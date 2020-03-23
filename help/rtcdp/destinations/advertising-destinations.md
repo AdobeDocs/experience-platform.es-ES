@@ -4,7 +4,7 @@ seo-title: Destinos publicitarios
 description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias anónimas con estas plataformas.
 seo-description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias anónimas con estas plataformas.
 translation-type: tm+mt
-source-git-commit: f76c5326d4b658b76d8df3d285f185706b66a826
+source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
 
 ---
 
@@ -15,4 +15,8 @@ Conecte la plataforma de datos del cliente en tiempo real a una plataforma de pu
 
 Al conectarse a un destino de publicidad, las audiencias se envían como ID a la plataforma de destino, donde se asignan a un ID conocido por la plataforma de destino.
 
-Actualmente, CDP en tiempo real es compatible con el destino publicitario de Google. Para obtener información sobre cómo conectar el destino, consulte Destino [de](/help/rtcdp/destinations/google-destination.md)Google.
+Actualmente, CDP en tiempo real es compatible con los destinos publicitarios que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+
+* [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
