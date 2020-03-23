@@ -19,7 +19,7 @@ El espacio de trabajo Destinos consta de cuatro secciones, **Catálogo**, **Exam
 
 ## Catalog {#catalog}
 
-La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos ofrecidos por Adobe a los que se pueden enviar datos. Seleccione un destino en el catálogo para abrir el carril derecho. Aquí puede configurar una conexión con el destino (destino **de** Connect) o obtener información más detallada sobre cada destino consultando la documentación (**ver documentación**).
+La **[!UICONTROL Catalog]** ficha muestra una lista de todos los destinos ofrecidos por Adobe a los que se pueden enviar datos. Seleccione un destino en el catálogo para abrir el carril derecho. Aquí puede configurar una conexión con el destino (destino **de** Connect) o obtener información más detallada sobre cada destino consultando la documentación (**ver documentación**).
 
 ![Opciones de catálogo de destino](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -27,7 +27,7 @@ Para obtener más información sobre las categorías de destino e información s
 
 ## Explorar {#browse}
 
-La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción habilitada activada establecen el destino en activo y viceversa. También puede ver los destinos en los que fluyen los datos seleccionando **Segmentos > Examinar** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
+La **[!UICONTROL Browse]** ficha muestra los destinos con los que ha establecido una conexión. Los destinos con la opción habilitada activada establecen el destino en activo y viceversa. También puede ver los destinos en los que fluyen los datos seleccionando **Segmentos > Examinar** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
 
 ![Ficha Examinar](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -45,11 +45,11 @@ Haga clic en una fila de destino para ver más información sobre el destino en 
 
 ![Haga clic en la fila de destino](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Seleccione el nombre del destino para ver la información sobre los segmentos activados en este destino. Haga clic en **[!UICONTROL Editar activación]** para modificar o agregar los segmentos que se envían a este destino.
+Seleccione el nombre del destino para ver la información sobre los segmentos activados en este destino. Haga clic en **[!UICONTROL Edit activation]** para modificar o agregar los segmentos que se están enviando a este destino.
 
 ## Cuentas {#accounts}
 
-En la ficha **[!UICONTROL Cuentas]** , puede obtener más información sobre las conexiones que ha establecido con varios destinos. Consulte la tabla siguiente para obtener toda la información que puede obtener sobre cada destino:
+En la **[!UICONTROL Accounts]** ficha, puede obtener más información sobre las conexiones establecidas con varios destinos. Consulte la tabla siguiente para obtener toda la información que puede obtener sobre cada destino:
 
 ![Ficha Cuentas](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -62,10 +62,10 @@ En la ficha **[!UICONTROL Cuentas]** , puede obtener más información sobre las
 
 ## Flujos de datos {#data-flows}
 
-La ficha Flujos **[!UICONTROL de]** datos muestra una representación gráfica de los flujos de activación que ha configurado en la plataforma de datos del cliente en tiempo real.
+La **[!UICONTROL Data flows]** ficha muestra una representación gráfica de los flujos de activación que ha configurado en la Plataforma de datos del cliente en tiempo real.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Seleccione cualquiera de los destinos que se muestran en la página y pulse **[!UICONTROL Ver flujos]** para ver información sobre todos los flujos de datos que ha configurado para cada destino.
+Seleccione cualquiera de los destinos mostrados en la página y pulse **[!UICONTROL View flows]** para ver la información sobre todos los flujos de datos que haya configurado para cada destino.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
