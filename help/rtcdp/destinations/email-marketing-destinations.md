@@ -21,11 +21,11 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 ## Paso 1: Conectar destino {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Connections > Destinations]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione **[!UICONTROL Connect destination]**.
 
    ![Conectar al destino](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. En el asistente de Connect, seleccione el tipo **** de conexión para la ubicación de almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
+2. En el asistente de Connect, seleccione la ubicación **[!UICONTROL Connection type]** del almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect]**.
 
 Para las conexiones **** S3, debe proporcionar el ID de clave de acceso y la clave de acceso secreto.
 
