@@ -25,4 +25,4 @@ Extensiones
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Seleccione Editar > Reglas [!UICONTROL de procesamiento] para hacer algo. Utilice [!DNL Microsoft Visual Code].
+Elija Edición > [!UICONTROL Processing Rules] para hacer algo. Utilice [!DNL Microsoft Visual Code].
