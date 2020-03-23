@@ -4,7 +4,7 @@ seo-title: Destino del administrador de publicidad de Google
 description: 'Google Ad Manager, anteriormente conocido como DoubleClick para editores o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeos y en aplicaciones móviles. '
 seo-description: 'Google Ad Manager, anteriormente conocido como DoubleClick para editores o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeos y en aplicaciones móviles. '
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -46,10 +46,10 @@ Antes de crear el destino de Google Ad Manager en Adobe Real-time CDP, debe pone
 ## Crear destino
 
 1. En **[!UICONTROL Conexiones > Destinos]**, seleccione Administrador de publicidad de Google y, a continuación, **[!UICONTROL Crear destino]**.
-   ![Destino de Connect Google Ad Manager](/help/rtcdp/destinations/assets/google-ad-manager-destination.png)
+   ![Destino de Connect Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. En el asistente Crear destino, rellene la información básica del destino.
-   ![Información básica Google Ad Manager](/help/rtcdp/destinations/assets/google-ad-manager-basic-information.png)
+   ![Información básica Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **Nombre**: Rellene el nombre preferido para este destino.
 * **Descripción**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
 * **Tipo** de cuenta: Seleccione una opción, en función de su cuenta con Google:
