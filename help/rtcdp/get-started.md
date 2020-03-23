@@ -105,7 +105,7 @@ Ella hace clic en la página principal para explorar un poco más.
 
 ![image](assets/luma-personal.png)
 
-Sarah recibe una experiencia de página principal personalizada que se distribuye de forma dinámica, en función de su perfil de cliente en tiempo real en Adobe Experience Platform.
+Sarah recibe una experiencia personalizada de la página principal que se distribuye de forma dinámica, en función de su perfil de cliente en tiempo real en Adobe Experience Platform.
 
 Ella ve contenido relevante, gracias a la personalización con tecnología Adobe Sensei en Adobe Target, que tiene en cuenta sus compras anteriores y su afinidad por usar ropa y equipo. Luma también adapta el contenido del catálogo masculino a los engranajes en marcha para los hombres según su última exploración.
 
@@ -154,7 +154,7 @@ Por ejemplo, para ingestar datos CRM de Luma, filtre el catálogo por *CRM* y se
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Por ejemplo, seleccione **[!UICONTROL Contactos]**. Se carga automáticamente una vista previa de los datos de los contactos para asegurarse de que todo se ve como se espera.
+   Por ejemplo, seleccione **[!UICONTROL Contacts]**. Se carga automáticamente una vista previa de los datos de los contactos para asegurarse de que todo se ve como se espera.
 
    La plataforma Adobe Experience elimina mucho del trabajo manual de este proceso mediante la asignación automática de campos estándar al esquema de perfil del Modelo de datos de experiencia (XDM).
 
@@ -231,7 +231,7 @@ Como Sarah agregó un artículo de regalo aparente en el carro y lo abandonó, L
 
 Cuando agregó el segmento &quot;Abandonadores de carro de compras de regalos&quot;, puede ver aproximadamente cuántas personas forman parte de este segmento. Puede realizar acciones al respecto y hacer que esté disponible para su personalización en todos los canales.
 
-Haga clic en **[!UICONTROL Enviar a destinos]**.
+Haga clic en **[!UICONTROL Send to destinations]**.
 
 En CDP en tiempo real de Adobe, Luma puede actuar sin problemas en sus segmentos de audiencia para su personalización.\
 Aquí vemos todos los destinos disponibles para que Luma envíe este destino, tanto a las soluciones Adobe como a las que no son de Adobe:
@@ -255,7 +255,7 @@ También puede programar el inicio o el final del segmento en un momento determi
 >[!NOTE]
 >De forma opcional, si hace clic en el campo de fecha, automáticamente se programan 90 días de espera.
 
-Haga clic en **[!UICONTROL Guardar]** para ir a la página siguiente.
+Haga clic **[!UICONTROL Save]** para ir a la página siguiente.
 
 Cuando un cliente de esta audiencia realiza una compra, su pertenencia a esta audiencia se suprime en tiempo real. Ya no cumplen los requisitos porque su estado ha cambiado.
 
