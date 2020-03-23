@@ -19,11 +19,11 @@ Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el desti
 
 ## Destino de Connect {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione Adobe Campaign y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Connections > Destinations]**, seleccione Adobe Campaign y, a continuación, seleccione **[!UICONTROL Connect destination]**.
 
    ![Conectar a la campaña de Adobe](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. En el asistente de destino de Connect, seleccione el tipo **** de conexión para la ubicación de almacenamiento. Para Adobe Campaign, puede seleccionar entre **Amazon S3**, **SFTP con contraseña** y **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
+1. En el asistente de destino de Connect, seleccione la ubicación **[!UICONTROL Connection type]** de almacenamiento. Para Adobe Campaign, puede seleccionar entre **Amazon S3**, **SFTP con contraseña** y **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect]**.
 
    ![Asistente para configurar campañas](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
