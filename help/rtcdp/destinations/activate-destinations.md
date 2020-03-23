@@ -38,7 +38,7 @@ Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/desti
 Siga los pasos a continuación para editar los flujos de activación existentes en CDP en tiempo real:
 
 1. Seleccione **Destinos** en la barra de navegación izquierda, luego haga clic en la ficha **Examinar** y, a continuación, haga clic en el nombre del destino.
-2. Seleccione **[!UICONTROL Editar activación]** en el carril derecho para cambiar los segmentos que se van a enviar al destino.
+2. Seleccione **[!UICONTROL Edit activation]** en el carril derecho para cambiar qué segmentos enviar al destino.
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
@@ -66,6 +66,6 @@ Compruebe el destino de publicidad correspondiente en el que está activando los
 Para deshabilitar un flujo de activación existente, siga los pasos a continuación:
 
 1. Seleccione **Destinos** en la barra de navegación izquierda, luego haga clic en la ficha **Examinar** y, a continuación, haga clic en el nombre del destino.
-2. Haga clic en el control **[!UICONTROL Habilitado]** en el carril derecho para cambiar el estado del flujo de activación.
+2. Haga clic en el **[!UICONTROL Enabled]** control del carril derecho para cambiar el estado del flujo de activación.
 3. En la ventana **Actualizar estado** del flujo de datos, seleccione **Confirmar** para desactivar el flujo de activación.
 
