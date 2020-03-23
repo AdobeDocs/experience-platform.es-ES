@@ -31,7 +31,7 @@ Este tutorial contiene los siguientes pasos:
 
 En primer lugar, instale la extensión SDK web de Adobe Experience Platform.
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. En Launch, abra la pestaña **[!UICONTROL Extensions]**.
 
    ![image](assets/launch-overview.png)
 
@@ -48,13 +48,13 @@ En primer lugar, instale la extensión SDK web de Adobe Experience Platform.
    * **ID de configuración:** Especifique el ID de configuración que obtuvo de su representante de Adobe.
    * **Dominio de Edge:** Especifique el dominio Edge que obtuvo de su representante de Adobe.
 
-1. Haga clic en **[!UICONTROL Guardar]** y continúe con el paso siguiente.
+1. Haga clic **[!UICONTROL Save]** y continúe con el paso siguiente.
 
 ## Crear una regla que indique a Launch qué datos enviar
 
 A continuación, cree una regla para que Launch sepa qué datos desea enviar a Adobe Experience Platform y cuándo desea enviarlos.
 
-1. En la ficha **[!UICONTROL Reglas]** , configure un evento que se active en cada nueva página del sitio web cuando se cargue la biblioteca Iniciar.
+1. En la **[!UICONTROL Rules]** ficha , configure un evento que se activará en cada nueva página del sitio web cuando se cargue la biblioteca Iniciar.
 
    ![image](assets/launch-make-a-rule.png)
 
@@ -66,7 +66,7 @@ A continuación, cree una regla para que Launch sepa qué datos desea enviar a A
 
    El objeto de datos que envía debe ser XDM válido que pase la validación con el esquema que utiliza el conjunto de datos conectado a su ID de configuración.
 
-1. Click **[!UICONTROL Keep Changes]**.
+1. Haga clic en **[!UICONTROL Keep Changes]**.
 
 Para obtener más información, consulte [Reglas](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) en la documentación de Launch.
 
