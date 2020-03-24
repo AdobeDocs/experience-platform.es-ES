@@ -4,7 +4,7 @@ seo-title: Espacio de trabajo Destinos
 description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
+source-git-commit: e87ddff936da88b1b2b3cf71c2d6c24ed28b39ab
 
 ---
 
@@ -13,33 +13,37 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 En la plataforma de datos del cliente en tiempo real de Adobe, seleccione **Destinos** en la barra de navegación izquierda para acceder al espacio de trabajo Destinos.
 
-El espacio de trabajo Destinos consta de cuatro secciones, **Catálogo**, **Examinar**, **Cuentas** y Flujos **** de datos, que se describen en las secciones siguientes.
+El espacio de trabajo Destinos consta de cuatro secciones, **Catálogo**, **Examinar**, **Cuentas** y Vista **** del sistema, que se describen en las secciones siguientes.
 
 ![Destinos-información general](/help/rtcdp/destinations/assets/destinations-overview.png)
 
 ## Catalog {#catalog}
 
-La **[!UICONTROL Catalog]** ficha muestra una lista de todos los destinos ofrecidos por Adobe a los que se pueden enviar datos. Seleccione un destino en el catálogo para abrir el carril derecho. Aquí puede configurar una conexión con el destino (destino **de** Connect) o obtener información más detallada sobre cada destino consultando la documentación (**ver documentación**).
+La **[!UICONTROL Catalog]** ficha muestra una lista de todos los destinos ofrecidos por Adobe a los que se pueden enviar datos.
+
+Utilice la funcionalidad de búsqueda de la página para localizar un destino específico o para filtrar destinos mediante el **[!UICONTROL Categories]** control.
+
+Seleccione un destino en el catálogo para abrir el carril derecho. Aquí puede configurar una conexión con el destino (destino **de** Connect), vista de las conexiones de destino existentes (destinos **de** exploración) o obtener información más detallada sobre cada destino consultando la documentación (documentación **de** Vista).
 
 ![Opciones de catálogo de destino](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
 Para obtener más información sobre las categorías de destino e información sobre cada destino, consulte Catálogo [de destino](/help/rtcdp/destinations/destinations-catalog.md).
 
-## Explorar {#browse}
+## Examinar {#browse}
 
-La **[!UICONTROL Browse]** ficha muestra los destinos con los que ha establecido una conexión. Los destinos con la opción habilitada activada establecen el destino en activo y viceversa. También puede ver los destinos en los que fluyen los datos seleccionando **Segmentos > Examinar** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
+La **[!UICONTROL Browse]** ficha muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **habilitada** activada establecen el destino en activo y viceversa. También puede realizar la vista de los destinos en los que tiene flujos de datos seleccionando **Segmentos > Examinar** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
 
 ![Ficha Examinar](/help/rtcdp/destinations/assets/browse-tab.png)
 
 | Elemento | Descripción |
 ---------|----------
-| Nombre de destino | Nombre proporcionado para el flujo de activación a este destino. |
+| Nombre | Nombre proporcionado para el flujo de activación a este destino. |
 | Destino | La plataforma de destino seleccionada para el flujo de activación. |
-| Creación | Fecha y hora UTC en que se creó el flujo de activación al destino. |
-| Tipo de conexión | *Solo* para destinos de marketing por correo electrónico. Representa el tipo de conexión al bloque de almacenamiento. Puede ser S3 o FTP. |
+| Tipo de conexión | Representa el tipo de conexión con el contenedor o destino de almacenamiento. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li></ul> |
 | Nombre de usuario | Las credenciales de cuenta que ha seleccionado para el flujo de destino. |
 | Segmentos | Número de segmentos que se están activando en este destino. |
-| Estado | `Active` ni `Inactive`. Indica si los datos se están activando en este destino. Para editar el estado, consulte [Deshabilitar activación](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
+| Creado | Fecha y hora UTC en que se creó el flujo de activación al destino. |
+| Estado | `Active` O bien `Inactive`. Indica si los datos se están activando en este destino. Para editar el estado, consulte [Deshabilitar activación](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 Haga clic en una fila de destino para ver más información sobre el destino en el carril derecho.
 
@@ -56,16 +60,18 @@ En la **[!UICONTROL Accounts]** ficha, puede obtener más información sobre las
 | Elemento | Descripción |
 ---------|----------
 | Plataforma | Destino para el que ha configurado la conexión. |
+| Tipo de conexión | Representa el tipo de conexión con el contenedor o destino de almacenamiento. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li><li>Para destinos de almacenamiento en la nube de Amazon S3: Clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: Autenticación básica para SFTP</li></ul> |
 | Nombre de usuario | Nombre de usuario seleccionado en el asistente [de](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)conexión de destino. |
-| Flujos | Representa el número de flujos de destino exitosos únicos conectados con la información básica creada para un destino. |
+| Flujos de datos | Representa el número de flujos de destino exitosos únicos conectados con la información básica creada para un destino. |
 | Con autorización | La fecha en que se autorizó la conexión a este destino. |
+| Estado | `Active` O bien `Inactive`. Indica si los datos se están activando en este destino. Para editar el estado, consulte [Deshabilitar activación](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
-## Flujos de datos {#data-flows}
+## Vista del sistema {#system-view}
 
-La **[!UICONTROL Data flows]** ficha muestra una representación gráfica de los flujos de activación que ha configurado en la Plataforma de datos del cliente en tiempo real.
+La **[!UICONTROL System View]** ficha muestra una representación gráfica de los flujos de activación que ha configurado en la plataforma de datos del cliente en tiempo real.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Seleccione cualquiera de los destinos mostrados en la página y pulse **[!UICONTROL View flows]** para ver la información sobre todos los flujos de datos que haya configurado para cada destino.
+Seleccione cualquiera de los destinos que se muestran en la página y pulse **[!UICONTROL View flows]** para ver la información sobre todas las conexiones que ha configurado para cada destino.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
