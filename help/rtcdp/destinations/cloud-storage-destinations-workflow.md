@@ -4,7 +4,7 @@ seo-title: Flujo de trabajo de los destinos de almacenamiento en la nube
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 translation-type: tm+mt
-source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
+source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
 ---
 
