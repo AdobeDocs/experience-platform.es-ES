@@ -1,10 +1,10 @@
 ---
-title: Flujo de trabajo de destinos de almacenamiento en la nube
-seo-title: Flujo de trabajo de destinos de almacenamiento en la nube
-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
-seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
+title: Flujo de trabajo de los destinos de almacenamiento en la nube
+seo-title: Flujo de trabajo de los destinos de almacenamiento en la nube
+description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
+seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 translation-type: tm+mt
-source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
+source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
 
 ---
 
@@ -13,26 +13,32 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
 ## Información general
 
-Esta página explica cómo puede conectarse a ubicaciones de almacenamiento en la nube en la plataforma de datos del cliente en tiempo real de Adobe.
+En esta página se explica cómo puede conectarse a ubicaciones de almacenamiento en la nube en la plataforma de datos del cliente en tiempo real de Adobe.
 
-1. En **[!UICONTROL Connections > Destinations]**, seleccione su destino preferido de almacenamiento en la nube y, a continuación, seleccione **[!UICONTROL Connect destination]**.
+1. En **[!UICONTROL Connections > Destinations]**, seleccione su destino de almacenamiento de nube preferido y, a continuación, seleccione **[!UICONTROL Connect destination]**.
 
-   ![Conectar con destino de almacenamiento en la nube](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+   ![Conectar con destino de almacenamiento de nube](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión con su destino de almacenamiento en la nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**.
+1. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. Consulte Destino [](/help/rtcdp/destinations/amazon-s3-destination.md) de Amazon S3 y destino [](/help/rtcdp/destinations/sftp-destination.md) SFTP para obtener detalles sobre las credenciales introducidas en el paso **Autenticación** .
 
    >[!NOTE]
    >
-   >El CDP en tiempo real de Adobe admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si se introducen credenciales incorrectas en la ubicación de almacenamiento en la nube. Esto garantiza que no se complete el flujo de trabajo con credenciales incorrectas.
+   >El CDP en tiempo real de Adobe admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si se introducen credenciales incorrectas en la ubicación del almacenamiento en la nube. Esto garantiza que no se complete el flujo de trabajo con credenciales incorrectas.
 
    ![Conectar con destino de almacenamiento en la nube: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. En el **[!UICONTROL Setup]** paso, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación.
-   1. Para los destinos de Amazon S3, inserte el **[!UICONTROL Bucket name]** y el **[!UICONTROL Folder path]** en el destino de almacenamiento en la nube donde se entregarán los archivos. Seleccione **[!UICONTROL Create Destination]** una vez rellenados los campos anteriores.
-   2. Para los destinos SFTP, inserte la variable **[!UICONTROL Folder path]**
-   ![Conectar con destino de almacenamiento en la nube: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+1. En el **[!UICONTROL Setup]** paso, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación. <br>
+Para los destinos de Amazon S3, inserte el **[!UICONTROL Bucket name]** y el **[!UICONTROL Folder path]** en el destino de almacenamiento de nube donde se enviarán los archivos. Seleccione **[!UICONTROL Create Destination]** una vez rellenados los campos anteriores.
 
-4. Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
+   ![Conectar con destino de almacenamiento en la nube Amazon S3: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+
+
+
+   <br>Para los destinos SFTP, inserte la variable **[!UICONTROL Folder path]**
+
+   ![Conectar con destino de almacenamiento de nube SFTP: paso de autenticación](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+1. Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
 
 ## Activar segmentos {#activate-segments}
 
