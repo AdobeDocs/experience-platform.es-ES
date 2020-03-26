@@ -4,7 +4,7 @@ seo-title: Flujo de trabajo de los destinos de almacenamiento en la nube
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 translation-type: tm+mt
-source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -19,7 +19,7 @@ En esta página se explica cómo puede conectarse a ubicaciones de almacenamient
 
    ![Conectar con destino de almacenamiento de nube](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-1. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. Consulte Destino [](/help/rtcdp/destinations/amazon-s3-destination.md) de Amazon S3 y destino [](/help/rtcdp/destinations/sftp-destination.md) SFTP para obtener detalles sobre las credenciales introducidas en el paso **Autenticación** .
+2. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. Consulte Destino [](/help/rtcdp/destinations/amazon-s3-destination.md) de Amazon S3 y destino [](/help/rtcdp/destinations/sftp-destination.md) SFTP para obtener detalles sobre las credenciales introducidas en el paso **Autenticación** .
 
    >[!NOTE]
    >
@@ -27,7 +27,7 @@ En esta página se explica cómo puede conectarse a ubicaciones de almacenamient
 
    ![Conectar con destino de almacenamiento en la nube: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-1. En el **[!UICONTROL Setup]** paso, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación. <br>
+3. En el **[!UICONTROL Setup]** paso, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación. <br>
 Para los destinos de Amazon S3, inserte el **[!UICONTROL Bucket name]** y el **[!UICONTROL Folder path]** en el destino de almacenamiento de nube donde se enviarán los archivos. Seleccione **[!UICONTROL Create Destination]** una vez rellenados los campos anteriores.
 
    ![Conectar con destino de almacenamiento en la nube Amazon S3: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
@@ -36,7 +36,7 @@ Para los destinos de Amazon S3, inserte el **[!UICONTROL Bucket name]** y el **[
 
    ![Conectar con destino de almacenamiento de nube SFTP: paso de autenticación](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-1. Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
+4. Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
 
 ## Activar segmentos {#activate-segments}
 
