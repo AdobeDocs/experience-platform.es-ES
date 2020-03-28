@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud es una suite de marketing digital anteriormente conocida como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 seo-description: Salesforce Marketing Cloud es una suite de marketing digital anteriormente conocida como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,25 +23,25 @@ Para enviar datos de segmentos a Salesforce Marketing Cloud, primero debe [conec
 
    ![Conectar a Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. En el paso **Autenticación** , si ya ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. En Salesforce Marketing Cloud, puede seleccionar entre **SFTP con contraseña** y **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect to destination]**.
+2. En el **[!UICONTROL Authentication]** paso, si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. En Salesforce Marketing Cloud, puede seleccionar entre **[!UICONTROL SFTP with Password]** y **[!UICONTROL SFTP with SSH Key]**. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect to destination]**.
 
-   Para **SFTP con conexiones de contraseña** , debe proporcionar Dominio, Puerto, Nombre de usuario y Contraseña.
-Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
+   Para **[!UICONTROL SFTP with Password]** las conexiones, debe proporcionar Dominio, Puerto, Nombre de usuario y Contraseña.
+Para **[!UICONTROL SFTP with SSH Key]** las conexiones, debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
 
    ![Rellenar información de Salesforce](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-3. En el paso **Configuración** , rellene la información relevante para su destino como se muestra a continuación:
-   * **Nombre**: Elija un nombre relevante para el destino.
-   * **Descripción**: Escriba una descripción para el destino.
-   * **Ruta** de carpeta: Proporcione la ruta en la ubicación del almacenamiento donde CDP en tiempo real depositará sus datos de exportación como archivos CSV o separados por tabuladores.
-   * **Formato** de archivo: **CSV** o **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
+3. En el **[!UICONTROL Setup]** paso, rellene la información relevante para su destino como se muestra a continuación:
+   * **[!UICONTROL Name]**:: Elija un nombre relevante para el destino.
+   * **[!UICONTROL Description]**:: Escriba una descripción para el destino.
+   * **[!UICONTROL Folder Path]**:: Proporcione la ruta en la ubicación del almacenamiento donde CDP en tiempo real depositará sus datos de exportación como archivos CSV o separados por tabuladores.
+   * **[!UICONTROL File Format]**:: **[!UICONTROL CSV]** o **[!UICONTROL TAB_DELIMITED]**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
    ![Información básica de Salesforce](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-4. Haga clic en **Crear destino** después de rellenar los campos anteriores. El destino ya está conectado y puede [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino.
+4. Haga clic **[!UICONTROL Create destination]** después de rellenar los campos anteriores. El destino ya está conectado y puede [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino.
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Salesforce Marketing Cloud, se recomienda seleccionar un identificador único en el esquema [de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Salesforce Marketing Cloud, se recomienda seleccionar un identificador único en el esquema [de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
 
 ## Configurar la importación de datos en Salesforce Marketing Cloud {#import-data-into-salesforce}
 
