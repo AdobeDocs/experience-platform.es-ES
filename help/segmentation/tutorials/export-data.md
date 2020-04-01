@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Exportación de datos mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # Exportación de datos de Perfil mediante API
 
-El Perfil del cliente en tiempo real le permite crear una única vista de clientes individuales al reunir datos de múltiples fuentes, incluidos datos de atributos y datos de comportamiento. Los datos disponibles dentro de Perfil se pueden exportar a un conjunto de datos para su posterior procesamiento. Este tutorial proporciona instrucciones paso a paso para crear y administrar trabajos de exportación mediante la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real.
+El Perfil del cliente en tiempo real le permite crear una única vista de clientes individuales al reunir datos de múltiples fuentes, incluidos datos de atributos y datos de comportamiento. Los datos disponibles dentro de Perfil se pueden exportar a un conjunto de datos para su posterior procesamiento. Este tutorial proporciona instrucciones paso a paso para crear y administrar trabajos de exportación mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentación.
 
 Además de crear un trabajo de exportación, también puede acceder a los datos de Perfil mediante la API de acceso a Perfil y mediante proyecciones. Consulte el tutorial [de la API de acceso a](../../profile/api/entities.md) Perfil o el tutorial sobre la [configuración de destinos y proyecciones](../../profile/api/edge-projections.md) de Edge para obtener más información sobre estos otros patrones de acceso.
 
