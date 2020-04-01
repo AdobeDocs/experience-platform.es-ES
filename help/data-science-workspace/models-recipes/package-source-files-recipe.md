@@ -20,10 +20,10 @@ Conceptos para comprender:
 
 ## Requisitos previos
 
-- <a href="https://docs.docker.com/install/#supported-platforms" target="_blank">Acoplador</a>
-- <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Python 3 y pip</a>
-- <a href="https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883" target="_blank">Scala</a>
-- <a href="https://maven.apache.org/install.html" target="_blank">Maven</a>
+- [Acoplador](https://docs.docker.com/install/#supported-platforms)
+- [Python 3 y pip](https://docs.conda.io/en/latest/miniconda.html)
+- [Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [Maven](https://maven.apache.org/install.html)
 
 ## Creación de fórmulas
 
