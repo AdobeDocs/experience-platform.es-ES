@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Perspectivas
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -15,7 +15,7 @@ Las perspectivas contienen métricas que se utilizan para facultar a un científ
 
 ## Recuperar una lista de perspectivas
 
-Puede recuperar una lista de perspectivas realizando una sola solicitud GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](appendix.md#query)de recursos.
+Puede recuperar una lista de perspectivas realizando una sola solicitud GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -105,7 +105,7 @@ Una respuesta correcta devuelve una carga útil que incluye una lista de perspec
 
 ## Recuperar una perspectiva específica
 
-Para buscar una perspectiva en particular, realice una solicitud GET y proporcione un valor válido `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](appendix.md#query)de recursos.
+Para buscar una perspectiva en particular, realice una solicitud GET y proporcione un valor válido `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
