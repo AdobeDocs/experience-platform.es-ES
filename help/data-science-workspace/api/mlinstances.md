@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Instancias MLI
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -17,7 +17,7 @@ Una instancia MLI es un emparejamiento de un [motor](./engines.md) existente con
 
 Puede crear una instancia MLI realizando una solicitud POST mientras proporciona una carga útil de solicitud que consta de un ID de motor (`{ENGINE_ID}`) válido y un conjunto apropiado de configuraciones predeterminadas.
 
-Si la ID del motor hace referencia a un motor PySpark o Spark, podrá configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU para fines de capacitación y puntuación. Consulte las secciones del apéndice sobre las configuraciones [de recursos](appendix.md#resource-config) PySpark y Spark y las configuraciones [de CPU y GPU](appendix.md#cpu-gpu-config) Python para obtener más información.
+Si la ID del motor hace referencia a un motor PySpark o Spark, podrá configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU para fines de capacitación y puntuación. Consulte las secciones del apéndice sobre las configuraciones [de recursos](./appendix.md#resource-config) PySpark y Spark y las configuraciones [de CPU y GPU](./appendix.md#cpu-gpu-config) Python para obtener más información.
 
 **Formato de API**
 
@@ -127,7 +127,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de instancias MLI
 
-Puede recuperar una lista de instancias MLI realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](appendix.md#query)de recursos.
+Puede recuperar una lista de instancias MLI realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -139,7 +139,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los parámetros [de consulta](appendix.md#query) disponibles para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los parámetros [de consulta](./appendix.md#query) disponibles para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
