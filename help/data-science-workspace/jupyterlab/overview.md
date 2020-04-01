@@ -1,0 +1,630 @@
+---
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+solution: Experience Platform
+title: Guía del usuario de JupyterLab
+topic: Overview
+translation-type: tm+mt
+source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+
+---
+
+
+# Guía del usuario de JupyterLab
+
+JupyterLab es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en la plataforma de Adobe Experience. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
+
+Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
+
+## JupyterLab en la plataforma de experiencia
+
+La integración de JupyterLab de la plataforma de experiencia se acompaña de cambios en la arquitectura, consideraciones de diseño, extensiones de bloc de notas personalizadas, bibliotecas preinstaladas y una interfaz temática de Adobe.
+
+La siguiente lista describe algunas de las características exclusivas de JupyterLab en la plataforma:
+
+| Función | Descripción |
+| --- | --- |
+| **Kernels** | Los Kernels proporcionan al portátil y a otros front-end de JupyterLab la capacidad de ejecutar e introducir código en diferentes lenguajes de programación. La plataforma de experiencias proporciona núcleos adicionales para admitir el desarrollo en Python, R, PySpark y Spark. Consulte la sección [kernels](#kernels) para obtener más detalles. |
+| **Acceso a datos** | Acceda directamente a los conjuntos de datos existentes desde JupyterLab con compatibilidad total con funciones de lectura y escritura. |
+| **Integración de servicios de plataforma** | Las integraciones integradas le permiten utilizar otros servicios de plataforma directamente desde JupyterLab. En la sección sobre [Integración con otros servicios](#service-integration)de la Plataforma se proporciona una lista completa de las integraciones admitidas. |
+| **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y la plataforma de experiencia, incluida la comunicación entre servicio y servicio de plataforma, se cifran y autentican a través del Sistema de administración de identidades de <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe (IMS)</a>. |
+| **Bibliotecas de desarrollo** | En la plataforma de experiencia, JupyterLab proporciona bibliotecas preinstaladas para Python, R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
+| **Controlador de biblioteca** | Cuando las bibliotecas preinstaladas no están disponibles para sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de Platform y mantener los datos seguros. Consulte la sección [kernels](#kernels) para obtener más detalles. |
+
+>[!NOTE] Las bibliotecas adicionales solo están disponibles para la sesión en la que se instalaron. Debe reinstalar las bibliotecas adicionales que necesite al iniciar sesiones nuevas.
+
+## Integración con otros servicios de plataforma {#service-integration}
+
+La estandarización y la interoperabilidad son conceptos clave que sustentan la plataforma de experiencia. La integración de JupyterLab en la plataforma como un IDE integrado le permite interactuar con otros servicios de la Plataforma, permitiéndole utilizar la Plataforma a todo su potencial. Los siguientes servicios de plataforma están disponibles en JupyterLab:
+
+* **Servicio de catálogo:** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
+* **Servicio de Consulta:** Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
+* **Marco para la detección del lenguaje Sensei ML:** Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
+
+>[!NOTE] Algunas integraciones de servicio de plataforma en JupyterLab están limitadas a núcleos específicos. Consulte la sección sobre [núcleos](#kernels) para obtener más detalles.
+
+## Funciones clave y operaciones comunes
+
+En las secciones siguientes encontrará información sobre las características clave de JupyterLab e instrucciones sobre cómo realizar operaciones comunes:
+
+* [Access JupyterLab](#access-jupyterlab)
+* [Interfaz JupyterLab](#jupyterlab-interface)
+* [Celdas de código](#code-cells)
+* [Kernels](#kernels)
+* [Sesiones de núcleo](#kernel-sessions)
+* [Recurso de ejecución de PySpark/Spark](#pysparkspark-execution-resource)
+* [Iniciador](#launcher)
+
+### Access JupyterLab
+
+En <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>, haga clic en **Modelos** en la columna de navegación izquierda y, a continuación, haga clic en **Equipos portátiles** que se encuentran en la navegación superior para acceder a JupyterLab. Deje tiempo para que JupyterLab se inicialice completamente.
+
+![](../images/jupyterlab/user-guide/access_jupyterlab.png)
+
+### Interfaz JupyterLab
+
+La interfaz de JupyterLab consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene fichas de documentos y actividades.
+
+**Barra de menús**
+
+La barra de menús situada en la parte superior de la interfaz tiene menús de nivel superior que exponen las acciones disponibles en JupyterLab con sus métodos abreviados de teclado:
+
+* **Archivo:** Acciones relacionadas con archivos y directorios
+* **Editar:** Acciones relacionadas con la edición de documentos y otras actividades
+* **Vista:** Acciones que alteran la apariencia de JupyterLab
+* **Ejecutar:** Acciones para ejecutar código en diferentes actividades, como blocs de notas y consolas de código
+* **Núcleo:** Acciones para administrar los núcleos
+* **Fichas:** Una lista de documentos y actividades abiertos
+* **Configuración:** Configuración común y editor de configuración avanzada
+* **Ayuda:** Una lista de JupyterLab y enlaces de ayuda del núcleo
+
+**Barra lateral izquierda**
+
+La barra lateral izquierda contiene fichas en las que se puede hacer clic que proporcionan acceso a las siguientes funciones:
+
+* **Explorador de archivos:** Una lista de documentos y directorios de portátiles guardados
+* **Explorador de datos:** Examinar, acceder y explorar conjuntos de datos y esquemas
+* **Kernels de funcionamiento y terminales:** Una lista de las sesiones activas del núcleo y de terminal con la capacidad de finalizar
+* **Comandos:** Una lista de comandos útiles
+* **Inspector de celdas:** Editor de celdas que proporciona acceso a herramientas y metadatos útiles para configurar un bloc de notas con fines de presentación
+* **fichas:** Una lista de fichas abiertas
+
+Haga clic en una ficha para exponer sus funciones o haga clic en una ficha expandida para contraer la barra lateral izquierda como se muestra a continuación:
+
+![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
+
+**Área de trabajo principal**
+
+El área de trabajo principal de JupyterLab le permite organizar documentos y otras actividades en paneles de fichas que se pueden cambiar de tamaño o subdividir. Arrastre una ficha al centro de un panel de fichas para migrarla. Para dividir un panel, arrastre una ficha a la izquierda, a la derecha, a la parte superior o a la parte inferior del panel:
+
+![](../images/jupyterlab/user-guide/main_work_area.gif)
+
+### Celdas de código
+
+Las celdas de código son el contenido principal de los blocs de notas. Contienen código fuente en el idioma del núcleo asociado al bloc de notas y la salida como resultado de la ejecución de la celda de código. Se muestra un recuento de ejecución a la derecha de cada celda de código que representa su orden de ejecución.
+
+![](../images/jupyterlab/user-guide/code_cell.png)
+
+Las acciones comunes de las células se describen a continuación:
+
+* **Añadir una celda:** Haga clic en el símbolo más (**+**) del menú del bloc de notas para agregar una celda vacía. Las celdas nuevas se colocan debajo de la celda con la que se está interactuando o al final del bloc de notas si no hay ninguna celda en particular enfocada.
+
+* **Mover una celda:** Sitúe el cursor a la derecha de la celda que desee mover y, a continuación, haga clic y arrastre la celda a una nueva ubicación. Además, al mover una celda de un bloc de notas a otro se replica la celda junto con su contenido.
+
+* **Ejecutar una celda:** Haga clic en el cuerpo de la celda que desee ejecutar y, a continuación, haga clic en el icono de **reproducción** (**▶**) en el menú del bloc de notas. Se muestra un asterisco (**\***) en el contador de ejecución de la celda cuando el núcleo está procesando la ejecución y se reemplaza por un entero al finalizar.
+
+* **Eliminar una celda:** Haga clic en el cuerpo de la celda que desee eliminar y, a continuación, haga clic en el icono de la **tijera** .
+
+### Kernels {#kernels}
+
+<!-- will need to edit this sparkmagic %% for data bricks not supported -->
+
+Los núcleos de los portátiles son los motores informáticos específicos del idioma para procesar las celdas de los portátiles. Además de Python, JupyterLab ofrece soporte de idiomas adicional en R, PySpark y Spark. Al abrir un documento portátil, se inicia el núcleo asociado. Cuando se ejecuta una celda portátil, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se cierre el núcleo.
+
+>[!NOTE] Las funcionalidades de PySpark y Spark están respaldadas por <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">SparkMagic</a>.
+
+Algunas funciones y características se limitan a determinados núcleos, como se describe en la tabla siguiente:
+
+| Kernel | Compatibilidad con la instalación de la biblioteca | Integraciones de plataformas |
+| :----: | :--------------------------: | :-------------------- |
+| **Python** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li><li>Servicio de Consulta</li></ul> |
+| **R** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
+| **PySpark** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
+| **Spark** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
+
+### Sesiones de núcleo
+
+Cada portátil o actividad activa en JupyterLab utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **Python 3** y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
+
+![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
+
+Si el núcleo está apagado o inactivo durante un período prolongado, entonces ¡ **Sin núcleo!** con un círculo sólido. Active un núcleo haciendo clic en el estado del núcleo y seleccionando el tipo de núcleo apropiado como se muestra a continuación:
+
+![](../images/jupyterlab/user-guide/switch_kernel.gif)
+
+### Recurso de ejecución de PySpark/Spark {#execution-resource}
+
+<!-- need to update with databricks -->
+
+Los kernels PySpark y Spark le permiten configurar los recursos del clúster Spark dentro de su bloc de notas PySpark o Spark mediante el comando configure (`%%configure`) y proporcionando una lista de configuraciones. Idealmente, estas configuraciones se definen antes de que se inicialice la aplicación Spark. La modificación de las configuraciones mientras la aplicación Spark está activa requiere un indicador de fuerza adicional después del comando (`%%configure -f`) que reiniciará la aplicación para que se apliquen los cambios, como se muestra a continuación:
+
+```python
+%%configure -f 
+{
+    "numExecutors": 10,
+    "executorMemory": "8G",
+    "executorCores":4,
+    "driverMemory":"2G",
+    "driverCores":2,
+    "conf": {
+        "spark.cores.max": "40"
+    }
+}
+```
+
+>[!TIP] Utilice el comando de ayuda (`%%help`) para vista de todos los comandos disponibles.
+
+Todas las propiedades configurables se enumeran en la tabla siguiente:
+
+| Propiedad | Descripción | Tipo |
+| :------- | :---------- | :-----:|
+| clase | El tipo de sesión (requerido) | `session kind`_ |
+| proxyUser | El usuario que se suplantará y que ejecutará esta sesión (por ejemplo, bob) | string |
+| jars | Archivos que se van a colocar en la Java `classpath` | lista de rutas |
+| pyFiles | Los archivos que se van a colocar en la variable `PYTHONPATH` | lista de rutas |
+| archivos | Archivos que se van a colocar en el directorio de trabajo del ejecutor | lista de rutas |
+| driverMemory | Memoria para el controlador en megabytes o gigabytes (por ejemplo, 1000M, 2G) | string |
+| driverCores | Número de núcleos utilizados por el controlador (solo en modo YARN) | int |
+| ejecutorMemory | Memoria para ejecutor en megabytes o gigabytes (por ejemplo, 1000M, 2G) | string |
+| ejecutorCores | Número de núcleos utilizados por el ejecutor | int |
+| numEjecutors | Número de ejecutores (solo modo YARN) | int |
+| archivos | Archivos que se van a descomprimir en el directorio de trabajo del ejecutor (solo en modo YARN) | lista de rutas |
+| cola | La cola YARN a la que enviar (solo en modo YARN) | string |
+| name | Nombre de la aplicación | string |
+| conf | Propiedad de configuración Spark | Mapa de key=val |
+
+### Iniciador
+
+<!-- Databricks update -->
+
+[//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
+
+El *iniciador* personalizado le proporciona plantillas de bloc de notas útiles para sus núcleos admitidos que le ayudarán a iniciar su tarea, como:
+
+| Plantilla | Descripción |
+| --- | --- |
+| En blanco | Un archivo de bloc de notas vacío. |
+| Inicio | Un bloc de notas precargado que muestra la exploración de datos mediante datos de ejemplo. |
+| Ventas minoristas | Un bloc de notas previamente rellenado que presenta la fórmula <a href="https://adobe.ly/2wOgO3L" target="_blank">de venta al</a> por menor utilizando datos de ejemplo. |
+| Generador de fórmulas | Una plantilla de portátil para crear una fórmula en JupyterLab. Se rellena previamente con código y comentarios que muestran y describen el proceso de creación de fórmulas. Consulte el tutorial <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de fórmula del</a> bloc de notas para obtener un tutorial detallado. |
+| Servicio de Consulta | Un bloc de notas precargado que muestra el uso del servicio de Consulta directamente en JupyterLab con flujos de trabajo de muestra proporcionados que analizan los datos a escala. |
+| Eventos XDM | Un bloc de notas precargado que muestra la exploración de datos en datos de Evento de experiencias con valor posterior, centrado en características comunes en la estructura de datos. |
+| Consultas XDM | Un bloc de notas precargado que muestra consultas empresariales de muestra sobre los datos de Experience Evento. |
+| Agregación | Un bloc de notas precargado que muestra flujos de trabajo de muestra a grandes cantidades acumuladas de datos en trozos más pequeños y manejables. |
+| Clúster | Un bloc de notas precargado que muestra el proceso de modelado integral del aprendizaje automático mediante algoritmos de agrupamiento. |
+
+Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disponibilidad de plantillas para cada núcleo se asigna en la siguiente tabla:
+
+<table>
+    <tr>
+        <td></td>
+        <th><strong>En blanco</strong></th>
+        <th><strong>Inicio</strong></th>
+        <th><strong>Ventas minoristas</strong></th>
+        <th><strong>Generador de fórmulas</strong></th>
+        <th><strong>Servicio de Consulta</strong></th>
+        <th><strong>Eventos XDM</strong></th>
+        <th><strong>Consultas XDM</strong></th>
+        <th><strong>Agregación</strong></th>
+        <th><strong>Clúster</strong></th>
+    </tr>
+    <tr>
+        <th><strong>Python</strong></th>
+        <td >sí</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th ><strong>R</strong></th>
+        <td >sí</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th  ><strong>PySpark</strong></th>
+        <td >sí</td>
+        <td >sí</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >sí</td>
+        <td >sí</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th ><strong>Spark</strong></th>
+        <td >sí</td>
+        <td >sí</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >sí</td>
+    </tr>
+</table>
+
+Para abrir un nuevo *iniciador*, haga clic en **Archivo > Nuevo iniciador**. También puede expandir el navegador **de** archivos desde la barra lateral izquierda y hacer clic en el símbolo más (**+**):
+
+![](../images/jupyterlab/user-guide/new_launcher.gif)
+
+## Acceso a los datos de la plataforma mediante equipos portátiles
+
+Cada núcleo soportado proporciona funcionalidades integradas que le permiten leer datos de la Plataforma desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los portátiles Python y R.
+
+### Leer desde un conjunto de datos en Python/R
+
+Los blocs de notas Python y R permiten paginar datos al acceder a conjuntos de datos. A continuación se muestra el código de muestra para leer datos con o sin paginación.
+
+[//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
+
+#### Leer desde un conjunto de datos en Python/R sin paginación
+
+Al ejecutar el siguiente código se leerá todo el conjunto de datos. Si la ejecución se realiza correctamente, los datos se guardarán como un nombre de datos de Pandas al que la variable hace referencia `df`.
+
+```python
+# Python
+
+client_context = PLATFORM_SDK_CLIENT_CONTEXT
+from platform_sdk.dataset_reader import DatasetReader
+dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+df = dataset_reader.read()
+df.head()
+```
+
+```R
+# R
+
+library(reticulate)
+use_python("/usr/local/bin/ipython")
+psdk <- import("platform_sdk")
+py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
+client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+DatasetReader <- psdk$dataset_reader$DatasetReader
+dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
+df <- dataset_reader$read() 
+df
+```
+
+* `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
+
+#### Leer desde un conjunto de datos en Python/R con paginación
+
+Al ejecutar el siguiente código se leerán los datos del conjunto de datos especificado. La paginación se logra limitando y compensando los datos a través de las funciones `limit()` y `offset()` respectivamente. La limitación de datos se refiere al número máximo de puntos de datos que se van a leer, mientras que la compensación se refiere al número de puntos de datos que se deben omitir antes de leer los datos. Si la operación de lectura se ejecuta correctamente, los datos se guardarán como un juego de datos de Pandas al que hace referencia la variable `df`.
+
+```python
+# Python
+
+client_context = PLATFORM_SDK_CLIENT_CONTEXT
+from platform_sdk.dataset_reader import DatasetReader
+
+dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+df = dataset_reader.limit(100).offset(10).read()
+```
+
+```R
+# R
+
+library(reticulate)
+use_python("/usr/local/bin/ipython")
+psdk <- import("platform_sdk")
+py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
+client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+
+DatasetReader <- psdk$dataset_reader$DatasetReader
+dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
+df <- dataset_reader$limit(100L)$offset(10L)$read() 
+```
+
+* `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
+
+### Leer desde un conjunto de datos en PySpark/Spark
+
+Con un bloc de notas PySpark o Spark activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
+
+```python
+# PySpark
+
+pd0 = spark.read.format("com.adobe.platform.dataset").\
+    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
+    load("{DATASET_ID}")
+pd0.describe()
+pd0.show(10, False)
+```
+
+```scala
+// Spark
+
+import com.adobe.platform.dataset.DataSetOptions
+val dataFrame = spark.read.
+    format("com.adobe.platform.dataset").
+    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
+    load("{DATASET_ID}")
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+### Datos de Consulta mediante el servicio de Consulta en Python
+
+JupyterLab en plataforma le permite utilizar SQL en un bloc de notas Python para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de la plataforma de</a>Adobe Experience Platform. El acceso a los datos a través del servicio de Consulta puede ser útil para tratar grandes conjuntos de datos debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante el servicio de Consulta tiene un límite de tiempo de procesamiento de diez minutos.
+
+Antes de utilizar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
+
+La consulta de datos mediante el servicio de Consulta requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
+
+
+Para utilizar el servicio de Consulta en JupyterLab, primero debe crear una conexión entre el portátil Python que trabaja y el servicio de Consulta. Esto se puede lograr ejecutando la primera celda generada.
+
+```python
+qs_connect()
+```
+
+En la segunda celda generada, la primera línea debe definirse antes de la consulta SQL. De forma predeterminada, la celda generada define una variable opcional (`df0`) que guarda los resultados de la consulta como un dataframe de Pandas. <br>El `-c QS_CONNECTION` argumento es obligatorio e indica al núcleo que ejecute la consulta SQL contra el servicio de Consulta. Consulte el [apéndice](#optional-sql-flags-for-query-service) para ver una lista de argumentos adicionales.
+
+```python
+%%read_sql df0 -c QS_CONNECTION
+SELECT *
+FROM name_of_the_dataset
+LIMIT 10
+/* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
+```
+
+Se puede hacer referencia a las variables Python directamente dentro de una consulta SQL utilizando sintaxis con formato de cadena y ajustando las variables entre llaves (`{}`), como se muestra en el siguiente ejemplo:
+
+```python
+table_name = 'name_of_the_dataset'
+table_columns = ','.join(['col_1','col_2','col_3'])
+```
+
+```python
+%%read_sql demo -c QS_CONNECTION
+SELECT {table_columns}
+FROM {table_name}
+```
+
+### Filtrar datos de ExperienceEvent en Python/R
+
+Para acceder y filtrar un conjunto de datos de ExperienceEvent en un bloc de notas Python o R, debe proporcionar el ID del conjunto de datos (`{DATASET_ID}`) junto con las reglas de filtro que definen un intervalo de tiempo específico mediante operadores lógicos. Cuando se define un intervalo de tiempo, se ignora cualquier paginación especificada y se considera todo el conjunto de datos.
+
+A continuación se describe una lista de los operadores de filtrado:
+
+* `eq()`: Equal to
+* `gt()`: Greater than
+* `ge()`: Greater than or equal to
+* `lt()`: Less than
+* `le()`: Less than or equal to
+* `And()`:: Operador AND lógico
+* `Or()`:: Operador lógico OR
+
+Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
+
+```python
+# Python
+
+client_context = PLATFORM_SDK_CLIENT_CONTEXT
+from platform_sdk.dataset_reader import DatasetReader
+
+dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+df = dataset_reader.\
+    where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
+    And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
+).read()
+```
+
+```R
+# R
+
+library(reticulate)
+use_python("/usr/local/bin/ipython")
+psdk <- import("platform_sdk")
+py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
+client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+
+DatasetReader <- psdk$dataset_reader$DatasetReader
+dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
+df <- dataset_reader$
+    where(dataset_reader["timestamp"]$gt("2019-01-01 00:00:00")$
+    And(dataset_reader["timestamp"]$lt("2019-12-31 23:59:59"))
+)$read()
+```
+
+### Filtrar datos de ExperienceEvent en PySpark/Spark
+
+El acceso y filtrado de un conjunto de datos de ExperienceEvent en un bloc de notas PySpark o Spark requiere que proporcione la identidad del conjunto de datos (`{DATASET_ID}`), la identidad IMS de su organización y las reglas de filtro que definen un intervalo de tiempo específico. Un intervalo de tiempo de filtrado se define mediante la función `spark.sql()`, donde el parámetro de función es una cadena de consulta SQL.
+
+Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
+
+```python
+# PySpark
+
+pd = spark.read.format("com.adobe.platform.dataset").\
+    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
+    load("{DATASET_ID}")
+
+pd.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+```
+
+```scala
+// Spark
+
+import com.adobe.platform.dataset.DataSetOptions
+val dataFrame = spark.read.
+    format("com.adobe.platform.dataset").
+    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
+    load("{DATASET_ID}")
+
+dataFrame.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+```
+
+
+## Bibliotecas admitidas {#supported-libraries}
+
+### Python / R
+
+| Biblioteca | Versión |
+| :------ | :------ |
+| portátil | 6.0.0 |
+| solicitudes | 2.22.0 |
+| tríptico | 4.0.0 |
+| folium | 0.10.0 |
+| ipywidgets | 7.5.1 |
+| bokeh | 1.3.1 |
+| gensim | 3.7.3 |
+| ipyparalelo | 0.5.2 |
+| jq | 1.6 |
+| keras | 2.2.4 |
+| nltk | 3.2.5 |
+| pandas | 0.22.0 |
+| pandasql | 0.7.3 |
+| almohada | 6.0.0 |
+| scikit-image | 0.15.0 |
+| scikit-learn | 0.21.3 |
+| scipy | 1.3.0 |
+| scrapy | 1.3.0 |
+| seaborn | 0.9.0 |
+| modelos de estado | 0.10.1 |
+| elástico | 5.1.0.17 |
+| gráfico | 0.11.5 |
+| py-xgboox | 0.90 |
+| opencv | 3.4.1 |
+| pyspark | 2.4.3 |
+| pytorch | 1.0.1 |
+| wxpython | 4.0.6 |
+| colorlover | 0.3.0 |
+| geopandas | 0.5.1 |
+| pyshp | 2.1.0 |
+| de forma | 1.6.4 |
+| rpy2 | 2.9.4 |
+| r-essentials | 3.6 |
+| r-arules | 1.6_3 |
+| r-fpc | 2.2_3 |
+| r-e1071 | 1.7_2 |
+| r-gam | 1.16.1 |
+| r-gbm | 2.1.5 |
+| r-temas | 4.2.0 |
+| r-ggvis | 0.4.4 |
+| r-igraph | 1.2.4.1 |
+| r-saltos | 3.0 |
+| volver a manipular | 1.0.1 |
+| r-rocr | 1.0_7 |
+| r-rmysql | 0.10.17 |
+| r-rodbc | 1.3_15 |
+| r-rsqlite | 2.1.2 |
+| r-rstan | 2.19.2 |
+| r-sqldf | 0.4_11 |
+| r-supervivencia | 2.44_1.1 |
+| r-zoo | 1.8_6 |
+| r-stringdist | 0.9.5.2 |
+| r-quadprog | 1.5_7 |
+| r-rjson | 0.2.20 |
+| r-previsión | 8.7 |
+| r-resolnp | 1.16 |
+| r-reticulate | 1.12 |
+| r-mlr | 2.14.0 |
+| r-viridis | 0.5.1 |
+| r-corplot | 0.84 |
+| r-fnn | 1.1.3 |
+| r-lubridate | 1.7.4 |
+| r-randomforest | 4.6_14 |
+| r-tidyverse | 1.2.1 |
+| r-tree | 1.0_39 |
+| pymongo | 3.8.0 |
+| pyarrow | 0.14.1 |
+| boto3 | 1.9.199 |
+| ipyvolumen | 0.5.2 |
+| fastparquet | 0.3.2 |
+| python-sndish | 0.5.4 |
+| ipywebrtc | 0.5.0 |
+| jupyter_client | 5.3.1 |
+| wordcloud | 1.5.0 |
+| grafviz | 2.40.1 |
+| python-graphviz | 0.11.1 |
+| azure-almacenamiento | 0.36.0 |
+| jupyterlab | 1.0.4 |
+| pandas_ml | 0.6.1 |
+| tensorflow-gpu | 1.14.0 |
+| nodejs | 12.3.0 |
+| mock | 3.0.5 |
+| ipympl | 0.3.3 |
+| fonts-anacond | 1.0 |
+| psycopg2 | 2.8.3 |
+| nariz | 1.3.7 |
+| autovizwidget | 0.12.9 |
+| altair | 3.1.0 |
+| vega_datasets | 0.7.0 |
+| papermill | 1.0.1 |
+| sql_Magic | 0.0.4 |
+| iso3166 | 1.0 |
+| nbimporter | 0.3.1 |
+
+### PySpark
+
+| Biblioteca | Versión |
+| :------ | :------ |
+| solicitudes | 2.18.4 |
+| gensim | 2.3.0 |
+| keras | 2.0.6 |
+| nltk | 3.2.4 |
+| pandas | 0.20.1 |
+| pandasql | 0.7.3 |
+| almohada | 5.3.0 |
+| scikit-image | 0.13.0 |
+| scikit-learn | 0.19.0 |
+| scipy | 0.19.1 |
+| scrapy | 1.3.3 |
+| modelos de estado | 0.8.0 |
+| elástico | 4.0.30.44 |
+| py-xgboox | 0.60 |
+| opencv | 3.1.0 |
+| pyarrow | 0.8.0 |
+| boto3 | 1.5.18 |
+| azure-almacenamiento-blob | 1.4.0 |
+| python | 3.6.7 |
+| mkl-rt | 11.1 |
+
+## Indicadores SQL opcionales para el servicio de Consulta
+
+Esta tabla describe los indicadores SQL opcionales que se pueden utilizar para el servicio de Consulta.
+
+| **Indicador** | **Descripción** |
+| --- | --- |
+| `-h`, `--help` | Muestre el mensaje de ayuda y salga. |
+| `-n`, `--notify` | Alternar la opción para notificar los resultados de la consulta. |
+| `-a`, `--async` | El uso de este indicador ejecuta la consulta asincrónicamente y puede liberar el núcleo mientras la consulta se está ejecutando. Tenga cuidado al asignar resultados de consulta a variables, ya que podría no estar definida si la consulta no se ha completado. |
+| `-d`, `--display` | El uso de este indicador evita que se muestren los resultados. |
+
