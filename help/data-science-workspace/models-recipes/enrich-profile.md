@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -23,7 +23,7 @@ Este documento proporciona un tutorial paso a paso para enriquecer el Perfil del
 
 Este tutorial requiere un conocimiento práctico de los distintos aspectos de Adobe Experience Platform relacionados con la ingesta de datos de Perfil y la creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-* [Perfil](../../rtcdp/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [Perfil](../../rtcdp/overview.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Servicio](../../identity-service/home.md)de identidad: Permite el Perfil del cliente en tiempo real al enlazar identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
