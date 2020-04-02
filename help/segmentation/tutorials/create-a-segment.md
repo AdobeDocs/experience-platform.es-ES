@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ El primer paso en la segmentación es definir un segmento, representado en una c
 
 Puede crear una nueva definición de segmento realizando una solicitud POST al extremo en la API de Perfil del cliente en tiempo real `/segment/definitions` . El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
 
-Las definiciones de segmentos se pueden evaluar de dos maneras: segmentación por lotes y segmentación de flujo. La segmentación por lotes evalúa los segmentos en función de una programación preestablecida o cuando la evaluación se activa manualmente, mientras que la segmentación por flujo continuo evalúa los segmentos tan pronto como los datos se ingieren en la plataforma. Este tutorial utilizará la segmentación por **lotes**. Para obtener más información sobre la segmentación de flujo continuo, lea la [información general sobre la segmentación](../ui/streaming-segmentation.md)de flujo continuo.
+Las definiciones de segmentos se pueden evaluar de dos maneras: segmentación por lotes y segmentación de flujo. La segmentación por lotes evalúa los segmentos en función de una programación preestablecida o cuando la evaluación se activa manualmente, mientras que la segmentación por flujo continuo evalúa los segmentos tan pronto como los datos se ingieren en la plataforma. Este tutorial utilizará la segmentación por **lotes**. Para obtener más información sobre la segmentación de flujo continuo, lea la [información general sobre la segmentación](../api/streaming-segmentation.md)de flujo continuo.
 
 **Formato API**
 
