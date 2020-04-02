@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de segmentación de la plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Para obtener información sobre la creación de definiciones de segmentos median
 
 La segmentación por flujo continuo es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes en el Perfil del cliente en tiempo real. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destinatarios siga siendo relevante.
 
-Para obtener más información sobre la segmentación de flujo continuo, lea la documentación [de segmentación de](./ui/streaming-segmentation.md)flujo continuo.
+Para obtener más información sobre la segmentación de flujo continuo, lea la documentación [de segmentación de](./api/streaming-segmentation.md)flujo continuo.
 
 ### Segmentación por lotes
 
@@ -204,8 +204,8 @@ Los datos de fecha le permiten asignar un contexto basado en la hora a las defin
 
 | Campo de ejemplo | Declaraciones pertinentes a la fecha | Escala de tiempo |
 | ------------- | ------------------------ | --------- |
-| people.firstPurchase | hoy, ayer, este mes, este año | Relevante para el día en que se creó el segmento. |
-| people.lastPurchase | en último lugar, durante, antes, después, en | Relevante en cualquier semana/mes. |
+| person.firstPurchase | hoy, ayer, este mes, este año | Relevante para el día en que se creó el segmento. |
+| person.lastPurchase | en último lugar, durante, antes, después, en | Relevante en cualquier semana/mes. |
 
 ### Eventos de experiencias
 
