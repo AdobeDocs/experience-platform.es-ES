@@ -1,17 +1,17 @@
 ---
 title: Destinos de mercadotecnia de correo electrónico
 seo-title: Destinos de mercadotecnia de correo electrónico
-description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
-seo-description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
+description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
+seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
 
 # Destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
 
-Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, como el envío de campañas de correo electrónico promocionales. La plataforma de datos del cliente en tiempo real de Adobe se integra con los ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
+Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. La plataforma de datos del cliente en tiempo real de Adobe se integra con los ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
 
 Para enviar segmentos a destinos de marketing por correo electrónico para sus campañas, el CDP en tiempo real de Adobe primero debe conectarse al destino.
 
@@ -25,7 +25,7 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
    ![Conectar al destino](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. En el asistente de Connect, seleccione la ubicación **[!UICONTROL Connection type]** del almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect]**.
+2. En el asistente de Connect, seleccione la ubicación del **[!UICONTROL Connection type]** almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect]**.
 
 Para las conexiones **** S3, debe proporcionar el ID de clave de acceso y la clave de acceso secreto.
 
@@ -33,7 +33,7 @@ Para **SFTP con conexiones de contraseña** , debe proporcionar Dominio, Puerto,
 
 Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
 
-## Paso 2: Seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
+## Paso 2: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
 
 En este paso, está seleccionando los campos que desea exportar a destinos de marketing por correo electrónico.
 
@@ -41,17 +41,17 @@ En este paso, está seleccionando los campos que desea exportar a destinos de ma
 
 ### Identidad {#identity}
 
-Le recomendamos que seleccione un identificador único del esquema [de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en un esquema unificado.
+Le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de lealtad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en esquema unificado.
 
 | Identificador único | Campo XDM en Esquema unificado |
 ---------|----------
-| Email Address | `personalEmail.address` |
+| Dirección de correo electrónico | `personalEmail.address` |
 | Phone | `mobilePhone.number` |
-| ID del programa de fidelidad | `Customer-defined XDM field` |
+| ID de programa de lealtad | `Customer-defined XDM field` |
 
 ### Otros atributos de destino
 
-En el selector de campo Esquema, elija los otros campos que desea exportar al destino de correo electrónico. Algunas opciones recomendadas son:
+En el selector de campos de Esquema, elija qué otros campos desea exportar al destino de correo electrónico. Algunas opciones recomendadas son:
 
 | Esquema | Campo XDM |
 ---------|----------
@@ -63,9 +63,9 @@ En el selector de campo Esquema, elija los otros campos que desea exportar al de
 | Dirección Código postal | `homeAddress.postalCode` |
 | Cumpleaños | `person.birthDayAndMonth` |
 
-## Paso 3: Importar datos desde la ubicación de almacenamiento en el destino
+## Paso 3: Importar datos desde la ubicación del almacenamiento al destino
 
-Consulte los artículos individuales de destino de marketing por correo electrónico para obtener información sobre cómo importar datos de su ubicación de almacenamiento en destinos:
+Consulte los artículos de destino de marketing por correo electrónico individuales para obtener información sobre cómo importar datos de la ubicación del almacenamiento a los destinos:
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
 * [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
