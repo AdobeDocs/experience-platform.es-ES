@@ -1,64 +1,64 @@
 ---
-title: Página principal y tableros de la plataforma de datos del cliente en tiempo real
-seo-title: Página principal y tableros de la plataforma de datos del cliente en tiempo real
-description: Tableros, página principal y experiencia de usuario de Adobe Experience Platform por primera vez
-seo-description: Tableros, página principal y experiencia de usuario de Adobe Experience Platform por primera vez
+title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
+seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
+description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
+seo-description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
 
 # Información general sobre las métricas de la plataforma de datos del cliente en tiempo real
 
-La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe, que incluye un tablero de métricas, aparece cuando inicia sesión en CDP en tiempo real.
+La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe, que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
 
-La página principal es sólo uno de los lugares donde aparecen las tarjetas de métricas. CDP en tiempo real proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre los datos, el perfil y las audiencias de segmentos del sistema.
+La página de inicio es sólo uno de los lugares en los que aparecen las tarjetas de métricas. CDP en tiempo real proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre las audiencias de datos, perfiles y segmentos del sistema.
 
-![image](assets/home2.jpg)
+![imagen](assets/home2.jpg)
 
-Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no aparece el tablero en la página principal. En este caso, la página principal proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos (es decir, a medida que se crean <!--sources-->conjuntos de datos, perfiles, segmentos y destinos y los datos fluyen al sistema), el tablero se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
+Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no aparece el panel en la página de inicio. En este caso, la página de inicio proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos (es decir, a medida que se crean <!--sources-->conjuntos de datos, perfiles, segmentos y destinos y los datos fluyen al sistema), el panel se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
 
-## Vista del tablero de la página principal
+## vista de panel de Página de inicio
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
-El tablero se divide en<!-- two areas.-->:
+El panel se divide en<!-- two areas.-->:
 
-* **La tabla de clasificación** se encuentra en la parte superior del tablero. La tabla de clasificación muestra el número de conjuntos de datos, perfiles, segmentos y destinos del sistema.
+* **La tabla de clasificación** está en la parte superior del panel. La tabla de clasificación muestra el número de conjuntos de datos, perfiles, segmentos y destinos del sistema.
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![imagen](assets/home-leaderboard2.jpg)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Elementos** recientes enumera los cinco conjuntos de datos, fuentes, segmentos y destinos más recientes agregados al sistema.
+* **Los elementos** recientes lista los cinco conjuntos de datos, fuentes, segmentos y destinos más recientes agregados al sistema.
 
-   ![image](assets/home-recent.jpg)
+   ![imagen](assets/home-recent.jpg)
 
-En otras partes de la plataforma de datos del cliente en tiempo real hay disponibles métricas adicionales, por ejemplo, para perfiles y segmentos.
+Hay métricas adicionales, por ejemplo para perfiles y segmentos, disponibles en otras partes de la Plataforma de datos del cliente en tiempo real.
 
 ### Conjuntos de datos
 
 El contador **[!UICONTROL Datasets]** muestra el número de conjuntos de datos en el sistema y la cantidad de datos en la plataforma. Este contador se actualiza cuando se crea un conjunto de datos.
 
-Para obtener más información sobre los conjuntos de datos, consulte [Ingesta de datos en Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Para obtener más información acerca de los conjuntos de datos, consulte la información general [de los](../catalog/datasets/overview.md)conjuntos de datos.
 
 ### Perfiles
 
-El **[!UICONTROL Profiles]** recuento muestra el número total de personas con perfiles en el perfil del cliente en tiempo real. No incluye fragmentos de perfil. Es la audiencia total a la que puede dirigirse.
+El **[!UICONTROL Profiles]** recuento muestra el número total de personas con perfiles en el Perfil del cliente en tiempo real. No incluye fragmentos de perfil. Ésta es su audiencia total a la que puede dirigirse.
 
 Este recuento utiliza la directiva [de](profile/merge-policies.md) combinación predeterminada como se establece en la configuración de directiva de combinación en Perfil unificado.
 
 El número de perfiles se actualiza una vez cada 24 horas.
 
-Para obtener más información acerca de los perfiles, consulte [Una vista unificada de su cliente en CDP](profile/profile-overview.md)en tiempo real.
+Para obtener más información sobre perfiles, consulte [Una vista unificada de su cliente en CDP](profile/profile-overview.md)en tiempo real.
 
 ### Segmentos
 
 **[!UICONTROL Segments]** muestra el número total de segmentos creados para la organización. Este número se actualiza cuando se crean nuevos segmentos.
 
-Para obtener más información sobre los segmentos, consulte Visión general [del servicio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)de segmentación.
+Para obtener más información sobre los segmentos, consulte Visión general [del servicio](segmentation/segmentation-overview.md)de segmentación.
 
 ### Destinos
 
@@ -104,15 +104,15 @@ The number of failed profile records is updated hourly. -->
 
 La **[!UICONTROL Recent datasets]** tarjeta muestra los cinco conjuntos de datos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo conjunto de datos.
 
-Haga clic en un conjunto de datos para ver los detalles de ese elemento o **[!UICONTROL View all]** para ver la lista de conjuntos de datos. Desde allí, puede hacer clic en una fuente específica para obtener detalles.
+Haga clic en un conjunto de datos para vista de los detalles de ese elemento o **[!UICONTROL View all]** para ver la lista de los conjuntos de datos. Desde allí, puede hacer clic en una fuente específica para obtener detalles.
 
-Para obtener más información sobre los conjuntos de datos, consulte [Ingesta de datos en Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Para obtener más información acerca de los conjuntos de datos, consulte la información general [de los](../catalog/datasets/overview.md)conjuntos de datos.
 
 ### Fuentes recientes
 
 La tarjeta **[!UICONTROL Recent sources]** de métrica muestra las cinco fuentes más recientes creadas en la organización. Esta lista se actualiza cuando se crea un nuevo origen.
 
-Haga clic en un origen para ver los detalles de ese elemento o **[!UICONTROL View all]** para ver la lista de fuentes. Desde allí, puede hacer clic en una fuente específica para obtener detalles.
+Haga clic en un origen para vista de los detalles de ese elemento o **[!UICONTROL View all]** para ver la lista de fuentes. Desde allí, puede hacer clic en una fuente específica para obtener detalles.
 
 Para obtener más información sobre las fuentes, consulte Información general sobre [las fuentes](sources/sources-overview.md).
 
@@ -120,14 +120,14 @@ Para obtener más información sobre las fuentes, consulte Información general 
 
 La tarjeta **[!UICONTROL Recent segments]** de métrica muestra los cinco segmentos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo segmento.
 
-Haga clic en un segmento para ver los detalles de ese elemento o **[!UICONTROL View all]** para ver información sobre más segmentos.
+Haga clic en un segmento para vista de los detalles de ese elemento o **[!UICONTROL View all]** para ver información sobre más segmentos.
 
-Para obtener más información sobre los segmentos, consulte Visión general [del servicio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)de segmentación.
+Para obtener más información sobre los segmentos, consulte Visión general [del servicio](segmentation/segmentation-overview.md)de segmentación.
 
 ### Destinos recientes
 
 La tarjeta **[!UICONTROL Recent destinations]** de métrica muestra los cinco destinos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo destino.
 
-Haga clic en un destino para ver los detalles de ese elemento o **[!UICONTROL View all]** para ver información sobre más destinos.
+Haga clic en un destino para vista de los detalles de ese elemento o **[!UICONTROL View all]** para ver información sobre más destinos.
 
 Para obtener más información sobre los destinos, consulte Información general sobre [los destinos](destinations/destinations-overview.md).
