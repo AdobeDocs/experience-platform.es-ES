@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 translation-type: tm+mt
-source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
@@ -12,14 +12,14 @@ source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
 
 * [Descripción general de la plataforma de experiencias](home.md)
 * [Primeros pasos](get-started.md)
-* Documentación de la plataforma de experiencia {#documentation}
+* Experience Platform documentation {#documentation}
    * [Información general sobre la documentación](documentation/overview.md)
    * [Control de acceso](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
    * [Catálogo y conjuntos de datos](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [Acceso a datos](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [Gobierno de datos](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-   * [Ingesta de datos (por lotes y flujo)](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+   * [Ingesta de datos](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Área de trabajo de ciencia de datos](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
    * [Servicio de decisiones](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
