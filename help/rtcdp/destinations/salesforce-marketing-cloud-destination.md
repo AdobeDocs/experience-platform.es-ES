@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud es una suite de marketing digital anteriormente conocida como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 seo-description: Salesforce Marketing Cloud es una suite de marketing digital anteriormente conocida como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,7 +41,7 @@ Para **[!UICONTROL SFTP with SSH Key]** las conexiones, debe proporcionar Domini
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Salesforce Marketing Cloud, se recomienda seleccionar un identificador único en el esquema [de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Salesforce Marketing Cloud, se recomienda seleccionar un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
 
 ## Configurar la importación de datos en Salesforce Marketing Cloud {#import-data-into-salesforce}
 
