@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -30,7 +30,7 @@ Con Data Science Workspace, Adobe Experience Platform le permite ofrecer a toda 
 - Un esquema de datos unificado creado en el modelo de datos de experiencia (XDM)
 - La potencia informática esencial para el aprendizaje automático/IA y la administración de grandes conjuntos de datos
 - Fórmulas de aprendizaje automático prediseñadas para acelerar el salto a experiencias impulsadas por AI
-- Creación, reutilización y modificación simplificadas de recetas para científicos de datos de diferentes niveles de aptitud
+- Creación, reutilización y modificación simplificadas de recetas para científicos de datos con diferentes niveles de aptitud
 - Publicación y uso compartido de servicios inteligentes con sólo unos pocos clics (sin programador) y supervisión y readiestramiento para la optimización continua de las experiencias personalizadas de los clientes
 
 Los científicos de datos de todos los niveles de habilidades obtendrán perspectivas digitales más rápidas y efectivas antes.
@@ -209,9 +209,9 @@ Con la combinación de experiencia en la marca y el aprendizaje automático y la
 
 Para obtener información adicional, como un flujo de trabajo diario completo, lea la documentación de introducción [a](./walkthrough.md) Data Science Workspace.
 
-## Recursos adicionales   
+## Recursos adicionales    
 
 El siguiente vídeo está diseñado para admitir su comprensión del espacio de trabajo de ciencia de datos.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
