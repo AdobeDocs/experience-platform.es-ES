@@ -4,7 +4,7 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ La plataforma de datos del cliente en tiempo real (CDP en tiempo real) reúne lo
 
 El Gobierno de datos de la plataforma de experiencia de Adobe le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de CDP en tiempo real, permitiéndole definir políticas de uso, categorizar los datos en base a esas políticas y verificar las infracciones de políticas al realizar ciertas acciones de mercadotecnia.
 
-CDP en tiempo real se basa en la plataforma Adobe Experience y, por lo tanto, la mayoría de las funciones de administración de datos se incluyen en la documentación de la plataforma de experiencia. Este documento está diseñado para complementar la información general [sobre la gobernanza de](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) datos para la plataforma de experiencia y describe las características de gobernanza disponibles en CDP en tiempo real. Se tratan los siguientes temas:
+CDP en tiempo real se basa en la plataforma Adobe Experience y, por lo tanto, la mayoría de las funciones de administración de datos se incluyen en la documentación de la plataforma de experiencia. Este documento está diseñado para complementar la información general [sobre la gobernanza de](../../data-governance/home.md) datos para la plataforma de experiencia y describe las características de gobernanza disponibles en CDP en tiempo real. Se tratan los siguientes temas:
 
 * [Aplicar etiquetas de uso a los datos](#labels)
 * [Administrar directivas de uso de datos](#policies)
@@ -25,7 +25,7 @@ CDP en tiempo real se basa en la plataforma Adobe Experience y, por lo tanto, la
 
 La Administración de datos permite aplicar etiquetas de uso a los datos, ya sea a nivel de conjunto de datos o campo de conjunto de datos. Las etiquetas de uso de datos permiten clasificar los datos según las políticas de uso que se aplican a esos datos.
 
-Para obtener información detallada sobre cómo trabajar con etiquetas de uso de datos, consulte la guía [de usuario de etiquetas de uso de](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) datos para Adobe Experience Platform.
+Para obtener información detallada sobre cómo trabajar con etiquetas de uso de datos, consulte la guía [de usuario de etiquetas de uso de](../../data-governance/labels/overview.md) datos para Adobe Experience Platform.
 
 ## Establecer restricciones en destinos
 
@@ -36,9 +36,9 @@ Los casos de uso de marketing se pueden definir durante la fase de _configuraci�
 
 ## Administrar directivas de uso de datos {#policies}
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, las políticas de uso de datos deben definirse y habilitarse. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la descripción general [de la gobernanza de](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) datos de la plataforma de experiencia para obtener más información.
+Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, las políticas de uso de datos deben definirse y habilitarse. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la descripción general [de la gobernanza de](../../data-governance/home.md) datos de la plataforma de experiencia para obtener más información.
 
-Adobe Experience Platform proporciona varias políticas **** principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver realizando una solicitud a la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), como se muestra en la sección &quot;Lista de todas las políticas&quot; de la guía [para desarrolladores de](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)Policy Service. También puede crear sus propias políticas **** personalizadas para modelar las restricciones de uso personalizadas, como se muestra en la sección &quot;Crear una política&quot; de la guía para desarrolladores.
+Adobe Experience Platform proporciona varias políticas **** principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver realizando una solicitud a la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), como se muestra en la sección &quot;Lista de todas las políticas&quot; de la guía [para desarrolladores de](../../data-governance/policies/overview.md)Policy Service. También puede crear sus propias políticas **** personalizadas para modelar las restricciones de uso personalizadas, como se muestra en la sección &quot;Crear una política&quot; de la guía para desarrolladores.
 
 ## (Beta) Aplicar el cumplimiento del uso de datos {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Haga clic en Línea **de datos** para rastrear los destinos, segmentos, polític
 
 Una vez que se ha activado una infracción, el botón **Guardar** se desactiva para la activación hasta que se actualizan los componentes correspondientes para cumplir con las políticas de uso de datos.
 
-### Aplicación de directivas para segmentos activados
+### Aplicación de directivas para segmentos activados {#policy-enforcement-for-activated-segments}
 
 La aplicación de políticas sigue aplicándose a los segmentos después de activarlos, lo que restringe cualquier cambio en un segmento o en su destino que pueda provocar una infracción de la política. Debido a los numerosos componentes involucrados en la activación de segmentos a destinos, cualquiera de las siguientes acciones puede potencialmente desencadenar una infracción:
 
@@ -83,4 +83,4 @@ Si alguna de las acciones anteriores desencadena una infracción, se evita que s
 
 ## Pasos siguientes
 
-Ahora que ha sido presentado a las funciones clave de Gobierno de datos en CDP en tiempo real y cómo las habilita la plataforma de experiencia, continúe con la [documentación de Administración de datos en la plataforma](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html)de experiencia de Adobe. La documentación proporciona información general sobre los conceptos esenciales de la administración de datos, así como flujos de trabajo paso a paso para administrar las etiquetas y políticas de uso de datos.
+Ahora que ha sido presentado a las funciones clave de Gobierno de datos en CDP en tiempo real y cómo las habilita la plataforma de experiencia, continúe con la [documentación de Administración de datos en la plataforma](../../data-governance/home.md)de experiencia de Adobe. La documentación proporciona información general sobre los conceptos esenciales de la administración de datos, así como flujos de trabajo paso a paso para administrar las etiquetas y políticas de uso de datos.
