@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Tutoriales de inserción de datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: eef56cfc20eb8e4ac131bee20c5c3afbf82971d2
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
 
 # Ingestar datos en la plataforma de experiencia
 
-Adobe Experience Platform aúna los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingestión de datos de la plataforma de experiencia de Adobe representa los múltiples métodos mediante los cuales la plataforma ingesta datos de estas fuentes, así como la forma en que se mantienen los datos dentro del lago de datos para su uso por los servicios de plataforma descendente. La ingestión de datos incluye la ingestión por lotes, la ingestión por flujo continuo y la ingestión mediante conectores de origen. Para obtener más información, lea la descripción general [de la ingestión](../ingestion/home.md) de datos y la información general [de](../source-connectors/home.md)las fuentes.
+Adobe Experience Platform aúna los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingestión de datos de la plataforma de experiencia de Adobe representa los múltiples métodos mediante los cuales la plataforma ingesta datos de estas fuentes, así como la forma en que se mantienen los datos dentro del lago de datos para su uso por los servicios de plataforma descendente. La ingestión de datos incluye la ingestión por lotes, la ingestión por flujo continuo y la ingestión mediante conectores de origen. Para obtener más información, lea la descripción general [de la ingestión de](../ingestion/home.md) datos o vaya directamente a la documentación [de](../source-connectors/home.md)las fuentes.
+
+## Creación de un conector de origen en la interfaz de usuario y la API
+
+Los conectores de origen le permiten ingestar datos de varias fuentes, donde se pueden etiquetar, estructurar y mejorar mediante los servicios de plataforma. Para empezar a crear un conector mediante la interfaz de usuario, visite la sección sobre [creación de un conector de origen en la descripción general](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)de la interfaz de usuario. Para crear conectores de origen mediante la API, visite la página [crear un conector de origen mediante la información general](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)de la API de servicio de flujo.
 
 ## Ingestar datos de lote
 
@@ -37,7 +41,5 @@ Con un conjunto de datos y conexiones de flujo continuo implementadas, puede tra
 
 Cuando se transmiten datos a Adobe Experience Platform, puede resultar caro realizar numerosas llamadas HTTP. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes en una sola solicitud es una manera excelente de optimizar los datos que se envían a la plataforma de experiencia. Para obtener información sobre cómo enviar varios mensajes a la plataforma de experiencias en una sola solicitud HTTP mediante la transmisión de flujo continuo, siga el tutorial [de](../ingestion/tutorials/streaming-multiple-messages.md)envío de varios mensajes.
 
-## Creación de un conector de origen en la interfaz de usuario y la API
 
-Los conectores de origen le permiten ingestar datos de varias fuentes, donde se pueden etiquetar, estructurar y mejorar mediante los servicios de plataforma. Para empezar a crear un conector mediante la interfaz de usuario, visite la sección sobre [creación de un conector de origen en la descripción general](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)de la interfaz de usuario. Para crear conectores de origen mediante la API, visite la página [crear un conector de origen mediante la información general](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)de la API de servicio de flujo.
 
