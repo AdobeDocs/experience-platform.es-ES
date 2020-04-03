@@ -30,7 +30,7 @@ Con Data Science Workspace, Adobe Experience Platform le permite ofrecer a toda 
 - Un esquema de datos unificado creado en el modelo de datos de experiencia (XDM)
 - La potencia informática esencial para el aprendizaje automático/IA y la administración de grandes conjuntos de datos
 - Fórmulas de aprendizaje automático prediseñadas para acelerar el salto a experiencias impulsadas por AI
-- Creación, reutilización y modificación simplificadas de recetas para científicos de datos con diferentes niveles de aptitud
+- Creación, reutilización y modificación simplificadas de recetas para científicos de datos de diferentes niveles de aptitud
 - Publicación y uso compartido de servicios inteligentes con sólo unos pocos clics (sin programador) y supervisión y readiestramiento para la optimización continua de las experiencias personalizadas de los clientes
 
 Los científicos de datos de todos los niveles de habilidades obtendrán perspectivas digitales más rápidas y efectivas antes.
