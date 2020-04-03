@@ -211,7 +211,7 @@ Los datos de fecha le permiten asignar un contexto basado en la hora a las defin
 
 Como esquema de Adobe Experience Platform, XDM ExperienceEvents registra las interacciones explícitas e implícitas de los clientes con aplicaciones integradas en la plataforma, incluida una instantánea del sistema en el momento en que se produjo la interacción. ExperienceEvents son registros de hechos. Por lo tanto, son una fuente de datos disponible durante la definición del segmento.
 
-Como se muestra en la tabla siguiente, los datos de evento se representan utilizando palabras clave que ayudan a reducir el comportamiento de evento y a especificar atributos de evento.
+Como se ve en la tabla siguiente, los datos de evento se representan utilizando palabras clave que ayudan a reducir el comportamiento de evento y a especificar atributos de evento.
 
 | Palabra clave | Utilice  |
 | ------- | --- |
