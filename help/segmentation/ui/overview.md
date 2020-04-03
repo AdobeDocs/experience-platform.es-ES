@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ La activación de las definiciones de segmentos para flujo continuo se puede rea
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 Una vez habilitada la segmentación de flujo, se debe establecer una línea de base (es la ejecución inicial después de la cual el segmento siempre estará actualizado). El sistema gestiona automáticamente el baseling, pero esto solo es posible si se ha habilitado la segmentación programada. Para obtener más información sobre cómo habilitar la segmentación programada, consulte [la sección anterior de esta guía](#enable-scheduled-segmentation)del usuario.
+
+## Violaciones de políticas DULE
+
+>[!NOTE] Las infracciones de directiva DULE solo se aplican si está creando un segmento que se ha asignado a un destino.
+
+Una vez que haya terminado de crear el segmento, el Gobierno de datos analizará el segmento para asegurarse de que no haya infracciones de política dentro del segmento. Para obtener más información sobre las infracciones DULE y de políticas, consulte la descripción general [de la etiqueta de uso de](../../data-governance/labels/overview.md)datos.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## Pasos siguientes
 
