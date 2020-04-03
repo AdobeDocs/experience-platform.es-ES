@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -491,10 +491,10 @@ Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje autom�
 
 Para continuar aprendiendo a trabajar con recursos dentro de Área de trabajo de ciencia de datos, visite la lista desplegable Fórmulas y modelos de Área de trabajo de ciencia de datos.
 
-## Recursos adicionales   
+## Recursos adicionales    
 
 El siguiente vídeo está diseñado para ayudarle a crear e implementar modelos.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 
