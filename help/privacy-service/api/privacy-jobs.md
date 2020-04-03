@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo Adobe Analytics debe gestionar los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`:: Todos los datos a los que hace referencia la colección dada de ID de usuario se vuelven anónimos. Si `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`:: Todos los datos se eliminan por completo.</li></ul> |
-| `regulation` **(Requerido)** | La regulación de la solicitud (debe ser &quot;gdpr&quot; o &quot;ccpa&quot;). |
+| `regulation` **(Requerido)** | Reglamento de la solicitud. Debe ser uno de los tres valores siguientes: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Respuesta**
 
@@ -399,7 +399,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{REGULATION}` | El tipo de regulación para el que se debe realizar la consulta. Los valores aceptados son `gdpr` y `ccpa`. |
+| `{REGULATION}` | El tipo de regulación para el que se debe realizar la consulta. Los valores aceptados son `gdpr`, `ccpa`y `pdpa_tha`. |
 | `{PAGE}` | La página de datos que se va a mostrar, mediante la numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | Número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devuelve un error de 400 códigos. |
 
