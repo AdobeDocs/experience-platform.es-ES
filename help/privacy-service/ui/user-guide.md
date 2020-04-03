@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Para descargar los datos completos del trabajo como archivo CSV, haga clic en **
 
 ## Crear una nueva solicitud de trabajo de privacidad
 
+>[!NOTE] Para crear una solicitud de trabajo de privacidad, debe proporcionar información de identidad para los clientes específicos cuyos datos se van a obtener o eliminar. Consulte el documento sobre los datos de [identidad para las solicitudes](../identity-data.md) de privacidad antes de continuar con esta sección.
+
 La interfaz de usuario de Privacy Service proporciona dos métodos para crear nuevas solicitudes de trabajo:
 
-* Uso del Generador de solicitudes
-* Cargar un archivo JSON
+* [Uso del Generador de solicitudes](#request-builder)
+* [Cargar un archivo JSON](#json)
 
 Los pasos para utilizar cada uno de estos métodos se proporcionan en las siguientes secciones.
 
-### Uso del Generador de solicitudes
+### Uso del Generador de solicitudes {#request-builder}
 
-Con el Creador de solicitudes, puede crear manualmente una nueva solicitud de trabajo de privacidad en la interfaz de usuario. El Generador de solicitudes se utiliza mejor para conjuntos de solicitudes más simples y pequeños, ya que el Generador de solicitudes limita las solicitudes para que solo tengan un tipo de ID por usuario. Para solicitudes más complicadas, es mejor [cargar un archivo](#upload-a-json-file) JSON.
+Con el Creador de solicitudes, puede crear manualmente una nueva solicitud de trabajo de privacidad en la interfaz de usuario. El Generador de solicitudes se utiliza mejor para conjuntos de solicitudes más simples y pequeños, ya que el Generador de solicitudes limita las solicitudes para que solo tengan un tipo de ID por usuario. Para solicitudes más complicadas, es mejor [cargar un archivo](#json) JSON.
 
 Para realizar inicios con el creador de solicitudes, haga clic en **Crear solicitud** debajo del widget de informe de estado en la parte derecha de la pantalla.
 
@@ -91,19 +93,31 @@ Para realizar inicios con el creador de solicitudes, haga clic en **Crear solici
 
 Se abre el cuadro de diálogo *Crear solicitud* , que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Seleccione el tipo **de** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más **productos** disponibles de la lista. En ID **de cliente**, seleccione un tipo de ID en el menú desplegable (correo electrónico, ECID o AAID). Escriba los valores de ID en el cuadro de texto a la derecha y presione **\&lt;enter>** para cada ID a fin de agregarlos a la lista.
+Seleccione el tipo **de** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más **productos** disponibles de la lista.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Los ID incluidos en esta lista recibirán una copia de todas las notificaciones por correo electrónico de Privacy Service, que se envían cuando se completa un trabajo, termina con errores o se agota el tiempo de espera. Cuando termine, haga clic en **Crear**.
+En Tipo *de*&#x200B;Área de nombres, seleccione el tipo de Área de nombres correspondiente para los ID de cliente que se envían a Privacy Service.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Cuando utilice el tipo de Área de nombres _estándar_ , seleccione una Área de nombres en el menú desplegable (correo electrónico, ECID o AAID), luego escriba los valores de ID en el cuadro de texto a la derecha y presione **\&lt;enter>** para cada ID para agregarlo a la lista.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Al utilizar el tipo de Área de nombres _personalizada_ , debe escribir manualmente la Área de nombres antes de proporcionar los valores de ID siguientes.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Cuando termine, haga clic en **Crear**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes de trabajo junto con su estado de procesamiento actual.
 
-### Cargar un archivo JSON
+### Cargar un archivo JSON {#json}
 
 Al crear solicitudes más complicadas, como las que utilizan varios tipos de ID para cada asunto de datos que se está procesando, puede crear una solicitud cargando un archivo JSON.
 
@@ -113,12 +127,12 @@ Haga clic en la flecha situada junto a **Crear solicitud**, debajo del widget de
 
 Aparece el cuadro de diálogo *Cargar JSON* , que proporciona una ventana para arrastrar y soltar el archivo JSON.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Si no tiene un archivo JSON para cargar, haga clic en **Descargar Adobe-GDPR-Request.json** para descargar una plantilla que puede rellenar según los valores recopilados de los temas de datos.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Busque el archivo JSON en el equipo y arrástrelo a la ventana de diálogo. Si la carga se realiza correctamente, el nombre del archivo aparecerá en el cuadro de diálogo. Puede seguir agregando más archivos JSON según sea necesario arrastrándolos y soltándolos en el cuadro de diálogo.
