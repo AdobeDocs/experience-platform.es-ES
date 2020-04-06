@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -86,6 +86,15 @@ Una vez que haya realizado los cambios necesarios, haga clic en **Guardar** para
 
 ![](../images/merge-policies/edited.png)
 
+## Infracción de la política de gestión de datos
+
+Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las directivas de uso de datos definidas por la organización. Las políticas de uso de datos forman parte de la Administración de datos de la plataforma de experiencia de Adobe y son reglas que describen los tipos de acciones de marketing que se le permite o se restringe el rendimiento de datos específicos de la plataforma. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y la organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibiría una notificación de &quot;infracción de directiva de control de datos detectada&quot; al intentar guardar la directiva de combinación.
+
+Esta notificación incluye una lista de las directivas de uso de datos que se han infringido y le permite vista de los detalles de la infracción seleccionando una directiva de la lista. Al seleccionar una directiva infringida, la ficha *Lineación* de datos proporciona el *motivo de la infracción* y las activaciones ** afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha infringido la directiva de uso de datos.
+
+Para obtener más información sobre el rendimiento de la gestión de datos en Adobe Experience Platform, lea la información general [sobre la gestión de](../../data-governance/home.md)datos.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Pasos siguientes
 
