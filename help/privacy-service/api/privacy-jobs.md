@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -100,7 +100,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `companyContexts` **(Requerido)** | Matriz que contiene información de autenticación para su organización. Cada identificador de la lista incluye los atributos siguientes: <ul><li>`namespace`:: Área de nombres de un identificador.</li><li>`value`:: El valor del identificador.</li></ul>Es **necesario** que uno de los identificadores utilice `imsOrgId` como su `namespace`, con `value` el identificador único de su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de compañía específicos del producto (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los valores potenciales incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
-| `users` **(Requerido)** | Matriz que contiene una colección de al menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Una matriz que lista las acciones que se desean realizar en los datos. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para un usuario en particular. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> |
+| `users` **(Requerido)** | Matriz que contiene una colección de por lo menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Una matriz que lista las acciones que se desean realizar en los datos. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para un usuario en particular. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> |
 | `include` **(Requerido)** | Una matriz de productos de Adobe que se incluirán en el procesamiento. Si falta este valor o si está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre los valores [del producto](appendix.md) aceptados en el apéndice para obtener más información. |
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo Adobe Analytics debe gestionar los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`:: Todos los datos a los que hace referencia la colección dada de ID de usuario se vuelven anónimos. Si `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`:: Todos los datos se eliminan por completo.</li></ul> |
-| `regulation` **(Requerido)** | La regulación de la solicitud (debe ser &quot;gdpr&quot; o &quot;ccpa&quot;). |
+| `regulation` **(Requerido)** | Reglamento de la solicitud. Debe ser uno de los tres valores siguientes: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Respuesta**
 
