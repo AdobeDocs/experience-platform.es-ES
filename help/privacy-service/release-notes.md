@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notas de la versión de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
+source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 ---
 
@@ -13,12 +13,22 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 
 Este documento contiene información sobre las nuevas funciones de Adobe Experience Platform Privacy Service, así como mejoras y correcciones de errores importantes.
 
+## 8 de abril de 2020
+
+### Nuevas funciones
+
+| Función | Descripción |
+| --- | --- |
+| Compatibilidad con PDPA | Las solicitudes de privacidad ahora se pueden crear y rastrear bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la `regulation` matriz acepta el valor &quot;pdpa_tha&quot;. |
+| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Área de nombres en el Creador de solicitudes en la interfaz de usuario de Privacy Service. Consulte la guía [del](ui/user-guide.md) usuario para obtener más información. |
+| Desuso de punto final antiguo | El punto final (`data/privacy/gdpr`) de la API anterior ha quedado obsoleto. |
+
 ## 14 de enero de 2020
 
 ### Nuevas funciones
 
 | Función | Descripción |
---- | ---
+| --- | --- |
 | Cambio de marca de Privacy Service | El llamado anteriormente &quot;Servicio de RGPD&quot; ha sido rebautizado como Servicio de Privacidad ya que el servicio ha crecido para apoyar otras regulaciones además del RGPD. |
 | Nuevos extremos de API | La ruta de acceso base para la API de Privacy Service se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nueva propiedad requerida `regulation` | Al crear nuevos trabajos en la API de Privacy Service, se debe proporcionar una `regulation` propiedad en la carga útil de la solicitud para indicar en qué regla se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. Consulte el documento sobre trabajos [de](api/privacy-jobs.md) privacidad en la guía para desarrolladores de Privacy Service para obtener más información. |
@@ -35,7 +45,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 ### Nuevas funciones
 
 | Función | Descripción |
---- | ---
+| --- | --- |
 | Panel de las métricas de solicitud | El nuevo panel de métricas en la interfaz de usuario de Privacy Service proporciona visibilidad de las solicitudes GDPR enviadas, erróneas y completadas. |
 | Generador de solicitudes | Para prestar servicios a organizaciones con usuarios técnicos y no técnicos que envían solicitudes de RGPD, se ha agregado la funcionalidad &quot;Crear solicitud&quot; a la interfaz de usuario. La capacidad de envío de archivos JSON aún está disponible en la interfaz de usuario de Privacy Service para las organizaciones que prefieran seguir usándola. |
 | Notificaciones de Evento de trabajos de RGPD | Las notificaciones de Evento sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se enviaban anteriormente mediante avisos de correo electrónico individuales, las notificaciones de evento de GDPR son mensajes que aprovechan los eventos de Adobe I/O, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. Los usuarios de la interfaz de usuario de Privacy Service pueden suscribirse a los eventos GDPR de Adobe I/O para recibir actualizaciones cuando se haya completado un producto o el trabajo GDPR. |
