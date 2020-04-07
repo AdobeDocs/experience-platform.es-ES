@@ -1,15 +1,15 @@
 ---
-title: Título del documento
-seo-title: Título del documento en Adobe Experience Platform
-description: descripción
+title: Título del Documento
+seo-title: Título de Documento en Adobe Experience Platform
+description: description
 seo-description: descripción de seo
 translation-type: tm+mt
-source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
 
-# Título del documento
+# Título del Documento
 
 Palabras y cosas
 
@@ -17,12 +17,12 @@ Palabras y cosas
 
 Extensiones
 
-> [!NOTE]
+>[!NOTE]
 > 
 > Esta es la línea 1.
 >
 > Esta es la línea 2.
 
-> [!VIDEO](https://youtu.be/ypS_CKym5NQ)
+>[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Elija Edición > [!UICONTROL Processing Rules] para hacer algo. Utilice [!DNL Microsoft Visual Code].
+Elija Edición > [!UICONTROL Processing Rules] para hacer algo. En su lugar, utilice [!DNL Microsoft Visual Code].
