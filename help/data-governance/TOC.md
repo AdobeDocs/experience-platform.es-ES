@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Governance Help
+user-guide-title: Ayuda de la gobernanza de datos de la plataforma Adobe Experience
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 
 ---
 
@@ -17,6 +17,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
    * [Etiquetas de uso de datos admitidas](labels/reference.md)
 * Directivas de uso de datos {#policies}
    * [Información general sobre las directivas de uso de datos](policies/overview.md)
+   * [Guía del usuario de directivas de uso de datos](policies/user-guide.md)
    * [Crear una directiva de uso de datos mediante la API de servicio de directivas](policies/create.md)
 * Aplicación de políticas {#enforcement}
    * [Información general sobre la aplicación de políticas](enforcement/overview.md)
