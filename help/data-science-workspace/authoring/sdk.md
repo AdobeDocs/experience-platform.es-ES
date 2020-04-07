@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía para desarrolladores de SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase Spark Da
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
             </td>
             <td>
