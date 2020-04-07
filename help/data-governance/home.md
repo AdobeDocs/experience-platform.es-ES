@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gobierno de datos de la plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimient
 
 Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que determinados tipos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta del Servicio de directivas que le indicará que se ha violado una política de uso de datos.
 
-### Cómo crear y trabajar con políticas de uso de datos
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario de la plataforma de experiencia.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE.
+Para obtener más información sobre cómo realizar las operaciones clave proporcionadas por la API de servicio de directivas DULE, consulte la guía [para desarrolladores de](api/getting-started.md)Policy Service. Para obtener instrucciones paso a paso sobre cómo trabajar con políticas DULE, consulte el tutorial sobre la [creación y evaluación de políticas DULE mediante la API](policies/create.md).
 
-Como administrador de datos, puede utilizar la API de servicio de directivas para administrar y evaluar las políticas relacionadas con las acciones de marketing que se realizan en datos que contienen etiquetas DULE. Mediante la API, puede crear y actualizar políticas, determinar el estado de una política y trabajar con acciones de marketing para evaluar si una acción específica infringe una política de uso de datos.
-
-Dentro de la API de servicio de directivas, todas las directivas y acciones de marketing se denominan `core` o `custom` recursos. `core` los recursos son definidos y mantenidos por Adobe, mientras que `custom` los recursos son creados y mantenidos por clientes individuales. Por lo tanto, los `custom` recursos son únicos y visibles únicamente para la organización que los creó.
-
-Para obtener más información sobre cómo realizar las operaciones clave proporcionadas por la API de servicio de directivas DULE, consulte la guía [para desarrolladores de](api/getting-started.md)Policy Service. Para obtener instrucciones paso a paso sobre cómo trabajar con políticas DULE, consulte el tutorial sobre la [creación y evaluación de políticas](policies/create.md)DULE.
+Para obtener información sobre cómo administrar políticas en la interfaz de usuario de la plataforma de experiencia, consulte la guía [del usuario de](policies/user-guide.md)políticas.
 
 ## Versiones futuras
 
@@ -110,7 +106,7 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 |---|---|
 | **Etiquetas de contrato** | Las etiquetas &quot;C&quot; del contrato se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de administración de datos de su organización. |
 | **Datos entre sitios** | Los datos entre sitios son la combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio. |
-| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normativas y políticas institucionales en lo que respecta al uso de los datos. |
+| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normas y políticas institucionales en lo que respecta al uso de los datos. |
 | **Administrador de datos** | El administrador de datos es la persona responsable de la administración, supervisión y ejecución de los activos de datos de una organización. Un administrador de datos también garantiza que las políticas de control de datos se salvaguarden y mantienen para cumplir con las regulaciones y políticas de organización del gobierno. |
 | **Etiquetas de uso de datos** | Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas. |
 | **Etiquetas de datos** | Las etiquetas se pueden agregar a un conjunto de datos. Todos los campos dentro de un conjunto de datos heredan las etiquetas del conjunto de datos. |
@@ -123,7 +119,7 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 | **Política** | En el marco de administración de datos, una política es una regla que describe qué tipo de acciones de mercadotecnia se permiten o no se permiten realizar en datos específicos. |
 | **Etiquetas sensibles** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 
-## Recursos adicionales   
+## Recursos adicionales    
 
 El siguiente vídeo está diseñado para apoyar su comprensión del Gobierno de datos y describe los aspectos clave del marco de aplicación y etiquetado del uso de datos (DULE).
 
