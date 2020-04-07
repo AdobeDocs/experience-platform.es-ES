@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Todos los recursos de la plataforma de experiencia están aislados en entornos l
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -253,7 +253,7 @@ Una respuesta correcta devuelve una lista de las etiquetas de uso de datos asoci
 
 ## Filtrar campos de datos
 
-> [!NOTE] Este paso es opcional. Si no desea ajustar los datos incluidos en el segmento en función de los resultados del paso anterior de [búsqueda de etiquetas](#lookup-data-usage-labels-for-the-source-datasets)de uso de datos, puede continuar con el paso final de [evaluación de los datos en caso de infracciones](#evaluate-data-for-policy-violations)de políticas.
+>[!NOTE] Este paso es opcional. Si no desea ajustar los datos incluidos en el segmento en función de los resultados del paso anterior de [búsqueda de etiquetas](#lookup-data-usage-labels-for-the-source-datasets)de uso de datos, puede continuar con el paso final de [evaluación de los datos en caso de infracciones](#evaluate-data-for-policy-violations)de políticas.
 
 Si desea ajustar los datos incluidos en el segmento de audiencia, puede hacerlo mediante uno de los dos métodos siguientes:
 
