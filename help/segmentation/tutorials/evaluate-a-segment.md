@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluar un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -34,7 +34,7 @@ Todos los recursos de la plataforma de experiencia están aislados en entornos l
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
 
@@ -52,7 +52,7 @@ Si todavía no ha completado el tutorial [Crear un segmento con la API](./create
 
 Mediante una evaluación programada, su organización de IMS puede crear una programación recurrente para ejecutar automáticamente los trabajos de exportación.
 
-> [!NOTE] La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
+>[!NOTE] La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
 
 ### Crear una programación
 
@@ -300,7 +300,7 @@ Una respuesta correcta devuelve los detalles del trabajo de segmento recién cre
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | Identificador del nuevo trabajo de segmento, que se utiliza con fines de búsqueda. |
+| `id` | El identificador del nuevo trabajo de segmento, que se utiliza con fines de búsqueda. |
 | `status` | Estado actual del trabajo del segmento. Será &quot;PROCESAMIENTO&quot; hasta que se complete el procesamiento, momento en el cual se convierte en &quot;CORRECTO&quot; o &quot;FALLIDO&quot;. |
 
 ### Buscar estado del trabajo del segmento
