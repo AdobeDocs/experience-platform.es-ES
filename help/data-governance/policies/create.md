@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y los detalles de l
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente una directiva DULE para una acción de marketing. Ahora puede continuar con el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) DULE para aprender a comprobar las infracciones de políticas y a gestionarlas en la aplicación de experiencia.
+Siguiendo este tutorial, ha creado correctamente una directiva de uso de datos para una acción de marketing. Ahora puede continuar con el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) de uso de datos para aprender a comprobar las infracciones de políticas y a gestionarlas en la aplicación de experiencia.
 
-Para obtener más información sobre las distintas operaciones disponibles en la API de servicio de directivas, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service. Para obtener información sobre cómo aplicar las políticas DULE para los datos de Perfil de clientes en tiempo real, consulte el tutorial sobre [la aplicación del cumplimiento de la normativa de uso de datos para segmentos](../../segmentation/tutorials/governance.md)de audiencia.
+Para obtener más información sobre las distintas operaciones disponibles en la API de servicio de directivas, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service. Para obtener información sobre cómo aplicar políticas para datos de Perfil de clientes en tiempo real, consulte el tutorial sobre [la aplicación del cumplimiento de la normativa de uso de datos para segmentos](../../segmentation/tutorials/governance.md)de audiencia.
+
+Para obtener información sobre cómo administrar las políticas de uso en la interfaz de usuario de la plataforma de experiencia, consulte la guía [de usuario de](user-guide.md)directivas.
