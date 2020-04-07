@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Notas de la versión de Adobe Experience Platform
 
 ## Fecha de publicación: 8 de abril de 2020
+
+## Servicios inteligentes
+
+Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de la experiencia del cliente. Esto permite que los analistas de mercadotecnia configuren predicciones específicas de las necesidades de una compañía mediante configuraciones de nivel empresarial sin necesidad de conocimientos de ciencia de datos. Además, los profesionales de marketing pueden activar predicciones en Adobe Experience Cloud, Adobe Experience Platform y aplicaciones de terceros.
+
+**Funciones principales**
+
+| Función | Descripción |
+|---|---|
+| AI del cliente | La API de cliente proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones. Con la ayuda de factores influyentes, la información sobre el cliente puede indicarle qué es lo que probablemente hará un cliente y por qué. Además, los especialistas en marketing pueden beneficiarse de las predicciones y perspectivas de la API del cliente para personalizar las experiencias de los clientes al ofrecer las ofertas y los mensajes más adecuados. |
+| Atribución AI | La API de atribución es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con respecto a los resultados especificados. Con la API de atribución, los especialistas en mercadotecnia pueden medir y optimizar el gasto en mercadotecnia y publicidad al comprender el impacto de cada interacción del cliente en cada fase de los viajes de los clientes. |
+
+**Problemas conocidos**
+
+* Actualmente no hay problemas conocidos.
+
+Para obtener más información sobre los servicios inteligentes y qué tiene que ver con la oferta, consulte la descripción general [de los servicios](../../intelligent-services/home.md)inteligentes.
 
 ## Privacy Service
 
