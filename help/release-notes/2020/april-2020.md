@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
+source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 
 ---
 
@@ -31,6 +31,26 @@ Problemas conocidos
 * None
 
 Para obtener más información acerca de Privacy Service, lea la información general [de](../../privacy-service/home.md)Privacy Service para obtener inicios.
+
+## Fuentes
+
+Adobe Experience Platform puede ingestar datos de fuentes externas y permitirle estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+La plataforma de experiencia proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
+
+### Nuevas funciones
+
+| Función | Descripción |
+| ------- | ----------- |
+| Compatibilidad de API e interfaz de usuario con bases de datos | Nuevos conectores de origen para Apache Spark (en HDInsights), Azure Synapse Analytics, Azure Table Almacenamiento, Hive (en HDInsights) y Phoenix. |
+| Compatibilidad de API e interfaz de usuario para aplicaciones basadas en pagos | Nuevos conectores de origen para PayPal. |
+| Compatibilidad de API e interfaz de usuario para aplicaciones basadas en protocolos | Nuevos conectores de origen para la OData genérica. |
+
+### Problemas conocidos
+
+* None
+
+Para obtener más información sobre las fuentes, consulte la descripción general [de](../../source-connectors/home.md)las fuentes.
 
 <!-- ## Access control
 
