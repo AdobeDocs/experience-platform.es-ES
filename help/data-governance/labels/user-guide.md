@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de etiquetas de uso de datos
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -99,7 +99,9 @@ Es importante recordar que la herencia se mueve sólo desde el nivel superior ha
 
 Ahora que ha agregado etiquetas de uso de datos a nivel de conjunto de datos y campo, puede empezar a ingestar datos en la plataforma de experiencia. Para obtener más información, lea la documentación [sobre la ingestión de](../../ingestion/home.md)datos para obtener inicios.
 
-## Recursos adicionales   
+Ahora también puede definir directivas de uso de datos en función de las etiquetas que haya aplicado. Para obtener más información, consulte la descripción general [de las directivas de uso de](../policies/overview.md)datos.
+
+## Recursos adicionales    
 
 El siguiente vídeo está diseñado para admitir su comprensión del Gobierno de datos y describe cómo aplicar etiquetas a un conjunto de datos y a campos individuales.
 
