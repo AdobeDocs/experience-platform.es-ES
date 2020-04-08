@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Privacy Service.
 
 Privacy Service proporciona una API RESTful y una interfaz de usuario para ayudar a las compañías a administrar las solicitudes de privacidad de datos de los clientes. Con Privacy Service, puede enviar solicitudes para acceder y eliminar datos de clientes personales o privados, lo que facilita el cumplimiento automatizado de las normas de privacidad legales y de la organización.
+
+## Al realizar solicitudes de privacidad en la API, ¿cuál es la diferencia entre un usuario y un ID de usuario? {#user-ids}
+
+Para realizar un nuevo trabajo de privacidad en la API, la carga útil JSON de la solicitud debe contener una `users` matriz que lista información específica para cada usuario al que se aplique la solicitud de privacidad. Cada elemento de la `users` matriz es un objeto que representa a un usuario concreto, identificado por su `key` valor.
+
+A su vez, cada objeto de usuario (o `key`) contiene su propia `userIDs` matriz. Esta matriz lista valores de ID específicos **para ese usuario** en particular.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+La matriz contiene dos objetos que representan a usuarios individuales identificados por sus `key` valores (&quot;DavidSmith&quot; y &quot;user12345&quot;). &quot;DavidSmith&quot; solo tiene una ID de la lista (su dirección de correo electrónico), mientras que &quot;user12345&quot; tiene dos (su dirección de correo electrónico y ECID).
+
+Para obtener más información sobre cómo proporcionar información de identidad de usuario, consulte la guía sobre datos de [identidad para solicitudes](identity-data.md)de privacidad.
+
 
 ## ¿Puedo utilizar Privacy Service para limpiar los datos que se enviaron accidentalmente a Platform?
 
