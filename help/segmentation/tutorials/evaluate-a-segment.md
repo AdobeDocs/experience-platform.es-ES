@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluar un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
 
 ---
 
@@ -300,7 +300,7 @@ Una respuesta correcta devuelve los detalles del trabajo de segmento recién cre
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | El identificador del nuevo trabajo de segmento, que se utiliza con fines de búsqueda. |
+| `id` | Identificador del nuevo trabajo de segmento, que se utiliza con fines de búsqueda. |
 | `status` | Estado actual del trabajo del segmento. Será &quot;PROCESAMIENTO&quot; hasta que se complete el procesamiento, momento en el cual se convierte en &quot;CORRECTO&quot; o &quot;FALLIDO&quot;. |
 
 ### Buscar estado del trabajo del segmento
@@ -504,8 +504,7 @@ curl -X POST \
         "persisted": true,
         "containerFormat": "parquet",
         "format": "parquet"
-    },
-    "aspect": "production"
+    }
 }'
 ```
 
