@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del desarrollador del servicio de segmentación
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ Todos los recursos de la plataforma de experiencia están aislados en entornos l
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**Nota:** Para obtener más información sobre cómo trabajar con entornos limitados en la plataforma de experiencia, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
+>[!NOTE] Para obtener más información sobre cómo trabajar con entornos limitados en la plataforma de experiencia, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
 
 <!-- ## Estimates
 
