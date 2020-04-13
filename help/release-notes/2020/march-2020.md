@@ -4,8 +4,9 @@ description: Notas de la versión de la plataforma de experiencia 11 de marzo de
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
@@ -22,8 +23,7 @@ La Administración de datos de la plataforma de experiencia de Adobe es una seri
 
 ### Nuevas funciones
 
->[!NOTE]
->Algunas de las siguientes funciones nuevas están actualmente en fase beta y no están disponibles para todos los usuarios. Las funciones beta están sujetas a cambios.
+>[!NOTE] Algunas de las siguientes funciones nuevas están actualmente en fase beta y no están disponibles para todos los usuarios. Las funciones beta están sujetas a cambios.
 
 | Función | Descripción |
 | ------- | ----------- |
