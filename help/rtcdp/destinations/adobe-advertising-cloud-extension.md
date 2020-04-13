@@ -4,7 +4,7 @@ seo-title: Extensión de Adobe Advertising Cloud
 description: La extensión de Adobe Advertising Cloud es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -19,6 +19,7 @@ Adobe Advertising Cloud es una extensión de publicidad en la plataforma de dato
 
 Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
+![Extensión de Adobe Advertising Cloud](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## Requisitos previos {#prerequisites}
 
