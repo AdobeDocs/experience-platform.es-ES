@@ -4,12 +4,12 @@ seo-title: Extensión de Adobe Target 2.0
 description: La extensión Adobe Destinatario v2 es un destino de personalización en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Destinatario v2 Extension (#adobe-destinatario-v2-extension)
+# Extensión de la versión 2.0 de Adobe Target{#adobe-target-v2-extension}
 
 ## Información general {#overview}
 
