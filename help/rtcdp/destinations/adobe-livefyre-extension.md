@@ -4,7 +4,7 @@ seo-title: Adobe Livefyre extension
 description: La extensión Adobe Livefyre es un destino social en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,6 +18,8 @@ Adobe Livefyre le permite descubrir, organizar y publicar en su sitio web un flu
 Adobe Livefyre es una extensión social de la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
 Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+![Adobe Livefyre extension](/help/rtcdp/destinations/assets/adobe-livefyre-extension.png)
 
 
 ## Requisitos previos {#prerequisites}
