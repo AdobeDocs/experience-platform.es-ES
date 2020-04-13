@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Métricas disponibles
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ Las siguientes tablas lista todas las métricas expuestas por Perspectivas de la
 La siguiente tabla describe las métricas de la inserción de datos de la plataforma Adobe Experience Platform. Las métricas en **negrita** son métricas de ingesta de flujo continuo.
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Número total de conjuntos de datos creados. | N/D |
 | timeseries.ingestion.dataset.size | Tamaño acumulado de todos los datos ingeridos para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
 | timeseries.ingestion.dataset.dailysize | Tamaño de los datos ingestados en base al uso diario para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
@@ -46,7 +46,7 @@ La siguiente tabla describe las métricas de la inserción de datos de la plataf
 La tabla siguiente describe las métricas del servicio de identidad de Adobe Experience Platform.
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Número de registros escritos en la fuente de datos por Identity Service, para un conjunto de datos o todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
 | timeseries.identity.dataset.recordfailed.count | Número de registros en los que el servicio de identidad ha fallado, para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Número de registros de identidad que se han ingerido correctamente para una Área de nombres. | ID de Área de nombres (**requerido**) |
@@ -62,7 +62,7 @@ La tabla siguiente describe las métricas del servicio de identidad de Adobe Exp
 La tabla siguiente describe las métricas de Adobe Experience Platform Privacy Service.
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Número total de trabajos creados a partir del RGPD. | ENV (**requerido**) |
 | timeseries.gdpr.jobs.completedjobs.count | Número total de trabajos completados del RGPD. | ENV (**requerido**) |
 | timeseries.gdpr.jobs.errorjobs.count | Número total de trabajos de error del RGPD. | ENV (**requerido**) |
@@ -72,7 +72,7 @@ La tabla siguiente describe las métricas de Adobe Experience Platform Privacy S
 La siguiente tabla describe las métricas del servicio de Consulta de la plataforma Adobe Experience Platform.
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Número total de consultas programadas no recurrentes. | N/D |
 | timeseries.queryservice.query.scheduledrecurring.count | Número total de consultas programadas recurrentes. | N/D |
 | timeseries.queryservice.query.batchquery.count | Número total de consultas por lotes ejecutadas. | N/D |
@@ -85,7 +85,7 @@ La siguiente tabla describe las métricas del servicio de Consulta de la platafo
 La siguiente tabla describe las métricas de Perfil del cliente en tiempo real.
 
 | Métrica de perspectivas | Descripción | Parámetro de consulta de ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Número de registros leídos del lago de datos por Perfil, para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
 | timeseries.profiles.dataset.recordsuccess.count | Número de registros escritos en su fuente de datos por Perfil, para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
 | timeseries.profiles.dataset.recordfailed.count | Número de registros con errores por Perfil, para un conjunto de datos o para todos los conjuntos de datos. | Id. de conjunto de datos (opcional) |
