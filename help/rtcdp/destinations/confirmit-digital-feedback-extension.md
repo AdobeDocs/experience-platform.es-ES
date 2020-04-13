@@ -4,7 +4,7 @@ seo-title: Confirmar extensión de comentarios digitales
 description: La extensión Confirmar comentarios digitales es una voz del destino del cliente en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -25,6 +25,9 @@ Confirmar comentarios digitales ayuda a convertir el tráfico del sitio web en p
 Confirmar comentarios digitales es una voz de la extensión del cliente en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+
+![Confirmar extensión de comentarios digitales](assets/confirmit-digital-feedback-extension.png)
 
 ## Requisitos previos {#prerequisites}
 
