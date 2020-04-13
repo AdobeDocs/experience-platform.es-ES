@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [Gainsight (extensión del Experience Platform Launch)](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire (extensión del Experience Platform Launch)](/help/rtcdp/destinations/kickfire-extension.md)
          * [Personalización web de marketing (extensión de Experience Platform Launch)](destinations/marketo-web-personalization-extension.md)
-      * Destinos de redes sociales{#social-network-destinations}
+      * Destinos de redes sociales{#social-destinations}
          * [Visión general de los destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre (extensión Experience Platform Launch)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Destinos de Encuesta {#surveys}
+      * Destinos de Encuesta {#survey-destinations}
          * [Introducción a los destinos de Encuesta](/help/rtcdp/destinations/survey-destinations.md)
          * [Foresee (extensión Experience Platform Launch)](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment (extensión de Experience Platform Launch)](/help/rtcdp/destinations/inmoment-extension.md)
