@@ -4,7 +4,7 @@ seo-title: Extensión de DoubleClick Floodlight (Beta)
 description: La extensión DoubleClick Floodlight (Beta) es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: La extensión DoubleClick Floodlight (Beta) es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Esta extensión permite una implementación rápida y sencilla de las etiquetas 
 DoubleClick Floodlight (Beta) es una extensión de publicidad en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la documentación de soporte de Google para [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
 Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+![Extensión de Floodlight Doubleclick](assets/doubleclick-floodlight-extension.png)
 
 ## Requisitos previos {#prerequisites}
 
