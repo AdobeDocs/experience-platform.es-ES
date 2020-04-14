@@ -4,7 +4,7 @@ seo-title: Extensiones de Experience Platform Launch
 description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece a los clientes una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece a los clientes una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -17,13 +17,13 @@ Para obtener una introducción a las funciones de Experience Platform Launch, co
 * [Documentación del Experience Platform Launch](https://docs.adobe.com/content/help/es-ES/launch/using/overview.html)
 * Vídeos [de inicio](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)rápido Experience Platform Launch. Inicio con [Introducción al proceso de Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) y [publicación](https://helpx.adobe.com/es/analytics/how-to/adobe-launch-publishing-process.html)y, a continuación, pase a los siguientes conceptos.
 
-## Cómo encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe
+## Cómo encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe {#how-to-find-extensions-in-interface}
 
 Para buscar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe, busque **[!UICONTROL Destinations > Catalog]** y seleccione **[!UICONTROL Extensions]** en el **[!UICONTROL Types]** filtro.
 
 ![Filtro Extensiones en la interfaz](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Cómo funcionan las extensiones de lanzamiento
+## Cómo funcionan las extensiones de lanzamiento {#how-extensions-work}
 
 Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
@@ -31,7 +31,7 @@ Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos 
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Ventajas de utilizar extensiones de Launch
+## Ventajas de utilizar extensiones de Launch {#extensions-benefits}
 
 El Experience Platform Launch es gratuito para los clientes existentes de Experience Cloud. Launch simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que puede instalar, configurar, actualizar y eliminar. Launch tiene una pequeña huella en el sitio web y le permite mantener las páginas cargadas rápidamente.
 
@@ -41,7 +41,7 @@ El Experience Platform Launch es gratuito para los clientes existentes de Experi
 
 Puede crear *reglas* que determinen cuándo reenviar datos de evento a extensiones. Esta potente funcionalidad le permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, consulte acerca de las reglas en la documentación [de](https://docs.adobe.com/help/es-ES/launch/using/reference/manage-resources/rules.html)lanzamiento.
 
-## Ejemplos de casos de uso para extensiones de Launch
+## Ejemplos de casos de uso para extensiones de Launch {#extensions-use-cases}
 
 Las extensiones de inicio le permiten satisfacer diversos casos de uso de clientes. Algunos ejemplos de casos de uso para usar extensiones de Launch son:
 
@@ -50,7 +50,7 @@ Las extensiones de inicio le permiten satisfacer diversos casos de uso de client
 * Puede activar una aplicación de cuadro de chat del lado del cliente en el momento adecuado en función de cómo interactúen los usuarios con sus páginas, según las reglas que configure en Launch.
 
 
-## categorías de extensión
+## categorías de extensión {#extension-categories}
 
 Las extensiones de inicio pueden encontrarse bajo las siguientes categorías en Adobe Real-time CDP:
 
