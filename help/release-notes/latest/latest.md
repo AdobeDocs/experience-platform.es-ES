@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Notas de la versión de Adobe Experience Platform
 
 ## Fecha de publicación: 8 de abril de 2020
+
+## Sistema de modelo de datos de experiencia (XDM)
+
+La estandarización y la interoperabilidad son conceptos clave que sustentan la plataforma de experiencia. El modelo de datos de experiencia (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+
+XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de la plataforma Adobe Experience. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
+
+### Nuevas funciones
+
+| Función | Descripción |
+| --- | --- |
+| Información de visualización alternativa automática | El Registro de Esquemas aplica automáticamente los valores personalizados de título y descripción configurados en el `alternateDisplayInfo` descriptor. |
+| Restricciones de campo escalar | El Registro de Esquemas no permite más de 6000 campos escalares en un solo esquema. |
+| Revisión general del rendimiento | Se ha revisado el Registro de Esquemas para que cumpla mejor las exigencias de la Plataforma de experiencias. |
+
+**Corrección de errores**
+
+* Se ha actualizado XDM a XED para que admita un formato XED más nítido para campos URI anidados en XDM estándar.
+
+**Problemas conocidos**
+
+* Conocido
 
 ## Gobierno de datos
 
