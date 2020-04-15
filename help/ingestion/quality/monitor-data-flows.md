@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitoreo de la ingesta de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ En la interfaz de usuario [de la plataforma de](https://platform.adobe.com)exper
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Aparece la página de supervisión *de flujo completo* . Este espacio de trabajo proporciona un gráfico que muestra la velocidad de transmisión de mensajes, así como una lista detallada de los datos entrantes.
+Aparece la página de supervisión *de flujo completo* . Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos transmitidos recibidos por Plataforma, un gráfico que muestra la tasa de eventos transmitidos que fueron procesados correctamente por el Perfil [del cliente en tiempo](../../profile/home.md)real, así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-De forma predeterminada, el gráfico muestra la tasa de ingestión durante los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
+De forma predeterminada, el gráfico superior muestra la tasa de ingestión durante los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Debajo del gráfico hay una lista de todos los registros de ingestión de flujo que se corresponden con el intervalo de fechas mostrado arriba. Cada lote de la lista muestra su ID, el nombre del conjunto de datos, cuándo se actualizó por última vez, el número de registros en el lote, así como el número de errores (si existe). Puede hacer clic en cualquiera de los registros para obtener información más detallada sobre ese registro.
+El gráfico inferior muestra la tasa de eventos de flujo procesados correctamente por Perfiles en los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
+
+> [!NOTE] Para que los datos se muestren en este gráfico, los datos deben habilitarse **explícitamente** para el Perfil. Para aprender a habilitar la transmisión de datos para Perfil, lea la guía [del usuario de](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)conjuntos de datos.
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Debajo de los gráficos hay una lista de todos los registros de ingestión de flujo que corresponden al intervalo de fechas mostrado arriba. Cada lote de la lista muestra su ID, el nombre del conjunto de datos, cuándo se actualizó por última vez, el número de registros en el lote, así como el número de errores (si existe). Puede hacer clic en cualquiera de los registros para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
