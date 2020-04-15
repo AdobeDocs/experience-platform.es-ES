@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación rec
 
 Consulte los [componentes de la sección de políticas](#components-of-merge-policies) de combinación al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
 
-## Actualizar una directiva de combinación
+## Actualizar una directiva de combinación {#update}
 
 Puede modificar una directiva de combinación existente editando atributos individuales (PATCH) o sobrescribiendo toda la directiva de combinación con atributos nuevos (PUT). A continuación se muestran ejemplos de cada uno.
 
