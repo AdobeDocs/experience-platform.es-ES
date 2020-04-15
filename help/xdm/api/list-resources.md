@@ -4,33 +4,27 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1541b027a4e572dc5e4e64de1117a269c58bafab
+source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 
 ---
 
 
 # Recursos de Lista
 
-Puede realizar la vista de una lista de todos los recursos (esquemas, clases, mezclas o tipos de datos) dentro de un contenedor mediante una sola solicitud GET. Para ayudar a filtrar los resultados, el Registro de Esquemas admite el uso de parámetros de consulta al enumerar los recursos.
-
-Los parámetros de consulta más comunes incluyen:
-
-* `limit` - Limite el número de recursos devueltos. Ejemplo: `limit=5` devolverá una lista de cinco recursos.
-* `orderby` - Ordenar los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Si se Añade un título `-` antes del título (`orderby=-title`), los elementos se ordenarán por título en orden descendente (Z-A).
-* `property` - Filtre los resultados en cualquier atributo de nivel superior. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase de Perfil XDM Individual.
-
-Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (`&`).
+Puede realizar la vista de una lista de todos los recursos (esquemas, clases, mezclas o tipos de datos) dentro de un contenedor mediante una sola solicitud GET.
 
 **Formato API**
 
 ```http
 GET /{CONTAINER_ID}/{RESOURCE_TYPE}
+GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
 | `{CONTAINER_ID}` | El contenedor donde se ubican los recursos (&quot;global&quot; o &quot;inquilino&quot;). |
 | `{RESOURCE_TYPE}` | Tipo de recurso que se va a recuperar de la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{QUERY_PARAMS`} | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
 
 **Solicitud**
 
@@ -73,3 +67,36 @@ La solicitud anterior utilizaba el encabezado `application/vnd.adobe.xed-id+json
   ]
 }
 ```
+
+## Uso de parámetros de consulta {#query}
+
+El Registro de Esquemas admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los recursos.
+
+>[!NOTE] Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (`&`).
+
+### Paginación
+
+Los parámetros de consulta más comunes para la paginación incluyen:
+
+| Parámetro | Descripción |
+| --- | --- |
+| `start` | Especifique dónde deben estar los resultados enumerados. Ejemplo: `start=2` obtendrá la lista de los resultados del tercer elemento devuelto en adelante. |
+| `limit` | Limite el número de recursos devueltos. Ejemplo: `limit=5` devolverá una lista de cinco recursos. |
+| `orderby` | Ordene los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Si se Añade un título `-` antes del título (`orderby=-title`), los elementos se ordenarán por título en orden descendente (Z-A). |
+
+### Filtrar
+
+Puede filtrar los resultados utilizando el `property` parámetro, que se utiliza para aplicar un operador específico a una propiedad JSON determinada dentro de los recursos recuperados. Los operadores admitidos son:
+
+| Operador | Descripción | Ejemplo |
+| --- | --- | --- |
+| `==` | Filtros si la propiedad es igual al valor proporcionado. | `property=title==test` |
+| `!=` | Filtros por si la propiedad no es igual al valor proporcionado. | `property=title!=test` |
+| `<` | Filtros si la propiedad es menor que el valor proporcionado. | `property=version<5` |
+| `>` | Filtros según si la propiedad es buena que el valor proporcionado. | `property=version>5` |
+| `<=` | Filtros por si la propiedad es menor o igual que el valor proporcionado. | `property=version<=5` |
+| `>=` | Filtros por si la propiedad es buena o igual al valor proporcionado. | `property=version>=5` |
+| `~` | Filtros según si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
+| (None) | Si se establece únicamente el nombre de la propiedad, solo se devuelven las entradas donde existe la propiedad. | `property=title` |
+
+>[!TIP] Puede utilizar el `property` parámetro para filtrar mezclas según su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase de Perfil XDM Individual.
