@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [Segmentación](../home.md): Cómo el Perfil del cliente en tiempo real divide un grupo grande de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
 - [Administración](../../data-governance/home.md)de datos: La Administración de datos proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
-   - [Directivas](../../data-governance/api/getting-started.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
+   - [Directivas](../../data-governance/policies/overview.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
+   - [Aplicación](../../data-governance/enforcement/overview.md)de políticas: Permite aplicar políticas de uso de datos y evitar operaciones de datos que constituyan infracciones de políticas.
+- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
 
@@ -48,7 +50,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 - Content-Type: application/json
 
-## Buscar una directiva de combinación para una definición de segmento
+## Buscar una directiva de combinación para una definición de segmento {#merge-policy}
 
 Este flujo de trabajo comienza por acceder a un segmento de audiencia conocido. Los segmentos que están habilitados para su uso en el Perfil del cliente en tiempo real contienen un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre los conjuntos de datos que se deben incluir en el segmento, que a su vez contienen las etiquetas de uso de datos aplicables.
 
@@ -117,9 +119,9 @@ Una respuesta correcta devuelve los detalles de la definición del segmento.
 | -------- | ----------- |
 | `mergePolicyId` | ID de la directiva de combinación utilizada para la definición del segmento. Esto se utilizará en el paso siguiente. |
 
-## Buscar los conjuntos de datos de origen de la directiva de combinación
+## Buscar los conjuntos de datos de origen de la directiva de combinación {#datasets}
 
-Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas DULE. Puede buscar los detalles de una directiva de combinación proporcionando el ID de directiva de combinación en una solicitud GET a la API de Perfil.
+Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando el ID de directiva de combinación en una solicitud GET a la API de Perfil.
 
 **Formato API**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | ID de la directiva de combinación obtenida en el paso [](#lookup-a-merge-policy-for-a-segment-definition)anterior. |
+| `{MERGE_POLICY_ID}` | ID de la directiva de combinación obtenida en el paso [](#merge-policy)anterior. |
 
 **Solicitud**
 
@@ -174,92 +176,195 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 | `attributeMerge.type` | Tipo de configuración de prioridad de datos para la directiva de combinación. Si el valor es `dataSetPrecedence`, los conjuntos de datos asociados con esta directiva de combinación se enumeran en `attributeMerge > data > order`. Si el valor es `timestampOrdered`, la directiva de combinación utiliza todos los conjuntos de datos asociados con el esquema al que se hace referencia en `schema.name` . |
 | `attributeMerge.data.order` | Si `attributeMerge.type` es `dataSetPrecedence`, este atributo será una matriz que contenga los ID de los conjuntos de datos utilizados por esta directiva de combinación. Estos ID se utilizan en el paso siguiente. |
 
-## Buscar etiquetas de uso de datos para los conjuntos de datos de origen
+## Evaluar conjuntos de datos para violaciones de políticas
 
-Una vez recopilados los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar estos ID para buscar las etiquetas de uso de datos configuradas para los propios conjuntos de datos y los campos de datos específicos contenidos en ellos.
+>[!NOTE]  En este paso se asume que tiene al menos una directiva de uso de datos activa que impide que se realicen acciones de marketing específicas en los datos que contienen determinadas etiquetas. Si no tiene ninguna política de uso aplicable para los conjuntos de datos que se están evaluando, siga el tutorial [de creación de](../../data-governance/policies/create.md) directivas para crear uno antes de continuar con este paso.
 
-La siguiente llamada a la API [del servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) catálogo recupera las etiquetas de uso de datos asociadas con un único conjunto de datos proporcionando su ID en la ruta de solicitud:
+Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar dichos conjuntos de datos en relación con acciones de marketing específicas a fin de comprobar si hay violaciones de directivas de uso de datos.
+
+Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de mercadotecnia en la ruta de una solicitud POST, mientras proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `{DATASET_ID}` | ID del conjunto de datos cuyas etiquetas de uso de datos desea buscar. |
+| Parámetro | Descripción |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva de uso de datos por la que está evaluando los conjuntos de datos. Según si Adobe o su organización han definido la directiva, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
 
 **Solicitud**
 
+La siguiente solicitud prueba la acción de mercadotecnia con los conjuntos de datos obtenidos en el paso `exportToThirdParty` [anterior](#datasets). La carga útil de la solicitud es una matriz que contiene los ID de cada conjunto de datos.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `entityType` | Cada elemento de la matriz de carga útil debe indicar el tipo de entidad que se está definiendo. En este caso de uso, el valor siempre será &quot;dataSet&quot;. |
+| `entityID` | Cada elemento de la matriz de carga útil debe proporcionar la ID única para un conjunto de datos. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de las etiquetas de uso de datos asociadas con el conjunto de datos en su conjunto, así como cualquier campo de datos en particular asociado con el esquema de origen.
+Una respuesta correcta devuelve el URI de la acción de marketing, las etiquetas de uso de datos recopiladas de los conjuntos de datos proporcionados y una lista de cualquier directiva de uso de datos que se haya infringido como resultado de probar la acción con dichas etiquetas. En este ejemplo, la directiva &quot;Exportar datos a terceros&quot; se muestra en la matriz, lo que indica que la acción de marketing desencadenó una infracción de la directiva. `violatedPolicies`
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- |
-| `dataset` | Objeto que contiene las etiquetas de uso de datos aplicadas al conjunto de datos en su conjunto. |
-| `schemaFields` | Matriz de objetos que representa campos de esquema específicos a los que se les han aplicado etiquetas de uso de datos. |
-| `schemaFields.path` | Ruta del campo de esquema cuyas etiquetas de uso de datos aparecen en el mismo objeto. |
+| --- | --- |
+| `duleLabels` | Una lista de las etiquetas de uso de datos que se extrajeron de los conjuntos de datos proporcionados. |
+| `discoveredLabels` | Una lista de los conjuntos de datos que se proporcionaron en la carga útil de la solicitud, que muestra las etiquetas de nivel de conjunto de datos y de campo que se encontraron en cada una. |
+| `violatedPolicies` | Una matriz que enumera las directivas de uso de datos que se infringieron al probar la acción de mercadotecnia (especificada en `marketingActionRef`) en comparación con la proporcionada `duleLabels`. |
+
+Con los datos devueltos en la respuesta de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente las infracciones de directiva cuando se produzcan.
 
 ## Filtrar campos de datos
 
->[!NOTE] Este paso es opcional. Si no desea ajustar los datos incluidos en el segmento en función de los resultados del paso anterior de [búsqueda de etiquetas](#lookup-data-usage-labels-for-the-source-datasets)de uso de datos, puede continuar con el paso final de [evaluación de los datos en caso de infracciones](#evaluate-data-for-policy-violations)de políticas.
-
-Si desea ajustar los datos incluidos en el segmento de audiencia, puede hacerlo mediante uno de los dos métodos siguientes:
+Si el segmento de audiencia no pasa la evaluación, puede ajustar los datos incluidos en el segmento a través de uno de los dos métodos descritos a continuación.
 
 ### Actualizar la directiva de combinación de la definición del segmento
 
-Al actualizar la directiva de combinación de una definición de segmento, se ajustarán los conjuntos de datos y los campos que se incluirán cuando se ejecute el trabajo de segmento. Consulte la sección sobre la [actualización de una directiva](../../profile/api/merge-policies.md) de combinación existente en el tutorial de políticas de combinación para obtener más información.
+Al actualizar la directiva de combinación de una definición de segmento, se ajustarán los conjuntos de datos y los campos que se incluirán cuando se ejecute el trabajo de segmento. Consulte la sección sobre la [actualización de una directiva](../../profile/api/merge-policies.md#update) de combinación existente en el tutorial de políticas de combinación de API para obtener más información.
 
 ### Restringir campos de datos específicos al exportar el segmento
 
@@ -267,11 +372,7 @@ Al exportar un segmento a un conjunto de datos mediante la API de Perfil del cli
 
 Considere un segmento que tiene campos de datos con los nombres &quot;A&quot;, &quot;B&quot; y &quot;C&quot;. Si sólo desea exportar el campo &quot;C&quot;, el `fields` parámetro contendrá sólo el campo &quot;C&quot;. Al realizar esto, los campos &quot;A&quot; y &quot;B&quot; se excluirían al exportar el segmento.
 
-Consulte la sección sobre [exportación de un segmento](./evaluate-a-segment.md#export-a-segment) en el tutorial de segmentación para obtener más información.
-
-## Evaluar datos para infracciones de directivas
-
-Ahora que ha recopilado las etiquetas de uso de datos asociadas con el segmento de audiencia, puede probar estas etiquetas con acciones de marketing para evaluar cualquier infracción de la directiva de uso de datos. Para ver los pasos detallados sobre cómo realizar evaluaciones de políticas mediante la API [del servicio de políticas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE, consulte el documento sobre evaluación [de](../../data-governance/enforcement/overview.md)políticas.
+Consulte la sección sobre [exportación de un segmento](./evaluate-a-segment.md#export) en el tutorial de segmentación para obtener más información.
 
 ## Pasos siguientes
 
