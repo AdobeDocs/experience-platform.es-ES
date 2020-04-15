@@ -4,7 +4,7 @@ seo-title: Tipos y Categorías de destinos
 description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfil/segmento capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. '
 seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfil/segmento capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos.
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -47,10 +47,11 @@ El siguiente vídeo le muestra las particularidades de los dos tipos de destinos
 
 CDP en tiempo real de Adobe aprovecha la potencia y flexibilidad de Experience Platform Launch para incluir extensiones de Launch en la interfaz CDP en tiempo real de Adobe.
 
+>[!TIP]
+>
+>Para obtener información detallada sobre las extensiones de Experience Platform Launch, incluidos los casos de uso y cómo encontrarlos en la interfaz, consulte la descripción general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+
 Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
-
-Para obtener información detallada sobre las extensiones de Experience Platform Launch, consulte la descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
-
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
