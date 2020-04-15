@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluar un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ Las siguientes secciones describen estas opciones con más detalle.
 
 Si conoce el perfil específico al que desea acceder, puede hacerlo mediante la API de Perfil del cliente en tiempo real. Los pasos completos para acceder a perfiles individuales están disponibles en [Access Real-time Customer Perfil data mediante el tutorial de la API](../../profile/api/entities.md) de Perfil.
 
-## Exportación de un segmento
+## Exportación de un segmento {#export}
 
 Una vez completado correctamente un trabajo de segmentación (el valor del `status` atributo es &quot;SUCCEEDED&quot;), puede exportar la audiencia a un conjunto de datos en el que se pueda acceder a él y tomar medidas al respecto.
 
