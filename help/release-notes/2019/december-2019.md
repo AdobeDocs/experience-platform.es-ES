@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -66,7 +66,7 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 
 * None.
 
-Para obtener más información sobre las fuentes, consulte la descripción general [de](../../source-connectors/home.md)las fuentes.
+Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
 
 ## Sistema de modelo de datos de experiencia (XDM)
 
