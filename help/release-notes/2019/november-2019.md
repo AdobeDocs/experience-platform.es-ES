@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 
 * Los conectores de origen para almacenamientos basados en la nube no admiten la ingestión de archivos comprimidos.
 
-Para obtener más información sobre las fuentes, consulte Información general sobre [las fuentes](../../source-connectors/home.md).
+Para obtener más información sobre las fuentes, consulte Información general sobre [las fuentes](../../sources/home.md).
 
 ## Área de trabajo de ciencia de datos
 
