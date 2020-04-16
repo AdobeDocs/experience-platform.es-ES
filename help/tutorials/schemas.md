@@ -4,7 +4,7 @@ solution: Experience Platform
 title: esquemas y descriptores XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ La capacidad de comprender las relaciones entre sus clientes y sus interacciones
 
 ## Creación de un esquema ad-hoc
 
-En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de [recopilación](../ingestion/home.md) de datos para la plataforma de experiencia, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones [de](../source-connectors/home.md)origen. La creación de un esquema ad-hoc se realiza mediante la API del Registro de Esquema y está pensada para utilizarse junto con otros tutoriales de la Plataforma de experiencia que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Para empezar a crear un esquema ad-hoc, consulte el tutorial para [crear un esquema ad-hoc mediante la API](../xdm/tutorials/ad-hoc.md).
+En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de [recopilación](../ingestion/home.md) de datos para la plataforma de experiencia, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones [de](../sources/home.md)origen. La creación de un esquema ad-hoc se realiza mediante la API del Registro de Esquema y está pensada para utilizarse junto con otros tutoriales de la Plataforma de experiencia que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Para empezar a crear un esquema ad-hoc, consulte el tutorial para [crear un esquema ad-hoc mediante la API](../xdm/tutorials/ad-hoc.md).
 
 ## Pasos siguientes
 
