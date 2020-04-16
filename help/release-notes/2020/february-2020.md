@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -34,4 +34,4 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 
 * None
 
-Para obtener más información sobre las fuentes, consulte la descripción general [de](../../source-connectors/home.md)las fuentes.
+Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
