@@ -4,7 +4,7 @@ seo-title: Voz de los destinos del cliente
 description: Las plataformas de voz recopilan y recopilan datos de diversas fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir que las compañías optimicen su sitio web a fin de satisfacer sus necesidades.
 seo-description: Las plataformas de voz recopilan y recopilan datos de diversas fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir que las compañías optimicen su sitio web a fin de satisfacer sus necesidades.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
