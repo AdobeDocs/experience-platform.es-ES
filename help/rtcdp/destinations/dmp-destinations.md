@@ -4,7 +4,7 @@ seo-title: Destinos de la plataforma de Gestión de datos (DMP)
 description: Las plataformas de Gestión de datos (DMP) permiten a los anunciantes, editores y agencias crear perfiles de audiencia únicos, identificar los segmentos más valiosos y utilizarlos en cualquier canal digital. Esto le permite crear una verdadera vista 360 de un perfil de consumo, crear y activar audiencias significativas.
 seo-description: Las plataformas de Gestión de datos (DMP) permiten a los anunciantes, editores y agencias crear perfiles de audiencia únicos, identificar los segmentos más valiosos y utilizarlos en cualquier canal digital. Esto le permite crear una verdadera vista 360 de un perfil de consumo, crear y activar audiencias significativas.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
