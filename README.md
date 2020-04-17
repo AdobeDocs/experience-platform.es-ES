@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
 translation-type: tm+mt
 
 ---
-# Artículo sobre colaboración
+# Contribución de contenido
 
 Agradecemos las contribuciones de contenido de nuestra comunidad y de los empleados de Adobe que no forman parte de los equipos de documentación.
 
@@ -11,7 +11,7 @@ Agradecemos las contribuciones de contenido de nuestra comunidad y de los emplea
 
 Este proyecto ha adoptado el [Código de conducta de Adobe Open Source](code-of-conduct.md) o el [Código de conducta de .NET Foundation](https://dotnetfoundation.org/code-of-conduct). Para obtener más información, consulte el artículo [Contribución](contributing.md).
 
-## Acerca de las contribuciones al contenido de Adobe
+## Formas de contribuir al contenido de Adobe
 
 Consulte la [Guía del colaborador de Adobe Docs](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -33,26 +33,32 @@ Si forma parte de la comunidad de Adobe y desea crear un artículo o enviar camb
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Cambios importantes de los empleados de Adobe
+### Cambios importantes o nuevos artículos de los empleados de Adobe
 
-Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de [!UICONTROL  Adobe Experience Cloud], y es su trabajo contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado que hay en `https://git.corp.adobe.com/AdobeDocs`. Consulte la Guía [de colaboración](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)interna.
+Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de  Adobe Experience Cloud, y es su trabajo contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado que hay en `https://git.corp.adobe.com/AdobeDocs`. Consulte la Guía [de colaboración](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) interna para obtener más información.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Contacto con el equipo de documentación de la plataforma de experiencia
+
+Como se ha indicado anteriormente, los miembros de la comunidad de Adobe pueden enviar un problema que se asignará al escritor correspondiente. Si es un empleado de Adobe, puede enviar un problema o ponerse en contacto directamente con el equipo de documentación de la plataforma de experiencia. Para encontrar el redactor principal para un área específica de la plataforma, consulte la wiki [Documentación de la plataforma de experiencia de](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe.
+
 ## Herramientas y configuración
+
+### Interfaz de usuario de GitHub
 
 Los colaboradores de la comunidad pueden utilizar la interfaz de usuario de GitHub para editar o ramificar el repositorio con el fin de realizar contribuciones importantes.
 
 Consulte la [Guía del colaborador de Adobe Docs](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) para obtener más detalles.
 
-## Cómo utilizar Markdown para dar formato al tema
+### Markdown
 
 Todos los artículos de este repositorio utilizan GitHub Flavored Markdown. Si no está familiarizado con Markdown, consulte:
 
 * [Conceptos básicos de Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Lista de referencias de Markdown imprimible](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Etiquetas
+### Etiquetas
 
 En el repositorio público, las etiquetas automatizadas se asignan a solicitudes de extracción para ayudarnos a administrar el flujo de trabajo de la solicitud de extracción y para saber qué sucede con su solicitud de extracción:
 
