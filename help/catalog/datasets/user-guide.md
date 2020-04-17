@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Para obtener métodos más sólidos para acceder a los datos, Experience Platfor
 * [Visión general del servicio de Consulta](../../query-service/home.md)
 * [Guía del usuario de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
-## Crear un conjunto de datos
+## Crear un conjunto de datos {#create}
 
 Para crear un nuevo conjunto de datos, haga inicio haciendo clic en **Crear conjunto de datos** en el panel *Conjuntos* de datos.
 
