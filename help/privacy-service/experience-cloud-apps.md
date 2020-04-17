@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicios de privacidad y aplicaciones de Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -26,11 +26,11 @@ A continuación se muestra una lista de las aplicaciones de Experience Cloud que
 
 | Aplicación | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>Advertising Cloud aprovecha las capacidades de exclusión global existentes que ofrece Adobe Privacy Center. Consulte la guía para [realizar solicitudes](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidad de datos para obtener más información.</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics gestiona las solicitudes de exclusión mediante variables de sistema de informes de [privacidad](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>Advertising Cloud aprovecha las capacidades de exclusión global existentes que ofrece Adobe Privacy Center. Consulte la guía para [realizar solicitudes](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidad de datos para obtener más información.</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics gestiona las solicitudes de exclusión mediante variables de sistema de informes de [privacidad](https://docs.adobe.com/content/help/es-ES/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://marketing.adobe.com/resources/help/en_US/aam/aam-gdpr.html)</li><li>[Documentación de exclusión](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentación de exclusión](../segmentation/honoring-opt-outs.md)</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Acceder/eliminar documentación para el lago de datos](../catalog/privacy.md)</li><li>[Acceso y eliminación de la documentación para el Perfil del cliente en tiempo real](../profile/privacy.md)</li><li>La plataforma de experiencia respeta las solicitudes de [exclusión para los segmentos](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/honoring-opt-outs.md)de audiencia.</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Acceder/eliminar documentación para el lago de datos](../catalog/privacy.md)</li><li>[Acceso y eliminación de la documentación para el Perfil del cliente en tiempo real](../profile/privacy.md)</li><li>La plataforma de experiencia respeta las solicitudes de [exclusión para los segmentos](../segmentation/honoring-opt-outs.md)de audiencia.</li></ul> |
 | Autenticación de Adobe Primetime | ✓ | N/D | <ul><li>[Acceder o eliminar documentación](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión no se aplican.</li></ul> |
 | Adobe Target | ✓ | N/D | <ul><li>[Acceder o eliminar documentación](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)</li><li>Destinatario no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión no se aplican.</li></ul> |
 
@@ -44,8 +44,8 @@ A continuación se muestra una lista de aplicaciones de Experience Cloud que no 
 
 | Aplicación | Descripción de la documentación |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/EN/ACC_GDPR.html) | Información general sobre las funcionalidades de RGPD para Adobe Campaign Classic. |
-| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/en_US/dtm/opt-in.html) | Pasos para evitar que las etiquetas de Adobe se activen hasta que se obtenga el consentimiento. |
+| [Adobe Campaign Classic](https://helpx.adobe.com/es/campaign/kb/campaign-privacy.html) | Información general sobre las funcionalidades de RGPD para Adobe Campaign Classic. |
+| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/es_ES/dtm/opt-in.html) | Pasos para evitar que las etiquetas de Adobe se activen hasta que se obtenga el consentimiento. |
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Información general sobre cómo un administrador de privacidad del cliente o un administrador de AEM pueden gestionar solicitudes GDPR. |
 | [Adobe Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/c_gdpr_compliance.html) | Pasos para hacer acceso al RGPD y eliminar solicitudes mediante Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
