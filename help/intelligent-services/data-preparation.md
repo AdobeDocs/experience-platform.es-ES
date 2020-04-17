@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Preparación de datos para su uso en Servicios inteligentes
 
-Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Concretamente, todos los conjuntos de datos que se utilizan en Servicios inteligentes deben cumplir el esquema XDM de los Eventos de experiencias **de consumo (CEE)** .
+Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los conjuntos de datos que se utilizan en Servicios inteligentes deben cumplir el esquema XDM de **Consumer ExperienceEvent (CEE)** .
 
 Este documento proporciona una guía general sobre cómo asignar los datos de eventos de marketing de varios canales a este esquema, esbozando información sobre los campos importantes dentro del esquema para ayudarle a determinar cómo asignar los datos de manera efectiva a su estructura.
 
@@ -52,7 +52,7 @@ El `xdm:channel` campo representa el canal de marketing relacionado con Experien
 
 ## Asignación e ingesta de datos
 
-Una vez que haya determinado si los datos de la serie temporal se pueden asignar al esquema de CEE, podrá realizar el inicio del proceso de ingreso de los datos a los servicios inteligentes. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a incorporarlos al servicio.
+Una vez que haya determinado si los datos de sus eventos de mercadotecnia se pueden asignar al esquema CEE, puede realizar el inicio del proceso de ingreso de los datos a los Servicios inteligentes. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a incorporarlos al servicio.
 
 Si tiene una suscripción de Adobe Experience Platform y desea asignar e ingestar los datos usted mismo, siga los pasos descritos en la sección siguiente.
 
