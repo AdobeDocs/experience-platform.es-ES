@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datos de identidad para solicitudes de privacidad
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -23,13 +23,13 @@ Por ejemplo, al administrar solicitudes de datos de clientes en Privacy Service,
 
 Por lo tanto, cada identidad enviada al Servicio de Privacidad debe ir acompañada de una **Área de nombres** que proporcione contexto al relacionar el valor de identidad con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Destinatario ID (&quot;TNTID&quot;).
 
-Adobe Experience Platform Identity Service mantiene una tienda de Áreas de nombres de identidad definidas globalmente y definidas por el usuario. Para obtener información más detallada sobre Áreas de nombres, consulte la descripción general [de la Área de nombres de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)identidad. Para obtener una lista de Áreas de nombres estándar y calificadores de Área de nombres que se utilizan comúnmente en Privacy Service, consulte la sección [del](api/appendix.md) apéndice en la guía para desarrolladores.
+Adobe Experience Platform Identity Service mantiene una tienda de Áreas de nombres de identidad definidas globalmente y definidas por el usuario. Para obtener información más detallada sobre Áreas de nombres, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad. Para obtener una lista de Áreas de nombres estándar y calificadores de Área de nombres que se utilizan comúnmente en Privacy Service, consulte la sección [del](api/appendix.md) apéndice en la guía para desarrolladores.
 
 ## ECID y servicio de inclusión
 
-El servicio de identidad de Adobe Experience Cloud sirve como marco común de identificación para Experience Cloud y asigna un ID único y persistente a cada visitante del sitio. El ID de Experience Cloud (ECID) rastrea la actividad de un cliente mediante el uso de una cookie de origen, puede identificar de forma exclusiva un dispositivo en varias aplicaciones y le permite identificar el mismo visitante de sitio y sus datos en diferentes aplicaciones de Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+El servicio de identidad de Adobe Experience Cloud sirve como marco común de identificación para Experience Cloud y asigna un ID único y persistente a cada visitante del sitio. El ID de Experience Cloud (ECID) rastrea la actividad de un cliente mediante el uso de una cookie de origen, puede identificar de forma exclusiva un dispositivo en varias aplicaciones y le permite identificar el mismo visitante de sitio y sus datos en diferentes aplicaciones de Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/es-ES/id-service/using/intro/overview.html) for more information.
 
-El servicio de inclusión, una extensión del servicio de identidad de Experience Cloud, le permite configurar protocolos en la aplicación para que los visitantes puedan determinar si puede configurar una cookie en el dispositivo o explorador del visitante. Para obtener información más detallada sobre el servicio de inclusión, incluido cómo configurar el servicio para su aplicación, consulte la documentación [del servicio de](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html)inclusión.
+El servicio de inclusión, una extensión del servicio de identidad de Experience Cloud, le permite configurar protocolos en la aplicación para que los visitantes puedan determinar si puede configurar una cookie en el dispositivo o explorador del visitante. Para obtener información más detallada sobre el servicio de inclusión, incluido cómo configurar el servicio para su aplicación, consulte la documentación [del servicio de](https://docs.adobe.com/content/help/es-ES/id-service/using/implementation/opt-in-service/optin-overview.html)inclusión.
 
 Una vez que se han asignado los ECID a los visitantes del sitio, puede utilizar la biblioteca JavaScript de privacidad de Adobe para recuperar dichos ID y utilizarlos en solicitudes de privacidad, tal como se describe en la siguiente sección.
 
