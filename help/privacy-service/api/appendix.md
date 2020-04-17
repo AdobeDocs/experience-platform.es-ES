@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Áreas de nombres y calificadores de identidad aceptados
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## Áreas de nombres de identidad estándar
 
-Todas las identidades que se envían a Privacy Service deben proporcionarse con una Área de nombres de identidad específica. Las Áreas de nombres de identidad son un componente de [Adobe Experience Platform Identity Service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) que indica el contexto al que se relaciona una identidad.
+Todas las identidades que se envían a Privacy Service deben proporcionarse con una Área de nombres de identidad específica. Las Áreas de nombres de identidad son un componente de [Adobe Experience Platform Identity Service](../../identity-service/home.md) que indica el contexto al que se relaciona una identidad.
 
 La siguiente tabla describe varios tipos de identidad predefinidos y utilizados comúnmente disponibles en la plataforma de experiencias, junto con sus `namespace` valores asociados:
 
@@ -31,7 +31,7 @@ La siguiente tabla describe varios tipos de identidad predefinidos y utilizados 
 
 >[!NOTE] Cada tipo de identidad también tiene un valor `namespaceId` entero, que se puede utilizar en lugar de la `namespace` cadena al establecer la propiedad `type` de la identidad en &quot;namespaceId&quot;. Consulte la sección sobre calificadores [de](#namespace-qualifiers) Área de nombres para obtener más información.
 
-Puede recuperar una lista de Áreas de nombres de identidad que esté utilizando su organización haciendo una solicitud GET al extremo en la API de servicio de identidad `idnamespace/identities` . Consulte la guía [para desarrolladores de](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) Identity Service para obtener más información.
+Puede recuperar una lista de Áreas de nombres de identidad que esté utilizando su organización haciendo una solicitud GET al extremo en la API de servicio de identidad `idnamespace/identities` . Consulte la guía [para desarrolladores de](../../identity-service/api/getting-started.md) Identity Service para obtener más información.
 
 ## Calificadores de Área de nombres
 
