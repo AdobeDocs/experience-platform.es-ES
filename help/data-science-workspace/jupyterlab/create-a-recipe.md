@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ La creación de una fórmula desde cero se puede realizar dentro de Área de tra
 
 El bloc de notas del Creador de fórmulas le permite ejecutar ejecuciones de puntuación y formación dentro del bloc de notas. Esto le ofrece la flexibilidad de realizar cambios en sus `train()` y `score()` métodos entre la ejecución de experimentos en los datos de capacitación y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula que se utilizará en el área de trabajo de ciencia de datos con el bloc de notas para la funcionalidad de fórmula integrada en el bloc de notas del Creador de fórmulas.
 
->[!NOTE] El bloc de notas del Generador de fórmulas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo admite Python.
+>[!NOTE]
+>El bloc de notas del Generador de fórmulas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo admite Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Al hacer clic en el bloc de notas del Creador de fórmulas desde el iniciador, el bloc de notas se abrirá en la ficha. La plantilla utilizada en el bloc de notas es la fórmula Python Retail Sales Forecasting (Previsión de ventas minoristas de Python) que también se puede encontrar en [este repositorio público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Observará que en la barra de herramientas hay tres acciones adicionales: **Tren
 
 ## Edite los archivos de fórmulas
 
-<!-- Databricks update to recipe needed -->
 Para realizar modificaciones en los archivos de fórmulas, vaya a la celda de Jupyter correspondiente a la ruta de archivo. Por ejemplo, si desea realizar cambios en `evaluator.py`, busque `%%writefile demo-recipe/evaluator.py`.
 
 Inicio realizando los cambios necesarios en la celda y, cuando termine, simplemente ejecute la celda. El `%%writefile filename.py` comando escribirá el contenido de la celda en la `filename.py`. Deberá ejecutar manualmente la celda de cada archivo con cambios.
@@ -69,9 +69,6 @@ Ahora que conoce los conceptos básicos del entorno de portátiles JupyterLab, p
 - [Archivo de evaluador](#evaluator-file)
 - [Archivo de Data Saver](#data-saver-file)
 
-
-
-
 ### Archivo de requisitos
 
 El archivo de requisitos se utiliza para declarar bibliotecas adicionales que desee utilizar en la fórmula. Puede especificar el número de versión si hay una dependencia. Para buscar bibliotecas adicionales, visite https://anaconda.org. La lista de las bibliotecas principales que ya se están utilizando incluye:
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores.
-
-
+>[!NOTE]
+>Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores.
 
 ### Archivos de configuración
 
@@ -101,9 +97,9 @@ Los usuarios deben completar las siguientes variables antes de ejecutar la forma
 
 Para buscar el conjunto de datos y los ID de esquema, vaya a la ficha Datos de los blocs de notas de la barra de navegación izquierda (debajo del icono de carpeta).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-La misma información se encuentra en [Adobe Experience Platform](https://platform.adobe.com/) , en las fichas **[Esquema](https://platform.adobe.com/schema)**y**[ Conjuntos](https://platform.adobe.com/dataset/overview)** de datos.
+La misma información se encuentra en [Adobe Experience Platform](https://platform.adobe.com/) , en las fichas **[Esquema](https://platform.adobe.com/schema)**y**[Conjuntos](https://platform.adobe.com/dataset/overview)** de datos.
 
 De forma predeterminada, se establecen los siguientes parámetros de configuración al acceder a los datos:
 
@@ -111,8 +107,6 @@ De forma predeterminada, se establecen los siguientes parámetros de configuraci
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Cargador de datos de formación
 
@@ -129,7 +123,8 @@ En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/st
 - [SDK de plataforma](#platform-sdk)
 - [Fuentes externas](#external-sources)
 
->[!NOTE] En el bloc de notas del Creador de fórmulas, los datos se cargan mediante el cargador de `platform_sdk` datos.
+>[!NOTE]
+>En el bloc de notas del Creador de fórmulas, los datos se cargan mediante el cargador de `platform_sdk` datos.
 
 ### SDK de plataforma
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Ahora los datos están en el objeto dataframe y se pueden analizar y manipular en la [siguiente sección](#data-preparation-and-feature-engineering).
 
-
-
 ### Desde el SDK de acceso a datos (obsoleto)
 
->[!CAUTION]  ya no `data_access_sdk_python` se recomienda, consulte [Convertir código de acceso a datos en SDK](../authoring/platform-sdk.md) de plataforma para obtener una guía sobre el uso del cargador de `platform_sdk` datos.
+>[!CAUTION]
+> `data_access_sdk_python` ya no se recomienda, consulte [Convertir código de acceso a datos en SDK](../authoring/platform-sdk.md) de plataforma para obtener una guía sobre el uso del cargador de `platform_sdk` datos.
 
 Los usuarios pueden cargar datos mediante el SDK de acceso a datos. La biblioteca se puede importar en la parte superior de la página incluyendo la línea:
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Como se indica en la sección [Archivo de](#configuration-files)configuración, al acceder a los datos desde la plataforma de experiencia se establecen los siguientes parámetros de configuración:
+>[!NOTE]
+>Como se indica en la sección [Archivo de](#configuration-files)configuración, al acceder a los datos desde la plataforma de experiencia se establecen los siguientes parámetros de configuración:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 La `load()` función del cargador de datos de puntuación debe completarse con el conjunto de datos de puntuación como resultado.
 
-
-
 ### Archivo de canalización
 
-El `pipeline.py` archivo incluye lógica para la formación y la puntuación. Pasaremos ambos en las dos secciones siguientes.
+El `pipeline.py` archivo incluye lógica para la formación y la puntuación.
 
 ### Formación
 
 El propósito de la formación es crear un modelo con las funciones y etiquetas de su conjunto de datos de formación.
 
->[!NOTE]  Las _funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
+>[!NOTE]\
+>_Las funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
 
 La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se pueden encontrar en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 Tenga en cuenta que, según la aplicación, tendrá argumentos en su `GradientBoostingRegressor()` función. `xTrainingDataset` debe contener las características utilizadas para la formación, mientras `yTrainingDataset` que debe contener las etiquetas.
-
-
 
 ### Puntuación
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Formación y puntuación
 
 Cuando haya terminado de realizar cambios en el bloc de notas y quiera entrenar la fórmula, puede hacer clic en los botones asociados en la parte superior de la barra para crear una ejecución de formación en la celda. Al hacer clic en el botón, aparecerá un registro de comandos y resultados de la secuencia de comandos de formación en el bloc de notas (debajo de la `evaluator.py` celda). Conda primero instala todas las dependencias y luego se inicia la formación.
@@ -467,7 +458,11 @@ Para depurar, si desea ver la salida oculta, agregue `debug` al final de la celd
 
 ## Crear fórmula
 
-Cuando haya terminado de editar la fórmula y esté satisfecho con el resultado de la prueba/puntuación, puede crear una fórmula a partir del bloc de notas pulsando **Crear fórmula**. Después de pulsar el botón, se le pedirá que introduzca un nombre de fórmula. Este nombre representará la fórmula real creada en Platform.
+Cuando haya terminado de editar la fórmula y esté satisfecho con el resultado de la prueba/puntuación, puede crear una fórmula a partir del bloc de notas pulsando **Crear fórmula** en la navegación superior derecha.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Después de pulsar el botón, se le pedirá que introduzca un nombre de fórmula. Este nombre representa la fórmula real creada en Platform.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -491,7 +486,7 @@ Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje autom�
 
 Para continuar aprendiendo a trabajar con recursos dentro de Área de trabajo de ciencia de datos, visite la lista desplegable Fórmulas y modelos de Área de trabajo de ciencia de datos.
 
-## Recursos adicionales    
+## Recursos adicionales
 
 El siguiente vídeo está diseñado para ayudarle a crear e implementar modelos.
 
