@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apéndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ A continuación se muestra un ejemplo de configuración que especifica el uso de
 
 ## Configuraciones de recursos PySpark y Spark {#resource-config}
 
-Los motores PySpark y Spark tienen la capacidad de modificar los recursos computacionales con fines de capacitación y puntuación, estos recursos se describen en la siguiente tabla:
+Los motores de chispa tienen la capacidad de modificar los recursos computacionales con fines de capacitación y puntuación. Estos recursos se describen en la siguiente tabla:
 
 | Recurso | Descripción | Tipo |
 | -------- | ----------- | ---- |
