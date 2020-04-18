@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Con PySpark 3 (Spark 2.4) `sc = spark.sparkContext` se define en la carga.
 
 ![Cargar 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Carga de datos de ExperienceCloud Platform en PySpark 2.3, obsoleto**
+**Carga de datos de la plataforma de Experience Cloud en PySpark 2.3, obsoleto**
 
 ![Carga 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Carga de datos de ExperienceSet en PySpark 2.4**
+**Carga de datos de la plataforma de Experience Cloud en PySpark 2.4**
 
 Con PySpark 3 (Spark 2.4) `org_id` y ya no `dataset_id` es necesario definir. Además, `df = spark.read.format` se ha sustituido por una magia personalizada [`%dataset`](#magic) para facilitar la lectura y escritura de conjuntos de datos.
 
