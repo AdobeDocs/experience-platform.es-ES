@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ En este tutorial se explica cómo configurar e importar una fórmula empaquetada
 
 ## Requisitos previos
 
-Este tutorial requiere una fórmula empaquetada en forma de una URL de imagen de Docker o un archivo binario. Consulte el tutorial sobre cómo [empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md) para obtener más información.
+Este tutorial requiere una fórmula empaquetada en forma de URL de imagen de Docker. Consulte el tutorial sobre cómo [empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md) para obtener más información.
 
 ## Flujo de trabajo de la interfaz de usuario
 
@@ -23,10 +23,14 @@ La importación de una fórmula empaquetada en Data Science Workspace requiere c
 
 El flujo de trabajo para importar una fórmula de paquete consta de los siguientes pasos:
 - [Configurar una fórmula](#configure)
-- [Importar fórmula binaria basada en PySpark](#pyspark)
-- [Importar fórmula basada en binarios: Scala Spark](#scala)
 - [Fórmula basada en el acoplador de importación: Python](#python)
 - [Fórmula basada en el Docker de importación - R](#r)
+- [Importar fórmula basada en el acoplador: PySpark](#pyspark)
+- [Fórmula basada en el acoplador de importación: Scala](#scala)
+
+flujos de trabajo obsoletos:
+- [Importar fórmula binaria basada en PySpark](#pyspark-deprecated)
+- [Importar fórmula basada en binarios: Scala Spark](#scala-deprecated)
 
 ### Configurar una fórmula {#configure}
 
@@ -115,7 +119,147 @@ A continuación se muestra un archivo de configuración de muestra que muestra l
 
 A los efectos de este tutorial, puede dejar los archivos de configuración predeterminados para la fórmula de ventas minoristas en la Referencia de área de trabajo de ciencia de datos como están.
 
-### Importar fórmula binaria basada en PySpark {#pyspark}
+### Fórmula basada en el acoplador de importación: Python {#python}
+
+Inicio navegando y seleccionando **Flujos de trabajo** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **Iniciar**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **Siguiente** en la esquina superior derecha.
+
+![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la generación de la fórmula de venta minorista mediante archivos de origen Python.
+
+Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada mediante archivos de origen Python en el campo URL **de** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Seleccione **Python** en la lista desplegable *Tiempo de ejecución* y **Clasificación** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **Siguiente** en la esquina superior derecha para proceder a la *administración de esquemas*.
+
+>[!NOTE]
+> *El tipo *admite **Clasificación**y **Regresión**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **Personalizado**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+
+Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+
+### Fórmula basada en el Docker de importación - R {#r}
+
+Inicio navegando y seleccionando **Flujos de trabajo** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **Iniciar**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **Siguiente** en la esquina superior derecha.
+
+![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen R.
+
+Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen R en el campo URL **de** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Seleccione **R** en la lista desplegable *Tiempo de ejecución* y **Clasificación** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **Siguiente** en la esquina superior derecha para proceder a la *administración de esquemas*.
+
+>[!NOTE]
+> *El tipo *admite **Clasificación**y **Regresión**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **Personalizado**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+
+Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+
+### Importar fórmula basada en el acoplador: PySpark {#pyspark}
+
+Inicio navegando y seleccionando **Flujos de trabajo** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **Iniciar**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **Siguiente** en la esquina superior derecha para continuar.
+
+![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen PySpark.
+
+Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen PySpark en el campo URL **de** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Seleccione **PySpark** en la lista desplegable *Tiempo de ejecución* . Una vez seleccionado el tiempo de ejecución de PySpark, el artefacto predeterminado se rellena automáticamente en **Docker**. A continuación, seleccione **Clasificación** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **Siguiente** en la esquina superior derecha para proceder a la *administración de esquemas*.
+
+>[!NOTE]
+> *El tipo *admite **Clasificación**y **Regresión**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **Personalizado**.
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+
+Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+
+### Fórmula basada en el acoplador de importación: Scala {#scala}
+
+Inicio navegando y seleccionando **Flujos de trabajo** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **Iniciar**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **Siguiente** en la esquina superior derecha para continuar.
+
+![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen de Scala (Spark).
+
+Una vez que esté en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen Scala en el campo URL *de* origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Seleccione **Spark** en la lista desplegable *Runtime* . Una vez seleccionado el motor de ejecución de Spark, el artefacto predeterminado se rellena automáticamente en **Docker**. A continuación, seleccione **Regresión** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **Siguiente** en la esquina superior derecha para proceder a la *administración de esquemas*.
+
+>[!NOTE]
+> *El tipo *admite **Clasificación**y **Regresión**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **Personalizado**.
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+
+Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+
+## Pasos siguientes
+
+Este tutorial proporciona una visión detallada sobre cómo configurar e importar una fórmula en el área de trabajo de ciencias de datos. Ahora puede crear, entrenar y evaluar un modelo con la fórmula recién creada.
+
+- [Formación y evaluación de un modelo en la interfaz de usuario](./train-evaluate-model-ui.md)
+- [Formación y evaluación de un modelo mediante la API](./train-evaluate-model-api.md)
+
+## flujos de trabajo obsoletos
+
+>[!CAUTION]
+>Ya no se admite la importación de fórmulas basadas en binarios en PySpark 3 (Spark 2.4) y Scala (Spark 2.4).
+
+### Importar fórmula binaria basada en PySpark {#pyspark-deprecated}
 
 En el tutorial [Empaquetar archivos de origen en un tutorial de Fórmula](./package-source-files-recipe.md) , se creó un archivo binario **EGG** con los archivos de origen PySpark de Retail Sales.
 
@@ -128,14 +272,14 @@ Del mismo modo, importe el archivo de configuración proporcionado arrastrándol
    ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. Puede encontrar errores en este punto. Esto es un comportamiento normal y es de esperar. Seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, que se crearon con la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquema para expandir el esquema de entrada de ventas al por menor. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
 5. Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-¡Felicitaciones, ha creado la fórmula de ventas minoristas! Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos con la fórmula de ventas minoristas recién creada.
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
 
 
-### Importar fórmula basada en binarios: Scala Spark {#scala}
+### Importar fórmula basada en binarios: Scala Spark {#scala-deprecated}
 
 En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se creó un archivo binario **JAR** con los archivos de origen de Retail Sales Scala Spark.
 
@@ -147,43 +291,8 @@ En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./pack
    ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
 4. Puede encontrar errores en este punto. Esto es un comportamiento normal y es de esperar. Seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, que se crearon con la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquema para expandir el esquema de entrada de ventas al por menor. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
+En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
 5. Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-¡Felicitaciones, ha creado la fórmula de ventas minoristas! Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos con la fórmula de ventas minoristas recién creada.
-
-### Fórmula basada en el acoplador de importación: Python {#python}
-
-En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la generación de la fórmula de venta minorista mediante archivos de origen Python.
-
-1. Pegue la URL del Docker correspondiente a la fórmula empaquetada generada mediante archivos de origen Python en el campo URL **de** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Haga clic en **Siguiente** cuando se hayan proporcionado ambos elementos.
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. Seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, que se crearon con la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquema para expandir el esquema de entrada de ventas al por menor. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
-3. Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-¡Felicitaciones, ha creado la fórmula de ventas minoristas! Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos con la fórmula de ventas minoristas recién creada.
-
-### Fórmula basada en el Docker de importación - R {#r}
-
-En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen R.
-
-1. Pegue la URL del Docker correspondiente a la fórmula empaquetada generada mediante archivos de origen R en el campo URL **de** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Haga clic en **Siguiente** cuando se hayan proporcionado ambos elementos.
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. Seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, que se crearon con la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquema para expandir el esquema de entrada de ventas al por menor. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **de** entrada o Función de **Destinatario** en la ventana Propiedades **del** campo derecha. Para este tutorial, establezca **semanalmente Ventas** como la función **de** Destinatario y todo lo demás como Función **de** entrada. Haga clic en **Siguiente** para revisar la nueva fórmula configurada.
-3. Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **Finalizar** para crear la fórmula.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-¡Felicitaciones, ha creado la fórmula de ventas minoristas! Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos con la fórmula de ventas minoristas recién creada.
-
-## Pasos siguientes
-
-Este tutorial proporciona una visión detallada sobre cómo configurar e importar una fórmula en el área de trabajo de ciencias de datos. Ahora puede crear, entrenar y evaluar un modelo con la fórmula recién creada.
-
-- [Formación y evaluación de un modelo en la interfaz de usuario](./train-evaluate-model-ui.md)
-- [Formación y evaluación de un modelo mediante la API](./train-evaluate-model-api.md)
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
