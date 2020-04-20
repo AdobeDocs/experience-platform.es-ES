@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Los cambios recientes en los blocs de notas de JupyterLab requieren que actualic
 
 - [Guía de migración de PySpark 2.3 a 2.4](#pyspark-notebook-migration)
 - [Guía de migración de Spark 2.3 a Spark 2.4 (Scala)](#spark-notebook-migration)
+
+El siguiente vídeo está diseñado para ayudar a comprender mejor los cambios que se requieren para los equipos portátiles JupyterLab:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Guía de migración de portátiles PySpark 2.3 a 2.4 {#pyspark-notebook-migration}
 
