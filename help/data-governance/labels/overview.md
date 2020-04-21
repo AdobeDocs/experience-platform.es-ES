@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre las etiquetas de uso de datos
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Para obtener más información sobre las etiquetas de uso de datos disponibles e
 
 ## Pasos siguientes
 
-Ahora que se le han introducido etiquetas de uso de datos, puede seguir leyendo la guía [del](user-guide.md) usuario para aprender a administrar etiquetas en la interfaz de usuario de la plataforma de experiencia.
+Ahora que se le han introducido etiquetas de uso de datos, puede seguir leyendo la guía [del](user-guide.md) usuario para aprender a administrar etiquetas en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre cómo administrar etiquetas mediante API, consulte la sección correspondiente en la guía [para desarrolladores del servicio de](../../catalog/api/labels.md)catálogos.
