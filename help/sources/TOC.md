@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
       - [Conector del Administrador de Audiencias](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
    - Publicidad {#advertising}
-      - [Conector de Google AdWords](connectors/advertising/ads.md)
+      - [Conector de Google Ads](connectors/advertising/ads.md)
    - almacenamiento de nube {#cloud-storage}
       - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob y Amazon S3](connectors/cloud-storage/blob-s3.md)
@@ -58,7 +58,6 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
          - [Conector de Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Conector de Google AdWords](tutorials/api/create/crm/adwords.md)
          - [Conector HubSpot](tutorials/api/create/crm/hubspot.md)
          - [Conector de Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Conector de Salesforce](tutorials/api/create/crm/salesforce.md)
