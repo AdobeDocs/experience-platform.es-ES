@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de datos de Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Analytics es un potente motor para ayudarle a obtener más información so
 
 ![](./images/analytics-data-experience-platform.png)
 
-En un nivel superior, Adobe Analytics recopila datos de varios canales digitales y de varios centros de datos de todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se ingieren en conjuntos de datos de la plataforma para su consumo por el área de trabajo de ciencias de datos, el servicio de Consulta y otras aplicaciones de descubrimiento de datos.
+En un nivel superior, Adobe Analytics recopila datos de varios canales digitales y de varios centros de datos de todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se incorporan a los conjuntos de datos de la plataforma para su consumo por el área de trabajo de ciencias de datos, el servicio de Consulta y otras aplicaciones de descubrimiento de datos.
 
 Consulte los siguientes documentos para obtener más información sobre VISTA y las reglas de procesamiento:
 * [Información general sobre las reglas de VISTA](https://marketing.adobe.com/resources/help/es_ES/reference/VISTA.html)
@@ -39,7 +39,7 @@ Para obtener más información sobre XDM, consulte la descripción general [del 
 
 Cuando se establece una conexión de origen para llevar datos de Analytics a la plataforma de experiencias mediante la interfaz de usuario de la plataforma, los campos de datos se asignan automáticamente y se ingestan en Perfil del cliente en tiempo real en cuestión de minutos. Para obtener instrucciones sobre cómo crear una conexión de origen con Adobe Analytics mediante la interfaz de usuario de la plataforma, consulte el tutorial [del conector de datos de](../../tutorials/ui/create/adobe-applications/analytics.md)Analytics.
 
-Para obtener información detallada sobre la asignación de campos que se produce entre Analytics y la plataforma de experiencias, visite la guía de asignación [de campos de](./analytics-mapping.md) Adobe Analytics.
+Para obtener información detallada sobre la asignación de campos que se produce entre Analytics y la plataforma de experiencias, visite la guía de asignación [de campos de](./mapping/analytics.md) Adobe Analytics.
 
 ## ¿Cuál es la latencia esperada para los datos de Analytics en la plataforma?
 
