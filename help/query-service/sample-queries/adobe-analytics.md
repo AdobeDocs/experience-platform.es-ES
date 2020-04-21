@@ -4,14 +4,14 @@ solution: Experience Platform
 title: consultas de muestra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
 
 # consultas de muestra para datos de Adobe Analytics
 
-Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en eventos de experiencia XDM y se transfieren a la plataforma de Adobe Experience como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el servicio de Consulta de la plataforma de experiencia de Adobe hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics para obtener más información sobre la asignación a ExperienceEvents de XDM.
+Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en eventos de experiencia XDM y se transfieren a la plataforma de Adobe Experience como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el servicio de Consulta de la plataforma de experiencia de Adobe hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obtener más información sobre la asignación a ExperienceEvents de XDM.
 
 ## Primeros pasos
 
