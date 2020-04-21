@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector del Administrador de Audiencias
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ A continuación se muestran ejemplos de la estructura del Administrador de Audie
 
 ## ¿Cómo se asignan los campos de Adobe Audiencia Manager a XDM?
 
-Consulte la documentación de los campos [de asignación del Administrador de][audience-manager-mapping-fields] Audiencias para obtener más información.
+Consulte la documentación de los campos [de asignación del Administrador de](./mapping/audience-manager.md) Audiencias para obtener más información.
 
 ## Gestión de datos en la plataforma
 
