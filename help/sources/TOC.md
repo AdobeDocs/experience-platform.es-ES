@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Conector de datos de Analytics](connectors/adobe-applications/analytics.md)
       - [Conector del Administrador de Audiencias](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
+      - Asignación de campos de aplicación de Adobe {#mapping}
+         - [Campos de asignación de Analytics](connectors/adobe-applications/mapping/analytics.md)
+         - [Campos de asignación del Administrador de Audiencias](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Campos de Asignación de destino](connectors/adobe-applications/mapping/target.md)
    - Publicidad {#advertising}
       - [Conector de Google Ads](connectors/advertising/ads.md)
    - almacenamiento de nube {#cloud-storage}
