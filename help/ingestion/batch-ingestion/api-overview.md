@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del desarrollador de la ingestión por lotes de Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir
 
 Al ingerir datos, es importante comprender cómo funcionan los esquemas del modelo de datos de experiencia (XDM). Para obtener más información sobre cómo los tipos de campos XDM se asignan a diferentes formatos, lea la guía [para desarrolladores de](../../xdm/api/getting-started.md)Esquema Registry.
 
-Existe cierta flexibilidad al ingerir datos: si un tipo no coincide con lo que hay en el esquema de destinatario, los datos se convertirán al tipo de destinatario expresado.  Si no puede, fallará el lote con un `TypeCompatibilityException`.
+Existe cierta flexibilidad al ingerir datos: si un tipo no coincide con lo que hay en el esquema de destinatario, los datos se convertirán al tipo de destinatario expresado. Si no puede, fallará el lote con un `TypeCompatibilityException`.
 
 Por ejemplo, ni JSON ni CSV tienen un tipo de fecha ni de fecha y hora. Como resultado, estos valores se expresan con cadenas [formateadas](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) o con formato de hora Unix en milisegundos (1531263959999000 00) y se convierten en el momento de la ingestión al tipo XDM de destinatario.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parámetro | Descripción |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia. |
 
 **Respuesta**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Eliminar un lote
+## Eliminar un lote {#delete-a-batch}
 
 Un lote puede eliminarse realizando la siguiente solicitud POST con el parámetro de `action=REVERT` consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de elementos no utilizados. El lote se recopilará de forma asíncrona, y en ese momento se marcará como &quot;eliminado&quot;.
 
