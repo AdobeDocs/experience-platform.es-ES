@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de catálogos y conjuntos de datos
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -31,3 +31,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 * [Procesamiento de solicitudes de privacidad en Data Lake](privacy.md)
 * [Protección de datos en la plataforma de experiencia](data-protection.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
