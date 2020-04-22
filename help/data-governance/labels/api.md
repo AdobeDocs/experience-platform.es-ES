@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos mediante API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Una respuesta correcta devuelve las etiquetas que se han agregado al conjunto de
 
 Puede eliminar las etiquetas aplicadas a un conjunto de datos haciendo una solicitud de ELIMINACIÓN.
 
->[!NOTE] Solo debe utilizar esta operación cuando prepare el conjunto de datos principal para eliminarlo.
-
 **Formato API**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-El estado HTTP 200 (Aceptar) de una respuesta correcta indicaba que se habían eliminado las etiquetas. Puede [buscar las etiquetas](#lookup) existentes para el conjunto de datos en una llamada separada para confirmarlo.
+Una respuesta correcta de estado HTTP 200 (Aceptar), que indica que se han eliminado las etiquetas. Puede [buscar las etiquetas](#lookup) existentes para el conjunto de datos en una llamada separada para confirmarlo.
 
 ## Pasos siguientes
 
