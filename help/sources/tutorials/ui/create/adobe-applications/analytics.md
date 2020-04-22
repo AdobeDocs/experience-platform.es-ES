@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -23,7 +23,7 @@ La pantalla actividad ** de origen lista todas las conexiones previamente establ
 
 >[!NOTE] Se pueden realizar varias conexiones enlazadas a un origen para introducir datos diferentes.
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 En la lista de los grupos de informes disponibles, seleccione el que desee incluir en la plataforma y haga clic en **Siguiente**.
 
