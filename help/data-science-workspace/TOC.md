@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Espacio de trabajo de ciencias de datos de la plataforma Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
+source-git-commit: 721e12606227a0c61d3d25c4f50df2046e47dd8e
 
 ---
 
@@ -53,3 +53,5 @@ source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
 * [Guías de migración de fórmulas y portátiles](recipe-notebook-migration.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Notas de la versión de la plataforma](../release-notes/latest/latest.md)
+* [Notas de la versión de la plataforma](http://www.adobe.com/go/platform-release-notes-en)
