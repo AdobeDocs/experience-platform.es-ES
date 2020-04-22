@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -24,3 +24,4 @@ source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
    * [Guía de interfaz de usuario](customer-ai/user-guide.md)
    * [Descubrimiento de perspectivas](customer-ai/discover-insights.md)
    * [Descarga de puntuaciones](customer-ai/download-scores.md)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
