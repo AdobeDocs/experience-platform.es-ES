@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## Fecha de lanzamiento: 10 de septiembre de 2019
 
-## Ingesta de datos
+Actualizaciones de funciones existentes en Adobe Experience Platform:
+
+* [Ingesta de datos](#ingestion)
+* [Área de trabajo de ciencia de datos](#dsw)
+* [Servicio de Consulta](#query)
+
+## Ingesta de datos {#ingestion}
 
 Adobe Experience Platform proporciona un completo conjunto de funciones para ingestar cualquier tipo y latencia de datos. La integración de datos de la plataforma de experiencia de Adobe proporciona varias alternativas para la ingesta de datos, incluidas las API por lotes, las API de flujo, los conectores nativos de Adobe, los socios de integración de datos o la interfaz de usuario de la plataforma de experiencia de Adobe.
 
@@ -26,7 +32,7 @@ Adobe Experience Platform proporciona un completo conjunto de funciones para ing
 
 Para obtener más información, visite la documentación [de la ingestión](../../ingestion/home.md)de datos.
 
-## Área de trabajo de ciencia de datos
+## Área de trabajo de ciencia de datos {#dsw}
 
 Adobe Experience Platform Data Science Workspace es un servicio totalmente gestionado dentro de la plataforma de experiencia que permite a los científicos de datos generar sin problemas perspectivas a partir de datos y contenido en las soluciones de Adobe y en los sistemas de terceros mediante la creación y la puesta en marcha de modelos de aprendizaje automático. Data Science Workspace está estrechamente integrado con Platform y potencia el ciclo de vida completo de la ciencia de datos, incluida la exploración y preparación de datos XDM, seguido del desarrollo y la operacionalización de modelos para enriquecer automáticamente el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 
@@ -46,9 +52,9 @@ Adobe Experience Platform Data Science Workspace es un servicio totalmente gesti
 
 Para obtener más información, visite Información general sobre [Data Science Workspace](../../data-science-workspace/home.md).
 
-## Servicio de Consulta
+## Servicio de Consulta {#query}
 
-El servicio de Consulta ofrece la posibilidad de utilizar SQL estándar para la consulta de datos en Adobe Experience Platform para admitir una variedad de casos de uso de análisis y gestiones de datos. Se trata de una herramienta sin servidor que le permite unir conjuntos de datos desde Data Lake y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en sistema de informes, Área de trabajo de ciencia de datos o para su inserción en el Perfil del cliente en tiempo real.
+El servicio de Consulta ofrece la posibilidad de utilizar SQL estándar para la consulta de datos en Adobe Experience Platform para admitir una gran variedad de casos de uso de análisis y gestiones de datos. Se trata de una herramienta sin servidor que le permite unir conjuntos de datos desde Data Lake y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en sistema de informes, Área de trabajo de ciencia de datos o para su inserción en el Perfil del cliente en tiempo real.
 
 Puede utilizar el servicio de Consulta para crear ecosistemas de análisis de datos, creando una imagen de los clientes en sus distintos canales de interacción. Estos canales pueden incluir sistemas de punto de venta, web, móviles o CRM.
 
