@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
 
 ---
 
@@ -14,18 +14,18 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Fecha de la versión: 18 de noviembre de 2019
 
-Nuevas versiones:
-* [Plataforma de datos de clientes en tiempo real](#real-time-customer-data-platform)
+Nuevas funciones de Adobe Experience Platform:
+* [Plataforma de datos de clientes en tiempo real](#rtcdp)
 * [Destinos](#destinations)
 * [Fuentes](#sources)
 
 Actualizaciones de funciones existentes:
-* [Área de trabajo de ciencia de datos](#data-science-workspace)
-* [Sistema de modelo de datos de experiencia (XDM)](#experience-data-model-xdm-system)
-* [Perfil del cliente en tiempo real](#real-time-customer-profile)
-* [Servicio de segmentación](#segmentation-service)
+* [Área de trabajo de ciencia de datos](#dsw)
+* [Sistema de modelo de datos de experiencia (XDM)](#xdm)
+* [Perfil del cliente en tiempo real](#profile)
+* [Servicio de segmentación](#segmentation)
 
-## Plataforma de datos de clientes en tiempo real
+## Real-time Customer Data Platform {#rtcdp}
 
 Basada en la plataforma Adobe Experience, la plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe ayuda a las compañías a reunir datos conocidos y desconocidos para activar los perfiles del cliente con decisiones inteligentes durante todo el viaje del cliente. CDP en tiempo real combina múltiples fuentes de datos empresariales para crear perfiles unificados en tiempo real que se pueden utilizar para proporcionar experiencias personalizadas de uno a uno en todos los canales y dispositivos.
 
@@ -42,7 +42,7 @@ Con CDP en tiempo real, puede:
 
 Para obtener más información, consulte la documentación [de la plataforma de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe.
 
-### Funciones principales
+**Funciones principales**
 
 | Función | Descripción |
 |---|---|
@@ -50,7 +50,7 @@ Para obtener más información, consulte la documentación [de la plataforma de 
 | panel de métricas de Página de inicio | La página de inicio de la Plataforma de datos del cliente en tiempo real de Adobe incluye un panel de métricas que muestra información sobre perfiles y segmentos. La página de inicio también contiene enlaces con material didáctico. Consulte la sección sobre las métricas [de la plataforma de datos del cliente en tiempo](#real-time-customer-data-platform-metrics) real más abajo. |
 | Fuentes | Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamientos basados en la nube, software de terceros y CRM. Consulte la sección [Fuentes](#sources) a continuación para obtener más información. |
 
-### Métricas de la plataforma de datos del cliente en tiempo real
+**Métricas de la plataforma de datos del cliente en tiempo real**
 
 La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe, que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
 
@@ -60,11 +60,11 @@ Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no ap
 
 Para obtener más información, consulte Información general sobre las métricas de la Plataforma de datos del cliente en tiempo [real](../../rtcdp/home-page-dashboards.md)
 
-## Destinos
+## Destinos {#destinations}
 
 Los destinos son integraciones prediseñadas con plataformas de destino admitidas por la plataforma de datos del cliente en tiempo real de Adobe que activan los datos a dichos socios de forma transparente. Para obtener más información, lea el artículo de información general sobre [Destinations](../../rtcdp/destinations/destinations-overview.md) .
 
-### Destinos disponibles
+**Destinos disponibles**
 
 Con la versión de noviembre, la plataforma de datos del cliente en tiempo real de Adobe admite los siguientes destinos:
 
@@ -73,20 +73,20 @@ Con la versión de noviembre, la plataforma de datos del cliente en tiempo real 
 
 Consulte el catálogo [de](../../rtcdp/destinations/destinations-catalog.md) destino para obtener información sobre cada uno de los destinos.
 
-### Limitaciones conocidas
+**Limitaciones conocidas**
 
 * El control para permitir programas de activación personalizados en el flujo [de](../../rtcdp/destinations/activate-destinations.md#activate-data) activación (paso de programación) no está disponible con la versión inicial.
 * Actualmente no hay forma de editar o eliminar una configuración de destino. Para solucionar esta limitación, puede habilitar o deshabilitar el destino en la esquina superior derecha de la página [de detalles del](../../rtcdp/destinations/destination-details-page.md)destino.
 * Actualmente no hay ninguna validación para los detalles de la cuenta, la ruta o las credenciales al conectarse a la cuenta de almacenamiento o destino. Asegúrese de que está introduciendo las credenciales correctas y la comprobación de dobles para detectar errores o errores ortográficos.
 * No se han realizado renovaciones de credenciales con la versión inicial. Una vez que una cuenta ha caducado o necesita actualizarse, debe crear una nueva conexión de destino y reasignar los segmentos asignados anteriormente.
 
-## Fuentes
+## Fuentes {#sources}
 
 Adobe Experience Platform puede ingestar datos de fuentes externas y permitirle estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 La plataforma de experiencia proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
-### Funciones principales
+**Funciones principales**
 
 | Función | Descripción |
 | ---------- | ------------ |
@@ -94,17 +94,17 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 | flujos de trabajo renovados para conectores CRM | Nuevo flujo de trabajo intuitivo de la interfaz de usuario para crear y administrar conectores de Microsoft Dynamics y Salesforce. |
 | Compatibilidad con conectores para almacenamientos basados en la nube | Los conectores ahora pueden acceder a almacenamientos basados en la nube. Las nuevas fuentes incluyen Amazon S3, Azure Blob y servidores FTP/SFTP. |
 
-### Problemas conocidos
+**Problemas conocidos**
 
 * Los conectores de origen para almacenamientos basados en la nube no admiten la ingestión de archivos comprimidos.
 
 Para obtener más información sobre las fuentes, consulte Información general sobre [las fuentes](../../sources/home.md).
 
-## Área de trabajo de ciencia de datos
+## Área de trabajo de ciencia de datos {#dsw}
 
 Adobe Experience Platform Data Science Workspace permite a los científicos de datos generar sin problemas perspectivas a partir de datos y contenido en todas las aplicaciones de Adobe y sistemas de terceros mediante la creación y la puesta en marcha de modelos de aprendizaje automático. Data Science Workspace está estrechamente integrado con Platform y potencia el ciclo de vida completo de la ciencia de datos, incluida la exploración y preparación de datos XDM, seguido del desarrollo y la operacionalización de modelos para enriquecer automáticamente el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 
-### Nuevas funciones
+**Nuevas funciones**
 
 | Función | Descripción |
 | -----------| ---------- |
@@ -113,13 +113,13 @@ Adobe Experience Platform Data Science Workspace permite a los científicos de d
 
 Para obtener más información, consulte la información general [de](../../data-science-workspace/home.md)Área de trabajo de ciencia de datos.
 
-## Sistema de modelo de datos de experiencia (XDM)
+## Sistema de modelo de datos de experiencia (XDM) {#xdm}
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan la plataforma de experiencia. El modelo de datos de experiencia (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
 XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de la plataforma Adobe Experience. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
 
-### Nuevas funciones
+**Nuevas funciones**
 
 | Función | Descripción |
 | ---------- | ------------ |
@@ -130,13 +130,13 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 | Restricciones de formato para `xdm:alternateDisplayInfo` | Los campos &quot;Título&quot; y &quot;Descripción&quot; para `xdm:alternateDisplayInfo` deben ser cadenas para pasar la validación. |
 | Cambio de nombre: Perfil individual XDM | El &quot;título&quot; de la clase &quot;Perfil XDM&quot; se ha actualizado a &quot;Perfil individual XDM&quot;. El formato `$id` de la clase no ha cambiado. |
 
-### Problemas conocidos
+**Problemas conocidos**
 
 * None.
 
 Para obtener más información sobre cómo trabajar con XDM mediante la API del Registro de Esquema y la interfaz de usuario del Editor de Esquemas, lea la documentación [del sistema](../../xdm/home.md)XDM.
 
-## Perfil del cliente en tiempo real
+## Perfil del cliente en tiempo real {#profile}
 
 Adobe Experience Platform le permite dirigir experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Perfil le permite consolidar sus distintos datos de clientes en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con los clientes.
 
@@ -148,17 +148,17 @@ Adobe Experience Platform le permite dirigir experiencias coordinadas, coherente
 | Configurar directivas de combinación por proyección | Las aplicaciones ahora pueden configurar políticas de combinación por proyección para generar una vista de los datos según una política de combinación específica. |
 | Atributos calculados | Los atributos calculados calculan automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil a valores acumulados como &quot;compra total&quot;, &quot;valor de duración&quot; o &quot;estado del canal&quot; según un evento entrante, un evento entrante y datos de perfil, o un evento entrante, datos de perfil y eventos históricos. |
 
-### Correcciones de errores
+**Corrección de errores**
 
 * lista simplificada de las estrategias de identificación de ID disponibles en el flujo de trabajo de creación de políticas de combinación.
 
-### Problemas conocidos
+**Problemas conocidos**
 
 * None.
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de Perfil, lea la Descripción general [del Perfil del cliente en tiempo](../../profile/home.md)real.
 
-## Servicio de segmentación
+## Servicio de segmentación {#segmentation}
 
 El servicio de segmentación de la plataforma de experiencia de Adobe proporciona una interfaz de usuario y una API RESTful que le permite crear segmentos y generar audiencias a partir de los datos de Perfil de clientes en tiempo real. Estos segmentos se configuran y mantienen de forma centralizada en Platform, lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
 
@@ -173,7 +173,7 @@ El servicio de segmentación define un subconjunto particular de perfiles al des
 | Compatibilidad con RBAC | El Generador de segmentos ahora ofrece compatibilidad con controles de acceso y permisos básicos basados en roles. |
 | Compatibilidad mejorada con el uso compartido de audiencias externas entre las soluciones de plataforma y Adobe | Ahora los usuarios pueden introducir metadatos de audiencia externos (que no sean de la plataforma de experiencia) en situaciones en las que el número de audiencias es grande o no se conoce a priori. Esta versión incluye acceso a los metadatos del Administrador de Audiencias para los clientes que han aprovisionado el conector de la solución. Estos metadatos de audiencia se pueden usar en el Generador de segmentos para crear nuevos segmentos de la plataforma de experiencia. <br/><br/> Además, los segmentos creados en la plataforma de experiencia estarán ahora disponibles para su uso en soluciones integradas de Adobe, incluidos Administrador de Audiencias, Destinatario y Ad Cloud. |
 
-### Correcciones de errores
+**Corrección de errores**
 
 * Se ha corregido un problema que provocaba que la segmentación con varias entidades devolviera cero perfiles en caso de relaciones anidadas.
 * Se corrigió un problema en el cual la lógica de exclusión devolvía resultados engañosos.
@@ -181,7 +181,7 @@ El servicio de segmentación define un subconjunto particular de perfiles al des
 * Se corrigió un problema intermitente en el cual aparecían varias copias de la misma carpeta XDM.
 * Ahora se genera mensajería para informar al usuario si las estimaciones de segmentos no están disponibles para la directiva de combinación seleccionada.
 
-### Problemas conocidos
+**Problemas conocidos**
 
 * None.
 
