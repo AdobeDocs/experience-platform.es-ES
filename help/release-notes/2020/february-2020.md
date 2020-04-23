@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,13 +14,17 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Fecha de publicación: 12 de febrero de 2020
 
-## Fuentes
+Actualizaciones de funciones existentes en Adobe Experience Platform:
+
+* [Fuentes](#sources)
+
+## Fuentes {#sources}
 
 Adobe Experience Platform puede ingestar datos de fuentes externas y permitirle estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 La plataforma de experiencia proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
-### Nuevas funciones
+**Nuevas funciones**
 
 | Función | Descripción |
 | ------- | ----------- |
@@ -30,7 +34,7 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 | Compatibilidad de API con sistemas de almacenamiento en la nube | Nuevos conectores de origen para la API de Azure Data Lake Service Gen 2 y la API de Almacenamiento de Google Cloud. |
 | Compatibilidad con la interfaz de usuario para sistemas de almacenamiento en la nube | Nuevo conector de origen para el Almacenamiento de Google Cloud en la interfaz de usuario. |
 
-### Problemas conocidos
+**Problemas conocidos**
 
 * None
 
