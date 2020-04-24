@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y publicación de un tutorial del modelo de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    * Lotes: Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
    * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project Jupyter y está estrechamente integrada en la plataforma de experiencias.
 
-## Preparación de los datos
+## Preparación de los datos {#prepare-your-data}
 
 Para crear un modelo de aprendizaje automático que haga recomendaciones de productos personalizadas a sus clientes, se deben analizar las compras anteriores realizadas en el sitio web. En esta sección se explica cómo estos datos se ingieren en la plataforma a través de Adobe Analytics y cómo se transforman en un conjunto de datos de funciones para que los utilice el modelo de aprendizaje automático.
 
@@ -68,7 +68,7 @@ Los demás conjuntos de datos se han rellenado previamente con lotes para obtene
 | Conjunto de datos de entrada de Recomendaciones | Esquema de entrada de Recomendaciones | Los datos de Analytics se transforman en un conjunto de datos de formación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Recomendaciones de productos. `itemid` y `userid` corresponden a un producto comprado por ese cliente. |
 | Conjunto de datos de salida de Recomendaciones | Esquema de salida de Recomendaciones | El conjunto de datos para el que se almacenan los resultados de puntuación contendrá la lista de los productos recomendados para cada cliente. |
 
-## Crear el modelo
+## Crear el modelo {#author-your-model}
 
 El segundo componente del ciclo de vida de Área de trabajo de ciencia de datos incluye la creación de fórmulas y modelos. La fórmula de Recomendaciones de productos está diseñada para generar recomendaciones de productos a escala utilizando datos de compras anteriores y aprendizaje automático.
 
@@ -85,7 +85,7 @@ Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendiza
 
 Ahora ha revisado los esquemas de entrada y salida requeridos por la fórmula de Recomendaciones de productos. Ahora puede continuar con la siguiente sección para averiguar cómo crear, capacitar y evaluar un modelo de recomendaciones de producto.
 
-## Formación y evaluación de su modelo
+## Formación y evaluación de su modelo {#train-and-evaluate-your-model}
 
 Ahora que los datos están preparados y la fórmula está lista para ser utilizada, puede crear, entrenar y evaluar el modelo de aprendizaje automático.
 
@@ -130,7 +130,7 @@ Cada vez que se completa una ejecución de formación, puede realizar una vista 
 3. Puede ver los parámetros de conjunto de datos, esquema y configuración utilizados para cada formación ejecutada en el carril correcto.
 4. Vuelva a la página Modelo e identifique la formación de mayor rendimiento mediante la observación de sus métricas de evaluación.
 
-## Operacionalizar el modelo
+## Operacionalizar el modelo {#operationalize-your-model}
 
 El paso final en el flujo de trabajo de Data Science es poner en marcha el modelo para obtener una puntuación y consumir perspectivas del almacén de datos.
 
