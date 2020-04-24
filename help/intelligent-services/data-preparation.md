@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ Este documento proporciona una guía general sobre cómo asignar los datos de ev
 
 El esquema Consumer ExperienceEvent describe el comportamiento de una persona en relación con eventos de marketing digital (web o móvil), así como con la actividad comercial en línea o sin conexión. El uso de este esquema es necesario para Servicios Inteligentes debido a sus campos (columnas) semánticamente bien definidos, evitando nombres desconocidos que de otra manera harían que los datos fueran menos claros.
 
+Los servicios inteligentes utilizan varios campos clave dentro de este esquema para generar perspectivas a partir de los datos de sus eventos de marketing, todos los cuales se pueden encontrar en el nivel raíz y se expanden para mostrar los subcampos requeridos.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 Al igual que todos los esquemas XDM, la mezcla CEE es extensible. En otras palabras, se pueden agregar campos adicionales a la mezcla CEE y, si es necesario, se pueden incluir variaciones diferentes en varios esquemas.
 
 Puede encontrarse un ejemplo completo de la mezcla en el repositorio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)público y debe utilizarse como referencia para los campos clave descritos en la sección siguiente.
@@ -30,6 +34,8 @@ Las secciones siguientes destacan los campos clave dentro de la combinación de 
 ### xdm:canal
 
 Este campo representa el canal de marketing relacionado con ExperienceEvent. El campo incluye información sobre el tipo de canal, el tipo de medio y el tipo de ubicación. **Este campo _debe_proporcionarse para que la API de atribución funcione con sus datos**.
+
+![](./images/data-preparation/channel.png)
 
 **esquema de ejemplo**
 
@@ -63,25 +69,25 @@ En la tabla siguiente se proporcionan algunos ejemplos de canales de marketing a
 
 Este campo es una matriz de artículos que representan los productos seleccionados por un cliente, incluidos el SKU del producto, el nombre, el precio y la cantidad.
 
+![](./images/data-preparation/productListItems.png)
+
 **esquema de ejemplo**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Para obtener información completa sobre cada uno de los subcampos requeridos pa
 ### xdm:commerce
 
 Este campo contiene información específica sobre el comercio acerca de ExperienceEvent, incluido el número de orden de compra y la información de pago.
+
+![](./images/data-preparation/commerce.png)
 
 **esquema de ejemplo**
 
@@ -128,6 +136,8 @@ Para obtener información completa sobre cada uno de los subcampos requeridos pa
 
 Este campo representa los detalles web relacionados con ExperienceEvent, como la interacción, los detalles de la página y el remitente del reenvío.
 
+![](./images/data-preparation/web.png)
+
 **esquema de ejemplo**
 
 ```json
@@ -156,6 +166,8 @@ Para obtener información completa sobre cada uno de los subcampos obligatorios 
 
 Este campo contiene información relacionada con actividades de marketing que están activas con el touchpoint.
 
+![](./images/data-preparation/marketing.png)
+
 **esquema de ejemplo**
 
 ```json
@@ -166,7 +178,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 }
 ```
 
-Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
+Para obtener información completa sobre cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
 ## Asignación e ingesta de datos
 
