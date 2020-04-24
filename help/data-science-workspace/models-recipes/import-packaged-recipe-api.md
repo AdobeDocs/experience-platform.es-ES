@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ Según la forma del archivo de fórmula empaquetado que se incluirá como parte 
 - [Creación de un motor con una URL de acoplamiento](#create-an-engine-with-a-docker-url)
 - [Crear un motor con un artefacto binario (desaprobado)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Creación de un motor con una URL de acoplamiento
+### Creación de un motor con una URL de acoplamiento {#create-an-engine-with-a-docker-url}
 
 Para crear un motor con un archivo de fórmula empaquetado almacenado en un contenedor de Docker, debe proporcionar la URL de Docker al archivo de fórmula empaquetado.
 
@@ -199,11 +199,11 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 Una respuesta correcta muestra una carga útil JSON con información acerca del motor recién creado. La `id` clave representa el identificador único del motor y es necesaria en el siguiente tutorial para crear una instancia MLI. Asegúrese de guardar el identificador del motor antes de continuar con los pasos siguientes.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Ha creado un motor con la API y se obtuvo un identificador de motor único como parte del cuerpo de respuesta. Puede utilizar este identificador de motor en el siguiente tutorial a medida que aprenda a [crear, entrenar y evaluar un modelo con la API](./train-evaluate-model-api.md).
 
-### Crear un motor con un artefacto binario (desaprobado)
+### Crear un motor con un artefacto binario (desaprobado) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
