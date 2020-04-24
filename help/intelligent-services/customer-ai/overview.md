@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el AI del cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ La API del cliente funciona analizando los datos existentes del Evento de la exp
 
 ## Pasos siguientes
 
-Puede empezar por seguir la guía de [introducción](./getting-started.md) . Esta guía lo acompaña durante la configuración de todas las solicitudes previas necesarias para la API del cliente. Si ya tiene todas las credenciales y los datos listos, visite la guía [de usuario de AI del](./user-guide.md)cliente. Proporciona los pasos para utilizar la API del cliente y muestra la creación de segmentos del cliente mediante puntuaciones de tendencia.
+Puede empezar por seguir la guía de [introducción](./getting-started.md) . Esta guía lo acompaña durante la configuración de todos los requisitos previos necesarios para la API del cliente. Si ya tiene todas las credenciales y los datos listos, visite [Configuración de una instancia](./user-guide/configure.md)de AI de cliente. Proporciona los pasos para utilizar la API del cliente.
