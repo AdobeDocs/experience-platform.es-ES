@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía para desarrolladores de API de registro de Esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * Content-Type: application/json
 
-## Conozca su TENANT_ID {#know-your-tenant-id}
+## Conozca su TENANT_ID {#know-your-tenant_id}
 
 A lo largo de esta guía verá referencias a un `TENANT_ID`. Este ID se utiliza para garantizar que los recursos que cree tengan el espacio de nombres correcto y estén contenidos en la organización de IMS. Si no conoce su ID, puede acceder a él realizando la siguiente solicitud GET:
 
