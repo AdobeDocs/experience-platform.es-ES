@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formación y evaluación de un modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
 
 Este tutorial le guió a través de la creación, formación y evaluación de un modelo en Área de trabajo de ciencias de datos. Una vez que haya llegado a un modelo optimizado, puede utilizar el modelo capacitado para generar perspectivas siguiendo la [Puntuación de un modelo en el tutorial de la interfaz de usuario](./score-model-ui.md) .
 
-## Referencia
+## Referencia {#reference}
 
 ### Configuraciones de fórmulas de venta minorista
 
