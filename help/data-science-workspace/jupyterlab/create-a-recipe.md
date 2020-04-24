@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Creación de una fórmula con blocs de notas Jupyter
 
 Este tutorial irá a dos secciones principales. En primer lugar, creará un modelo de aprendizaje automático con una plantilla dentro de JupyterLab Notebook. A continuación, ejercerá el flujo de trabajo del bloc de notas a la fórmula dentro de JupyterLab para crear una fórmula dentro de Data Science Workspace.
-- [Empiece con el entorno de portátiles JupyterLab](#get-started-with-the-jupyterlab-notebook-environment)
-- [Edite los archivos de fórmulas](#make-edits-to-recipe-files)
-- [Introducción al bloc de notas del Creador de fórmulas](#get-started-with-the-recipe-builder-notebook)
-   - [Archivo de requisitos](#requirements-file)
-   - [Archivos de configuración](#configuration-files)
-   - [Cargador de datos de formación](#training-data-loader)
-   - [Cargador de datos de puntuación](#scoring-data-loader)
-   - [Archivo de canalización](#pipeline-file)
-   - [Archivo de evaluador](#evaluator-file)
-   - [Archivo de Data Saver](#data-saver-file)
-- [Formación y puntuación](#training-and-scoring)
-- [Crear una fórmula](#create-recipe)
 
 ## Conceptos introducidos:
 
@@ -45,7 +33,7 @@ El bloc de notas del Creador de fórmulas le permite ejecutar ejecuciones de pun
 
 Al hacer clic en el bloc de notas del Creador de fórmulas desde el iniciador, el bloc de notas se abrirá en la ficha. La plantilla utilizada en el bloc de notas es la fórmula Python Retail Sales Forecasting (Previsión de ventas minoristas de Python) que también se puede encontrar en [este repositorio público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Observará que en la barra de herramientas hay tres acciones adicionales: **Tren**, **Puntuación** y **Crear fórmula**. Estos iconos solo aparecerán en el bloc de notas del Creador de fórmulas. Se hablará de más información sobre estas acciones [en la sección](#training-and-scoring) Formación y puntuación después de crear la fórmula en el bloc de notas.
+Observará que en la barra de herramientas hay tres acciones adicionales: - **[!UICONTROL Train]**, **[!UICONTROL Score]** y **[!UICONTROL Create Recipe]**. Estos iconos solo aparecerán en el bloc de notas del Creador de fórmulas. Se hablará de más información sobre estas acciones [en la sección](#training-and-scoring) Formación y puntuación después de crear la fórmula en el bloc de notas.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ Ahora que conoce los conceptos básicos del entorno de portátiles JupyterLab, p
 - [Archivo de evaluador](#evaluator-file)
 - [Archivo de Data Saver](#data-saver-file)
 
-### Archivo de requisitos
+### Archivo de requisitos {#requirements-file}
 
 El archivo de requisitos se utiliza para declarar bibliotecas adicionales que desee utilizar en la fórmula. Puede especificar el número de versión si hay una dependencia. Para buscar bibliotecas adicionales, visite https://anaconda.org. La lista de las bibliotecas principales que ya se están utilizando incluye:
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores.
 
-### Archivos de configuración
+### Archivos de configuración {#configuration-files}
 
 Los archivos de configuración `training.conf` y `scoring.conf`, se utilizan para especificar los conjuntos de datos que desea utilizar para la formación y la puntuación, así como para agregar hiperparámetros. Existen configuraciones independientes para la capacitación y la puntuación.
 
@@ -108,7 +96,7 @@ De forma predeterminada, se establecen los siguientes parámetros de configuraci
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Cargador de datos de formación
+## Cargador de datos de formación {#training-data-loader}
 
 El objetivo del cargador de datos de formación es crear instancias de los datos utilizados para crear el modelo de aprendizaje automático. Normalmente, hay dos tareas que el cargador de datos de formación realizará:
 - Cargar datos de la plataforma
@@ -116,7 +104,7 @@ El objetivo del cargador de datos de formación es crear instancias de los datos
 
 Las dos secciones siguientes abarcarán la carga de datos y la preparación de datos.
 
-### Carga de datos
+### Carga de datos {#loading-data}
 
 En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)pandas. Los datos se pueden cargar desde archivos de Adobe Experience Platform mediante el SDK de plataforma (`platform_sdk`) o desde fuentes externas mediante las funciones `read_csv()` o `read_json()` de pandas.
 
@@ -126,11 +114,11 @@ En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/st
 >[!NOTE]
 >En el bloc de notas del Creador de fórmulas, los datos se cargan mediante el cargador de `platform_sdk` datos.
 
-### SDK de plataforma
+### SDK de plataforma {#platform-sdk}
 
 Para ver un tutorial detallado sobre el uso del cargador de `platform_sdk` datos, visite la guía del SDK de la [plataforma](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación de compilación, la lectura básica de datos y la escritura básica de datos.
 
-### Fuentes externas
+### Fuentes externas {#external-sources}
 
 Esta sección muestra cómo importar un archivo JSON o CSV a un objeto pandas. La documentación oficial de la biblioteca de pandas puede encontrarse aquí:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 Ahora que tiene sus datos, puede comenzar con la preparación de datos y la ingeniería de características.
 
-### Preparación de datos e ingeniería de características
+### Preparación de datos e ingeniería de características {#data-preparation-and-feature-engineering}
 
 Una vez cargados los datos, los datos se preparan y luego se dividen en los `train` y los `val` conjuntos de datos. A continuación se muestra el código de muestra:
 
@@ -222,7 +210,7 @@ Estos datos se dividen entre `train` y `val` dataset.
 
 La `load()` función debe completarse con el `train` conjunto de datos y `val` como resultado.
 
-### Cargador de datos de puntuación
+### Cargador de datos de puntuación {#scoring-data-loader}
 
 El procedimiento para cargar datos para la puntuación es similar al de cargar datos de formación en la `split()` función. Utilizamos el SDK de acceso a datos para cargar datos de los `scoringDataSetId` que se encuentran en nuestro `recipe.conf` archivo.
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 La `load()` función del cargador de datos de puntuación debe completarse con el conjunto de datos de puntuación como resultado.
 
-### Archivo de canalización
+### Archivo de canalización {#pipeline-file}
 
 El `pipeline.py` archivo incluye lógica para la formación y la puntuación.
 
-### Formación
+### Formación {#training}
 
 El propósito de la formación es crear un modelo con las funciones y etiquetas de su conjunto de datos de formación.
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 Tenga en cuenta que, según la aplicación, tendrá argumentos en su `GradientBoostingRegressor()` función. `xTrainingDataset` debe contener las características utilizadas para la formación, mientras `yTrainingDataset` que debe contener las etiquetas.
 
-### Puntuación
+### Puntuación {#scoring}
 
 La `score()` función debe contener el algoritmo de puntuación y devolver una medición para indicar el rendimiento del modelo. La `score()` función utiliza las etiquetas de conjunto de datos de puntuación y el modelo entrenado para generar un conjunto de funciones predichas. Estos valores predichos se comparan con las características reales del conjunto de datos de puntuación. En este ejemplo, la `score()` función utiliza el modelo entrenado para predecir las características mediante las etiquetas del conjunto de datos de puntuación. Se devuelven las características predichas.
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Archivo de evaluador
+### Archivo de evaluador {#evaluator-file}
 
 El `evaluator.py` archivo contiene lógica sobre cómo desea evaluar la fórmula formada, así como sobre cómo deben dividirse los datos de capacitación. En el ejemplo de ventas minoristas, se incluirá la lógica para cargar y preparar los datos de capacitación. Pasaremos por las dos secciones siguientes.
 
-### Dividir el conjunto de datos
+### Dividir el conjunto de datos {#split-the-dataset}
 
 La fase de preparación de datos para la capacitación requiere dividir el conjunto de datos que se utilizará para la capacitación y las pruebas. Estos datos se utilizarán implícitamente para evaluar el modelo después de que se haya formado. `val` Este proceso es independiente de la puntuación.
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Evaluar el modelo entrenado
+### Evaluar el modelo entrenado {#evaluate-the-trained-model}
 
 La `evaluate()` función se realiza después de que el modelo esté entrenado y devuelve una métrica para indicar el rendimiento del modelo. La `evaluate()` función utiliza las etiquetas de conjunto de datos de prueba y el modelo Capacitado para predecir un conjunto de funciones. Estos valores predichos se comparan con las características reales del conjunto de datos de prueba. Los algoritmos de puntuación comunes incluyen:
 - [Error medio de porcentaje absoluto (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 Observe que la función devuelve un `metric` objeto que contiene una matriz de métricas de evaluación. Estas métricas se utilizarán para evaluar el rendimiento del modelo capacitado.
 
-### Archivo de Data Saver
+### Archivo de Data Saver {#data-saver-file}
 
 El `datasaver.py` archivo contiene la `save()` función para guardar la predicción al probar la puntuación. La `save()` función tomará la predicción y, mediante las API del catálogo de la plataforma de experiencia, escribirá los datos en el `scoringResultsDataSetId` archivo especificado en el `scoring.conf` .
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Formación y puntuación
+## Formación y puntuación {#training-and-scoring}
 
 Cuando haya terminado de realizar cambios en el bloc de notas y quiera entrenar la fórmula, puede hacer clic en los botones asociados en la parte superior de la barra para crear una ejecución de formación en la celda. Al hacer clic en el botón, aparecerá un registro de comandos y resultados de la secuencia de comandos de formación en el bloc de notas (debajo de la `evaluator.py` celda). Conda primero instala todas las dependencias y luego se inicia la formación.
 
-Tenga en cuenta que debe ejecutar la formación al menos una vez para poder ejecutar la puntuación. Al hacer clic en el botón **Ejecutar puntuación** , se anotará en el modelo entrenado que se generó durante la formación. La secuencia de comandos de puntuación aparecerá en `datasaver.py`.
+Tenga en cuenta que debe ejecutar la formación al menos una vez para poder ejecutar la puntuación. Al hacer clic en el **[!UICONTROL Run Scoring]** botón, se anotará en el modelo entrenado que se generó durante la formación. La secuencia de comandos de puntuación aparecerá en `datasaver.py`.
 
 Para depurar, si desea ver la salida oculta, agregue `debug` al final de la celda de salida y vuelva a ejecutarla.
 
-## Crear fórmula
+## Crear fórmula {#create-recipe}
 
-Cuando haya terminado de editar la fórmula y esté satisfecho con el resultado de la prueba/puntuación, puede crear una fórmula a partir del bloc de notas pulsando **Crear fórmula** en la navegación superior derecha.
+Cuando haya terminado de editar la fórmula y esté satisfecho con el resultado de la prueba/puntuación, puede crear una fórmula a partir del bloc de notas pulsando **[!UICONTROL Create Recipe]** en la navegación superior derecha.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ Después de pulsar el botón, se le pedirá que introduzca un nombre de fórmula
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Una vez que presione **Aceptar** , podrá navegar a la nueva fórmula de la Plataforma [de](https://platform.adobe.com/)Adobe Experience. Puede hacer clic en el botón Fórmulas **de** Vista para llevarlo a la ficha **Fórmulas** en Modelos **ML**
+Una vez que pulse **[!UICONTROL Ok]** podrá navegar hasta la nueva fórmula de la plataforma [de experiencias de](https://platform.adobe.com/)Adobe. Puede hacer clic en el **[!UICONTROL View Recipes]** botón para ir a la **[!UICONTROL Recipes]** ficha de **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ Una vez completado el proceso, la fórmula tendrá este aspecto:
 > - No crear fórmulas en diferentes blocs de notas al mismo tiempo
 
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje automático en el bloc de notas del Creador de fórmulas. También ha aprendido a ejercitar el flujo de trabajo del bloc de notas para la fórmula dentro del bloc de notas a fin de crear una fórmula dentro de Área de trabajo de ciencia de datos.
 
 Para continuar aprendiendo a trabajar con recursos dentro de Área de trabajo de ciencia de datos, visite la lista desplegable Fórmulas y modelos de Área de trabajo de ciencia de datos.
 
-## Recursos adicionales
+## Recursos adicionales {#additional-resources}
 
 El siguiente vídeo está diseñado para ayudarle a crear e implementar modelos.
 
