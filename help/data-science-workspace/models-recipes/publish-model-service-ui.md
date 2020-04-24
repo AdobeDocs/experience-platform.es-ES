@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicación de un modelo como servicio (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: af491361c5c3518e9bcc0af41a5aa79022229a2d
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -26,32 +26,32 @@ Este tutorial requiere un modelo existente con una ejecución de formación corr
 
 Si prefiere publicar un modelo con las API de aprendizaje automático de Sensei, consulte el tutorial [de](./publish-model-service-api.md)API.
 
-## Publicación de un modelo
+## Publicación de un modelo {#publish-a-model}
 
-1. En Adobe Experience Platform, haga clic en el vínculo **Modelos** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a publicar como servicio.
+1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a publicar como servicio.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-1. Haga clic en **Publicar** cerca de la parte superior derecha de la página de información general del modelo para inicio de un proceso de creación de servicios.
+2. Haga clic **[!UICONTROL Publish]** cerca de la parte superior derecha de la página de información general del modelo para crear un inicio de un proceso de creación de servicio.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-1. Introduzca un nombre que desee para el servicio y, si lo desea, proporcione una descripción del servicio, haga clic en **Siguiente** cuando finalice.
+3. Introduzca un nombre que desee para el servicio y, si lo desea, proporcione una descripción del servicio; haga clic en **[!UICONTROL Next]** cuando termine.
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-1. Se muestran todas las ejecuciones de formación correctas para el modelo. El nuevo servicio heredará las configuraciones de capacitación y puntuación de la ejecución de formación seleccionada.
+4. Se muestran todas las ejecuciones de formación correctas para el modelo. El nuevo servicio heredará las configuraciones de capacitación y puntuación de la ejecución de formación seleccionada.
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-1. Haga clic en **Finalizar** para crear el servicio y redirigir a la Galería **de** servicios para mostrar todos los servicios disponibles, incluido el servicio recién creado.
+5. Haga clic en **[!UICONTROL Finish]** para crear el servicio y redireccionar al **[!UICONTROL Service Gallery]** para mostrar todos los servicios disponibles, incluido el servicio recién creado.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Puntuación mediante un servicio
+## Puntuación mediante un servicio {#access-a-service}
 
-1. En Adobe Experience Platform, haga clic en la ficha **Servicios** situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio que desee utilizar y haga clic en **Puntuación**.
+1. En Adobe Experience Platform, haga clic en la **[!UICONTROL Services]** ficha situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio que desea utilizar y haga clic en **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
-1. Seleccione un conjunto de datos de entrada adecuado para la ejecución de puntuación y haga clic en **Siguiente**.
+2. Seleccione un conjunto de datos de entrada adecuado para la ejecución de puntuación y haga clic en **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-1. Seleccione un conjunto de datos de salida adecuado para los resultados de puntuación y haga clic en **Siguiente**.
+3. Seleccione un conjunto de datos de salida adecuado para los resultados de puntuación y haga clic en **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-1. Cuando se crea un servicio, hereda las configuraciones de puntuación predeterminadas. Puede revisar estas configuraciones y ajustarlas según sea necesario haciendo clic con el doble en los valores. Una vez que esté satisfecho con las configuraciones, haga clic en **Finalizar** para comenzar la ejecución de la puntuación.
+4. Cuando se crea un servicio, hereda las configuraciones de puntuación predeterminadas. Puede revisar estas configuraciones y ajustarlas según sea necesario haciendo clic con el doble en los valores. Una vez que esté satisfecho con las configuraciones, haga clic en **[!UICONTROL Finish]** para comenzar la ejecución de la puntuación.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-1. En la página *Información general* del servicio, se muestran los detalles del nuevo trabajo de puntuación y su progreso. Una vez finalizado el trabajo, se actualizará el trabajo de puntuación **Más reciente** .
+5. En la página *Información general* del servicio, se muestran los detalles del nuevo trabajo de puntuación y su progreso. Una vez finalizado el trabajo, se actualizará el trabajo de puntuación **[!UICONTROL Most Recent]** .
    ![](../images/models-recipes/publish-model/score_pending.png)
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Siguiendo este tutorial, ha publicado correctamente un modelo como un servicio accesible y ha puntuado datos mediante el nuevo servicio a través de la Galería *de* servicios. Continúe con el siguiente tutorial para obtener información sobre cómo puede [programar las ejecuciones de puntuación y formación automatizada en un servicio](./schedule-models-ui.md).
