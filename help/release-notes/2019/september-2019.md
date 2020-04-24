@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Notas de la versión de Adobe Experience Platform
 
-## Fecha de lanzamiento: 10 de septiembre de 2019
+**Fecha de lanzamiento: 10 de septiembre de 2019**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
