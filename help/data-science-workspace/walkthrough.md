@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recorrido de Área de trabajo de ciencias de datos
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ En nuestro tutorial, utilizaremos Python 3 en el bloc de notas Jupyter para most
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Configuración
+### Configuración {#setup}
 
 Con el bloc de notas Retail Sales abierto, lo primero que hacemos es cargar las bibliotecas necesarias para nuestro flujo de trabajo. En la siguiente lista se ofrece una breve descripción de para qué se utiliza cada uno de ellos:
 - **numpy** : biblioteca de computación científica que agrega compatibilidad con matrices y matrices multidimensionales y grandes
@@ -55,7 +55,7 @@ Con el bloc de notas Retail Sales abierto, lo primero que hacemos es cargar las 
 - **sklearn** : biblioteca de aprendizaje automático que incluye algoritmos de clasificación, regresión, vector de compatibilidad y clúster
 - **advertencias** : biblioteca que controla los mensajes de advertencia
 
-### Explorar datos
+### Explorar datos {#exploring-data}
 
 #### Cargar datos
 
@@ -129,7 +129,7 @@ Con el mismo conjunto de datos minorista, podemos generar la matriz de correlaci
 
 Fíjese en la diagonal de los que están en el centro. Esto muestra que cuando se compara una variable con sí misma, tiene una correlación positiva completa. Una correlación positiva fuerte tendrá una magnitud más cercana a 1, mientras que las correlaciones débiles estarán más cerca de 0. La correlación negativa se muestra con un coeficiente negativo que muestra una tendencia inversa.
 
-### Ingeniería de funciones
+### Ingeniería de funciones {#feature-engineering}
 
 En esta sección, realizaremos modificaciones en nuestro conjunto de datos comercial. Realizaremos las siguientes operaciones:
 
@@ -177,7 +177,7 @@ A continuación se muestra un resumen del conjunto de datos después de nuestras
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Capacitación y verificación
+### Capacitación y verificación {#training-and-verification}
 
 Ahora es el momento de crear algunos modelos de los datos y seleccionar qué modelo es el mejor para predecir las ventas futuras. Evaluaremos los 5 algoritmos siguientes:
 
@@ -201,7 +201,7 @@ En esta sección, declararemos todos los algoritmos en una matriz llamada `model
 
 ![](./images/walkthrough/training_scoring.png)
 
-Para la puntuación, estamos tomando la diferencia porcentual media entre los valores predichos `weeklySalesAhead` con los valores reales en los `y_test` datos. Ya que queremos minimizar la diferencia entre nuestra predicción y la realidad, el Regresor de aumento de degradado es el modelo de mejor rendimiento.
+Para la puntuación, estamos tomando la diferencia porcentual media entre los valores predichos `weeklySalesAhead` con los valores reales en los `y_test` datos. Dado que queremos minimizar la diferencia entre nuestra predicción y la realidad, el Regresor de aumento de degradado es el modelo de mejor rendimiento.
 
 #### Visualizar predicciones
 
