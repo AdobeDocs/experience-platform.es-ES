@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Instancias MLI
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Una instancia MLI es un emparejamiento de un [motor](./engines.md) existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
 
-## Crear una instancia MLI
+## Crear una instancia MLI {#create-an-mlinstance}
 
 Puede crear una instancia MLI realizando una solicitud POST mientras proporciona una carga útil de solicitud que consta de un ID de motor (`{ENGINE_ID}`) válido y un conjunto apropiado de configuraciones predeterminadas.
 
