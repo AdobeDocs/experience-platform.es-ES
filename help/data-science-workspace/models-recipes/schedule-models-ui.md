@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Programar un modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Para completar este tutorial, debe tener acceso a la plataforma de experiencias.
 
 Este tutorial requiere un servicio existente. Si no tiene un servicio accesible con el que trabajar, puede crear uno siguiendo el tutorial [Publicar el modelo como servicio de la interfaz de usuario](./publish-model-service-ui.md) .
 
-## Configurar puntuación programada
+## Configurar puntuación programada {#configure-scheduled-scoring}
 
 La puntuación de modelo se puede configurar para que sea un proceso automatizado y programado. Una vez creado el servicio, puede seguir los pasos a continuación para configurar y aplicar un programa de puntuación:
 
@@ -41,7 +41,7 @@ La puntuación de modelo se puede configurar para que sea un proceso automatizad
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configurar la formación programada
+## Configurar la formación programada {#configure-scheduled-training}
 
 La configuración de las ejecuciones de formación programadas en un servicio garantiza que el modelo de aprendizaje automático se actualice a los patrones de datos más recientes. Siempre que se completa una ejecución de formación programada, se utiliza el modelo capacitado resultante para activar el servicio hasta la siguiente ejecución de formación programada.
 
