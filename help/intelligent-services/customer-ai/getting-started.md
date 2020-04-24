@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introducción a la API del cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ Las guías para la API del cliente requieren una comprensión práctica de los d
 
 ## Descarga de puntuaciones de AI del cliente
 
->[!NOTE] Si no necesita descargar puntuaciones sin procesar, puede omitir este paso y continuar con la guía de la interfaz de usuario.
+>[!NOTE] Si no necesita descargar puntuaciones sin procesar, puede omitir este paso y continuar con la guía [de](./user-guide/configure.md)configuración.
 
 La descarga de puntuaciones de AI del cliente se realiza mediante una combinación de llamadas de API. Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
 
@@ -42,4 +42,4 @@ Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato
 
 ## Pasos siguientes
 
-Una vez que esté listo y tenga todas sus credenciales y esquemas en su lugar, inicio siguiendo la guía [de interfaz de usuario de](./user-guide.md)Customer AI. Esta guía lo acompaña durante la creación de una instancia y enviarla para capacitación y puntuación.
+Una vez que haya completado los pasos descritos en el documento anterior, visite la documentación de [entrada y salida](./input-output.md) . Este documento ofrece una breve descripción general de los tipos de datos que se utilizan y producen en la API del cliente.
