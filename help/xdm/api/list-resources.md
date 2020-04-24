@@ -4,18 +4,16 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Recursos de Lista
 
-Puede realizar la vista de una lista de todos los recursos (esquemas, clases, mezclas o tipos de datos) dentro de un contenedor mediante una sola solicitud GET.
+Puede realizar una vista de una lista de todos los recursos del Registro de Esquemas de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud GET.
 
 >[!NOTE] Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
->
-> Si desea anular por completo el límite de 300 elementos, debe utilizar el encabezado Aceptar `application/vnd.adobe.xdm-v2+json` para devolver todos los resultados en una sola solicitud.
 
 **Formato API**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parámetro | Descripción |
 | --- | --- |
 | `{CONTAINER_ID}` | El contenedor donde se ubican los recursos (&quot;global&quot; o &quot;inquilino&quot;). |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a recuperar de la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{RESOURCE_TYPE}` | Tipo de recurso que se va a recuperar de la biblioteca de Esquemas. Los tipos válidos son `classes`, `mixins`, `schemas`, `datatypes`y `descriptors`. |
 | `{QUERY_PARAMS`} | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
 
 **Solicitud**
@@ -48,7 +46,7 @@ El formato de respuesta depende del encabezado Accept enviado en la solicitud. L
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Devuelve un breve resumen de cada recurso. Éste es el encabezado recomendado para enumerar los recursos. (Límite: 300) |
 | application/vnd.adobe.xed+json | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
-| application/vnd.adobe.xdm-v2+json | Devuelve el esquema JSON completo para todos los resultados en una sola solicitud, anulando el límite de 300 elementos. |
+| application/vnd.adobe.xdm-v2+json | Al utilizar el extremo, se debe utilizar este encabezado Accept para utilizar las capacidades de paginación. `/descriptors` |
 
 **Respuesta**
 
