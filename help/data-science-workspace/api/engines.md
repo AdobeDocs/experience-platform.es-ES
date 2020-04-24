@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 }
 ```
 
-## Creación de un motor de canalización de funciones mediante artefactos binarios (obsoleto)
+## Creación de un motor de canalización de funciones mediante artefactos binarios (obsoleto) {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >Los artefactos binarios ya no son compatibles y se definen para eliminarlos posteriormente.
