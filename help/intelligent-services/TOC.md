@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
 
 ---
 
@@ -21,7 +21,10 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * AI del cliente {#customer-ai}
    * [Información general](customer-ai/overview.md)
    * [Introducción a la API del cliente](customer-ai/getting-started.md)
-   * [Guía de interfaz de usuario](customer-ai/user-guide.md)
-   * [Descubrimiento de perspectivas](customer-ai/discover-insights.md)
-   * [Descarga de puntuaciones](customer-ai/download-scores.md)
+   * [Entrada y salida](customer-ai/input-output.md)
+   * Guía de interfaz de usuario {#user-guide}
+      * [Configurar una instancia](customer-ai/user-guide/configure.md)
+      * [Descubrimiento de perspectivas](customer-ai/user-guide/discover-insights.md)
+      * [Crear segmentos con puntuaciones de AI del cliente](customer-ai/user-guide/create-segment.md)
+      * [Descarga de puntuaciones](customer-ai/user-guide/download-scores.md)
 * [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
