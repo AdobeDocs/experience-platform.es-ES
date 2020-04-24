@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicación de un modelo como servicio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ Según el caso de uso y los requisitos específicos, la creación de un servicio
 
 Tenga en cuenta que se puede crear un servicio ML con una instancia ML sin programar ningún experimento de formación o puntuación. Este servicio ML creará entidades experimentales ordinarias y un solo programa experimental para la formación y la puntuación.
 
-### Servicio ML con experimento programado para la puntuación
+### Servicio ML con experimento programado para la puntuación {#ml-service-with-scheduled-experiment-for-scoring}
 
 La creación de un servicio ML mediante la publicación de una instancia ML con ejecuciones de experimento programadas para la puntuación dará como resultado la creación de una entidad de experimento común para la formación. La ejecución del experimento de formación resultante que se genera se utilizará para todas las ejecuciones del experimento de puntuación programadas. Asegúrese de que dispone de los `mlInstanceId`, `trainingDataSetId`y `scoringDataSetId` requeridos para la creación del servicio ML, y de que existen y son valores válidos.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 A partir de la `JSON` respuesta, las claves `trainingExperimentId` y `scoringExperimentId` sugiere que se creó una nueva entidad Experimento de calificación y formación para este servicio ML. La presencia del `scoringSchedule` objeto hace referencia a los detalles sobre la programación de la ejecución del experimento de puntuación. La `id` clave de la respuesta se refiere al servicio ML que acaba de crear.
 
-### Servicio ML con experimentos programados para formación y puntuación
+### Servicio ML con experimentos programados para formación y puntuación {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Para publicar una instancia de ML existente como un servicio ML con ejecuciones de experimentos de puntuación y formación programadas, debe proporcionar programas de formación y de puntuación. Cuando se crea un servicio ML de esta configuración, también se crean las entidades programadas del experimento para la formación y la puntuación. Tenga en cuenta que los programas de capacitación y puntuación no tienen por qué ser los mismos. Durante la ejecución de un trabajo de puntuación, se buscará el último modelo capacitado producido por las ejecuciones de experimentos de formación programadas y se utilizará para la ejecución de puntuación programada.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 La incorporación `trainingExperimentId` y `scoringExperimentId` en el órgano de respuesta sugiere la creación de entidades de Experimento para la capacitación y la puntuación. La presencia `trainingSchedule` y `scoringSchedule` sugiere que las entidades del Experimento antes mencionadas para capacitación y puntuación son experimentos programados. La `id` clave de la respuesta se refiere al servicio ML que acaba de crear.
 
-## Recuperación de servicios ML
+## Recuperación de servicios ML {#retrieving-ml-services}
 
 Recuperar un servicio ML existente es tan sencillo como hacer una `GET` solicitud al `/mlServices` extremo. Asegúrese de tener la identificación del servicio ML para el servicio ML específico que está intentando recuperar.
 
