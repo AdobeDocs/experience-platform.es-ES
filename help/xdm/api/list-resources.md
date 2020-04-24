@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Recursos de Lista
 
 Puede realizar la vista de una lista de todos los recursos (esquemas, clases, mezclas o tipos de datos) dentro de un contenedor mediante una sola solicitud GET.
+
+>[!NOTE] Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
+>
+> Si desea anular por completo el límite de 300 elementos, debe utilizar el encabezado Aceptar `application/vnd.adobe.xdm-v2+json` para devolver todos los resultados en una sola solicitud.
 
 **Formato API**
 
@@ -42,8 +46,9 @@ El formato de respuesta depende del encabezado Accept enviado en la solicitud. L
 
 | Aceptar encabezado | Descripción |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Devuelve un breve resumen de cada recurso, generalmente el encabezado preferido para el listado |
-| application/vnd.adobe.xed+json | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido |
+| application/vnd.adobe.xed-id+json | Devuelve un breve resumen de cada recurso. Éste es el encabezado recomendado para enumerar los recursos. (Límite: 300) |
+| application/vnd.adobe.xed+json | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
+| application/vnd.adobe.xdm-v2+json | Devuelve el esquema JSON completo para todos los resultados en una sola solicitud, anulando el límite de 300 elementos. |
 
 **Respuesta**
 
@@ -74,7 +79,7 @@ El Registro de Esquemas admite el uso de parámetros de consulta para filtrar lo
 
 >[!NOTE] Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (`&`).
 
-### Paginación
+### Paginación {#paging}
 
 Los parámetros de consulta más comunes para la paginación incluyen:
 
@@ -84,7 +89,7 @@ Los parámetros de consulta más comunes para la paginación incluyen:
 | `limit` | Limite el número de recursos devueltos. Ejemplo: `limit=5` devolverá una lista de cinco recursos. |
 | `orderby` | Ordene los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Si se Añade un título `-` antes del título (`orderby=-title`), los elementos se ordenarán por título en orden descendente (Z-A). |
 
-### Filtrar
+### Filtrar {#filtering}
 
 Puede filtrar los resultados utilizando el `property` parámetro, que se utiliza para aplicar un operador específico a una propiedad JSON determinada dentro de los recursos recuperados. Los operadores admitidos son:
 
