@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### Cambiar dependencias (Spark) {#change-dependencies-spark}
 
-Si está utilizando una fórmula existente, se requieren cambios en el archivo pom.xml para las dependencias. Cambie la versión de dependencia model-authoring-sdk a 1.0.0. A continuación, actualice la versión de Spark en el archivo pom a 2.4.3 y la versión de Scala a a 2.11.12.
+Si está utilizando una fórmula existente, se requieren cambios en el archivo pom.xml para las dependencias. Cambie la versión de dependencia model-authoring-sdk a 2.0.0. A continuación, actualice la versión de Spark en el archivo pom a 2.4.3 y la versión de Scala a a 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
