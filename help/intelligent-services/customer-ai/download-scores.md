@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descarga de puntuaciones en la API del cliente
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación
 
 ![Id. de conjunto de datos](./images/download-scores/access-scores.png)
 
-## Recuperar el ID de lote
+## Recuperar el ID de lote {#retrieve-your-batch-id}
 
 Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API con el fin de devolver un solo lote en lugar de una lista de lotes pertenecientes a su organización. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre el [filtrado de datos del catálogo mediante parámetros](../../catalog/api/filter-data.md)de consulta.
 
@@ -98,7 +98,7 @@ Dentro del objeto de ID de lote de puntuación hay una `relatedObjects` matriz. 
 }
 ```
 
-## Recupere la siguiente llamada de API con su ID de lote
+## Recupere la siguiente llamada de API con su ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
 
 Una vez que tenga su ID de lote, podrá realizar una nueva solicitud GET a `/batches`. La solicitud devuelve un vínculo que se utiliza como la siguiente solicitud de API.
 
@@ -152,7 +152,7 @@ Una respuesta correcta devuelve una carga útil que contiene un `_links` objeto.
 }
 ```
 
-## Recuperar los archivos
+## Recuperar los archivos {#retrieving-your-files}
 
 Utilizando el `href` valor obtenido en el paso anterior como una llamada de API, realice una nueva solicitud GET para recuperar el directorio de archivos.
 
