@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una canalización de funciones
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime (en adelante, &quot;Runtime&quot;).
 
 Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante el SDK [de creación de](./sdk.md) modelos en PySpark y Spark.
-
-El tutorial cubre los siguientes pasos:
-- [Implemente sus clases de Feature Pipeline](#implement-your-feature-pipeline-classes)
-   - [Definir variables en un archivo de configuración](#define-variables-in-the-configuration-json-file)
-   - [Preparación de los datos de entrada con DataLoader](#prepare-the-input-data-with-dataloader)
-   - [Transformar un conjunto de datos con DatasetTransformer](#transform-a-dataset-with-datasettransformer)
-   - [Funciones de datos de ingeniero con FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-   - [Almacenar el conjunto de datos de funciones con DataSaver](#store-your-feature-dataset-with-datasaver)
-   - [Especifique los nombres de clase implementados en el archivo de la aplicación](#specify-your-implemented-class-names-in-the-application-file)
-- [Generar el artefacto binario](#build-the-binary-artifact)
-- [Creación de un motor de canalización de funciones mediante la API](#create-a-feature-pipeline-engine-using-the-api)
 
 ## Clases de canalización de funciones
 
@@ -44,11 +33,11 @@ El siguiente diagrama de flujo muestra el orden de ejecución del motor de ejecu
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implemente sus clases de Feature Pipeline
+## Implemente sus clases de Feature Pipeline {#implement-your-feature-pipeline-classes}
 
 Las siguientes secciones proporcionan detalles y ejemplos sobre la implementación de las clases requeridas para una canalización de funciones.
 
-### Definición de variables en el archivo JSON de configuración
+### Definición de variables en el archivo JSON de configuración {#define-variables-in-the-configuration-json-file}
 
 El archivo JSON de configuración consta de pares clave-valor y está diseñado para que pueda especificar las variables que se definirán posteriormente durante el tiempo de ejecución. Estos pares clave-valor pueden definir propiedades como ubicación del conjunto de datos de entrada, ID del conjunto de datos de salida, ID del inquilino, encabezados de columna, etc.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### Preparación de los datos de entrada con DataLoader
+### Preparación de los datos de entrada con DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader es responsable de la recuperación y el filtrado de los datos de entrada. La implementación de DataLoader debe ampliar la clase abstracta `DataLoader` y anular el método abstracto `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Transformar un conjunto de datos con DatasetTransformer
+### Transformar un conjunto de datos con DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 DatasetTransformer proporciona la lógica para transformar un DataFrame de entrada y devuelve un DataFrame nuevo derivado. Esta clase se puede implementar para trabajar de forma conjunta con FeaturePipelineFactory, trabajar como el único componente de ingeniería de funciones o puede elegir no implementar esta clase.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Funciones de datos de ingeniero con FeaturePipelineFactory
+### Funciones de datos de ingeniero con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 FeaturePipelineFactory le permite implementar la lógica de ingeniería de características mediante la definición y la agrupación de una serie de transformadores de chispa a través de una tubería de chispa. Esta clase se puede implementar para trabajar de forma conjunta con DatasetTransformer, trabajar como el único componente de ingeniería de funciones o puede elegir no implementar esta clase.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Almacenar el conjunto de datos de funciones con DataSaver
+### Almacenar el conjunto de datos de funciones con DataSaver {#store-your-feature-dataset-with-datasaver}
 
 DataSaver se encarga de almacenar los conjuntos de datos de funciones resultantes en una ubicación de almacenamiento. La implementación de DataSaver debe ampliar la clase abstracta `DataSaver` y anular el método abstracto `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Especifique los nombres de clase implementados en el archivo de la aplicación
+### Especifique los nombres de clase implementados en el archivo de la aplicación {#specify-your-implemented-class-names-in-the-application-file}
 
 Ahora que las clases de Feature Pipeline están definidas e implementadas, debe especificar los nombres de las clases en el archivo de la aplicación.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Generar el artefacto binario
+## Generar el artefacto binario {#build-the-binary-artifact}
 
 Ahora que las clases de tuberías de funciones están implementadas, puede compilarlas en un artefacto binario que puede utilizarse para crear una tubería de funciones a través de llamadas de API.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 La generación exitosa de la tubería de características generará un `.jar` artefacto en el `/dist` directorio, este artefacto se utiliza para crear una tubería de características.
 
-## Creación de un motor de canalización de funciones mediante la API
+## Creación de un motor de canalización de funciones mediante la API {#create-a-feature-pipeline-engine-using-the-api}
 
 Ahora que ha creado la tubería de características y el artefacto binario, puede [crear un motor de tuberías de funciones con la API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)de aprendizaje automático Sensei. La creación correcta de un motor de canalización de funciones le proporcionará un identificador de motor como parte del cuerpo de respuesta, asegúrese de guardar este valor antes de continuar con los pasos siguientes.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
