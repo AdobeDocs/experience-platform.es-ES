@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 
 ---
 
@@ -22,7 +22,7 @@ Se requieren las credenciales del Registro de Docker para cargar un archivo de f
 
 **Formato de API**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -57,7 +57,7 @@ Puede crear un motor realizando una solicitud POST mientras proporciona sus meta
 
 **Formato de API**
 
-```http
+```https
 POST /engines
 ```
 
@@ -165,13 +165,93 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 }
 ```
 
+## Creación de un motor de canalización de funciones mediante URL de acoplamiento {#feature-pipeline-docker}
+
+Puede crear una canalización de funciones Motor realizando una solicitud POST mientras proporciona sus metadatos y una URL de acoplamiento que haga referencia a una imagen de Docker.
+
+**Formato API**
+
+```https
+POST /engines
+```
+
+**Solicitud**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. El valor se puede establecer en Spark o PySpark. |
+| `algorithm` | El algoritmo que se está utilizando, establezca este valor en `fp` (canalización de funciones). |
+| `name` | Nombre deseado para el motor de canalización de funciones. La fórmula correspondiente a este motor heredará este valor para que se muestre en la interfaz de usuario como nombre de la fórmula. |
+| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para que se muestre en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor en una cadena vacía. |
+| `mlLibrary` | Campo que se requiere al crear motores para las fórmulas de PySpark y Scala. Este campo debe definirse como `databricks-spark`. |
+| `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o el Dockerhub público (no autenticado). |
+| `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
+| `artifacts.default.image.packagingType` | Tipo de embalaje del motor. Este valor debe establecerse en `docker`. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve una carga útil que contiene los detalles del nuevo motor de canalización de funciones creado, incluido su identificador único (`id`). La siguiente respuesta de ejemplo es para un motor de canalización de funciones PySpark.
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## Recuperar una lista de motores
 
 Puede recuperar una lista de motores realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -246,7 +326,7 @@ Puede recuperar los detalles de un motor específico realizando una solicitud GE
 
 **Formato de API**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -321,7 +401,7 @@ La siguiente llamada de API de ejemplo actualizará el nombre y la descripción 
 
 **Formato de API**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -389,7 +469,7 @@ Puede eliminar un motor realizando una solicitud DELETE mientras especifica el I
 
 **Formato de API**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -429,7 +509,7 @@ Puede crear un motor con artefactos locales `.jar` o `.egg` binarios realizando 
 
 **Formato de API**
 
-```http
+```https
 POST /engines
 ```
 
@@ -498,7 +578,7 @@ Puede crear una canalización de funciones Motor utilizando artefactos locales `
 
 **Formato de API**
 
-```http
+```https
 POST /engines
 ```
 
