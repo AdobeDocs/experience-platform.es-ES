@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Además de los documentos mencionados, se recomienda revisar también las siguie
 * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Describe esquemas XDM, componentes básicos, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en la plataforma de experiencia.
 * [Tutorial](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Proporciona instrucciones detalladas para crear esquemas con el Editor de Esquemas en la plataforma de experiencia.
 
-## Crear un esquema de salida y un conjunto de datos
+## Crear un esquema de salida y un conjunto de datos {#create-an-output-schema-and-dataset}
 
 El primer paso para enriquecer el Perfil del cliente en tiempo real con perspectivas de puntuación es saber qué objeto real (como una persona) define sus datos. Conocer los datos le permite describir y diseñar una estructura que tenga un significado para los datos, como diseñar una base de datos relacional.
 
@@ -73,7 +73,7 @@ La composición de un esquema comienza asignando una clase. Las clases definen l
 
 Ahora que ha creado un conjunto de datos de esquema de salida, puede continuar en la siguiente sección para configurarlo y habilitarlo para el enriquecimiento de Perfil.
 
-## Configurar un esquema de salida y un conjunto de datos
+## Configurar un esquema de salida y un conjunto de datos {#configure-an-output-schema-and-dataset}
 
 Antes de habilitar un conjunto de datos para Perfil, debe configurar el esquema del conjunto de datos para tener un campo de identidad principal y luego habilitar el esquema para Perfil. Si desea crear y activar un nuevo esquema, puede consultar el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas. De lo contrario, siga las instrucciones a continuación para habilitar un esquema y un conjunto de datos existentes.
 
@@ -97,7 +97,7 @@ Antes de habilitar un conjunto de datos para Perfil, debe configurar el esquema 
 
 Cuando los datos se ingieren en un conjunto de datos habilitado para Perfil, esos mismos datos también se ingieren como registros de Perfil. Ahora que el esquema y el conjunto de datos están preparados, genere algunos datos en el conjunto de datos realizando ejecuciones de puntuación utilizando un modelo adecuado y continúe con este tutorial para crear segmentos de perspectiva mediante el Generador de segmentos.
 
-## Creación de segmentos mediante el Generador de segmentos
+## Creación de segmentos mediante el Generador de segmentos {#create-segments-using-the-segment-builder}
 
 Ahora que ha generado e ingestado perspectivas en el conjunto de datos habilitado para Perfil, puede administrar esos datos identificando subconjuntos de elementos relacionados mediante el Generador de segmentos. Siga los pasos a continuación para crear sus propios segmentos.
 
@@ -117,6 +117,6 @@ Ahora que ha generado e ingestado perspectivas en el conjunto de datos habilitad
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Este documento lo guió por los pasos necesarios para habilitar un esquema y un conjunto de datos para Perfil, y mostró brevemente el flujo de trabajo para crear segmentos de perspectiva mediante el Generador de segmentos. Para obtener más información sobre los segmentos y el Generador de segmentos, consulte la descripción general [del servicio](../../segmentation/home.md)Segmentación.
