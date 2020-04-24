@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ En las secciones siguientes encontrará información sobre las características 
 * [Celdas de código](#code-cells)
 * [Kernels](#kernels)
 * [Sesiones de núcleo](#kernel-sessions)
-* [Recurso de ejecución de PySpark/Spark](#pysparkspark-execution-resource)
+* [Recurso de ejecución de PySpark/Spark](#execution-resource)
 * [Iniciador](#launcher)
 
-### Access JupyterLab
+### Access JupyterLab {#access-jupyterlab}
 
 En [Adobe Experience Platform](https://platform.adobe.com), seleccione **Equipos portátiles** en la columna de navegación izquierda. Deje tiempo para que JupyterLab se inicialice completamente.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### Interfaz JupyterLab
+### Interfaz JupyterLab {#jupyterlab-interface}
 
 La interfaz de JupyterLab consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene fichas de documentos y actividades.
 
@@ -98,7 +98,7 @@ El área de trabajo principal de JupyterLab le permite organizar documentos y ot
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Celdas de código
+### Celdas de código {#code-cells}
 
 Las celdas de código son el contenido principal de los blocs de notas. Contienen código fuente en el idioma del núcleo asociado al bloc de notas y la salida como resultado de la ejecución de la celda de código. Se muestra un recuento de ejecución a la derecha de cada celda de código que representa su orden de ejecución.
 
@@ -130,7 +130,7 @@ Algunas funciones y características se limitan a determinados núcleos, como se
 | **Chispa: obsoleto** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
 | **Scala** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
 
-### Sesiones de núcleo
+### Sesiones de núcleo {#kernel-sessions}
 
 Cada portátil o actividad activa en JupyterLab utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **Python 3** y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
 
@@ -193,7 +193,7 @@ Todas las propiedades configurables se enumeran en la tabla siguiente:
 | name | Nombre de la aplicación | string |
 | conf | Propiedad de configuración Spark | Mapa de key=val |
 
-### Iniciador
+### Iniciador {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Indicadores SQL opcionales para el servicio de Consulta
+## Indicadores SQL opcionales para el servicio de Consulta {#optional-sql-flags-for-query-service}
 
 Esta tabla describe los indicadores SQL opcionales que se pueden utilizar para el servicio de Consulta.
 
