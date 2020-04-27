@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ Puede habilitar o deshabilitar las directivas de uso de datos personalizadas en 
 
 ## Pasos siguientes
 
-Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre cómo administrar las políticas mediante la API de directiva DULE, consulte el tutorial [de creación de directivas de](./create.md)API. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
+Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
