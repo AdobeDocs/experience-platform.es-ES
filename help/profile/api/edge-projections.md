@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Propiedad|Descripción||`type` **(obligatorio)** |Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de borde.||`dataCenters` **(obligatorio)** |Matriz de cadenas que lista los bordes hacia los que se van a enrutar las proyecciones. Puede contener uno o varios de los siguientes valores: &quot;OR1&quot; - Estados Unidos Occidental, &quot;VA5&quot; - Estados Unidos Oriental, &quot;NLD1&quot; - EMEA.||`ttl` **(obligatorio)** |Especifica la caducidad de la proyección. Intervalo de valores aceptado: 600 a 604800. Valor predeterminado: 3600.||`replicationPolicy` **(obligatorio)** |Define el comportamiento de la replicación de datos desde el concentrador hasta los bordes.  Valores admitidos: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVO.|
+| Propiedad | Descripción |
+|---|---|
+| `type` **(Requerido)** | Tipo de destino que se va a crear. El único valor aceptado, &quot;EDGE&quot;, crea un destino de borde. |
+| `dataCenters` **(Requerido)** | Matriz de cadenas que lista los bordes hacia los que se van a enrutar las proyecciones. Puede contener uno o varios de los siguientes valores: &quot;OR1&quot; - Estados Unidos Occidental, &quot;VA5&quot; - Estados Unidos Oriental, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Requerido)** | Especifica la caducidad de la proyección. Intervalo de valores aceptado: 600 a 604800. Valor predeterminado: 3600. |
+| `replicationPolicy` **(Requerido)** | Define el comportamiento de la replicación de datos desde el concentrador hasta los bordes.  Valores admitidos: PROACTIVO, REACTIVO. Valor predeterminado: REACTIVO. |
 
 **Respuesta**
 
