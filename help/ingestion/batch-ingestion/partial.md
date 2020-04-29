@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Información general sobre la ingesta parcial por lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# Ingestión parcial por lotes
+# Ingestión parcial por lotes (Beta)
 
 La ingestión parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un cierto umbral. Con esta capacidad, los usuarios pueden transferir correctamente todos los datos correctos a Adobe Experience Platform mientras que todos los datos incorrectos se agrupan por lotes por separado, junto con los detalles de por qué no son válidos.
 
 Este documento proporciona un tutorial para administrar la ingestión parcial por lotes.
 
-Además, el [apéndice](#partial-batch-ingestion-error-types) de este tutorial proporciona una referencia para los tipos de error de ingestión parcial por lotes.
+Además, el [apéndice](#appendix) de este tutorial proporciona una referencia para los tipos de error de ingestión parcial por lotes.
+
+>[!IMPORTANT] Esta función solo existe mediante la API. Póngase en contacto con su equipo para obtener acceso a esta función.
 
 ## Primeros pasos
 
@@ -47,7 +49,7 @@ Todos los recursos de la plataforma de experiencia están aislados en entornos l
 
 ## Habilitar un conjunto de datos para la ingestión parcial por lotes en la API
 
->[!NOTE] En esta sección se describe cómo habilitar un conjunto de datos para la ingestión parcial por lotes mediante la API. Para obtener instrucciones sobre el uso de la interfaz de usuario, lea el paso [habilitar un conjunto de datos para la ingestión parcial por lotes en la interfaz de usuario](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) .
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 Puede crear un nuevo conjunto de datos o modificar un conjunto de datos existente con la ingestión parcial habilitada.
 
@@ -71,35 +73,35 @@ Del mismo modo, para modificar un conjunto de datos existente, siga los pasos de
 
 Dentro del conjunto de datos, deberá agregar la etiqueta descrita anteriormente.
 
-## Habilitar un conjunto de datos para la ingestión parcial por lotes en la interfaz de usuario
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] En esta sección se describe cómo habilitar un conjunto de datos para la ingestión parcial por lotes mediante la interfaz de usuario. Si ya ha habilitado un conjunto de datos para la ingestión parcial por lotes mediante la API, puede pasar a la siguiente sección.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-Para habilitar un conjunto de datos para la ingestión parcial a través de la interfaz de usuario de la plataforma, haga clic en **Conjuntos** de datos en el panel de navegación izquierdo. Puede [crear un nuevo conjunto de datos](#create-a-new-dataset-with-partial-batch-ingestion-enabled) o [modificar uno existente](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### Crear un nuevo conjunto de datos con la ingestión parcial por lotes habilitada
+### Create a new dataset with partial batch ingestion enabled
 
-Para crear un nuevo conjunto de datos, siga los pasos que se indican en la guía del usuario del [conjunto de datos](../../catalog/datasets/user-guide.md). Una vez que llegue al paso *Configurar conjunto de datos* , tome nota de los campos Ingesta ** parcial y Diagnósticos *de* error.
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-La *conmutación de ingestión* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-La opción Diagnósticos *de* error solo aparece cuando está desactivada la opción de alternancia de ingestión ** parcial. Esta función permite a Platform generar mensajes de error detallados sobre los lotes ingestados. Si se activa la *opción de cambio de inserción* parcial, los diagnósticos de error mejorados se aplican automáticamente.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-El umbral *de* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Modificar un conjunto de datos existente para habilitar la ingestión parcial de lotes
+### Modify an existing dataset to enable partial batch ingestion
 
-Para modificar un conjunto de datos existente, seleccione el conjunto de datos que desee modificar. La barra lateral de la derecha se rellena con información sobre el conjunto de datos.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-La *conmutación de ingestión* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-El umbral *de* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Recuperar errores parciales de ingesta por lotes
 
@@ -176,7 +178,7 @@ Si el lote tiene un error y los diagnósticos de error están habilitados, el es
 
 Este tutorial trata sobre cómo crear o modificar un conjunto de datos para habilitar la ingestión parcial por lotes. Para obtener más información sobre la ingestión por lotes, lea la guía [para desarrolladores de la ingestión de](./api-overview.md)lotes.
 
-## Tipos de error de ingestión parcial por lotes
+## Tipos de error de ingestión parcial por lotes {#appendix}
 
 La ingestión parcial de lotes tiene cuatro tipos de error diferentes al ingerir datos.
 
