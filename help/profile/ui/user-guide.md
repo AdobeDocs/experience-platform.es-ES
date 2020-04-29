@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ Haga clic en **Combinar directivas** para vista de una lista de directivas de co
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-Para obtener más información sobre cómo trabajar con políticas de combinación en la interfaz de usuario, consulte la guía [del usuario de directivas](merge-policies.md)mMerge.
+Para obtener más información sobre cómo trabajar con políticas de combinación en la interfaz de usuario, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
 
 ## esquema de Unión
 
