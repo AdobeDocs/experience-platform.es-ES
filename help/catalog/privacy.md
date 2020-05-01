@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d3584202554baf46aad174d671084751e6557bbc
 
 ---
 
 
 # Procesamiento de solicitudes de privacidad en Data Lake
 
-Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión de venta o eliminar sus datos personales, según lo establecido en las normas de privacidad, como la Regulación General de Protección de Datos (RGPD) y la Ley de Protección de los Consumidores de California (CCPA).
+Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales según lo establecido en las normativas legales y de privacidad de la organización.
 
 Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en Data Lake.
 
@@ -22,168 +22,114 @@ Se recomienda que conozca bien los siguientes servicios de la plataforma de expe
 * [Privacy Service](../privacy-service/home.md): Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en las aplicaciones de Adobe Experience Cloud.
 * [Servicio](home.md)de catálogo: Sistema de registro para la ubicación y el linaje de datos dentro de la plataforma de experiencias. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
 * [Sistema](../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Servicio](../identity-service/home.md)de identidad: Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 
-## Añadir etiquetas de privacidad a conjuntos de datos {#privacy-labels}
+## Explicación de las Áreas de nombres de identidad {#namespaces}
 
-Para que un conjunto de datos se procese en una solicitud de privacidad para el Data Lake, el conjunto de datos debe recibir etiquetas de privacidad. Las etiquetas de privacidad indican los campos dentro del esquema asociado de un conjunto de datos que se aplican a las Áreas de nombres que espera que se envíen en las solicitudes de privacidad.
+El servicio de identidad de Adobe Experience Platform une datos de identidad del cliente entre sistemas y dispositivos. Identity Service utiliza Áreas de nombres **de** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Destinatario ID (&quot;TNTID&quot;).
 
-Esta sección muestra cómo agregar etiquetas de privacidad a un conjunto de datos para utilizarlas en solicitudes de privacidad de Data Lake. Para empezar, considere el siguiente conjunto de datos:
+Identity Service mantiene un almacén de Áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las Áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;Correo electrónico&quot; y &quot;ECID&quot;), mientras que la organización también puede crear Áreas de nombres personalizadas para satisfacer sus necesidades específicas.
 
-```json
-{
-    "5d8e9cf5872f18164763f971": {
-        "name": "Loyalty Members",
-        "description": "Dataset for the Loyalty Members schema",
-        "imsOrg": "{IMS_ORG}",
-        "tags": {
-            "adobe/pqs/table": [
-                "loyalty_members"
-            ]
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
-        "id": "5d8e9cf5872f18164763f971",
-        "dule": {
-            "identity": [],
-            "contract": [
-                "C2",
-                "C5"
-            ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C5"
-            ],
-            "identifiability": [],
-            "specialTypes": []
-        },
-        "version": "1.0.2",
-        "created": 1569627381749,
-        "updated": 1569880723282,
-        "createdClient": "acp_ui_platform",
-        "createdUser": "{USER_ID}",
-        "updatedUser": "{USER_ID}",
-        "viewId": "5d8e9cf5872f18164763f972",
-        "status": "enabled",
-        "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
-        },
-        "files": "@/dataSets/5d8e9cf5872f18164763f971/views/5d8e9cf5872f18164763f972/files",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": [
-                {
-                    "path": "/properties/personalEmail/properties/address",
-                    "identity": [
-                        "I1"
-                    ],
-                    "contract": [],
-                    "sensitive": [],
-                    "contracts": [],
-                    "identifiability": [
-                        "I1"
-                    ],
-                    "specialTypes": []
-                }
-            ],
-            "gdpr": []
-        },
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2c66c3a4323128d3701289df4468e8a6",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        }
-    }
-}
-```
+Para obtener más información sobre Áreas de nombres de identidad en la plataforma de experiencia, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
 
-La `schemaMetadata` propiedad del conjunto de datos contiene una `gdpr` matriz, que actualmente está vacía. Para agregar etiquetas de privacidad al conjunto de datos, esta matriz debe actualizarse mediante una solicitud PATCH a la API [del servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo.
+## Añadir datos de identidad a conjuntos de datos
 
->[!NOTE] Aunque se nombra la matriz `gdpr`, la adición de etiquetas permitirá solicitudes de trabajos de privacidad para las regulaciones GDPR y CCPA.
+Al crear solicitudes de privacidad para el Data Lake, se deben proporcionar valores de identidad válidos (y sus Áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos que están sujetos a solicitudes de privacidad deben contener un descriptor **de** identidad en su esquema XDM asociado.
+
+>[!NOTE] Los conjuntos de datos basados en esquemas que no admiten metadatos del descriptor de identidad (como conjuntos de datos ad-hoc) actualmente no se pueden procesar en solicitudes de privacidad.
+
+En esta sección se explican los pasos para agregar un descriptor de identidad al esquema XDM de un conjunto de datos existente. Si ya tiene un conjunto de datos con un descriptor de identidad, puede pasar a la [siguiente sección](#nested-maps).
+
+>[!IMPORTANT] Cuando decida qué campos de esquema se definirán como identidades, tenga en cuenta las [limitaciones del uso de campos](#nested-maps)anidados de tipo de mapa.
+
+Existen dos métodos para agregar un descriptor de identidad a un esquema de conjunto de datos:
+
+* [Uso de la interfaz de usuario](#identity-ui)
+* [Uso de la API](#identity-api)
+
+### Uso de la interfaz de usuario {#identity-ui}
+
+En la interfaz de usuario de la plataforma de experiencia, el espacio de trabajo le permite editar sus esquemas XDM existentes. _[!UICONTROL Schemas]_Para agregar un descriptor de identidad a un esquema, seleccione el esquema en la lista y siga los pasos para[configurar un campo de esquema como campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidad en el tutorial Editor de Esquemas.
+
+Una vez configurados los campos correspondientes dentro del esquema como campos de identidad, puede pasar a la siguiente sección sobre el [envío de solicitudes](#submit)de privacidad.
+
+### Uso de la API {#identity-api}
+
+>[!NOTE] En esta sección se asume que conoce el valor de ID de URI único del esquema XDM del conjunto de datos. Si no conoce este valor, puede recuperarlo mediante la API del servicio de catálogo. Después de leer la sección de [introducción](./api/getting-started.md) de la guía para desarrolladores, siga los pasos descritos en para [enumerar](./api/list-objects.md) o [buscar](./api/look-up-object.md) los objetos del catálogo para encontrar el conjunto de datos. El ID de esquema se encuentra en `schemaRef.id`
+>
+> Esta sección incluye llamadas a la API del Registro de Esquema. Para obtener información importante relacionada con el uso de la API, incluido el conocimiento del usuario `{TENANT_ID}` y el concepto de contenedores, consulte la sección de [introducción](../xdm/api/getting-started.md) de la guía para desarrolladores.
+
+Puede agregar un descriptor de identidad al esquema XDM de un conjunto de datos haciendo una solicitud POST al extremo del `/descriptors` en la API del Registro de Esquema.
 
 **Formato API**
 
 ```http
-PATCH /dataSets/{DATASET_ID}
+POST /descriptors
 ```
-
-| Parámetro | Descripción |
-| --- | --- |
-| `{DATASET_ID}` | El `id` valor del conjunto de datos que se va a actualizar. |
 
 **Solicitud**
 
-En este ejemplo, un conjunto de datos incluye una dirección de correo electrónico en el `personalEmail.address` campo. Para que este campo funcione como identificador para las solicitudes de privacidad de Data Lake, se debe agregar a su `gdpr` matriz una etiqueta que utilice una Área de nombres no registrada.
-
-La siguiente solicitud agrega una etiqueta de privacidad que asigna la Área de nombres &quot;email_label&quot; al `personalEmail.address` campo.
-
->[!IMPORTANT] Al ejecutar una operación PATCH en la propiedad `schemaMetadata` de un conjunto de datos, asegúrese de copiar las subpropiedades existentes dentro de la carga útil de la solicitud. Si se excluyen los valores existentes de la carga útil, se eliminarán del conjunto de datos.
+La siguiente solicitud define un descriptor de identidad en un campo &quot;dirección de correo electrónico&quot; de un esquema de ejemplo.
 
 ```shell
-curl -X PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/5d8e9cf5872f18164763f971' \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
-  -d '{ 
-    "schemaMetadata": { 
-      "primaryKey": [],
-      "delta": [],
-      "dule": [
-        {
-          "path": "/properties/personalEmail/properties/address",
-          "identity": [
-              "I1"
-          ],
-          "contract": [],
-          "sensitive": [],
-          "contracts": [],
-          "identifiability": [
-              "I1"
-          ],
-          "specialTypes": []
-        }
-      ],
-      "gdpr": [
-          {
-              "namespace": ["email_label"],
-              "path": "/properties/personalEmail/properties/address"
-          }
-      ]
-  }'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '
+      {
+        "@type": "xdm:descriptorIdentity",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/personalEmail/address",
+        "xdm:namespace": "Email",
+        "xdm:property": "xdm:code",
+        "xdm:isPrimary": false
+      }'
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `namespace` | Una matriz que enumera las Áreas de nombres que se asociarán al campo especificado en `path`. Las Áreas de nombres se utilizan para identificar los campos relacionados con la privacidad al [enviar solicitudes](#submit) de acceso o eliminación en la API de Privacy Service. |
-| `path` | La ruta al campo dentro del esquema asociado del conjunto de datos que se aplica al `namespace`. Lo ideal sería que las etiquetas de privacidad solo se apliquen a los campos &quot;hoja&quot; (campos sin subcampos). |
+| `@type` | Tipo de descriptor que se está creando. Para los descriptores de identidad, el valor debe ser &quot;xdm:descriptorIdentity&quot;. |
+| `xdm:sourceSchema` | El identificador URI exclusivo del esquema XDM del conjunto de datos. |
+| `xdm:sourceVersion` | Versión del esquema XDM especificado en `xdm:sourceSchema`. |
+| `xdm:sourceProperty` | Ruta al campo de esquema al que se está aplicando el descriptor. |
+| `xdm:namespace` | Una de las Áreas de nombres [de identidad](../privacy-service/api/appendix.md#standard-namespaces) estándar reconocidas por Privacy Service o una Área de nombres personalizada definida por su organización. |
+| `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, en función de la Área de nombres que se utilice en `xdm:namespace`. |
+| `xdm:isPrimary` | Un valor booleano opcional. Cuando es true, indica que el campo es una identidad principal. Los Esquemas solo pueden contener una identidad primaria. El valor predeterminado es false si no se incluye. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) con el ID del conjunto de datos proporcionado en la carga útil. El uso del ID para buscar de nuevo el conjunto de datos revela que se han agregado las etiquetas de privacidad.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del descriptor recién creado.
 
 ```json
-[
-    "@/dataSets/5d8e9cf5872f18164763f971"
-]
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/personalEmail/address",
+  "xdm:namespace": "Email",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": false,
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
 ```
-
-### Etiquetado de campos anidados de tipo de mapa
-
-Es importante tener en cuenta que hay dos tipos de campos anidados de tipo mapa que no admiten el etiquetado de privacidad:
-
-* Campo de tipo mapa dentro de un campo de tipo matriz
-* Campo de tipo mapa dentro de otro campo de tipo mapa
-
-El procesamiento del trabajo de privacidad de cualquiera de los dos ejemplos anteriores fallará eventualmente. Por este motivo, se recomienda evitar el uso de campos anidados de tipo mapa para almacenar datos privados de clientes. Los ID de consumidor relevantes deben almacenarse como un tipo de datos que no sea de mapa dentro del `identityMap` campo (campo de tipo mapa en sí mismo) para conjuntos de datos basados en registros o el `endUserID` campo para conjuntos de datos basados en series temporales.
 
 ## Envío de solicitudes {#submit}
 
->[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la API [de](../privacy-service/api/getting-started.md) Privacy Service o de la interfaz de usuario [de](../privacy-service/ui/overview.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad de usuario enviados en las cargas de solicitud.
+>[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la interfaz de usuario [de](../privacy-service/ui/overview.md) Privacy Service o de la API [de](../privacy-service/api/getting-started.md) Privacy Service para obtener pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar un formato adecuado a los datos de identidad de usuario enviados en las cargas de solicitud.
 
-La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante la API o la interfaz de usuario de Privacy Service.
+La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante la interfaz de usuario o API de Privacy Service.
+
+### Uso de la interfaz de usuario
+
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **AEP Data Lake** y/o **Perfil** en _Productos_ para procesar los trabajos de datos almacenados en Data Lake o en Real-time Customer Perfil, respectivamente.
+
+<img src="images/privacy/product-value.png" width="450"><br>
 
 ### Uso de la API
 
@@ -232,12 +178,6 @@ curl -X POST \
 }'
 ```
 
-### Uso de la interfaz de usuario
-
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **AEP Data Lake** y/o **Perfil** en _Productos_ para procesar los trabajos de datos almacenados en Data Lake o en Real-time Customer Perfil, respectivamente.
-
-<img src="images/privacy/product-value.png" width="450"><br>
-
 ## Eliminar procesamiento de solicitud
 
 Cuando la plataforma de experiencia recibe una solicitud de eliminación de Privacy Service, la plataforma envía una confirmación a Privacy Service de que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante ese período de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de plataforma puede acceder a ellos.
@@ -249,3 +189,16 @@ En futuras versiones, Platform enviará una confirmación a Privacy Service desp
 Al leer este documento, se le han presentado los conceptos importantes relacionados con el procesamiento de las solicitudes de privacidad del Data Lake. Se recomienda seguir leyendo la documentación proporcionada en esta guía para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad.
 
 Consulte el documento sobre el procesamiento de solicitudes de [privacidad para el Perfil](../profile/privacy.md) de clientes en tiempo real para ver los pasos sobre el procesamiento de solicitudes de privacidad para el almacén de Perfiles.
+
+## Apéndice
+
+La siguiente sección contiene información adicional para procesar solicitudes de privacidad en el lago de datos.
+
+### Etiquetado de campos anidados de tipo de mapa {#nested-maps}
+
+Es importante tener en cuenta que hay dos tipos de campos anidados de tipo mapa que no admiten el etiquetado de privacidad:
+
+* Campo de tipo mapa dentro de un campo de tipo matriz
+* Campo de tipo mapa dentro de otro campo de tipo mapa
+
+El procesamiento del trabajo de privacidad de cualquiera de los dos ejemplos anteriores fallará eventualmente. Por este motivo, se recomienda evitar el uso de campos anidados de tipo mapa para almacenar datos privados de clientes. Los ID de consumidor relevantes deben almacenarse como un tipo de datos que no sea de mapa dentro del `identityMap` campo (campo de tipo mapa en sí mismo) para conjuntos de datos basados en registros o el `endUserID` campo para conjuntos de datos basados en series temporales.
