@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Recopilar datos de una base de datos externa o sistema NoSQL a través de conectores de origen y API
+title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00764a59629eb8a5a06ac28ad446084b0bdb2293
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Recopilar datos de una base de datos externa o sistema NoSQL a través de conectores de origen y API
+# Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial trata los pasos para recuperar datos de una base de datos o sistema NoSQL e ingerirlos a la plataforma a través de conectores de origen y API.
+En este tutorial se explican los pasos para recuperar datos de una base de datos de terceros e incorporarlos a la plataforma mediante conectores de origen y API.
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a una base de datos de terceros o a un sistema NoSQL a través de una conexión base válida e información sobre el archivo que desea introducir en Platform, incluyendo la ruta y estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar una base de datos o sistema NoSQL con la API](../explore/database-nosql.md) de servicio de flujo antes de intentar este tutorial.
+Este tutorial requiere que tenga una conexión válida a una base de datos de terceros, así como información sobre el archivo que desea introducir en la plataforma (incluida la ruta y estructura del archivo). Si no dispone de esta información, consulte el tutorial sobre la [exploración de una base de datos mediante la API](../explore/database-nosql.md) de servicio de flujo antes de intentar este tutorial.
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de una conexión base para una base de datos o sistema NoSQL. |
+| `baseConnectionId` | ID de una conexión de base de datos. |
 | `data.schema.id` | El `$id` funcionamiento del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
 | `connectionSpec.id` | ID de especificación de conexión para una base de datos o sistema NoSQL. |
@@ -463,7 +463,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 }
 ```
 
-## Buscar especificaciones de flujo de datos {#specs}
+## Recuperar especificaciones de flujo de datos {#specs}
 
 Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos mediante una solicitud GET a la API de servicio de flujo. Las especificaciones de flujo de datos son responsables de recopilar datos de una base de datos externa o sistema NoSQL.
 
@@ -648,16 +648,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -675,10 +665,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `flowSpec.id` | El ID de especificación de flujo de datos asociado a la base de datos o al sistema NoSQL. |
-| `sourceConnectionIds` | ID de conexión de origen asociado a la base de datos o al sistema NoSQL. |
-| `targetConnectionIds` | El ID de conexión de destinatario asociado a la base de datos o al sistema NoSQL. |
-| `transformations.params.mappingId` | El ID de asignación asociado a la base de datos o al sistema NoSQL. |
+| `flowSpec.id` | El ID de especificación de flujo de datos asociado a la base de datos. |
+| `sourceConnectionIds` | ID de conexión de origen asociado a la base de datos. |
+| `targetConnectionIds` | ID de conexión de destinatario asociado a la base de datos. |
+| `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
 
 **Respuesta**
 
@@ -692,7 +682,30 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de una base de datos o sistema NoSQL de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de una base de datos de terceros de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
+
+## Apéndice
+
+La sección siguiente lista los diferentes conectores de origen de almacenamiento de nube y sus especificaciones de conexiones.
+
+### Especificación de conexión
+
+| Nombre del conector | ID de especificación de conexión |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive en Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark en Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Explorador de datos de Azure | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Análisis de sinapsis de Azure | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Almacenamiento de tabla de Azure | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
