@@ -4,7 +4,7 @@ seo-title: Seguimiento de los eventos del SDK web de la plataforma Adobe Experie
 description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
 
 ---
 
@@ -42,6 +42,9 @@ alloy("event", {
   }
 });
 ```
+
+>[!Note]
+>Hay un límite de 32 KB en los datos que se pueden enviar en cada evento del campo XDM.
 
 ### Envío de datos que no son XDM
 
