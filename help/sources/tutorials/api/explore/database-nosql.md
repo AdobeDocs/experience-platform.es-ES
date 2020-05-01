@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Explorar una base de datos o sistema NoSQL mediante la API de servicio de flujo
+title: Explorar una base de datos mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4c34ecdaeb4a0df1faf2dd54e8a264b9126f20b4
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Explorar una base de datos o sistema NoSQL mediante la API de servicio de flujo
+# Explorar una base de datos mediante la API de servicio de flujo
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para explorar bases de datos o sistemas NoSQL.
+Este tutorial utiliza la API de servicio de flujo para explorar el contenido y la estructura de archivos de una base de datos de terceros.
 
 ## Primeros pasos
 
@@ -22,23 +22,11 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [Fuentes](../../../home.md): La plataforma de experiencia permite la ingesta de datos de diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
 * [Simuladores](../../../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos o a un sistema NoSQL mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos de terceros mediante la API de servicio de flujo.
 
-### Obtención de una conexión base
+### Recopilar las credenciales necesarias
 
-Para explorar la base de datos o el sistema NoSQL mediante API de plataforma, debe tener un ID de conexión base válido. Si todavía no tiene una conexión base para la base de datos o el sistema NoSQL con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
-
-* [Amazon Redshift](../create/databases/redshift.md)
-* [Apache Spark en Azure HDInsights ](../create/databases/spark.md)
-* [Análisis de sinapsis de Azure](../create/databases/synapse-analytics.md)
-* [Almacenamiento de tabla de Azure](../create/databases/ats.md)
-* [Google BigQuery](../create/databases/bigquery.md)
-* [Hive](../create/databases/hive.md)
-* [MariaDB](../create/databases/mariadb.md)
-* [MySQL](../create/databases/mysql.md)
-* [Phoenix](../create/databases/phoenix.md)
-* [PostgreSQL](../create/databases/postgres.md)
-* [SQL Server](../create/databases/sql-server.md)
+Este tutorial requiere que tenga una conexión válida con la base de datos de terceros desde la que desee ingestar datos. Una conexión válida implica el ID de especificación de conexión y el ID de conexión de la base de datos. Encontrará más información sobre la creación de una conexión de base de datos y la recuperación de estos valores en la descripción general [de los conectores](./../../../home.md#database)de origen.
 
 ### Leer llamadas de API de muestra
 
@@ -62,7 +50,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explorar las tablas de datos
 
-Mediante la conexión base de la base de datos o el sistema NoSQL, puede explorar las tablas de datos realizando solicitudes GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o transferir a Platform.
+Con el ID de conexión de la base de datos, puede explorar las tablas de datos realizando solicitudes GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o transferir a Platform.
 
 **Formato API**
 
@@ -72,13 +60,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de una base de datos o de una conexión base de NoSQL. |
+| `{BASE_CONNECTION_ID}` | ID de una conexión de base de datos. |
 
 **Solicitud**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -87,7 +75,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de tablas de la base de datos o del sistema NoSQL. Encuentre la tabla que desee traer a Platform y tome nota de su `path` propiedad, ya que se le pedirá que la proporcione en el próximo paso para inspeccionar su estructura.
+Una respuesta correcta devuelve una matriz de tablas de la base de datos. Encuentre la tabla que desee traer a Platform y tome nota de su `path` propiedad, ya que se le pedirá que la proporcione en el próximo paso para inspeccionar su estructura.
 
 ```json
 [
@@ -110,7 +98,7 @@ Una respuesta correcta devuelve una matriz de tablas de la base de datos o del s
 
 ## Inspeccionar la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde la base de datos o desde el sistema NoSQL, realice una solicitud GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde la base de datos, realice una solicitud GET mientras especifica la ruta de una tabla como parámetro de consulta.
 
 **Formato API**
 
@@ -120,14 +108,14 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de una base de datos o de una conexión base de NoSQL. |
+| `{BASE_CONNECTION_ID}` | ID de una conexión de base de datos. |
 | `{TABLE_PATH}` | Ruta de una tabla. |
 
 **Solicitud**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -164,4 +152,4 @@ Una respuesta correcta devuelve la estructura de la tabla especificada. Los deta
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado la base de datos o el sistema NoSQL, ha encontrado la ruta de la tabla que desea transferir a Platform y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de la base de datos o del sistema NoSQL y llevarlos a la plataforma](../collect/database-nosql.md).
+Siguiendo este tutorial, ha explorado su base de datos, ha encontrado la ruta de la tabla que desea ingerir en Plataforma y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de la base de datos e incluirlos en la plataforma](../collect/database-nosql.md).
