@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
 
 ---
 
@@ -37,12 +37,15 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive en el conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark en el conector HDInsights de Azure](connectors/databases/spark.md)
+      - [Conector del Explorador de datos de Azure](connectors/databases/data-explorer.md)
       - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Almacenamiento de tabla de Azure](connectors/databases/ats.md)
       - [Conector Google BigQuery](connectors/databases/bigquery.md)
+      - [Conector IBM DB2](connectors/databases/ibm-db2.md)
       - [Conector MariaDB](connectors/databases/mariadb.md)
       - [Conector de Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
+      - [Conector Oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - Automatización de mercadotecnia {#marketing-automation}
@@ -70,13 +73,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [Conector ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de datos {#databases}
          - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive en el conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark en el conector HDInsights de Azure](tutorials/api/create/databases/spark.md)
+         - [Conector del Explorador de datos de Azure](tutorials/api/create/databases/data-explorer.md)
          - [Conector de Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Conector de Almacenamiento de tabla de Azure](tutorials/api/create/databases/ats.md)
          - [Conector Google BigQuery](tutorials/api/create/databases/bigquery.md)
-         - [Conector Hive](tutorials/api/create/databases/hive.md)
+         - [Conector IBM DB2](tutorials/api/create/databases/ibm-db2.md)
          - [Conector MariaDB](tutorials/api/create/databases/mariadb.md)
          - [Conector MySQL](tutorials/api/create/databases/mysql.md)
+         - [Conector Oracle](tutorials/api/create/databases/oracle.md)
          - [Conector Phoenix](tutorials/api/create/databases/phoenix.md)
          - [Conector PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Conector de SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -126,16 +132,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [Conector ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Bases de datos {#databases}
          - [Conector Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive en el conector Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark en el conector HDInsights de Azure](tutorials/ui/create/databases/spark.md)
          - [Conector de Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Almacenamiento de tabla de Azure](tutorials/ui/create/databases/ats.md)
          - [Conector de Google Big Consulta](tutorials/ui/create/databases/bigquery.md)
-         - [Conector Hive](tutorials/ui/create/databases/hive.md)
          - [Conector MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Conector de Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Conector MySQL](tutorials/ui/create/databases/mysql.md)
          - [Conector Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Conector PostgreSQL](tutorials/ui/create/databases/postgres.md)
-         - [Conector de la bujía](tutorials/ui/create/databases/spark.md)
       - Automatización de mercadotecnia {#marketing-automation}
          - [Conector HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Pagos {#payments}
