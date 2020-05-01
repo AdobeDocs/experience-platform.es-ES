@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Áreas de nombres y calificadores de identidad aceptados
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # Apéndice
 
-## Áreas de nombres de identidad estándar
+## Áreas de nombres de identidad estándar {#standard-namespaces}
 
 Todas las identidades que se envían a Privacy Service deben proporcionarse con una Área de nombres de identidad específica. Las Áreas de nombres de identidad son un componente de [Adobe Experience Platform Identity Service](../../identity-service/home.md) que indica el contexto al que se relaciona una identidad.
 
