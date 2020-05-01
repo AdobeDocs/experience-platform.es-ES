@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Perfil del cliente en tiempo real
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -33,7 +33,7 @@ Para obtener más información sobre Áreas de nombres de identidad en la plataf
 
 ## Envío de solicitudes {#submit}
 
->[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la API [de](../privacy-service/api/getting-started.md) Privacy Service o de la interfaz de usuario [de](../privacy-service/ui/overview.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad de usuario enviados en las cargas de solicitud.
+>[!NOTE] Esta sección trata cómo crear solicitudes de privacidad para el almacén de datos de Perfil. Se recomienda encarecidamente que revise la documentación de la API [de](../privacy-service/api/getting-started.md) Privacy Service o de la interfaz de usuario [de](../privacy-service/ui/overview.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad de usuario enviados en las cargas de solicitud.
 
 La siguiente sección describe cómo realizar solicitudes de privacidad para el Perfil de clientes en tiempo real y el Data Lake mediante la API o la interfaz de usuario de Privacy Service.
 
