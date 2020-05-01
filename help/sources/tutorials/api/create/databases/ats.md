@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 69ea79aff57ad82d8bc462984526b2126858c0b1
+source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
 
 ---
 
@@ -68,7 +68,6 @@ POST /connections
 **Solicitud**
 
 Para crear una conexión ATS, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
-
 
 ```shell
 curl -X POST \
