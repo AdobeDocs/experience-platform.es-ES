@@ -4,7 +4,7 @@ seo-title: Seguimiento de los eventos del SDK web de la plataforma Adobe Experie
 description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
+source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
 
 ---
 
@@ -43,7 +43,7 @@ alloy("event", {
 });
 ```
 
->[!Note]
+>[!NOTE]
 >Hay un límite de 32 KB en los datos que se pueden enviar en cada evento del campo XDM.
 
 ### Envío de datos que no son XDM
@@ -83,7 +83,7 @@ alloy("event", {
 
 ### Inicio de una vista
 
-Cuando se inicie una vista, es importante notificar al SDK estableciendo `viewStart` en `true` el comando `event` . Esto indica, entre otras cosas, que el SDK debe recuperar y procesar contenido personalizado. Aunque no utilice la personalización en este momento, simplifica en gran medida la activación de la personalización u otras funciones más adelante, ya que no será necesario modificar el código en la página. Además, el seguimiento de vistas resulta útil cuando se ven informes de análisis después de recopilar los datos.
+Cuando se inicie una vista, es importante notificar al SDK estableciendo `viewStart` en `true` el comando `event` . Esto indica, entre otras cosas, que el SDK debe recuperar y procesar contenido personalizado. Aunque no utilice la personalización en este momento, simplifica en gran medida la activación de la personalización u otras funciones más adelante, ya que no será necesario modificar el código en la página. Además, el seguimiento de vistas resulta beneficioso cuando se ven informes de análisis después de recopilar los datos.
 
 La definición de una vista puede depender del contexto.
 
