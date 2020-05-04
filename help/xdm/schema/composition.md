@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conceptos básicos de la composición de esquemas
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -60,7 +60,7 @@ Los Esquemas se utilizan para la ingesta de datos en la plataforma de experienci
 
 Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot;. Tras la ingestión de datos, los datos de esos campos se insertarán en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, el Perfil [del cliente en tiempo](../../profile/home.md) real y otros servicios de la plataforma de experiencias pueden acceder a los datos del gráfico para proporcionar una vista conjunta de cada cliente individual.
 
-Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, ID de [Experience Cloud (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;Identidad&quot;.
+Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, ID de [Experience Cloud (ECID)](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;Identidad&quot;.
 
 Es importante pensar en las identidades de los clientes durante la fase de planificación de esquemas para ayudar a garantizar que los datos se reúnan a fin de generar el perfil más sólido posible. Consulte la descripción general [del servicio de](../../identity-service/home.md) identidad para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
