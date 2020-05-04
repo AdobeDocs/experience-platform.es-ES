@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de datos de Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -21,11 +21,9 @@ Adobe Analytics es un potente motor para ayudarle a obtener más información so
 
 ![](./images/analytics-data-experience-platform.png)
 
-En un nivel superior, Adobe Analytics recopila datos de varios canales digitales y de varios centros de datos de todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se incorporan a los conjuntos de datos de la plataforma para su consumo por el área de trabajo de ciencias de datos, el servicio de Consulta y otras aplicaciones de descubrimiento de datos.
+En un nivel superior, Adobe Analytics recopila datos de varios canales digitales y de varios centros de datos de todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se ingieren en conjuntos de datos de la plataforma para su consumo por el área de trabajo de ciencias de datos, el servicio de Consulta y otras aplicaciones de descubrimiento de datos.
 
-Consulte los siguientes documentos para obtener más información sobre VISTA y las reglas de procesamiento:
-* [Información general sobre las reglas de VISTA](https://marketing.adobe.com/resources/help/es_ES/reference/VISTA.html)
-* [Resumen de las reglas de procesamiento](https://docs.adobe.com/content/help/es-ES/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+Consulte Introducción a las reglas [de procesamiento](https://docs.adobe.com/content/help/es-ES/analytics/admin/admin-tools/processing-rules/processing-rules.html) para obtener más información sobre las reglas de procesamiento.
 
 ## Modelo de datos de experiencia (XDM)
 
