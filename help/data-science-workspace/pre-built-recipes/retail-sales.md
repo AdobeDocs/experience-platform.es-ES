@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fórmula de ventas minoristas
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -53,7 +53,7 @@ Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM para
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de capacitación en el esquema **DSWRetailSales** . Desde aquí, el modelo se entrena usando un algoritmo [de regresión de aumento de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)degradado. La mejora de degradado utiliza la idea de que los alumnos débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, pueden utilizarse para crear un poderoso modelo predictivo.
+En primer lugar, se carga el conjunto de datos de capacitación en el esquema *DSWRetailSales* . Desde aquí, el modelo se entrena usando un algoritmo [de regresión de aumento de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)degradado. La mejora de degradado utiliza la idea de que los alumnos débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, pueden utilizarse para crear un poderoso modelo predictivo.
 
 El proceso incluye tres elementos: una función de pérdida, un alumno débil y un modelo aditivo.
 
