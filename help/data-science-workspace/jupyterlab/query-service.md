@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de Consulta en el bloc de notas de Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -13,16 +13,7 @@ source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
 
 Adobe Experience Platform le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencias de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar.
 
-En este tutorial se muestran las siguientes consultas SQL de muestra para casos de uso comunes con el fin de explorar, transformar y analizar datos de Adobe Analytics:
-
-- [Acceso a JupyterLab y servicio de Consulta](#access-jupyterlab-and-query-service)
-- [Consulta de datos](#query-your-data)
-   - [Recuento de visitantes por hora](#hourly-visitor-count)
-   - [Recuento de actividades por hora](#hourly-activity-count)
-   - [Número de eventos por sesión de visitante](#number-of-events-per-visitor-session)
-   - [Páginas populares de un día determinado](#popular-pages-for-a-given-day)
-   - [Usuarios activos para un día determinado](#active-users-for-a-given-day)
-   - [Ciudades activas por actividad de usuario](#active-cities-by-user-activity)
+Este tutorial muestra consultas SQL de muestra para casos de uso comunes con el fin de explorar, transformar y analizar datos de Adobe Analytics.
 
 ## Primeros pasos
 
@@ -38,25 +29,25 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - [Sintaxis SQL del servicio de Consulta](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Acceso a JupyterLab y servicio de Consulta
+## Acceso a JupyterLab y servicio de Consulta {#access-jupyterlab-and-query-service}
 
-1. En [la plataforma](https://platform.adobe.com)de experiencias, vaya a **Modelos** desde la columna de navegación izquierda. Haga clic en **Equipos portátiles** en el encabezado superior para abrir JupyterLab. Deje un momento para que JupyterLab se cargue.
+1. En [Experience Platform](https://platform.adobe.com), vaya a **[!UICONTROL Notebooks]** la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **Archivo > Nuevo iniciador**.
+   > [!NOTE] Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL File]** y seleccione **[!UICONTROL New Launcher]**.
 
-2. En la ficha Iniciador, haga clic en el icono **Vacío** de un entorno Python 3 para abrir un bloc de notas vacío.
+2. En la ficha Iniciador, haga clic en el icono **[!UICONTROL Blank]** de un entorno Python 3 para abrir un bloc de notas vacío.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 es actualmente el único entorno admitido para el servicio de Consulta en portátiles.
 
-3. En el carril de selección de la izquierda, haga clic en el icono **Datos** y en el doble haga clic en el directorio **Conjuntos** de datos para lista de todos los conjuntos de datos.
+3. En el carril de selección de la izquierda, haga clic en el **[!UICONTROL Data]** **[!UICONTROL Datasets]** icono y en el doble haga clic en el directorio para realizar la lista de todos los conjuntos de datos.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Busque un conjunto de datos de Adobe Analytics para explorar y haga clic con el botón secundario en el listado, haga clic en Datos de **Consulta en el bloc de notas** para generar consultas SQL en el bloc de notas vacío.
+4. Busque un conjunto de datos de Adobe Analytics para explorar y haga clic con el botón secundario en el listado; haga clic en **[!UICONTROL Query Data in Notebook]** para generar consultas SQL en el bloc de notas vacío.
 
 5. Haga clic en la primera celda generada que contenga la función `qs_connect()` y ejecútela haciendo clic en el botón de reproducción. Esta función crea una conexión entre la instancia del bloc de notas y el servicio de Consulta.
 
@@ -93,17 +84,17 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - `target_day` :: Día específico del que proceden los datos de destinatario.
    >[!NOTE] Puede cambiar estos valores en cualquier momento. Al hacerlo, asegúrese de ejecutar la celda variables para que se apliquen los cambios.
 
-## Consulta de datos
+## Consulta de datos {#query-your-data}
 
-Introduzca las siguientes consultas SQL en celdas de bloc de notas individuales. Para ejecutar una consulta, haga clic en su celda y luego en el botón de **reproducción** . Los resultados de consulta o los registros de errores se muestran debajo de la celda ejecutada.
+Introduzca las siguientes consultas SQL en celdas de bloc de notas individuales. Para ejecutar una consulta, haga clic en su celda y luego en el **[!UICONTROL play]** botón. Los resultados de consulta o los registros de errores se muestran debajo de la celda ejecutada.
 
-Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y el servicio de Consulta puede interrumpirse. En estos casos, reinicie JupyterLab haciendo clic en el botón de **alimentación** situado en la esquina superior derecha.
+Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y el servicio de Consulta puede interrumpirse. En estos casos, reinicie JupyterLab haciendo clic en el **[!UICONTROL Power]** botón situado en la esquina superior derecha.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **todas** las celdas para continuar donde lo dejó.
+El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **[!UICONTROL all]** las celdas para continuar donde lo dejó.
 
-### Recuento de visitantes por hora
+### Recuento de visitantes por hora {#hourly-visitor-count}
 
 La siguiente consulta devuelve el recuento de visitantes por hora para una fecha especificada:
 
@@ -144,7 +135,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Recuento de actividades por hora
+### Recuento de actividades por hora {#hourly-activity-count}
 
 La siguiente consulta devuelve el recuento de acciones por hora para una fecha especificada:
 
@@ -195,7 +186,7 @@ Si se ejecuta la consulta modificada, los resultados se almacenarán `hourly_act
 hourly_actions_date_rage.head()
 ```
 
-### Número de eventos por sesión de visitante
+### Número de eventos por sesión de visitante {#number-of-events-per-visitor-session}
 
 La siguiente consulta devuelve el número de eventos por sesión de visitante para una fecha especificada:
 
@@ -230,7 +221,7 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Páginas populares de un día determinado
+### Páginas populares de un día determinado {#popular-pages-for-a-given-day}
 
 La siguiente consulta devuelve las diez páginas más populares para una fecha especificada:
 
@@ -249,7 +240,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Usuarios activos para un día determinado
+### Usuarios activos para un día determinado {#active-users-for-a-given-day}
 
 La siguiente consulta devuelve los diez usuarios más activos para una fecha especificada:
 
@@ -268,7 +259,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Ciudades activas por actividad de usuario
+### Ciudades activas por actividad de usuario {#active-cities-by-user-activity}
 
 La siguiente consulta devuelve las diez ciudades que generan la mayoría de actividades de usuario para una fecha especificada:
 
