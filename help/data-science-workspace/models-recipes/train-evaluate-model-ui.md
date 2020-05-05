@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formación y evaluación de un modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -23,42 +23,42 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
 
 ## Crear un modelo
 
-1. En Adobe Experience Platform, haga clic en el vínculo **Modelos** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Haga clic en **Crear modelo** cerca de la parte superior derecha de la página para iniciar un proceso de creación de modelo.
+1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Haga clic **[!UICONTROL Create Model]** cerca de la parte superior derecha de la página para iniciar un proceso de creación de modelo.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Navegue por la lista de las fórmulas existentes, busque y seleccione la fórmula que se utilizará para crear el modelo y haga clic en **Siguiente**.
+2. Navegue por la lista de las fórmulas existentes, busque y seleccione la fórmula que se utilizará para crear el modelo y haga clic en **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Seleccione un conjunto de datos de entrada adecuado y haga clic en **Siguiente**. Esto establecerá el conjunto de datos de formación de entrada predeterminado para el modelo.
+3. Seleccione un conjunto de datos de entrada adecuado y haga clic en **[!UICONTROL Next]**. Esto establecerá el conjunto de datos de formación de entrada predeterminado para el modelo.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Proporcione un nombre para el modelo y revise las configuraciones de modelo predeterminadas. Las configuraciones predeterminadas se aplicaron durante la creación de la fórmula, para revisar y modificar los valores de configuración, haga clic en los valores mientras pulsa el doble. Para proporcionar un nuevo conjunto de configuraciones, haga clic en **Cargar nueva configuración** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Haga clic en **Finalizar** para crear el modelo.
+4. Proporcione un nombre para el modelo y revise las configuraciones de modelo predeterminadas. Las configuraciones predeterminadas se aplicaron durante la creación de la fórmula, para revisar y modificar los valores de configuración, haga clic en los valores mientras pulsa el doble. Para proporcionar un nuevo conjunto de configuraciones, haga clic **[!UICONTROL Upload New Config]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Click **[!UICONTROL Finish]** to create the Model.
    >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Crear una ejecución de formación
 
-1. En Adobe Experience Platform, haga clic en el vínculo **Modelos** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a formar.
+1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a formar.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Para los modelos creados con la interfaz de usuario de Área de trabajo de ciencia de datos, se genera y ejecuta automáticamente una ejecución de formación utilizando las configuraciones predeterminadas y el conjunto de datos de formación de entrada.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Para crear una nueva formación, haga clic en **Tren** cerca de la parte superior derecha de la página de información general del modelo.
+3. Cree una nueva ejecución de formación haciendo clic en **[!UICONTROL Train]** cerca de la parte superior derecha de la página de información general del modelo.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Seleccione el conjunto de datos de entrada de formación para la ejecución de la formación y haga clic en **Siguiente**.
+4. Seleccione el conjunto de datos de entrada de formación para la ejecución de la formación y haga clic en **[!UICONTROL Next]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo clic en los valores con el doble. Haga clic en **Finalizar** para crear y ejecutar la ejecución de formación.
+5. Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo clic en los valores con el doble. Haga clic en **[!UICONTROL Finish]** para crear y ejecutar la ejecución de formación.
    >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Evaluar el modelo
 
-1. En Adobe Experience Platform, haga clic en el vínculo **Modelos** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a evaluar.
+1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a evaluar.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Con varias ejecuciones de formación completadas, las métricas de evaluación se pueden comparar en distintas ejecuciones de formación en el gráfico de evaluación del modelo; seleccione una métrica de evaluación mediante la lista desplegable que se encuentra encima del gráfico.
@@ -98,7 +98,7 @@ Los parámetros adicionales determinan las propiedades técnicas del modelo:
 | `ACP_DSW_INPUT_FEATURES` | Cadena | Lista de atributos de esquema de entrada separados por comas. |
 | `ACP_DSW_TARGET_FEATURES` | Cadena | Lista de atributos de esquema de salida separados por comas. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Booleano | Determina si las características de entrada y salida se pueden modificar |
-| `tenantId` | Cadena | Este ID garantiza que los recursos que cree tengan un espacio de nombres adecuado y estén contenidos en la organización de IMS. [Siga los pasos aquí](../../xdm/api/getting-started.md#know-your-tenant-id) para encontrar su ID de inquilino. |
+| `tenantId` | Cadena | Este ID garantiza que los recursos que cree tengan un espacio de nombres adecuado y estén contenidos en la organización de IMS. [Siga los pasos aquí](../../xdm/api/getting-started.md#know-your-tenant_id) para encontrar su ID de inquilino. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Cadena | esquema de entrada utilizado para la formación de un modelo. |
 | `evaluation.labelColumn` | Cadena | Etiqueta de columna para visualizaciones de evaluación. |
 | `evaluation.metrics` | Cadena | lista separada por comas de las métricas de evaluación que se utilizarán para evaluar un modelo. |
