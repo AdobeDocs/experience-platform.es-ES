@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ Este tutorial irá a dos secciones principales. En primer lugar, creará un mode
 
 ## Empiece con el entorno de portátiles JupyterLab
 
-La creación de una fórmula desde cero se puede realizar dentro de Área de trabajo de ciencia de datos. Para inicio, vaya a [Adobe Experience Platform](https://platform.adobe.com) y haga clic en la ficha Modelos **** ML de la izquierda para acceder al área de trabajo de ciencias de datos. Desde aquí, haga clic en la subficha **Equipos portátiles** y, en la pantalla del iniciador de Jupyterlab, cree un nuevo bloc de notas seleccionando la plantilla Generador de fórmulas.
+La creación de una fórmula desde cero se puede realizar dentro de Área de trabajo de ciencia de datos. Para inicio, vaya a [Adobe Experience Platform](https://platform.adobe.com) y haga clic en la **[!UICONTROL Notebooks]** ficha de la izquierda. Para crear un nuevo bloc de notas, seleccione la plantilla Generador de fórmulas en JupyterLab Launcher.
 
 El bloc de notas del Creador de fórmulas le permite ejecutar ejecuciones de puntuación y formación dentro del bloc de notas. Esto le ofrece la flexibilidad de realizar cambios en sus `train()` y `score()` métodos entre la ejecución de experimentos en los datos de capacitación y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula que se utilizará en el área de trabajo de ciencia de datos con el bloc de notas para la funcionalidad de fórmula integrada en el bloc de notas del Creador de fórmulas.
 
@@ -291,7 +291,7 @@ El propósito de la formación es crear un modelo con las funciones y etiquetas 
 >[!NOTE]\
 >_Las funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
 
-La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se pueden encontrar en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
+La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se encuentran en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
 Después de elegir el modelo de formación, ajustará el conjunto de datos de formación x e y al modelo y la función devolverá el modelo entrenado. Un ejemplo que lo muestra es el siguiente:
 
