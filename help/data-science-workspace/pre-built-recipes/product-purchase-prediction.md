@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fórmula de compra del producto
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -56,6 +56,6 @@ Esta fórmula utiliza esquemas [](../../xdm/home.md) XDM para modelar los datos.
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de formación en el esquema **ProductPrediction** . Desde aquí, el modelo se entrena usando un clasificador [de bosque](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aleatorio. El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador forestal aleatorio construya varios árboles de decisión y los combine para crear una predicción más precisa y estable.
+En primer lugar, se carga el conjunto de datos de formación en el esquema *ProductPrediction* . Desde aquí, el modelo se entrena usando un clasificador [de bosque](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aleatorio. El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador forestal aleatorio construya varios árboles de decisión y los combine para crear una predicción más precisa y estable.
 
 Este proceso tiene el inicio de crear un conjunto de árboles de decisiones que selecciona aleatoriamente subconjuntos de datos de capacitación. Después, se promedian los resultados de cada árbol de decisiones.
