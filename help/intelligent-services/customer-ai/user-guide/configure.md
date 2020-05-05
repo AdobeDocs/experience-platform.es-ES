@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuración de una instancia de AI de cliente
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -49,7 +49,7 @@ Haga clic **[!UICONTROL Enter Field Name]** y seleccione un campo en la lista de
 
 ![](../images/user-guide/goal.png)
 
-### Configurar una programación *(opcional)*{#configure-a-schedule}
+### Configurar una programación *(opcional)* {#configure-a-schedule}
 
 Aparece el paso *avanzado* . Este paso opcional le permite configurar una programación para automatizar las ejecuciones de predicciones, definir exclusiones de predicciones para filtrar determinados eventos o hacer clic **[!UICONTROL Finish]** si no se necesita nada.
 
@@ -76,4 +76,10 @@ Al seguir esta sección, ha configurado una instancia de AI del cliente y se ha 
 ## Pasos siguientes {#next-steps}
 
 Siguiendo este tutorial, ha configurado correctamente una instancia de AI del cliente y ha generado puntuaciones de tendencia. Ahora puede elegir usar el Generador de segmentos para [crear segmentos de clientes con puntuaciones](./create-segment.md) predichas o [descubrir perspectivas con la API](./discover-insights.md)del cliente.
+
+## Recursos adicionales
+
+El siguiente vídeo está diseñado para ayudarle a comprender el flujo de trabajo de configuración de la API del cliente. Además, se proporcionan prácticas recomendadas y ejemplos de casos de uso.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 
