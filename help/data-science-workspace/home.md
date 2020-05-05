@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -30,7 +30,7 @@ Con Data Science Workspace, Adobe Experience Platform le permite ofrecer a toda 
 - Un esquema de datos unificado creado en el modelo de datos de experiencia (XDM)
 - La potencia informática esencial para el aprendizaje automático/IA y la administración de grandes conjuntos de datos
 - Fórmulas de aprendizaje automático prediseñadas para acelerar el salto a experiencias impulsadas por AI
-- Creación, reutilización y modificación simplificadas de recetas para científicos de datos de diferentes niveles de aptitud
+- Creación, reutilización y modificación simplificadas de recetas para científicos de datos con diferentes niveles de aptitud
 - Publicación y uso compartido de servicios inteligentes con sólo unos pocos clics (sin programador) y supervisión y readiestramiento para la optimización continua de las experiencias personalizadas de los clientes
 
 Los científicos de datos de todos los niveles de habilidades obtendrán perspectivas digitales más rápidas y efectivas antes.
@@ -172,7 +172,6 @@ Todos los datos de Adobe Experience Platform cumplen con un esquema XDM estandar
 Si no encuentra inmediatamente los datos que necesita, pero existen fuera de Adobe Experience Platform, es una tarea relativamente sencilla de ingerir conjuntos de datos adicionales, que también se transformarán en el esquema XDM estandarizado.\
 Puede utilizar el bloc de notas Jupyter para simplificar el procesamiento previo de los datos, posiblemente a partir de una plantilla de portátil o un bloc de notas que haya utilizado anteriormente para comprar.
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### Crear la fórmula
@@ -209,7 +208,7 @@ Con la combinación de experiencia en la marca y el aprendizaje automático y la
 
 Para obtener información adicional, como un flujo de trabajo diario completo, lea la documentación de introducción [a](./walkthrough.md) Data Science Workspace.
 
-## Recursos adicionales    
+## Recursos adicionales
 
 El siguiente vídeo está diseñado para admitir su comprensión del espacio de trabajo de ciencia de datos.
 
