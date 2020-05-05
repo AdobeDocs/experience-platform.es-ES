@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Programar un modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -28,13 +28,13 @@ Este tutorial requiere un servicio existente. Si no tiene un servicio accesible 
 
 La puntuación de modelo se puede configurar para que sea un proceso automatizado y programado. Una vez creado el servicio, puede seguir los pasos a continuación para configurar y aplicar un programa de puntuación:
 
-1. En Adobe Experience Platform, haga clic en la ficha **Servicios** situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio en el que desea programar las ejecuciones de puntuación y haga clic en **Abrir** para vista de su página de *Información general* .
+1. En Adobe Experience Platform, haga clic en la **[!UICONTROL Services]** ficha situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio en el que desea programar las ejecuciones de puntuación y haga clic en **[!UICONTROL Open]** para vista de su página *Información general* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. La página Información general muestra la información de puntuación del servicio. Haga clic en el vínculo **Actualizar programación** para configurar un programa de puntuación.
+2. La página Información general muestra la información de puntuación del servicio. Haga clic en el **[!UICONTROL Update Schedule]** vínculo para configurar un programa de puntuación.
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. Configure la frecuencia, la fecha de inicio, la fecha de finalización, el conjunto de datos de entrada y el conjunto de datos de salida para la programación de puntuación. Una vez que esté satisfecho con las configuraciones, haga clic en **Crear** para actualizar el programa de puntuación del servicio.
+3. Configure la frecuencia, la fecha de inicio, la fecha de finalización, el conjunto de datos de entrada y el conjunto de datos de salida para la programación de puntuación. Una vez que esté satisfecho con las configuraciones, haga clic en **[!UICONTROL Create]** para actualizar el programa de puntuación del Servicio.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. El programa de puntuación actualizado se muestra en la página *Información general* del servicio.
@@ -47,13 +47,13 @@ La configuración de las ejecuciones de formación programadas en un servicio ga
 
 Una vez creado el servicio, puede seguir los pasos que se indican a continuación para configurar y aplicar una programación de formación:
 
-1. En Adobe Experience Platform, haga clic en la ficha **Servicios** situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio en el que desea programar las ejecuciones de formación y haga clic en **Abrir** para vista de la página de *Información general* .
+1. En Adobe Experience Platform, haga clic en la **[!UICONTROL Services]** ficha situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio en el que desea programar las ejecuciones de formación y haga clic en **[!UICONTROL Open]** para vista de su página *Información general* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. La página Información general muestra la información de capacitación del servicio. Haga clic en el vínculo **Actualizar programación** para configurar una programación de formación.
+2. La página Información general muestra la información de capacitación del servicio. Haga clic en el **[!UICONTROL Update Schedule]** vínculo para configurar una programación de formación.
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. Configure la frecuencia, la fecha de inicio, la fecha de finalización y el conjunto de datos de entrada utilizados para la programación de formación. Una vez que esté satisfecho con las configuraciones, haga clic en **Crear** para actualizar la programación de formación del servicio.
+3. Configure la frecuencia, la fecha de inicio, la fecha de finalización y el conjunto de datos de entrada utilizados para la programación de formación. Una vez que esté satisfecho con las configuraciones, haga clic en **[!UICONTROL Create]** para actualizar la programación de capacitación del Servicio.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. La programación de formación actualizada se muestra en la página *Información general* del servicio.
