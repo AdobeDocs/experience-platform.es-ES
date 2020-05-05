@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descarga de puntuaciones en la API del cliente
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ---
 
@@ -36,12 +36,12 @@ Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación
 
 ## Recuperar el ID de lote {#retrieve-your-batch-id}
 
-Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API con el fin de devolver un solo lote en lugar de una lista de lotes pertenecientes a su organización. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre el [filtrado de datos del catálogo mediante parámetros](../../../catalog/api/filter-data.md)de consulta.
+Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API a fin de devolver el último lote exitoso en lugar de una lista de lotes que pertenecen a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta de límite a la cantidad deseada que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre el [filtrado de datos del catálogo mediante parámetros](../../../catalog/api/filter-data.md)de consulta.
 
 **Formato API**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | Parámetro | Descripción |
@@ -51,7 +51,7 @@ GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 **Solicitud**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -60,40 +60,51 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote de puntuación. In this example, the object is `5e602f67c2f39715a87f46b1`.
-
-Dentro del objeto de ID de lote de puntuación hay una `relatedObjects` matriz. Esta matriz contiene dos objetos. El primer objeto tiene un `type` valor de &quot;lote&quot; y también contiene un ID. En la respuesta de ejemplo siguiente, el ID del lote es `035e2520-5e69-11ea-b624-51evfeba55d1`. Copie el ID de lote para utilizarlo en la siguiente llamada de API.
+Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote. En este ejemplo, el valor clave del objeto devuelto es el ID de lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie el ID de lote para utilizarlo en la siguiente llamada de API.
 
 ```json
-{   
-    "5e602f67c2f39715a87f46b1": {
-        "imsOrg": "{IMS_ORG}",
+{
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
+        "status": "success",
+        "tags": {
+            "Tags": [ ... ],
+        },
         "relatedObjects": [
             {
-                "id": "5c01a91863540e14cd3d0432",
-                "type": "dataSet"
-            },
-            {
-                "id": "035e2520-5e69-11ea-b624-51evfeba55d1",
-                "type": "batch"
+                "type": "dataSet",
+                "id": "5cd9146b31dae914b75f654f"
             }
         ],
-        "status": "success",
-        "metrics": {
-            "recordsRead": 46721830,
-            "recordsWritten": 46721830,
-            "avgNumExecutorsPerTask": 33,
-            "startTime": 1583362385336,
-            "inputSizeInKb": 10242034,
-            "endTime": 1583363197517
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "replay": {
+            "predecessors": [
+                "01E5N7EDQQP4JHJ93M7C3WM5SP"
+            ],
+            "reason": "Replacing for 2020-04-09",
+            "predecessorListingType": "IMMEDIATE"
         },
-        "errors": [],
-        "created": 1550791457173,
-        "createdClient": "{CLIENT_CREATED}",
-        "createdUser": "{CREATED_BY}",
-        "updatedUser": "{CREATED_BY}",
-        "updated": 1550792060301,
-        "version": "1.0.116"
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
+        "started": 1586715571808,
+        "metrics": {
+            "partitionCount": 1,
+            "outputByteSize": 2380339,
+            "inputFileCount": -1,
+            "inputByteSize": 2381007,
+            "outputRecordCount": 24340,
+            "outputFileCount": 1,
+            "inputRecordCount": 24340
+        },
+        "completed": 1586715582735,
+        "created": 1586715571217,
+        "createdClient": "acp_foundation_push",
+        "createdUser": "sensei_exp_attributionai@AdobeID",
+        "updatedUser": "acp_foundation_dataTracker@AdobeID",
+        "updated": 1586715583582,
+        "version": "1.0.5"
     }
 }
 ```
