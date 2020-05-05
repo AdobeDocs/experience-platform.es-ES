@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas en la API de atribución
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -152,3 +152,9 @@ La tarjeta campañas ** principales muestra información general sobre sus campa
 ## Pasos siguientes
 
 Una vez que haya terminado de filtrar los datos y pueda mostrar la información adecuada, tiene la opción de acceder a las puntuaciones. Para obtener una guía detallada sobre cómo acceder a las puntuaciones, visite las puntuaciones de [acceso en el tutorial de atribución de AI](./download-scores.md) . Además, también puede descargar los datos de resumen como se indica en [más acciones](#more-actions). Al seleccionar &quot;Descargar datos de resumen&quot; se descargan los datos de resumen agregados por fechas.
+
+## Recursos adicionales
+
+El siguiente vídeo está diseñado para ayudarle en el aprendizaje de cómo utilizar la página de perspectivas de Atribución de AI para comprender el retorno de la inversión de los canales y campañas de marketing.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
