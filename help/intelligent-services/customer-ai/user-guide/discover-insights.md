@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -122,3 +122,9 @@ Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga c
 ## Pasos siguientes
 
 Este documento describía las perspectivas proporcionadas por una instancia de servicio de inteligencia artificial del cliente. Ahora puede continuar con el tutorial sobre la [descarga de puntuaciones en la API](./download-scores.md) del cliente o explorar las otras guías de [Adobe Intelligent Services](../../home.md) que se ofrecen.
+
+## Recursos adicionales
+
+En el siguiente vídeo se describe cómo utilizar la API del cliente para ver la salida de los modelos y los factores influyentes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
