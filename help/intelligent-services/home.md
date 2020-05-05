@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visión general de Servicios Inteligentes
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 # Visión general de Servicios Inteligentes
 
 Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de la experiencia del cliente. Esto permite que los analistas de mercadotecnia configuren predicciones específicas de las necesidades de una compañía mediante configuraciones de nivel empresarial sin necesidad de conocimientos de ciencia de datos. Además, los profesionales de marketing pueden activar predicciones en Adobe Experience Cloud, Adobe Experience Platform y aplicaciones de terceros.
+
+El siguiente vídeo está diseñado para admitir su comprensión de los servicios inteligentes. Con ejemplos de casos de uso empresarial, este vídeo explica un flujo de trabajo de alto nivel y describe las capacidades de la IA de atribución y de la AI del cliente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Ventajas de los servicios inteligentes
 
