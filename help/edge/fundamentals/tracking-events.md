@@ -4,7 +4,7 @@ seo-title: Seguimiento de los eventos del SDK web de la plataforma Adobe Experie
 description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Inicio de una vista
-
-Cuando se inicie una vista, es importante notificar al SDK estableciendo `viewStart` en `true` el comando `event` . Esto indica, entre otras cosas, que el SDK debe recuperar y procesar contenido personalizado. Aunque no utilice la personalización en este momento, simplifica en gran medida la activación de la personalización u otras funciones más adelante, ya que no será necesario modificar el código en la página. Además, el seguimiento de vistas resulta beneficioso cuando se ven informes de análisis después de recopilar los datos.
-
-La definición de una vista puede depender del contexto.
-
-* En un sitio web normal, cada página web suele considerarse una vista única. En este caso, un evento con `viewStart` configurado para `true` se debe ejecutar lo antes posible en la parte superior de la página.
-* En una aplicación de una sola página \(SPA\), una vista está menos definida. Normalmente significa que el usuario ha navegado dentro de la aplicación y que la mayor parte del contenido ha cambiado. Para aquellos familiarizados con los fundamentos técnicos de las aplicaciones de una sola página, esto suele suceder cuando la aplicación carga una nueva ruta. Siempre que un usuario se desplaza a una nueva vista, sin importar cómo decida definir una _vista_, se debe ejecutar un evento con `viewStart` el estado configurado en `true` .
-
-El evento con `viewStart` el valor `true` es el mecanismo principal para enviar datos a Adobe Experience Cloud y solicitar contenido de Adobe Experience Cloud. Así es como inicio una vista:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Después de enviar los datos, el servidor responde con contenido personalizado, entre otras cosas. Este contenido personalizado se procesa automáticamente en la vista. Los controladores de vínculos también se adjuntan automáticamente al contenido de la nueva vista.
-
 ## Uso de la API sendBeacon
 
 Puede ser complicado enviar datos de evento justo antes de que el usuario haya navegado fuera de la página web. Si la solicitud tarda demasiado, el explorador podría cancelarla. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Cuando se utiliza `sendBeacon`, el navegador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no mantiene presionada la navegación de la página. Para indicar a Adobe Experience Platform Web SDK que utilice `sendBeacon`, agregue la opción `"documentUnloading": true` al comando evento.  Vea el siguiente ejemplo:
@@ -138,7 +109,7 @@ Si desea gestionar una respuesta desde un evento, se le puede notificar un éxit
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
