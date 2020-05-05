@@ -4,7 +4,7 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ Para poder enviar datos a Adobe Experience Platform, debe crear un esquema XDM y
 - Añada la combinación del SDK web de la plataforma Adobe Experience Platform en el esquema que ha creado
 - [Cree un conjunto de datos](https://platform.adobe.com/dataset/overview) con su esquema en el que desee que los datos aterricen
 
-## Solicitud de un ID de configuración
+## Crear un ID de configuración
 
-Debe tener un ID de configuración para utilizar el SDK. El ID de configuración garantiza que los datos se dirijan al lugar correcto. Puede obtener un ID de configuración de su consultor o a través de Client Care. Necesitarán la siguiente información:
+Puede crear un ID de configuración mediante la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge durante el inicio.
 
-- **ID de organización:** Puede encontrarlo siguiendo las instrucciones [aquí](https://docs.adobe.com/content/help/es-ES/core-services/interface/manage-users-and-products/organizations.html)
-- **Id. de conjunto de datos:** Esto está disponible en la interfaz de usuario del conjunto de datos cuando hace clic en un conjunto de datos
-- **ID de Esquema:** Esto está disponible en la dirección URL de la pantalla de creación de esquemas
-- **Nombre práctico:** Es el nombre descriptivo que se utilizará en futuras IU para esta configuración
+>Nota: La organización debe estar en una lista blanca para la función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
 
 ## Instalación del SDK en Launch
 
