@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de API de atribución
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -174,3 +174,9 @@ Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la 
 ## Pasos siguientes
 
 Siguiendo este tutorial, se ha creado correctamente una instancia de servicio en Atribución AI. Una vez que la instancia haya terminado de anotar (aproximadamente 24 horas), estará listo para [descubrir perspectivas](./discover-insights.md)de Atribución de AI. Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md) sin procesar.
+
+## Recursos adicionales
+
+En el siguiente vídeo se describe un flujo de trabajo completo para crear una nueva instancia en la API de atribución.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
