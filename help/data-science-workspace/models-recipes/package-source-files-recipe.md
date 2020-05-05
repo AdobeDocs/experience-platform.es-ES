@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -35,24 +35,24 @@ Una imagen de Docker permite a un desarrollador empaquetar una aplicación con t
 
 La imagen de Docker creada se inserta en el Registro de Contenedor de Azure mediante las credenciales proporcionadas durante el flujo de trabajo de creación de fórmulas.
 
-Para obtener las credenciales de Azure Contenedor Registry, inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. En la columna de navegación izquierda, navegue a **Flujos de trabajo**. Seleccione **Importar fórmula** , luego seleccione **Iniciar**. Consulte la captura de pantalla siguiente para obtener referencia.
+Para obtener las credenciales de Azure Contenedor Registry, inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. En la columna de navegación izquierda, vaya a **[!UICONTROL Workflows]**. Seleccione **[!UICONTROL Import Recipe]** seguido de **[!UICONTROL Launch]**. Consulte la captura de pantalla siguiente para obtener referencia.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Se abre la página *Configurar* . Proporcione un nombre **de** fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez completada, haga clic en **Siguiente**.
+Se abre la página *Configurar* . Proporcione un nombre *de* fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez finalizado, haga clic en **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Seleccione el *motor de ejecución* correspondiente y, a continuación, elija una **clasificación** para el *tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
+Seleccione el *motor de ejecución* adecuado y, a continuación, elija un **[!UICONTROL Classification]** para *Tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
 
 >[!NOTE]
 >*El tipo *es la clase de problema de aprendizaje automático para el que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la ejecución de la formación.
 
 >[!TIP]
->- Para las fórmulas de Python, seleccione el tiempo de ejecución de **Python** .
->- Para las fórmulas R, seleccione el tiempo de ejecución de **R** .
->- Para las fórmulas de PySpark, seleccione el tiempo de ejecución de **PySpark** . Se rellena automáticamente un tipo de artefacto.
->- Para las fórmulas de escala, seleccione el tiempo de ejecución de **Spark** . Se rellena automáticamente un tipo de artefacto.
+>- Para las fórmulas de Python, seleccione el **[!UICONTROL Python]** motor de ejecución.
+>- Para las fórmulas R, seleccione el tiempo de ejecución **[!UICONTROL R]** .
+>- Para las fórmulas de PySpark, seleccione el tiempo de ejecución **[!UICONTROL PySpark]** . Se rellena automáticamente un tipo de artefacto.
+>- Para las fórmulas de escala, seleccione el motor de ejecución **[!UICONTROL Spark]** . Se rellena automáticamente un tipo de artefacto.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ Copie esta URL y continúe con los [siguientes pasos](#next-steps).
 
 ## Pasos siguientes {#next-steps}
 
-Este tutorial pasó a empaquetar archivos de origen en una fórmula, el paso previo para importar una fórmula en el área de trabajo de ciencia de datos. Ahora debe tener una imagen de Docker en el Registro de Contenedor de Azure junto con la URL de imagen correspondiente. Ya está listo para iniciar el tutorial sobre la **importación de una fórmula empaquetada en Data Science Workspace**. Seleccione uno de los vínculos de tutorial siguientes para empezar.
+Este tutorial pasó a empaquetar archivos de origen en una fórmula, el paso previo para importar una fórmula en el área de trabajo de ciencia de datos. Ahora debe tener una imagen de Docker en el Registro de Contenedor de Azure junto con la URL de imagen correspondiente. Ya está listo para iniciar el tutorial sobre la importación de una fórmula empaquetada en el área de trabajo de ciencias de datos. Seleccione uno de los vínculos de tutorial siguientes para comenzar:
 
 - [Importación de una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md)
 - [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md)
