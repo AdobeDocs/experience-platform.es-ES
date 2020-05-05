@@ -4,7 +4,7 @@ solution: Experience Platform
 title: esquemas y conjuntos de datos de Previsualización
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 11eb1859f3e4b059765709e750f18b61509a2f93
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -13,15 +13,15 @@ source-git-commit: 11eb1859f3e4b059765709e750f18b61509a2f93
 
 Una vez completada correctamente la secuencia de comandos de arranque desde el tutorial [Crear el esquema de ventas minoristas y el conjunto de datos](./create-retails-sales-dataset.md) . Los esquemas de salida y los conjuntos de datos se pueden ver en la plataforma de experiencias. Para realizar la vista de los esquemas y conjuntos de datos, siga los pasos a continuación:
 
-1. Haga clic en el vínculo **Esquemas** ubicado en la columna de navegación izquierda y busque el esquema de entrada creado por la secuencia de comandos de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` el paso anterior. Vista los detalles del esquema y su composición haciendo clic en él.
+1. Haga clic en el **[!UICONTROL Schemas]** vínculo ubicado en la columna de navegación izquierda y busque el esquema de entrada creado por la secuencia de comandos de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` el paso anterior. Vista los detalles del esquema y su composición haciendo clic en él.
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Haga clic en el vínculo **Conjuntos** de datos ubicado en la columna de navegación izquierda y abra el conjunto de datos de entrada que se creó haciendo clic en el nombre del listado. El nombre del conjunto de datos corresponderá a lo que se definió en `config.yaml` el paso anterior.
+2. Haga clic en el **[!UICONTROL Datasets]** vínculo ubicado en la columna de navegación izquierda y abra el conjunto de datos de entrada que se creó haciendo clic en el nombre del listado. El nombre del conjunto de datos corresponderá a lo que se definió en `config.yaml` el paso anterior.
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
-3. Haga clic en **Previsualización Conjunto de datos** ubicado en la previsualización superior derecha de un subconjunto del conjunto de datos.
+3. Haga clic en **[!UICONTROL Preview Dataset]** ubicado en la previsualización superior derecha de un subconjunto del conjunto de datos.
 
    ![](../images/models-recipes/access-data/preview_dataset.png)
 
