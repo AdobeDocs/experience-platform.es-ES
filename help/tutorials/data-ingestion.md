@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Tutoriales de inserción de datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ Para poder transferir datos CSV a la plataforma de Adobe Experience, los datos d
 
 ## Creación de una conexión de flujo continuo
 
-Para inicio de datos de flujo continuo a la plataforma de experiencia, primero debe crear una conexión HTTP de flujo. Al crear una conexión de flujo continuo, debe proporcionar detalles clave como, por ejemplo, el origen de los datos de flujo continuo y si desea o no enviar datos desde un origen de confianza (autenticado) o no de confianza (no autenticado). Esto se puede hacer mediante la interfaz de usuario de la plataforma o las API de la plataforma de experiencia. Para obtener más información, siga los tutoriales sobre la [creación de una conexión de flujo mediante la interfaz de usuario](../ingestion/tutorials/create-streaming-connection-ui.md) o la [creación de una conexión de flujo mediante API](../ingestion/tutorials/create-streaming-connection.md).
+Para inicio de datos de flujo continuo a la plataforma de experiencia, primero debe solicitar un extremo HTTP. Tiene la opción de configurar este extremo para aplicar un comportamiento autenticado. Esto se puede hacer mediante la interfaz de usuario de la plataforma o las API de la plataforma de experiencia. Para obtener más información, siga los tutoriales sobre la [creación de una conexión de flujo mediante la interfaz de usuario](../ingestion/tutorials/create-streaming-connection-ui.md) o la [creación de una conexión de flujo mediante API](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Creación de una conexión de flujo autenticada
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como Perfil e identidad del cliente en tiempo real, diferenciar entre registros procedentes de fuentes de confianza y orígenes que no son de confianza. Para empezar, siga el tutorial para [crear una conexión](../ingestion/tutorials/create-authenticated-streaming-connection.md)de flujo autenticada.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como Perfil e identidad del cliente en tiempo real, diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Para empezar, siga el tutorial para [crear una conexión](../ingestion/tutorials/create-authenticated-streaming-connection.md)de flujo autenticada.
 
 ## Datos de series temporales y registros de flujo
 
