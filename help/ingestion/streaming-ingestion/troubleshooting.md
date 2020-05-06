@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Solución de problemas de ingestión de flujo continuo
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Las cargas de solicitud solo se pueden evaluar una vez que se han enviado a Plat
 
 Cuando no se admite la validación sincrónica para la ubicación solicitada, se devuelve una respuesta de error 501. Consulte la descripción general [de validación de](../quality/streaming-validation.md) flujo para obtener más información sobre la validación sincrónica.
 
-### ¿Cómo se autentican los datos enviados?
+### ¿Cómo puedo garantizar que los datos se recopilen únicamente a partir de fuentes de confianza?
 
 La plataforma de experiencias admite la recopilación de datos segura. Cuando la recopilación de datos autenticada está habilitada, los clientes deben enviar un testigo web JSON (JWT) y su identificador de organización IMS como encabezados de solicitud. Para obtener más información sobre cómo enviar datos autenticados a Platform, consulte la guía sobre recopilación [de datos](../tutorials/create-authenticated-streaming-connection.md)autenticados.
 
