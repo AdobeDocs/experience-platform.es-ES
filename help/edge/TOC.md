@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de la red perimetral de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+workflow-type: tm+mt
+source-wordcount: '89'
+ht-degree: 7%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
    * [Administración del parpadeo](fundamentals/managing-flicker.md)
    * [Apoyo al consentimiento](fundamentals/supporting-consent.md)
    * [Compatibilidad con navegadores en la aplicación](fundamentals/supporting-in-app-browsers.md)
+   * [Recuperación del ID de Experience Cloud](fundamentals/retrieving-experience-cloud-id.md)
 * Qué implementar {#implement}
    * [Productos](what-to-implement/commerce.md)
 * Consideraciones específicas de la solución {#solutions}
