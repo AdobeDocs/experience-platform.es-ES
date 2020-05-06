@@ -4,7 +4,10 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,10 +28,7 @@ Actualmente, el SDK web de Adobe Experience Platform solo admite el envío de da
 
 Para poder enviar datos a Adobe Experience Platform, debe crear un esquema XDM y un conjunto de datos que utilicen ese esquema.
 
-- [Cree un esquema](../../xdm/tutorials/create-schema-ui.md) con las siguientes mezclas:
-   - Detalles de implementación de ExperienceEvent
-   - Detalles del Entorno de ExperienceEvent
-   - Detalles de la web de ExperienceEvent
+- [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
 - Añada la combinación del SDK web de la plataforma Adobe Experience Platform en el esquema que ha creado
 - [Cree un conjunto de datos](https://platform.adobe.com/dataset/overview) con su esquema en el que desee que los datos aterricen
 
