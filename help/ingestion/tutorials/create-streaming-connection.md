@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de una conexión de flujo mediante la API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -177,6 +180,6 @@ Esta sección proporciona información adicional sobre la creación de conexione
 
 ### Conexiones de flujo autenticadas
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como Perfil e identidad del cliente en tiempo real, diferenciar entre registros procedentes de fuentes de confianza y fuentes que no son de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso IMS como parte de la solicitud POST; si el testigo IMS es válido, los registros se marcan como recopilados a partir de fuentes válidas.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como Perfil e identidad del cliente en tiempo real, diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso IMS como parte de la solicitud POST; si el testigo IMS es válido, los registros se marcan como recopilados de fuentes de confianza.
 
 Encontrará más información sobre la creación de una conexión de flujo autenticada en el tutorial [](create-authenticated-streaming-connection.md)de creación de una conexión de flujo autenticada.
