@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de una conexión de flujo autenticada
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 2%
 
 ---
 
@@ -194,11 +197,3 @@ Si el `Authorization` encabezado no está presente o se envía un token de acces
     }
 }
 ```
-
-### Envío de mensajes a una conexión de flujo no autenticada con Autorización
-
-Si una conexión de flujo continuo no tiene habilitada la autenticación, el cliente puede (opcionalmente) agregar el encabezado a la `Authorization` solicitud.
-
-Si el `Authorization` encabezado no está presente o se envía un token de acceso no válido o caducado, se devolverá una respuesta HTTP 401 no autorizada, los datos se seguirán publicando, pero con el `authenticatedRequest` campo establecido en `false`.
-
-Si el `Authorization` encabezado está presente y es válido, los datos se publicarán con el `authenticatedRequest` campo configurado en `true`.
