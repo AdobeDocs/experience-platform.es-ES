@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analizar los datos con portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '1746'
 ht-degree: 0%
@@ -54,7 +54,7 @@ La fórmula de ventas minoristas es un ejemplo independiente que utiliza el mism
 
 Pasaremos a acceder a los datos internamente desde Adobe Experience Platform y a los datos de forma externa. Utilizaremos la `data_access_sdk_python` biblioteca para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca pandas Python.
 
-#### Datos externos {#external-data}
+#### Datos externos
 
 Con el bloc de notas Ventas minoristas abierto, busque el encabezado &quot;Cargar datos&quot;. El siguiente código Python utiliza la estructura de datos de los pandas y la función `DataFrame` read_csv() [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para leer el CSV alojado en Github en el marco de datos:
 
@@ -72,7 +72,7 @@ Finalmente, podemos echar un vistazo a cómo se ven nuestros datos. Podemos util
 
 Ahora, pasaremos a acceder a los datos de la plataforma de experiencia.
 
-#### Por ID de conjunto de datos
+##### Por ID de conjunto de datos
 
 Para esta sección, utilizamos el conjunto de datos de ventas minoristas, que es el mismo conjunto de datos utilizado en el bloc de notas de muestra de ventas minoristas.
 
@@ -148,7 +148,7 @@ Si miramos los valores mínimo y máximo de `store`, podemos ver que hay 45 alma
 
 Esto significa que 22 tiendas son de `storeType` , 17 lo son `A``storeType` , y 6 lo son `B``storeType` `C`.
 
-### Visualización de datos
+#### Visualización de datos
 
 Ahora que conocemos los valores de los marcos de datos, queremos complementar esto con visualizaciones para que las cosas sean más claras y fáciles de identificar patrones. Los gráficos también son útiles para transmitir resultados a una audiencia. Algunas bibliotecas Python que son útiles para la visualización incluyen:
 - [Matplotlib](https://matplotlib.org/)
@@ -167,7 +167,7 @@ En esta sección, veremos rápidamente algunas ventajas de usar cada biblioteca.
 [ggchart](https://ggplot2.tidyverse.org/) es un paquete también construido sobre matplotlib. Sin embargo, la diferencia principal es que la herramienta es un puerto de ggplot2 para R. De manera similar al mar, el objetivo es mejorar la matplotlib. Los usuarios que estén familiarizados con ggchart2 para R deben tener en cuenta esta biblioteca.
 
 
-### Gráficos uniformes
+##### Gráficos uniformes
 
 Los gráficos uniformes son gráficos de una variable individual. Para visualizar los datos se utiliza un gráfico univariado común: el cuadro y el diagrama de whisky.
 
@@ -177,7 +177,7 @@ Usando nuestro conjunto de datos de antes, podemos generar la tabla y el diagram
 
 Para mostrar la distribución de datos se utiliza una casilla y un diagrama de whisky. Las líneas exteriores del trazado muestran los cuartiles superior e inferior, mientras que el cuadro abarca el rango intercuartil. La línea del cuadro marca la mediana. Cualquier punto de datos que supere 1,5 veces el cuartil superior o inferior se marcará como un círculo. Estos puntos se consideran periféricos.
 
-### Gráficos multivariados
+##### Gráficos multivariados
 
 Los gráficos multivariados se utilizan para ver la interacción entre variables. Con la visualización, los científicos de datos pueden ver si hay correlaciones o patrones entre las variables. Un gráfico multivariado común es una matriz de correlación. Con una matriz de correlación, las dependencias entre varias variables se cuantifican con el coeficiente de correlación.
 
