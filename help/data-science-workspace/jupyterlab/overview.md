@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+workflow-type: tm+mt
+source-wordcount: '3356'
+ht-degree: 6%
 
 ---
 
@@ -51,7 +54,7 @@ En las secciones siguientes encontrará información sobre las características 
 * [Celdas de código](#code-cells)
 * [Kernels](#kernels)
 * [Sesiones de núcleo](#kernel-sessions)
-* [Recurso de ejecución de PySpark/Spark](#execution-resource)
+* [Recurso de ejecución de PySpark/Spark](#pyspark-spark-execution-resource)
 * [Iniciador](#launcher)
 
 ### Access JupyterLab {#access-jupyterlab}
@@ -140,7 +143,7 @@ Si el núcleo está apagado o inactivo durante un período prolongado, entonces 
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Recurso de ejecución de PySpark/Spark {#execution-resource}
+### Recurso de ejecución de PySpark/Spark {#pyspark-spark-execution-resource}
 
 >[!IMPORTANT]
 >Con la transición de Spark 2.3 a Spark 2.4, los núcleos Spark y PySpark están obsoletos.
@@ -475,7 +478,7 @@ Un comando mágico personalizado de Data Science Workspace para leer o escribir 
 
 JupyterLab en plataforma le permite utilizar SQL en un bloc de notas Python para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de la plataforma de</a>Adobe Experience Platform. El acceso a los datos a través del servicio de Consulta puede ser útil para tratar grandes conjuntos de datos debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante el servicio de Consulta tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de usar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
+Antes de utilizar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
 
 La consulta de datos mediante el servicio de Consulta requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
 
