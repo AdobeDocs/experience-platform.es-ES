@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
    - Bases de datos {#databases}
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
-      - [Conector Apache Cassandra](connectors/databases/cassandra.md)
       - [Apache Hive en el conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark en el conector HDInsights de Azure](connectors/databases/spark.md)
       - [Conector del Explorador de datos de Azure](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [Conector ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de datos {#databases}
          - [Conector Amazon Redshift](tutorials/api/create/databases/redshift.md)
-         - [Conector Apache Cassandra](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive en el conector Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark en el conector HDInsights de Azure](tutorials/api/create/databases/spark.md)
          - [Conector del Explorador de datos de Azure](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Recopilación de datos de automatización de mercadotecnia](tutorials/api/collect/marketing-automation.md)
       - [Recopilar datos de pago](tutorials/api/collect/payments.md)
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
-   - [Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros](tutorials/api/create-dataset-base-connection.md)
-   - [Creación de una conexión de base de datos mediante la API de servicio de flujo](tutorials/api/cloud-storage-parquet.md)
+   - [Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
+   - [Creación de una conexión de base de datos mediante la API de servicio de flujo](tutorials/api/create-dataset-base-connection.md)
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Creación de un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
