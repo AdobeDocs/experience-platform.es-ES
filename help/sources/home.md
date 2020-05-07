@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Información general sobre los conectores de origen de la plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
+source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,6 @@ La plataforma de experiencias ofrece compatibilidad para la ingesta de datos des
 La plataforma de experiencias ofrece compatibilidad para la ingesta de datos desde una base de datos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre los conectores de origen específicos:
 
 - [Conector Amazon Redshift](connectors/databases/redshift.md)
-- [Conector Apache Cassandra](connectors/databases/cassandra.md)
 - [Apache Hive en el conector Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark en el conector HDInsights de Azure](connectors/databases/spark.md)
 - [Conector del Explorador de datos de Azure](connectors/databases/data-explorer.md)
