@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
+source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ Puede personalizar los atributos que se muestran en la lista haciendo clic en el
 
 El recuento de perfiles muestra el número total de perfiles que su organización tiene en la plataforma de experiencia, después de que la directiva de combinación predeterminada de su organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca en diferentes canales, pero estos fragmentos se combinarán (según la política de combinación predeterminada) y devolverá un recuento de perfiles &quot;1&quot; porque todos están relacionados con el mismo individuo.
 
-El recuento de perfiles también incluye tanto perfiles con atributos (datos de registros) como perfiles (como perfiles de Adobe Analytics) que solo contienen datos de series temporales (eventos). El recuento se actualiza periódicamente para proporcionar un número total actualizado de perfiles dentro de la plataforma. Cada vez que una ingestión de perfiles aumenta o disminuye el recuento en más de un 5%, se activa automáticamente un trabajo para actualizar el recuento. Si su organización está utilizando la transmisión por flujo continuo, los trabajos se programan para que se ejecuten cada hora a fin de recoger los datos recién ingestados.
+El recuento de perfiles también incluye perfiles con atributos (datos de registros), así como perfiles que solo contienen datos de series temporales (eventos), como perfiles de Adobe Analytics. El recuento de perfiles se actualiza con regularidad para proporcionar un número total actualizado de perfiles dentro de la plataforma.
+
+Cuando la ingestión de perfiles en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos siguientes a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
 
 ![](../images/user-guide/profile-count.png)
 
