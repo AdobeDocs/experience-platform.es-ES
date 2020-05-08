@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector del Explorador de datos de Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ La documentación siguiente proporciona información sobre cómo conectar el Exp
 
 ## Conectar el Explorador de datos de Azure a la plataforma mediante la interfaz de usuario
 
-- [Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/ats.md)
+- [Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
 - [Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
