@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -140,6 +140,7 @@ ht-degree: 0%
          - [Conector de Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Almacenamiento de tabla de Azure](tutorials/ui/create/databases/ats.md)
          - [Conector de Google Big Consulta](tutorials/ui/create/databases/bigquery.md)
+         - [Conector IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [Conector MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Conector de Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Conector MySQL](tutorials/ui/create/databases/mysql.md)
