@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Información general sobre el acceso a los datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 4%
 
 ---
 
@@ -237,7 +240,6 @@ Contents of the file
 
 Para obtener más ejemplos, consulte el tutorial [de acceso a](tutorials/dataset-data.md)datos.
 
-
 ## Suscripción a eventos de ingesta de datos
 
-La plataforma pone a disposición eventos específicos de alto valor para la suscripción a través de la consola [de E/S de](https://console.adobe.io/)Adobe. Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Encontrará más información sobre el uso de Eventos de Adobe I/O en la guía de [introducción](https://www.adobe.io/apis/experienceplatform/events/docs.html).
+Platform pone a disposición de la suscripción eventos específicos de alto valor mediante [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
