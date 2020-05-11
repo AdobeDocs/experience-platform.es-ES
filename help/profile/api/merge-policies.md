@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 1%
 
 ---
 
@@ -170,7 +173,7 @@ Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esque
 
 ## Directivas de combinación de acceso {#access-merge-policies}
 
-Mediante la API de Perfil de cliente en tiempo real, el punto final permite realizar una solicitud de búsqueda para vista de una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de la organización de IMS, filtradas por criterios específicos. `/config/mergePolicies`
+Mediante la API de Perfil de cliente en tiempo real, el punto final permite realizar una solicitud de búsqueda para vista de una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de la organización de IMS, filtradas por criterios específicos. `/config/mergePolicies` También puede utilizar el extremo para recuperar varias directivas de combinación por sus ID. `/config/mergePolicies/bulk-get` Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
 
 ### Acceso a una única directiva de combinación por ID
 
@@ -217,6 +220,99 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+Consulte los [componentes de la sección de políticas](#components-of-merge-policies) de combinación al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
+
+### Recuperar varias directivas de combinación por sus ID
+
+Puede recuperar varias directivas de combinación haciendo una solicitud POST al extremo e incluyendo los ID de las directivas de combinación que desee recuperar en el cuerpo de la solicitud. `/config/mergePolicies/bulk-get`
+
+**Formato API**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Solicitud**
+
+El cuerpo de la solicitud incluye una matriz &quot;ids&quot; con objetos individuales que contienen la &quot;id&quot; de cada directiva de combinación para la que desea recuperar detalles.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve Estado HTTP 207 (Varios estados) y los detalles de las directivas de combinación cuyos ID se proporcionaron en la solicitud POST.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 
