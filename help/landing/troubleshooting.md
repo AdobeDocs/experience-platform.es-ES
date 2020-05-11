@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Preguntas más frecuentes y guía de solución de problemas de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '2001'
+ht-degree: 2%
 
 ---
 
@@ -85,11 +88,11 @@ Para obtener más información sobre los extremos específicos en las API de pla
 
 ## ¿Cuál es mi organización IMS? {#what-is-my-ims-organization}
 
-Una organización de IMS es una representación de Adobe de un cliente. Todas las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización de IMS tiene derecho a la plataforma de experiencia, puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar en la consola [de E/S de](https://console.adobe.io/)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de cualquier integración concreta para encontrar el ID en Credenciales de **cliente**. Para ver un tutorial paso a paso sobre cómo autenticarse en la plataforma, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
+Una organización de IMS es una representación de Adobe de un cliente. Todas las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización de IMS tiene derecho a la plataforma de experiencia, puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar en [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): en la ficha **Integraciones** , vaya a la sección **Información general** de cualquier integración concreta para encontrar el ID en Credenciales de **cliente**. Para ver un tutorial paso a paso sobre cómo autenticarse en la plataforma, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
 
 ## ¿Dónde puedo encontrar mi clave de API? {#where-can-i-find-my-api-key}
 
-Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de la consola [de E/S de](https://console.adobe.io/)Adobe. En la consola, en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica y encontrará la clave en Credenciales de **cliente**. Para ver un tutorial paso a paso sobre cómo autenticarse en la plataforma, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
+Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). En la consola, en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica y encontrará la clave en Credenciales de **cliente**. Para ver un tutorial paso a paso sobre cómo autenticarse en la plataforma, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
 
 ## ¿Cómo consigo un token de acceso? {#how-do-i-get-an-access-token}
 
