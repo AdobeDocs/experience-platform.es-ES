@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
    - almacenamiento de nube {#cloud-storage}
       - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob y Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Conector de Almacenamiento de archivos de Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP y SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Conector de Almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 0%
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Conector Blob de Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Conector Gen2 de Azure Data Lake Almacenamiento](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Conector de Almacenamiento de archivos de Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Conector de Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 0%
       - almacenamiento de nube {#cloud-storage}
          - [Conector Gen2 de Azure Data Lake Almacenamiento](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Conector Azure Blob y Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Conector de Almacenamiento de archivos de Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Conector FTP y SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Conector de Almacenamiento de Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
