@@ -4,7 +4,10 @@ seo-title: Configuración del SDK web de la plataforma Adobe Experience
 description: Descubra cómo configurar el SDK web de la plataforma de experiencia
 seo-description: Descubra cómo configurar el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +16,11 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 >[!IMPORTANT]
 >
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+>El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 La configuración del SDK se realiza con el `configure` comando .
 
->[!Iimportante]
+>[!IImportante]
 >`configure` debe ser _siempre_ el primer comando llamado.
 
 ```javascript
@@ -35,7 +38,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | Ninguno |
+| Cadena | Sí | none |
 
 El ID de configuración asignado, que vincula el SDK con las cuentas y la configuración correspondientes.  Al configurar varias instancias dentro de una sola página, debe configurar una diferente `configId` para cada instancia.
 
@@ -45,7 +48,7 @@ El ID de configuración asignado, que vincula el SDK con las cuentas y la config
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de cadenas | No | `["web", "device", "environment", "placeContext"]` |
 
-Indica las categorías de contexto que se recopilarán automáticamente, tal como se describe en Información [](../reference/automatic-information.md)automática.  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
+Indica qué categorías de contexto se recopilarán automáticamente, tal como se describe en Información [](../reference/automatic-information.md)automática.  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
 
 ### `debugEnabled`
 
@@ -68,19 +71,11 @@ Indica si se debe habilitar la depuración. Al configurar esta configuración pa
 
 Dominio utilizado para interactuar con los servicios de Adobe. Solo se utiliza si tiene un dominio de origen (CNAME) que proxies solicitudes a la infraestructura Edge de Adobe.
 
-### `errorsEnabled`
-
-| **Tipo** | **Requerido** | **Valor predeterminado** |
-| -------- | ------------ | ----------------- |
-| Booleano | No | `true` |
-
-Indica si se deben suprimir los errores. Como se describe en [Ejecución de comandos](executing-commands.md), los errores _no capturados_ se registran en la consola del desarrollador, independientemente de si la depuración está habilitada en el SDK web de Adobe Experience Platform. Si se establece `errorsEnabled` en `false`, las promesas devueltas por el SDK web de Adobe Experience Platform nunca se rechazan, aunque se siguen registrando errores en la consola si el registro está activado en el SDK web de Adobe Experience Platform.
-
 ### `orgId`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | Ninguno |
+| Cadena | Sí | none |
 
 Su ID de organización de Experience Cloud asignado.  Al configurar varias instancias dentro de una página, debe configurar una diferente `orgId` para cada instancia.
 
@@ -97,16 +92,16 @@ Indica si los datos asociados con los clics en vínculos se deben recopilar auto
 | **Propiedad** |  |
 | ------------ | ----------------------------------- |
 | Nombre del vínculo | Nombre determinado por el contexto del vínculo |
-| Dirección URL del vínculo | URL normalizada |
+| URL del vínculo | URL normalizada |
 | Tipo de vínculo | Configurar para descargar, salir u otro |
 
 ### `onBeforeEventSend`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Función | No | () => no definido |
+| Función | No | () => undefined |
 
-Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se `xdm` envía un objeto con el campo a la llamada de retorno.  Modifique el objeto xdm para cambiar lo que se envía.  Dentro de la llamada de retorno, el `xdm` objeto ya tendrá los datos pasados en el comando event y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de eventos](tracking-events.md#modifying-events-globally).
+Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se `xdm` envía un objeto con el campo a la llamada de retorno.  Modifique el objeto xdm para cambiar lo que se envía.  Dentro de la llamada de retorno, el `xdm` objeto ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
@@ -124,7 +119,7 @@ Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | No | Ninguno |
+| Cadena | No | none |
 
 Se utiliza para crear una definición de estilo CSS que oculta las áreas de contenido de la página web mientras se carga contenido personalizado desde el servidor. Si no se proporciona esta opción, el SDK no intenta ocultar ninguna área de contenido mientras se carga el contenido personalizado, lo que podría dar como resultado un &quot;parpadeo&quot;.
 
@@ -134,7 +129,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
 
-## Opciones de audiencias
+## Opciones de Audiencias
 
 ### `cookieDestinationsEnabled`
 
@@ -158,9 +153,9 @@ Habilita los destinos de URL, lo que permite activar las direcciones URL en func
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Número | No | Ninguno |
+| Número | No | none |
 
-El ID del contenedor que especifica qué sincronizaciones de ID se activan. Se trata de un entero no negativo que se puede obtener de su consultor.
+El ID de contenedor que especifica qué sincronizaciones de ID se activan. Se trata de un entero no negativo que se puede obtener de su consultor.
 
 ### `idSyncEnabled`
 
