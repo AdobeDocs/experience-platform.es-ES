@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Conector FTP y SFTP
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # Conector FTP y SFTP
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, Google Cloud Platform y Azure. Puede llevar los datos de estos sistemas a la plataforma.
 
-Las fuentes de almacenamiento de nube pueden llevar sus propios datos a la plataforma sin necesidad de descargar, formatear o cargar. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes mediante la interfaz de usuario. La compatibilidad con los proveedores de almacenamiento en la nube incluye servidores FTP y SFTP.
+Las fuentes de almacenamiento de nube pueden llevar sus propios datos a la plataforma sin necesidad de descargar, formatear o cargar. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. La plataforma le permite incorporar datos de un servidor FTP o SFTP por lotes.
 
-La siguiente documentación proporciona información sobre cómo conectar un servidor FTP o SFTP a la plataforma mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar un servidor FTP o STFP a la plataforma mediante API o la interfaz de usuario:
 
 ## Conectar FTP y SFTP a plataforma mediante API
 
@@ -26,4 +29,4 @@ La siguiente documentación proporciona información sobre cómo conectar un ser
 ## Conexión de FTP o SFTP a la plataforma mediante la interfaz de usuario
 
 - [Creación de un conector de origen FTP o SFTP en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
-- [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
