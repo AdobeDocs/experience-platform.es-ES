@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 0%
    - Publicidad {#advertising}
       - [Conector de Google Ads](connectors/advertising/ads.md)
    - almacenamiento de nube {#cloud-storage}
+      - [Conector de Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob y Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Conector de los centros de Evento de Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de Almacenamiento de archivos de Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP y SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Conector de Almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [Conector OData genérico](tutorials/ui/create/protocols/odata.md)
    - Configurar un flujo de datos {#dataflow}
       - [Configurar un flujo de datos para un conector de publicidad](tutorials/ui/dataflow/advertising.md)
-      - [Configurar un flujo de datos para un conector de almacenamiento de nube](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configurar un flujo de datos para un conector de almacenamiento de nube por lotes](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configuración de un flujo de datos para un conector de almacenamiento de flujo continuo en la nube](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Configurar un flujo de datos para un conector de base de datos](tutorials/ui/dataflow/databases.md)
       - [Configurar un flujo de datos para un conector CRM](tutorials/ui/dataflow/crm.md)
       - [Configurar un flujo de datos para un conector de éxito de cliente](tutorials/ui/dataflow/customer-success.md)
