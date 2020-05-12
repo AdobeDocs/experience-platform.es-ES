@@ -1,23 +1,26 @@
 ---
-title: Combinación de datos de eventos
-seo-title: Combinación de datos de eventos del SDK web de Adobe Experience Platform
-description: Aprenda a combinar los datos de eventos del SDK web de la plataforma de experiencia
-seo-description: Aprenda a combinar los datos de eventos del SDK web de la plataforma de experiencia
+title: Combinación de datos de evento
+seo-title: Combinación de datos de evento del SDK web de Adobe Experience Platform
+description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
+seo-description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '444'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Combinación de datos de eventos
+# (Beta) Combinación de datos de evento
 
 >[!IMPORTANT]
 >
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+>El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-En ocasiones, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que _sí_ tiene para que no se pierda si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
+A veces, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que _sí_ tiene para que no se pierda si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
 
-En estos casos, puede combinar datos con eventos anteriores pasando `eventMergeId` como una opción a los `event` comandos de la siguiente manera:
+En estos casos, puede combinar datos con eventos anteriores pasando `eventMergeId` como opción a los `event` comandos de la siguiente manera:
 
 ```javascript
 alloy("event", {
@@ -55,20 +58,20 @@ alloy("event", {
 });
 ```
 
-Al pasar el mismo valor de ID de combinación de eventos a ambos comandos de evento en este ejemplo, los datos del segundo comando de evento se incrementan a los datos enviados anteriormente en el primer comando de evento. En la plataforma de datos de experiencia se crea un registro para cada comando de evento, pero durante el informe los registros se unen mediante el ID de combinación de eventos y aparecen como un solo evento.
+Al pasar el mismo valor de ID de combinación de eventos a ambos comandos de evento en este ejemplo, los datos del segundo comando de evento se incrementan a los datos enviados anteriormente en el primer comando de evento. En la plataforma de datos de experiencia se crea un registro para cada comando de evento, pero durante el sistema de informes los registros se unen mediante el ID de combinación de eventos y aparecen como un solo evento.
 
-Si envía datos sobre un evento concreto a proveedores de terceros, también puede incluir el mismo ID de combinación de eventos con esos datos. Más adelante, si decide importar los datos de terceros en Adobe Experience Platform, el ID de combinación de eventos se utilizará para combinar todos los datos recopilados como resultado del evento discreto que se produjo en la página web.
+Si envía datos sobre un evento concreto a proveedores de terceros, puede incluir también el mismo ID de combinación de eventos con esos datos. Más adelante, si decide importar los datos de terceros en Adobe Experience Platform, el ID de combinación de eventos se utilizará para combinar todos los datos recopilados como resultado del evento discreto que se produjo en la página web.
 
 ## Generación de un ID de combinación de eventos
 
-El valor de ID de combinación de eventos puede ser cualquier cadena que elija, pero recuerde que todos los eventos enviados con el mismo ID se notifican como un evento único, por lo que tenga cuidado de imponer la exclusividad cuando los eventos no se deban combinar. Si desea que el SDK genere un ID de combinación de eventos único en su nombre (siguiendo la especificación [](https://www.ietf.org/rfc/rfc4122.txt)UUID v4 ampliamente adoptada), puede utilizar el `createEventMergeId` comando para hacerlo.
+El valor de ID de combinación de eventos puede ser cualquier cadena que elija, pero recuerde que todos los eventos enviados con el mismo ID se notifican como un solo evento, por lo que tenga cuidado de imponer la exclusividad cuando no se deban combinar eventos. Si desea que el SDK genere un ID de combinación de eventos único en su nombre (siguiendo la especificación [](https://www.ietf.org/rfc/rfc4122.txt)UUID v4 ampliamente adoptada), puede utilizar el `createEventMergeId` comando para hacerlo.
 
-Como con todos los comandos, se devuelve una promesa porque puede ejecutar el comando antes de que el SDK haya terminado de cargarse. La promesa se resolverá con una ID única de combinación de eventos lo antes posible. Puede esperar a que se resuelva la promesa antes de enviar datos al servidor de la siguiente manera:
+Como con todos los comandos, se devuelve una promesa porque puede ejecutar el comando antes de que el SDK haya terminado de cargarse. La promesa se resolverá con un ID de combinación de eventos único lo antes posible. Puede esperar a que se resuelva la promesa antes de enviar datos al servidor de la siguiente manera:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -80,13 +83,13 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 
 // Time passes and more data becomes available
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -102,7 +105,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 ```
@@ -112,15 +115,15 @@ Siga este mismo patrón si desea acceder al ID de combinación de eventos por ot
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   // send event merge ID to a third-party provider
-  console.log(eventMergeId);
+  console.log(results.eventMergeId);
 });
 ```
 
 ## Nota sobre el formato XDM
 
-Dentro del comando event, el `mergeId` se agrega a la `xdm` carga útil.  Si lo desea, la opción `mergeId` se puede enviar como parte de la opción xdm, como se muestra a continuación:
+Dentro del comando evento, el `mergeId` se agrega a la `xdm` carga útil.  Si lo desea, la opción `mergeId` se puede enviar como parte de la opción xdm, como se muestra a continuación:
 
 ```javascript
 alloy("event", {
