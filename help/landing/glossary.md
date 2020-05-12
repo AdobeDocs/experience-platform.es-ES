@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
+source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+workflow-type: tm+mt
+source-wordcount: '6973'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## A
 
-**Control de acceso:** Control de acceso {#access-control} para la plataforma de experiencia vincula a los usuarios con permisos de acceso y entornos de simulación de pruebas mediante perfiles de producto en Adobe Admin Console.
+**Control de acceso:** {#access-control} Control de acceso para la plataforma de experiencia vincula a los usuarios con permisos de acceso y entornos de simulación de pruebas a través de los perfiles del producto en Adobe Admin Console.
 
 **ID de clave de acceso:** El ID de clave de acceso es un identificador único asociado a una clave de acceso secreto de Amazon S3. El ID de la clave de acceso y la clave de acceso secreto se utilizan conjuntamente para firmar solicitudes de AWS.
 
@@ -49,6 +52,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Atributos:** Los atributos son características especificadas que representan un perfil.
 
+**Combinación de atributos:** La combinación de atributos define cómo una política de combinación prioriza el valor de atributo de perfil en caso de conflictos de datos.
+
 **Atribución AI:** Attribution AI es un servicio de Adobe Sensei que ofrece funciones de atribución algorítmicas de varios canales en todo el ciclo de vida del cliente.
 
 **Audiencia**: Una audiencia es el conjunto resultante de perfiles que cumplen los criterios de una definición de segmento.
@@ -71,7 +76,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Segmentación por lotes:** La segmentación por lotes es una alternativa a un proceso de selección de datos en curso y mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y almacena para que pueda exportarse para su uso.
 
-**Generar:** En Experience Platform Launch, una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contiene todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
+**Generar:** En Experience Platform Launch, una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contienen todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
 
 **Herramientas de inteligencia empresarial:** La inteligencia empresarial, también conocida como herramientas &quot;BI&quot;, está integrada principalmente con el servicio de Consulta de la plataforma de experiencia. Las herramientas de inteligencia comercial son tipos de software de aplicaciones que recopilan y procesan grandes cantidades de datos no estructurados de sistemas internos y externos.
 
@@ -103,23 +108,23 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Etiquetas &quot;C&quot; de datos de contrato:** Las etiquetas de contrato `C` se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de control de datos de un cliente.
 
-**Etiqueta de contrato C1:** la etiqueta de control de datos del `C1` contrato especifica que los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. Por ejemplo, los datos que se originaron en las redes sociales.
+**Etiqueta de contrato C1:** `C1` la etiqueta de control de datos de contrato especifica que los datos solo se pueden exportar desde Adobe Experience Cloud en un formulario agregado sin incluir identificadores individuales o de dispositivo. Por ejemplo, los datos que se originaron en las redes sociales.
 
-**Etiqueta de contrato C2:** La etiqueta de control de datos del `C2` contrato especifica los datos que no se pueden exportar a terceros. Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente.  Por ejemplo: los contratos de redes sociales suelen restringir la transferencia de datos que se reciben de ellos. C2 es más restrictivo que C1, que sólo requiere agregación y datos anónimos.
+**Etiqueta de contrato C2:** `C2` la etiqueta de control de datos de contrato especifica los datos que no se pueden exportar a terceros. Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente.  Por ejemplo: los contratos de redes sociales suelen restringir la transferencia de datos que se reciben de ellos. C2 es más restrictivo que C1, que sólo requiere agregación y datos anónimos.
 
-**Etiqueta de contrato C3:** La etiqueta de control de datos del `C3` contrato especifica los datos que no se pueden combinar ni utilizar de otro modo con información directamente identificable. Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la combinación o utilización de esos datos con información directamente identificable.  Por ejemplo, los contratos para datos provenientes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros a menudo incluyen prohibiciones contractuales específicas sobre el uso de datos directamente identificables.
+**Etiqueta de contrato C3:** `C3` la etiqueta de control de datos de contrato especifica los datos que no se pueden combinar ni utilizar de otro modo con información directamente identificable. Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la combinación o utilización de esos datos con información directamente identificable.  Por ejemplo, los contratos para datos provenientes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros a menudo incluyen prohibiciones contractuales específicas sobre el uso de datos directamente identificables.
 
-**Etiqueta de contrato C4:** La etiqueta de control de datos de contratos `C4` especifica que los datos no se pueden usar para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. C4 es la etiqueta más restrictiva, ya que engloba las etiquetas C5, C6 y C7.
+**Etiqueta de contrato C4:** `C4` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. C4 es la etiqueta más restrictiva, ya que engloba las etiquetas C5, C6 y C7.
 
-**Etiqueta de contrato C5:** La etiqueta de control de datos del `C5` contrato especifica que los datos no se pueden utilizar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
+**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
 
-**C6 Etiqueta de contrato:** La etiqueta de control de datos de `C6` contrato especifica que los datos no se pueden usar para la segmentación de publicidad en el sitio. Los datos no se pueden usar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios.  Esto incluye el uso de datos recopilados anteriormente en el sitio sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra.
+**C6 Etiqueta de contrato:** `C6` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. Los datos no se pueden usar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios.  Esto incluye el uso de datos recopilados anteriormente en el sitio sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra.
 
-**Etiqueta de contrato C7:** la etiqueta de control de datos del `C7` contrato especifica que los datos no se pueden usar para dirigir el contenido en el sitio.  Los datos no se pueden utilizar para la segmentación de contenido en el sitio, incluida la selección y el envío de contenido en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dicho contenido.  Esto incluye información recopilada anteriormente sobre el interés de los usuarios por seleccionar contenido, procesar datos sobre qué contenido se mostró, con qué frecuencia o cuánto tiempo se mostró, cuándo y dónde se mostró, y si los usuarios realizaron alguna acción relacionada con el contenido, incluido por ejemplo hacer clic en el contenido.
+**Etiqueta de contrato C7:** `C7` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir el contenido en el sitio.  Los datos no se pueden utilizar para la segmentación de contenido en el sitio, incluida la selección y el envío de contenido en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dicho contenido.  Esto incluye información recopilada anteriormente sobre el interés de los usuarios por seleccionar contenido, procesar datos sobre qué contenido se mostró, con qué frecuencia o cuánto tiempo se mostró, cuándo y dónde se mostró, y si los usuarios realizaron alguna acción relacionada con el contenido, incluido por ejemplo hacer clic en el contenido.
 
-**C8 Etiqueta de contrato:** la etiqueta de control de datos del `C8` contrato especifica que los datos no se pueden usar para medir los sitios web o las aplicaciones de la organización. Los datos no se pueden usar para medir, comprender y generar informes sobre el uso que hacen los usuarios de los sitios o aplicaciones de su organización. Esto no incluye la segmentación basada en intereses, que es la recopilación de información sobre el uso que hace de este servicio para personalizar posteriormente el contenido y/o la publicidad en otros contextos.
+**C8 Etiqueta de contrato:** `C8` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para medir los sitios web o las aplicaciones de la organización. Los datos no se pueden usar para medir, comprender y generar informes sobre el uso que hacen los usuarios de los sitios o aplicaciones de su organización. Esto no incluye la segmentación basada en intereses, que es la recopilación de información sobre el uso que hace de este servicio para personalizar posteriormente el contenido y/o la publicidad en otros contextos.
 
-**Etiqueta de contrato C9:** la etiqueta de control de datos del `C9` contrato especifica que los datos no se pueden usar en flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas de los datos utilizados para la ciencia de datos.  A veces se expresan en términos que prohíben el uso de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado.
+**Etiqueta de contrato C9:** `C9` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar en flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas de los datos utilizados para la ciencia de datos.  A veces se expresan en términos que prohíben el uso de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado.
 
 **Columna Fecha de creación:** La selección de una `Created Date` columna es una opción al especificar datos de terceros mediante una conexión. Cuando se selecciona la estrategia de guardar datos anexados y el conjunto de datos contiene un esquema relacionado con varias fechas, el usuario debe elegir entre el esquema de fecha y hora disponible para especificar una columna `Created Date` clave. `Created Date` no está disponible cuando se selecciona la estrategia de sobrescritura para guardar.
 
@@ -145,14 +150,6 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Flujo de datos:** Un flujo de datos es un conjunto o una colección de mensajes que comparten el mismo esquema y que se envían por el mismo origen.
 
-**Conjunto de datos:** Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, generalmente una tabla, que contiene esquemas (columnas) y campos (filas).
-
-**Flujo de conjunto de datos:** En la plataforma de datos del cliente en tiempo real, un flujo de conjuntos de datos es una representación visual de conjuntos de datos de origen que fluye a través del Perfil del cliente en tiempo real hacia los destinos.
-
-**Id. de conjunto de datos:** Identificador generado por Adobe para un conjunto de datos ingerido.
-
-**Salida de conjunto de datos:** El resultado del conjunto de datos proporciona un mecanismo para determinar qué se utilizará la opción *Crear tabla como selección* para una ejecución del servicio de Consulta en particular.
-
 **Administración de datos:** La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normas y políticas de la organización con respecto al uso de los datos.
 
 **Etiquetas de administración de datos:** Las etiquetas de control de datos proporcionan a los usuarios la capacidad de clasificar datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas. Las etiquetas de control de datos agregadas a un conjunto de datos se heredan o se aplican a todos los campos dentro de ese conjunto de datos.  Las etiquetas de control de datos también se pueden aplicar directamente a los campos.
@@ -170,6 +167,14 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Tipo de datos:** El tipo de datos es un objeto reutilizable con propiedades en una representación jerárquica.
 
 **Etiquetas de uso de datos:** Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas.
+
+**Flujo de datos:** En la plataforma de datos del cliente en tiempo real, un flujo de datos es un flujo virtual de datos que fluye a la plataforma desde un origen y hacia los destinos.
+
+**Conjunto de datos:** Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, generalmente una tabla, que contiene esquemas (columnas) y campos (filas).
+
+**Id. de conjunto de datos:** Identificador generado por Adobe para un conjunto de datos ingerido.
+
+**Salida de conjunto de datos:** El resultado del conjunto de datos proporciona un mecanismo para determinar qué se utilizará la opción *Crear tabla como selección* para una ejecución del servicio de Consulta en particular.
 
 **Evento de decisión:** Un evento de decisión se utiliza para recoger observaciones sobre el resultado y el contexto de una actividad de decisión. El evento de decisión recoge información sobre la forma en que se tomó la decisión, en el momento en que se tomó, las opciones propuestas (elegidas) y el estado contextual existente que influyó en la decisión o pudo observarse durante el proceso de decisión. El evento de decisión también captura la ID de la propuesta, un identificador único global que puede utilizarse para correlacionar la decisión con otros eventos.
 
@@ -214,6 +219,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Modelo de datos de experiencia (XDM):** El modelo de datos de experiencia (XDM) es el concepto de utilizar esquemas estándar para unificar datos para su uso con las aplicaciones de la plataforma de experiencia y Adobe Experience Cloud. XDM estandariza la forma en que se estructuran los datos y acelera y simplifica el proceso de obtener perspectivas a partir de cantidades masivas de datos.
 
 **Experience Platform Launch:** Launch es un ecosistema de administración de etiquetas y SDK, integrado con las aplicaciones de Experience Cloud y de Experience Cloud. Launch proporciona herramientas para implementar, unificar y administrar integraciones de análisis, marketing y publicidad necesarias para potenciar las experiencias relevantes de los clientes en todos los dispositivos cliente.
+
+**Extensiones de Experience Platform Launch:** Las extensiones de Experience Platform Launch permiten el envío de datos de evento sin procesar directamente a los destinos de la plataforma de datos del cliente en tiempo real. La instalación de extensiones de Launch requiere acceso a las propiedades de Launch.
 
 **Experimento:** Un experimento es un proceso de creación de un modelo entrenado formando la instancia con una porción de muestra de los datos de producción activos.
 
@@ -274,6 +281,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Identificación:** El proceso de identificación de fragmentos de datos y su unión para formar un registro completo de un perfil es el proceso de identificación de dichos fragmentos.
 
 **Símbolo de identidad:** El símbolo de identidad es una abreviatura de una Área de nombres de identidad que puede utilizarse como referencia en las API.
+
+**Valor de identidad:** El valor de identidad son datos asociados a una identidad asignada en el esquema. Al hacer coincidir los datos de registro entre fragmentos de perfil, tanto el valor de identidad como la Área de nombres deben coincidir.
 
 **Etiqueta de datos I1:** La etiqueta de datos `I1` se utiliza para clasificar datos de identificación directa que pueden identificar o contactar con una persona específica en lugar de con un dispositivo.
 
@@ -347,7 +356,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Organización:** Una organización es el nombre que se utiliza para identificar una compañía o un grupo específico dentro de una compañía en todos los productos de Adobe. El administrador puede configurar y administrar el acceso y los permisos de las funciones para los usuarios de una organización.
 
-**Sobrescribir estrategia de guardado:** la estrategia de `Overwrite` almacenamiento es una opción para ingerir datos de terceros a través de una conexión, donde el usuario especifica si los datos ingestados se sobrescribirán en una programación específica. La plataforma de experiencia ingesta el conjunto de datos especificado desde el origen de terceros y lo sobrescribe en la plataforma de experiencia.
+**Sobrescribir estrategia de guardado:** `Overwrite` la estrategia de almacenamiento es una opción para ingerir datos de terceros a través de una conexión, donde el usuario especifica si los datos ingestados se sobrescribirán en una programación específica. La plataforma de experiencia ingesta el conjunto de datos especificado desde el origen de terceros y lo sobrescribe en la plataforma de experiencia.
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
@@ -377,6 +386,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Exportación de Perfil:** La exportación de Perfil es uno de los dos tipos de destinos en la plataforma de datos del cliente en tiempo real. La exportación de Perfil genera un archivo que contiene perfiles y atributos, utiliza datos PII sin procesar con correo electrónico y se utiliza para integrarse con las plataformas de automatización de correo electrónico y mercadotecnia.
 
+**Fragmento de perfil de Perfil:** Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular.
+
 **ID de Perfil:** Un ID de perfil es un identificador generado automáticamente asociado a un tipo de identidad y representa un perfil.
 
 **Propiedad:** En Experience Platform Launch, una propiedad es un contenedor para todo lo necesario para implementar un conjunto de etiquetas.
@@ -389,7 +400,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Editor de Consultas:** El Editor de Consultas es una herramienta para escribir, validar y enviar sentencias SQL en el servicio de Consulta.
 
-**Servicio de Consulta para la plataforma Adobe Experience:** El servicio *de Consulta de la plataforma de* experiencia permite a los analistas de datos realizar consultas de ExperienceEvents y XDM para su uso en análisis y aprendizaje automático. Con el servicio de Consulta, los científicos y analistas de datos podrán extraer todos sus conjuntos de datos almacenados en la plataforma de experiencias, incluidos los datos de comportamiento, así como los puntos de venta, la administración de la relación con los clientes (CRM) y más, y realizar consultas en dichos conjuntos de datos para responder preguntas específicas sobre los datos.
+**Servicio de Consulta para la plataforma Adobe Experience:** *El servicio* de Consulta de la plataforma de experiencia permite a los analistas de datos realizar consultas de ExperienceEvents y XDM para su uso en análisis y aprendizaje automático. Con el servicio de Consulta, los científicos y analistas de datos podrán extraer todos sus conjuntos de datos almacenados en la plataforma de experiencias, incluidos los datos de comportamiento, así como los puntos de venta, la administración de la relación con los clientes (CRM) y más, y realizar consultas en dichos conjuntos de datos para responder preguntas específicas sobre los datos.
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
@@ -465,9 +476,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Servicios:** Un potente marco para la operacionalización de los servicios AI y ML mediante Adobe Intelligent Services. Los servicios ofrecen experiencias personalizadas en tiempo real o ofrecen servicios inteligentes personalizados.
 
-**Etiqueta de datos S1:** La etiqueta de datos `S1` se utiliza para clasificar datos que especifican la latitud y la longitud que pueden utilizarse para determinar la ubicación exacta de un dispositivo.
+**Etiqueta de datos S1:** `S1` la etiqueta de datos se utiliza para clasificar datos que especifican la latitud y la longitud que pueden utilizarse para determinar la ubicación exacta de un dispositivo.
 
-**Etiqueta de datos S2:** La etiqueta `S2` de datos se utiliza para clasificar datos que pueden utilizarse para determinar un área de geo-valla definida de forma amplia.
+**Etiqueta de datos S2:** `S2` la etiqueta de datos se utiliza para clasificar los datos que pueden utilizarse para determinar un área de la valla geográfica definida de forma amplia.
 
 **Fuente:** El origen es un término general para cualquier conector de entrada en la plataforma de datos del cliente en tiempo real.
 
