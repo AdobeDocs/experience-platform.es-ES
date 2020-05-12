@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de Almacenamiento de Google Cloud mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 96be7084d5d2efb86b7bba27f1a92bd9c0055fba
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 2%
 
 ---
 
@@ -55,80 +58,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * Content-Type: `application/json`
 
-## Buscar especificaciones de conexión
+## Crear una conexión
 
-Antes de conectar Platform a un Almacenamiento de Google Cloud, debe comprobar que existen especificaciones de conexión para el Almacenamiento de Google Cloud. Si no existen especificaciones de conexión, no se puede establecer una conexión.
-
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión para el Almacenamiento de Google Cloud realizando una solicitud GET y utilizando parámetros de consulta.
-
-**Formato API**
-
-El envío de una solicitud GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="google-cloud"` para obtener información específica sobre Google Cloud Almacenamiento.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name==google-cloud
-```
-
-**Solicitud**
-
-La siguiente solicitud recupera las especificaciones de conexión de Google Cloud Almacenamiento.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-cloud"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve las especificaciones de conexión para el Almacenamiento de Google Cloud, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión base.
-
-```json
-{
-    "items": [
-        {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "name": "google-cloud",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for google-cloud",
-                    "type": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to google-cloud storage connector.",
-                        "properties": {
-                            "accessKeyId": {
-                                "type": "string",
-                                "description": "Access Key Id for the user account"
-                            },
-                            "secretAccessKey": {
-                                "type": "string",
-                                "description": "Secret Access Key for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "accessKeyId",
-                            "secretAccessKey"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Creación de una conexión base
-
-Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión de base por cuenta de Almacenamiento de Google Cloud, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de Almacenamiento de Google Cloud, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
 
 **Formato API**
 
@@ -147,8 +79,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google Cloud Storage base connection",
-        "description": "Base connector for Google Cloud Storage",
+        "name": "Google Cloud Storage connection",
+        "description": "Connector for Google Cloud Storage",
         "auth": {
             "specName": "Basic Authentication for google-cloud",
             "params": {
@@ -167,11 +99,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | ID de clave de acceso asociado a su cuenta de Almacenamiento de Google Cloud. |
 | `auth.params.secretAccessKey` | La clave de acceso secreto asociada a su cuenta de Almacenamiento de Google Cloud. |
-| `connectionSpec.id` | Especificación de conexión `id` de la cuenta de Almacenamiento de Google Cloud recuperada en el paso anterior. |
+| `connectionSpec.id` | ID de especificación de conexión de Almacenamiento de Google Cloud: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar los datos del almacenamiento de nube en el siguiente tutorial.
+Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar los datos del almacenamiento de nube en el siguiente tutorial.
 
 ```json
 {
