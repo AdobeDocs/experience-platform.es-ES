@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de la red perimetral de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 7%
+source-wordcount: '91'
+ht-degree: 9%
 
 ---
 
@@ -30,13 +30,15 @@ ht-degree: 7%
    * [Administración del parpadeo](fundamentals/managing-flicker.md)
    * [Apoyo al consentimiento](fundamentals/supporting-consent.md)
    * [Compatibilidad con navegadores en la aplicación](fundamentals/supporting-in-app-browsers.md)
-   * [Recuperación del ID de Experience Cloud](fundamentals/retrieving-experience-cloud-id.md)
+   * [Identidad](fundamentals/identity.md)
 * Qué implementar {#implement}
    * [Productos](what-to-implement/commerce.md)
 * Consideraciones específicas de la solución {#solutions}
    * Analytics {#analytics}
       * [Información general de Analytics](solution-specific/analytics/analytics-overview.md)
       * [Variables asignadas automáticamente](solution-specific/analytics/automatically-mapped-vars.md)
+   * Audience Manager {#aam}
+      * [Información general del Administrador de Audiencias](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Información general de Destinatario](solution-specific/target/target-overview.md)
 * Referencia {#ref}
