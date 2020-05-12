@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de Azure Data Lake Almacenamiento Gen2 en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
    - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión base ADLS Gen2, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/cloud-storage.md).
+Si ya tiene una conexión base ADLS Gen2, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
 
 ### Recopilar las credenciales necesarias
 
@@ -63,4 +66,4 @@ Para conectar una cuenta existente, seleccione la cuenta ADLS Gen2 con la que de
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión base con su cuenta de ADLS Gen2. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a la plataforma](../../dataflow/cloud-storage.md).
+Siguiendo este tutorial, ha establecido una conexión base con su cuenta de ADLS Gen2. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a la plataforma](../../dataflow/batch/cloud-storage.md).
