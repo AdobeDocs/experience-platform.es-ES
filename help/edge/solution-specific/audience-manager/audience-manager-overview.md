@@ -4,7 +4,7 @@ seo-title: Envío de datos a Adobe Audiencia Manager con el SDK web de Adobe Exp
 description: Obtenga información sobre cómo enviar datos a Adobe Audiencia Manager con el SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo enviar datos a Adobe Audiencia Manager con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: cfb23e7fde246ca224d5e1f2688651aa7d992b2c
+source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# (Beta) Administrador de Audiencias en la plataforma de experiencias Edge Network
+# (Beta) Administrador de Audiencias en la plataforma de experiencia de Edge Network
 
 >[!IMPORTANT]
 >
