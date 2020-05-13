@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -26,21 +26,17 @@ Esta guía del usuario requiere conocer los distintos servicios de la plataforma
 * [Servicio](../../identity-service/home.md)de identidad: Permite el Perfil del cliente en tiempo real al enlazar identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
-## Perfil general
+## Información general
 
-En la interfaz de usuario [de la plataforma de](http://platform.adobe.com)experiencia, haga clic en **Perfiles** en el panel de navegación izquierdo para abrir la ficha _Información general_ en el espacio de trabajo de _Perfiles_ . Esta ficha muestra varias utilidades que proporcionan información de alto nivel sobre el almacén de Perfiles, incluida la audiencia direccionable total, el número de registros de Perfiles que se ingerieron durante la última semana, así como estadísticas sobre registros exitosos y fallidos para el mismo período de tiempo.
+En la interfaz de usuario [de la plataforma de](http://platform.adobe.com)experiencia, haga clic en **Perfiles** en el panel de navegación izquierdo para abrir la ficha _Información general_ . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## Muestras de perfil de Vista
+## Perfil Browse
 
-Haga clic en **Examinar** para vista de una lista de muestra de perfiles disponibles. Este ejemplo incluye hasta 50 perfiles del recuento total de [perfiles](#profile-count). Los ejemplos se actualizan mediante un trabajo automático que recoge nuevos datos de perfil a medida que se ingesta. Cada perfil de la lista muestra su ID, nombre, apellidos y correo electrónico personal. Al hacer clic en el ID de un perfil de la lista, se muestran sus detalles en el visor de [Perfil](#profile-viewer).
+Haga clic en la ficha **Examinar** para buscar perfiles por identidades. Esta ficha también contiene el recuento [total de](#profile-count)perfiles.
 
-![](../images/user-guide/profile-samples.png)
-
-Puede personalizar los atributos que se muestran en la lista haciendo clic en el icono del selector de columnas. Esto muestra una lista desplegable que contiene atributos de perfil comunes que puede agregar o eliminar.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### Recuento de Perfiles {#profile-count}
 
@@ -50,43 +46,53 @@ El recuento de perfiles también incluye perfiles con atributos (datos de regist
 
 Cuando la ingestión de perfiles en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos siguientes a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
 
-![](../images/user-guide/profile-count.png)
+### Área de nombres de identidad
 
-### Búsqueda de Perfiles
+El selector de Área de nombres **de** identidad abre un cuadro de diálogo en el que puede elegir la Área de nombres de identidad por la que desea buscar y puede personalizar los atributos que se muestran en la búsqueda seleccionando el icono de filtro y eligiendo los atributos que desea agregar o eliminar.
 
-Si conoce una identidad vinculada para un perfil en particular (como su dirección de correo electrónico), puede buscar ese perfil haciendo clic en **Buscar un perfil**. Esta es la forma más fiable de acceder a un perfil específico, independientemente de si aparece en la lista de muestras.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+En el cuadro de diálogo *Seleccionar Área de nombres* de identidad, elija la Área de nombres por la que desea realizar la búsqueda o utilice la barra de **búsqueda** del cuadro de diálogo para empezar a escribir el nombre de una Área de nombres. Puede seleccionar una Área de nombres para vista de detalles adicionales, y una vez encontrada la Área de nombres que desea buscar puede seleccionar el botón de radio y pulsar **Seleccionar** para continuar.
 
-En el cuadro de diálogo que aparece, seleccione una Área de nombres de ID adecuada en la lista desplegable (&quot;Correo electrónico&quot; en este ejemplo) e introduzca el valor de ID siguiente antes de hacer clic en **Aceptar**. Si se encuentra, los detalles del perfil de destino aparecen en el visor de perfil, tal como se describe en la sección siguiente.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Valor de identidad
 
-### Visor de Perfiles {#profile-viewer}
+Después de seleccionar una Área de nombres **** de identidad, vuelva a la ficha *Examinar* , donde puede introducir un valor **** de identidad. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para la Área de nombres proporcionada. Por ejemplo, si selecciona la Área de nombres **de** identidad &quot;Correo electrónico&quot;, se requiere un valor **de** identidad en forma de una dirección de correo electrónico válida.
 
-Al seleccionar o buscar un perfil específico, se abre la pantalla _Detalle_ del visor de perfil. Esta página muestra información sobre el perfil seleccionado, como los atributos básicos del perfil, las identidades vinculadas y los canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Una vez introducido un valor, seleccione **Mostrar perfil** y se devuelve un solo perfil que coincida con el valor. Seleccione el ID **de** Perfil para vista de los detalles de perfil.
 
-El visor de perfil también proporciona fichas que le permiten realizar vistas de eventos y pertenencias a segmentos asociados con este perfil, si existe.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Detalles del Perfil
+
+Al seleccionar el ID **de** Perfil, se abre la ficha _Detalle_ . Esta página muestra información sobre el perfil seleccionado, incluidos atributos básicos, identidades vinculadas y canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+Puede vista información adicional relacionada con el perfil, incluidos Atributos, Eventos y Segmentos a los que el perfil es miembro.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Combinar directivas
 
 Haga clic en **Combinar directivas** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
 
-![](../images/user-guide/profile-merge-policies.png)
-
 Para obtener más información sobre cómo trabajar con políticas de combinación en la interfaz de usuario, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
+
+![](../images/user-guide/profiles-merge-policies.png)
 
 ## esquema de Unión
 
-Haga clic en Esquema **de** Unión para vista de los esquemas de unión para el almacén de datos de perfil. Un esquema de unión es una combinación de todos los campos del Modelo de datos de experiencia (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en el Perfil del cliente en tiempo real. Haga clic en una clase de la lista izquierda para vista de la estructura de su esquema de unión en el lienzo.
+Haga clic en Esquema **de** Unión para vista de los esquemas de unión de su almacén de Perfiles. Un esquema de unión es una combinación de todos los campos del Modelo de datos de experiencia (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en el Perfil del cliente en tiempo real. Haga clic en una clase de la lista izquierda para vista de la estructura de su esquema de unión en el lienzo.
 
-![](../images/user-guide/profile-union-schema.png)
+Por ejemplo, si selecciona &quot;Perfil XDM&quot;, se muestra el esquema de unión de la clase de Perfil individual XDM.
 
 Consulte la sección sobre esquemas de unión en la guía [de composición de](../../xdm/schema/composition.md) esquemas para obtener más información sobre los esquemas de unión y su función en el Perfil de clientes en tiempo real.
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Pasos siguientes
 
