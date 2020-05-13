@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descripción general de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
+source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 1%
 
 ---
 
@@ -21,6 +24,20 @@ Basada en API abiertas, la plataforma de experiencia expone toda la funcionalida
 ## Documentación de la plataforma de experiencia
 
 La documentación de la plataforma de experiencias se proporciona en varios formatos para diversas funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los servicios de la Plataforma, visite la información general [de la documentación de la Plataforma de](documentation/overview.md)experiencias. O bien, para empezar a aprender más sobre un servicio de plataforma específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
+
+>[!NOTE]
+>
+>A partir de mayo de 2020, Adobe implementará actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones de Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
+>
+>* Vínculos a artículos destacados
+>* Recomendaciones de documentación relacionadas con el contexto
+>* La capacidad de proporcionar comentarios sobre los problemas de la documentación y los informes
+>* Se mejoraron los resultados de búsqueda que también incluyen resultados de foros de la comunidad y contenido de vídeo.
+>
+> 
+De vez en cuando, puede recibir una encuesta para recibir comentarios adicionales.
+>
+>Este despliegue es gradual, por lo que es posible que no vea los cambios inmediatamente. Puede realizar la vista de la experiencia actualizada en cualquier momento en [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Tutoriales de la plataforma de experiencia
 
