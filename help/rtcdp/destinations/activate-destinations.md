@@ -4,7 +4,10 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 0%
 
 ---
 
@@ -19,16 +22,16 @@ Para activar datos en destinos, debe haber [conectado correctamente un destino](
 
 ## Activar datos {#activate-data}
 
-1. En **[!UICONTROL Destinations > Browse]**, seleccione el destino en el que desea activar los segmentos.
+1. En **[!UICONTROL Destinos > Examinar]**, seleccione el destino en el que desea activar los segmentos.
 2. Haga clic en el nombre del destino. Esto le lleva al flujo Activar.
-   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Tenga en cuenta que si ya existe un flujo de activación para un destino, puede ver los segmentos que se están enviando al destino. Seleccione **[!UICONTROL Edit activation]** en el carril derecho y siga los pasos a continuación para modificar los detalles de la activación.
-3. Select **[!UICONTROL Activate]**;
-4. En el flujo **[!UICONTROL Activate destination]** de trabajo, en la **[!UICONTROL Select Segments]** página, seleccione qué segmentos enviar al destino.
+   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Tenga en cuenta que si ya existe un flujo de activación para un destino, puede ver los segmentos que se están enviando al destino. Seleccione **[!UICONTROL Editar activación]** en el carril derecho y siga los pasos a continuación para modificar los detalles de la activación.
+3. Seleccione **[!UICONTROL Activar]**;
+4. En el flujo de trabajo **[!UICONTROL Activar destino]** , en la página **[!UICONTROL Seleccionar segmentos]** , seleccione los segmentos que desea enviar al destino.
    ![segmentos a destino](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Condicional*. Este paso solo se aplica a segmentos asignados a destinos de marketing por correo electrónico. <br> En la **[!UICONTROL Destination Attributes]** página, seleccione **[!UICONTROL Add new field]** y seleccione los atributos que desee enviar al destino.
+5. *Condicional*. Este paso solo se aplica a los segmentos asignados a destinos de almacenamiento en la nube y a destinos de marketing por correo electrónico. <br> En la página Atributos **[!UICONTROL de]** destino, seleccione **[!UICONTROL Añadir nuevo campo]** y seleccione los atributos que desee enviar al destino.
 Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) único del esquema de unión. Para obtener más información sobre los atributos obligatorios, consulte Identidad en el artículo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) correo electrónico.
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. En la **[!UICONTROL Segment schedule]** página puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia con la que se envían datos al destino.
+6. En la página Programación **[!UICONTROL de]** segmentos, puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia con la que se envían datos al destino.
 
    >[!IMPORTANT]
    >
@@ -36,7 +39,7 @@ Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/desti
 
    ![elegir origen de datos](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
-7. En la **[!UICONTROL Review]** página, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancel]** para desglosar el flujo, **[!UICONTROL Back]** para modificar la configuración o **[!UICONTROL Finish]** para confirmar la selección y el inicio al enviar datos al destino.
+7. En la página **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar la selección y el inicio de envío de datos al destino.
 
 ![confirmación-selección](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -44,8 +47,8 @@ Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/desti
 
 Siga los pasos a continuación para editar los flujos de activación existentes en CDP en tiempo real:
 
-1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la **[!UICONTROL Browse]** ficha y, a continuación, haga clic en el nombre del destino.
-2. Seleccione **[!UICONTROL Edit activation]** en el carril derecho para cambiar qué segmentos enviar al destino.
+1. Seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda, luego haga clic en la ficha **[!UICONTROL Examinar]** y, a continuación, haga clic en el nombre del destino.
+2. Seleccione **[!UICONTROL Editar activación]** en el carril derecho para cambiar los segmentos que se van a enviar al destino.
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
@@ -76,7 +79,7 @@ Para Facebook, una activación exitosa significa que una audiencia personalizada
 
 Para deshabilitar un flujo de activación existente, siga los pasos a continuación:
 
-1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la **[!UICONTROL Browse]** ficha y, a continuación, haga clic en el nombre del destino.
-2. Haga clic en el **[!UICONTROL Enabled]** control del carril derecho para cambiar el estado del flujo de activación.
+1. Seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda, luego haga clic en la ficha **[!UICONTROL Examinar]** y, a continuación, haga clic en el nombre del destino.
+2. Haga clic en el control **[!UICONTROL Habilitado]** en el carril derecho para cambiar el estado del flujo de activación.
 3. En la ventana **Actualizar estado** de flujo de datos, seleccione **Confirmar** para desactivar el flujo de activación.
 
