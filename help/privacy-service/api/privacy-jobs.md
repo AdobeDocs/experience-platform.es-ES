@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 2%
 
 ---
 
 
 # Trabajos de privacidad
 
-Las siguientes secciones explican las llamadas que puede realizar mediante el extremo raíz (`/`) en la API de Privacy Service. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las siguientes secciones explican las llamadas que puede realizar mediante el `/jobs` punto final de la API de Privacy Service. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
 
-## Crear un trabajo de privacidad
+## Crear un trabajo de privacidad {#create-job}
 
 Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud POST al extremo raíz.
 
@@ -33,7 +36,7 @@ Esta sección muestra cómo realizar una solicitud de trabajo de acceso o elimin
 **Formato API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Solicitud**
@@ -100,7 +103,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `companyContexts` **(Requerido)** | Matriz que contiene información de autenticación para su organización. Cada identificador de la lista incluye los atributos siguientes: <ul><li>`namespace`:: Área de nombres de un identificador.</li><li>`value`:: El valor del identificador.</li></ul>Es **necesario** que uno de los identificadores utilice `imsOrgId` como su `namespace`, con `value` el identificador único de su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de compañía específicos del producto (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los valores potenciales incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
-| `users` **(Requerido)** | Matriz que contiene una colección de al menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador de un usuario que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Matriz que lista las acciones que se deben realizar en los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para el usuario. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la guía de [solución de problemas](../troubleshooting-guide.md#user-ids). |
+| `users` **(Requerido)** | Matriz que contiene una colección de por lo menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador de un usuario que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Matriz que lista las acciones que se deben realizar en los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para el usuario. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la guía de [solución de problemas](../troubleshooting-guide.md#user-ids). |
 | `include` **(Requerido)** | Una matriz de productos de Adobe que se incluirán en el procesamiento. Si falta este valor o si está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre los valores [del producto](appendix.md) aceptados en el apéndice para obtener más información. |
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
@@ -157,7 +160,7 @@ Una respuesta correcta devuelve los detalles de los trabajos recién creados.
 | --- | --- |
 | `jobId` | Un ID exclusivo y de solo lectura generado por el sistema para un trabajo. Este valor se utiliza en el siguiente paso de buscar un trabajo específico. |
 
-Una vez que haya enviado correctamente la solicitud de trabajo, puede pasar al siguiente paso de [comprobar el estado](#check-the-status-of-a-job)del trabajo.
+Una vez que haya enviado correctamente la solicitud de trabajo, puede pasar al siguiente paso de [comprobar el estado](#check-status)del trabajo.
 
 ### Creación de un trabajo de exclusión {#opt-out}
 
@@ -166,7 +169,7 @@ En esta sección se muestra cómo realizar una solicitud de trabajo de exclusió
 **Formato API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Solicitud**
@@ -281,7 +284,7 @@ Una respuesta correcta devuelve los detalles de los trabajos recién creados.
 
 Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar con el siguiente paso para comprobar el estado del trabajo.
 
-## Comprobar el estado de un trabajo
+## Comprobar el estado de un trabajo {#check-status}
 
 Mediante uno de los `jobId` valores devueltos en el paso anterior, puede recuperar información sobre ese trabajo, como su estado de procesamiento actual.
 
@@ -290,12 +293,12 @@ Mediante uno de los `jobId` valores devueltos en el paso anterior, puede recuper
 **Formato API**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{JOB_ID}` | ID del trabajo que desea buscar, devuelto en `jobId` la respuesta del paso [](#create-a-job-request)anterior. |
+| `{JOB_ID}` | ID del trabajo que desea buscar, devuelto en `jobId` la respuesta del paso [](#create-job)anterior. |
 
 **Solicitud**
 
@@ -391,10 +394,10 @@ Puede realizar una vista de una lista de todas las solicitudes de trabajo dispon
 Este formato de solicitud utiliza un parámetro de `regulation` consulta en el extremo raíz (`/`), por lo tanto comienza con un signo de interrogación (`?`) como se muestra a continuación. La respuesta está paginada, lo que le permite utilizar otros parámetros de consulta (`page` y `size`) para filtrar la respuesta. Puede separar varios parámetros mediante ampersands (`&`).
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parámetro | Descripción |
