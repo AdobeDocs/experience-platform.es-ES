@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '413'
 ht-degree: 12%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 12%
    * Interfaz de destinos {#destinations-interface}
       * [Espacio de trabajo Destinos](destinations/destinations-workspace.md)
       * [Página de detalles de destino](destinations/destination-details-page.md)
-   * Catálogo de destinos  {#destinations-cat}
+   * Catálogo de destinos {#destinations-cat}
       * [Descripción general del catálogo de destinos](destinations/destinations-catalog.md)
       * Destinos de Adobe{#adobe-destinations}
          * [Información general sobre los destinos de Adobe](destinations/adobe-destinations.md)
@@ -76,7 +76,9 @@ ht-degree: 12%
       * Destinos de almacenamiento de nube{#cloud-storage}
          * [Descripción general de los destinos de almacenamiento de nube](destinations/cloud-storage-destinations.md)
          * [Flujo de trabajo para crear destinos de almacenamiento en la nube](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Destino de Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Destino de Amazon S3](destinations/amazon-s3-destination.md)
+         * [Destino de los centros de eventos de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino de SFTP](destinations/sftp-destination.md)
       * Destinos de la plataforma de Gestión de datos {#dmp-destinations}
          * [Introducción a los destinos de la plataforma de Gestión de datos](destinations/dmp-destinations.md)
