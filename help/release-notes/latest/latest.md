@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 4%
+source-wordcount: '875'
+ht-degree: 5%
 
 ---
 
@@ -19,9 +19,11 @@ ht-degree: 4%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Área de trabajo de ciencia de datos](#dsw)
-- [SDK web de la plataforma de experiencia y red perimetral de la plataforma de experiencia](#edge)
-- [Fuentes](#sources)
+- [Notas de la versión de Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Área de trabajo de ciencia de datos {#dsw}](#data-science-workspace-dsw)
+   - [Destinos {#destinations}](#destinations-destinations)
+   - [SDK web de la plataforma de experiencia y red perimetral de la plataforma de experiencia {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [Fuentes {#sources}](#sources-sources)
 
 ## Área de trabajo de ciencia de datos {#dsw}
 
@@ -37,6 +39,26 @@ Data Science Workspace utiliza el aprendizaje automático y la inteligencia arti
 | Fórmulas | Las nuevas fórmulas de PySpark y Spark ahora siguen el flujo de trabajo de Docker, similar a las fórmulas Python y R. |
 
 Para obtener más información sobre la migración de los blocs de notas y las fórmulas para utilizar Spark 2.4, consulte la guía [de migración de](../../data-science-workspace/recipe-notebook-migration.md)portátiles. Para obtener más información general sobre el espacio de trabajo de ciencia de datos, consulte la documentación [](../../data-science-workspace/home.md)general.
+
+## Destinos {#destinations}
+
+En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
+
+**Nuevos destinos**
+
+Ahora, CDP en tiempo real de Adobe admite la activación de datos a destinos de almacenamiento en la nube de flujo continuo, lo que le permite exportar datos y eventos de audiencia a estos destinos en formato JSON. A continuación, puede describir la lógica empresarial sobre estos eventos en los destinos. Consulte a continuación los detalles:
+
+>[!NOTE]
+>
+>Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] de CDP en tiempo real de Adobe se encuentran actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+
+| Documentación | Descripción |
+|--- | ---|
+| [(Beta) Destino de Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) | En este artículo se explica cómo crear una conexión saliente en tiempo real con su [!DNL Amazon Kinesis] almacenamiento para transmitir datos desde Adobe Experience Platform. |
+| [(Beta) Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md) | En este artículo se explica cómo crear una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde Adobe Experience Platform. |
+| [Tutorial de API: Conexión a destinos de flujo continuo y activación de datos](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | En este tutorial se muestra cómo utilizar las llamadas de API para conectarse a los datos de la plataforma Adobe Experience, crear una conexión a un destino de almacenamiento de flujo continuo en la nube (centros de Evento de Amazon Kinesis o Azure), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado. |
+
+Para obtener más información, consulte la información general sobre [los destinos](/help/rtcdp/destinations/destinations-overview.md).
 
 ## SDK web de la plataforma de experiencia y red perimetral de la plataforma de experiencia {#edge}
 
