@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Privacy Service Help
+user-guide-title: Ayuda de Adobe Experience Platform Privacy Service
 translation-type: tm+mt
-source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
+source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 11%
 
 ---
 
@@ -22,11 +25,14 @@ source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
    * [Guía del usuario de Privacy Service](ui/user-guide.md)
 * [Datos de identidad para solicitudes de privacidad](identity-data.md)
 * [Suscripción a Eventos de privacidad](privacy-events.md)
-* Guía de GDPR {#gdpr}
+* Guías de GDPR {#gdpr}
    * [Preguntas más frecuentes sobre el RGPD](gdpr/faq.md)
    * [Terminología del RGPD](gdpr/terminology.md)
-* Guía de CCPA {#ccpa}
+* Guías de CCPA {#ccpa}
    * [Preguntas más frecuentes sobre CCPA](ccpa/faq.md)
+* Guías del PDPA (Tailandia) {#pdpa-tha}
+   * [Preguntas más frecuentes sobre PDPA (Tailandia)](./pdpa-tha/faq.md)
+   * [Terminología del PDPA (Tailandia)](./pdpa-tha/terminology.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
-* [Referencia de API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
+* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Notas de la versión](release-notes.md)
