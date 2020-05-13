@@ -1,0 +1,530 @@
+---
+keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Real-time CDP
+solution: Experience Platform
+title: Conectar a destinos de flujo continuo y activar datos
+topic: tutorial
+translation-type: tm+mt
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+workflow-type: tm+mt
+source-wordcount: '1861'
+ht-degree: 2%
+
+---
+
+
+# Conéctese a los destinos de flujo continuo y active los datos en la plataforma de datos del cliente en tiempo real de Adobe mediante API
+
+>[!NOTE]
+>
+>Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] de CDP en tiempo real de Adobe se encuentran actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+
+En este tutorial se muestra cómo utilizar llamadas de API para conectarse a los datos de la plataforma de Adobe Experience, crear una conexión a un destino de almacenamiento de flujo continuo en la nube ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
+
+Este tutorial utiliza el destino en todos los ejemplos, pero los pasos son idénticos para [!DNL Amazon Kinesis] [!DNL Azure Event Hubs].
+
+![Información general: los pasos para crear un destino de flujo continuo y activar segmentos](/help/rtcdp/destinations/assets/flow-prelim.png)
+
+Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe para conectarse a un destino y activar datos, consulte [Conectar un destino](../../rtcdp/destinations/connect-destination.md) y [Activar perfiles y segmentos en los tutoriales de destino](../../rtcdp/destinations/activate-destinations.md) .
+
+## Introducción
+
+Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+
+* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Servicio](../../catalog/home.md)de catálogo: Catalog es el sistema de registros para la ubicación y el linaje de los datos dentro de la plataforma de experiencia.
+* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+
+Las siguientes secciones proporcionan información adicional que debe conocer para activar datos en destinos de flujo continuo en CDP en tiempo real de Adobe.
+
+### Recopilar las credenciales necesarias
+
+Para completar los pasos de este tutorial, debe tener listas las siguientes credenciales, según el tipo de destinos a los que esté conectando y activando segmentos.
+
+* Para [!DNL Amazon Kinesis] conexiones: `accessKeyId`, `secretKey`, `region` o `connectionUrl`
+* Para [!DNL Azure Event Hubs] conexiones: `sasKeyName`, `sasKey`, `namespace`
+
+### Leer llamadas de API de muestra {#reading-sample-api-calls}
+
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+
+### Recopilar valores para encabezados opcionales y requeridos {#gather-values}
+
+Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](/help/tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+
+* Autorización: Portador `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+Los recursos de la plataforma de experiencia se pueden aislar en entornos limitados virtuales específicos. En las solicitudes a las API de plataforma, puede especificar el nombre y la ID del entorno limitado en el que se realizará la operación. Son parámetros opcionales.
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!Note]
+>Para obtener más información sobre los entornos limitados en la plataforma de experiencias, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
+
+* Content-Type: `application/json`
+
+### Documentación de Swagger {#swagger-docs}
+
+Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte https://platform.adobe.io/data/foundation/flowservice/swagger#/. Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+
+## Obtenga la lista de los destinos de flujo continuo disponibles {#get-the-list-of-available-streaming-destinations}
+
+![Pasos de destino paso 1](/help/rtcdp/destinations/assets/step1-create-streaming-destination-api.png)
+
+Como primer paso, debe decidir a qué destino de flujo se activan los datos. Para empezar, realice una llamada para solicitar una lista de los destinos disponibles a los que puede conectar y activar segmentos. Realice la siguiente solicitud GET al extremo para devolver una lista de los destinos disponibles: `connectionSpecs`
+
+**Formato API**
+
+```http
+GET /connectionSpecs
+```
+
+**Solicitud**
+
+```
+curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
+--header 'accept: application/json' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+
+**Respuesta**
+
+Una respuesta correcta contiene una lista de los destinos disponibles y sus identificadores únicos (`id`). Almacene el valor del destino que va a usar, como será necesario en otros pasos. Por ejemplo, si desea conectar y enviar segmentos a [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs], busque el siguiente fragmento en la respuesta:
+
+```json
+{
+    "id": "86043421-563b-46ec-8e6c-e23184711bf6",
+  "name": "Amazon Kinesis",
+  ...
+  ...
+}
+
+{
+    "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+  "name": "Azure Event Hubs",
+  ...
+  ...
+}
+```
+
+## Conectar con los datos de la plataforma de experiencia {#connect-to-your-experience-platform-data}
+
+![Pasos de destino, paso 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
+
+A continuación, debe conectarse a los datos de la plataforma de experiencia para poder exportar datos de perfil y activarlos en el destino preferido. Se trata de dos subpasos que se describen a continuación.
+
+1. En primer lugar, debe realizar una llamada para autorizar el acceso a los datos en la plataforma de experiencia, configurando una conexión base.
+2. A continuación, con el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establecerá la conexión con los datos de la plataforma de experiencia.
+
+
+### Autorizar el acceso a los datos en la plataforma de experiencia
+
+**Formato API**
+
+```http
+POST /connections
+```
+
+**Solicitud**
+
+```
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME} \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "name": "Base connection to Experience Platform",
+            "description": "This call establishes the connection to Experience Platform data",
+            "connectionSpec": {
+                "id": "{CONNECTION_SPEC_ID}",
+                "version": "1.0"
+            }
+}'
+```
+
+
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión para el servicio de Perfil unificado - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+
+**Respuesta**
+
+Una respuesta correcta contiene el identificador único (`id`) de la conexión base. Almacene este valor como sea necesario en el paso siguiente para crear la conexión de origen.
+
+```json
+{
+    "id": "1ed86558-59b5-42f7-9865-5859b552f7f4"
+}
+```
+
+### Conectar con los datos de la plataforma de experiencia
+
+**Formato API**
+
+```http
+POST /sourceConnections
+```
+
+**Solicitud**
+
+```
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+            "name": "Connecting to Unified Profile Service",
+            "description": "Optional",
+            "connectionSpec": {
+                "id": "{CONNECTION_SPEC_ID}",
+                "version": "1.0"
+            },
+            "baseConnectionId": "{BASE_CONNECTION_ID}",
+            "data": {
+                "format": "json"
+            },
+            "params" : {}
+}'
+```
+
+* `{BASE_CONNECTION_ID}`:: Utilice el Id obtenido en el paso anterior.
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión para el servicio de Perfil unificado - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+
+**Respuesta**
+
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada al servicio de Perfil unificado. Esto confirma que se ha conectado correctamente a los datos de la plataforma de experiencia. Almacene este valor tal como se requiere en un paso posterior.
+
+```json
+{
+    "id": "ed48ae9b-c774-4b6e-88ae-9bc7748b6e97"
+}
+```
+
+
+## Conectar con destino de flujo continuo {#connect-to-streaming-destination}
+
+![Pasos de destino, paso 3](/help/rtcdp/destinations/assets/step3-create-streaming-destination-api.png)
+
+En este paso, está configurando una conexión con el destino de flujo deseado. Se trata de dos subpasos que se describen a continuación.
+
+1. En primer lugar, debe realizar una llamada para autorizar el acceso al destino de flujo, configurando una conexión base.
+2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de destinatario, que especifica la ubicación en la cuenta de almacenamiento donde se entregarán los datos exportados, así como el formato de los datos que se exportarán.
+
+### Autorizar el acceso al destino de flujo continuo
+
+**Formato API**
+
+```http
+POST /connections
+```
+
+**Solicitud**
+
+```
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
+    "description": "your company's holiday campaign",
+    "connectionSpec": {
+        "id": "{_CONNECTION_SPEC_ID}",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "{AUTHENTICATION_CREDENTIALS}",
+        "params": { // use these values for Amazon Kinesis connections
+            "accessKeyId": "{ACCESS_ID}",
+            "secretKey": "{SECRET_KEY}",
+            "region": "{REGION}"
+        },
+        "params": { // use these values for Azure Event Hubs connections
+            "sasKeyName": "{SAS_KEY_NAME}",
+            "sasKey": "{SAS_KEY}",
+            "namespace": "{EVENT_HUB_NAMESPACE}"
+        }        
+    }
+}'
+```
+
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{AUTHENTICATION_CREDENTIALS}`:: rellene el nombre del destino de flujo continuo, por ejemplo: `Amazon Kinesis authentication credentials` o `Azure Event Hubs authentication credentials`.
+* `{ACCESS_ID}`:: *Para conexiones de Amazon Kinesis.* Su ID de acceso para la ubicación del almacenamiento de Amazon Kinesis.
+* `{SECRET_KEY}`:: *Para conexiones de Amazon Kinesis.* La clave secreta para la ubicación del almacenamiento de Amazon Kinesis.
+* `{REGION}`:: *Para conexiones de Amazon Kinesis.* Región de su cuenta de Amazon Kinesis donde CDP en tiempo real de Adobe transmitirá sus datos.
+* `{SAS_KEY_NAME}`:: *Para conexiones de los centros de Evento de Azure.* Rellene el nombre de la clave SAS. Obtenga información sobre la autenticación con [!DNL Azure Event Hubs] claves SAS en la documentación [de](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
+* `{SAS_KEY}`:: *Para conexiones de los centros de Evento de Azure.* Rellene la clave SAS. Obtenga información sobre la autenticación con [!DNL Azure Event Hubs] claves SAS en la documentación [de](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
+* `{EVENT_HUB_NAMESPACE}`:: *Para conexiones de los centros de Evento de Azure.* Complete la Área de nombres de los centros de Evento de Azure, donde CDP de Adobe en tiempo real generará sus datos. Para obtener más información, consulte [Creación de una Área de nombres](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de centros de Evento en la documentación de Microsoft.
+
+**Respuesta**
+
+Una respuesta correcta contiene el identificador único (`id`) de la conexión base. Almacene este valor como sea necesario en el paso siguiente para crear una conexión de destinatario.
+
+```json
+{
+    "id": "1ed86558-59b5-42f7-9865-5859b552f7f4"
+}
+```
+
+### Especificar la ubicación del almacenamiento y el formato de los datos
+
+**Formato API**
+
+```http
+POST /targetConnections
+```
+
+**Solicitud**
+
+```
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Amazon Kinesis/ Azure Event Hubs target connection",
+    "description": "Connection to Amazon Kinesis/ Azure Event Hubs",
+    "baseConnection": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "{CONNECTION_SPEC_ID}",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+    },
+    "params": { // use these values for Amazon Kinesis connections
+        "stream": "{NAME_OF_DATA_STREAM}", 
+        "region": "{REGION}"
+    },
+    "params": { // use these values for Azure Event Hubs connections
+        "eventHubName": "{EVENT_HUB_NAME}",
+        "namespace": "EVENT_HUB_NAMESPACE"
+    }
+}'
+```
+
+* `{BASE_CONNECTION_ID}`:: Utilice el ID de conexión base que obtuvo en el paso anterior.
+* `{CONNECTION_SPEC_ID}`:: Utilice la especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{NAME_OF_DATA_STREAM}`:: *Para conexiones de Amazon Kinesis.* Proporcione el nombre del flujo de datos existente en su cuenta de Amazon Kinesis. CDP en tiempo real de Adobe exportará datos a este flujo.
+* `{REGION}`:: *Para conexiones de Amazon Kinesis.* Región de su cuenta de Amazon Kinesis donde CDP en tiempo real de Adobe transmitirá sus datos.
+* `{EVENT_HUB_NAME}`:: *Para conexiones de los centros de Evento de Azure.* Rellene el nombre de Azure Evento Hub, donde CDP en tiempo real de Adobe transmitirá sus datos. Para obtener más información, consulte [Creación de un concentrador](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de evento en la documentación de Microsoft.
+* `{EVENT_HUB_NAMESPACE}`:: *Para conexiones de los centros de Evento de Azure.* Complete la Área de nombres de los centros de Evento de Azure, donde CDP de Adobe en tiempo real generará sus datos. Para obtener más información, consulte [Creación de una Área de nombres](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de centros de Evento en la documentación de Microsoft.
+
+**Respuesta**
+
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de destinatario recién creada al destino de flujo. Almacene este valor tal como se requiere en pasos posteriores.
+
+```json
+{
+    "id": "12ab90c7-519c-4291-bd20-d64186b62da8"
+}
+```
+
+## Crear un flujo de datos
+
+![Pasos de destino, paso 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
+
+Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos de la plataforma de experiencias y el destino en el que activará los datos. Considere este paso como la construcción de la canalización, a través de la cual fluirán los datos más adelante, entre la plataforma de experiencias y el destino deseado.
+
+Para crear un flujo de datos, realice una solicitud POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
+
+Realice la siguiente solicitud POST para crear un flujo de datos.
+
+**Formato API**
+
+```http
+POST /flows
+```
+
+**Solicitud**
+
+```shell
+curl -X POST \
+'https://platform.adobe.io/data/foundation/flowservice/flows' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-gw-ims-org-id: {IMS_ORG}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-d  '{
+   
+        "name": "Create dataflow to Amazon Kinesis/ Azure Event Hubs",
+        "description": "This operation creates a dataflow to Amazon Kinesis/ Azure Event Hubs",
+        "flowSpec": {
+            "id": "{FLOW_SPEC_ID}",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "{SOURCE_CONNECTION_ID}"
+        ],
+        "targetConnectionIds": [
+            "{TARGET_CONNECTION_ID}"
+        ]
+    }
+```
+
+* `{FLOW_SPEC_ID}`:: Utilice el flujo para el destino de flujo que desea conectar. Para obtener la especificación de flujo, realice una operación GET en el `flowspecs` extremo. Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de flujo al que desea conectarse.
+* `{SOURCE_CONNECTION_ID}`:: Utilice el ID de conexión de origen obtenido en el paso [Conectar con la plataforma](#connect-to-your-experience-platform-data)de experiencia.
+* `{TARGET_CONNECTION_ID}`:: Utilice el ID de conexión de destinatario obtenido en el paso [Conectar con destino](#connect-to-streaming-destination)de flujo continuo.
+
+**Respuesta**
+
+Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y un `etag`. Anote ambos valores. como lo hará en el paso siguiente, para activar segmentos.
+
+```json
+{
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+}
+```
+
+
+## Activar datos en el nuevo destino
+
+![Pasos de destino, paso 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
+
+Después de haber creado todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de flujo continuo. En este paso, se selecciona qué segmentos y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
+
+Para activar segmentos en el nuevo destino, debe realizar una operación de PARCHE JSON, similar a la que se muestra a continuación. Puede activar varios segmentos y atributos de perfil en una sola llamada. Para obtener más información sobre JSON PATCH, consulte la especificación [](https://tools.ietf.org/html/rfc6902)RFC.
+
+**Formato API**
+
+```http
+PATCH /flows
+```
+
+**Solicitud**
+
+```
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'If-Match: "{ETAG}"' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/transformations/0/params/segmentSelectors/selectors/-",
+        "value": {
+            "type": "PLATFORM_SEGMENT",
+            "value": {
+                "name": "Name of the segment that you are activating",
+                "description": "Description of the segment that you are activating",
+                "id": "{SEGMENT_ID}"
+            }
+        }
+    },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/segmentSelectors/selectors/-",
+        "value": {
+            "type": "PLATFORM_SEGMENT",
+            "value": {
+                "name": "Name of the segment that you are activating",
+                "description": "Description of the segment that you are activating",
+                "id": "{SEGMENT_ID}"
+            }
+        }
+    },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
+    }
+]
+```
+
+* `{DATAFLOW_ID}`:: Utilice el flujo de datos obtenido en el paso anterior.
+* `{ETAG}`:: Utilice la etiqueta que obtuvo en el paso anterior.
+* `{SEGMENT_ID}`:: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, seleccione API **de servicio de** segmentación en el menú de navegación de la izquierda y busque la `GET /segment/jobs` operación.
+* `{PROFILE_ATTRIBUTE}`: Por ejemplo, `"person.lastName"`
+
+**Respuesta**
+
+Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para validar que la solicitud era correcta, consulte el paso siguiente, Validar el flujo de datos.
+
+## Validar el flujo de datos
+
+![Pasos de destino, paso 6](/help/rtcdp/destinations/assets/step6-create-streaming-destination-api.png)
+
+Como último paso del tutorial, debe validar que los segmentos y atributos de perfil se hayan asignado correctamente al flujo de datos.
+
+Para validar esto, realice la siguiente solicitud GET:
+
+**Formato API**
+
+```http
+GET /flows
+```
+
+**Solicitud**
+
+```
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--header 'x-sandbox-name: prod' \
+--header 'If-Match: "{ETAG}"' 
+```
+
+* `{DATAFLOW_ID}`:: Utilice el flujo de datos del paso anterior.
+* `{ETAG}`:: Utilice la etiqueta del paso anterior.
+
+**Respuesta**
+
+La respuesta devuelta debe incluir en el `transformations` parámetro los segmentos y los atributos de perfil que ha enviado en el paso anterior. A continuación se muestra un parámetro `transformations` de muestra en la respuesta:
+
+```
+"transformations": [
+    {
+        "name": "GeneralTransform",
+        "params": {
+            "profileSelectors": {
+                "selectors": []
+            },
+            "segmentSelectors": {
+                "selectors": [
+                    {
+                        "type": "PLATFORM_SEGMENT",
+                        "value": {
+                            "name": "Men over 50",
+                            "description": "",
+                            "id": "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+],
+```
+
+## Pasos siguientes
+
+Siguiendo este tutorial, ha conectado con éxito CDP en tiempo real a uno de los destinos de flujo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden usar en el destino para el análisis de clientes o para cualquier otra operación de datos que desee realizar. Consulte las páginas siguientes para obtener más información:
+
+* [Información general sobre los destinos](../../rtcdp/destinations/destinations-overview.md)
+* [Descripción general del catálogo de destinos](../../rtcdp/destinations/destinations-catalog.md)
