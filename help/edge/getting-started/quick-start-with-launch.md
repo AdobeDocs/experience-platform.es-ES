@@ -4,9 +4,9 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 3%
 Esta guía le guiará por los distintos modos de configurar el SDK web de Adobe Experience Platform en Launch. Para poder utilizar esta función, debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
 - Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funcionará sin un CNAME, pero necesitará uno antes de ir a producción
-- Tenga derecho a la plataforma de datos de Adobe Experience Platform. Si no ha adquirido la plataforma, se le proporcionará la base de servicios de datos de la plataforma de experiencia para su uso con el SDK.
+- Tenga derecho a la plataforma de datos de Adobe Experience Platform. Si no ha adquirido Platform, le proporcionaremos la base de servicios de datos de la plataforma de experiencia para que la utilice de forma limitada con el SDK sin cargo adicional.
 - Utilizar la versión más reciente del servicio de ID de Visitante
 
 ## Crear un ID de configuración
 
 Puede crear un ID de configuración mediante la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge durante el inicio. Esto le permitirá habilitar la red perimetral para enviar datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
 
->Nota: La organización debe estar en una lista blanca para la función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
+>[!NOTE]
+>
+>La organización debe estar en una lista blanca para la función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
 
 ## Preparación de un Esquema
 
@@ -56,6 +58,7 @@ Para obtener más información sobre cómo rastrear eventos, consulte [Seguimien
 Una vez que tenga datos fluidos, puede hacer lo siguiente.
 
 - [Cree su esquema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Más información sobre la depuración](../fundamentals/debugging.md)
 - Aprenda a [personalizar la experiencia](../fundamentals/rendering-personalization-content.md)
 - Obtenga información sobre cómo enviar datos a varias soluciones
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
