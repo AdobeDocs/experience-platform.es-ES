@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Servicios de privacidad y aplicaciones de Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: f4a007b66806cb0d322226e1e1837cfce7ca4095
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 16%
 
 ---
 
@@ -30,13 +33,11 @@ A continuación se muestra una lista de las aplicaciones de Experience Cloud que
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics gestiona las solicitudes de exclusión mediante variables de sistema de informes de [privacidad](https://docs.adobe.com/content/help/es-ES/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentación de exclusión](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentación de exclusión](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Atributos del cliente de Adobe (CRS) | ✓ | N/D | <ul><li>[Acceder/eliminar documentación del RGPD](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[Acceder/eliminar documentación de CCPA](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>Los atributos del cliente no tienen la capacidad de transferir datos, por lo que las solicitudes de exclusión no se aplican.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Acceder/eliminar documentación para el lago de datos](../catalog/privacy.md)</li><li>[Acceso y eliminación de la documentación para el Perfil del cliente en tiempo real](../profile/privacy.md)</li><li>La plataforma de experiencia respeta las solicitudes de [exclusión para los segmentos](../segmentation/honoring-opt-outs.md)de audiencia.</li></ul> |
 | Autenticación de Adobe Primetime | ✓ | N/D | <ul><li>[Acceder o eliminar documentación](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión no se aplican.</li></ul> |
 | Adobe Target | ✓ | N/D | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/es-ES/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.translate.html)</li><li>Destinatario no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión no se aplican.</li></ul> |
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## Aplicaciones de autoservicio {#self-serve}
 
