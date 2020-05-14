@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen IBM DB2 en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # Creación de un conector de origen IBM DB2 en la interfaz de usuario
+
+> [!NOTE]
+> El conector IBM DB2 está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen IBM DB2 (en adelante, &quot;DB2&quot;) mediante la interfaz de usuario de la plataforma.
 
