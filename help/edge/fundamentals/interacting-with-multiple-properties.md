@@ -4,7 +4,7 @@ seo-title: SDK web de Adobe Experience Platform Interactuar con varias propiedad
 description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
 seo-description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -44,7 +44,7 @@ mycustomname1("configure", {
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
-mycustomname1("event", {
+mycustomname1("sendEvent", {
   "data": {
     "key": "value"
   }
@@ -55,7 +55,7 @@ mycustomname2("configure", {
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
-mycustomname2("event", {
+mycustomname2("sendEvent", {
   "data": {
     "key": "value"
   }
