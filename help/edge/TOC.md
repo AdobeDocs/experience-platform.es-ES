@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de la red perimetral de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '85'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 12%
 * [Descripción general de la red perimetral](home.md)
 * Primeros pasos {#get-started}
    * [inicio rápido con Launch](getting-started/quick-start-with-launch.md)
-   * [Implementación de todos los productos](getting-started/deploying-all-products.md)
 * Aspectos básicos {#fundamentals}
    * [Instalación del SDK](fundamentals/installing-the-sdk.md)
    * [Ejecución de comandos](fundamentals/executing-commands.md)
@@ -28,7 +27,6 @@ ht-degree: 12%
    * [Interactuar con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
    * [Representación de contenido personalizado](fundamentals/rendering-personalization-content.md)
    * [Apoyo al consentimiento](fundamentals/supporting-consent.md)
-   * [Compatibilidad con navegadores en la aplicación](fundamentals/supporting-in-app-browsers.md)
    * [Identidad](fundamentals/identity.md)
 * Qué implementar {#implement}
    * [Productos](what-to-implement/commerce.md)
