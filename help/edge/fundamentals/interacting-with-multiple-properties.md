@@ -4,21 +4,20 @@ seo-title: SDK web de Adobe Experience Platform Interactuar con varias propiedad
 description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
 seo-description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Interactuar con varias propiedades
+# Interactuar con varias propiedades
 
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+Hay algunos casos en los que podría interesarle interactuar con dos propiedades diferentes en la misma página. Estos incluyen:
 
-Hay algunos casos en los que podría interesarle interactuar con dos propiedades diferentes en la misma página. Son:
-
-* Empresas que han sido adquiridas y que están trabajando en la integración de sus sitios web
-* Relaciones de intercambio de datos entre varias empresas
+* Compañías que se han adquirido y que están trabajando en la integración de sus sitios web
+* Relaciones de uso compartido de datos entre varias compañías
 * Clientes que están probando nuevas soluciones de Adobe y que no desean interrumpir su implementación existente
 
 El SDK permite crear una instancia independiente para cada propiedad agregando otro nombre a la matriz en el código base. En el siguiente ejemplo, hemos proporcionado dos nombres `mycustomname1` y `mycustomname2`.
