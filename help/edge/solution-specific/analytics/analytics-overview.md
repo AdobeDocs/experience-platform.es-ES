@@ -4,32 +4,31 @@ seo-title: Envío de datos a Adobe Analytics con el SDK web de la plataforma Ado
 description: Descubra cómo enviar datos a Adobe Analytics con el SDK web de la plataforma de experiencia
 seo-description: Descubra cómo enviar datos a Adobe Analytics con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Envío de datos a Adobe Analytics
-
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+# Envío de datos a Adobe Analytics
 
 El SDK web de Adobe Experience Platform puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que Adobe Analytics puede utilizar.
 
 ## Configuración
 
-Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo de informes asignado en la interfaz de usuario de configuración del cliente. Aquí puede asignar uno o más informes a una configuración determinada. Una vez asignado un grupo de informes, los datos empezarán a fluir automáticamente.
+Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo de informes asignado en la interfaz de usuario de configuración del cliente. Aquí puede asignar uno o más sistemas de informes a una configuración determinada. Una vez asignado un grupo de informes, los datos empezarán a fluir automáticamente.
 
 ## Datos asignados automáticamente
 
-Adobe Experience Platform Edge Network asigna automáticamente muchas variables XDM. La lista completa de variables asignadas automáticamente se muestra [aquí](../analytics/automatically-mapped-vars.md).
+Adobe Experience Platform Edge Network asigna automáticamente muchas variables XDM. La lista completa de las variables asignadas automáticamente aparece [aquí](../analytics/automatically-mapped-vars.md).
 
 ## Datos asignados manualmente
 
 Se puede acceder a todos los datos recopilados por la red Edge mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
 
-Si tuviera un esquema que se viera así.
+Si tuvieras un esquema así.
 
 ```javascript
 {
