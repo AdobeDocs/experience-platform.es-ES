@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de la red perimetral de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '89'
 ht-degree: 12%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 12%
 * [Descripción general de la red perimetral](home.md)
 * Primeros pasos {#get-started}
    * [inicio rápido con Launch](getting-started/quick-start-with-launch.md)
+   * [inicio rápido sin lanzamiento](getting-started/quick-start-without-launch.md)
 * Aspectos básicos {#fundamentals}
    * [Instalación del SDK](fundamentals/installing-the-sdk.md)
    * [Ejecución de comandos](fundamentals/executing-commands.md)
