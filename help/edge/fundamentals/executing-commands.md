@@ -4,19 +4,15 @@ seo-title: Ejecución de los comandos del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo ejecutar los comandos del SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo ejecutar los comandos del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 4%
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Ejecución de comandos
-
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+# Ejecución de comandos
 
 Una vez que el código base se haya implementado en la página web, puede empezar a ejecutar comandos con el SDK. No es necesario esperar a que el archivo externo \(`alloy.js`\) se cargue desde el servidor antes de ejecutar los comandos. Si el SDK no ha terminado de cargar el SDK, los comandos se ponen en cola y el SDK los procesa lo antes posible.
 
