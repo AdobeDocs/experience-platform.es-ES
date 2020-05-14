@@ -4,18 +4,17 @@ seo-title: Información recopilada automáticamente por el SDK web de Adobe Expe
 description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 seo-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 5%
 
 ---
 
 
-# (Beta) Información recopilada automáticamente
+# Información recopilada automáticamente
 
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
-
-El SDK de Adobe Experience Cloud recopila una serie de elementos de información automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación se muestra una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
+El SDK de Adobe Experience Cloud recopila una serie de elementos de información automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
 
 ## Dispositivo (`device`)
 
@@ -33,7 +32,7 @@ Altura en píxeles de la pantalla.
 
 | **Ruta en carga útil:** | **Valores posibles:** |
 | --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` ni `portrait` |
+| `events[].xdm.device.screenOrientation` | `landscape` O bien `portrait` |
 
 La orientación de la pantalla.
 
@@ -49,7 +48,7 @@ Ancho de la pantalla (en píxeles).
 
 Detalles sobre el entorno del explorador.
 
-### Tipo de entorno
+### Tipo de Entorno
 
 Explorador
 
@@ -57,7 +56,7 @@ Explorador
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-El tipo de entorno a través del cual surgió la experiencia. El SDK de la plataforma Adobe Experience para JavaScript siempre se establece `browser`.
+El tipo de entorno por el que salió a la luz la experiencia. El SDK de la plataforma Adobe Experience para JavaScript siempre se establece `browser`.
 
 ### Altura de la ventanilla
 
@@ -119,7 +118,7 @@ Número de minutos que el usuario se desplaza con respecto a GMT.
 | ------------------------ | -------------------------- |
 | `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
-Marca de tiempo del evento.  Esta parte del contexto no se puede eliminar.
+Marca de hora del evento.  Esta parte del contexto no se puede eliminar.
 
 Marca de hora UTC para el usuario final en formato ISO ampliado simplificado [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
@@ -135,7 +134,7 @@ Detalles sobre la página en la que se encuentra el usuario.
 
 La dirección URL de la página actual.
 
-### Dirección URL del referente
+### URL de Remitente del reenvío
 
 | **Ruta en carga útil:** | **Ejemplo:** |
 | ---------------------------------- | ----------------------------------------- |
