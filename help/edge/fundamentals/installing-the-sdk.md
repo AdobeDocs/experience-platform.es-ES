@@ -4,16 +4,15 @@ seo-title: SDK web de Adobe Experience Platform para instalar el SDK
 description: Obtenga información sobre cómo instalar el SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo instalar el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Instalación del SDK
-
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+# Instalación del SDK
 
 El primer paso para implementar el SDK web de la plataforma Adobe Experience es copiar y pegar el siguiente &quot;código base&quot; lo más alto posible en la `<head>` etiqueta de su HTML:
 
@@ -48,7 +47,7 @@ Este código base, además de crear una función global, también carga código 
 
 ## Compatibilidad con Internet Explorer
 
-Este SDK hace uso de promesas, que es un método para comunicar la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que utiliza el SDK es admitida de forma nativa por todos los exploradores de destino excepto Internet Explorer. Para utilizar el SDK en Internet Explorer, debe tener `window.Promise` un [relleno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Este SDK hace uso de las promesas, que es un método para comunicar la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/Promise) que utiliza el SDK es admitida de forma nativa por todos los exploradores de destinatario excepto Internet Explorer. Para utilizar el SDK en Internet Explorer, debe tener `window.Promise` un [relleno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Para determinar si ya tiene `window.Promise` polirelleno:
 
