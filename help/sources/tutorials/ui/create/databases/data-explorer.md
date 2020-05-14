@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 
 # Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario
+
+> [!NOTE]
+> El conector del Explorador de datos de Azure está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen del Explorador de datos de Azure (en adelante, &quot;Explorador de datos&quot;) mediante la interfaz de usuario de la plataforma.
 
