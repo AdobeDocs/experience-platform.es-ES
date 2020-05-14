@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Representación de contenido person
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 3%
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Descripción general de las opciones de personalización
-
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+# Información general sobre las opciones de personalización
 
 El SDK web de Adobe Experience Platform admite consultas de las soluciones de personalización de Adobe, incluido Adobe Destinatario. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
 
