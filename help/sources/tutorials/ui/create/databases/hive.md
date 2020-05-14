@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creación de un Apache Hive en el conector de origen de Azure HDInsights en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bc9e369c7141ab70d7f7e6deffe9e0ad92ca92e
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Creación de un Apache Hive en el conector de origen de Azure HDInsights en la interfaz de usuario
+
+> [!NOTE]
+> El conector Apache Hive de Azure HDInsights está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un Apache Hive en el conector de origen de Azure HDInsights mediante la interfaz de usuario de la plataforma.
 
