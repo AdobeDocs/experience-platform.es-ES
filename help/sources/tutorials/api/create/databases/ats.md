@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 2%
 
 ---
 
 
 # Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
+
+>[!NOTE]
+>El conector de Almacenamiento de tabla de Azure está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
