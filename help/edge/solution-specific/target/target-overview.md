@@ -4,7 +4,7 @@ seo-title: SDK web de Adobe Experience Platform y uso de Adobe Destinatario
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia mediante Adobe Destinatario
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia mediante Adobe Destinatario
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 2%
@@ -42,7 +42,7 @@ El SDK web de AEP tiene la capacidad de procesar automáticamente las experienci
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ El Compositor de experiencias basadas en formularios es una interfaz no visual q
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 El SDK web de AEP proporciona una funcionalidad en la que puede recuperar acciones de VEC sin depender del SDK web de AEP para procesar las acciones de VEC. Envíe un evento con `__view__` la definición de `decisionScopes`.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
