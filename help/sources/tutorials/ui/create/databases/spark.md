@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Crear una chispa de Apache en el conector de origen de Azure HDInsights en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Crear una chispa de Apache en el conector de origen de Azure HDInsights en la interfaz de usuario
+
+> [!NOTE]
+> El conector Apache Spark en Azure HDInsights está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear una chispa de Apache en el conector de origen de Azure HDInsights mediante la interfaz de usuario de la plataforma.
 
