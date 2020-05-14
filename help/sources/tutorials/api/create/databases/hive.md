@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creación de un Apache Hive en el conector HDInsights de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: d9792bd87e6e0811e7a165bbde324a99a9cfd5c9
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 2%
 
 ---
 
 
 # Creación de un Apache Hive en el conector HDInsights de Azure mediante la API de servicio de flujo
+
+>[!NOTE]
+>El conector Apache Hive de Azure HDInsights está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
