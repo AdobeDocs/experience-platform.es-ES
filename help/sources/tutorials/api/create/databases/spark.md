@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creación de una chispa Apache en el conector HDInsights de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2fd9f38673750af705021d1e8f160be9304039a0
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 1%
 
 ---
 
 
 # Creación de una chispa Apache en el conector HDInsights de Azure mediante la API de servicio de flujo
+
+>[!NOTE]
+>El conector Apache Spark en Azure HDInsights está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
