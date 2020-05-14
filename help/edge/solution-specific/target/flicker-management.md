@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Administración del parpadeo para experiencias personalizadas
+seo-title: Adobe Experience Platform Web SDK gestionar parpadeo
+description: Obtenga información sobre cómo gestionar el parpadeo en las experiencias de los usuarios
+seo-description: Obtenga información sobre cómo administrar el parpadeo con las propiedades del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # Administración del parpadeo
 
 Al intentar representar contenido de personalización, el SDK debe asegurarse de que no hay parpadeo. El parpadeo, también llamado FOOC (Flash of Original Content), se produce cuando se muestra brevemente un contenido original antes de que aparezca la alternativa durante la prueba/personalización. El SDK intenta aplicar estilos CSS a elementos de la página para garantizar que dichos elementos se ocultan hasta que el contenido de personalización se procese correctamente.
