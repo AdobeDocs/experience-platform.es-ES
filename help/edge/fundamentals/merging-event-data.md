@@ -4,19 +4,19 @@ seo-title: Combinación de datos de evento del SDK web de Adobe Experience Platf
 description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
 seo-description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 2%
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Combinación de datos de evento
+# Combinación de datos de evento
 
 >[!IMPORTANT]
 >
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>Esta función aún está en desarrollo, por lo que no todas las soluciones podrán combinar estos datos.
 
 A veces, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que _sí_ tiene para que no se pierda si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
 
