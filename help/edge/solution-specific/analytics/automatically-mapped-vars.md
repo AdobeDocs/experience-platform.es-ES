@@ -4,44 +4,43 @@ seo-title: Variables asignadas automáticamente en Analytics con el SDK web de l
 description: Descubra qué variables se asignan automáticamente en Analytics con el SDK web de la plataforma de experiencia
 seo-description: Descubra qué variables se asignan automáticamente en Analytics con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
 
 # Variables asignadas automáticamente en Analytics
 
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
-
 A continuación se muestra una lista de variables que Adobe Experience Platform Edge Network asigna automáticamente a Analytics.
 
-| Ruta de campo XDM | Cadena de consulta de Analytics/Encabezado HTTP | Descripción |
+| Ruta de campo XDM | Cadena de Consulta de Analytics/Encabezado HTTP | Descripción |
 | ---------- | ------------------------- | -------- |
 | `environment.browserDetails.userAgent` | `User-Agent` | Es una asignación de encabezado HTTP, HEADER_USER_AGENT. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | Es una asignación de encabezado HTTP, HEADER_ACCEPT_LANGUAGE. |
-| `environment.browserDetails.cookiesEnabled` | `k` | Asignación COOKIES del parámetro de consulta AppMeasurement con la conversión BOOLEAN_TO_YN. |
+| `environment.browserDetails.cookiesEnabled` | `k` | Asignación COOKIES del parámetro de consulta de AppMeasurement con la conversión BOOLEAN_TO_YN. |
 | `environment.browserDetails.javaScriptVersion` | `j` | Asignación del parámetro de consulta AppMeasurement J_JSCRIPT. |
-| `environment.browserDetails.javaEnabled` | `v` | Asignación del parámetro de consulta AppMeasurement JAVA_ENABLED con la conversión BOOLEAN_TO_YN. |
-| `environment.browserDetails.viewportHeight` | `bh` | Asignación del parámetro de consulta AppMeasurement para BROWSER_HEIGHT. |
-| `environment.browserDetails.viewportWidth` | `bw` | Asignación del parámetro de consulta AppMeasurement para BROWSER_WIDTH. |
+| `environment.browserDetails.javaEnabled` | `v` | Asignación del parámetro de consulta de AppMeasurement JAVA_ENABLED con BOOLEAN_TO_YN de conversión. |
+| `environment.browserDetails.viewportHeight` | `bh` | Asignación del parámetro de consulta de AppMeasurement para BROWSER_HEIGHT. |
+| `environment.browserDetails.viewportWidth` | `bw` | Asignación del parámetro de consulta de AppMeasurement para BROWSER_WIDTH. |
 | `environment.connectionType` | `ct` | Asignación del parámetro de consulta AppMeasurement CT_CONNECT_TYPE. |
 | `device.colorDepth` | `c` | Asignación del parámetro de consulta de AppMeasurement C_COLOR. |
-| `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta AppMeasurement. |
-| `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta AppMeasurement. |
-| `placeContext.geo.latitude` | `lat` | Asignación LATITUDE del parámetro de consulta AppMeasurement. |
+| `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta de AppMeasurement. |
+| `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta de AppMeasurement. |
+| `placeContext.geo.latitude` | `lat` | Asignación LATITUDE del parámetro de consulta de AppMeasurement. |
 | `placeContext.geo.longitude` | `lon` | Asignación del parámetro de consulta AppMeasurement en LONGITUDE. |
-| `web.webPageDetails.server` | `sv` | Asignación del parámetro de consulta AppMeasurement USER_SERVER. |
-| `web.webPageDetails.name` | `gn` | Asignación del parámetro de consulta AppMeasurement para PAGENAME. |
-| `web.webPageDetails.URL` | `g` | Asignación del parámetro de consulta AppMeasurement PAGE_URL. |
-| `web.webPageDetails.homePage` | `hp` | Asignación del parámetro de consulta AppMeasurement HOMEPAGE con la conversión BOOLEAN_TO_YN. |
-| `web.webReferrer.URL` | `r` | Asignación de REFERRER del parámetro de consulta AppMeasurement. |
+| `web.webPageDetails.server` | `sv` | Asignación del parámetro de consulta de AppMeasurement USER_SERVER. |
+| `web.webPageDetails.name` | `gn` | Asignación del parámetro de consulta de AppMeasurement para PAGENAME. |
+| `web.webPageDetails.URL` | `g` | Asignación del parámetro de consulta de AppMeasurement PAGE_URL. |
+| `web.webPageDetails.homePage` | `hp` | Parámetro de consulta de AppMeasurement Asignación HOMEPAGE con conversión BOOLEAN_TO_YN. |
+| `web.webReferrer.URL` | `r` | Asignación de REMITENTES DEL REENVÍO de parámetros de consulta de AppMeasurement. |
 | `application.id` | `c.a.appid` | Asignación `c.a.appid` de datos de contexto de AppMeasurement. |
 | `application.launches.value` | `c.a.launches` | Asignación `c.a.launches` de datos de contexto de AppMeasurement. |
-| `marketing.trackingCode` | `v0` | Asignación del parámetro de consulta AppMeasurement en CAMPAIGN. |
-| `commerce.purchaseID` | `pi` | Asignación del parámetro de consulta AppMeasurement PURCHASEID. |
-| `commerce.currencyCode` | `cc` | Asignación de CURRENCY del parámetro de consulta AppMeasurement. |
+| `marketing.trackingCode` | `v0` | Asignación de CAMPAÑA de parámetros de consulta de AppMeasurement. |
+| `commerce.purchaseID` | `pi` | Asignación del parámetro de consulta de AppMeasurement PURCHASEID. |
+| `commerce.currencyCode` | `cc` | Asignación de CURRENCY, parámetro de consulta de AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Asignación `a.media.name` de datos de contexto de AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Asignación `c.a.media.length` de datos de contexto de AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastContentType` | `c.a.contentType` | Asignación `c.a.contentType` de datos de contexto de AppMeasurement. |
@@ -63,4 +62,4 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | `media.mediaTimed.pauses.value` | `c.a.media.pauseCount` | Asignación `c.a.media.pauseCount` de datos de contexto de AppMeasurement. |
 | `media.mediaTimed.pauseTime.value` | `c.a.media.pauseTime` | Asignación `c.a.media.pauseTime` de datos de contexto de AppMeasurement. |
 | `media.mediaTimed.resumes.value` | `c.a.media.resume` | Asignación `c.a.media.resume` de datos de contexto de AppMeasurement. |
-| `identitymap.ecid.[0].id` | `mid` | Asignación MID del parámetro de consulta AppMeasurement. |
+| `identitymap.ecid.[0].id` | `mid` | Asignación MID del parámetro de consulta de AppMeasurement. |
