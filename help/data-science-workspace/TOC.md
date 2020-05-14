@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Espacio de trabajo de ciencias de datos de la plataforma Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 2%
+source-wordcount: '210'
+ht-degree: 3%
 
 ---
 
@@ -29,6 +29,11 @@ ht-degree: 2%
    * [MLServices](api/mlservices.md)
    * [Perspectivas](api/insights.md)
    * [Apéndice](api/appendix.md)
+* Aprendizaje automático en tiempo real (Alpha) {#real-time-machine-learning}
+   * [Información general](real-time-machine-learning/home.md)
+   * [Primeros pasos](real-time-machine-learning/getting-started.md)
+   * [Guía del usuario del bloc de notas de creación RTML](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Guía de referencia de nodos](real-time-machine-learning/node-reference.md)
 * Fórmulas prediseñadas {#pre-built-recipes}
    * [Fórmula de recomendación de producto](pre-built-recipes/product-recommendations.md)
    * [Predicción de compra de productos](pre-built-recipes/product-purchase-prediction.md)
