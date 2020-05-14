@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Apache Hive en el conector Azure HDInsights
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
 
-# Apache Hive en el conector Azure HDInsights
+# (Beta) Apache Hive en el conector Azure HDInsights
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
