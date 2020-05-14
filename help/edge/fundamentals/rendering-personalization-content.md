@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Representación de contenido person
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ El SDK web de Adobe Experience Platform admite consultas de las soluciones de pe
 El SDK procesa automáticamente el contenido personalizado cuando envía un evento al servidor y lo establece `renderDecisions` como `true` opción en el evento.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ El procesamiento del contenido personalizado es asincrónico, por lo que no debe
 Puede solicitar la lista de decisiones para que se devuelvan como una promesa en el `event` comando utilizando `scopes`. Un ámbito es una cadena que permite a la solución de personalización saber qué decisión desea.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
