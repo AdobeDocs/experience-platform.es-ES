@@ -4,16 +4,15 @@ seo-title: Seguimiento de los eventos del SDK web de la plataforma Adobe Experie
 description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
 
 # eventos de seguimiento
-
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Para enviar datos de evento a Adobe Experience Cloud, utilice el `event` comando. El `event` comando es la forma principal de enviar datos a Experience Cloud y recuperar contenido personalizado, identidades y destinos de audiencia.
 
