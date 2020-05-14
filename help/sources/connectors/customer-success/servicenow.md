@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Conector ServiceNow
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0077b43d99869585ddf010ba62ea3bf5daca944b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
 
-# Conector ServiceNow
+# Conector ServiceNow (Beta)
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
