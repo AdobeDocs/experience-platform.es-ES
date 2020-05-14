@@ -4,24 +4,23 @@ seo-title: Depuración del SDK web de Adobe Experience Platform
 description: Aprenda a alternar la depuración del SDK web de la plataforma de experiencia
 seo-description: Aprenda a alternar la depuración del SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
 
-# Depuración (Beta)
+# Depuración
 
->[!IMPORTANT]
->
->El SDK web de la plataforma de experiencia de Adobe se encuentra en fase beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
-
-Cuando la depuración está habilitada, el SDK envía mensajes a la consola del navegador que pueden resultar útiles para depurar la implementación y para comprender el comportamiento del SDK. La depuración también resulta en una validación sincrónica del lado del servidor de los datos que se recopilan en relación con el esquema configurado.
+Cuando la depuración está habilitada, el SDK envía mensajes a la consola del navegador que pueden resultar útiles para depurar la implementación y para comprender el comportamiento del SDK. La depuración también resulta en una validación sincrónica del lado del servidor de los datos que se recopilan con el esquema que ha configurado.
 
 La depuración está deshabilitada de forma predeterminada, pero se puede alternar de tres formas diferentes:
 
 * `configure` command
 * `debug` command
-* parámetro de cadena de consulta
+* Parámetro de cadena de consulta
 
 ## Alternar la depuración con el comando Configurar
 
@@ -52,17 +51,17 @@ Si prefiere no cambiar el código de la página web o no desea que los mensajes 
 
 ## Alternar la depuración con un parámetro de cadena de consulta
 
-Alternar la depuración estableciendo un parámetro de cadena de `alloy_debug` consulta en `true` o `false` de la siguiente manera:
+Alternar la depuración estableciendo un parámetro de cadena de `alloy_debug` consulta en `true` o `false` como se indica a continuación:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-De forma similar al `debug` comando, si prefiere no cambiar el código de la página web o no desea que se produzcan mensajes de registro para todos los usuarios del sitio web, esto es especialmente útil porque puede configurar el parámetro de cadena de consulta al cargar la página web en el explorador.
+De forma similar al `debug` comando, si prefiere no cambiar el código de la página web o no desea que los mensajes de registro se produzcan para todos los usuarios del sitio web, esto es especialmente útil porque puede configurar el parámetro de cadena de consulta al cargar la página web en el explorador.
 
 ## Prioridad y duración
 
-Cuando la depuración se establece mediante el parámetro de cadena de consulta o comando `debug` , anula cualquier `debug` opción establecida en el `configure` comando. En estos dos casos, la depuración también permanece alternada durante toda la sesión. En otras palabras, si habilita la depuración mediante el comando debug o el parámetro de cadena de consulta, permanecerá habilitado hasta que se cumpla una de las siguientes condiciones:
+Cuando la depuración se establece mediante el comando `debug` o el parámetro de cadena de consulta, anula cualquier `debug` opción establecida en el `configure` comando. En estos dos casos, la depuración también permanece alternada durante toda la sesión. En otras palabras, si se habilita la depuración mediante el comando debug o el parámetro de cadena de consulta, permanece habilitado hasta que se cumpla una de las siguientes condiciones:
 
 * El final de la sesión
 * Ejecute el `debug` comando
