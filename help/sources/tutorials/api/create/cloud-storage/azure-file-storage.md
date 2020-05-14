@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creación de un conector de Almacenamiento de archivos de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8beee3f15aa867026b28f9c395553d1c934ef7a3
+source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
 
 
 # Creación de un conector de Almacenamiento de archivos de Azure mediante la API de servicio de flujo
+
+>[!NOTE]
+>El conector del Almacenamiento de archivos de Azure está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
