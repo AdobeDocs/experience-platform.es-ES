@@ -4,9 +4,9 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 ## Información general {#overview}
 
 Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
+
+![Destino de Facebook en la interfaz de usuario de CDP en tiempo real](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Casos de uso
 
