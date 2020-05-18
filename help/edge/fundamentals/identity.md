@@ -4,10 +4,10 @@ seo-title: SDK web de Adobe Experience Platform Recuperación de Experience Clou
 description: Obtenga información sobre cómo obtener el ID de Adobe Experience Cloud.
 seo-description: Obtenga información sobre cómo obtener el ID de Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '416'
+ht-degree: 7%
 
 ---
 
@@ -77,6 +77,14 @@ La clave para el objeto es el símbolo de Área de nombres [de](../../identity-s
 | Cadena | Sí | none |
 
 Es el ID que desea sincronizar para la Área de nombres dada.
+
+#### `authenticationState`
+
+| **Tipo** | **Requerido** | **Valor predeterminado** | **Valores posibles** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| Cadena | Sí | ambiguo | ambiguo, autenticado y registradoOut |
+
+El estado de autenticación del ID.
 
 #### `primary`
 
