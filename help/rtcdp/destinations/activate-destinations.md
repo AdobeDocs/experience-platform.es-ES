@@ -4,9 +4,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,12 @@ Para activar datos en destinos, debe haber [conectado correctamente un destino](
 3. Seleccione **[!UICONTROL Activar]**;
 4. En el flujo de trabajo **[!UICONTROL Activar destino]** , en la página **[!UICONTROL Seleccionar segmentos]** , seleccione los segmentos que desea enviar al destino.
    ![segmentos a destino](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Condicional*. Este paso solo se aplica a los segmentos asignados a destinos de almacenamiento en la nube y a destinos de marketing por correo electrónico. <br> En la página Atributos **[!UICONTROL de]** destino, seleccione **[!UICONTROL Añadir nuevo campo]** y seleccione los atributos que desee enviar al destino.
+5. *Condicional*. Este paso varía en función del tipo de destino en el que se activan los segmentos. <br> Para los destinos *de marketing de* correo electrónico y los destinos *de almacenamiento de* nube, en la página **[!UICONTROL Seleccionar atributos]** , seleccione **[!UICONTROL Añadir nuevo campo]** y seleccione los atributos que desee enviar al destino.
 Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) único del esquema de unión. Para obtener más información sobre los atributos obligatorios, consulte Identidad en el artículo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) correo electrónico.
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)Para destinos *de red* social, en el paso Asignación **[!UICONTROL de]** identidad, seleccione atributos de origen para asignarlos a identidades de destinatario.
+   ![asignación de identidad antes de rellenar los campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)En el ejemplo siguiente, la dirección de correo electrónico personal del esquema de identidad se ha marcado mediante hash durante la ingestión en la plataforma de experiencia para cumplir los requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico de Facebook. Pulse **[!UICONTROL Siguiente]** después de seleccionar la asignación.
+   ![asignación de identidad después de rellenar los campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. En la página Programación **[!UICONTROL de]** segmentos, puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia con la que se envían datos al destino.
 
    >[!IMPORTANT]
@@ -75,6 +78,10 @@ Compruebe el destino de publicidad correspondiente en el que está activando los
 
 Para Facebook, una activación exitosa significa que una audiencia personalizada de Facebook se crearía mediante programación en el Administrador [de publicidades de](https://www.facebook.com/adsmanager/manage/)Facebook. La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
 
+>[!TIP]
+>
+>La integración entre Adobe Real-time CDP y Facebook admite los rellenos de audiencia históricos. Todas las cualificaciones del segmento histórico se envían a Facebook cuando activa los segmentos en el destino.
+
 ## Deshabilitar activación {#disable-activation}
 
 Para deshabilitar un flujo de activación existente, siga los pasos a continuación:
@@ -83,3 +90,4 @@ Para deshabilitar un flujo de activación existente, siga los pasos a continuaci
 2. Haga clic en el control **[!UICONTROL Habilitado]** en el carril derecho para cambiar el estado del flujo de activación.
 3. En la ventana **Actualizar estado** de flujo de datos, seleccione **Confirmar** para desactivar el flujo de activación.
 
+En AWS Kinesis, genere una clave de acceso: par de claves de acceso secreto para otorgar acceso CDP en tiempo real de Adobe a su cuenta de AWS Kinesis. Obtenga más información en la documentación [de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)AWS Kinesis.
