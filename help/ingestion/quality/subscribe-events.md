@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Suscripción a eventos de ingesta de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+workflow-type: tm+mt
+source-wordcount: '851'
+ht-degree: 2%
 
 ---
 
@@ -36,42 +39,54 @@ A continuación se muestra una lista de las notificaciones de estado de ingesta 
 
 El esquema de evento de notificación de ingestión de datos es un esquema del Modelo de datos de experiencia (XDM) que contiene campos y valores que proporcionan detalles sobre el estado de los datos que se están ingeriendo. Visite la repo pública de XDM GitHub para poder vista del último esquema [de carga útil de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notificación.
 
-## Suscripción a las notificaciones de estado de inserción de datos
+## Suscripción a las notificaciones de estado de ingesta de datos
 
-A través de los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante los enlaces web. Para obtener más información sobre los enlaces web y cómo suscribirse a los Eventos de Adobe I/O mediante los enlaces web, consulte la [introducción a la guía Webhooks](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) de Eventos de Adobe I/O.
+A través de los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante los enlaces web. Las secciones siguientes describen los pasos para suscribirse a las notificaciones de la plataforma para eventos de ingesta de datos mediante Adobe Developer Console.
 
-### Crear una nueva integración con la consola de Adobe I/O
+### Crear un nuevo proyecto en Adobe Developer Console
 
-Inicie sesión en la consola [de E/S de](https://console.adobe.io/home) Adobe y haga clic en la ficha *Integraciones* o en **Crear integración** en Inicio rápido. Cuando aparezca la pantalla *Integración* , haga clic en **Nueva integración** para crear una nueva integración.
+Vaya a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vacío en la documentación de Adobe Developer Console.
 
-![Crear nueva integración](../images/quality/subscribe-events/create_integration_start.png)
+### Añadir eventos de la plataforma de experiencia en el proyecto
 
-Aparece la pantalla *Crear nueva integración* . Seleccione **Recibir eventos en tiempo real** cercanos y haga clic en **Continuar**.
+Una vez creado un nuevo proyecto, navegue a la pantalla de información general de dicho proyecto. Desde aquí, haga clic en **[!UICONTROL Añadir evento]**.
 
-![Recibir eventos casi en tiempo real](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-La siguiente pantalla ofrece opciones para crear integraciones con diferentes eventos, productos y servicios disponibles para su organización en función de sus suscripciones, derechos y permisos. Para esta integración, seleccione Notificaciones **de** plataforma en Plataforma de experiencia y, a continuación, haga clic en **Continuar**.
+Aparece el cuadro de diálogo _[!UICONTROL Añadir eventos]_. Haga clic en Plataforma**[!UICONTROL  de ]**experiencia para filtrar la lista de opciones disponibles y, a continuación, haga clic en Notificaciones**[!UICONTROL  de ]**plataforma antes de hacer clic en**[!UICONTROL  Siguiente ]**.
 
-![Seleccionar proveedor de evento](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-Aparece el formulario Detalles *de la* integración, que requiere que proporcione un nombre y una descripción para la integración, así como un certificado de clave pública.
+La siguiente pantalla muestra una lista de tipos de evento a los que suscribirse. Seleccione **[!UICONTROL Notificación]** de inserción de datos y, a continuación, haga clic en **[!UICONTROL Siguiente]**.
 
-Si no tiene un certificado público, puede generar uno en la terminal mediante el siguiente comando:
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+La siguiente pantalla le solicita que cree un testigo web JSON (JWT). Tiene la opción de generar automáticamente un par de claves o cargar su propia clave pública generada en la terminal.
 
-Una vez que haya generado un certificado, arrastre y suelte el archivo en el cuadro Certificados **de claves** públicas o haga clic en **Seleccionar un archivo** para examinar el directorio de archivos y seleccionar el certificado directamente.
+A efectos de este tutorial, se sigue la primera opción. Haga clic en el cuadro de opciones para **[!UICONTROL Generar un par]** de claves y, a continuación, haga clic en el botón **[!UICONTROL Generar par]** de claves en la esquina inferior derecha.
 
-Después de agregar el certificado, aparece la opción Registro *de* Evento. Haga clic en **Añadir registro** de Evento.
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![detalles de integración](../images/quality/subscribe-events/create_integration_details.png)
+Cuando se genera el par de claves, el explorador lo descarga automáticamente. Debe almacenar el archivo usted mismo, ya que no se mantiene en la consola de desarrollador.
 
-El cuadro de diálogo Detalles *de registro de* Evento se expande para mostrar controles adicionales. Aquí puede seleccionar los tipos de evento que desee y registrar su enlace web. Escriba un nombre para el registro en el evento, la URL del enlace web *(opcional)* y una breve descripción. Finalmente, seleccione los tipos de evento a los que desea suscribirse (notificación de ingesta de datos) y haga clic en **Guardar**.
+La siguiente pantalla le permite revisar los detalles del par de claves recién generado. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
-![Seleccionar eventos](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+En la pantalla siguiente, especifique un nombre y una descripción para el registro de eventos. Lo mejor es crear un nombre único y fácilmente identificable para ayudar a diferenciar este registro de eventos de otros en el mismo proyecto.
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+Más abajo en la misma pantalla, puede configurar de forma opcional cómo recibir eventos. **[!UICONTROL Weblink]** le permite proporcionar una dirección de webgancho personalizada para recibir eventos, mientras que la acción **** Runtime le permite hacer lo mismo con [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+
+Este tutorial omite este paso de configuración opcional. Una vez que haya terminado, haga clic en **[!UICONTROL Guardar eventos]** configurados para completar el registro de eventos.
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+Aparece la página de detalles del registro de evento recién creado, donde puede revisar los eventos recibidos, realizar un seguimiento de depuración y editar su configuración.
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## Pasos siguientes
 
-Una vez que haya creado la integración de E/S, podrá realizar la vista de las notificaciones recibidas para dicha integración. Consulte la guía [Seguimiento de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
+Una vez que haya registrado las notificaciones de la plataforma en el proyecto, puede realizar la vista de eventos recibidos del panel del proyecto. Consulte la guía [Seguimiento de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
