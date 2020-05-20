@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen de Amazon Kinesis en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 En la categoría *Cloud Almacenamiento* , seleccione **Amazon Kinesis** y haga clic **en el icono + (+)** para crear un nuevo conector Kinesis.
 
-![](../../../../images/tutorials/create/eventhub/catalog.png)
+![](../../../../images/tutorials/create/kinesis/catalog.png)
 
 Aparecerá el cuadro de diálogo *Conectar con Amazon Kinesis* . En esta página, puede usar credenciales nuevas o existentes.
 
@@ -58,13 +58,13 @@ Aparecerá el cuadro de diálogo *Conectar con Amazon Kinesis* . En esta página
 
 Si está utilizando nuevas credenciales, seleccione **Nueva cuenta**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y las credenciales de Kinesis. Cuando termine, seleccione **Connect** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
-![](../../../../images/tutorials/create/eventhub/new.png)
+![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### Cuenta existente
 
 Para conectar una cuenta existente, seleccione la cuenta de Kinesis con la que desea conectarse y, a continuación, seleccione **Siguiente** para continuar.
 
-![](../../../../images/tutorials/create/eventhub/existing.png)
+![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## Pasos siguientes
 
