@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de concentradores de Evento de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Para que el servicio de flujo se conecte con la cuenta de los centros de Evento 
 | ---------- | ----------- |
 | `sasKeyName` | El nombre de la regla de autorización, que también se conoce como nombre de clave SAS. |
 | `sasKey` | Firma de acceso compartido generada. |
-| `namespace` | La Área de nombres de EventHub a la que accede. |
+| `namespace` | La Área de nombres de los centros de Evento a los que está accediendo. |
+| `connectionSpec.id` | ID de la especificación de conexión de los centros de Evento de Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Para obtener más información sobre estos valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)de EventHub.
+Para obtener más información acerca de estos valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)de Evento Hubs.
 
 ### Leer llamadas de API de muestra
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | El nombre de la regla de autorización, que también se conoce como nombre de clave SAS. |
 | `auth.params.sasKey` | Firma de acceso compartido generada. |
+| `namespace` | La Área de nombres de los centros de Evento a los que está accediendo. |
 | `connectionSpec.id` | ID de la especificación de conexión de los centros de Evento de Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Respuesta**
