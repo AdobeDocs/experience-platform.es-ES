@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +28,6 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [Servicio de decisiones](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extraer, Transformar, Cargar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [SDK web de la plataforma de experiencia (Beta)](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
    * [Servicio de identidad](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
    * [Servicios inteligentes](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/es-ES/launch/using/overview.html)
@@ -37,9 +39,10 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [Sandboxes](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [Segmentación](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [Fuentes (Conectores)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
+   * [SDK web](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
    * [XDM (modelo de datos de experiencia)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
 * [Tutoriales de la plataforma de experiencia](https://docs.adobe.com/content/help/es-ES/experience-platform/tutorials/home.html)
-* [Notas de la versión](https://docs.adobe.com/content/help/es-ES/experience-platform/release-notes/latest.html)
+* [Notas de la versión](https://docs.adobe.com/content/help/es-ES/experience-platform/release-notes/latest.translate.html)
 * [Glosario](glossary.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Conceptos básicos de API](api-fundamentals.md)
