@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Entrada y salida de AI del cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+workflow-type: tm+mt
+source-wordcount: '828'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,31 @@ El siguiente documento describe las diferentes entradas y salidas utilizadas en 
 ## Datos de entrada de AI del cliente
 
 La API del cliente utiliza datos del Evento de experiencias de consumo para calcular las puntuaciones de tendencia. Para obtener más información sobre el Evento de la experiencia del consumidor, consulte la documentación de [Preparar datos para su uso en Servicios inteligentes](../data-preparation.md).
+
+### Datos históricos
+
+La API del cliente requiere datos históricos para la formación de modelos, pero la cantidad de datos requeridos se basa en dos elementos clave: ventana de resultados y población elegible.
+
+De forma predeterminada, la API del cliente busca que un usuario haya tenido actividades en los últimos 120 días si no se proporciona ninguna definición de población elegible durante la configuración de la aplicación. Además de la cantidad mínima de datos de Evento de experiencias de consumo que se requiere, la AI del cliente también necesita una cantidad mínima de eventos de éxito según una definición de objetivo predicha. Actualmente, la API del cliente necesita un mínimo de 500 eventos de éxito.
+
+Los siguientes ejemplos proporcionados utilizan una fórmula sencilla para ayudarle a determinar la cantidad mínima de datos necesaria. Si tiene más de lo mínimo, es probable que el modelo proporcione resultados más precisos. Si tiene menos de la cantidad mínima necesaria, el modelo fallará, ya que no hay una cantidad suficiente de datos para la formación de modelos.
+
+**Fórmula**:
+
+Longitud mínima de los datos requerida = población elegible + ventana de resultados
+
+>[!NOTE]
+> 30 es el número mínimo de días requeridos para la población elegible. Si no se proporciona, el valor predeterminado es 120 días.
+
+Ejemplos :
+
+- Desea predecir si es probable que un cliente compre un reloj en los próximos 30 días. También desea puntuar a los usuarios que tienen alguna actividad web en los últimos 60 días. En este caso, la longitud mínima de los datos requerida = 60 días + 30 días. La población elegible es de 60 días y la duración del resultado es de 30 días, con un total de 90 días.
+
+- Desea predecir si es probable que el usuario compre un reloj en los próximos 7 días. En este caso, la longitud mínima de los datos requerida = 120 días + 7 días. La población elegible tiene un valor predeterminado de 120 días y la ventana de resultados es de 7 días con un total de 127 días.
+
+- Desea predecir si es probable que el cliente compre un reloj en los próximos 7 días. También desea puntuar a los usuarios que tengan alguna actividad web en los últimos 7 días. En este caso, la longitud mínima de los datos requerida = 30 días + 7 días. La población elegible requiere un mínimo de 30 días y la duración del resultado es de 7 días, con un total de 37 días.
+
+Además de los datos mínimos requeridos, la API del cliente también funciona mejor con los datos recientes. En este caso de uso, la AI del cliente realiza una predicción para el futuro en función de los datos de comportamiento recientes de un usuario. En otras palabras, es probable que los datos más recientes den una predicción más precisa.
 
 ## Datos de salida de AI del cliente
 
