@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
 translation-type: tm+mt
-source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 11%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 11%
          * [Flujo de trabajo para crear destinos de almacenamiento en la nube](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Destino de Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Destino de Amazon S3](destinations/amazon-s3-destination.md)
-         * [Destino de los centros de eventos de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino de SFTP](destinations/sftp-destination.md)
       * Destinos de la plataforma de Gestión de datos {#dmp-destinations}
          * [Introducción a los destinos de la plataforma de Gestión de datos](destinations/dmp-destinations.md)
