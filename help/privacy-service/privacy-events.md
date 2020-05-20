@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Suscripción a Eventos de privacidad
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+workflow-type: tm+mt
+source-wordcount: '861'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ Este documento proporciona los pasos para configurar una integración de las not
 
 ## Primeros pasos
 
-Este tutorial utiliza **ngrok**, un producto de software que expone los servidores locales a la Internet pública a través de túneles seguros. Por favor, [instale ngrok](https://ngrok.com/download) antes de comenzar este tutorial para poder seguir y crear un weblink en su equipo local. Esta guía también requiere que descargue un repositorio GIT que contenga un servidor simple escrito en [Node.js](https://nodejs.org/).
+Este tutorial utiliza **ngrok**, un producto de software que expone los servidores locales a la Internet pública a través de túneles seguros. Por favor, [instale ngrok](https://ngrok.com/download) antes de comenzar este tutorial para poder seguir y crear un weblink en su equipo local. Esta guía también requiere que descargue un repositorio GIT que contenga un servidor [Node.js](https://nodejs.org/) simple.
 
 ## Crear un servidor local
 
@@ -57,71 +60,73 @@ Estos comandos instalan todas las dependencias e inicializan el servidor. Si tie
 
 ## Creación de un gancho web con ngrok
 
-En el mismo directorio y en una nueva ventana de línea de comandos, escriba el siguiente comando:
+Abra una nueva ventana de línea de comandos y vaya al directorio donde instaló ngrok anteriormente. Desde aquí, escriba el siguiente comando:
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 Una salida correcta es similar a la siguiente:
 
 ![Salida ngrok](images/privacy-events/ngrok-output.png)
 
-Tenga en cuenta la `Forwarding` dirección URL (`https://e142b577.ngrok.io`), ya que se utilizará para identificar el enlace web en el siguiente paso.
+Tenga en cuenta la `Forwarding` dirección URL (`https://212d6cd2.ngrok.io`), ya que se utilizará para identificar el enlace web en el siguiente paso.
 
-## Crear una nueva integración con la consola de Adobe I/O
+## Crear un nuevo proyecto en Adobe Developer Console
 
-Inicie sesión en la consola [de E/S de](https://console.adobe.io) Adobe y haga clic en la ficha **Integraciones** . Aparece la ventana _Integraciones_ . Desde aquí, haga clic en **Nueva integración**.
+Vaya a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vacío en la documentación de Adobe Developer Console.
 
-![Integraciones de Vista en la consola de Adobe I/O](images/privacy-events/integrations.png)
+## Añadir Eventos de privacidad al proyecto
 
-Aparece la ventana *Crear una nueva integración* . Seleccione **Recibir eventos en tiempo real** cercanos y haga clic en **Continuar**.
+Una vez que haya terminado de crear un nuevo proyecto en la consola, haga clic en **[!UICONTROL Añadir evento]** en la pantalla Información general _del_ proyecto.
 
-![Crear nueva integración](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-La siguiente pantalla ofrece opciones para crear integraciones con diferentes eventos, productos y servicios disponibles para su organización en función de sus suscripciones, derechos y permisos. Para esta integración, seleccione Eventos **de** Privacy Service y, a continuación, haga clic en **Continuar**.
+Aparece el cuadro de diálogo _Añadir eventos_ . Seleccione **[!UICONTROL Experience Cloud]** para filtrar la lista de los tipos de evento disponibles y, a continuación, seleccione Eventos **[!UICONTROL de]** Privacy Service antes de hacer clic en **[!UICONTROL Siguiente]**.
 
-![Seleccionar Eventos de privacidad](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-Aparece el formulario Detalles *de la* integración, que requiere que proporcione un nombre y una descripción para la integración, así como un certificado de clave pública.
+Aparece el cuadro de diálogo _Configurar registro_ de evento. Seleccione los eventos que desea recibir seleccionando las casillas correspondientes. Los Eventos que seleccione aparecerán en Eventos __suscritos en la columna izquierda. Cuando termine, haga clic en**[!UICONTROL  Siguiente ]**.
 
-![Detalles de integración](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-Si no tiene un certificado público, puede generar uno mediante el siguiente comando terminal:
+La siguiente pantalla le solicita que proporcione una clave pública para el registro en el evento. Tiene la opción de generar automáticamente un par de claves o cargar su propia clave pública generada en la terminal.
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+A efectos de este tutorial, se sigue la primera opción. Haga clic en el cuadro de opciones para **[!UICONTROL Generar un par]** de claves y, a continuación, haga clic en el botón **[!UICONTROL Generar par]** de claves en la esquina inferior derecha.
 
-Una vez que haya generado un certificado, arrastre y suelte el archivo en el cuadro Certificados **de claves** públicas o haga clic en **Seleccionar un archivo** para examinar el directorio de archivos y seleccionar el certificado directamente.
+![](./images/privacy-events/generate-key-value.png)
 
-Después de agregar el certificado, aparece la opción Registro *de* Evento. Haga clic en **Añadir registro** de Evento.
+Cuando se genera el par de claves, el explorador lo descarga automáticamente. Debe almacenar el archivo usted mismo, ya que no se mantiene en la consola de desarrollador.
 
-![Añadir registro de Evento](images/privacy-events/add-event-registration.png)
+La siguiente pantalla le permite revisar los detalles del par de claves recién generado. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
-El cuadro de diálogo se expande para mostrar controles adicionales. Aquí puede seleccionar los tipos de evento que desee y registrar su enlace web. Escriba un nombre para el registro en el evento, la URL del enlace web (la `Forwarding` dirección devuelta cuando [creó el enlace web](#create-a-webhook-using-ngrok)por primera vez), así como una breve descripción. Finalmente, seleccione los tipos de evento a los que desea suscribirse y haga clic en **Guardar**.
+![](./images/privacy-events/keypair-generated.png)
 
-![Formulario de registro de Evento](images/privacy-events/event-registration-form.png)
+En la pantalla siguiente, especifique un nombre y una descripción para el registro de eventos. Lo mejor es crear un nombre único y fácilmente identificable para ayudar a diferenciar este registro de eventos de otros en el mismo proyecto.
 
-Una vez completado el formulario de registro de Evento, haga clic en **Crear integración** y se completará la integración de E/S.
+![](./images/privacy-events/event-details.png)
 
-![Crear integración](images/privacy-events/create-integration.png)
+Más abajo en la misma pantalla, se le ofrecen dos opciones para configurar cómo recibir eventos. Seleccione **[!UICONTROL Webgancho]** y proporcione la `Forwarding` URL para el ngrok webgancho que creó anteriormente en _[!UICONTROL URL]_de Webgancho. A continuación, seleccione su estilo de envío preferido (único o por lotes) antes de hacer clic en**[!UICONTROL  Guardar eventos ]**configurados para completar el registro de eventos.
+
+![](./images/privacy-events/webhook-details.png)
+
+La página de detalles del proyecto vuelve a aparecer, con Eventos de privacidad debajo de _[!UICONTROL Eventos]_en el panel de navegación izquierdo.
 
 ## Datos de evento de Vista
 
-Una vez que haya creado los trabajos de privacidad e integración de E/S, puede realizar la vista de las notificaciones recibidas para esa integración. En la ficha **Integraciones** de la consola de E/S, vaya a la integración y haga clic en **Vista**.
+Una vez que haya registrado Eventos de privacidad con su proyecto y que los trabajos de privacidad se hayan procesado, puede realizar la vista de cualquier notificación recibida para ese registro. En la ficha **[!UICONTROL Proyectos]** de la consola de desarrollador, seleccione el proyecto en la lista para abrir la página Información general __ del producto. Desde aquí, seleccione Eventos **[!UICONTROL de]** privacidad en el panel de navegación izquierdo.
 
-![Integración de Vista](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-Aparece la página de detalles de la integración. Haga clic en **Eventos** para vista de los registros de evento para la integración. Busque el registro de Eventos de privacidad y haga clic en **Vista**.
+Aparece la ficha Detalles __ del registro, que le permite vista de más información sobre el registro, editar su configuración o vista de los eventos reales recibidos desde la activación del vínculo web.
 
-![Registro de Eventos de Vista](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-Aparece la ventana Detalles *del* Evento, que le permite vista de más información sobre el registro, editar su configuración o vista de los eventos reales recibidos desde que activó el enlace web. Puede vista de los detalles del evento y navegar hasta la opción **Depurar seguimiento** .
+Haga clic en la ficha **[!UICONTROL Seguimiento]** de depuración para vista de una lista de eventos recibidos. Haga clic en un evento de la lista para vista de sus detalles.
 
-![Seguimiento de depuración](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-La sección **Carga útil** proporciona detalles sobre el evento seleccionado, incluido su tipo de evento (`"com.adobe.platform.gdpr.productcomplete"`), como se indica en el ejemplo anterior.
+La sección _[!UICONTROL Carga útil]_proporciona detalles sobre el evento seleccionado, incluido su tipo de evento (`com.adobe.platform.gdpr.productcomplete`), como se indica en el ejemplo anterior.
 
 ## Pasos siguientes
 
