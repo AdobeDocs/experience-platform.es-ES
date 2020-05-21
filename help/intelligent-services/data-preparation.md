@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+workflow-type: tm+mt
+source-wordcount: '1445'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +33,8 @@ Puede encontrarse un ejemplo completo de la mezcla en el repositorio [XDM](https
 ## Campos clave
 
 Las secciones siguientes destacan los campos clave dentro de la combinación de CEE que deben utilizarse para que los servicios inteligentes generen perspectivas útiles, incluyendo descripciones y vínculos a documentación de referencia para más ejemplos.
+
+>[!IMPORTANT] El `xdm:channel` campo (que se explica en la primera sección) es **necesario** para que la API de atribución funcione con los datos, mientras que la AI del cliente no tiene campos obligatorios. Todos los demás campos clave son muy recomendables, pero no obligatorios.
 
 ### xdm:canal
 
@@ -178,11 +183,13 @@ Este campo contiene información relacionada con actividades de marketing que es
 }
 ```
 
-Para obtener información completa sobre cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
+Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
 ## Asignación e ingesta de datos
 
-Una vez que haya determinado si los datos de sus eventos de mercadotecnia se pueden asignar al esquema CEE, puede realizar el inicio del proceso de ingreso de los datos a los Servicios inteligentes. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a incorporarlos al servicio.
+Una vez que haya determinado si los datos de eventos de marketing se pueden asignar al esquema CEE, el siguiente paso es determinar qué datos se van a incluir en Servicios inteligentes. Todos los datos históricos utilizados en Servicios Inteligentes deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
+
+Después de decidir el rango de datos que desea enviar, póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema e incorporarlos al servicio.
 
 Si tiene una suscripción de Adobe Experience Platform y desea asignar e ingestar los datos usted mismo, siga los pasos descritos en la sección siguiente.
 
@@ -208,9 +215,81 @@ Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos bas
 * [Crear un conjunto de datos en la interfaz de usuario](../catalog/datasets/user-guide.md#create) (siga el flujo de trabajo para usar un esquema existente)
 * [Creación de un conjunto de datos en la API](../catalog/datasets/create.md)
 
-#### Asignar y transferir datos
+#### Añadir una etiqueta de Área de nombres de identidad principal en el conjunto de datos
+
+Si está trayendo datos desde Adobe Audiencia Manager, Adobe Analytics u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud PATCH a la API del servicio de catálogo.
+
+Si va a ingerir datos de un archivo CSV local, puede pasar a la siguiente sección sobre [asignación e ingesta de datos](#ingest).
+
+Antes de seguir el ejemplo de llamada de API que se muestra a continuación, consulte la sección [](../catalog/api/getting-started.md) Introducción en la guía para desarrolladores de catálogos para obtener información importante sobre los encabezados necesarios.
+
+**Formato API**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{DATASET_ID}` | ID del conjunto de datos creado anteriormente. |
+
+**Solicitud**
+
+En función de la fuente desde la que ingrese datos, debe proporcionar los valores apropiados `primaryIdentityNamespace` y `sourceConnectorId` de etiqueta en la carga útil de la solicitud.
+
+La siguiente solicitud agrega los valores de etiqueta adecuados para el Administrador de Audiencias:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+La siguiente solicitud agrega los valores de etiqueta adecuados para Analytics:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en la plataforma, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
+
+**Respuesta**
+
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud PATCH.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### Asignar y transferir datos {#ingest}
 
 Después de crear un esquema y un conjunto de datos de CEE, puede asignar inicios a las tablas de datos en el esquema e ingerirlos en la plataforma. Consulte el tutorial sobre la [asignación de un archivo CSV a un esquema](../ingestion/tutorials/map-a-csv-file.md) XDM para ver los pasos para realizar esto en la interfaz de usuario. Una vez que se ha rellenado un conjunto de datos, se puede utilizar el mismo conjunto de datos para ingestar archivos de datos adicionales.
+
+Si los datos se almacenan en una aplicación de terceros admitida, también puede elegir crear un conector [de](../sources/home.md) origen para transferir los datos de eventos de marketing a Platform en tiempo real.
 
 ## Pasos siguientes {#next-steps}
 
