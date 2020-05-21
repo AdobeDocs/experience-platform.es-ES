@@ -4,9 +4,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,26 @@ Para activar datos en destinos, debe haber [conectado correctamente un destino](
    ![segmentos a destino](/help/rtcdp/destinations/assets/select-segments.png)
 5. *Condicional*. Este paso varía en función del tipo de destino en el que se activan los segmentos. <br> Para los destinos *de marketing de* correo electrónico y los destinos *de almacenamiento de* nube, en la página **[!UICONTROL Seleccionar atributos]** , seleccione **[!UICONTROL Añadir nuevo campo]** y seleccione los atributos que desee enviar al destino.
 Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) único del esquema de unión. Para obtener más información sobre los atributos obligatorios, consulte Identidad en el artículo Destinos [de marketing de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) correo electrónico.
-   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)Para destinos *de red* social, en el paso Asignación **[!UICONTROL de]** identidad, seleccione atributos de origen para asignarlos a identidades de destinatario.
-   ![asignación de identidad antes de rellenar los campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)En el ejemplo siguiente, la dirección de correo electrónico personal del esquema de identidad se ha marcado mediante hash durante la ingestión en la plataforma de experiencia para cumplir los requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico de Facebook. Pulse **[!UICONTROL Siguiente]** después de seleccionar la asignación.
-   ![asignación de identidad después de rellenar los campos](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+   <br> 
+
+   Para los destinos ** sociales, en el paso Asignación **[!UICONTROL de]** identidad, puede seleccionar atributos de origen para asignarlos como identidades de destinatario en el destino. Este paso es opcional u obligatorio, según la identidad principal que utilice en el esquema. <br> 
+
+   *Dirección de correo electrónico como identidad* principal: Si utiliza la dirección de correo electrónico como identidad principal en el esquema, puede omitir el paso de asignación de identidad, como se muestra a continuación:
+
+   ![Dirección de correo electrónico como identidad](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *Otro ID como identidad* principal: Si utiliza otro ID, como ID *de* recompensas o ID *de* lealtad, como identidad principal en el esquema, deberá asignar manualmente la dirección de correo electrónico del esquema de identidad como identidad de destinatario en el destino social, como se muestra a continuación:
+
+   ![ID de fidelidad como identidad](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Seleccione `Email_LC_SHA256` como identidad de destinatario si ha marcado las direcciones de correo electrónico de los clientes en la ingesta de datos en Adobe Experience Platform, según los requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico de Facebook. <br> Seleccione `Email` como identidad de destinatario si las direcciones de correo electrónico que utiliza no están marcadas por hash. CDP en tiempo real de Adobe realizará un hash de las direcciones de correo electrónico para cumplir con los requisitos de Facebook.
+
+   ![asignación de identidad después de rellenar los campos](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. En la página Programación **[!UICONTROL de]** segmentos, puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia con la que se envían datos al destino.
 
