@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Conector del Administrador de Audiencias
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Consulte la documentación de los campos [de asignación del Administrador de](.
 
 Los conjuntos de datos son una construcción de almacenamiento y administración para una colección de datos, generalmente una tabla, que contiene esquemas (columnas) y campos (filas) y que está disponible mediante una conexión de datos. Los datos del Administrador de Audiencias constan de datos en tiempo real, datos de entrada y datos de Perfil. Para ubicar los conjuntos de datos del Administrador de Audiencias, utilice la función de búsqueda en la interfaz de usuario con las convenciones de nombres proporcionadas para cada tipo de datos.
 
-Aunque los usuarios tienen la capacidad de deshabilitar conjuntos de datos, no se recomienda deshabilitar los conjuntos de datos que se utilizarán para la pertenencia a segmentos en Perfil.
+Los conjuntos de datos del Administrador de Audiencias están deshabilitados para el Perfil de forma predeterminada y los usuarios pueden habilitar o deshabilitar conjuntos de datos en función de sus casos de uso. No se recomienda deshabilitar los conjuntos de datos que se utilizarán para la pertenencia a segmentos en Perfil.
 
 | Nombre del conjunto de datos | Descripción |
 | ------------ | ----------- |
@@ -66,7 +69,7 @@ Aunque los usuarios tienen la capacidad de deshabilitar conjuntos de datos, no s
 
 ### Conexiones
 
-Adobe Audiencia Manager crea una conexión en el catálogo: Conexión **del Administrador de** Audiencias. Catalog es el sistema de registros para la ubicación y linaje de datos dentro de Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
+Adobe Audiencia Manager crea una conexión en el catálogo: **Conexión** del Administrador de Audiencias. Catalog es el sistema de registros para la ubicación y linaje de datos dentro de Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
 
 ## ¿Cuál es la latencia esperada para los datos del Administrador de Audiencias en la plataforma?
 
