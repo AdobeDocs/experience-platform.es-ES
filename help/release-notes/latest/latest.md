@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1299'
 ht-degree: 5%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Notas de la versión de Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Actualizaciones de la interfaz de usuario {#ux}](#user-interface-updates-ux)
-   - [Área de trabajo de ciencia de datos {#dsw}](#data-science-workspace-dsw)
-   - [Destinos {#destinations}](#destinations-destinations)
-   - [SDK web de la plataforma de experiencia y red perimetral de la plataforma de experiencia {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [Fuentes {#sources}](#sources-sources)
+- [Actualizaciones de la interfaz de usuario](#ux)
+- [Área de trabajo de ciencia de datos](#dsw)
+- [Destinos](#destinations)
+- [SDK web de la plataforma de experiencia y red perimetral de la plataforma de experiencia](#edge)
+- [Perfil del cliente en tiempo real](#profile)
+- [Fuentes](#sources)
 
 ## Actualizaciones de la interfaz de usuario {#ux}
 
@@ -100,6 +100,29 @@ El SDK web de la plataforma de experiencia y la red perimetral de la plataforma 
 
 Para obtener más información sobre Platform Web SDK y Edge Network, consulte la [documentación](../../edge/home.md).
 
+## Perfil del cliente en tiempo real {#profile}
+
+Adobe Experience Platform le permite dirigir experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Perfil le permite consolidar sus distintos datos de clientes en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con los clientes.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| -----------| ---------- |
+| Nuevas métricas de exportación de Perfil | Métricas Añadidas para los trabajos de exportación de perfiles que muestran la cantidad total de perfiles exportados y la cantidad de perfiles en cada Área de nombres. |
+| Nuevas métricas de perspectivas de visibilidad | La API de perspectivas de capacidad de observación ahora tiene las siguientes métricas para transmitir la ingestión al Perfil: Tasa De Solicitud Entrante, Tasa De Ingesta Correcta, Tamaño De Registro Ingerido. |
+| Extremo GET masivo | Se Añadió el extremo GET masivo a la API de Perfil de cliente en tiempo real para permitir la recuperación de varios resultados en una sola llamada de API. Ahora puede obtener de forma masiva hasta 100 ID para definiciones de segmentos, trabajos de segmentos y políticas de combinación. |
+| Examinar perfil por identidad | En la interfaz de usuario de la plataforma ahora puede seleccionar una Área de nombres de identidad y proporcionar un valor de identidad para examinar un perfil. |
+
+**Corrección de errores**
+
+- None.
+
+**Problemas conocidos**
+
+- None.
+
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de Perfil, lea la descripción general [del Perfil del cliente en tiempo](../../profile/home.md)real.
+
 ## Fuentes {#sources}
 
 Adobe Experience Platform puede ingestar datos de fuentes externas y permitirle estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
@@ -116,6 +139,6 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 
 **Problemas conocidos**
 
-- None
+- None.
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
