@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Exportación de datos mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+workflow-type: tm+mt
+source-wordcount: '1953'
+ht-degree: 1%
 
 ---
 
@@ -169,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -180,15 +186,16 @@ curl -X POST \
 | `mergePolicy.id` | ID de la directiva de combinación. |
 | `mergePolicy.version` | Versión específica de la directiva de combinación que se va a utilizar. Si se omite este valor, se pasará de forma predeterminada a la versión más reciente. |
 | `filter` | *(Opcional)* Especifica uno o varios de los siguientes filtros que se aplicarán al segmento antes de la exportación. |
-| `filter.segments` | *(Opcional)* Especifica los segmentos que se van a exportar. Si se omite este valor, se exportarán todos los datos de todos los perfiles. Acepta una matriz de objetos de segmento, cada uno de los cuales contiene los campos siguientes:<ul><li>`segmentId`:: **(Necesario si se utiliza`segments`)** ID del segmento para la exportación de perfiles.</li><li>`segmentNs` *(Opcional)* Área de nombres de segmentos para el `segmentID`.</li><li>`status` *(Opcional)* Una matriz de cadenas que proporciona un filtro de estado para la `segmentID`. De forma predeterminada, `status` tendrá el valor `["realized", "existing"]` que representa todos los perfiles que entran en el segmento en el momento actual. Los valores posibles incluyen: `"realized"`, `"existing"`, y `"exited"`.</br></br>Para obtener más información, consulte el tutorial [sobre la](./create-a-segment.md)creación de segmentos.</li></ul> |
+| `filter.segments` | *(Opcional)* Especifica los segmentos que se van a exportar. Si se omite este valor, se exportarán todos los datos de todos los perfiles. Acepta una matriz de objetos de segmento, cada uno de los cuales contiene los campos siguientes:<ul><li>`segmentId`:: **(Necesario si se utiliza`segments`)** ID de segmento para la exportación de perfiles.</li><li>`segmentNs` *(Opcional)* Área de nombres de segmentos para el `segmentID`.</li><li>`status` *(Opcional)* Matriz de cadenas que proporciona un filtro de estado para el `segmentID`. De forma predeterminada, `status` tendrá el valor `["realized", "existing"]` que representa todos los perfiles que entran en el segmento en el momento actual. Los valores posibles incluyen: `"realized"`, `"existing"`, y `"exited"`.</br></br>Para obtener más información, consulte el tutorial [sobre la](./create-a-segment.md)creación de segmentos.</li></ul> |
 | `filter.segmentQualificationTime` | *(Opcional)* Filtre según el tiempo de calificación del segmento. Se puede proporcionar la hora de inicio y/o la hora de finalización. |
 | `filter.segmentQualificationTime.startTime` | *(Opcional)* Tiempo de inicio de cualificación del segmento para un ID de segmento para un estado determinado. No se proporciona, no habrá ningún filtro en el tiempo de inicio para una calificación de ID de segmento. La marca de tiempo debe proporcionarse en formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
 | `filter.segmentQualificationTime.endTime` | *(Opcional)* Hora de finalización de la calificación del segmento para un ID de segmento para un estado determinado. No se proporciona, no habrá ningún filtro en la hora de finalización para una calificación de ID de segmento. La marca de tiempo debe proporcionarse en formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
 | `filter.fromIngestTimestamp ` | *(Opcional)* Limita los perfiles exportados para incluir solo aquellos que se hayan actualizado después de esta marca de tiempo. La marca de tiempo debe proporcionarse en formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . <ul><li>`fromIngestTimestamp` en el caso de **perfiles**, en su caso: Incluye todos los perfiles combinados en los que la marca de tiempo actualizada combinada es buena que la marca de tiempo dada. Admite `greater_than` operando.</li><li>`fromTimestamp` para **eventos**: Todos los eventos ingeridos después de esta marca de tiempo se exportarán según el resultado de perfil resultante. Este no es el tiempo de evento en sí mismo sino el tiempo de ingestión de los eventos.</li> |
 | `filter.emptyProfiles` | *(Opcional)* Booleano. Los Perfiles pueden contener registros de Perfiles, registros de ExperienceEvent o ambos. Los Perfiles sin registros de Perfil y solo los registros de ExperienceEvent se denominan &quot;emptyProfiles&quot;. Para exportar todos los perfiles del almacén de Perfiles, incluido &quot;emptyProfiles&quot;, establezca el valor de `emptyProfiles` en `true`. Si `emptyProfiles` se establece en `false`, solo se exportan los perfiles con registros de Perfil en el almacén. De forma predeterminada, si no se incluye `emptyProfiles` el atributo, solo se exportan los perfiles que contienen registros de Perfil. |
 | `additionalFields.eventList` | *(Opcional)* Controla los campos de evento de la serie temporal exportados para objetos secundarios o asociados proporcionando una o varias de las siguientes opciones de configuración:<ul><li>`eventList.fields`:: Controle los campos que desea exportar.</li><li>`eventList.filter`:: Especifica criterios que limitan los resultados incluidos de los objetos asociados. Espera un valor mínimo necesario para la exportación, normalmente una fecha.</li><li>`eventList.filter.fromIngestTimestamp`:: Filtros eventos de series temporales a los que se han ingerido después de la marca de tiempo proporcionada. Este no es el tiempo de evento en sí mismo sino el tiempo de ingestión de los eventos.</li></ul> |
-| `destination` | **(Requerido)** Información de destino de los datos exportados:<ul><li>`destination.datasetId`:: **(Requerido)** El ID del conjunto de datos donde se exportan los datos.</li><li>`destination.segmentPerBatch`:: *(Opcional)* Un valor booleano que, si no se proporciona, toma como valor predeterminado `false`. Un valor de `false` exporta todos los ID de segmento en un único ID de lote. Un valor de `true` exporta un ID de segmento en un ID de lote. Tenga en cuenta que la configuración del valor que se va a definir `true` puede afectar al rendimiento de exportación de lotes.</li></ul> |
+| `destination` | **(Requerido)** Información de destino de los datos exportados:<ul><li>`destination.datasetId`:: **(Requerido)** El ID del conjunto de datos en el que se exportan los datos.</li><li>`destination.segmentPerBatch`:: *(Opcional)* Un valor booleano que, si no se proporciona, toma como valor predeterminado `false`. Un valor de `false` exporta todos los ID de segmento en un único ID de lote. Un valor de `true` exporta un ID de segmento en un ID de lote. Tenga en cuenta que la configuración del valor que se va a definir `true` puede afectar al rendimiento de exportación de lotes.</li></ul> |
 | `schema.name` | **(Requerido)** El nombre del esquema asociado con el conjunto de datos donde se exportan los datos. |
+| `evaluationInfo.segmentation` | *(Opcional)* Un valor booleano que, si no se proporciona, toma como valor predeterminado `false`. Un valor de `true` indica que la segmentación debe realizarse en el trabajo de exportación. |
 
 >[!NOTE] Para exportar solo datos de Perfil y no incluir datos de ExperienceEvent relacionados, elimine el objeto &quot;extraFields&quot; de la solicitud.
 
