@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Espacio de trabajo de ciencias de datos de la plataforma Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '215'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 3%
    * [Analizar los datos con portátiles](jupyterlab/analyze-your-data.md)
    * [Servicio de Consulta en el bloc de notas de Jupyter](jupyterlab/query-service.md)
    * [Creación de una fórmula con blocs de notas Jupyter](jupyterlab/create-a-recipe.md)
+   * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizaje automático de Sensei {#api}
    * [Primeros pasos](api/getting-started.md)
    * [Motores](api/engines.md)
