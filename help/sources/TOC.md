@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
          - [Campos de asignación del Administrador de Audiencias](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campos de Asignación de destino](connectors/adobe-applications/mapping/target.md)
    - Publicidad {#advertising}
-      - [Conector de Google Ads](connectors/advertising/ads.md)
+      - [Conector de Google AdWords](connectors/advertising/ads.md)
    - almacenamiento de nube {#cloud-storage}
       - [Conector de Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
 - Tutoriales de API {#api-tutorials}
    - Creación de un conector de origen {#create}
       - Publicidad {#advertising}
-         - [Conector de Google Ads](tutorials/api/create/advertising/ads.md)
+         - [Conector de Google AdWords](tutorials/api/create/advertising/ads.md)
       - almacenamiento de nube {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 0%
          - [Conector del Administrador de Audiencias de Adobe](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicidad {#create}
-         - [Conector de Google Ads](tutorials/ui/create/advertising/ads.md)
+         - [Conector de Google AdWords](tutorials/ui/create/advertising/ads.md)
       - almacenamiento de nube {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Conector Gen2 de Azure Data Lake Almacenamiento](tutorials/ui/create/cloud-storage/adls-gen2.md)
