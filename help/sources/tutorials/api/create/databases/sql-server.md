@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de SQL Server mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -36,9 +36,10 @@ Para conectarse a SQL Server, debe proporcionar la siguiente propiedad de conexi
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión asociada a su cuenta de SQL Server. |
+| `connectionString` | La cadena de conexión asociada a su cuenta de SQL Server. El patrón de cadena de conexión de SQL Server es: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | ID utilizado para generar una conexión. Se ha corregido el identificador de especificación de conexión para SQL Server `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
-Consulte [este documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) para obtener más información sobre cómo empezar a usar SQL Server.
+Para obtener más información sobre la obtención de una cadena de conexión, consulte [este documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server)de SQL Server.
 
 ### Leer llamadas de API de muestra
 
@@ -60,77 +61,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * Content-Type: `application/json`
 
-## Buscar especificaciones de conexión
+## Crear una conexión
 
-Para crear una conexión de SQL Server, debe existir un conjunto de especificaciones de conexión de SQL Server en el servicio de flujo. El primer paso para conectar Platform con SQL Server es recuperar estas especificaciones.
-
-**Formato API**
-
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="sql-server"` para obtener información específica de SQL Server.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**Solicitud**
-
-La siguiente solicitud recupera las especificaciones de conexión para SQL Server.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve las especificaciones de conexión de SQL Server, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión base.
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Creación de una conexión base
-
-Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por cuenta de SQL Server, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de SQL Server, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Solicitud**
+
+Para crear una conexión de SQL Server, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para SQL Server es `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -165,12 +100,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `auth.params.connectionString` | La cadena de conexión asociada con la autenticación de SQL Server. |
-| `connectionSpec.id` | La especificación de conexión (`id`) recopilada en el paso anterior. |
+| `auth.params.connectionString` | La cadena de conexión asociada a su cuenta de SQL Server. El patrón de cadena de conexión de SQL Server es: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | El ID de especificación de conexión para SQL Server es: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar los datos en el siguiente tutorial.
+Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar la base de datos en el siguiente tutorial.
 
 ```json
 {
@@ -181,4 +116,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión base de SQL Server mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar bases de datos o sistemas NoSQL mediante la API](../../explore/database-nosql.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión de SQL Server mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión en el siguiente tutorial a medida que aprenda a [explorar bases de datos o sistemas NoSQL mediante la API](../../explore/database-nosql.md)de servicio de flujo.
