@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de Oracle mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión utilizada para conectarse a Oracle. El patrón de cadena de conexión de Oracle es: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | La cadena de conexión utilizada para conectarse a Oracle. El patrón de cadena de conexión de Oracle es: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para Oracle es `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)de Oracle.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                    "connectionString": "{CONNECTION_STRING}"
+                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.connectionString` | La cadena de conexión asociada a la cuenta de Oracle. |
+| `auth.params.connectionString` | La cadena de conexión utilizada para conectarse a la base de datos Oracle. El patrón de cadena de conexión de Oracle es: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | ID de especificación de conexión de Oracle: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Respuesta**
