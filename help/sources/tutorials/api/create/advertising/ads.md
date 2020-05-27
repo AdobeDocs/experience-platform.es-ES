@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un conector de Google Ads mediante la API de servicio de flujo
+title: Creación de un conector Google AdWords mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 950fa88ed6c9235bff98658763b662113bb76caa
+source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 1%
 
 ---
 
 
-# Creación de un conector de Google Ads mediante la API de servicio de flujo
+# Creación de un conector Google AdWords mediante la API de servicio de flujo
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar la plataforma de experiencia con Google Ads.
+Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar la plataforma de experiencia con Google AdWords.
 
 ## Primeros pasos
 
@@ -26,18 +29,18 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 ### Recopilar las credenciales necesarias
 
-Para que el servicio de flujo se conecte con los anuncios, debe proporcionar valores para las siguientes propiedades de conexión:
+Para que el servicio de flujo se conecte con AdWords, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | **Credencial** | **Descripción** |
 | -------------- | --------------- |
-| ID del cliente | ID de cliente de la cuenta de anuncios. |
+| ID del cliente | ID de cliente de la cuenta de AdWords. |
 | Token de desarrollador | El testigo del programador asociado a la cuenta del administrador. |
-| Actualizar token | El autentificador de actualización obtenido de Google para autorizar el acceso a los anuncios. |
+| Actualizar token | El autentificador de actualización obtenido de Google para autorizar el acceso a AdWords. |
 | ID de cliente | ID de cliente de la aplicación de Google utilizada para adquirir el autentificador de actualización. |
 | Secreto del cliente | El secreto de cliente de la aplicación de Google utilizado para adquirir el autentificador de actualización. |
-| ID de especificación de conexión | Identificador único necesario para crear una conexión. El ID de especificación de conexión para Google Ads es: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| ID de especificación de conexión | Identificador único necesario para crear una conexión. El ID de especificación de conexión para Google AdWords es: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-Para obtener más información sobre estos valores, consulte este documento [de](https://developers.google.com/adwords/api/docs/guides/authentication)Google Ads.
+Para obtener más información sobre estos valores, consulte este documento [de](https://developers.google.com/adwords/api/docs/guides/authentication)Google AdWords.
 
 ### Leer llamadas de API de muestra
 
@@ -61,7 +64,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de Google Ads, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de Google AdWords, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -71,7 +74,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión de Google Ads, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para Google Ads es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Para crear una conexión de Google AdWords, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para Google AdWords es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
 ```shell
 curl -X POST \
@@ -82,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "google-ads connection",
-        "description": "Connection for google-ads",
+        "name": "google-AdWords connection",
+        "description": "Connection for google-AdWords",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -104,12 +107,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | ID de cliente de su cuenta de anuncios. |
-| `auth.params.developerToken` | El testigo de programadores de su cuenta de anuncios. |
-| `auth.params.refreshToken` | El testigo de actualización de la cuenta de anuncios. |
-| `auth.params.clientID` | ID de cliente de la cuenta de anuncios. |
-| `auth.params.clientSecret` | El secreto de cliente de su cuenta de anuncios. |
-| `connectionSpec.id` | ID de especificación de conexión de Google Ads: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | ID de cliente de su cuenta de AdWords. |
+| `auth.params.developerToken` | El testigo del programador de su cuenta de AdWords. |
+| `auth.params.refreshToken` | El testigo de actualización de la cuenta de AdWords. |
+| `auth.params.clientID` | ID de cliente de la cuenta de AdWords. |
+| `auth.params.clientSecret` | El secreto de cliente de la cuenta de AdWords. |
+| `connectionSpec.id` | ID de la especificación de conexión de Google AdWords: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Respuesta**
 
@@ -124,4 +127,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión de Google Ads mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial a medida que aprenda a [explorar los sistemas de publicidad mediante la API](../../explore/advertising.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión de Google AdWords mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial a medida que aprenda a [explorar los sistemas de publicidad mediante la API](../../explore/advertising.md)de servicio de flujo.
