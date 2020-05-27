@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre aprendizaje automático en tiempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
@@ -61,7 +61,7 @@ El aprendizaje automático en tiempo real se encuentra actualmente en alfa. La f
 > Limitaciones alfa:
 > - Actualmente, solo se admiten modelos basados en ONNX.
 > - Las funciones utilizadas en los nodos no se pueden serializar. Por ejemplo, una función lambda utilizada en un nodo Pandas.
-> - Hay una suspensión de 60 segundos después de que la implementación de Edge se realice manualmente.
+> - Hay una suspensión de 20 segundos después de que la implementación de Edge se realice manualmente.
 > - Para el aprendizaje profundo, los datos deben enviarse de manera tal que, cuando `df.values` se les llama, devuelvan un arreglo de discos que sea aceptable para su modelo DL. Esto se debe a que el nodo de puntuación del modelo ONNX utiliza `df.values` y envía la salida para realizar una puntuación con respecto al modelo.
 
 
