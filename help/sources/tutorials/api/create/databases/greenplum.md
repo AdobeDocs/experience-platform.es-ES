@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector GreenPlum mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión que se utiliza para conectarse a la instancia de GreenPlum. El patrón de cadena de conexión para GreenPlum es `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | La cadena de conexión que se utiliza para conectarse a la instancia de GreenPlum. El patrón de cadena de conexión para GreenPlum es `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Identificador necesario para crear una conexión. El ID de especificación de conexión fija para GreenPlum es `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Para obtener más información sobre la adquisición de una cadena de conexión, consulte [este documento](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)de GreenPlum.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.connectionString` | La cadena de conexión asociada a su cuenta de GreenPlum. |
-| `connectionSpec.id` | ID de especificación de conexión DB2: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | Cadena de conexión utilizada para conectarse a una cuenta de GreenPlum. El patrón de cadena de conexión es: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | ID de especificación de conexión de GreenPlum: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Respuesta**
 
