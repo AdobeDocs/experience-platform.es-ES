@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen de Oracle DB en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Para acceder a su cuenta de Oracle en Platform, debe proporcionar los siguientes
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión utilizada para conectarse a Oracle. El patrón de cadena de conexión de Oracle es: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | La cadena de conexión utilizada para conectarse a Oracle. El patrón de cadena de conexión de Oracle es: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para Oracle es `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)de Oracle.
