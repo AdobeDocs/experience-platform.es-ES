@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descriptores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 1%
 
 ---
 
@@ -301,20 +304,25 @@ Un descriptor de identidad indica que &quot;sourceProperty&quot; de &quot;source
 
 #### Descriptor de nombres descriptivos
 
-Los descriptores de nombres prácticos permiten al usuario modificar los valores `title` y `description` de los campos de esquema de la biblioteca principal. Especialmente útil cuando se trabaja con &quot;eVars&quot; y otros campos &quot;genéricos&quot; que se desea etiquetar como que contienen información específica de su organización. La interfaz de usuario puede utilizarlos para mostrar un nombre más sencillo o solo para mostrar campos con un nombre descriptivo.
+Los descriptores de nombres prácticos permiten al usuario modificar los valores `title`, `description`y `meta:enum` de los campos de esquema de la biblioteca principal. Especialmente útil cuando se trabaja con &quot;eVars&quot; y otros campos &quot;genéricos&quot; que se desea etiquetar como que contienen información específica de su organización. La interfaz de usuario puede utilizarlos para mostrar un nombre más sencillo o solo para mostrar campos con un nombre descriptivo.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -326,6 +334,7 @@ Los descriptores de nombres prácticos permiten al usuario modificar los valores
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, utilice &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en Caso de título. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
+| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de los valores sugeridos para el campo en la interfaz de usuario de la plataforma de experiencia. Es importante tener en cuenta que `meta:enum` no declara una lista desglosada ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para los campos XDM principales definidos por Adobe. Si la propiedad source es un campo personalizado definido por su organización, debe editar la propiedad del campo directamente a través de una solicitud `meta:enum` [PUT](./update-resource.md). |
 
 #### Descriptor de relación
 
