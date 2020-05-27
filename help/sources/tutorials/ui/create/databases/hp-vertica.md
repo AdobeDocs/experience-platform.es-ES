@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen HP Vertica en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Las siguientes secciones proporcionan información adicional que deberá conocer
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión utilizada para conectarse a su instancia de HP Vertica. El patrón de cadena de conexión para HP Vertica es `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | La cadena de conexión utilizada para conectarse a su instancia de HP Vertica. El patrón de cadena de conexión para HP Vertica es `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Para obtener más información sobre cómo empezar, consulte [este documento](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)HP Vertica.
 
