@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Azure Synapse Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Para acceder a la cuenta de Sinapse en Platform, debe proporcionar los siguiente
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión asociada con la autenticación de Synapse. |
+| `connectionString` | La cadena de conexión asociada con la autenticación de Synapse. El patrón de la cadena de conexión Synapse es `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 Para obtener más información sobre este valor, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse)de Sinapsis.
 
