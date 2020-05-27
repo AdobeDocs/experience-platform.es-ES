@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario del portátil de aprendizaje automático en tiempo real
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ Inicio cargando los datos de la formación.
 >[!NOTE]
 >En la plantilla ML **en tiempo** real, el conjunto de datos [CSV de seguro de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automóvil se toma de Github.
 
+![Carga de datos de capacitación](../images/rtml/load_training.png)
+
 Si desea utilizar un conjunto de datos desde Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` por el valor adecuado.
 
 ![conjunto de datos rtml](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ Con la plantilla ML *en tiempo* real, debe analizar, preprocesar, entrenar y eva
 La celda Transformaciones *de* datos de plantillas ML *en tiempo* real debe modificarse para que funcione con su propio conjunto de datos. Generalmente esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación de datos o la ingeniería de funciones.
 
 >[!NOTE]
->El siguiente ejemplo se ha resumido para fines de legibilidad mediante `[ ... ]`. vista de la plantilla ML *en tiempo* real para la celda de código completa.
+>El siguiente ejemplo se ha resumido para fines de legibilidad mediante `[ ... ]`. vista y expanda la sección de transformaciones de datos de plantillas ML *en tiempo* real para la celda de código completa.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de resultados devuelta por el `carinsurancedataset.csv` conjunto de datos devuelve las modificaciones definidas.
+Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de resultados devuelta por el `carinsurancedataset.csv` conjunto de datos devuelve las modificaciones que ha definido.
 
 ![Ejemplo de transformaciones de datos](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Cambie el valor de la `model_path` cadena (`model.onnx`) para cambiar el nombre del modelo.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>La siguiente celda no es editable ni eliminable y es necesaria para que funcione la aplicación de aprendizaje automático en tiempo real.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Cambie el valor de la `model_path` cadena para asignar un nombre al modelo.
 
 ![modelo ONNX](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ Esta sección describe cómo crear un DSL. Va a crear los nodos que incluyen cua
 ### Creación de nodos
 
 >[!NOTE]
-> Es probable que tenga varios nodos según el tipo de datos que se esté utilizando. En el siguiente ejemplo se describe sólo un nodo en la plantilla ML *en tiempo* real. vista de la plantilla ML *en tiempo* real para la celda de código completa.
+> Es probable que tenga varios nodos según el tipo de datos que se esté utilizando. En el siguiente ejemplo se describe sólo un nodo en la plantilla ML *en tiempo* real. vista la sección Creación *de* nodos de plantillas ML *en tiempo* real para la celda de código completa.
 
 El nodo Pandas siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de mapa. El ejemplo siguiente lo hace mediante `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Después de haber colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada, `"inplace": False` crea una nueva columna. Se ha configurado la compatibilidad para proporcionar un nuevo nombre de columna para agregarlo en una versión posterior. La última línea `cols` puede ser un nombre de columna o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo `leasing` se especifica. Para obtener más información sobre los nodos disponibles y cómo utilizarlos, visite la guía de referencia de [nodos](./node-reference.md).
 
@@ -323,7 +330,7 @@ A continuación, conecte los nodos con los bordes. Cada tupla es una conexión d
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Una vez conectados los nodos, cree el gráfico.
+Una vez conectados los nodos, cree el gráfico. La celda siguiente es obligatoria y no se puede editar ni eliminar.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Utilice la siguiente celda de la plantilla ML *en tiempo* real para realizar una
 
 Una vez completada la puntuación, se devuelve la URL de Edge, la carga útil y la salida puntuada de Edge.
 
-## Eliminación de una aplicación implementada desde Edge (opcional)
+## Lista de las aplicaciones implementadas desde Edge
 
->!![CAUTION]
-Esta celda se utiliza para eliminar la aplicación Edge implementada. No utilice la siguiente celda a menos que necesite eliminar una aplicación de Edge implementada.
+Para generar una lista de las aplicaciones implementadas actualmente en el Edge, ejecute la siguiente celda de código. Esta celda no se puede editar ni eliminar.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+La respuesta devuelta es una matriz de los servicios implementados.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Eliminación de un ID de aplicación o servicio implementado desde Edge (opcional)
+
+>[!CAUTION]
+>Esta celda se utiliza para eliminar la aplicación Edge implementada. No utilice la siguiente celda a menos que necesite eliminar una aplicación de Edge implementada.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
