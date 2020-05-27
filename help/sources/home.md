@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre los conectores de origen de la plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ La plataforma de experiencia permite la ingesta de datos desde otras aplicacione
 
 La plataforma de experiencias ofrece compatibilidad con la ingesta de datos desde un sistema de publicidad de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre los conectores de origen específicos:
 
-- [Conector de Google Ads](connectors/advertising/ads.md)
+- [Conector de Google AdWords](connectors/advertising/ads.md)
 
 ### Almacenamiento de nube
 
