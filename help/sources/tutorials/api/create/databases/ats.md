@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Para que el servicio de flujo se conecte con ATS, debe proporcionar valores para
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión que se conecta a la instancia de Almacenamiento de tabla de Azure. |
-| `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | La cadena de conexión utilizada para conectarse a una instancia de ATS. El patrón de cadena de conexión para ATS es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ID utilizado para generar una conexión. El ID de especificación de conexión fija para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)de ATS.
+Para obtener más información sobre la obtención de una cadena de conexión, consulte [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)ATS.
 
 ### Leer llamadas de API de muestra
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión ATS, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Para crear una conexión ATS, su ID de especificación de conexión única debe proporcionarse como parte de la solicitud POST. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.connectionString` | La cadena de conexión asociada a su cuenta de ATS. |
-| `connectionSpec.id` | ID de especificación de conexión ATS: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | La cadena de conexión utilizada para conectarse a una instancia de ATS. El patrón de cadena de conexión para ATS es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | El ID de especificación de conexión ATS es: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Respuesta**
 
