@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen MySQL en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Para acceder a su cuenta MySQL en Platform, debe proporcionar el siguiente valor
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `connectionString` | La cadena de conexión MySQL asociada a su cuenta. |
+| `connectionString` | La cadena de conexión MySQL asociada a su cuenta. El patrón de cadena de conexión MySQL es: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Puede obtener más información sobre las cadenas de conexión y cómo obtenerlas leyendo el documento [](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
 
