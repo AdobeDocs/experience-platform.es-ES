@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Azure Blob o Amazon S3 en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -37,9 +37,22 @@ La plataforma de experiencia admite los siguientes formatos de archivo para la i
 
 ### Recopilar las credenciales necesarias
 
-Para acceder a su almacenamiento Blob en la plataforma, debe proporcionar una cadena **de conexión Almacenamiento de** Azure válida. Puede obtener más información sobre las cadenas de conexión, incluidas las formas de obtenerlas a través de <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">este documento</a>de Microsoft Azure.
+Para acceder a su almacenamiento Blob en la plataforma, debe proporcionar un valor válido para las siguientes credenciales:
 
-Del mismo modo, el acceso al bucket S3 en la plataforma requiere que proporcione la clave **de acceso** S3 y la clave **secreta** S3. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Credencial | Descripción |
+| ---------- | ----------- |
+| `connectionString` | La cadena de conexión necesaria para acceder a los datos del almacenamiento Blob. El patrón de la cadena de conexión Blob es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+Para obtener más información sobre cómo empezar, visite [este documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)de Azure Blob.
+
+Del mismo modo, el acceso al bucket S3 en la plataforma requiere que proporcione los valores válidos para las siguientes credenciales:
+
+| Credencial | Descripción |
+| ---------- | ----------- |
+| `s3AccessKey` | ID de la clave de acceso para el almacenamiento S3. |
+| `s3SecretKey` | ID de clave secreta para el almacenamiento S3. |
+
+Para obtener más información sobre cómo empezar, visite [este documento](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/)de AWS.
 
 ## Conectar la cuenta de Blob o S3
 
