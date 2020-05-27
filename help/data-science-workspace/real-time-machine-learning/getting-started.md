@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introducción al aprendizaje automático en tiempo real
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para utilizar el aprendizaje automático en tiempo real, debe tener acceso a una
 
 Las guías para aprendizaje automático en tiempo real requieren una comprensión práctica de los portátiles [Python 3,](../jupyterlab/overview.md)Jupyter, la ciencia de datos y el aprendizaje automático.
 
-Términos clave:
+**Términos clave:**
 
 - **DSL:** Idioma específico del dominio.
 - **Edge:** El servicio de puntuación de aprendizaje automático en tiempo real se puede ejecutar en clústeres de Edge más cerca de sus activaciones y aplicaciones.
