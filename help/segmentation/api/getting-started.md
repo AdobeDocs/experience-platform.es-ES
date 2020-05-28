@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del desarrollador del servicio de segmentación
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 Los trabajos de segmentos procesan definiciones de segmentos previamente establecidas para generar un segmento de audiencia. Puede utilizar el extremo para recuperar una lista de trabajos de segmentos, crear un nuevo trabajo de segmento, recuperar detalles de un trabajo de segmento específico o eliminar un trabajo de segmento específico. `/segment/jobs`
 
 Para obtener más información sobre el uso de este extremo, lea la guía para desarrolladores de trabajos de [segmentos](./segment-jobs.md).
+
+## Búsqueda de segmentos
+
+La búsqueda de segmentos se utiliza para buscar e indexar campos configurables contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Para empezar a trabajar con la búsqueda de segmentos, consulte la guía para desarrolladores de [búsquedas](segment-search.md)
 
 ## Pasos siguientes
 
