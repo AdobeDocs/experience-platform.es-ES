@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Perfil de clientes en tiempo real
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+workflow-type: tm+mt
+source-wordcount: '78'
+ht-degree: 20%
 
 ---
 
@@ -17,7 +20,6 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Proyecciones de Edge](api/edge-projections.md)
    * [Entidades (acceso a Perfil)](api/entities.md)
    * [Combinar directivas](api/merge-policies.md)
-   * [Búsqueda de Perfiles](api/profile-search.md)
    * [Trabajos del sistema de Perfil (Eliminar solicitudes)](api/profile-system-jobs.md)
 * IU de Perfil {#ui}
    * [Guía del usuario de Perfil](ui/user-guide.md)
