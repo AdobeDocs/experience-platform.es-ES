@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
@@ -75,10 +78,6 @@ Al reunir datos de varias fuentes en la plataforma de experiencia, las política
 Mediante la API de Perfil del cliente en tiempo real, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para obtener más información sobre cómo trabajar con políticas de combinación mediante la API, visite la subguía [de políticas de](merge-policies.md)combinación.
 
 Para obtener una guía sobre cómo trabajar con políticas de combinación mediante la interfaz de usuario de la plataforma, consulte la guía [del usuario](../ui/merge-policies.md)Combinar directivas.
-
-## Búsqueda de Perfiles
-
-La búsqueda por Perfil se utiliza para buscar e indexar los campos configurables contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Para empezar a trabajar con la búsqueda por Perfil, consulte la subguía [de búsqueda](profile-search.md)
 
 ## Trabajos del sistema de Perfil
 
