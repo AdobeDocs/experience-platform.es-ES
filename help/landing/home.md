@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Descripción general de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 2%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Descripción general de Adobe Experience Platform
 
 >[!NOTE]
+>
 >La documentación de Adobe Experience Platform se ha trasladado recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
 
 Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. La plataforma de experiencia permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema, y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
@@ -42,6 +43,10 @@ De vez en cuando, puede recibir una encuesta para recibir comentarios adicionale
 ## Tutoriales de la plataforma de experiencia
 
 Comience con Platform de forma rápida y sencilla, siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de la plataforma de experiencias, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. Visite los tutoriales [de la plataforma de](../tutorials/home.md) experiencias para empezar.
+
+## Tutoriales de vídeo
+
+Vea los tutoriales [en](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vídeo para una amplia variedad de temas de la plataforma de experiencia.
 
 ## documentos y recursos de referencia
 
