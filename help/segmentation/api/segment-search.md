@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de segmentación
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Requerido)** Donde {ESQUEMA} representa el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
-| s={SEARCH_TERM} | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} representa el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
 
 **Solicitud**
 
@@ -65,18 +65,22 @@ Una respuesta correcta devuelve el estado HTTP 200 con la siguiente información
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
-| Área de nombres={ÁREA DE NOMBRES} | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
-| s={SEARCH_TERM} | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
-| entityId={ENTITY_ID} | *(Opcional)* Limita la búsqueda dentro de la carpeta designada, especificada con {ENTITY_ID}. |
-| limit={LIMIT} | *(Opcional)* Donde {LIMIT} representa el número de resultados de búsqueda que se van a devolver. El valor predeterminado es 50. |
-| page={PAGE} | *(Opcional)* Donde {PAGE} representa el número de página utilizado para paginar los resultados de la consulta buscada. Tenga en cuenta que el número de página inicio en **0**. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
+| `namespace={NAMESPACE}` | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
+| `entityId={ENTITY_ID}` | *(Opcional)* Limita la búsqueda dentro de la carpeta designada, especificada con {ENTITY_ID}. |
+| `limit={LIMIT}` | *(Opcional)* Donde {LIMIT} representa el número de resultados de búsqueda que se van a devolver. El valor predeterminado es 50. |
+| `page={PAGE}` | *(Opcional)* Donde {PAGE} representa el número de página utilizado para paginar los resultados de la consulta buscada. Tenga en cuenta que el número de página inicio en **0**. |
 
 
 **Solicitud**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
-| Área de nombres={ÁREA DE NOMBRES} | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
-| entityId={ENTITY_ID} | **(Requerido)** El ID del objeto de búsqueda sobre el que desea obtener la información estructural, especificado con {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
+| `namespace={NAMESPACE}` | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
+| `entityId={ENTITY_ID}` | **(Requerido)** El ID del objeto de búsqueda sobre el que desea obtener la información estructural, especificado con {ENTITY_ID}. |
 
 **Solicitud**
 
