@@ -4,7 +4,10 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
@@ -36,14 +39,14 @@ Los casos de uso de marketing se pueden definir durante la fase de _configuraci�
 
 ## Administrar directivas de uso de datos {#policies}
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, las políticas de uso de datos deben definirse y habilitarse. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la descripción general [de la gobernanza de](../../data-governance/home.md) datos de la plataforma de experiencia para obtener más información.
+Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, las políticas de uso de datos deben definirse y habilitarse. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la descripción general [del Gobierno de](../../data-governance/home.md) datos de la plataforma de experiencia para obtener más información.
 
 Adobe Experience Platform proporciona varias políticas **** principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver realizando una solicitud a la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), como se muestra en la sección &quot;Lista de todas las políticas&quot; de la guía [para desarrolladores de](../../data-governance/policies/overview.md)Policy Service. También puede crear sus propias políticas **** personalizadas para modelar las restricciones de uso personalizadas, como se muestra en la sección &quot;Crear una política&quot; de la guía para desarrolladores.
 
 ## (Beta) Aplicar el cumplimiento del uso de datos {#enforce-data-usage-compliance}
 
 >[!IMPORTANT]
->Esta función está en fase beta y no está disponible para todos los usuarios. Se puede habilitar si se solicita. La documentación y la funcionalidad están sujetas a cambios.
+>Esta función está en fase beta y no está disponible para todos los usuarios. Se puede habilitar si se solicita. La documentación y las funciones están sujetas a cambios.
 
 Una vez etiquetados los datos y definidas las políticas de uso, puede imponer el cumplimiento de las políticas en el uso de los datos. Cuando se activan segmentos de audiencia a destinos en tiempo real CDP, la Administración de datos aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
 
@@ -84,3 +87,7 @@ Si alguna de las acciones anteriores desencadena una infracción, se evita que s
 ## Pasos siguientes
 
 Ahora que ha sido presentado a las funciones clave de Gobierno de datos en CDP en tiempo real y cómo las habilita la plataforma de experiencia, continúe con la [documentación de Administración de datos en la plataforma](../../data-governance/home.md)de experiencia de Adobe. La documentación proporciona información general sobre los conceptos esenciales de la administración de datos, así como flujos de trabajo paso a paso para administrar las etiquetas y políticas de uso de datos.
+
+El siguiente vídeo proporciona información general sobre la administración de datos en tiempo real de CDP, incluido el uso de casos de uso de mercadotecnia en destinos y flujos de trabajo de ejemplo para diferentes escenarios:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
