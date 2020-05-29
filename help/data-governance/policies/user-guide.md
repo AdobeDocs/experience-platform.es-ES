@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+workflow-type: tm+mt
+source-wordcount: '435'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +25,7 @@ Esta guía requiere una comprensión práctica de los siguientes conceptos de la
 
 ## Directivas de uso de datos de Vista
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **[!UICONTROL Policies]** para abrir el *[!UICONTROL Policies]* espacio de trabajo. En la **[!UICONTROL Browse]** ficha, puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
+En la interfaz de usuario de la plataforma de experiencia, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
 
 ![](../images/policies/browse-policies.png)
 
@@ -32,38 +35,42 @@ Haga clic en una directiva de la lista para vista de su descripción y tipo. Si 
 
 ## Crear una directiva de uso de datos personalizada
 
-Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Create policy]** en la esquina superior derecha del espacio de trabajo *Directivas* .
+Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha del espacio de trabajo *Directivas* .
 
 ![](../images/policies/create-policy-button.png)
 
-Aparece el *[!UICONTROL Create policy]* flujo de trabajo. Inicio proporcionando un nombre y una descripción para la nueva directiva.
+Aparece el flujo de trabajo *[!UICONTROL Crear directiva]* . Inicio proporcionando un nombre y una descripción para la nueva directiva.
 
 ![](../images/policies/create-policy-description.png)
 
-A continuación, seleccione las etiquetas de uso de datos en las que se basará la directiva. Al seleccionar varias etiquetas, se le da la opción de elegir si los datos deben contener todas las etiquetas o sólo una de ellas para que la política se aplique. Haga clic en **[!UICONTROL Next]** cuando termine.
+A continuación, seleccione las etiquetas de uso de datos en las que se basará la directiva. Al seleccionar varias etiquetas, se le da la opción de elegir si los datos deben contener todas las etiquetas o sólo una de ellas para que la política se aplique. Haga clic en **[!UICONTROL Siguiente]** cuando termine.
 
 ![](../images/policies/add-labels.png)
 
-Aparecerá el *[!UICONTROL Select marketing actions]* paso. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y haga clic en **[!UICONTROL Next]** para continuar.
+Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y, a continuación, haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 >[!NOTE] Al seleccionar varias acciones de marketing, la política las interpreta como una regla &quot;O&quot;. En otras palabras, la política se aplica si se realiza _cualquiera_ de las acciones de marketing seleccionadas.
 
 ![](../images/policies/add-marketing-actions.png)
 
-Aparece el *[!UICONTROL Review]* paso, que le permite revisar los detalles de la nueva directiva antes de crearla. Una vez que esté satisfecho, haga clic en **[!UICONTROL Finish]** para crear la directiva.
+Aparece el paso *[!UICONTROL Revisar]* , que le permite revisar los detalles de la nueva directiva antes de crearla. Una vez que esté satisfecho, haga clic en **[!UICONTROL Finalizar]** para crear la directiva.
 
 ![](../images/policies/policy-review.png)
 
-La ficha *[!UICONTROL Browse]* vuelve a aparecer, que ahora lista la directiva recién creada con el estado &quot;Borrador&quot;. Para habilitar la directiva, consulte la siguiente sección.
+Vuelve a aparecer la ficha *[!UICONTROL Examinar]* , que ahora lista la directiva recién creada con el estado &quot;Borrador&quot;. Para habilitar la directiva, consulte la siguiente sección.
 
 ![](../images/policies/created-policy.png)
 
 ## Habilitar o deshabilitar una directiva de uso de datos {#enable}
 
-Puede habilitar o deshabilitar las directivas de uso de datos personalizadas en la *[!UICONTROL Browse]* ficha del espacio de trabajo *[!UICONTROL Policies]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Status]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
+Puede habilitar o deshabilitar las directivas de uso de datos personalizadas en la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Directivas]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Estado]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
 
 ![](../images/policies/enable-policy.png)
 
 ## Pasos siguientes
 
 Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
+
+El siguiente vídeo muestra cómo trabajar con las políticas de uso en la interfaz de usuario de la plataforma de experiencia:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
