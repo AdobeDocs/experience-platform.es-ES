@@ -4,18 +4,23 @@ solution: Experience Platform
 title: Recopilación de datos CRM mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 1%
 
 ---
 
 
 # Recopilación de datos CRM mediante conectores de origen y API
 
-Este tutorial trata los pasos para recuperar datos de un sistema CRM y llevarlos a la plataforma a través de conectores de origen y API.
+El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+
+Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a la plataforma a través de conectores de origen y API.
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un sistema CRM a través de una conexión base válida e información sobre la tabla que desea incluir en Platform, incluyendo la ruta y la estructura de la tabla. Si no tiene esta información, consulte el tutorial sobre [explorar sistemas CRM mediante la API](../explore/crm.md) de servicio de flujo antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un sistema CRM de terceros a través de una conexión válida e información sobre la tabla que desea incluir en Platform, incluida la ruta y estructura de la tabla. Si no tiene esta información, consulte el tutorial sobre [explorar sistemas CRM mediante la API](../explore/crm.md) de servicio de flujo antes de intentar este tutorial.
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
@@ -54,11 +59,23 @@ Para poder introducir datos externos en la plataforma mediante conectores de ori
 
 Para crear una clase ad-hoc y un esquema, siga los pasos descritos en el tutorial [de esquema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Al crear una clase ad-hoc, todos los campos encontrados en los datos de origen deben describirse dentro del cuerpo de la solicitud.
 
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. Obtenga y almacene el identificador único (`$id`) del esquema ad-hoc y, a continuación, continúe con el paso siguiente de este tutorial.
+Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. El identificador único (`$id`) del esquema ad-hoc es necesario para continuar con el siguiente paso de este tutorial.
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en una conexión base, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+
+Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
+
+Utilice los siguientes valores de enumeración para los conectores **basados en** archivos:
+
+| Data.format | Valor de enumeración |
+| ----------- | ---------- |
+| Archivos delimitados | `delimited` |
+| Archivos JSON | `json` |
+| Archivos de parquet | `parquet` |
+
+Para todos los conectores **basados en** tablas, utilice el valor enum: `tabular`.
 
 **Formato API**
 
@@ -70,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -118,17 +135,19 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `baseConnectionId` | ID de una conexión base para un sistema CRM. |
+| `baseConnectionId` | ID de conexión única del sistema CRM de terceros al que accede. |
 | `data.schema.id` | ID del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
+| `connectionSpec.id` | El ID de especificación de conexión asociado a su sistema CRM de terceros específico. Consulte el [apéndice](#appendix) para obtener una lista de los ID de especificaciones de conexión. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Almacene este valor tal como se requiere en pasos posteriores para crear una conexión de destinatario.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en un paso posterior para crear un flujo de datos.
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -180,7 +199,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles del esquema recién creado, incluido su identificador único (`$id`). Almacene este ID como sea necesario en pasos posteriores para crear un conjunto de datos, una asignación y un flujo de datos de destinatario.
+Una respuesta correcta devuelve detalles del esquema recién creado, incluido su identificador único (`$id`). Este ID es necesario en pasos posteriores para crear un conjunto de datos, una asignación y un flujo de datos de destinatario.
 
 ```json
 {
@@ -220,7 +239,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de un conjunto de datos de destinatario
 
-Se puede crear un conjunto de datos de destinatario realizando una solicitud POST a la API de servicio de catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destinatario realizando una solicitud POST a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
 **Formato API**
 
@@ -253,7 +272,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado en el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API. Almacene el ID del conjunto de datos de destinatario como se requiere en pasos posteriores para crear una conexión de destinatario y un flujo de datos.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado en el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API. El ID del conjunto de datos de destinatario es necesario en pasos posteriores para crear una conexión de destinatario y un flujo de datos.
 
 ```json
 [
@@ -261,15 +280,9 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Creación de una conexión base de datos
-
-Para crear una conexión de destinatario e ingerir datos externos en la plataforma, primero se debe adquirir una conexión de base de datos.
-
-Para crear una conexión de base de datos, siga los pasos descritos en el tutorial [de conexión de base de](../create-dataset-base-connection.md)datos.
-
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de datos. Obtenga y almacene el identificador único (`$id`) de la conexión base y continúe con el siguiente paso de este tutorial.
-
 ## Creación de una conexión de destinatario
+
+Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 Ahora tiene los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
@@ -283,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -304,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -312,12 +323,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la conexión base de datos. |
 | `data.schema.id` | El `$id` del esquema XDM de destinatario. |
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión para su CRM. |
-
->[!NOTE] Al crear una conexión de destinatario, asegúrese de utilizar el valor de conexión base del conjunto de datos para la conexión base `id` en lugar de la conexión base del conector de origen de terceros.
+| `connectionSpec.id` | ID de especificación de conexión fija al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -386,7 +394,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Almacene este valor como se requiere en un paso posterior para crear un flujo de datos.
+Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Este valor es necesario en un paso posterior para crear un flujo de datos.
 
 ```json
 {
@@ -456,7 +464,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 }
 ```
 
-## Buscar especificaciones de flujo de datos {#specs}
+## Recuperar especificaciones de flujo de datos {#specs}
 
 Un flujo de datos es responsable de recopilar datos de las fuentes y de traerlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos responsables de recopilar datos CRM.
 
@@ -478,7 +486,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de llevar los datos del sistema CRM a la plataforma. Almacene el valor del `id` campo como se requiere en el paso siguiente para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de llevar los datos del sistema CRM a la plataforma. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -611,6 +619,8 @@ El último paso para recopilar datos CRM es crear un flujo de datos. A partir de
 
 Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
 
+Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+
 **Formato API**
 
 ```http
@@ -641,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -663,10 +667,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `flowSpec.id` | Id. de especificación de flujo de datos |
-| `sourceConnectionIds` | ID de conexión de origen |
-| `targetConnectionIds` | ID de conexión de Destinatario |
-| `transformations.params.mappingId` | ID de asignación |
+| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
+| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
@@ -675,6 +682,8 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -684,3 +693,14 @@ Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
+
+## Apéndice
+
+La sección siguiente lista los diferentes conectores de origen CRM y sus especificaciones de conexiones.
+
+### Especificación de conexión
+
+| Nombre del conector | Especificación de conexión |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
