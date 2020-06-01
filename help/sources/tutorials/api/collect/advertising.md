@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Recopilación de datos de publicidad a través de las API y los conectores de origen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
+workflow-type: tm+mt
+source-wordcount: '1596'
+ht-degree: 1%
 
 ---
 
 
 # Recopilación de datos de publicidad a través de las API y los conectores de origen
 
-Este tutorial trata los pasos para recuperar datos de un sistema de publicidad y llevarlos a la plataforma a través de los conectores de origen y las API.
+El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+
+En este tutorial se explican los pasos para recuperar datos de una aplicación de publicidad de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 
 ## Primeros pasos
 
@@ -54,11 +59,23 @@ Para poder introducir datos externos en la plataforma mediante conectores de ori
 
 Para crear una clase ad-hoc y un esquema, siga los pasos descritos en el tutorial [de esquema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Al crear una clase ad-hoc, todos los campos encontrados en los datos de origen deben describirse dentro del cuerpo de la solicitud.
 
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. Obtenga y almacene el identificador único (`$id`) del esquema ad-hoc y, a continuación, continúe con el paso siguiente de este tutorial.
+Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. El identificador único (`$id`) del esquema ad-hoc es necesario para continuar con el siguiente paso de este tutorial.
 
 ## Creación de una conexión de origen {#source}
 
 Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en una conexión base, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+
+Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
+
+Utilice los siguientes valores de enumeración para los conectores **basados en** archivos:
+
+| Data.format | Valor de enumeración |
+| ----------- | ---------- |
+| Archivos delimitados | `delimited` |
+| Archivos JSON | `json` |
+| Archivos de parquet | `parquet` |
+
+Para todos los conectores **basados en** tablas, utilice el valor enum: `tabular`.
 
 **Formato API**
 
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
         "description": "Advertising source connection",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -99,10 +116,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | El ID de conexión de la aplicación de publicidad |
+| `baseConnectionId` | ID de conexión única de la aplicación de publicidad de terceros a la que está accediendo. |
 | `data.schema.id` | El `$id` funcionamiento del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
-| `connectionSpec.id` | ID de especificación de conexión de la aplicación de publicidad. |
+| `connectionSpec.id` | ID de especificación de conexión asociada a la aplicación de publicidad específica de terceros. |
 
 **Respuesta**
 
@@ -273,17 +290,11 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Creación de una conexión base de datos
-
-Para crear una conexión de destinatario e ingerir datos externos en la plataforma, primero se debe adquirir una conexión de base de datos.
-
-Para crear una conexión de base de datos, siga los pasos descritos en el tutorial [de conexión de base de](../create-dataset-base-connection.md)datos.
-
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de datos. Obtenga y almacene el identificador único (`$id`) de la conexión base y continúe con el siguiente paso de este tutorial.
-
 ## Creación de una conexión de destinatario
 
-Ahora tiene los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato API**
 
@@ -302,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "4316ba76-e66b-4218-96ba-76e66bf21802",
         "name": "Target Connection for advertising",
         "description": "Target Connection for advertising",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -324,12 +333,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la conexión base de datos. |
 | `data.schema.id` | El `$id` del esquema XDM de destinatario. |
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión para la publicidad. |
-
->[!IMPORTANT] Al crear una conexión de destinatario, asegúrese de utilizar el valor de conexión base del conjunto de datos para la conexión base `id` en lugar del ID de conexión del conector de origen de terceros.
+| `connectionSpec.id` | ID de especificación de conexión fija al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -398,73 +404,16 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Almacene este valor como se requiere en un paso posterior para crear un flujo de datos.
+Una respuesta correcta devuelve detalles de la asignación recién creada, incluido su identificador único (`id`). Este valor es necesario en un paso posterior para crear un flujo de datos.
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc"
+    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "version": 0,
+    "createdDate": 1589398562232,
+    "modifiedDate": 1589398562232,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
@@ -623,6 +572,8 @@ El último paso hacia la recopilación de datos publicitarios es crear un flujo 
 
 Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
 
+Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+
 **Formato API**
 
 ```https
@@ -655,7 +606,7 @@ curl -X POST \
             {
             "name": "Mapping",
             "params": {
-                "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                "mappingId": "febec6a6785e45ea9ed594422cc483d7",
                 "mappingVersion": "0"
                 }
             }
@@ -670,10 +621,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `flowSpec.id` | Id. de especificación de flujo de datos |
-| `sourceConnectionIds` | ID de conexión de origen |
-| `targetConnectionIds` | ID de conexión de Destinatario |
-| `transformations.params.mappingId` | ID de asignación |
+| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
+| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
@@ -681,7 +635,8 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
