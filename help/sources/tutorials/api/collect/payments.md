@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Recopilación de datos de pago mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ Este tutorial trata los pasos para recuperar datos de una aplicación de pago e 
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un sistema de pago a través de una conexión base válida, así como información sobre el archivo que desea introducir en Platform (incluyendo la ruta y estructura del archivo). Si no tiene esta información, consulte el tutorial sobre [explorar una aplicación de pagos mediante la API](../explore/payments.md) de servicio de flujo antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un sistema de pago a través de una conexión válida, así como información sobre el archivo que desea introducir en Platform (incluyendo la ruta y estructura del archivo). Si no tiene esta información, consulte el tutorial sobre [explorar una aplicación de pagos mediante la API](../explore/payments.md) de servicio de flujo antes de intentar este tutorial.
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
@@ -62,6 +65,18 @@ Siga los pasos descritos en la guía para desarrolladores hasta que haya creado 
 
 Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
 
+Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
+
+Utilice los siguientes valores de enumeración para los conectores **basados en** archivos:
+
+| Data.format | Valor de enumeración |
+| ----------- | ---------- |
+| Archivos delimitados | `delimited` |
+| Archivos JSON | `json` |
+| Archivos de parquet | `parquet` |
+
+Para todos los conectores **basados en** tablas, utilice el valor enum: `tabular`.
+
 **Formato API**
 
 ```https
@@ -83,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "Paypal",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -101,7 +116,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | El ID de conexión de la aplicación de pagos |
+| `baseConnectionId` | ID de conexión única de la aplicación de pagos de terceros a la que está accediendo. |
 | `data.schema.id` | El `$id` funcionamiento del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
 | `connectionSpec.id` | ID de especificación de conexión de la aplicación de pagos. |
@@ -275,17 +290,11 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Creación de una conexión base de datos
-
-Para poder ingerir datos externos en la plataforma, primero se debe adquirir una conexión base de datos de la plataforma de experiencia.
-
-Para crear una conexión de base de datos, siga los pasos descritos en el tutorial [de conexión de base de](../create-dataset-base-connection.md)datos.
-
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de datos. Obtenga y almacene el identificador único (`$id`) y continúe utilizándolo como ID de conexión en el paso siguiente para crear una conexión de destinatario.
-
 ## Creación de una conexión de destinatario
 
-Ahora tiene con usted los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Ahora puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen de entrada.
+Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato API**
 
@@ -304,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "72c47da8-c225-40c0-847d-a8c22550c01b",
         "name": "Target Connection for payments",
         "description": "Target Connection for payments",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
             }
@@ -325,10 +332,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la conexión base de datos. |
 | `data.schema.id` | El `$id` del esquema XDM de destinatario. |
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión para la aplicación de pagos. |
+| `connectionSpec.id` | ID de especificación de conexión fija al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
@@ -578,6 +584,8 @@ El último paso para recopilar datos es crear un flujo de datos. En este punto, 
 
 Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
 
+Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+
 **Formato API**
 
 ```https
@@ -627,11 +635,21 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1567411548",
-            "frequency":"minute",
+            "frequency": "minute",
             "interval":"30"
         }
     }'
 ```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
+| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
@@ -639,7 +657,8 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
