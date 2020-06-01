@@ -4,7 +4,7 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -35,8 +35,10 @@ Un minorista en línea quiere llegar a los clientes existentes a través de las 
 
 
 Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y quiere ofrecer a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
-Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando como identificadores las direcciones de correo electrónico con hash.
-A continuación, pueden combinar sus datos sin conexión con los datos de actividad en línea existentes para crear nuevos segmentos de audiencia que pueden destinatario a través del destino de Facebook.
+
+Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando las direcciones de correo electrónico como identificadores.
+
+A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia que pueden destinatario a través del destino de Facebook.
 
 ## Especificaciones del destino {#destination-specs}
 
