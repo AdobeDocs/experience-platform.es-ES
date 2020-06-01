@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Recopilar datos de un sistema de éxito de cliente mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: c216e321fd913773578107df027d953f10d99a36
+source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +16,11 @@ source-git-commit: c216e321fd913773578107df027d953f10d99a36
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-En este tutorial se explican los pasos para recuperar datos de un sistema de éxito del cliente (&quot;CS&quot;) e incorporarlos a la plataforma mediante conectores de origen y API.
+En este tutorial se explican los pasos para recuperar datos de un sistema de éxito de cliente e incorporarlos a la plataforma mediante conectores de origen y API.
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un sistema CS de terceros a través de una conexión de base válida e información sobre el archivo que desea introducir en Platform, incluida la ruta y la estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar una base de datos o sistema NoSQL con la API](../explore/customer-success.md) de servicio de flujo antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un sistema de éxito de cliente de terceros a través de una conexión válida e información sobre el archivo que desea introducir en Platform, incluida la ruta y la estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar una base de datos o sistema NoSQL con la API](../explore/customer-success.md) de servicio de flujo antes de intentar este tutorial.
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
@@ -28,7 +31,7 @@ Este tutorial también requiere que tenga conocimientos prácticos sobre los sig
 * [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en la plataforma de experiencias como archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema CS mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a un sistema de éxito de clientes mediante la API de servicio de flujo.
 
 ### Leer llamadas de API de muestra
 
@@ -56,11 +59,23 @@ Para poder introducir datos externos en la plataforma mediante conectores de ori
 
 Para crear una clase ad-hoc y un esquema, siga los pasos descritos en el tutorial [de esquema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Al crear una clase ad-hoc, todos los campos encontrados en los datos de origen deben describirse dentro del cuerpo de la solicitud.
 
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. Obtenga y almacene el identificador único (`$id`) del esquema ad-hoc y, a continuación, continúe con el paso siguiente de este tutorial.
+Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. El identificador único (`$id`) del esquema ad-hoc es necesario para continuar con el siguiente paso de este tutorial.
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en una conexión base, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+
+Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
+
+Utilice los siguientes valores de enumeración para los conectores **basados en** archivos:
+
+| Data.format | Valor de enumeración |
+| ----------- | ---------- |
+| Archivos delimitados | `delimited` |
+| Archivos JSON | `json` |
+| Archivos de parquet | `parquet` |
+
+Para todos los conectores **basados en** tablas, utilice el valor enum: `tabular`.
 
 **Formato API**
 
@@ -79,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source connection for CS",
-        "baseConnectionId": "60a5c8b9-3c30-43ba-a5c8-b93c3093ba66",
-        "description": "Source Connection for CS to ingest Account",
+        "name": "Source connection for Customer Success",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "description": "Source connection for a Customer Success connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/classes/51dd6dce662f8aebe4353c74bbb49c77cb3cbcd6c6b29021",
+                "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/classes/5d032b2230d5495aef49437d04d1c5fac4788b17ae85bf93",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -93,18 +108,18 @@ curl -X POST \
             "path": "Account"
         },
         "connectionSpec": {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
+            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
-    }
-}'
+        }
+    }}'
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | El ID de una conexión base para un sistema CS |
+| `baseConnectionId` | ID de conexión única del sistema de éxito de clientes de terceros al que accede. |
 | `data.schema.id` | El `$id` funcionamiento del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
-| `connectionSpec.id` | ID de especificación de conexión para un sistema CS. |
+| `connectionSpec.id` | ID de especificación de conexión asociada con el sistema de éxito de clientes de terceros específico. Consulte el [apéndice](#appendix) para obtener una lista de los ID de especificaciones de conexión. |
 
 **Respuesta**
 
@@ -112,8 +127,8 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ```json
 {
-    "id": "01b7cbea-cf18-4552-b7cb-eacf18055294",
-    "etag": "\"2103ac94-0000-0200-0000-5e543ad70000\""
+    "id": "17faf955-2cf8-4b15-baf9-552cf88b1540",
+    "etag": "\"2900a761-0000-0200-0000-5ed18cea0000\""
 }
 ```
 
@@ -145,8 +160,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for CS",
-        "description": "Target schema for CS",
+        "title": "Target schema for a Customer Success connector",
+        "description": "Target schema for Database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -158,6 +173,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -167,13 +186,13 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-    "meta:altId": "_{TENANT_ID}.schemas.deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
+    "meta:altId": "_{TENANT_ID}.schemas.b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for CS",
+    "title": "Target schema for a Customer Success connector",
     "type": "object",
-    "description": "Target schema for CS",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -208,13 +227,14 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1582578764554,
-        "repo:lastModifiedDate": 1582578764554,
+        "repo:createdDate": 1590791550228,
+        "repo:lastModifiedDate": 1590791550228,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "213e4bf7cbac74e3a9e6f988da321e2f7353acacd9ea651a5652bd49b28b8d2a"
+        "eTag": "d730441903b95425145d9c742647ab4426d86549159182913e5f99cc904be5b1",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
@@ -229,7 +249,7 @@ Se puede crear un conjunto de datos de destinatario realizando una solicitud POS
 **Formato API**
 
 ```http
-POST /dataSets
+POST catalog/dataSets
 ```
 
 **Solicitud**
@@ -243,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for CS",
+        "name": "Target dataset for a Customer Success connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -261,21 +281,15 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ```json
 [
-    "@/dataSets/5e543e8a60b15218ad44b95f"
+    "@/dataSets/5ed18e0f4f90b719196f44a9"
 ]
 ```
 
-## Creación de una conexión base de datos
-
-Para poder ingerir datos externos en la plataforma, primero se debe adquirir una conexión base de datos de la plataforma de experiencia.
-
-Para crear una conexión de base de datos, siga los pasos descritos en el tutorial [de conexión de base de](../create-dataset-base-connection.md)datos.
-
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de datos. Obtenga y almacene el identificador único (`$id`) y continúe utilizándolo como ID de conexión base en el paso siguiente para crear una conexión de destinatario.
-
 ## Creación de una conexión de destinatario
 
-Ahora tiene con usted los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Ahora puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen de entrada.
+Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato API**
 
@@ -314,10 +328,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la conexión base de datos. |
 | `data.schema.id` | El `$id` del esquema XDM de destinatario. |
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión para el sistema de éxito del cliente. |
+| `connectionSpec.id` | ID de especificación de conexión fija al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
@@ -325,8 +338,8 @@ Una respuesta correcta devuelve el identificador único (`id`) de la nueva conex
 
 ```json
 {
-    "id": "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5",
-    "etag": "\"5d02211d-0000-0200-0000-5e543f0f0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -352,12 +365,20 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
                 "sourceAttribute": "Name",
                 "identity": false,
                 "identityGroup": null,
@@ -365,16 +386,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "CreatedDate",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -394,75 +407,18 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "7c3547d3cfc14f568a51c32b4c0ed739",
+    "version": 0,
+    "createdDate": 1590792069173,
+    "modifiedDate": 1590792069173,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
-## Buscar especificaciones de flujo de datos {#specs}
+## Recuperar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos mediante una solicitud GET a la API de servicio de flujo. Las especificaciones de flujo de datos son responsables de recopilar datos de una base de datos externa o sistema NoSQL.
+Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos mediante una solicitud GET a la API de servicio de flujo. Las especificaciones de flujo de datos son responsables de recopilar datos de un sistema de éxito de clientes de terceros.
 
 **Formato API**
 
@@ -482,7 +438,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de llevar los datos del sistema CS a la plataforma. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de llevar los datos del sistema de éxito del cliente a la plataforma. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -613,7 +569,7 @@ El último paso para recopilar datos es crear un flujo de datos. En este punto, 
 * [ID de asignación](#mapping)
 * [Id. de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
+Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
 
 **Formato API**
 
@@ -631,41 +587,40 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Creating a dataflow for a Customer Success connector",
+        "description": "Creating a dataflow for a Customer Success connector",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "01b7cbea-cf18-4552-b7cb-eacf18055294"
+            "17faf955-2cf8-4b15-baf9-552cf88b1540"
         ],
         "targetConnectionIds": [
-            "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5"
+            "bc36ecd6-3b04-4067-b6ec-d63b04b0673d"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
+                        "name": "date-time"
                     }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1590792316",
+            "frequency": "minute",
+            "interval": "15",
+            "backfill": "true"
         }
     }'
 ```
@@ -676,13 +631,35 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
+| Propiedad | Descripción |
+| --- | --- |
+| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
+| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
+
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de un sistema CS de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de un sistema de éxito del cliente de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
+
+## Apéndice
+
+La sección siguiente lista los diferentes conectores de origen de almacenamiento de nube y sus especificaciones de conexiones.
+
+### Especificación de conexión
+
+| Nombre del conector | Especificación de conexión |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
