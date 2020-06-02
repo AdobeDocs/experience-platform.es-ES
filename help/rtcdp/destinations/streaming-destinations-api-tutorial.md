@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar a destinos de flujo continuo y activar datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`:: *Para conexiones de Amazon Kinesis.* Proporcione el nombre del flujo de datos existente en su cuenta de Amazon Kinesis. CDP en tiempo real de Adobe exportará datos a este flujo.
 * `{REGION}`:: *Para conexiones de Amazon Kinesis.* Región de su cuenta de Amazon Kinesis donde CDP en tiempo real de Adobe transmitirá sus datos.
 * `{EVENT_HUB_NAME}`:: *Para conexiones de los centros de Evento de Azure.* Rellene el nombre de Azure Evento Hub, donde CDP en tiempo real de Adobe transmitirá sus datos. Para obtener más información, consulte [Creación de un concentrador](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de evento en la documentación de Microsoft.
-* `{EVENT_HUB_NAMESPACE}`:: *Para conexiones de los centros de Evento de Azure.* Complete la Área de nombres de los centros de Evento de Azure, donde CDP de Adobe en tiempo real generará sus datos. Para obtener más información, consulte [Creación de una Área de nombres](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de centros de Evento en la documentación de Microsoft.
 
 **Respuesta**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:: Utilice el flujo para el destino de flujo que desea conectar. Para obtener la especificación de flujo, realice una operación GET en el `flowspecs` extremo. Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de flujo al que desea conectarse.
+* `{FLOW_SPEC_ID}`:: El ID de especificación de flujo para los destinos basados en perfil es `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilice este valor en la llamada.
 * `{SOURCE_CONNECTION_ID}`:: Utilice el ID de conexión de origen obtenido en el paso [Conectar con la plataforma](#connect-to-your-experience-platform-data)de experiencia.
 * `{TARGET_CONNECTION_ID}`:: Utilice el ID de conexión de destinatario obtenido en el paso [Conectar con destino](#connect-to-streaming-destination)de flujo continuo.
 
@@ -392,7 +390,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y
 ```
 
 
-## Activar datos en el nuevo destino
+## Activar datos en el nuevo destino {#activate-data}
 
 ![Pasos de destino, paso 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`:: Utilice el flujo de datos obtenido en el paso anterior.
 * `{ETAG}`:: Utilice la etiqueta que obtuvo en el paso anterior.
 * `{SEGMENT_ID}`:: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, seleccione API **de servicio de** segmentación en el menú de navegación de la izquierda y busque la `GET /segment/jobs` operación.
-* `{PROFILE_ATTRIBUTE}`: Por ejemplo, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`:: Por ejemplo, `personalEmail.address` o `person.lastName`
 
 **Respuesta**
 
@@ -503,8 +513,23 @@ La respuesta devuelta debe incluir en el `transformations` parámetro los segmen
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ La respuesta devuelta debe incluir en el `transformations` parámetro los segmen
         }
     }
 ],
+```
+
+**Datos exportados**
+
+>[!IMPORTANT]
+>
+> Además de los atributos de perfil y los segmentos en el paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en AWS Kinesis y Azure Evento Hubs también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo, [ECID](https://docs.adobe.com/content/help/es-ES/id-service/using/intro/id-request.html), ID móvil, ID de Google, dirección de correo electrónico, etc.). Vea un ejemplo a continuación.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Pasos siguientes
