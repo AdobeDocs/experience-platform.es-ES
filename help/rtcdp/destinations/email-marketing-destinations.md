@@ -4,7 +4,10 @@ seo-title: Destinos de mercadotecnia de correo electrónico
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +24,11 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 ## Paso 1: Conectar destino {#connect-destination}
 
-1. En **[!UICONTROL Connections > Destinations]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione **[!UICONTROL Connect destination]**.
+1. En **[!UICONTROL Conexiones > Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
-   ![Conectar al destino](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![Conectar al destino](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
-2. En el asistente de Connect, seleccione la ubicación del **[!UICONTROL Connection type]** almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect]**.
+2. En el asistente de Connect, seleccione el tipo **** de conexión para la ubicación del almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
 Para las conexiones **** S3, debe proporcionar el ID de clave de acceso y la clave de acceso secreto.
 
