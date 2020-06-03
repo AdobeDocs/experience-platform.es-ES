@@ -4,7 +4,10 @@ seo-title: Destino de publicidades de Google
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 seo-description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ads, anteriormente conocido como Google AdWords, es un servicio de public
 
 Tenga en cuenta los siguientes detalles que son específicos de los destinos de Google Ads:
 
-* Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a los destinos de Google Ads: ID de cookie de **Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
+* Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a los destinos de Google Ads: **ID de cookie de Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * Las audiencias activadas se crean mediante programación en la plataforma Google.
 * Actualmente, CDP en tiempo real de Adobe no incluye una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
 
@@ -48,15 +51,15 @@ Antes de crear el destino de Google Ads en Adobe Real-time CDP, debe ponerse en 
 
 ## Crear destino
 
-1. En **[!UICONTROL Connections > Destinations]**, seleccione Publicidades de Google y, a continuación, **[!UICONTROL Create destination]**.
+1. En **[!UICONTROL Conexiones > Destinos]**, seleccione Publicidades de Google y, a continuación, **[!UICONTROL Crear destino]**.
    ![Destino de Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. En el flujo de trabajo Crear destino, rellene el [!UICONTROL Basic Information] para el destino.
+2. En el flujo de trabajo Crear destino, rellene la información  básica del destino. <br>
    ![Información básica de Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **[!UICONTROL Name]**:: Rellene el nombre preferido para este destino.
-* **[!UICONTROL Description]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
-* **[!UICONTROL Account Type]**:: AdWords es la única opción disponible.
-* **[!UICONTROL Account ID]**:: Rellene su ID de cuenta con Google Ads. El formato de ID suele ser 123-456-7890.
+* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
+* **[!UICONTROL Tipo]** de cuenta: AdWords es la única opción disponible.
+* **[!UICONTROL ID]** de cuenta: Rellene su ID de cuenta con Google Ads. El formato de ID suele ser 123-456-7890.
 
 ## Activar segmentos en anuncios de Google
 
