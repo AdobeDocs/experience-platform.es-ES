@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Guía del usuario de JupyterLab
 
-JupyterLab es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en la plataforma de Adobe Experience. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
+JupyterLab es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en [!DNL Adobe Experience Platform]. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
 
 Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 
@@ -29,7 +29,7 @@ La siguiente lista describe algunas de las características exclusivas de Jupyte
 | **Kernels** | Los Kernels proporcionan al portátil y a otros front-end de JupyterLab la capacidad de ejecutar e introducir código en diferentes lenguajes de programación. La plataforma de experiencias proporciona núcleos adicionales para admitir el desarrollo en Python, R, PySpark y Spark. Consulte la sección [kernels](#kernels) para obtener más detalles. |
 | **Acceso a datos** | Acceda directamente a los conjuntos de datos existentes desde JupyterLab con compatibilidad total con funciones de lectura y escritura. |
 | **Integración de servicios de plataforma** | Las integraciones integradas le permiten utilizar otros servicios de plataforma directamente desde JupyterLab. En la sección sobre [Integración con otros servicios](#service-integration)de la Plataforma se proporciona una lista completa de las integraciones admitidas. |
-| **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y la plataforma de experiencia, incluida la comunicación entre servicio y servicio de plataforma, se cifran y autentican a través del Sistema de administración de identidades de <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe (IMS)</a>. |
+| **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y la plataforma de experiencia, incluida la comunicación entre servicio y servicio de plataforma, se cifran y autentican a través del <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliotecas de desarrollo** | En la plataforma de experiencia, JupyterLab proporciona bibliotecas preinstaladas para Python, R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
 | **Controlador de biblioteca** | Cuando las bibliotecas preinstaladas no están disponibles para sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de Platform y mantener los datos seguros. Consulte la sección [kernels](#kernels) para obtener más detalles. |
 
@@ -182,7 +182,7 @@ Todas las propiedades configurables se enumeran en la tabla siguiente:
 | Propiedad | Descripción | Tipo |
 | :------- | :---------- | :-----:|
 | clase | El tipo de sesión (requerido) | `session kind`_ |
-| proxyUser | El usuario que se suplantará y que ejecutará esta sesión (por ejemplo, bob) | string |
+| proxyUser | Usuario que se suplantará y que ejecutará esta sesión (por ejemplo, bob) | string |
 | jars | Archivos que se van a colocar en la Java `classpath` | lista de rutas |
 | pyFiles | Los archivos que se van a colocar en la variable `PYTHONPATH` | lista de rutas |
 | archivos | Archivos que se van a colocar en el directorio de trabajo del ejecutor | lista de rutas |
