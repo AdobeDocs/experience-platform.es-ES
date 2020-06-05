@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas en la API de atribución
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Aparece el cuadro de diálogo de edición, que le permite editar la descripción
 
 ![editar pover](./images/insights/edit-popover.png)
 
-### Más acciones
+### Más acciones {#more-actions}
 
 El botón *Más acciones* se encuentra en la navegación superior derecha junto a *Editar*. Al hacer clic en **Más acciones** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
 
