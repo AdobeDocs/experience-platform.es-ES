@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analizar los datos con portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Este tutorial se centra en cómo utilizar los blocs de notas Jupyter, creados en
 
 Se introducen los siguientes conceptos:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter y está estrechamente integrada en Adobe Experience Platform.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter, y está estrechamente integrada en [!DNL Adobe Experience Platform].
 - **Lotes:** Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad. Se crean nuevos lotes cuando se agregan datos a un conjunto de datos.
 - **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la guía [de SDK](../authoring/platform-sdk.md) de plataforma.
 
@@ -38,7 +38,7 @@ De forma predeterminada, la fórmula Tensorflow funciona en un clúster de GPU y
 
 ### Crear un bloc de notas nuevo
 
-En la interfaz de usuario de Adobe Experience Platform, haga clic en la ficha Ciencias de datos del menú superior para ir al área de trabajo de ciencias de datos. Desde esta página, haga clic en la ficha JupyterLab que abrirá el iniciador de JupyterLab. Debería ver una página similar a esta.
+En la interfaz de usuario, haga clic en la ficha Ciencias de datos del menú superior para ir al área de trabajo de ciencias de datos. [!DNL Adobe Experience Platform] Desde esta página, haga clic en la ficha JupyterLab que abrirá el iniciador de JupyterLab. Debería ver una página similar a esta.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ La fórmula de ventas minoristas es un ejemplo independiente que utiliza el mism
 
 >[!NOTE] El `data_access_sdk_python` se ha desaprobado y ya no se recomienda. Consulte el tutorial sobre la [conversión del SDK de acceso a datos al SDK](../authoring/platform-sdk.md) de plataforma para convertir su código. Los mismos pasos a continuación se aplican para este tutorial.
 
-Pasaremos a acceder a los datos internamente desde Adobe Experience Platform y a los datos de forma externa. Utilizaremos la `data_access_sdk_python` biblioteca para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca pandas Python.
+Pasaremos a acceder a los datos internamente desde [!DNL Adobe Experience Platform] y a los datos externamente. Utilizaremos la `data_access_sdk_python` biblioteca para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca pandas Python.
 
 #### Datos externos
 
@@ -70,7 +70,7 @@ Finalmente, podemos echar un vistazo a cómo se ven nuestros datos. Podemos util
 
 #### Datos de la plataforma de experiencia
 
-Ahora, pasaremos a acceder a los datos de la plataforma de experiencia.
+Ahora, vamos a pasar a acceder a [!DNL Experience Platform] los datos.
 
 ##### Por ID de conjunto de datos
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Si está trabajando en otros núcleos que no sean Python, consulte [esta página](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) para acceder a los datos de la plataforma de Adobe Experience.
+Si está trabajando en otros núcleos que no sean Python, consulte [esta página](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) para acceder a los datos del [!DNL Adobe Experience Platform].
 
 Si selecciona la celda ejecutable y pulsa el botón de reproducción en la barra de herramientas, se ejecutará el código ejecutable. El resultado para `head()` será una tabla con las claves del conjunto de datos como columnas y las primeras n filas del conjunto de datos. `head()` acepta un argumento integer para especificar cuántas líneas desea generar. De forma predeterminada, es 5.
 
@@ -190,7 +190,7 @@ Observe la diagonal de 1&#39;s hacia abajo en el centro. Esto muestra que cuando
 
 ## Pasos siguientes
 
-En este tutorial se explica cómo crear un nuevo bloc de notas Jupyter en el área de trabajo de ciencias de datos y cómo acceder a los datos de forma externa, así como desde la plataforma de Adobe Experience. Concretamente, dimos los siguientes pasos:
+En este tutorial se explica cómo crear un nuevo bloc de notas de Jupyter en el área de trabajo de ciencias de datos y cómo acceder a los datos tanto desde el exterior como desde [!DNL Adobe Experience Platform]. Concretamente, dimos los siguientes pasos:
 - Crear un nuevo bloc de notas de Jupyter
 - Obtener acceso a conjuntos de datos y esquemas
 - Explorar conjuntos de datos
