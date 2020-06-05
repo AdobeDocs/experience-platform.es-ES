@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del SDK de la plataforma
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '451'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +22,7 @@ Este tutorial le proporciona información sobre la conversión `data_access_sdk_
 
 ## Generar autenticación {#build-authentication}
 
-La autenticación es necesaria para realizar llamadas a Adobe Experience Platform y está compuesta por una clave de API, un ID de organización de IMS, un token de usuario y un token de servicio.
+La autenticación es necesaria para realizar llamadas a [!DNL Adobe Experience Platform]la clave de API, el ID de organización de IMS, un token de usuario y un token de servicio.
 
 ### Python
 
