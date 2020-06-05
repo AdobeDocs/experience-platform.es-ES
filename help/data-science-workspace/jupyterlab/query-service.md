@@ -4,56 +4,59 @@ solution: Experience Platform
 title: Servicio de Consulta en el bloc de notas de Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '799'
+ht-degree: 1%
 
 ---
 
 
 # Servicio de Consulta en el bloc de notas de Jupyter
 
-Adobe Experience Platform le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencias de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar.
+[!DNL Adobe Experience Platform] le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencia de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar.
 
-Este tutorial muestra consultas SQL de muestra para casos de uso comunes con el fin de explorar, transformar y analizar datos de Adobe Analytics.
+Este tutorial muestra consultas SQL de muestra para casos de uso comunes para explorar, transformar y analizar [!DNL Adobe Analytics] datos.
 
 ## Primeros pasos
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
-- Acceso a Adobe Experience Platform. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar
 
-- Un conjunto de datos de Adobe Analytics
+- Un [!DNL Adobe Analytics] conjunto de datos
 
 - Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
    - [Modelo de datos de experiencia (XDM) y sistema XDM](../../xdm/home.md)
    - [Servicio de Consulta](../../query-service/home.md)
    - [Sintaxis SQL del servicio de Consulta](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## Acceso a JupyterLab y servicio de Consulta {#access-jupyterlab-and-query-service}
 
-1. En [Experience Platform](https://platform.adobe.com), vaya a **[!UICONTROL Notebooks]** la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
+1. En [la plataforma](https://platform.adobe.com)de experiencias, vaya a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL File]** y seleccione **[!UICONTROL New Launcher]**.
+   > [!NOTE] Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL Archivo]** y, a continuación, seleccione **[!UICONTROL Nuevo iniciador]**.
 
-2. En la ficha Iniciador, haga clic en el icono **[!UICONTROL Blank]** de un entorno Python 3 para abrir un bloc de notas vacío.
+2. En la ficha Iniciador, haga clic en el icono **[!UICONTROL Vacío]** de un entorno Python 3 para abrir un bloc de notas vacío.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 es actualmente el único entorno admitido para el servicio de Consulta en portátiles.
 
-3. En el carril de selección de la izquierda, haga clic en el **[!UICONTROL Data]** **[!UICONTROL Datasets]** icono y en el doble haga clic en el directorio para realizar la lista de todos los conjuntos de datos.
+3. En el carril de selección de la izquierda, haga clic en el icono **[!UICONTROL Datos]** y en el doble haga clic en el directorio **[!UICONTROL Conjuntos]** de datos para lista de todos los conjuntos de datos.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Busque un conjunto de datos de Adobe Analytics para explorar y haga clic con el botón secundario en el listado; haga clic en **[!UICONTROL Query Data in Notebook]** para generar consultas SQL en el bloc de notas vacío.
+4. Busque un conjunto de datos para explorar y haga clic con el botón secundario en el listado, haga clic en Datos de [!DNL Adobe Analytics] Consulta en el bloc de notas **** para generar consultas SQL en el bloc de notas vacío.
 
 5. Haga clic en la primera celda generada que contenga la función `qs_connect()` y ejecútela haciendo clic en el botón de reproducción. Esta función crea una conexión entre la instancia del bloc de notas y el servicio de Consulta.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copie el nombre del conjunto de datos de Adobe Analytics de la segunda consulta SQL generada; después será el valor `FROM`.
+6. Copie el nombre del [!DNL Adobe Analytics] conjunto de datos de la segunda consulta SQL generada, será el valor posterior `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -78,21 +81,22 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    target_day = "01"
    ```
 
-   - `target_table` :: Nombre del conjunto de datos de Adobe Analytics.
+   - `target_table` :: Nombre del [!DNL Adobe Analytics] conjunto de datos.
    - `target_year` :: Año específico del que proceden los datos de destinatario.
    - `target_month` :: Mes específico del que procede el destinatario.
    - `target_day` :: Día específico del que proceden los datos de destinatario.
+
    >[!NOTE] Puede cambiar estos valores en cualquier momento. Al hacerlo, asegúrese de ejecutar la celda variables para que se apliquen los cambios.
 
 ## Consulta de datos {#query-your-data}
 
-Introduzca las siguientes consultas SQL en celdas de bloc de notas individuales. Para ejecutar una consulta, haga clic en su celda y luego en el **[!UICONTROL play]** botón. Los resultados de consulta o los registros de errores se muestran debajo de la celda ejecutada.
+Introduzca las siguientes consultas SQL en celdas de bloc de notas individuales. Para ejecutar una consulta, haga clic en su celda y luego en el botón de **[!UICONTROL reproducción]** . Los resultados de consulta o los registros de errores se muestran debajo de la celda ejecutada.
 
-Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y el servicio de Consulta puede interrumpirse. En estos casos, reinicie JupyterLab haciendo clic en el **[!UICONTROL Power]** botón situado en la esquina superior derecha.
+Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y el servicio de Consulta puede interrumpirse. En estos casos, reinicie JupyterLab haciendo clic en el botón de **[!UICONTROL alimentación]** situado en la esquina superior derecha.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **[!UICONTROL all]** las celdas para continuar donde lo dejó.
+El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **[!UICONTROL todas]** las celdas para continuar donde lo dejó.
 
 ### Recuento de visitantes por hora {#hourly-visitor-count}
 
