@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen MySQL en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Exp
 
 Bajo la categoría *Bases* de Datos, seleccione **MySQL** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione Origen **de** Connect.
 
-![](../../../../images/tutorials/create/my-sql/sources-catalog.png)
+![](../../../../images/tutorials/create/my-sql/catalog.png)
 
 Aparece la página *Conectar con MySQL* . En esta página, puede usar credenciales nuevas o existentes.
 
@@ -56,13 +56,13 @@ Aparece la página *Conectar con MySQL* . En esta página, puede usar credencial
 
 Si está utilizando nuevas credenciales, seleccione **Nueva cuenta**. En el formulario de entrada que aparece, proporcione la conexión base con un nombre, una descripción opcional y sus credenciales de MySQL. Cuando termine, seleccione **Connect** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
 
-![](../../../../images/tutorials/create/my-sql/new-credentials.png)
+![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Cuenta existente
 
 Para conectar una cuenta existente, seleccione la cuenta MySQL con la que desea conectarse y luego seleccione **Siguiente** para continuar.
 
-![](../../../../images/tutorials/create/my-sql/existing-credentials.png)
+![](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Pasos siguientes
 
