@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1059'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Para utilizar perspectivas para la API del cliente, debe tener disponible una in
 
 ## Información general de la instancia de servicio
 
-En la interfaz de usuario de Adobe Experience Platform, haga clic en **[!UICONTROL Services]** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles. En el contenedor de AI del cliente, haga clic en **[!UICONTROL Open]**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles. En el contenedor de AI del cliente, haga clic en **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ A continuación, se abre la página de perspectivas de esa instancia de servicio
 
 Existen dos formas de vista de los detalles de instancias de servicio: la primera es desde el panel y la segunda desde la instancia de servicio.
 
-Para vista de detalles desde el panel, haga clic en un contenedor de instancia de servicio evitando el hipervínculo adjunto al nombre. Esto abre un carril derecho que proporciona detalles adicionales como la descripción, la frecuencia de puntuación, el objetivo de predicción y la población elegible. Además, puede elegir editar y eliminar la instancia haciendo clic en **[!UICONTROL Edit]** o **[!UICONTROL Delete]**.
+Para vista de detalles desde el panel, haga clic en un contenedor de instancia de servicio evitando el hipervínculo adjunto al nombre. Esto abre un carril derecho que proporciona detalles adicionales como la descripción, la frecuencia de puntuación, el objetivo de predicción y la población elegible. Además, puede elegir editar y eliminar la instancia haciendo clic en **[!UICONTROL Editar]** o **[!UICONTROL Eliminar]**.
 
 ![carril derecho](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Para vista de detalles desde el panel, haga clic en un contenedor de instancia d
 
 ![error al ejecutar el mensaje](../images/insights/failed-run.png)
 
-La segunda forma de vista de detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Puede hacer clic **[!UICONTROL Show more]** en la parte superior derecha para completar una lista desplegable. Se muestran detalles como la definición de la puntuación, cuándo se creó y el tipo de tendencia. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia](./configure.md)de AI de cliente.
+La segunda forma de vista de detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Puede hacer clic en **[!UICONTROL Mostrar más]** en la parte superior derecha para completar una lista desplegable. Se muestran detalles como la definición de la puntuación, cuándo se creó y el tipo de tendencia. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia](./configure.md)de AI de cliente.
 
 ![mostrar más](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ La segunda forma de vista de detalles adicionales para una instancia de servicio
 
 ### Editar una instancia
 
-Para editar una instancia, haga clic en **[!UICONTROL Edit]** en la navegación superior derecha.
+Para editar una instancia, haga clic en **[!UICONTROL Editar]** en la navegación superior derecha.
 
 ![haga clic en el botón de edición](../images/insights/edit-button.png)
 
-Aparece el cuadro de diálogo de edición, que le permite editar la *descripción* y la frecuencia *de puntuación* de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, haga clic **[!UICONTROL Edit]** en en la esquina inferior derecha.
+Aparece el cuadro de diálogo de edición, que le permite editar la *descripción* y la frecuencia *de puntuación* de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, haga clic en **[!UICONTROL Editar]** en la esquina inferior derecha.
 
 ![editar pover](../images/insights/edit-instance.png)
 
 ### Más acciones
 
-El **[!UICONTROL More actions]** botón se encuentra en la navegación superior derecha junto a **[!UICONTROL Edit]**. Al hacer clic en **[!UICONTROL More actions]** se abre un menú desplegable que permite seleccionar una de las siguientes operaciones:
+El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Al hacer clic en **[!UICONTROL Más acciones]** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
 
-- **[!UICONTROL Delete]**:: Elimina la instancia.
-- **[!UICONTROL Access scores]**:: Al hacer clic en las puntuaciones *de* Access, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
-- **[!UICONTROL View run history]**:: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
+- **[!UICONTROL Eliminar]**: Elimina la instancia.
+- **[!UICONTROL Puntuaciones]** de acceso: Al hacer clic en las puntuaciones *de* Access, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
+- **[!UICONTROL Historial]** de ejecución de Vistas: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Para cada bloque de puntuación, se genera una tarjeta que muestra los 10 factor
 
 ### Crear un segmento
 
-Al hacer clic en el **[!UICONTROL Create Segment]** botón de cualquiera de los bloques para baja, media y alta propensión se le redirige al generador de segmentos.
+Al hacer clic en el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques de baja, media y alta propensión se le redirige al generador de segmentos.
 
 >[!NOTE]
->El **[!UICONTROL Create Segment]** botón solo está disponible si el Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el Perfil de clientes en tiempo real, visite la información general [sobre el Perfil de clientes en tiempo](../../../rtcdp/overview.md)real.
+>El botón **[!UICONTROL Crear segmento]** solo está disponible si el Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el Perfil de clientes en tiempo real, visite la información general [sobre el Perfil de clientes en tiempo](../../../rtcdp/overview.md)real.
 
 ![Haga clic en Crear segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Crear un segmento](../images/insights/create-segment.png)
 
-El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Create Segment]** desde la página Perspectivas, la API del cliente agrega automáticamente la información de los bloques seleccionados al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Nombre* y *Descripción* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, haga clic **[!UICONTROL Save]** en en la parte superior derecha.
+El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** en la página Perspectivas, la API del cliente agrega automáticamente la información de los bloques seleccionados al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Nombre* y *Descripción* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, haga clic en **[!UICONTROL Guardar]** en la parte superior derecha.
 
 >!![NOTE] Dado que las puntuaciones de tendencia se escriben en el perfil individual, están disponibles en el Generador de segmentos como cualquier otro atributo de perfil. Al navegar al generador de segmentos para crear nuevos segmentos, puede ver todas las distintas puntuaciones de tendencia en la Área de nombres de la API del cliente.
 
 ![Rellenar segmento](../images/insights/segment-saving.png)
 
-Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segments]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
+Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
 
 ![Todos los segmentos](../images/insights/Segments-dashboard.png)
 
