@@ -4,17 +4,20 @@ solution: Experience Platform
 title: Introducción a la API de atribución
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
 
 # Introducción a la API de atribución
 
-Las siguientes guías requieren conocer los distintos servicios de Adobe Experience Platform relacionados con el uso de la API de atribución. Antes de comenzar los tutoriales, revise los siguientes documentos:
+Las siguientes guías requieren comprender los distintos [!DNL Adobe Experience Platform] servicios relacionados con el uso de Atribución AI. Antes de comenzar los tutoriales, revise los siguientes documentos:
 
-- [Descripción general](../../xdm/home.md)del sistema del modelo de datos de experiencia (XDM): XDM es el marco de base que permite a Adobe Experience Cloud, con la tecnología de Experience Platform, entregar el mensaje correcto a la persona adecuada, en el canal correcto y en el momento preciso. La metodología en la que se basa la plataforma de experiencia, el sistema XDM, hace operativos los esquemas del modelo de datos de experiencia para que los utilicen los servicios de plataforma.
-- [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en la plataforma de Adobe Experience.
+- [Descripción general](../../xdm/home.md)del sistema del modelo de datos de experiencia (XDM): XDM es el marco fundamental que permite [!DNL Adobe Experience Cloud], con la tecnología de Experience Platform, entregar el mensaje correcto a la persona adecuada, en el canal correcto, en el momento preciso. La metodología en la que se basa la plataforma de experiencia, el sistema XDM, hace operativos los esquemas del modelo de datos de experiencia para que los utilicen los servicios de plataforma.
+- [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en [!DNL Adobe Experience Platform].
 - [esquemas](../../xdm/tutorials/create-schema-ui.md)de creación: En este tutorial se explican los pasos para crear un esquema con el Editor de Esquemas en la plataforma de experiencia.
 
 La API de atribución requiere que los conjuntos de datos se ajusten al esquema de Eventos de experiencias del consumidor (CEE), que es una mezcla en el Modelo [de datos de](../../xdm/home.md) experiencia (XDM). Póngase en contacto con el servicio de asistencia de Adobe en attributionai-support@adobe.com para implementar o realizar cambios en estos datos. Si los datos de inversión de medios están presentes, puede realizar más análisis, como por ejemplo ingresos incrementales y retorno de la inversión. Si los datos de perfil del cliente están disponibles, puede atribuir créditos adicionales al nivel de perfil del cliente.
