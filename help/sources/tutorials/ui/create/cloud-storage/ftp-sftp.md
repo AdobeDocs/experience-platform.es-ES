@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen FTP o SFTP en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
@@ -42,22 +42,32 @@ La plataforma de experiencia admite los siguientes formatos de archivo para la i
 
 Para acceder al servidor FTP o SFTP en la plataforma, debe proporcionar el nombre **de** host del servidor, un nombre **de** usuario y una **contraseña**.
 
-## Conectar con el servidor
+## Conectarse al servidor FTP o SFTP
 
-Con las credenciales del servidor listas, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada para vincular el servidor FTP o SFTP a la plataforma.
+Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta de FTP o SFTP para conectarse a Platform.
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **Fuentes** en la barra de navegación izquierda para acceder al espacio de trabajo de fuentes. La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y flujos de datos asociados a ellas.
 
-En la categoría *Cloud Almacenamiento* , seleccione **FTP** o **SFTP** para mostrar una barra de información en la parte derecha de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para la vista de la documentación o la conexión con la fuente. Para crear una nueva conexión base de entrada, haga clic en **Conectar origen**.
+Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+En la categoría *[!UICONTROL Bases de datos]* , seleccione **[!UICONTROL SFTP]** y haga clic **en el icono + (+)** para crear un nuevo conector FTP o SFTP.
 
-En el formulario de entrada, proporcione la conexión base con un nombre, una descripción opcional y sus credenciales de FTP o SFTP. Por último, haga clic en **Conectar** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
+![catálogo](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+Aparece la página *[!UICONTROL Conectar a SFTP]* . En esta página, puede usar credenciales nuevas o existentes.
 
-Una vez establecida la conexión de base con el servidor FTP o SFTP, puede continuar en la siguiente sección y configurar un flujo de datos para llevar datos a Platform.
+### Nueva cuenta
+
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la conexión con un nombre, una descripción opcional y sus credenciales de FTP o SFTP. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva cuenta.
+
+![connect](../../../../images/tutorials/create/sftp/new.png)
+
+### Cuenta existente
+
+Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+
+![existente](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su servidor FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos a Platform](../../dataflow/batch/cloud-storage.md).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a la plataforma](../../dataflow/batch/cloud-storage.md).
