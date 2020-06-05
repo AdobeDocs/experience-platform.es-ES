@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Crear el esquema y conjunto de datos de ventas minoristas
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
 # Crear el esquema y conjunto de datos de ventas minoristas
 
-Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizados, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en la plataforma de experiencia.
+Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales [!DNL Adobe Experience Platform] de Data Science Workspace. Una vez finalizados, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en la plataforma de experiencia.
 
 ## Primeros pasos
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
-- Acceso a Adobe Experience Platform. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
 - Autorización para realizar llamadas a la API de la plataforma de experiencia. Complete el tutorial [Autenticar y acceder a las API](../../tutorials/authentication.md) de Adobe Experience Platform para obtener los siguientes valores y completar este tutorial con éxito:
    - Autorización: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
