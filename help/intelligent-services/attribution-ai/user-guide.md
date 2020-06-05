@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de API de atribución
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Este documento sirve como guía para interactuar con la API de atribución en la
 
 ## Crear una instancia
 
-En la interfaz de usuario de Adobe Experience Platform, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
@@ -167,7 +170,7 @@ Para asegurarse de que obtiene el modelo más preciso posible, es importante cap
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia se ha completado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
