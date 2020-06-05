@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de la API de aprendizaje automático de Sensei
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +20,7 @@ En esta guía para desarrolladores se proporcionan pasos para ayudarle en el ini
 
 ## Primeros pasos
 
-Debe haber completado el tutorial de [autenticación](../../tutorials/authentication.md) para tener acceso a los siguientes encabezados de solicitud para realizar llamadas a las API de Adobe Experience Platform:
+Debe haber completado el tutorial de [autenticación](../../tutorials/authentication.md) para tener acceso a los siguientes encabezados de solicitud para realizar llamadas a [!DNL Adobe Experience Platform] las API:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
