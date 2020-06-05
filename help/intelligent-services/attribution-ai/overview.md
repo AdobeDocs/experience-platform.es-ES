@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Información general de Atribución de IA
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ La API de atribución se utiliza para atribuir créditos a puntos de contacto qu
 
 Las salidas de la API de atribución se pueden separar en varias dimensiones y se pueden utilizar en diferentes etapas del viaje del cliente. Esto se logra sin necesidad de traducir las necesidades comerciales en problemas de aprendizaje automático, selección de algoritmos, capacitación o implementación de modelos.
 
-Los datos de AI de atribución pueden proceder de fuentes de datos de Adobe (por ejemplo, Analytics) o de otros fabricantes.
+Los datos de AI de atribución pueden provenir de Adobe (p. ej. [!DNL Analytics]) o fuentes de datos que no sean de Adobe.
 
 La IA de atribución admite dos categorías de puntuaciones, algorítmica y basada en reglas. Las puntuaciones algorítmicas incluyen puntuaciones incrementales e influenciadas. Las puntuaciones basadas en reglas incluyen Primer toque, Último toque, Lineal, en forma de U y Decadencia de tiempo.
 
@@ -57,7 +60,7 @@ La API de atribución se puede utilizar para ayudar en los siguientes casos de u
 
 ### Funciones adicionales
 
-La API de atribución también oferta la integración con otras soluciones de Adobe como Adobe Analytics. Esto le permite utilizar estas soluciones para utilizar el modelo algorítmico personalizable para evaluar el rendimiento de los medios y proporcionar perspectivas analíticas.
+La API de atribución también oferta la integración con otras soluciones de Adobe como [!DNL Adobe Analytics]. Esto le permite utilizar estas soluciones para utilizar el modelo algorítmico personalizable para evaluar el rendimiento de los medios y proporcionar perspectivas analíticas.
 
 ## Pasos siguientes
 
