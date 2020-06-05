@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -63,8 +63,8 @@ En la tabla siguiente se proporcionan algunos ejemplos de canales de marketing a
 | --- | --- | --- | --- |
 | Búsqueda de pago | https:/<span>/ns.adobe.com/xdm/canal-types/search | pagado | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | ganado | clicks |
-| Mostrar  | https:/<span>/ns.adobe.com/xdm/canal-types/display | pagado | clicks |
-| Correo electrónico | https:/<span>/ns.adobe.com/xdm/canal-types/email | pagado | clicks |
+| Mostrar | https:/<span>/ns.adobe.com/xdm/canal-types/display | pagado | clicks |
+| Correo electrónico  | https:/<span>/ns.adobe.com/xdm/canal-types/email | pagado | clicks |
 | Remitente del reenvío interno | https:/<span>/ns.adobe.com/xdm/canal-types/direct | propiedad | clicks |
 | Visualización de visualizaciones | https:/<span>/ns.adobe.com/xdm/canal-types/display | pagado | impresiones |
 | Redirección de código QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | propiedad | clicks |
@@ -191,7 +191,7 @@ Una vez que haya determinado si los datos de eventos de marketing se pueden asig
 
 Después de decidir el rango de datos que desea enviar, póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema e incorporarlos al servicio.
 
-Si tiene una suscripción de Adobe Experience Platform y desea asignar e ingestar los datos usted mismo, siga los pasos descritos en la sección siguiente.
+Si tiene una [!DNL Adobe Experience Platform] suscripción y desea asignar e ingestar los datos usted mismo, siga los pasos descritos en la sección siguiente.
 
 ### Uso de Adobe Experience Platform
 
@@ -217,7 +217,7 @@ Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos bas
 
 #### Añadir una etiqueta de Área de nombres de identidad principal en el conjunto de datos
 
-Si está trayendo datos desde Adobe Audiencia Manager, Adobe Analytics u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud PATCH a la API del servicio de catálogo.
+Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud PATCH a la API del servicio de catálogo.
 
 Si va a ingerir datos de un archivo CSV local, puede pasar a la siguiente sección sobre [asignación e ingesta de datos](#ingest).
 
