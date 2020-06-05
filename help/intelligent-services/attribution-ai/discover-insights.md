@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas en la API de atribución
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ Para utilizar perspectivas para la API de atribución, debe tener disponible una
 
 ## Información general sobre perspectivas de instancias de servicio
 
-En la interfaz de usuario de Adobe Experience Platform, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
 
 ![Acceso a la instancia](./images/insights/open_Attribution_ai.png)
 
