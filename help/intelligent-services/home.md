@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Visión general de Servicios Inteligentes
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 0%
 
 ---
 
 
 # Visión general de Servicios Inteligentes
 
-Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de la experiencia del cliente. Esto permite que los analistas de mercadotecnia configuren predicciones específicas de las necesidades de una compañía mediante configuraciones de nivel empresarial sin necesidad de conocimientos de ciencia de datos. Además, los profesionales de marketing pueden activar predicciones en Adobe Experience Cloud, Adobe Experience Platform y aplicaciones de terceros.
+Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de la experiencia del cliente. Esto permite que los analistas de mercadotecnia configuren predicciones específicas de las necesidades de una compañía mediante configuraciones de nivel empresarial sin necesidad de conocimientos de ciencia de datos. Además, los profesionales de mercadotecnia pueden activar las predicciones en aplicaciones [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]y de terceros.
 
 El siguiente vídeo está diseñado para admitir su comprensión de los servicios inteligentes. Con ejemplos de casos de uso empresarial, este vídeo explica un flujo de trabajo de alto nivel y describe las capacidades de la IA de atribución y de la AI del cliente.
 
@@ -19,7 +22,7 @@ El siguiente vídeo está diseñado para admitir su comprensión de los servicio
 
 ## Ventajas de los servicios inteligentes
 
-Los servicios inteligentes, basados en la plataforma Adobe Experience, proporcionan a los especialistas en marketing responsables de la experiencia del cliente acceso a AI como servicio, lo que facilita que cualquiera pueda predecir el comportamiento del cliente, medir el impacto de una campaña o garantizar un mejor rendimiento de cada inversión. A continuación se enumeran algunas de las ventajas que ofrece Intelligent Services.
+Los servicios inteligentes, basados [!DNL Adobe Experience Platform]en, proporcionan a los especialistas en marketing responsables de la experiencia del cliente acceso a la IA como servicio, lo que facilita que cualquiera pueda predecir el comportamiento del cliente, medir el impacto de una campaña o garantizar un mejor rendimiento de cada inversión. A continuación se enumeran algunas de las ventajas que ofrece Intelligent Services.
 
 ### Régimen rentable al mercado
 
@@ -37,7 +40,7 @@ Empoderar a los especialistas en marketing para que empiecen a trabajar con AI/M
 
 ### Ingesta
 
-Los datos del cliente se ingieren y transforman con el modelo de datos de experiencia (XDM) en la plataforma Adobe Experience. Para obtener más información sobre XDM, visite la descripción general [de](../xdm/home.md)XDM.
+Los datos del cliente se ingieren y transforman con el modelo de datos de experiencia (XDM) en [!DNL Adobe Experience Platform]. Para obtener más información sobre XDM, visite la descripción general [de](../xdm/home.md)XDM.
 
 ### Configurar
 
@@ -49,7 +52,7 @@ Una vez que los modelos han terminado la formación y la puntuación, las puntua
 
 ### Realizar acción
 
-Por último, puede decidir qué acciones realizar con las predicciones, como el consumo de perspectivas, la activación de aplicaciones en Adobe Experience Cloud y la creación de paneles personalizados.
+Por último, puede decidir qué acciones realizar con las predicciones, como el consumo de perspectivas, la activación de aplicaciones en todo el [!DNL Adobe Experience Cloud]sitio y la creación de paneles personalizados.
 
 ## Pasos siguientes
 
