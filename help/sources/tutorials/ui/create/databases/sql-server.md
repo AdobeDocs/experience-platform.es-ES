@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen de Microsoft SQL Server en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Exp
 
 En la categoría *Bases* de datos, seleccione **Microsoft SQL Server** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione Origen **de** Connect.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 Aparece la página *Conectar con Microsoft SQL Server* . En esta página, puede usar credenciales nuevas o existentes.
 
@@ -56,13 +56,13 @@ Aparece la página *Conectar con Microsoft SQL Server* . En esta página, puede 
 
 Si está utilizando nuevas credenciales, seleccione **Nueva cuenta**. En el formulario de entrada que aparece, proporcione la conexión base con un nombre, una descripción opcional y las credenciales de SQL Server. Cuando termine, seleccione **Connect** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Cuenta existente
 
 Para conectar una cuenta existente, seleccione la cuenta de SQL Server con la que desea conectarse y, a continuación, seleccione **Siguiente** para continuar.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## Pasos siguientes
 
