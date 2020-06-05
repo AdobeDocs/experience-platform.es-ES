@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen MariaDB en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Exp
 
 En la categoría *Bases* de datos, seleccione **Maria DB** para mostrar una barra de información en la parte derecha de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione Origen **de** Connect.
 
-![](../../../../images/tutorials/create/maria-db/sources-catalog.png)
+![](../../../../images/tutorials/create/maria-db/catalog.png)
 
 Aparece la página *Conectar con Maria DB* . En esta página, puede usar credenciales nuevas o existentes.
 
@@ -56,13 +56,13 @@ Aparece la página *Conectar con Maria DB* . En esta página, puede usar credenc
 
 Si está utilizando nuevas credenciales, seleccione **Nueva cuenta**. En el formulario de entrada que aparece, proporcione la conexión base con un nombre, una descripción opcional y las credenciales de Maria DB. Cuando termine, seleccione **Connect** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
 
-![](../../../../images/tutorials/create/maria-db/new-credentials.png)
+![](../../../../images/tutorials/create/maria-db/new.png)
 
 ### Cuenta existente
 
 Para conectar una cuenta existente, seleccione la cuenta de Maria DB con la que desea conectarse y, a continuación, seleccione **Siguiente** para continuar.
 
-![](../../../../images/tutorials/create/maria-db/existing-credentials.png)
+![](../../../../images/tutorials/create/maria-db/existing.png)
 
 ## Pasos siguientes
 
