@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de API de atribución
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Existen tres tipos diferentes de datos de entrada que se utilizan para definir e
 - **Ventana retroactiva:** Proporciona un intervalo de tiempo que indica cuántos días antes de incluir los puntos de contacto del evento de conversión.
 - **Puntos de contacto:** eventos de marketing de nivel de destinatario, individual o cookie utilizados para evaluar el impacto numérico o de ingresos de las conversiones.
 
-### Definir eventos de conversión
+### Definir eventos de conversión {#define-conversion-events}
 
 Para definir un evento de conversión, debe asignar un nombre al evento y seleccionar el tipo de evento haciendo clic en el menú desplegable **Introducir nombre** de campo.
 
@@ -144,7 +144,7 @@ Para cambiar la hora del día que desea que se produzca la puntuación, haga cli
 
 ![icono del reloj](./images/user-guide/time_of_day.png)
 
-### Modelado basado en regiones (opcional)
+### Modelado basado en regiones (opcional) {#region-based-modeling-optional}
 
 El comportamiento de los clientes puede variar significativamente según el país y la región geográfica. Para las empresas globales, el uso de modelos basados en países o regiones puede aumentar la precisión de la atribución. Cada región agregada crea un nuevo modelo con los datos de esa región.
 
