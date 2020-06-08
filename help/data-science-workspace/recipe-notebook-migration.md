@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '3459'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 # Guías de migración de fórmulas y portátiles
 
 >[!NOTE]
->Los equipos portátiles y las fórmulas que utilizan Python/R no se ven afectados. La migración solo se aplica a las fórmulas y los blocs de notas PySpark/Spark existentes.
+>Los equipos portátiles y las fórmulas que utilizan Python/R no se ven afectados. La migración solo se aplica a las fórmulas y los blocs de notas PySpark/Spark (2.3).
 
 Las siguientes guías describen los pasos y la información necesarios para migrar las fórmulas y los blocs de notas existentes.
 
