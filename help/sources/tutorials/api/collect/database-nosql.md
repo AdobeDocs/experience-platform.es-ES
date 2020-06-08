@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
+workflow-type: tm+mt
+source-wordcount: '1607'
+ht-degree: 2%
 
 ---
 
@@ -701,6 +704,7 @@ La sección siguiente lista los diferentes conectores de origen de almacenamient
 | Explorador de datos de Azure | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | Análisis de sinapsis de Azure | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | Almacenamiento de tabla de Azure | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
 | MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
