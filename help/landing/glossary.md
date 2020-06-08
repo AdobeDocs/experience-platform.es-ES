@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 **Segmentación por lotes:** La segmentación por lotes es una alternativa a un proceso de selección de datos en curso y mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y almacena para que pueda exportarse para su uso.
 
-**Generar:** En Experience Platform Launch, una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contienen todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
+**Generar:** En Experience Platform Launch, una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contiene todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
 
 **Herramientas de inteligencia empresarial:** La inteligencia empresarial, también conocida como herramientas &quot;BI&quot;, está integrada principalmente con el servicio de Consulta de la plataforma de experiencia. Las herramientas de inteligencia comercial son tipos de software de aplicaciones que recopilan y procesan grandes cantidades de datos no estructurados de sistemas internos y externos.
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **Etiqueta de contrato C4:** `C4` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. C4 es la etiqueta más restrictiva, ya que engloba las etiquetas C5, C6 y C7.
 
-**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
+**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden utilizar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
 
 **C6 Etiqueta de contrato:** `C6` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. Los datos no se pueden usar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios.  Esto incluye el uso de datos recopilados anteriormente en el sitio sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra.
 
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **Componente de regla:** En Experience Platform Launch, los componentes de regla son los eventos, las condiciones y las acciones que conforman una regla.
 
-**Tiempo de ejecución:** Runtime especifica un entorno de tiempo de ejecución para una fórmula de aprendizaje automático. Los tiempos de ejecución de Spark y PySpark permiten la carga directa de un archivo de origen de fórmula binaria (.jar). Los tiempos de ejecución de Python, R y Tensorflow permiten introducir una dirección URL en una imagen de docker para un origen de fórmula.
+**Tiempo de ejecución:** Runtime especifica un entorno de tiempo de ejecución para una fórmula de aprendizaje automático. Los tiempos de ejecución Python, R, Spark, PySpark y Tensorflow permiten introducir una URL en una imagen de docker para un origen de fórmula.
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
@@ -496,7 +496,7 @@ ht-degree: 0%
 
 **Transmisión de flujo continuo:** La ingestión de flujo continuo proporciona a los usuarios un método para enviar datos desde dispositivos cliente y servidor a la plataforma de experiencias en tiempo real.
 
-**Dirección URL del extremo de flujo:** Una URL de extremo de flujo continuo es un punto final único proporcionado por Adobe y vinculado a la organización IMS de un cliente para transmitir datos a la plataforma de experiencia.
+**Dirección URL del extremo de flujo:** Una URL de extremo de flujo continuo es un punto final único proporcionado por Adobe y vinculado a la organización de IMS de un cliente para transmitir datos a la plataforma de experiencia.
 
 **Segmentación de flujo continuo:** La segmentación por flujo continuo es un proceso continuo de selección de datos que actualiza segmentos en respuesta a la actividad del usuario. Una vez creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes en el Perfil del cliente en tiempo real. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destinatarios siga siendo relevante.
 
