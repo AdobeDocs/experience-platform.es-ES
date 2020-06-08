@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3349'
+source-wordcount: '2773'
 ht-degree: 6%
 
 ---
@@ -119,9 +119,7 @@ Las acciones comunes de las células se describen a continuación:
 
 ### Kernels {#kernels}
 
-Los núcleos de los portátiles son los motores informáticos específicos del idioma para procesar las celdas de los portátiles. Además de Python, JupyterLab ofrece soporte de idiomas adicional en R, PySpark y Spark. Al abrir un documento portátil, se inicia el núcleo asociado. Cuando se ejecuta una celda portátil, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se cierre el núcleo.
-
->[!IMPORTANT] JupyterLab Launcher actualizado de Spark 2.3 a Spark 2.4. Los núcleos Spark y PySpark ya no son compatibles con los portátiles Spark 2.4.
+Los núcleos de los portátiles son los motores informáticos específicos del idioma para procesar las celdas de los portátiles. Además de Python, JupyterLab proporciona soporte de idioma adicional en R, PySpark y Spark (Scala). Al abrir un documento portátil, se inicia el núcleo asociado. Cuando se ejecuta una celda portátil, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se cierre el núcleo.
 
 Algunas funciones y características se limitan a determinados núcleos, como se describe en la tabla siguiente:
 
@@ -129,8 +127,6 @@ Algunas funciones y características se limitan a determinados núcleos, como se
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li><li>Servicio de Consulta</li></ul> |
 | **R** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
-| **PySpark: obsoleto** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
-| **Chispa: obsoleto** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
 | **Scala** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
 
 ### Sesiones de núcleo {#kernel-sessions}
@@ -142,59 +138,6 @@ Cada portátil o actividad activa en JupyterLab utiliza una sesión del núcleo.
 Si el núcleo está apagado o inactivo durante un período prolongado, entonces ¡ **Sin núcleo!** con un círculo sólido. Active un núcleo haciendo clic en el estado del núcleo y seleccionando el tipo de núcleo apropiado como se muestra a continuación:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
-
-### Recurso de ejecución de PySpark/Spark {#execution-resource}
-
->[!IMPORTANT]
->Con la transición de Spark 2.3 a Spark 2.4, los núcleos Spark y PySpark están obsoletos.
->
->Los nuevos portátiles PySpark 3 (Spark 2.4) utilizan el núcleo Python3. Consulte la guía sobre la conversión de [Pyspark 3 (Spark 2.3) a PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) para ver un tutorial detallado sobre la actualización de los portátiles existentes.
->
->Los nuevos portátiles Spark deben utilizar el núcleo Scala. Consulte la guía sobre la conversión de [Spark 2.3 a Scala (Spark 2.4)](../recipe-notebook-migration.md) para ver un tutorial detallado sobre la actualización de los blocs de notas existentes.
-
-Los kernels PySpark y Spark le permiten configurar los recursos del clúster Spark dentro de su bloc de notas PySpark o Spark mediante el comando configure (`%%configure`) y proporcionando una lista de configuraciones. Idealmente, estas configuraciones se definen antes de que se inicialice la aplicación Spark. La modificación de las configuraciones mientras la aplicación Spark está activa requiere un indicador de fuerza adicional después del comando (`%%configure -f`) que reiniciará la aplicación para que se apliquen los cambios, como se muestra a continuación:
-
->[!CAUTION]
->Con los portátiles PySpark 3 (Spark 2.4) y Scala (Spark 2.4), ya no se admite `%%` sparkMagic. Ya no se pueden utilizar las siguientes operaciones:
-* `%%help`
-* `%%info`
-* `%%cleanup`
-* `%%delete`
-* `%%configure`
-* `%%local`
-
-```python
-%%configure -f 
-{
-    "numExecutors": 10,
-    "executorMemory": "8G",
-    "executorCores":4,
-    "driverMemory":"2G",
-    "driverCores":2,
-    "conf": {
-        "spark.cores.max": "40"
-    }
-}
-```
-
-Todas las propiedades configurables se enumeran en la tabla siguiente:
-
-| Propiedad | Descripción | Tipo |
-| :------- | :---------- | :-----:|
-| clase | El tipo de sesión (requerido) | `session kind`_ |
-| proxyUser | Usuario que se suplantará y que ejecutará esta sesión (por ejemplo, bob) | string |
-| jars | Archivos que se van a colocar en la Java `classpath` | lista de rutas |
-| pyFiles | Los archivos que se van a colocar en la variable `PYTHONPATH` | lista de rutas |
-| archivos | Archivos que se van a colocar en el directorio de trabajo del ejecutor | lista de rutas |
-| driverMemory | Memoria para el controlador en megabytes o gigabytes (por ejemplo, 1000M, 2G) | string |
-| driverCores | Número de núcleos utilizados por el controlador (solo en modo YARN) | int |
-| ejecutorMemory | Memoria para ejecutor en megabytes o gigabytes (por ejemplo, 1000M, 2G) | string |
-| ejecutorCores | Número de núcleos utilizados por el ejecutor | int |
-| numEjecutors | Número de ejecutores (solo modo YARN) | int |
-| archivos | Archivos que se van a descomprimir en el directorio de trabajo del ejecutor (solo en modo YARN) | lista de rutas |
-| cola | La cola YARN a la que enviar (solo en modo YARN) | string |
-| name | Nombre de la aplicación | string |
-| conf | Propiedad de configuración Spark | Mapa de key=val |
 
 ### Iniciador {#launcher}
 
@@ -252,30 +195,6 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <td >no</td>
         <td >no</td>
         <td >no</td>
-    </tr>
-    <tr>
-        <th  ><strong>PySpark 3 (Spark 2.3, obsoleto)</strong></th>
-        <td >sí</td>
-        <td >sí</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >sí</td>
-        <td >sí</td>
-        <td >no</td>
-    </tr>
-    <tr>
-        <th ><strong>Chispa (Spark 2.3 - obsoleto)</strong></th>
-        <td >sí</td>
-        <td >sí</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >sí</td>
     </tr>
       <tr>
         <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
@@ -377,28 +296,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
 
-### Leer desde un conjunto de datos en PySpark/Spark/Scala
+### Leer desde un conjunto de datos en PySpark/Scala
 
->[!IMPORTANT]
->Con la transición de Spark 2.3 a Spark 2.4, los núcleos Spark y PySpark están obsoletos.
->
->Los nuevos portátiles PySpark 3 (Spark 2.4) utilizan el núcleo Python3. Consulte la guía sobre la conversión de [Pyspark 3 (Spark 2.3) a PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) si desea convertir el código Spark 2.3 existente. Los nuevos portátiles deben seguir el ejemplo de [PySpark 3 (Spark 2.4)](#pyspark2.4) que se muestra a continuación.
->
->Los nuevos portátiles Spark deben utilizar el núcleo Scala. Consulte la guía de conversión de [Spark 2.3 a Scala (Spark 2.4)](../recipe-notebook-migration.md) si desea convertir el código Spark 2.3 existente. Los nuevos portátiles deben seguir el ejemplo de [Scala (Spark 2.4)](#spark2.4) que se muestra a continuación.
-
-Con un bloc de notas PySpark o Spark activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
-
-#### PySpark (Spark 2.3, desaprobado)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd0 = spark.read.format("com.adobe.platform.dataset").\
-    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-pd0.describe()
-pd0.show(10, False)
-```
+Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
 
 #### PySpark (Spark 2.4) {#pyspark2.4}
 
@@ -410,20 +310,6 @@ Con la introducción de Spark 2.4, se proporciona [`%dataset`](#magic) magia per
 %dataset read --datasetId {DATASET_ID} --dataFrame pd0
 pd0.describe()
 pd0.show(10, False)
-```
-
-#### Chispa (Spark 2.3 - obsoleto)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-dataFrame.printSchema()
-dataFrame.show()
 ```
 
 #### Scala (Spark 2.4) {#spark2.4}
@@ -478,7 +364,7 @@ Un comando mágico personalizado de Data Science Workspace para leer o escribir 
 
 JupyterLab en plataforma le permite utilizar SQL en un bloc de notas Python para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de la plataforma de</a>Adobe Experience Platform. El acceso a los datos a través del servicio de Consulta puede ser útil para tratar grandes conjuntos de datos debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante el servicio de Consulta tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de usar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
+Antes de utilizar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
 
 La consulta de datos mediante el servicio de Consulta requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
 
@@ -560,34 +446,9 @@ df <- dataset_reader$
 
 ### Filtrar datos de ExperienceEvent en PySpark/Spark
 
->[!IMPORTANT]
->Con la transición de Spark 2.3 a Spark 2.4, los núcleos Spark y PySpark están obsoletos.
->
->Los nuevos portátiles PySpark 3 (Spark 2.4) utilizan el núcleo Python3. Consulte la guía sobre la conversión de [Pyspark 3 (Spark 2.3) a PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) para obtener más información sobre la conversión del código existente. Si va a crear un nuevo bloc de notas PySpark, utilice el ejemplo de [PySpark 3 (spark 2.4)](#pyspark3-spark2.4) para filtrar los datos de ExperienceEvent.
->
->Los nuevos portátiles Spark deben utilizar el núcleo Scala. Consulte la guía sobre la conversión de [Spark 2.3 a Scala (Spark 2.4)](../recipe-notebook-migration.md) para obtener más información sobre la conversión del código existente. Si va a crear un nuevo bloc de notas Spark, utilice el ejemplo [Scala (spark 2.4)](#scala-spark) para filtrar los datos de ExperienceEvent.
-
-El acceso y filtrado de un conjunto de datos de ExperienceEvent en un bloc de notas PySpark o Spark requiere que proporcione la identidad del conjunto de datos (`{DATASET_ID}`), la identidad IMS de su organización y las reglas de filtro que definen un intervalo de tiempo específico. Un intervalo de tiempo de filtrado se define mediante la función `spark.sql()`, donde el parámetro de función es una cadena de consulta SQL.
+El acceso y filtrado de un conjunto de datos de ExperienceEvent en un bloc de notas de PySpark o Scala requiere que proporcione la identidad del conjunto de datos (`{DATASET_ID}`), la identidad IMS de su organización y las reglas de filtro que definen un intervalo de tiempo específico. Un intervalo de tiempo de filtrado se define mediante la función `spark.sql()`, donde el parámetro de función es una cadena de consulta SQL.
 
 Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
-
-#### PySpark 3 (Spark 2.3, obsoleto)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd = spark.read.format("com.adobe.platform.dataset").\
-    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-
-pd.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-```
 
 #### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
 
@@ -607,26 +468,6 @@ timepd = spark.sql("""
     AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
 """)
 timepd.show()
-```
-
-#### Chispa (Spark 2.3 - obsoleto)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-
-dataFrame.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
 ```
 
 #### Scala (Spark 2.4) {#scala-spark}
