@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 6%
+source-wordcount: '3672'
+ht-degree: 11%
 
 ---
 
@@ -37,13 +37,14 @@ La siguiente lista describe algunas de las características exclusivas de Jupyte
 
 ## Integración con otros servicios de plataforma {#service-integration}
 
-La estandarización y la interoperabilidad son conceptos clave que sustentan la plataforma de experiencia. La integración de JupyterLab en la plataforma como un IDE integrado le permite interactuar con otros servicios de la Plataforma, permitiéndole utilizar la Plataforma a todo su potencial. Los siguientes servicios de plataforma están disponibles en JupyterLab:
+La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. La integración de JupyterLab en [!DNL Platform] un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole aprovechar [!DNL Platform] al máximo su potencial. Los siguientes [!DNL Platform] servicios están disponibles en JupyterLab:
 
 * **Servicio de catálogo:** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
 * **Servicio de Consulta:** Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
 * **Marco para la detección del lenguaje Sensei ML:** Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
+* **Modelo de datos de experiencia (XDM):** La estandarización y la interoperabilidad son conceptos clave que subyacen a Adobe Experience Platform. [El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
->[!NOTE] Algunas integraciones de servicio de plataforma en JupyterLab están limitadas a núcleos específicos. Consulte la sección sobre [núcleos](#kernels) para obtener más detalles.
+>[!NOTE] Algunas integraciones [!DNL Platform] de servicio en JupyterLab están limitadas a núcleos específicos. Consulte la sección sobre [núcleos](#kernels) para obtener más detalles.
 
 ## Funciones clave y operaciones comunes
 
@@ -230,6 +231,82 @@ Para abrir un nuevo *iniciador*, haga clic en **Archivo > Nuevo iniciador**. Tam
 
 Cada núcleo soportado proporciona funcionalidades integradas que le permiten leer datos de la Plataforma desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los portátiles Python y R.
 
+### Límites de datos de equipos portátiles
+
+La siguiente información define la cantidad máxima de datos que se pueden leer, qué tipo de datos se han utilizado y el intervalo de tiempo estimado que se tarda en leer los datos. Para Python y R, se utilizó un servidor portátil configurado con 40 GB de RAM para los análisis de rendimiento. Para PySpark y Scala, se utilizó un clúster de databricks configurado en 64 GB de RAM, 8 núcleos, 2 DBU con un máximo de 4 trabajadores para los puntos de referencia que se describen a continuación.
+
+Los datos de esquema de ExperienceEvent utilizados varían en tamaño desde mil (1K) filas hasta mil millones (1B). Tenga en cuenta que para las métricas PySpark y Spark se utilizó un período de 10 días para los datos XDM.
+
+Los datos de esquema específicos se preprocesaron mediante la opción Crear tabla como selección (CTAS) del servicio de Consulta. Estos datos también variaron en el tamaño desde mil filas (1K) hasta mil millones (1B).
+
+#### Límites de datos de portátiles Python
+
+**esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 2 millones de filas (aproximadamente 6,1 GB de datos en disco) de datos XDM en menos de 22 minutos. Añadir filas adicionales puede provocar errores.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Tamaño en disco (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (en segundos) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**esquema ad-hoc:** Debería poder leer un máximo de 5 millones de filas (unos 5,6 GB de datos en disco) de datos no XDM (ad-hoc) en menos de 14 minutos. Añadir filas adicionales puede provocar errores.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Tamaño en disco (en MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (en segundos) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### Límites de datos del portátil R
+
+**esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 1 millón de filas de datos XDM (datos de 3 GB en disco) en menos de 13 minutos.
+
+| Número de filas | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Tamaño en disco (MB) | 18.73 | 187.5 | 308 | 3000 |
+| Núcleo R (en segundos) | 14.03 | 69.6 | 86.8 | 775 |
+
+**esquema ad-hoc:** Debería poder leer un máximo de 3 millones de filas de datos ad-hoc (datos de 293 MB en disco) en unos 10 minutos.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Tamaño en disco (en MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| SDK R (en segundos) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### Límites de datos de portátiles PySpark (núcleo Python):
+
+**esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 20 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Tamaño en disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
+| SDK (modo interactivo) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (modo Lote) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
+
+**esquema ad-hoc:** En el modo interactivo, debe poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en menos de 3 minutos. En el modo Lote, debería poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en unos 18 minutos.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Tamaño en disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
+| Modo interactivo de SDK (en segundos) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
+| Modo de lotes de SDK (en segundos) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+
+#### Límites de datos de portátiles Spark (kernel Scala):
+
+**esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 18 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Tamaño en disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
+| Modo interactivo de SDK (en segundos) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| Modo de lotes de SDK (en segundos) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
+
+**esquema ad-hoc:** En el modo interactivo, debe poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en menos de 3 minutos. En el modo Lote, debería poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en unos 16 minutos.
+
+| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Tamaño en disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
+| Modo interactivo de SDK (en segundos) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
+| Modo de lotes de SDK (en segundos) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
+
 ### Leer desde un conjunto de datos en Python/R
 
 Los blocs de notas Python y R permiten paginar datos al acceder a conjuntos de datos. A continuación se muestra el código de muestra para leer datos con o sin paginación.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
 
-### Leer desde un conjunto de datos en PySpark/Scala
+### Leer desde un conjunto de datos en PySpark/Spark/Scala
 
 Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
 
@@ -364,7 +441,7 @@ Un comando mágico personalizado de Data Science Workspace para leer o escribir 
 
 JupyterLab en plataforma le permite utilizar SQL en un bloc de notas Python para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de la plataforma de</a>Adobe Experience Platform. El acceso a los datos a través del servicio de Consulta puede ser útil para tratar grandes conjuntos de datos debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante el servicio de Consulta tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de utilizar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
+Antes de usar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
 
 La consulta de datos mediante el servicio de Consulta requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
 
