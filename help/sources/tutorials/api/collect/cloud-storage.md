@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de almacenamiento en la nube mediante las API y los conectores de origen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
+source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -584,7 +584,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 ## Crear un flujo de datos
 
-El último paso para recopilar datos de almacenamiento en la nube es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
+El último paso para recopilar datos de almacenamiento en la nube es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores necesarios:
 
 - [ID de conexión de origen](#source)
 - [ID de conexión de Destinatario](#target)
@@ -668,7 +668,7 @@ Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de
 - [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 - [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
 
-## Apéndice
+## Apéndice {#appendix}
 
 La sección siguiente lista los diferentes conectores de origen de almacenamiento de nube y sus especificaciones de conexiones.
 
@@ -683,4 +683,5 @@ La sección siguiente lista los diferentes conectores de origen de almacenamient
 | Centros de Evento de Azure (centros de Evento) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Almacenamiento de archivos de Azure | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Almacenamiento de Google Cloud | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
