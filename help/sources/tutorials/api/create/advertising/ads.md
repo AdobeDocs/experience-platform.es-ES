@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector Google AdWords mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,8 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión de Google AdWords, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para Google AdWords es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+La siguiente solicitud crea una nueva conexión AdWords, configurada por las propiedades proporcionadas en la carga útil:
+
 
 ```shell
 curl -X POST \
