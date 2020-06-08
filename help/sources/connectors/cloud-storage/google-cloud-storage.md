@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector de Almacenamiento de Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Conector de Almacenamiento de Google Cloud
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, Google Cloud Platform y Azure. Puede llevar los datos de estos sistemas a la plataforma.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, Google Cloud Platform y Azure, lo que le permite traer los datos de estos sistemas.
 
 Las fuentes de almacenamiento de nube pueden llevar sus propios datos a la plataforma sin necesidad de descargar, formatear o cargar. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. Platform le permite traer datos desde Google Cloud Almacenamiento por lotes.
 
