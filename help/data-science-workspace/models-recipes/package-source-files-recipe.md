@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ Una imagen de Docker permite a un desarrollador empaquetar una aplicación con t
 
 La imagen de Docker creada se inserta en el Registro de Contenedor de Azure mediante las credenciales proporcionadas durante el flujo de trabajo de creación de fórmulas.
 
-Para obtener las credenciales de Azure Contenedor Registry, inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. En la columna de navegación izquierda, vaya a **[!UICONTROL Workflows]**. Seleccione **[!UICONTROL Import Recipe]** seguido de **[!UICONTROL Launch]**. Consulte la captura de pantalla siguiente para obtener referencia.
+Para obtener las credenciales de Azure Contenedor Registry, inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. En la columna de navegación izquierda, navegue a **[!UICONTROL Flujos de trabajo]**. Seleccione **[!UICONTROL Importar fórmula]** , luego seleccione **[!UICONTROL Iniciar]**. Consulte la captura de pantalla siguiente para obtener referencia.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Se abre la página *Configurar* . Proporcione un nombre *de* fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez finalizado, haga clic en **[!UICONTROL Next]**.
+Se abre la página *Configurar* . Proporcione un nombre *de* fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez completada, haga clic en **[!UICONTROL Siguiente]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Seleccione el *motor de ejecución* adecuado y, a continuación, elija un **[!UICONTROL Classification]** para *Tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
+Seleccione el *motor de ejecución* correspondiente y, a continuación, elija una **[!UICONTROL clasificación]** para el *tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
 
 >[!NOTE]
 >*El tipo *es la clase de problema de aprendizaje automático para el que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la ejecución de la formación.
 
 >[!TIP]
->- Para las fórmulas de Python, seleccione el **[!UICONTROL Python]** motor de ejecución.
->- Para las fórmulas R, seleccione el tiempo de ejecución **[!UICONTROL R]** .
->- Para las fórmulas de PySpark, seleccione el tiempo de ejecución **[!UICONTROL PySpark]** . Se rellena automáticamente un tipo de artefacto.
->- Para las fórmulas de escala, seleccione el motor de ejecución **[!UICONTROL Spark]** . Se rellena automáticamente un tipo de artefacto.
+>- Para las fórmulas de Python, seleccione el tiempo de ejecución de **[!UICONTROL Python]** .
+>- Para las fórmulas R, seleccione el tiempo de ejecución de **[!UICONTROL R]** .
+>- Para las fórmulas de PySpark, seleccione el tiempo de ejecución de **[!UICONTROL PySpark]** . Se rellena automáticamente un tipo de artefacto.
+>- Para las fórmulas de escala, seleccione el tiempo de ejecución de **[!UICONTROL Spark]** . Se rellena automáticamente un tipo de artefacto.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -193,46 +196,3 @@ Este tutorial pasó a empaquetar archivos de origen en una fórmula, el paso pre
 
 - [Importación de una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md)
 - [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md)
-
-## Creación de binarios (desaprobada)
-
->[!CAUTION]
-> Los binarios no son compatibles con las nuevas fórmulas de PySpark y Scala y se van a eliminar en una versión futura. Siga los flujos de trabajo [de](#docker-based-model-authoring) Docker cuando trabaje con PySpark y Scala. Los siguientes flujos de trabajo solo son aplicables a las fórmulas de Spark 2.3.
-
-### Generar binarios de PySpark (desaprobado)
-
-Si no lo ha hecho, clona el repositorio github en su sistema local con el siguiente comando:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Navegue hasta el repositorio clonado en su sistema local y ejecute los siguientes comandos para generar el archivo requerido `.egg` para importar una fórmula PySpark:
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-El `.egg` archivo se genera en la `dist` carpeta.
-
-Ahora puede pasar a los [siguientes pasos](#next-steps).
-
-#### Generar binarios Scala (desaprobado)
-
-Si aún no lo ha hecho, ejecute el siguiente comando para clonar el repositorio de Github en su sistema local:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Para crear el `.jar` artefacto utilizado para importar una fórmula Scala, navegue hasta el repositorio clonado y siga los pasos a continuación:
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-El `.jar` artefacto generado con dependencias se encuentra en el `/target` directorio.
-
-Ahora puede pasar a los [siguientes pasos](#next-steps).
