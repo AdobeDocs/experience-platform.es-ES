@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre los conectores de origen de la plataforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -47,11 +47,11 @@ Las fuentes de almacenamiento de nube pueden llevar sus propios datos a la plata
 - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
 - [Conector Azure Blob y Amazon S3](connectors/cloud-storage/blob-s3.md)
 - [Conector de Amazon Kinesis](connectors/cloud-storage/kinesis.md)
+- [Conector HDFS de Apache](connectors/cloud-storage/hdfs.md)
 - [Conector de los centros de Evento de Azure](connectors/cloud-storage/eventhub.md)
 - [Conector de Almacenamiento de archivos de Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Conector FTP y SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Conector de Almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
-- [Conector HDFS](connectors/cloud-storage/hdfs.md)
 
 ### Administración de la relación con los clientes (CRM)
 
@@ -77,7 +77,7 @@ La plataforma de experiencias ofrece compatibilidad para la ingesta de datos des
 - [Conector del Explorador de datos de Azure](connectors/databases/data-explorer.md)
 - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Conector de Almacenamiento de tabla de Azure](connectors/databases/ats.md)
-- [Conector CouchBase](connectors/databases/couchbase.md)
+- [Conector de la base de acoplamiento](connectors/databases/couchbase.md)
 - [Conector Google BigQuery](connectors/databases/bigquery.md)
 - [Conector GreenPlum](connectors/databases/greenplum.md)
 - [Conector HP Vertica](connectors/databases/hp-vertica.md)
