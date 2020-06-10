@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
+source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 0%
       - [Conector de Google AdWords](connectors/advertising/ads.md)
    - almacenamiento de nube {#cloud-storage}
       - [Conector de Amazon Kinesis](connectors/cloud-storage/kinesis.md)
+      - [Conector HDFS de Apache](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 de Azure Data Lake Almacenamiento](connectors/cloud-storage/adls-gen2.md)
       - [Conector Azure Blob y Amazon S3](connectors/cloud-storage/blob-s3.md)
       - [Conector de los centros de Evento de Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de Almacenamiento de archivos de Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Conector FTP y SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Conector de Almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
-      - [Conector HDFS](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Conector de Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Conector de Salesforce](connectors/crm/salesforce.md)
@@ -47,7 +47,7 @@ ht-degree: 0%
       - [Conector del Explorador de datos de Azure](connectors/databases/data-explorer.md)
       - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Almacenamiento de tabla de Azure](connectors/databases/ats.md)
-      - [Conector CouchBase](connectors/databases/couchbase.md)
+      - [Conector de la base de acoplamiento](connectors/databases/couchbase.md)
       - [Conector Google BigQuery](connectors/databases/bigquery.md)
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
@@ -71,12 +71,12 @@ ht-degree: 0%
       - almacenamiento de nube {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Conector Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [Conector HDFS de Apache](tutorials/api/create/cloud-storage/hdfs.md)
          - [Conector Blob de Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Conector Gen2 de Azure Data Lake Almacenamiento](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Conector de los centros de Evento de Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Conector de Almacenamiento de archivos de Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Conector de Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
-         - [Conector HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Conector HubSpot](tutorials/api/create/crm/hubspot.md)
@@ -92,7 +92,7 @@ ht-degree: 0%
          - [Conector del Explorador de datos de Azure](tutorials/api/create/databases/data-explorer.md)
          - [Conector de Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Conector de Almacenamiento de tabla de Azure](tutorials/api/create/databases/ats.md)
-         - [Conector CouchBase](tutorials/api/create/databases/couchbase.md)
+         - [Conector de la base de acoplamiento](tutorials/api/create/databases/couchbase.md)
          - [Conector Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [Conector GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [Conector HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -138,7 +138,8 @@ ht-degree: 0%
       - Publicidad {#create}
          - [Conector de Google AdWords](tutorials/ui/create/advertising/ads.md)
       - almacenamiento de nube {#cloud-storage}
-         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Conector de Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Conector HDFS de Apache](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Conector Gen2 de Azure Data Lake Almacenamiento](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Conector Azure Blob y Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Conector de los centros de Evento de Azure](tutorials/ui/create/cloud-storage/eventhub.md)
@@ -158,6 +159,7 @@ ht-degree: 0%
          - [Conector del Explorador de datos de Azure](tutorials/ui/create/databases/data-explorer.md)
          - [Conector de Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Conector de Almacenamiento de tabla de Azure](tutorials/ui/create/databases/ats.md)
+         - [Conector de la base de acoplamiento](tutorials/ui/create/databases/couchbase.md)
          - [Conector de Google Big Consulta](tutorials/ui/create/databases/bigquery.md)
          - [Conector GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [Conector HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
