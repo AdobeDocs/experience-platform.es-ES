@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 6%
+source-wordcount: '429'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 6%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [Área de trabajo de ciencia de datos](#dsw)
+- [Segmentación](#segmentation)
 - [Fuentes](#sources)
 
 ## Área de trabajo de ciencia de datos {#dsw}
@@ -35,6 +36,20 @@ Tenga en cuenta que el aprendizaje automático en tiempo real se encuentra en fa
 | Iniciador de HTML en tiempo real de JupyterLab | JupyterLab Launcher ahora incluye un ordenador portátil Python para aprendizaje automático en tiempo real (Alpha). |
 
 Para obtener más información sobre el alfa de aprendizaje automático en tiempo real, consulte la descripción general [de aprendizaje automático en tiempo](../../data-science-workspace/real-time-machine-learning/home.md)real.
+
+## Segmentación {#segmentation}
+
+El servicio de segmentación de la plataforma de experiencia de Adobe proporciona una interfaz de usuario y una API RESTful que le permite crear segmentos y generar audiencias a partir de los datos de Perfil de clientes en tiempo real. Estos segmentos se configuran y mantienen de forma centralizada en Platform, lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+
+El servicio de segmentación define un subconjunto particular de perfiles al describir los criterios que distinguen a un grupo comercializable de personas dentro de la base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Campos de fecha | Se ha agregado una función de &quot;aniversario&quot; para las funciones de fecha, que permite a los usuarios evaluar las fechas sin el año. |
+
+Para obtener más información sobre la segmentación, consulte la información general [de segmentación](../../segmentation/home.md)
 
 ## Fuentes {#sources}
 
