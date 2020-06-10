@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía de solución de problemas de Área de trabajo de Data Science
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Por último, cambie &quot;Bloquear cookies de terceros&quot; por &quot;Desactiva
 
 ![Chrome avanzado](./images/faq/toggle-off.png)
 
->[!NOTE] También puede deshabilitar las cookies de terceros y la lista blanca [*.]ds.adobe.net
+>[!NOTE] También puede deshabilitar las cookies de terceros y agregar [*.]ds.adobe.net a la lista allow.
 
 Vaya a &quot;chrome://flags/&quot; en la barra de direcciones. Busque y deshabilite el indicador titulado *&quot;SameSite de forma predeterminada&quot;* mediante el menú desplegable de la derecha.
 
@@ -61,7 +64,7 @@ A continuación, en la barra de navegación superior, seleccione el menú **Desa
 
 ## ¿Por qué veo un mensaje &#39;403 prohibido&#39; al intentar cargar o eliminar un archivo en JupyterLab?
 
-Si el explorador está habilitado con software de bloqueo de anuncios como Ghostery o AdBlock Plus, el dominio &quot;\*.adobe.net&quot; debe incluirse en la lista blanca en cada software de bloqueo de anuncios para que JupyterLab funcione normalmente. Esto se debe a que las máquinas virtuales de JupyterLab se ejecutan en un dominio diferente al dominio de la plataforma de experiencia.
+Si el explorador está habilitado con software de bloqueo de anuncios como Ghostery o AdBlock Plus, se debe permitir el dominio &quot;\*.adobe.net&quot; en cada software de bloqueo de anuncios para que JupyterLab funcione normalmente. Esto se debe a que las máquinas virtuales de JupyterLab se ejecutan en un dominio diferente al dominio de la plataforma de experiencia.
 
 ## ¿Por qué algunas partes de mi bloc de notas Jupyter parecen revueltas o no se representan como código?
 
