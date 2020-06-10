@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un conector HDFS mediante la API de servicio de flujo
+title: Creación de un conector HDFS de Apache mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '558'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un conector HDFS mediante la API de servicio de flujo
+# Creación de un conector HDFS de Apache mediante la API de servicio de flujo
 
 >[!NOTE]
->El conector HDFS está en versión beta. Las funciones y la documentación están sujetas a cambios.
+>El conector HDFS de Apache está en versión beta. Las funciones y la documentación están sujetas a cambios.
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de distintas fuentes para incluirlos en la plataforma de Adobe Experience. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar un sistema de archivos distribuido Hadoop (en adelante, &quot;HDFS&quot;) a la plataforma de experiencia.
+Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar un sistema de archivos distribuido Apache Hadoop (en lo sucesivo, &quot;HDFS&quot;) a la plataforma de experiencia.
 
 ## Primeros pasos
 
