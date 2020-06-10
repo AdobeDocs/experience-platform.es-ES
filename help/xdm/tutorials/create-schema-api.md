@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 1%
 
 ---
 
@@ -1775,7 +1778,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1850,7 +1853,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1902,7 +1905,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1967,7 +1970,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2032,7 +2035,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
