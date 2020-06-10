@@ -4,9 +4,9 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web de la plataforma de experiencia para recopilar datos
 translation-type: tm+mt
-source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '548'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Bienvenido
 
-Esta guía le guiará por los distintos modos de configurar el SDK web de Adobe Experience Platform en Launch. Para poder utilizar esta función, debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
+Esta guía le guiará por los diferentes pasos para configurar el SDK web de la plataforma Adobe Experience Platform en Launch. Para poder usar esta función, necesita tener permisos y estar en la lista allow. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
 - Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funcionará sin un CNAME, pero necesitará uno antes de ir a producción
 - Tenga derecho a la plataforma de datos de Adobe Experience Platform. Si no ha adquirido Platform, le proporcionaremos la base de servicios de datos de la plataforma de experiencia para que la utilice de forma limitada con el SDK sin cargo adicional.
@@ -26,7 +26,7 @@ Puede crear un ID de configuración mediante la herramienta [de configuración](
 
 >[!NOTE]
 >
->La organización debe estar en una lista blanca para la función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
+>Su organización debe estar en la lista de autorización de la función. Comuníquese con el CSM para que se le ponga en la lista de autorización.
 
 ## Preparación de un Esquema
 
