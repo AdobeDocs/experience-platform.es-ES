@@ -4,7 +4,7 @@ seo-title: Compatibilidad con la preferencia de consentimiento del SDK web de Ad
 description: Descubra cómo se admiten las preferencias de consentimiento con el SDK web de la plataforma de experiencia
 seo-description: Descubra cómo se admiten las preferencias de consentimiento con el SDK web de la plataforma de experiencia
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Si el usuario exclusión todos los fines, el SDK no realiza ninguna de estas tar
 
 ## Configuración del consentimiento
 
-De forma predeterminada, el usuario está adhesión a todos los efectos. Para evitar que el SDK realice las tareas anteriores hasta que el usuario adhesión, pase `"defaultConsent": { "general": "pending" }` durante la configuración del SDK lo siguiente:
+De forma predeterminada, el usuario está adhesión para todos los fines. Para evitar que el SDK realice las tareas anteriores hasta que el usuario adhesión, pase `"defaultConsent": { "general": "pending" }` durante la configuración del SDK lo siguiente:
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
@@ -45,7 +45,13 @@ Si el usuario adhesión, ejecute el `setConsent` comando con la `general` opció
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -55,7 +61,13 @@ Si el usuario decide exclusión, ejecute el `setConsent` comando con la `general
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 
