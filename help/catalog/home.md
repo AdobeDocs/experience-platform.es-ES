@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Información general del servicio de catálogo
 topic: overview
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
 
 El servicio de catálogo es el sistema de registro para la ubicación y el linaje de los datos en Adobe Experience Platform. Aunque todos los datos que se ingestan en la plataforma de experiencia se almacenan en el lago de datos como archivos y directorios, Catálogo guarda los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y supervisión.
 
-En pocas palabras, Catálogo actúa como un almacén de metadatos o un &quot;catálogo&quot; en el que puede encontrar información sobre los datos en la plataforma de experiencias. Puede utilizar el catálogo para responder a las siguientes preguntas:
+En pocas palabras, Catálogo actúa como un almacén de metadatos o un &quot;catálogo&quot; en el que puede encontrar información sobre sus datos en la plataforma de experiencias. Puede utilizar el catálogo para responder a las siguientes preguntas:
 
 * ¿Dónde se encuentran mis datos?
 * ¿En qué fase de procesamiento se encuentran estos datos?
@@ -39,7 +42,7 @@ Para obtener información más general sobre el sistema XDM, consulte la descrip
 
 La plataforma de experiencia ingesta datos de varias fuentes y mantiene registros como conjuntos de datos dentro del lago de datos. El catálogo rastrea los metadatos de estos conjuntos de datos, independientemente de su origen o método de ingesta.
 
-Al utilizar el método de ingesta por lotes, Catalog también realiza un seguimiento de metadatos adicionales para los archivos de **lotes** . Los lotes son unidades de datos que consisten en uno o más archivos que se van a ingerir como una sola unidad. El catálogo realiza un seguimiento de los metadatos de estos archivos por lotes, así como de los conjuntos de datos en los que se conservan tras la ingestión. Los metadatos del lote incluyen información sobre el número de registros que se han ingestado correctamente, así como sobre los registros fallidos y los mensajes de error asociados.
+Al utilizar el método de ingesta por lotes, Catalog también realiza un seguimiento de metadatos adicionales para los archivos de **lotes** . Los lotes son unidades de datos compuestas por uno o más archivos que se van a introducir como una sola unidad. El catálogo realiza un seguimiento de los metadatos de estos archivos por lotes, así como de los conjuntos de datos en los que se conservan tras la ingestión. Los metadatos del lote incluyen información sobre el número de registros que se han ingestado correctamente, así como sobre los registros fallidos y los mensajes de error asociados.
 
 Consulte la descripción general [de la ingestión de](../ingestion/home.md) datos para obtener más información.
 
@@ -52,10 +55,10 @@ La siguiente tabla describe los distintos tipos de objetos admitidos por Catalog
 | Objeto | Extremo API | Definición |
 |---|---|---|
 | Cuenta | `/accounts` | Al crear conexiones de origen, se deben proporcionar credenciales de autenticación. Una cuenta representa una colección de credenciales de autenticación que se utilizaron para crear una conexión de un tipo específico. Cada conexión tiene un conjunto de parámetros únicos que el catálogo persiste y que se protegen en un Almacén de claves de Azure. |
-| Lote | `/batches` | Los lotes son unidades de datos que consisten en uno o más archivos que se van a ingerir como una sola unidad. Un objeto de lote en Catálogo describe las métricas de ingestión del lote (como el número de registros procesados o el tamaño del disco) y también puede incluir vínculos a conjuntos de datos, vistas y otros recursos que se vieron afectados por la operación por lotes. |
+| Lote | `/batches` | Los lotes son unidades de datos compuestas por uno o más archivos que se van a introducir como una sola unidad. Un objeto de lote en Catálogo describe las métricas de ingestión del lote (como el número de registros procesados o el tamaño del disco) y también puede incluir vínculos a conjuntos de datos, vistas y otros recursos que se vieron afectados por la operación por lotes. |
 | Conexión | `/connections` | Una conexión es una única instancia de un conector de origen, exclusivo de su organización y configurado con las credenciales de autenticación correspondientes para el tipo de conector. |
 | Conector | `/connectors` | Los conectores definen el modo en que las conexiones de origen deben recopilar datos de otras aplicaciones de Adobe (como Adobe Analytics y Adobe Audiencia Manager), fuentes de almacenamiento en la nube de terceros (como Azure Blob, Amazon S3, servidores FTP y servidores SFTP) y sistemas CRM de terceros (como Microsoft Dynamics y Salesforce). |
-| Conjunto de datos | `/dataSets` | Un conjunto de datos es un almacenamiento y una estructura de administración que se utiliza para recopilar datos (generalmente una tabla) que contiene un esquema (columnas) y campos (filas). |
+| Conjunto de datos | `/dataSets` | Un conjunto de datos es un almacenamiento y una estructura de administración que se utiliza para recopilar datos (generalmente una tabla) que contiene un esquema (columnas) y campos (filas). Consulte la información general [de los](./datasets/overview.md) conjuntos de datos para obtener más información. |
 | Archivo de conjunto de datos | `/datasetFiles` | Los archivos de conjunto de datos representan bloques de datos que se han guardado en la plataforma. Como registros de archivos literales, es allí donde puede encontrar el tamaño del archivo, el número de registros que contiene y una referencia al lote que ingesta el archivo. |
 
 ## Pasos siguientes
