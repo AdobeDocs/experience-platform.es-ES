@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Introducción a los conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ Para obtener más información sobre XDM, consulte la descripción general [del 
 
 ## Ingreso de datos en conjuntos de datos
 
-La ingestión de datos de la plataforma de experiencia de Adobe representa los múltiples métodos mediante los cuales la plataforma ingesta datos de diversas fuentes. Independientemente del método de ingestión, todos los datos ingestados correctamente se convierten en archivos por lotes. Los lotes son unidades de datos que consisten en uno o más archivos que se van a ingerir como una sola unidad. Estos archivos por lotes se agregan luego a conjuntos de datos dedicados y persisten dentro del lago de datos.
+La ingestión de datos de la plataforma de experiencia de Adobe representa los múltiples métodos mediante los cuales la plataforma ingesta datos de diversas fuentes. Independientemente del método de ingestión, todos los datos ingestados correctamente se convierten en archivos por lotes. Los lotes son unidades de datos compuestas por uno o más archivos que se van a introducir como una sola unidad. Estos archivos por lotes se agregan luego a conjuntos de datos dedicados y persisten dentro del lago de datos.
 
 Para obtener más información, consulte la descripción general [de la inserción de](../../ingestion/home.md) datos.
 
@@ -41,7 +44,10 @@ El Gobierno de datos de la plataforma Adobe Experience le permite administrar lo
 
 Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o a campos de conjuntos de datos individuales. Las etiquetas agregadas en el nivel de conjunto de datos son heredadas por todos los campos dentro de ese conjunto de datos.
 
-Consulte la información general [de](../../data-governance/home.md) Administración de datos para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en la interfaz de usuario de la plataforma de experiencia, consulte la guía [del usuario de etiquetas de uso de](../../data-governance/labels/user-guide.md)datos.
+Consulte la información general [de](../../data-governance/home.md) Administración de datos para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en [!DNL Platform], consulte las siguientes guías:
+
+* [Administrar etiquetas en la interfaz de usuario](../../data-governance/labels/user-guide.md)
+* [Administrar etiquetas en la API](../../data-governance/labels/api.md)
 
 ## Conjuntos de datos en los servicios de plataformas descendentes
 
