@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +18,17 @@ Este documento proporciona los pasos para crear y administrar solicitudes de pri
 
 ## Examinar el panel de la interfaz de usuario de Privacy Service
 
-El panel de la interfaz de usuario de Privacy Service proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: Informe **** de estado y solicitudes **** de trabajo. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
+El panel de la interfaz de usuario de Privacy Service proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: **Informe** de estado y solicitudes **de trabajo**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
 
 ![panel de la interfaz de usuario](../images/user-guide/dashboard.png)
 
 ### Tipo de regulación
 
-Privacy Service admite solicitudes de trabajo para dos tipos de regulación:
+Privacy Service admite solicitudes de trabajo para tres tipos de regulación:
 
-* Reglamento general de protección de datos (RGPD)
-* La Ley de Privacidad del Consumidor de California (CCPA).
+* Reglamento general de protección de datos (RGPD) de la Unión Europea
+* La Ley de Privacidad del Consumidor de California (CCPA)
+* Ley de Protección de Datos Personales de Tailandia (PDPA_THA)
 
 Los trabajos para cada tipo de regulación se rastrean por separado. Para cambiar entre tipos de regulación, haga clic en el menú desplegable Tipo **de** regulación y seleccione la regulación deseada en la lista.
 
