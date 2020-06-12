@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
+workflow-type: tm+mt
+source-wordcount: '899'
+ht-degree: 0%
 
 ---
 
 
-# Preguntas más frecuentes sobre Privacy Service
+# Guía de solución de problemas de Privacy Service
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Privacy Service.
+Adobe Experience Platform Privacy Service proporciona una API RESTful y una interfaz de usuario para ayudar a las compañías a administrar las solicitudes de privacidad de datos de los clientes. Con Privacy Service, puede enviar solicitudes para acceder y eliminar datos de clientes personales o privados, lo que facilita el cumplimiento automatizado de las normas de privacidad legales y de la organización.
 
-Privacy Service proporciona una API RESTful y una interfaz de usuario para ayudar a las compañías a administrar las solicitudes de privacidad de datos de los clientes. Con Privacy Service, puede enviar solicitudes para acceder y eliminar datos de clientes personales o privados, lo que facilita el cumplimiento automatizado de las normas de privacidad legales y de la organización.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Privacy Service, así como información sobre los errores encontrados más frecuentemente en la API.
 
 ## Al realizar solicitudes de privacidad en la API, ¿cuál es la diferencia entre un usuario y un ID de usuario? {#user-ids}
 
@@ -92,3 +95,18 @@ Para obtener más información, consulte la sección sobre la [búsqueda de un t
 ### Uso de la interfaz de usuario
 
 En el panel de la interfaz de usuario de Privacy Service, busque el trabajo que desea descargar desde la utilidad Solicitudes **de** trabajo. Haga clic en el ID del trabajo para abrir la página Detalles _del_ trabajo. Desde aquí, haga clic en **Descargar** en la esquina superior derecha para descargar el archivo ZIP. Consulte la guía [del usuario de](ui/user-guide.md) Privacy Service para obtener más detalles.
+
+## Mensajes de error comunes
+
+La siguiente tabla describe algunos errores comunes en Privacy Service, con descripciones que ayudan a resolver sus respectivos problemas.
+
+| Mensaje de error | Descripción |
+| --- | --- |
+| No se encontraron los ID de usuario. | Algunos de los ID de usuario proporcionados en la solicitud no se encontraron y se omitieron. Asegúrese de que está utilizando las Áreas de nombres y los valores de ID correctos en la carga útil de la solicitud. Consulte el documento sobre [proporcionar datos](./identity-data.md) de identidad para obtener una explicación más detallada. |
+| Área de nombres no válida | La Área de nombres de identidad proporcionada para un ID de usuario no era válida. Consulte la sección sobre Áreas de nombres [de identidad](./api/appendix.md#standard-namespaces) estándar en el apéndice de la guía para desarrolladores de Privacy Service para obtener una lista de Áreas de nombres aceptadas. Si utiliza una Área de nombres personalizada, asegúrese de que está configurando la propiedad del ID en `type` &quot;custom&quot;. |
+| Finalizado parcialmente | El trabajo se completó correctamente, pero algunos datos no se aplicaron a la solicitud dada y se omitieron. |
+| Los datos no tienen el formato requerido. | Uno o más de los valores de datos de la aplicación especificada tenían un formato incorrecto. Consulte los detalles del trabajo para obtener más información. |
+| No se ha aprovisionado la organización IMS. | Este mensaje se produce cuando la organización de IMS no se ha aprovisionado para Privacy Service. Póngase en contacto con el administrador para obtener más información. |
+| Se requiere acceso y permisos. | Se requiere acceso y permisos para utilizar Privacy Service. Póngase en contacto con el administrador para obtener acceso. |
+| Hubo un problema al cargar y archivar los datos de acceso. | Cuando se produzca este error, vuelva a cargar los datos de acceso e inténtelo de nuevo. |
+| Se excedió la carga de trabajo para el límite actual de la tasa de documento. | Cuando se produzca este error, reduzca la tasa de envío e inténtelo de nuevo. |
