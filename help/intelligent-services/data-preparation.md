@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,26 @@ Para que los servicios inteligentes puedan descubrir perspectivas a partir de lo
 
 Este documento proporciona una guía general sobre cómo asignar los datos de eventos de marketing de varios canales a este esquema, esbozando información sobre los campos importantes dentro del esquema para ayudarle a determinar cómo asignar los datos de manera efectiva a su estructura.
 
-## Explicación del esquema de CEE
+## Resumen de flujo de trabajo
+
+El proceso de preparación varía en función de si los datos se almacenan en Adobe Experience Platform o externamente. En esta sección se resumen los pasos necesarios que debe seguir, en cualquier caso.
+
+### Preparación de datos externos
+
+Si los datos se almacenan fuera de [!DNL Experience Platform], siga los pasos a continuación:
+
+1. Póngase en contacto con los servicios de consultoría de Adobe para solicitar las credenciales de acceso para un contenedor de Almacenamiento de blob de Azure dedicado.
+1. Con las credenciales de acceso, cargue los datos en el contenedor Blob.
+1. Póngase en contacto con los servicios de consultoría de Adobe para asignar los datos al esquema [](#cee-schema) Consumer ExperienceEvent e incorporarlos a los servicios inteligentes.
+
+### [!DNL Experience Platform] preparación de datos
+
+Si los datos ya están almacenados en [!DNL Platform], siga los pasos a continuación:
+
+1. Revise la estructura del esquema [](#cee-schema) Consumer ExperienceEvent y determine si los datos se pueden asignar a sus campos.
+1. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema e incorporarlos a los servicios inteligentes, o [siga los pasos de esta guía](#mapping) si desea asignarlos usted mismo.
+
+## Explicación del esquema de CEE {#cee-schema}
 
 El esquema Consumer ExperienceEvent describe el comportamiento de una persona en relación con eventos de marketing digital (web o móvil), así como con la actividad comercial en línea o sin conexión. El uso de este esquema es necesario para Servicios Inteligentes debido a sus campos (columnas) semánticamente bien definidos, evitando nombres desconocidos que de otra manera harían que los datos fueran menos claros.
 
@@ -59,7 +78,7 @@ Para obtener información completa sobre cada uno de los subcampos obligatorios 
 
 En la tabla siguiente se proporcionan algunos ejemplos de canales de marketing asignados al `xdm:channel` esquema:
 
-| Canal | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Búsqueda de pago | https:/<span>/ns.adobe.com/xdm/canal-types/search | pagado | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | ganado | clicks |
@@ -185,7 +204,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 
 Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
-## Asignación e ingesta de datos
+## Asignación e ingesta de datos (#mapping)
 
 Una vez que haya determinado si los datos de eventos de marketing se pueden asignar al esquema CEE, el siguiente paso es determinar qué datos se van a incluir en Servicios inteligentes. Todos los datos históricos utilizados en Servicios Inteligentes deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
 
@@ -237,7 +256,7 @@ PATCH /dataSets/{DATASET_ID}
 
 En función de la fuente desde la que ingrese datos, debe proporcionar los valores apropiados `primaryIdentityNamespace` y `sourceConnectorId` de etiqueta en la carga útil de la solicitud.
 
-La siguiente solicitud agrega los valores de etiqueta adecuados para el Administrador de Audiencias:
+La siguiente solicitud agrega los valores de etiqueta adecuados para Audience Manager:
 
 ```shell
 curl -X PATCH \
