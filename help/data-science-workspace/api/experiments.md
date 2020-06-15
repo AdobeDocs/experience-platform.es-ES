@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Experimentos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 El desarrollo de modelos y la formación se realizan en el nivel Experimento, donde un Experimento consiste en una instancia MLI, ejecuciones de capacitación y carreras de puntuación.
 
-## Crear un experimento
+## Crear un experimento {#create-an-experiment}
 
 Puede crear un experimento realizando una solicitud POST mientras proporciona un nombre y un ID de instancia MLI válido en la carga útil de la solicitud.
 
@@ -64,7 +67,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 }
 ```
 
-## Crear y ejecutar una ejecución de formación o puntuación
+## Crear y ejecutar una ejecución de formación o puntuación {#experiment-training-scoring}
 
 Puede crear ejecuciones de puntuación o formación realizando una solicitud POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. Si se crea correctamente una ejecución de formación, se inicializará el procedimiento de formación del modelo y su finalización con éxito generará un modelo capacitado. La generación de modelos formados reemplazará a los ya existentes, de modo que un experimento solo puede utilizar un modelo entrenado en un momento dado.
 
@@ -95,7 +98,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `{TASK}` | Especifica la tarea de la ejecución. Establezca este valor como `train` para formación, `score` puntuación o `fp` para la canalización de funciones. |
+| `{TASK}` | Especifica la tarea de la ejecución. Establezca este valor como `train` para formación, `score` puntuación o `featurePipeline` para la canalización de funciones. |
 
 **Respuesta**
 
@@ -216,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Respuesta**
 
@@ -366,7 +368,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un experimento
 
-Puede eliminar un solo experimento realizando una solicitud de ELIMINACIÓN que incluya el ID del experimento de destinatario en la ruta de solicitud.
+Puede eliminar un solo experimento realizando una solicitud de DELETE que incluya el ID del experimento de destinatario en la ruta de solicitud.
 
 **Formato de API**
 
@@ -401,7 +403,7 @@ curl -X DELETE \
 
 ## Eliminar experimentos por ID de instancia MLI
 
-Puede eliminar todos los experimentos que pertenezcan a una instancia MLI concreta realizando una solicitud DELETE que incluya el ID de instancia MLI como parámetro de consulta.
+Puede eliminar todos los experimentos que pertenezcan a una instancia MLI concreta realizando una solicitud de DELETE que incluya el ID de instancia MLI como parámetro de consulta.
 
 **Formato de API**
 
