@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -35,17 +35,15 @@ Este tutorial requiere un archivo de fórmula empaquetado en forma de URL de Doc
 
 - `{DOCKER_URL}`:: Dirección URL de una imagen de Docker de un servicio inteligente.
 
-Este tutorial requiere que haya completado el tutorial [](../../tutorials/authentication.md) Autenticación a la plataforma de Adobe Experience para realizar correctamente llamadas a las API de plataforma. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Este tutorial requiere que haya completado el tutorial [](../../tutorials/authentication.md) Autenticación a Adobe Experience Platform para poder realizar correctamente llamadas a las API de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.
 - `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
-- `{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.
+- `{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.
 
 ## Crear un motor
 
-Según la forma del archivo de fórmula empaquetado que se incluirá como parte de la solicitud de API, se crea un motor de dos formas:
-
-- [Creación de un motor con una URL de acoplamiento](#create-an-engine-with-a-docker-url)
+Los motores se pueden crear realizando una solicitud POST al extremo /motores. El motor creado se configura en función de la forma del archivo de fórmula empaquetado que debe incluirse como parte de la solicitud de API.
 
 ### Creación de un motor con una URL de acoplamiento {#create-an-engine-with-a-docker-url}
 
