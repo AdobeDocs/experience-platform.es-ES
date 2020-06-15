@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Tutorial;Feature Pipeline;Data Science Workspace;popular topics
-solution: Experience Platform
+keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
+solution: Adobe Experience Platform Data Science Workspace
 title: Creación de una canalización de funciones
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,34 @@ ht-degree: 0%
 
 # Creación de una canalización de funciones
 
-[!DNL Adobe Experience Platform] le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime (en lo sucesivo, &quot;Runtime&quot;).
+>[!IMPORTANT]
+> Las tuberías de funciones actualmente solo están disponibles mediante API.
 
-Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante el SDK [de creación de](./sdk.md) modelos en PySpark y Spark.
+Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime (en adelante, &quot;Runtime&quot;).
 
-## Clases de canalización de funciones
+Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizadas mediante el SDK [de creación de](./sdk.md) modelos en PySpark.
+
+El siguiente flujo de trabajo se produce cuando se ejecuta una canalización de funciones:
+
+1. La fórmula carga el conjunto de datos en una canalización.
+2. La transformación de funciones se realiza en el conjunto de datos y se vuelve a escribir en el Adobe Experience Platform.
+3. Los datos transformados se cargan para la formación.
+4. La canalización de funciones define las etapas con el regresor de aumento de degradado como modelo elegido.
+5. La canalización se utiliza para ajustar los datos de capacitación y se crea el modelo capacitado.
+6. El modelo se transforma con el conjunto de datos de puntuación.
+7. Las columnas interesantes del resultado se seleccionan y se guardan de nuevo [!DNL Experience Platform] con los datos asociados.
+
+## Primeros pasos
+
+Para ejecutar una fórmula en cualquier organización, se requiere lo siguiente:
+- Un conjunto de datos de entrada.
+- Esquema del conjunto de datos.
+- Un esquema transformado y un conjunto de datos vacío basado en ese esquema.
+- Un esquema de salida y un conjunto de datos vacío basados en ese esquema.
+
+Todos los conjuntos de datos anteriores deben cargarse en la [!DNL Platform] interfaz de usuario. Para configurar esta opción, utilice el script de [arranque proporcionado por Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+
+## Clases de flujo de funciones
 
 En la tabla siguiente se describen las principales clases abstractas que debe ampliar para crear una canalización de funciones:
 
@@ -29,7 +52,7 @@ En la tabla siguiente se describen las principales clases abstractas que debe am
 | FeaturePipelineFactory | Una clase FeaturePipelineFactory construye una tubería Spark que consiste en una serie de transformadores Spark para realizar ingeniería de funciones. Puede optar por no proporcionar una clase FeaturePipelineFactory e implementar la lógica de ingeniería de funciones en la clase DatasetTransformer. |
 | DataSaver | Una clase DataSaver proporciona la lógica para el almacenamiento de un conjunto de datos de funciones. |
 
-Cuando se inicia un trabajo de Canalización de funciones, el motor de ejecución ejecutará primero DataLoader para cargar los datos de entrada como DataFrame y, a continuación, modifica el DataFrame ejecutando DatasetTransformer, FeaturePipelineFactory o ambos. Por último, el conjunto de datos de características resultante se almacena a través de DataSaver.
+Cuando se inicia un trabajo de Canalización de funciones, el motor de ejecución ejecuta primero DataLoader para cargar datos de entrada como DataFrame y, a continuación, modifica el DataFrame ejecutando DatasetTransformer, FeaturePipelineFactory o ambos. Por último, el conjunto de datos de características resultante se almacena a través de DataSaver.
 
 El siguiente diagrama de flujo muestra el orden de ejecución del motor de ejecución:
 
@@ -44,8 +67,7 @@ Las siguientes secciones proporcionan detalles y ejemplos sobre la implementaci�
 
 El archivo JSON de configuración consta de pares clave-valor y está diseñado para que pueda especificar las variables que se definirán posteriormente durante el tiempo de ejecución. Estos pares clave-valor pueden definir propiedades como ubicación del conjunto de datos de entrada, ID del conjunto de datos de salida, ID del inquilino, encabezados de columna, etc.
 
-En el siguiente ejemplo se muestran los pares clave-valor que se encuentran dentro de un archivo de configuración. Expanda el ejemplo para ver los detalles:
-
+En el siguiente ejemplo se muestran los pares de clave-valor que se encuentran dentro de un archivo de configuración:
 
 **ejemplo de configuración JSON**
 
@@ -55,7 +77,7 @@ En el siguiente ejemplo se muestran los pares clave-valor que se encuentran dent
         "name": "fp",
         "parameters": [
             {
-                "key": "datasetId",
+                "key": "dataset_id",
                 "value": "000"
             },
             {
@@ -71,132 +93,74 @@ En el siguiente ejemplo se muestran los pares clave-valor que se encuentran dent
 ]
 ```
 
-
-
-Puede acceder a la configuración JSON a través de cualquier método de clase que se defina `configProperties` como parámetro. Por ejemplo:
+Puede acceder a la configuración JSON a través de cualquier método de clase que se defina `config_properties` como parámetro. Por ejemplo:
 
 **PySpark**
 
 ```python
-input_dataset_id = str(configProperties.get("datasetId"))
+dataset_id = str(config_properties.get(dataset_id))
 ```
 
-**Spark**
-
-```scala
-val input_dataset_id: String = configProperties.get("datasetId")
-```
-
+Consulte el archivo [canalización.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) proporcionado por Data Science Workspace para ver un ejemplo de configuración más detallado.
 
 ### Preparación de los datos de entrada con DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader es responsable de la recuperación y el filtrado de los datos de entrada. La implementación de DataLoader debe ampliar la clase abstracta `DataLoader` y anular el método abstracto `load`.
 
-En el ejemplo siguiente se recupera un conjunto de datos de la plataforma por ID y se devuelve como DataFrame, donde el ID del conjunto de datos (`datasetId`) es una propiedad definida en el archivo de configuración. Expanda cada ejemplo para ver los detalles:
-
+En el ejemplo siguiente se recupera un conjunto de datos [!DNL Platform] por ID y se devuelve como DataFrame, donde el ID del conjunto de datos (`dataset_id`) es una propiedad definida en el archivo de configuración.
 
 **Ejemplo de PySpark**
 
 ```python
 # PySpark
 
-from sdk.data_loader import DataLoader
+from pyspark.sql.types import StringType, TimestampType
+from pyspark.sql.functions import col, lit, struct
+import logging
 
 class MyDataLoader(DataLoader):
-    def load(self, configProperties, spark):
+    def load_dataset(config_properties, spark, tenant_id, dataset_id):
+    PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
+    PLATFORM_SDK_PQS_INTERACTIVE = "interactive"
 
-        # preliminary checks
-        if configProperties is None :
-            raise ValueError("configProperties parameter is null")
-        if spark is None:
-            raise ValueError("spark parameter is null")
+    service_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+    user_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+    org_id = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+    api_key = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
 
-        # prepare variables
-        dataset_id = str(
-            configProperties.get("datasetId"))
-        service_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+    dataset_id = str(config_properties.get(dataset_id))
 
-        # validate variables
-        for arg in ['dataset_id', 'service_token', 'user_token', 'org_id', 'api_key']:
-            if eval(arg) == 'None':
-                raise ValueError("%s is empty" % arg)
+    for arg in ['service_token', 'user_token', 'org_id', 'dataset_id', 'api_key']:
+        if eval(arg) == 'None':
+            raise ValueError("%s is empty" % arg)
 
-        # load dataset through Spark session
-        df = spark.read.format("com.adobe.platform.dataset") \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('orgId', org_id) \
-            .option('serviceApiKey', api_key) \
-            .load(dataset_id)
+    query_options = get_query_options(spark.sparkContext)
 
-        # return as DataFrame
-        return df
+    pd = spark.read.format(PLATFORM_SDK_PQS_PACKAGE) \
+        .option(query_options.userToken(), user_token) \
+        .option(query_options.serviceToken(), service_token) \
+        .option(query_options.imsOrg(), org_id) \
+        .option(query_options.apiKey(), api_key) \
+        .option(query_options.mode(), PLATFORM_SDK_PQS_INTERACTIVE) \
+        .option(query_options.datasetId(), dataset_id) \
+        .load()
+    pd.show()
+
+    # Get the distinct values of the dataframe
+    pd = pd.distinct()
+
+    # Flatten the data
+    if tenant_id in pd.columns:
+        pd = pd.select(col(tenant_id + ".*"))
+
+    return pd
 ```
-
-
-
-
-**Ejemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DataLoader
-import org.apache.spark.sql.{DataFrame, SparkSession}
-
-class MyDataLoader extends DataLoader {
-    override def load(configProperties: ConfigProperties, sparkSession: SparkSession): DataFrame = {
-
-        // preliminary checks
-        require(configProperties != null)
-        require(sparkSession != null)
-
-        // prepare variables
-        val dataSetId: String = configProperties
-            .get("datasetId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(dataSetId, serviceToken, userToken, orgId, apiKey).foreach(
-            value => required(value != "")
-        )
-
-        // load dataset through Spark session
-        var df = sparkSession.read.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .load(dataSetId)
-        
-        // return as DataFrame
-        df
-    }
-}
-```
-
-
 
 ### Transformar un conjunto de datos con DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 DatasetTransformer proporciona la lógica para transformar un DataFrame de entrada y devuelve un DataFrame nuevo derivado. Esta clase se puede implementar para trabajar de forma conjunta con FeaturePipelineFactory, trabajar como el único componente de ingeniería de funciones o puede elegir no implementar esta clase.
 
-En el siguiente ejemplo se amplía la clase DatasetTransformer. Expanda cada ejemplo para ver los detalles:
+El ejemplo siguiente amplía la clase DatasetTransformer:
 
 
 **Ejemplo de PySpark**
@@ -205,54 +169,59 @@ En el siguiente ejemplo se amplía la clase DatasetTransformer. Expanda cada eje
 # PySpark
 
 from sdk.dataset_transformer import DatasetTransformer
+from pyspark.ml.feature import StringIndexer
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import unix_timestamp, from_unixtime, to_date, lit, lag, udf, date_format, lower, col, split, explode
+from pyspark.sql import Window
+from .helper import setupLogger
 
 class MyDatasetTransformer(DatasetTransformer):
+    logger = setupLogger(__name__)
 
-    def transform(self, configProperties, dataset):
-        transformed = dataset
+    def transform(self, config_properties, dataset):
+        tenant_id = str(config_properties.get("tenantId"))
 
-        '''
-        Transformations
-        '''
+        # Flatten the data
+        if tenant_id in dataset.columns:
+            self.logger.info("Flatten the data before transformation")
+            dataset = dataset.select(col(tenant_id + ".*"))
+            dataset.show()
 
-        # return new DataFrame
-        return transformed
+        # Convert isHoliday boolean value to Int
+        # Rename the column to holiday and drop isHoliday
+        pd = dataset.withColumn("holiday", col("isHoliday").cast(IntegerType())).drop("isHoliday")
+        pd.show()
+
+        # Get the week and year from date
+        pd = pd.withColumn("week", date_format(to_date("date", "MM/dd/yy"), "w").cast(IntegerType()))
+        pd = pd.withColumn("year", date_format(to_date("date", "MM/dd/yy"), "Y").cast(IntegerType()))
+
+        # Convert the date to TimestampType
+        pd = pd.withColumn("date", to_date(unix_timestamp(pd["date"], "MM/dd/yy").cast("timestamp")))
+
+        # Convert categorical data
+        indexer = StringIndexer(inputCol="storeType", outputCol="storeTypeIndex")
+        pd = indexer.fit(pd).transform(pd)
+
+        # Get the WeeklySalesAhead and WeeklySalesLag column values
+        window = Window.orderBy("date").partitionBy("store")
+        pd = pd.withColumn("weeklySalesLag", lag("weeklySales", 1).over(window)).na.drop(subset=["weeklySalesLag"])
+        pd = pd.withColumn("weeklySalesAhead", lag("weeklySales", -1).over(window)).na.drop(subset=["weeklySalesAhead"])
+        pd = pd.withColumn("weeklySalesScaled", lag("weeklySalesAhead", -1).over(window)).na.drop(subset=["weeklySalesScaled"])
+        pd = pd.withColumn("weeklySalesDiff", (pd['weeklySales'] - pd['weeklySalesLag'])/pd['weeklySalesLag'])
+
+        pd = pd.na.drop()
+        self.logger.debug("Transformed dataset count is %s " % pd.count())
+
+        # return transformed dataframe
+        return pd
 ```
-
-
-
-
-**Ejemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DatasetTransformer
-
-class MyDatasetTransformer extends DatasetTransformer {
-
-    override def transform(configProperties: ConfigProperties, dataset: Dataset[_]): Dataset[_] = {
-        val transformed = dataset
-
-        /*
-        transformations
-        */
-        
-        // return new DataFrame
-        transformed
-    }
-}
-```
-
-
 
 ### Funciones de datos de ingeniero con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 FeaturePipelineFactory le permite implementar la lógica de ingeniería de características mediante la definición y la agrupación de una serie de transformadores de chispa a través de una tubería de chispa. Esta clase se puede implementar para trabajar de forma conjunta con DatasetTransformer, trabajar como el único componente de ingeniería de funciones o puede elegir no implementar esta clase.
 
-El siguiente ejemplo amplía la clase FeaturePipelieFactory e implementa una serie de transformadores Spark como varias etapas en una tubería Spark. Expanda cada ejemplo para ver los detalles:
-
+El siguiente ejemplo amplía la clase FeaturePipelineFactory:
 
 **Ejemplo de PySpark**
 
@@ -260,78 +229,64 @@ El siguiente ejemplo amplía la clase FeaturePipelieFactory e implementa una ser
 # PySpark
 
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import HashingTF, Tokenizer
-from sdk.feature_pipeline_factory import FeaturePipelineFactory
+from pyspark.ml.regression import GBTRegressor
+from pyspark.ml.feature import VectorAssembler
+
+import numpy as np
+
+from sdk.pipeline_factory import PipelineFactory
 
 class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
-    def create_pipeline(self, configProperties):
+    def apply(self, config_properties):
+        if config_properties is None:
+            raise ValueError("config_properties parameter is null")
 
-        # Spark Transformers
-        tokenizer = Tokenizer(inputCol="lower_text", outputCol="words")
-        hashingTF = HashingTF(inputCol=tokenizer.getOutputCol(), outputCol="features")
+        tenant_id = str(config_properties.get("tenantId"))
+        input_features = str(config_properties.get("ACP_DSW_INPUT_FEATURES"))
 
-        # Chain together Spark Transformers as Spark Pipeline Stages
-        pipeline = Pipeline(stages=[tokenizer, hashingTF])
+        if input_features is None:
+            raise ValueError("input_features parameter is null")
+        if input_features.startswith(tenant_id):
+            input_features = input_features.replace(tenant_id + ".", "")
 
-        # return a Spark Pipeline
+        learning_rate = float(config_properties.get("learning_rate"))
+        n_estimators = int(config_properties.get("n_estimators"))
+        max_depth = int(config_properties.get("max_depth"))
+
+        feature_list = list(input_features.split(","))
+        feature_list.remove("date")
+        feature_list.remove("storeType")
+
+        cols = np.array(feature_list)
+
+        # Gradient-boosted tree estimator
+        gbt = GBTRegressor(featuresCol='features', labelCol='weeklySalesAhead', predictionCol='prediction',
+                       maxDepth=max_depth, maxBins=n_estimators, stepSize=learning_rate)
+
+        # Assemble the fields to a vector
+        assembler = VectorAssembler(inputCols=cols, outputCol="features")
+
+        # Construct the pipeline
+        pipeline = Pipeline(stages=[assembler, gbt])
+
         return pipeline
 
-    def get_param_map(self, configProperties, sparkSession):
+    def train(self, config_properties, dataframe):
         pass
+
+    def score(self, config_properties, dataframe, model):
+        pass
+
+    def getParamMap(self, config_properties, sparkSession):
+        return None
 ```
-
-
-
-
-**Ejemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.FeaturePipelineFactory
-import org.apache.spark.ml.feature.{HashingTF, Tokenizer}
-import org.apache.spark.ml.Pipeline
-import org.apache.spark.ml.param.ParamMap
-import org.apache.spark.sql.SparkSession
-
-class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
-    def this() = this("MyFeaturePipeline")
-
-    override def createPipeline(configProperties: ConfigProperties): Pipeline = {
-        
-        // Spark Transformers
-        val tokenizer = new Tokenizer()
-            .setInputCol("lower_text")
-            .setOutputCol("words")
-        val hashingTF = new HashingTF()
-            .setInputCol(tokenizer.getOutputCol())
-            .setOutputCol("features")
-
-        // Chain together Spark Transformers as Spark Pipeline Stages
-        val pipeline = new Pipeline()
-            .setStages(Array(tokenizer, hashingTF))
-        
-        // return a Spark Pipeline
-        pipeline
-    }
-
-    override def getParamMap(configProperties: ConfigProperties, sparkSession: SparkSession): ParamMap = {
-        val map = new ParamMap()
-        map
-    }
-}
-```
-
-
 
 ### Almacenar el conjunto de datos de funciones con DataSaver {#store-your-feature-dataset-with-datasaver}
 
 DataSaver se encarga de almacenar los conjuntos de datos de funciones resultantes en una ubicación de almacenamiento. La implementación de DataSaver debe ampliar la clase abstracta `DataSaver` y anular el método abstracto `save`.
 
-El ejemplo siguiente amplía la clase DataSaver que almacena datos en un conjunto de datos de la plataforma por ID, donde el ID del conjunto de datos (`featureDatasetId`) y el ID del inquilino (`tenantId`) son propiedades definidas en el archivo de configuración. Expanda cada ejemplo para ver los detalles:
-
+El ejemplo siguiente amplía la clase DataSaver que almacena datos en un [!DNL Platform] conjunto de datos por ID, donde el ID del conjunto de datos (`featureDatasetId`) y el ID del inquilino (`tenantId`) son propiedades definidas en la configuración.
 
 **Ejemplo de PySpark**
 
@@ -395,152 +350,89 @@ class MyDataSaver(DataSaver):
 ```
 
 
-
-
-**Ejemplo de Spark**
-
-```scala
-// Spark
-
-import com.adobe.platform.dataset.DataSetOptions
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.impl.Constants
-import com.adobe.platform.ml.sdk.DataSaver
-import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.TimestampType
-
-class MyDataSaver extends DataSaver {
-    override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
-
-        // Spark session
-        val sparkSession = dataFrame.sparkSession
-
-        // preliminary checks
-        require(configProperties != null)
-        require(dataFrame != null)
-
-        // prepare variables
-        val timestamp:String = "2019-01-01 00:00:00"
-        val output_dataset_id: String = configProperties
-            .get("featureDatasetId").getOrElse("")
-        val tenant_id:String = configProperties
-            .get("tenantId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(output_dataset_id, tenant_id, serviceToken, userToken, orgId, apiKey).foreach(
-            value => require(value != "")
-        )
-
-        // create and prepare DataFrame with valid columns
-        import sparkSession.implicits._
-
-        var output_df  = dataFrame.withColumn("date", $"date".cast("String"))
-        output_df = output_df.withColumn("timestamp", lit(timestamp).cast(TimestampType))
-        output_df = output_df.withColumn("_id", lit("empty"))
-        output_df = output_df.withColumn("eventType", lit("empty"))
-
-        // store data into dataset
-        output_df.select(tenant_id, "_id", "eventType", "timestamp").write.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .save(output_dataset_id)
-    }
-}
-```
-
 ### Especifique los nombres de clase implementados en el archivo de la aplicación {#specify-your-implemented-class-names-in-the-application-file}
 
-Ahora que las clases de Feature Pipeline están definidas e implementadas, debe especificar los nombres de las clases en el archivo de la aplicación.
+Ahora que las clases de canalización de funciones están definidas e implementadas, debe especificar los nombres de las clases en el archivo YAML de la aplicación.
 
-Los siguientes ejemplos especifican nombres de clase implementados. Expanda el ejemplo para ver los detalles:
-
+Los siguientes ejemplos especifican nombres de clase implementados:
 
 **Ejemplo de PySpark**
 
 ```yaml
-# application.yaml
+#Name of the class which contains implementation to get the input data.
+feature.dataLoader: InputDataLoaderForFeaturePipeline
 
-# Name of the implementation of DataLoader abstract class
-feature.dataLoader: MyDataLoader
-
-# Name of the implementation of DatasetTransformer abstract class
+#Name of the class which contains implementation to get the transformed data.
 feature.dataset.transformer: MyDatasetTransformer
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.pipeline.class: MyFeaturePipelineFactory
+#Name of the class which contains implementation to save the transformed data.
+feature.dataSaver: DatasetSaverForTransformedData
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver: MyDataSaver
+#Name of the class which contains implementation to get the training data
+training.dataLoader: TrainingDataLoader
+
+#Name of the class which contains pipeline. It should implement PipelineFactory.scala
+pipeline.class: TrainPipeline
+
+#Name of the class which contains implementation for evaluation metrics.
+evaluator: Evaluator
+evaluateModel: True
+
+#Name of the class which contains implementation to get the scoring data.
+scoring.dataLoader: ScoringDataLoader
+
+#Name of the class which contains implementation to save the scoring data.
+scoring.dataSaver: MyDatasetSaver
 ```
 
+## Cree el motor de canalización de funciones mediante la API {#create-feature-pipeline-engine-api}
 
+Ahora que ha creado la canalización de funciones, debe crear una imagen de Docker para realizar una llamada a los extremos de la canalización de funciones en la API de aprendizaje automático de Sensei. Necesita una URL de imagen de Docker para realizar una llamada a los extremos de la canalización de funciones.
 
+>[!TIP]
+>Si no tiene una URL de Docker, visite los archivos de origen del [paquete en un tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obtener un tutorial paso a paso sobre la creación de una URL de host de Docker.
 
-**Ejemplo de Spark**
+Opcionalmente, también puede utilizar la siguiente colección Postman para ayudarle a completar el flujo de trabajo de la API de canalización de funciones:
 
-```properties
-# application.properties
+https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
-# Name of the implementation of DataLoader abstract class
-feature.pipeline.class=MyDataLoader
+### Creación de un motor de canalización de funciones {#create-engine-api}
 
-# Name of the implementation of DatasetTransformer abstract class
-feature.dataset.transformer=MyDatasetTransformer
+Una vez que tenga la ubicación de la imagen del Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de funciones mediante la API de aprendizaje automático de Sensei realizando una POST a `/engines`. La creación correcta de un motor de canalización de funciones le proporciona un identificador único del motor (`id`). Asegúrese de guardar este valor antes de continuar.
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.dataLoader=MyFeaturePipelineFactory
+### Crear una instancia MLI {#create-mlinstance}
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver=MyDataSaver
-```
+Con su nueva creación `engineID`, debe [crear una MLIsistance](../api/mlinstances.md#create-an-mlinstance) haciendo una solicitud POST al `/mlInstance` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles de la instancia MLI recién creada, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
+### Crear un experimento {#create-experiment}
 
+A continuación, debe [crear un experimento](../api/experiments.md#create-an-experiment). Para crear un experimento necesita tener el identificador único (`id`) MLIsistance y realizar una solicitud POST al `/experiment` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
-## Generar el artefacto binario {#build-the-binary-artifact}
+### Especificar la tarea de canalización de la función de ejecución de experimentos {#specify-feature-pipeline-task}
 
-Ahora que las clases de tuberías de funciones están implementadas, puede compilarlas en un artefacto binario que puede utilizarse para crear una tubería de funciones a través de llamadas de API.
+Después de crear un experimento, debe cambiar el modo del experimento a `featurePipeline`. Para cambiar el modo, realice una POST adicional a [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con su `EXPERIMENT_ID` y en el cuerpo de envío `{ "mode":"featurePipeline"}` para especificar una ejecución del experimento de la canalización de funciones.
 
-**PySpark**
+Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
-Para crear una canalización de funciones PySpark, ejecute la secuencia de comandos de Python ubicada en el directorio raíz del SDK de creación de modelos. `setup.py`
+### Especifique la tarea de formación de ejecución del experimento {#training}
 
->[!NOTE] La creación de una canalización de funciones PySpark requiere que tenga Python 3 instalado en su equipo.
+A continuación, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de ejecución de formación. Realice una POST en `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo, establezca el modo en `train` y envíe una matriz de tareas que contengan los parámetros de formación. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento solicitado.
 
-```shell
-python3 setup.py bdist_egg
-```
+Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
-La generación exitosa de la tubería de características generará un `.egg` artefacto en el `/dist` directorio, este artefacto se utiliza para crear una tubería de características.
+### Especifique la tarea de puntuación de la ejecución del experimento {#scoring}
 
-**Spark**
+>[!NOTE]
+> Para completar este paso, debe tener al menos una ejecución de formación correcta asociada con el experimento.
 
-Para crear una canalización de funciones de Spark, ejecute el siguiente comando de consola en el directorio raíz del SDK de creación de modelos:
+Después de una ejecución de formación correcta, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de la ejecución de puntuación. Realice una POST a `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el `mode` atributo en &quot;score&quot;. Esto inicio tu carrera de Experimento de puntaje.
 
->[!NOTE] La creación de una tubería de función de chispa requiere que tenga Scala y sbt instalados en su equipo.
+Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
-```shell
-mvn clean install
-```
-
-La generación exitosa de la tubería de características generará un `.jar` artefacto en el `/dist` directorio, este artefacto se utiliza para crear una tubería de características.
-
-## Creación de un motor de canalización de funciones mediante la API {#create-a-feature-pipeline-engine-using-the-api}
-
-Ahora que ha creado la tubería de características y el artefacto binario, puede [crear un motor de tuberías de funciones con la API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)de aprendizaje automático Sensei. La creación correcta de un motor de canalización de funciones le proporcionará un identificador de motor como parte del cuerpo de respuesta, asegúrese de guardar este valor antes de continuar con los pasos siguientes.
+Una vez finalizada la puntuación, la canalización de funciones debería estar operativa.
 
 ## Pasos siguientes {#next-steps}
 
-[//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
+[//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Al leer este documento, ha creado una tubería de funciones con el SDK de creación de modelos, ha creado un artefacto binario y ha utilizado el artefacto para crear un motor de tuberías de funciones mediante una llamada de API. Ya está listo para [crear un modelo](../api/mlinstances.md#create-an-mlinstance) de tubería de funciones con el motor y el inicio recién creados que transforman conjuntos de datos y extraen funciones de datos a escala.
+Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la API de aprendizaje automático de Sensei. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante la API [de aprendizaje automático](../api/getting-started.md)Sensei.
