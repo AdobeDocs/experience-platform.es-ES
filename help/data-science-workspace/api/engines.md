@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -202,7 +202,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -219,6 +219,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o el Dockerhub público (no autenticado). |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Tipo de embalaje del motor. Este valor debe establecerse en `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Los parámetros `pipeline.json` del archivo de configuración. |
 
 **Respuesta**
 
@@ -242,7 +243,8 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del nu
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
@@ -468,7 +470,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un motor
 
-Puede eliminar un motor realizando una solicitud DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
+Puede eliminar un motor realizando una solicitud de DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
 
 **Formato de API**
 
