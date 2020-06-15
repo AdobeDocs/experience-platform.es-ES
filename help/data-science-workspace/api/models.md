@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Modelos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 4%
 
 ---
 
@@ -42,10 +45,10 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -55,10 +58,10 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "27c53796-bd6b-4u59-b51d-7296aa20er23",
             "name": "Model 2",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "3cb25a2d-2cbd-4d34-a619-8ddae5259a5t",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model2",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -68,10 +71,10 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "Model 3",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model3",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -117,7 +120,7 @@ La siguiente solicitud contiene una consulta y recupera una lista de modelos for
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID} \
+  https://platform.adobe.io/data/sensei/models/?property=experimentRunId==33408593-2871-4198-a812-6d1b7d939cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -132,10 +135,10 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -146,7 +149,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
        }
     ],
     "_page": {
-        "property": "experimentRunId=={EXPERIMENT_RUN_ID},deleted==false",
+        "property": "experimentRunId==33408593-2871-4198-a812-6d1b7d939cda,deleted==false",
         "count": 1
     }
 }
@@ -158,6 +161,60 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 | `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el `name` valor del modelo. |
 | `experimentId` | Un ID de experimento válido. |
 | `experimentRunId` | Un ID de ejecución de experimento válido. |
+
+## Registro de un modelo pregenerado {#register-a-model}
+
+Puede registrar un modelo pregenerado realizando una solicitud POST al `/models` extremo. Para registrar el modelo, es necesario incluir los valores del `modelArtifact` archivo y de la `model` propiedad en el cuerpo de la solicitud.
+
+**Formato de API**
+
+```http
+POST /models
+```
+
+**Solicitud**
+
+El siguiente POST contiene los valores `modelArtifact` de archivo y `model` propiedad que se necesitan. Consulte la tabla siguiente para obtener más información sobre estos valores.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/models \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -F 'modelArtifact=@/Users/yourname/Desktop/model.onnx' \
+    -F 'model={
+            "name": "Your Model - 0615-1342-45",
+            "originType": "offline"
+    }'
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `modelArtifact` | Ubicación del artefacto de modelo completo que desea incluir. |
+| `model` | Datos de formulario del objeto Model que se debe crear. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único (`id`) Modelos.
+
+```json
+{
+  "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "name": "Your Model - 0615-1342-45",
+  "originType": "offline",
+  "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "created": "2020-06-15T20:55:41.520Z",
+  "updated": "2020-06-15T20:55:41.520Z",
+  "deprecated": false
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `id` | ID correspondiente al modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el `id` valor del modelo. |
 
 ## Actualizar un modelo por ID
 
@@ -179,17 +236,17 @@ PUT /models/{MODEL_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -d '{
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -206,10 +263,10 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ```json
 {
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -222,7 +279,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un modelo por ID
 
-Puede eliminar un solo modelo realizando una solicitud DELETE que incluya el ID del modelo de destinatario en la ruta de solicitud.
+Puede eliminar un solo modelo realizando una solicitud de DELETE que incluya el ID del modelo de destinatario en la ruta de la solicitud.
 
 **Formato de API**
 
@@ -238,7 +295,7 @@ DELETE /models/{MODEL_ID}
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -256,3 +313,163 @@ Una respuesta correcta devuelve una carga útil que contiene un estado de 200 qu
     "detail": "Model deletion was successful"
 }
 ```
+
+## Crear una nueva transcodificación para un modelo {#create-transcoded-model}
+
+La transcodificación es la conversión directa de digital a digital de una codificación a otra. Para crear una nueva transcodificación para un modelo, proporcione el valor `{MODEL_ID}` y el valor `targetFormat` que desea que aparezca el nuevo resultado.
+
+**Formato de API**
+
+```http
+POST /models/{MODEL_ID}/transcodings
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: text/plain' \
+    -D '{
+ "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+ "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+ "targetFormat": "CoreML",
+ "created": "2019-12-16T19:59:08.360Z",
+ "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+ },
+ "updated": "2019-12-19T18:37:43.696Z",
+ "deleted": false,
+}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único (`id`) de transcodificaciones utilizado para [recuperar un modelo](#retrieve-transcoded-model)transcodificado específico.
+
+```json
+{
+  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+  "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+  "targetFormat": "CoreML",
+  "created": "2020-06-12T22:01:55.886Z",
+  "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+  },
+  "updated": "2020-06-12T22:01:55.886Z",
+  "deleted": false
+}
+```
+
+## Recuperar una lista de transcodificaciones para un modelo {#retrieve-transcoded-model-list}
+
+Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud GET con su `{MODEL_ID}`.
+
+**Formato de API**
+
+```http
+GET /models/{MODEL_ID}/transcodings
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{MODEL_ID}` | Identificador del modelo preparado o publicado. |
+
+**Solicitud**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve una carga útil que contiene un objeto json con una lista de cada transcodificación realizada en el Modelo. Cada modelo transcodificado recibe un identificador único (`id`).
+
+```json
+{
+    "children": [
+        {
+            "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T01:07:50.978Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T01:07:50.978Z",
+            "deprecated": false
+        },
+        {
+            "id": "bdb3e4c2-4702-4045-86b4-17ee40df91cc",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T17:48:26.473Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T17:48:26.473Z",
+            "deprecated": false
+        }
+    ],
+    "_page": {
+        "property": "modelId==15c53796-bd6b-4e09-b51d-7296aa20af71,deleted==false,deprecated==false",
+        "count": 2
+    }
+}
+```
+
+## Recuperar un modelo transcodificado específico {#retrieve-transcoded-model}
+
+Puede recuperar un modelo transcodificado específico realizando una solicitud GET con el ID `{MODEL_ID}` y el ID de un modelo transcodificado.
+
+**Formato de API**
+
+```http
+GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{MODEL_ID}` | Identificador único de un modelo con formación o publicado. |
+| `{TRANSCODING_ID}` | Identificador único de un modelo transcodificado. |
+
+**Solicitud**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings/460aa5a1-e972-455d-b8dc-4bc6cd91edb6 \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con los datos del Modelo transcodificado.
+
+```json
+{
+    "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+    "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+    "created": "2019-12-20T01:07:50.978Z",
+    "createdBy": {
+        "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+    },
+    "updated": "2019-12-20T01:07:50.978Z",
+    "deprecated": false
+}
+```
+
+
