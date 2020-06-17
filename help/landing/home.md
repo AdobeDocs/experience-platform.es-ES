@@ -1,64 +1,95 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Descripción general de Adobe Experience Platform
+title: Adobe Experience Platform general
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
+source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '637'
+ht-degree: 3%
 
 ---
 
 
-# Descripción general de Adobe Experience Platform
+# Adobe Experience Platform general
 
 >[!NOTE]
 >
->La documentación de Adobe Experience Platform se ha trasladado recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
+>La documentación de Adobe Experience Platform se ha movido recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
 
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. La plataforma de experiencia permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema, y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsen la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes desde cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 
-Basada en API abiertas, la plataforma de experiencia expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la sencilla integración de soluciones empresariales mediante herramientas conocidas. La plataforma de experiencias también ayuda a los asociados a crear e integrar sus propios productos y tecnologías según sea necesario. Esta potencia y flexibilidad hacen que la plataforma de experiencias sea única en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
+Basado en API abiertas, el Experience Platform expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de las soluciones empresariales mediante herramientas conocidas. Experience Platform también apoya a los asociados para que creen e integren sus propios productos y tecnologías según sea necesario. Este poder y flexibilidad hacen que el Experience Platform sea único en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
 
-## Documentación de la plataforma de experiencia
+## Compatibilidad con idiomas
 
-La documentación de la plataforma de experiencias se proporciona en varios formatos para diversas funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los servicios de la Plataforma, visite la información general [de la documentación de la Plataforma de](documentation/overview.md)experiencias. O bien, para empezar a aprender más sobre un servicio de plataforma específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
+La interfaz de usuario y la documentación de Adobe Experience Platform están disponibles en varios idiomas.
+
+### Idiomas de la interfaz de usuario
+
+La interfaz de usuario de Adobe Experience Platform está disponible actualmente en los siguientes idiomas:
+
+* Inglés
+* Francés
+* Alemán
+* Japonés
+
+El idioma predeterminado de la interfaz de usuario está determinado por la región especificada en el perfil del usuario. Para cambiar el idioma:
 
 >[!NOTE]
 >
->A partir de mayo de 2020, Adobe lanzará actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones de Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
+> La selección de una región determina el idioma y el contenido de Adobe.com.
+
+1. Haga clic en el idioma actual en el pie de página de la interfaz de Experience Platform.
+1. En la configuración de perfil, haga clic en **[!UICONTROL Cambiar región]**.
+1. Seleccione su región.
+
+### Idiomas de documentación
+
+La documentación de Adobe Experience Platform está disponible en varios idiomas. Para cambiar el idioma, haga clic en la lista desplegable de idioma y seleccione el idioma que desee.
+
+![imagen](assets/lang.jpg)
+
+## Documentación de Experience Platform
+
+La documentación del Experience Platform se proporciona en varios formatos para diversas funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los servicios de Platform, visite la información general [de la documentación del](documentation/overview.md)Experience Platform. O bien, para empezar a aprender más sobre un servicio de Platform específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
+
+>[!NOTE]
+>
+>A partir de mayo de 2020, Adobe lanzará actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
 >
 >* Vínculos a artículos destacados
 >* Recomendaciones de documentación relacionadas con el contexto
->* La capacidad de proporcionar comentarios sobre la plataforma de experiencias y los problemas de informes
+>* La capacidad de proporcionar comentarios sobre los problemas del Experience Platform y del informe
 >* Se mejoraron los resultados de búsqueda que también incluyen resultados de foros de la comunidad y contenido de vídeo.
+
 >
 > 
 De vez en cuando, puede recibir una encuesta para recibir comentarios adicionales.
 >
 >Este despliegue es gradual, por lo que es posible que no vea los cambios inmediatamente. Puede realizar la vista de la experiencia actualizada en cualquier momento en [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
-## Tutoriales de la plataforma de experiencia
+## Tutoriales del Experience Platform
 
-Comience con Platform de forma rápida y sencilla, siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de la plataforma de experiencias, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. Visite los tutoriales [de la plataforma de](../tutorials/home.md) experiencias para empezar.
+Empiece con Platform de forma rápida y sencilla, siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación del Experience Platform, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. Visite los tutoriales del [Experience Platform](../tutorials/home.md) para empezar.
 
 ## Tutoriales de vídeo
 
-Vea los tutoriales [en](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vídeo para una amplia variedad de temas de la plataforma de experiencia.
+Vea los tutoriales [en](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vídeo para una amplia variedad de temas de Experience Platform.
 
 ## documentos y recursos de referencia
 
-* [**Notas **](../release-notes/latest/latest.md)<br/>de la versiónBusque información sobre la versión más reciente de la plataforma de experiencias y revise las versiones anteriores.
+* [**Notas **](../release-notes/latest/latest.md)<br/>de la versiónEncontrar información sobre la versión más reciente del Experience Platform y revisar versiones anteriores.
 
-* [**Glosario **](glossary.md)<br/>Revise la terminología de la plataforma de experiencias de Adobe.
+* [**Glosario **](glossary.md)<br/>Revisar terminología de Adobe Experience Platform.
 
 * [**Guía **](troubleshooting.md)<br/>de solución de problemasEncuentre soluciones para errores comunes y respuestas a preguntas más frecuentes.
 
-* [**Conceptos básicos **](api-fundamentals.md)<br/>de APIsAprenda los conceptos básicos del trabajo con las API de plataforma.
+* [**Conceptos básicos **](api-fundamentals.md)<br/>de la APIsAprenda los conceptos básicos del trabajo con las API de Platform.
 
-* [**Referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de la plataforma de experiencias de Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas.*Estos documentos están alojados en Adobe I/O.*
+* [**API de referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de Experience Platform de Discover, incluidas encabezados, parámetros, solicitudes de muestra y respuestas.
+*Estos documentos están alojados en Adobe I/O.*
 
 
 
