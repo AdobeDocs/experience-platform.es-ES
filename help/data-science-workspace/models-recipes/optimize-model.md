@@ -4,21 +4,17 @@ solution: Experience Platform
 title: Optimizar un modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 
-# Optimizar un modelo
+# Optimizar un modelo mediante el marco de perspectivas de modelo
 
-
-Este tutorial pasará a:
-
-- Configuración del código de fórmula
-- Definición de métricas personalizadas
-- Uso de métricas de evaluación y gráficos de visualización creados previamente
-
-Al final de este tutorial, debe poder configurar el código de fórmula, definir métricas personalizadas, usar métricas de evaluación prediseñadas y gráficos de visualización predeterminados.
+El marco de perspectivas de modelo proporciona al científico de datos herramientas en el área de trabajo de ciencias de datos para realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos. El marco mejorará la velocidad y la eficacia del flujo de trabajo del aprendizaje automático, así como la facilidad de uso de los científicos de datos. Esto se lleva a cabo proporcionando una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático para facilitar el ajuste del modelo. El resultado final permite a los científicos de datos y a los científicos de datos ciudadanos tomar mejores decisiones de optimización de modelos para sus clientes finales.
 
 ## ¿Qué son las métricas?
 
@@ -27,10 +23,6 @@ Después de implementar y entrenar un modelo, el próximo paso que un científic
 - Área bajo curva
 - Matriz de confusión
 - Informe de clasificación
-
-## ¿Qué es el marco de perspectivas del modelo?
-
-El marco de perspectivas de modelo proporciona al científico de datos herramientas en el área de trabajo de ciencias de datos para realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos. El marco mejorará la velocidad y la eficacia del flujo de trabajo del aprendizaje automático, así como la facilidad de uso de los científicos de datos. Esto se lleva a cabo proporcionando una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático para facilitar el ajuste del modelo. El resultado final permite a los científicos de datos y a los científicos de datos ciudadanos tomar mejores decisiones de optimización de modelos para sus clientes finales.
 
 ## Configuración del código de fórmula
 
@@ -64,7 +56,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-Una vez habilitada una clase de evaluador, se calcularán varias métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
+Una vez habilitada una clase de evaluador, se calculará una serie de métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
@@ -166,7 +158,7 @@ El marco de perspectivas del modelo Sensei admitirá una plantilla predeterminad
 --- | --- | ---
 | Regresión | - RMSE<br>- MAPE<br>- MASA<br>- MAE | Curva de superposición de valores reales frente a valores previstos |
 | Clasificación binaria | - Tabla<br>de confusión- Precisión-recuperación<br>- Precisión<br>- F-score (específicamente F1,F2)<br>- AUC<br>- ROC | Curva ROC y matriz de confusión |
-| Clasificación de varias clases | -Matriz de confusión <br>- Para cada clase: <br>- precisión de recuperación de precisión <br>- F-score (específicamente F1, F2) | Curva ROC y matriz de confusión |
+| Clasificación de varias clases | -Matriz de confusión <br>- Para cada clase: <br>- precisión-recuperación <br>- F-score (específicamente F1, F2) | Curva ROC y matriz de confusión |
 | Agrupación (con la verdad del suelo) | - NMI (puntuación de información mutua normalizada), AMI (puntuación de información mutua ajustada)<br>- RI (índice Rand), ARI (índice Rand ajustado)<br>- puntuación de homogeneidad, puntuación de integridad y medida<br>V- FMI (índice Fowlkes-Mallow)<br>- Índice de pureza<br>- Jaccard | Diagrama de clústeres que muestra clústeres y centroides con tamaños de clúster relativos que reflejan los puntos de datos que se incluyen dentro del clúster |
 | Agrupación (sin la verdad del suelo) | - Inercia<br>- Coeficiente<br>de silueta- CHI (índice Calinski-Harabaz)<br>- DBI (índice Davies-Bouldin)<br>- Índice de Dunn | Diagrama de clústeres que muestra clústeres y centroides con tamaños de clúster relativos que reflejan los puntos de datos que se incluyen dentro del clúster |
 | Recomendación | -Precisión media promedio (MAP) <br>-Ganancia acumulativa <br>media descontada normalizada-Clasificación recíproca <br>métrica K | TBD |
