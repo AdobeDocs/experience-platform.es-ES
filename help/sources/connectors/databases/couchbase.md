@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector de la base de acoplamiento
 topic: overview
 translation-type: tm+mt
-source-git-commit: d56ebfe4b72fd305120f73a32a915b3dce9046c0
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,20 @@ ht-degree: 0%
 
 # (Beta) Conector de la base de acoplamiento
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como Microsoft, MySQL y Azure, lo que le permite traer los datos de estos sistemas. Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoData. La compatibilidad con proveedores de bases de datos incluye Couchbase.
+>[!NOTE]
+>El conector Couchbase está en fase beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-La documentación siguiente proporciona información sobre cómo conectar Couchbase a la plataforma mediante API o la interfaz de usuario:
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como Microsoft, MySQL y Azure, lo que le permite traer sus datos de estos sistemas. Se admiten diferentes tipos de bases de datos de terceros, incluyendo relacional, NoSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye Couchbase.
 
-## Connect Couchbase a plataforma mediante API
+La siguiente documentación proporciona información sobre cómo conectar Couchbase a Platform mediante API o la interfaz de usuario:
+
+## Connect Couchbase a Platform mediante API
 
 - [Creación de un conector Couchbase mediante la API de servicio de flujo](../../tutorials/api/create/databases/couchbase.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
 - [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar Couchbase a plataforma mediante la interfaz de usuario
+## Conectar Couchbase a Platform mediante la interfaz de usuario
 
 - [Creación de un conector de origen Couchbase en la interfaz de usuario](../../tutorials/ui/create/databases/couchbase.md)
 - [Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
