@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector HP Vertica
 topic: overview
 translation-type: tm+mt
-source-git-commit: 400c80e589c25ed1eefe262e3ad3404599eb1337
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # Conector HP Vertica (Beta)
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como Microsoft, MySQL y Azure. Puede llevar los datos de estos sistemas a la plataforma.
+>[!NOTE]
+>El conector HP Vertica está en versión beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoData. La compatibilidad con proveedores de bases de datos incluye HP Vertica.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como Microsoft, MySQL y Azure. Puede traer los datos de estos sistemas a Platform.
 
-La documentación siguiente proporciona información sobre cómo conectar HP Vertica a la plataforma mediante API o la interfaz de usuario:
+Se admiten diferentes tipos de bases de datos de terceros, incluyendo relacional, NoSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye HP Vertica.
 
-## Conectar HP Vertica a la plataforma mediante API
+La siguiente documentación proporciona información sobre cómo conectar HP Vertica a Platform mediante API o la interfaz de usuario:
+
+## Conectar HP Vertica a Platform mediante API
 
 - [Creación de un conector HP Vertica mediante la API de servicio de flujo](../../tutorials/api/create/databases/hp-vertica.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
 - [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
-## Conexión de HP Vertica a la plataforma mediante la interfaz de usuario
+## Conectar HP Vertica a Platform mediante la interfaz de usuario
 
 - [Creación de un conector de origen HP Vertica en la interfaz de usuario](../../tutorials/ui/create/databases/hp-vertica.md)
 - [Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
