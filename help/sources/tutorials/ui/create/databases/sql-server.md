@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Microsoft SQL Server en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Creación de un conector de origen de Microsoft SQL Server en la interfaz de usuario
 
 > [!NOTE]
-> El conector de Microsoft SQL Server está en versión beta. Las funciones y la documentación están sujetas a cambios.
+> El conector de Microsoft SQL Server está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de Microsoft SQL Server (en adelante denominado &quot;SQL Server&quot;) mediante la interfaz de usuario de la plataforma.
+Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de Microsoft SQL Server (en adelante, &quot;SQL Server&quot;) mediante la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 * [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -32,7 +32,7 @@ Si ya tiene una conexión base de SQL Server, puede omitir el resto de este docu
 
 ### Recopilar las credenciales necesarias
 
-Para conectarse a SQL Server on Platform, debe proporcionar la siguiente propiedad de conexión:
+Para conectarse a SQL Server en Platform, debe proporcionar la siguiente propiedad de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
