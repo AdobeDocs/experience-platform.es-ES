@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen FTP o SFTP en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 # Creación de un conector de origen FTP o SFTP en la interfaz de usuario
 
 >[!NOTE]
->Los conectores FTP y SFTP están en versión beta. Las funciones y la documentación están sujetas a cambios.
+>Los conectores FTP y SFTP están en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen FTP o SFTP mediante la interfaz de usuario de la plataforma.
+Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen FTP o SFTP mediante la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 * [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -32,7 +32,7 @@ Si ya tiene una conexión FTP o SFTP válida, puede omitir el resto de este docu
 
 ### Formatos de archivo compatibles
 
-La plataforma de experiencia admite los siguientes formatos de archivo para la ingesta desde fuentes externas:
+Experience Platform admite los siguientes formatos de archivo para la ingesta desde fuentes externas:
 
 * Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por comas (CSV). El valor de los encabezados de campo dentro de archivos con formato DSV solo debe consistir en caracteres alfanuméricos y guiones bajos. En el futuro se prestará apoyo al DSV general.
 * Notación de objetos JavaScript (JSON): Los archivos de datos con formato JSON deben ser compatibles con XDM.
@@ -40,7 +40,7 @@ La plataforma de experiencia admite los siguientes formatos de archivo para la i
 
 ### Recopilar las credenciales necesarias
 
-Para acceder al servidor FTP o SFTP en la plataforma, debe proporcionar el nombre **de** host del servidor, un nombre **de** usuario y una **contraseña**.
+Para acceder al servidor FTP o SFTP en Platform, debe proporcionar el nombre **de** host del servidor, un nombre **de** usuario y una **contraseña**.
 
 ## Conectarse al servidor FTP o SFTP
 
@@ -70,4 +70,4 @@ Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la qu
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta de FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a la plataforma](../../dataflow/batch/cloud-storage.md).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a Platform](../../dataflow/batch/cloud-storage.md).
