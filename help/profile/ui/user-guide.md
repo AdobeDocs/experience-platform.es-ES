@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
+source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -20,31 +20,51 @@ Este documento sirve como guía para interactuar con el Perfil del cliente en ti
 
 ## Primeros pasos
 
-Esta guía del usuario requiere conocer los distintos servicios de la plataforma de experiencia que se utilizan para administrar el Perfil de los clientes en tiempo real. Antes de leer esta guía del usuario, consulte la documentación de los siguientes servicios:
+Esta guía del usuario requiere conocer los distintos servicios de Experience Platform que se utilizan para administrar los Perfiles de los clientes en tiempo real. Antes de leer esta guía del usuario, consulte la documentación de los siguientes servicios:
 
 * [Perfil](../home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Servicio](../../identity-service/home.md)de identidad: Permite el Perfil del cliente en tiempo real al enlazar identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
+* [Servicio](../../identity-service/home.md)de identidad: Permite el Perfil del cliente en tiempo real al enlazar identidades de orígenes de datos dispares a medida que se van ingeriendo en Platform.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
 ## Información general
 
-En la interfaz de usuario [de la plataforma de](http://platform.adobe.com)experiencia, haga clic en **Perfiles** en el panel de navegación izquierdo para abrir la ficha _Información general_ . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
+En la interfaz de usuario [del](http://platform.adobe.com)Experience Platform, haga clic en **Perfiles** en el panel de navegación izquierdo para abrir la ficha _Información general_ . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Perfil Browse
 
-Haga clic en la ficha **Examinar** para buscar perfiles por identidades. Esta ficha también contiene el recuento [total de](#profile-count)perfiles.
+Haga clic en la ficha **Examinar** para examinar los perfiles por identidad.
+
+### Métricas de Perfil {#profile-metrics}
+
+A la derecha de la ficha **Examinar** hay varias métricas de perfil importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
+
+Estas métricas de perfil se evalúan mediante la directiva de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida la definición de una directiva de combinación predeterminada, consulte la guía [de usuario Políticas de](merge-policies.md)combinación.
+
+Además de estas métricas, la sección Métricas de perfil también proporciona una fecha y hora de *última actualización* , que muestra cuándo se evaluaron las métricas por última vez.
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Recuento de Perfiles {#profile-count}
 
-El recuento de perfiles muestra el número total de perfiles que su organización tiene en la plataforma de experiencia, después de que la directiva de combinación predeterminada de su organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca en diferentes canales, pero estos fragmentos se combinarán (según la política de combinación predeterminada) y devolverá un recuento de perfiles &quot;1&quot; porque todos están relacionados con el mismo individuo.
+El recuento de perfiles muestra el número total de perfiles que su organización tiene en Experience Platform, después de que la directiva de combinación predeterminada de su organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca en diferentes canales, pero estos fragmentos se combinarán (según la política de combinación predeterminada) y devolverá un recuento de perfiles &quot;1&quot; porque todos están relacionados con el mismo individuo.
 
-El recuento de perfiles también incluye perfiles con atributos (datos de registros), así como perfiles que solo contienen datos de series temporales (eventos), como perfiles de Adobe Analytics. El recuento de perfiles se actualiza con regularidad para proporcionar un número total actualizado de perfiles dentro de la plataforma.
+El recuento de perfiles también incluye tanto perfiles con atributos (datos de registro) como perfiles que contienen únicamente datos de series temporales (eventos), como perfiles de Adobe Analytics. El recuento de perfiles se actualiza con regularidad para proporcionar un número total actualizado de perfiles dentro de Platform.
 
 Cuando la ingestión de perfiles en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos siguientes a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
+
+### Perfiles por Área de nombres {#profiles-by-namespace}
+
+La métrica *Perfiles por Área de nombres* muestra el recuento total y el desglose de Áreas de nombres en todos los perfiles combinados de su almacén de Perfiles. El número total de perfiles por Área de nombres (es decir, sumar los valores mostrados para cada Área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría tener varias Áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias Áreas de nombres con ese cliente individual.
+
+De forma similar a la métrica de recuento [de](#profile-count) perfiles, cuando la ingestión de perfiles en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar las métricas de Área de nombres. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos posteriores a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o reducción del 5 %, se ejecuta un trabajo para actualizar las métricas.
+
+### Combinar directiva
+
+El selector de directivas **de** combinación selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar la opción `X` situada junto a la directiva de combinación predeterminada para abrir un cuadro de diálogo *Seleccionar directiva* de combinación donde puede elegir otra directiva de combinación. Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
+
+![](../images/user-guide/profiles-search-merge-policy.png)
 
 ### Área de nombres de identidad
 
@@ -80,7 +100,7 @@ Puede vista información adicional relacionada con el perfil, incluidos Atributo
 
 Haga clic en **Combinar directivas** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación en la interfaz de usuario, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
+Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario Políticas de](merge-policies.md)combinación.
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
@@ -96,4 +116,4 @@ Consulte la sección sobre esquemas de unión en la guía [de composición de](.
 
 ## Pasos siguientes
 
-Al leer esta guía, ahora sabe cómo realizar vistas y administrar los datos de Perfil mediante la interfaz de usuario de la plataforma de experiencia. Para obtener información sobre cómo aprovechar los datos de Perfil de clientes en tiempo real para generar segmentos de audiencia, consulte la documentación [de](../../segmentation/home.md)segmentación.
+Al leer esta guía, ahora sabe cómo realizar vistas y administrar los datos de Perfil mediante la interfaz de usuario del Experience Platform. Para obtener información sobre cómo aprovechar los datos de Perfil de clientes en tiempo real para generar segmentos de audiencia, consulte la documentación [de](../../segmentation/home.md)segmentación.
