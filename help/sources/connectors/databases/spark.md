@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apache Spark en el conector HDInsights de Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,16 @@ ht-degree: 0%
 
 # (Beta) Apache Spark en el conector Azure HDInsights
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+>[!NOTE]
+>El conector Apache Spark en Azure HDInsights está en versión beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-La plataforma de experiencias ofrece compatibilidad para la ingesta de datos desde una base de datos de terceros. La plataforma puede conectarse a diferentes tipos de bases de datos, como relacional, sinSQL o data warehouses. La compatibilidad con proveedores de bases de datos incluye Apache Spark en Azure HDInsights.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+
+Experience Platform proporciona soporte para la ingesta de datos desde una base de datos de terceros. Platform puede conectarse a diferentes tipos de bases de datos, como relacional, sinSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye Apache Spark en Azure HDInsights.
 
 La siguiente documentación proporciona información sobre cómo conectar Apache Spark en Azure HDInsights a Platform mediante API o la interfaz de usuario:
 
-## Conectar Apache Spark en Azure HDInsights a la plataforma mediante API
+## Conectar Apache Spark en Azure HDInsights a Platform mediante API
 
 - [Creación de una chispa Apache en el conector HDInsights de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/spark.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
