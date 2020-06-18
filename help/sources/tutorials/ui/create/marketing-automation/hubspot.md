@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen HubSpot en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Creación de un conector de origen HubSpot en la interfaz de usuario
 
 > [!NOTE]
-> El conector HubSpot está en versión beta. Las funciones y la documentación están sujetas a cambios.
+> El conector HubSpot está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen HubSpot mediante la interfaz de usuario de la plataforma.
+Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen HubSpot mediante la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 * [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -32,7 +32,7 @@ Si ya tiene una conexión base de HubSpot, puede omitir el resto de este documen
 
 ### Recopilar las credenciales necesarias
 
-Para acceder a la cuenta de HubSpot en la plataforma, debe proporcionar los siguientes valores:
+Para acceder a su cuenta de HubSpot en Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Para obtener más información sobre cómo empezar, consulte este documento [de 
 
 ## Conectar la cuenta de HubSpot
 
-Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada para vincular su cuenta de HubSpot a Platform.
+Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada para vincular su cuenta de HubSpot a Platform.
 
 Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **Fuentes** en la barra de navegación izquierda para acceder al espacio de trabajo *Fuentes* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
 
@@ -69,4 +69,4 @@ Para conectar una cuenta existente, seleccione la cuenta de HubSpot con la que d
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión base a su cuenta de HubSpot. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para llevar los datos del sistema de automatización de marketing a la plataforma](../../dataflow/marketing-automation.md).
+Siguiendo este tutorial, ha establecido una conexión base a su cuenta de HubSpot. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para llevar datos del sistema de automatización de marketing a Platform](../../dataflow/marketing-automation.md).
