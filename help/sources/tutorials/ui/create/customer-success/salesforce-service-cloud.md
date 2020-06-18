@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Salesforce Service Cloud en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Creación de un conector de origen de Salesforce Service Cloud en la interfaz de usuario
 
 >[!NOTE]
->El conector de Salesforce Service Cloud está en versión beta. Las funciones y la documentación están sujetas a cambios.
+>El conector de Salesforce Service Cloud está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de Salesforce Service Cloud (en adelante denominado &quot;SSC&quot;) mediante la interfaz de usuario de la plataforma.
+Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de Salesforce Service Cloud (en adelante denominado &quot;SSC&quot;) mediante la interfaz de usuario de Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 * [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -44,7 +44,7 @@ Para obtener más información sobre cómo empezar, consulte [este documento](ht
 
 ## Conectar la cuenta de Salesforce Service Cloud
 
-Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta SSC para conectarse a Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta de SSC para conectarse a Platform.
 
 Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **Fuentes** en la barra de navegación izquierda para acceder al espacio de trabajo *Fuentes* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
 
@@ -70,4 +70,4 @@ Para conectar una cuenta existente, seleccione la cuenta SSC con la que desea co
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta SSC. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para llevar los datos de éxito del cliente a la plataforma](../../dataflow/customer-success.md).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta SSC. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de éxito del cliente a Platform](../../dataflow/customer-success.md).
