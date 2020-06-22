@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Gobierno de datos de la plataforma Adobe Experience
+title: Administración de datos de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
+source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+workflow-type: tm+mt
+source-wordcount: '1462'
+ht-degree: 0%
 
 ---
 
 
 # Información general sobre la administración de datos
 
-Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capten mejor a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de la plataforma sean compatibles con las políticas de uso de datos.
+Una de las capacidades principales del Adobe Experience Platform es reunir los datos de varios sistemas empresariales para permitir que los especialistas en mercadotecnia identifiquen, comprendan y capten a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que sus operaciones de datos dentro de Platform sean compatibles con las políticas de uso de datos.
 
-El Gobierno de datos de la plataforma de experiencia de Adobe le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de la plataforma de experiencias en varios niveles, incluso la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para las acciones de marketing.
+La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluyendo catalogación, linaje de datos, etiquetado de uso de datos, políticas de uso de datos y control del uso de datos para acciones de mercadotecnia.
 
 ## Funciones de administración de datos
 
@@ -41,7 +44,7 @@ Los especialistas en mercadotecnia son el punto final del gobierno de los datos.
 
 ## Marco DULE
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el marco básico para el gobierno de datos de la plataforma de experiencia. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
+El etiquetado y cumplimiento del uso de datos (DULE) es el marco básico para la gobernanza de datos Experience Platform. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
 
 Existen tres elementos clave en el marco DULE: Etiquetas, políticas y aplicación.
 
@@ -53,32 +56,31 @@ Existen tres elementos clave en el marco DULE: Etiquetas, políticas y aplicaci�
 
 La Administración de datos permite a los administradores de datos aplicar etiquetas de uso en el nivel de base de datos y campo para categorizar los datos según el tipo de directivas que se apliquen.
 
-El marco de trabajo DULE incluye etiquetas de uso de datos predefinidas que pueden utilizarse para categorizar los datos de cuatro maneras:
+El marco de trabajo DULE incluye etiquetas de uso de datos predefinidas que pueden utilizarse para categorizar los datos de tres maneras:
 
 ![Categorías de etiquetas de uso de datos](./images/overview/label-categories.png)
 
 * **Etiquetas de datos del contrato &quot;C&quot;:** Etiquete y categorice los datos que tienen obligaciones contractuales o que están relacionados con políticas de control de datos de clientes.
 * **Etiquetas de datos &quot;I&quot; de identidad:** Etiquete y categorice los datos que pueden identificar o comunicarse con una persona específica.
 * **Etiquetas De Datos &quot;S&quot; Sensibles:** Etiquete y categorice los datos relacionados con datos confidenciales, como datos geográficos.
-* **Etiquetas de datos de RGPD:** Etiquete y categorice los datos que pueden contener identificadores personales para su uso en solicitudes de acceso y/o eliminación de RGPD.
 
 >[!NOTE] Consulte la guía sobre las etiquetas [de uso de datos](labels/reference.md) admitidas para obtener una lista completa de las etiquetas disponibles, así como las definiciones de cada tipo de etiqueta.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. La práctica recomendada aconseja etiquetar los datos tan pronto como se incorporen a la plataforma de experiencia o tan pronto como los datos estén disponibles en la plataforma.
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. La práctica recomendada fomenta el etiquetado de datos tan pronto como se ingesta en el Experience Platform o tan pronto como los datos estén disponibles en Platform.
 
-Consulte la descripción general de las etiquetas [de uso de](./labels/overview.md) datos para obtener instrucciones paso a paso sobre cómo aplicar etiquetas a conjuntos de datos y campos mediante la interfaz de usuario.
+Consulte la descripción general de las etiquetas [de uso de](./labels/overview.md) datos para obtener más información.
 
 ## Directivas de uso de datos
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que puede realizar o que tienen restricciones para realizar en los datos de la plataforma de experiencia.
+Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe la realización de datos dentro de Experience Platform.
 
 Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que determinados tipos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta del Servicio de directivas que le indicará que se ha violado una política de uso de datos.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario de la plataforma de experiencia.
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario del Experience Platform.
 
-Para obtener más información sobre cómo realizar las operaciones clave proporcionadas por la API de servicio de directivas DULE, consulte la guía [para desarrolladores de](api/getting-started.md)Policy Service. Para obtener instrucciones paso a paso sobre cómo trabajar con políticas DULE, consulte el tutorial sobre la [creación y evaluación de políticas DULE mediante la API](policies/create.md).
+>[!IMPORTANT] Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
 
-Para obtener información sobre cómo administrar políticas en la interfaz de usuario de la plataforma de experiencia, consulte la guía [del usuario de](policies/user-guide.md)políticas.
+Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la descripción general [de](./policies/overview.md)las políticas.
 
 ## Versiones futuras
 
@@ -106,7 +108,7 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 |---|---|
 | **Etiquetas de contrato** | Las etiquetas &quot;C&quot; del contrato se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de administración de datos de su organización. |
 | **Datos entre sitios** | Los datos entre sitios son la combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio. |
-| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normas y políticas institucionales en lo que respecta al uso de los datos. |
+| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normativas y políticas institucionales en lo que respecta al uso de los datos. |
 | **Administrador de datos** | El administrador de datos es la persona responsable de la administración, supervisión y ejecución de los activos de datos de una organización. Un administrador de datos también garantiza que las políticas de control de datos se salvaguarden y mantienen para cumplir con las regulaciones y políticas de organización del gobierno. |
 | **Etiquetas de uso de datos** | Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas. |
 | **Etiquetas de datos** | Las etiquetas se pueden agregar a un conjunto de datos. Todos los campos dentro de un conjunto de datos heredan las etiquetas del conjunto de datos. |
@@ -115,11 +117,11 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 | **Geofence** | Una geofence es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software activar una respuesta cuando un dispositivo móvil entra o sale de un área en particular. |
 | **Etiquetas de identidad** | Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar o comunicarse con una persona específica. |
 | **Targeting basado en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de los usuarios, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias. |
-| **Acción de mercadotecnia** | Una acción de mercadotecnia, en el contexto del marco de administración de datos, es una acción que realiza un consumidor de datos de la plataforma de experiencia, para la cual es necesario verificar las violaciones de las políticas de uso de datos |
+| **Acción de mercadotecnia** | Una acción de mercadotecnia, en el contexto del marco de administración de datos, es una acción que realiza un consumidor de datos Experience Platform, para la cual es necesario verificar las infracciones de las políticas de uso de datos |
 | **Política** | En el marco de administración de datos, una política es una regla que describe qué tipo de acciones de mercadotecnia se permiten o no se permiten realizar en datos específicos. |
 | **Etiquetas sensibles** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 
-## Recursos adicionales    
+## Recursos adicionales
 
 El siguiente vídeo está diseñado para apoyar su comprensión del Gobierno de datos y describe los aspectos clave del marco de aplicación y etiquetado del uso de datos (DULE).
 
