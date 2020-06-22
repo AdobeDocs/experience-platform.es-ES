@@ -4,17 +4,17 @@ seo-title: Destinos de mercadotecnia de correo electrónico
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 2%
+source-wordcount: '731'
+ht-degree: 1%
 
 ---
 
 
 # Destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
 
-Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. La plataforma de datos del cliente en tiempo real de Adobe se integra con los ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
+Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Datos del cliente en tiempo real de Adobe Platform se integra con ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
 
 Para enviar segmentos a destinos de marketing por correo electrónico para sus campañas, el CDP en tiempo real de Adobe primero debe conectarse al destino.
 
@@ -26,17 +26,28 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 1. En **[!UICONTROL Conexiones > Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
-   ![Conectar al destino](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![Conectar al destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. En el asistente de Connect, seleccione el tipo **** de conexión para la ubicación del almacenamiento. Puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
+2. En el paso **[!UICONTROL Autenticación]** , si ya ha configurado una conexión con el destino de marketing por correo electrónico, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector de tipo **[!UICONTROL de]** conexión, puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
-Para las conexiones **** S3, debe proporcionar el ID de clave de acceso y la clave de acceso secreto.
+   Para las conexiones **** S3, debe proporcionar el ID de la clave de acceso de Amazon y la clave de acceso secreto.
 
-Para **SFTP con conexiones de contraseña** , debe proporcionar Dominio, Puerto, Nombre de usuario y Contraseña.
+   Para **SFTP con conexiones de contraseña** , debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
 
-Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
+   Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH para el servidor SFTP.
 
-## Paso 2: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
+3. En el paso **[!UICONTROL Configuración]** , introduzca un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el nuevo destino, así como el formato **** Archivo para los archivos exportados. <br>
+Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre **[!UICONTROL del]** depósito y la ruta **[!UICONTROL de]** carpeta en el destino de almacenamiento de nube donde se enviarán los archivos. Para la opción almacenamiento SFTP, inserte la ruta **[!UICONTROL de]** carpeta donde se enviarán los archivos. <br>
+También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br>
+   ![Paso de configuración de correo electrónico](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Paso 2: seleccione qué miembros de segmento incluir en las exportaciones de destino {#select-segments}
+
+En la página **[!UICONTROL Seleccionar segmentos]** , seleccione qué segmentos enviar al destino. Encontrará más información sobre los campos en las secciones siguientes.
+
+![Seleccionar segmentos](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Paso 3: Seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
 
 En este paso, está seleccionando los campos que desea exportar a destinos de marketing por correo electrónico.
 
@@ -44,7 +55,7 @@ En este paso, está seleccionando los campos que desea exportar a destinos de ma
 
 ### Identidad {#identity}
 
-Le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de lealtad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en esquema unificado.
+Le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de lealtad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en el esquema de unión.
 
 | Identificador único | Campo XDM en Esquema unificado |
 ---------|----------
