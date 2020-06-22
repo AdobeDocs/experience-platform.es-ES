@@ -1,34 +1,34 @@
 ---
 title: Descripción general de destinos
 seo-title: Descripción general de destinos
-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
-seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: 49479cd1520bd2407ecd5140265661aefe0817a3
+source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
 
-# Descripción general de destinos
+# Destinations Overview {#overview}
 
 ![Pancarta de información general sobre destinos](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Los destinos** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+**Los destinos** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos de clientes en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 
-## Destinos y fuentes
+## Destinos y fuentes {#destinations-and-sources}
 
 Una de las funcionalidades principales de CDP en tiempo real es la ingesta de sus datos de origen y su activación para sus necesidades comerciales. Utilice fuentes para ingerir datos en CDP en tiempo real y destinos para exportar datos desde CDP en tiempo real.
 
-## Pasos de destino
+## Pasos de destino {#steps}
 
 * Elija entre un catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) autoservicio de todos los destinos disponibles en CDP en tiempo real.
 * Utilice **[!UICONTROL Destinos]** para [activar](/help/rtcdp/destinations/activate-destinations.md) y enviar perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital, etc.
 * Programe las exportaciones de datos a sus destinos preferidos en horas normales.
 
-## Controles
+## Controles {#controls}
 
 Los controles del espacio de trabajo [Destinos](/help/rtcdp/destinations/destinations-workspace.md) permiten:
 
@@ -38,24 +38,32 @@ Los controles del espacio de trabajo [Destinos](/help/rtcdp/destinations/destina
 * Seleccione qué segmentos deben activarse en los destinos;
 * Seleccione los campos [del Modelo de datos de](../../xdm/home.md) experiencia (XDM) que desea exportar al activar segmentos en destinos de marketing por correo electrónico.
 
-## Tipos y categorías de destino
+## Destination types and categories {#types-and-categories}
 
 Para obtener información detallada, consulte la descripción general [de tipos de](/help/rtcdp/destinations/destination-types.md)destino y categorías.
 
-## Destinos y Controles de acceso
+## Destinos y Controles de acceso {#access-controls}
 
-La funcionalidad de destinos de CDP en tiempo real funciona con los permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
+La funcionalidad de destinos de CDP en tiempo real funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
 
 Para obtener más información sobre controles de acceso, consulte la guía del usuario de [Control de acceso](../../access-control/ui/overview.md).
 
-<!--
+## Restricciones de administración de datos para activar datos en destinos {#data-governance}
 
-// Commenting out DULE in Destinations service
+La administración de datos se impone para los destinos CDP en tiempo real mediante:
 
-## Destinations and Data Usage Labeling and Enforcement (DULE)
+* *Casos* de uso de marketing que puede seleccionar en el flujo de trabajo de creación de destinos;
+* *Directivas* de uso de datos que restringen la activación de datos que contienen determinadas etiquetas de uso en destinos con determinados casos de uso de marketing.
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+Consulte la documentación de Administración de datos en tiempo real de CDP para obtener más información sobre casos [de uso de](/help/rtcdp/privacy/data-governance-overview.md#destinations) mercadotecnia y [resolución de violaciones](/help/rtcdp/privacy/data-governance-overview.md#enforcement)de políticas de datos.
 
-You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+Para obtener más información sobre la selección de casos de uso de mercadotecnia en el flujo de trabajo de creación de destino, consulte las páginas siguientes para los distintos tipos de destino en CDP en tiempo real:
 
--->
+* [Destinos publicitarios - Google Ad Manager ](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Destinos publicitarios - Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
+* [Destinos publicitarios - Google Display &amp; Video 360 ](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Destinos de almacenamiento de nube](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+* [Destinos de mercadotecnia de correo electrónico](/help/rtcdp/destinations/email-marketing-destinations.md)
+* [Destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations-workflow.md)
+
+Para obtener más información sobre las infracciones de la directiva de datos en el flujo de trabajo de activación de segmentos, consulte el paso 7 en [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/activate-destinations.md).
