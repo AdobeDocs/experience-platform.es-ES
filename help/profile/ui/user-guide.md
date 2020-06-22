@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ En la interfaz de usuario [del](http://platform.adobe.com)Experience Platform, h
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Perfil Browse
+## Examinar
 
-Haga clic en la ficha **Examinar** para examinar los perfiles por identidad.
+Seleccione la ficha *Examinar* para examinar los perfiles por identidad.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Métricas de Perfil {#profile-metrics}
 
-A la derecha de la ficha **Examinar** hay varias métricas de perfil importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
+A la derecha de la ficha *Examinar* hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
 
 Estas métricas de perfil se evalúan mediante la directiva de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida la definición de una directiva de combinación predeterminada, consulte la guía [de usuario Políticas de](merge-policies.md)combinación.
 
 Además de estas métricas, la sección Métricas de perfil también proporciona una fecha y hora de *última actualización* , que muestra cuándo se evaluaron las métricas por última vez.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Recuento de Perfiles {#profile-count}
 
@@ -92,13 +94,13 @@ Al seleccionar el ID **de** Perfil, se abre la ficha _Detalle_ . Esta página mu
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puede vista información adicional relacionada con el perfil, incluidos Atributos, Eventos y Segmentos a los que el perfil es miembro.
+Puede vista información adicional relacionada con el perfil, incluidos *Atributos*, *Eventos* y *Segmentos* a los que pertenece el perfil.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Combinar directivas
 
-Haga clic en **Combinar directivas** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
+Seleccione la ficha *Combinar políticas* para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
 
 Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario Políticas de](merge-policies.md)combinación.
 
@@ -106,7 +108,7 @@ Para obtener más información sobre las directivas de combinación, consulte la
 
 ## esquema de Unión
 
-Haga clic en Esquema **de** Unión para vista de los esquemas de unión de su almacén de Perfiles. Un esquema de unión es una combinación de todos los campos del Modelo de datos de experiencia (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en el Perfil del cliente en tiempo real. Haga clic en una clase de la lista izquierda para vista de la estructura de su esquema de unión en el lienzo.
+Seleccione la ficha Esquema *de* Unión para vista de los esquemas de unión de su almacén de Perfiles. Un esquema de unión es una combinación de todos los campos del Modelo de datos de experiencia (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en el Perfil del cliente en tiempo real. Seleccione una clase en la lista izquierda para vista de la estructura de su esquema de unión en el lienzo.
 
 Por ejemplo, si selecciona &quot;Perfil XDM&quot;, se muestra el esquema de unión de la clase de Perfil individual XDM.
 
