@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 1%
 
 ---
 
 
 # Políticas
 
-Las políticas de uso de datos son reglas que su organización adopta que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a los datos dentro de la plataforma de experiencia.
+Las políticas de uso de datos son reglas que su organización adopta que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a los datos dentro de Experience Platform.
 
 El extremo se utiliza para todas las llamadas de API relacionadas con la visualización, creación, actualización o eliminación de directivas de uso de datos. `/policies`
 
@@ -130,7 +133,7 @@ La respuesta incluye un &quot;recuento&quot; que muestra el número total de pol
 }
 ```
 
-## Buscar directiva específica
+## Buscar una directiva
 
 Cada directiva contiene un `id` campo que puede utilizarse para solicitar los detalles de una directiva específica. Si se desconoce el contenido `id` de una política, se puede encontrar mediante la solicitud de listado (GET) para lista de todas las directivas dentro de un contenedor específico (`core` o `custom`), como se muestra en el paso anterior.
 
@@ -503,7 +506,7 @@ Una solicitud de actualización correcta devolverá un estado HTTP 200 (Aceptar)
 
 ## Eliminar una directiva
 
-Si necesita eliminar una directiva que haya creado, puede hacerlo enviando una solicitud DELETE al `id` de la directiva que desee eliminar. Se recomienda realizar primero una solicitud de búsqueda (GET) para vista de la directiva y confirmar que es la directiva correcta que desea eliminar. **Una vez eliminadas, las políticas no se pueden recuperar.**
+Si necesita eliminar una directiva que haya creado, puede hacerlo enviando una solicitud de DELETE al `id` de la directiva que desee eliminar. Se recomienda realizar primero una solicitud de búsqueda (GET) para vista de la directiva y confirmar que es la directiva correcta que desea eliminar. **Una vez eliminadas, las políticas no se pueden recuperar.**
 
 **Formato API**
 
