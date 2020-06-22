@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 2%
 
 ---
 
 
-# Crear una directiva de uso de datos
+# Crear una directiva de uso de datos en la API
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del control de datos de la plataforma de experiencia de Adobe. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
+El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del gobierno de datos de Adobe Experience Platform. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
 
 Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la API de servicio de directivas. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
@@ -19,16 +22,16 @@ Este documento proporciona un tutorial paso a paso para crear una directiva DULE
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de las políticas DULE:
 
-* [Administración](../home.md)de datos: El marco por el cual la Plataforma impone el cumplimiento del uso de datos.
+* [Administración](../home.md)de datos: El marco mediante el cual Platform impone el cumplimiento de la normativa de uso de datos.
 * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para acceder a los datos.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar llamadas exitosas a la API del servicio de directivas DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 ## Definir una acción de mercadotecnia {#define-action}
 
-En el marco de la administración de datos, una acción de marketing es una acción que realiza un consumidor de datos de la plataforma de experiencia, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
+En el marco de la Administración de datos, una acción de marketing es una acción que realiza un consumidor de datos Experience Platform, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
 El primer paso para crear una política DULE es determinar qué acción de mercadotecnia evaluará la política. Esto se puede realizar con una de las siguientes opciones:
 
@@ -41,7 +44,7 @@ Puede consultar las acciones de marketing existentes que su directiva DULE debe 
 
 **Formato API**
 
-En función de si está buscando una acción de marketing proporcionada por la plataforma de experiencias o una acción de marketing personalizada creada por su organización, utilice los puntos finales `marketingActions/core` o `marketingActions/custom` finales, respectivamente.
+En función de si está buscando una acción de marketing proporcionada por un Experience Platform o una acción de marketing personalizada creada por su organización, utilice los puntos finales `marketingActions/core` o `marketingActions/custom` finales, respectivamente.
 
 ```http
 GET /marketingActions/core
@@ -413,4 +416,4 @@ Siguiendo este tutorial, ha creado correctamente una directiva de uso de datos p
 
 Para obtener más información sobre las distintas operaciones disponibles en la API de servicio de directivas, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service. Para obtener información sobre cómo aplicar políticas para datos de Perfil de clientes en tiempo real, consulte el tutorial sobre [la aplicación del cumplimiento de la normativa de uso de datos para segmentos](../../segmentation/tutorials/governance.md)de audiencia.
 
-Para obtener información sobre cómo administrar las políticas de uso en la interfaz de usuario de la plataforma de experiencia, consulte la guía [de usuario de](user-guide.md)directivas.
+Para obtener información sobre cómo administrar las directivas de uso en la interfaz de usuario del Experience Platform, consulte la guía [de usuario de](user-guide.md)directivas.
