@@ -4,7 +4,7 @@ seo-title: Destino de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 El [!DNL Kinesis Data Streams] servicio de Amazon Web Services le permite recopilar y procesar grandes flujos de registros de datos en tiempo real.
 
-Puede crear una conexión saliente en tiempo real con su [!DNL Amazon Kinesis] almacenamiento para transmitir datos desde Adobe Experience Platform.
+Puede crear una conexión saliente en tiempo real con el [!DNL Amazon Kinesis] almacenamiento para transmitir datos desde el Adobe Experience Platform.
 
 * Para obtener más información sobre [!DNL Amazon Kinesis], consulte la documentación [de](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
 * Para conectarse a [!DNL Amazon Kinesis] través de llamadas de API, consulte el tutorial [de API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)flujo continuo.
@@ -44,20 +44,20 @@ Consulte Flujo de trabajo de destinos de almacenamiento de [Cloud ](/help/rtcdp/
 
 Para [!DNL Amazon Kinesis] destinos, introduzca la siguiente información en el flujo de trabajo de creación de destinos:
 
-### En el paso Cuenta {#account-step}
+### En el paso Autenticación {#authentication-step}
 
 * **Clave de acceso y clave** secreta de Amazon Web Services: En [!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar acceso CDP en tiempo real de Adobe a su [!DNL Amazon Kinesis] cuenta. Obtenga más información en la documentación [de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
 * **región**: Indicar a qué [!DNL Amazon Web Services] región se transmitirán los datos.
 
 ![Campos de entrada en el paso de cuenta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
-### En el paso Autenticación {#authentication-step}
+### En el paso Configuración {#setup-step}
 
 * **Nombre**: Proporcione un nombre para la conexión a [!DNL Amazon Kinesis]
 * **Descripción**: Proporcione una descripción de la conexión a [!DNL Amazon Kinesis].
-* **stream**: Proporcione el nombre del flujo de datos existente en la [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo.
+* **stream**: Proporcione el nombre de un flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo.
 
-![Campos de entrada en el paso de autenticación](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
+![Campos de entrada en el paso de autenticación](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
 <!--
 
@@ -73,7 +73,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 ## Datos exportados {#exported-data}
 
-Los datos exportados de la plataforma de experiencias llegan [!DNL Amazon Kinesis] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
+Los datos de Experience Platform exportados llegan [!DNL Amazon Kinesis] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
 
 ```
 {
