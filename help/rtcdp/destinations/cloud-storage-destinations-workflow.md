@@ -4,9 +4,9 @@ seo-title: Flujo de trabajo de los destinos de almacenamiento en la nube
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Información general
 
-En esta página se explica cómo puede conectarse a ubicaciones de almacenamiento en la nube en la plataforma de datos del cliente en tiempo real de Adobe.
+En esta página se explica cómo puede conectarse a ubicaciones de almacenamiento en la nube en Adobe Real-time Customer Data Platform.
 
 1. En **[!UICONTROL Conexiones > Destinos]**, seleccione el destino de almacenamiento de nube preferido y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
@@ -31,13 +31,22 @@ En esta página se explica cómo puede conectarse a ubicaciones de almacenamient
    ![Conectar con destino de almacenamiento en la nube: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. En el paso **[!UICONTROL Configuración]** , introduzca un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación. <br>
+También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br>
 Para los destinos de Amazon S3, inserte el nombre **[!UICONTROL del]** bucket y la ruta **[!UICONTROL de la]** carpeta en el destino de almacenamiento de nube donde se enviarán los archivos. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
-   ![Conectar con destino de almacenamiento en la nube Amazon S3: paso de autenticación](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Conectar con destino de almacenamiento en la nube Amazon S3: paso de autenticación](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   Para los destinos SFTP, inserte la ruta **[!UICONTROL de]** carpeta donde se enviarán los archivos.
+   Para los destinos SFTP, inserte la ruta **[!UICONTROL de]** carpeta donde se enviarán los archivos. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
    ![Conectar con destino de almacenamiento de nube SFTP: paso de autenticación](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Para los destinos de Amazon Kinesis, proporcione el nombre del flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+
+   ![Conectar con destino de almacenamiento de nube de Kinesis: paso de autenticación](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Para los destinos de los centros de Evento de Azure, proporcione el nombre del flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+
+   ![Conectar con destino de almacenamiento de nube de Kinesis: paso de autenticación](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. Se ha creado el destino. Puede seleccionar **[!UICONTROL Guardar y salir]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Siguiente]** para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
 
