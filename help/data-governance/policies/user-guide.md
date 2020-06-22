@@ -4,28 +4,30 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 2%
+source-wordcount: '739'
+ht-degree: 1%
 
 ---
 
 
 # Guía del usuario de directivas de uso de datos
 
-El Gobierno de datos de la plataforma de experiencia de Adobe proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona una descripción general de las acciones que puede realizar en el espacio de trabajo _Directivas_ de la interfaz de usuario de la plataforma de experiencia.
+El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo _Directivas_ de la interfaz de usuario de Experience Platform.
+
+>[!IMPORTANT] Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de los siguientes conceptos de la plataforma de experiencia:
+Esta guía requiere una comprensión práctica de los siguientes conceptos de Experience Platform:
 
 - [Gobierno de datos](../home.md)
 - [Directivas de uso de datos](./overview.md)
 
-## Directivas de uso de datos de Vista
+## Directivas de uso de datos de Vista {#view-policies}
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
+En la interfaz de usuario del Experience Platform, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
 
 ![](../images/policies/browse-policies.png)
 
@@ -33,9 +35,9 @@ Haga clic en una directiva de la lista para vista de su descripción y tipo. Si 
 
 ![](../images/policies/policy-details.png)
 
-## Crear una directiva de uso de datos personalizada
+## Crear una directiva de uso de datos personalizada {#create-policy}
 
-Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha del espacio de trabajo *Directivas* .
+Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el espacio de trabajo *Directivas* .
 
 ![](../images/policies/create-policy-button.png)
 
@@ -63,14 +65,50 @@ Vuelve a aparecer la ficha *[!UICONTROL Examinar]* , que ahora lista la directiv
 
 ## Habilitar o deshabilitar una directiva de uso de datos {#enable}
 
-Puede habilitar o deshabilitar las directivas de uso de datos personalizadas en la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Directivas]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Estado]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
+Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
+
+Puede habilitar o deshabilitar las directivas desde la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Directivas]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Estado]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
 
 ![](../images/policies/enable-policy.png)
 
+## Acciones de mercadotecnia de Vista {#view-marketing-actions}
+
+En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Acciones **[!UICONTROL de]** marketing para la vista de una lista de acciones de marketing disponibles definidas por Adobe y su propia organización.
+
+![](../images/policies/marketing-actions.png)
+
+## Crear una acción de mercadotecnia {#create-marketing-action}
+
+Para crear una nueva acción de mercadotecnia personalizada, haga clic en **[!UICONTROL Crear acción]** de mercadotecnia en la esquina superior derecha de la ficha Acciones **[!UICONTROL de]** mercadotecnia en el espacio de trabajo *[!UICONTROL Directivas]* .
+
+![](../images/policies/create-marketing-action.png)
+
+Aparece el cuadro de diálogo *[!UICONTROL Crear acción]* de marketing. Escriba un nombre y una descripción para la acción de marketing y haga clic en **[!UICONTROL Crear]**.
+
+![](../images/policies/create-marketing-action-details.png)
+
+La acción recién creada aparece en la ficha Acciones *[!UICONTROL de]* mercadotecnia. Ahora puede usar la acción de marketing al [crear nuevas directivas](#create-policy)de uso de datos.
+
+![](../images/policies/created-marketing-action.png)
+
+## Editar o eliminar una acción de mercadotecnia {#edit-delete-marketing-action}
+
+>[!NOTE] Solo se pueden editar las acciones de mercadotecnia personalizadas definidas por su organización. Las acciones de marketing definidas por Adobe no se pueden cambiar ni eliminar.
+
+En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Acciones **[!UICONTROL de]** marketing para la vista de una lista de acciones de marketing disponibles definidas por Adobe y su propia organización. Seleccione una acción de marketing personalizada de la lista y, a continuación, utilice los campos proporcionados en la sección derecha para editar los detalles de la acción de marketing.
+
+![](../images/policies/edit-marketing-action.png)
+
+Si las directivas de uso existentes no están utilizando la acción de marketing, puede eliminarla haciendo clic en **[!UICONTROL Eliminar acción]** de marketing.
+
+>[!NOTE] Si se intenta eliminar una acción de marketing que está utilizando una directiva existente, aparecerá un mensaje de error que indicará que el intento de eliminación ha fallado.
+
+![](../images/policies/delete-marketing-action.png)
+
 ## Pasos siguientes
 
-Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
+Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de Experience Platform. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar las directivas de uso de datos, consulte la descripción general [de cumplimiento de](../enforcement/overview.md)políticas.
 
-El siguiente vídeo muestra cómo trabajar con las políticas de uso en la interfaz de usuario de la plataforma de experiencia:
+El siguiente vídeo muestra cómo trabajar con las políticas de uso en la interfaz de usuario del Experience Platform:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
