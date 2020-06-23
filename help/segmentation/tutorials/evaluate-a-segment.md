@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Evaluar un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 2%
 
 ---
 
@@ -18,23 +21,23 @@ Este documento proporciona un tutorial para evaluar segmentos y acceder a los re
 Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [Servicio](../home.md)de segmentación de la plataforma Adobe Experience: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
+- [Servicio](../home.md)de segmentación de Adobes Experience Platform: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Encabezados requeridos
 
-Este tutorial también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a las API de plataforma. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Este tutorial también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a las API de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
 
@@ -48,7 +51,7 @@ Una vez desarrollada, probada y guardada la definición del segmento, puede eval
 
 Si todavía no ha completado el tutorial [Crear un segmento con la API](./create-a-segment.md) de Perfil del cliente en tiempo real o ha creado una definición de segmento con el Generador [de segmentos](../ui/overview.md), hágalo antes de continuar con este tutorial.
 
-## Evaluación programada
+## Evaluación programada {#scheduled-evaulation}
 
 Mediante una evaluación programada, su organización de IMS puede crear una programación recurrente para ejecutar automáticamente los trabajos de exportación.
 
@@ -410,7 +413,7 @@ Una respuesta correcta devuelve los detalles del trabajo de segmentación y prop
 
 ## Interpretar resultados de segmentos
 
-Cuando los trabajos de segmentos se ejecutan correctamente, el `segmentMembership` mapa se actualiza para cada perfil incluido en el segmento. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en Platform, lo que permite la integración con otras soluciones como Adobe Audiencia Manager.
+Cuando los trabajos de segmentos se ejecutan correctamente, el `segmentMembership` mapa se actualiza para cada perfil incluido en el segmento. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager.
 
 El siguiente ejemplo muestra el aspecto del `segmentMembership` atributo para cada registro de perfil individual:
 
@@ -472,7 +475,7 @@ Una de las consideraciones clave es el esquema en el que se basa el conjunto de 
 Existen dos maneras de crear el conjunto de datos necesario:
 
 - **Uso de API:** Los pasos siguientes en este tutorial describen cómo crear un conjunto de datos que haga referencia al Esquema de Unión de Perfil individual XDM mediante la API de catálogo.
-- **Uso de la interfaz de usuario:** Para utilizar la interfaz de usuario de Adobe Experience Platform y crear un conjunto de datos que haga referencia al esquema de unión, siga los pasos del tutorial [de la](../ui/overview.md) interfaz de usuario y, a continuación, vuelva a este tutorial para continuar con los pasos para [generar perfiles](#generate-xdm-profiles-for-audience-members)de audiencia.
+- **Uso de la interfaz de usuario:** Para utilizar la interfaz de usuario de Adobe Experience Platform para crear un conjunto de datos que haga referencia al esquema de unión, siga los pasos del tutorial [de](../ui/overview.md) IU y vuelva a este tutorial para continuar con los pasos para [generar perfiles](#generate-xdm-profiles-for-audience-members)de audiencia.
 
 Si ya tiene un conjunto de datos compatible y conoce su ID, puede continuar directamente con el paso para [generar perfiles](#generate-xdm-profiles-for-audience-members)de audiencia.
 
@@ -948,7 +951,7 @@ curl -X GET \
 
 ## Pasos siguientes
 
-Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el lago de datos de la plataforma de experiencia. A continuación, puede utilizar la API [de acceso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) datos para acceder a los datos mediante el `batchId` vínculo asociado a la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
+Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el Experience Platform Data Lake. A continuación, puede utilizar la API [de acceso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) datos para acceder a los datos mediante el `batchId` vínculo asociado a la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga el tutorial [de acceso a](../../data-access/tutorials/dataset-data.md)datos.
 
