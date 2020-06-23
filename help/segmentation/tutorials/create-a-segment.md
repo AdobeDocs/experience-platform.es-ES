@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -20,28 +23,28 @@ Para obtener información sobre cómo generar segmentos mediante la interfaz de 
 Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [Servicio](../home.md)de segmentación de la plataforma Adobe Experience: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
+- [Servicio](../home.md)de segmentación de Adobes Experience Platform: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -53,7 +56,7 @@ El primer paso en la segmentación es definir un segmento, representado en una c
 
 Puede crear una nueva definición de segmento realizando una solicitud POST al extremo en la API de Perfil del cliente en tiempo real `/segment/definitions` . El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
 
-Las definiciones de segmentos se pueden evaluar de dos maneras: segmentación por lotes y segmentación de flujo. La segmentación por lotes evalúa los segmentos en función de una programación preestablecida o cuando la evaluación se activa manualmente, mientras que la segmentación por flujo continuo evalúa los segmentos tan pronto como los datos se ingieren en la plataforma. Este tutorial utilizará la segmentación por **lotes**. Para obtener más información sobre la segmentación de flujo continuo, lea la [información general sobre la segmentación](../api/streaming-segmentation.md)de flujo continuo.
+Las definiciones de segmentos se pueden evaluar de dos maneras: segmentación por lotes y segmentación de flujo. La segmentación por lotes evalúa los segmentos en función de una programación preestablecida o cuando la evaluación se activa manualmente, mientras que la segmentación por flujo continuo evalúa los segmentos tan pronto como se ingieren datos en Platform. Este tutorial utilizará la segmentación por **lotes**. Para obtener más información sobre la segmentación de flujo continuo, lea la [información general sobre la segmentación](../api/streaming-segmentation.md)de flujo continuo.
 
 **Formato API**
 
@@ -119,7 +122,7 @@ Una respuesta correcta devuelve los detalles de la definición de segmento reci�
 }
 ```
 
-## Calcular y previsualización de una audiencia
+## Calcular y previsualización de una audiencia {#estimate-and-preview-an-audience}
 
 A medida que desarrolla la definición del segmento, puede utilizar las herramientas de estimación y previsualización dentro del Perfil del cliente en tiempo real para obtener información de nivel de resumen de vista que le ayudará a aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las Previsualizaciones proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 
