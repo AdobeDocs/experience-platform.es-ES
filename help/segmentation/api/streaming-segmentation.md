@@ -4,46 +4,47 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# Evaluar eventos en tiempo real con segmentación de flujo continuo (Beta)
+# Evaluar eventos en tiempo casi real con segmentación de flujo continuo
 
->[!NOTE] La segmentación por flujo continuo es una función beta y estará disponible bajo petición.
-
-La segmentación por flujo continuo (también conocida como evaluación continua de consultas) es la capacidad de evaluar instantáneamente a un cliente en cuanto un evento entra en un grupo de segmentos en particular. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Adobe Experience Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
+La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real mientras se concentran en la riqueza de los datos. Con la segmentación de flujo continuo, la cualificación de segmentos ahora se produce cuando los datos llegan a [!DNL Platform]su destino, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Primeros pasos
 
-Esta guía para desarrolladores requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform relacionados con la segmentación por flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Esta guía para desarrolladores requiere un conocimiento práctico de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación por flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [Segmentación](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de los datos de Perfil del cliente en tiempo real.
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
+- [!DNL Segmentation](../home.md):: Proporciona la capacidad de crear segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Esta guía para desarrolladores proporciona llamadas de API de ejemplo para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía para desarrolladores proporciona llamadas de API de ejemplo para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -51,22 +52,39 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Es posible que se requieran encabezados adicionales para completar solicitudes específicas. Los encabezados correctos se muestran en cada uno de los ejemplos de este documento. Preste especial atención a las solicitudes de muestra para asegurarse de que se incluyen todos los encabezados necesarios.
 
-### Tipos de consulta habilitados para la segmentación por flujo
+### Tipos de consulta habilitados para la segmentación por flujo {#streaming-segmentation-query-types}
 
-La siguiente tabla lista los diferentes tipos de consultas de segmentación y si admiten o no la segmentación de flujo.
+>[!NOTE] Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. Encontrará información sobre cómo habilitar la segmentación programada en la sección [Activar segmentación programada](#enable-scheduled-segmentation)
 
-| Tipo de Consulta | consulta de muestra | Segmentación por flujo continuo admitida |
-| ---------- | ------------ | --------------------------------- |
-| Demografía simple | &quot;Dame a todas las personas cuya dirección está en Canadá&quot;. | Compatible |
-| eventos de series temporales | &quot;Dame a todas las personas que descargaron Lightroom&quot;. | Compatible |
-| Demografía y series cronológicas | &quot;Denme a todas las personas que viven en Canadá y han hecho un pedido en los últimos 30 días&quot;. | Compatible |
-| Ausencia de eventos | &quot;Dadme a todas las personas que han abandonado dos carros separados dentro de dos días entre sí&quot;. | Compatible |
-| Varias entidades | &quot;Dame a todas las personas cuyo tipo de asignación de derechos sea &#39;Experienciado&#39;&quot;. | No admitido |
-| Funciones avanzadas de PQL | &quot;Dame todos los perfiles que hicieron un pedido la semana pasada, e incluye el SKU y el nombre de todos los productos comprados&quot;. | No admitido |
+Para que un segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
-## Recuperar todos los segmentos habilitados para la segmentación de flujo continuo
+| Tipo de Consulta | Detalles |
+| ---------- | ------- |
+| Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
+| Visita entrante dentro de un período de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante **en los últimos siete días**. |
+| Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. |
+| Visita entrante que hace referencia a un perfil dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o varios atributos de perfil, **en los últimos siete días**. |
+| Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o varios atributos de perfil. |
 
-Antes de crear un nuevo segmento habilitado para flujo continuo o actualizar un segmento existente para que se pueda transmitir por flujo continuo, debe asegurarse de que no está duplicando información recuperando una lista de todos los segmentos habilitados para flujo continuo.
+La siguiente sección lista ejemplos de definición de segmentos que **no se habilitarán** para la segmentación de flujo continuo.
+
+| Tipo de Consulta | Detalles |
+| ---------- | ------- | 
+| Visita entrante dentro de un período de tiempo relativo | Si la definición del segmento se refiere a un evento entrante **no** dentro del período **de siete días**&#x200B;últimos. Por ejemplo, en las **últimas dos semanas**. |
+| Visita entrante que hace referencia a un perfil dentro de una ventana relativa | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento entrante **no** dentro del **último período** de siete días.</li><li>Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM).</li></ul> |
+| Varios eventos que hacen referencia a un perfil | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento que **no** se produce en **las últimas 24 horas**.</li><li>Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM).</li></ul> |
+| consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |
+
+Además, se aplican algunas directrices al realizar la segmentación de flujo:
+
+| Tipo de Consulta | Directrices |
+| ---------- | -------- |
+| consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
+| Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Solo se permiten pedidos de tiempo simples (antes y después) entre los eventos.</li><li>Los eventos individuales **no se pueden** negar. Sin embargo, toda la consulta **puede** ser anulada.</li></ul> |
+
+## Recuperar todos los segmentos activados para la segmentación de flujo continuo
+
+Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de la organización de IMS realizando una solicitud GET al `/segment/definitions` extremo.
 
 **Formato API**
 
@@ -85,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
@@ -179,7 +197,7 @@ Una respuesta correcta devuelve una matriz de segmentos en la organización de I
 
 ## Creación de un segmento con transmisión habilitada
 
-Después de confirmar que el segmento que desea crear no existe aún, puede crear un nuevo segmento que esté habilitado para la segmentación de flujo continuo.
+Un segmento se habilitará automáticamente para la transmisión si coincide con uno de los tipos de segmentación de [flujo enumerados arriba](#streaming-segmentation-query-types).
 
 **Formato API**
 
@@ -188,8 +206,6 @@ POST /segment/definitions
 ```
 
 **Solicitud**
-
-La siguiente solicitud crea un nuevo segmento que está habilitado para la segmentación de flujo. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -210,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] Se trata de una solicitud estándar de &quot;crear un segmento&quot;, con el parámetro agregado de la `continuous` sección definido como `enabled: true`. Para obtener más información sobre la creación de una definición de segmento, lea la documentación sobre la creación [de](../tutorials/create-a-segment.md)segmentos.
+>[!NOTE] Se trata de una solicitud estándar para &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre la [creación de un segmento](../tutorials/create-a-segment.md).
 
 **Respuesta**
 
@@ -269,174 +274,9 @@ Una respuesta correcta devuelve los detalles de la definición de segmento habil
 }
 ```
 
-## Habilitar un segmento existente para la segmentación de flujo continuo
+## Habilitar evaluación programada {#enable-scheduled-segmentation}
 
-Puede habilitar un segmento existente para la segmentación de flujo continuo suministrando el ID de la definición del segmento en la ruta de una solicitud PATCH. Además, la carga útil de esta solicitud PATCH debe incluir todos los detalles de la definición de segmento existente, a la que se puede acceder mediante una solicitud GET a la definición de segmento en cuestión.
-
-### Buscar una definición de segmento existente
-
-Para buscar una definición de segmento existente, debe proporcionar su ID en la ruta de una solicitud GET.
-
-**Formato API**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | ID de la definición de segmento que desea buscar. |
-
-**Solicitud**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devolverá detalles de la definición del segmento solicitada.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] Para la siguiente solicitud, necesitará los detalles completos de la definición del segmento que se devolvieron en esta respuesta. Por favor, copie los detalles de esta respuesta para utilizarla en el cuerpo de la siguiente solicitud.
-
-### Habilitar el segmento existente para la segmentación de flujo continuo
-
-Ahora que conoce los detalles del segmento que desea actualizar, puede realizar una solicitud PATCH para actualizar el segmento a fin de habilitar la segmentación de flujo.
-
-**Formato API**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Solicitud**
-
-La carga útil de la siguiente solicitud proporciona los detalles de la definición del segmento (obtenida en el paso [](#look-up-an-existing-segment-definition)anterior) y la actualiza cambiando su `continuous.enabled` propiedad a `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve los detalles de la definición del segmento recién actualizada.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## Habilitar evaluación programada
-
-Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de base (después de la cual el segmento siempre estará actualizado). Esto lo hace automáticamente el sistema, sin embargo, la evaluación programada (también conocida como segmentación programada) debe habilitarse primero para que se produzca la conexión de base.
-
-Con la segmentación programada, su organización de IMS puede crear una programación recurrente para ejecutar automáticamente trabajos de exportación para evaluar segmentos.
+Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de base (después de la cual el segmento siempre estará actualizado). La evaluación programada (también conocida como segmentación programada) debe habilitarse en primer lugar para que el sistema realice automáticamente la asignación de la base. Con la segmentación programada, su organización de IMS puede adherirse a una programación recurrente para ejecutar automáticamente trabajos de exportación para evaluar segmentos.
 
 >[!NOTE] La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
 
@@ -551,4 +391,4 @@ La misma operación puede utilizarse para deshabilitar una programación reempla
 
 Ahora que ha habilitado segmentos nuevos y existentes para la segmentación de flujo continuo y ha habilitado la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos para su organización.
 
-Para obtener información sobre cómo realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la guía [de usuario del Generador de](../ui/overview.md)segmentos.
+Para obtener información sobre cómo realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la guía del usuario [del Generador de segmentos](../ui/overview.md).
