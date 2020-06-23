@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Conectar a destinos de flujo continuo y activar datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 2%
 
 ---
 
 
-# Conéctese a los destinos de flujo continuo y active los datos en la plataforma de datos del cliente en tiempo real de Adobe mediante API
+# Conéctese a los destinos de flujo continuo y active los datos en tiempo real de datos de cliente de Adobe en Platform mediante API
 
 >[!NOTE]
 >
 >Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] de CDP en tiempo real de Adobe se encuentran actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
-En este tutorial se muestra cómo utilizar llamadas de API para conectarse a los datos de la plataforma de Adobe Experience, crear una conexión a un destino de almacenamiento de flujo continuo en la nube ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
+En este tutorial se muestra cómo utilizar llamadas de API para conectarse a los datos de Adobe Experience Platform, crear una conexión a un destino de almacenamiento de nube de flujo continuo ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
 Este tutorial utiliza el destino en todos los ejemplos, pero los pasos son idénticos para [!DNL Amazon Kinesis] [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe pa
 
 ## Introducción
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
-* [Servicio](../../catalog/home.md)de catálogo: Catalog es el sistema de registros para la ubicación y el linaje de los datos dentro de la plataforma de experiencia.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Servicio](../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de Experience Platform.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para activar datos en destinos de flujo continuo en CDP en tiempo real de Adobe.
 
@@ -45,22 +45,22 @@ Para completar los pasos de este tutorial, debe tener listas las siguientes cred
 
 ### Leer llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados opcionales y requeridos {#gather-values}
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](/help/tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](/help/tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Los recursos de la plataforma de experiencia se pueden aislar en entornos limitados virtuales específicos. En las solicitudes a las API de plataforma, puede especificar el nombre y la ID del entorno limitado en el que se realizará la operación. Son parámetros opcionales.
+Los recursos del Experience Platform se pueden aislar en entornos limitados virtuales específicos. En las solicitudes a las API de Platform, puede especificar el nombre y la ID del entorno limitado en el que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
->Para obtener más información sobre los entornos limitados en la plataforma de experiencias, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!Nota]
+>Para obtener más información sobre los entornos limitados en Experience Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
@@ -68,7 +68,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger {#swagger-docs}
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte https://platform.adobe.io/data/foundation/flowservice/swagger#/. Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte la documentación de la API del servicio de [flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtenga la lista de los destinos de flujo continuo disponibles {#get-the-list-of-available-streaming-destinations}
 
@@ -114,17 +114,17 @@ Una respuesta correcta contiene una lista de los destinos disponibles y sus iden
 }
 ```
 
-## Conectar con los datos de la plataforma de experiencia {#connect-to-your-experience-platform-data}
+## Conectar con los datos del Experience Platform {#connect-to-your-experience-platform-data}
 
 ![Pasos de destino, paso 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
 
-A continuación, debe conectarse a los datos de la plataforma de experiencia para poder exportar datos de perfil y activarlos en el destino preferido. Se trata de dos subpasos que se describen a continuación.
+A continuación, debe conectarse a los datos del Experience Platform para poder exportar los datos del perfil y activarlos en su destino preferido. Se trata de dos subpasos que se describen a continuación.
 
-1. En primer lugar, debe realizar una llamada para autorizar el acceso a los datos en la plataforma de experiencia, configurando una conexión base.
-2. A continuación, con el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establecerá la conexión con los datos de la plataforma de experiencia.
+1. En primer lugar, debe realizar una llamada para autorizar el acceso a sus datos en Experience Platform, configurando una conexión base.
+2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establecerá la conexión con los datos del Experience Platform.
 
 
-### Autorizar el acceso a los datos en la plataforma de experiencia
+### Autorizar el acceso a sus datos en Experience Platform
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una respuesta correcta contiene el identificador único (`id`) de la conexión b
 }
 ```
 
-### Conectar con los datos de la plataforma de experiencia
+### Conectar con los datos del Experience Platform
 
 **Formato API**
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada al servicio de Perfil unificado. Esto confirma que se ha conectado correctamente a los datos de la plataforma de experiencia. Almacene este valor tal como se requiere en un paso posterior.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada al servicio de Perfil unificado. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como se requiere en un paso posterior.
 
 ```json
 {
@@ -335,7 +335,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ![Pasos de destino, paso 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
-Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos de la plataforma de experiencias y el destino en el que activará los datos. Considere este paso como la construcción de la canalización, a través de la cual fluirán los datos más adelante, entre la plataforma de experiencias y el destino deseado.
+Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos del Experience Platform y el destino en el que activará los datos. Considere este paso como la construcción de la canalización, a través de la cual los datos fluirán más adelante, entre el Experience Platform y el destino deseado.
 
 Para crear un flujo de datos, realice una solicitud POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
 
@@ -375,7 +375,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`:: El ID de especificación de flujo para los destinos basados en perfil es `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilice este valor en la llamada.
-* `{SOURCE_CONNECTION_ID}`:: Utilice el ID de conexión de origen obtenido en el paso [Conectar con la plataforma](#connect-to-your-experience-platform-data)de experiencia.
+* `{SOURCE_CONNECTION_ID}`:: Utilice el ID de conexión de origen obtenido en el paso [Conectar con su Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`:: Utilice el ID de conexión de destinatario obtenido en el paso [Conectar con destino](#connect-to-streaming-destination)de flujo continuo.
 
 **Respuesta**
