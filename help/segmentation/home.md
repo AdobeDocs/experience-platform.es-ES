@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Servicio de segmentación de la plataforma Adobe Experience
+title: Servicio de segmentación de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+workflow-type: tm+mt
+source-wordcount: '2386'
+ht-degree: 0%
 
 ---
 
 
 # Descripción general del servicio de segmentación
 
-El servicio de segmentación de la plataforma de experiencia de Adobe proporciona una interfaz de usuario y una API RESTful que le permite crear segmentos y generar audiencias a partir de los datos de Perfil de clientes en tiempo real. Estos segmentos están configurados y mantenidos de forma centralizada en Platform y son fácilmente accesibles para cualquier solución de Adobe.
+El servicio de segmentación por Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite crear segmentos y generar audiencias a partir de los datos de Perfil del cliente en tiempo real. Estos segmentos están configurados y mantenidos de forma centralizada en Platform y son fácilmente accesibles para cualquier solución de Adobe.
 
-Este documento proporciona información general sobre el servicio de segmentación y la función que desempeña en Adobe Experience Platform.
+Este documento proporciona información general sobre el servicio de segmentación y la función que desempeña en el Adobe Experience Platform.
 
 ## Introducción al servicio de segmentación
 
@@ -27,7 +30,7 @@ Es importante comprender los siguientes términos clave utilizados en este docum
 
 La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles de su almacén de perfiles para distinguir un grupo de personas comercializables de su base de clientes. Por ejemplo: en una campaña por correo electrónico llamada &quot;¿Olvidó comprar sus zapatillas?&quot;, puede que desee una audiencia de todos los usuarios que buscaron zapatos deportivos en los últimos 30 días, pero que no completaron una compra.
 
-Una vez definido conceptualmente un segmento, se crea en la plataforma de experiencia. Normalmente, los segmentos son creados por el especialista en marketing o audiencia, aunque algunas organizaciones prefieren que los cree su departamento de marketing, en colaboración con sus analistas de datos. Al revisar los datos que se envían a la plataforma, el analista de datos compone la definición del segmento seleccionando los campos y valores que se utilizarán para generar las reglas o condiciones del segmento. Esto se realiza mediante la interfaz de usuario o la API.
+Una vez definido conceptualmente un segmento, se crea en Experience Platform. Normalmente, los segmentos son creados por el especialista en marketing o audiencia, aunque algunas organizaciones prefieren que los cree su departamento de marketing, en colaboración con sus analistas de datos. Al revisar los datos que se envían a Platform, el analista de datos compone la definición del segmento seleccionando los campos y valores que se utilizarán para generar las reglas o condiciones del segmento. Esto se realiza mediante la interfaz de usuario o la API.
 
 ## Crear segmentos
 
@@ -42,8 +45,6 @@ Para obtener información sobre la creación de definiciones de segmentos median
 ## Evaluar segmentos
 
 ### Segmentación por flujo continuo
-
->[!NOTE] La segmentación por flujo continuo es una función beta y estará disponible bajo petición.
 
 La segmentación por flujo continuo es un proceso continuo de selección de datos que actualiza los segmentos en respuesta a la actividad del usuario. Una vez creado y guardado un segmento, la definición del segmento se aplica a los datos entrantes en el Perfil del cliente en tiempo real. Las adiciones y eliminaciones de segmentos se procesan con regularidad, lo que garantiza que la audiencia de destinatarios siga siendo relevante.
 
@@ -74,7 +75,7 @@ Al crear un nuevo segmento, debe proporcionar un nombre de segmento. El nombre d
 ### Combinar directivas
 
 Las políticas de combinación son reglas utilizadas por Perfil para determinar cómo se priorizarán los datos y cómo se combinarán en una vista unificada bajo ciertas condiciones.
-Si no se define una directiva de combinación, se utiliza la directiva de combinación de plataforma predeterminada. Si prefiere utilizar una directiva de combinación específica de su organización, puede crear la suya propia y marcarla como la predeterminada de su organización.
+Si no se define una directiva de combinación, se utiliza la directiva de combinación predeterminada de Platform. Si prefiere utilizar una directiva de combinación específica de su organización, puede crear la suya propia y marcarla como la predeterminada de su organización.
 
 >[!NOTE] La estimación de los tamaños de audiencia se basa en la directiva de combinación de perfiles predeterminada de la organización.
 
@@ -93,7 +94,7 @@ Estas funciones avanzadas se analizan con más detalle en las siguientes seccion
 
 ## Segmentación secuencial {#sequential}
 
-Un viaje de usuario estándar es secuencial.  Adobe Experience Platform le permite definir una serie ordenada de segmentos para reflejar este viaje y capturar así secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado mediante la línea de tiempo del evento visual en el Generador de segmentos.
+Un viaje de usuario estándar es secuencial.  Adobe Experience Platform le permite definir una serie ordenada de segmentos para reflejar este viaje, capturando así secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado mediante la línea de tiempo del evento visual en el Generador de segmentos.
 
 Un ejemplo de un viaje del cliente que requeriría una segmentación secuencial sería la vista del producto > adición del producto > cierre de compra > Sin compra.
 
@@ -209,9 +210,9 @@ Los datos de fecha le permiten asignar un contexto basado en la hora a las defin
 
 ### Eventos de experiencias
 
-Como esquema de Adobe Experience Platform, XDM ExperienceEvents registra las interacciones explícitas e implícitas de los clientes con aplicaciones integradas en la plataforma, incluida una instantánea del sistema en el momento en que se produjo la interacción. ExperienceEvents son registros de hechos. Por lo tanto, son una fuente de datos disponible durante la definición del segmento.
+Como esquema de Adobe Experience Platform, ExperienceEvents de XDM registra las interacciones explícitas e implícitas de los clientes con las aplicaciones integradas de Platform, incluida una instantánea del sistema en el momento en que tuvo lugar la interacción. ExperienceEvents son registros de hechos. Por lo tanto, son una fuente de datos disponible durante la definición del segmento.
 
-Como se ve en la tabla siguiente, los datos de evento se representan utilizando palabras clave que ayudan a reducir el comportamiento de evento y a especificar atributos de evento.
+Como se muestra en la tabla siguiente, los datos de evento se representan utilizando palabras clave que ayudan a reducir el comportamiento de evento y a especificar atributos de evento.
 
 | Palabra clave | Utilice  |
 | ------- | --- |
@@ -228,7 +229,7 @@ Las definiciones de segmentos existentes también pueden utilizarse como compone
 
 Las audiencias externas también se pueden usar como componentes de una nueva definición de segmento, agregando sus reglas de atributos al nuevo segmento.
 
-Actualmente, solo se admite Adobe Audiencia Manager como audiencia. En el futuro se habilitarán fuentes adicionales.
+Actualmente, solo se admite Adobe Audience Manager como audiencia. En el futuro se habilitarán fuentes adicionales.
 
 ### Otros tipos de datos
 
@@ -256,6 +257,6 @@ El servicio de segmentación proporciona un flujo de trabajo consolidado para cr
 - La segmentación es el proceso de definir un subconjunto de perfiles de su almacén de perfiles, lo que le permite caracterizar el comportamiento o los atributos de un grupo comercializable deseado. El servicio de segmentación hace posible este proceso.
 - Al planificar un segmento, tenga en cuenta que se puede hacer referencia a un segmento desde cualquier otro segmento y combinarlo con él.
 - Un segmento se puede crear a partir de reglas basadas en datos de perfil, datos de series temporales relacionados o ambos.
-- Los segmentos se pueden evaluar según sea necesario o de forma continua. Cuando se evalúa según demanda, todos los datos de perfil se pasan a través de las definiciones de segmentos a la vez. Cuando se evalúa continuamente, los datos se transmiten a través de definiciones de segmentos a medida que entran en la plataforma.
+- Los segmentos se pueden evaluar según sea necesario o de forma continua. Cuando se evalúa según demanda, todos los datos de perfil se pasan a través de las definiciones de segmentos a la vez. Cuando se evalúa continuamente, los datos se transmiten a través de definiciones de segmentos a medida que entran en Platform.
 
 Para obtener información sobre cómo definir segmentos en la interfaz de usuario, consulte la guía [Generador de](./ui/overview.md)segmentos. Para obtener información sobre la creación de definiciones de segmentos mediante la API, consulte el tutorial sobre la [creación de segmentos mediante la API](./tutorials/create-a-segment.md).
