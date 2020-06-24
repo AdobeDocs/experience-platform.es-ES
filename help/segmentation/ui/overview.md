@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Actualmente, las programaciones solo se pueden crear mediante la API. Para ver l
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Segmentación por flujo continuo
+## Segmentación por flujo continuo {#streaming-segmentation}
 
 >[!NOTE] Para que la segmentación por flujo continuo funcione, el cliente deberá habilitar la segmentación programada para la organización. Para obtener más información sobre cómo habilitar la segmentación programada, consulte [la sección anterior de esta guía](#enable-scheduled-segmentation)del usuario.
 
