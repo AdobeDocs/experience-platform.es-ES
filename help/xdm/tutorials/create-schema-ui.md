@@ -1,43 +1,46 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un esquema con el Editor de Esquemas
+title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+workflow-type: tm+mt
+source-wordcount: '3409'
+ht-degree: 0%
 
 ---
 
 
-# Creación de un esquema con el Editor de Esquemas
+# Crear un esquema con el editor de esquemas.
 
-El Registro de Esquema proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos en la biblioteca de Esquemas de Adobe Experience Platform. La biblioteca de Esquemas contiene los recursos que Adobe, los socios de la plataforma de experiencia y los proveedores cuyas aplicaciones utiliza, así como los recursos que define y guarda en el Registro de Esquema.
+El Registro de Esquemas proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos de la Biblioteca de Esquemas de Adobe Experience Platform. La biblioteca de Esquemas contiene los recursos que Adobe, los socios Experience Platform y los proveedores cuyas aplicaciones utiliza, así como los recursos que define y guarda en el Registro de Esquemas.
 
-En este tutorial se explican los pasos para crear un esquema con el Editor de Esquemas en la plataforma de experiencia. Si prefiere componer un esquema con la API de Registro de Esquema, lea la guía [para desarrolladores de](../api/getting-started.md) Esquema Registry antes de intentar el tutorial para [crear un esquema con la API](create-schema-api.md).
+En este tutorial se explican los pasos para crear un esquema con el Editor de Esquemas en Experience Platform. Si prefiere componer un esquema con la API de Registro de Esquema, lea la guía [para desarrolladores de](../api/getting-started.md) Esquema Registry antes de intentar el tutorial para [crear un esquema con la API](create-schema-api.md).
 
 Este tutorial también incluye pasos para [definir una nueva clase](#create-new-class) que puede utilizar para componer un esquema.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos aspectos de la plataforma de Adobe Experience Platform relacionados con el uso del Editor de Esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
+Este tutorial requiere un conocimiento práctico de los diversos aspectos del Adobe Experience Platform que implica el uso del Editor de Esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
 
 * [Modelo de datos de experiencia (XDM)](../home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los esquemas XDM y sus componentes, incluidas clases, mezclas, tipos de datos y campos.
 * [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Este tutorial requiere que tenga acceso a la plataforma de experiencias. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
+Este tutorial requiere que tenga acceso a Experience Platform. Si no tiene acceso a una organización de IMS en Experience Platform, póngase en contacto con el administrador del sistema antes de continuar.
 
-## Examinar esquemas existentes en el espacio de trabajo Esquemas
+## Examinar esquemas existentes en el espacio de trabajo Esquemas {#browse}
 
-El espacio de trabajo Esquemas de la plataforma de experiencias proporciona una visualización de la biblioteca de Esquemas, lo que le permite realizar vistas y administrar todos los esquemas disponibles, así como componer otros nuevos. El espacio de trabajo también incluye el Editor de Esquemas, el lienzo en el que se compondrá un esquema a lo largo de este tutorial.
+El espacio de trabajo Esquemas dentro de Experience Platform proporciona una visualización de la biblioteca de Esquemas, lo que le permite realizar vistas y administrar todos los esquemas disponibles, así como componer otros nuevos. El espacio de trabajo también incluye el Editor de Esquemas, el lienzo en el que se compondrá un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión en la plataforma de experiencia, haga clic en **Esquemas** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación de la biblioteca de Esquemas) en la que podrá realizar vistas, administrar y personalizar todos los esquemas disponibles. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
+Después de iniciar sesión en el Experience Platform, haga clic en **Esquemas** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación de la biblioteca de Esquemas) en la que podrá realizar vistas, administrar y personalizar todos los esquemas disponibles. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
 
 Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las capacidades de filtrado de todos los recursos del Registro, incluidos los tipos de datos, las clases y las mezclas.
 
 ![Vista de la biblioteca de Esquemas](../images/tutorials/create-schema/schemas_filter.png)
 
-## Crear y asignar un nombre a un esquema
+## Crear y asignar un nombre a un esquema {#create}
 
 Para empezar a componer un esquema, haga clic en **Crear Esquema** en la esquina superior derecha del espacio de trabajo Esquemas.
 
@@ -59,7 +62,7 @@ A la hora de decidir un nombre para el esquema, hay que tener en cuenta varias c
 
 Este tutorial contiene un esquema para ingestar datos relacionados con los miembros de un programa de lealtad, por lo que el esquema se denomina &quot;Miembros de lealtad&quot;.
 
-## Asignar una clase
+## Asignar una clase {#class}
 
 A la izquierda del editor se encuentra la sección *Composición* . Actualmente contiene dos subsecciones: *Esquema* y *clase*.
 
@@ -79,11 +82,11 @@ El lienzo vuelve a aparecer. La sección *Clase* ahora contiene la clase selecci
 
 ![Clase de Perfil individual XDM asignada](../images/tutorials/create-schema/class_assigned_structure.png)
 
-Los campos aparecen con el formato &quot;fieldName&quot;| Tipo de datos&quot;. Los pasos para definir los campos de esquema en la interfaz de usuario se proporcionan más adelante en este tutorial.
+Los campos aparecen con el formato &quot;fieldName&quot; | Tipo de datos&quot;. Los pasos para definir los campos de esquema en la interfaz de usuario se proporcionan más adelante en este tutorial.
 
 >[!NOTE] Puede [cambiar la clase de un esquema](#change-class) en cualquier momento durante el proceso de composición inicial antes de guardar el esquema, pero esto debe hacerse con extrema precaución. Las mezclas solo son compatibles con determinadas clases, por lo que al cambiar la clase se restablecerán el lienzo y los campos que se hayan agregado.
 
-## Añadir una mezcla
+## Añadir una mezcla {#mixin}
 
 Ahora que se ha asignado una clase, la sección *Composición* contiene una tercera subsección: *Mezclas*.
 
@@ -111,7 +114,7 @@ Observe que el campo &quot;nombre&quot; tiene un tipo de datos de &quot;Nombre d
 
 Haga clic en diferentes campos dentro del lienzo para ver los campos adicionales que contribuyen a la estructura de esquema.
 
-## Añadir otra mezcla
+## Añadir otra mezcla {#mixin-2}
 
 Ahora puede repetir los mismos pasos para agregar otra mezcla. Cuando esta vez vista el cuadro de diálogo *Añadir mezcla* , tenga en cuenta que la combinación &quot;Detalles de persona de Perfil&quot; se ha atenuado y que el botón de radio situado junto a él no se puede seleccionar. Esto evita que usted duplique accidentalmente las mezclas que ya ha incluido en el esquema actual.
 
@@ -125,7 +128,7 @@ De forma similar al campo &quot;nombre&quot;, los campos que acaba de agregar re
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Definir una nueva mezcla
+## Definir una nueva mezcla {#define-mixin}
 
 El esquema &quot;Miembros de lealtad&quot; tiene como objetivo capturar datos relacionados con los miembros de un programa de lealtad, por lo que requerirá algunos campos específicos relacionados con la lealtad. No hay mezclas estándar disponibles que contengan los campos necesarios, por lo tanto deberá definir una nueva mezcla.
 
@@ -139,7 +142,7 @@ Para este tutorial, asigne un nombre a la nueva combinación &quot;Detalles de l
 
 Haga clic en **Añadir mezcla** para volver al editor de esquemas. &quot;Detalles de lealtad&quot; debería aparecer ahora en *Mezclas* en la parte izquierda del lienzo, pero todavía no hay campos asociados a él y por lo tanto no aparecen campos nuevos en *Estructura*.
 
-## Añadir campos a la mezcla
+## Añadir campos a la mezcla {#mixin-fields}
 
 Ahora que ha creado la mezcla &quot;Detalles de Lealtad&quot;, es hora de definir los campos que la mezcla contribuirá al esquema.
 
@@ -178,7 +181,7 @@ Hay diferentes opciones de restricción disponibles según el tipo de datos sele
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Añadir más campos para mezclar
+## Añadir más campos para mezclar {#mixin-fields-2}
 
 Ahora que ha agregado el campo &quot;loyaltyId&quot;, puede agregar campos adicionales para capturar información relacionada con la lealtad como:
 
@@ -191,7 +194,7 @@ Una vez finalizado, el objeto Lealtad contendrá campos para: ID de lealtad, pun
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Añadir el campo &#39;enum&#39; a la mezcla
+## Añadir el campo &#39;enum&#39; a la mezcla {#enum}
 
 Al definir campos en el Editor de Esquemas, existen algunas opciones adicionales que puede aplicar a los tipos de campo básicos para proporcionar restricciones adicionales en los datos que el campo puede contener.
 
@@ -212,7 +215,7 @@ Más información sobre las restricciones adicionales disponibles:
 * **Enum:** Indica que este campo debe contener uno de los valores de una lista enumerada de valores posibles.
 * **Identidad:** Indica que este campo es un campo de identidad. Más información sobre los campos de identidad se proporciona [más adelante en este tutorial](#identity-field).
 
-## Conversión de un objeto de varios campos en un tipo de datos
+## Conversión de un objeto de varios campos en un tipo de datos {#datatype}
 
 Después de agregar varios campos específicos de lealtad, el objeto &quot;loyalty&quot; ahora contiene una estructura de datos común que podría ser útil en otros esquemas.
 
@@ -230,9 +233,9 @@ En un esquema futuro, ahora se puede asignar un campo al **Tipo** de &quot;Lealt
 
 ## Definición de un campo de esquema como campo de identidad {#identity-field}
 
-Los Esquemas se utilizan para la ingesta de datos en la plataforma de experiencia y, en última instancia, se utilizan para identificar a personas y unir información procedente de múltiples fuentes. Para ayudar con este proceso, los campos clave pueden marcarse como campos &quot;Identidad&quot;.
+Los Esquemas se utilizan para la ingesta de datos en Experience Platform y, en última instancia, los datos se utilizan para identificar a las personas y unir la información proveniente de múltiples fuentes. Para ayudar con este proceso, los campos clave pueden marcarse como campos &quot;Identidad&quot;.
 
-La plataforma de experiencia facilita la identificación de un campo de identidad mediante el uso de la casilla de verificación **Identidad** en el Editor de Esquemas.
+Experience Platform facilita la identificación de un campo de identidad mediante el uso de una casilla de verificación **Identidad** en el Editor de Esquemas.
 
 Por ejemplo, puede haber miles de miembros del programa de lealtad que pertenezcan al mismo &quot;nivel&quot;, pero cada miembro del programa de lealtad tiene un &quot;loyaltyId&quot; único (que en este caso es la dirección de correo electrónico del miembro individual). El hecho de que &quot;loyaltyId&quot; sea un identificador único para cada miembro lo convierte en un buen candidato para un campo de identidad, mientras que &quot;level&quot; no lo es.
 
@@ -260,7 +263,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## Habilitar el esquema para utilizarlo en el Perfil del cliente en tiempo real {#profile}
 
-El Editor de Esquemas permite habilitar un esquema para su uso con el Perfil [del cliente en tiempo](../../profile/home.md)real. Perfil proporciona una vista holística de cada cliente mediante la creación de un perfil sólido de 360° de atributos del cliente, así como una cuenta con marca de tiempo de cada interacción que el cliente ha tenido en cualquier sistema integrado con la plataforma de experiencia.
+El Editor de Esquemas permite habilitar un esquema para su uso con el Perfil [del cliente en tiempo](../../profile/home.md)real. Perfil proporciona una vista holística de cada cliente mediante la creación de un perfil sólido de 360° de atributos del cliente, así como una cuenta con marca de tiempo de cada interacción que el cliente ha tenido en cualquier sistema integrado con el Experience Platform.
 
 Para que un esquema se pueda utilizar con el Perfil del cliente en tiempo real, debe tener una identidad principal definida. Recibirá un mensaje de error &quot;Falta identidad principal&quot; si intenta habilitar un esquema sin definir primero una identidad principal.
 
@@ -282,7 +285,7 @@ Haga clic en **Perfil** y aparecerá una ventana emergente en la que se le pedir
 
 Ahora que ha terminado de componer un esquema &quot;Miembros de lealtad&quot;, puede ver el esquema completo en la sección *Estructura* del editor. Haga clic en **Guardar** y el esquema se guardará en la biblioteca de Esquemas, para que el Registro de Esquemas pueda acceder a él.
 
-El nuevo esquema ahora se puede usar para ingerir datos en la plataforma. Recuerde que una vez que el esquema se ha utilizado para ingestar datos, sólo se pueden realizar cambios aditivos. Consulte los [conceptos básicos de la composición](../schema/composition.md) de esquema para obtener más información sobre el control de versiones de esquemas.
+El nuevo esquema ahora se puede usar para ingerir datos en Platform. Recuerde que una vez que el esquema se ha utilizado para ingestar datos, sólo se pueden realizar cambios aditivos. Consulte los [conceptos básicos de la composición](../schema/composition.md) de esquema para obtener más información sobre el control de versiones de esquemas.
 
 El esquema &quot;Miembros de lealtad&quot; también está disponible para su visualización y administración mediante la API del Registro de Esquemas. Para empezar a trabajar con la API, lea la guía [para desarrolladores de la API de](../api/getting-started.md)Esquema Registry.
 
@@ -292,7 +295,7 @@ La siguiente información se complementa con el tutorial del Editor de Esquemas.
 
 ### Create a new class {#create-new-class}
 
-La plataforma de experiencias proporciona la flexibilidad para definir un esquema en función de una clase exclusiva de su organización.
+Experience Platform proporciona la flexibilidad para definir un esquema en función de una clase exclusiva de su organización.
 
 Abra el cuadro de diálogo *Asignar clase* haciendo clic en **Asignar** en la sección *Clase* del Editor de Esquemas. En el cuadro de diálogo, seleccione **Crear nueva clase**.
 
