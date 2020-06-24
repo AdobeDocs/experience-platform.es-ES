@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Creación de un esquema mediante la API del Registro de Esquema
 
-El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform. La biblioteca de Esquemas contiene recursos que Adobe, los socios de la plataforma de experiencia y los proveedores cuyas aplicaciones utiliza le han puesto a su disposición. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El Registro de Esquemas se utiliza para acceder a la Biblioteca de Esquemas dentro de Adobe Experience Platform. La biblioteca de Esquemas contiene los recursos que Adobe, los socios Experience Platform y los proveedores cuyas aplicaciones utiliza le ponen a su disposición. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar. Si prefiere utilizar la interfaz de usuario en la plataforma de experiencia, el tutorial [Editor de](create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
+Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar. Si prefiere utilizar la interfaz de usuario en Experience Platform, el tutorial [Editor de](create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
 * [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
@@ -33,7 +33,7 @@ En este tutorial se explican los pasos para componer un esquema de miembros de l
 
 ## Redactar un esquema con una clase estándar
 
-Un esquema se puede considerar como el modelo para los datos que desea transferir a la plataforma de experiencia. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utiliza al menos una mezcla.
+Un esquema se puede considerar como el modelo para los datos que desea ingerir en Experience Platform. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utiliza al menos una mezcla.
 
 ### Asignar una clase
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Respuesta **
+**Respuesta**
 
 El formato de respuesta depende del encabezado Accept enviado con la solicitud. Intente experimentar con diferentes encabezados Accept para ver cuál se adapta mejor a sus necesidades.
 
@@ -952,7 +952,7 @@ Al realizar una solicitud GET para buscar el esquema, ahora se muestra la refere
 
 ### Definir un descriptor de identidad
 
-Los Esquemas se utilizan para la ingesta de datos en la plataforma de experiencia. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, el Perfil [del cliente en tiempo](../../profile/home.md) real y otros servicios de la plataforma de experiencias pueden acceder a los datos del gráfico para proporcionar una vista unida de cada cliente individual.
+Los Esquemas se utilizan para ingerir datos en Experience Platform. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, el Perfil [del cliente en tiempo](../../profile/home.md) real y otros servicios de Experience Platform pueden acceder a los datos del gráfico para proporcionar una vista unida de cada cliente individual.
 
 Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, ID de [Experience Cloud (ECID)](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud define un descriptor de identidad en el campo &quot;loyaltyId&quot;. Esto indica a la plataforma de experiencia que utilice el identificador único de miembro del programa de lealtad (en este caso, la dirección de correo electrónico del miembro) para ayudar a unir información sobre el individuo.
+La siguiente solicitud define un descriptor de identidad en el campo &quot;loyaltyId&quot;. Esto indica al Experience Platform que utilice el identificador único de miembro del programa de lealtad (en este caso, la dirección de correo electrónico del miembro) para ayudar a unir información sobre el individuo.
 
 ```SHELL
 curl -X POST \
