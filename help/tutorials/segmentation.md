@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriales de segmentación
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,7 @@ Adobe Experience Platform le permite reunir datos de múltiples fuentes y combin
 
 Los segmentos que están habilitados para su uso en el Perfil del cliente en tiempo real contienen un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre los conjuntos de datos que se deben incluir en el segmento, que a su vez contienen las etiquetas de uso de datos aplicables. Para ver los pasos específicos que abarcan la aplicación de la conformidad con el uso de datos para un segmento de audiencia, siga el tutorial de cumplimiento de la normativa de uso de [datos para segmentos](../segmentation/tutorials/governance.md).
 
-## (Beta) Segmentación por flujo continuo
-
->[!NOTE]
->La segmentación por flujo continuo está en fase beta y estará disponible bajo petición. Las funciones y la documentación están sujetas a cambios.
+## Segmentación por flujo continuo
 
 La segmentación por flujo continuo es la capacidad de evaluar instantáneamente a un cliente tan pronto como un evento entra en un grupo de segmentos en particular. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Adobe Experience Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados. Para obtener más información, visite la descripción general [de la segmentación de](../segmentation/api/streaming-segmentation.md)flujo.
 
