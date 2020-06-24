@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ Para agregar una nueva regla a la definición del segmento, arrastre un mosaico 
 
 Puede arrastrar y soltar una audiencia de la ficha *[!UICONTROL Audiencia]* en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición del segmento. Esto le permite incluir o excluir la pertenencia a una audiencia como un atributo en la nueva regla de segmento.
 
-Para [!DNL Platform] audiencias creadas con el Generador de segmentos, se le ofrece la opción de convertir la audiencia en el conjunto de reglas que se utilizaron en la definición de segmento para esa audiencia. Esta conversión hace una copia de la lógica de regla, que se puede modificar sin afectar a la definición del segmento original.
+Para [!DNL Platform] audiencias creadas con el Generador [!UICONTROL de]segmentos, se le ofrece la opción de convertir la audiencia en el conjunto de reglas que se utilizaron en la definición de segmentos para esa audiencia. Esta conversión hace una copia de la lógica de regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de que ha guardado los cambios recientes en la definición del segmento antes de convertirlo a lógica de regla.
 
 >[!NOTE] Al agregar una audiencia desde un origen externo, solo se hace referencia a la pertenencia a la audiencia. No puede convertir la audiencia en reglas y, por lo tanto, las reglas utilizadas para crear la audiencia original no se pueden modificar en la nueva definición de segmento.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Si surgen conflictos al convertir audiencias en reglas, el Generador [!UICONTROL de segmentos] intentará conservar las opciones existentes de la mejor manera posible.
+
+### vista de código
+
+También puede realizar la vista de una versión basada en código de una regla creada en el Generador [!UICONTROL de segmentos]. Una vez que haya creado la regla dentro del lienzo del generador de reglas, puede seleccionar vista **[!UICONTROL de]** código para ver el segmento como PQL.
+
+![](../images/segment-builder/code-view.png)
+
+La vista de código proporciona un botón que le permite copiar el valor del segmento que se va a utilizar en las llamadas de API. Para obtener la versión más reciente del segmento, asegúrese de haber guardado los cambios más recientes en el segmento.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Contenedores
 
