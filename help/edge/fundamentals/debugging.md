@@ -1,12 +1,12 @@
 ---
 title: Depuración
 seo-title: Depuración del SDK web de Adobe Experience Platform
-description: Aprenda a alternar la depuración del SDK web de la plataforma de experiencia
-seo-description: Aprenda a alternar la depuración del SDK web de la plataforma de experiencia
+description: Aprenda a alternar la depuración del SDK web Experience Platform
+seo-description: Aprenda a alternar la depuración del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Cuando la depuración está habilitada, el SDK envía mensajes a la consola del navegador que pueden resultar útiles para depurar la implementación y para comprender el comportamiento del SDK. La depuración también resulta en una validación sincrónica del lado del servidor de los datos que se recopilan con el esquema que ha configurado.
 
-La depuración está deshabilitada de forma predeterminada, pero se puede alternar de tres formas diferentes:
+La depuración está deshabilitada de forma predeterminada, pero se puede activar de tres formas diferentes:
 
 * `configure` command
 * `setDebug` command
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Esto habilita la depuración para todos los usuarios de la página web en lugar de solo para su explorador personal.
 
 ## Alternar la depuración con el comando Depurar
@@ -61,7 +62,7 @@ De forma similar al `debug` comando, si prefiere no cambiar el código de la pá
 
 ## Prioridad y duración
 
-Cuando la depuración se establece mediante el comando `debug` o el parámetro de cadena de consulta, anula cualquier `debug` opción establecida en el `configure` comando. En estos dos casos, la depuración también permanece alternada durante toda la sesión. En otras palabras, si se habilita la depuración mediante el comando debug o el parámetro de cadena de consulta, permanece habilitado hasta que se cumpla una de las siguientes condiciones:
+Cuando la depuración se establece mediante el comando `debug` o el parámetro de cadena de consulta, anula cualquier `debug` opción establecida en el `configure` comando. En estos dos casos, la depuración también permanece activada durante toda la sesión. En otras palabras, si se habilita la depuración mediante el comando debug o el parámetro de cadena de consulta, permanece habilitado hasta que se cumpla una de las siguientes condiciones:
 
 * El final de la sesión
 * Ejecute el `debug` comando
