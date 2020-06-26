@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
+source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Cuando la ingestión de registros en el almacén de Perfiles aumenta o disminuye
 
 La métrica *Perfiles por Área de nombres* muestra el recuento total y el desglose de Áreas de nombres en todos los perfiles combinados de su almacén de Perfiles. El número total de perfiles por Área de nombres (es decir, sumar los valores mostrados para cada Área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría tener varias Áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias Áreas de nombres con ese cliente individual.
 
-De forma similar a la métrica de recuento [de](#profile-count) perfiles, cuando la ingestión de perfiles en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar las métricas de Área de nombres. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos posteriores a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o reducción del 5 %, se ejecuta un trabajo para actualizar las métricas.
+De forma similar a la métrica de recuento [de](#profile-count) perfiles, cuando la ingestión de registros en el almacén de Perfiles aumenta o disminuye el recuento en más de un 5 %, se activa un trabajo para actualizar las métricas de Área de nombres. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos posteriores a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o reducción del 5 %, se ejecuta un trabajo para actualizar las métricas.
 
 ### Combinar directiva
 
