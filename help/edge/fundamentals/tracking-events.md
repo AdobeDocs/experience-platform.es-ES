@@ -1,12 +1,12 @@
 ---
 title: eventos de seguimiento
-seo-title: Seguimiento de los eventos del SDK web de la plataforma Adobe Experience Platform
-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
-seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web de la plataforma de experiencia
+seo-title: Seguimiento de eventos del SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
+seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # eventos de seguimiento
 
-Para enviar datos de evento a Adobe Experience Cloud, utilice el `sendEvent` comando. El `sendEvent` comando es la forma principal de enviar datos a Experience Cloud y recuperar contenido personalizado, identidades y destinos de audiencia.
+Para enviar datos de evento a Adobe Experience Cloud, utilice el `sendEvent` comando. El `sendEvent` comando es la forma principal de enviar datos al Experience Cloud y recuperar contenido personalizado, identidades y destinos de audiencia.
 
 Los datos enviados a Adobe Experience Cloud se dividen en dos categorías:
 
@@ -25,7 +25,7 @@ Los datos enviados a Adobe Experience Cloud se dividen en dos categorías:
 
 Los datos XDM son un objeto cuyo contenido y estructura coinciden con un esquema creado en Adobe Experience Platform. [Obtenga más información sobre cómo crear un esquema.](../../xdm/tutorials/create-schema-ui.md)
 
-Los datos XDM que desee incluir en el análisis, la personalización, las audiencias o los destinos deben enviarse mediante la `xdm` opción .
+Los datos XDM que desee que formen parte de sus análisis, personalización, audiencias o destinos deben enviarse mediante la `xdm` opción .
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-Los exploradores han impuesto límites a la cantidad de datos que se pueden enviar `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 K. Si el navegador rechaza el evento porque la carga útil es demasiado grande, el SDK web de la plataforma Adobe Experience Platform vuelve a utilizar su método de transporte normal (por ejemplo, la búsqueda).
+Los exploradores han impuesto límites a la cantidad de datos que se pueden enviar `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 K. Si el explorador rechaza el evento porque la carga útil es demasiado grande, el SDK web de Adobe Experience Platform vuelve a utilizar su método de transporte normal (por ejemplo, buscar).
 
 ## Gestión de respuestas de eventos
 
