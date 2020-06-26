@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Combinar directivas
 
-Adobe Experience Platform le permite reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que utiliza la Plataforma para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía muestra los pasos para trabajar con políticas de combinación mediante la API. Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
+Adobe Experience Platform le permite reunir datos de múltiples fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía muestra los pasos para trabajar con políticas de combinación mediante la API. Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de Perfil del cliente en tiempo real. Antes de continuar, consulte la guía [para desarrolladores de la API de Perfil del cliente en tiempo](getting-started.md)real. En particular, la sección [de](getting-started.md#getting-started) introducción de la guía para desarrolladores de Perfil incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas con éxito a cualquier API de plataforma de experiencia.
+El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Componentes de políticas de combinación {#components-of-merge-policies}
 
-Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesite. Cualquier API que acceda a datos de Perfil requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. Platform proporciona una directiva de combinación predeterminada o puede crear una directiva de combinación para un esquema específico y marcarla como predeterminada para su organización. Cada organización puede tener varias directivas de combinación por esquema, pero cada esquema solo puede tener una directiva de combinación predeterminada. Cualquier directiva de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre del esquema y se requiera una directiva de combinación pero no se proporcione. Cuando se establece una directiva de combinación como predeterminada, cualquier directiva de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
+Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesite. Cualquier API que acceda a datos de Perfil requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. Platform proporciona una directiva de combinación predeterminada o puede crear una directiva de combinación para un esquema específico y marcarla como la predeterminada para su organización. Cada organización puede tener varias directivas de combinación por esquema, pero cada esquema solo puede tener una directiva de combinación predeterminada. Cualquier directiva de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre del esquema y se requiera una directiva de combinación pero no se proporcione. Cuando se establece una directiva de combinación como predeterminada, cualquier directiva de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
 
 ### Completar objeto de directiva de combinación
 
@@ -59,7 +59,7 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 | `attributeMerge` | [Objeto de combinación](#attribute-merge) de atributos que indica la forma en que la directiva de combinación dará prioridad a los valores de atributos de perfil en caso de conflictos de datos. |
 | `schema` | El objeto [esquema](#schema) en el que se puede utilizar la directiva de combinación. |
 | `default` | Valor booleano que indica si esta directiva de combinación es la predeterminada para el esquema especificado. |
-| `version` | Versión mantenida por la plataforma de la directiva de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una directiva de combinación. |
+| `version` | Platform mantuvo la versión de la directiva de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una directiva de combinación. |
 | `updateEpoch` | Fecha de la última actualización de la directiva de combinación. |
 
 **Ejemplo de directiva de combinación**
@@ -86,7 +86,7 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 
 ### Gráfico de identidad {#identity-graph}
 
-[El servicio](../../identity-service/home.md) de identidad de Adobe Experience Platform administra los gráficos de identidad que se utilizan globalmente y para cada organización en la plataforma de experiencia. El `identityGraph` atributo de la directiva de combinación define cómo determinar las identidades relacionadas para un usuario.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) administra los gráficos de identidad utilizados globalmente y para cada organización en Experience Platform. El `identityGraph` atributo de la directiva de combinación define cómo determinar las identidades relacionadas para un usuario.
 
 **identityGraph, objeto**
 
@@ -693,7 +693,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación act
 
 ## Eliminar una directiva de combinación
 
-Una directiva de combinación se puede eliminar haciendo una solicitud ELIMINAR al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de solicitud. `/config/mergePolicies`
+Una directiva de combinación puede eliminarse realizando una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
 
 **Formato API**
 
@@ -724,7 +724,7 @@ Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un c
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar directivas de combinación para su organización de IMS, puede utilizarlas para crear segmentos de audiencia a partir de los datos de Perfil de clientes en tiempo real. Consulte la documentación [del servicio de segmentación de](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
+Ahora que sabe cómo crear y configurar directivas de combinación para su organización de IMS, puede utilizarlas para crear segmentos de audiencia a partir de los datos de Perfil de clientes en tiempo real. Consulte la documentación [del servicio de segmentación por](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
 
 
 
