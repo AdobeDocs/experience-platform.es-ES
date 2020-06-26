@@ -1,12 +1,12 @@
 ---
 title: Configuración del SDK
-seo-title: Configuración del SDK web de la plataforma Adobe Experience
-description: Descubra cómo configurar el SDK web de la plataforma de experiencia
-seo-description: Descubra cómo configurar el SDK web de la plataforma de experiencia
+seo-title: Configuración del SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
+seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '743'
 ht-degree: 11%
 
 ---
@@ -16,8 +16,9 @@ ht-degree: 11%
 
 La configuración del SDK se realiza con el `configure` comando .
 
->[!IImportante]
->`configure` debe ser _siempre_ el primer comando llamado.
+>[!IMPORTANT]
+>
+>`configure` debe ser *siempre* el primer comando llamado.
 
 ```javascript
 alloy("configure", {
@@ -54,7 +55,7 @@ Indica qué categorías de contexto se recopilarán automáticamente, tal como s
 
 Indica si se debe habilitar la depuración. Al configurar esta configuración para que `true` habilite las siguientes funciones:
 
-| **Función** |  |  |
+| **Función** | **Función** |
 | ---------------------- | ------------------ |
 | Validación sincrónica | Valida los datos que se recopilan con el esquema y devuelve un error en la respuesta bajo la siguiente etiqueta: `collect:error OR success` |
 | Registro de la consola | Permite que los mensajes de depuración se muestren en la consola JavaScript del explorador |
@@ -85,7 +86,7 @@ Su ID de organización de Experience Cloud asignado.  Al configurar varias insta
 
 Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Para los clics que se califican como clics en vínculos, se recopilan los siguientes datos de interacción [](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Web:
 
-| **Propiedad** |  |
+| **Propiedad** | **Descripción** |
 | ------------ | ----------------------------------- |
 | Nombre del vínculo | Nombre determinado por el contexto del vínculo |
 | URL del vínculo | URL normalizada |
@@ -97,7 +98,7 @@ Indica si los datos asociados con los clics en vínculos se deben recopilar auto
 | -------- | ------------ | ----------------- |
 | Función | No | () => undefined |
 
-Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se `xdm` envía un objeto con el campo a la llamada de retorno.  Modifique el objeto xdm para cambiar lo que se envía.  Dentro de la llamada de retorno, el `xdm` objeto ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
+Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se `xdm` envía un objeto con el campo a la llamada de retorno.  Modifique el `xdm` objeto para cambiar lo que se envía.  Dentro de la llamada de retorno, el `xdm` objeto ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
@@ -133,7 +134,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos de cookies, lo que permite configurar las cookies en función de la calificación del segmento.
+Habilita los destinos [!UICONTROL de]cookies de Audience Manager, lo que permite configurar cookies en función de la calificación de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -141,7 +142,7 @@ Habilita los destinos de cookies, lo que permite configurar las cookies en funci
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos de URL, lo que permite activar las direcciones URL en función de la calificación del segmento.
+Habilita los destinos [!UICONTROL de]URL de Audience Manager, lo que permite activar las direcciones URL en función de la calificación del segmento.
 
 ## Opciones de identidad
 
@@ -167,4 +168,4 @@ Habilita la función de sincronización de ID, que permite activar direcciones U
 | -------- | ------------ | ----------------- |
 | Booleano | No | true |
 
-Habilita la configuración de cookies de terceros de Adobe. El SDK puede mantener el ID de visitante en un contexto de terceros para permitir que se utilice el mismo ID de visitante en todo el sitio. Esto resulta útil si tiene varios sitios o desea compartir datos con socios; sin embargo, a veces esto no es deseable por razones de privacidad.
+Habilita la configuración de cookies de terceros de Adobe. El SDK puede mantener el ID de visitante en un contexto de terceros para permitir que se utilice el mismo ID de visitante en todos los sitios. Esto resulta útil si tiene varios sitios o desea compartir datos con socios; sin embargo, a veces esto no es deseable por razones de privacidad.
