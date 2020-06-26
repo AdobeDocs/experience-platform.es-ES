@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Eliminar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitud DELETE.
 
->[!WARNING] Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios de ruptura en otras partes de la plataforma de experiencia.
+>[!WARNING] Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios de ruptura en otra parte del Experience Platform.
 
 **Formato API**
 
@@ -21,7 +24,9 @@ Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitu
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] El extremo se ha desaprobado `DELETE /batches/{ID}` . Para eliminar un lote, debe utilizar la API [de ingestión de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lotes.
+>[!IMPORTANT]
+>
+>El extremo se ha desaprobado `DELETE /batches/{ID}` . Para eliminar un lote, debe utilizar la API [de ingestión de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lotes.
 
 | Parámetro | Descripción |
 | --- | --- |
@@ -43,7 +48,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos eliminado. Este ID debe coincidir con el enviado en la solicitud de ELIMINACIÓN. Al realizar una solicitud GET en el objeto eliminado, se devuelve el estado HTTP 404 (no encontrado), lo que confirma que el conjunto de datos se ha eliminado correctamente.
+Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos eliminado. Este ID debe coincidir con el enviado en la solicitud de DELETE. Al realizar una solicitud GET en el objeto eliminado, se devuelve el estado HTTP 404 (no encontrado), lo que confirma que el conjunto de datos se ha eliminado correctamente.
 
 ```json
 [
