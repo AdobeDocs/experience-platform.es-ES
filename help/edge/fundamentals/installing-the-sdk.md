@@ -4,21 +4,22 @@ seo-title: SDK web de Adobe Experience Platform al instalar el SDK
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
+source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
-# Instalación del SDK
+# Instalación del SDK {#installing-the-sdk}
 
 El SDK web de Adobe Experience Platform está disponible en una red de envío de contenido (CDN) para su uso. Puede hacer referencia a este archivo o descargarlo y alojarlo en su propia infraestructura. Está disponible en una versión minimizada y no minimizada. La versión no minimizada resulta útil para la depuración.
 
-[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+* Versión minimizada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Versión no minimizada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## Añadir el código
+## Añadir el código {#adding-the-code}
 
 El primer paso en la implementación del SDK web de Adobe Experience Platform es copiar y pegar el siguiente &quot;código base&quot; lo más alto posible en la `<head>` etiqueta de su HTML:
 
@@ -51,7 +52,7 @@ En este ejemplo, se cambia el nombre de la función global `mycustomname`en luga
 
 Este código base, además de crear una función global, también carga código adicional contenido en un archivo externo \(`alloy.js`\) alojado en un servidor. De forma predeterminada, este código se carga asincrónicamente para permitir que la página web tenga el máximo rendimiento posible. Ésta es la implementación recomendada.
 
-## Compatibilidad con Internet Explorer
+## Compatibilidad con Internet Explorer {#support-internet-explore}
 
 Este SDK hace uso de las promesas, que es un método para comunicar la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/Promise) que utiliza el SDK es admitida de forma nativa por todos los exploradores de destinatario excepto Internet Explorer. Para utilizar el SDK en Internet Explorer, debe tener `window.Promise` un [relleno](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
@@ -71,9 +72,9 @@ Si ha determinado que necesita rellenar `window.Promise`, incluya la siguiente e
 
 Esto carga una secuencia de comandos que garantiza que `window.Promise` sea una implementación de Promise válida.
 
-## Carga sincrónica del archivo JavaScript
+## Carga sincrónica del archivo JavaScript {#loading-javascript-synchronously}
 
-Como se explicó anteriormente, el código base que ha copiado y pegado en el HTML de su sitio web carga un archivo externo con código adicional. Este código adicional contiene la funcionalidad principal del SDK. Cualquier comando que intente ejecutar mientras se carga este archivo se pondrá en cola y, a continuación, se procesará una vez cargado el archivo. Este es el método de instalación de mayor rendimiento.
+Como se explica en la sección que [Añade el código](#adding-the-code), el código base que ha copiado y pegado en el HTML del sitio web carga un archivo externo con código adicional. Este código adicional contiene la funcionalidad principal del SDK. Cualquier comando que intente ejecutar mientras se carga este archivo se pondrá en cola y, a continuación, se procesará una vez cargado el archivo. Este es el método de instalación de mayor rendimiento.
 
 Sin embargo, bajo ciertas circunstancias, es posible que desee cargar el archivo sincrónicamente \(más detalles sobre estas circunstancias se documentarán más adelante\). De este modo, se bloquea el resto del documento HTML para que el explorador lo analice y procese hasta que se cargue y ejecute el archivo externo. Este retraso adicional antes de mostrar contenido principal a los usuarios suele desaconsejarse, pero puede tener sentido según las circunstancias.
 
