@@ -4,81 +4,120 @@ solution: Experience Platform
 title: Asignación de un archivo CSV a un esquema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+workflow-type: tm+mt
+source-wordcount: '1354'
+ht-degree: 2%
 
 ---
 
 
 # Asignación de un archivo CSV a un esquema XDM
 
-Para poder transferir datos CSV a la plataforma de Adobe Experience, los datos deben asignarse a un esquema del modelo de datos de experiencia (XDM). Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de la plataforma de experiencia.
+Para poder ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario [!DNL Platform] .
 
 Además, en el apéndice de este tutorial se proporciona más información sobre el uso de funciones [de](#mapping-functions)asignación.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Platform]:
 
-- [Modelo de datos de experiencia (sistema XDM)](../../xdm/home.md): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
-- [Ingesta](../batch-ingestion/overview.md)por lotes: El método mediante el cual Platform ingesta datos de los archivos de datos proporcionados por el usuario.
+- [!DNL Experience Data Model (XDM System)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [!DNL Batch ingestion](../batch-ingestion/overview.md):: El método mediante el cual [!DNL Platform] ingesta datos de archivos de datos proporcionados por el usuario.
 
 Este tutorial también requiere que ya haya creado un conjunto de datos para ingestar los datos de CSV. Para ver los pasos para crear un conjunto de datos en la interfaz de usuario, consulte el tutorial [de ingesta de](./ingest-batch-data.md)datos.
 
+## Elegir un destino
+
+Inicie sesión en [!DNL Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Flujos de trabajo]** en la barra de navegación izquierda para acceder al espacio de trabajo de *[!UICONTROL Flujos de trabajo]* .
+
+En la pantalla **[!UICONTROL Flujos de trabajo]** , seleccione **[!UICONTROL Asignar CSV al esquema]** XDM en la sección **[!UICONTROL de ingesta]** de datos y, a continuación, seleccione **[!UICONTROL Iniciar]**.
+
+![](../images/tutorials/map-a-csv-file/workflows.png)
+
+Aparece el flujo de trabajo *[!UICONTROL Asignar CSV al esquema]* XDM, comenzando en el paso *[!UICONTROL Destino]* . Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede usar un conjunto de datos existente o crear uno nuevo.
+
+**Usar un conjunto de datos existente**
+
+Para ingerir los datos CSV en un conjunto de datos existente, seleccione **[!UICONTROL Usar conjunto de datos]** existente. Puede recuperar un conjunto de datos existente mediante la función de búsqueda o desplazándose por la lista de conjuntos de datos existentes en el panel.
+
+![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
+
+Para ingestar los datos CSV en un nuevo conjunto de datos, seleccione **[!UICONTROL Crear nuevo conjunto de datos]** e introduzca un nombre y una descripción para el conjunto de datos en los campos proporcionados. Seleccione un esquema utilizando la función de búsqueda o desplazándose por la lista de esquemas proporcionada. Seleccione **[!UICONTROL Siguiente]** para continuar.
+
+![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
+
 ## Añadir datos
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **Flujos de trabajo** en el panel de navegación izquierdo y, a continuación, haga clic en **Asignar CSV al esquema** XDM. En el carril derecho que aparece, haga clic en **Iniciar**.
-
-![](../images/tutorials/map-a-csv-file/workflow-tab.png)
-
-Aparece el flujo de trabajo _Asignar CSV a esquema_ XDM, comenzando en el paso _Añadir datos_ .
+Aparece el paso *[!UICONTROL Añadir datos]* . Arrastre y suelte el archivo CSV en el espacio proporcionado o seleccione **[!UICONTROL Elegir archivos]** para introducir manualmente el archivo CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-Arrastre y suelte el archivo CSV en el espacio proporcionado o haga clic en **Examinar** para seleccionar un archivo directamente. Una vez cargado el archivo, aparece una sección de datos _de_ muestra que muestra las diez primeras filas de datos. Una vez que confirme que los datos se han cargado según lo esperado, haga clic en **Siguiente**.
+La sección Datos *[!UICONTROL de]* ejemplo aparece una vez cargado el archivo, mostrando las primeras diez filas de datos. Una vez que confirme que los datos se han cargado según lo esperado, seleccione **[!UICONTROL Siguiente]**.
 
-![](../images/tutorials/map-a-csv-file/csv-added.png)
-
-## Elegir un destino
-
-Aparece el paso _Destino_ . En la lista proporcionada, seleccione el conjunto de datos en el que se van a ingestar los datos CSV y, a continuación, haga clic en **Siguiente**.
-
-![](../images/tutorials/map-a-csv-file/select-destination.png)
+![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Asignar campos CSV a campos de esquema XDM
 
-Aparece el paso _Asignación_ . Las columnas del archivo CSV se muestran en Campo __ de origen, con sus correspondientes campos de esquema XDM en Campo _de_ Destinatario. Los campos de destinatario no seleccionados están delineados en rojo.
+Aparece el paso *[!UICONTROL Asignación]* . Las columnas del archivo CSV se muestran en Campo ** de origen, con sus correspondientes campos de esquema XDM en Campo *[!UICONTROL de]* Destinatario. Los campos de destinatario no seleccionados están delineados en rojo. Puede utilizar la opción de campos de filtro para reducir la lista de los campos de origen disponibles.
 
-Para asignar una columna CSV a un campo XDM, haga clic en el icono de esquema situado junto al campo de destinatario correspondiente de la columna.
+Para asignar una columna CSV a un campo XDM, seleccione el icono de esquema junto al campo de destinatario correspondiente de la columna.
 
-![](../images/tutorials/map-a-csv-file/target-field-mapping.png)
+![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Aparece la ventana _Seleccionar esquema_ . Aquí puede desplazarse por la estructura del esquema XDM y localizar el campo al que desea asignar la columna CSV. Haga clic en un campo XDM para seleccionarlo y, a continuación, haga clic en **Seleccionar**.
+Aparece la ventana *[!UICONTROL Seleccionar esquema]* . Aquí puede desplazarse por la estructura del esquema XDM y localizar el campo al que desea asignar la columna CSV. Haga clic en un campo XDM para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Seleccionar]**.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-selection.png)
+![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-La pantalla _Asignación_ vuelve a aparecer y el campo XDM seleccionado aparece ahora en Campo __ Destinatario.
+La pantalla *[!UICONTROL Asignación]* vuelve a aparecer y el campo XDM seleccionado aparece ahora en Campo ** Destinatario.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-mapped.png)
+![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
-Si no desea asignar una columna CSV concreta, puede eliminar la asignación haciendo clic en el icono **** Eliminar situado junto al campo destinatario. Si desea agregar una nueva asignación, haga clic en **Añadir nueva asignación** en la parte inferior de la lista.
+Si no desea asignar una columna CSV concreta, puede eliminar la asignación haciendo clic en el icono **** Eliminar situado junto al campo destinatario. También puede eliminar todas las asignaciones seleccionando el botón **** Borrar todas las asignaciones.
 
-![](../images/tutorials/map-a-csv-file/remove-or-add-mapping.png)
+![](../images/tutorials/map-a-csv-file/remove-mapping.png)
+
+Si desea agregar una nueva asignación, seleccione **[!UICONTROL Añadir nueva asignación]** en la parte superior de la lista Campo *[!UICONTROL de]* origen.
+
+![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Al asignar campos, también puede incluir funciones para calcular valores en función de los campos de origen de entrada. Consulte la sección de funciones [de](#mapping-functions) asignación del apéndice para obtener más información.
 
-Repita los pasos anteriores para continuar asignando columnas CSV a campos XDM. Una vez que haya terminado, haga clic en **Siguiente**.
+### Añadir campo calculado
 
-![](../images/tutorials/map-a-csv-file/mapping-finish.png)
+Los campos calculados permiten crear valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destinatario y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
 
-## Datos de entrada
+Seleccione el botón **[!UICONTROL Añadir campo]** calculado para continuar.
 
-Aparece el paso _Ingesta_ , que le permite revisar los detalles del archivo de origen y del conjunto de datos de destinatario. Haga clic en **Ingestar** para inicio de la ingesta de datos CSV. Según el tamaño del archivo CSV, este proceso puede tardar varios minutos. La pantalla se actualiza una vez completada la ingestión, lo que indica que la operación ha sido correcta o incorrecta. Click **Finish** to complete the workflow.
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-![](../images/tutorials/map-a-csv-file/ingest-data.png)
+Aparece el panel **[!UICONTROL Crear campo]** calculado. El cuadro de diálogo izquierdo contiene los campos, las funciones y los operadores admitidos en los campos calculados. Seleccione una de las fichas para agregar funciones, campos o operadores al editor de expresiones en inicio.
+
+![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
+
+| Tabulación | Descripción |
+| --------- | ----------- |
+| Campos | La ficha Campos lista campos y atributos disponibles en el esquema de origen. |
+| Funciones | La ficha Funciones lista las funciones disponibles para transformar los datos. |
+| Operadores | La ficha Operadores lista los operadores disponibles para transformar los datos. |
+
+Puede agregar manualmente campos, funciones y operadores mediante el editor de expresiones del centro. Seleccione el editor para crear una expresión en inicio.
+
+![](../images/tutorials/map-a-csv-file/expression-editor.png)
+
+Seleccione **[!UICONTROL Guardar]** para continuar.
+
+La pantalla de asignación vuelve a aparecer con el campo de origen recién creado. Aplique el campo de destinatario correspondiente y seleccione **[!UICONTROL Finalizar]** para completar la asignación.
+
+![](../images/tutorials/map-a-csv-file/new-field.png)
+
+## Monitorear el flujo de datos
+
+Una vez asignado y creado el archivo CSV, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en plataforma. Estos datos ahora pueden ser utilizados por los servicios de plataforma descendente, como el Perfil de clientes en tiempo real. Consulte la descripción general [del Perfil del cliente en tiempo](../../profile/home.md) real para obtener más información.
+Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios [!DNL Platform] de flujo descendente como [!DNL Real-time Customer Profile]. Consulte la información general [!DNL Real-time Customer Profile](../../profile/home.md) para obtener más información.
 
 ## Apéndice
 
@@ -86,7 +125,7 @@ La siguiente sección proporciona información adicional para asignar columnas C
 
 ### Funciones de asignación
 
-Determinadas funciones de asignación se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen. Para utilizar una función, escríbala en Campo __ de origen con la sintaxis y las entradas adecuadas.
+Determinadas funciones de asignación se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen. Para utilizar una función, escríbala en Campo ** de origen con la sintaxis y las entradas adecuadas.
 
 Por ejemplo, para concatenar campos CSV de **ciudad** y **país** y asignarlos al campo XDM de **ciudad** , establezca el campo de origen como `concat(city, ", ", county)`.
 
@@ -118,8 +157,8 @@ La siguiente tabla lista todas las funciones de asignación admitidas, incluidas
 | format | Da formato a la fecha de entrada según un formato especificado. | format({DATE}, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | Convierte una marca de hora en una cadena de fecha según un formato especificado. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
 | date | Convierte una cadena de fecha en un objeto ZonianDateTime (formato ISO 8601). | date(&quot;23-Oct-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Recupera las partes de la fecha. Se admiten los siguientes valores de componente: <br><br>&quot;<br>&quot;year&quot;<br>&quot;yyyy&quot;<br><br>&quot;yy&quot;<br>&quot;trimestre&quot;<br>&quot;qq&quot;<br><br>&quot;q&quot;<br>&quot;mes&quot;<br>&quot;mm&quot;<br><br>&quot;m&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;día del año&quot;&quot;dy&quot;y&quot;&quot;día&quot;dd&quot;d&quot;d&quot;semana&quot;u&quot;día de la semana&quot;&quot;dw&quot;hh&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;u&quot;h&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;u&quot;h&quot;h&quot;h&quot;h&quot;h&quot;ea&quot;h&quot;ea&quot;ea&quot;ea&quot;ea&quot;u&quot;u&quot;h&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;h&quot;h&quot;ea&quot;u&quot;h&quot;ea&quot;ea&quot;h&quot;u&quot;ea&quot;h&quot;h&quot;h&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;ea&quot;u&quot;ea&quot;ea&quot;ea&quot;&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minuto&quot;&quot;mi&quot;&quot;n&quot;&quot;segundo&quot;&quot;ss&quot;&quot;s&quot;&quot;milisegundo&quot;&quot;ms&quot;&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | Reemplaza un componente en una fecha determinada. Se aceptan los siguientes componentes: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br><br><br><br><br><br><br><br><br><br>&quot;hour&quot;hh&quot;minuto&quot;&quot;minuto&quot;&quot;mi&quot;&quot;&quot;segundo&quot;&quot;ss&quot;&quot;s&quot;&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| date_part | Recupera las partes de la fecha. Se admiten los siguientes valores de componente: <br><br>&quot;year&quot;<br>&quot;aaaaaa&quot;<br>&quot;yy&quot;<br><br>&quot;trimestre&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;mes&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;día del año&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;dy&quot;y&quot;&quot;día&quot;d&quot;d&quot;semana&quot;ww&quot;w&quot;w&quot;día de la semana&quot;día de la semana&quot;dw&quot;w&quot;ea&quot;hh&quot;h&quot;h&quot;hh&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot; &quot;hh24&quot;&quot;hh12&quot;&quot;minuto&quot;&quot;mi&quot;&quot;n&quot;&quot;segundo&quot;&quot;ss&quot;&quot;s&quot;&quot;milisegundo&quot;&quot;ms&quot;&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
+| set_date_part | Reemplaza un componente en una fecha determinada. Se aceptan los siguientes componentes: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;minuto&quot;&quot;mi&quot;&quot;s&quot;ss&quot;s&quot;&quot;&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | Crea una fecha a partir de partes. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;América/Los Ángeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | Devuelve la marca de tiempo actual. | current_timestamp() | 1571850624571 |
 | current_date | Devuelve la fecha actual sin un componente de tiempo. | current_date() | &quot;18 de noviembre de 2019&quot; |
