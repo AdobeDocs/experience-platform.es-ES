@@ -4,31 +4,32 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 1%
 
 ---
 
 
-# (Alfa) Atributos calculados
+# Extremo de atributos calculados (alfa)
 
 >[!IMPORTANT]
->La funcionalidad de atributo calculada descrita en este documento se encuentra actualmente en alfa y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+>La funcionalidad de atributo calculada descrita en este documento se encuentra actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos.
 
 Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información.
 
-Esta guía le ayudará a comprender mejor los atributos calculados en Adobe Experience Platform e incluye llamadas de API de muestra para realizar operaciones CRUD básicas mediante el `/config/computedAttributes` punto final.
+Esta guía le ayudará a comprender mejor los atributos calculados dentro del Adobe Experience Platform e incluye llamadas de API de muestra para realizar operaciones CRUD básicas mediante el `/config/computedAttributes` punto final.
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de Perfil del cliente en tiempo real. Antes de continuar, consulte la guía [para desarrolladores de Perfil para clientes en tiempo](getting-started.md)real.
-
-En particular, la sección [de](getting-started.md) introducción de la guía para desarrolladores de Perfil incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas con éxito a cualquier API de plataforma de experiencia.
+El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Explicación de los atributos calculados
 
-Adobe Experience Platform le permite importar y combinar fácilmente datos de varias fuentes para generar Perfiles de clientes en tiempo real. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista de 360 grados del cliente.
+Adobe Experience Platform le permite importar y combinar fácilmente datos de múltiples fuentes para generar Perfiles de clientes en tiempo real. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista de 360 grados del cliente.
 
 Parte de la información recopilada en el perfil se puede entender fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o basarse en otros campos y valores para generar la información (por ejemplo, &quot;total de compras de duración&quot;). Para facilitar la comprensión de estos datos de un vistazo, Platform le permite crear atributos **** calculados que realizan automáticamente estas referencias y cálculos y devuelven el valor en el campo correspondiente.
 
@@ -39,7 +40,7 @@ Los atributos calculados incluyen la creación de una expresión, o &quot;regla&
 Los casos de uso para atributos calculados pueden ir desde cálculos simples a referencias muy complejas. Estos son algunos ejemplos de casos de uso para atributos calculados:
 
 1. **Porcentajes:** Un atributo simple calculado podría incluir tomar dos campos numéricos en un registro y dividirlos para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
-1. **Uso de la aplicación:** Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° número de aperturas, lo que estimula un compromiso más profundo con su marca.
+1. **Uso de la aplicación:** Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° período de apertura, lo que estimula una mayor participación con su marca.
 1. **Valores de duración:** La recopilación de totales en curso, como un valor de compra de por vida para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
 
 ## Configurar un atributo calculado
@@ -479,10 +480,10 @@ Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cue
 
 ## Eliminar un atributo calculado
 
-También es posible eliminar un atributo calculado mediante la API. Esto se lleva a cabo realizando una solicitud DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
+También es posible eliminar un atributo calculado mediante la API. Esto se realiza realizando una solicitud DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
 
->[!Note]
->Tenga cuidado al eliminar un atributo calculado, ya que puede estar en uso en más de un esquema y la operación ELIMINAR no se puede deshacer.
+>[!Nota]
+>Tenga cuidado al eliminar un atributo calculado, ya que puede estar en uso en más de un esquema y la operación de DELETE no se puede deshacer.
 
 **Formato API**
 
