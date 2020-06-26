@@ -1,12 +1,12 @@
 ---
 title: Representación de contenido personalizado
 seo-title: Adobe Experience Platform Web SDK Representación de contenido personalizado
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
-seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia
+description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
+seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Información general sobre las opciones de personalización
 
-El SDK web de Adobe Experience Platform admite consultas de las soluciones de personalización de Adobe, incluido Adobe Destinatario. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
+El SDK web de Adobe Experience Platform permite consultar las soluciones de personalización de Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
 
 ## Representación automática de contenido
 
@@ -36,7 +36,7 @@ alloy("sendEvent", {
 });
 ```
 
-El procesamiento del contenido personalizado es asincrónico, por lo que no debe haber ninguna suposición cuando una parte concreta del contenido forma parte de la página.
+El procesamiento de contenido personalizado es asíncrono, por lo que no debe darse por sentado cuándo una parte concreta del contenido forma parte de la página.
 
 ## Representación manual de contenido
 
@@ -90,9 +90,10 @@ Esto devolverá una lista de decisiones como un objeto JSON para cada decisión.
 }
 ```
 
-{info}Si utiliza ámbitos de Destinatario para convertirse en mBoxes en el servidor, solo serán solicitudes a la vez en lugar de individualmente. El mbox global siempre se envía.
-{info}
+>[!TIP]
+>
+> Si utiliza ámbitos de Destinatario que se convierten en mBoxes en el servidor, solo serán solicitudes a la vez en lugar de individualmente. El mbox global siempre se envía.
 
 ### Recuperar contenido automático
 
-Si desea que el `result.decisions` informe incluya las decisiones de procesamiento automático, puede establecer `renderDecisions` en false e incluir el ámbito especial `__view__`
+Si desea que el `result.decisions` informe incluya las decisiones de procesamiento automático, puede establecer `renderDecisions` en false e incluir el ámbito especial `__view__`.
