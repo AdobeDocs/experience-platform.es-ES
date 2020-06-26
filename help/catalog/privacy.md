@@ -4,33 +4,36 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
 
 # Procesamiento de solicitudes de privacidad en Data Lake
 
-Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales según lo establecido en las normativas legales y de privacidad de la organización.
+Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización.
 
 Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en Data Lake.
 
 ## Primeros pasos
 
-Se recomienda que conozca bien los siguientes servicios de la plataforma de experiencias antes de leer esta guía:
+Se recomienda que conozca bien los siguientes servicios de Experience Platform antes de leer esta guía:
 
 * [Privacy Service](../privacy-service/home.md): Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en las aplicaciones de Adobe Experience Cloud.
-* [Servicio](home.md)de catálogo: Sistema de registro para la ubicación y el linaje de datos dentro de la plataforma de experiencias. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
-* [Sistema](../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Servicio](home.md)de catálogo: Sistema de registro para la ubicación y linaje de datos dentro del Experience Platform. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
+* [Sistema](../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [Servicio](../identity-service/home.md)de identidad: Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 
 ## Explicación de las Áreas de nombres de identidad {#namespaces}
 
-El servicio de identidad de Adobe Experience Platform une datos de identidad del cliente entre sistemas y dispositivos. Identity Service utiliza Áreas de nombres **de** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Destinatario ID (&quot;TNTID&quot;).
+Adobe Experience Platform Identity Service une los datos de identidad del cliente entre sistemas y dispositivos. Identity Service utiliza Áreas de nombres **de** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un ID de Advertising Cloud de Adobe (&quot;AdCloud&quot;) o un ID de Adobe Target (&quot;TNTID&quot;).
 
 Identity Service mantiene un almacén de Áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las Áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;Correo electrónico&quot; y &quot;ECID&quot;), mientras que la organización también puede crear Áreas de nombres personalizadas para satisfacer sus necesidades específicas.
 
-Para obtener más información sobre Áreas de nombres de identidad en la plataforma de experiencia, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
+Para obtener más información sobre Áreas de nombres de identidad en Experience Platform, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
 
 ## Añadir datos de identidad a conjuntos de datos
 
@@ -40,7 +43,9 @@ Al crear solicitudes de privacidad para el Data Lake, se deben proporcionar valo
 
 En esta sección se explican los pasos para agregar un descriptor de identidad al esquema XDM de un conjunto de datos existente. Si ya tiene un conjunto de datos con un descriptor de identidad, puede pasar a la [siguiente sección](#nested-maps).
 
->[!IMPORTANT] Cuando decida qué campos de esquema se definirán como identidades, tenga en cuenta las [limitaciones del uso de campos](#nested-maps)anidados de tipo de mapa.
+>[!IMPORTANT]
+>
+>Cuando decida qué campos de esquema se definirán como identidades, tenga en cuenta las [limitaciones del uso de campos](#nested-maps)anidados de tipo de mapa.
 
 Existen dos métodos para agregar un descriptor de identidad a un esquema de conjunto de datos:
 
@@ -49,7 +54,7 @@ Existen dos métodos para agregar un descriptor de identidad a un esquema de con
 
 ### Uso de la interfaz de usuario {#identity-ui}
 
-En la interfaz de usuario de la plataforma de experiencia, el espacio de trabajo le permite editar sus esquemas XDM existentes. _[!UICONTROL Schemas]_Para agregar un descriptor de identidad a un esquema, seleccione el esquema en la lista y siga los pasos para[configurar un campo de esquema como campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidad en el tutorial Editor de Esquemas.
+En la interfaz de usuario de Experience Platform, el espacio de trabajo _[!UICONTROL Esquemas]_permite editar los esquemas XDM existentes. Para agregar un descriptor de identidad a un esquema, seleccione el esquema en la lista y siga los pasos para[configurar un campo de esquema como campo](../xdm/tutorials/create-schema-ui.md#identity-field)de identidad en el tutorial Editor de Esquemas.
 
 Una vez configurados los campos correspondientes dentro del esquema como campos de identidad, puede pasar a la siguiente sección sobre el [envío de solicitudes](#submit)de privacidad.
 
@@ -97,7 +102,7 @@ curl -X POST \
 | `xdm:sourceSchema` | El identificador URI exclusivo del esquema XDM del conjunto de datos. |
 | `xdm:sourceVersion` | Versión del esquema XDM especificado en `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Ruta al campo de esquema al que se está aplicando el descriptor. |
-| `xdm:namespace` | Una de las Áreas de nombres [de identidad](../privacy-service/api/appendix.md#standard-namespaces) estándar reconocidas por Privacy Service o una Área de nombres personalizada definida por su organización. |
+| `xdm:namespace` | Una de las Áreas de nombres [de identidad](../privacy-service/api/appendix.md#standard-namespaces) estándar reconocidas por el Privacy Service o una Área de nombres personalizada definida por la organización. |
 | `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, en función de la Área de nombres que se utilice en `xdm:namespace`. |
 | `xdm:isPrimary` | Un valor booleano opcional. Cuando es true, indica que el campo es una identidad principal. Los Esquemas solo pueden contener una identidad primaria. El valor predeterminado es false si no se incluye. |
 
@@ -121,9 +126,9 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 ## Envío de solicitudes {#submit}
 
->[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la interfaz de usuario [de](../privacy-service/ui/overview.md) Privacy Service o de la API [de](../privacy-service/api/getting-started.md) Privacy Service para obtener pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar un formato adecuado a los datos de identidad de usuario enviados en las cargas de solicitud.
+>[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la interfaz de usuario [del](../privacy-service/ui/overview.md) Privacy Service o de la API [del](../privacy-service/api/getting-started.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad del usuario enviados en las cargas de solicitud.
 
-La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante la interfaz de usuario o API de Privacy Service.
+La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante la interfaz de usuario o API del Privacy Service.
 
 ### Uso de la interfaz de usuario
 
@@ -180,9 +185,9 @@ curl -X POST \
 
 ## Eliminar procesamiento de solicitud
 
-Cuando la plataforma de experiencia recibe una solicitud de eliminación de Privacy Service, la plataforma envía una confirmación a Privacy Service de que la solicitud se ha recibido y los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante ese período de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de plataforma puede acceder a ellos.
+Cuando el Experience Platform recibe una solicitud de eliminación del Privacy Service, Platform envía una confirmación al Privacy Service de que la solicitud se ha recibido y que los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante ese período de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de Platform puede acceder a ellos.
 
-En futuras versiones, Platform enviará una confirmación a Privacy Service después de que se hayan eliminado físicamente los datos.
+En futuras versiones, Platform enviará una confirmación al Privacy Service después de que se hayan eliminado físicamente los datos.
 
 ## Pasos siguientes
 
