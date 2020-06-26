@@ -1,10 +1,10 @@
 ---
 title: Ejecución de comandos
-seo-title: Ejecución de los comandos del SDK web de Adobe Experience Platform
-description: Obtenga información sobre cómo ejecutar los comandos del SDK web de la plataforma de experiencia
-seo-description: Obtenga información sobre cómo ejecutar los comandos del SDK web de la plataforma de experiencia
+seo-title: Ejecución de comandos del SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo ejecutar comandos del SDK web Experience Platform
+seo-description: Obtenga información sobre cómo ejecutar comandos del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -66,7 +66,7 @@ alloy("commandName", options)
 
 ### Objetos de respuesta
 
-Todas las promesas devueltas por los comandos se resuelven con un `result` objeto. El objeto result contendrá datos según el comando y el consentimiento del usuario. Por ejemplo, la información de la biblioteca se pasa como una propiedad del objeto results en el siguiente comando.
+Todas las promesas devueltas por los comandos se resuelven con un `result` objeto. El objeto result contendrá datos según el comando y el consentimiento del usuario. Por ejemplo, la información de biblioteca se pasa como una propiedad del objeto results en el siguiente comando.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
