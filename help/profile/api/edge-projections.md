@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# Destinos y proyecciones de Edge
+# Definiciones de destinos y configuraciones de proyección de Edge
 
-Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Destinatario y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la API de Perfil de clientes en tiempo real para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
+Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la API de Perfil de clientes en tiempo real para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de Perfil del cliente en tiempo real. Antes de continuar, consulte la guía [para desarrolladores de Perfil para clientes en tiempo](getting-started.md)real. En particular, la sección [de](getting-started.md#getting-started) introducción de la guía para desarrolladores de Perfil incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas con éxito a cualquier API de plataforma de experiencia.
+El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 >[!NOTE]
 >Las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. En este documento `Content-Type` se utiliza más de uno. Preste especial atención a los encabezados de las llamadas de ejemplo para asegurarse de que utiliza lo correcto `Content-Type` para cada solicitud.
@@ -171,7 +171,7 @@ Una respuesta correcta devuelve los detalles del destino Edge recién creado, in
 
 | Propiedad | Descripción |
 |---|---|
-| `self.href` | Esta ruta se utiliza para buscar (OBTENER) el destino directamente y también para actualizar (PUT) o eliminar (ELIMINAR) el destino. |
+| `self.href` | Esta ruta se utiliza para buscar (GET) el destino directamente y también para actualizar (PUT) o eliminar (DELETE) el destino. |
 | `id` | ID única de sólo lectura generada por el sistema para el destino. Este ID se utiliza para hacer referencia al destino directamente y al crear configuraciones de proyección. |
 | `version` | Este valor de sólo lectura muestra la versión actual del destino. Cuando se actualiza un destino, el número de versión se incrementa automáticamente. |
 
@@ -292,7 +292,7 @@ La respuesta incluye los detalles actualizados del destino, incluido su ID y el 
 
 ### Eliminar un destino
 
-Si su organización ya no necesita un destino de proyección, puede eliminarlo realizando una solicitud ELIMINAR al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
+Si su organización ya no requiere un destino de proyección, puede eliminarlo realizando una solicitud DELETE al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
 
 >[!CAUTION]
 >La respuesta de la API a la solicitud de eliminación es inmediata, pero los cambios reales en los datos de los bordes se producen asincrónicamente. En otras palabras, los datos de perfil se eliminarán de todos los bordes (el `dataCenters` especificado en el destino de la proyección), pero el proceso tardará un tiempo en completarse.
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Solicitud**
 
-La siguiente solicitud lista todas las configuraciones de proyección asociadas con la clase de esquema del modelo de datos de experiencia, Perfil individual XDM. Para obtener más información sobre XDM y su función dentro de la plataforma, lea la información general [del sistema](../../xdm/home.md)XDM.
+La siguiente solicitud lista todas las configuraciones de proyección asociadas con la clase de esquema del modelo de datos de experiencia, Perfil individual XDM. Para obtener más información sobre XDM y su función en Platform, lea la información general [del sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \
@@ -639,4 +639,4 @@ Devuelve sólo los valores de los campos `type` y `city` para cada elemento de l
 
 ## Pasos siguientes
 
-En esta guía se muestran los pasos necesarios para configurar proyecciones y destinos de Edge, incluida la forma de dar un formato adecuado al `selector` parámetro. Ahora puede crear nuevos destinos y proyecciones de Edge específicos a las necesidades de su organización. Para descubrir acciones adicionales disponibles a través de la API de Perfil, consulte la guía [para desarrolladores de la API de Perfil del cliente en tiempo](getting-started.md)real.
+En esta guía se muestran los pasos necesarios para configurar proyecciones y destinos, incluida la forma de dar un formato adecuado al `selector` parámetro. Ahora puede crear nuevos destinos de proyección y configuraciones específicas de las necesidades de su organización.
