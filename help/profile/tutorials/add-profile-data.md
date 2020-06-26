@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Añadir datos al Perfil del cliente en tiempo real
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -15,13 +18,13 @@ Este tutorial describe los pasos necesarios para agregar datos al Perfil del cli
 
 ## Habilitar un esquema para el Perfil del cliente en tiempo real
 
-Los datos que el Perfil del cliente en tiempo real ingesta en la plataforma de experiencia para su uso deben cumplir con un esquema del modelo de datos de experiencia (XDM) habilitado para el Perfil. Para que un esquema esté habilitado para Perfil, debe implementar la clase XDM Individual Perfil o XDM ExperienceEvent.
+Los datos que el Perfil del cliente en tiempo real ingesta en el Experience Platform para su uso deben cumplir con un esquema del modelo de datos de experiencia (XDM) habilitado para el Perfil. Para que un esquema esté habilitado para Perfil, debe implementar la clase XDM Individual Perfil o XDM ExperienceEvent.
 
 Puede activar un esquema para utilizarlo en el Perfil de clientes en tiempo real mediante la API del Registro de Esquemas o la interfaz de usuario del Editor de Esquemas. Para empezar, siga los tutoriales para [crear un esquema con API](../../xdm/tutorials/create-schema-api.md) o [crear un esquema con la interfaz de usuario](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas.
 
 ## Añadir datos mediante ingestión por lotes
 
-Todos los datos cargados en la plataforma mediante la ingestión por lotes se cargan en conjuntos de datos individuales. Antes de que el Perfil del cliente en tiempo real pueda utilizar estos datos, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre la [configuración de un conjunto de datos para Perfil y servicio](dataset-configuration.md)de identidad.
+Todos los datos cargados a Platform mediante la ingestión por lotes se cargan en conjuntos de datos individuales. Antes de que el Perfil del cliente en tiempo real pueda utilizar estos datos, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre la [configuración de un conjunto de datos para Perfil y servicio](dataset-configuration.md)de identidad.
 
 Una vez configurado el conjunto de datos, puede realizar el inicio de la ingesta de datos. Consulte la guía [para desarrolladores de](../../ingestion/batch-ingestion/api-overview.md) ingestión por lotes para ver los pasos detallados sobre cómo cargar archivos en diferentes formatos.
 
@@ -35,4 +38,4 @@ Al cargar datos en un nuevo conjunto de datos por primera vez, o como parte de u
 
 Mediante la API de acceso a Perfil de cliente en tiempo real, puede recuperar datos por lotes a medida que se cargan en un conjunto de datos. Si no puede recuperar ninguna de las entidades que espera, es posible que el conjunto de datos no esté habilitado para el Perfil. Después de confirmar que el conjunto de datos se ha habilitado, asegúrese de que el formato y los identificadores de los datos de origen admiten sus expectativas.
 
-Para obtener instrucciones detalladas sobre cómo acceder a las entidades mediante la API de Perfil del cliente en tiempo real, consulte la [subguía de entidades, también conocida como la &quot;API de acceso a Perfil&quot;](../api/entities.md).
+Para obtener instrucciones detalladas sobre cómo acceder a las entidades mediante la API de Perfil del cliente en tiempo real, consulte la guía [de extremo de](../api/entities.md)las entidades, también conocida como la &quot;API de acceso a Perfil&quot;.
