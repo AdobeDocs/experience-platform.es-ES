@@ -1,12 +1,12 @@
 ---
 title: Combinación de datos de evento
 seo-title: Combinación de datos de evento del SDK web de Adobe Experience Platform
-description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
-seo-description: Aprenda a combinar datos de evento del SDK web de la plataforma de experiencia
+description: Aprenda a combinar datos de evento del SDK web Experience Platform
+seo-description: Aprenda a combinar datos de evento del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Esta función aún está en desarrollo, por lo que no todas las soluciones podrán combinar estos datos.
+>Esta función aún está en desarrollo. No todas las soluciones podrán combinar datos de evento como se describe en esta página.
 
 A veces, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que _sí_ tiene para que no se pierda si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
 
@@ -58,15 +58,15 @@ alloy("sendEvent", {
 });
 ```
 
-Al pasar el mismo valor de ID de combinación de eventos a ambos comandos de evento en este ejemplo, los datos del segundo comando de evento se incrementan a los datos enviados anteriormente en el primer comando de evento. En la plataforma de datos de experiencia se crea un registro para cada comando de evento, pero durante el sistema de informes los registros se unen mediante el ID de combinación de eventos y aparecen como un solo evento.
+Al pasar el mismo `eventMergeID` valor a ambos comandos de evento en este ejemplo, los datos del segundo comando de evento se incrementan a los datos enviados anteriormente en el primer comando de evento. Se crea un registro para cada comando de evento en el Platform de datos de experiencia, pero durante el sistema de informes los registros se unen mediante el `eventMergeID` y aparecen como un solo evento.
 
-Si envía datos sobre un evento concreto a proveedores de terceros, puede incluir también el mismo ID de combinación de eventos con esos datos. Más adelante, si decide importar los datos de terceros en Adobe Experience Platform, el ID de combinación de eventos se utilizará para combinar todos los datos recopilados como resultado del evento discreto que se produjo en la página web.
+Si está enviando datos sobre un evento concreto a proveedores de terceros, también puede incluir lo mismo `eventMergeID` con esos datos. Más adelante, si decide importar los datos de terceros en el Adobe Experience Platform, `eventMergeID` se utilizarán para combinar todos los datos recopilados como resultado del evento discreto que se produjo en la página web.
 
-## Generación de un ID de combinación de eventos
+## Generación de un `eventMergeID`
 
-El valor de ID de combinación de eventos puede ser cualquier cadena que elija, pero recuerde que todos los eventos enviados con el mismo ID se notifican como un solo evento, por lo que tenga cuidado de imponer la exclusividad cuando no se deban combinar eventos. Si desea que el SDK genere un ID de combinación de eventos único en su nombre (siguiendo la especificación [](https://www.ietf.org/rfc/rfc4122.txt)UUID v4 ampliamente adoptada), puede utilizar el `createEventMergeId` comando para hacerlo.
+El `eventMergeID` valor puede ser cualquier cadena que elija, pero recuerde que todos los eventos enviados con el mismo ID se notifican como un solo evento, por lo que tenga cuidado de imponer la exclusividad cuando no se deban combinar eventos. Si desea que el SDK genere un único `eventMergeID` en su nombre (siguiendo la especificación [ampliamente adoptada](https://www.ietf.org/rfc/rfc4122.txt)UUID v4), puede utilizar el `createEventMergeId` comando para hacerlo.
 
-Como con todos los comandos, se devuelve una promesa porque puede ejecutar el comando antes de que el SDK haya terminado de cargarse. La promesa se resolverá con un ID de combinación de eventos único lo antes posible. Puede esperar a que se resuelva la promesa antes de enviar datos al servidor de la siguiente manera:
+Como con todos los comandos, se devuelve una promesa porque puede ejecutar el comando antes de que el SDK haya terminado de cargarse. La promesa se resolverá con un único `eventMergeID` tiempo. Puede esperar a que se resuelva la promesa antes de enviar datos al servidor de la siguiente manera:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
@@ -110,7 +110,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-Siga este mismo patrón si desea acceder al ID de combinación de eventos por otros motivos (por ejemplo, para enviarlo a un proveedor de terceros):
+Siga este mismo patrón si desea acceder a la página `eventMergeID` por otros motivos (por ejemplo, para enviarla a un proveedor de terceros):
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
