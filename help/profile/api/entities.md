@@ -4,23 +4,21 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 1%
 
 ---
 
 
-# Entidades (acceso a Perfil)
+# Extremo de entidades (acceso a Perfil)
 
-Adobe Experience Platform le permite acceder a los datos de Perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los datos de Perfil mediante la interfaz de usuario de la plataforma, consulte la guía del usuario de [Perfil](../ui/user-guide.md).
+Adobe Experience Platform le permite acceder a los datos de Perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a perfiles mediante la interfaz de usuario de Platform, consulte la guía del usuario de [Perfil](../ui/user-guide.md).
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de Perfil del cliente en tiempo real. Antes de continuar, consulte la guía [para desarrolladores de la API de Perfil del cliente en tiempo](getting-started.md)real.
-
-En particular, la sección [de](getting-started.md#getting-started) introducción de la guía para desarrolladores de Perfil incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas con éxito a cualquier API de plataforma de experiencia.
+El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Acceso a los datos de perfil por identidad
 
@@ -776,7 +774,7 @@ Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud 
 
 ## Acceso a eventos de series temporales en varias entidades de esquema
 
-Puede acceder a varias entidades conectadas mediante un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relaciones, lea la guía para desarrolladores de la API de registro de Esquema [y la subguía](../../xdm/api/descriptors.md)de descriptores para desarrolladores.
+Puede acceder a varias entidades conectadas mediante un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relación, lea la guía de extremo de [descriptores de la guía para desarrolladores de la API de registro de Esquema](../../xdm/api/descriptors.md).
 
 Puede incluir parámetros de consulta en la ruta de la solicitud para especificar a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
@@ -886,7 +884,7 @@ Los resultados se paginan al recuperar eventos de series temporales. Si hay pág
 
 ## Pasos siguientes
 
-Siguiendo esta guía, ha accedido con éxito a los campos de datos, perfiles y datos de series temporales de Perfiles de clientes en tiempo real. Para obtener información sobre cómo acceder a otros recursos de datos almacenados en la plataforma, consulte la información general [sobre el acceso a](../../data-access/home.md)datos.
+Siguiendo esta guía, ha accedido con éxito a los campos de datos, perfiles y datos de series temporales de Perfiles de clientes en tiempo real. Para obtener información sobre cómo acceder a otros recursos de datos almacenados en Platform, consulte la información general [sobre el acceso a](../../data-access/home.md)datos.
 
 ## Apéndice {#appendix}
 
