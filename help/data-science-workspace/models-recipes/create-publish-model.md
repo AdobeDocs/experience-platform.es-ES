@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación y publicación de un tutorial del modelo de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 Imagine que posee un sitio web de venta en línea. Cuando los clientes compran en su sitio web comercial, usted desea presentarles recomendaciones personalizadas de productos para exponer una variedad de otros productos de sus ofertas comerciales. A lo largo de la existencia de su sitio web, ha recopilado continuamente datos de clientes y desea utilizar de alguna manera estos datos para generar recomendaciones de productos personalizadas.
 
-[!DNL Adobe Experience Platform] Área de trabajo de ciencia de datos proporciona los medios para lograr su objetivo mediante la fórmula [de recomendaciones de](../pre-built-recipes/product-recommendations.md)productos prediseñada. Siga este tutorial para ver cómo puede acceder a los datos de minoristas y comprenderlos, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en Área de trabajo de ciencias de datos.
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] proporciona los medios para lograr su objetivo mediante la fórmula [de recomendaciones de](../pre-built-recipes/product-recommendations.md)productos prediseñada. Siga este tutorial para ver cómo puede acceder a los datos de minoristas y comprenderlos, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en [!DNL Data Science Workspace].
 
-Este tutorial refleja el flujo de trabajo de Data Science Workspace y abarca los siguientes pasos para crear un modelo de aprendizaje automático:
+Este tutorial refleja el flujo de trabajo de [!DNL Data Science Workspace]y abarca los siguientes pasos para crear un modelo de aprendizaje automático:
 
 1. [Preparación de los datos](#prepare-your-data)
 2. [Crear el modelo](#author-your-model)
@@ -31,7 +31,7 @@ Este tutorial refleja el flujo de trabajo de Data Science Workspace y abarca los
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
-* Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
+* Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
 * Recursos de habilitación. Póngase en contacto con el representante de cuentas para que le proporcione los siguientes elementos.
    * Fórmula de Recomendaciones
@@ -42,21 +42,21 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    * Valores posteriores del conjunto de datos dorados
    * Esquema Conjunto de datos dorado
 
-* Descargue los tres archivos Jupyter Notebook necesarios del repositorio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">público Git de</a>Adobe, que se utilizarán para mostrar el flujo de trabajo de JupyterLab en el área de trabajo de ciencia de datos.
+* Descargue los tres archivos necesarios [!DNL Jupyter Notebook] del <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">repositorio [!DNL Git] público de</a>Adobe, que se utilizarán para mostrar el [!DNL JupyterLab] flujo de trabajo en [!DNL Data Science Workspace].
 
 * Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   * [Modelo](../../xdm/home.md)de datos de experiencia: El esfuerzo de estandarización llevado a cabo por Adobe para definir esquemas estándar como Perfil y ExperienceEvent para la administración de la experiencia del cliente.
+   * [!DNL Experience Data Model](../../xdm/home.md):: El esfuerzo de estandarización llevado a cabo por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
    * Conjuntos de datos: Una construcción de almacenamiento y administración para los datos reales. Una instancia física de instancia de un Esquema [](../../xdm/schema/field-dictionary.md)XDM.
    * Lotes: Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
-   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project Jupyter y está estrechamente integrada en la plataforma de experiencias.
+   * [!DNL JupyterLab]:: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project [!DNL Jupyter] y está estrechamente integrada en [!DNL Experience Platform].
 
 ## Preparación de los datos {#prepare-your-data}
 
-Para crear un modelo de aprendizaje automático que haga recomendaciones de productos personalizadas a sus clientes, se deben analizar las compras anteriores realizadas en el sitio web. En esta sección se explica cómo se ingieren estos datos en la plataforma [!DNL Adobe Analytics]y cómo se transforman en conjuntos de datos de funciones para que los utilice el modelo de aprendizaje automático.
+Para crear un modelo de aprendizaje automático que haga recomendaciones de productos personalizadas a sus clientes, se deben analizar las compras anteriores realizadas en el sitio web. En esta sección se explica cómo se transfieren estos datos [!DNL Platform] a través de [!DNL Adobe Analytics]y cómo se transforman en conjuntos de datos de funciones para que los utilice el modelo de aprendizaje automático.
 
 ### Explore los datos y comprenda los esquemas
 
-1. Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com/) y haga clic en **[!UICONTROL Datasets]** para lista de todos los conjuntos de datos existentes y seleccione el conjunto de datos que desee explorar. En este caso, el conjunto de datos de Analytics Conjunto de datos **dorados postValues**.
+1. Inicie sesión en el [Adobe Experience Platform](https://platform.adobe.com/) y haga clic en **[!UICONTROL Conjuntos]** de datos para lista de todos los conjuntos de datos existentes y seleccione el conjunto de datos que desee explorar. En este caso, el [!DNL Analytics] conjunto de datos Conjunto de datos **dorado postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Seleccione Conjunto de datos **[!UICONTROL de Previsualización]** cerca de la parte superior derecha para examinar los registros de muestra y, a continuación, haga clic en **[!UICONTROL Cerrar]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -67,13 +67,13 @@ Los demás conjuntos de datos se han rellenado previamente con lotes para obtene
 
 | Nombre del conjunto de datos | Esquema | Descripción |
 | ----- | ----- | ----- |
-| Valores posteriores del conjunto de datos dorados | esquema Conjunto de datos dorado | Datos de origen de Analytics de su sitio web |
-| Conjunto de datos de entrada de Recomendaciones | Esquema de entrada de Recomendaciones | Los datos de Analytics se transforman en un conjunto de datos de formación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Recomendaciones de productos. `itemid` y `userid` corresponden a un producto comprado por ese cliente. |
+| Valores posteriores del conjunto de datos dorados | esquema Conjunto de datos dorado | [!DNL Analytics] datos de origen del sitio web |
+| Conjunto de datos de entrada de Recomendaciones | Esquema de entrada de Recomendaciones | Los datos [!DNL Analytics] se transforman en un conjunto de datos de capacitación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Recomendaciones de productos. `itemid` y `userid` corresponden a un producto comprado por ese cliente. |
 | Conjunto de datos de salida de Recomendaciones | Esquema de salida de Recomendaciones | El conjunto de datos para el que se almacenan los resultados de puntuación contendrá la lista de los productos recomendados para cada cliente. |
 
 ## Crear el modelo {#author-your-model}
 
-El segundo componente del ciclo de vida de Área de trabajo de ciencia de datos incluye la creación de fórmulas y modelos. La fórmula de Recomendaciones de productos está diseñada para generar recomendaciones de productos a escala utilizando datos de compras anteriores y aprendizaje automático.
+El segundo componente del [!DNL Data Science Workspace] ciclo vital implica la creación de fórmulas y modelos. La fórmula de Recomendaciones de productos está diseñada para generar recomendaciones de productos a escala utilizando datos de compras anteriores y aprendizaje automático.
 
 Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendizaje automático y lógica diseñados para resolver problemas específicos. Lo que es más importante, las fórmulas le permiten democratizar el aprendizaje automático en toda la organización, lo que permite a otros usuarios acceder a un modelo para casos de uso dispares sin necesidad de escribir ningún código.
 
@@ -162,4 +162,4 @@ Una vez finalizada la ejecución de la puntuación, podrá realizar la previsual
 
 ¡Bien hecho, ha generado con éxito recomendaciones de productos!
 
-Este tutorial le ha presentado el flujo de trabajo de Data Science Workspace, demostrando cómo los datos sin procesar pueden convertirse en información útil a través del aprendizaje automático. Para obtener más información sobre el uso de Data Science Workspace, continúe con la siguiente guía sobre la [creación del esquema de ventas minoristas y del conjunto de datos](./create-retails-sales-dataset.md).
+Este tutorial le ha presentado el flujo de trabajo de [!DNL Data Science Workspace], demostrando cómo los datos sin procesar pueden convertirse en información útil a través del aprendizaje automático. Para obtener más información sobre el uso del [!DNL Data Science Workspace], continúe con la siguiente guía sobre la [creación del esquema de ventas minoristas y del conjunto de datos](./create-retails-sales-dataset.md).
