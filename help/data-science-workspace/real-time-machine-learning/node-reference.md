@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de referencia de nodos de aprendizaje automático en tiempo real
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ La siguiente guía describe las bibliotecas de nodos admitidas para aprendizaje 
 
 ## Descubrimiento de nodos para su uso en la canalización ML
 
-Copie el siguiente código en un bloc de notas Python para vista de todos los nodos disponibles para su uso.
+Copie el siguiente código en un [!DNL Python] bloc de notas para vista de todos los nodos disponibles para su uso.
 
 ```python
 from pprint import pprint
