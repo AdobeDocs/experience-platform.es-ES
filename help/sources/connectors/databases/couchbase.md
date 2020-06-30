@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Conector de la base de acoplamiento
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Conector de la base de acoplamiento
+# Conector (Beta) [!DNL Couchbase]
 
 >[!NOTE]
->El conector Couchbase está en fase beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El [!DNL Couchbase] conector está en versión beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como Microsoft, MySQL y Azure, lo que le permite traer sus datos de estos sistemas. Se admiten diferentes tipos de bases de datos de terceros, incluyendo relacional, NoSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye Couchbase.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure], lo que le permite traer sus datos de estos sistemas. Se admiten diferentes tipos de bases de datos de terceros, incluyendo relacional, NoSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye [!DNL Couchbase].
 
-La siguiente documentación proporciona información sobre cómo conectar Couchbase a Platform mediante API o la interfaz de usuario:
+La documentación siguiente proporciona información sobre cómo conectarse [!DNL Couchbase] a [!DNL Platform] través de API o de la interfaz de usuario:
 
-## Connect Couchbase a Platform mediante API
+## Conectar [!DNL Couchbase] a [!DNL Platform] mediante API
 
 - [Creación de un conector Couchbase mediante la API de servicio de flujo](../../tutorials/api/create/databases/couchbase.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
 - [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar Couchbase a Platform mediante la interfaz de usuario
+## Conectar [!DNL Couchbase] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Creación de un conector de origen Couchbase en la interfaz de usuario](../../tutorials/ui/create/databases/couchbase.md)
 - [Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
