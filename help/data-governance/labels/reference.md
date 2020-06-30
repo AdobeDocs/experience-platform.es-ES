@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Etiquetas de uso de datos admitidas
 topic: labels
 translation-type: tm+mt
-source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 El Adobe Experience Platform incluye una infraestructura para la administración de datos con el etiquetado y la aplicación del uso de datos (DULE) en su núcleo.  Las funciones DULE permiten la aplicación de etiquetas de uso de datos a conjuntos de datos y campos para clasificar los datos según el tipo de políticas de uso que se aplican a esos datos.
 
-Este documento describe todas las etiquetas de uso de datos admitidas actualmente por el Experience Platform. Puede encontrar más información acerca de la Administración de datos y el DULE en la descripción general [de la Administración de](../home.md)datos.
+Este documento describe todas las etiquetas de uso de datos admitidas actualmente por [!DNL Experience Platform]. Puede encontrar más información sobre [!DNL Data Governance] y DULE en la descripción general [de la administración de](../home.md)datos.
 
 ## Etiquetas de contrato
 
