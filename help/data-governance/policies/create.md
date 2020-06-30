@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del gobierno de datos de Adobe Experience Platform. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
 
-Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la API de servicio de directivas. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
+Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la [!DNL Policy Service] API. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de las políticas DULE:
 
-* [Administración](../home.md)de datos: El marco mediante el cual Platform impone el cumplimiento de la normativa de uso de datos.
+* [Administración](../home.md)de datos: Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
 * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para acceder a los datos.
-* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar llamadas exitosas a la API del servicio de directivas DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) [!DNL Policy Service] desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 ## Definir una acción de mercadotecnia {#define-action}
 
-En el marco de la Administración de datos, una acción de marketing es una acción que realiza un consumidor de datos Experience Platform, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
+En el [!DNL Data Governance] marco, una acción de marketing es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
 El primer paso para crear una política DULE es determinar qué acción de mercadotecnia evaluará la política. Esto se puede realizar con una de las siguientes opciones:
 
@@ -44,7 +44,7 @@ Puede consultar las acciones de marketing existentes que su directiva DULE debe 
 
 **Formato API**
 
-En función de si está buscando una acción de marketing proporcionada por un Experience Platform o una acción de marketing personalizada creada por su organización, utilice los puntos finales `marketingActions/core` o `marketingActions/custom` finales, respectivamente.
+En función de si está buscando una acción de mercadotecnia proporcionada por [!DNL Experience Platform] o una acción de mercadotecnia personalizada creada por su organización, utilice los puntos `marketingActions/core` o `marketingActions/custom` finales, respectivamente.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y los detalles de l
 
 Siguiendo este tutorial, ha creado correctamente una directiva de uso de datos para una acción de marketing. Ahora puede continuar con el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) de uso de datos para aprender a comprobar las infracciones de políticas y a gestionarlas en la aplicación de experiencia.
 
-Para obtener más información sobre las distintas operaciones disponibles en la API de servicio de directivas, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service. Para obtener información sobre cómo aplicar políticas para datos de Perfil de clientes en tiempo real, consulte el tutorial sobre [la aplicación del cumplimiento de la normativa de uso de datos para segmentos](../../segmentation/tutorials/governance.md)de audiencia.
+Para obtener más información sobre las distintas operaciones disponibles en la [!DNL Policy Service] API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service. Para obtener información sobre cómo aplicar directivas para [!DNL Real-time Customer Profile] datos, consulte el tutorial sobre la [aplicación de la conformidad de uso de datos para segmentos](../../segmentation/tutorials/governance.md)de audiencia.
 
-Para obtener información sobre cómo administrar las directivas de uso en la interfaz de usuario del Experience Platform, consulte la guía [de usuario de](user-guide.md)directivas.
+Para obtener información sobre cómo administrar las directivas de uso en la interfaz de [!DNL Experience Platform] usuario, consulte la guía [de usuario de](user-guide.md)directivas.
