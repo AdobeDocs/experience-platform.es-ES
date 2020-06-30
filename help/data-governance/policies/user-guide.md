@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # Guía del usuario de directivas de uso de datos
 
-El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo _Directivas_ de la interfaz de usuario de Experience Platform.
+El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo _Directivas_ de la interfaz de [!DNL Experience Platform] usuario.
 
 >[!IMPORTANT] Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de los siguientes conceptos de Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes [!DNL Experience Platform] conceptos:
 
-- [Gobierno de datos](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Directivas de uso de datos](./overview.md)
 
 ## Directivas de uso de datos de Vista {#view-policies}
 
-En la interfaz de usuario del Experience Platform, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
+En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Haga clic en una directiva de la lista para vista de su descripción y tipo. Si 
 
 ## Crear una directiva de uso de datos personalizada {#create-policy}
 
-Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el espacio de trabajo *Directivas* .
+Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el espacio de trabajo *[!UICONTROL Directivas]* .
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Si las directivas de uso existentes no están utilizando la acción de marketing
 
 ## Pasos siguientes
 
-Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la interfaz de usuario de Experience Platform. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar las directivas de uso de datos, consulte la descripción general [de cumplimiento de](../enforcement/overview.md)políticas.
+Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar las directivas de uso de datos, consulte la descripción general [de cumplimiento de](../enforcement/overview.md)políticas.
 
-El siguiente vídeo muestra cómo trabajar con las políticas de uso en la interfaz de usuario del Experience Platform:
+En el siguiente vídeo se muestra cómo trabajar con las políticas de uso en la [!DNL Experience Platform] interfaz de usuario:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
