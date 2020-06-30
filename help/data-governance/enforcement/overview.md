@@ -4,25 +4,28 @@ solution: Experience Platform
 title: Información general sobre la aplicación de políticas
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: d1659bbdd40cf1e598713f1fe1a6eeae8e8249cc
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
 
 # Información general sobre la aplicación de políticas
 
-Una vez que las etiquetas de uso de datos se han aplicado a los conjuntos de datos de la plataforma y se han definido las políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades de administración de datos le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan violaciones de políticas.
+Una vez que las etiquetas de uso de datos se han aplicado a los [!DNL Platform] [!DNL Data Governance] conjuntos de datos y se han definido las políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan violaciones de políticas.
 
-Existen dos métodos de aplicación de políticas proporcionados por las características de administración de datos en la plataforma: Aplicación **basada en** API y aplicación **automática**.
+Existen dos métodos de aplicación de las políticas proporcionados por [!DNL Data Governance] las características en [!DNL Platform]: **Aplicación** basada en API y aplicación **automática**.
 
 ## Aplicación basada en API
 
-La API de servicio de directivas proporciona extremos que le permiten probar acciones de marketing con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se producen violaciones de directivas. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos.
+La [!DNL Policy Service] API proporciona puntos finales que le permiten probar acciones de mercadotecnia con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se producen violaciones de políticas. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos.
 
 Consulte el tutorial sobre la aplicación de [políticas](api-enforcement.md) para ver los pasos para evaluar las políticas mediante la API.
 
 ## Aplicación automática
 
-Determinadas aplicaciones que se crean en la parte superior de la plataforma de experiencia (como la plataforma de datos del cliente en tiempo real) proporcionan una aplicación automática de las políticas de uso de datos. Cada aplicación mantiene su propio método de detectar violaciones de políticas y proporcionar pasos para resolver problemas.
+Algunas aplicaciones que se crean sobre [!DNL Experience Platform] (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionan una aplicación automática de las políticas de uso de datos. Cada aplicación mantiene su propio método de detectar violaciones de políticas y proporcionar pasos para resolver problemas.
 
-Consulte la documentación de la aplicación basada en la plataforma que está utilizando para obtener más información sobre la aplicación automática de políticas de uso de datos. Para obtener información sobre la aplicación automática de políticas en tiempo real, consulte la información general [sobre la gobernanza de datos CDP en tiempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)real.
+Consulte la documentación de la aplicación [!DNL Platform]basada que está utilizando para obtener más información sobre la aplicación automática de políticas de uso de datos. Para obtener información sobre la aplicación automática de políticas en tiempo real, consulte la información general [sobre la gobernanza de datos CDP en tiempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)real.
