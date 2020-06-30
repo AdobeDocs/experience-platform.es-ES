@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Obtener el historial de clúster de una identidad
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 1%
 
 ---
 
 
 # Obtener el historial de clúster de una identidad
 
-Las identidades pueden mover clústeres a lo largo de varias ejecuciones de gráficos de dispositivos. El servicio de identidad proporciona visibilidad en las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
+Las identidades pueden mover clústeres a lo largo de varias ejecuciones de gráficos de dispositivos. [!DNL Identity Service] proporciona visibilidad en las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
 
 Utilice el parámetro opcional `graph-type` para indicar el tipo de salida desde el que se obtiene el clúster. Las opciones son:
 
