@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Creación de un conector de origen HDFS de Apache en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
 
-# Creación de un conector de origen HDFS de Apache en la interfaz de usuario
+# Creación de un conector de origen [!DNL Apache] HDFS en la interfaz de usuario
 
 >[!NOTE]
->El conector HDFS de Apache está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Apache] HDFS está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de [!DNL Adobe Experience Platform] proporcionan la capacidad de ingerir datos externos de forma programada. Este tutorial proporciona los pasos para autenticar un conector de origen Apache Hadoop Distributed File System (en lo sucesivo, &quot;HDFS&quot;) mediante la interfaz de usuario. [!DNL Platform]
+Los conectores de origen de [!DNL Adobe Experience Platform] proporcionan la capacidad de ingerir datos externos de forma programada. Este tutorial proporciona los pasos para autenticar un conector de origen [!DNL Apache Hadoop Distributed File System] (en lo sucesivo denominado &quot;HDFS&quot;) mediante la interfaz [!DNL Platform] de usuario.
 
 ## Primeros pasos
 
@@ -42,7 +42,7 @@ Para autenticar el conector de origen HDFS, debe proporcionar valores para la si
 
 Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta de HDFS a la que conectarse [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y flujos de datos asociados a ellas.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y flujos de datos asociados a ellas.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
