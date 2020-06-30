@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Fórmula de recomendación de producto
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '421'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +26,7 @@ La fórmula de Recomendaciones de productos utiliza el aprendizaje automático p
 
 ## ¿Cómo empiezo?
 
-Para empezar, siga el tutorial de Adobe Experience Platform Lab (consulte el vínculo de laboratorio más abajo). Este tutorial le mostrará cómo crear la fórmula de Recomendaciones de productos en un bloc de notas de Jupyter siguiendo el flujo de trabajo del [bloc de notas para las fórmulas](../jupyterlab/create-a-recipe.md) e implementando la fórmula en el espacio de trabajo de ciencias de datos de la plataforma de experiencia.
+Puede comenzar siguiendo el tutorial de Adobe Experience Platform Lab (consulte el enlace de laboratorio más abajo). Este tutorial le mostrará cómo crear la fórmula de Recomendaciones de productos en un bloc de notas de Jupyter siguiendo el flujo de trabajo del [bloc de notas para la fórmula](../jupyterlab/create-a-recipe.md) e implementando la fórmula en [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Laboratorio: Predecir el futuro con el área de trabajo de ciencias de datos](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos de laboratorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
