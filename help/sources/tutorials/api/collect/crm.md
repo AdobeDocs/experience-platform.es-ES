@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos CRM mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+source-git-commit: 7988dd97af133caf9ecfb3448be6b7d895c5df7c
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1580'
 ht-degree: 1%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 1%
 
 # Recopilación de datos CRM mediante conectores de origen y API
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a la plataforma a través de conectores de origen y API.
+Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a [!DNL Platform] través de conectores de origen y API.
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un sistema CRM de terceros a través de una conexión válida e información sobre la tabla que desea incluir en Platform, incluida la ruta y estructura de la tabla. Si no tiene esta información, consulte el tutorial sobre [explorar sistemas CRM mediante la API](../explore/crm.md) de servicio de flujo antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un sistema CRM de terceros a través de una conexión válida e información sobre la tabla en la que desea incluir [!DNL Platform], incluyendo la ruta y la estructura de la tabla. Si no tiene esta información, consulte el tutorial sobre [explorar sistemas CRM mediante la API](../explore/crm.md) de servicio de flujo antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
-* [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registros para la ubicación y el linaje de los datos dentro de la plataforma de experiencia.
-* [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en la plataforma de experiencias como archivos por lotes.
-* [Simuladores](../../../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
+* [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
+* [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema CRM mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema CRM mediante la [!DNL Flow Service] API.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Creación de una clase y un esquema XDM ad-hoc
 
-Para poder introducir datos externos en la plataforma mediante conectores de origen, se debe crear una clase y un esquema XDM ad-hoc para los datos de origen sin procesar.
+Para introducir datos externos [!DNL Platform] a través de conectores de origen, se debe crear una clase y un esquema XDM ad-hoc para los datos de origen sin procesar.
 
 Para crear una clase ad-hoc y un esquema, siga los pasos descritos en el tutorial [de esquema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Al crear una clase ad-hoc, todos los campos encontrados en los datos de origen deben describirse dentro del cuerpo de la solicitud.
 
@@ -63,7 +63,7 @@ Siga los pasos descritos en la guía para desarrolladores hasta que haya creado 
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
@@ -153,9 +153,9 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ## Creación de un esquema destinatario XDM {#target}
 
-En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en Platform, también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un conjunto de datos de la plataforma en el que se incluyen los datos de origen.
+En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destinatario realizando una solicitud POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema. Si prefiere utilizar la interfaz de usuario en la plataforma de experiencias, el tutorial [Editor de](../../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
+Se puede crear un esquema XDM de destinatario realizando una solicitud POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](../../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
 
 **Formato API**
 
@@ -466,7 +466,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Recuperar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y de traerlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos responsables de recopilar datos CRM.
+Un flujo de datos es responsable de recopilar datos de las fuentes y de traerlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos responsables de recopilar datos CRM.
 
 **Formato API**
 
@@ -486,7 +486,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de llevar los datos del sistema CRM a la plataforma. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de traer datos de su sistema CRM a [!DNL Platform]. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -689,7 +689,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de un sistema CRM de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de un sistema CRM de forma programada. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
@@ -702,5 +702,5 @@ La sección siguiente lista los diferentes conectores de origen CRM y sus especi
 
 | Nombre del conector | Especificación de conexión |
 | -------------- | --------------- |
-| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
-| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
+| [!DNL Microsoft Dynamics] | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| [!DNL Salesforce] | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
