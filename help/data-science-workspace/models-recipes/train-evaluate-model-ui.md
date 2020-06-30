@@ -4,61 +4,64 @@ solution: Experience Platform
 title: Formación y evaluación de un modelo (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '975'
+ht-degree: 2%
 
 ---
 
 
 # Formación y evaluación de un modelo (IU)
 
-En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
+En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es apropiada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
 
 Este tutorial recorre los pasos para crear, entrenar y evaluar un modelo.
 
 ## Primeros pasos
 
-Para completar este tutorial, debe tener acceso a la plataforma de experiencias. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
+Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
 Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el tutorial [Importar una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md) antes de continuar.
 
 ## Crear un modelo
 
-1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Haga clic **[!UICONTROL Create Model]** cerca de la parte superior derecha de la página para iniciar un proceso de creación de modelo.
+1. En Adobe Experience Platform, haga clic en el vínculo **[!UICONTROL Modelos]** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Haga clic en **[!UICONTROL Crear modelo]** cerca de la parte superior derecha de la página para iniciar un proceso de creación de modelo.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Navegue por la lista de las fórmulas existentes, busque y seleccione la fórmula que se utilizará para crear el modelo y haga clic en **[!UICONTROL Next]**.
+2. Navegue por la lista de las fórmulas existentes, busque y seleccione la fórmula que se utilizará para crear el modelo y haga clic en **[!UICONTROL Siguiente]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Seleccione un conjunto de datos de entrada adecuado y haga clic en **[!UICONTROL Next]**. Esto establecerá el conjunto de datos de formación de entrada predeterminado para el modelo.
+3. Seleccione un conjunto de datos de entrada adecuado y haga clic en **[!UICONTROL Siguiente]**. Esto establecerá el conjunto de datos de formación de entrada predeterminado para el modelo.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Proporcione un nombre para el modelo y revise las configuraciones de modelo predeterminadas. Las configuraciones predeterminadas se aplicaron durante la creación de la fórmula, para revisar y modificar los valores de configuración, haga clic en los valores mientras pulsa el doble. Para proporcionar un nuevo conjunto de configuraciones, haga clic **[!UICONTROL Upload New Config]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Click **[!UICONTROL Finish]** to create the Model.
+4. Proporcione un nombre para el modelo y revise las configuraciones de modelo predeterminadas. Las configuraciones predeterminadas se aplicaron durante la creación de la fórmula, para revisar y modificar los valores de configuración, haga clic en los valores mientras pulsa el doble. Para proporcionar un nuevo conjunto de configuraciones, haga clic en **[!UICONTROL Cargar nueva configuración]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Haga clic en **[!UICONTROL Finalizar]** para crear el modelo.
    >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Crear una ejecución de formación
 
-1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a formar.
+1. En Adobe Experience Platform, haga clic en el vínculo **[!UICONTROL Modelos]** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a formar.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Para los modelos creados con la interfaz de usuario de Área de trabajo de ciencia de datos, se genera y ejecuta automáticamente una ejecución de formación utilizando las configuraciones predeterminadas y el conjunto de datos de formación de entrada.
+2. Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Para los modelos creados con la interfaz de usuario, se genera y ejecuta automáticamente una ejecución de formación utilizando las configuraciones predeterminadas y el conjunto de datos de formación de entrada. [!DNL Data Science Workspace]
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Cree una nueva ejecución de formación haciendo clic en **[!UICONTROL Train]** cerca de la parte superior derecha de la página de información general del modelo.
+3. Para crear una nueva formación, haga clic en **[!UICONTROL Tren]** cerca de la parte superior derecha de la página de información general del modelo.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Seleccione el conjunto de datos de entrada de formación para la ejecución de la formación y haga clic en **[!UICONTROL Next]**.
+4. Seleccione el conjunto de datos de entrada de formación para la ejecución de la formación y haga clic en **[!UICONTROL Siguiente]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo clic en los valores con el doble. Haga clic en **[!UICONTROL Finish]** para crear y ejecutar la ejecución de formación.
+5. Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo clic en los valores con el doble. Haga clic en **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de formación.
    >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Evaluar el modelo
 
-1. En Adobe Experience Platform, haga clic en el **[!UICONTROL Models]** vínculo ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a evaluar.
+1. En Adobe Experience Platform, haga clic en el vínculo **[!UICONTROL Modelos]** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a evaluar.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Se muestran todas las ejecuciones de formación existentes con sus estados de formación actuales. Con varias ejecuciones de formación completadas, las métricas de evaluación se pueden comparar en distintas ejecuciones de formación en el gráfico de evaluación del modelo; seleccione una métrica de evaluación mediante la lista desplegable que se encuentra encima del gráfico.
@@ -77,7 +80,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
 
 ## Pasos siguientes
 
-Este tutorial le guió a través de la creación, formación y evaluación de un modelo en Área de trabajo de ciencias de datos. Una vez que haya llegado a un modelo optimizado, puede utilizar el modelo capacitado para generar perspectivas siguiendo la [Puntuación de un modelo en el tutorial de la interfaz de usuario](./score-model-ui.md) .
+Este tutorial le guió durante la creación, formación y evaluación de un modelo en [!DNL Data Science Workspace]. Una vez que haya llegado a un modelo optimizado, puede utilizar el modelo capacitado para generar perspectivas siguiendo la [Puntuación de un modelo en el tutorial de la interfaz de usuario](./score-model-ui.md) .
 
 ## Referencia {#reference}
 
