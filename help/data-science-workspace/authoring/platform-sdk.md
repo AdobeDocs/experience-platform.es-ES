@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guía del SDK de la plataforma
+title: Guía del SDK de Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
 
 
-# Guía del SDK de la plataforma
+# [!DNL Platform] Guía del SDK
 
 Este tutorial le proporciona información sobre la conversión `data_access_sdk_python` al nuevo Python `platform_sdk` en Python y R. Este tutorial proporciona información sobre las siguientes operaciones:
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lectura básica de los datos {#basic-reading-of-data}
 
-Con el nuevo SDK de plataforma, el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
+Con el nuevo [!DNL Platform] SDK, el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
 
 Si el tiempo de lectura tarda demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-El nuevo SDK de plataforma admite las siguientes operaciones:
+El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
 
 | Operación | Función |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez configurado el cargador de datos, los datos se preparan y luego se dividen en los conjuntos de datos `platform_sdk` y `train` `val` . Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección sobre la preparación de [datos y la ingeniería](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) de características en el tutorial para crear una fórmula con portátiles JupyterLab.
+Una vez configurado el cargador de datos, los datos se preparan y luego se dividen en los conjuntos de datos `platform_sdk` y `train` `val` . Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección sobre la preparación de [datos y la ingeniería](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) de características en el tutorial para crear una fórmula con [!DNL JupyterLab] portátiles.
