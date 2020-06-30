@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servicio de Consulta en el bloc de notas de Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Servicio de Consulta en el bloc de notas de Jupyter
 
-[!DNL Adobe Experience Platform] le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencia de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar.
+[!DNL Adobe Experience Platform] le permite utilizar el lenguaje de Consulta estructurado (SQL) [!DNL Data Science Workspace] integrándolo [!DNL Query Service] en [!DNL JupyterLab] como función estándar.
 
 Este tutorial muestra consultas SQL de muestra para casos de uso comunes para explorar, transformar y analizar [!DNL Adobe Analytics] datos.
 
@@ -22,19 +22,19 @@ Este tutorial muestra consultas SQL de muestra para casos de uso comunes para ex
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
-- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar
 
 - Un [!DNL Adobe Analytics] conjunto de datos
 
 - Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   - [Modelo de datos de experiencia (XDM) y sistema XDM](../../xdm/home.md)
-   - [Servicio de Consulta](../../query-service/home.md)
-   - [Sintaxis SQL del servicio de Consulta](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Acceso a JupyterLab y servicio de Consulta {#access-jupyterlab-and-query-service}
+## Acceso [!DNL JupyterLab] y [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. En [la plataforma](https://platform.adobe.com)de experiencias, vaya a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
+1. En [!DNL Experience Platform](https://platform.adobe.com), vaya a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
 4. Busque un conjunto de datos para explorar y haga clic con el botón secundario en el listado, haga clic en Datos de [!DNL Adobe Analytics] Consulta en el bloc de notas **** para generar consultas SQL en el bloc de notas vacío.
 
-5. Haga clic en la primera celda generada que contenga la función `qs_connect()` y ejecútela haciendo clic en el botón de reproducción. Esta función crea una conexión entre la instancia del bloc de notas y el servicio de Consulta.
+5. Haga clic en la primera celda generada que contenga la función `qs_connect()` y ejecútela haciendo clic en el botón de reproducción. Esta función crea una conexión entre la instancia del bloc de notas y el [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -92,7 +92,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
 Introduzca las siguientes consultas SQL en celdas de bloc de notas individuales. Para ejecutar una consulta, haga clic en su celda y luego en el botón de **[!UICONTROL reproducción]** . Los resultados de consulta o los registros de errores se muestran debajo de la celda ejecutada.
 
-Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y el servicio de Consulta puede interrumpirse. En estos casos, reinicie JupyterLab haciendo clic en el botón de **[!UICONTROL alimentación]** situado en la esquina superior derecha.
+Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas [!DNL Query Service] puede romperse. En estos casos, reinicie [!DNL JupyterLab] haciendo clic en el botón **[!UICONTROL Energía]** situado en la esquina superior derecha.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -120,7 +120,7 @@ ORDER  BY Hour;
 
 En la consulta anterior, el destinatario `_acp_year` de la `WHERE` cláusula se define como el valor de `target_year`. Incluya las variables en las consultas SQL, contándolas entre llaves (`{}`).
 
-La primera línea de la consulta contiene la variable opcional `hourly_visitor`. Los resultados de la Consulta se almacenarán en esta variable como un dataframe de Pandas. Almacenar los resultados en un dataframe permite visualizar posteriormente los resultados de la consulta utilizando un paquete Python deseado. Ejecute el siguiente código Python en una celda nueva para generar un gráfico de barras:
+La primera línea de la consulta contiene la variable opcional `hourly_visitor`. Los resultados de la Consulta se almacenarán en esta variable como un dataframe de Pandas. El almacenamiento de resultados en un dataframe permite visualizar posteriormente los resultados de la consulta utilizando un paquete [!DNL Python] deseado. Ejecute el siguiente [!DNL Python] código en una celda nueva para generar un gráfico de barras:
 
 ```python
 trace = go.Bar(
@@ -210,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Ejecute el siguiente código Python para generar un histograma del número de eventos por sesión de visita:
+Ejecute el siguiente [!DNL Python] código para generar un histograma del número de eventos por sesión de visita:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -284,4 +284,4 @@ LIMIT  10;
 
 ## Pasos siguientes <!-- omit in toc -->
 
-Este tutorial muestra algunos casos de uso de muestra para utilizar el servicio de Consulta en portátiles Jupyter. Siga el tutorial [Analizar los datos con Jupyter Notebooks](./analyze-your-data.md) para ver cómo se realizan operaciones similares con el SDK de acceso a datos.
+En este tutorial se mostraron algunos casos de uso de muestra para utilizarlos [!DNL Query Service] en [!DNL Jupyter] portátiles. Siga el tutorial [Analizar los datos con Jupyter Notebooks](./analyze-your-data.md) para ver cómo se realizan operaciones similares con el SDK de acceso a datos.
