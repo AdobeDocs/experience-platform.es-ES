@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Creación de un conector de PayPal mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 1%
+source-wordcount: '560'
+ht-degree: 2%
 
 ---
 
 
-# Creación de un conector de PayPal mediante la API de servicio de flujo
+# Creación de un [!DNL PayPal] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
->El conector PayPal está en fase beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El [!DNL PayPal] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar PayPal con el Experience Platform.
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL PayPal] a Experience Platform.
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a PayPal mediante la API de servicio de flujo.
+Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL PayPal] través de la [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para que el servicio de flujo se conecte con PayPal, debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] conectarse con [!DNL PayPal], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| Host | Dirección URL de la instancia de PayPal. (predeterminado: api.sandbox.paypal.com). |
-| ID de cliente | ID de cliente asociado a la aplicación PayPal. |
-| Secreto del cliente | El secreto de cliente asociado a la aplicación PayPal. |
-| ID de especificación de conexión | Identificador único necesario para crear una conexión. El ID de especificación de conexión para PayPal es: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| Host | Dirección URL de la [!DNL PayPal] instancia. (predeterminado: api.sandbox.paypal.com). |
+| ID de cliente | ID de cliente asociado a la [!DNL PayPal] aplicación. |
+| Secreto del cliente | El secreto de cliente asociado a la [!DNL PayPal] aplicación. |
+| ID de especificación de conexión | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL PayPal] es: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 Para obtener más información sobre cómo empezar, consulte [este documento](https://developer.paypal.com/docs/api/overview/#get-credentials)de PayPal.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de Experience Platform, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de PayPal, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por [!DNL PayPal] cuenta, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
 
 **Formato API**
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión PayPal, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para PayPal es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Para crear una [!DNL PayPal] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL PayPal] es `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
 ```shell
 curl -X POST \
@@ -105,10 +105,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `auth.params.host` | Dirección URL de la instancia de PayPal. |
-| `auth.params.clientId` | ID de cliente asociado a su instancia de PayPal. |
-| `auth.params.clientSecret` | El secreto de cliente asociado a la instancia de PayPal. |
-| `connectionSpec.id` | ID de especificación de conexión de PayPal: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
+| `auth.params.host` | Dirección URL de la [!DNL PayPal] instancia. |
+| `auth.params.clientId` | ID de cliente asociado a su [!DNL PayPal] instancia. |
+| `auth.params.clientSecret` | El secreto de cliente asociado a la [!DNL PayPal] instancia. |
+| `connectionSpec.id` | ID de especificación de [!DNL PayPal] conexión: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **Respuesta**
 
@@ -123,4 +123,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión PayPal con la API de servicio de flujo y ha obtenido el valor de ID exclusivo de la conexión. Puede utilizar este ID en el siguiente tutorial cuando aprenda a [explorar la aplicación de pagos mediante la API](../../explore/payments.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una [!DNL PayPal] conexión mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial cuando aprenda a [explorar la aplicación de pagos mediante la API](../../explore/payments.md)de servicio de flujo.
