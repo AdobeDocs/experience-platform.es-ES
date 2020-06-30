@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicación de un modelo como servicio (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Si prefiere publicar un modelo con las API de aprendizaje automático de Sensei,
 
 ## Puntuación mediante un servicio {#access-a-service}
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** situada en la columna de navegación izquierda para acceder a la Galería *de servicios*. Busque el servicio que desee utilizar y haga clic en **[!UICONTROL Puntuación]**.
+1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** situada en la columna de navegación izquierda para acceder a la Galería *[!UICONTROL de servicios]*. Busque el servicio que desee utilizar y haga clic en **[!UICONTROL Puntuación]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Seleccione un conjunto de datos de entrada adecuado para la ejecución de puntuación y haga clic en **[!UICONTROL Siguiente]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Si prefiere publicar un modelo con las API de aprendizaje automático de Sensei,
 
 ## Pasos siguientes {#next-steps}
 
-Siguiendo este tutorial, ha publicado correctamente un modelo como un servicio accesible y ha puntuado datos mediante el nuevo servicio a través de la Galería *de* servicios. Continúe con el siguiente tutorial para obtener información sobre cómo puede [programar las ejecuciones de puntuación y formación automatizada en un servicio](./schedule-models-ui.md).
+Siguiendo este tutorial, ha publicado correctamente un modelo como un servicio accesible y ha puntuado datos mediante el nuevo servicio a través de la Galería *[!UICONTROL de]* servicios. Continúe con el siguiente tutorial para obtener información sobre cómo puede [programar las ejecuciones de puntuación y formación automatizada en un servicio](./schedule-models-ui.md).
