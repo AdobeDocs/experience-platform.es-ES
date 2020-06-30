@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración de datos de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Información general sobre la administración de datos
 
-Una de las capacidades principales del Adobe Experience Platform es reunir los datos de varios sistemas empresariales para permitir que los especialistas en mercadotecnia identifiquen, comprendan y capten a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que sus operaciones de datos dentro de Platform sean compatibles con las políticas de uso de datos.
+Una de las capacidades principales del Adobe Experience Platform es reunir los datos de varios sistemas empresariales para permitir que los especialistas en mercadotecnia identifiquen, comprendan y capten a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] son compatibles con las políticas de uso de datos.
 
-La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluyendo catalogación, linaje de datos, etiquetado de uso de datos, políticas de uso de datos y control del uso de datos para acciones de mercadotecnia.
+La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en [!DNL Experience Platform] varios niveles, incluyendo la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
 
 ## Funciones de administración de datos
 
@@ -44,7 +44,7 @@ Los especialistas en mercadotecnia son el punto final del gobierno de los datos.
 
 ## Marco DULE
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el marco básico para la gobernanza de datos Experience Platform. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
+El etiquetado y cumplimiento del uso de datos (DULE) es el marco central para el gobierno [!DNL Experience Platform] de datos. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
 
 Existen tres elementos clave en el marco DULE: Etiquetas, políticas y aplicación.
 
@@ -66,17 +66,17 @@ El marco de trabajo DULE incluye etiquetas de uso de datos predefinidas que pued
 
 >[!NOTE] Consulte la guía sobre las etiquetas [de uso de datos](labels/reference.md) admitidas para obtener una lista completa de las etiquetas disponibles, así como las definiciones de cada tipo de etiqueta.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. La práctica recomendada fomenta el etiquetado de datos tan pronto como se ingesta en el Experience Platform o tan pronto como los datos estén disponibles en Platform.
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. La práctica recomendada fomenta el etiquetado de los datos tan pronto como se ingieran en [!DNL Experience Platform]o tan pronto como los datos estén disponibles en [!DNL Platform].
 
 Consulte la descripción general de las etiquetas [de uso de](./labels/overview.md) datos para obtener más información.
 
 ## Directivas de uso de datos
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe la realización de datos dentro de Experience Platform.
+Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se restringe el rendimiento de los datos dentro de [!DNL Experience Platform].
 
 Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que determinados tipos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta del Servicio de directivas que le indicará que se ha violado una política de uso de datos.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario del Experience Platform.
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario. [!DNL Experience Platform]
 
 >[!IMPORTANT] Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
 
@@ -117,7 +117,7 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 | **Geofence** | Una geofence es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software activar una respuesta cuando un dispositivo móvil entra o sale de un área en particular. |
 | **Etiquetas de identidad** | Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar o comunicarse con una persona específica. |
 | **Targeting basado en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de los usuarios, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias. |
-| **Acción de mercadotecnia** | Una acción de mercadotecnia, en el contexto del marco de administración de datos, es una acción que realiza un consumidor de datos Experience Platform, para la cual es necesario verificar las infracciones de las políticas de uso de datos |
+| **Acción de mercadotecnia** | Una acción de mercadotecnia, en el contexto del marco de administración de datos, es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las violaciones de las políticas de uso de datos |
 | **Política** | En el marco de administración de datos, una política es una regla que describe qué tipo de acciones de mercadotecnia se permiten o no se permiten realizar en datos específicos. |
 | **Etiquetas sensibles** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 
