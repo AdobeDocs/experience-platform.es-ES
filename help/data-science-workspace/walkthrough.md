@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Recorrido de Área de trabajo de ciencias de datos
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '1638'
+ht-degree: 0%
 
 ---
 
 
-# Recorrido de Área de trabajo de ciencias de datos
+# [!DNL Data Science Workspace] tutorial
 
-Este documento proporciona un tutorial para Adobe Experience Platform Data Science Workspace. Específicamente, analizaremos el flujo de trabajo general que un científico de datos podría llevar a cabo para resolver un problema usando el aprendizaje automático.
+Este documento proporciona un tutorial para el Adobe Experience Platform [!DNL Data Science Workspace]. Específicamente, analizaremos el flujo de trabajo general que un científico de datos podría llevar a cabo para resolver un problema usando el aprendizaje automático.
 
 ## Requisitos previos
 
 - Una cuenta de Adobe ID registrada
-   - La cuenta de Adobe ID debe haberse agregado a una organización con acceso a Adobe Experience Platform y a Data Science Workspace
+   - La cuenta de Adobe ID debe haber sido agregada a una organización con acceso a Adobes Experience Platform y [!DNL Data Science Workspace]
 
 ## Motivación del científico de datos
 
@@ -26,22 +29,22 @@ Un minorista enfrenta muchos desafíos para seguir siendo competitivo en el merc
 
 La solución de un científico de datos es aprovechar la riqueza de datos históricos a los que tiene acceso un minorista, predecir tendencias futuras y optimizar las decisiones de precios. Usaremos datos de ventas anteriores para entrenar nuestro modelo de aprendizaje automático y usaremos el modelo para predecir las tendencias futuras de venta. Con esto, el minorista podrá tener perspectivas que le ayudarán a realizar cambios en los precios.
 
-En este resumen, vamos a seguir los pasos que un científico de datos podría seguir para realizar un conjunto de datos y crear un modelo para predecir las ventas semanales. Iremos a las siguientes secciones en el bloc de notas de ventas minoristas de muestra en el espacio de trabajo de ciencia de datos de la plataforma Adobe Experience:
+En este resumen, vamos a seguir los pasos que un científico de datos podría seguir para realizar un conjunto de datos y crear un modelo para predecir las ventas semanales. Iremos a las siguientes secciones en el bloc de notas sobre ventas minoristas de muestra en Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuración](#setup)
 - [Exploración de datos](#exploring-data)
 - [Ingeniería de funciones](#feature-engineering)
 - [Formación y verificación](#training-and-verification)
 
-### Equipos portátiles en el área de trabajo de ciencias de la información
+### Equipos portátiles en [!DNL Data Science Workspace]
 
-En primer lugar, queremos crear un bloc de notas JupyterLab para abrir el bloc de notas de muestra &quot;Ventas al por menor&quot;. El seguimiento de los pasos que realiza el científico de datos en el bloc de notas nos permitirá comprender un flujo de trabajo típico.
+En primer lugar, queremos crear un [!DNL JupyterLab] bloc de notas para abrir el bloc de notas de muestra de &quot;Ventas minoristas&quot;. El seguimiento de los pasos que realiza el científico de datos en el bloc de notas nos permitirá comprender un flujo de trabajo típico.
 
-En la interfaz de usuario de Adobe Experience Platform, haga clic en la ficha Ciencias de datos del menú superior para ir al área de trabajo de ciencias de datos. Desde esta página, haga clic en la ficha JupyterLab que abrirá el iniciador de JupyterLab. Debería ver una página similar a esta.
+En la interfaz de usuario de Adobe Experience Platform, haga clic en la ficha Ciencia de datos del menú superior para ir al [!DNL Data Science Workspace]. Desde esta página, haga clic en la [!DNL JupyterLab] ficha que abrirá el [!DNL JupyterLab] iniciador. Debería ver una página similar a esta.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-En nuestro tutorial, utilizaremos Python 3 en el bloc de notas Jupyter para mostrar cómo acceder y explorar los datos. En la página del iniciador se proporcionan blocs de notas de ejemplo. Utilizaremos la muestra &quot;Ventas al detalle&quot; para Python 3.
+En nuestro tutorial, utilizaremos [!DNL Python] 3 en la [!DNL Jupyter Notebook] para mostrar cómo acceder y explorar los datos. En la página del iniciador se proporcionan blocs de notas de ejemplo. Utilizaremos la muestra &quot;Ventas al detalle&quot; para [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -59,7 +62,7 @@ Con el bloc de notas Retail Sales abierto, lo primero que hacemos es cargar las 
 
 #### Cargar datos
 
-Una vez cargadas las bibliotecas, podemos ver en inicio los datos. El siguiente código Python utiliza la estructura de datos de pandas y la función `DataFrame` read_csv() [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) para leer el CSV alojado en Github en el DataFrame de pandas:
+Una vez cargadas las bibliotecas, podemos ver en inicio los datos. El siguiente [!DNL Python] código utiliza la estructura de datos de los pandas y la función `DataFrame` read_csv() [para leer el CSV alojado](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) [!DNL Github] en el DataFrame de los paneles:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -73,7 +76,7 @@ Finalmente, podemos echar un vistazo a cómo se ven nuestros datos. Podemos util
 
 #### Resumen estadístico
 
-Podemos aprovechar la biblioteca pandas de Python para obtener el tipo de datos de cada atributo. El resultado de la siguiente llamada nos proporcionará información sobre el número de entradas y el tipo de datos de cada una de las columnas:
+Podemos aprovechar [!DNL Python's] la biblioteca de paneles para obtener el tipo de datos de cada atributo. El resultado de la siguiente llamada nos proporcionará información sobre el número de entradas y el tipo de datos de cada una de las columnas:
 
 ```PYTHON
 df.info()
@@ -201,7 +204,7 @@ En esta sección, declararemos todos los algoritmos en una matriz llamada `model
 
 ![](./images/walkthrough/training_scoring.png)
 
-Para la puntuación, estamos tomando la diferencia porcentual media entre los valores predichos `weeklySalesAhead` con los valores reales en los `y_test` datos. Dado que queremos minimizar la diferencia entre nuestra predicción y la realidad, el Regresor de aumento de degradado es el modelo de mejor rendimiento.
+Para la puntuación, estamos tomando la diferencia porcentual media entre los valores predichos `weeklySalesAhead` con los valores reales en los `y_test` datos. Ya que queremos minimizar la diferencia entre nuestra predicción y la realidad, el Regresor de aumento de degradado es el modelo de mejor rendimiento.
 
 #### Visualizar predicciones
 
