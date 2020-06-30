@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Administrar entidades del servicio de decisiones mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '7207'
+ht-degree: 0%
 
 ---
 
 
 # Administrar reglas y objetos de decisiones mediante API
 
-Este documento proporciona un tutorial para trabajar con las entidades comerciales de Decisioning Service mediante las API de Adobe Experience Platform.
+Este documento proporciona un tutorial para trabajar con las entidades comerciales de [!DNL Decisioning Service] utilizar las API de Adobe Experience Platform.
 
 El tutorial consta de dos partes:
 
@@ -21,31 +24,31 @@ El tutorial consta de dos partes:
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los servicios de la plataforma de experiencias y las convenciones de API. El repositorio de plataforma es un servicio que utilizan otros servicios de plataforma para almacenar objetos comerciales y diversos tipos de metadatos. Proporciona una forma segura y flexible de administrar y consulta esos objetos para que los utilicen varios servicios de tiempo de ejecución. El Servicio de toma de decisiones es uno de ellos. Antes de comenzar este tutorial, consulte la documentación siguiente:
+Este tutorial requiere un conocimiento práctico de los [!DNL Experience Platform] servicios y las convenciones de API. El [!DNL Platform] repositorio es un servicio que utilizan otros [!DNL Platform] servicios para almacenar objetos comerciales y diversos tipos de metadatos. Proporciona una forma segura y flexible de administrar y consulta esos objetos para que los utilicen varios servicios de tiempo de ejecución. El [!DNL Decisioning Service] es uno de esos. Antes de comenzar este tutorial, consulte la documentación siguiente:
 
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [Servicio](./../home.md)de decisiones: Explica los conceptos y componentes utilizados para la toma de decisiones sobre experiencias en general y para la toma de decisiones sobre Ofertas en particular. Ilustra las estrategias utilizadas para elegir la mejor opción para presentar durante la experiencia del cliente.
-- [Lenguaje de Consulta de Perfil (PQL)](../../segmentation/pql/overview.md): PQL es un lenguaje potente para escribir expresiones sobre instancias de XDM. PQL se utiliza para definir las reglas de decisión.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [!DNL Decisioning Service](./../home.md):: Explica los conceptos y componentes utilizados para la toma de decisiones sobre experiencias en general y para la toma de decisiones sobre Ofertas en particular. Ilustra las estrategias utilizadas para elegir la mejor opción para presentar durante la experiencia del cliente.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):: PQL es un lenguaje potente para escribir expresiones sobre instancias de XDM. PQL se utiliza para definir las reglas de decisión.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -53,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Convenciones de API de repositorio
 
-El servicio de toma de decisiones está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales de la plataforma. Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de utilizar una API POST, GET, PUT, PATCH o DELETE que indica el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos, pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
+[!DNL Decisioning Service] está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos [!DNL Platform’s] comerciales. Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de usar una API POST, GET, PUT, PATCH o DELETE que indique el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
 
 Además de los encabezados enumerados anteriormente, las API para crear, leer, actualizar, eliminar y consulta de objetos de repositorio tienen las siguientes convenciones:
 
@@ -78,7 +81,7 @@ El uso de cada variante **de** formato depende de la API específica:
 | Eliminar contenedor<br/>instanceDelete | N/D | `xdm.receipt` |
 | Leer Contenedor<br/>InstanceRead | N/D | `hal` con `schema` parámetro |
 | Lista,<br/>instanciascontenedores de lista | N/D | `hal` con `schema` parámetro especial `https://ns.adobe.com/experience/xcore/hal/results` |
-| Instancias de búsqueda | N/D | hal con parámetro especial `schema``https://ns.adobe.com/experience/xcore/hal/results` |
+| Instancias de búsqueda | N/D | hal con parámetro especial `schema` `https://ns.adobe.com/experience/xcore/hal/results` |
 | Leer raíz de repo | N/D | `home.hal` |
 
 Para las API de creación, actualización y lectura de contenedor, el esquema del parámetro de formato tiene el valor `https://ns.adobe.com/experience/xcore/container`.
@@ -89,7 +92,7 @@ La lista de contenedores accesibles se obtiene llamando al extremo raíz del rep
 
 ## Administración del acceso a los contenedores
 
-Un administrador puede agrupar en perfiles principios, recursos y permisos de acceso similares. Esto reduce la carga de administración y es compatible con la interfaz de usuario [de la Consola de administración de](https://adminconsole.adobe.com)Adobe. Debe ser administrador de productos de Adobe Experience Platform e Ofertas de su organización para crear perfiles y asignarles usuarios.
+Un administrador puede agrupar entidades principales, recursos y permisos de acceso similares en perfiles. Esto reduce la carga de administración y es compatible con la interfaz de usuario [de Admin Console de](https://adminconsole.adobe.com)Adobe. Debe ser administrador de productos de Adobe Experience Platform en su organización para crear perfiles y asignarles usuarios.
 
 Es suficiente crear perfiles de productos que coincidan con determinados permisos en un solo paso y, a continuación, simplemente agregar usuarios a esos perfiles. Los Perfiles actúan como grupos a los que se han concedido permisos y todos los usuarios reales o técnicos de ese grupo heredan esos permisos.
 
@@ -97,9 +100,9 @@ Es suficiente crear perfiles de productos que coincidan con determinados permiso
 
 Cuando el administrador haya concedido acceso a contenedores para usuarios regulares o integraciones, esos contenedores aparecerán en la llamada lista &quot;Principal&quot; del repositorio. La lista puede ser diferente para diferentes usuarios o integraciones, ya que es un subconjunto de todos los contenedores accesibles para el llamante. La lista de contenedores puede filtrarse por su asociación a contextos de productos. Se llama al parámetro filter `product` y se puede repetir. Si se proporciona más de un filtro de contexto de producto, se devolverá la unión de los contenedores que tienen asociaciones con cualquiera de los contextos de producto determinados. Tenga en cuenta que un solo contenedor se puede asociar a varios contextos de producto.
 
-El contexto de los contenedores del servicio de decisiones de plataforma es actualmente `dma_offers`.
+El contexto para los [!DNL Platform][!DNL Decisioning Service] contenedores es actualmente `dma_offers`.
 
->[!NOTE] El contexto para los Contenedores de decisiones de plataforma cambiará pronto a `acp`. El filtrado es opcional, pero los filtros solo `dma_offers` requerirán modificaciones en una versión futura. Para prepararse para este cambio, los clientes no deben usar filtros o aplicar ambos contextos de producto como filtro.
+>[!NOTE] El contexto para [!DNL Platform Decisioning Containers] pronto cambiará a `acp`. El filtrado es opcional, pero los filtros solo `dma_offers` requerirán modificaciones en una versión futura. Para prepararse para este cambio, los clientes no deben usar filtros o aplicar ambos contextos de producto como filtro.
 
 **Solicitud**
 
@@ -344,13 +347,15 @@ La paginación se controla mediante los siguientes parámetros:
 Es posible filtrar los resultados de lista y se produce independientemente del mecanismo de paginación. Los Filtros simplemente omiten las instancias en el orden de las listas o solicitan explícitamente incluir solo las instancias que cumplen una condición determinada. Un cliente puede solicitar que la expresión de propiedades se utilice como filtro o puede especificar una lista de URI que se utilizarán como valores de la clave principal de las instancias.
 
 - **`property`**:: Contiene una ruta de nombre de propiedad seguida de un operador de comparación seguido de un valor. <br/>
-La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad de carga útil `status` y que los valores posibles son `draft`, `approved`y `archived` luego el parámetro de consulta `deleted` `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
+La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad payload 
+`status` y los valores posibles son `draft`, `approved`, `archived` y `deleted` luego el parámetro de consulta `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
 <br/>
 La propiedad que se va a comparar con el valor dado se identifica como una ruta. Los componentes de ruta individuales están separados por ".", como: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
 Para las propiedades que tienen valores de cadena, numéricos o de fecha y hora, los operadores permitidos son: `==`, `!=`, `<`, `<=`, `>` y `>=`. Además, para propiedades con un valor de cadena, se `~` puede utilizar un operador. El `~` operador coincide con la propiedad dada según una expresión regular. El valor de cadena de la propiedad debe coincidir con la expresión **completa** de las entidades que se incluirán en los resultados filtrados. Por ejemplo, buscar la cadena `cars` en cualquier lugar dentro del valor de propiedad requiere que la expresión regular sea `.*cars.*`. Sin el encabezado o el final `.*`, solo las entidades coincidirán con las que tengan un valor de propiedad que comience o termine con `cars`, respectivamente. Para el `~` operador, la comparación de caracteres de letras no distingue entre mayúsculas y minúsculas. Para todos los demás operadores, la comparación distingue entre mayúsculas y minúsculas.<br/><br/>
 No solo se pueden usar propiedades de carga útil de instancia en expresiones de filtro. Las propiedades de los sobres se comparan de la misma manera, por ejemplo: `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>El parámetro de `property` consulta se puede repetir para que se apliquen varias condiciones de filtro, por ejemplo, para devolver todas las instancias que se modificaron por última vez después de una fecha determinada y antes de una fecha determinada. Los valores de esas expresiones deben tener codificación de dirección URL. Si no se da ninguna expresión y el nombre de la propiedad simplemente aparece en la lista, los elementos que cumplen los requisitos son aquellos que tienen una propiedad con el nombre dado.<br/>
+<br/>
+El parámetro de `property` consulta se puede repetir para que se apliquen varias condiciones de filtro, por ejemplo, para devolver todas las instancias que se modificaron por última vez después de una fecha determinada y antes de una fecha determinada. Los valores de esas expresiones deben tener codificación de dirección URL. Si no se da ninguna expresión y el nombre de la propiedad simplemente aparece en la lista, los elementos que cumplen los requisitos son aquellos que tienen una propiedad con el nombre dado.<br/>
 <br/>
 
 - **`id`**:: A veces, es necesario filtrar una lista por el URI de las instancias. El parámetro de `property` consulta se puede usar para filtrar una instancia, pero para obtener más de una instancia, se puede proporcionar una lista de URI a la solicitud. El `id` parámetro se repite y cada incidencia especifica un valor de URI, `id={URI_1}&id={URI_2},…` los valores de URI deben tener codificación de URL.
@@ -453,7 +458,7 @@ Además de los parámetros de paginación y filtrado de las API de lista, esta A
 
 La búsqueda de texto completo se controla mediante los siguientes parámetros:
 
-- **`q`**:: Contiene una lista sin ordenar separada por espacios de términos que se normalizan antes de compararlos con cualquier propiedad de cadena de las instancias. Las propiedades de cadena se analizan para los términos y esos términos también se normalizan. La consulta de búsqueda intenta coincidir con uno o más de los términos especificados en el `q` parámetro. Los caracteres +, -, =, &amp;&amp;,||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / tienen un significado especial para determinar los límites de la palabra dentro de la cadena de consulta y se debe aplicar una barra invertida cuando aparezca en un token que debe coincidir con el carácter. La cadena de consulta se puede rodear de comillas de doble para buscar coincidencias exactas de la cadena y para evitar caracteres especiales.
+- **`q`**:: Contiene una lista sin ordenar separada por espacios de términos que se normalizan antes de compararlos con cualquier propiedad de cadena de las instancias. Las propiedades de cadena se analizan para los términos y esos términos también se normalizan. La consulta de búsqueda intenta coincidir con uno o más de los términos especificados en el `q` parámetro. Los caracteres +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, :, / tienen un significado especial para determinar los límites de la palabra dentro de la cadena de consulta y se debe aplicar una barra invertida cuando aparezca en un token que debe coincidir con el carácter. La cadena de consulta se puede rodear de comillas de doble para buscar coincidencias exactas de la cadena y para evitar caracteres especiales.
 - **`field`**:: Si los términos de búsqueda solo deben coincidir con un subconjunto de las propiedades, el parámetro field puede indicar la ruta a esa propiedad. El parámetro se puede repetir para indicar más de una propiedad con la que se debe hacer coincidir.
 - **`qop`**:: Contiene un parámetro de control que se utiliza para modificar el comportamiento coincidente de la búsqueda. Cuando el parámetro se establece en y luego todos los términos de búsqueda deben coincidir y cuando el parámetro está ausente o su valor se define en o cuando cualquiera de los términos puede contar para una coincidencia.
 
@@ -831,7 +836,7 @@ Consulte [Actualización y parche de instancias](#updating-and-patching-instance
 
 El valor de la propiedad de condición de la regla contiene una expresión PQL. Se hace referencia a los datos de contexto mediante la expresión de ruta especial @{schemaID}.
 
-Las reglas se alinean naturalmente con los segmentos de la plataforma de experiencia y, a menudo, una regla simplemente reutiliza la intención de un segmento probando la propiedad de un perfil `segmentMembership` . La `segmentMembership` propiedad contiene los resultados de las condiciones de segmentos que ya se han evaluado. Esto permite que una organización defina una vez sus audiencias específicas de dominio, les asigne un nombre y evalúe las condiciones una vez.
+Las reglas se alinean naturalmente con los segmentos en la regla [!DNL Experience Platform] y, a menudo, una regla simplemente reutiliza la intención de un segmento probando la propiedad de un `segmentMembership` perfil. La `segmentMembership` propiedad contiene los resultados de las condiciones de segmentos que ya se han evaluado. Esto permite que una organización defina una vez sus audiencias específicas de dominio, les asigne un nombre y evalúe las condiciones una vez.
 
 ## Administración de colecciones de ofertas
 
