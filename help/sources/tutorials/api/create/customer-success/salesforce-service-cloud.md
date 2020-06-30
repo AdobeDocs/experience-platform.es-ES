@@ -4,35 +4,35 @@ solution: Experience Platform
 title: Creación de un conector de Salesforce Service Cloud mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
 
 
-# Creación de un conector de Salesforce Service Cloud mediante la API de servicio de flujo
+# Creación de un [!DNL Salesforce Service Cloud] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
->El conector de Salesforce Service Cloud está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El [!DNL Salesforce Service Cloud] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a Experience Platform a Salesforce Service Cloud (en lo sucesivo, &quot;SSC&quot;).
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a [!DNL Salesforce Service Cloud] (en adelante, &quot;SSC&quot;).
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a SSC mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a SSC mediante la [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para que el servicio de flujo se conecte con SSC, debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] conectarse con SSC, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -44,17 +44,17 @@ Para obtener más información sobre cómo empezar, consulte [este documento](ht
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,7 +64,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Buscar especificaciones de conexión
 
-Para crear una conexión SSC, debe existir un conjunto de especificaciones de conexión SSC en el servicio de flujo. El primer paso para conectar Platform con SSC es recuperar estas especificaciones.
+Para crear una conexión SSC, debe existir un conjunto de especificaciones de conexión SSC en [!DNL Flow Service]. El primer paso para conectarse [!DNL Platform] a SSC es recuperar estas especificaciones.
 
 **Formato API**
 
@@ -141,7 +141,7 @@ Una respuesta correcta devuelve las especificaciones de conexión para SSC, incl
 }
 ```
 
-## Creación de una conexión base
+## Create a base connection
 
 Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión de base por cuenta SSC, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
@@ -199,4 +199,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión de base SSC mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar los sistemas de éxito de los clientes mediante la API](../../explore/customer-success.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión de base SSC mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar los sistemas de éxito de los clientes mediante la API](../../explore/customer-success.md)de servicio de flujo.
