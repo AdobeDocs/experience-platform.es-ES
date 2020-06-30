@@ -4,57 +4,57 @@ solution: Experience Platform
 title: Creación de un conector ServiceNow mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
 
 
-# Creación de un conector ServiceNow mediante la API de servicio de flujo
+# Creación de un [!DNL ServiceNow] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
->El conector ServiceNow está en fase beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El [!DNL ServiceNow] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a un servidor de ServiceNow.
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a un [!DNL ServiceNow] servidor.
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un servidor de ServiceNow mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un [!DNL ServiceNow] servidor mediante la [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para que el servicio de flujo se conecte a ServiceNow, debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] conectarse a [!DNL ServiceNow], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `endpoint` | Extremo del servidor ServiceNow. |
-| `username` | Nombre de usuario utilizado para conectarse al servidor ServiceNow para la autenticación. |
-| `password` | La contraseña para conectarse al servidor de ServiceNow para la autenticación. |
+| `endpoint` | Extremo del [!DNL ServiceNow] servidor. |
+| `username` | Nombre de usuario utilizado para conectarse al [!DNL ServiceNow] servidor para la autenticación. |
+| `password` | La contraseña para conectarse al [!DNL ServiceNow] servidor para la autenticación. |
 
 Para obtener más información sobre cómo empezar, consulte [este documento](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)de ServiceNow.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,11 +64,11 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Buscar especificaciones de conexión
 
-Para crear una conexión ServiceNow, debe existir un conjunto de especificaciones de conexión ServiceNow en el servicio de flujo. El primer paso para conectar Platform a ServiceNow es recuperar estas especificaciones.
+Para crear una [!DNL ServiceNow] conexión, debe existir un conjunto de especificaciones de [!DNL ServiceNow] conexión dentro de [!DNL Flow Service]. El primer paso para conectarse [!DNL Platform] a [!DNL ServiceNow] es recuperar estas especificaciones.
 
 **Formato API**
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="service-now"` para obtener información específica para ServiceNow.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="service-now"` para obtener información específica para [!DNL ServiceNow].
 
 ```http
 GET /connectionSpecs
@@ -77,7 +77,7 @@ GET /connectionSpecs?property=name=="service-now"
 
 **Solicitud**
 
-La siguiente solicitud recupera las especificaciones de conexión de ServiceNow.
+La siguiente solicitud recupera las especificaciones de conexión para [!DNL ServiceNow].
 
 ```shell
 curl -X GET \
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve las especificaciones de conexión de ServiceNow, incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión base.
+Una respuesta correcta devuelve las especificaciones de conexión para [!DNL ServiceNow], incluido su identificador único (`id`). Este ID es necesario en el paso siguiente para crear una conexión base.
 
 ```json
 {
@@ -137,7 +137,7 @@ Una respuesta correcta devuelve las especificaciones de conexión de ServiceNow,
 
 ## Creación de una conexión base
 
-Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por cuenta de ServiceNow, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
+Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por [!DNL ServiceNow] cuenta, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -175,10 +175,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | ------------- | --------------- |
-| `auth.params.server` | Extremo del servidor de ServiceNow. |
-| `auth.params.username` | Nombre de usuario utilizado para conectarse al servidor ServiceNow para la autenticación. |
-| `auth.params.password` | La contraseña para conectarse al servidor de ServiceNow para la autenticación. |
-| `connectionSpec.id` | ID de especificación de conexión asociada a ServiceNow. |
+| `auth.params.server` | Extremo del [!DNL ServiceNow] servidor. |
+| `auth.params.username` | Nombre de usuario utilizado para conectarse al [!DNL ServiceNow] servidor para la autenticación. |
+| `auth.params.password` | La contraseña para conectarse al [!DNL ServiceNow] servidor para la autenticación. |
+| `connectionSpec.id` | ID de especificación de conexión asociada con [!DNL ServiceNow]. |
 
 **Respuesta**
 
@@ -193,4 +193,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión base de ServiceNow mediante la API de servicio de flujo y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar los sistemas de éxito de los clientes mediante la API](../../explore/customer-success.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión [!DNL ServiceNow] base mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar los sistemas de éxito de los clientes mediante la API](../../explore/customer-success.md)de servicio de flujo.
