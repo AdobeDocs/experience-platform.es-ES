@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Creación de un conector de concentradores de Evento de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un conector de concentradores de Evento de Azure mediante la API de servicio de flujo
+# Creación de un [!DNL Azure Event Hubs] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
-> El conector de los centros de Evento de Azure está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+> El [!DNL Azure Event Hubs] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Azure Evento Hubs.
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a una [!DNL Azure Event Hubs] cuenta.
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-- [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-- [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+- [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que debe conocer para conectarse correctamente a una cuenta de los centros de Evento de Azure mediante la API de servicio de flujo.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una [!DNL Azure Event Hubs] cuenta mediante la [!DNL Flow Service] API.
 
 ### Recopilar las credenciales necesarias
 
-Para que el servicio de flujo se conecte con la cuenta de los centros de Evento de Azure, debe proporcionar valores para las siguientes propiedades de conexión:
+Para [!DNL Flow Service] conectarse con su [!DNL Azure Event Hubs] cuenta, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `sasKeyName` | El nombre de la regla de autorización, que también se conoce como nombre de clave SAS. |
 | `sasKey` | Firma de acceso compartido generada. |
 | `namespace` | La Área de nombres de los centros de Evento a los que está accediendo. |
-| `connectionSpec.id` | ID de la especificación de conexión de los centros de Evento de Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `connectionSpec.id` | ID de especificación de [!DNL Azure Event Hubs] conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 Para obtener más información acerca de estos valores, consulte [este documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)de Evento Hubs.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de Experience Platform, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta de los centros de Evento de Azure, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por [!DNL Azure Event Hubs] cuenta, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
 
 **Formato API**
 
@@ -105,8 +105,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | El nombre de la regla de autorización, que también se conoce como nombre de clave SAS. |
 | `auth.params.sasKey` | Firma de acceso compartido generada. |
-| `namespace` | La Área de nombres de los centros de Evento a los que está accediendo. |
-| `connectionSpec.id` | ID de la especificación de conexión de los centros de Evento de Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `namespace` | La Área de nombres del [!DNL Event Hubs] acceso. |
+| `connectionSpec.id` | ID de especificación de [!DNL Azure Event Hubs] conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Respuesta**
 
@@ -121,4 +121,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión de Azure Evento Hubs mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API](../../explore/cloud-storage.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una [!DNL Azure Event Hubs] conexión mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API](../../explore/cloud-storage.md)de servicio de flujo.
