@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
 
 
-# Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
+# Enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de aprendizaje automático
 
-[!DNL Adobe Experience Platform] Data Science Workspace proporciona las herramientas y los recursos para crear, evaluar y utilizar modelos de aprendizaje automático para generar predicciones y perspectivas de datos. Cuando las perspectivas de aprendizaje automático se ingieren en un conjunto de datos habilitado para el Perfil, esos mismos datos también se ingieren como registros de Perfil, los cuales se pueden segmentar en subconjuntos de elementos relacionados mediante el servicio de segmentación de la plataforma de experiencia.
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] proporciona las herramientas y los recursos para crear, evaluar y utilizar modelos de aprendizaje automático para generar predicciones y perspectivas de datos. Cuando las perspectivas de aprendizaje automático se ingieren en un conjunto de datos [!DNL Profile]habilitado, esos mismos datos también se ingieren como [!DNL Profile] registros que luego se pueden segmentar en subconjuntos de elementos relacionados mediante [!DNL Experience Platform Segmentation Service].
 
-Este documento proporciona un tutorial paso a paso para enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático. Los pasos se desglosan en las siguientes secciones:
+Este documento proporciona un tutorial paso a paso para enriquecerse [!DNL Real-time Customer Profile] con las perspectivas de aprendizaje automático. Los pasos se desglosan en las siguientes secciones:
 
 1. [Crear un esquema de salida y un conjunto de datos](#create-an-output-schema-and-dataset)
 2. [Configurar un esquema de salida y un conjunto de datos](#configure-an-output-schema-and-dataset)
@@ -24,24 +24,24 @@ Este documento proporciona un tutorial paso a paso para enriquecer el Perfil del
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los diversos aspectos de la [!DNL Adobe Experience Platform] ingesta de datos de Perfil y la creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los diversos aspectos de la [!DNL Adobe Experience Platform] ingesta [!DNL Profile] de datos y la creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-* [Perfil](../../rtcdp/overview.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Servicio](../../identity-service/home.md)de identidad: Permite el Perfil del cliente en tiempo real al enlazar identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
-* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+* [!DNL Real-time Customer Profile](../../rtcdp/overview.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en Platform.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
 Además de los documentos mencionados, se recomienda revisar también las siguientes guías sobre esquemas y el Editor de Esquemas:
 
-* [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Describe esquemas XDM, componentes básicos, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en la plataforma de experiencia.
-* [Tutorial](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Proporciona instrucciones detalladas para crear esquemas con el Editor de Esquemas en la plataforma de experiencia.
+* [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Describe los esquemas XDM, los componentes básicos, los principios y las prácticas recomendadas para la composición de esquemas que se van a utilizar en [!DNL Experience Platform].
+* [Tutorial](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Proporciona instrucciones detalladas para crear esquemas con el Editor de Esquemas en [!DNL Experience Platform].
 
 ## Crear un esquema de salida y un conjunto de datos {#create-an-output-schema-and-dataset}
 
-El primer paso para enriquecer el Perfil del cliente en tiempo real con perspectivas de puntuación es saber qué objeto real (como una persona) define sus datos. Conocer los datos le permite describir y diseñar una estructura que tenga un significado para los datos, como diseñar una base de datos relacional.
+El primer paso hacia el enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de puntuación es saber qué objeto real (como una persona) definen sus datos. Conocer los datos le permite describir y diseñar una estructura que tenga un significado para los datos, como diseñar una base de datos relacional.
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). En esta sección se proporcionan instrucciones básicas para crear un esquema con el generador de esquemas. Para ver un tutorial más detallado, consulte el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas.
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Esquema]** para acceder al navegador de esquema. Haga clic en **[!UICONTROL Crear Esquema]** para acceder al Editor *de*Esquemas, donde puede crear esquemas de forma interactiva.
+1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Esquema]** para acceder al explorador de esquema. Haga clic en **[!UICONTROL Crear Esquema]** para acceder al Editor *de*Esquemas, donde puede crear esquemas de forma interactiva.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
 2. En la ventana *Composición* , haga clic en **[!UICONTROL Asignar]** para examinar las clases disponibles.
@@ -79,9 +79,9 @@ Ahora que ha creado un conjunto de datos de esquema de salida, puede continuar e
 
 ## Configurar un esquema de salida y un conjunto de datos {#configure-an-output-schema-and-dataset}
 
-Antes de habilitar un conjunto de datos para Perfil, debe configurar el esquema del conjunto de datos para tener un campo de identidad principal y luego habilitar el esquema para Perfil. Si desea crear y activar un nuevo esquema, puede consultar el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas. De lo contrario, siga las instrucciones a continuación para habilitar un esquema y un conjunto de datos existentes.
+Antes de habilitar un conjunto de datos para [!DNL Profile], debe configurar el esquema del conjunto de datos para tener un campo de identidad principal y luego habilitar el esquema para [!DNL Profile]. Si desea crear y activar un nuevo esquema, puede consultar el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas. De lo contrario, siga las instrucciones a continuación para habilitar un esquema y un conjunto de datos existentes.
 
-1. En Adobe Experience Platform, utilice el navegador de esquema para buscar el esquema de salida en el que desea activar el Perfil y haga clic en su nombre para vista de la composición.
+1. En Adobe Experience Platform, utilice el navegador esquema para buscar el esquema de salida en el que desea activar y haga clic [!DNL Profile] en su nombre para vista de la composición.
    ![](../images/models-recipes/enrich-rtcdp/schemas.png)
 
 2. Expanda la estructura de esquema y busque un campo adecuado para establecerlo como identificador principal. Haga clic en el campo que desee para mostrar sus propiedades.
@@ -93,22 +93,22 @@ Antes de habilitar un conjunto de datos para Perfil, debe configurar el esquema 
 4. Haga clic en el objeto de nivel superior de la estructura del esquema para mostrar las propiedades del esquema y activar el esquema para el Perfil alternando el conmutador de **[!UICONTROL Perfil]** . Haga clic en **[!UICONTROL Guardar]** para finalizar los cambios. El conjunto de datos que se creó con este esquema ahora se puede habilitar para Perfil.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
-5. Utilice el navegador de conjuntos de datos para encontrar el conjunto de datos en el que desea activar el Perfil y haga clic en su nombre para acceder a sus detalles.
+5. Utilice el explorador de conjuntos de datos para encontrar el conjunto de datos en el que desea habilitar y haga clic [!DNL Profile] en su nombre para acceder a sus detalles.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Habilite el conjunto de datos para el Perfil alternando el conmutador de **[!UICONTROL Perfil]** que se encuentra en la columna de información derecha.
+6. Habilite el conjunto de datos para [!DNL Profile] conmutar el conmutador de **[!UICONTROL Perfil]** que se encuentra en la columna de información derecha.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
-Cuando los datos se ingieren en un conjunto de datos habilitado para Perfil, esos mismos datos también se ingieren como registros de Perfil. Ahora que el esquema y el conjunto de datos están preparados, genere algunos datos en el conjunto de datos realizando ejecuciones de puntuación utilizando un modelo adecuado y continúe con este tutorial para crear segmentos de perspectiva mediante el Generador de segmentos.
+Cuando los datos se ingieren en un conjunto de datos [!DNL Profile]habilitado, esos mismos datos también se ingieren como [!DNL Profile] registros. Ahora que el esquema y el conjunto de datos están preparados, genere algunos datos en el conjunto de datos realizando ejecuciones de puntuación utilizando un modelo adecuado y continúe con este tutorial para crear segmentos de perspectiva mediante el Generador de segmentos.
 
 ## Creación de segmentos mediante el Generador de segmentos {#create-segments-using-the-segment-builder}
 
-Ahora que ha generado e ingestado perspectivas en el conjunto de datos habilitado para Perfil, puede administrar esos datos identificando subconjuntos de elementos relacionados mediante el Generador de segmentos. Siga los pasos a continuación para crear sus propios segmentos.
+Ahora que ha generado e ingestado perspectivas en el conjunto de datos [!DNL Profile]habilitado, puede administrar esos datos identificando subconjuntos de elementos relacionados mediante el Generador de segmentos. Siga los pasos a continuación para crear sus propios segmentos.
 
 1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Segmentos]** seguida de **[!UICONTROL Crear segmento]** para acceder al Generador de segmentos.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
-2. En el Generador de segmentos, el carril izquierdo proporciona acceso a los componentes principales de los segmentos: atributos, eventos y segmentos existentes. Cada bloque de creación aparece en su propia ficha respectiva. Seleccione la clase a la que se extiende el esquema con Perfil habilitado y, a continuación, busque los componentes básicos del segmento.
+2. En el Generador de segmentos, el carril izquierdo proporciona acceso a los componentes principales de los segmentos: atributos, eventos y segmentos existentes. Cada bloque de creación aparece en su propia ficha respectiva. Seleccione la clase a la que se extiende el esquema [!DNL Profile]habilitado y, a continuación, busque los componentes básicos del segmento.
    ![](../images/models-recipes/enrich-rtcdp/segment_builder.png)
 
 3. Arrastre y suelte los bloques de creación en el lienzo del generador de reglas, rellénelos con instrucciones comparativas.
@@ -123,4 +123,4 @@ Ahora que ha generado e ingestado perspectivas en el conjunto de datos habilitad
 
 ## Pasos siguientes {#next-steps}
 
-Este documento lo guió por los pasos necesarios para habilitar un esquema y un conjunto de datos para Perfil, y mostró brevemente el flujo de trabajo para crear segmentos de perspectiva mediante el Generador de segmentos. Para obtener más información sobre los segmentos y el Generador de segmentos, consulte la descripción general [del servicio](../../segmentation/home.md)Segmentación.
+Este documento lo guió por los pasos necesarios para habilitar un esquema y un conjunto de datos [!DNL Profile], y mostró brevemente el flujo de trabajo para crear segmentos de perspectiva mediante el Generador de segmentos. Para obtener más información sobre los segmentos y el Generador de segmentos, consulte la descripción general [del servicio](../../segmentation/home.md)Segmentación.
