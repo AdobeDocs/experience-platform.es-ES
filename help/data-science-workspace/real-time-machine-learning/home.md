@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre aprendizaje automático en tiempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 >[!IMPORTANT]
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
-El aprendizaje automático en tiempo real puede aumentar considerablemente la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferenciación en tiempo real y al aprendizaje continuo en Experience Edge.
+El aprendizaje automático en tiempo real puede aumentar considerablemente la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferenciación en tiempo real y al aprendizaje continuo en el [!DNL Experience Edge].
 
-Una combinación de computación sin fisuras tanto en el concentrador como en el borde reduce considerablemente la latencia que tradicionalmente está involucrada en la generación de experiencias hiperpersonalizadas que son relevantes y responden. Por lo tanto, el aprendizaje automático en tiempo real proporciona inferencias con una latencia increíblemente baja para la toma de decisiones sincrónica. Algunos ejemplos son el procesamiento de contenido personalizado de una página web o la aparición de una oferta o descuento para reducir la generación y aumentar las conversiones en una tienda web.
+Una combinación de computación optimizada tanto en el concentrador como en el concentrador reduce [!DNL Edge] drásticamente la latencia que tradicionalmente se dedica a generar experiencias hiperpersonalizadas que son relevantes y responden. Por lo tanto, el aprendizaje automático en tiempo real proporciona inferencias con una latencia increíblemente baja para la toma de decisiones sincrónica. Algunos ejemplos son el procesamiento de contenido personalizado de una página web o la aparición de una oferta o descuento para reducir la generación y aumentar las conversiones en una tienda web.
 
 ## Arquitectura de aprendizaje automático en tiempo real {#architecture}
 
@@ -35,15 +35,15 @@ El flujo de trabajo siguiente describe los pasos y resultados típicos que conll
 
 ### Introducción y preparación de datos
 
-Los datos se ingieren y transforman con el modelo de datos de experiencia (XDM) en la plataforma Adobe Experience. Estos datos se utilizan para la formación de modelos. Para obtener más información sobre XDM, visite la descripción general [de](../../xdm/home.md)XDM.
+Los datos se ingieren y transforman con el [!DNL Experience Data Model] (XDM) en Adobe Experience Platform. Estos datos se utilizan para la formación de modelos. Para obtener más información sobre XDM, visite la descripción general [de](../../xdm/home.md)XDM.
 
 ### Creación  
 
-Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o incluyéndolo como un modelo ONNX serializado previamente formalizado en equipos portátiles Jupyter de la plataforma Adobe Experience Platform.
+Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o incorporándolo como un modelo ONNX serializado previamente capacitado en portátiles Jupyter de Adobe Experience Platform.
 
 ### Implementación
 
-Implemente el modelo en Experience Edge para crear un servicio de aprendizaje automático en tiempo real en la Galería de servicios mediante el punto final de la API de predicción.
+Implemente el modelo en [!DNL Experience Edge] para crear un servicio de aprendizaje automático en tiempo real en la Galería [!UICONTROL de servicios] mediante el punto final de la API de predicción.
 
 ### Inferencia
 
@@ -51,7 +51,7 @@ Utilice el punto final de la API de REST de predicción para generar perspectiva
 
 ### Entrega
 
-Los especialistas en marketing pueden definir segmentos y reglas que asignen puntuaciones de aprendizaje automático en tiempo real a experiencias con Adobe Destinatario. Esto permite que visitantes del sitio web de su marca se muestren en tiempo real como una experiencia hiperpersonalizada de la misma página o de la página siguiente.
+A continuación, los especialistas en marketing pueden definir segmentos y reglas que asignen puntuaciones de aprendizaje automático en tiempo real a experiencias mediante Adobe Target. Esto permite que visitantes del sitio web de su marca se muestren en tiempo real como una experiencia hiperpersonalizada de la misma página o de la página siguiente.
 
 ## Funcionalidad actual
 
@@ -61,7 +61,7 @@ El aprendizaje automático en tiempo real se encuentra actualmente en alfa. La f
 > Limitaciones alfa:
 > - Actualmente, solo se admiten modelos basados en ONNX.
 > - Las funciones utilizadas en los nodos no se pueden serializar. Por ejemplo, una función lambda utilizada en un nodo Pandas.
-> - Hay una suspensión de 20 segundos después de que la implementación de Edge se realice manualmente.
+> - Hay una suspensión de 20 segundos después de que [!DNL Edge] la implementación se haya realizado manualmente.
 > - Para el aprendizaje profundo, los datos deben enviarse de manera tal que, cuando `df.values` se les llama, devuelvan un arreglo de discos que sea aceptable para su modelo DL. Esto se debe a que el nodo de puntuación del modelo ONNX utiliza `df.values` y envía la salida para realizar una puntuación con respecto al modelo.
 
 
