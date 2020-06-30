@@ -4,39 +4,42 @@ solution: Experience Platform
 title: Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0e993e3b0ad4ff58a67e7db742f97c5fb2c3308d
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '1069'
+ht-degree: 2%
 
 ---
 
 
-# Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros mediante la API de servicio de flujo
+# Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros mediante la [!DNL Flow Service] API
 
-El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para ingestar datos de parqué de un sistema de almacenamiento en la nube de terceros.
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos necesarios para transferir datos de parqué desde un sistema de almacenamiento en la nube de terceros.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-- [Fuentes](../../home.md): La plataforma de experiencia permite la ingesta de datos de diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
-- [Simuladores](../../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+- [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para poder ingerir correctamente datos de parqué de un almacenamiento de nube de terceros mediante la API de servicio de flujo.
+Las siguientes secciones proporcionan información adicional que deberá conocer para poder ingerir correctamente datos de parqué de un almacenamiento de nube de terceros mediante la [!DNL Flow Service] API.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia, incluidos los que pertenecen al servicio de flujo, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +49,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Para poder ingerir datos de parqué mediante API de plataforma, debe tener una conexión válida para el origen de almacenamiento en la nube de terceros al que accede. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
+Para poder ingerir datos de parqué mediante [!DNL Platform] API, debe disponer de una conexión válida para el origen de almacenamiento en la nube de terceros al que accede. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -58,9 +61,9 @@ Obtenga y almacene el identificador único (`$id`) de la conexión y continúe c
 
 ## Creación de un esquema de destinatario
 
-Para que los datos de origen se utilicen en Platform, también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un conjunto de datos de la plataforma en el que se incluyen los datos de origen.
+Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen.
 
-Si prefiere utilizar la interfaz de usuario en la plataforma de experiencias, el tutorial [Editor de](../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
+Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
 
 **Formato API**
 
@@ -70,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Solicitud**
 
-La siguiente solicitud de ejemplo crea un esquema XDM que extiende la clase de Perfil individual XDM.
+La siguiente solicitud de ejemplo crea un esquema XDM que extiende la clase XDM [!DNL Individual Profile] .
 
 ```shell
 curl -X POST \
@@ -195,7 +198,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM de destinatario, ahora se puede crear una conexión de origen mediante una solicitud POST a la API de servicio de flujo. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destinatario recuperado en el paso anterior.
+Con la creación de un esquema XDM de destinatario, ahora se puede crear una conexión de origen mediante una solicitud POST a la [!DNL Flow Service] API. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destinatario recuperado en el paso anterior.
 
 **Formato API**
 
@@ -254,7 +257,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ## Creación de una conexión base de datos
 
-Para poder ingerir datos externos en la plataforma, primero se debe adquirir una conexión base de datos de la plataforma de experiencia.
+Para poder ingerir datos externos en [!DNL Platform], primero se debe adquirir una conexión base de datos [!DNL Experience Platform] .
 
 Para crear una conexión de base de datos, siga los pasos descritos en el tutorial [de conexión de base de](./create-dataset-base-connection.md)datos.
 
@@ -308,7 +311,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ## Creación de una conexión de destinatario {#target}
 
-Ahora tiene los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Con estos identificadores, puede crear una conexión de destinatario mediante la API de servicio de flujo para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Con estos identificadores, puede crear una conexión de destinatario utilizando la [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen de entrada.
 
 **Formato API**
 
@@ -427,7 +430,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de parqué de su sistema de almacenamiento en la nube de terceros de forma programada. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de parqué de su sistema de almacenamiento en la nube de terceros de forma programada. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 - [Información general sobre el Perfil del cliente en tiempo real](../../../profile/home.md)
 - [Información general sobre el área de trabajo de ciencias de datos](../../../data-science-workspace/home.md)
