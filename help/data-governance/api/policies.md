@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Políticas
 
-Las políticas de uso de datos son reglas que su organización adopta que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a los datos dentro de Experience Platform.
+Las políticas de uso de datos son reglas que su organización adopta que describen los tipos de acciones de marketing que se le permite o se le restringe la realización de datos en [!DNL Experience Platform].
 
 El extremo se utiliza para todas las llamadas de API relacionadas con la visualización, creación, actualización o eliminación de directivas de uso de datos. `/policies`
 
@@ -406,7 +406,7 @@ Una solicitud de actualización correcta devuelve un estado HTTP 200 (Aceptar) y
 
 Una porción específica de una directiva se puede actualizar mediante una solicitud PATCH. A diferencia de las solicitudes PUT que _reescriben_ la directiva, las solicitudes PATCH actualizan solo la ruta especificada en el cuerpo de la solicitud. Esto resulta especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita enviar la ruta específica que desea actualizar (`/status`) y su valor (`ENABLE` o `DISABLE`).
 
-Actualmente, la API de servicio de directivas admite operaciones de &quot;agregar&quot;, &quot;reemplazar&quot; y &quot;quitar&quot; PARCH, y permite combinar varias actualizaciones en una sola llamada agregando cada una como un objeto dentro de la matriz, como se muestra en los ejemplos siguientes.
+La [!DNL Policy Service] API admite actualmente operaciones &quot;add&quot;, &quot;replace&quot; y &quot;remove&quot; PATCH, y le permite combinar varias actualizaciones en una sola llamada agregando cada una como un objeto dentro de la matriz, como se muestra en los siguientes ejemplos.
 
 **Formato API**
 
