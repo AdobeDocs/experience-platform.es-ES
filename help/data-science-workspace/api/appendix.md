@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Apéndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 4%
 
 ---
 
 
 # Apéndice
 
-Las siguientes secciones proporcionan información de referencia para diversas funciones de la API de aprendizaje automático Sensei.
+Las siguientes secciones proporcionan información de referencia para varias funciones de la [!DNL Sensei Machine Learning] API.
 
 ## Parámetros de Consulta para la recuperación de recursos {#query}
 
-La API de aprendizaje automático de Sensei admite parámetros de consulta al recuperar recursos. Los parámetros de consulta disponibles y sus usos se describen en la tabla siguiente:
+La [!DNL Sensei Machine Learning] API admite parámetros de consulta al recuperar recursos. Los parámetros de consulta disponibles y sus usos se describen en la tabla siguiente:
 
 | Parámetro de consulta | Descripción | Valor predeterminado |
 | --------------- | ----------- | ------- |
