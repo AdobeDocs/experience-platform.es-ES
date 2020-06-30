@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Modelo de dominio de decisiones de Oferta
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '2614'
+ht-degree: 0%
 
 ---
 
 
 # Visión general del modelo de dominio de decisiones de Oferta
 
-La toma de decisiones de Ofertas es un caso de uso del servicio de decisiones en el que se formalizan y administran de forma centralizada las reglas y predicciones utilizadas para atraer clientes con ofertas. La toma de decisiones de Oferta se considera un tipo de decisiones _**de**_ contenido. En este caso de uso, las opciones _**de**_ decisión se denominan _**ofertas**_ y se caracterizan como tales por el contenido que se les adjunta. Para obtener una introducción al modelo de objetos utilizado por el servicio de toma de decisiones, consulte el Modelo [de dominio del servicio de](experience-model.md)decisiones.
+La toma de decisiones de Oferta es un caso de uso en el [!DNL Decisioning Service] que se formalizan y administran de forma centralizada las reglas y predicciones utilizadas para atraer clientes con ofertas. La toma de decisiones de Oferta se considera un tipo de decisiones _**de**_ contenido. En este caso de uso, las opciones _**de**_ decisión se denominan _**ofertas**_ y se caracterizan como tales por el contenido que se les adjunta. Para obtener una introducción al modelo de objetos utilizado por el [!DNL Decisioning Service], consulte el Modelo [de dominio del servicio de](experience-model.md)decisiones.
 
 El objetivo es presentar al usuario final una &quot;mejor Oferta&quot; en cualquier canal basado en criterios de objetivo, limitaciones de costo y frecuencia, así como en interacciones previas entre canales, incluidas Ofertas previas propuestas.
 
@@ -60,7 +63,7 @@ Las ofertas generales, también denominadas ofertas personalizadas, son las opci
 
 Las colocaciones definen las restricciones de contenido y se utilizan con una actividad para especificar el lugar en el que se entrega la mejor experiencia. Esto reduce aún más el número de opciones que se pueden considerar y es otra restricción impuesta por la actividad. Esto se denomina restricción de colocación. Solo se considerarán las opciones que tengan contenido que cumpla una restricción de colocación, como ofertas. Esto se evalúa en las primeras etapas de la estrategia de decisión. Cuando los objetos de opción cambian las restricciones de colocación de cada actividad se vuelven a evaluar y la opción puede considerarse o quedar fuera de ella para una o varias actividades.
 
-No es responsabilidad del Servicio de decisiones formalizar los detalles complejos de las dependencias de contenido. En su lugar, cada cliente identificará la lista de colocaciones en todos los canales y dará a esas colocaciones identificadores y nombres únicos. Al hacer referencia a una ubicación determinada, el diseñador afirma que el contenido determinado se ajustará a la ubicación.
+No es responsabilidad del [!DNL Decisioning Service] grupo formalizar los detalles complejos de las dependencias de contenido. En su lugar, cada cliente identificará la lista de colocaciones en todos los canales y dará a esas colocaciones identificadores y nombres únicos. Al hacer referencia a una ubicación determinada, el diseñador afirma que el contenido determinado se ajustará a la ubicación.
 
 Cuando se desarrolla el contenido, el especialista en marketing de oferta y el diseñador de contenido simplemente (tienen que) acordar un &quot;contrato implícito&quot; que se encuentra detrás del nombre &quot;Imagen principal de Página de inicio&quot; o &quot;Secuencia de comandos de apertura de llamada de servicio&quot;. El primero puede acordarse como una imagen de 600 px de ancho y 350 px de altura y el segundo puede estar restringiendo el contenido al texto en dos variantes de idioma que no sea más de 50 palabras en tres o cuatro frases con una estructura semántica. Ubicación para no almacenar todo el significado del contrato oculto.
 
@@ -98,7 +101,7 @@ Cuando se solicita una decisión, el cliente puede solicitar propuestas de varia
 
 Actualmente, las restricciones de duplicación no se escriben en el repositorio de objetos comerciales. En su lugar, la desduplicación es la estrategia predeterminada en tiempo de ejecución. Un parámetro de solicitud puede anular el comportamiento predeterminado para suprimir el paso de anulación de duplicación.
 
-### Restricciones de Perfil: Reglas de elegibilidad
+### [!DNL Profile] restricciones: Reglas de elegibilidad
 
 Hasta ahora, las limitaciones examinadas han sido aplicables independientemente de para quién se haya seleccionado la oferta. La toma de decisiones de experiencias también admite un caso de uso en el que la personalización de propuestas se basa en los eventos de registros y series temporales del cliente. Las reglas se evalúan por perfil para decidir si una oferta cumple los requisitos o debe suprimirse para ese usuario. Para ello, se puede asociar una regla de elegibilidad con cada oferta. Además de los eventos de perfil y experiencia de un usuario final, la regla de elegibilidad tendrá en cuenta los datos de contexto en tiempo real. Esos datos son proporcionados por el servicio de envío y pueden adoptar la forma de datos que no están relacionados con un perfil, como los niveles de inventario, las condiciones meteorológicas y los horarios de vuelo.
 
