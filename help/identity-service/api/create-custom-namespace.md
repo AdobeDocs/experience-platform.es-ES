@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Crear una Área de nombres personalizada
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
 
 
 # Creación de una Área de nombres personalizada
 
-Mediante la API de Área de nombres de identidad, puede crear una Área de nombres de identidad personalizada que solo estará disponible para su organización.
+Mediante la [!DNL Identity Namespace] API, puede crear una Área de nombres de identidad personalizada que solo estará disponible para su organización.
 
 Para obtener recomendaciones sobre la creación de Áreas de nombres personalizadas, consulte [la documentación](../troubleshooting-guide.md)de preguntas más frecuentes de Identity Service.
 
