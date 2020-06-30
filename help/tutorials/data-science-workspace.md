@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriales de Área de trabajo de Data Science
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Para empezar, siga el tutorial [de puntaje de una](../data-science-workspace/mod
 
 ## Publicación de un modelo como servicio
 
-Adobe Experience Platform Data Science Workspace le permite publicar el modelo como un servicio, lo que permite a los usuarios de la organización de IMS puntuar datos sin necesidad de crear sus propios modelos. Esto se puede hacer mediante la interfaz de usuario o la API de aprendizaje automático Sensei. [!DNL Platform]
+Adobe Experience Platform Data Science Workspace le permite publicar el modelo como un servicio, lo que permite a los usuarios de la organización de IMS puntuar datos sin necesidad de crear sus propios modelos. Esto se puede hacer mediante la interfaz de usuario o la API de aprendizaje automático de Sensei. [!DNL Platform]
 
 **Este tutorial le ayudará a:**
 - Publicar un modelo como servicio.
@@ -137,7 +137,7 @@ Para obtener más información, visite el tutorial para [crear una canalización
 
 ## Creación de una aplicación de aprendizaje automático en tiempo real (alfa)
 
-Una combinación de computación sin fisuras tanto en el concentrador como en el borde reduce considerablemente la latencia que tradicionalmente está involucrada en la generación de experiencias hiperpersonalizadas que son relevantes y responden. Por lo tanto, el aprendizaje automático en tiempo real proporciona inferencias con una latencia increíblemente baja para la toma de decisiones sincrónica. Algunos ejemplos son el procesamiento de contenido personalizado de una página web, la aparición de una oferta y los descuentos para reducir la producción y aumentar las conversiones en una tienda web.
+Una combinación de computación optimizada tanto en el concentrador como en el concentrador reduce [!DNL Edge] drásticamente la latencia que tradicionalmente se dedica a generar experiencias hiperpersonalizadas que son relevantes y responden. Por lo tanto, el aprendizaje automático en tiempo real proporciona inferencias con una latencia increíblemente baja para la toma de decisiones sincrónica. Algunos ejemplos son el procesamiento de contenido personalizado de una página web, la aparición de una oferta y los descuentos para reducir la producción y aumentar las conversiones en una tienda web.
 
 **Esta guía le ayudará a:**
 - Conozca la arquitectura de aprendizaje automático en tiempo real.
