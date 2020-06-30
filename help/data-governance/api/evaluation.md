@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -390,7 +393,7 @@ El objeto response incluye una `duleLabels` matriz que contiene la lista consoli
 
 Si se infringe una directiva al realizar la acción de marketing especificada en los datos de los campos proporcionados, la matriz contendrá los detalles de la directiva (o políticas) afectada. `violatedPolicies` Si no se infringe ninguna directiva, la matriz `violatedPolicies` aparecerá vacía (`[]`).
 
-En la respuesta siguiente, se puede ver que la lista de `duleLabels` ahora es más corta, al igual que `discoveredLabels` para cada conjunto de datos, ya que solo incluye los campos especificados en el cuerpo de la solicitud. También observará que la directiva anteriormente violada, &quot;Publicidades de objetivo o contenido&quot;, requería ambas etiquetas, por lo que ya no se infringe y la `C4 AND C6` `violatedPolicies` matriz aparece vacía.
+En la respuesta siguiente, se puede ver que la lista de `duleLabels` ahora es más corta, al igual que `discoveredLabels` para cada conjunto de datos, ya que solo incluye los campos especificados en el cuerpo de la solicitud. También observará que la directiva anteriormente violada, &quot;Publicidades de objetivo o contenido&quot;, requería ambas `C4 AND C6` `violatedPolicies` etiquetas, por lo que ya no se viola y la matriz parece vacía.
 
 ```JSON
 {
@@ -490,6 +493,6 @@ En la respuesta siguiente, se puede ver que la lista de `duleLabels` ahora es m�
 }
 ```
 
-## Evaluación de políticas para el Perfil de clientes en tiempo real
+## Evaluación de políticas para [!DNL Real-time Customer Profile]
 
-La API de servicio de directivas también se puede utilizar para comprobar si hay infracciones de políticas que impliquen el uso de segmentos de Perfil de clientes en tiempo real. Consulte el tutorial sobre la [aplicación de la conformidad con el uso de datos para ver los segmentos](../../segmentation/tutorials/governance.md) de audiencia para obtener más información.
+La [!DNL Policy Service] API también se puede utilizar para comprobar si hay infracciones de política que impliquen el uso de [!DNL Real-time Customer Profile] segmentos. Consulte el tutorial sobre la [aplicación de la conformidad con el uso de datos para ver los segmentos](../../segmentation/tutorials/governance.md) de audiencia para obtener más información.
