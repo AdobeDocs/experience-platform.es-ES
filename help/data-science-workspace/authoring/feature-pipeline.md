@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creación de una canalización de funciones
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -284,7 +284,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### Almacenar el conjunto de datos de funciones con DataSaver {#store-your-feature-dataset-with-datasaver}
 
-DataSaver se encarga de almacenar los conjuntos de datos de funciones resultantes en una ubicación de almacenamiento. La implementación de DataSaver debe ampliar la clase abstracta `DataSaver` y anular el método abstracto `save`.
+DataSaver es responsable de almacenar los conjuntos de datos de funciones resultantes en una ubicación de almacenamiento. La implementación de DataSaver debe ampliar la clase abstracta `DataSaver` y anular el método abstracto `save`.
 
 El ejemplo siguiente amplía la clase DataSaver que almacena datos en un [!DNL Platform] conjunto de datos por ID, donde el ID del conjunto de datos (`featureDatasetId`) y el ID del inquilino (`tenantId`) son propiedades definidas en la configuración.
 
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Cree el motor de canalización de funciones mediante la API {#create-feature-pipeline-engine-api}
 
-Ahora que ha creado la canalización de funciones, debe crear una imagen de Docker para realizar una llamada a los extremos de la canalización de funciones en la API de aprendizaje automático de Sensei. Necesita una URL de imagen de Docker para realizar una llamada a los extremos de la canalización de funciones.
+Ahora que ha creado la canalización de funciones, debe crear una imagen de Docker para realizar una llamada a los extremos de la canalización de funciones en la [!DNL Sensei Machine Learning] API. Necesita una URL de imagen de Docker para realizar una llamada a los extremos de la canalización de funciones.
 
 >[!TIP]
 >Si no tiene una URL de Docker, visite los archivos de origen del [paquete en un tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obtener un tutorial paso a paso sobre la creación de una URL de host de Docker.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Creación de un motor de canalización de funciones {#create-engine-api}
 
-Una vez que tenga la ubicación de la imagen del Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de funciones mediante la API de aprendizaje automático de Sensei realizando una POST a `/engines`. La creación correcta de un motor de canalización de funciones le proporciona un identificador único del motor (`id`). Asegúrese de guardar este valor antes de continuar.
+Una vez que tenga la ubicación de la imagen del Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de funciones mediante la [!DNL Sensei Machine Learning] API realizando una POST en `/engines`. La creación correcta de un motor de canalización de funciones le proporciona un identificador único del motor (`id`). Asegúrese de guardar este valor antes de continuar.
 
 ### Crear una instancia MLI {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Una vez finalizada la puntuación, la canalización de funciones debería estar 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la API de aprendizaje automático de Sensei. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante la API [de aprendizaje automático](../api/getting-started.md)Sensei.
+Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la [!DNL Sensei Machine Learning] API. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante el uso del [!DNL Sensei Machine Learning API](../api/getting-started.md).
