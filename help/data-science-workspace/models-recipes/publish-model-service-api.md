@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Publicación de un modelo como servicio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Publicación de un modelo como servicio (API)
 
-Este tutorial trata el proceso de publicación de un modelo como servicio mediante la API [de aprendizaje automático de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei.
+Este tutorial trata el proceso de publicación de un modelo como servicio mediante el uso del [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico del espacio de trabajo de ciencia de datos de la plataforma Adobe Experience. Antes de comenzar este tutorial, consulte la información general [de](../home.md) Data Science Workspace para obtener una introducción de alto nivel al servicio.
+Este tutorial requiere un conocimiento práctico del espacio de trabajo de Adobe Experience Platform Data Science. Antes de comenzar este tutorial, consulte la información general [de](../home.md) Data Science Workspace para obtener una introducción de alto nivel al servicio.
 
 Para seguir este tutorial, debe tener un motor ML, una instancia de ML y un experimento. Para ver los pasos para crearlos en la API, consulte el tutorial sobre la [importación de una fórmula](./import-packaged-recipe-api.md)empaquetada.
 
-Finalmente, antes de iniciar este tutorial, revise la sección de [introducción](../api/getting-started.md) de la guía para desarrolladores para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API de aprendizaje automático Sensei, incluidos los encabezados necesarios utilizados en este tutorial:
+Finalmente, antes de iniciar este tutorial, revise la sección de [introducción](../api/getting-started.md) de la guía para desarrolladores para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la [!DNL Sensei Machine Learning] API, incluidos los encabezados necesarios utilizados en este tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ En la tabla siguiente se describe una terminología común utilizada en este tut
 
 | Término | Definición |
 --- | ---
-| **Instancia de aprendizaje automático (instancia de ML)** | Instancia de un motor Sensei para un inquilino en particular, que contiene datos, parámetros y código Sensei específicos. |
+| **Instancia de aprendizaje automático (instancia de ML)** | Instancia de un [!DNL Sensei] motor para un inquilino determinado, que contiene datos, parámetros y [!DNL Sensei] código específicos. |
 | **Experimento** | Entidad que sirve de marco para la realización de ejecuciones de experimentos de formación, la puntuación de ejecuciones de experimentos o ambas. |
 | **Experimento programado** | Término que describe la automatización de las ejecuciones de experimentos de prueba o de clasificación, regido por una programación definida por el usuario. |
 | **Ejecución del experimento** | Un ejemplo particular de experimentos de capacitación o puntuación. Las ejecuciones de experimentos múltiples de un experimento en particular pueden diferir en los valores de conjuntos de datos utilizados para la formación o la puntuación. |
