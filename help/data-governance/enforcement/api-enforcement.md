@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 2%
 
 ---
 
@@ -15,18 +18,18 @@ Una vez que haya creado etiquetas de uso de datos para los datos y haya creado p
 
 >[!NOTE] De forma predeterminada, solo pueden participar en la evaluación las directivas cuyo estado está configurado para `ENABLED` participar. Para permitir que `DRAFT` las directivas participen en la evaluación, debe incluir el parámetro de consulta `includeDraft=true` en la ruta de la solicitud.
 
-Este documento proporciona pasos sobre cómo utilizar la API de servicio de directivas para comprobar si hay infracciones de políticas en diferentes escenarios.
+Este documento proporciona pasos sobre cómo utilizar la [!DNL Policy Service] API para comprobar si hay infracciones de políticas en diferentes escenarios.
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los siguientes conceptos clave involucrados en la aplicación de las políticas DULE:
 
-* [Administración](../home.md)de datos: El marco por el cual la Plataforma impone el cumplimiento del uso de datos.
+* [Administración](../home.md)de datos: Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
    * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a conjuntos de datos (y/o a campos individuales dentro de esos conjuntos de datos), especificando restricciones para el uso de los datos.
    * [Directivas](../policies/overview.md)de uso de datos: Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que están permitidas o restringidas para determinados conjuntos de etiquetas DULE.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar llamadas exitosas a la API del servicio de directivas DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) [!DNL Policy Service] desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
 ## Evaluar mediante etiquetas DULE y una acción de mercadotecnia
 
@@ -360,6 +363,6 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 ## Pasos siguientes
 
-Al leer este documento, comprobó correctamente si hay infracciones de directivas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas DULE. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente las infracciones de directiva cuando se produzcan.
+Al leer este documento, comprobó correctamente si hay infracciones de políticas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas DULE. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente las infracciones de directiva cuando se produzcan.
 
-Para ver los pasos sobre cómo aplicar políticas de uso de datos para segmentos de audiencia en Perfil de clientes en tiempo real, consulte el siguiente [tutorial](../../segmentation/tutorials/governance.md).
+Para ver los pasos sobre cómo aplicar políticas de uso de datos para segmentos de audiencia en [!DNL Real-time Customer Profile], consulte el siguiente [tutorial](../../segmentation/tutorials/governance.md).
