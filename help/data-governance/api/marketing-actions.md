@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Acciones de mercadotecnia
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
 
 # Acciones de mercadotecnia
 
-Una acción de marketing, en el contexto de la gobernanza de datos de la plataforma de experiencia de Adobe, es una acción que realiza un consumidor de datos de la plataforma de experiencia, para la cual es necesario comprobar si hay infracciones de las políticas de uso de datos.
+Una acción de mercadotecnia, en el contexto de la Administración de datos de Adobe Experience Platform, es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
 Trabajar con acciones de marketing en la API requiere que utilice el `/marketingActions` punto final.
 
@@ -139,7 +142,7 @@ El objeto response contiene los detalles de la acción de marketing, incluida la
 
 ## Crear o actualizar una acción de marketing
 
-La API de servicio de directivas permite definir sus propias acciones de marketing, así como actualizar las existentes. Tanto la creación como la actualización se realizan mediante una operación PUT en el nombre de la acción de marketing.
+La [!DNL Policy Service] API le permite definir sus propias acciones de marketing, así como actualizar las existentes. Tanto la creación como la actualización se realizan mediante una operación PUT en el nombre de la acción de marketing.
 
 **Formato API**
 
@@ -192,7 +195,7 @@ Si se crea correctamente, recibirá un estado HTTP 201 (Creado) y el cuerpo de r
 
 ## Eliminar una acción de mercadotecnia
 
-Es posible eliminar las acciones de marketing enviando una solicitud DELETE a la parte `{marketingActionName}` de la acción de marketing que desee eliminar.
+Es posible eliminar las acciones de marketing enviando una solicitud de DELETE a la `{marketingActionName}` parte de la acción de marketing que desee eliminar.
 
 >[!NOTE] No puede eliminar las acciones de marketing a las que se hace referencia al salir de las directivas. Al intentar hacerlo, se producirá un error 400 (solicitud incorrecta) junto con un mensaje de error que incluye los ID `id` (o múltiples) de cualquier directiva (o directivas) que contenga una referencia a la acción de marketing que intenta eliminar.
 
