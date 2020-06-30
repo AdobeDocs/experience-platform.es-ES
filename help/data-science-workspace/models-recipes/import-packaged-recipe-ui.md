@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1760'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Importación de una fórmula empaquetada (IU)
 
-En este tutorial se explica cómo configurar e importar una fórmula empaquetada mediante el ejemplo de venta minorista proporcionado. Al final de este tutorial, estará listo para crear, capacitar y evaluar un modelo en Adobe Experience Platform Data Science Workspace.
+En este tutorial se explica cómo configurar e importar una fórmula empaquetada mediante el ejemplo de venta minorista proporcionado. Al final de este tutorial, estará listo para crear, entrenar y evaluar un modelo en Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Requisitos previos
 
@@ -22,7 +22,7 @@ Este tutorial requiere una fórmula empaquetada en forma de URL de imagen de Doc
 
 ## Flujo de trabajo de la interfaz de usuario
 
-La importación de una fórmula empaquetada en Data Science Workspace requiere configuraciones de fórmula específicas, compiladas en un solo archivo de Notación de objetos JavaScript (JSON), esta compilación de configuraciones de fórmula se denomina archivo **de** configuración. Una fórmula empaquetada con un conjunto concreto de configuraciones se denomina instancia **de** fórmula. Se puede usar una fórmula para crear muchas instancias de fórmula en el área de trabajo de ciencia de datos.
+La importación de una fórmula empaquetada en [!DNL Data Science Workspace] requiere configuraciones de fórmula específicas, compiladas en un solo archivo JSON (JavaScript Object Notation), esta compilación de configuraciones de fórmula se denomina archivo **de** configuración. Una fórmula empaquetada con un conjunto concreto de configuraciones se denomina instancia **de** fórmula. Se puede usar una fórmula para crear muchas instancias de fórmula en [!DNL Data Science Workspace].
 
 El flujo de trabajo para importar una fórmula de paquete consta de los siguientes pasos:
 - [Configurar una fórmula](#configure)
@@ -33,7 +33,7 @@ El flujo de trabajo para importar una fórmula de paquete consta de los siguient
 
 ### Configurar una fórmula {#configure}
 
-Cada instancia de fórmula en Data Science Workspace está acompañada de un conjunto de configuraciones que adaptan la instancia de fórmula a un caso de uso concreto. Los archivos de configuración definen los comportamientos de puntuación y formación predeterminados de un modelo creado con esta instancia de fórmula.
+Cada instancia de fórmula en [!DNL Data Science Workspace] está acompañada de un conjunto de configuraciones que adaptan la instancia de fórmula a un caso de uso determinado. Los archivos de configuración definen los comportamientos de puntuación y formación predeterminados de un modelo creado con esta instancia de fórmula.
 
 >[!NOTE] Los archivos de configuración son fórmulas y casos específicos.
 
@@ -116,11 +116,11 @@ A continuación se muestra un archivo de configuración de muestra que muestra l
 | `evaluation.metrics` | Cadena | lista separada por comas de las métricas de evaluación que se utilizarán para evaluar un modelo. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Cadena | esquema de salida utilizado para marcar un modelo. Deje esto vacío al importar en la interfaz de usuario, reemplácelo por SchemaID de puntuación al importar mediante API. |
 
-A los efectos de este tutorial, puede dejar los archivos de configuración predeterminados para la fórmula de ventas minoristas en la Referencia de área de trabajo de ciencia de datos como están.
+A los efectos de este tutorial, puede dejar los archivos de configuración predeterminados para la fórmula de ventas minoristas en la [!DNL Data Science Workspace] Referencia como están.
 
-### Fórmula basada en el acoplador de importación: Python {#python}
+### Fórmula basada en el acoplador de importación: [!DNL Python] {#python}
 
-Inicio navegando y seleccionando **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para Inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -131,7 +131,7 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 >[!NOTE]
 > En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la generación de la fórmula de venta minorista mediante archivos de origen Python.
 
-Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada mediante archivos de origen Python en el campo URL **[!UICONTROL de]** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Seleccione **[!UICONTROL Python]** en la lista desplegable *Tiempo de ejecución* y **[!UICONTROL Clasificación]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos [!DNL Python] de origen en el campo URL **** de origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Seleccione **[!UICONTROL Python]** en la lista desplegable *Tiempo de ejecución* y **[!UICONTROL Clasificación]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
 
 >[!NOTE]
 > *El tipo *admite **[!UICONTROL Clasificación]**y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
@@ -148,11 +148,11 @@ Revise la fórmula, agregue, modifique o elimine configuraciones según sea nece
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en [!DNL Data Science Workspace] el uso de la fórmula de ventas minoristas recién creada.
 
 ### Fórmula basada en el Docker de importación - R {#r}
 
-Inicio navegando y seleccionando **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para Inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -180,11 +180,11 @@ Revise la fórmula, agregue, modifique o elimine configuraciones según sea nece
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en [!DNL Data Science Workspace] el uso de la fórmula de ventas minoristas recién creada.
 
 ### Importar fórmula basada en el acoplador: PySpark {#pyspark}
 
-Inicio navegando y seleccionando **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para Inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -212,11 +212,11 @@ Revise la fórmula, agregue, modifique o elimine configuraciones según sea nece
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en [!DNL Data Science Workspace] el uso de la fórmula de ventas minoristas recién creada.
 
 ### Fórmula basada en el acoplador de importación: Scala {#scala}
 
-Inicio navegando y seleccionando **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la interfaz de usuario de la plataforma. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para Inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -225,9 +225,9 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 ![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen de Scala (Spark).
+> En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen de Scala ([!DNL Spark]).
 
-Una vez que esté en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen Scala en el campo URL *de* origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Seleccione **[!UICONTROL Spark]** en la lista desplegable *Runtime* . Una vez seleccionado el motor de ejecución de Spark, el artefacto predeterminado se rellena automáticamente en **[!UICONTROL Docker]**. A continuación, seleccione **[!UICONTROL Regresión]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que esté en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen Scala en el campo URL *de* origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Seleccione **[!UICONTROL Spark]** en la lista desplegable *Runtime* . Una vez seleccionado el motor de ejecución, el artefacto predeterminado se rellena automáticamente en [!DNL Spark] Docker ****. A continuación, seleccione **[!UICONTROL Regresión]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
 
 >[!NOTE]
 > *El tipo *admite **[!UICONTROL Clasificación]**y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
@@ -244,11 +244,11 @@ Revise la fórmula, agregue, modifique o elimine configuraciones según sea nece
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en el área de trabajo de ciencias de datos mediante la fórmula de ventas minoristas recién creada.
+Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un modelo en [!DNL Data Science Workspace] el uso de la fórmula de ventas minoristas recién creada.
 
 ## Pasos siguientes {#next-steps}
 
-Este tutorial proporciona una visión detallada sobre cómo configurar e importar una fórmula en el área de trabajo de ciencias de datos. Ahora puede crear, entrenar y evaluar un modelo con la fórmula recién creada.
+Este tutorial proporciona una visión detallada sobre cómo configurar e importar una fórmula en [!DNL Data Science Workspace]. Ahora puede crear, entrenar y evaluar un modelo con la fórmula recién creada.
 
 - [Formación y evaluación de un modelo en la interfaz de usuario](./train-evaluate-model-ui.md)
 - [Formación y evaluación de un modelo mediante la API](./train-evaluate-model-api.md)
