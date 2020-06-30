@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre las directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Información general sobre las directivas de uso de datos
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe la realización de datos dentro de Experience Platform.
+Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se restringe el rendimiento de los datos dentro de [!DNL Experience Platform].
 
 Este documento proporciona información general de alto nivel sobre las políticas de uso de datos y proporciona vínculos a documentación adicional para trabajar con políticas en la interfaz de usuario o la API.
 
 ## Acciones de mercadotecnia {#marketing-actions}
 
-**Las acciones** de mercadotecnia (también denominadas casos **de uso de** mercadotecnia) en el contexto del marco de administración de datos, son acciones que un consumidor de datos Experience Platform puede realizar, para las cuales su organización desea restringir el uso de datos. Como tal, una directiva de uso de datos se define de la siguiente manera:
+**Las acciones** de mercadotecnia (también denominadas casos **de uso de** mercadotecnia) en el contexto del marco de administración de datos, son acciones que un consumidor de [!DNL Experience Platform] datos puede realizar, por lo que su organización desea restringir el uso de datos. Como tal, una directiva de uso de datos se define de la siguiente manera:
 
 1. Una acción de mercadotecnia específica
 2. Las etiquetas de uso de datos con las que se restringe la acción
 
-Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que los tipos de datos específicos (como Información de identificación personal (PII)) no se pueden exportar e intenta exportar un conjunto de datos que contiene una etiqueta &quot;I&quot; (Datos de identidad), recibirá una respuesta del Servicio de directivas que le informará de que se ha violado una política de uso de datos.
+Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que los tipos de datos específicos (como Información de identificación personal (PII)) no se pueden exportar e intenta exportar un conjunto de datos que contiene una etiqueta &quot;I&quot; (Datos de identidad), recibirá una respuesta del usuario que le [!DNL Policy Service] informará de que se ha violado una política de uso de datos.
 
 >[!NOTE] Las acciones de marketing por sí solas no restringen el uso de datos. Deben incluirse en las directivas de uso de datos habilitadas para que esas acciones se evalúen en caso de infracciones de políticas.
 
