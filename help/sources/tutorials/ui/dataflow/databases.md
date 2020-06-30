@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario
 
-Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector base de la base de datos.
+Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector base de la base de datos.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-- [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+- [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [Perfil](../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
@@ -40,7 +40,7 @@ Seleccione la base de datos que desee utilizar y haga clic en **[!UICONTROL Sigu
 
 ## Asignación de campos de datos a un esquema XDM
 
-Aparece el paso *Asignación* , que proporciona una interfaz interactiva para asignar los datos de origen a un conjunto de datos de la plataforma.
+Aparece el paso *Asignación* , que proporciona una interfaz interactiva para asignar los datos de origen a un conjunto de datos de Platform.
 
 Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede utilizar un conjunto de datos existente o crear un nuevo conjunto de datos.
 
@@ -114,7 +114,7 @@ Una vez creado el flujo de datos, puede monitorear los datos que se están inger
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha creado correctamente un flujo de datos para incorporar datos de una base de datos externa y obtener información sobre la supervisión de conjuntos de datos. Los datos entrantes ahora se pueden utilizar en los servicios de plataforma descendente, como Perfil del cliente en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, se ha creado correctamente un flujo de datos para incorporar datos de una base de datos externa y obtener información sobre la supervisión de conjuntos de datos. Los datos entrantes ahora se pueden utilizar en servicios de Platform descendentes, como Perfil de clientes en tiempo real y Área de trabajo de ciencias de datos. Consulte los siguientes documentos para obtener más información:
 
 - [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 - [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
@@ -131,10 +131,10 @@ En el espacio de trabajo *[!UICONTROL Fuentes]* , seleccione la ficha **[!UICONT
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-La columna *Propiedades* aparece en la parte derecha de la pantalla, incluido un botón de alternancia **[!UICONTROL Habilitado]** . Seleccione la opción para desactivar el flujo de datos. Se puede utilizar la misma opción para volver a habilitar un flujo de datos después de desactivarlo.
+La columna *[!UICONTROL Propiedades]* aparece en la parte derecha de la pantalla, incluido un botón de alternancia **[!UICONTROL Habilitado]** . Seleccione la opción para desactivar el flujo de datos. Se puede utilizar la misma opción para volver a habilitar un flujo de datos después de desactivarlo.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Activar datos de entrada para población de Perfiles
+### Activar datos de entrada para [!DNL Profile] población
 
-Los datos entrantes del conector de origen se pueden utilizar para enriquecer y rellenar los datos de Perfil del cliente en tiempo real. Para obtener más información sobre cómo rellenar los datos de Perfil de clientes reales, consulte el tutorial sobre población [de](../profile.md)Perfiles.
+Los datos entrantes del conector de origen se pueden utilizar para enriquecer y rellenar [!DNL Real-time Customer Profile] los datos. Para obtener más información sobre cómo rellenar [!DNL Real-time Customer Profile] los datos, consulte el tutorial sobre población [de](../profile.md)Perfiles.
