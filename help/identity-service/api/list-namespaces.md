@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Áreas de nombres disponibles de Lista
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +33,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa una Área de nombres disponible. Las Áreas de nombres con un valor &quot;personalizado&quot; de &quot;false&quot; son Áreas de nombres estándar, mientras que las que tienen un valor &quot;personalizado&quot; de &quot;true&quot; son Áreas de nombres que su organización ha creado.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa una Área de nombres disponible. Las Áreas de nombres con un valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL false]&quot; son Áreas de nombres estándar, mientras que las que tienen un valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL true]&quot; son Áreas de nombres que su organización ha creado.
 
 >[!NOTE] Esta respuesta se ha truncado para el espacio.
 
