@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Optimizar un modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Optimizar un modelo mediante el marco de perspectivas de modelo
 
-El marco de perspectivas de modelo proporciona al científico de datos herramientas en el área de trabajo de ciencias de datos para realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos. El marco mejorará la velocidad y la eficacia del flujo de trabajo del aprendizaje automático, así como la facilidad de uso de los científicos de datos. Esto se lleva a cabo proporcionando una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático para facilitar el ajuste del modelo. El resultado final permite a los científicos de datos y a los científicos de datos ciudadanos tomar mejores decisiones de optimización de modelos para sus clientes finales.
+El marco de perspectivas del modelo proporciona al científico de datos herramientas para [!DNL Data Science Workspace] realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos. El marco mejorará la velocidad y la eficacia del flujo de trabajo del aprendizaje automático, así como la facilidad de uso de los científicos de datos. Esto se lleva a cabo proporcionando una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático para facilitar el ajuste del modelo. El resultado final permite a los científicos de datos y a los científicos de datos ciudadanos tomar mejores decisiones de optimización de modelos para sus clientes finales.
 
 ## ¿Qué son las métricas?
 
@@ -28,7 +28,7 @@ Después de implementar y entrenar un modelo, el próximo paso que un científic
 
 Actualmente, Model Insights Framework admite los siguientes tiempos de ejecución:
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 El código de muestra de las fórmulas se encuentra en el repositorio [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) , en `recipes`. En este tutorial se hará referencia a archivos específicos de este repositorio.
@@ -56,7 +56,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-Una vez habilitada una clase de evaluador, se calculará una serie de métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
+Una vez habilitada una clase de evaluador, se calcularán varias métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
@@ -95,19 +95,19 @@ Una vez definida en la fórmula, el siguiente paso es habilitarla en las fórmul
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-En el área de trabajo de ciencia de datos, el usuario podría ver las perspectivas en la ficha &quot;Métricas de evaluación&quot; de la página del experimento.
+En la página [!DNL Data Science Workspace], el usuario podrá ver las perspectivas en la ficha &quot;Métricas de evaluación&quot; de la página del experimento.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Por ahora, no hay métricas de evaluación predeterminadas para Python o Tensorflow. Por lo tanto, para obtener las métricas de evaluación de Python o Tensorflow, deberá crear una métrica de evaluación personalizada. Esto se puede hacer implementando la `Evaluator` clase.
+Por ahora, no hay métricas de evaluación predeterminadas para [!DNL Python] o [!DNL Tensorflow]. Por lo tanto, para obtener las métricas de evaluación para [!DNL Python] o [!DNL Tensorflow], deberá crear una métrica de evaluación personalizada. Esto se puede hacer implementando la `Evaluator` clase.
 
-#### Métricas de evaluación personalizadas para Python
+#### Métricas de evaluación personalizadas para [!DNL Python]
 
 Para las métricas de evaluación personalizadas, hay dos métodos principales que deben implementarse para el evaluador: `split()` y `evaluate()`.
 
-Para Python, estos métodos se definirían en [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para la `Evaluator` clase. Siga el vínculo [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para ver un ejemplo del `Evaluator`.
+Por [!DNL Python], estos métodos se definirían en [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para la `Evaluator` clase. Siga el vínculo [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para ver un ejemplo del `Evaluator`.
 
-La creación de métricas de evaluación en Python requiere que el usuario implemente los `evaluate()` métodos y `split()` .
+La creación de métricas de evaluación en [!DNL Python] requiere que el usuario implemente los `evaluate()` métodos y `split()` .
 
 El `evaluate()` método devuelve el objeto de métrica que contiene una matriz de objetos de métrica con propiedades de `name`, `value`y `valueType`.
 
@@ -117,7 +117,7 @@ El `split()` método debe devolver un datafame de formación y ensayo que se uti
 
 #### Métricas de evaluación personalizadas para Tensorflow
 
-Para Tensorflow, similar a Python, será necesario implementar los métodos `evaluate()` y `split()` en la `Evaluator` clase. Por `evaluate()`, las métricas deben devolverse mientras `split()` devuelve los conjuntos de datos de prueba y tren.
+Para [!DNL Tensorflow], de manera similar a [!DNL Python], será necesario implementar los métodos `evaluate()` y `split()` en la `Evaluator` clase. Por `evaluate()`, las métricas deben devolverse mientras `split()` devuelve los conjuntos de datos de prueba y tren.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ Los datos se cargan primero en un conjunto de datos desde un origen como se defi
 
 ## Uso de métricas y gráficos de visualización creados previamente
 
-El marco de perspectivas del modelo Sensei admitirá una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático. La siguiente tabla muestra las clases comunes de algoritmos de aprendizaje automático de alto nivel y las métricas y visualizaciones de evaluación correspondientes.
+La plantilla [!DNL Sensei Model Insights Framework] admitirá una plantilla predeterminada para cada tipo de algoritmo de aprendizaje automático. La siguiente tabla muestra las clases comunes de algoritmos de aprendizaje automático de alto nivel y las métricas y visualizaciones de evaluación correspondientes.
 
 | Tipo de algoritmo ML | Métricas de evaluación | Visualizaciones |
 --- | --- | ---
