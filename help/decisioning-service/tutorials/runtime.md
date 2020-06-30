@@ -4,43 +4,46 @@ solution: Experience Platform
 title: Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '1985'
+ht-degree: 0%
 
 ---
 
 
 # Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 
-Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de Decisioning Service mediante las API de Adobe Experience Platform.
+Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de [!DNL Decisioning Service] utilizar API de Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los servicios de la plataforma de experiencias que intervienen en la toma de decisiones y en la determinación de la siguiente mejor oferta para presentar durante las experiencias de los clientes. Antes de comenzar este tutorial, consulte la documentación siguiente:
+Este tutorial requiere una comprensión práctica de los [!DNL Experience Platform] servicios que intervienen en la toma de decisiones y la determinación de la siguiente mejor oferta para presentar durante las experiencias de los clientes. Antes de comenzar este tutorial, consulte la documentación siguiente:
 
-- [Servicio](./../home.md)de decisiones: Proporciona el marco para agregar y eliminar ofertas y crear algoritmos para elegir lo mejor que se puede presentar durante la experiencia del cliente.
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [Lenguaje de Consulta de Perfil (PQL)](../../segmentation/pql/overview.md): PQL se utiliza para definir reglas y filtros.
+- [!DNL Decisioning Service](./../home.md):: Proporciona el marco para agregar y eliminar ofertas y crear algoritmos para elegir lo mejor que se puede presentar durante la experiencia del cliente.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):: PQL se utiliza para definir reglas y filtros.
 - [Administrar reglas y objetos de decisiones mediante API](./entities.md): Antes de utilizar el tiempo de ejecución de los servicios de decisiones, deberá configurar las entidades relacionadas.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../tutorials/authentication.md)entorno limitado.
+>[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../tutorials/authentication.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -52,7 +55,7 @@ También es necesario para solicitudes en tiempo de ejecución:
 
 >[!NOTE] `UUID` es una cadena en formato UUID que es única globalmente y no debe reutilizarse para distintas llamadas de API
 
-El servicio de toma de decisiones está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales de Platform, el repositorio de objetos principales XDM. Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de utilizar una API POST, GET, PUT, PATCH o DELETE que indica el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos, pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
+[!DNL Decisioning Service] está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales, el repositorio de objetos principales XDM. [!DNL Platform’s] Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de usar una API POST, GET, PUT, PATCH o DELETE que indique el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
 
 Las rutas de extremo de todas las API de repositorio de objetos principales XDM inicio con `https://platform.adobe.io/data/core/ode/`.
 
@@ -60,7 +63,7 @@ El primer elemento de ruta que sigue al punto final es el `containerId`. Este id
 
 ## Compilación de modelos de decisión
 
-La activación de las entidades lógicas del negocio se produce de manera automática y continua. Tan pronto como se guarde una nueva opción en el repositorio y se marque como &quot;aprobada&quot;, será un candidato para la inclusión del conjunto de opciones disponibles. Tan pronto como se actualice una regla de decisión, el conjunto de reglas se volverá a montar y se preparará para la ejecución en tiempo de ejecución. En este paso de activación automática, se evaluarán todas las restricciones definidas por la lógica empresarial que no dependan del contexto de tiempo de ejecución. Los resultados de este paso de activación se envían a una caché en la que están disponibles para el tiempo de ejecución del servicio de decisiones.
+La activación de las entidades lógicas del negocio se produce de manera automática y continua. Tan pronto como se guarde una nueva opción en el repositorio y se marque como &quot;aprobada&quot;, será un candidato para la inclusión del conjunto de opciones disponibles. Tan pronto como se actualice una regla de decisión, el conjunto de reglas se volverá a montar y se preparará para la ejecución en tiempo de ejecución. En este paso de activación automática, se evaluarán todas las restricciones definidas por la lógica empresarial que no dependan del contexto de tiempo de ejecución. Los resultados de este paso de activación se envían a una caché en la que están disponibles para el motor de ejecución [!DNL Decisioning Service] .
 
 ### Efectos de las colocaciones, filtros y estados del ciclo vital
 
@@ -147,7 +150,7 @@ curl -X GET {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/diagnostics \
   -H 'x-request-id: {NEW_UUID}'
 ```
 
-El único parámetro para esta llamada de API es `containerId`. Los resultados son todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
+El único parámetro para esta llamada de API es `containerId`. Los resultados de todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
 
 **Respuesta**
 
@@ -168,11 +171,11 @@ El único parámetro para esta llamada de API es `containerId`. Los resultados s
 
 ## Llamadas a la API de REST para ejecutar decisiones
 
-La API de REST es una de las rutas para las aplicaciones que se ejecutan en la parte superior de la plataforma a fin de obtener la mejor experiencia basada en las reglas, modelos y restricciones que la organización ha establecido para sus usuarios. Las aplicaciones envían una de las identidades del perfil (ID de perfil y Área de nombres de identidad). El servicio de toma de decisiones buscará el perfil y la información se utilizará para aplicar la lógica empresarial. Se pueden pasar datos de contexto adicionales a la solicitud y, si se especifican en las reglas comerciales, se incluirán en los datos para tomar la decisión.
+La API de REST es una de las rutas para que las aplicaciones que se ejecutan sobre [!DNL Platform] la base obtengan la siguiente mejor experiencia en función de las reglas, modelos y restricciones que la organización ha establecido para sus usuarios. Las aplicaciones envían una de las identidades del perfil (ID de perfil y Área de nombres de identidad) que [!DNL Decisioning Service] buscará el perfil y la información se utilizará para aplicar la lógica empresarial. Se pueden pasar datos de contexto adicionales a la solicitud y, si se especifican en las reglas comerciales, se incluirán en los datos para tomar la decisión.
 
 Las aplicaciones pueden lograr un mejor rendimiento al solicitar una decisión de hasta 30 actividades a la vez. Los URI de las actividades se pasan en la misma solicitud. La API de REST es sincrónica y devolverá las opciones propuestas para todas esas actividades o la opción de reserva si ninguna opción de personalización satisface las restricciones.
 
-Es posible que dos actividades diferentes tengan la misma opción que sus &quot;mejores&quot;. Para evitar repetir una experiencia compuesta, de forma predeterminada, el servicio de decisiones arbitrará entre las actividades a las que se hace referencia en la misma solicitud. El arbitraje significa que para cada una de las actividades se tienen en cuenta sus opciones principales de N, pero no se propone ninguna opción más de una vez en todas esas actividades. Si dos actividades tienen la misma opción de clasificación superior, se elegirá una de ellas para que utilice su segunda opción o la tercera opción, y así sucesivamente. Estas reglas de anulación de duplicación intentan evitar que cualquiera de las actividades utilice su opción de reserva.
+Es posible que dos actividades diferentes tengan la misma opción que sus &quot;mejores&quot;. Para evitar la repetición de una experiencia compuesta, de forma predeterminada, [!DNL Decisioning Service] se arbitran entre las actividades a las que se hace referencia en la misma solicitud. El arbitraje significa que para cada una de las actividades se tienen en cuenta sus opciones principales de N, pero no se propone ninguna opción más de una vez en todas esas actividades. Si dos actividades tienen la misma opción de clasificación superior, se elegirá una de ellas para que utilice su segunda opción o la tercera opción, y así sucesivamente. Estas reglas de anulación de duplicación intentan evitar que cualquiera de las actividades utilice su opción de reserva.
 
 La solicitud de decisión contiene los argumentos de su cuerpo de una solicitud POST. El cuerpo tiene el formato de valor de encabezado `Content-Type` JSON `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
@@ -217,7 +220,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 }’
 ```
 
-- **`xdm:dryRun`** - Cuando el valor de esta propiedad opcional se establece en true, la solicitud de decisión obedece a restricciones de limitación pero no las arrastra realmente, se espera que el llamante nunca tenga la intención de presentar la propuesta al perfil. El servicio de toma de decisiones no registrará la propuesta como un evento de decisión XDM oficial y no aparecerá en los conjuntos de datos de sistema de informes. El valor predeterminado de esta propiedad es false y, cuando se omite la propiedad, la decisión no se considera una ejecución de prueba y, por lo tanto, se presentará al usuario final.
+- **`xdm:dryRun`** - Cuando el valor de esta propiedad opcional se establece en true, la solicitud de decisión obedece a restricciones de limitación pero no las arrastra realmente, se espera que el llamante nunca tenga la intención de presentar la propuesta al perfil. La [!DNL Decisioning Service] propuesta no registrará la propuesta como un evento oficial de decisión XDM y no aparecerá en los conjuntos de datos de sistema de informes. El valor predeterminado de esta propiedad es false y, cuando se omite la propiedad, la decisión no se considera una ejecución de prueba y, por lo tanto, se presentará al usuario final.
 - **`xdm:validateContextData`** - Esta propiedad opcional activa o desactiva la validación de los datos de contexto. Si la validación está activada, para cada elemento de datos de contexto proporcionado, el esquema (basado en el `@type` campo) se recuperará del Registro XDM y el `xdm:data` objeto se validará en él.
 
 La solicitud por este esquema contiene una matriz de URI que hace referencia a actividades de oferta, una identidad de perfil y una matriz de elementos de datos de contexto:
@@ -289,4 +292,4 @@ Tenga en cuenta que la sintaxis de PQL no utiliza prefijos en los nombres de pro
 Todos los registros de las entidades de evento de perfil y experiencia ya se administran en el almacén de perfiles. Al transmitir una o más identidades de perfil a la solicitud, el perfil de esas identidades será identificado y buscado desde la tienda. Los datos están disponibles automáticamente para las reglas de decisión y los modelos evaluados por la estrategia de decisión.
 
 Para recuperar los registros de perfil y experiencia, se aplica la directiva de combinación predeterminada.
-Tenga en cuenta que después de cargar registros de perfil en el panel de datos de la Plataforma, hay un ligero retraso hasta que se puedan consultar los registros de perfil. Lo mismo ocurre con la ingesta de registros de perfiles y experiencias a través de las API de flujo, solo después de unos segundos los datos estarán disponibles para evaluar las reglas de decisión que evalúan los datos de perfil y evento de experiencia.
+Tenga en cuenta que, después de cargar registros de perfil en el [!DNL Platform] datalake, hay un ligero retraso hasta que se puedan consultar los registros de perfil. Lo mismo ocurre con la ingesta de registros de perfiles y experiencias a través de las API de flujo, solo después de unos segundos los datos estarán disponibles para evaluar las reglas de decisión que evalúan los datos de perfil y evento de experiencia.
