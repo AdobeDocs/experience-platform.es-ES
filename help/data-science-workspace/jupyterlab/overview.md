@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '3782'
+source-wordcount: '3647'
 ht-degree: 11%
 
 ---
 
 
-# Guía del usuario de JupyterLab
+# [!DNL JupyterLab] guía del usuario
 
-JupyterLab es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en [!DNL Adobe Experience Platform]. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
+[!DNL JupyterLab] es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en [!DNL Adobe Experience Platform]. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
 
-Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
+Este documento proporciona información general sobre [!DNL JupyterLab] y sus características, así como instrucciones para realizar acciones comunes.
 
-## JupyterLab en Experience Platform
+## [!DNL JupyterLab] en [!DNL Experience Platform]
 
 La integración de JupyterLab de Experience Platform se acompaña de cambios en la arquitectura, consideraciones de diseño, extensiones de bloc de notas personalizadas, bibliotecas preinstaladas y una interfaz temática de Adobe.
 
@@ -26,29 +26,29 @@ La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en
 
 | Función | Descripción |
 | --- | --- |
-| **Kernels** | Los Kernels proporcionan al portátil y a otros front-end de JupyterLab la capacidad de ejecutar e introducir código en diferentes lenguajes de programación. Experience Platform proporciona núcleos adicionales para apoyar el desarrollo en Python, R, PySpark y Spark. Consulte la sección [kernels](#kernels) para obtener más detalles. |
-| **Acceso a datos** | Acceda directamente a los conjuntos de datos existentes desde JupyterLab con compatibilidad total con funciones de lectura y escritura. |
-| **Integración de servicios de Platform** | Las integraciones integradas le permiten utilizar otros servicios de Platform directamente desde JupyterLab. En la sección sobre [Integración con otros servicios](#service-integration)de Platform se proporciona una lista completa de las integraciones admitidas. |
+| **Kernels** | Los kernels proporcionan al portátil y a otros [!DNL JupyterLab] front-end la capacidad de ejecutar e introducir código en diferentes lenguajes de programación. [!DNL Experience Platform] proporciona núcleos adicionales para admitir el desarrollo en [!DNL Python], R, PySpark y [!DNL Spark]. Consulte la sección [kernels](#kernels) para obtener más detalles. |
+| **Acceso a datos** | Acceda directamente a los conjuntos de datos existentes desde dentro [!DNL JupyterLab] con compatibilidad total con las capacidades de lectura y escritura. |
+| **[!DNL Platform]integración de servicios ** | Las integraciones integradas le permiten utilizar otros [!DNL Platform] servicios directamente desde dentro [!DNL JupyterLab]. En la sección sobre [Integración con otros servicios](#service-integration)de Platform se proporciona una lista completa de las integraciones admitidas. |
 | **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y el Experience Platform, incluida la comunicación de servicio a servicio de Platform, se cifran y autentican a través del <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
-| **Bibliotecas de desarrollo** | En Experience Platform, JupyterLab proporciona bibliotecas preinstaladas para Python, R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
-| **Controlador de biblioteca** | Cuando las bibliotecas preinstaladas no están adaptadas a sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de Platform y proteger sus datos. Consulte la sección [kernels](#kernels) para obtener más detalles. |
+| **Bibliotecas de desarrollo** | En [!DNL Experience Platform], [!DNL JupyterLab] proporciona bibliotecas preinstaladas para [!DNL Python], R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
+| **Controlador de biblioteca** | Cuando las bibliotecas preinstaladas no están adaptadas a sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de [!DNL Platform] los datos y mantenerlos seguros. Consulte la sección [kernels](#kernels) para obtener más detalles. |
 
 >[!NOTE] Las bibliotecas adicionales solo están disponibles para la sesión en la que se instalaron. Debe reinstalar las bibliotecas adicionales que necesite al iniciar sesiones nuevas.
 
-## Integración con otros servicios de Platform {#service-integration}
+## Integración con otros [!DNL Platform] servicios {#service-integration}
 
-La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. La integración de JupyterLab en [!DNL Platform] un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole aprovechar [!DNL Platform] al máximo su potencial. Los siguientes [!DNL Platform] servicios están disponibles en JupyterLab:
+La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. La integración de [!DNL JupyterLab] on [!DNL Platform] como un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole utilizar [!DNL Platform] todo su potencial. Los siguientes [!DNL Platform] servicios están disponibles en [!DNL JupyterLab]:
 
-* **Servicio de catálogo:** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
-* **Servicio de Consulta:** Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
-* **Marco para la detección del lenguaje Sensei ML:** Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
-* **Modelo de datos de experiencia (XDM):** La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform. [El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+* **[!DNL Catalog Service]::**Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
+* **[!DNL Query Service]::**Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
+* **[!DNL Sensei ML Framework]::**Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
+* **[!DNL Experience Data Model (XDM)]::**La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform.[El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
->[!NOTE] Algunas integraciones [!DNL Platform] de servicio en JupyterLab están limitadas a núcleos específicos. Consulte la sección sobre [núcleos](#kernels) para obtener más detalles.
+>[!NOTE] Algunas integraciones [!DNL Platform] de servicios en [!DNL JupyterLab] están limitadas a núcleos específicos. Consulte la sección sobre [núcleos](#kernels) para obtener más detalles.
 
 ## Funciones clave y operaciones comunes
 
-En las secciones siguientes encontrará información sobre las características clave de JupyterLab e instrucciones sobre cómo realizar operaciones comunes:
+En las secciones siguientes se proporciona información sobre las características clave [!DNL JupyterLab] y las instrucciones para realizar operaciones comunes:
 
 * [Access JupyterLab](#access-jupyterlab)
 * [Interfaz JupyterLab](#jupyterlab-interface)
@@ -58,28 +58,28 @@ En las secciones siguientes encontrará información sobre las características 
 * [Recurso de ejecución de PySpark/Spark](#execution-resource)
 * [Iniciador](#launcher)
 
-### Access JupyterLab {#access-jupyterlab}
+### Acceso [!DNL JupyterLab] {#access-jupyterlab}
 
-En [Adobe Experience Platform](https://platform.adobe.com), seleccione **Equipos portátiles** en la columna de navegación izquierda. Deje tiempo para que JupyterLab se inicialice completamente.
+En [Adobe Experience Platform](https://platform.adobe.com), seleccione **Equipos portátiles** en la columna de navegación izquierda. Deje que transcurra algún tiempo para que se inicialice [!DNL JupyterLab] completamente.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### Interfaz JupyterLab {#jupyterlab-interface}
+### [!DNL JupyterLab] interfaz {#jupyterlab-interface}
 
-La interfaz de JupyterLab consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene fichas de documentos y actividades.
+La [!DNL JupyterLab] interfaz consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene fichas de documentos y actividades.
 
 **Barra de menús**
 
-La barra de menús situada en la parte superior de la interfaz tiene menús de nivel superior que exponen las acciones disponibles en JupyterLab con sus métodos abreviados de teclado:
+La barra de menús situada en la parte superior de la interfaz tiene menús de nivel superior que exponen las acciones disponibles [!DNL JupyterLab] con los métodos abreviados de teclado:
 
 * **Archivo:** Acciones relacionadas con archivos y directorios
 * **Editar:** Acciones relacionadas con la edición de documentos y otras actividades
-* **Vista:** Acciones que alteran la apariencia de JupyterLab
+* **Vista:** Acciones que modifican el aspecto de [!DNL JupyterLab]
 * **Ejecutar:** Acciones para ejecutar código en diferentes actividades, como blocs de notas y consolas de código
 * **Núcleo:** Acciones para administrar los núcleos
 * **Fichas:** Una lista de documentos y actividades abiertos
 * **Configuración:** Configuración común y editor de configuración avanzada
-* **Ayuda:** Una lista de JupyterLab y enlaces de ayuda del núcleo
+* **Ayuda:** Una lista de vínculos de ayuda [!DNL JupyterLab] y del núcleo
 
 **Barra lateral izquierda**
 
@@ -98,7 +98,7 @@ Haga clic en una ficha para exponer sus funciones o haga clic en una ficha expan
 
 **Área de trabajo principal**
 
-El área de trabajo principal de JupyterLab le permite organizar documentos y otras actividades en paneles de fichas que se pueden cambiar de tamaño o subdividir. Arrastre una ficha al centro de un panel de fichas para migrarla. Para dividir un panel, arrastre una ficha a la izquierda, a la derecha, a la parte superior o a la parte inferior del panel:
+El área de trabajo principal de [!DNL JupyterLab] permite organizar documentos y otras actividades en paneles de fichas que se pueden cambiar de tamaño o subdividir. Arrastre una ficha al centro de un panel de fichas para migrarla. Para dividir un panel, arrastre una ficha a la izquierda, a la derecha, a la parte superior o a la parte inferior del panel:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
@@ -120,19 +120,19 @@ Las acciones comunes de las células se describen a continuación:
 
 ### Kernels {#kernels}
 
-Los núcleos de los portátiles son los motores informáticos específicos del idioma para procesar las celdas de los portátiles. Además de Python, JupyterLab proporciona soporte de idioma adicional en R, PySpark y Spark (Scala). Al abrir un documento portátil, se inicia el núcleo asociado. Cuando se ejecuta una celda portátil, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se cierre el núcleo.
+Los núcleos de los portátiles son los motores informáticos específicos del idioma para procesar las celdas de los portátiles. Además de [!DNL Python], [!DNL JupyterLab] proporciona compatibilidad con idiomas adicionales en R, PySpark y [!DNL Spark] (Scala). Al abrir un documento portátil, se inicia el núcleo asociado. Cuando se ejecuta una celda portátil, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se cierre el núcleo.
 
 Algunas funciones y características se limitan a determinados núcleos, como se describe en la tabla siguiente:
 
-| Kernel | Compatibilidad con la instalación de la biblioteca | Integraciones de Platform |
+| Kernel | Compatibilidad con la instalación de la biblioteca | [!DNL Platform] integraciones |
 | :----: | :--------------------------: | :-------------------- |
-| **Python** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li><li>Servicio de Consulta</li></ul> |
-| **R** | Sí | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
-| **Scala** | No | <ul><li>Marco para el transporte marítimo de Sensei ML</li><li>Servicio de catálogo</li></ul> |
+| **[!DNL Python]** | Sí | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
+| **R** | Sí | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | No | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### Sesiones de núcleo {#kernel-sessions}
 
-Cada portátil o actividad activa en JupyterLab utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **Python 3** y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
+Cada portátil o actividad activa en [!DNL JupyterLab] utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **[!DNL Python]3 **y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -151,8 +151,8 @@ El *iniciador* personalizado le proporciona plantillas de bloc de notas útiles 
 | En blanco | Un archivo de bloc de notas vacío. |
 | Inicio | Un bloc de notas precargado que muestra la exploración de datos mediante datos de ejemplo. |
 | Ventas minoristas | Un bloc de notas previamente rellenado que presenta la fórmula <a href="https://adobe.ly/2wOgO3L" target="_blank">de venta al</a> por menor utilizando datos de ejemplo. |
-| Generador de fórmulas | Una plantilla de portátil para crear una fórmula en JupyterLab. Se rellena previamente con código y comentarios que muestran y describen el proceso de creación de fórmulas. Consulte el tutorial <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de fórmula del</a> bloc de notas para obtener un tutorial detallado. |
-| Servicio de Consulta | Un bloc de notas precargado que muestra el uso del servicio de Consulta directamente en JupyterLab con flujos de trabajo de muestra proporcionados que analizan los datos a escala. |
+| Generador de fórmulas | Plantilla de bloc de notas para crear una fórmula en [!DNL JupyterLab]. Se rellena previamente con código y comentarios que muestran y describen el proceso de creación de fórmulas. Consulte el tutorial <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de fórmula del</a> bloc de notas para obtener un tutorial detallado. |
+| [!DNL Query Service] | Un bloc de notas precargado que muestra el uso de [!DNL Query Service] directamente [!DNL JupyterLab] con flujos de trabajo de muestra proporcionados que analizan los datos a escala. |
 | Eventos XDM | Un bloc de notas precargado que muestra la exploración de datos en datos de Evento de experiencias con valor posterior, centrado en características comunes en la estructura de datos. |
 | Consultas XDM | Un bloc de notas precargado que muestra consultas empresariales de muestra sobre los datos de Experience Evento. |
 | Agregación | Un bloc de notas precargado que muestra flujos de trabajo de muestra a grandes cantidades acumuladas de datos en trozos más pequeños y manejables. |
@@ -167,14 +167,14 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <th><strong>Inicio</strong></th>
         <th><strong>Ventas minoristas</strong></th>
         <th><strong>Generador de fórmulas</strong></th>
-        <th><strong>Servicio de Consulta</strong></th>
+        <th><strong>[!Servicio de Consulta DNL]</strong></th>
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregación</strong></th>
         <th><strong>Clúster</strong></th>
     </tr>
     <tr>
-        <th><strong>Python</strong></th>
+        <th><strong>[!DNL Python]</strong></th>
         <td >sí</td>
         <td >sí</td>
         <td >sí</td>
@@ -198,7 +198,7 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <td >no</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
         <td >no</td>
         <td >sí</td>
         <td >no</td>
@@ -227,7 +227,7 @@ Para abrir un nuevo *iniciador*, haga clic en **Archivo > Nuevo iniciador**. Tam
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### Configuración de GPU y servidor de memoria en Python/R
+### Configuración de GPU y servidor de memoria en [!DNL Python]/R
 
 En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior derecha para abrir la configuración *del servidor* portátil. Puede activar la GPU y asignar la cantidad de memoria que necesita con el control deslizante. La cantidad de memoria que puede asignar depende de cuánto haya proporcionado su organización. Seleccione **[!UICONTROL Actualizar configuraciones]** para guardar.
 
@@ -236,19 +236,19 @@ En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior der
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-## Acceso a datos de Platform mediante equipos portátiles
+## Acceso a [!DNL Platform] datos mediante equipos portátiles
 
-Cada núcleo compatible proporciona funcionalidades integradas que permiten leer datos de Platform desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los portátiles Python y R.
+Cada núcleo soportado proporciona funcionalidades integradas que permiten leer [!DNL Platform] datos desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los blocs de notas [!DNL Python] y R.
 
 ### Límites de datos de equipos portátiles
 
-La siguiente información define la cantidad máxima de datos que se pueden leer, qué tipo de datos se han utilizado y el intervalo de tiempo estimado que se tarda en leer los datos. Para Python y R, se utilizó un servidor portátil configurado con 40 GB de RAM para los análisis de rendimiento. Para PySpark y Scala, se utilizó un clúster de databricks configurado en 64 GB de RAM, 8 núcleos, 2 DBU con un máximo de 4 trabajadores para los puntos de referencia que se describen a continuación.
+La siguiente información define la cantidad máxima de datos que se pueden leer, qué tipo de datos se han utilizado y el intervalo de tiempo estimado que se tarda en leer los datos. Para [!DNL Python] y R, se utilizó un servidor portátil configurado con 40 GB de RAM para los análisis de rendimiento. Para PySpark y Scala, se utilizó un clúster de databricks configurado en 64 GB de RAM, 8 núcleos, 2 DBU con un máximo de 4 trabajadores para los puntos de referencia que se describen a continuación.
 
-Los datos de esquema de ExperienceEvent utilizados varían en tamaño desde mil (1K) filas hasta mil millones (1B). Tenga en cuenta que para las métricas PySpark y Spark se utilizó un período de 10 días para los datos XDM.
+Los datos de esquema de ExperienceEvent utilizados varían en tamaño desde mil (1K) filas hasta mil millones (1B). Tenga en cuenta que para PySpark y las [!DNL Spark] métricas, se utilizó un período de 10 días para los datos XDM.
 
-Los datos de esquema específicos se preprocesaron mediante la opción Crear tabla como selección (CTAS) del servicio de Consulta. Estos datos también variaron en el tamaño desde mil filas (1K) hasta mil millones (1B).
+Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service] Crear tabla como selección (CTAS). Estos datos también variaron en el tamaño desde mil filas (1K) hasta mil millones (1B).
 
-#### Límites de datos de portátiles Python
+#### [!DNL Python] límites de datos del bloc de notas
 
 **esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 2 millones de filas (aproximadamente 6,1 GB de datos en disco) de datos XDM en menos de 22 minutos. Añadir filas adicionales puede provocar errores.
 
@@ -280,7 +280,7 @@ Los datos de esquema específicos se preprocesaron mediante la opción Crear tab
 | Tamaño en disco (en MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
 | SDK R (en segundos) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
 
-#### Límites de datos de portátiles PySpark (núcleo Python):
+#### Límites de datos de portátiles PySpark ([!DNL Python] núcleo):
 
 **esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 20 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
 
@@ -298,7 +298,7 @@ Los datos de esquema específicos se preprocesaron mediante la opción Crear tab
 | Modo interactivo de SDK (en segundos) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
 | Modo de lotes de SDK (en segundos) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
-#### Límites de datos de portátiles Spark (kernel Scala):
+#### [!DNL Spark] Límites de datos de portátiles (kernel Scala):
 
 **esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 18 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
 
@@ -316,13 +316,13 @@ Los datos de esquema específicos se preprocesaron mediante la opción Crear tab
 | Modo interactivo de SDK (en segundos) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
 | Modo de lotes de SDK (en segundos) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
 
-### Leer desde un conjunto de datos en Python/R
+### Leer desde un conjunto de datos en [!DNL Python]/R
 
-Los blocs de notas Python y R permiten paginar datos al acceder a conjuntos de datos. A continuación se muestra el código de muestra para leer datos con o sin paginación.
+[!DNL Python] Los blocs de notas y R permiten paginar datos al acceder a conjuntos de datos. A continuación se muestra el código de muestra para leer datos con o sin paginación.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
-#### Leer desde un conjunto de datos en Python/R sin paginación
+#### Leer desde un conjunto de datos en [!DNL Python]/R sin paginación
 
 Al ejecutar el siguiente código se leerá todo el conjunto de datos. Si la ejecución se realiza correctamente, los datos se guardarán como un nombre de datos de Pandas al que la variable hace referencia `df`.
 
@@ -352,7 +352,7 @@ df
 
 * `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
 
-#### Leer desde un conjunto de datos en Python/R con paginación
+#### Leer desde un conjunto de datos en [!DNL Python]/R con paginación
 
 Al ejecutar el siguiente código se leerán los datos del conjunto de datos especificado. La paginación se logra limitando y compensando los datos a través de las funciones `limit()` y `offset()` respectivamente. La limitación de datos se refiere al número máximo de puntos de datos que se van a leer, mientras que la compensación se refiere al número de puntos de datos que se deben omitir antes de leer los datos. Si la operación de lectura se ejecuta correctamente, los datos se guardarán como un juego de datos de Pandas al que hace referencia la variable `df`.
 
@@ -382,11 +382,11 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
 
-### Leer desde un conjunto de datos en PySpark/Spark/Scala
+### Leer desde un conjunto de datos en PySpark/[!DNL Spark]/Scala
 
 Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
 
-#### PySpark (Spark 2.4) {#pyspark2.4}
+#### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
 
 Con la introducción de Spark 2.4, se proporciona [`%dataset`](#magic) magia personalizada.
 
@@ -398,7 +398,7 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
-#### Scala (Spark 2.4) {#spark2.4}
+#### Scala ([!DNL Spark] 2.4) {#spark2.4}
 
 ```scala
 // Scala (Spark 2.4)
@@ -422,9 +422,9 @@ dataFrame.show()
 >[!TIP]
 >En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`.
 
-### Uso de la magia de %dataset en portátiles PySpark 3 (Spark 2.4) {#magic}
+### Uso de la magia de %dataset en los blocs de notas PySpark 3 ([!DNL Spark] 2.4) {#magic}
 
-Con la introducción de Spark 2.4, `%dataset` la magia personalizada se suministra para su uso en los nuevos portátiles PySpark 3 (Spark 2.4) (núcleo Python 3).
+Con la introducción de [!DNL Spark] 2.4, `%dataset` la magia personalizada se suministra para su uso en los nuevos portátiles PySpark 3 ([!DNL Spark] 2.4) ([!DNL Python] 3 kernel).
 
 **Uso**
 
@@ -432,7 +432,7 @@ Con la introducción de Spark 2.4, `%dataset` la magia personalizada se suminist
 
 **Descripción**
 
-Un comando mágico personalizado de Data Science Workspace para leer o escribir un conjunto de datos desde un bloc de notas Python (núcleo Python 3).
+Un comando [!DNL Data Science Workspace] mágico personalizado para leer o escribir un conjunto de datos desde un [!DNL Python] portátil ([!DNL Python] núcleo 3).
 
 * **{action}**: Tipo de acción que se realizará en el conjunto de datos. Hay dos acciones disponibles: &quot;lectura&quot; o &quot;escritura&quot;.
 * **—datasetId {id}**: Se utiliza para proporcionar la identificación del conjunto de datos que se va a leer o escribir. Este es un argumento requerido.
@@ -446,22 +446,22 @@ Un comando mágico personalizado de Data Science Workspace para leer o escribir 
 * **Leer ejemplo**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 * **Ejemplo** de escritura: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-### Datos de Consulta mediante el servicio de Consulta en Python
+### Consulta de datos mediante [!DNL Query Service] la [!DNL Python]
 
-JupyterLab en Platform le permite utilizar SQL en un bloc de notas Python para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de</a>Adobe Experience Platform. El acceso a los datos a través del servicio de Consulta puede ser útil para tratar grandes conjuntos de datos debido a sus tiempos de ejecución superiores. Tenga en cuenta que la consulta de datos mediante el servicio de Consulta tiene un límite de tiempo de procesamiento de diez minutos.
+[!DNL JupyterLab] on [!DNL Platform] permite utilizar SQL en un [!DNL Python] bloc de notas para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de</a>Adobe Experience Platform. El acceso a los datos a través de [!DNL Query Service] puede ser útil para tratar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Se debe tener en cuenta que la consulta de datos mediante [!DNL Query Service] el uso tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de utilizar el servicio de Consulta en JupyterLab, asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL del servicio de</a>Consulta.
+Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service]</a>SQL.
 
-La consulta de datos mediante el servicio de Consulta requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
+La consulta de datos mediante [!DNL Query Service] requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
 
 
-Para utilizar el servicio de Consulta en JupyterLab, primero debe crear una conexión entre el portátil Python que trabaja y el servicio de Consulta. Esto se puede lograr ejecutando la primera celda generada.
+Para utilizar [!DNL Query Service] en [!DNL JupyterLab], primero debe crear una conexión entre su [!DNL Python] portátil de trabajo y [!DNL Query Service]. Esto se puede lograr ejecutando la primera celda generada.
 
 ```python
 qs_connect()
 ```
 
-En la segunda celda generada, la primera línea debe definirse antes de la consulta SQL. De forma predeterminada, la celda generada define una variable opcional (`df0`) que guarda los resultados de la consulta como un dataframe de Pandas. <br>El `-c QS_CONNECTION` argumento es obligatorio e indica al núcleo que ejecute la consulta SQL contra el servicio de Consulta. Consulte el [apéndice](#optional-sql-flags-for-query-service) para ver una lista de argumentos adicionales.
+En la segunda celda generada, la primera línea debe definirse antes de la consulta SQL. De forma predeterminada, la celda generada define una variable opcional (`df0`) que guarda los resultados de la consulta como un dataframe de Pandas. <br>El `-c QS_CONNECTION` argumento es obligatorio y le indica al núcleo que ejecute la consulta SQL contra [!DNL Query Service]. Consulte el [apéndice](#optional-sql-flags-for-query-service) para ver una lista de argumentos adicionales.
 
 ```python
 %%read_sql df0 -c QS_CONNECTION
@@ -484,9 +484,9 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filtrar datos de ExperienceEvent en Python/R
+### Filtrar datos de ExperienceEvent en [!DNL Python]/R
 
-Para acceder y filtrar un conjunto de datos de ExperienceEvent en un bloc de notas Python o R, debe proporcionar el ID del conjunto de datos (`{DATASET_ID}`) junto con las reglas de filtro que definen un intervalo de tiempo específico mediante operadores lógicos. Cuando se define un intervalo de tiempo, se ignora cualquier paginación especificada y se considera todo el conjunto de datos.
+Para acceder y filtrar un conjunto de datos de ExperienceEvent en un bloc de notas [!DNL Python] o R, debe proporcionar el ID del conjunto de datos (`{DATASET_ID}`) junto con las reglas de filtro que definen un intervalo de tiempo específico mediante operadores lógicos. Cuando se define un intervalo de tiempo, se ignora cualquier paginación especificada y se considera todo el conjunto de datos.
 
 A continuación se describe una lista de los operadores de filtrado:
 
@@ -530,13 +530,13 @@ df <- dataset_reader$
 )$read()
 ```
 
-### Filtrar datos de ExperienceEvent en PySpark/Spark
+### Filtrar datos de ExperienceEvent en PySpark/[!DNL Spark]
 
 El acceso y filtrado de un conjunto de datos de ExperienceEvent en un bloc de notas de PySpark o Scala requiere que proporcione la identidad del conjunto de datos (`{DATASET_ID}`), la identidad IMS de su organización y las reglas de filtro que definen un intervalo de tiempo específico. Un intervalo de tiempo de filtrado se define mediante la función `spark.sql()`, donde el parámetro de función es una cadena de consulta SQL.
 
 Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
 
-#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+#### PySpark 3 ([!DNL Spark] 2.4) {#pyspark3-spark2.4}
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -556,7 +556,7 @@ timepd = spark.sql("""
 timepd.show()
 ```
 
-#### Scala (Spark 2.4) {#scala-spark}
+#### Scala ([!DNL Spark] 2.4) {#scala-spark}
 
 ```scala
 // Spark (Spark 2.4)
@@ -606,7 +606,7 @@ timedf.show()
 
 ## Bibliotecas admitidas {#supported-libraries}
 
-### Python / R
+### [!DNL Python] / R
 
 | Biblioteca | Versión |
 | :------ | :------ |
@@ -687,7 +687,7 @@ timedf.show()
 | grafviz | 2.40.1 |
 | python-graphviz | 0.11.1 |
 | azure-almacenamiento | 0.36.0 |
-| jupyterlab | 1.0.4 |
+| [!DNL jupyterlab] | 1.0.4 |
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
 | nodejs | 12.3.0 |
@@ -726,12 +726,12 @@ timedf.show()
 | pyarrow | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-almacenamiento-blob | 1.4.0 |
-| python | 3.6.7 |
+| [!DNL python] | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Indicadores SQL opcionales para el servicio de Consulta {#optional-sql-flags-for-query-service}
+## Indicadores SQL opcionales para [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
-Esta tabla describe los indicadores SQL opcionales que se pueden utilizar para el servicio de Consulta.
+Esta tabla describe los indicadores SQL opcionales para los que se puede utilizar [!DNL Query Service].
 
 | **Indicador** | **Descripción** |
 | --- | --- |
