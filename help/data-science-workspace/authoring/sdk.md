@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía para desarrolladores de SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 564603fdec6050463937c6e162cdff00cda506c4
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Guía para desarrolladores de SDK
 
-El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y tuberías de funciones que se pueden utilizar en [!DNL Adobe Experience Platform] Data Science Workspace, proporcionando plantillas implementables en PySpark y Spark (Scala).
+El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y tuberías de funciones que se pueden utilizar en [!DNL Adobe Experience Platform] Área de trabajo de ciencias de datos, proporcionando plantillas implementables en [!DNL PySpark] y [!DNL Spark (Scala)].
 
 Este documento proporciona información sobre las distintas clases que se encuentran en el SDK de creación de modelos.
 
@@ -37,7 +37,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Carga y devolución de datos de plataforma como un DataFrame de Pandas</p>
+                <p>Carga y devolución de datos de Platform como marco de datos de Pandas</p>
             </td>
             <td>
                 <ul>
@@ -52,7 +52,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
 
 **Spark**
 
-En la tabla siguiente se describen los métodos abstractos de una clase Spark Data Loader:
+En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Spark] Data Loader:
 
 <table>
     <thead>
@@ -65,7 +65,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase Spark Da
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Carga y devolución de datos de plataforma como marco de datos</p>
+                <p>Carga y devolución de datos de Platform como marco de datos</p>
             </td>
             <td>
                 <ul>
@@ -77,9 +77,9 @@ En la tabla siguiente se describen los métodos abstractos de una clase Spark Da
     </tbody>
 </table>
 
-### Carga de datos desde un conjunto de datos de plataforma {#load-data-from-a-platform-dataset}
+### Carga de datos desde un [!DNL Platform] conjunto de datos {#load-data-from-a-platform-dataset}
 
-En el ejemplo siguiente se recuperan los datos de la plataforma por ID y se devuelve un DataFrame, donde el ID del conjunto de datos (`datasetId`) es una propiedad definida en el archivo de configuración.
+En el ejemplo siguiente se recuperan [!DNL Platform] los datos por ID y se devuelve un DataFrame, donde el ID del conjunto de datos (`datasetId`) es una propiedad definida en el archivo de configuración.
 
 **PySpark**
 
@@ -198,7 +198,7 @@ La clase DataSaver encapsula todo lo relacionado con el almacenamiento de datos 
 
 **PySpark**
 
-En la tabla siguiente se describen los métodos abstractos de una clase PySpark Data Saver:
+En la tabla siguiente se describen los métodos abstractos de una clase [!DNL PySpark] Data Saver:
 
 <table>
     <thead>
@@ -211,7 +211,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
+                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de Platform</p>
             </td>
             <td>
                 <ul>
@@ -226,7 +226,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
 
 **Chispa (Scala)**
 
-En la tabla siguiente se describen los métodos abstractos de una clase Spark Data Saver:
+En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Spark] Data Saver:
 
 <table>
     <thead>
@@ -239,7 +239,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase Spark Da
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
+                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de Platform</p>
             </td>
             <td>
                 <ul>
@@ -251,14 +251,14 @@ En la tabla siguiente se describen los métodos abstractos de una clase Spark Da
     </tbody>
 </table>
 
-### Guardar datos en un conjunto de datos de la plataforma {#save-data-to-a-platform-dataset}
+### Guardar datos en un [!DNL Platform] conjunto de datos {#save-data-to-a-platform-dataset}
 
-Para almacenar datos en un conjunto de datos de la Plataforma, las propiedades deben proporcionarse o definirse en el archivo de configuración:
+Para almacenar datos en un [!DNL Platform] conjunto de datos, las propiedades deben proporcionarse o definirse en el archivo de configuración:
 
-- ID de conjunto de datos de plataforma válida en la que se almacenarán los datos
+- Un ID [!DNL Platform] de conjunto de datos válido al que se almacenarán los datos
 - El ID de inquilino que pertenece a su organización
 
-Los siguientes ejemplos almacenan datos (`prediction`) en un conjunto de datos de la plataforma, donde la ID del conjunto de datos (`datasetId`) y la ID del inquilino (`tenantId`) son propiedades definidas dentro del archivo de configuración.
+Los siguientes ejemplos almacenan datos (`prediction`) en un [!DNL Platform] conjunto de datos, donde la ID del conjunto de datos (`datasetId`) y la ID del inquilino (`tenantId`) son propiedades definidas dentro del archivo de configuración.
 
 
 **PySpark**
@@ -394,7 +394,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La clase DatasetTransformer modifica y transforma la estructura de un conjunto de datos. Sensei Machine Learning Runtime no requiere que este componente se defina y se implementa según sus necesidades.
+La clase DatasetTransformer modifica y transforma la estructura de un conjunto de datos. El componente [!DNL Sensei Machine Learning Runtime] no requiere que se defina y se implementa según sus necesidades.
 
 Con respecto a una canalización de funciones, los transformadores de conjuntos de datos se pueden utilizar de manera conjunta con una fábrica de canalizaciones de funciones para preparar datos para la ingeniería de funciones.
 
@@ -428,7 +428,7 @@ La siguiente tabla describe los métodos de clase de una clase de transformador 
 
 **Chispa (Scala)**
 
-La siguiente tabla describe los métodos abstractos de una clase de transformador de conjuntos de datos Spark:
+En la tabla siguiente se describen los métodos abstractos de una clase de transformador de [!DNL Spark] conjuntos de datos:
 
 <table>
     <thead>
@@ -499,7 +499,7 @@ En la tabla siguiente se describen los métodos de clase de PySpark FeaturePipel
 
 **Chispa (Scala)**
 
-En la tabla siguiente se describen los métodos de clase de Spark FeaturePipelineFactory:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -537,7 +537,7 @@ En la tabla siguiente se describen los métodos de clase de Spark FeaturePipelin
 
 ## PipelineFactory {#pipelinefactory}
 
-La clase PipelineFactory encapsula métodos y definiciones para la formación y puntuación de modelos, donde la lógica y los algoritmos de formación se definen en forma de Spark Pipeline.
+La clase PipelineFactory encapsula métodos y definiciones para la formación y puntuación de modelos, donde la lógica y los algoritmos de formación se definen en forma de [!DNL Spark] Canalización.
 
 **PySpark**
 
@@ -608,7 +608,7 @@ En la tabla siguiente se describen los métodos de clase de PySpark PipelineFact
 
 **Chispa (Scala)**
 
-En la tabla siguiente se describen los métodos de clase de Spark PipelineFactory:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -692,7 +692,7 @@ En la tabla siguiente se describen los métodos de clase de PySpark MLEvaluator:
 
 **Chispa (Scala)**
 
-En la tabla siguiente se describen los métodos de clase de un MLEvaluator de Spark:
+En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] valor MLE:
 
 <table>
     <thead>
