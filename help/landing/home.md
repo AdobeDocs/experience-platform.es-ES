@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform general
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
+source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 3%
+source-wordcount: '755'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,19 @@ ht-degree: 3%
 >
 >La documentación de Adobe Experience Platform se ha movido recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
 
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsen la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes desde cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsen la experiencia del cliente. [!DNL Experience Platform] permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 
-Basado en API abiertas, el Experience Platform expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de las soluciones empresariales mediante herramientas conocidas. Experience Platform también apoya a los asociados para que creen e integren sus propios productos y tecnologías según sea necesario. Este poder y flexibilidad hacen que el Experience Platform sea único en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
+Basado en API abiertas, [!DNL Experience Platform] expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de soluciones empresariales mediante herramientas conocidas. [!DNL Experience Platform] también ayuda a los asociados a crear e integrar sus propios productos y tecnologías según sea necesario. Este poder y flexibilidad hacen [!DNL Experience Platform] único en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
+
+Los siguientes vídeos describen una experiencia hipotética creada con Adobe Experience Platform, tal como se ve desde la perspectiva de un cliente. Vea cómo [!DNL Experience Platform] crea una experiencia rica, relevante y en tiempo real.
+
+**Perspectiva del cliente:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+
+**Entre bastidores:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
 
 ## Compatibilidad con idiomas
 
@@ -41,9 +51,9 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 >
 > La selección de una región determina el idioma y el contenido de Adobe.com.
 
-1. Haga clic en el idioma actual en el pie de página de la interfaz de Experience Platform.
-1. En la configuración de perfil, haga clic en **[!UICONTROL Cambiar región]**.
-1. Seleccione su región.
+1. Haga clic en el idioma actual en el pie de página de la [!DNL Experience Platform] interfaz.
+2. En la configuración de perfil, haga clic en **[!UICONTROL Cambiar región]**.
+3. Seleccione su región.
 
 ### Idiomas de documentación
 
@@ -51,9 +61,9 @@ La documentación de Adobe Experience Platform está disponible en varios idioma
 
 ![imagen](assets/lang.jpg)
 
-## Documentación de Experience Platform
+## [!DNL Experience Platform] documentación
 
-La documentación del Experience Platform se proporciona en varios formatos para diversas funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los servicios de Platform, visite la información general [de la documentación del](documentation/overview.md)Experience Platform. O bien, para empezar a aprender más sobre un servicio de Platform específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
+[!DNL Experience Platform] la documentación se proporciona en múltiples formatos para una variedad de funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los [!DNL Platform] servicios, visite la información general [de la documentación del](documentation/overview.md)Experience Platform. O bien, para empezar a aprender más sobre un [!DNL Platform] servicio específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
 
 >[!NOTE]
 >
@@ -61,7 +71,7 @@ La documentación del Experience Platform se proporciona en varios formatos para
 >
 >* Vínculos a artículos destacados
 >* Recomendaciones de documentación relacionadas con el contexto
->* La capacidad de proporcionar comentarios sobre los problemas del Experience Platform y del informe
+>* La capacidad de proporcionar comentarios sobre los problemas [!DNL Experience Platform] y de informes
 >* Se mejoraron los resultados de búsqueda que también incluyen resultados de foros de la comunidad y contenido de vídeo.
 
 >
@@ -70,26 +80,55 @@ De vez en cuando, puede recibir una encuesta para recibir comentarios adicionale
 >
 >Este despliegue es gradual, por lo que es posible que no vea los cambios inmediatamente. Puede realizar la vista de la experiencia actualizada en cualquier momento en [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
-## Tutoriales del Experience Platform
+## [!DNL Experience Platform] tutoriales
 
-Empiece con Platform de forma rápida y sencilla, siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación del Experience Platform, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. Visite los tutoriales del [Experience Platform](../tutorials/home.md) para empezar.
+Empiece con [!DNL Platform] rapidez y facilidad siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. [!DNL Experience Platform] Visite los tutoriales del [Experience Platform](../tutorials/home.md) para empezar.
 
 ## Tutoriales de vídeo
 
-Vea los tutoriales [en](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vídeo para una amplia variedad de temas de Experience Platform.
+Vea [los tutoriales](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) en vídeo para una amplia variedad de [!DNL Experience Platform] temas.
+
+Para un rápido recorrido por la interfaz de [!DNL Experience Platform's] usuario, vea el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
 
 ## documentos y recursos de referencia
 
-* [**Notas **](../release-notes/latest/latest.md)<br/>de la versiónEncontrar información sobre la versión más reciente del Experience Platform y revisar versiones anteriores.
+* [**Notas **](../release-notes/latest/latest.md)<br/>de la versiónBuscar información sobre la versión más reciente y revisar las versiones anteriores[!DNL Experience Platform].
 
 * [**Glosario **](glossary.md)<br/>Revisar terminología de Adobe Experience Platform.
 
 * [**Guía **](troubleshooting.md)<br/>de solución de problemasEncuentre soluciones para errores comunes y respuestas a preguntas más frecuentes.
 
-* [**Conceptos básicos **](api-fundamentals.md)<br/>de la APIsAprenda los conceptos básicos del trabajo con las API de Platform.
+* [**Conceptos básicos **](api-fundamentals.md)<br/>de APIsAprenda los conceptos básicos del trabajo con[!DNL Platform]las APIs.
 
-* [**API de referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de Experience Platform de Discover, incluidas encabezados, parámetros, solicitudes de muestra y respuestas.
-*Estos documentos están alojados en Adobe I/O.*
+* [**Referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de[!DNL Experience Platform]Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas.*Estos documentos están alojados en Adobe I/O.*
+
+## Recursos de vídeo de integración de Adobe Experience Platform
+
+[!DNL Experience Platform] utiliza los servicios de aplicación y [!DNL Intelligent Services] integrados sobre [!DNL Experience Platform], para obtener más información, vea el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+
+Una de las ventajas clave que ofrece Adobe Experience Platform es su capacidad de integración con otros servicios de Adobe existentes. En el siguiente vídeo se ofrece una descripción general de cómo se integran [!DNL Experience Platform] los servicios con [!DNL Experience Cloud] aplicaciones y funciones como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes], [!DNL Audience Library]y [!DNL Experience Platform Launch].
+
+>[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+
+Para obtener más información sobre la arquitectura que potencia el Adobe Experience Platform, vea el siguiente vídeo:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+
+### [!DNL Experience Platform] capacidades y casos de uso
+
+Los siguientes vídeos describen las funciones clave y los casos de uso de [!DNL Experience Platform]:
+
+**Competencias:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+
+**Casos de uso:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
 
 
