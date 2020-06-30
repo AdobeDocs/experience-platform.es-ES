@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Conector Apache Cassandra
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fd2f526ee3efb4ae9f4d7af851bb5cd5d63cfa9
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Conector Apache Cassandra
+# [!DNL Apache Cassandra ]conector
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
-La plataforma de experiencias ofrece compatibilidad para la ingesta de datos desde una base de datos de terceros. La plataforma puede conectarse a diferentes tipos de bases de datos, como relacional, sinSQL o data warehouses. La compatibilidad con proveedores de bases de datos incluye Apache Cassandra.
+[!DNL Experience Platform] permite la ingesta de datos desde una base de datos de terceros. [!DNL Platform] puede conectarse a diferentes tipos de bases de datos, como relacional, sinSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye [!DNL Apache Cassandra].
 
-La siguiente documentación proporciona información sobre cómo conectar Apache Cassandra a la plataforma mediante API:
+La siguiente documentación proporciona información sobre cómo conectarse [!DNL Apache Cassandra] a [!DNL Platform] través de API:
 
-## Conectar Apache Cassandra a plataforma mediante API
+## Conectar [!DNL Apache Cassandra] a [!DNL Platform] mediante API
 
 - [Creación de un conector Apache Cassandra mediante la API de servicio de flujo](../../tutorials/api/create/databases/cassandra.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
