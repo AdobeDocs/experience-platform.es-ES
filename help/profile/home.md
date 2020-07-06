@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Un perfil es una representación de un sujeto, una organización o una persona, 
 
 ### eventos de series temporales
 
-Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
+Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, ya sea directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
 
 ### Identidades
 
@@ -54,7 +54,7 @@ Una de las características clave del Perfil del cliente en tiempo real es la ca
 
 Al reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales, las políticas de combinación son las reglas que Platform utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para obtener más información sobre cómo trabajar con políticas de combinación mediante la API de Perfil de clientes en tiempo real, consulte la guía [de extremo de directivas de](api/merge-policies.md)combinación. Para trabajar con políticas de combinación mediante la interfaz de usuario del Experience Platform, consulte la guía [del usuario de directivas de](ui/merge-policies.md)combinación.
 
-## (Alfa) Configuración de atributos calculados
+### (Alfa) Configuración de atributos calculados
 
 >[!IMPORTANT]
 >La funcionalidad de atributo calculada que se describe en este documento está en alfa. La documentación y las funciones están sujetas a cambios.
@@ -80,7 +80,7 @@ Platform puede configurarse para enviar su registro y datos de series temporales
 >[!Nota]
 >Los datos recopilados a través de las soluciones de Adobe, incluidos Analytics Cloud, Marketing Cloud y Advertising Cloud, fluyen a Experience Platform y se ingieren en Perfil.
 
-### Métricas de ingestión de flujo continuo de Perfiles
+### Métricas de ingestión de Perfiles
 
 Perspectivas de la capacidad de observación permite exponer métricas clave en Adobes Experience Platform. Además de las estadísticas de uso de Platform y los indicadores de rendimiento para diversas funcionalidades de Platform, existen métricas específicas relacionadas con el Perfil que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingestión exitosas, los tamaños de registro ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de las métricas de Perfil, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
 
