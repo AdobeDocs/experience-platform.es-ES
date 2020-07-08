@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 3%
 
 ---
 
@@ -214,7 +217,9 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la consulta](#delete-a-specified-scheduled-query)programada creada.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la consulta](#delete-a-specified-scheduled-query)programada creada.
 
 ### Solicitar detalles de una consulta programada específica
 
@@ -295,7 +300,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la consulta p
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la consulta](#delete-a-specified-scheduled-query)programada creada.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la consulta](#delete-a-specified-scheduled-query)programada creada.
 
 ### Actualizar detalles de una consulta programada específica
 
@@ -408,9 +415,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Eliminar una consulta programada especificada
 
-Puede eliminar una consulta programada especificada realizando una solicitud ELIMINAR al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
+Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
 
->[!NOTE] La programación **debe** deshabilitarse antes de eliminarse.
+>[!NOTE]
+>
+>La programación **debe** deshabilitarse antes de eliminarse.
 
 **Formato API**
 
