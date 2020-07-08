@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exportación de datos mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -20,26 +20,28 @@ Además de crear un trabajo de exportación, también puede acceder a los datos 
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en el trabajo con datos de Perfil. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que intervienen en el trabajo con datos de Perfil. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [Servicio](../home.md)de segmentación de la plataforma Adobe Experience: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
+- [Servicio](../home.md)de segmentación de Adobes Experience Platform: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Encabezados requeridos
 
-Este tutorial también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a las API de plataforma. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Este tutorial también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a las API de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
 
@@ -47,7 +49,7 @@ Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
 
 ## Crear un trabajo de exportación
 
-La exportación de datos de Perfil requiere primero crear un conjunto de datos en el que se exportarán los datos y, a continuación, iniciar un nuevo trabajo de exportación. Estos dos pasos se pueden realizar mediante las API de la plataforma de experiencia; el primero utiliza la API del servicio de catálogo y el segundo utiliza la API de Perfil del cliente en tiempo real. Las instrucciones detalladas para completar cada paso se describen en las secciones siguientes.
+La exportación de datos de Perfil requiere primero crear un conjunto de datos en el que se exportarán los datos y, a continuación, iniciar un nuevo trabajo de exportación. Estos dos pasos se pueden realizar mediante API de Experience Platform, mientras que el primero utiliza la API de servicio de catálogo y el segundo utiliza la API de Perfil de cliente en tiempo real. Las instrucciones detalladas para completar cada paso se describen en las secciones siguientes.
 
 - [Crear un conjunto de datos](#create-a-target-dataset) de destinatario: cree un conjunto de datos para retener los datos exportados.
 - [Iniciar un nuevo trabajo](#initiate-export-job) de exportación: Rellene el conjunto de datos con datos de Perfil individual XDM.
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(Requerido)** El nombre del esquema asociado con el conjunto de datos donde se exportan los datos. |
 | `evaluationInfo.segmentation` | *(Opcional)* Un valor booleano que, si no se proporciona, toma como valor predeterminado `false`. Un valor de `true` indica que la segmentación debe realizarse en el trabajo de exportación. |
 
->[!NOTE] Para exportar solo datos de Perfil y no incluir datos de ExperienceEvent relacionados, elimine el objeto &quot;extraFields&quot; de la solicitud.
+>[!NOTE]
+>
+>Para exportar solo datos de Perfil y no incluir datos de ExperienceEvent relacionados, elimine el objeto &quot;extraFields&quot; de la solicitud.
 
 **Respuesta**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## Cancelar un trabajo de exportación
 
-La plataforma de experiencias permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, como si el trabajo de exportación no se completó o se quedó atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de ELIMINACIÓN al extremo e incluir el `/export/jobs` `id` del trabajo de exportación que desea cancelar en la ruta de la solicitud.
+Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, como si el trabajo de exportación no se completó o se quedó atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al extremo e incluir el `/export/jobs` `id` del trabajo de exportación que desea cancelar en la ruta de la solicitud.
 
 **Formato API**
 
@@ -558,10 +562,10 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 204 (sin contenid
 
 ## Pasos siguientes
 
-Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el lago de datos de la plataforma de experiencia. A continuación, puede utilizar la API [de acceso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) datos para acceder a los datos mediante el `batchId` vínculo asociado a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
+Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el Experience Platform Data Lake. A continuación, puede utilizar la API [de acceso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) datos para acceder a los datos mediante el `batchId` vínculo asociado a la exportación. Según el tamaño de la exportación, los datos pueden estar en trozos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga el tutorial [de acceso a](../../data-access/tutorials/dataset-data.md)datos.
 
-También puede acceder a los datos de Perfil de cliente en tiempo real exportados correctamente mediante el servicio de Consulta de la plataforma Adobe Experience Platform. El servicio de Consulta, que utiliza la interfaz de usuario o la API RESTful, le permite escribir, validar y ejecutar consultas en los datos dentro de Data Lake.
+También puede acceder a los datos de Perfil de cliente en tiempo real exportados correctamente mediante el servicio de Consulta de Adobes Experience Platform. El servicio de Consulta, que utiliza la interfaz de usuario o la API RESTful, le permite escribir, validar y ejecutar consultas en los datos dentro de Data Lake.
 
 Para obtener más información sobre cómo consulta de datos de audiencia, consulte la documentación [del servicio de](../../query-service/home.md)Consulta.
