@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario del Simulador para pruebas
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Este documento proporciona pasos para realizar diversas operaciones relacionadas
 
 ## Entornos limitados de Vista
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **Simuladores** para pruebas en el panel de navegación izquierdo para abrir el panel _Simuladores para pruebas_ . El panel lista todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creativo, eliminado o fallido).
+En la interfaz de usuario del Experience Platform, haga clic en **Entornos** aislados en el panel de navegación izquierdo para abrir el panel _Entornos_ aislados. El panel lista todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creativo, eliminado o fallido).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -45,7 +48,9 @@ Cuando termine, haga clic en **Crear**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Dado que está restringido a la creación de tipos de entorno limitado que no sean de producción únicamente, la opción de **tipo** está bloqueada en &quot;No de producción&quot; y no se puede manipular.
+>[!NOTE]
+>
+>Dado que está restringido a la creación de tipos de entorno limitado que no sean de producción únicamente, la opción de **tipo** está bloqueada en &quot;No de producción&quot; y no se puede manipular.
 
 Una vez que haya terminado de crear el simulador para pruebas, actualice la página y aparecerá el nuevo simulador para pruebas en el panel de _Simuladores para pruebas_ con el estado &quot;Creación&quot;. Los nuevos entornos limitados tardan aproximadamente 15 minutos en ser aprovisionados por el sistema, después de lo cual su estado cambia a &quot;Activo&quot;.
 
@@ -53,7 +58,9 @@ Una vez que haya terminado de crear el simulador para pruebas, actualice la pág
 
 ## Restablecer un entorno limitado
 
->[!NOTE] Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden restablecer los entornos limitados de producción.
+>[!NOTE]
+>
+>Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden restablecer los entornos limitados de producción.
 
 Al restablecer un entorno limitado que no sea de producción, se eliminan todos los recursos asociados con dicho entorno limitado (esquemas, conjuntos de datos, etc.), al tiempo que se mantiene el nombre del entorno limitado y los permisos asociados. Este simulador para pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
 
@@ -71,7 +78,9 @@ Aparece un mensaje de confirmación y el estado del simulador para pruebas cambi
 
 ## Eliminar un entorno limitado
 
->[!NOTE] Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden eliminar los entornos limitados de producción.
+>[!NOTE]
+>
+>Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden eliminar los entornos limitados de producción.
 
 Al eliminar de forma permanente un entorno limitado que no sea de producción, se eliminan todos los recursos asociados a dicho entorno, incluidos los permisos.
 
@@ -87,4 +96,4 @@ Aparece un mensaje de confirmación y se elimina el simulador de pruebas del esp
 
 ## Pasos siguientes
 
-Este documento demostró cómo administrar entornos limitados en la interfaz de usuario de la plataforma de experiencia. Para obtener información sobre cómo administrar entornos limitados mediante la API de Simulador para pruebas, consulte la guía [para desarrolladores de](../api/getting-started.md)simuladores de pruebas.
+Este documento demostró cómo administrar los entornos limitados en la interfaz de usuario del Experience Platform. Para obtener información sobre cómo administrar entornos limitados mediante la API de Simulador para pruebas, consulte la guía [para desarrolladores de](../api/getting-started.md)simuladores de pruebas.
