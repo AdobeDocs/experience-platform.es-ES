@@ -4,47 +4,52 @@ solution: Experience Platform
 title: Guía para desarrolladores de API de registro de Esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1246'
+ht-degree: 0%
 
 ---
 
 
 # Guía para desarrolladores de API de registro de Esquema
 
-El Registro de Esquema se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, lo que proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Con la API de Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye las definidas por Adobe, los socios de la plataforma de experiencia y los proveedores cuyas aplicaciones utilice. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
+Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobe, los socios Experience Platform y los proveedores cuyas aplicaciones utilice. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio mediante la API del Registro de Esquema. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el Registro de Esquemas.
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM.
 * [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas correctamente a la API del Registro de Esquema.
 
 ## Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ## Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia, incluidos los que pertenecen al Registro de Esquemas, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos de Experience Platform, incluidos los que pertenecen al Registro de Esquemas, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes de búsqueda (GET) al Registro de Esquema requieren un encabezado de aceptación adicional, cuyo valor determina el formato de la información devuelta por la API. Consulte la sección [Aceptar encabezado](#accept) más abajo para obtener más detalles.
 
@@ -154,13 +159,13 @@ Una respuesta correcta devuelve información sobre el uso del Registro de Esquem
 
 * `tenantId`:: El `TENANT_ID` valor de la organización de IMS.
 
-## Comprender el `CONTAINER_ID`{#container}
+## Comprender el `CONTAINER_ID` {#container}
 
 Las llamadas a la API del Registro de Esquema requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor **** global y el contenedor **de** inquilinos.
 
 ### contenedor global
 
-El contenedor global contiene todos los socios estándar de Adobe y de la plataforma de experiencia que proporcionan clases, mezclas, tipos de datos y esquemas. Sólo puede realizar solicitudes de lista y búsqueda (GET) con respecto al contenedor global.
+El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas que proporciona el socio estándar de Adobe y el Experience Platform. Sólo puede realizar solicitudes de lista y búsqueda (GET) con respecto al contenedor global.
 
 ### contenedor del inquilino
 
@@ -198,7 +203,9 @@ Las siguientes listas de tabla son compatibles con los valores de encabezado Acc
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` atributos y `allOf` resueltos. No hay títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` atributos y `allOf` resueltos. Se incluyen los descriptores. |
 
->[!NOTE] Si sólo se proporciona la versión `major` (por ejemplo, 1, 2, 3), el registro devolverá la última `minor` versión (por ejemplo: .1, .2, .3) automáticamente.
+>[!NOTE]
+>
+>Si sólo se proporciona la versión `major` (por ejemplo, 1, 2, 3), el registro devolverá la última `minor` versión (por ejemplo: .1, .2, .3) automáticamente.
 
 ## Limitaciones y prácticas recomendadas del campo XDM
 
