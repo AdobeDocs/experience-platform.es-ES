@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del desarrollador del servicio de segmentación
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -14,36 +14,38 @@ ht-degree: 0%
 
 # Guía del desarrollador del servicio de segmentación
 
-La segmentación le permite crear segmentos y generar audiencias en Adobe Experience Platform a partir de los datos de Perfil del cliente en tiempo real.
+La segmentación le permite crear segmentos y generar audiencias en Adobes Experience Platform a partir de los datos de Perfil del cliente en tiempo real.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform relacionados con el uso de la segmentación.
+Esta guía requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que se utilizan en la segmentación.
 
 - [Segmentación](../home.md): Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
-- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para utilizar la segmentación con éxito mediante la API.
 
 ### Leer llamadas de API de muestra
 
-La documentación de la API del servicio de segmentación proporciona llamadas de API de ejemplo para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+La documentación de la API del servicio de segmentación proporciona llamadas de API de ejemplo para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Encabezados requeridos
 
-La documentación de la API también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a extremos de plataforma. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+La documentación de la API también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a extremos de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre cómo trabajar con entornos limitados en la plataforma de experiencia, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo trabajar con entornos limitados en Experience Platform, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
 
 <!-- ## Estimates
 
@@ -93,4 +95,4 @@ La búsqueda de segmentos se utiliza para buscar e indexar campos configurables 
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API de segmentación, seleccione una de las subguías para aprender a utilizar los extremos específicos relacionados con la segmentación. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de la plataforma, consulte la guía [del usuario](../ui/overview.md)Segmentación.
+Para empezar a realizar llamadas mediante la API de segmentación, seleccione una de las subguías para aprender a utilizar los extremos específicos relacionados con la segmentación. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de Platform, consulte la guía [del usuario](../ui/overview.md)Segmentación.
