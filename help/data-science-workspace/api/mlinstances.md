@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Instancias MLI
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ Una respuesta exitosa devuelve los detalles de la instancia MLI.
 
 Puede actualizar una instancia MLI existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID de instancia MLI de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
->[!TIP] Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>[!TIP]
+>
+>Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
 
 La siguiente llamada de API de ejemplo actualizará los parámetros de puntuación y formación de una entidad MLI al tener inicialmente estas propiedades:
 
