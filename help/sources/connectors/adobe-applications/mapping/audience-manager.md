@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Campo de asignación del Administrador de Audiencias
+title: Campo de asignación de Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Campos de asignación del Administrador de Audiencias
+# Campos de asignación de Audience Manager
 
-Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audiencia Manager (datos en tiempo real, integrados y de Perfil) y sus correspondientes campos XDM.
+Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (en tiempo real, integrados y datos de Perfil) y sus correspondientes campos XDM.
 
 Consulte el diccionario [de campo](../../../../xdm/schema/field-dictionary.md) XDM para obtener más información sobre cada campo XDM.
 
@@ -47,7 +50,9 @@ Tipo: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Los campos entrantes están programados para quedar obsoletos en una versión futura.
+>[!NOTE]
+>
+>Los campos entrantes están programados para quedar obsoletos en una versión futura.
 
 ## Datos de Perfil
 
