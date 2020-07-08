@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Administrar permisos para un perfil de producto
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +32,9 @@ Para agregar un permiso, haga clic en el icono de **signo más (+)** junto al no
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] La lista Elementos *de permisos* incluidos solo muestra los permisos agregados de la categoría seleccionada actualmente.
+>[!NOTE]
+>
+>La lista Elementos *de permisos* incluidos solo muestra los permisos agregados de la categoría seleccionada actualmente.
 
 Para quitar un permiso, haga clic en el icono **X** que hay junto al nombre del permiso o seleccione **Quitar todo** para quitar todos los permisos de la categoría actual. Los permisos eliminados vuelven a aparecer en Elementos de permisos *disponibles*.
 
