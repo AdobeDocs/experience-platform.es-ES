@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Buscar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
 
 Si conoce el identificador único de un objeto Catalog específico, puede realizar una solicitud GET para vista de los detalles del objeto.
 
->[!NOTE] Al ver objetos específicos, sigue siendo recomendable [filtrar por propiedades](filter-data.md) y devolver solo las propiedades que le interesen.
+>[!NOTE]
+>
+>Al ver objetos específicos, sigue siendo recomendable [filtrar por propiedades](filter-data.md) y devolver solo las propiedades que le interesen.
 
 **Formato API**
 
@@ -60,4 +65,6 @@ Una respuesta correcta devuelve el conjunto de datos especificado con solo el so
 }
 ```
 
->[!NOTE] Las propiedades cuyos valores llevan el prefijo `@` representan objetos interrelacionados. Consulte la sección del apéndice sobre la [visualización de objetos](appendix.md#view-interrelated-objects) interrelacionados para ver los pasos para la vista de los detalles de estos objetos.
+>[!NOTE]
+>
+>Las propiedades cuyos valores llevan el prefijo `@` representan objetos interrelacionados. Consulte la sección del apéndice sobre la [visualización de objetos](appendix.md#view-interrelated-objects) interrelacionados para ver los pasos para la vista de los detalles de estos objetos.
