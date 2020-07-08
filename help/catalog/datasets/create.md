@@ -4,42 +4,47 @@ solution: Experience Platform
 title: Creación de un conjunto de datos mediante API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
 
 # Creación de un conjunto de datos mediante API
 
-Este documento proporciona pasos generales para crear un conjunto de datos con las API de Adobe Experience Platform y rellenar el conjunto de datos con un archivo.
+Este documento proporciona pasos generales para crear un conjunto de datos mediante las API de Adobe Experience Platform y rellenar el conjunto de datos con un archivo.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: La plataforma de experiencia le permite ingestar datos como archivos por lotes.
-* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: Experience Platform le permite ingestar datos como archivos por lotes.
+* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -207,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Este tutorial utiliza el formato de archivo de [parqué](https://parquet.apache.org/documentation/latest/) para todos sus ejemplos. Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>Este tutorial utiliza el formato de archivo de [parqué](https://parquet.apache.org/documentation/latest/) para todos sus ejemplos. Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md)
 
 **Respuesta**
 
@@ -289,7 +296,9 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respu
 
 Después de crear correctamente un nuevo lote para la carga, ahora puede cargar archivos en el conjunto de datos específico. Es importante recordar que cuando definió el conjunto de datos, especificó el formato de archivo como parquet. Por lo tanto, los archivos que cargue deben tener ese formato.
 
->[!NOTE] El archivo de carga de datos más grande admitido es de 512 MB. Si el archivo de datos es más grande que este, debe dividirse en fragmentos de no más de 512 MB, que se cargarán de uno en uno. Puede cargar cada archivo del mismo lote repitiendo este paso para cada archivo, utilizando el mismo ID de lote. No hay límite en el número si se pueden cargar archivos como parte de un lote.
+>[!NOTE]
+>
+>El archivo de carga de datos más grande admitido es de 512 MB. Si el archivo de datos es más grande que este, debe dividirse en fragmentos de no más de 512 MB, que se cargarán de uno en uno. Puede cargar cada archivo del mismo lote repitiendo este paso para cada archivo, utilizando el mismo ID de lote. No hay límite en el número si se pueden cargar archivos como parte de un lote.
 
 **Formato API**
 
@@ -446,7 +455,9 @@ Una respuesta negativa devuelve un objeto con el valor de `"failed"` en su `"sta
 }
 ```
 
->[!NOTE] Un intervalo de sondeo recomendado es de dos minutos.
+>[!NOTE]
+>
+>Un intervalo de sondeo recomendado es de dos minutos.
 
 ## Leer datos del conjunto de datos
 
