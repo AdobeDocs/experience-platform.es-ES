@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Campos de asignación de Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '3328'
+ht-degree: 11%
 
 ---
 
 
 # Campos de asignación de Analytics
 
-Adobe Experience Platform le permite ingestar datos de Adobe Analytics a través del conector de datos de Analytics (ADC). Algunos de los datos ingestados a través de ADC se pueden asignar directamente desde los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para asignarse correctamente.
+Adobe Experience Platform le permite ingestar datos de Adobe Analytics a través del conector de datos de Analytics (ADC). Algunos de los datos ingestados a través de ADC pueden asignarse directamente desde los campos de Analytics a los campos del Modelo de datos de experiencia (XDM), mientras que otros datos requieren transformaciones y funciones específicas para asignarse correctamente.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -21,9 +24,11 @@ Los campos seleccionados se asignan directamente de Adobe Analytics al Modelo de
 
 La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (campo ** Analytics), el campo XDM correspondiente (campo ** XDM) y su tipo (tipo ** XDM), así como una descripción del campo (*Descripción*).
 
->[!NOTE] Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
-| Campo de Analytics | Campo XDM | Tipo XDM | Descripción |
+| Campo Analytics | Campo XDM | Tipo XDM | Descripción |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Variable personalizada que puede variar entre 1 y 250. Cada organización usará estas eVars personalizadas de manera diferente. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variables de tráfico personalizadas, que pueden variar entre 1 y 75. |
@@ -54,8 +59,8 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | mobileappid | application.</span>name | string | El ID de la aplicación móvil, almacenado en el siguiente formato: `[AppName][BundleVersion]`. |
 | mobiledevice | device.model | string | Nombre del dispositivo móvil. En iOS, se almacena como una cadena de dos dígitos separada por comas. El primer número representa la generación del dispositivo y el segundo número representa la familia del dispositivo. |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | string | Utilizado por los servicios móviles. Representa el punto de interés. |
-| pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | number | Utilizado por los servicios móviles. Representa la distancia del punto de interés. |
-| mobileplaceaccuracy | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | number | Recopilado desde la variable de datos de contexto a.loc.acc. Indica la precisión del GPS en metros en el momento de la recogida. |
+| pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | entero | Utilizado por los servicios móviles. Representa la distancia del punto de interés. |
+| mobileplaceaccuracy | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | entero | Recopilado desde la variable de datos de contexto a.loc.acc. Indica la precisión del GPS en metros en el momento de la recogida. |
 | mobileplacecategory | placeContext.POIinteraction.POIDetail.category | string | Recopilado desde la variable de datos de contexto a.loc.category. Describe la categoría de un lugar específico. |
 | mobileplaceid | placeContext.POIinteraction.POIDetail.POIID | string | Recopilado desde la variable de datos de contexto a.loc.id. Identificador de un punto de interés determinado. |
 | vídeo | media.mediaTimed.primaryAssetReference._id | string | Nombre del vídeo. |
@@ -76,8 +81,8 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | videoshowtype | media.mediaTimed.primaryAssetReference.showType | string | Tipo de programa del vídeo. |
 | videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | string | Cargas del anuncio de vídeo. |
 | videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | string | Tipo de fuente de vídeo. |
-| mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | number | Señalización principal de Mobile Services. |
-| mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | number | Señalización menor de Mobile Services. |
+| mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | entero | Señalización principal de Mobile Services. |
+| mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | entero | Señalización menor de Mobile Services. |
 | mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | UUID de señalización de Mobile Services. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | string | ID de sesión de vídeo. |
 | videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | array | Género del vídeo. | {title (Objeto), description (Objeto), type (Objeto), meta:xdmType (Objeto), items (cadena), meta:xdmField (Objeto)} |
@@ -102,11 +107,11 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | videototaltime | media.mediaTimed.totalTimePlayed | Objeto | <!-- MISSING --> | {id (cadena), valor (número)} |
 | videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | Objeto | Tiempo de inicio de la calidad del vídeo. | {id (cadena), valor (número)} |
 | videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | Objeto | <!-- MISSING --> | {id (cadena), valor (número)} |
-| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Objeto | Recuento de búfer de calidad de vídeo | {id (cadena), valor (número)} |
+| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | Objeto | Recuento de búferes en la calidad de vídeo | {id (cadena), valor (número)} |
 | videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | Objeto | Hora de búfer de la calidad de vídeo | {id (cadena), valor (número)} |
-| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Objeto | Recuento de cambios en la calidad del vídeo | {id (cadena), valor (número)} |
-| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Objeto | Velocidad media de bits de calidad del vídeo | {id (cadena), valor (número)} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Objeto | Recuento de errores de calidad del vídeo | {id (cadena), valor (número)} |
+| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Objeto | Recuento de cambios en la calidad de vídeo | {id (cadena), valor (número)} |
+| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Objeto | Tasa de bits promedio de la calidad de vídeo | {id (cadena), valor (número)} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Objeto | Recuento de errores de calidad de vídeo | {id (cadena), valor (número)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Objeto | <!-- MISSING --> | {id (cadena), valor (número)} |
 | videoprogress10 | media.mediaTimed.progress10 | Objeto | <!-- MISSING --> | {id (cadena), valor (número)} |
 | videoprogress25 | media.mediaTimed.progress25 | Objeto | <!-- MISSING --> | {id (cadena), valor (número)} |
@@ -122,7 +127,7 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 
 Estos campos tienen un único origen, pero se asignan a **varias** ubicaciones XDM.
 
-| Campo de Analytics | Campo XDM | Tipo XDM | Descripción |
+| Campo Analytics | Campo XDM | Tipo XDM | Descripción |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | integer | ID numérico que representa la resolución del monitor. |
 | mobileosversion | entorno.OperatingSystem, entorno.OperatingSystemVersion | string | Versión del sistema operativo móvil. |
@@ -134,9 +139,11 @@ Es necesario transformar determinados campos procedentes de ADC, lo que requiere
 
 La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (campo ** Analytics), el campo XDM correspondiente (campo ** XDM) y su tipo (tipo ** XDM), así como una descripción del campo (*Descripción*).
 
->[!NOTE] Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
-| Campo de Analytics | Campo XDM | Tipo XDM | Descripción |
+| Campo Analytics | Campo XDM | Tipo XDM | Descripción |
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variables de tráfico personalizadas, que varían entre 1 y 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | Objeto | Utilizado por variables de jerarquía. Contiene un | lista delimitada de valores. | {valores (matriz), delimitador (cadena)} |
@@ -146,20 +153,20 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | m_evento_lista | commerce.purchase, commerce.productViews, commerce.productListOpen, commerce.checkouts, commerce.productListAdd, commerce.productListRemovals, commerce.productListViews | Objeto | eventos comerciales estándar activados en la visita. | {id (cadena), valor (número)} |
 | m_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201 a 300.evento201 - _experience.analytics.evento201 a 300.evento300, _experience.analytics.evento301 a 400.evento33 01 - _experience.analytics.evento301to400.` 400, _experience.analytics.› 401to500.401 - _experience.analytics.html401to500._experience .analytics.› 501a600.501 - _experience.analytics.` 501a600.600, _experience.analytics.601a700.601 - _experience.analytics. 601to700.html700, _experience.analytics.701to800.html・701 - _experience.analytics.701to800._experience.analytics.801to1 900.› 801 - _experience.analytics.` 801to900.› 900, _experience.analytics.901to1000.› 901 - _experience.analytics.› 901 a 10000 1000 | Objeto | eventos personalizados activados en la visita. | {id (objeto), valor (objeto)} |
 | m_geo_country | placeContext.geo.countryCode | string | Abreviación del país del que procede la visita, que se basa en la IP. |
-| m_geo_latitude | placeContext.geo._esquema.latitude | number | <!-- MISSING --> |
-| m_geo_longitude | placeContext.geo._esquema.longitude | number | <!-- MISSING --> |
+| m_geo_latitude | placeContext.geo._esquema.latitude | entero | <!-- MISSING --> |
+| m_geo_longitude | placeContext.geo._esquema.longitude | entero | <!-- MISSING --> |
 | m_java_enabled | environment.browserDetails.javaEnabled | Booleano | Un indicador que indica si Java está habilitado. |
-| m_latitude | placeContext.geo._esquema.latitude | number | <!-- MISSING --> |
-| m_longitude | placeContext.geo._esquema.longitude | number | <!-- MISSING --> |
+| m_latitude | placeContext.geo._esquema.latitude | entero | <!-- MISSING --> |
+| m_longitude | placeContext.geo._esquema.longitude | entero | <!-- MISSING --> |
 | m_page_evento_var1 | web.webInteraction.URL | string | Variable que solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Esta variable contiene la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
 | m_page_evento_var2 | web.webInteraction.name | string | Variable que solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Esto lista el nombre personalizado del vínculo, si se especifica. |
 | m_page_type | web.webPageDetails.isErrorPage | Booleano | Variable que se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o contener &quot;ErrorPage&quot;. |
-| m_pagename_no_url | web.webPageDetails.pageViews.value | number | El nombre de la página (si se ha establecido). Si no se especifica ninguna página, este valor se deja vacío. |
+| m_pagename_no_url | web.webPageDetails.pageViews.value | entero | El nombre de la página (si se ha establecido). Si no se especifica ninguna página, este valor se deja vacío. |
 | m_paid_search | search.isPaid | Booleano | Un indicador que se establece si la visita coincide con la detección de búsqueda paga. |
 | m_product_lista | productListItems[].items | array | La lista del producto, tal como se pasa a través de la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
-| m_ref_type | web.webReferrer.type | string | Un ID numérico que representa el tipo de referencia de la visita. 1 significa que dentro del sitio, 2 significa otros sitios web, 3 significa motores de búsqueda, 4 significa disco duro, 5 significa USENET, 6 significa Escrito o marcador (sin remitente del reenvío), 7 significa correo electrónico, 8 significa No JavaScript y 9 significa Redes sociales. |
+| m_ref_type | web.webReferrer.type | string | Una ID numérica que representa el tipo de referente de la visita. 1 significa que dentro del sitio, 2 significa otros sitios web, 3 significa motores de búsqueda, 4 significa disco duro, 5 significa USENET, 6 significa Escrito o marcador (sin remitente del reenvío), 7 significa correo electrónico, 8 significa No JavaScript y 9 significa Redes sociales. |
 | m_search_engine | search.searchEngine | string | ID numérica que representa el motor de búsqueda que dirigió el visitante a su sitio. |
-| post_currency | commerce.order.currencyCode | string | El código de moneda que se utilizó durante la transacción. |
+| post_currency | commerce.order.currencyCode | string | El código de moneda que se ha utilizado durante la transición. |
 | post_cust_hit_time_gmt | timestamp | string | Esto solo se utiliza en conjuntos de datos con marca de tiempo habilitada. Ésta es la marca de tiempo que se envía con ella, en función de la hora Unix. |
 | post_cust_visid | identityMap | object | ID de visitante del cliente. |
 | post_cust_visid | endUserIDs._experience.aacustomid.primario | Booleano | ID de visitante del cliente. |
@@ -172,13 +179,13 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | hit_time_gmt | receivedTimestamp | string | Marca de hora de la visita, basada en tiempo Unix. |
 | hitid_high + hitid_low | _id | string | Identificador único para identificar una visita. |
 | hitid_low | _id | string | Se utiliza junto con hitid_high para identificar de forma exclusiva una visita. |
-| ip | environment.ipV4 | string | Dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
+| Consejo | environment.ipV4 | string | Dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | Booleano | Versión de JavaScript utilizada. |
-| mcvisid_high + mcvisid_low | identityMap | object | El ID de Visitante de Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | El ID de Visitante de Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.Primary | Booleano | El ID de Visitante de Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.Área de nombres.code | string | El ID de Visitante de Experience Cloud. |
-| mcvisid_low | identityMap | object | El ID de Visitante de Experience Cloud. |
+| mcvisid_high + mcvisid_low | identityMap | object | ID del Visitante del Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | ID del Visitante del Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.Primary | Booleano | ID del Visitante del Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.Área de nombres.code | string | ID del Visitante del Experience Cloud. |
+| mcvisid_low | identityMap | object | ID del Visitante del Experience Cloud. |
 | sdid_high + sdid_low | _experience.destinatario.plementalDataID | string | ID de la configuración de visitas. El campo analytics sdid_high y sdid_low es la identificación de datos suplementaria que se utiliza para unir dos (o más) visitas entrantes. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Proximidad de la señalización de Mobile Services. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | Nombre del capítulo del vídeo. |
@@ -186,15 +193,17 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 
 ## Campos de asignación avanzada
 
-Los campos seleccionados (conocidos como &quot;valores postales&quot;) requieren transformaciones más avanzadas para poder asignarlos correctamente desde los campos de Adobe Analytics al Modelo de datos de experiencia (XDM). La realización de estas transformaciones avanzadas implica el uso del servicio de Consulta Adobe Experience Platfrom y de funciones prediseñadas (llamadas funciones definidas por Adobe) para la sesionización, atribución y deduplicación.
+Los campos seleccionados (conocidos como &quot;valores postales&quot;) requieren transformaciones más avanzadas para poder asignarlos correctamente de los campos de Adobe Analytics al Modelo de datos de experiencia (XDM). La realización de estas transformaciones avanzadas implica el uso del servicio de Consulta Adobe Experience Platfrom y de funciones prediseñadas (llamadas funciones definidas por Adobe) para la sesionización, atribución y deduplicación.
 
 Para obtener más información sobre la realización de estas transformaciones mediante el servicio de Consulta, visite la documentación de funciones [definidas por](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
 
 La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (campo ** Analytics), el campo XDM correspondiente (campo ** XDM) y su tipo (tipo ** XDM), así como una descripción del campo (*Descripción*).
 
->[!NOTE] Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
-| Campo de Analytics | Campo XDM | Tipo XDM | Descripción |
+| Campo Analytics | Campo XDM | Tipo XDM | Descripción |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | Variable personalizada que puede variar entre 1 y 250. Cada organización usará estas eVars personalizadas de manera diferente. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.props.prop1 - _experience.analytics.customDimensions.props.prop75 | string | Variables de tráfico personalizadas, que pueden variar entre 1 y 75. |
@@ -226,7 +235,7 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | visit_num | _experience.analytics.session.num | integer | Variable utilizada en la dimensión Número de visita. Esto inicio en 1 y aumenta cada vez que se produce un nuevo inicio de visita (por usuario). |
 | visit_page_num | _experience.analytics.session.depth | integer | Variable utilizada en la dimensión Profundidad de acierto. Este valor aumenta en 1 por cada visita que genera el usuario y se restablece después de cada visita. |
 | visit_remitente del reenvío | _experience.analytics.session.web.webReferrer.URL | string | El primer remitente del reenvío de la visita. |
-| visit_search_page_num | _experience.analytics.session.search.pageDepth | integer | Nombre de la primera página de la visita. |
+| visit_search_page_num | _experience.analytics.session.search.pageDepth | integer | El primer nombre de página de la visita. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Objeto | Variables de tráfico personalizadas 1-75. |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarchies.hier1 - _experience.analytics.customDimensions.hierarchies.hier5 | Objeto | Utilizado por variables de jerarquía y contiene una lista delimitada de valores. | {valores (matriz), delimitador (cadena)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.listas.lista1.lista[] - _experience.analytics.customDimensions.listas.lista3.lista[] | array | Una lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. | {valor (cadena), clave (cadena)} |
@@ -234,14 +243,14 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | post_evento_lista | commerce.purchase, commerce.productViews, commerce.productListOpen, commerce.checkouts, commerce.productListAdd, commerce.productListRemovals, commerce.productListViews | Objeto | eventos comerciales estándar activados en la visita. | {id (cadena), valor (número)} |
 | post_evento_lista | _experience.analytics.evento1to100.evento1 - _experience.analytics.evento1to100.evento100, _experience.analytics.evento101to200.evento101 - _experience.analytics.evento101to20 0.evento200, _experience.analytics.evento201 a 300.evento201 - _experience.analytics.evento201 a 300.evento300, _experience.analytics.evento301 a 400.evento33 01 - _experience.analytics.evento301to400.` 400, _experience.analytics.› 401to500.401 - _experience.analytics.html401to500._experience .analytics.› 501a600.501 - _experience.analytics.` 501a600.600, _experience.analytics.601a700.601 - _experience.analytics. 601to700.html700, _experience.analytics.701to800.html・701 - _experience.analytics.701to800._experience.analytics.801to1 900.› 801 - _experience.analytics.` 801to900.› 900, _experience.analytics.901to1000.› 901 - _experience.analytics.› 901 a 10000 1000 | Objeto | eventos personalizados activados en la visita. | {id (objeto), valor (objeto)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | Booleano | Un indicador que indica si Java está habilitado. |
-| post_latitude | placeContext.geo._esquema.latitude | number | <!-- MISSING --> |
-| post_longitude | placeContext.geo._esquema.longitude | number | <!-- MISSING --> |
+| post_latitude | placeContext.geo._esquema.latitude | entero | <!-- MISSING --> |
+| post_longitude | placeContext.geo._esquema.longitude | entero | <!-- MISSING --> |
 | post_page_evento | web.webInteraction.type | string | Tipo de visita que se envía en la solicitud de imagen (visita individual estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
-| post_page_evento | web.webInteraction.linkClicks.value | number | Tipo de visita que se envía en la solicitud de imagen (visita individual estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
+| post_page_evento | web.webInteraction.linkClicks.value | entero | Tipo de visita que se envía en la solicitud de imagen (visita individual estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
 | post_page_evento_var1 | web.webInteraction.URL | string | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Es la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
 | post_page_evento_var2 | web.webInteraction.name | string | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Será el nombre personalizado del vínculo. |
 | post_page_type | web.webPageDetails.isErrorPage | Booleano | Se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o contener &quot;ErrorPage&quot; |
-| post_pagename_no_url | web.webPageDetails.pageViews.value | number | El nombre de la página (si se ha establecido). Si no se especifica ninguna página, este valor se deja vacío. |
+| post_pagename_no_url | web.webPageDetails.pageViews.value | entero | El nombre de la página (si se ha establecido). Si no se especifica ninguna página, este valor se deja vacío. |
 | post_product_lista | productListItems[].items | array | La lista del producto, tal como se pasa a través de la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
 | post_search_engine | search.searchEngine | string | ID numérica que representa el motor de búsqueda que dirigió el visitante a su sitio. |
 | mvvar1_instance | .lista.items[] | Objeto | Lista de los valores variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
@@ -249,12 +258,12 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 |  | mvvar3_instance | .lista.items[] | Objeto | Lista de los valores variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
 | color | device.colorDepth | integer | ID de profundidad de color, según el valor de la columna c_color. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | string | El ID numérico, que representa el tipo de remitente del reenvío del primer remitente del reenvío del visitante. |
-| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | integer | Marca de hora de la primera visita individual del visitante en tiempo Unix. |
+| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | integer | Marca de tiempo de la primera visita del visitante en Tiempo Unix. |
 | geo_country | placeContext.geo.countryCode | string | Abreviación del país del que procede la visita, basada en la IP. |
-| geo_latitude | placeContext.geo._esquema.latitude | number | <!-- MISSING --> |
-| geo_longitude | placeContext.geo._esquema.longitude | number | <!-- MISSING --> |
+| geo_latitude | placeContext.geo._esquema.latitude | entero | <!-- MISSING --> |
+| geo_longitude | placeContext.geo._esquema.longitude | entero | <!-- MISSING --> |
 | paid_search | search.isPaid | Booleano | Un indicador que se establece si la visita coincide con la detección de búsqueda paga. |
-| ref_type | web.webReferrer.type | string | Un ID numérico que representa el tipo de referencia de la visita. |
+| ref_type | web.webReferrer.type | string | Una ID numérica que representa el tipo de referente de la visita. |
 | visit_paid_search | _experience.analytics.session.search.isPaid | Booleano | Un indicador (1=pago, 0=no pagado) que indica si la primera visita individual de la visita fue desde una visita individual de búsqueda paga. |
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | string | ID numérico que representa el tipo de remitente del reenvío del primer remitente del reenvío de la visita. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | string | ID numérica del primer motor de búsqueda de la visita. |
