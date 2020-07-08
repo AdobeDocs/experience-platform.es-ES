@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Inicio clonando el [!DNL GitHub] repositorio en el sistema local con el siguient
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/scala/retail` donde puede encontrar las secuencias de comandos `login.sh` y `build.sh`. Estas secuencias de comandos se utilizan para iniciar sesión en Docker y crear la imagen del Docker. Si tiene las credenciales [del](#docker-based-model-authoring) Docker listas, introduzca los siguientes comandos en terminal en orden:
+A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/scala` donde puede encontrar las secuencias de comandos `login.sh` y `build.sh`. Estas secuencias de comandos se utilizan para iniciar sesión en Docker y crear la imagen del Docker. Si tiene las credenciales [del](#docker-based-model-authoring) Docker listas, introduzca los siguientes comandos en terminal en orden:
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/s
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>Si recibe un error de permiso al intentar iniciar sesión en Docker mediante la `login.sh` secuencia de comandos, intente utilizar el comando `bash login.sh`.
 
 Al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
 
