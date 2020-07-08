@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía del usuario de conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
@@ -15,18 +18,18 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 
 ## Primeros pasos
 
-Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía del usuario requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Conjuntos](overview.md)de datos: almacenamiento y administración para la persistencia de datos en la plataforma de experiencia.
-* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Conjuntos](overview.md)de datos: La construcción de almacenamiento y administración para la persistencia de datos en Experience Platform.
+* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante el Editor de Esquemas en la interfaz de usuario de la plataforma.
+   * [Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante el Editor de Esquemas en la interfaz de usuario de Platform.
 * [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Administración](../../data-governance/home.md)de datos: Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
 
 ## datasets de Vista
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **Conjuntos** de datos en el panel de navegación izquierdo para abrir el panel *Conjuntos* de datos. El panel lista todos los conjuntos de datos disponibles para su organización. Se muestran detalles de cada conjunto de datos de la lista, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de la ingestión más reciente.
+En la interfaz de usuario del Experience Platform, haga clic en **Conjuntos** de datos en el panel de navegación izquierdo para abrir el panel *Conjuntos* de datos. El panel lista todos los conjuntos de datos disponibles para su organización. Se muestran detalles de cada conjunto de datos de la lista, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de la ingestión más reciente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -45,7 +48,7 @@ En la ventana previsualización, la vista jerárquica del esquema para el conjun
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Para obtener métodos más sólidos para acceder a los datos, Experience Platform proporciona servicios de flujo descendente como Consulta Service y JupyterLab para explorar y analizar los datos. Consulte los siguientes documentos para obtener más información:
+Para obtener métodos más sólidos para acceder a sus datos, Experience Platform proporciona servicios de flujo descendente como el Servicio de Consulta y JupyterLab para explorar y analizar los datos. Consulte los siguientes documentos para obtener más información:
 
 * [Visión general del servicio de Consulta](../../query-service/home.md)
 * [Guía del usuario de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -87,7 +90,9 @@ Aparece el paso *Configurar* . Proporcione un nombre y una descripción opcional
 
 Aparece el paso *Añadir datos* . Para cargar el archivo CSV, arrástrelo y colóquelo en el centro de la pantalla o haga clic en **Examinar** para explorar el directorio de archivos. El archivo puede tener un tamaño de hasta diez gigabytes. Una vez cargado el archivo CSV, haga clic en **Guardar** para crear el conjunto de datos.
 
->[!NOTE] Los nombres de columna CSV deben tener inicios con caracteres alfanuméricos y solo pueden contener letras, números y subrayados.
+>[!NOTE]
+>
+>Los nombres de columna CSV deben tener inicios con caracteres alfanuméricos y solo pueden contener letras, números y subrayados.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -108,13 +113,15 @@ Si un conjunto de datos ya contiene datos y se habilita para el Perfil, Perfil n
 
 ## Administrar y aplicar la administración de datos en un conjunto de datos
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo de administración de datos principal para la plataforma de experiencia. Las etiquetas DULE permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la información general [sobre el Gobierno de](../../data-governance/home.md) datos para obtener más información sobre las etiquetas o consulte la guía [del usuario sobre las etiquetas de uso de](../../data-governance/labels/overview.md) datos para obtener instrucciones sobre cómo aplicar etiquetas a los conjuntos de datos.
+El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo de control de datos principal para el Experience Platform. Las etiquetas DULE permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la información general [sobre el Gobierno de](../../data-governance/home.md) datos para obtener más información sobre las etiquetas o consulte la guía [del usuario sobre las etiquetas de uso de](../../data-governance/labels/overview.md) datos para obtener instrucciones sobre cómo aplicar etiquetas a los conjuntos de datos.
 
 ## Eliminar un conjunto de datos
 
 Puede eliminar un conjunto de datos accediendo primero a su pantalla de actividad ** de conjunto de datos. A continuación, haga clic en **Eliminar conjunto de datos** para eliminarlo.
 
->[!NOTE] Los conjuntos de datos creados y utilizados por aplicaciones y servicios de Adobe (como Adobe Analytics, Adobe Audiencia Manager o el servicio de toma de decisiones) no se pueden eliminar.
+>[!NOTE]
+>
+>Los conjuntos de datos creados y utilizados por aplicaciones y servicios de Adobe (como Adobe Analytics, Adobe Audience Manager o el servicio de toma de decisiones) no se pueden eliminar.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -128,7 +135,7 @@ Si un conjunto de datos está habilitado para el Perfil, eliminarlo a través de
 
 ## Monitoreo de la ingesta de datos
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **Supervisión** en el panel de navegación izquierdo. El panel *de supervisión* le permite realizar la vista de los estados de los datos de entrada desde la ingestión por lotes o por flujo continuo. Para vista de los estados de lotes individuales, haga clic en *Lote de extremo a extremo* o en *Flujo de extremo a extremo*. Los paneles listas todas las ejecuciones de ingestión por lotes o de flujo continuo, incluidas las que se hayan realizado correctamente, hayan fallado o estén en curso. Cada listado proporciona detalles del lote, incluyendo el ID del lote, el nombre del conjunto de datos del destinatario y el número de registros ingestados. Si el conjunto de datos de destinatario está habilitado para el Perfil, también se muestra el número de registros de identidad y perfil ingestados.
+En la interfaz de usuario del Experience Platform, haga clic en **Supervisión** en el panel de navegación izquierdo. El panel *de supervisión* le permite realizar la vista de los estados de los datos de entrada desde la ingestión por lotes o por flujo continuo. Para vista de los estados de lotes individuales, haga clic en *Lote de extremo a extremo* o en *Flujo de extremo a extremo*. Los paneles listas todas las ejecuciones de ingestión por lotes o de flujo continuo, incluidas las que se hayan realizado correctamente, hayan fallado o estén en curso. Cada listado proporciona detalles del lote, incluyendo el ID del lote, el nombre del conjunto de datos del destinatario y el número de registros ingestados. Si el conjunto de datos de destinatario está habilitado para el Perfil, también se muestra el número de registros de identidad y perfil ingestados.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -142,7 +149,7 @@ Si desea eliminar el lote, puede hacerlo haciendo clic en **Eliminar lote** enco
 
 ## Pasos siguientes
 
-Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre la realización de flujos de trabajo comunes de plataforma que involucran conjuntos de datos, consulte los siguientes tutoriales:
+Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario del Experience Platform. Para ver los pasos sobre cómo realizar flujos de trabajo comunes de Platform que involucran conjuntos de datos, consulte los siguientes tutoriales:
 
 * [Creación de un conjunto de datos mediante API](create.md)
 * [Datos del conjunto de datos de Consulta mediante la API de acceso a datos](../../data-access/home.md)
