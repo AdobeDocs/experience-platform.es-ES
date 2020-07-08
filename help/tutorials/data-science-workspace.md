@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tutoriales de Área de trabajo de Data Science
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Para obtener más información, siga los archivos de origen del [paquete en un t
 ## Importar una fórmula
 
 >[!NOTE]
+>
+>
 >Este tutorial requiere que tenga una URL de archivo de origen de Docker. Visite los archivos de origen del [paquete en un tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) de fórmula si no tiene una URL de archivo de origen del Docker.
 
 Los tutoriales de las fórmulas de importación proporcionan información sobre cómo configurar e importar una fórmula empaquetada. Al final de este tutorial, puede crear, capacitar y evaluar un modelo en Adobe Experience Platform Data Science Workspace.
@@ -104,7 +106,7 @@ Para empezar, siga el tutorial [de puntaje de una](../data-science-workspace/mod
 
 ## Publicación de un modelo como servicio
 
-Adobe Experience Platform Data Science Workspace le permite publicar el modelo como un servicio, lo que permite a los usuarios de la organización de IMS puntuar datos sin necesidad de crear sus propios modelos. Esto se puede hacer mediante la interfaz de usuario o la API de aprendizaje automático de Sensei. [!DNL Platform]
+Adobe Experience Platform Data Science Workspace le permite publicar el modelo como un servicio, lo que permite a los usuarios de la organización de IMS puntuar datos sin necesidad de crear sus propios modelos. Esto se puede hacer mediante la interfaz de usuario o la API de aprendizaje automático Sensei. [!DNL Platform]
 
 **Este tutorial le ayudará a:**
 - Publicar un modelo como servicio.
