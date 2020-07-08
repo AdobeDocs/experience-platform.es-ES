@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
 # Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
 Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas.
 
@@ -20,10 +23,10 @@ Este documento proporciona un tutorial para definir una relación uno a uno entr
 
 Este tutorial requiere un conocimiento práctico del Modelo de datos de experiencia (XDM) y el sistema XDM. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
-* [Sistema XDM en la plataforma](../home.md)de experiencias: Información general sobre XDM y su implementación en la plataforma de experiencias.
+* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en Experience Platform.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Introducción de los componentes básicos de los esquemas XDM.
 * [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
@@ -53,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] El encabezado Aceptar `application/vnd.adobe.xed-id+json` devuelve solo los títulos, ID y versiones de los esquemas resultantes.
+>[!NOTE]
+>
+>El encabezado Aceptar `application/vnd.adobe.xed-id+json` devuelve solo los títulos, ID y versiones de los esquemas resultantes.
 
 **Respuesta**
 
@@ -101,7 +106,9 @@ Registre los `$id` valores de los dos esquemas entre los que desea definir una r
 
 En el Registro de Esquemas, los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas SQL: un campo del esquema de origen actúa como referencia a un campo de un esquema de destino. Al definir una relación, cada esquema debe tener un campo específico para utilizarse como referencia al otro esquema.
 
->[!IMPORTANT] Si los esquemas se van a habilitar para su uso en Perfil [de cliente en tiempo](../../profile/home.md)real, el campo de referencia para el esquema de destino debe ser su identidad **** principal. Esto se explica con más detalle más adelante en este tutorial.
+>[!IMPORTANT]
+>
+>Si los esquemas se van a habilitar para su uso en Perfil [de cliente en tiempo](../../profile/home.md)real, el campo de referencia para el esquema de destino debe ser su identidad **** principal. Esto se explica con más detalle más adelante en este tutorial.
 
 Si ninguno de los esquemas tiene un campo para este fin, es posible que tenga que crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;cadena&quot;.
 
@@ -323,7 +330,9 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 ## Definir campos de identidad principales para ambos esquemas
 
->[!NOTE] Este paso solo es necesario para esquemas que se habilitarán para su uso en el Perfil [del cliente en tiempo](../../profile/home.md)real. Si no desea que esquema participe en una unión o si sus esquemas ya tienen identidades principales definidas, puede pasar al siguiente paso de [crear un descriptor](#create-descriptor) de identidad de referencia para el esquema de destino.
+>[!NOTE]
+>
+>Este paso solo es necesario para esquemas que se habilitarán para su uso en el Perfil [del cliente en tiempo](../../profile/home.md)real. Si no desea que esquema participe en una unión o si sus esquemas ya tienen identidades principales definidas, puede pasar al siguiente paso de [crear un descriptor](#create-descriptor) de identidad de referencia para el esquema de destino.
 
 Para que los esquemas se puedan habilitar para su uso en el Perfil del cliente en tiempo real, deben tener una identidad principal definida. Además, el esquema de destino de una relación debe utilizar su identidad principal como campo de referencia.
 
