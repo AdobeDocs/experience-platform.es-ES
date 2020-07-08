@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Los científicos de datos pueden aprovechar las nuevas tecnologías y conjuntos 
 
 Control de acceso para [!DNL Experience Platform] se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
 
->[!IMPORTANT] Para poder usar [!DNL Data Science Workspace], debe habilitarse el permiso [!UICONTROL &quot;Administrar área de trabajo de ciencia de datos&quot;] .
+>[!IMPORTANT]
+>
+>Para poder usar [!DNL Data Science Workspace], debe habilitarse el permiso [!UICONTROL &quot;Administrar área de trabajo de ciencia de datos&quot;] .
 
 La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso:
 
