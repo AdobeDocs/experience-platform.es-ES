@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 2%
@@ -20,14 +20,18 @@ Las siguientes secciones explican las llamadas que puede realizar mediante el `/
 
 Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud POST al extremo raíz.
 
->[!NOTE] Las aplicaciones compatibles de Adobe Experience Cloud utilizan valores diferentes para identificar los sujetos de datos. Consulte la guía sobre [Privacy Service y las aplicaciones](../experience-cloud-apps.md) de Experience Cloud para obtener más información sobre los identificadores necesarios para sus aplicaciones.
+>[!NOTE]
+>
+>Las aplicaciones compatibles de Adobe Experience Cloud utilizan valores diferentes para identificar los sujetos de datos. Consulte la guía sobre aplicaciones [de](../experience-cloud-apps.md) Privacy Service y Experience Cloud para obtener más información sobre los identificadores requeridos para las aplicaciones.
 
 La API de Privacy Service admite dos tipos de solicitudes de trabajo para datos personales:
 
 * [Acceso y/o eliminación](#access-delete): Acceder (leer) o eliminar datos personales.
 * [Exclusión la venta](#opt-out): Marque los datos personales como no vendidos.
 
->[!IMPORTANT] Aunque las solicitudes de acceso y eliminación se pueden combinar como una sola llamada de API, las solicitudes de exclusión se deben realizar por separado.
+>[!IMPORTANT]
+>
+>Aunque las solicitudes de acceso y eliminación se pueden combinar como una sola llamada de API, las solicitudes de exclusión se deben realizar por separado.
 
 ### Crear un trabajo de acceso o eliminación {#access-delete}
 
@@ -288,7 +292,9 @@ Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar 
 
 Mediante uno de los `jobId` valores devueltos en el paso anterior, puede recuperar información sobre ese trabajo, como su estado de procesamiento actual.
 
->[!IMPORTANT] Los datos de los trabajos creados anteriormente solo están disponibles para su recuperación en los 30 días posteriores a la fecha de finalización del trabajo.
+>[!IMPORTANT]
+>
+>Los datos de los trabajos creados anteriormente solo están disponibles para su recuperación en los 30 días posteriores a la fecha de finalización del trabajo.
 
 **Formato API**
 
@@ -383,7 +389,9 @@ La siguiente tabla lista los distintos estados de trabajo posibles y su signific
 | 3 | Submitted | El trabajo se envía a todas las solicitudes correspondientes. |
 | 4 | Error | Error en el procesamiento del trabajo: se puede obtener información más específica recuperando los detalles del trabajo individual. |
 
->[!NOTE] Un trabajo enviado puede permanecer en estado de procesamiento si tiene un trabajo secundario dependiente que aún se está procesando.
+>[!NOTE]
+>
+>Un trabajo enviado puede permanecer en estado de procesamiento si tiene un trabajo secundario dependiente que aún se está procesando.
 
 ## Lista de todos los trabajos
 
@@ -428,4 +436,4 @@ Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe
 
 ## Pasos siguientes
 
-Ahora sabe cómo crear y supervisar trabajos de privacidad mediante la API de Privacy Service. Para obtener información sobre cómo realizar las mismas tareas mediante la interfaz de usuario, consulte la descripción general [de la interfaz de usuario de](../ui/overview.md)Privacy Service.
+Ahora sabe cómo crear y supervisar trabajos de privacidad mediante la API de Privacy Service. Para obtener información sobre cómo realizar las mismas tareas mediante la interfaz de usuario, consulte la descripción general [de la interfaz de usuario del](../ui/overview.md)Privacy Service.
