@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Creación de un esquema ad-hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
 
 # Creación de un esquema ad-hoc
 
-En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de ingestión de datos para la plataforma de experiencia, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
+En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de ingestión de datos para Experience Platform, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
 
-Este documento proporciona pasos generales para crear un esquema ad-hoc mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas. Está pensado para utilizarse junto con otros tutoriales de la plataforma de experiencia que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de esos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
+Este documento proporciona pasos generales para crear un esquema ad-hoc mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas. Está pensado para utilizarse junto con otros tutoriales de Experience Platform que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de esos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico del sistema del modelo de datos de experiencia (XDM). Antes de iniciar este tutorial, consulte la siguiente documentación de XDM:
 
-- [Descripción general](../home.md)del sistema XDM: Información general de alto nivel sobre XDM y su implementación en la plataforma de experiencias.
+- [Descripción general](../home.md)del sistema XDM: Descripción general de alto nivel de XDM y su implementación en Experience Platform.
 - [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los componentes básicos de los esquemas XDM.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
@@ -38,7 +41,9 @@ POST /tenant/classes
 
 La siguiente solicitud crea una nueva clase XDM, configurada por los atributos suministrados en la carga útil. Al proporcionar una `$ref` propiedad definida como `https://ns.adobe.com/xdm/data/adhoc` en la `allOf` matriz, esta clase hereda el `adhoc` comportamiento. La solicitud también define un `_adhoc` objeto, que contiene los campos personalizados de la clase.
 
->[!NOTE] Los campos personalizados definidos en `_adhoc` varían según el caso de uso del esquema ad-hoc. Consulte el flujo de trabajo específico en el tutorial correspondiente para los campos personalizados requeridos según el caso de uso.
+>[!NOTE]
+>
+>Los campos personalizados definidos en `_adhoc` varían según el caso de uso del esquema ad-hoc. Consulte el flujo de trabajo específico en el tutorial correspondiente para los campos personalizados requeridos según el caso de uso.
 
 ```shell
 curl -X POST \
@@ -216,7 +221,9 @@ Una respuesta correcta devuelve los detalles del esquema recién creado, incluye
 
 ## Vista del esquema ad hoc completo
 
->[!NOTE] Este paso es opcional. Si no desea inspeccionar la estructura de campos de su esquema ad-hoc, puede saltar a la sección de [próximos pasos](#next-steps) al final de este tutorial.
+>[!NOTE]
+>
+>Este paso es opcional. Si no desea inspeccionar la estructura de campos de su esquema ad-hoc, puede saltar a la sección de [próximos pasos](#next-steps) al final de este tutorial.
 
 Una vez creado el esquema ad-hoc, puede realizar una solicitud de búsqueda (GET) para vista del esquema en su formulario ampliado. Esto se lleva a cabo utilizando el encabezado Accept adecuado en la solicitud GET, como se muestra a continuación.
 
