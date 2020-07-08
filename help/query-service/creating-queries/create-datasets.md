@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Generar conjuntos de datos a partir de resultados de consulta
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
 
 # Generar conjuntos de datos a partir de resultados de consulta
 
-El verdadero poder del servicio de Consulta se revela cuando se utilizan consultas para generar conjuntos de datos en el lago de datos que se utilizarán como entrada en más consultas o en otros servicios como Área de trabajo de ciencia de datos, Perfil de clientes en tiempo real o Espacio de trabajo de Análisis.
+El verdadero poder del servicio de Consulta se revela cuando se utilizan consultas para generar conjuntos de datos en el lago de datos que se utilizarán como entrada en más consultas o en otros servicios como Área de trabajo de ciencia de datos, Perfil de clientes en tiempo real o Analysis Workspace.
 
 El servicio de Consulta permite crear conjuntos de datos desde la interfaz de usuario. Siga estos pasos:
 
 1. Escriba la consulta con un cliente conectado y valide la salida.
-2. Inicie sesión en la interfaz de usuario de la plataforma y vaya a Consultas.
+2. Inicie sesión en la interfaz de usuario de Platform y vaya a Consultas.
 3. Busque su consulta en la lista y pase el ratón sobre la fila.
 4. Haga clic en **Crear conjunto de datos**. ![Imagen](../images/queries/create-datasets/click-create-dataset.png)
 5. Escriba un nombre de conjunto de datos, precedido de su ID de LDAP (no tiene que ser único ni SQL seguro; el sistema genera un &quot;nombre de tabla&quot; basado en el nombre proporcionado aquí).
@@ -25,7 +28,9 @@ El servicio de Consulta permite crear conjuntos de datos desde la interfaz de us
 
 Después de crear un conjunto de datos, se puede acceder a él como cualquier otro conjunto de datos en el lago de datos y utilizarlo para diversos casos de uso.
 
->[!NOTE] En una implementación dinámica, debe aplicar etiquetas de Administración de datos después de crear el conjunto de datos.
+>[!NOTE]
+>
+>En una implementación dinámica, debe aplicar etiquetas de Administración de datos después de crear el conjunto de datos.
 
 ## Generar conjuntos de datos con un esquema predefinido del modelo de datos de experiencia
 
