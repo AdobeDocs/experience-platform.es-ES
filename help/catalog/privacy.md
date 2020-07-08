@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Para obtener más información sobre Áreas de nombres de identidad en Experienc
 
 Al crear solicitudes de privacidad para el Data Lake, se deben proporcionar valores de identidad válidos (y sus Áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos que están sujetos a solicitudes de privacidad deben contener un descriptor **de** identidad en su esquema XDM asociado.
 
->[!NOTE] Los conjuntos de datos basados en esquemas que no admiten metadatos del descriptor de identidad (como conjuntos de datos ad-hoc) actualmente no se pueden procesar en solicitudes de privacidad.
+>[!NOTE]
+>
+>Los conjuntos de datos basados en esquemas que no admiten metadatos del descriptor de identidad (como conjuntos de datos ad-hoc) actualmente no se pueden procesar en solicitudes de privacidad.
 
 En esta sección se explican los pasos para agregar un descriptor de identidad al esquema XDM de un conjunto de datos existente. Si ya tiene un conjunto de datos con un descriptor de identidad, puede pasar a la [siguiente sección](#nested-maps).
 
@@ -60,7 +62,9 @@ Una vez configurados los campos correspondientes dentro del esquema como campos 
 
 ### Uso de la API {#identity-api}
 
->[!NOTE] En esta sección se asume que conoce el valor de ID de URI único del esquema XDM del conjunto de datos. Si no conoce este valor, puede recuperarlo mediante la API del servicio de catálogo. Después de leer la sección de [introducción](./api/getting-started.md) de la guía para desarrolladores, siga los pasos descritos en para [enumerar](./api/list-objects.md) o [buscar](./api/look-up-object.md) los objetos del catálogo para encontrar el conjunto de datos. El ID de esquema se encuentra en `schemaRef.id`
+>[!NOTE]
+>
+>En esta sección se asume que conoce el valor de ID de URI único del esquema XDM del conjunto de datos. Si no conoce este valor, puede recuperarlo mediante la API del servicio de catálogo. Después de leer la sección de [introducción](./api/getting-started.md) de la guía para desarrolladores, siga los pasos descritos en para [enumerar](./api/list-objects.md) o [buscar](./api/look-up-object.md) los objetos del catálogo para encontrar el conjunto de datos. El ID de esquema se encuentra en `schemaRef.id`
 >
 > Esta sección incluye llamadas a la API del Registro de Esquema. Para obtener información importante relacionada con el uso de la API, incluido el conocimiento del usuario `{TENANT_ID}` y el concepto de contenedores, consulte la sección de [introducción](../xdm/api/getting-started.md) de la guía para desarrolladores.
 
@@ -126,7 +130,9 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 ## Envío de solicitudes {#submit}
 
->[!NOTE] En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la interfaz de usuario [del](../privacy-service/ui/overview.md) Privacy Service o de la API [del](../privacy-service/api/getting-started.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad del usuario enviados en las cargas de solicitud.
+>[!NOTE]
+>
+>En esta sección se explica cómo dar formato a las solicitudes de privacidad del lago de datos. Se recomienda encarecidamente que revise la documentación de la interfaz de usuario [del](../privacy-service/ui/overview.md) Privacy Service o de la API [del](../privacy-service/api/getting-started.md) Privacy Service para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluida la forma correcta de dar formato a los datos de identidad del usuario enviados en las cargas de solicitud.
 
 La siguiente sección describe cómo realizar solicitudes de privacidad para el lago de datos mediante la interfaz de usuario o API del Privacy Service.
 
