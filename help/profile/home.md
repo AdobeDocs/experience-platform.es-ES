@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Un perfil es una representación de un sujeto, una organización o una persona, 
 
 ### eventos de series temporales
 
-Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, ya sea directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
+Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
 
 ### Identidades
 
@@ -129,6 +129,8 @@ El Experience Platform tiene una serie de directrices que seguir para utilizar e
 --->
 
 >[!NOTE]
+>
+>
 >Una entidad no personal hace referencia a cualquier clase XDM que **no forme** parte del Perfil.
 
 ## Próximos pasos y recursos adicionales
