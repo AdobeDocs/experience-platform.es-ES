@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear un conjunto de datos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 Para crear un conjunto de datos mediante la API de catálogo, debe conocer el valor del `$id` esquema del modelo de datos de experiencia (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud POST al extremo en la API de catálogo `/datasets` .
 
->[!NOTE] Este documento solo cubre cómo crear un objeto de conjunto de datos en el catálogo. Para ver los pasos completos sobre cómo crear, rellenar y monitorear un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
+>[!NOTE]
+>
+>Este documento solo cubre cómo crear un objeto de conjunto de datos en el catálogo. Para ver los pasos completos sobre cómo crear, rellenar y monitorear un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
 
 **Formato API**
 
@@ -52,7 +57,9 @@ curl -X POST \
 | `name` | Nombre del conjunto de datos que se va a crear. |
 | `schemaRef.id` | El valor URI `$id` del esquema XDM en el que se basará el conjunto de datos. |
 
->[!NOTE] En este ejemplo se utiliza el formato de archivo de [parqué](https://parquet.apache.org/documentation/latest/) para su `containerFormat` propiedad. Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md).
+>[!NOTE]
+>
+>En este ejemplo se utiliza el formato de archivo de [parqué](https://parquet.apache.org/documentation/latest/) para su `containerFormat` propiedad. Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md).
 
 **Respuesta**
 
