@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Introducción a la introducción por lotes de Adobe Experience Platform
+title: Introducción a la ingestión de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 2%
 
 ---
 
 
 # Introducción a la ingestión de lotes
 
-La API de inserción por lotes permite ingestar datos en Adobe Experience Platform como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
+La API de inserción de lotes permite ingestar datos en Adobe Experience Platform como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 
 La referencia [de la API de inserción de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) datos proporciona información adicional sobre estas llamadas de API.
 
@@ -21,7 +24,7 @@ El diagrama siguiente describe el proceso de ingestión por lotes:
 
 ## Uso de la API
 
-La API de inserción de datos permite ingestar datos como lotes (una unidad de datos que consta de uno o varios archivos que se van a ingestar como una unidad) en la plataforma de experiencia en tres pasos básicos:
+La API de inserción de datos permite ingestar datos como lotes (una unidad de datos que consta de uno o más archivos que se van a ingestar como una unidad) en Experience Platform en tres pasos básicos:
 
 1. Crear un nuevo lote.
 2. Cargue archivos en un conjunto de datos especificado que coincida con el esquema XDM de los datos.
@@ -44,21 +47,23 @@ Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en partes
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -123,7 +128,9 @@ Después de crear correctamente un nuevo lote para la carga, los archivos se pue
 
 Puede cargar archivos con la API **de carga de archivos** pequeños. Sin embargo, si los archivos son demasiado grandes y se supera el límite de la puerta de enlace (como tiempos de espera extendidos, solicitudes de tamaño de cuerpo excedidos y otras restricciones), puede cambiar a la API **de carga de archivos** grandes. Esta API carga el archivo en fragmentos y vincula los datos mediante la llamada a la API **de carga de archivos** grandes.
 
->[!NOTE] Los ejemplos siguientes utilizan el formato de archivo [parquet](https://parquet.apache.org/documentation/latest/) . Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](./api-overview.md).
+>[!NOTE]
+>
+>Los ejemplos siguientes utilizan el formato de archivo [parquet](https://parquet.apache.org/documentation/latest/) . Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](./api-overview.md).
 
 ### Carga de archivos pequeña
 
@@ -384,7 +391,7 @@ El `"status"` campo muestra el estado actual del lote solicitado. Los lotes pued
 | Anulado | Se ha llamado **explícitamente** a una operación de anulación (mediante la API de Ingesta por lotes) para el lote especificado. Una vez que el lote está en estado **Cargado** , no se puede anular. |
 | Activo | El lote se ha promocionado correctamente y está disponible para el consumo de flujo descendente. Este estado se puede usar de forma intercambiable con **Éxito**. |
 | Eliminado | Se han eliminado completamente los datos del lote. |
-| Error | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no se mostrarán** . Este estado se puede usar de forma intercambiable con **Error**. |
+| Fallido | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no se mostrarán** . Este estado se puede usar de forma intercambiable con **Error**. |
 | Inactivo | El lote se promocionó correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
 | Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
 | Cargando | Los datos de este lote se están cargando y el lote **no está** listo para promocionarse. |
