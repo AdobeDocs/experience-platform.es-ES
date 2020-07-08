@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -69,7 +69,9 @@ Además de poder buscar [!DNL ExperienceEvent] elementos, también puede buscar 
 
 Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra de búsqueda, que utiliza la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Los resultados de búsqueda comienzan a llenarse a medida que se ingresan palabras completas. Por ejemplo, para generar una regla basada en el campo XDM `ExperienceEvent.commerce.productViews`, escriba &quot;vistas de producto&quot; en el inicio de búsqueda. Una vez escrita la palabra &quot;producto&quot;, comienzan a aparecer los resultados de la búsqueda. Cada resultado incluye la jerarquía de objetos a la que pertenece.
 
->[!NOTE] Los campos de esquema personalizados definidos por su organización pueden tardar hasta 24 horas en aparecer y estar disponibles para su uso en la creación de reglas.
+>[!NOTE]
+>
+>Los campos de esquema personalizados definidos por su organización pueden tardar hasta 24 horas en aparecer y estar disponibles para su uso en la creación de reglas.
 
 A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y [!UICONTROL Tipos de evento] en la definición del segmento.
 
@@ -105,7 +107,9 @@ Puede arrastrar y soltar una audiencia de la ficha *[!UICONTROL Audiencia]* en e
 
 Para [!DNL Platform] audiencias creadas con el Generador [!UICONTROL de]segmentos, se le ofrece la opción de convertir la audiencia en el conjunto de reglas que se utilizaron en la definición de segmentos para esa audiencia. Esta conversión hace una copia de la lógica de regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de que ha guardado los cambios recientes en la definición del segmento antes de convertirlo a lógica de regla.
 
->[!NOTE] Al agregar una audiencia desde un origen externo, solo se hace referencia a la pertenencia a la audiencia. No puede convertir la audiencia en reglas y, por lo tanto, las reglas utilizadas para crear la audiencia original no se pueden modificar en la nueva definición de segmento.
+>[!NOTE]
+>
+>Al agregar una audiencia desde un origen externo, solo se hace referencia a la pertenencia a la audiencia. No puede convertir la audiencia en reglas y, por lo tanto, las reglas utilizadas para crear la audiencia original no se pueden modificar en la nueva definición de segmento.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ Un contenedor secundario también se puede extraer y agregar en línea al conten
 
 Una vez que haga clic en **[!UICONTROL Desajustar contenedor]** , se eliminará el contenedor secundario y los criterios aparecerán en línea.
 
->[!NOTE] Al desajustar contenedores, tenga cuidado de que la lógica siga cumpliendo con la definición de segmento deseada.
+>[!NOTE]
+>
+>Al desajustar contenedores, tenga cuidado de que la lógica siga cumpliendo con la definición de segmento deseada.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,7 +167,9 @@ A medida que siga generando la definición del segmento, puede realizar la vista
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] Las estimaciones de Audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de un millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades se utilizan 1 millón de entidades; y para más de 20 millones de entidades se utiliza el 5% del total. Encontrará más información sobre la generación de estimaciones de segmentos en la sección [de generación de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimaciones del tutorial de creación de segmentos.
+>[!NOTE]
+>
+>Las estimaciones de Audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de un millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades se utilizan 1 millón de entidades; y para más de 20 millones de entidades se utiliza el 5% del total. Encontrará más información sobre la generación de estimaciones de segmentos en la sección [de generación de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimaciones del tutorial de creación de segmentos.
 
 ## Habilitar la segmentación programada {#enable-scheduled-segmentation}
 
@@ -171,7 +179,9 @@ La evaluación a petición implica el uso de la API para realizar evaluaciones y
 
 La activación de las definiciones de segmentos para la evaluación programada se puede realizar mediante la interfaz de usuario o la API. En la interfaz de usuario, vuelva a la ficha *[!UICONTROL Examinar]* dentro de **[!UICONTROL Segmentos]** y seleccione **[!UICONTROL Evaluar todos los segmentos]**. Esto hará que todos los segmentos se evalúen según la programación establecida por su organización.
 
->[!NOTE] La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] dentro de un solo entorno de simulación de pruebas, no podrá usar la evaluación programada.
+>[!NOTE]
+>
+>La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] dentro de un solo entorno de simulación de pruebas, no podrá usar la evaluación programada.
 
 Actualmente, las programaciones solo se pueden crear mediante la API. Para ver los pasos detallados sobre cómo crear, editar y trabajar con programaciones mediante la API, siga el tutorial para evaluar y acceder a los resultados del segmento, específicamente la sección sobre evaluación [programada mediante la API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -179,7 +189,9 @@ Actualmente, las programaciones solo se pueden crear mediante la API. Para ver l
 
 ## Segmentación por flujo continuo {#streaming-segmentation}
 
->[!NOTE] Para que la segmentación por flujo continuo funcione, el cliente deberá habilitar la segmentación programada para la organización. Para obtener más información sobre cómo habilitar la segmentación programada, consulte [la sección anterior de esta guía](#enable-scheduled-segmentation)del usuario.
+>[!NOTE]
+>
+>Para que la segmentación por flujo continuo funcione, el cliente deberá habilitar la segmentación programada para la organización. Para obtener más información sobre cómo habilitar la segmentación programada, consulte [la sección anterior de esta guía](#enable-scheduled-segmentation)del usuario.
 
 Una consulta se evaluará automáticamente con segmentación de flujo continuo si cumple cualquiera de los siguientes criterios:
 
@@ -223,7 +235,9 @@ Para obtener información adicional sobre la última evaluación de segmentos, h
 
 ## Violaciones de políticas DULE
 
->[!NOTE] Las infracciones de directiva DULE solo se aplican si está creando un segmento que se ha asignado a un destino.
+>[!NOTE]
+>
+>Las infracciones de directiva DULE solo se aplican si está creando un segmento que se ha asignado a un destino.
 
 Una vez que haya terminado de crear el segmento, éste se analizará [!DNL Data Governance] para asegurarse de que no haya violaciones de política dentro del segmento. Para obtener más información sobre las infracciones DULE y de políticas, consulte la descripción general [de la etiqueta de uso de](../../data-governance/labels/overview.md)datos.
 
