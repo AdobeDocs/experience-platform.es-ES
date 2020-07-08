@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Actualización de un simulador para pruebas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
 
 Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud PATCH que incluya el simulador para pruebas `name` en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 
->[!NOTE] Actualmente solo se puede actualizar la propiedad `title` de un simulador de pruebas.
+>[!NOTE]
+>
+>Actualmente solo se puede actualizar la propiedad `title` de un simulador de pruebas.
 
 **Formato API**
 
