@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,7 +72,9 @@ Las Áreas de nombres que defina son privadas para su organización y requieren 
 
 De forma similar a las Áreas de nombres estándar, puede hacer clic en una Área de nombres personalizada desde la ficha *[!UICONTROL Examinar]* para vista de sus detalles. Sin embargo, con una Área de nombres personalizada también puede editar su Nombre para mostrar y su Descripción desde el área de detalles.
 
->[!NOTE] Una vez creada una Área de nombres, no se puede eliminar y su &quot;Símbolo de identidad&quot; (o &quot;código&quot; en la API) y &quot;Tipo&quot; no se pueden cambiar.
+>[!NOTE]
+>
+>Una vez creada una Área de nombres, no se puede eliminar y su &quot;Símbolo de identidad&quot; (o &quot;código&quot; en la API) y &quot;Tipo&quot; no se pueden cambiar.
 
 ## Áreas de nombres en los datos de identidad
 
