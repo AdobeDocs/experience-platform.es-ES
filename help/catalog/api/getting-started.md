@@ -4,44 +4,49 @@ solution: Experience Platform
 title: Guía del desarrollador del servicio de catálogo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 0%
 
 ---
 
 
 # Guía del desarrollador del servicio de catálogo
 
-El servicio de catálogo es el sistema de registro para la ubicación y el linaje de los datos en Adobe Experience Platform. El catálogo actúa como almacén de metadatos o &quot;catálogo&quot;, donde puede encontrar información sobre los datos en la plataforma de experiencias, sin necesidad de acceder a los datos en sí. Consulte la información general [del](../home.md) catálogo para obtener más información.
+El servicio de catálogo es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. El catálogo actúa como almacén de metadatos o &quot;catálogo&quot;, donde puede encontrar información sobre sus datos en Experience Platform, sin necesidad de acceder a los datos en sí. Consulte la información general [del](../home.md) catálogo para obtener más información.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio mediante la API de catálogo. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el catálogo.
 
 ## Requisitos previos
 
-El catálogo realiza un seguimiento de los metadatos de varios tipos de recursos y operaciones dentro de la plataforma de experiencias. Esta guía para desarrolladores requiere un conocimiento práctico de los distintos servicios de la plataforma de experiencia que intervienen en la creación y administración de estos recursos:
+El catálogo realiza un seguimiento de los metadatos de varios tipos de recursos y operaciones dentro del Experience Platform. Esta guía para desarrolladores requiere un conocimiento práctico de los diversos servicios de Experience Platform que intervienen en la creación y administración de estos recursos:
 
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: Forma en que la plataforma de experiencias ingesta y almacena datos de archivos de datos, como CSV y Parquet.
-* [Transmisión por secuencias](../../ingestion/streaming-ingestion/overview.md): Cómo Experience Platform ingiere y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
+* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: Cómo el Experience Platform ingesta y almacena datos de archivos de datos, como CSV y Parquet.
+* [Transmisión por secuencias](../../ingestion/streaming-ingestion/overview.md): Cómo el Experience Platform ingiere y almacena datos desde dispositivos del lado del cliente y del servidor en tiempo real.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer o tener disponible para realizar llamadas correctamente a la API del servicio de catálogo.
 
 ## Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ## Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
