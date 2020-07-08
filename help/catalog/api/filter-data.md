@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Filtrar datos del catálogo mediante parámetros de consulta
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2060'
+ht-degree: 1%
 
 ---
 
@@ -202,7 +205,7 @@ Existen algunas limitaciones que se deben tener en cuenta al utilizar etiquetas:
 * Los únicos objetos Catalog que admiten etiquetas actualmente son conjuntos de datos, lotes y conexiones.
 * Los nombres de las etiquetas son exclusivos de la organización de IMS.
 * Los procesos de Adobe pueden aprovechar las etiquetas para determinados comportamientos. Los nombres de estas etiquetas llevan el prefijo &quot;adobe&quot; como estándar. Por lo tanto, debe evitar esta convención al declarar nombres de etiquetas.
-* Los siguientes nombres de etiquetas están reservados para su uso en la plataforma de experiencia y, por lo tanto, no se pueden declarar como nombres de etiqueta para su organización:
+* Los siguientes nombres de etiquetas están reservados para su uso en todos los Experience Platform y, por lo tanto, no se pueden declarar como nombres de etiqueta para su organización:
    * `unifiedProfile`:: Este nombre de etiqueta está reservado para que el Perfil [del cliente en tiempo](../../profile/home.md)real ingrese conjuntos de datos.
    * `unifiedIdentity`:: Este nombre de etiqueta está reservado para los conjuntos de datos que ingesta [Identity Service](../../identity-service/home.md).
 
@@ -586,7 +589,9 @@ El valor del `property` parámetro admite varios tipos diferentes de expresiones
 | > | Devuelve sólo objetos cuyos valores de propiedad son buenos (pero no iguales a) una cantidad declarada. | `property=version>1.0.0` |
 | >= | Devuelve sólo objetos cuyos valores de propiedad sean buenos (o iguales a) una cantidad declarada. | `property=version>=1.0.0` |
 
->[!NOTE] La `name` propiedad admite el uso de un comodín `*`, ya sea como la cadena de búsqueda completa o como parte de ella. Los comodines coinciden con caracteres vacíos, de modo que la cadena de búsqueda `te*st` coincidirá con el valor &quot;test&quot;. Los asteriscos se escapan duplicándolos (`**`). Un asterisco de doble en una cadena de búsqueda representa un asterisco único como cadena literal.
+>[!NOTE]
+>
+>La `name` propiedad admite el uso de un comodín `*`, ya sea como la cadena de búsqueda completa o como parte de ella. Los comodines coinciden con caracteres vacíos, de modo que la cadena de búsqueda `te*st` coincidirá con el valor &quot;test&quot;. Los asteriscos se escapan duplicándolos (`**`). Un asterisco de doble en una cadena de búsqueda representa un asterisco único como cadena literal.
 
 **Solicitud**
 
