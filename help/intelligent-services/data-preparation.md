@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -82,7 +82,9 @@ Este campo representa la fecha y hora en que se produjo el evento. Este valor de
 
 #### xdm:canal {#channel}
 
->[!NOTE] Este campo solo es obligatorio cuando se utiliza Atribución AI.
+>[!NOTE]
+>
+>Este campo solo es obligatorio cuando se utiliza Atribución AI.
 
 Este campo representa el canal de marketing relacionado con ExperienceEvent. El campo incluye información sobre el tipo de canal, el tipo de medio y el tipo de ubicación.
 
@@ -233,7 +235,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 }
 ```
 
-Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
+Para obtener información completa sobre cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
 ## Asignación e ingesta de datos (#mapping)
 
@@ -245,7 +247,9 @@ Si tiene una [!DNL Adobe Experience Platform] suscripción y desea asignar e ing
 
 ### Uso de Adobe Experience Platform
 
->[!NOTE] Los pasos a continuación requieren una suscripción al Experience Platform. Si no tiene acceso a Platform, vaya a la sección de pasos [](#next-steps) siguientes.
+>[!NOTE]
+>
+>Los pasos a continuación requieren una suscripción al Experience Platform. Si no tiene acceso a Platform, vaya a la sección de pasos [](#next-steps) siguientes.
 
 Esta sección describe el flujo de trabajo para asignar e ingerir datos en Experience Platform para su uso en Servicios inteligentes, incluidos vínculos a tutoriales para ver los pasos detallados.
 
@@ -256,7 +260,9 @@ Cuando esté listo para el inicio de preparar sus datos para la ingestión, el p
 * [Creación de un esquema en la interfaz de usuario](../xdm/tutorials/create-schema-ui.md)
 * [Creación de un esquema en la API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] Los tutoriales anteriores siguen un flujo de trabajo genérico para crear un esquema. Al elegir una clase para el esquema, debe utilizar la clase **ExperienceEvent de** XDM. Una vez seleccionada esta clase, puede agregar la mezcla CEE al esquema.
+>[!IMPORTANT]
+>
+>Los tutoriales anteriores siguen un flujo de trabajo genérico para crear un esquema. Al elegir una clase para el esquema, debe utilizar la clase **ExperienceEvent de** XDM. Una vez seleccionada esta clase, puede agregar la mezcla CEE al esquema.
 
 Después de agregar la mezcla CEE al esquema, puede agregar otras mezclas según sea necesario para campos adicionales dentro de los datos.
 
@@ -271,7 +277,9 @@ Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario
 
 #### Añadir una etiqueta de Área de nombres de identidad principal en el conjunto de datos
 
->[!NOTE] Las próximas versiones de Intelligent Services integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
+>[!NOTE]
+>
+>Las próximas versiones de Intelligent Services integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
 
 Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud PATCH a la API del servicio de catálogo.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en Platform, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en Platform, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
 
 **Respuesta**
 
