@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del portátil de aprendizaje automático en tiempo real
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ A continuación, cambie el valor de la `model_path` cadena en el bloc de notas M
 Esta sección describe cómo crear un DSL. Va a crear los nodos que incluyen cualquier preprocesamiento de datos junto con el nodo ONNX. A continuación, se crea un gráfico DSL con nodos y bordes. Borra los nodos de conexión utilizando un formato basado en tupla (node_1, node_2). El gráfico no debería tener ciclos.
 
 >[!IMPORTANT]
+>
+>
 >El uso del nodo ONNX es obligatorio. Sin el nodo ONNX, la aplicación no se realizará correctamente.
 
 ### Creación de nodos
