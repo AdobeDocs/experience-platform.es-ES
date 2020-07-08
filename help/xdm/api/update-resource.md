@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Actualizar un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,9 @@ Puede modificar o actualizar los recursos en el contenedor del inquilino mediant
 
 Para obtener más información sobre JSON Patch, incluidas las operaciones disponibles, consulte la documentación [oficial de](http://jsonpatch.com/)JSON Patch.
 
->[!NOTE] Si desea reemplazar un recurso completo por valores nuevos en lugar de actualizar campos individuales, consulte el documento sobre la [sustitución de un recurso mediante una operación](replace-resource.md)PUT.
+>[!NOTE]
+>
+>Si desea reemplazar un recurso completo por valores nuevos en lugar de actualizar campos individuales, consulte el documento sobre la [sustitución de un recurso mediante una operación](replace-resource.md)PUT.
 
 ## Añadir mezclas a un esquema
 
