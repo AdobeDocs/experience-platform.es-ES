@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Apéndice de la guía del desarrollador del servicio de catálogo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +108,9 @@ La siguiente solicitud crea un nuevo conjunto de datos y, a continuación, crea 
 
 Por ejemplo, si desea hacer referencia a un valor devuelto por una subsolicitud anterior, puede crear una referencia en el formato: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (donde `{REQUEST_ID}` es el ID proporcionado por el usuario para la subsolicitud, como se muestra a continuación). Puede hacer referencia a cualquier atributo disponible en el cuerpo del objeto de respuesta de una subsolicitud anterior mediante estas plantillas.
 
->[!NOTE] Cuando una subsolicitud ejecutada devuelve solamente la referencia a un objeto (como es el valor predeterminado para la mayoría de las solicitudes POST y PUT en la API del catálogo), esta referencia se asigna al valor `id` y se puede utilizar como `<<{OBJECT_ID}.id>>`.
+>[!NOTE]
+>
+>Cuando una subsolicitud ejecutada devuelve solamente la referencia a un objeto (como es el valor predeterminado para la mayoría de las solicitudes POST y PUT en la API del catálogo), esta referencia se asigna al valor `id` y se puede utilizar como `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -140,7 +145,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID proporcionado por el usuario que se adjunta al objeto de respuesta para que pueda hacer coincidir las solicitudes con las respuestas. Catalog no almacena este valor y simplemente lo devuelve en la respuesta con fines de referencia. |
-| `resource` | Ruta de recurso relativa a la raíz de la API de catálogo. El protocolo y el dominio no deben formar parte de este valor y deben tener el prefijo &quot;/&quot;. <br/><br/> Cuando utilice PATCH o DELETE como la subsolicitud `method`, incluya el ID del objeto en la ruta del recurso. No debe confundirse con el proporcionado por el usuario `id`, la ruta de acceso al recurso utiliza el ID del propio objeto Catalog (por ejemplo, `resource: "/dataSets/1234567890"`). |
+| `resource` | Ruta de recurso relativa a la raíz de la API de catálogo. El protocolo y el dominio no deben formar parte de este valor y deben tener el prefijo &quot;/&quot;. <br/><br/> Cuando utilice PATCH o DELETE como subsolicitud `method`, incluya la ID del objeto en la ruta del recurso. No debe confundirse con el proporcionado por el usuario `id`, la ruta de acceso al recurso utiliza el ID del propio objeto Catalog (por ejemplo, `resource: "/dataSets/1234567890"`). |
 | `method` | Nombre del método (GET, PUT, POST, PATCH o DELETE) relacionado con la acción que se realiza en la solicitud. |
 | `body` | El documento JSON que normalmente se pasaría como carga útil en una solicitud POST, PUT o PATCH. Esta propiedad no es necesaria para solicitudes GET o DELETE. |
 
@@ -187,6 +192,6 @@ En ocasiones, es posible que desee validar un objeto sin guardar la información
 
 ## Compactación de datos
 
-Compaction es un servicio de la plataforma de experiencias que combina datos de archivos pequeños en archivos más grandes sin cambiar ningún dato. Por motivos de rendimiento, a veces resulta beneficioso combinar un conjunto de archivos pequeños en archivos más grandes para proporcionar un acceso más rápido a los datos cuando se realiza una consulta.
+Compaction es un servicio Experience Platform que combina datos de archivos pequeños en archivos más grandes sin cambiar ningún dato. Por motivos de rendimiento, a veces resulta beneficioso combinar un conjunto de archivos pequeños en archivos más grandes para proporcionar un acceso más rápido a los datos cuando se realiza una consulta.
 
 Cuando se compactan los archivos de un lote ingestado, se actualiza el objeto Catalog asociado para fines de supervisión.
