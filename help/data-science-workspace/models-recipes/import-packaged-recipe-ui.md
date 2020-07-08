@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ El flujo de trabajo para importar una fórmula de paquete consta de los siguient
 
 Cada instancia de fórmula en [!DNL Data Science Workspace] está acompañada de un conjunto de configuraciones que adaptan la instancia de fórmula a un caso de uso determinado. Los archivos de configuración definen los comportamientos de puntuación y formación predeterminados de un modelo creado con esta instancia de fórmula.
 
->[!NOTE] Los archivos de configuración son fórmulas y casos específicos.
+>[!NOTE]
+>
+>Los archivos de configuración son fórmulas y casos específicos.
 
 A continuación se muestra un archivo de configuración de muestra que muestra los comportamientos de puntuación y formación predeterminados para la fórmula de ventas minoristas.
 
