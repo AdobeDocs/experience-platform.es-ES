@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Conectar con RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
@@ -40,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` y `{PORT_NUMBER}` | El extremo del host y su puerto para el servicio de Consulta. |
 | `{USERNAME}` y `{PASSWORD}` | Las credenciales de inicio de sesión que se utilizarán. El nombre de usuario adopta la forma de `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales de la plataforma](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en Plataforma, haga clic en **Consultas** y, a continuación, haga clic en **Credenciales**.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar sus credenciales, inicie sesión en Platform, haga clic en **Consultas** y, a continuación, haga clic en **Credenciales**.
 
 ## Pasos siguientes
 
