@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabajos de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Esta guía proporciona información para ayudarle a comprender mejor los trabajo
 
 Los extremos de API que se utilizan en esta guía forman parte de la API de segmentación. Antes de continuar, consulte la guía para desarrolladores [de Segmentación](./getting-started.md).
 
-En particular, la sección [de](./getting-started.md#getting-started) introducción de la guía para desarrolladores de Segmentación incluye vínculos a temas relacionados, una guía para leer las llamadas de la API de muestra en el documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas exitosas a cualquier API de la plataforma de experiencia.
+En particular, la sección [de](./getting-started.md#getting-started) introducción de la guía para desarrolladores de Segmentación incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en el documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
 
 ## Recuperar una lista de trabajos de segmentos
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de segmentos para la organización de IMS especificada como JSON. La siguiente respuesta devuelve una lista de todos los trabajos de segmentos exitosos para la organización de IMS.
 
->[!NOTE] La siguiente respuesta se ha truncado para el espacio y solo mostrará el primer trabajo devuelto.
+>[!NOTE]
+>
+>La siguiente respuesta se ha truncado para el espacio y solo mostrará el primer trabajo devuelto.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento solicitados.
 
->[!NOTE] La siguiente respuesta se ha truncado para el espacio y solo muestra detalles parciales de cada trabajo de segmento. La respuesta completa lista los detalles completos de los trabajos de segmento solicitados.
+>[!NOTE]
+>
+>La siguiente respuesta se ha truncado para el espacio y solo muestra detalles parciales de cada trabajo de segmento. La respuesta completa lista los detalles completos de los trabajos de segmento solicitados.
 
 ```json
 {
@@ -424,7 +428,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 
 ## Cancelar o eliminar un trabajo de segmento específico
 
-Para solicitar la eliminación de un trabajo de segmento especificado, realice una solicitud de ELIMINACIÓN al extremo y proporcione el valor del trabajo del segmento en la ruta de acceso de la solicitud `/segment/jobs` `id` .
+Puede solicitar la eliminación de un trabajo de segmento especificado realizando una solicitud de DELETE al extremo y proporcionando el valor del trabajo de segmento en la ruta de acceso de la solicitud `/segment/jobs``id` .
 
 **Formato API**
 
