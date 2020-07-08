@@ -4,15 +4,20 @@ solution: Experience Platform
 title: Conjuntos de datos vs. tablas y esquemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
 # Conjuntos de datos vs. tablas y esquemas
 
-Revise la lista de conjuntos de datos disponibles en la interfaz de usuario [de](https://platform.adobe.com/datasets)Adobe Experience Platform, asegurándose de observar los nombres de conjuntos de datos.
->[!NOTE] Algunos nombres de conjuntos de datos tienen espacios y, de lo contrario, podrían no ser seguros para SQL.
+Revise la lista de conjuntos de datos disponibles en la interfaz de usuario [de](https://platform.adobe.com/datasets)Adobe Experience Platform y asegúrese de observar los nombres de conjuntos de datos.
+>[!NOTE]
+>
+>Algunos nombres de conjuntos de datos tienen espacios y, de lo contrario, podrían no ser seguros para SQL.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -39,7 +44,7 @@ Para vista de las tablas disponibles en Platform con SQL, puede utilizar `\d` o 
 (2 rows)
 ```
 
-`SHOW TABLES;` es un comando personalizado que proporciona una vista más detallada y presenta la tabla, así como el nombre del conjunto de datos que se encuentra en la interfaz de usuario de la plataforma.
+`SHOW TABLES;` es un comando personalizado que proporciona una vista más detallada y presenta la tabla, así como el nombre del conjunto de datos que se encuentra en la interfaz de usuario de Platform.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -51,7 +56,9 @@ Para vista de las tablas disponibles en Platform con SQL, puede utilizar `\d` o 
 
 Para vista del esquema raíz de una tabla, utilice el `\d table_name` comando .
 
->[!NOTE] El esquema presentado muestra los campos raíz, la mayoría de los cuales son complejos, referidos a un tipo de objeto en la interfaz de usuario del esquema de Dataset.
+>[!NOTE]
+>
+>El esquema presentado muestra los campos raíz, la mayoría de los cuales son complejos, referidos a un tipo de objeto en la interfaz de usuario del esquema de Dataset.
 
 `\d luma_midvalues`
 
