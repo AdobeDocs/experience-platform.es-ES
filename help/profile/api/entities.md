@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
+title: 'Entidades: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -544,7 +544,7 @@ curl -X POST \
 | Propiedad | Descripción |
 |---|---|
 | `schema.name` | **(OBLIGATORIO)** El esquema XDM de la entidad que se va a recuperar |
-| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent` este valor, debe especificar el esquema de la entidad perfil a la que están relacionados los eventos de series temporales. |
+| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent` este valor, debe especificar el esquema de la entidad de perfil a la que están relacionados los eventos de series temporales. |
 | `identities` | **(OBLIGATORIO)** Una lista de matriz de perfiles desde los que recuperar eventos de series temporales asociadas. Cada entrada de la matriz se establece de una de las dos maneras siguientes: 1) utilizando una identidad completa consistente en un valor de ID y una Área de nombres o 2) proporcionando un XID. |
 | `fields` | Aísla los datos devueltos a un conjunto especificado de campos. Utilícelo para filtrar qué campos de esquema se incluyen en los datos recuperados. Ejemplo: personalEmail,persona.nombre,persona.género |
 | `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica ninguno en la llamada de servicio, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, la opción predeterminada es no combinar perfiles ni establecer vínculos de identidad. |
