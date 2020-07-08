@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Transmisión de datos de series temporales
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1173'
+ht-degree: 2%
 
 ---
 
 
-# Transmitir datos de series temporales a Adobe Experience Platform
+# Transmitir datos de series temporales al Adobe Experience Platform
 
 Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Marco normalizado mediante el cual la Plataforma organiza los datos de experiencia.
+- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco normalizado mediante el cual Platform organiza los datos de experiencia.
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [Guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la API del Registro de Esquemas y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
 
@@ -27,21 +30,23 @@ Las siguientes secciones proporcionan información adicional que debe conocer pa
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -208,7 +213,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | El `$id` que recibió anteriormente cuando compuso el esquema. Debería tener este aspecto: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] Códigos de Área de nombres **de identidad de &#x200B; &#x200B;**
+>[!NOTE]
+>
+>Códigos de Área de nombres **de identidad de &#x200B; &#x200B;**
 >
 > Asegúrese de que los códigos sean válidos; el ejemplo anterior utiliza &quot;correo electrónico&quot;, que es una Área de nombres de identidad estándar. Otras Áreas de nombres de identidad estándar de uso común se encuentran en las preguntas más frecuentes [de](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)Identity Service.
 >
@@ -237,7 +244,9 @@ Una respuesta correcta devuelve el estado HTTP 201 con información sobre la Ár
 
 Una vez que haya creado el esquema, deberá crear un conjunto de datos para ingestar los datos del registro.
 
->[!NOTE] Este conjunto de datos se habilitará para el Perfil **del cliente en tiempo** real y la **identidad** estableciendo las etiquetas correspondientes.
+>[!NOTE]
+>
+>Este conjunto de datos se habilitará para el Perfil **del cliente en tiempo** real y la **identidad** estableciendo las etiquetas correspondientes.
 
 **Formato API**
 
@@ -285,7 +294,7 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 
 ## Ingesta de datos de series temporales a la conexión de flujo continuo
 
-Con el conjunto de datos y la conexión de transmisión en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de series temporales en Platform.
+Con el conjunto de datos y la conexión de flujo en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de series temporales en Platform.
 
 **Formato API**
 
@@ -300,7 +309,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Solicitud**
 
->[!NOTE] Tendrá que generar sus propios `xdmEntity._id` y `xdmEntity.timestamp`. Una buena manera de generar un ID es utilizar un UUID. Además, la siguiente llamada de API **no requiere** encabezados de autenticación.
+>[!NOTE]
+>
+>Tendrá que generar sus propios `xdmEntity._id` y `xdmEntity.timestamp`. Una buena manera de generar un ID es utilizar un UUID. Además, la siguiente llamada de API **no requiere** encabezados de autenticación.
 
 
 ```shell
@@ -395,7 +406,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del Perfil reci�
 
 Para validar los registros ingestados anteriormente, puede utilizar la API [de acceso a](../../profile/api/entities.md) Perfil para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
 
->[!NOTE] Si el ID de directiva de combinación no está definido y el esquema.</span>name o relatedSchema</span>.name es `_xdm.context.profile`, Perfil Access recuperará **todas** las identidades relacionadas.
+>[!NOTE]
+>
+>Si el ID de directiva de combinación no está definido y el esquema.</span>name o relatedSchema</span>.name es `_xdm.context.profile`, Perfil Access recuperará **todas** las identidades relacionadas.
 
 **Formato API**
 
@@ -493,6 +506,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de las entid
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede comprender cómo ingerir datos de registro en la plataforma mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la interfaz de usuario de la plataforma. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-flows.md) de datos.
+Al leer este documento, ahora puede comprender cómo ingerir datos de registro en Platform mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la interfaz de usuario de Platform. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-flows.md) de datos.
 
 Para obtener más información sobre la transmisión por secuencias de ingestión en general, lea la información general sobre la [transmisión por secuencias](../streaming-ingestion/overview.md).
