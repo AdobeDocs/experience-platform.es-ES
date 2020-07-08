@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 91104399e50bce03fed7c9196e6e83fc48a54d1c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 1%
 
 ---
 
@@ -15,31 +18,33 @@ Esta guía para desarrolladores proporciona pasos para realizar varias operacion
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform relacionados con el uso del servicio de Consulta.
+Esta guía requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que implican el uso del servicio de Consulta.
 
-- [Servicio](../home.md)de Consulta: Proporciona la capacidad de consulta de conjuntos de datos y capturar las consultas resultantes como nuevos conjuntos de datos en la plataforma de experiencia.
-- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Servicio](../home.md)de Consulta: Proporciona la capacidad de consulta de conjuntos de datos y capturar las consultas resultantes como nuevos conjuntos de datos en Experience Platform.
+- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para utilizar correctamente el servicio de Consulta mediante la API.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en esta documentación para ver ejemplos de llamadas a API, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) a API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en esta documentación para ver ejemplos de llamadas a API, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) a API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de la plataforma de experiencia, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de plataforma, como se muestra a continuación:
+Para realizar llamadas a las API de Experience Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Platform, como se muestra a continuación:
 
 - Autorización: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre cómo trabajar con entornos limitados en la plataforma de experiencia, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo trabajar con entornos limitados en Experience Platform, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
 
 ## Ejemplos de llamadas a API
 
