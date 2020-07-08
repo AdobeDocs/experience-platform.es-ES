@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Asignaciones de identidad de Lista
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
@@ -62,7 +65,9 @@ curl -X GET \
 
 Utilice el `POST` método como equivalente por lotes del `GET` método descrito anteriormente para recuperar asignaciones para varias identidades.
 
->[!NOTE] La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
+>[!NOTE]
+>
+>La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
 
 **Formato API**
 
