@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Puntuación de un modelo (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +36,7 @@ curl -X POST \
 
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.\
+`{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.\
 `{JSON_PAYLOAD}`:: Objeto de ejecución del experimento que se va a enviar. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
@@ -121,7 +124,7 @@ curl -X POST \
 
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.\
+`{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.\
 `{EXPERIMENT_ID}`:: ID correspondiente al experimento que desea destinatario. Esto se encuentra en la respuesta al crear el experimento.\
 `{JSON_PAYLOAD}`:: Datos que se van a publicar. El ejemplo que utilizamos en nuestro tutorial está aquí:
 
@@ -214,7 +217,7 @@ Dado que existen varias ejecuciones de experimento para un experimento específi
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto se puede hacer consultando una solicitud DELETE a la función `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto puede realizarse consultando una solicitud de DELETE a la `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -229,7 +232,9 @@ curl -X DELETE \
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
 
->[!NOTE] La llamada de API deshabilitará la creación de nuevas ejecuciones de Experimento. Sin embargo, no detendrá la ejecución de ejecuciones de experimentos que ya se estén ejecutando.
+>[!NOTE]
+>
+>La llamada de API deshabilitará la creación de nuevas ejecuciones de Experimento. Sin embargo, no detendrá la ejecución de ejecuciones de experimentos que ya se estén ejecutando.
 
 A continuación se muestra la respuesta que notifica que el experimento se ha eliminado correctamente.
 
