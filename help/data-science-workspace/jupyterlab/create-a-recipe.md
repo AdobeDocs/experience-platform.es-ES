@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ La creación de una fórmula desde cero se puede realizar dentro de [!DNL Data S
 El [!UICONTROL bloc de notas Generador] de fórmulas le permite ejecutar ejecuciones de puntuación y formación dentro del bloc de notas. Esto le ofrece la flexibilidad de realizar cambios en sus `train()` y `score()` métodos entre la ejecución de experimentos en los datos de capacitación y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula para utilizarla [!DNL Data Science Workspace] con la funcionalidad de fórmula integrada en el bloc de notas del Creador de fórmulas.
 
 >[!NOTE]
+>
+>
 >El bloc de notas del Creador de fórmulas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo es compatible [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Para realizar modificaciones en los archivos de fórmulas, vaya a la celda de Ju
 
 Inicio realizando los cambios necesarios en la celda y, cuando termine, simplemente ejecute la celda. El `%%writefile filename.py` comando escribirá el contenido de la celda en la `filename.py`. Deberá ejecutar manualmente la celda de cada archivo con cambios.
 
->[!NOTE] Debe ejecutar las celdas manualmente cuando corresponda.
+>[!NOTE]
+>
+>Debe ejecutar las celdas manualmente cuando corresponda.
 
 ## Introducción al bloc de notas del Creador de fórmulas
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores.
 
 ### Archivos de configuración {#configuration-files}
@@ -115,6 +121,8 @@ En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/st
 - [Fuentes externas](#external-sources)
 
 >[!NOTE]
+>
+>
 >En el bloc de notas del Creador de fórmulas, los datos se cargan mediante el cargador de `platform_sdk` datos.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ Ahora los datos están en el objeto dataframe y se pueden analizar y manipular e
 ### Desde el SDK de acceso a datos (obsoleto)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` ya no se recomienda, consulte [Convertir código de acceso a datos en SDK](../authoring/platform-sdk.md) de Platform para obtener una guía sobre el uso del cargador de `platform_sdk` datos.
 
 Los usuarios pueden cargar datos mediante el SDK de acceso a datos. La biblioteca se puede importar en la parte superior de la página incluyendo la línea:
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >Como se indica en la sección [Archivo de](#configuration-files)configuración, al acceder a los datos desde [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -291,7 +303,9 @@ El `pipeline.py` archivo incluye lógica para la formación y la puntuación.
 
 El propósito de la formación es crear un modelo con las funciones y etiquetas de su conjunto de datos de formación.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_Las funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
 
 La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se pueden encontrar en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
