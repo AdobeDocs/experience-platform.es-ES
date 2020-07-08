@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administrar entidades del servicio de decisiones mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -102,7 +104,9 @@ Cuando el administrador haya concedido acceso a contenedores para usuarios regul
 
 El contexto para los [!DNL Platform][!DNL Decisioning Service] contenedores es actualmente `dma_offers`.
 
->[!NOTE] El contexto para [!DNL Platform Decisioning Containers] pronto cambiará a `acp`. El filtrado es opcional, pero los filtros solo `dma_offers` requerirán modificaciones en una versión futura. Para prepararse para este cambio, los clientes no deben usar filtros o aplicar ambos contextos de producto como filtro.
+>[!NOTE]
+>
+>El contexto para [!DNL Platform Decisioning Containers] pronto cambiará a `acp`. El filtrado es opcional, pero los filtros solo `dma_offers` requerirán modificaciones en una versión futura. Para prepararse para este cambio, los clientes no deben usar filtros o aplicar ambos contextos de producto como filtro.
 
 **Solicitud**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Aunque `instanceId` se proporciona como parámetro de ruta, las aplicaciones, siempre que sea posible, no deben construir la ruta por sí mismas y, en su lugar, seguir los vínculos a instancias incluidas en las operaciones de lista y búsqueda. Para más detalles, véanse las secciones ‎ 6.4.4 y ‎ 6.4.6.
+>[!NOTE]
+>
+>Aunque `instanceId` se proporciona como parámetro de ruta, las aplicaciones, siempre que sea posible, no deben construir la ruta por sí mismas y, en su lugar, seguir los vínculos a instancias incluidas en las operaciones de lista y búsqueda. Para más detalles, véanse las secciones ‎ 6.4.4 y ‎ 6.4.6.
 
 **Respuesta**
 
@@ -326,7 +332,9 @@ La respuesta depende del `{schemaId}` especificado. Por ejemplo, para &quot;http
 }
 ```
 
->[!NOTE] El resultado contiene las instancias para el esquema determinado o la primera página de esta lista. Tenga en cuenta que las instancias pueden cumplir más de un esquema y, por lo tanto, pueden aparecer en más de una lista.
+>[!NOTE]
+>
+>El resultado contiene las instancias para el esquema determinado o la primera página de esta lista. Tenga en cuenta que las instancias pueden cumplir más de un esquema y, por lo tanto, pueden aparecer en más de una lista.
 
 Los recursos de página son transitorios y de solo lectura; no se pueden actualizar ni eliminar. El modelo de paginación proporciona acceso aleatorio a subconjuntos de listas grandes durante un período de tiempo prolongado sin mantener ningún estado por cliente.
 
@@ -347,8 +355,7 @@ La paginación se controla mediante los siguientes parámetros:
 Es posible filtrar los resultados de lista y se produce independientemente del mecanismo de paginación. Los Filtros simplemente omiten las instancias en el orden de las listas o solicitan explícitamente incluir solo las instancias que cumplen una condición determinada. Un cliente puede solicitar que la expresión de propiedades se utilice como filtro o puede especificar una lista de URI que se utilizarán como valores de la clave principal de las instancias.
 
 - **`property`**:: Contiene una ruta de nombre de propiedad seguida de un operador de comparación seguido de un valor. <br/>
-La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad payload 
-`status` y los valores posibles son `draft`, `approved`, `archived` y `deleted` luego el parámetro de consulta `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
+La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad de carga útil `status` y que los valores posibles son `draft`, `approved`y `archived` luego el parámetro de consulta `deleted` `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
 <br/>
 La propiedad que se va a comparar con el valor dado se identifica como una ruta. Los componentes de ruta individuales están separados por ".", como: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
@@ -571,7 +578,9 @@ Al utilizar las API con el tipo de contenido `application/vnd.adobe.platform.xco
 }
 ```
 
->[!NOTE] Por razones de brevedad, en todos los fragmentos de JSON solo se ilustran las propiedades de instancia y solo cuando se requiere se muestran las propiedades de envoltorio y la sección _links.
+>[!NOTE]
+>
+>Por razones de brevedad, en todos los fragmentos de JSON solo se ilustran las propiedades de instancia y solo cuando se requiere se muestran las propiedades de envoltorio y la sección _links.
 
 ### Propiedades de oferta general
 
