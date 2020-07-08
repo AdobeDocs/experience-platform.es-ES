@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apéndice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ La [!DNL Sensei Machine Learning] API admite parámetros de consulta al recupera
 | `orderby` | Indica las propiedades que se van a utilizar para ordenar en orden de prioridad. Incluya un guión (**-**) antes de un nombre de propiedad para ordenarlo en orden descendente; de lo contrario, los resultados se ordenarán en orden ascendente. | `orderby=created` |
 | `property` | Indica la expresión de comparación que un objeto debe satisfacer para poder ser devuelto. | `property=deleted==false` |
 
->[!NOTE] Cuando se combinan varios parámetros de consulta, deben separarse con ampersands (**&amp;**).
+>[!NOTE]
+>
+>Cuando se combinan varios parámetros de consulta, deben separarse con ampersands (**&amp;**).
 
 ## Configuraciones de CPU y GPU Python {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ A continuación se muestra un ejemplo de configuración que especifica el uso de
 ]
 ```
 
->[!NOTE] Los valores de `cpus` y `gpus` no significan el número de CPU o GPU, sino el número de máquinas físicas. Estos valores son permisibles `"1"` y, de lo contrario, generarán una excepción.
+>[!NOTE]
+>
+>Los valores de `cpus` y `gpus` no significan el número de CPU o GPU, sino el número de máquinas físicas. Estos valores son permisibles `"1"` y, de lo contrario, generarán una excepción.
 
 ## Configuraciones de recursos PySpark y Spark {#resource-config}
 
