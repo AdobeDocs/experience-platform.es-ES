@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Activar datos de origen de entrada para rellenar perfiles de cliente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Ahora que el esquema está habilitado para [!DNL Profile], vuelva a la pantalla 
 
 Con el esquema y el conjunto de datos habilitados para [!DNL Profile], los datos ingeridos en ese conjunto de datos ahora también rellenarán los perfiles de los clientes.
 
->[!NOTE] Los datos existentes dentro de un conjunto de datos recientemente habilitado no son consumidos por [!DNL Profile]
+>[!NOTE]
+>
+>Los datos existentes dentro de un conjunto de datos recientemente habilitado no son consumidos por [!DNL Profile]
 
 ## Pasos siguientes
 
