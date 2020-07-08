@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Consentimiento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Consentimiento
 
-Ciertas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. El punto final de la API de Privacy Service le permite procesar las solicitudes de consentimiento del cliente e integrarlas en su flujo de trabajo de privacidad. `/consent`
+Ciertas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. El punto final de la API de Privacy Service le permite procesar las solicitudes de consentimiento del cliente e integrarlas en el flujo de trabajo de privacidad. `/consent`
 
 Antes de utilizar esta guía, consulte la sección [Introducción](./getting-started.md) para obtener información sobre los encabezados de autenticación requeridos que se presentan en la llamada de API de ejemplo siguiente.
 
@@ -66,8 +66,10 @@ curl -X POST \
 | `nameSpace` | Cada objeto de la `entities` matriz debe contener una de las Áreas de nombres [de identidad](./appendix.md#standard-namespaces) estándar reconocidas por la API de Privacy Service. |
 | `values` | Matriz de valores para cada usuario, correspondiente con el valor proporcionado `nameSpace`. |
 
->[!NOTE] Para obtener más información sobre cómo determinar qué valores de identidad del cliente se enviarán a Privacy Service, consulte la guía sobre el [suministro de datos](../identity-data.md)de identidad.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo determinar qué valores de identidad del cliente se envían a Privacy Service, consulte la guía sobre [proporcionar datos](../identity-data.md)de identidad.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) sin carga útil, lo que indica que Privacy Service ha aceptado la solicitud y que se está procesando.
+Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) sin carga útil, lo que indica que la solicitud fue aceptada por el Privacy Service y se está procesando.
