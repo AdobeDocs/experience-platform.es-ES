@@ -4,18 +4,23 @@ solution: Experience Platform
 title: Campo de Asignación de destino
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '427'
+ht-degree: 0%
 
 ---
 
 
 # Campos de Asignación de destino
 
-Adobe Experience Platform le permite ingestar datos de Adobe Destinatario a través del conector de origen de Destinatario. Al utilizar el conector, todos los datos de los campos de Destinatario deben asignarse a los campos del Modelo de datos de [experiencia (XDM)](../../../../xdm/home.md) asociados a la clase ExperienceEvent de XDM.
+Adobe Experience Platform le permite ingerir datos de Adobe Target a través del conector de origen de Destinatario. Al utilizar el conector, todos los datos de los campos de Destinatario deben asignarse a los campos del Modelo de datos de [experiencia (XDM)](../../../../xdm/home.md) asociados a la clase ExperienceEvent de XDM.
 
 La siguiente tabla describe los campos de un esquema de Experience Evento (campo *ExperienceEvent de* XDM) y los campos de Destinatario correspondientes a los que deben asignarse (campo *Solicitud de* Destinatario). También se proporcionan notas adicionales para algunas asignaciones.
 
->[!NOTE] Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Campo ExperienceEvent de XDM | Campo Solicitud de Destinatario | Notas |
 | ------------------------- | -------------------- | ----- |
@@ -47,7 +52,7 @@ La siguiente tabla describe los campos de un esquema de Experience Evento (campo
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
 | `experience.target.environmentID` | Asignación interna de Destinatario para entornos definidos por el cliente (como dev, qa o prod). |
-| `experience.target.supplementalDataID` | Identificador que se utiliza para unir eventos de Destinatario con eventos de Analytics |
+| `experience.target.supplementalDataID` | Identificador que se utiliza para unir eventos de Destinatario con eventos Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Lista (matriz) de actividades para las que el visitante ha calificado |
