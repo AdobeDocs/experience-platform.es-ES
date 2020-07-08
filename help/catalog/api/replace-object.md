@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Reemplazar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
 
 Puede sobrescribir el contenido de un objeto Catalog mediante una solicitud PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
 
->[!NOTE] Si sólo necesita actualizar algunos campos específicos dentro de un objeto Catalog, el uso de una solicitud PATCH puede resultar más eficaz.
+>[!NOTE]
+>
+>Si sólo necesita actualizar algunos campos específicos dentro de un objeto Catalog, el uso de una solicitud PATCH puede resultar más eficaz.
 
 **Formato API**
 
