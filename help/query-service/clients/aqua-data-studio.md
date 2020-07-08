@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Conectar con Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
 
 # Conectar con Aqua Data Studio
 
-Este documento recorre los pasos para conectar Aqua Data Studio con el servicio de Consulta de la plataforma Adobe Experience.
+Este documento recorre los pasos para conectar Aqua Data Studio con el servicio de Consulta de Adobe Experience Platform.
 
 Después de instalar Aqua Data Studio, primero debe registrar el servidor. En el menú principal, haga clic en **Servidor** y, a continuación, en **Registrar servidor**.
 
@@ -24,7 +27,9 @@ Aparece el cuadro de diálogo *Registrar servidor* . En la ficha *General* , sel
 - **Host y puerto**: El extremo del host y su puerto para el servicio de Consulta.
 - **Base de datos:** Base de datos que se utilizará.
 
->[!NOTE] Para obtener más información sobre cómo encontrar las credenciales de inicio de sesión, el host, el puerto y el nombre de la base de datos, visite la página de [credenciales en la plataforma](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en Plataforma, haga clic en **Consultas** y, a continuación, haga clic en **Credenciales**.
+>[!NOTE]
+>
+>Para obtener más información sobre cómo encontrar las credenciales de inicio de sesión, el host, el puerto y el nombre de la base de datos, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar sus credenciales, inicie sesión en Platform, haga clic en **Consultas** y, a continuación, haga clic en **Credenciales**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
