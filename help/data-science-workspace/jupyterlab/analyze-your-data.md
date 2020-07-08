@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analizar los datos con portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ La fórmula de ventas minoristas es un ejemplo independiente que utiliza el mism
 
 ### Acceso a los datos
 
->[!NOTE] El `data_access_sdk_python` se ha desaprobado y ya no se recomienda. Consulte el tutorial sobre la [conversión del SDK de acceso a datos al SDK](../authoring/platform-sdk.md) de Platform para convertir el código. Los mismos pasos a continuación se aplican para este tutorial.
+>[!NOTE]
+>
+>El `data_access_sdk_python` se ha desaprobado y ya no se recomienda. Consulte el tutorial sobre la [conversión del SDK de acceso a datos al SDK](../authoring/platform-sdk.md) de Platform para convertir el código. Los mismos pasos a continuación se aplican para este tutorial.
 
 Pasaremos a acceder a los datos internamente desde [!DNL Adobe Experience Platform] y a los datos externamente. Utilizaremos la `data_access_sdk_python` biblioteca para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca de paneles [!DNL Python] .
 
@@ -86,7 +88,9 @@ Dado que el conjunto de datos es el mismo, queremos reemplazar los datos de carg
 
 Ahora, podemos hacer clic con el botón derecho en el conjunto de datos y seleccionar la opción &quot;Explorar datos en el bloc de notas&quot; en la lista desplegable. `Retail-Training-<your-alias>` Aparecerá una entrada de código ejecutable en el bloc de notas.
 
->[!TIP] consulte la [!DNL Platform SDK](../authoring/platform-sdk.md) guía para convertir el código.
+>[!TIP]
+>
+>consulte la [!DNL Platform SDK](../authoring/platform-sdk.md) guía para convertir el código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
