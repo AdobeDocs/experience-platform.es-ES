@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas en la API de atribución
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servi
 
 Aparece la página de servicio de Atribución de AI. Esta página lista las instancias de servicio de Atribución de AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en el nombre de una instancia de servicio para comenzar.
 
->[!NOTE] Solo se pueden seleccionar las instancias de servicio que hayan completado correctamente las ejecuciones de puntuación.
+>[!NOTE]
+>
+>Solo se pueden seleccionar las instancias de servicio que hayan completado correctamente las ejecuciones de puntuación.
 
 ![Crear instancia](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ El botón *Más acciones* se encuentra en la navegación superior derecha junto 
 
 Las perspectivas de la API de atribución le permiten filtrar los datos y actualizar automáticamente los elementos visuales de la interfaz de usuario en función de los filtros seleccionados.
 
->[!NOTE] De forma predeterminada, cada filtro se establece en &quot;Todo&quot; excepto el filtro del modelo ** Atribución, que se establece en &quot;Conversiones atribuidas incrementales e influenciadas&quot;.
+>[!NOTE]
+>
+>De forma predeterminada, cada filtro se establece en &quot;Todo&quot; excepto el filtro del modelo ** Atribución, que se establece en &quot;Conversiones atribuidas incrementales e influenciadas&quot;.
 
 ### evento de conversión
 
@@ -98,21 +102,25 @@ El filtro *Producto* permite seleccionar entre los productos que se ingirieron i
 
 El filtro *Geografía* rellena los códigos de país en función de los modelos de región. Dependiendo de sus datos, este filtro puede o no estar presente.
 
->[!NOTE] Los códigos de país tienen dos caracteres. Puede encontrar una lista completa aquí [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Los códigos de país tienen dos caracteres. Puede encontrar una lista completa aquí [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Región
 
->[!NOTE] Este filtro solo está presente si ha realizado el modelado [opcional basado en](./user-guide.md#region-based-modeling-optional) región de pasos en la guía de interfaz de usuario de Atribución de AI al crear la instancia de servicio.
+>[!NOTE]
+>
+>Este filtro solo está presente si ha realizado el modelado [opcional basado en](./user-guide.md#region-based-modeling-optional) región de pasos en la guía de interfaz de usuario de Atribución de AI al crear la instancia de servicio.
 
 Este filtro le permite seleccionar cualquier región que configure en el proceso de creación de instancias.
 
-### Canal
+### Channel
 
 Al hacer clic en el filtro de *Canal* se muestra una lista desplegable con todos los canales de mercadotecnia disponibles. Puede seleccionar varios canales para compararlos.
 
-![Canal](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
-### Intervalo de fechas
+### Date Range
 
 Haga clic en el icono de calendario para abrir la ventana emergente de intervalo de fechas. Las fechas de evento de conversión inicial y final determinan la cantidad de datos rellenados en la interfaz de usuario. Puede elegir reducir o ampliar el intervalo de fechas para enfocar o expandir la cantidad de datos rellenados.
 
