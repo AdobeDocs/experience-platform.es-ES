@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Uniones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +34,7 @@ La `timeSeriesEvents` matriz es una lista de eventos de series temporales que se
 
 ### Mapa de pertenencia a segmentos
 
-El `segmentMembership` mapa almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente mediante la API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)de segmentación, se actualiza el mapa. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en Platform, lo que permite la integración con otras soluciones como Adobe Audiencia Manager.
+El `segmentMembership` mapa almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente mediante la API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)de segmentación, se actualiza el mapa. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager.
 
 Consulte el tutorial sobre la [creación de segmentos mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
@@ -39,7 +42,9 @@ Consulte el tutorial sobre la [creación de segmentos mediante API](../../segmen
 
 Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
 
->[!NOTE] Las etiquetas inmutables son etiquetas que se pretenden definir, pero que nunca se eliminan.
+>[!NOTE]
+>
+>Las etiquetas inmutables son etiquetas que se pretenden definir, pero que nunca se eliminan.
 
 **Formato API**
 
@@ -161,7 +166,9 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una `results` matriz e
 
 Puede realizar una vista de una unión específica realizando una solicitud GET que incluya los datos `$id` y, según el encabezado Accept, algunos o todos los detalles de la unión.
 
->[!NOTE] Las búsquedas de Uniones están disponibles mediante el `/unions` extremo y `/schemas` para habilitarlas para usarlas en las exportaciones de Perfil a un conjunto de datos.
+>[!NOTE]
+>
+>Las búsquedas de Uniones están disponibles mediante el `/unions` extremo y `/schemas` para habilitarlas para usarlas en las exportaciones de Perfil a un conjunto de datos.
 
 **Formato API**
 
