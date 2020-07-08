@@ -4,44 +4,49 @@ solution: Experience Platform
 title: Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 2%
 
 ---
 
 
 # Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 
-En este tutorial se proporcionan pasos para crear un conector de origen de Adobe Analytics en la interfaz de usuario con el fin de introducir datos de consumo en la plataforma de Adobe Experience.
+En este tutorial se proporcionan pasos para crear un conector de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de consumo al Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
+* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../../../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Creación de una conexión de origen con Adobe Analytics
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo de fuentes. La pantalla *Catálogo* muestra los orígenes disponibles para crear conexiones de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
+Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo de orígenes. La pantalla *Catálogo* muestra los orígenes disponibles para crear conexiones de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría de aplicaciones *de* Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Accounts]**.
+En la categoría de aplicaciones *de* Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en la parte derecha de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Cuentas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleccionar datos
 
-Aparece el paso *Adobe Analytics* . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Select data]**.
+Aparece el paso *Adobe Analytics* . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Seleccionar datos]**.
 
->[!NOTE] Se pueden realizar varias conexiones enlazadas a un origen para introducir datos diferentes.
+>[!NOTE]
+>
+>Se pueden realizar varias conexiones enlazadas a un origen para introducir datos diferentes.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flows.png)
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-En la lista de los grupos de informes disponibles, seleccione el que desee incluir en la plataforma y haga clic en **[!UICONTROL Next]**.
+En la lista de grupos de informes disponibles, seleccione el que desee incluir en Platform y haga clic en **[!UICONTROL Siguiente]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
@@ -92,7 +97,7 @@ Para obtener más información sobre cómo etiquetar datos procedentes de Analyt
 
 ## Pasos siguientes
 
-Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un flujo de conjuntos de datos para contener los datos entrantes. Además, se rellenan los datos de forma retroactiva y se ingieren hasta 13 meses de datos históricos. Cuando se completa la ingestión inicial, los datos de Analytics y se utilizan en los servicios de plataforma descendente, como el servicio de Perfil y segmentación de clientes en tiempo real. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un flujo de conjuntos de datos para contener los datos entrantes. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando se completa la ingestión inicial, los datos de Analytics y se utilizan en los servicios de Platform descendentes, como el servicio de Perfil y segmentación de clientes en tiempo real. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../../profile/home.md)
 * [Descripción general del servicio de segmentación](../../../../../segmentation/home.md)
