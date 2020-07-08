@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Actualizar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +19,9 @@ Puede actualizar parte de un objeto Catalog incluyendo su ID en la ruta de una s
 * Uso de campos
 * Uso de notación de parche JSON
 
->[!NOTE] Las operaciones PATCH de un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados.  Las modificaciones de los objetos interrelacionados deben realizarse directamente.
+>[!NOTE]
+>
+>Las operaciones PATCH de un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados.  Las modificaciones de los objetos interrelacionados deben realizarse directamente.
 
 ## Actualización mediante campos
 
