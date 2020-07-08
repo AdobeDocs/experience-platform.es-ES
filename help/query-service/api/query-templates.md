@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 3%
 
 ---
 
@@ -102,7 +105,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
 
 ### Creación de una plantilla de consulta
 
@@ -163,7 +168,9 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con los detalles d
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
 
 ### Recuperar una plantilla de consulta especificada
 
@@ -219,7 +226,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la planti
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
 
 ### Actualizar una plantilla de consulta especificada
 
@@ -237,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Solicitud**
 
->[!NOTE] La solicitud PUT requiere que se rellene tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
+>[!NOTE]
+>
+>La solicitud PUT requiere que se rellene tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -287,11 +298,13 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con la informació
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.delete` para [eliminar la plantilla](#delete-a-specified-query-template)de consulta.
 
 ### Eliminar una plantilla de consulta específica
 
-Puede eliminar una plantilla de consulta específica realizando una solicitud ELIMINAR al `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
+Puede eliminar una plantilla de consulta específica realizando una solicitud de DELETE al `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
 
 **Formato API**
 
