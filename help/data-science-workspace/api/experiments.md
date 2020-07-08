@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimentos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ El desarrollo de modelos y la formación se realizan en el nivel Experimento, do
 
 Puede crear un experimento realizando una solicitud POST mientras proporciona un nombre y un ID de instancia MLI válido en la carga útil de la solicitud.
 
->[!NOTE] A diferencia de la formación de modelos en la interfaz de usuario, la creación de un experimento a través de una llamada de API explícita no crea ni ejecuta automáticamente una ejecución de formación.
+>[!NOTE]
+>
+>A diferencia de la formación de modelos en la interfaz de usuario, la creación de un experimento a través de una llamada de API explícita no crea ni ejecuta automáticamente una ejecución de formación.
 
 **Formato de API**
 
@@ -242,7 +244,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 
 Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un experimento determinado realizando una sola solicitud GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
->[!NOTE] Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (&amp;).
+>[!NOTE]
+>
+>Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (&amp;).
 
 **Formato de API**
 
@@ -301,7 +305,9 @@ Una respuesta correcta devuelve una carga útil que contiene una lista de ejecuc
 
 Puede actualizar un experimento existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del experimento de destinatario en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
->[!TIP] Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>[!TIP]
+>
+>Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
 
 La siguiente llamada de API de ejemplo actualiza el nombre de un experimento mientras que inicialmente tiene estas propiedades:
 
