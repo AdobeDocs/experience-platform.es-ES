@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Una respuesta correcta devuelve una carga útil que contiene los detalles del registro del Docker, incluyendo la URL del Docker (`host`), el nombre de usuario (`username`) y la contraseña (`password`).
 
 >[!NOTE]
+>
+>
 >La contraseña del Docker cambia cada vez que `{ACCESS_TOKEN}` se actualiza.
 
 ```json
@@ -383,7 +385,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 Puede modificar y actualizar un motor existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del motor de destinatario en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
->[!NOTE] Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>[!NOTE]
+>
+>Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
 
 La siguiente llamada de API de ejemplo actualizará el nombre y la descripción de un motor al tener estas propiedades inicialmente:
 
