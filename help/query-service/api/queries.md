@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 3%
 
 ---
 
@@ -193,7 +196,9 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
 
 ### Recuperar una consulta por ID
 
@@ -262,7 +267,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
 
 ### Cancelar una consulta
 
