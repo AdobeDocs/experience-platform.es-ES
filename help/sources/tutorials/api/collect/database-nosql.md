@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 1%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
 | `connectionSpec.id` | ID de especificación de conexión de la base de datos de terceros. |
 
->[!NOTE] Al crear una conexión de destinatario, asegúrese de utilizar el valor de conexión base del conjunto de datos para la conexión base `id` en lugar de la conexión base del conector de origen de terceros.
+>[!NOTE]
+>
+>Al crear una conexión de destinatario, asegúrese de utilizar el valor de conexión base del conjunto de datos para la conexión base `id` en lugar de la conexión base del conector de origen de terceros.
 
 **Respuesta**
 
