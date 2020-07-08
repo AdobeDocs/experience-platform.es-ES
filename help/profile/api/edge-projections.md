@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
+title: 'Proyecciones avanzadas: API de Perfil de clientes en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 2%
@@ -107,7 +107,7 @@ La respuesta incluye una `projectionDestinations` matriz con los detalles de cad
 
 Para obtener más información sobre los atributos de un destino individual, consulte la sección sobre [creación de un destino](#create-a-destination) que se muestra a continuación.
 
-### Crear un destino {#create-a-destination}
+### Create a destination {#create-a-destination}
 
 Si el destino que necesita no existe ya, puede crear un nuevo destino de proyección realizando una solicitud POST al extremo del `/config/destinations` .
 
