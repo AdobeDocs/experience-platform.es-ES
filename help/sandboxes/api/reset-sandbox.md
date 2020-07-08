@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Restablecer un entorno limitado
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
@@ -59,4 +62,6 @@ Una respuesta correcta devuelve los detalles del simulador para pruebas actualiz
 }
 ```
 
->[!NOTE] Una vez restablecido el entorno limitado, el sistema tarda unos 15 minutos en aprovisionarlo. Una vez aprovisionado, el simulador de pruebas `state` se convierte en &quot;activo&quot; o &quot;fallido&quot;.
+>[!NOTE]
+>
+>Una vez restablecido el entorno limitado, el sistema tarda unos 15 minutos en aprovisionarlo. Una vez aprovisionado, el simulador de pruebas `state` se convierte en &quot;activo&quot; o &quot;fallido&quot;.
