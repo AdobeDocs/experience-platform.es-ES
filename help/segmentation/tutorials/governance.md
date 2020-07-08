@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1372'
+ht-degree: 1%
 
 ---
 
@@ -15,36 +18,38 @@ En este tutorial se explican los pasos para reforzar la compatibilidad del uso d
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
 
-- [Perfil](../../profile/home.md)del cliente en tiempo real: Perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos del modelo de datos de experiencia (XDM) en la plataforma. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
+- [Perfil](../../profile/home.md)del cliente en tiempo real: Perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos del Modelo de datos de experiencia (XDM) dentro de Platform. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
    - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por el Perfil del cliente en tiempo real para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para fines de administración de datos.
 - [Segmentación](../home.md): Cómo el Perfil del cliente en tiempo real divide un grupo grande de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
 - [Administración](../../data-governance/home.md)de datos: La Administración de datos proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
    - [Directivas](../../data-governance/policies/overview.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
    - [Aplicación](../../data-governance/enforcement/overview.md)de políticas: Permite aplicar políticas de uso de datos y evitar operaciones de datos que constituyan infracciones de políticas.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -178,7 +183,9 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 
 ## Evaluar conjuntos de datos para violaciones de políticas
 
->[!NOTE]  En este paso se asume que tiene al menos una directiva de uso de datos activa que impide que se realicen acciones de marketing específicas en los datos que contienen determinadas etiquetas. Si no tiene ninguna política de uso aplicable para los conjuntos de datos que se están evaluando, siga el tutorial [de creación de](../../data-governance/policies/create.md) directivas para crear uno antes de continuar con este paso.
+>[!NOTE]
+>
+> En este paso se asume que tiene al menos una directiva de uso de datos activa que impide que se realicen acciones de marketing específicas en los datos que contienen determinadas etiquetas. Si no tiene ninguna política de uso aplicable para los conjuntos de datos que se están evaluando, siga el tutorial [de creación de](../../data-governance/policies/create.md) directivas para crear uno antes de continuar con este paso.
 
 Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar dichos conjuntos de datos en relación con acciones de marketing específicas a fin de comprobar si hay violaciones de directivas de uso de datos.
 
@@ -376,4 +383,4 @@ Consulte la sección sobre [exportación de un segmento](./evaluate-a-segment.md
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para obtener más información sobre la administración de datos en la plataforma de experiencias, consulte la descripción general [de la administración de](../../data-governance/home.md)datos.
+Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para obtener más información sobre la administración de datos en Experience Platform, consulte la descripción general [de la administración de](../../data-governance/home.md)datos.
