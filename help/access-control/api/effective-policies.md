@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Políticas eficaces de Vista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice sobre los permisos y tipos [de recursos](#accepted-permissions-and-resource-types)aceptados.
+>[!NOTE]
+>
+>Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice sobre los permisos y tipos [de recursos](#accepted-permissions-and-resource-types)aceptados.
 
 **Respuesta**
 
@@ -60,7 +65,7 @@ Una respuesta correcta devuelve información sobre los permisos y tipos de recur
 
 ## Pasos siguientes
 
-En este documento se explica cómo realizar llamadas a la API de Control de acceso para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información sobre control de acceso para la plataforma de experiencias, consulte la descripción general [de](../home.md)control de acceso.
+En este documento se explica cómo realizar llamadas a la API de Control de acceso para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información sobre control de acceso para Experience Platform, consulte la descripción general [del](../home.md)control de acceso.
 
 ## Apéndice
 
