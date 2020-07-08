@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Acciones de mercadotecnia
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 En la solicitud siguiente, observe que la carga útil `name` de la solicitud es la misma que la de la llamada `{marketingActionName}` de API. A diferencia `id` de lo que sucede con una política de solo lectura y generada por el sistema, la creación de una acción de marketing requiere que proporcione el nombre _deseado_ de la acción de marketing a medida que la crea.
 
->[!NOTE] Si no se proporciona el `{marketingActionName}` en la llamada, se producirá un error 405 (método no permitido), ya que no se le permitirá realizar directamente una PUT en el `/marketingActions/custom` extremo. Además, si la `name` carga útil no coincide con la `{marketingActionName}` de la ruta, recibirá un error 400 (solicitud incorrecta).
+>[!NOTE]
+>
+>Si no se proporciona el `{marketingActionName}` en la llamada, se producirá un error 405 (método no permitido), ya que no se le permitirá realizar directamente una PUT en el `/marketingActions/custom` extremo. Además, si la `name` carga útil no coincide con la `{marketingActionName}` de la ruta, recibirá un error 400 (solicitud incorrecta).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Si se crea correctamente, recibirá un estado HTTP 201 (Creado) y el cuerpo de r
 
 Es posible eliminar las acciones de marketing enviando una solicitud de DELETE a la `{marketingActionName}` parte de la acción de marketing que desee eliminar.
 
->[!NOTE] No puede eliminar las acciones de marketing a las que se hace referencia al salir de las directivas. Al intentar hacerlo, se producirá un error 400 (solicitud incorrecta) junto con un mensaje de error que incluye los ID `id` (o múltiples) de cualquier directiva (o directivas) que contenga una referencia a la acción de marketing que intenta eliminar.
+>[!NOTE]
+>
+>No puede eliminar las acciones de marketing a las que se hace referencia al salir de las directivas. Al intentar hacerlo, se producirá un error 400 (solicitud incorrecta) junto con un mensaje de error que incluye los ID `id` (o múltiples) de cualquier directiva (o directivas) que contenga una referencia a la acción de marketing que intenta eliminar.
 
 **Formato API**
 
