@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Optimizar un modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Una vez habilitada una clase de evaluador, se calcularán varias métricas duran
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] Si la métrica no está definida, las métricas predeterminadas estarán activas.
+>[!NOTE]
+>
+>Si la métrica no está definida, las métricas predeterminadas estarán activas.
 
 Se puede habilitar una métrica específica cambiando el valor de `evaluation.metrics.com`. En el siguiente ejemplo, la métrica F-Score está habilitada.
 
@@ -83,7 +85,9 @@ En la tabla siguiente se indican las métricas predeterminadas de cada clase. Un
 
 El evaluador personalizado se puede proporcionar ampliando la interfaz de `MLEvaluator.scala` en el `Evaluator.scala` archivo. En el archivo [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) de ejemplo, definimos las funciones personalizadas `split()` y `evaluate()` . Nuestra `split()` función divide nuestros datos al azar con una proporción de 8:2 y nuestra `evaluate()` función define y devuelve 3 métricas: MAPE, MAE y RMSE.
 
->[!IMPORTANT] Para la `MLMetric` clase, no utilice `"measures"` para `valueType` crear otro `MLMetric` elemento, la métrica no se rellenará en la tabla de métricas de evaluación personalizada.
+>[!IMPORTANT]
+>
+>Para la `MLMetric` clase, no utilice `"measures"` para `valueType` crear otro `MLMetric` elemento, la métrica no se rellenará en la tabla de métricas de evaluación personalizada.
 >  
 > Haga esto: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > No es esto: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
