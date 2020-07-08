@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 2%
@@ -217,7 +217,9 @@ Esta expresión se denomina expresión **de** política y es un objeto que conti
 }
 ```
 
->[!NOTE] Solo se admiten los operadores OR y AND.
+>[!NOTE]
+>
+>Solo se admiten los operadores OR y AND.
 
 Una vez configurada la expresión de directivas, puede crear una nueva directiva DULE haciendo una solicitud POST al extremo del `/policies/custom` mismo.
 
@@ -322,7 +324,9 @@ Registre el identificador URI de la directiva DULE recién creada, tal como se u
 
 ## Habilitar la directiva DULE
 
->[!NOTE] Aunque este paso es opcional si desea dejar la directiva DULE en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido `ENABLED` para participar en la evaluación. Consulte el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) DULE para obtener información sobre cómo hacer excepciones para políticas en `DRAFT` estado.
+>[!NOTE]
+>
+>Aunque este paso es opcional si desea dejar la directiva DULE en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido `ENABLED` para participar en la evaluación. Consulte el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) DULE para obtener información sobre cómo hacer excepciones para políticas en `DRAFT` estado.
 
 De forma predeterminada, las directivas DULE que tienen sus `status` propiedades establecidas para `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud PATCH en el extremo y proporcionando el identificador único para la directiva al final de la ruta de la solicitud. `/policies/custom/`
 
