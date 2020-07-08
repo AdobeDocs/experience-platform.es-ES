@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Acceso a las puntuaciones en Atribución AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Además, para acceder a las puntuaciones de la API de atribución, debe tener di
 
 ## Find your dataset ID {#dataset-id}
 
-Dentro de la instancia de servicio para las perspectivas de AI de atribución, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Access scores]**.
+Dentro de la instancia de servicio para perspectivas de AI de atribución, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione Puntuaciones **[!UICONTROL de]** acceso.
 
 ![más acciones](./images/download-scores/more-actions.png)
 
@@ -220,7 +223,9 @@ Copie el `href` valor de cualquier objeto de archivo de la `data` matriz y, a co
 
 Para descargar los datos del archivo, realice una solicitud GET al `"href"` valor copiado en el paso anterior para [recuperar los archivos](#retrieving-your-files).
 
->[!NOTE] Si realiza esta solicitud directamente en la línea de comandos, es posible que se le pregunte si desea agregar un resultado después de los encabezados de la solicitud. El siguiente ejemplo de solicitud utiliza `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Si realiza esta solicitud directamente en la línea de comandos, es posible que se le pregunte si desea agregar un resultado después de los encabezados de la solicitud. El siguiente ejemplo de solicitud utiliza `--output {FILENAME.FILETYPE}`.
 
 **Formato API**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Asegúrese de que se encuentra en el directorio o la carpeta en los que desea guardar el archivo antes de realizar la solicitud GET.
+>[!TIP]
+>
+>Asegúrese de que se encuentra en el directorio o la carpeta en los que desea guardar el archivo antes de realizar la solicitud GET.
 
 **Respuesta**
 
@@ -258,7 +265,9 @@ Este documento describe los pasos necesarios para descargar puntuaciones de Atri
 
 ## Acceso a las puntuaciones mediante Snowflake
 
->[!IMPORTANT] Póngase en contacto con attributionai-support@adobe.com para obtener más información sobre el acceso a las puntuaciones mediante SnowFlake.
+>[!IMPORTANT]
+>
+>Póngase en contacto con attributionai-support@adobe.com para obtener más información sobre el acceso a las puntuaciones mediante SnowFlake.
 
 Puede acceder a las puntuaciones de Atribución AI agregadas a través de Snowflake. Actualmente, debe enviar por correo electrónico a la asistencia de Adobe a attributionai-support@adobe.com para configurar y recibir las credenciales de Snowflake en su cuenta de lector.
 
@@ -268,7 +277,9 @@ Una vez que la asistencia de Adobe haya procesado su solicitud, se le proporcion
 - Nombre de usuario
 - Contraseña
 
->[!NOTE] La cuenta de lector es para consultar los datos mediante clientes SQL, hojas de cálculo y soluciones BI que admiten el conector JDBC.
+>[!NOTE]
+>
+>La cuenta de lector es para consultar los datos mediante clientes SQL, hojas de cálculo y soluciones BI que admiten el conector JDBC.
 
 Una vez que tenga las credenciales y la dirección URL, puede realizar la consulta de las tablas de modelos, agregadas por fecha de punto de contacto o fecha de conversión.
 
