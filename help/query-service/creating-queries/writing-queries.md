@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Escritura de consultas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
 
 # Directrices generales para la ejecución de consultas en el Servicio de Consulta
 
-Este documento detalla detalles importantes que deben conocerse al escribir consultas en el servicio de Consulta de la plataforma Adobe Experience Platform.
+Este documento detalla detalles importantes que deben conocerse al escribir consultas en el servicio de Consulta de Adobe Experience Platform.
 
 Para obtener información detallada sobre la sintaxis SQL utilizada en el servicio de Consulta, lea la documentación [de sintaxis](../sql/syntax.md)SQL.
 
 ## Modelos de ejecución de Consulta
 
-El servicio de Consulta de la plataforma Adobe Experience tiene dos modelos de ejecución de consultas: interactiva y no interactiva. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
+El servicio de Consulta de Adobe Experience Platform tiene dos modelos de ejecución de consultas: interactiva y no interactiva. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
 
 ### Ejecución de consultas interactivas
 
@@ -31,13 +34,15 @@ La ejecución de consultas interactivas tiene las siguientes limitaciones:
 | Máximo de filas devueltas | 50,000 |
 | consultas simultáneas máximas | 5 |
 
->[!NOTE] Para anular la limitación máxima de filas, incluya `LIMIT 0` en la consulta. El tiempo de espera de consulta de 10 minutos sigue siendo válido.
+>[!NOTE]
+>
+>Para anular la limitación máxima de filas, incluya `LIMIT 0` en la consulta. El tiempo de espera de consulta de 10 minutos sigue siendo válido.
 
-De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no se mantienen** . Para mantener los resultados como un conjunto de datos en la plataforma de experiencias, la consulta debe utilizar la `CREATE TABLE AS SELECT` sintaxis.
+De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no se mantienen** . Para mantener los resultados como un conjunto de datos en Experience Platform, la consulta debe utilizar la `CREATE TABLE AS SELECT` sintaxis.
 
 ### Ejecución de consultas no interactivas
 
-Las Consultas enviadas a través de la API de servicio de Consulta se ejecutan de forma no interactiva. La ejecución no interactiva significa que el servicio de Consulta recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en la plataforma de experiencias para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
+Las Consultas enviadas a través de la API de servicio de Consulta se ejecutan de forma no interactiva. La ejecución no interactiva significa que el servicio de Consulta recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en Experience Platform para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
 
 ## Acceso a un campo específico dentro de un objeto
 
@@ -67,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | El nombre de la tabla de análisis. |
 
->[!NOTE] Dado que cada tipo de anotación devuelve los mismos resultados, el que elija utilizar estará a su preferencia.
+>[!NOTE]
+>
+>Dado que cada tipo de anotación devuelve los mismos resultados, el que elija utilizar estará a su preferencia.
 
 Las dos consultas de ejemplo anteriores devuelven un objeto acoplado en lugar de un solo valor:
 
@@ -147,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] Las comillas de Doble **no se pueden** utilizar con acceso a campo de notación de puntos.
+>[!NOTE]
+>
+>Las comillas de Doble **no se pueden** utilizar con acceso a campo de notación de puntos.
 
 ### Comillas secundarias
 
