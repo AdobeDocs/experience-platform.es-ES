@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear segmentos de clientes con puntuaciones predichas
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
 
@@ -13,23 +16,25 @@ source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos. Para ver un tutorial más sólido sobre la creación de segmentos, consulte la guía [de usuario del Generador](../../../segmentation/tutorials/create-a-segment.md)de segmentos.
 
->[!IMPORTANT] Para utilizar este método, es necesario habilitar el Perfil del cliente en tiempo real para el conjunto de datos.
+>[!IMPORTANT]
+>
+>Para utilizar este método, es necesario habilitar el Perfil del cliente en tiempo real para el conjunto de datos.
 
-En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segments]** , en el panel de navegación izquierdo, y, a continuación, haga clic en **[!UICONTROL Create segment]**.
+En la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y, a continuación, haga clic en **[!UICONTROL Crear segmento]**.
 
 ![](../images/user-guide/segments.png)
 
-Aparece el Generador *de segmentos* . En la columna *Campos* de la izquierda y en la ficha *Atributos* , haga clic en la carpeta denominada **[!UICONTROL XDM Individual Profile]** y, a continuación, haga clic en la carpeta con la Área de nombres de su organización. La carpeta denominada **[!UICONTROL Customer AI]** contiene los resultados de las ejecuciones de predicción y recibe el nombre de la instancia a la que pertenecen las puntuaciones. Haga clic en una carpeta de instancia para acceder a los resultados de la instancia deseada.
+Aparece el Generador *de segmentos* . En la columna *Campos* de la izquierda y en la ficha *Atributos* , haga clic en la carpeta denominada Perfil **[!UICONTROL individual]** XDM y, a continuación, haga clic en la carpeta con la Área de nombres de su organización. La carpeta denominada **[!UICONTROL Customer AI]** contiene los resultados de las ejecuciones de predicciones y recibe el nombre de la instancia a la que pertenecen las puntuaciones. Haga clic en una carpeta de instancia para acceder a los resultados de la instancia deseada.
 
 ![](../images/user-guide/results.png)
 
-Ubicado en el centro del Generador de segmentos, arrastre y suelte el **[!UICONTROL Score]** atributo en el lienzo *del* creador de reglas para definir una regla.
+Situado en el centro del Generador de segmentos, arrastre y suelte el atributo **[!UICONTROL Puntuación]** en el lienzo *del creador de* reglas para definir una regla.
 
 En la columna de propiedades *del* segmento de la derecha, proporcione un nombre para el segmento.
 
 ![](../images/user-guide/properties.png)
 
-Por encima de la columna *Campos* de la izquierda, haga clic en el icono de **engranaje** y seleccione una política *de* combinación en la lista desplegable. Haga clic **[!UICONTROL Save]** para crear el segmento.
+Por encima de la columna *Campos* de la izquierda, haga clic en el icono de **engranaje** y seleccione una política *de* combinación en la lista desplegable. Click **[!UICONTROL Save]** to create the segment.
 
 ![](../images/user-guide/merge_policy.png)
 
