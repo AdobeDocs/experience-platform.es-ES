@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -144,7 +147,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones 
 }
 ```
 
->[!NOTE] Puede utilizar el valor de `_links.cancel` para [detener una ejecución para una consulta](#immediately-stop-a-run-for-a-specific-scheduled-query)programada específica.
+>[!NOTE]
+>
+>Puede utilizar el valor de `_links.cancel` para [detener una ejecución para una consulta](#immediately-stop-a-run-for-a-specific-scheduled-query)programada específica.
 
 ### Activar inmediatamente una ejecución para una consulta programada específica
 
