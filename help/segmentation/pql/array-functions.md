@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funciones de matriz, lista y conjunto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 La `notIn` función se utiliza para determinar si un elemento no es miembro de una matriz o lista.
 
->[!NOTE] La `notIn` función *también* garantiza que ninguno de los dos valores sea igual a nulo. Por lo tanto, los resultados no son una negación exacta de la `in` función.
+>[!NOTE]
+>
+>La `notIn` función *también* garantiza que ninguno de los dos valores sea igual a nulo. Por lo tanto, los resultados no son una negación exacta de la `in` función.
 
 **Formato**
 
