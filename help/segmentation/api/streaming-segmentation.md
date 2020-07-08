@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 1%
@@ -14,7 +14,9 @@ ht-degree: 1%
 
 # Evaluar eventos en tiempo casi real con segmentación de flujo continuo
 
->[!NOTE] El siguiente documento indica cómo utilizar la segmentación de flujo mediante la API. Para obtener información sobre el uso de la segmentación por flujo continuo mediante la interfaz de usuario, consulte la guía [del Generador de](../ui/overview.md#streaming-segmentation)segmentos.
+>[!NOTE]
+>
+>El siguiente documento indica cómo utilizar la segmentación de flujo mediante la API. Para obtener información sobre el uso de la segmentación por flujo continuo mediante la interfaz de usuario, consulte la guía [del Generador de](../ui/overview.md#streaming-segmentation)segmentos.
 
 La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real mientras se concentran en la riqueza de los datos. Con la segmentación de flujo continuo, la cualificación de segmentos ahora se produce cuando los datos llegan a [!DNL Platform]su destino, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
@@ -46,7 +48,9 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -56,7 +60,9 @@ Es posible que se requieran encabezados adicionales para completar solicitudes e
 
 ### Tipos de consulta habilitados para la segmentación por flujo {#streaming-segmentation-query-types}
 
->[!NOTE] Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. Encontrará información sobre cómo habilitar la segmentación programada en la sección [Activar segmentación programada](#enable-scheduled-segmentation)
+>[!NOTE]
+>
+>Deberá habilitar la segmentación programada para la organización para que funcione la segmentación de flujo continuo. Encontrará información sobre cómo habilitar la segmentación programada en la sección [Activar segmentación programada](#enable-scheduled-segmentation)
 
 Para que un segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
@@ -232,7 +238,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Se trata de una solicitud estándar para &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre la [creación de un segmento](../tutorials/create-a-segment.md).
+>[!NOTE]
+>
+>Se trata de una solicitud estándar para &quot;crear un segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre la [creación de un segmento](../tutorials/create-a-segment.md).
 
 **Respuesta**
 
@@ -280,7 +288,9 @@ Una respuesta correcta devuelve los detalles de la definición de segmento habil
 
 Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de base (después de la cual el segmento siempre estará actualizado). La evaluación programada (también conocida como segmentación programada) debe habilitarse en primer lugar para que el sistema realice automáticamente la asignación de la base. Con la segmentación programada, su organización de IMS puede adherirse a una programación recurrente para ejecutar automáticamente trabajos de exportación para evaluar segmentos.
 
->[!NOTE] La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
+>[!NOTE]
+>
+>La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
 
 ### Crear una programación
 
