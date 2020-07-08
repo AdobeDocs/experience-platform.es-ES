@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publicación de un modelo como servicio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ Una respuesta correcta devuelve los detalles del servicio ML.
 }
 ```
 
->[!NOTE] Recuperar diferentes servicios ML puede devolver una respuesta con más o menos pares de clave-valor. La respuesta anterior es una representación de un servicio [ML con la formación programada y las ejecuciones de experimentos de puntuación](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>[!NOTE]
+>
+>Recuperar diferentes servicios ML puede devolver una respuesta con más o menos pares de clave-valor. La respuesta anterior es una representación de un servicio [ML con la formación programada y las ejecuciones de experimentos de puntuación](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Programar formación o puntuación
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] No intente modificar los `startTime` trabajos de formación y puntuación programados existentes. Si `startTime` debe modificarse, considere la posibilidad de publicar el mismo modelo y reprogramar los trabajos de formación y puntuación.
+>[!WARNING]
+>
+>No intente modificar los `startTime` trabajos de formación y puntuación programados existentes. Si `startTime` debe modificarse, considere la posibilidad de publicar el mismo modelo y reprogramar los trabajos de formación y puntuación.
 
 **Respuesta**
 
