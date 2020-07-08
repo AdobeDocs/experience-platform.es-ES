@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funciones de fecha y hora
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
@@ -140,11 +143,13 @@ La `occurs` función se puede escribir con cualquiera de los siguientes formatos
 | --------- | ----------- |
 | `{COMPARISON}` | Operador de comparación. Puede ser cualquiera de los siguientes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`. Encontrará más información sobre las funciones de comparación en el documento [de funciones de](./comparison-functions.md)comparación. |
 | `{INTEGER}` | Un entero no negativo. |
-| `{TIME_UNIT}` | Una unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)``minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)``century``centuries``millennium``millennia`,,,. |
+| `{TIME_UNIT}` | Una unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`,. |
 | `{DIRECTION}` | Preposición que describe cuándo comparar la fecha. Puede ser cualquiera de las siguientes palabras: `before`, `after`, `from`. |
 | `{TIME}` | Puede ser un literal de marca de hora (`today`, `now`, `yesterday`, `tomorrow`), una unidad de tiempo relativa (una de `this`, `last`o `next` seguida de una unidad de tiempo) o un atributo de marca de hora. |
 
->[!NOTE] El uso de la palabra `on` es opcional. Está ahí para mejorar la legibilidad de algunas combinaciones, como `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>El uso de la palabra `on` es opcional. Está ahí para mejorar la legibilidad de algunas combinaciones, como `timestamp occurs on date(2019,12,31)`.
 
 **Ejemplo**
 
