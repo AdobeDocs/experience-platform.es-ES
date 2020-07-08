@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Información general sobre la ingesta parcial por lotes de Adobe Experience Platform
+title: Introducción a la ingestión parcial por lotes de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -18,34 +21,38 @@ Este documento proporciona un tutorial para administrar la ingestión parcial po
 
 Además, el [apéndice](#appendix) de este tutorial proporciona una referencia para los tipos de error de ingestión parcial por lotes.
 
->[!IMPORTANT] Esta función solo existe mediante la API. Póngase en contacto con su equipo para obtener acceso a esta función.
+>[!IMPORTANT]
+>
+>Esta función solo existe mediante la API. Póngase en contacto con su equipo para obtener acceso a esta función.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform relacionados con la ingestión parcial por lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform relacionados con la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Ingesta](./overview.md)por lotes: El método que Platform ingesta y almacena datos de archivos de datos, como CSV y Parquet.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 ## Habilitar un conjunto de datos para la ingestión parcial por lotes en la API
 
@@ -75,7 +82,9 @@ Dentro del conjunto de datos, deberá agregar la etiqueta descrita anteriormente
 
 <!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>[!NOTE]
+>
+>This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
 To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
