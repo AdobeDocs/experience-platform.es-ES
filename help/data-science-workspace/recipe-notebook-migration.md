@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -324,7 +324,9 @@ El siguiente vídeo está diseñado para ayudar a comprender mejor los cambios n
 
 Con la introducción de PySpark 2.4 a [!DNL JupyterLab Notebooks], [!DNL Python] los nuevos portátiles con PySpark 2.4 ahora utilizan el núcleo [!DNL Python] 3 en lugar del núcleo PySpark 3. Esto significa que el código existente que se ejecuta en PySpark 2.3 no es compatible con PySpark 2.4.
 
->[!IMPORTANT] PySpark 2.3 está en desuso y está configurado para eliminarse en una versión posterior. Todos los ejemplos existentes se han configurado para reemplazarse con ejemplos de PySpark 2.4.
+>[!IMPORTANT]
+>
+>PySpark 2.3 está en desuso y está configurado para eliminarse en una versión posterior. Todos los ejemplos existentes se han configurado para reemplazarse con ejemplos de PySpark 2.4.
 
 Para convertir los blocs de notas PySpark 3 ([!DNL Spark] 2.3) existentes a [!DNL Spark] 2.4, siga los ejemplos que se describen a continuación:
 
@@ -458,7 +460,9 @@ Con PySpark 3 ([!DNL Spark] 2.4) `org_id` y ya `dataset_id` no es necesario defi
 | ------- | ----------- |
 | [%dataset](#magic) | Magia personalizada para acceso a datos en el núcleo [!DNL Python] 3. |
 
->[!TIP] —mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
+>[!TIP]
+>
+>—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
 
 ## Creación de un datafame local
 
@@ -511,7 +515,9 @@ sample_df = df.sample(fraction)
    </tr>
 </table>
 
->[!TIP] También puede especificar una muestra de raíz opcional, como un booleano conSustitución, fracción de doble o una semilla larga.
+>[!TIP]
+>
+>También puede especificar una muestra de raíz opcional, como un booleano conSustitución, fracción de doble o una semilla larga.
 
 Las siguientes imágenes resaltan las diferencias clave para crear un datafame local en PySpark 2.3 y PySpark 2.4. Este ejemplo utiliza los blocs de notas de inicio de *Agregación* que se proporcionan en la [!DNL JupyterLab Launcher].
 
@@ -559,7 +565,9 @@ pd0.show(10, False)
 | pd0 | Nombre del objeto dataframe pandas que se va a usar o crear. |
 | [%dataset](#magic) | Magia personalizada para acceso a datos en el núcleo [!DNL Python] 3. |
 
->[!TIP] —mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
+>[!TIP]
+>
+>—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
 
 Las siguientes imágenes resaltan las diferencias clave para volver a escribir datos [!DNL Platform] en PySpark 2.3 y PySpark 2.4. Este ejemplo utiliza los blocs de notas de inicio de *Agregación* que se proporcionan en la [!DNL JupyterLab Launcher].
 
@@ -577,7 +585,9 @@ Con PySpark 3 ([!DNL Spark] 2.4), la magia `%dataset` personalizada elimina la n
 
 Con la introducción de [!DNL Spark] 2.4 a [!DNL JupyterLab Notebooks], los portátiles existentes [!DNL Spark] ([!DNL Spark] 2.3) ahora están usando el núcleo Scala en lugar del [!DNL Spark] núcleo. Esto significa que el código existente que se ejecuta en [!DNL Spark] ([!DNL Spark] 2.3) no es compatible con Scala ([!DNL Spark] 2.4). Además, todos los [!DNL Spark] portátiles nuevos deben utilizar Scala ([!DNL Spark] 2.4) en la [!DNL JupyterLab Launcher].
 
->[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3) está en desuso y configurado para eliminarse en una versión posterior. Todos los ejemplos existentes se han configurado para reemplazarse con ejemplos de Scala ([!DNL Spark] 2.4).
+>[!IMPORTANT]
+>
+>[!DNL Spark] ([!DNL Spark] 2.3) está en desuso y configurado para eliminarse en una versión posterior. Todos los ejemplos existentes se han configurado para reemplazarse con ejemplos de Scala ([!DNL Spark] 2.4).
 
 Para convertir los blocs de notas existentes [!DNL Spark] ([!DNL Spark] 2.3) a Scala ([!DNL Spark] 2.4), siga los ejemplos que se describen a continuación:
 
@@ -756,7 +766,9 @@ El bloc de notas Scala ([!DNL Spark] 2.4) utiliza el núcleo Scala que requiere 
 
 ![chispa de carga 2.4](./images/migration/spark-scala/load-2.4.png)
 
->[!TIP] En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`. Esto elimina la necesidad de definir variables si sabe que sólo se van a usar una sola vez. El ejemplo siguiente toma `val userToken` el ejemplo anterior y lo declara en línea dentro de `option`:
+>[!TIP]
+>
+>En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`. Esto elimina la necesidad de definir variables si sabe que sólo se van a usar una sola vez. El ejemplo siguiente toma `val userToken` el ejemplo anterior y lo declara en línea dentro de `option`:
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
