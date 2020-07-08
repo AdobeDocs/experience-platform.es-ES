@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con esas etiquetas, puede utilizar la API [de servicio de directivas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de la política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 
->[!NOTE] De forma predeterminada, solo pueden participar en la evaluación las directivas cuyo estado está configurado para `ENABLED` participar. Para permitir que `DRAFT` las directivas participen en la evaluación, debe incluir el parámetro de consulta `includeDraft=true` en la ruta de la solicitud.
+>[!NOTE]
+>
+>De forma predeterminada, solo pueden participar en la evaluación las directivas cuyo estado está configurado para `ENABLED` participar. Para permitir que `DRAFT` las directivas participen en la evaluación, debe incluir el parámetro de consulta `includeDraft=true` en la ruta de la solicitud.
 
 Este documento proporciona pasos sobre cómo utilizar la [!DNL Policy Service] API para comprobar si hay infracciones de políticas en diferentes escenarios.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 La siguiente solicitud prueba la acción de mercadotecnia con las etiquetas `exportToThirdParty` y `C1` `C3`. Dado que la directiva de uso de datos que creó anteriormente en este tutorial define la `C1` etiqueta como una de las `deny` condiciones de su expresión de directiva, la acción de marketing debe desencadenar una infracción de directiva.
 
->[!NOTE] Las etiquetas de uso de datos distinguen entre mayúsculas y minúsculas. Las infracciones de directiva solo se producen cuando las etiquetas definidas en sus expresiones de directiva coinciden exactamente. En este ejemplo, una `C1` etiqueta activaría una infracción, mientras que una `c1` etiqueta no.
+>[!NOTE]
+>
+>Las etiquetas de uso de datos distinguen entre mayúsculas y minúsculas. Las infracciones de directiva solo se producen cuando las etiquetas definidas en sus expresiones de directiva coinciden exactamente. En este ejemplo, una `C1` etiqueta activaría una infracción, mientras que una `c1` etiqueta no.
 
 ```shell
 curl -X GET \
