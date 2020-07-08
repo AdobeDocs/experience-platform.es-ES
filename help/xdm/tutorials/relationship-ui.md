@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante el Editor de Esquemas de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
 
 # Definir una relación entre dos esquemas mediante el Editor de Esquemas
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en distintos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
-Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante el Editor de Esquemas en la interfaz de usuario de la plataforma de experiencia. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre la [definición de una relación mediante la API](relationship-api.md)del Registro de Esquema.
+Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por la organización mediante el Editor de Esquemas en la interfaz de usuario del Experience Platform. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre la [definición de una relación mediante la API](relationship-api.md)del Registro de Esquema.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico del sistema XDM y del editor de Esquema en la interfaz de usuario de la plataforma de experiencia. Antes de comenzar este tutorial, consulte la siguiente documentación:
+Este tutorial requiere un conocimiento práctico del sistema XDM y del editor de Esquemas en la interfaz de usuario del Experience Platform. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
-* [Sistema XDM en la plataforma](../home.md)de experiencias: Información general sobre XDM y su implementación en la plataforma de experiencias.
+* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en Experience Platform.
 * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Introducción de los componentes básicos de los esquemas XDM.
 * [Cree un esquema con el Editor](create-schema-ui.md)de Esquemas: Un tutorial sobre los conceptos básicos del trabajo con el Editor de Esquemas.
 
@@ -45,7 +48,9 @@ El esquema de destino &quot;Hoteles&quot; contiene campos que describen un hotel
 
 ## Crear una mezcla de relación
 
->[!NOTE] Este paso solo es necesario si el esquema de origen no tiene un campo de tipo de cadena dedicado para utilizarlo como referencia a otro esquema. Si este campo ya está definido en el esquema de origen, vaya al siguiente paso para [definir un campo](#relationship-field)de relación.
+>[!NOTE]
+>
+>Este paso solo es necesario si el esquema de origen no tiene un campo de tipo de cadena dedicado para utilizarlo como referencia a otro esquema. Si este campo ya está definido en el esquema de origen, vaya al siguiente paso para [definir un campo](#relationship-field)de relación.
 
 Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo específico para utilizarlo como referencia al esquema de destino. Puede agregar este campo al esquema de origen creando una nueva mezcla.
 
