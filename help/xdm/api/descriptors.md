@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descriptores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Descriptores
 
-Los Esquemas definen una vista estática de las entidades de datos, pero no proporcionan detalles específicos sobre cómo los datos basados en estos esquemas (conjuntos de datos, por ejemplo) pueden relacionarse entre sí. Adobe Experience Platform le permite describir estas relaciones y otros metadatos interpretativos sobre un esquema mediante descriptores.
+Los Esquemas definen una vista estática de las entidades de datos, pero no proporcionan detalles específicos sobre cómo los datos basados en estos esquemas (conjuntos de datos, por ejemplo) pueden relacionarse entre sí. Adobe Experience Platform permite describir estas relaciones y otros metadatos interpretativos sobre un esquema mediante descriptores.
 
 Los descriptores de Esquema son metadatos de nivel de inquilino, lo que significa que son exclusivos de la organización de IMS y todas las operaciones de descriptor se realizan en el contenedor de inquilino.
 
@@ -22,7 +22,9 @@ Cada esquema puede tener una o varias entidades descriptoras de esquema aplicada
 
 Este documento proporciona llamadas de API de ejemplo para descriptores, así como una lista completa de los descriptores disponibles y los campos requeridos para definir cada tipo.
 
->[!NOTE] Los descriptores requieren encabezados Accept únicos que reemplazan `xed` por `xdm`, pero de lo contrario tienen un aspecto muy similar a los encabezados Accept utilizados en otras partes del Registro de Esquema. Los encabezados Accept adecuados se han incluido en las llamadas de ejemplo siguientes, pero tenga especial cuidado de asegurarse de que se utilizan los encabezados correctos.
+>[!NOTE]
+>
+>Los descriptores requieren encabezados Accept únicos que reemplazan `xed` por `xdm`, pero de lo contrario tienen un aspecto muy similar a los encabezados Accept utilizados en otras partes del Registro de Esquema. Los encabezados Accept adecuados se han incluido en las llamadas de ejemplo siguientes, pero tenga especial cuidado de asegurarse de que se utilizan los encabezados correctos.
 
 ## Descriptores de Listas
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud define un descriptor de identidad en un campo &quot;dirección de correo electrónico&quot; de un esquema de ejemplo. Esto indica a la plataforma de experiencia que utilice la dirección de correo electrónico como identificador para ayudar a unir información sobre el individuo.
+La siguiente solicitud define un descriptor de identidad en un campo &quot;dirección de correo electrónico&quot; de un esquema de ejemplo. Esto indica al Experience Platform que utilice la dirección de correo electrónico como identificador para ayudar a unir información sobre el individuo.
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ Al realizar una solicitud de búsqueda (GET) para la vista del descriptor, se mo
 
 ## Eliminar descriptor
 
-En ocasiones, es posible que deba eliminar un descriptor que haya definido del Registro de Esquemas. Esto se realiza realizando una solicitud DELETE que hace referencia al `@id` del descriptor que desea eliminar.
+En ocasiones, es posible que deba eliminar un descriptor que haya definido del Registro de Esquemas. Esto se realiza realizando una solicitud de DELETE que hace referencia al `@id` del descriptor que desea eliminar.
 
 **Formato API**
 
@@ -277,7 +279,7 @@ Las siguientes secciones proporcionan información general sobre los tipos de de
 
 #### Descriptor de identidad
 
-Un descriptor de identidad indica que &quot;sourceProperty&quot; de &quot;sourceSchema&quot; es un campo de identidad tal como lo describe [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Un descriptor de identidad indica que &quot;sourceProperty&quot; de &quot;sourceSchema&quot; es un campo Identity tal como lo describe [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -334,7 +336,7 @@ Los descriptores de nombres prácticos permiten al usuario modificar los valores
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, utilice &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en Caso de título. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
-| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de los valores sugeridos para el campo en la interfaz de usuario de la plataforma de experiencia. Es importante tener en cuenta que `meta:enum` no declara una lista desglosada ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para los campos XDM principales definidos por Adobe. Si la propiedad source es un campo personalizado definido por su organización, debe editar la propiedad del campo directamente a través de una solicitud `meta:enum` [PATCH](./update-resource.md). |
+| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de los valores sugeridos para el campo en la interfaz de usuario del Experience Platform. Es importante tener en cuenta que `meta:enum` no declara una lista desglosada ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para los campos XDM principales definidos por Adobe. Si la propiedad source es un campo personalizado definido por su organización, debe editar la propiedad del campo directamente a través de una solicitud `meta:enum` [PATCH](./update-resource.md). |
 
 #### Descriptor de relación
 
