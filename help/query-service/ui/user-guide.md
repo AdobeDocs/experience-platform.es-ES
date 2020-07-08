@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía del editor de Consultas del servicio de Consulta de Adobe Experience Platform
+title: Guía del Editor de Consultas del servicio de Consulta de Adobes Experience Platform
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
 
 # Guía del usuario del Editor de Consultas
 
-El Editor de Consultas es una herramienta interactiva proporcionada por el servicio de Consulta de la plataforma de experiencia de Adobe, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario de la plataforma de experiencia. El Editor de Consultas admite el desarrollo de consultas para la análisis y la exploración de datos, y permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en la plataforma de experiencia.
+El Editor de Consultas es una herramienta interactiva proporcionada por el Servicio de Consulta de Adobes Experience Platform, que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de Consultas admite el desarrollo de consultas para la análisis y la exploración de datos, y permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 
-Para obtener más información sobre los conceptos y las características del servicio de Consulta, consulte la descripción general [del servicio de][query-service-overview]Consulta. Para obtener más información sobre cómo navegar por la interfaz de usuario del servicio de Consulta en la plataforma, consulte la descripción general [de la interfaz de usuario del servicio de][query-service-ui]Consulta.
+Para obtener más información sobre los conceptos y las características del servicio de Consulta, consulte la descripción general [del servicio de][query-service-overview]Consulta. Para obtener más información sobre cómo navegar por la interfaz de usuario del servicio de Consulta en Platform, consulte la descripción general [de la interfaz de usuario del servicio de][query-service-ui]Consulta.
 
 ## Primeros pasos
 
@@ -35,7 +38,7 @@ Con el Editor de Consultas, puede escribir, ejecutar y guardar consultas para lo
 
 ### Acceso al Editor de Consultas
 
-En la interfaz de usuario de la plataforma de experiencia, haga clic en **Consultas** en el menú de navegación de la izquierda para abrir el espacio de trabajo del servicio de Consulta. A continuación, haga clic en **Crear Consulta** en la parte superior derecha de la pantalla para escribir consultas en inicio. Este vínculo está disponible desde cualquiera de las páginas del espacio de trabajo del servicio de Consulta.
+En la interfaz de usuario del Experience Platform, haga clic en **Consultas** en el menú de navegación de la izquierda para abrir el espacio de trabajo del servicio de Consulta. A continuación, haga clic en **Crear Consulta** en la parte superior derecha de la pantalla para escribir consultas en inicio. Este vínculo está disponible desde cualquiera de las páginas del espacio de trabajo del servicio de Consulta.
 
 ![Imagen](../images/queries/query-editor-overview/create-query.png)
 
@@ -77,7 +80,7 @@ Mientras visualiza una consulta en el Editor de Consultas, el panel Detalles *de
 
 ![Imagen](../images/queries/query-editor-overview/query-details.png)
 
-Este panel le permite generar un conjunto de datos de salida directamente desde la interfaz de usuario, eliminar o asignar un nombre a la consulta mostrada y realizar la vista del código SQL en un formato fácil de copiar en la ficha Consulta ** SQL. Este panel también muestra metadatos útiles, como la última vez que se modificó la consulta y quién la modificó, si corresponde. Para generar un conjunto de datos, haga clic en **Conjunto de datos** de salida. Aparecerá el cuadro de diálogo *Conjunto de datos* de salida. Escriba un nombre y una descripción y, a continuación, haga clic en **Ejecutar Consulta**. El nuevo conjunto de datos se muestra en la ficha *Conjuntos* de datos de la interfaz de usuario del servicio de Consulta en la plataforma.
+Este panel le permite generar un conjunto de datos de salida directamente desde la interfaz de usuario, eliminar o asignar un nombre a la consulta mostrada y realizar la vista del código SQL en un formato fácil de copiar en la ficha Consulta ** SQL. Este panel también muestra metadatos útiles, como la última vez que se modificó la consulta y quién la modificó, si corresponde. Para generar un conjunto de datos, haga clic en **Conjunto de datos** de salida. Aparecerá el cuadro de diálogo *Conjunto de datos* de salida. Escriba un nombre y una descripción y, a continuación, haga clic en **Ejecutar Consulta**. El nuevo conjunto de datos se muestra en la ficha *Conjuntos* de datos de la interfaz de usuario del servicio de Consulta en Platform.
 
 ### Guardar consultas
 
@@ -89,7 +92,9 @@ Todas las consultas ejecutadas desde el Editor de Consultas se capturan en la ta
 
 Consulte la descripción general [de la interfaz de usuario del servicio de][query-service-ui] Consulta para obtener más información.
 
->[!NOTE] El registro no guarda las Consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de Consulta, debe ejecutarse o guardarse en el Editor de Consultas.
+>[!NOTE]
+>
+>El registro no guarda las Consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de Consulta, debe ejecutarse o guardarse en el Editor de Consultas.
 
 ## Ejecución de consultas mediante el Editor de Consultas
 
@@ -101,7 +106,9 @@ La consola proporciona información sobre el estado y el funcionamiento del serv
 
 ![Imagen](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] La consola solo muestra los errores que se han producido al ejecutar una consulta. No muestra errores de validación de consulta antes de ejecutar una consulta.
+>[!NOTE]
+>
+>La consola solo muestra los errores que se han producido al ejecutar una consulta. No muestra errores de validación de consulta antes de ejecutar una consulta.
 
 ### Resultados de Consulta
 
@@ -111,7 +118,7 @@ Una vez finalizada la consulta, los resultados se muestran en la ficha *Resultad
 
 ## Pasos siguientes
 
-Ahora que sabe qué funciones están disponibles en el Editor de Consultas y cómo navegar por la aplicación, puede crear inicios para sus propias consultas directamente en Platform. Para obtener más información sobre cómo ejecutar consultas SQL con conjuntos de datos en Data Lake, consulte la guía sobre cómo [ejecutar consultas][query-service-running-queries]. Para obtener consultas SQL de muestra para trabajar con datos de Adobe Analytics y Adobe Destinatario, consulte la referencia [de consultas de][query-service-sample-queries]ejemplo.
+Ahora que sabe qué funciones están disponibles en el Editor de Consultas y cómo navegar por la aplicación, puede crear inicios para sus propias consultas directamente en Platform. Para obtener más información sobre cómo ejecutar consultas SQL con conjuntos de datos en Data Lake, consulte la guía sobre cómo [ejecutar consultas][query-service-running-queries]. Para obtener consultas SQL de muestra para trabajar con datos de Analytics y Adobe Target de Adobe, consulte la referencia [de consultas de][query-service-sample-queries]ejemplo.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
