@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Obtener el historial de clúster de una identidad
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%
@@ -68,7 +68,9 @@ curl -X GET \
 
 Utilice el `POST` método como equivalente por lotes del `GET` método descrito anteriormente para devolver los historiales de clúster de varias identidades.
 
->[!NOTE] La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
+>[!NOTE]
+>
+>La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
 
 **Formato API**
 
@@ -210,7 +212,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] La respuesta siempre tendrá una entrada para cada XID proporcionado en la solicitud, independientemente de si los XID de una solicitud pertenecen al mismo clúster o si uno o más tienen algún clúster asociado.
+>[!NOTE]
+>
+>La respuesta siempre tendrá una entrada para cada XID proporcionado en la solicitud, independientemente de si los XID de una solicitud pertenecen al mismo clúster o si uno o más tienen algún clúster asociado.
 
 ## Pasos siguientes
 
