@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -94,7 +94,9 @@ Según la estrategia de recopilación de datos de su empresa, los campos de dato
 
 Aunque [!DNL Experience Platform] oferta una variedad de Áreas de nombres estándar, es posible que necesite crear Áreas de nombres adicionales para categorizar correctamente sus identidades. Para obtener más información, consulte la sección sobre [visualización y creación de Áreas de nombres para su organización](./namespaces.md) en la descripción general de la Área de nombres de identidad.
 
->[!NOTE] Las Áreas de nombres de identidad son un calificador para las identidades. Como resultado, una vez creada una Área de nombres, no se puede eliminar.
+>[!NOTE]
+>
+>Las Áreas de nombres de identidad son un calificador para las identidades. Como resultado, una vez creada una Área de nombres, no se puede eliminar.
 
 ### Incluir datos de identidad en [!DNL Experience Data Model] (XDM)
 
@@ -109,7 +111,9 @@ Cualquier campo de tipo `string` en esquemas que implemente clases XDM de regist
 Los campos de identidad también permiten la vinculación de identidades si comparten datos PII comunes.
 Por ejemplo, al etiquetar los campos de número de teléfono como campos de identidad, [!DNL Identity Service] se graban automáticamente las relaciones con los demás individuos que utilizan el mismo número de teléfono.
 
->[!NOTE] La Área de nombres de las identidades resultantes se proporciona en el momento en que se etiqueta el campo.
+>[!NOTE]
+>
+>La Área de nombres de las identidades resultantes se proporciona en el momento en que se etiqueta el campo.
 
 ### Configurar un conjunto de datos para [!DNL Identity Service]
 
