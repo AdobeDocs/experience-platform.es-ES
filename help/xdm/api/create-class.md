@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear una clase
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
 
 El principal componente de un esquema es una clase. La clase contiene el conjunto mínimo de campos que se deben definir para capturar los datos principales de un esquema. Por ejemplo, si diseñara un esquema para automóviles y camiones, lo más probable es que utilizaría una clase llamada Vehículo que describiera las propiedades comunes básicas de todos los vehículos.
 
-Adobe y otros socios de la plataforma de experiencia proporcionan varias clases estándar, pero también puede definir sus propias clases y guardarlas en el Registro de Esquema. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
+Adobe y otros socios Experience Platform proporcionan varias clases estándar, pero también puede definir sus propias clases y guardarlas en el Registro de Esquemas. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
 
->[!NOTE] Al componer un esquema basado en una clase definida, no podrá utilizar mezclas estándar. Cada mezcla define las clases con las que son compatibles en sus `meta:intendedToExtend` atributos. Una vez que comience a definir mezclas compatibles con su nueva clase (utilizando la `$id` de su nueva clase en el `meta:intendedToExtend` campo de la mezcla), podrá reutilizar esas mezclas cada vez que defina un esquema que implemente la clase que ha definido. Consulte las secciones sobre [creación de mezclas](create-mixin.md) y [creación de esquemas](create-schema.md) para obtener más información.
+>[!NOTE]
+>
+>Al componer un esquema basado en una clase definida, no podrá utilizar mezclas estándar. Cada mezcla define las clases con las que son compatibles en sus `meta:intendedToExtend` atributos. Una vez que comience a definir mezclas compatibles con su nueva clase (utilizando la `$id` de su nueva clase en el `meta:intendedToExtend` campo de la mezcla), podrá reutilizar esas mezclas cada vez que defina un esquema que implemente la clase que ha definido. Consulte las secciones sobre [creación de mezclas](create-mixin.md) y [creación de esquemas](create-schema.md) para obtener más información.
 
 **Formato API**
 
