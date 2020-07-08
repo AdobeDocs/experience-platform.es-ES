@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Eliminar un entorno limitado
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 
 # Eliminar un entorno limitado
 
-Puede eliminar un simulador para pruebas realizando una solicitud de ELIMINACIÓN que incluya el simulador para pruebas `name` en la ruta de solicitud.
+Puede eliminar un simulador para pruebas realizando una solicitud de DELETE que incluya el simulador para pruebas `name` en la ruta de solicitud.
 
->[!NOTE] Al realizar esta llamada de API, se actualiza la propiedad del `status` simulador para pruebas a &quot;eliminarse&quot; y se desactiva. Las solicitudes GET todavía pueden recuperar los detalles del entorno limitado después de eliminarlo.
+>[!NOTE]
+>
+>Al realizar esta llamada de API, se actualiza la propiedad del `status` simulador para pruebas a &quot;eliminarse&quot; y se desactiva. Las solicitudes GET todavía pueden recuperar los detalles del entorno limitado después de eliminarlo.
 
 **Formato API**
 
