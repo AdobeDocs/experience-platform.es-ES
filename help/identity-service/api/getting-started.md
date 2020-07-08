@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Primeros pasos
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -50,7 +52,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### enrutamiento basado en la región
 
-La [!DNL Identity Service] API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización de IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada punto final garantiza que todas las solicitudes realizadas con la [!DNL Identity Service] API se dirijan a la región adecuada.
+La [!DNL Identity Service] API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización de IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada punto final garantiza que todas las solicitudes realizadas mediante la [!DNL Identity Service] API se dirijan a la región adecuada.
 
 Actualmente hay dos regiones admitidas por [!DNL Identity Service] las API: VA7 y NLD2.
 
@@ -61,7 +63,9 @@ La siguiente tabla muestra las rutas de ejemplo que utilizan regiones:
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] Las solicitudes realizadas sin especificar una región pueden dar como resultado un enrutamiento de llamadas a la región incorrecta o provocar un error inesperado en las llamadas.
+>[!NOTE]
+>
+>Las solicitudes realizadas sin especificar una región pueden dar como resultado un enrutamiento de llamadas a la región incorrecta o provocar un error inesperado en las llamadas.
 
 Si no puede localizar la región dentro de su perfil de organización de IMS, póngase en contacto con el administrador del sistema para obtener ayuda.
 
@@ -77,7 +81,9 @@ Para limitar la carga útil en las respuestas, las API adaptan sus respuestas al
 
 Los ejemplos de este documento no cubren toda la funcionalidad de la [!DNL Identity Service] API. Para obtener la API completa, consulte la Referencia [de API de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Swagger.
 
->[!NOTE] Todas las identidades devueltas estarán en el formulario XID nativo cuando se utilice XID nativo en la solicitud. Se recomienda utilizar el formulario de ID/Área de nombres. Para obtener más información, consulte la sección sobre la [obtención del XID para una identidad](./create-custom-namespace.md).
+>[!NOTE]
+>
+>Todas las identidades devueltas estarán en el formulario XID nativo cuando se utilice XID nativo en la solicitud. Se recomienda utilizar el formulario de ID/Área de nombres. Para obtener más información, consulte la sección sobre la [obtención del XID para una identidad](./create-custom-namespace.md).
 
 ## Pasos siguientes
 
