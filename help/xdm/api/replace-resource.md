@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Reemplazar un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,9 @@ El Registro de Esquemas permite reemplazar un recurso completo mediante una oper
 
 Este método es especialmente útil si desea actualizar mucha información en el recurso a la vez.
 
->[!NOTE] Si solo desea actualizar parte de un recurso en lugar de reemplazarlo por completo, consulte el documento sobre la [actualización de un recurso mediante una operación](update-resource.md)PATCH.
+>[!NOTE]
+>
+>Si solo desea actualizar parte de un recurso en lugar de reemplazarlo por completo, consulte el documento sobre la [actualización de un recurso mediante una operación](update-resource.md)PATCH.
 
 **Formato API**
 
