@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía del usuario de Privacy Service
+title: Guía del usuario del Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -12,13 +12,13 @@ ht-degree: 0%
 ---
 
 
-# Guía del usuario de Privacy Service
+# Guía del usuario del Privacy Service
 
-Este documento proporciona los pasos para crear y administrar solicitudes de privacidad mediante la interfaz de usuario de Privacy Service.
+Este documento proporciona los pasos para crear y administrar solicitudes de privacidad mediante la interfaz de usuario del Privacy Service.
 
-## Examinar el panel de la interfaz de usuario de Privacy Service
+## Examinar el panel de la interfaz de usuario del Privacy Service
 
-El panel de la interfaz de usuario de Privacy Service proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: **Informe** de estado y solicitudes **de trabajo**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
+El panel de la interfaz de usuario del Privacy Service proporciona dos utilidades que le permiten realizar la vista del estado de sus trabajos de privacidad: **Informe** de estado y solicitudes **de trabajo**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
 
 ![panel de la interfaz de usuario](../images/user-guide/dashboard.png)
 
@@ -54,13 +54,17 @@ Para vista de más detalles sobre un punto de datos determinado, haga clic en el
 
 ![Filtro aplicado desde la utilidad](../images/user-guide/apply-filter.png)
 
->[!NOTE] Cuando se ha aplicado un filtro al widget de solicitudes de trabajo, puede eliminarlo haciendo clic en la **X** de la píldora de filtro. Las solicitudes de trabajo luego vuelven a la lista de seguimiento predeterminada.
+>[!NOTE]
+>
+>Cuando se ha aplicado un filtro al widget de solicitudes de trabajo, puede eliminarlo haciendo clic en la **X** de la píldora de filtro. Las solicitudes de trabajo luego vuelven a la lista de seguimiento predeterminada.
 
 ### Solicitudes de trabajo
 
 El widget de solicitudes de trabajo lista todas las solicitudes de trabajo disponibles en la organización, incluidos detalles como el tipo de solicitud, el estado actual, la fecha de vencimiento y el correo electrónico del solicitante.
 
->[!NOTE] Los datos de los trabajos creados anteriormente solo son accesibles durante 30 días después de la fecha de finalización.
+>[!NOTE]
+>
+>Los datos de los trabajos creados anteriormente solo son accesibles durante 30 días después de la fecha de finalización.
 
 Puede filtrar la lista escribiendo las palabras clave en la barra de búsqueda debajo del título de las solicitudes de trabajo. La lista filtros automáticamente a medida que escribe, mostrando las solicitudes que contienen valores que coinciden con los términos de búsqueda. También puede utilizar el menú desplegable **Solicitado en** para seleccionar un intervalo de tiempo para los trabajos enumerados.
 
@@ -78,9 +82,11 @@ Para descargar los datos completos del trabajo como archivo CSV, haga clic en **
 
 ## Crear una nueva solicitud de trabajo de privacidad
 
->[!NOTE] Para crear una solicitud de trabajo de privacidad, debe proporcionar información de identidad para los clientes específicos cuyos datos se van a obtener o eliminar. Consulte el documento sobre los datos de [identidad para las solicitudes](../identity-data.md) de privacidad antes de continuar con esta sección.
+>[!NOTE]
+>
+>Para crear una solicitud de trabajo de privacidad, debe proporcionar información de identidad para los clientes específicos cuyos datos se van a obtener o eliminar. Consulte el documento sobre los datos de [identidad para las solicitudes](../identity-data.md) de privacidad antes de continuar con esta sección.
 
-La interfaz de usuario de Privacy Service proporciona dos métodos para crear nuevas solicitudes de trabajo:
+La interfaz de usuario del Privacy Service proporciona dos métodos para crear nuevas solicitudes de trabajo:
 
 * [Uso del Generador de solicitudes](#request-builder)
 * [Cargar un archivo JSON](#json)
@@ -145,6 +151,6 @@ Cuando termine, haga clic en **Crear**. El cuadro de diálogo desaparece y el nu
 
 ### Pasos siguientes
 
-Al leer este documento, ha aprendido a utilizar la interfaz de usuario de Privacy Service para crear un trabajo de privacidad, vista de los detalles de un trabajo y supervisión de su estado de procesamiento, así como a descargar los resultados una vez finalizados.
+Al leer este documento, ha aprendido a usar la interfaz de usuario del Privacy Service para crear un trabajo de privacidad, a realizar la vista de los detalles de un trabajo y a supervisar su estado de procesamiento, y a descargar los resultados una vez que se haya completado.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la API de Privacy Service, consulte la guía [para](../api/getting-started.md)desarrolladores.
+Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la API de Privacy Service, consulte la guía para [desarrolladores](../api/getting-started.md).
