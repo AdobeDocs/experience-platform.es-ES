@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Comandos de metadatos
 topic: metadata
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
 
 En el caso de los metadatos del conjunto de datos, los siguientes comandos PSQL se admiten actualmente para la consulta:
 
->[!NOTE] Los comandos que se enumeran a continuación distinguen entre mayúsculas y minúsculas.
+>[!NOTE]
+>
+>Los comandos que se enumeran a continuación distinguen entre mayúsculas y minúsculas.
 
 | Comando | Descripción |
 |------- | ------------|
@@ -38,5 +43,5 @@ En el caso de los metadatos del conjunto de datos, los siguientes comandos PSQL 
 
 Se pueden combinar todos los comandos con los que `\d` se inicio. Por ejemplo, puede publicar `\dtsn` para mostrar una lista de todas las tablas, secuencias y esquemas. `\d` por sí mismo muestra todas las tablas, vistas, vistas materializadas y secuencias visibles.
 
-Para obtener más información sobre los comandos mencionados anteriormente, consulte la documentación de [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que la plataforma de experiencia no admite todas las opciones que se muestran en la documentación de PostgreSQL.
+Para obtener más información sobre los comandos mencionados anteriormente, consulte la documentación de [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que no todas las opciones que se muestran en la documentación de PostgreSQL son compatibles con Experience Platform.
 
