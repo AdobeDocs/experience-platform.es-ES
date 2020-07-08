@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear un conjunto de datos para exportar un segmento de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 Adobe Experience Platform le permite segmentar fácilmente perfiles de clientes en audiencias basadas en atributos específicos. Una vez creados los segmentos, puede exportar esa audiencia a un conjunto de datos donde se pueda acceder a ella y actuar en consecuencia. Para que la exportación se realice correctamente, el conjunto de datos debe configurarse correctamente.
 
-En este tutorial se explican los pasos necesarios para crear un conjunto de datos que pueda utilizarse para exportar un segmento de audiencia mediante la interfaz de usuario de la plataforma de experiencia.
+En este tutorial se explican los pasos necesarios para crear un conjunto de datos que pueda utilizarse para exportar un segmento de audiencia mediante la interfaz de usuario del Experience Platform.
 
-Este tutorial está directamente relacionado con los pasos descritos en el tutorial para [evaluar y acceder a los resultados](./evaluate-a-segment.md)del segmento. El tutorial de evaluación de un segmento proporciona pasos para crear un conjunto de datos mediante la API de catálogo, mientras que este tutorial describe los pasos para crear un conjunto de datos mediante la interfaz de usuario de la plataforma de experiencia.
+Este tutorial está directamente relacionado con los pasos descritos en el tutorial para [evaluar y acceder a los resultados](./evaluate-a-segment.md)del segmento. El tutorial de evaluación de un segmento proporciona pasos para crear un conjunto de datos mediante la API de catálogo, mientras que este tutorial describe los pasos para crear un conjunto de datos mediante la interfaz de usuario del Experience Platform.
 
 ## Primeros pasos
 
@@ -23,16 +26,18 @@ Para exportar un segmento, el conjunto de datos debe basarse en el Esquema de Un
 
 Para vista de esquemas de unión en la interfaz de usuario, haga clic en **Perfiles** en el panel de navegación izquierdo y, a continuación, haga clic en la ficha esquema *de* Unión como se muestra a continuación.
 
-![Ficha esquema de Unión en la interfaz de usuario de la plataforma de experiencia](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Ficha esquema de Unión en la interfaz de usuario de Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Espacio de trabajo de conjuntos de datos
 
-El espacio de trabajo de conjuntos de datos de la interfaz de usuario de la plataforma de experiencia le permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos.
+El espacio de trabajo de conjuntos de datos dentro de la interfaz de usuario del Experience Platform le permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos.
 
 Para vista del espacio de trabajo de conjuntos de datos, haga clic en **Conjuntos** de datos en el panel de navegación izquierdo y, a continuación, haga clic en la ficha *Examinar* . El espacio de trabajo de conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con *Nombre*, *Creado* (fecha y hora), *Origen*, *Esquema* y Estado **** del último lote, así como la fecha y hora en que el conjunto de datos fue la Última actualización. Según el ancho de cada columna, puede que sea necesario desplazarse hacia la izquierda o la derecha para ver todas las columnas.
 
->[!NOTE] Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las funciones de filtrado con el fin de vista únicamente de los conjuntos de datos habilitados para el Perfil del cliente en tiempo real.
+>[!NOTE]
+>
+>Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las funciones de filtrado con el fin de vista únicamente de los conjuntos de datos habilitados para el Perfil del cliente en tiempo real.
 
 ![Vista de todos los conjuntos de datos](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
