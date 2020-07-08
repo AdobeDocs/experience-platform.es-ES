@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Este tutorial requiere que tenga acceso a Experience Platform. Si no tiene acces
 
 El espacio de trabajo Esquemas dentro de Experience Platform proporciona una visualización de la biblioteca de Esquemas, lo que le permite realizar vistas y administrar todos los esquemas disponibles, así como componer otros nuevos. El espacio de trabajo también incluye el Editor de Esquemas, el lienzo en el que se compondrá un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión en el Experience Platform, haga clic en **Esquemas** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación de la biblioteca de Esquemas) en la que podrá realizar vistas, administrar y personalizar todos los esquemas disponibles. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
+Después de iniciar sesión en el Experience Platform, haga clic en **Esquemas** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación de la biblioteca de Esquemas) en la que podrá realizar vistas, administrar y personalizar todos los esquemas disponibles. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
 
 Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las capacidades de filtrado de todos los recursos del Registro, incluidos los tipos de datos, las clases y las mezclas.
 
@@ -84,7 +84,9 @@ El lienzo vuelve a aparecer. La sección *Clase* ahora contiene la clase selecci
 
 Los campos aparecen con el formato &quot;fieldName&quot; | Tipo de datos&quot;. Los pasos para definir los campos de esquema en la interfaz de usuario se proporcionan más adelante en este tutorial.
 
->[!NOTE] Puede [cambiar la clase de un esquema](#change-class) en cualquier momento durante el proceso de composición inicial antes de guardar el esquema, pero esto debe hacerse con extrema precaución. Las mezclas solo son compatibles con determinadas clases, por lo que al cambiar la clase se restablecerán el lienzo y los campos que se hayan agregado.
+>[!NOTE]
+>
+>Puede [cambiar la clase de un esquema](#change-class) en cualquier momento durante el proceso de composición inicial antes de guardar el esquema, pero esto debe hacerse con extrema precaución. Las mezclas solo son compatibles con determinadas clases, por lo que al cambiar la clase se restablecerán el lienzo y los campos que se hayan agregado.
 
 ## Añadir una mezcla {#mixin}
 
@@ -108,7 +110,9 @@ El lienzo del esquema vuelve a aparecer. La sección *Mezclas* ahora lista la me
 
 Esta combinación aporta varios campos bajo el nombre de nivel superior &quot;persona&quot; con el tipo de datos &quot;Persona&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
 
->[!NOTE] Recuerde que los campos pueden utilizar tipos escalares (como cadena, entero, matriz o fecha) como tipo de datos, así como cualquier &quot;tipo de datos&quot; (un grupo de campos que representan un concepto común) en el Registro de Esquemas.
+>[!NOTE]
+>
+>Recuerde que los campos pueden utilizar tipos escalares (como cadena, entero, matriz o fecha) como tipo de datos, así como cualquier &quot;tipo de datos&quot; (un grupo de campos que representan un concepto común) en el Registro de Esquemas.
 
 Observe que el campo &quot;nombre&quot; tiene un tipo de datos de &quot;Nombre de la persona&quot;, lo que significa que también describe un concepto común y contiene subcampos relacionados con el nombre, como nombre, apellidos y nombre completo.
 
@@ -247,7 +251,9 @@ Ahora todos los datos ingestados en el campo &quot;loyaltyId&quot; se utilizará
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Una vez que un campo de esquema se haya establecido como identidad principal, recibirá un mensaje de error si posteriormente intenta establecer otro campo del esquema como principal. Cada esquema puede contener sólo un campo de identidad principal.
+>[!NOTE]
+>
+>Una vez que un campo de esquema se haya establecido como identidad principal, recibirá un mensaje de error si posteriormente intenta establecer otro campo del esquema como principal. Cada esquema puede contener sólo un campo de identidad principal.
 
 Para obtener más información sobre cómo trabajar con identidades, consulte la documentación de [Identity Service](../../identity-service/home.md) .
 
@@ -279,7 +285,9 @@ Haga clic en **Perfil** y aparecerá una ventana emergente en la que se le pedir
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Una vez que un esquema se ha habilitado para el Perfil del cliente en tiempo real y se ha guardado, no se puede deshabilitar.
+>[!NOTE]
+>
+>Una vez que un esquema se ha habilitado para el Perfil del cliente en tiempo real y se ha guardado, no se puede deshabilitar.
 
 ## Pasos siguientes
 
@@ -303,13 +311,17 @@ A continuación, puede asignar a la nueva clase un nombre **para** mostrar (un n
 
 ![Detalles de clase nuevos](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Cuando cree un esquema que implemente una clase definida por su organización, recuerde que las mezclas están disponibles para su uso únicamente con clases compatibles. Como la clase que ha definido es nueva, no hay mezclas compatibles en el cuadro de diálogo *Añadir mezcla* . En su lugar, deberá seleccionar **Crear nueva mezcla** y definir una mezcla para utilizarla con esa clase. La próxima vez que componga un esquema que implemente la nueva clase, la mezcla que definió aparecerá en la lista y estará disponible para su uso.
+>[!NOTE]
+>
+>Cuando cree un esquema que implemente una clase definida por su organización, recuerde que las mezclas están disponibles para su uso únicamente con clases compatibles. Como la clase que ha definido es nueva, no hay mezclas compatibles en el cuadro de diálogo *Añadir mezcla* . En su lugar, deberá seleccionar **Crear nueva mezcla** y definir una mezcla para utilizarla con esa clase. La próxima vez que componga un esquema que implemente la nueva clase, la mezcla que definió aparecerá en la lista y estará disponible para su uso.
 
 ### Cambiar la clase de un esquema {#change-class}
 
 En cualquier momento durante el proceso de composición de esquema inicial, antes de guardar el esquema, puede cambiar la clase en la que se basa el esquema.
 
->[!WARNING] Tenga cuidado antes de cambiar la clase. Las mezclas solo son compatibles con determinadas clases, por lo que al cambiar la clase se restablece el lienzo y se eliminan los campos que se hayan agregado a ese punto.
+>[!WARNING]
+>
+>Tenga cuidado antes de cambiar la clase. Las mezclas solo son compatibles con determinadas clases, por lo que al cambiar la clase se restablece el lienzo y se eliminan los campos que se hayan agregado a ese punto.
 
 Para cambiar la clase, haga clic en **Asignar** junto a *Clase* en la sección *Composición* del editor.
 
