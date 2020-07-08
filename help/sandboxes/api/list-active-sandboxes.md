@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Lista de entornos limitados activos para el usuario actual
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
 
 # Lista de entornos limitados activos para el usuario actual
 
->[!NOTE] A diferencia de otros extremos proporcionados en la API de Simulador para pruebas, este extremo está disponible para todos los usuarios, incluidos los que no tienen permisos de acceso a Administración de Simuladores para pruebas.
+>[!NOTE]
+>
+>A diferencia de otros extremos proporcionados en la API de Simulador para pruebas, este extremo está disponible para todos los usuarios, incluidos los que no tienen permisos de acceso a Administración de Simuladores para pruebas.
 
 Puede realizar una lista de los entornos limitados activos para el usuario actual mediante una solicitud GET al extremo raíz (`/`).
 
