@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo _Directivas_ de la interfaz de [!DNL Experience Platform] usuario.
 
->[!IMPORTANT] Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
+>[!IMPORTANT]
+>
+>Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
 
 ## Requisitos previos
 
@@ -51,7 +53,9 @@ A continuación, seleccione las etiquetas de uso de datos en las que se basará 
 
 Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y, a continuación, haga clic en **[!UICONTROL Siguiente]** para continuar.
 
->[!NOTE] Al seleccionar varias acciones de marketing, la política las interpreta como una regla &quot;O&quot;. En otras palabras, la política se aplica si se realiza _cualquiera_ de las acciones de marketing seleccionadas.
+>[!NOTE]
+>
+>Al seleccionar varias acciones de marketing, la política las interpreta como una regla &quot;O&quot;. En otras palabras, la política se aplica si se realiza _cualquiera_ de las acciones de marketing seleccionadas.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ La acción recién creada aparece en la ficha Acciones *[!UICONTROL de]* mercado
 
 ## Editar o eliminar una acción de mercadotecnia {#edit-delete-marketing-action}
 
->[!NOTE] Solo se pueden editar las acciones de mercadotecnia personalizadas definidas por su organización. Las acciones de marketing definidas por Adobe no se pueden cambiar ni eliminar.
+>[!NOTE]
+>
+>Solo se pueden editar las acciones de mercadotecnia personalizadas definidas por su organización. Las acciones de marketing definidas por Adobe no se pueden cambiar ni eliminar.
 
 En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Acciones **[!UICONTROL de]** marketing para la vista de una lista de acciones de marketing disponibles definidas por Adobe y su propia organización. Seleccione una acción de marketing personalizada de la lista y, a continuación, utilice los campos proporcionados en la sección derecha para editar los detalles de la acción de marketing.
 
@@ -101,7 +107,9 @@ En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Accio
 
 Si las directivas de uso existentes no están utilizando la acción de marketing, puede eliminarla haciendo clic en **[!UICONTROL Eliminar acción]** de marketing.
 
->[!NOTE] Si se intenta eliminar una acción de marketing que está utilizando una directiva existente, aparecerá un mensaje de error que indicará que el intento de eliminación ha fallado.
+>[!NOTE]
+>
+>Si se intenta eliminar una acción de marketing que está utilizando una directiva existente, aparecerá un mensaje de error que indicará que el intento de eliminación ha fallado.
 
 ![](../images/policies/delete-marketing-action.png)
 
