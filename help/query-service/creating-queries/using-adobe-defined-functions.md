@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funciones definidas por Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -92,7 +95,9 @@ Las FDA de atribución que se encuentran en el servicio de Consulta permiten def
 
 Este ejemplo se centra en la atribución de último toque, pero Adobe también oferta la atribución de primer toque.
 
->[!NOTE] Otras opciones con tiempos de espera y caducidad basada en eventos estarán disponibles en futuras versiones del Servicio de Consulta.
+>[!NOTE]
+>
+>Otras opciones con tiempos de espera y caducidad basada en eventos estarán disponibles en futuras versiones del Servicio de Consulta.
 
 **Sintaxis:**
 
