@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -30,7 +30,9 @@ En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UIC
 
 Aparece la página de servicio de AI del cliente. Esta página lista las instancias de servicio de AI del cliente y muestra información sobre ellas, incluido el nombre de la instancia, el tipo de tendencia, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
 
->[!NOTE] Solo las instancias de servicio que hayan completado correctamente las ejecuciones de puntuación tienen perspectivas.
+>[!NOTE]
+>
+>Solo las instancias de servicio que hayan completado correctamente las ejecuciones de puntuación tienen perspectivas.
 
 ![Crear instancia](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ Para vista de detalles desde el panel, haga clic en un contenedor de instancia d
 
 ![carril derecho](../images/insights/success-run.png)
 
->[!NOTE] En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en *Última ejecución* en el carril derecho, que solo está visible para las ejecuciones fallidas.
+>[!NOTE]
+>
+>En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en *Última ejecución* en el carril derecho, que solo está visible para las ejecuciones fallidas.
 
 ![error al ejecutar el mensaje](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior
 
 Resumen de puntuación muestra el número total de perfiles puntuados y los categoriza en bloques que contienen alta, media y baja tendencia. Los bloques de propensión se determinan en función del rango de puntuación, el bajo es menor que 24, el medio es de 25 a 74 y el alto es superior a 74. Cada cubo tiene un color correspondiente a la leyenda.
 
->[!NOTE] Si se trata de una puntuación de propensión a la conversión, las puntuaciones altas se muestran en verde y las bajas en rojo. Si predices una tendencia a la agitación, esto es volteado, las puntuaciones altas están en rojo y las bajas son verdes. El cubo medio permanece amarillo independientemente del tipo de propensión que elija.
+>[!NOTE]
+>
+>Si se trata de una puntuación de propensión a la conversión, las puntuaciones altas se muestran en verde y las bajas en rojo. Si predices una tendencia a la agitación, esto es volteado, las puntuaciones altas están en rojo y las bajas son verdes. El cubo medio permanece amarillo independientemente del tipo de propensión que elija.
 
 ![resumen de puntuación](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ El generador de segmentos se utiliza para definir un segmento. Al seleccionar **
 
 ![Rellenar segmento](../images/insights/segment-saving.png)
 
-Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
+Para vista del nuevo segmento en la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
 
 ![Todos los segmentos](../images/insights/Segments-dashboard.png)
 
