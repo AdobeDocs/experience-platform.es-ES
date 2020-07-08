@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creación de un simulador para pruebas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
@@ -41,7 +44,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Identificador que se utilizará para acceder al simulador para pruebas en solicitudes futuras. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. No puede contener espacios ni mayúsculas. |
-| `title` | Nombre legible en lenguaje natural que se utiliza para la visualización en la interfaz de usuario de la plataforma. |
+| `title` | Nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
 | `type` | Tipo de entorno limitado que se va a crear. Actualmente, una organización solo puede crear entornos limitados de tipo &quot;desarrollo&quot;. |
 
 **Respuesta**
@@ -58,4 +61,6 @@ Una respuesta correcta devuelve los detalles del entorno limitado recién creado
 }
 ```
 
->[!NOTE] El sistema tarda aproximadamente 15 minutos en aprovisionar los Simuladores para pruebas, después de lo cual `state` se activarán o &quot;fallarán&quot;.
+>[!NOTE]
+>
+>El sistema tarda aproximadamente 15 minutos en aprovisionar los Simuladores para pruebas, después de lo cual `state` se activarán o &quot;fallarán&quot;.
