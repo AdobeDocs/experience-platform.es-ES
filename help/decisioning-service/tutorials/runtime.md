@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../tutorials/authentication.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../tutorials/authentication.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -53,7 +55,9 @@ También es necesario para solicitudes en tiempo de ejecución:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` es una cadena en formato UUID que es única globalmente y no debe reutilizarse para distintas llamadas de API
+>[!NOTE]
+>
+>`UUID` es una cadena en formato UUID que es única globalmente y no debe reutilizarse para distintas llamadas de API
 
 [!DNL Decisioning Service] está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales, el repositorio de objetos principales XDM. [!DNL Platform’s] Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de usar una API POST, GET, PUT, PATCH o DELETE que indique el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
 
