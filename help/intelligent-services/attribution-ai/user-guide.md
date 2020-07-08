@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario de API de atribución
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ Para definir un evento de conversión, debe asignar un nombre al evento y selecc
 
 Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha. La segunda lista desplegable se utiliza para proporcionar un contexto adicional al evento mediante el uso de operaciones. Para este evento de conversión, se utiliza la operación predeterminada *existe* .
 
->[!NOTE] Al definir el evento, se actualiza una cadena con el nombre ** de conversión.
+>[!NOTE]
+>
+>Al definir el evento, se actualiza una cadena con el nombre ** de conversión.
 
 ![sin menú desplegable](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Para este punto de contacto, seleccione **es igual que**.
 
 Una vez seleccionado un operador para un punto de contacto, *introduzca el valor* del campo. Los valores desplegables de *Introducir valor* de campo se rellenan en función del operador y el valor de punto de contacto seleccionados previamente. Si un valor no se rellena en la lista desplegable, puede escribir ese valor manualmente. Haga clic en el menú desplegable y seleccione **CLIC**.
 
->[!NOTE] Los operadores &quot;existe&quot; y &quot;no existe&quot; no tienen valores de campo asociados a ellos.
+>[!NOTE]
+>
+>Los operadores &quot;existe&quot; y &quot;no existe&quot; no tienen valores de campo asociados a ellos.
 
 ![menú desplegable de punto de contacto](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Al hacer clic en **Añadir grupo** , puede crear campos adicionales separados de
 
 ![descripción general de touchpoint](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Utilice la cadena debajo de *Touchpoint name* para obtener una descripción general rápida de su touchpoint. Observe que la cadena coincide con el nombre del punto de contacto.
+>[!NOTE]
+>
+>Utilice la cadena debajo de *Touchpoint name* para obtener una descripción general rápida de su touchpoint. Observe que la cadena coincide con el nombre del punto de contacto.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Haga clic en la lista desplegable en Frecuencia *de* puntuación para selecciona
 
 Para cambiar la hora del día que desea que se produzca la puntuación, haga clic en el icono del reloj. En la nueva superposición que aparece, introduzca la hora del día en la que desea que se realice la puntuación. Haga clic fuera de la superposición para cerrarla.
 
->[!NOTE] Cada proceso de puntuación puede tardar hasta 24 horas en completarse.
+>[!NOTE]
+>
+>Cada proceso de puntuación puede tardar hasta 24 horas en completarse.
 
 ![icono del reloj](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ A continuación, seleccione un operador.
 
 Por último, escriba el código de país en la lista desplegable *Introducir valor* de campo.
 
->[!NOTE] Los códigos de país tienen dos caracteres. Puede encontrar una lista completa aquí [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Los códigos de país tienen dos caracteres. Puede encontrar una lista completa aquí [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![región](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Por último, escriba el código de país en la lista desplegable *Introducir val
 
 Para asegurarse de que obtiene el modelo más preciso posible, es importante capacitar a su modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se entrena con 2 trimestres (6 meses) de datos. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede elegir entrenar con uno o cuatro cuartos de datos (3 a 12 meses).
 
->[!NOTE] Un período de formación más corto es más sensible a las tendencias recientes, mientras que un período de formación más largo crea un modelo más sólido y es menos sensible a las tendencias recientes.
+>[!NOTE]
+>
+>Un período de formación más corto es más sensible a las tendencias recientes, mientras que un período de formación más largo crea un modelo más sólido y es menos sensible a las tendencias recientes.
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
