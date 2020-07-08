@@ -4,7 +4,7 @@ seo-title: Administración de datos en tiempo real de datos de clientes Platform
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 1%
@@ -34,7 +34,9 @@ Para obtener información detallada sobre cómo trabajar con etiquetas de uso de
 
 Puede establecer restricciones de uso de datos en un destino definiendo casos de uso de mercadotecnia (también llamados acciones de mercadotecnia) para ese destino. Un caso de uso de marketing para un destino indica la intención de los datos que se exportarán a ese destino.
 
->[!NOTE] Para obtener más información sobre las acciones de marketing y su uso en las políticas de uso de datos, consulte la información general [de las directivas de uso de](../../data-governance/policies/overview.md) datos en la documentación del Experience Platform.
+>[!NOTE]
+>
+>Para obtener más información sobre las acciones de marketing y su uso en las políticas de uso de datos, consulte la información general [de las directivas de uso de](../../data-governance/policies/overview.md) datos en la documentación del Experience Platform.
 
 La definición de casos de uso de mercadotecnia en los destinos le permite asegurarse de que todos los perfiles o segmentos enviados a dichos destinos cumplen las políticas de uso de datos. Por lo tanto, debe agregar a los destinos los casos de uso de mercadotecnia adecuados en función de las necesidades de su organización para aplicar restricciones de directiva en la activación.
 
@@ -63,7 +65,9 @@ Cuando se activa un segmento por primera vez, el servicio de directivas DULE com
 * Las etiquetas de uso de datos aplicadas a los campos y conjuntos de datos dentro del segmento que se va a activar.
 * El propósito de marketing del destino.
 
->[!NOTE] Si hay etiquetas de uso de datos que solo se han aplicado a determinados campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de las etiquetas de nivel de campo en la activación solo se produce bajo las siguientes condiciones:
+>[!NOTE]
+>
+>Si hay etiquetas de uso de datos que solo se han aplicado a determinados campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de las etiquetas de nivel de campo en la activación solo se produce bajo las siguientes condiciones:
 >* Los campos se utilizan en la definición del segmento.
 >* Los campos se configuran como atributos proyectados para el destino de destinatario.
 
