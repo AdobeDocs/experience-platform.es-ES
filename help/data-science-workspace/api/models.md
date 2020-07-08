@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modelos
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 4%
@@ -220,7 +220,9 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 Puede actualizar un modelo existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del modelo de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
->[!TIP] Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>[!TIP]
+>
+>Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
 
 **Formato de API**
 
