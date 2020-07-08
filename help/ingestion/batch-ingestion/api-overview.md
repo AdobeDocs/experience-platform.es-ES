@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía del desarrollador de la ingestión por lotes de Adobe Experience Platform
+title: Guía para desarrolladores de Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2577'
+ht-degree: 6%
 
 ---
 
@@ -21,29 +24,31 @@ La ingestión de datos proporciona una API RESTful mediante la cual puede realiz
 
 Las siguientes secciones proporcionan información adicional que debe conocer o tener disponible para realizar llamadas exitosas a la API de inserción por lotes.
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-- [Ingesta](./overview.md)por lotes: Permite ingestar datos en Adobe Experience Platform como archivos por lotes.
-- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): Marco normalizado mediante el cual la plataforma de experiencias organiza los datos de experiencia del cliente.
-- [Simuladores](../../sandboxes/home.md): La plataforma de experiencia proporciona entornos limitados virtuales que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Ingesta](./overview.md)por lotes: Permite ingerir datos en Adobe Experience Platform como archivos por lotes.
+- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un `Content-Type` encabezado adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada. En esta guía se utilizan los siguientes tipos de contenido:
 
@@ -73,7 +78,9 @@ La siguiente tabla muestra las conversiones admitidas al ingestar datos.
 | Objeto |  |  |  |  |  |  |  |  | X | X |
 | Mapa |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] Los booleanos y las matrices no se pueden convertir a otros tipos.
+>[!NOTE]
+>
+>Los booleanos y las matrices no se pueden convertir a otros tipos.
 
 ## Restricciones de entrada
 
@@ -85,13 +92,17 @@ La ingestión de datos por lotes tiene algunas restricciones:
 
 ## Ingestar archivos JSON
 
->[!NOTE] Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, es necesario cambiar a una carga de archivos grande.
+>[!NOTE]
+>
+>Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, es necesario cambiar a una carga de archivos grande.
 
 ### Crear lote
 
 En primer lugar, deberá crear un lote, con JSON como formato de entrada. Al crear el lote, deberá proporcionar una ID de conjunto de datos. También deberá asegurarse de que todos los archivos cargados como parte del lote se ajustan al esquema XDM vinculado al conjunto de datos proporcionado.
 
->[!NOTE] Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, será necesario establecer el `isMultiLineJson` indicador. Para obtener más información, lea la guía de solución de problemas de ingestión de [lotes](./troubleshooting.md).
+>[!NOTE]
+>
+>Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, será necesario establecer el `isMultiLineJson` indicador. Para obtener más información, lea la guía de solución de problemas de ingestión de [lotes](./troubleshooting.md).
 
 **Formato API**
 
@@ -151,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
->[!NOTE] Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos JSON formateado correctamente.
+>[!NOTE]
+>
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos JSON formateado correctamente.
 
 **Formato API**
 
@@ -167,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitud**
 
->[!NOTE] La API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
+>[!NOTE]
+>
+>La API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -221,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Ingestar archivos de parquet
 
->[!NOTE] Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, deberá cambiar a una carga de archivos grande.
+>[!NOTE]
+>
+>Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, deberá cambiar a una carga de archivos grande.
 
 ### Crear lote
 
@@ -298,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitud**
 
->[!CAUTION] Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
+>[!CAUTION]
+>
+>Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -352,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Ingestar archivos de parquet grandes
 
->[!NOTE] En esta sección se explica cómo cargar archivos de más de 256 MB. Los archivos de gran tamaño se cargan en fragmentos y luego se vinculan mediante una señal de API.
+>[!NOTE]
+>
+>En esta sección se explica cómo cargar archivos de más de 256 MB. Los archivos de gran tamaño se cargan en fragmentos y luego se vinculan mediante una señal de API.
 
 ### Crear lote
 
@@ -467,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitud**
 
->[!CAUTION] Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
+>[!CAUTION]
+>
+>Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -559,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Para poder ingestar archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones que se proporcionan en el tutorial [de creación de esquemas](../../xdm/api/ad-hoc.md)específicos.
 
->[!NOTE] Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, deberá cambiar a una carga de archivos grande.
+>[!NOTE]
+>
+>Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si se alcanza un tiempo de espera de puerta de enlace o se producen errores de tamaño del cuerpo de la solicitud, deberá cambiar a una carga de archivos grande.
 
 ### Crear conjunto de datos
 
@@ -695,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
->[!NOTE] Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos CSV con el formato adecuado.
+>[!NOTE]
+>
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos CSV con el formato adecuado.
 
 **Formato API**
 
@@ -711,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitud**
 
->[!CAUTION] Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
+>[!CAUTION]
+>
+>Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -916,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Solicitud**
 
->[!CAUTION] Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream. No utilice la opción curl -F, ya que establece de forma predeterminada una solicitud de varias partes que no es compatible con la API.
+>[!CAUTION]
+>
+>Esta API admite la carga de una sola parte. Asegúrese de que el tipo de contenido sea application/octet-stream. No utilice la opción curl -F, ya que establece de forma predeterminada una solicitud de varias partes que no es compatible con la API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -972,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformación de datos para la ingestión de lotes
 
-Para poder transferir un archivo de datos a la plataforma de experiencia, la estructura jerárquica del archivo debe cumplir con el esquema del Modelo de datos de [experiencia (XDM)](../../xdm/home.md) asociado al conjunto de datos que se está cargando.
+Para poder ingerir un archivo de datos en Experience Platform, la estructura jerárquica del archivo debe cumplir con el esquema del Modelo de datos de [experiencia (XDM)](../../xdm/home.md) asociado al conjunto de datos que se está cargando.
 
 La información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM se encuentra en el documento de transformaciones [de](../../etl/transformations.md) ejemplo, junto con un ejemplo de archivo de datos JSON formateado correctamente. Los archivos de ejemplo proporcionados en el documento se pueden encontrar aquí:
 
