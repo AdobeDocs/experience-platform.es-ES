@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de decisiones
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -68,7 +68,9 @@ Puede utilizar [!DNL Decisioning Service] en un modo de interacción sincrónico
 
 El uso de [!DNL Decisioning Service] es opcional y solo requiere unos pocos pasos además de los pasos típicos necesarios para crear [!DNL Profile] entidades y administrarlas.
 
->[!NOTE] Para sacar el máximo partido de la [!DNL Real-time Customer Profile], el [!DNL Decisioning Service] centro se integra directamente con la tienda de perfiles. Las llamadas de API solo necesitan indicar una de las identidades de un perfil determinado.
+>[!NOTE]
+>
+>Para sacar el máximo partido de la [!DNL Real-time Customer Profile], el [!DNL Decisioning Service] centro se integra directamente con la tienda de perfiles. Las llamadas de API solo necesitan indicar una de las identidades de un perfil determinado.
 
 La secuencia típica de pasos inicios con la generación de perfiles:
 
