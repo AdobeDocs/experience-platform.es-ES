@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Puede realizar una vista de una lista de todos los recursos del Registro de Esquemas de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud GET.
 
->[!NOTE] Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
+>[!NOTE]
+>
+>Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
 
 **Formato API**
 
@@ -78,7 +80,9 @@ La solicitud anterior utilizaba el encabezado `application/vnd.adobe.xed-id+json
 
 El Registro de Esquemas admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los recursos.
 
->[!NOTE] Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (`&`).
+>[!NOTE]
+>
+>Cuando se combinan varios parámetros de consulta, deben separarse con signos ampersands (`&`).
 
 ### Paginación {#paging}
 
@@ -105,4 +109,6 @@ Puede filtrar los resultados utilizando el `property` parámetro, que se utiliza
 | `~` | Filtros según si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
 | (None) | Si se establece únicamente el nombre de la propiedad, solo se devuelven las entradas donde existe la propiedad. | `property=title` |
 
->[!TIP] Puede utilizar el `property` parámetro para filtrar mezclas según su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase de Perfil XDM Individual.
+>[!TIP]
+>
+>Puede utilizar el `property` parámetro para filtrar mezclas según su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase de Perfil XDM Individual.
