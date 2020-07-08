@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de segmentación de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 0%
@@ -40,7 +40,9 @@ Para obtener información sobre cómo crear y utilizar segmentos en el Generador
 
 Para obtener información sobre la creación de definiciones de segmentos mediante la API, consulte el tutorial sobre la [creación de segmentos de audiencia mediante la API](./tutorials/create-a-segment.md).
 
->[!NOTE] En el evento que se amplía un esquema, todas las cargas futuras deben actualizar los campos recién agregados en consecuencia. Para obtener más información sobre la personalización del Modelo de datos de experiencia (XDM), visite el tutorial [del Editor de](../xdm/tutorials/create-schema-ui.md)Esquemas.
+>[!NOTE]
+>
+>En el evento que se amplía un esquema, todas las cargas futuras deben actualizar los campos recién agregados en consecuencia. Para obtener más información sobre la personalización del Modelo de datos de experiencia (XDM), visite el tutorial [del Editor de](../xdm/tutorials/create-schema-ui.md)Esquemas.
 
 ## Evaluar segmentos
 
@@ -70,14 +72,18 @@ La composición de los segmentos (a través de la API o del Generador de segment
 
 Al crear un nuevo segmento, debe proporcionar un nombre de segmento. El nombre del segmento se utiliza para identificar un segmento particular entre la colección creada por el servicio de segmentación. Por lo tanto, los nombres de los segmentos deben ser descriptivos, concisos y únicos.
 
->[!NOTE] Al planificar un segmento, recuerde que se puede hacer referencia a los segmentos desde cualquier otro segmento y combinarlos con él. Al seleccionar un nombre, considere la posibilidad de que el segmento contenga partes reutilizables.
+>[!NOTE]
+>
+>Al planificar un segmento, recuerde que se puede hacer referencia a los segmentos desde cualquier otro segmento y combinarlos con él. Al seleccionar un nombre, considere la posibilidad de que el segmento contenga partes reutilizables.
 
 ### Combinar directivas
 
 Las políticas de combinación son reglas utilizadas por Perfil para determinar cómo se priorizarán los datos y cómo se combinarán en una vista unificada bajo ciertas condiciones.
 Si no se define una directiva de combinación, se utiliza la directiva de combinación predeterminada de Platform. Si prefiere utilizar una directiva de combinación específica de su organización, puede crear la suya propia y marcarla como la predeterminada de su organización.
 
->[!NOTE] La estimación de los tamaños de audiencia se basa en la directiva de combinación de perfiles predeterminada de la organización.
+>[!NOTE]
+>
+>La estimación de los tamaños de audiencia se basa en la directiva de combinación de perfiles predeterminada de la organización.
 
 ### Otros metadatos de segmentos
 
@@ -138,7 +144,9 @@ Los recursos del arquitecto de datos incluyen el acceso a los datos web de la ex
 
 **La solución**
 
->[!NOTE] En este ejemplo supondremos que el arquitecto de datos ya ha establecido una Área de nombres de ID.
+>[!NOTE]
+>
+>En este ejemplo supondremos que el arquitecto de datos ya ha establecido una Área de nombres de ID.
 
 Con la API, el arquitecto de datos relaciona la clave del esquema ExperienceEvent con la clase &quot;products&quot;. De este modo, el arquitecto de datos puede utilizar los campos adicionales de la clase &quot;products&quot; como si fueran nativos del esquema ExperienceEvent. A medida que el paso final de la configuración funciona, el arquitecto de datos debe incorporar los datos adecuados al Perfil del cliente en tiempo real. Esto se realiza habilitando el conjunto de datos &quot;products&quot; para su uso con Perfil. Una vez finalizado el trabajo de configuración, el arquitecto de datos o el especialista en mercadotecnia pueden generar el segmento de destinatario en el Generador de segmentos.
 
