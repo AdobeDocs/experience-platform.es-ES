@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuración de un flujo de datos para un conector por lotes de almacenamiento de nube en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Si hace clic en una carpeta de la lista, podrá recorrer la jerarquía de carpet
 
 Una vez que se complete la ventana de previsualización, puede hacer clic en **[!UICONTROL Siguiente]** para cargar todos los archivos de la carpeta seleccionada. Si desea cargar en un archivo específico, selecciónelo en el listado antes de hacer clic en **[!UICONTROL Siguiente]**.
 
->[!NOTE] Los formatos de archivo admitidos son CSV, JSON y Parquet. Los archivos JSON y Parquet deben ser compatibles con XDM.
+>[!NOTE]
+>
+>Los formatos de archivo admitidos son CSV, JSON y Parquet. Los archivos JSON y Parquet deben ser compatibles con XDM.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
