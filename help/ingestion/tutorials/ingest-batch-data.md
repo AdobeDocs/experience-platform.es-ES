@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Ingestar datos en Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 0%
 
 ---
 
@@ -15,17 +18,19 @@ Adobe Experience Platform le permite importar fácilmente datos en Platform como
 
 ## Primeros pasos
 
-Para completar este tutorial, debe tener acceso a la plataforma de experiencias. Si no tiene acceso a una organización de IMS en la plataforma de experiencia, póngase en contacto con el administrador del sistema antes de continuar.
+Para completar este tutorial, debe tener acceso a Experience Platform. Si no tiene acceso a una organización de IMS en Experience Platform, póngase en contacto con el administrador del sistema antes de continuar.
 
 Si prefiere ingerir datos mediante las API de inserción de datos, lea la guía [para desarrolladores de](../batch-ingestion/api-overview.md)Ingesta de datos.
 
 ## Espacio de trabajo de conjuntos de datos
 
-El espacio de trabajo Conjuntos de datos de la plataforma de experiencia le permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos.
+El espacio de trabajo Conjuntos de datos dentro de Experience Platform le permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos.
 
 Haga clic en **Conjuntos** de datos en el panel de navegación izquierdo para Vista del espacio de trabajo Conjuntos de datos. El espacio de trabajo Conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con _Nombre_, _Creado_ (fecha y hora), _Origen_, _Esquema_ y Estado ____ del último lote, así como la fecha y hora en que el conjunto de datos fue la Última actualización.
 
->[!NOTE] Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las funciones de filtrado con el fin de vista solo de los conjuntos de datos habilitados para el Perfil.
+>[!NOTE]
+>
+>Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las funciones de filtrado con el fin de vista solo de los conjuntos de datos habilitados para el Perfil.
 
 ![Vista de todos los conjuntos de datos](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -73,7 +78,7 @@ También en la ficha Información hay una opción de _Perfil_ que se utiliza par
 
 ## Habilitar conjunto de datos para el Perfil del cliente en tiempo real
 
-Los conjuntos de datos se utilizan para la ingesta de datos en la plataforma de experiencia y, en última instancia, se utilizan para identificar a personas y unir información procedente de múltiples fuentes. Esa información unida se denomina Perfil del cliente en tiempo real. Para que Platform sepa qué información debe incluirse en el Perfil en tiempo real, los conjuntos de datos se pueden marcar para su inclusión mediante la opción de alternancia de **Perfil** .
+Los conjuntos de datos se utilizan para ingerir datos en Experience Platform y, en última instancia, se utilizan para identificar a personas y unir información procedente de múltiples fuentes. Esa información unida se denomina Perfil del cliente en tiempo real. Para que Platform sepa qué información debe incluirse en el Perfil en tiempo real, los conjuntos de datos se pueden marcar para su inclusión mediante la opción de alternancia de **Perfil** .
 
 De forma predeterminada, esta opción está desactivada. Si elige alternar en el Perfil, todos los datos ingestados en el conjunto de datos se utilizarán para identificar a un individuo y unir su Perfil en tiempo real.
 
@@ -97,7 +102,9 @@ Los datos se pueden agregar a un conjunto de datos de diferentes maneras. Puede 
 
 Para empezar a agregar datos al conjunto de datos, haga clic en la ficha **Añadir datos** . Ahora puede arrastrar y soltar archivos o buscar en el equipo los archivos que desee agregar.
 
->[!NOTE] La plataforma admite dos tipos de archivos para la ingestión de datos, el parqué o JSON. Puede agregar hasta cinco archivos a la vez, con un tamaño máximo de 10 GB para cada archivo.
+>[!NOTE]
+>
+>Platform admite dos tipos de archivos para la ingestión de datos, el parqué o JSON. Puede agregar hasta cinco archivos a la vez, con un tamaño máximo de 10 GB para cada archivo.
 
 ![Ficha Añadir datos](../images/tutorials/ingest-batch-data/add_data.png)
 
@@ -135,6 +142,6 @@ Haga clic en **Previsualización de conjunto de datos** para abrir un cuadro de 
 
 ## Pasos siguientes
 
-Ahora que ha creado un conjunto de datos y ha ingerido datos correctamente en la plataforma de experiencia, puede repetir estos pasos para crear un nuevo conjunto de datos o para ingerir más datos en el conjunto de datos existente.
+Ahora que ha creado un conjunto de datos y ha ingerido datos correctamente en Experience Platform, puede repetir estos pasos para crear un nuevo conjunto de datos o para ingerir más datos en el conjunto de datos existente.
 
 Para obtener más información sobre la ingestión por lotes, lea la información general [sobre la ingestión de](../batch-ingestion/overview.md)lotes.
