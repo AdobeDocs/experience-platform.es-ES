@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Conceptos básicos de la composición de esquemas
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2761'
+ht-degree: 0%
 
 ---
 
 
 # Conceptos básicos de la composición de esquemas
 
-Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en la plataforma de Adobe Experience. Para obtener información general sobre XDM y cómo se utiliza dentro de la plataforma, consulte la descripción general [del sistema](../home.md)XDM.
+Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en el Adobe Experience Platform. Para obtener información general sobre XDM y cómo se utiliza en Platform, consulte la descripción general [del sistema](../home.md)XDM.
 
 ## Explicación de los esquemas
 
@@ -19,7 +22,7 @@ Un esquema es un conjunto de reglas que representan y validan la estructura y el
 
 Además de describir la estructura de los datos, los esquemas aplican restricciones y expectativas a los datos para que se puedan validar a medida que se desplaza de un sistema a otro. Estas definiciones estándar permiten interpretar los datos de manera coherente, independientemente del origen, y eliminan la necesidad de traducirlos entre las aplicaciones.
 
-Experience Platform mantiene esta normalización semántica mediante el uso de esquemas. Los Esquemas son la forma estándar de describir los datos en la plataforma de experiencia, lo que permite reutilizar todos los datos que se ajustan a los esquemas sin conflictos en una organización e incluso compartir entre varias organizaciones.
+Experience Platform mantiene esta normalización semántica mediante el uso de esquemas. Los Esquemas son la manera estándar de describir los datos en Experience Platform, permitiendo que todos los datos que se ajustan a los esquemas se puedan reutilizar sin conflictos en una organización e incluso compartir entre varias organizaciones.
 
 ### Tablas relacionales frente a objetos incrustados
 
@@ -33,19 +36,19 @@ Los sistemas digitales modernos generan grandes cantidades de señales conductua
 
 Los Esquemas solucionan este problema permitiendo que los datos se integren desde múltiples fuentes, que se estandaricen a través de estructuras y definiciones comunes y que se compartan entre las soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen con antelación y los datos se modelan para ajustarse a esas expectativas.
 
-### flujos de trabajo basados en Esquemas en la plataforma de experiencia
+### flujos de trabajo basados en Esquemas en Experience Platform
 
-La estandarización es un concepto clave de la plataforma de experiencias. XDM, dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
+La estandarización es un concepto clave para el Experience Platform. XDM, dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
 
-La infraestructura en la que se crea la plataforma de experiencias, conocida como sistema XDM, facilita los flujos de trabajo basados en esquemas e incluye el Registro de Esquemas, el Editor de Esquemas, los metadatos de esquema y los patrones de consumo de servicios. See the [XDM System overview](../home.md) for more information.
+La infraestructura en la que se crea el Experience Platform, conocida como sistema XDM, facilita los flujos de trabajo basados en esquemas e incluye el Registro de Esquemas, el Editor de Esquemas, los metadatos de esquema y los patrones de consumo de servicios. See the [XDM System overview](../home.md) for more information.
 
 ## Planificación del esquema
 
 El primer paso para crear un esquema es determinar el concepto, o objeto real, que se intenta capturar dentro del esquema. Una vez que identifique el concepto que está tratando de describir, puede empezar a planificar su esquema pensando en cosas como el tipo de datos, los campos de identidad potenciales y cómo el esquema puede evolucionar en el futuro.
 
-### Comportamientos de datos en la plataforma de experiencias
+### Comportamientos de datos en el Experience Platform
 
-Los datos destinados a utilizarse en la plataforma de experiencia se agrupan en dos tipos de comportamiento:
+Los datos destinados a utilizarse en Experience Platform se agrupan en dos tipos de comportamiento:
 
 * **Registrar datos**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
 * **Datos** de series temporales: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirecta.
@@ -56,9 +59,9 @@ Tanto los esquemas de registro como de serie temporal contienen un mapa de ident
 
 ### Identidad
 
-Los Esquemas se utilizan para la ingesta de datos en la plataforma de experiencia. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre la &quot;identidad&quot; y los campos que pueden utilizarse para identificar un tema, independientemente de la procedencia de los datos.
+Los Esquemas se utilizan para ingerir datos en Experience Platform. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre la &quot;identidad&quot; y los campos que pueden utilizarse para identificar un tema, independientemente de la procedencia de los datos.
 
-Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot;. Tras la ingestión de datos, los datos de esos campos se insertarán en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, el Perfil [del cliente en tiempo](../../profile/home.md) real y otros servicios de la plataforma de experiencias pueden acceder a los datos del gráfico para proporcionar una vista conjunta de cada cliente individual.
+Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot;. Tras la ingestión de datos, los datos de esos campos se insertarán en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, el Perfil [del cliente en tiempo](../../profile/home.md) real y otros servicios de Experience Platform pueden acceder a los datos del gráfico para proporcionar una vista conjunta de cada cliente individual.
 
 Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, ID de [Experience Cloud (ECID)](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;Identidad&quot;.
 
@@ -68,21 +71,23 @@ Es importante pensar en las identidades de los clientes durante la fase de plani
 
 A medida que la naturaleza de las experiencias digitales sigue evolucionando, también deben evolucionar los esquemas utilizados para representarlas. Por lo tanto, un esquema bien diseñado puede adaptarse y evolucionar según sea necesario, sin causar cambios destructivos en versiones anteriores del esquema.
 
-Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, la plataforma de experiencias aplica un principio de versiones puramente aditivo para garantizar que cualquier revisión del esquema solo dé lugar a actualizaciones y cambios no destructivos. En otras palabras, no se admiten los cambios de **salto.**
+Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, el Experience Platform aplica un principio de control de versiones puramente aditivo para garantizar que cualquier revisión del esquema sólo dé lugar a actualizaciones y cambios no destructivos. En otras palabras, no se admiten los cambios de **salto.**
 
 | Cambios admitidos | Romper cambios (no compatible) |
 |------------------------------------|---------------------------------|
 | <ul><li>Añadir nuevos campos a un esquema existente</li><li>Hacer opcional un campo obligatorio</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Introducción de nuevos campos obligatorios</li><li>Cambio de nombre o redefinición de campos existentes</li><li>Eliminación o restricción de valores de campo admitidos anteriormente</li><li>Desplazamiento de atributos a una ubicación diferente en el árbol</li></ul> |
 
->[!NOTE] Si todavía no se ha utilizado un esquema para ingerir datos en la plataforma de experiencias, puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en la Plataforma, debe cumplir la política de control de versiones acumulativas.
+>[!NOTE]
+>
+>Si todavía no se ha utilizado un esquema para ingerir datos en Experience Platform, puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en Platform, debe cumplir la política de versiones aditivas.
 
 ### Esquemas e ingestión de datos
 
-Para poder ingerir datos en la plataforma de experiencia, primero debe crearse un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos para el servicio [de](../../catalog/home.md)catálogos y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Para obtener más información, consulte la información general sobre la introducción [de datos de la plataforma de](../../ingestion/home.md) Adobe Experience Platform.
+Para poder ingerir datos en Experience Platform, primero se debe crear un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos para el servicio [de](../../catalog/home.md)catálogos y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Consulte la información general sobre la ingestión [de datos de](../../ingestion/home.md) Adobe Experience Platform para obtener más información.
 
 ## Componentes de un esquema
 
-La plataforma de experiencias utiliza un enfoque de composición en el que los componentes básicos estándar se combinan para crear esquemas. Este enfoque fomenta la reutilización de los componentes existentes e impulsa la estandarización en todo el sector para admitir esquemas y componentes de proveedores en la plataforma.
+Experience Platform utiliza un enfoque de composición en el que los componentes básicos estándar se combinan para crear esquemas. Este enfoque fomenta la reutilización de los componentes existentes e impulsa la estandarización en toda la industria para admitir esquemas y componentes de proveedores en Platform.
 
 Los Esquemas se componen con la fórmula siguiente:
 
@@ -96,11 +101,11 @@ La composición de un esquema comienza asignando una clase. Las clases definen l
 
 Una clase también determina qué mezclas serán elegibles para su uso en el esquema. Esto se analiza más detalladamente en la sección de [mezclas](#mixin) que sigue.
 
-Existen clases estándar que se proporcionan con cada integración de la plataforma de experiencia, conocidas como clases &quot;del sector&quot;. Las clases industriales son normas generalmente aceptadas que se aplican a un amplio conjunto de casos de uso. Algunos ejemplos de clases del sector incluyen las clases XDM Individual Perfil y XDM ExperienceEvent proporcionadas por Adobe.
+Existen clases estándar que se proporcionan con cada integración de Experience Platform, conocidas como clases &quot;Industria&quot;. Las clases industriales son normas generalmente aceptadas que se aplican a un amplio conjunto de casos de uso. Algunos ejemplos de clases del sector incluyen las clases XDM Individual Perfil y XDM ExperienceEvent proporcionadas por Adobe.
 
-La plataforma de experiencia también permite clases de &quot;proveedores&quot;, que son clases definidas por los socios de la plataforma de experiencia y que están disponibles para todos los clientes que utilizan ese servicio o aplicación de proveedor dentro de la plataforma.
+Experience Platform también permite clases de &quot;proveedor&quot;, que son clases definidas por socios Experience Platform y que están disponibles para todos los clientes que utilizan ese servicio o aplicación de proveedor dentro de Platform.
 
-También existen clases que se utilizan para describir casos de uso más específicos para organizaciones individuales dentro de la plataforma, las cuales se denominan clases de &quot;cliente&quot;. Las clases de cliente son definidas por una organización cuando no hay clases del sector o del proveedor disponibles para describir un caso de uso único.
+También existen clases que se utilizan para describir casos de uso más específicos para organizaciones individuales dentro de Platform, las cuales se denominan clases de &quot;cliente&quot;. Las clases de cliente son definidas por una organización cuando no hay clases del sector o del proveedor disponibles para describir un caso de uso único.
 
 Por ejemplo, un esquema que representa a los miembros de un programa de Lealtad describe los datos de registro de un individuo y, por lo tanto, pueden basarse en la clase de Perfil individual XDM, una clase industrial estándar definida por Adobe.
 
@@ -110,21 +115,21 @@ Una mezcla es un componente reutilizable que define uno o varios campos que impl
 
 Las mezclas definen con qué clase o clases son compatibles en función del comportamiento de los datos que representan (registro o serie temporal). Esto significa que no todas las mezclas están disponibles para su uso con todas las clases.
 
-Las mezclas tienen el mismo ámbito y definición que las clases: hay mezclas del sector, mezclas de proveedores y mezclas de clientes que las organizaciones individuales definen mediante Plataforma. La plataforma de experiencia incluye muchas mezclas estándar del sector, al tiempo que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
+Las mezclas tienen el mismo ámbito y definición que las clases: hay mezclas del sector, mezclas de proveedores y mezclas de clientes que las organizaciones individuales definen mediante Platform. Experience Platform incluye muchas mezclas estándar del sector, al tiempo que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
 
 Por ejemplo, para capturar detalles como &quot;Nombre&quot; y &quot;Dirección de inicio&quot; para el esquema &quot;Miembros de lealtad&quot;, podría utilizar mezclas estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;Nivel de Programa de lealtad&quot;) no suelen tener una mezcla predefinida. En este caso, debe definir su propia mezcla para capturar esta información.
 
 Recuerde que los esquemas están compuestos de mezclas &quot;cero o más&quot;, lo que significa que puede componer un esquema válido sin usar ninguna mezcla.
 
-### Tipo de datos {#data-type}
+### Data type {#data-type}
 
 Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que una mezcla, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que una mezcla, ya que se puede incluir un tipo de datos en cualquier parte de un esquema agregándolo como el &quot;tipo de datos&quot; de un campo.
 
-La plataforma de experiencias proporciona varios tipos de datos comunes como parte del Registro de Esquemas para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales del Registro de Esquemas, donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
+Experience Platform proporciona varios tipos de datos comunes como parte del Registro de Esquemas para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales del Registro de Esquemas, donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
 
 ### Campo
 
-Un campo es el componente básico más básico de un esquema. Los campos proporcionan restricciones con respecto al tipo de datos que pueden contener al definir un tipo de datos específico. Estos tipos de datos básicos definen un solo campo, mientras que los tipos [de](#data-type) datos mencionados anteriormente le permiten definir varios subcampos y reutilizar la misma estructura de varios campos en varios esquemas. Por lo tanto, además de definir el &quot;tipo de datos&quot; de un campo como uno de los tipos de datos definidos en el Registro, la plataforma de experiencias admite tipos escalares básicos como:
+Un campo es el componente básico más básico de un esquema. Los campos proporcionan restricciones con respecto al tipo de datos que pueden contener al definir un tipo de datos específico. Estos tipos de datos básicos definen un solo campo, mientras que los tipos [de](#data-type) datos mencionados anteriormente le permiten definir varios subcampos y reutilizar la misma estructura de varios campos en varios esquemas. Por lo tanto, además de definir el &quot;tipo de datos&quot; de un campo como uno de los tipos de datos definidos en el Registro, el Experience Platform admite tipos escalares básicos como:
 
 * Cadena
 * Número entero
@@ -143,7 +148,9 @@ Los rangos válidos de estos tipos escalares se pueden restringir aún más a ci
 * Fecha y hora
 * Mapa
 
->[!NOTE] El tipo de campo &quot;map&quot; permite datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema definido por el sector o el proveedor, pero no está disponible para utilizarse en los campos definidos. La guía [para desarrolladores de la API de registro de](../api/getting-started.md) Esquema contiene más información sobre la definición de tipos de campo.
+>[!NOTE]
+>
+>El tipo de campo &quot;map&quot; permite datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema definido por el sector o el proveedor, pero no está disponible para utilizarse en los campos definidos. La guía [para desarrolladores de la API de registro de](../api/getting-started.md) Esquema contiene más información sobre la definición de tipos de campo.
 
 Algunas operaciones de datos utilizadas por los servicios y las aplicaciones posteriores imponen restricciones a tipos de campo específicos. Los servicios afectados incluyen, entre otros:
 
@@ -157,15 +164,15 @@ Antes de crear un esquema para su uso en los servicios intermedios, revise la do
 
 ### Campos XDM
 
-Además de los campos básicos y la capacidad de definir sus propios tipos de datos, XDM proporciona un conjunto estándar de campos y tipos de datos que los servicios de la plataforma de experiencia entienden implícitamente y proporcionan buena coherencia cuando se utiliza en los componentes de la plataforma.
+Además de los campos básicos y la capacidad de definir sus propios tipos de datos, XDM proporciona un conjunto estándar de campos y tipos de datos que los servicios de Experience Platform entienden implícitamente y proporcionan buena coherencia cuando se utilizan en los componentes de Platform.
 
-Estos campos, como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;, contienen connotaciones agregadas que van más allá de los tipos de campos escalares básicos, lo que indica a Platform que cualquier campo que comparta el mismo tipo de datos XDM se comportará de la misma manera. Se puede confiar en este comportamiento para que sea coherente independientemente de la procedencia de los datos o del servicio de plataforma en el que se utilicen los datos.
+Estos campos, como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;, contienen connotaciones agregadas que van más allá de los tipos de campos escalares básicos, lo que indica a Platform que cualquier campo que comparta el mismo tipo de datos XDM se comportará de la misma manera. Se puede confiar en este comportamiento para que sea coherente independientemente de dónde procedan los datos o en qué servicio de Platform se utilicen los datos.
 
-Consulte el diccionario [de campos](field-dictionary.md) XDM para obtener una lista completa de los campos XDM disponibles. Se recomienda utilizar campos XDM y tipos de datos siempre que sea posible para admitir la coherencia y la estandarización en toda la plataforma de experiencia.
+Consulte el diccionario [de campos](field-dictionary.md) XDM para obtener una lista completa de los campos XDM disponibles. Se recomienda utilizar campos XDM y tipos de datos siempre que sea posible para mantener la coherencia y la estandarización entre Experience Platform.
 
 ## Ejemplo de composición
 
-Los Esquemas representan el formato y la estructura de los datos que se van a ingerir en la plataforma y se crean utilizando un modelo de composición. Como se mencionó anteriormente, estos esquemas están compuestos de una clase y cero o más mezclas compatibles con esa clase.
+Los Esquemas representan el formato y la estructura de los datos que se van a ingerir en Platform y se crean utilizando un modelo de composición. Como se mencionó anteriormente, estos esquemas están compuestos de una clase y cero o más mezclas compatibles con esa clase.
 
 Por ejemplo, un esquema que describe las compras realizadas en una tienda minorista puede denominarse &quot;Transacciones de almacenamiento&quot;. El esquema implementa la clase XDM ExperienceEvent combinada con la combinación de comercio estándar y una combinación de información del producto definida por el usuario.
 
@@ -177,7 +184,7 @@ El diagrama siguiente muestra estos esquemas y los campos que aporta cada mezcla
 
 ### Unión {#union}
 
-Aunque la plataforma de experiencia le permite componer esquemas para casos de uso específicos, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase XDM ExperienceEvent y dos esquemas basados en la clase de Perfil individual XDM. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase (XDM ExperienceEvent y XDM Individual Perfil, respectivamente).
+Aunque Experience Platform le permite componer esquemas para casos de uso específicos, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase XDM ExperienceEvent y dos esquemas basados en la clase de Perfil individual XDM. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase (XDM ExperienceEvent y XDM Individual Perfil, respectivamente).
 
 ![](../images/schema-composition/union.png)
 
@@ -187,13 +194,13 @@ Para obtener más información sobre cómo trabajar con Perfil, consulte la desc
 
 ## Asignación de archivos de datos a esquemas XDM
 
-Todos los archivos de datos que se ingieren en la plataforma de experiencia deben cumplir la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para cumplir con las jerarquías XDM (incluidos los archivos de ejemplo), consulte el documento sobre las transformaciones [ETL de](../../etl/transformations.md)ejemplo. Para obtener información general sobre la ingesta de archivos de datos en la plataforma de experiencias, consulte la descripción general [de la ingestión de](../../ingestion/batch-ingestion/overview.md)lotes.
+Todos los archivos de datos que se ingieren en Experience Platform deben cumplir la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para cumplir con las jerarquías XDM (incluidos los archivos de ejemplo), consulte el documento sobre las transformaciones [ETL de](../../etl/transformations.md)ejemplo. Para obtener información general sobre la ingesta de archivos de datos en Experience Platform, consulte la descripción general [de la ingestión de](../../ingestion/batch-ingestion/overview.md)lotes.
 
 ## Pasos siguientes
 
 Ahora que comprende los aspectos básicos de la composición de esquemas, está listo para empezar a crear esquemas mediante el Registro de Esquemas.
 
-El Registro de Esquema se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. La biblioteca de Esquemas contiene los recursos del sector definidos por Adobe, los recursos del proveedor definidos por los socios de la plataforma de experiencia y las clases, mezclas, tipos de datos y esquemas compuestos por miembros de la organización.
+El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. La biblioteca de Esquemas contiene los recursos del sector definidos por Adobe, los recursos del proveedor definidos por los socios Experience Platform y las clases, mezclas, tipos de datos y esquemas compuestos por miembros de la organización.
 
 Para empezar a componer esquemas mediante la interfaz de usuario, siga el tutorial [del Editor de](../tutorials/create-schema-ui.md) Esquemas para crear el esquema &quot;Miembros de lealtad&quot; mencionado a lo largo de este documento.
 
