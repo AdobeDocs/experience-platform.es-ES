@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una conexión de flujo autenticada
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 2%
@@ -14,38 +14,40 @@ ht-degree: 2%
 
 # Creación de una conexión de flujo autenticada
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como Perfil e identidad del cliente en tiempo real, diferenciar entre registros procedentes de fuentes de confianza y orígenes que no son de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokenes de acceso como parte de la solicitud POST.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como el Perfil de clientes en tiempo real y la identidad, diferenciar entre registros procedentes de fuentes de confianza y orígenes que no son de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokenes de acceso como parte de la solicitud POST.
 
 ## Primeros pasos
 
-Se requiere el registro de la conexión de flujo continuo para el inicio de datos de flujo continuo a Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de datos de flujo.
+Se requiere el registro de la conexión de flujo para el inicio de datos de flujo continuo en el Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de datos de flujo.
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una dirección URL única que puede utilizarse para transmitir datos a Platform.
 
 Este tutorial también requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Marco normalizado mediante el cual la Plataforma organiza los datos de experiencia.
+- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco normalizado mediante el cual Platform organiza los datos de experiencia.
 - [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para realizar llamadas a las API de inserción de flujo continuo.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas de la plataforma de experiencia.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de API de la plataforma de experiencia, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de la plataforma de experiencia están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Para obtener más información sobre los entornos limitados en la plataforma, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>[!NOTE]
+>
+>Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **Solicitud**
 
->[!NOTE] Los valores de la lista `providerId` y de la lista `connectionSpec` deben **** utilizarse como se muestra en el ejemplo, ya que son lo que especifica a la API que está creando una conexión de flujo para la transmisión por flujo continuo de la ingesta.
+>[!NOTE]
+>
+>Los valores de la lista `providerId` y de la lista `connectionSpec` deben **** utilizarse como se muestra en el ejemplo, ya que son lo que especifica a la API que está creando una conexión de flujo para la transmisión por flujo continuo de la ingesta.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -173,7 +177,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Pasos siguientes
 
-Ahora que ha creado una conexión de flujo autenticada, puede transmitir series temporales o datos de registro, lo que le permite ingestar datos dentro de la plataforma. Para aprender a transmitir datos de series temporales a Platform, vaya al tutorial [de datos de series temporales de](./streaming-time-series-data.md)flujo continuo. Para obtener información sobre cómo transmitir datos de registros a Platform, vaya al tutorial [de datos de registros de](./streaming-record-data.md)flujo continuo.
+Ahora que ha creado una conexión de flujo autenticada, puede transmitir series temporales o datos de registro, lo que le permite ingestar datos en Platform. Para aprender a transmitir datos de series temporales a Platform, vaya al tutorial [de datos de series temporales de](./streaming-time-series-data.md)flujo continuo. Para aprender a transmitir datos de registro a Platform, vaya al tutorial [de datos de registro de](./streaming-record-data.md)flujo continuo.
 
 ## Apéndice
 
