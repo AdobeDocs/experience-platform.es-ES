@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Buscar un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
@@ -45,9 +48,11 @@ Las solicitudes de búsqueda de recursos requieren que `version` se incluyan en 
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin formato `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, se incluyen los descriptores. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, incluidos los descriptores. |
 
->[!NOTE] Si sólo se proporciona la versión `major` (1, 2, 3, etc.), el Registro devolverá automáticamente la última `minor` versión (.1, .2, .3, etc.).
+>[!NOTE]
+>
+>Si sólo se proporciona la versión `major` (1, 2, 3, etc.), el Registro devolverá automáticamente la última `minor` versión (.1, .2, .3, etc.).
 
 **Respuesta**
 
