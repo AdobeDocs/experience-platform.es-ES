@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform Privacy Service
 translation-type: tm+mt
-source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
+source-git-commit: 8c617631f2c1eb58871ed5eb0c9218cd943764cb
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 11%
@@ -13,18 +13,18 @@ ht-degree: 11%
 
 # Adobe Experience Platform Privacy Service {#privacy}
 
-* [Información general de Privacy Service](home.md)
-* [Servicios de privacidad y aplicaciones de Experience Cloud](experience-cloud-apps.md)
+* [Información general del Privacy Service](home.md)
+* [Aplicaciones de Privacy Service y Experience Cloud](experience-cloud-apps.md)
+* [Datos de identidad para solicitudes de privacidad](identity-data.md)
 * [Información general de la biblioteca JS de privacidad](js-library.md)
 * Privacy Service API {#api}
    * [Primeros pasos](api/getting-started.md)
    * [Trabajos de privacidad](api/privacy-jobs.md)
    * [Consentimiento](api/consent.md)
    * [Apéndice](api/appendix.md)
-* Interfaz de usuario de Privacy Service {#ui}
+* IU de Privacy Service {#ui}
    * [Información general sobre la interfaz de usuario de Privacy Service](ui/overview.md)
-   * [Guía del usuario de Privacy Service](ui/user-guide.md)
-* [Datos de identidad para solicitudes de privacidad](identity-data.md)
+   * [Guía del usuario del Privacy Service](ui/user-guide.md)
 * [Suscripción a Eventos de privacidad](privacy-events.md)
 * Guías de GDPR {#gdpr}
    * [Preguntas más frecuentes sobre el RGPD](gdpr/faq.md)
