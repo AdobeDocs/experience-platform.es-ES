@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Introducción a la ingestión parcial por lotes de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 2%
+source-wordcount: '1243'
+ht-degree: 1%
 
 ---
 
 
 
-# Ingestión parcial por lotes (Beta)
+# Ingestión parcial por lotes
 
 La ingestión parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un cierto umbral. Con esta capacidad, los usuarios pueden transferir correctamente todos los datos correctos a Adobe Experience Platform mientras que todos los datos incorrectos se agrupan por lotes por separado, junto con los detalles de por qué no son válidos.
 
@@ -21,102 +21,117 @@ Este documento proporciona un tutorial para administrar la ingestión parcial po
 
 Además, el [apéndice](#appendix) de este tutorial proporciona una referencia para los tipos de error de ingestión parcial por lotes.
 
->[!IMPORTANT]
->
->Esta función solo existe mediante la API. Póngase en contacto con su equipo para obtener acceso a esta función.
-
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform relacionados con la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Ingesta](./overview.md)por lotes: El método que Platform ingesta y almacena datos de archivos de datos, como CSV y Parquet.
+- [Ingesta](./overview.md)por lotes: Método que [!DNL Platform] ingiere y almacena datos de archivos de datos, como CSV y Parquet.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-## Habilitar un conjunto de datos para la ingestión parcial por lotes en la API
+## Habilitar un lote para la ingestión parcial de lotes en la API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>En esta sección se describe cómo habilitar un lote para la ingestión parcial por lotes mediante la API. Para obtener instrucciones sobre el uso de la interfaz de usuario, lea el paso [habilitar un lote para la ingestión parcial por lotes en la interfaz de usuario](#enable-ui) .
 
-Puede crear un nuevo conjunto de datos o modificar un conjunto de datos existente con la ingestión parcial habilitada.
+Puede crear un nuevo lote con la ingestión parcial activada.
 
-Para crear un nuevo conjunto de datos, siga los pasos del tutorial [](../../catalog/api/create-dataset.md)Crear un conjunto de datos. Una vez que llegue al paso *Crear un conjunto de datos* , agregue el siguiente campo dentro del cuerpo de la solicitud:
+Para crear un nuevo lote, siga los pasos de la guía [para desarrolladores de](./api-overview.md)ingestión por lotes. Una vez que llegue al paso *Crear lote* , agregue el siguiente campo dentro del cuerpo de la solicitud:
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `errorThresholdPercentage` | El porcentaje de errores aceptables antes de que se produzca un error en todo el lote. |
+| `enableErrorDiagnostics` | Un indicador que permite [!DNL Platform] generar mensajes de error detallados sobre el lote. |
+| `partialIngestionPercentage` | El porcentaje de errores aceptables antes de que se produzca un error en todo el lote. Así que, en este ejemplo, un máximo del 5% del lote puede ser error, antes de que falle. |
 
-Del mismo modo, para modificar un conjunto de datos existente, siga los pasos de la guía para desarrolladores de [catálogos](../../catalog/api/update-object.md).
 
-Dentro del conjunto de datos, deberá agregar la etiqueta descrita anteriormente.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Habilitar un lote para la ingestión parcial de lotes en la interfaz de usuario {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>En esta sección se describe cómo habilitar un lote para la ingestión parcial por lotes mediante la interfaz de usuario. Si ya ha habilitado un lote para la ingestión parcial por lotes mediante la API, puede pasar a la siguiente sección.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+Para habilitar un lote para la ingestión parcial a través de la interfaz de usuario, puede crear un nuevo lote a través de conexiones de origen, crear un nuevo lote en un conjunto de datos existente o crear un nuevo lote a través del flujo [!DNL Platform] &quot;Asignar CSV a XDM&quot;.
 
-### Create a new dataset with partial batch ingestion enabled
+### Crear una nueva conexión de origen {#new-source}
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+Para crear una nueva conexión de origen, siga los pasos que se enumeran en la descripción general [de](../../sources/home.md)Fuentes. Una vez que llegue al paso de detalle *[!UICONTROL de]* flujo de datos, tome nota de los campos de diagnóstico *[!UICONTROL de ingestión]* parcial y ** error.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+La *[!UICONTROL conmutación de ingestión]* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Usar un conjunto de datos existente {#existing-dataset}
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
+Para utilizar un conjunto de datos existente, seleccione un conjunto de datos para el inicio. La barra lateral de la derecha se rellena con información sobre el conjunto de datos.
 
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+La [!UICONTROL *[!UICONTROL conmutación de ingestión]*] parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
-## Recuperar errores parciales de ingesta por lotes
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+
+Ahora, puede cargar datos con el botón **Añadir datos** y se ingesta con ingestión parcial.
+
+### Utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot; {#map-flow}
+
+Para utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot;, siga los pasos enumerados en el tutorial [](../tutorials/map-a-csv-file.md)Asignar un archivo CSV. Una vez que llegue al paso de *Añadir datos* , tome nota de los campos de diagnóstico de ingestión ** parcial y *[!UICONTROL error]* .
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
+
+La *[!UICONTROL conmutación de ingestión]* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+
+La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
+
+El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+
+## Recuperar errores parciales de ingesta por lotes {#retrieve-errors}
 
 Si los lotes contienen errores, deberá recuperar la información de error sobre estos errores para poder volver a ingestar los datos.
 
-### Comprobar estado
+### Comprobar estado {#check-status}
 
 Para comprobar el estado del lote ingestado, debe proporcionar el ID del lote en la ruta de una solicitud GET.
 
@@ -149,6 +164,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
@@ -183,7 +201,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 Si el lote tiene un error y los diagnósticos de error están habilitados, el estado será &quot;correcto&quot; con más información sobre el error proporcionado en un archivo de error descargable.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Este tutorial trata sobre cómo crear o modificar un conjunto de datos para habilitar la ingestión parcial por lotes. Para obtener más información sobre la ingestión por lotes, lea la guía [para desarrolladores de la ingestión de](./api-overview.md)lotes.
 
