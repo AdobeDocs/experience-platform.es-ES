@@ -4,10 +4,10 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 5%
+source-wordcount: '553'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Puede crear un ID de configuración con la herramienta [de configuración](../fu
 
 >[!NOTE]
 >
->Su organización debe estar en la lista de permitidos para la función. Póngase en contacto con su CSM para agregar a la lista de permitidos.
+>Su organización debe estar en la lista de permitidos de la función. Póngase en contacto con el CSM para agregarlo a la lista de permitidos.
 
 ## Preparación de un Esquema
 
@@ -33,6 +33,10 @@ La red perimetral Experience Platform toma los datos como XDM. XDM es un formato
 
 - [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
 - Añadir la mezcla de SDK web de Adobe Experience Platform en el esquema que ha creado
+
+El siguiente vídeo está diseñado para ayudarle en la creación de un conector de origen de esquema, conjunto de datos y flujo continuo para sus datos del SDK web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Instalación del SDK en Adobe Launch
 
