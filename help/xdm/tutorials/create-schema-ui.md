@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ Haga clic en **Perfil** y aparecerá una ventana emergente en la que se le pedir
 >
 >Una vez que un esquema se ha habilitado para el Perfil del cliente en tiempo real y se ha guardado, no se puede deshabilitar.
 
-## Pasos siguientes
+## Próximos pasos y recursos adicionales
 
 Ahora que ha terminado de componer un esquema &quot;Miembros de lealtad&quot;, puede ver el esquema completo en la sección *Estructura* del editor. Haga clic en **Guardar** y el esquema se guardará en la biblioteca de Esquemas, para que el Registro de Esquemas pueda acceder a él.
 
 El nuevo esquema ahora se puede usar para ingerir datos en Platform. Recuerde que una vez que el esquema se ha utilizado para ingestar datos, sólo se pueden realizar cambios aditivos. Consulte los [conceptos básicos de la composición](../schema/composition.md) de esquema para obtener más información sobre el control de versiones de esquemas.
 
 El esquema &quot;Miembros de lealtad&quot; también está disponible para su visualización y administración mediante la API del Registro de Esquemas. Para empezar a trabajar con la API, lea la guía [para desarrolladores de la API de](../api/getting-started.md)Esquema Registry.
+
+>[!WARNING]
+>
+>La interfaz de usuario que [!DNL Platform] se muestra en los siguientes vídeos no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+El siguiente vídeo muestra cómo crear un esquema sencillo en la [!DNL Platform] interfaz de usuario.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+El siguiente vídeo pretende reforzar su comprensión del trabajo con mezclas y clases.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Apéndice
 
