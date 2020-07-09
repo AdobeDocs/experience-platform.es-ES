@@ -1,23 +1,23 @@
 ---
 title: inicio rápido con javascript sin formato
 seo-title: 'inicio rápido del SDK web de Adobe Experience Platform '
-description: Guía de inicio rápido para utilizar el SDK web de la plataforma de experiencia para recopilar datos
-seo-description: Guía de inicio rápido para utilizar el SDK web de la plataforma de experiencia para recopilar datos
+description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
+seo-description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 3%
+source-wordcount: '537'
+ht-degree: 5%
 
 ---
 
 
 # Bienvenido
 
-Esta guía le guiará por las diferentes formas de configurar el SDK web de la plataforma Adobe Experience Platform. Para poder utilizar esta función, debe estar en la lista allow. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
+Esta guía le guiará por las diferentes formas de configurar el SDK web de Adobe Experience Platform. Para poder utilizar esta función, debe estar en la lista de permitidos. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
 - Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funciona sin un CNAME pero necesita uno antes de ir a producción
-- Tenga derecho a la plataforma de datos de Adobe Experience Platform.  Si no ha adquirido Platform, le proporcionaremos la base de servicios de datos de la plataforma de experiencia para que la utilice de forma limitada con el SDK sin cargo adicional.
+- Tenga derecho a Adobe Experience Platform Data Platform.  Si no ha adquirido Platform, le proporcionaremos Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
 - Utilizar la versión más reciente del servicio de ID de Visitante
 
 ## Crear un ID de configuración
@@ -26,14 +26,18 @@ Puede crear un ID de configuración con la herramienta [de configuración](../fu
 
 >[!NOTE]
 >
->Su organización debe estar en la lista de autorización de la función. Comuníquese con el CSM para que se le ponga en la lista de autorización.
+>Su organización debe estar en la lista de permitidos de la función. Póngase en contacto con su CSM para ponerse en la lista de permitidos.
 
 ## Preparación de un Esquema
 
-Experience Platform Edge Network toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo espera la red de Edge que se formateen los datos. Para enviar datos, debe definir el esquema.
+La red perimetral Experience Platform toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo espera la red de Edge que se formateen los datos. Para enviar datos, debe definir el esquema.
 
 - [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
-- Añada la combinación del SDK web de la plataforma Adobe Experience Platform en el esquema que ha creado
+- Añadir la mezcla de SDK web de Adobe Experience Platform en el esquema que ha creado
+
+El siguiente vídeo está diseñado para ayudarle en la creación de un conector de origen de esquema, conjunto de datos y flujo continuo para sus datos del SDK web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Instalación del SDK
 
@@ -92,7 +96,7 @@ Para obtener más información sobre cómo rastrear eventos, consulte [Seguimien
 
 Una vez que haya datos fluidos, puede hacer lo siguiente:
 
-- [Cree su esquema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Cree su esquema](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/schema/composition.html)
 - [Más información sobre la depuración](../fundamentals/debugging.md)
 - Aprenda a [personalizar la experiencia](../fundamentals/rendering-personalization-content.md)
 - Obtenga información sobre cómo enviar datos a varias soluciones
