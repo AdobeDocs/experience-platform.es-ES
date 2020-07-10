@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Trabajos del sistema de Perfil: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parámetro | Descripción |
 |---|---|
-| `start` | Desplaza la página de resultados devueltos, según la hora de creación de la solicitud. Ejemplo: `start=4` |
-| `limit` | Limite el número de resultados devueltos. Ejemplo: `limit=10` |
-| `page` | Devolver una página específica de resultados, según la hora de creación de la solicitud. Ejemplo: `page=2` |
-| `sort` | Ordenar los resultados por un campo específico en orden ascendente (`asc`) o descendente (`desc`). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=batchId:asc` |
+| `start` | Desplaza la página de resultados devueltos, según la hora de creación de la solicitud. Ejemplo: *`start=4`* |
+| `limit` | Limite el número de resultados devueltos. Ejemplo: *`limit=10`* |
+| `page` | Devolver una página específica de resultados, según la hora de creación de la solicitud. Ejemplo: ***`page=2`*** |
+| `sort` | Ordenar los resultados por un campo específico en orden ascendente (*`asc`*) o descendente (**`desc`**). El parámetro de ordenación no funciona cuando se devuelven varias páginas de resultados. Ejemplo: `sort=batchId:asc` |
 
 **Solicitud**
 
@@ -91,11 +91,11 @@ La respuesta incluye una matriz &quot;secundarios&quot; con un objeto para cada 
 
 | Propiedad | Descripción |
 |---|---|
-| _page.count | Número total de solicitudes. Esta respuesta se ha truncado para el espacio. |
-| _page.next | Si existe una página adicional de resultados, reemplace el valor de ID en una solicitud [de](#view-a-specific-delete-request) búsqueda por el valor &quot;siguiente&quot; proporcionado para la vista de la siguiente página de resultados. |
-| jobType | Tipo de trabajo que se va a crear. En este caso, siempre devolverá &quot;DELETE&quot;. |
-| status | Estado de la solicitud de eliminación. Los valores posibles son &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| métricas | Objeto que incluye el número de registros que se han procesado (&quot;recordsProcessed&quot;) y el tiempo en segundos que se ha procesado la solicitud o el tiempo que tardó en completarse (&quot;timeTakenInSec&quot;). |
+| `_page.count` | Número total de solicitudes. Esta respuesta se ha truncado para el espacio. |
+| `_page.next` | Si existe una página adicional de resultados, reemplace el valor de ID en una solicitud [de](#view-a-specific-delete-request) búsqueda por el valor proporcionado para la vista de la siguiente página de resultados por el `"next"` . |
+| `jobType` | Tipo de trabajo que se va a crear. En este caso, siempre regresará `"DELETE"`. |
+| `status` | Estado de la solicitud de eliminación. Los valores posibles son `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Objeto que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que la solicitud se ha procesado o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
 
 ## Crear una solicitud de eliminación {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| dataSetId | **(Requerido)** El ID del conjunto de datos que desea eliminar. |
+| `dataSetId` | **(Requerido)** El ID del conjunto de datos que desea eliminar. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. La solicitud `status` en el momento de la creación es `"NEW"` hasta que comienza el procesamiento. El `dataSetId` contenido de la respuesta debe coincidir con el `dataSetId` enviado en la solicitud.
+Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. La solicitud **`status`** en el momento de la creación es *`"NEW"`* hasta que comienza el procesamiento. El **`dataSetId`** contenido de la respuesta debe coincidir con el ***`dataSetId`*** enviado en la solicitud.
 
 ```json
 {
@@ -151,8 +151,8 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 
 | Propiedad | Descripción |
 |---|---|
-| id | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
-| dataSetId | ID del conjunto de datos, tal como se especifica en la solicitud POST. |
+| `id` | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
+| `dataSetId` | ID del conjunto de datos, tal como se especifica en la solicitud POST. |
 
 ### Eliminar un lote
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| batchId | **(Requerido)** El ID del lote que desea eliminar. |
+| `batchId` | **(Requerido)** El ID del lote que desea eliminar. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. El &quot;estado&quot; de la solicitud en el momento de la creación es &quot;NUEVO&quot; hasta que comienza el procesamiento. El &quot;batchId&quot; de la respuesta debe coincidir con el &quot;batchId&quot; enviado en la solicitud.
+Una respuesta correcta devuelve los detalles de la solicitud de eliminación recién creada, incluido un ID único, generado por el sistema y de solo lectura para la solicitud. Se puede utilizar para buscar la solicitud y comprobar su estado. La solicitud `"status"` en el momento de la creación es `"NEW"` hasta que comienza el procesamiento. El `"batchId"` contenido de la respuesta debe coincidir con el `"batchId"` enviado en la solicitud.
 
 ```json
 {
@@ -206,8 +206,8 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 
 | Propiedad | Descripción |
 |---|---|
-| id | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
-| batchId | ID del lote, tal como se especifica en la solicitud POST. |
+| `id` | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
+| `batchId` | ID del lote, tal como se especifica en la solicitud POST. |
 
 Si intenta iniciar una solicitud de eliminación para un lote de conjuntos de datos de registro, se producirá un error de 400 niveles, similar al siguiente:
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parámetro | Descripción |
 |---|---|
-| {DELETE_REQUEST_ID} | **(Requerido)** El ID de la solicitud de eliminación que desea vista. |
+| `{DELETE_REQUEST_ID}` | **(Requerido)** El ID de la solicitud de eliminación que desea vista. |
 
 **Solicitud**
 
@@ -269,11 +269,11 @@ La respuesta proporciona los detalles de la solicitud de eliminación, incluido 
 
 | Propiedades | Descripción |
 |---|---|
-| jobType | El tipo de trabajo que se está creando, en este caso siempre devolverá &quot;DELETE&quot;. |
-| status | Estado de la solicitud de eliminación. Valores posibles: &quot;NUEVO&quot;, &quot;PROCESAMIENTO&quot;, &quot;COMPLETADO&quot;, &quot;ERROR&quot;. |
-| métricas | Matriz que incluye el número de registros que se han procesado (&quot;recordsProcessed&quot;) y el tiempo en segundos que se ha procesado la solicitud o el tiempo que tardó en completarse (&quot;timeTakenInSec&quot;). |
+| `jobType` | El tipo de trabajo que se está creando, en este caso siempre volverá `"DELETE"`. |
+| `status` | Estado de la solicitud de eliminación. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Matriz que incluye el número de registros que se han procesado (`"recordsProcessed"`) y el tiempo en segundos que la solicitud se ha estado procesando o el tiempo que tardó en completarse (`"timeTakenInSec"`). |
 
-Una vez que el estado de la solicitud de eliminación es &quot;COMPLETADO&quot;, puede confirmar que los datos se han eliminado intentando acceder a los datos eliminados mediante la API de acceso a datos. Para obtener instrucciones sobre cómo utilizar la API de acceso a datos para acceder a conjuntos de datos y lotes, consulte la documentación [de acceso a](../../data-access/home.md)datos.
+Una vez que el estado de la solicitud de eliminación `"COMPLETED"` puede confirmar que los datos se han eliminado intentando acceder a los datos eliminados mediante la API de acceso a datos. Para obtener instrucciones sobre cómo utilizar la API de acceso a datos para acceder a conjuntos de datos y lotes, consulte la documentación [de acceso a](../../data-access/home.md)datos.
 
 ## Eliminar una solicitud de eliminación
 
