@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del Editor de Consultas del servicio de Consulta de Adobes Experience Platform
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,12 @@ La consola proporciona información sobre el estado y el funcionamiento del serv
 Una vez finalizada la consulta, los resultados se muestran en la ficha *Resultados* , junto a la ficha *Consola* . Esta vista muestra el resultado tabular de la consulta, mostrando hasta 100 filas. Esta vista le permite comprobar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, elimine los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con el resultado. Consulte el tutorial [][query-service-create-datasets] Generación de conjuntos de datos para obtener instrucciones sobre cómo generar un conjunto de datos a partir de resultados de consulta en el Editor de Consultas.
 
 ![Imagen](../images/queries/query-editor-overview/query-results.png)
+
+## Vídeo del tutorial Ejecutar consultas con el servicio de Consulta
+
+El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente PSQL. Además, se muestran el uso de propiedades individuales en un objeto XDM, el uso de funciones definidas por Adobe y el uso de CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Pasos siguientes
 
