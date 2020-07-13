@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1807'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,56 @@ ht-degree: 2%
 
 # Trabajos de privacidad
 
-Las siguientes secciones explican las llamadas que puede realizar mediante el `/jobs` punto final de la API de Privacy Service. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Este documento explica cómo trabajar con trabajos de privacidad mediante llamadas de API. Específicamente, abarca el uso del `/job` punto final en la API de Privacy Service. Antes de leer esta guía, consulte la sección [de](./getting-started.md#getting-started) introducción para obtener información importante que debe conocer para realizar llamadas a la API correctamente, incluidos los encabezados necesarios y cómo leer llamadas a la API de ejemplo.
+
+## Lista de todos los trabajos {#list}
+
+Puede realizar una vista de una lista de todos los trabajos de privacidad disponibles en su organización mediante una solicitud GET al `/jobs` extremo.
+
+**Formato API**
+
+Este formato de solicitud utiliza un parámetro de `regulation` consulta en el `/jobs` extremo, por lo tanto comienza con un signo de interrogación (`?`) como se muestra a continuación. La respuesta está paginada, lo que le permite utilizar otros parámetros de consulta (`page` y `size`) para filtrar la respuesta. Puede separar varios parámetros mediante ampersands (`&`).
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{REGULATION}` | El tipo de regulación para el que se debe realizar la consulta. Los valores aceptados son `gdpr`, `ccpa`y `pdpa_tha`. |
+| `{PAGE}` | La página de datos que se va a mostrar, mediante la numeración basada en 0. El valor predeterminado es `0`. |
+| `{SIZE}` | Número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devuelve un error de 400 códigos. |
+
+**Solicitud**
+
+La siguiente solicitud recupera una lista paginada de todos los trabajos dentro de una organización de IMS, comenzando desde la tercera página con un tamaño de página de 50.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve una lista de trabajos, y cada trabajo contiene detalles como el `jobId`. En este ejemplo, la respuesta contendría una lista de 50 trabajos, comenzando en la tercera página de resultados.
+
+### Acceso a páginas subsiguientes
+
+Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe realizar otra llamada de API al mismo extremo mientras aumenta el parámetro de `page` consulta en 1.
 
 ## Crear un trabajo de privacidad {#create-job}
 
-Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud POST al extremo raíz.
+Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud POST al `/jobs` extremo.
 
 >[!NOTE]
 >
->Las aplicaciones compatibles de Adobe Experience Cloud utilizan valores diferentes para identificar los sujetos de datos. Consulte la guía sobre aplicaciones [de](../experience-cloud-apps.md) Privacy Service y Experience Cloud para obtener más información sobre los identificadores requeridos para las aplicaciones.
+>Las aplicaciones compatibles de Adobe Experience Cloud utilizan valores diferentes para identificar los sujetos de datos. Consulte la guía sobre aplicaciones [de](../experience-cloud-apps.md) Privacy Service y Experience Cloud para obtener más información sobre los identificadores requeridos para las aplicaciones. Para obtener instrucciones más generales sobre cómo determinar qué ID se enviarán al Privacy Service, consulte el documento sobre datos de [identidad en solicitudes](../identity-data.md)de privacidad.
 
 La API de Privacy Service admite dos tipos de solicitudes de trabajo para datos personales:
 
@@ -290,7 +331,7 @@ Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar 
 
 ## Comprobar el estado de un trabajo {#check-status}
 
-Mediante uno de los `jobId` valores devueltos en el paso anterior, puede recuperar información sobre ese trabajo, como su estado de procesamiento actual.
+Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo dicho trabajo `jobId` en la ruta de una solicitud GET al `/jobs` extremo.
 
 >[!IMPORTANT]
 >
@@ -304,7 +345,7 @@ GET /jobs/{JOB_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{JOB_ID}` | ID del trabajo que desea buscar, devuelto en `jobId` la respuesta del paso [](#create-job)anterior. |
+| `{JOB_ID}` | ID del trabajo que desea buscar. Este ID se devuelve en `jobId` las respuestas de API correctas para [crear un trabajo](#create-job) y [enumerar todos los trabajos](#list). |
 
 **Solicitud**
 
@@ -324,12 +365,12 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,64 +435,28 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
 
 | Propiedad | Descripción |
 | --- | --- |
-| `productStatusResponse` | Estado actual del trabajo. En la tabla siguiente se proporcionan detalles sobre cada posible estado. |
+| `productStatusResponse` | Cada objeto de la `productResponses` matriz contiene información sobre el estado actual del trabajo con respecto a una [!DNL Experience Cloud] aplicación específica. |
+| `productStatusResponse.status` | La categoría de estado actual del trabajo. Consulte la tabla siguiente para obtener una lista de las categorías [de estado](#status-categories) disponibles y sus significados correspondientes. |
+| `productStatusResponse.message` | Estado específico del trabajo, correspondiente a la categoría de estado. |
+| `productStatusResponse.responseMsgCode` | Código estándar para los mensajes de respuesta del producto recibidos por el Privacy Service. Los detalles del mensaje se proporcionan en `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | Una explicación más detallada del estado del trabajo. Los mensajes para estados similares pueden variar entre productos. |
+| `productStatusResponse.results` | Para ciertos estados, algunos productos pueden devolver un `results` objeto que proporciona información adicional que no está cubierta por `responseMsgDetail`. |
 | `downloadURL` | Si el estado del trabajo es `complete`, este atributo proporciona una URL para descargar los resultados del trabajo como archivo ZIP. Este archivo está disponible para su descarga durante 60 días tras finalizar el trabajo. |
 
-### Respuestas al estado del trabajo
+### categorías de estado del trabajo {#status-categories}
 
-La siguiente tabla lista los distintos estados de trabajo posibles y su significado correspondiente:
+La siguiente tabla lista las diferentes categorías posibles de estado del trabajo y su significado correspondiente:
 
-| Código de estado | Mensaje de estado | Significado |
-| ----------- | -------------- | -------- |
-| 1 | Completar | El trabajo se ha completado y (si es necesario) los archivos se cargan desde cada aplicación. |
-| 2 | Procesamiento | Las aplicaciones han reconocido el trabajo y se están procesando. |
-| 3 | Submitted | El trabajo se envía a todas las solicitudes correspondientes. |
-| 4 | Error | Error en el procesamiento del trabajo: se puede obtener información más específica recuperando los detalles del trabajo individual. |
+| categoría de estado | Significado |
+| -------------- | -------- |
+| Completar | El trabajo se ha completado y (si es necesario) los archivos se cargan desde cada aplicación. |
+| Procesamiento | Las aplicaciones han reconocido el trabajo y se están procesando. |
+| Submitted | El trabajo se envía a todas las solicitudes correspondientes. |
+| Error | Error en el procesamiento del trabajo: se puede obtener información más específica recuperando los detalles del trabajo individual. |
 
 >[!NOTE]
 >
 >Un trabajo enviado puede permanecer en estado de procesamiento si tiene un trabajo secundario dependiente que aún se está procesando.
-
-## Lista de todos los trabajos
-
-Puede realizar una vista de una lista de todas las solicitudes de trabajo disponibles dentro de su organización mediante una solicitud GET al extremo raíz (`/`).
-
-**Formato API**
-
-Este formato de solicitud utiliza un parámetro de `regulation` consulta en el extremo raíz (`/`), por lo tanto comienza con un signo de interrogación (`?`) como se muestra a continuación. La respuesta está paginada, lo que le permite utilizar otros parámetros de consulta (`page` y `size`) para filtrar la respuesta. Puede separar varios parámetros mediante ampersands (`&`).
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| Parámetro | Descripción |
-| --- | --- |
-| `{REGULATION}` | El tipo de regulación para el que se debe realizar la consulta. Los valores aceptados son `gdpr`, `ccpa`y `pdpa_tha`. |
-| `{PAGE}` | La página de datos que se va a mostrar, mediante la numeración basada en 0. El valor predeterminado es `0`. |
-| `{SIZE}` | Número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devuelve un error de 400 códigos. |
-
-**Solicitud**
-
-La siguiente solicitud recupera una lista paginada de todos los trabajos dentro de una organización de IMS, comenzando desde la tercera página con un tamaño de página de 50.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve una lista de trabajos, y cada trabajo contiene detalles como el `jobId`. En este ejemplo, la respuesta contendría una lista de 50 trabajos, comenzando en la tercera página de resultados.
-
-### Acceso a páginas subsiguientes
-
-Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe realizar otra llamada de API al mismo extremo mientras aumenta el parámetro de `page` consulta en 1.
 
 ## Pasos siguientes
 
