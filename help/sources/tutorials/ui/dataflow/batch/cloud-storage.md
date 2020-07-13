@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuración de un flujo de datos para un conector por lotes de almacenamiento de nube en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -129,10 +129,16 @@ Una vez creado el flujo de datos del almacenamiento de nube, puede supervisar lo
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer datos de un almacenamiento de nube externo y ha adquirido una perspectiva sobre la supervisión de conjuntos de datos. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para traer datos de un almacenamiento de nube externo y ha adquirido una perspectiva sobre la supervisión de conjuntos de datos. Para obtener más información sobre la creación de flujos de datos, puede complementar su aprendizaje viendo el siguiente vídeo. Además, los datos entrantes ahora pueden ser utilizados por servicios de flujo [!DNL Platform] descendente como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## Apéndice
 
