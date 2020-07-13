@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Segmentación multientidad
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -13,14 +16,16 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 La segmentación de varias entidades es la capacidad de ampliar los datos de Perfil con datos adicionales basados en productos, almacenes u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de Perfil.
 
-Para obtener más información sobre la segmentación multientidad, lea la información general [de](./home.md)segmentación.
+Para obtener más información sobre la segmentación multientidad, siga leyendo la documentación y complementando su aprendizaje, vea el siguiente vídeo o explorando la descripción general [de la](./home.md)segmentación.]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en el uso de la segmentación. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que implican el uso de la segmentación. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Perfil](../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [Servicio](./home.md)de segmentación de la plataforma Adobe Experience: Permite generar segmentos a partir del Perfil del cliente en tiempo real.
+- [Servicio](./home.md)de segmentación de Adobes Experience Platform: Permite generar segmentos a partir del Perfil del cliente en tiempo real.
 - [Modelo de datos de experiencia (XDM)](../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
 ## Cómo definir relaciones XDM
