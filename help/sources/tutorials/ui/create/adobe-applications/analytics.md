@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 2%
+source-wordcount: '769'
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ Para obtener más información sobre cómo etiquetar datos procedentes de Analyt
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Pasos siguientes
+## Próximos pasos y recursos adicionales
 
 Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un flujo de conjuntos de datos para contener los datos entrantes. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando se completa la ingestión inicial, los datos de Analytics y se utilizan en los servicios de Platform descendentes, como el servicio de Perfil y segmentación de clientes en tiempo real. Consulte los siguientes documentos para obtener más información:
 
@@ -103,3 +103,12 @@ Una vez creada la conexión, se crea automáticamente un esquema de destinatario
 * [Descripción general del servicio de segmentación](../../../../../segmentation/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../../data-science-workspace/home.md)
 * [Visión general del servicio de Consulta](../../../../../query-service/home.md)
+
+El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de datos mediante el conector Adobe Analytics Source:
+
+>[!WARNING]
+>
+> La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
