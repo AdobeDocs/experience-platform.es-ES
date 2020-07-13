@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector CRM en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -123,10 +123,16 @@ Para obtener más información sobre la supervisión de conjuntos de datos y la 
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha creado correctamente un flujo de datos para incorporar datos de una CRM y obtener información sobre la supervisión de conjuntos de datos. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, se ha creado correctamente un flujo de datos para incorporar datos de una CRM y obtener información sobre la supervisión de conjuntos de datos. Para obtener más información sobre la creación de flujos de datos, puede complementar su aprendizaje viendo el siguiente vídeo. Además, los datos entrantes ahora pueden ser utilizados por servicios de flujo [!DNL Platform] descendente como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 * [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
 
 ## Apéndice
 
