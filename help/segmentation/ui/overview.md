@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,12 @@ Para obtener información adicional sobre la última evaluación de segmentos, h
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Demostración en vídeo de segmentación por flujo continuo
+
+El siguiente vídeo está diseñado para admitir su comprensión de la segmentación de flujo continuo. Muestra un ejemplo de la experiencia del cliente seguido de una visita rápida de las funciones clave de la [!DNL Platform] interfaz.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## Violaciones de políticas DULE
 
 >[!NOTE]
@@ -243,7 +249,7 @@ Una vez que haya terminado de crear el segmento, éste se analizará [!DNL Data 
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Pasos siguientes
+## Próximos pasos y recursos adicionales {#next-steps}
 
 El Generador de segmentos proporciona un flujo de trabajo enriquecido que le permite aislar audiencias comercializables de [!DNL Real-time Customer Profile] los datos. Después de leer esta guía, debería poder:
 
@@ -251,6 +257,18 @@ El Generador de segmentos proporciona un flujo de trabajo enriquecido que le per
 - Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.
 - Estimaciones de Vista de su audiencia potencial, permitiéndole ajustar las definiciones de segmentos según sea necesario.
 - Habilite todas las definiciones de segmentos para la segmentación programada.
-- Active las definiciones de segmentos especificadas para la segmentación de flujo continuo.
+- Habilite definiciones de segmentos especificadas para la segmentación de flujo continuo.
 
-Para obtener instrucciones paso a paso sobre cómo trabajar con [!DNL Segmentation Service] el uso de la [!DNL Segmentation Service] API, consulte el tutorial [Creación de segmentos de audiencia mediante APIs](../tutorials/create-a-segment.md) .
+Para obtener más información sobre [!DNL Segmentation Service], siga leyendo la documentación y complementando su aprendizaje, vea los vídeos siguientes. Para obtener instrucciones paso a paso sobre cómo trabajar con [!DNL Segmentation Service] el uso de la [!DNL Segmentation Service] API, consulte el tutorial [Creación de segmentos de audiencia mediante APIs](../tutorials/create-a-segment.md) .
+
+>[!WARNING]
+>
+> La [!DNL Platform] interfaz de usuario que se muestra en los siguientes vídeos no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+**Crear un segmento:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Crear un segmento dinámico:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
