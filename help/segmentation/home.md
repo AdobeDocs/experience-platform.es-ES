@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servicio de segmentación de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -129,6 +129,10 @@ Al asignar una variable al atributo de estado de compra, el segmento dinámico s
 Con la función de segmentación multientidad avanzada, puede crear segmentos utilizando varias clases XDM, agregando así extensiones a los esquemas de personas. Como resultado, el servicio de segmentación puede acceder a campos adicionales durante la definición del segmento como si fueran nativos del almacén de datos de perfil.
 
 La segmentación multientidad proporciona la flexibilidad necesaria para identificar audiencias en base a los datos relevantes para sus necesidades comerciales. Este proceso se puede llevar a cabo de manera rápida y sencilla sin necesidad de conocimientos técnicos para consultar las bases de datos. Esto le permite agregar datos clave a los segmentos sin tener que realizar cambios costosos en los flujos de datos ni esperar a una combinación de datos back-end.
+
+El siguiente vídeo está diseñado para admitir su comprensión de la segmentación de varias entidades y describe tanto la segmentación de varias entidades como el contexto del segmento (carga útil del segmento).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ### Caso de uso: Promoción basada en precios
 
