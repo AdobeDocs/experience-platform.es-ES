@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de Azure Blob o Amazon S3 en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 2%
+source-wordcount: '631'
+ht-degree: 1%
 
 ---
 
@@ -80,6 +80,6 @@ Para conectar una cuenta existente, seleccione la cuenta [!DNL Blob] o S3 con la
 
 ![existente](../../../../images/tutorials/create/blob/existing.png)
 
-## Pasos siguientes
+## Próximos pasos y recursos adicionales
 
 Siguiendo este tutorial, ha establecido una conexión con su cuenta [!DNL Blob] o S3. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a Platform](../../dataflow/batch/cloud-storage.md).
