@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector CRM en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Configurar un flujo de datos para un conector CRM en la interfaz de usuario
 
-Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un [!DNL Platform] conjunto de datos. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector base de CRM.
+Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un [!DNL Platform] conjunto de datos. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector CRM.
 
 ## Primeros pasos
 
@@ -103,23 +103,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![revisión](../../../images/tutorials/dataflow/crm/review.png)
 
-## Monitorear el flujo de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Siga los pasos a continuación para acceder al monitor de conjuntos de datos de un flujo de datos.
-
-En el espacio de trabajo _Fuentes_ , seleccione el origen CRM que desea vista en la categoría *[!UICONTROL CRM]* . Seleccione *[!UICONTROL Connect Source]* para iniciar la interfaz de autenticación. Para vista de un flujo de datos existente, seleccione Cuenta ** existente y seleccione la cuenta a la que desea acceder.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Aparece la pantalla actividad ** de origen. Desde aquí, haga clic en el nombre de un conjunto de datos cuya actividad desee monitorear.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-Aparece la pantalla *[!UICONTROL actividad]* del conjunto de datos. Esta página muestra la velocidad de los mensajes que se consumen en forma de gráfico.
-
-![actividad de conjuntos de datos](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-Para obtener más información sobre la supervisión de conjuntos de datos y la ingestión, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
 
 ## Pasos siguientes
 
