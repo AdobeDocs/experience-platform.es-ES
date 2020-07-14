@@ -3,15 +3,15 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
+source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 12%
+source-wordcount: '94'
+ht-degree: 14%
 
 ---
 
 
-# Adobe Experience Platform Web SDK {#edge}
+# SDK web de Adobe Experience Platform {#edge}
 
 * [Visión general del SDK web](home.md)
 * Primeros pasos {#get-started}
@@ -34,13 +34,14 @@ ht-degree: 12%
 * Consideraciones específicas de la solución {#solutions}
    * Analytics {#analytics}
       * [Información general de Analytics](solution-specific/analytics/analytics-overview.md)
+      * [Asignación manual de variables en Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Variables asignadas automáticamente](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
-      * [Información general del Administrador de Audiencias](solution-specific/audience-manager/audience-manager-overview.md)
+      * [Información general sobre Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Información general de Target](solution-specific/target/target-overview.md)
       * [Administración de parpadeo](solution-specific/target/flicker-management.md)
 * Referencia {#ref}
    * [Información recopilada automáticamente](reference/automatic-information.md)
    * [Recuperación de la información de la biblioteca](reference/retrieving-library-information.md)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
