@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,14 @@ Si le preguntaste a una persona &quot;¿Cuál es tu ID?&quot; sin más contexto,
 Sus clientes pueden interactuar con su marca mediante una combinación de canales en línea y sin conexión, lo que resulta en el desafío de cómo reconciliar esas interacciones fragmentadas en una sola identidad de cliente.
 
 [!DNL Experience Platform] aborda este desafío a través de dos conceptos: [Áreas de nombres](#identity-namespaces) de identidad y gráficos [](#identity-graphs)de identidad.
+
+El siguiente vídeo está diseñado para apoyar su comprensión de las identidades y los gráficos de identidad. En el siguiente vídeo se explican las tres funciones de la colección de identidades, los gráficos de identidad y las API. También se describe cómo se utilizan los algoritmos determinísticos y probabilísticos para construir gráficos de identidad privados, y se analiza el papel de los gráficos de identidad privados, Adobe Experience Platform Identity Service Co-Op Graph y los gráficos de terceros.
+
+>[!IMPORTANT]
+>
+> Los gráficos privados probabilísticos todavía están en desarrollo y se van a publicar en una fecha posterior.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### Áreas de nombres de identidad
 
@@ -122,6 +130,14 @@ Durante el proceso de inserción de flujo continuo, extrae [!DNL Identity Servic
 ### Ingresar datos a [!DNL Identity Service]
 
 [!DNL Identity Service] consume datos compatibles con XDM enviados a [!DNL Experience Platform] por ingestión [](../ingestion/batch-ingestion/overview.md) por lotes o por [transmisiones](../ingestion/streaming-ingestion/overview.md).
+
+El siguiente vídeo está diseñado para admitir su comprensión del servicio de identidad. En este vídeo se muestra cómo etiquetar campos de datos como identidades, ingerir datos de identidad y, a continuación, comprobar que los datos han llegado a Adobe Experience Platform Identity Service Private Graph.
+
+>[!WARNING]
+>
+> La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Administración de datos
 
