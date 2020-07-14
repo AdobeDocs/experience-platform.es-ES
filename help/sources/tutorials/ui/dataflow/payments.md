@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de pago en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -93,13 +93,13 @@ Proporcione valores para la programación y haga clic en **[!UICONTROL Siguiente
 
 ![programar](../../../images/tutorials/dataflow/payments/scheduling.png)
 
-## Asigne un nombre al flujo de conjuntos de datos
+## Asigne un nombre al flujo de datos
 
 Aparece el paso de detalle *[!UICONTROL del flujo de]* datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de conjuntos de datos. Seleccione **[!UICONTROL Siguiente]** cuando termine.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Revise el flujo de conjuntos de datos
+## Revise el flujo de datos
 
 Aparece el paso *[!UICONTROL Revisar]* , que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
@@ -111,9 +111,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![revisión](../../../images/tutorials/dataflow/payments/review.png)
 
-## Monitoree el flujo de conjuntos de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo del conjunto de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo monitorear los flujos de conjuntos de datos, consulte el tutorial sobre [cuentas y flujos](../monitor.md)de conjuntos de datos.
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
 
 ## Pasos siguientes
 
