@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuración de un flujo de datos para un conector de flujo de almacenamiento en la nube en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## Monitorear el flujo de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo de datos del almacenamiento de nube, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión de conjuntos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
+Una vez creado el flujo de datos del almacenamiento de nube, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión y eliminación de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Pasos siguientes
 
