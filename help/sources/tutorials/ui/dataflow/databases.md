@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una pro
 | --- | --- |
 | Frecuencia | Las frecuencias seleccionables incluyen Minuto, Hora, Día y Semana. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
-| Tiempo de Inicio | Marca de hora UTC para la que se producirá la primera ingestión. |
+| Tiempo de Inicio | Marca de hora UTC para la que se producirá la primera ingestión. El valor de tiempo de inicio debe establecerse en el tiempo de epoch en segundos. |
 | Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *Rellenar* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *de* Inicio. Los archivos cargados antes de la hora *de* Inicio no se ingieren. |
 | Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
