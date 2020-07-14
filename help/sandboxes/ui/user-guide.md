@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario del Simulador para pruebas
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Una vez seleccionado un simulador de pruebas, la pantalla se actualiza con el si
 ![](../images/ui/sandbox-switched.png)
 
 ## Crear un nuevo simulador para pruebas
+
+Utilice el siguiente vídeo para obtener una descripción general rápida sobre cómo usar [!DNL Sandboxes] en [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Para crear un nuevo simulador para pruebas en la interfaz de usuario, haga clic en **Entornos** para pruebas en la barra de navegación izquierda y, a continuación, haga clic en **Crear Simulador para pruebas**.
 
