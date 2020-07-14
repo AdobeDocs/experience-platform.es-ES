@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de automatización de marketing en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -103,23 +103,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![revisión](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## Monitorear el flujo de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Siga los pasos a continuación para acceder al monitor de conjuntos de datos de un flujo de datos.
-
-En el espacio de trabajo *[!UICONTROL Fuentes]* , seleccione la fuente de automatización de marketing que desee vista en la categoría de automatización *[!UICONTROL de]* marketing. Seleccione *[!UICONTROL Connect Source]* para iniciar la interfaz de autenticación. Para vista de un flujo de datos existente, seleccione Cuenta ** existente y seleccione la cuenta a la que desea acceder.
-
-![monitor](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
-
-Aparece la pantalla actividad ** de origen. Desde aquí, haga clic en el nombre de un conjunto de datos cuya actividad desee monitorear.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/marketing-automation/select-dataflow-dataset.png)
-
-Aparece la pantalla *[!UICONTROL actividad]* del conjunto de datos. Esta página muestra la velocidad de los mensajes que se consumen en forma de gráfico.
-
-![actividad de conjuntos de datos](../../../images/tutorials/dataflow/marketing-automation/dataset-activity.png)
-
-Para obtener más información sobre la supervisión de conjuntos de datos y la ingestión, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
 
 ## Pasos siguientes
 
