@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Monitorear el flujo de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar los flujos de datos, consulte el tutorial sobre [cuentas y flujos de datos](../monitor.md).
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
 
 ## Pasos siguientes
 
