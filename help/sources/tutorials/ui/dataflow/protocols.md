@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuración de un flujo de datos para un conector de protocolo en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -85,19 +85,19 @@ Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una pro
 | Tiempo de Inicio | Marca de hora UTC para la que se producirá la primera ingestión. |
 | Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *[!UICONTROL Rellenar]* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
 
-Los flujos de conjuntos de datos están diseñados para ingestar automáticamente los datos de forma programada. Si solo desea realizar una ingesta una vez a través de este flujo de trabajo, puede hacerlo configurando la **[!UICONTROL Frecuencia]** en &quot;Día&quot; y aplicando un número muy grande para el **[!UICONTROL intervalo]**, como 10000 o similar.
+Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Si solo desea realizar una ingesta una vez a través de este flujo de trabajo, puede hacerlo configurando la **[!UICONTROL Frecuencia]** en &quot;Día&quot; y aplicando un número muy grande para el **[!UICONTROL intervalo]**, como 10000 o similar.
 
 Proporcione valores para la programación y haga clic en **[!UICONTROL Siguiente]**.
 
 ![programar](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## Asigne un nombre al flujo de conjuntos de datos
+## Asigne un nombre al flujo de datos
 
 Aparece el paso de detalle *[!UICONTROL del flujo de]* datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de conjuntos de datos. Haga clic en **[!UICONTROL Siguiente]** cuando termine.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## Revise el flujo de conjuntos de datos
+## Revise el flujo de datos
 
 Aparece el paso *[!UICONTROL Revisar]* , que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
@@ -109,9 +109,9 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![revisión](../../../images/tutorials/dataflow/protocols/review.png)
 
-## Monitoree el flujo de conjuntos de datos
+## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo del conjunto de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo monitorear los flujos de conjuntos de datos, consulte el tutorial sobre [cuentas y flujos](../monitor.md)de conjuntos de datos.
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
 
 ## Pasos siguientes
 
