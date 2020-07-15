@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración de datos de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,6 @@ El Gobierno de datos admite actualmente el etiquetado DULE en dos niveles (conju
 
 Las versiones posteriores proporcionarán las siguientes funciones:
 
-* Etiquetas de uso de datos personalizadas: Cree nuevas etiquetas y definiciones en función de las necesidades de su organización.
 * Aplicación de políticas: Utilice el marco de políticas para asesorar y aplicar políticas en diferentes patrones de acceso a datos.
 * Auditoría: Monitorear las actividades de acceso a datos e identificar los problemas de cumplimiento e informar al respecto.
 
@@ -112,7 +111,7 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 |---|---|
 | **Etiquetas de contrato** | Las etiquetas &quot;C&quot; del contrato se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de administración de datos de su organización. |
 | **Datos entre sitios** | Los datos entre sitios son la combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio. |
-| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normas y políticas institucionales en lo que respecta al uso de los datos. |
+| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normativas y políticas institucionales en lo que respecta al uso de los datos. |
 | **Administrador de datos** | El administrador de datos es la persona responsable de la administración, supervisión y ejecución de los activos de datos de una organización. Un administrador de datos también garantiza que las políticas de control de datos se salvaguarden y mantienen para cumplir con las regulaciones y políticas de organización del gobierno. |
 | **Etiquetas de uso de datos** | Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas. |
 | **Etiquetas de datos** | Las etiquetas se pueden agregar a un conjunto de datos. Todos los campos dentro de un conjunto de datos heredan las etiquetas del conjunto de datos. |
