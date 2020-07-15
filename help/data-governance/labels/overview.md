@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre las etiquetas de uso de datos
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campo
 
 Las etiquetas de uso de datos que se aplican en el nivel de conjunto de datos se propagan a todos los campos dentro del conjunto de datos. Las etiquetas también se pueden aplicar directamente a campos individuales (encabezados de columna) en un conjunto de datos, sin propagación.
 
-Para obtener más información sobre las etiquetas de uso de datos disponibles en [!DNL Experience Platform] y las políticas de uso que representan, consulte la guía sobre etiquetas [de uso de datos](reference.md)admitidas.
+[!DNL Platform] proporciona varias etiquetas de uso de datos &quot;principales&quot; integradas, que abarcan una amplia variedad de restricciones comunes aplicables a la administración de datos. Para obtener más información sobre estas etiquetas y las políticas de uso que representan, consulte la guía sobre las etiquetas [de uso de datos](reference.md)principales.
+
+Además de las etiquetas proporcionadas por Adobe, también puede definir sus propias etiquetas personalizadas. Para ver los pasos sobre cómo hacerlo en la interfaz de usuario, consulte la guía [del usuario de etiquetas de uso de](./user-guide.md)datos. Para ver los pasos para realizar esto mediante llamadas de API, consulte la guía [de la API de etiquetas de uso de](./api.md)datos.
 
 ## Herencia de etiquetas para segmentos de audiencia
 
@@ -34,14 +36,13 @@ Además de heredar etiquetas de nivel de conjunto de datos, los segmentos hereda
 
 Para obtener más información sobre cómo funciona la aplicación automática en tiempo real de CDP, consulte la descripción general [de la gestión de datos CDP en tiempo real de](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Herencia de los controles de exportación de datos de Adobe Audience Manager
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+Experience Platform tiene la capacidad de compartir segmentos con Adobe Audience Manager. Todos los controles de exportación de datos que se hayan aplicado a segmentos de Audience Manager se traducen a etiquetas y acciones de marketing equivalentes que reconoce el Gobierno de datos de Experience Platform.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+Para obtener una referencia sobre cómo los controles de exportación de datos específicos se asignan a las etiquetas de uso de datos en Platform, consulte la documentación [del](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+
 
 ## Pasos siguientes
 
-Ahora que se le han introducido etiquetas de uso de datos, puede seguir leyendo la guía [del](user-guide.md) usuario para aprender a administrar etiquetas en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre cómo administrar etiquetas mediante API, consulte la sección correspondiente en la guía [para desarrolladores del servicio de](../../catalog/api/labels.md)catálogos.
+Ahora que se le han introducido etiquetas de uso de datos, puede seguir leyendo la guía [del](user-guide.md) usuario para aprender a administrar etiquetas en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre cómo administrar etiquetas mediante API, consulte la guía [de API de etiquetas de](./api.md)uso.
