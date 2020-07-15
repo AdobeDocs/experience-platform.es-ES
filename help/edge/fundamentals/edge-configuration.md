@@ -4,9 +4,9 @@ seo-title: Configuración de Edge para el SDK web Experience Platform
 description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Los ID de configuración de Edge se pueden crear en Adobe [!DNL Launch] con la h
 >
 >La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la documentación [!DNL Launch] para obtener más información.
 
-Puede crear una configuración de borde haciendo clic en **[UICONTROL Nueva configuración]** de borde en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno.
+Puede crear una configuración de borde haciendo clic en **[!UICONTROL Nueva configuración]** de borde en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno.
 
 ### Configuración de Entorno predeterminada
 
