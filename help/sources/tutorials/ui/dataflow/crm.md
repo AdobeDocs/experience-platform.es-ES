@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector CRM en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 737f3b0fe9bbc04029fc1002613d4efc0bb3f5bd
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '1167'
+ht-degree: 0%
 
 ---
 
@@ -74,16 +74,29 @@ Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una pro
 
 | Campo | Descripción |
 | --- | --- |
-| Frecuencia | Las frecuencias seleccionables incluyen Minuto, Hora, Día y Semana. |
+| Frecuencia | Las frecuencias seleccionables incluyen Una vez, Minuto, Hora, Día y Semana. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
-| Tiempo de Inicio | Marca de hora UTC para la que se producirá la primera ingestión. |
-| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *[!UICONTROL Rellenar]* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
+| Tiempo de Inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión |
+| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *Rellenar* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *de* Inicio. Los archivos cargados antes de la hora *de* Inicio no se ingieren. |
+| Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
-Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Si solo desea realizar una ingesta una vez a través de este flujo de trabajo, puede hacerlo configurando la **[!UICONTROL Frecuencia]** en &quot;Día&quot; y aplicando un número muy grande para el **[!UICONTROL intervalo]**, como 10000 o similar.
+Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
 
-Proporcione valores para la programación y haga clic en **[!UICONTROL Siguiente]**.
+Para establecer la hora de inicio para la ingestión, ajuste la fecha y la hora que se muestran en el cuadro de hora del inicio. También puede seleccionar el icono de calendario para editar el valor de tiempo del inicio. La hora de Inicio debe ser buena o igual a la hora UTC actual.
 
-![programar](../../../images/tutorials/dataflow/crm/scheduling.png)
+Seleccione **[!UICONTROL Cargar datos incrementales por]** para asignar la columna delta. Este campo ofrece una distinción entre los datos nuevos y los existentes.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configurar un flujo de datos de ingestión único
+
+Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**.
+
+>[!TIP] **[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
+
+![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
 
 ## Asigne un nombre al flujo de datos
 
