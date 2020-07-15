@@ -4,9 +4,9 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '560'
 ht-degree: 4%
 
 ---
@@ -31,8 +31,9 @@ Puede crear un ID de configuración con la herramienta [de configuración](../fu
 
 La red perimetral Experience Platform toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo espera la red de Edge que se formateen los datos. Para enviar datos, deberá definir su esquema. Asegúrese de completar lo siguiente:
 
-- [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
-- Añadir la mezcla de SDK web de Adobe Experience Platform en el esquema que ha creado
+1. [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
+2. Añada la combinación ExperienceEvent de AEP Web SDK en el esquema que haya creado.
+3. Cree un conjunto de datos a partir del esquema que ha creado.
 
 El siguiente vídeo está diseñado para ayudarle en la creación de un conector de origen de esquema, conjunto de datos y flujo continuo para sus datos del SDK web.
 
