@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de pago en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 0d6f5776fef93b3d96461fc18c8818231e4c2e44
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Aparecerá el cuadro de diálogo *[!UICONTROL Seleccionar esquema]* . Seleccione
 
 En función de sus necesidades, puede elegir asignar los campos directamente o utilizar funciones de asignador para transformar los datos de origen para derivar valores calculados o calculados. Para obtener más información sobre la asignación de datos y las funciones del asignador, consulte el tutorial sobre la [asignación de datos CSV a campos](../../../../ingestion/tutorials/map-a-csv-file.md)de esquema XDM.
 
-La pantalla *[!UICONTROL Asignación]* también permite definir la columna ** Delta. Cuando se crea el flujo del conjunto de datos, se puede establecer cualquier campo de marca de hora como base para decidir qué registros se van a transferir en las ingestas incrementales programadas.
+La pantalla *[!UICONTROL Asignación]* también permite definir la columna ** Delta. Cuando se crea el flujo de datos, se puede definir cualquier campo de marca de hora como base para decidir qué registros se van a transferir en las compras incrementales programadas.
 
 Una vez asignados los datos de origen, haga clic en **[!UICONTROL Siguiente]**.
 
@@ -82,20 +82,33 @@ Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una pro
 
 | Campo | Descripción |
 | --- | --- |
-| Frecuencia | Las frecuencias seleccionables incluyen Minuto, Hora, Día y Semana. |
+| Frecuencia | Las frecuencias seleccionables incluyen Una vez, Minuto, Hora, Día y Semana. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
-| Tiempo de Inicio | Marca de hora UTC para la que se producirá la primera ingestión. |
-| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *[!UICONTROL Rellenar]* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
+| Tiempo de Inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión |
+| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *Rellenar* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *de* Inicio. Los archivos cargados antes de la hora *de* Inicio no se ingieren. |
+| Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
-Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Si solo desea realizar una ingesta una vez a través de este flujo de trabajo, puede hacerlo configurando la **[!UICONTROL Frecuencia]** en &quot;Día&quot; y aplicando un número muy grande para el **[!UICONTROL intervalo]**, como 10000 o similar.
+Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
 
-Proporcione valores para la programación y haga clic en **[!UICONTROL Siguiente]**.
+Para establecer la hora de inicio para la ingestión, ajuste la fecha y la hora que se muestran en el cuadro de hora del inicio. También puede seleccionar el icono de calendario para editar el valor de tiempo del inicio. La hora de Inicio debe ser buena o igual a la hora UTC actual.
 
-![programar](../../../images/tutorials/dataflow/payments/scheduling.png)
+Seleccione **[!UICONTROL Cargar datos incrementales por]** para asignar la columna delta. Este campo ofrece una distinción entre los datos nuevos y los existentes.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configurar un flujo de datos de ingestión único
+
+Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**.
+
+>[!TIP] **[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
 
 ## Asigne un nombre al flujo de datos
 
-Aparece el paso de detalle *[!UICONTROL del flujo de]* datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de conjuntos de datos. Seleccione **[!UICONTROL Siguiente]** cuando termine.
+Aparece el paso de detalles ** de flujo de datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de datos. Seleccione **[!UICONTROL Siguiente]** cuando termine.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
@@ -117,7 +130,7 @@ Una vez creado el flujo de datos, puede monitorear los datos que se están inger
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente un flujo de conjuntos de datos para incorporar datos de un sistema de automatización de marketing y ha adquirido una perspectiva sobre la supervisión de conjuntos de datos. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado correctamente un flujo de datos para incorporar datos de un sistema de automatización de marketing y ha adquirido una perspectiva sobre la supervisión de conjuntos de datos. Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 - [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 - [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
@@ -126,11 +139,11 @@ Siguiendo este tutorial, ha creado correctamente un flujo de conjuntos de datos 
 
 Las secciones siguientes proporcionan información adicional para trabajar con conectores de origen.
 
-### Deshabilitar un flujo de conjuntos de datos
+### Deshabilitar un flujo de datos
 
-Cuando se crea un flujo de conjunto de datos, se activa inmediatamente y se ingieren datos según la programación que se le haya dado. Puede deshabilitar un flujo de conjuntos de datos activo en cualquier momento siguiendo las instrucciones a continuación.
+Cuando se crea un flujo de datos, se activa inmediatamente y se ingieren datos según la programación que se le haya dado. Puede desactivar un flujo de datos activo en cualquier momento siguiendo las instrucciones que se indican a continuación.
 
-En la pantalla Flujos *[!UICONTROL de]* datos, seleccione el nombre del flujo de conjuntos de datos que desea deshabilitar.
+En la pantalla *[!UICONTROL Flujos]* de datos, seleccione el nombre del flujo de datos que desea deshabilitar.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/payments/view-dataset-flows.png)
 
