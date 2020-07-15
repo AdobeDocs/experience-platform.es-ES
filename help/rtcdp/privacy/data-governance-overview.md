@@ -4,10 +4,10 @@ seo-title: Administración de datos en tiempo real de datos de clientes Platform
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 1%
+source-wordcount: '1056'
+ht-degree: 0%
 
 ---
 
@@ -49,10 +49,7 @@ Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimient
 
 Adobe Experience Platform proporciona varias políticas **** principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver en la interfaz de usuario navegando al espacio de trabajo **[!UICONTROL Directivas]** y seleccionando la ficha **[!UICONTROL Examinar]** . Consulte la guía [del usuario de](../../data-governance/policies/user-guide.md) directivas en la documentación del Experience Platform para ver los pasos más detallados sobre cómo trabajar con políticas en la interfaz de usuario, incluido cómo crear sus propias políticas personalizadas.
 
-## (Beta) Aplicar el cumplimiento del uso de datos {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Esta función está en fase beta y no está disponible para todos los usuarios. Se puede habilitar si se solicita. La documentación y las funciones están sujetas a cambios.
+## Aplicar el cumplimiento de uso de datos {#enforce-data-usage-compliance}
 
 Una vez etiquetados los datos y definidas las políticas de uso, puede imponer el cumplimiento de las políticas en el uso de los datos. Cuando se activan segmentos de audiencia a destinos en tiempo real CDP, la Administración de datos aplica automáticamente las políticas de uso en caso de que se produzcan infracciones.
 
