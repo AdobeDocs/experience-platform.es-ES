@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de etiquetas de uso de datos
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ Puede repetir estos pasos para continuar agregando y editando etiquetas de campo
 ![Seleccione varios campos para aplicar etiquetas de nivel de campo simultáneamente.](../images/labels/fields_select_multiple.png)
 
 Es importante recordar que la herencia se mueve sólo desde el nivel superior hacia abajo (conjunto de datos → campos), lo que significa que las etiquetas aplicadas en el nivel de campo no se propagan a otros campos o conjuntos de datos.
+
+## Administración de etiquetas personalizadas
+
+Puede crear sus propias etiquetas de uso personalizadas en el espacio de trabajo *[!UICONTROL Directivas]* de la [!DNL Experience Platform] IU. Haga clic en **[!UICONTROL Directivas]** en el panel de navegación izquierdo y, a continuación, haga clic en **[!UICONTROL Etiquetas]** para vista de una lista de las etiquetas existentes. Desde aquí, haga clic en **[!UICONTROL Crear etiqueta]**.
+
+![](../images/labels/create-label-btn.png)
+
+Aparece el cuadro de diálogo *[!UICONTROL Crear etiqueta]* . A partir de aquí, proporcione la siguiente información para la nueva etiqueta:
+
+* **[!UICONTROL Identificador]**: Identificador único de la etiqueta. Este valor se utiliza con fines de búsqueda y, por lo tanto, debe ser corto y conciso.
+* **[!UICONTROL Nombre]**: Un nombre descriptivo para la etiqueta.
+* **[!UICONTROL Descripción]**: (Opcional) Una descripción de la etiqueta para proporcionar contexto adicional.
+
+Cuando termine, haga clic en **[!UICONTROL Crear]**.
+
+![](../images/labels/create-label.png)
+
+El cuadro de diálogo se cierra y la etiqueta personalizada recién creada aparece en la lista en la ficha *[!UICONTROL Etiquetas]* .
+
+![](../images/labels/label-created.png)
+
+La etiqueta ahora se puede seleccionar en Etiquetas ** personalizadas al editar etiquetas de uso para conjuntos de datos y campos, o al crear políticas de uso de datos.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Pasos siguientes
 
