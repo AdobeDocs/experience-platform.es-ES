@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Terminología del RGPD
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 5%
 
 ---
 
@@ -61,7 +64,7 @@ __Sistema de archivo:__ Cualquier conjunto específico de datos personales a los
 
 ## G
 
-__RGPD:__ El Reglamento General de Protección de Datos (RGPD) es un marco jurídico que establece directrices para la recogida y el tratamiento de la información personal de las personas en la Unión Europea (UE). El RGPD establece los principios de gestión de datos y los derechos de la persona, al tiempo que impone multas que pueden basarse en los ingresos. El RGPD abarca todas las compañías que se ocupan de los datos de los ciudadanos de la UE, por lo que es una reglamentación decisiva para los funcionarios encargados del cumplimiento de las normas empresariales en los bancos, las aseguradoras y otras compañías financieras. El RGPD entrará en vigor en toda la UE el 25 de mayo de 2018.
+__RGPD:__ El [!DNL General Data Protection Regulation] RGPD es un marco jurídico que establece directrices para la recogida y el tratamiento de la información personal de las personas en la Unión Europea (UE). El RGPD establece los principios de gestión de datos y los derechos de la persona, al tiempo que impone multas que pueden basarse en los ingresos. El RGPD abarca todas las compañías que se ocupan de los datos de los ciudadanos de la UE, por lo que es una reglamentación decisiva para los funcionarios encargados del cumplimiento de las normas empresariales en los bancos, las aseguradoras y otras compañías financieras. El RGPD entrará en vigor en toda la UE el 25 de mayo de 2018.
 
 __Datos genéticos:__ Datos relativos a las características de una persona hereditaria o adquirida que proporcionan información única sobre la salud o la fisiología de la persona.
 
@@ -71,7 +74,7 @@ __Grupo de empresas:__ Una empresa de control y sus empresas controladas.
 
 ## I
 
-__Servicios de administración de identidades (IMS):__ Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y la autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Los usuarios pueden iniciar sesión directamente con Renga (el proveedor de servicios de identidad de Adobe) o mediante un dominio de autenticación de terceros de confianza (como Google, Facebook o un LDAP corporativo o de organización).
+__Servicios de Identity Management (IMS):__ Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y la autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __ID de organización de IMS:__ Se refiere a un token de autorización de Adobe para la autenticación servicio a servicio, que no requiere el inicio de sesión del usuario. Se emite a un cliente de IMS y no tiene ningún usuario asociado. Un cliente de IMS necesita un token de servicio para autorizar solicitudes de canal de retorno entre servicios. (El término “token de sistema” se utiliza de forma ocasional con el significado de “token de servicio”).
 
