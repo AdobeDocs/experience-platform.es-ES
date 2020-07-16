@@ -4,54 +4,54 @@ solution: Experience Platform
 title: Guía para desarrolladores de API de registro de Esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
 
 
-# Guía para desarrolladores de API de registro de Esquema
+# [!DNL Schema Registry] Guía para desarrolladores de API
 
-El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobe, los socios Experience Platform y los proveedores cuyas aplicaciones utilice. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
+Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobe, los socios [!DNL Experience Platform] y los proveedores cuyas aplicaciones utilice. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
 
-En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio mediante la API del Registro de Esquema. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el Registro de Esquemas.
+En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Schema Registry] API. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el [!DNL Schema Registry].
 
 ## Requisitos previos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Sistema](../home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [!DNL Experience Data Model (XDM) System](../home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM.
-* [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas correctamente a la API del Registro de Esquema.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a la [!DNL Schema Registry] API correctamente.
 
 ## Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ## Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de Experience Platform, incluidos los que pertenecen al Registro de Esquemas, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-Todas las solicitudes de búsqueda (GET) al Registro de Esquema requieren un encabezado de aceptación adicional, cuyo valor determina el formato de la información devuelta por la API. Consulte la sección [Aceptar encabezado](#accept) más abajo para obtener más detalles.
+Todas las solicitudes de búsqueda (GET) al [!DNL Schema Registry] requieren un encabezado Accept adicional, cuyo valor determina el formato de la información devuelta por la API. Consulte la sección [Aceptar encabezado](#accept) más abajo para obtener más detalles.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve información sobre el uso del Registro de Esquemas por parte de su organización. Esto incluye un `tenantId` atributo cuyo valor es su `TENANT_ID`.
+Una respuesta correcta devuelve información sobre el uso de la [!DNL Schema Registry]. Esto incluye un `tenantId` atributo cuyo valor es su `TENANT_ID`.
 
 ```JSON
 {
@@ -161,17 +161,17 @@ Una respuesta correcta devuelve información sobre el uso del Registro de Esquem
 
 ## Comprender el `CONTAINER_ID` {#container}
 
-Las llamadas a la API del Registro de Esquema requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor **** global y el contenedor **de** inquilinos.
+Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor **** global y el contenedor **de** inquilinos.
 
 ### contenedor global
 
-El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas que proporciona el socio estándar de Adobe y el Experience Platform. Sólo puede realizar solicitudes de lista y búsqueda (GET) con respecto al contenedor global.
+El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas proporcionados por Adobe y [!DNL Experience Platform] el socio. Sólo puede realizar solicitudes de lista y búsqueda (GET) con respecto al contenedor global.
 
 ### contenedor del inquilino
 
 No debe confundirse con su único `TENANT_ID`, el contenedor del inquilino contiene todas las clases, mezclas, tipos de datos, esquemas y descriptores definidos por una organización de IMS. Son exclusivas de cada organización, lo que significa que no son visibles ni manejables por otras organizaciones de IMS. Puede realizar todas las operaciones de CRUD (GET, POST, PUT, PATCH, DELETE) con los recursos que cree en el contenedor del inquilino.
 
-Cuando se crea una clase, mezcla, esquema o tipo de datos en el contenedor del inquilino, se guarda en el Registro de Esquemas y se asigna un `$id` URI que incluye su `TENANT_ID`. Esto `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de `$id` valores.
+Cuando se crea una clase, una mezcla, un esquema o un tipo de datos en el contenedor del inquilino, se guarda en el  [!DNL Schema Registry] y se asigna un `$id` URI que incluye su `TENANT_ID`. Esto `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de `$id` valores.
 
 ## Identificación del Esquema {#schema-identification}
 
@@ -189,7 +189,7 @@ Las llamadas a la API del Registro de Esquema admitirán el `$id` URI con codifi
 
 ## Aceptar encabezado {#accept}
 
-Al realizar operaciones de lista y búsqueda (GET) en la API del Registro de Esquema, se requiere un encabezado Accept para determinar el formato de los datos devueltos por la API. Al buscar recursos específicos, también se debe incluir un número de versión en el encabezado Aceptar.
+Al realizar operaciones de lista y búsqueda (GET) en la [!DNL Schema Registry] API, se requiere un encabezado Accept para determinar el formato de los datos devueltos por la API. Al buscar recursos específicos, también se debe incluir un número de versión en el encabezado Aceptar.
 
 Las siguientes listas de tabla son compatibles con los valores de encabezado Accept, incluidos los que tienen números de versión, junto con las descripciones de lo que la API devolverá cuando se utilicen.
 
@@ -242,4 +242,4 @@ Consulte el [apéndice](appendix.md) para obtener más información sobre cómo 
 
 ## Pasos siguientes
 
-Este documento abarcaba los conocimientos previos necesarios para realizar llamadas a la API del Registro de Esquema, incluidas las credenciales de autenticación necesarias. Ahora puede continuar con las llamadas de muestra que se proporcionan en esta guía para desarrolladores y seguir sus instrucciones. Para obtener un tutorial paso a paso completo sobre cómo realizar un esquema en la API, consulte el siguiente [tutorial](../tutorials/create-schema-api.md).
+Este documento cubría los conocimientos previos necesarios para realizar llamadas a la [!DNL Schema Registry] API, incluidas las credenciales de autenticación necesarias. Ahora puede continuar con las llamadas de muestra que se proporcionan en esta guía para desarrolladores y seguir sus instrucciones. Para obtener un tutorial paso a paso completo sobre cómo realizar un esquema en la API, consulte el siguiente [tutorial](../tutorials/create-schema-api.md).
