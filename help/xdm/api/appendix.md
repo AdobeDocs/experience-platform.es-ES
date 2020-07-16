@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apéndice para desarrolladores de Esquema Registry
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1265'
 ht-degree: 4%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Apéndice
 
-Este documento proporciona información adicional relacionada con el trabajo con la API del Registro de Esquemas.
+Este documento proporciona información adicional relacionada con el trabajo con la [!DNL Schema Registry] API.
 
 ## Modo de compatibilidad
 
-El modelo de datos de experiencia (XDM) es una especificación documentada públicamente, impulsada por Adobe para mejorar la interoperabilidad, la expresividad y el poder de las experiencias digitales. Adobe mantiene el código fuente y las definiciones XDM formales en un proyecto de código [abierto en GitHub](https://github.com/adobe/xdm/). Estas definiciones se escriben en notación estándar XDM, utilizando JSON-LD (JavaScript Object Notation for Linked Data) y Esquema JSON como gramática para definir esquemas XDM.
+[!DNL Experience Data Model] (XDM) es una especificación documentada públicamente, impulsada por Adobe para mejorar la interoperabilidad, la expresividad y el poder de las experiencias digitales. Adobe mantiene el código fuente y las definiciones XDM formales en un proyecto de código [abierto en GitHub](https://github.com/adobe/xdm/). Estas definiciones se escriben en notación estándar XDM, utilizando JSON-LD (JavaScript Object Notation for Linked Data) y Esquema JSON como gramática para definir esquemas XDM.
 
-Al consultar las definiciones XDM formales en el repositorio público, puede ver que el XDM estándar difiere de lo que ve en Adobe Experience Platform. Lo que se ve en Experience Platform se llama Modo de compatibilidad y proporciona una sencilla asignación entre el XDM estándar y la forma en que se utiliza en Platform.
+Al consultar las definiciones XDM formales en el repositorio público, puede ver que el XDM estándar difiere de lo que ve en Adobe Experience Platform. Lo que se ve en [!DNL Experience Platform] se llama Modo de compatibilidad y proporciona una sencilla asignación entre el XDM estándar y la forma en que se utiliza en [!DNL Platform].
 
 ### Funcionamiento del modo de compatibilidad
 
@@ -28,7 +28,7 @@ El modo de compatibilidad permite que el modelo JSON-LD de XDM funcione con la i
 
 La principal diferencia que notará entre el modo XDM estándar y el modo de compatibilidad es la eliminación del prefijo &quot;xdm:&quot; para los nombres de campo.
 
-A continuación se muestra una comparación paralela que muestra los campos relacionados con el cumpleaños (con los atributos &quot;description&quot; eliminados) tanto en el modo XDM estándar como en el modo de compatibilidad. Observe que los campos Modo de compatibilidad incluyen una referencia al campo XDM y su tipo de datos en los atributos &quot;meta:xdmField&quot; y &quot;meta:xdmType&quot;.
+La siguiente es una comparación paralela que muestra los campos relacionados con el cumpleaños (con los atributos &quot;description&quot; eliminados) tanto en el modo XDM estándar como en el modo de compatibilidad. Observe que los campos Modo de compatibilidad incluyen una referencia al campo XDM y su tipo de datos en los atributos &quot;meta:xdmField&quot; y &quot;meta:xdmType&quot;.
 
 <table>
   <th>XDM estándar</th>
@@ -51,15 +51,15 @@ A continuación se muestra una comparación paralela que muestra los campos rela
 
 Adobe Experience Platform está diseñado para trabajar con múltiples soluciones y servicios, cada uno con sus propios desafíos y limitaciones técnicos (por ejemplo, cómo ciertas tecnologías manejan caracteres especiales). Para superar estas limitaciones, se desarrolló el Modo de compatibilidad.
 
-La mayoría de los servicios Experience Platform, incluidos Catálogo, Data Lake y Perfil de clientes en tiempo real, utilizan el modo de compatibilidad en lugar del XDM estándar. La API del Registro de Esquema también utiliza el Modo de compatibilidad y todos los ejemplos de este documento se muestran mediante el Modo de compatibilidad.
+La mayoría de [!DNL Experience Platform] los servicios, incluidos [!DNL Catalog], [!DNL Data Lake]y [!DNL Real-time Customer Profile] utilizados [!DNL Compatibility Mode] en lugar de XDM estándar. La [!DNL Schema Registry] API también utiliza [!DNL Compatibility Mode], y todos los ejemplos de este documento se muestran usando [!DNL Compatibility Mode].
 
-Vale la pena saber que se produce una asignación entre el XDM estándar y la forma en que se realiza en Experience Platform, pero no debería afectar al uso de los servicios de Platform.
+Vale la pena saber que se produce una asignación entre el XDM estándar y la forma en que se realiza su operación en [!DNL Experience Platform], pero no debería afectar al uso de [!DNL Platform] los servicios.
 
-El proyecto de código abierto está disponible para usted, pero cuando se trata de interactuar con los recursos a través del Registro de Esquemas, los ejemplos de API de este documento proporcionan las mejores prácticas que debe conocer y seguir.
+El proyecto de código abierto está disponible para usted, pero cuando se trata de interactuar con los recursos a través del [!DNL Schema Registry], los ejemplos de API de este documento proporcionan las prácticas recomendadas que debe conocer y seguir.
 
 ## Definición de tipos de campo XDM en la API {#field-types}
 
-Los esquemas XDM se definen utilizando estándares de Esquema JSON y tipos de campo básicos, con restricciones adicionales para los nombres de campo que son impuestas por el Experience Platform. XDM permite definir tipos de campo adicionales mediante el uso de formatos y restricciones opcionales. Los tipos de campo XDM están expuestos por el atributo de nivel de campo `meta:xdmType`.
+Los esquemas XDM se definen utilizando estándares de Esquema JSON y tipos de campo básicos, con restricciones adicionales para los nombres de campo que son aplicados por [!DNL Experience Platform]. XDM permite definir tipos de campo adicionales mediante el uso de formatos y restricciones opcionales. Los tipos de campo XDM están expuestos por el atributo de nivel de campo `meta:xdmType`.
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ Para empezar, busque el tipo de campo deseado y utilice el código de muestra pr
   <tr>
     <td>map</td>
     <td>type:<br/><br/><strong>objectNota:</strong><br/>El uso del tipo de datos 'map' está reservado para el uso de esquemas del sector y del proveedor y no está disponible para su uso en campos definidos por el inquilino. Se utiliza en esquemas estándar cuando los datos se representan como claves que se asignan a algún valor, o cuando las claves no pueden incluirse razonablemente en un esquema estático y deben tratarse como valores de datos.</td>
-    <td>UN 'mapa' NO DEBE definir ninguna propiedad. DEBE definir un solo esquema "extraProperties" para describir el tipo de valores contenidos en el "mapa". Un 'mapa' en XDM puede contener un solo tipo de datos. Los valores pueden ser cualquier definición de esquema XDM válida, incluyendo una matriz o un objeto, o como referencia a otro esquema (mediante $ref).<br/><br/>Campo de mapa con valores de tipo 'string':
+    <td>UN 'mapa' NO DEBE definir ninguna propiedad. DEBE definir un único esquema "[!UICONTROL extraProperties]" para describir el tipo de valores contenidos en el 'mapa'. Un 'mapa' en XDM puede contener un solo tipo de datos. Los valores pueden ser cualquier definición de esquema XDM válida, incluyendo una matriz o un objeto, o como referencia a otro esquema (mediante $ref).<br/><br/>Campo de mapa con valores de tipo 'string':
       <pre class="JSON language-JSON hljs">
         "sampleField": { "type": "object", "extraProperties":{ "type": "string" } }
       </pre>
@@ -243,7 +243,7 @@ Para empezar, busque el tipo de campo deseado y utilice el código de muestra pr
 
 La tabla siguiente describe la asignación entre &quot;meta:xdmType&quot; y otros formatos de serialización.
 
-| Tipo<br>XDM(meta:xdmType) | JSON<br>(Esquema JSON) | Parquet<br>(tipo/anotación) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
+| Tipo<br>XDM(meta:xdmType) | JSON<br>(Esquema JSON) | Parquet<br>(tipo/anotación) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Cadena | System.String | Cadena | string | Cadena | string |
 | entero | type:number | DOBLE | DoubleType | java.lang.Double | Duplicada | System.Double | Número | doble | Duplicada | doble |
