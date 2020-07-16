@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Crear un esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 1%
 
 ---
 
 
 # Crear un esquema
 
-Un esquema se puede considerar como el modelo para los datos que desea transferir a la plataforma de experiencia. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utilizará al menos una mezcla.
+Un esquema se puede considerar como el modelo para los datos en los que desea realizar la ingesta [!DNL Experience Platform]. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utilizará al menos una mezcla.
 
 El proceso de composición de esquema comienza asignando una clase. La clase define los aspectos de comportamiento clave de los datos (registro o serie temporal), así como los campos mínimos requeridos para describir los datos que se van a ingestar.
 
@@ -51,7 +54,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos el `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y son asignados por el Registro de Esquemas.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos el `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
 
 ```JSON
 {
