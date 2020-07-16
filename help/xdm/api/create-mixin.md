@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Crear una mezcla
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
 
 Las mezclas son un conjunto de campos utilizados para describir un concepto concreto, como &quot;dirección&quot; o &quot;preferencias de perfil&quot;. Existen numerosas mezclas estándar disponibles o puede definir las suyas cuando desee capturar información exclusiva de su organización. Cada mezcla contiene un `meta:intendedToExtend` campo que lista las clases con las que es compatible la mezcla.
 
-Puede que le resulte útil revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede realizar la lista (GET) de todas las mezclas compatibles con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. Los ejemplos siguientes devolverán todas las mezclas que se pueden utilizar con la clase de Perfil XDM Individual:
+Puede que le resulte útil revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede realizar la lista (GET) de todas las mezclas compatibles con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. Los ejemplos siguientes devolverán todas las mezclas que se pueden utilizar con la [!DNL XDM Individual Profile] clase:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -99,7 +102,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y son asignados por el Registro de Esquemas.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
 
 ```JSON
 {
