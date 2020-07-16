@@ -4,28 +4,28 @@ solution: Experience Platform
 title: Suscripción a Eventos de privacidad
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
 
 
-# Suscripción a Eventos de privacidad
+# Suscribirse a [!DNL Privacy Events]
 
-Los Eventos de privacidad son mensajes proporcionados por Adobe Experience Platform Privacy Service, que aprovechan los Eventos de Adobe I/O enviados a un enlace web configurado para facilitar una automatización eficaz de las solicitudes de trabajo. Reducirán o eliminarán la necesidad de sondear la API de Privacy Service para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo.
+[!DNL Privacy Events] son mensajes proporcionados por Adobe Experience Platform [!DNL Privacy Service], que aprovechan los Eventos de Adobe I/O enviados a un webgancho configurado para facilitar una automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo.
 
 Actualmente existen cuatro tipos de notificaciones relacionadas con el ciclo vital de la solicitud de trabajo de privacidad:
 
 | Tipo | Descripción |
 --- | ---
-| Trabajo completado | Todas las soluciones de Experience Cloud han informado y el estado global o general del trabajo se ha marcado como completado. |
+| Trabajo completado | Todas [!DNL Experience Cloud] las soluciones han sido informadas y el estado general o global del trabajo se ha marcado como completado. |
 | Error de trabajo | Una o más soluciones han informado de un error al procesar la solicitud. |
 | Producto completado | Una de las soluciones asociadas con este trabajo ha completado su trabajo. |
 | Error del producto | Una de las soluciones informó de un error al procesar la solicitud. |
 
-Este documento proporciona los pasos para configurar una integración de las notificaciones de Privacy Service en Adobe I/O. Para obtener información general de alto nivel sobre Privacy Service y sus funciones, consulte la información general sobre [Privacy Service](home.md).
+Este documento proporciona los pasos para configurar una integración para [!DNL Privacy Service] las notificaciones dentro de Adobe I/O. Para obtener una descripción general de alto nivel de [!DNL Privacy Service] y sus funciones, consulte la descripción general [del](home.md)Privacy Service.
 
 ## Primeros pasos
 
@@ -82,7 +82,7 @@ Una vez que haya terminado de crear un nuevo proyecto en la consola, haga clic e
 
 ![](./images/privacy-events/add-event-button.png)
 
-Aparece el cuadro de diálogo _Añadir eventos_ . Seleccione **[!UICONTROL Experience Cloud]** para filtrar la lista de los tipos de evento disponibles y, a continuación, seleccione Eventos **[!UICONTROL de]** Privacy Service antes de hacer clic en **[!UICONTROL Siguiente]**.
+Aparece el cuadro de diálogo _Añadir eventos_ . Seleccione **[!UICONTROL Experience Cloud]** para filtrar la lista de un tipo de evento disponible y, a continuación, seleccione Eventos **[!UICONTROL de]** Privacy Service antes de hacer clic en **[!UICONTROL Siguiente]**.
 
 ![](./images/privacy-events/add-privacy-events.png)
 
@@ -110,11 +110,11 @@ Más abajo en la misma pantalla, se le ofrecen dos opciones para configurar cóm
 
 ![](./images/privacy-events/webhook-details.png)
 
-La página de detalles del proyecto vuelve a aparecer, con Eventos de privacidad debajo de _[!UICONTROL Eventos]_en el panel de navegación izquierdo.
+La página de detalles del proyecto vuelve a aparecer, [!DNL Privacy Events] con _[!UICONTROL Eventos]_en el panel de navegación izquierdo.
 
 ## Datos de evento de Vista
 
-Una vez que haya registrado Eventos de privacidad con su proyecto y que los trabajos de privacidad se hayan procesado, puede realizar la vista de cualquier notificación recibida para ese registro. En la ficha **[!UICONTROL Proyectos]** de la consola de desarrollador, seleccione el proyecto en la lista para abrir la página Información general __ del producto. Desde aquí, seleccione Eventos **[!UICONTROL de]** privacidad en el panel de navegación izquierdo.
+Una vez que se haya registrado [!DNL Privacy Events] con el proyecto y se hayan procesado los trabajos de privacidad, podrá realizar la vista de las notificaciones recibidas para ese registro. En la ficha **[!UICONTROL Proyectos]** de la consola de desarrollador, seleccione el proyecto en la lista para abrir la página Información general __ del producto. Desde aquí, seleccione Eventos **[!UICONTROL de]** privacidad en el panel de navegación izquierdo.
 
 ![](./images/privacy-events/events-left-nav.png)
 
