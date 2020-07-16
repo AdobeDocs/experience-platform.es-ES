@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servicio de Consulta de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,6 @@ ht-degree: 0%
 >[!NOTE]
 >Los tutoriales de Adobe Experience Platform se han trasladado recientemente. Para encontrar un tutorial, seleccione el [!DNL Platform] área correcta en el panel de navegación izquierdo. Tómese un momento para actualizar cualquier marcador existente.
 
-Adobe Experience Platform es la primera plataforma de gestión de la experiencia del cliente creada específicamente para este fin. Con perfiles de clientes en tiempo real, inteligencia continua y una arquitectura abierta y extensible, hace realidad la entrega de experiencias personalizadas a gran escala. Empiece con Platform de forma rápida y sencilla, siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático.
+Adobe Experience Platform es la primera plataforma de gestión de la experiencia del cliente creada específicamente para este fin. Con perfiles de clientes en tiempo real, inteligencia continua y una arquitectura abierta y extensible, hace realidad la entrega de experiencias personalizadas a gran escala. Empiece con [!DNL Platform] rapidez y facilidad siguiendo los tutoriales paso a paso de todo, desde la preparación de los datos para la ingesta hasta algoritmos avanzados de aprendizaje automático.
 
 Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación [del](../landing/documentation/overview.md)Experience Platform, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales. Además, si experimenta errores mientras trabaja con los tutoriales, consulte la guía [de solución de problemas de](../landing/troubleshooting.md) Adobe Experience Platform o las guías de funciones individuales para obtener ayuda.
