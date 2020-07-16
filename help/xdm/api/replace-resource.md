@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Reemplazar un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Reemplazar un recurso
 
-El Registro de Esquemas permite reemplazar un recurso completo mediante una operación PUT. Esta operación esencialmente vuelve a escribir el recurso, por lo tanto el cuerpo de la solicitud debe incluir todos los campos que serían necesarios al crear un nuevo recurso mediante una solicitud POST.
+La [!DNL Schema Registry] permite reemplazar un recurso completo mediante una operación PUT. Esta operación esencialmente vuelve a escribir el recurso, por lo tanto el cuerpo de la solicitud debe incluir todos los campos que serían necesarios al crear un nuevo recurso mediante una solicitud POST.
 
 Este método es especialmente útil si desea actualizar mucha información en el recurso a la vez.
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde el [!DNL Schema Library]. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
 | `{RESOURCE_ID}` | El `$id` URI con codificación URL o `meta:altId` del recurso. |
 
 **Solicitud**
