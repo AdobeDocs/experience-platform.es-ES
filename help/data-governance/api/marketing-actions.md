@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Acciones de mercadotecnia
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Acciones de mercadotecnia
 
-Una acción de mercadotecnia, en el contexto de la Administración de datos de Adobe Experience Platform, es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
+Una acción de mercadotecnia, en el contexto del Adobe Experience Platform [!DNL Data Governance], es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
 Trabajar con acciones de marketing en la API requiere que utilice el `/marketingActions` punto final.
 
