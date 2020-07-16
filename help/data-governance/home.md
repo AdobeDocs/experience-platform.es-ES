@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Administración de datos de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
-# Información general sobre la administración de datos
+# [!DNL Data Governance]sobre validación
 
 Una de las capacidades principales del Adobe Experience Platform es reunir los datos de varios sistemas empresariales para permitir que los especialistas en mercadotecnia identifiquen, comprendan y capten a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] son compatibles con las políticas de uso de datos.
 
-La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en [!DNL Experience Platform] varios niveles, incluyendo la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en [!DNL Experience Platform] varios niveles, incluyendo la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
 
 ## Funciones de administración de datos
 
@@ -44,7 +44,7 @@ Los especialistas en mercadotecnia son el punto final del gobierno de los datos.
 
 ## Marco DULE
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el marco central para el gobierno [!DNL Experience Platform] de datos. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
+El etiquetado y cumplimiento del uso de datos (DULE) es el marco de trabajo principal para [!DNL Experience Platform][!DNL Data Governance]. DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
 
 Existen tres elementos clave en el marco DULE: Etiquetas, políticas y aplicación.
 
@@ -54,7 +54,7 @@ Existen tres elementos clave en el marco DULE: Etiquetas, políticas y aplicaci�
 
 ## Etiquetas de uso de datos
 
-La Administración de datos permite a los administradores de datos aplicar etiquetas de uso en el nivel de base de datos y campo para categorizar los datos según el tipo de directivas que se apliquen.
+[!DNL Data Governance] permite a los administradores de datos aplicar etiquetas de uso en el nivel de campo y conjunto de datos para categorizar los datos según el tipo de directivas que se apliquen.
 
 El marco de trabajo DULE incluye etiquetas de uso de datos predefinidas que pueden utilizarse para categorizar los datos de tres maneras:
 
@@ -76,9 +76,9 @@ Consulte la descripción general de las etiquetas [de uso de](./labels/overview.
 
 Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se restringe el rendimiento de los datos dentro de [!DNL Experience Platform].
 
-Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que determinados tipos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta del Servicio de directivas que le indicará que se ha violado una política de uso de datos.
+Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que determinados tipos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta de la [!DNL Policy Service] que le informará de que se ha violado una política de uso de datos.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API de servicio de directivas DULE o la interfaz de usuario. [!DNL Experience Platform]
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API DULE [!DNL Policy Service] o la interfaz de [!DNL Experience Platform] usuario.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Para obtener más información sobre las políticas de uso de datos y las accion
 
 ## Versiones futuras
 
-El Gobierno de datos admite actualmente el etiquetado DULE en dos niveles (conjunto de datos y campo). La Administración de datos también admite la creación y administración de políticas de uso de datos y acciones de marketing a través de la API del servicio de políticas DULE.
+[!DNL Data Governance] actualmente admite el etiquetado DULE en dos niveles (conjunto de datos y campo). [!DNL Data Governance] también admite la creación y administración de políticas de uso de datos y acciones de marketing a través de la API DULE [!DNL Policy Service] .
 
 Las versiones posteriores proporcionarán las siguientes funciones:
 
@@ -97,15 +97,15 @@ Las versiones posteriores proporcionarán las siguientes funciones:
 
 ## Pasos siguientes
 
-Este documento proporcionó una introducción de alto nivel sobre la gobernanza de los datos y el marco de trabajo del DULE. Ahora puede continuar con las etiquetas de uso de [datos, la guía](labels/user-guide.md) del usuario y el inicio de agregar etiquetas de uso a los datos de experiencia.
+Este documento proporcionó una introducción de alto nivel [!DNL Data Governance] y el marco DULE. Ahora puede continuar con las etiquetas de uso de [datos, la guía](labels/user-guide.md) del usuario y el inicio de agregar etiquetas de uso a los datos de experiencia.
 
 ## Apéndice
 
-La siguiente sección proporciona información adicional con respecto a la Administración de datos.
+La siguiente sección proporciona información adicional sobre [!DNL Data Governance].
 
-### Terminología de la administración de datos
+### [!DNL Data Governance] terminología
 
-La siguiente tabla describe los términos clave relacionados con la administración de datos y el marco DULE.
+La siguiente tabla describe los términos clave relacionados con [!DNL Data Governance] y el marco DULE.
 
 | Término | Definición |
 |---|---|
@@ -126,6 +126,6 @@ La siguiente tabla describe los términos clave relacionados con la administraci
 
 ## Recursos adicionales
 
-El siguiente vídeo está diseñado para apoyar su comprensión del Gobierno de datos y describe los aspectos clave del marco de aplicación y etiquetado del uso de datos (DULE).
+El siguiente vídeo está diseñado para ayudarle a comprender [!DNL Data Governance]y describe los aspectos clave del marco de etiquetado y cumplimiento del uso de datos (DULE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
