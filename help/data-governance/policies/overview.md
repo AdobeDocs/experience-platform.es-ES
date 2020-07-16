@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre las directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Cuando el uso de datos se produce en el servicio de su organización, se deben i
 
 >[!NOTE]
 >
->Si utiliza datos de clientes en tiempo real de Platform, puede configurar casos de uso de marketing en destinos para automatizar la aplicación de políticas. Consulte el documento sobre Administración de [datos en tiempo real CDP](../../rtcdp/privacy/data-governance-overview.md) para obtener más información.
+>Si utiliza [!DNL Real-time Customer Data Platform], puede configurar casos de uso de mercadotecnia en destinos para automatizar la aplicación de políticas. Consulte el documento sobre Administración de [datos en tiempo real CDP](../../rtcdp/privacy/data-governance-overview.md) para obtener más información.
 
-Consulte el apéndice de este documento para ver una lista de las acciones [de marketing definidas por Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la API de servicio de directivas DULE o la interfaz de usuario de Experience Platform. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
+Consulte el apéndice de este documento para ver una lista de las acciones [de marketing definidas por Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la API DULE [!DNL Policy Service] o la interfaz de [!DNL Experience Platform ]usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -49,15 +49,15 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Administración de directivas de uso de datos {#manage}
 
-Una vez que se han aplicado las etiquetas de uso de datos, los administradores de datos pueden utilizar la API de servicio de directivas DULE o la interfaz de usuario del Experience Platform para administrar y evaluar las políticas relacionadas con las acciones de marketing que se realizan en datos que contienen etiquetas de uso de datos. Puede crear y actualizar políticas, determinar el estado de una política y trabajar con acciones de marketing para evaluar si una acción específica infringe una política de uso de datos.
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden utilizar la API DULE [!DNL Policy Service] [!DNL Experience Platform] o la interfaz de usuario para administrar y evaluar las políticas relacionadas con las acciones de marketing que se realizan en datos que contienen etiquetas de uso de datos. Puede crear y actualizar políticas, determinar el estado de una política y trabajar con acciones de marketing para evaluar si una acción específica infringe una política de uso de datos.
 
 >[!IMPORTANT]
 >
 >Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
-Para obtener instrucciones paso a paso sobre cómo trabajar con acciones de marketing y políticas de uso de datos en la API, consulte el tutorial sobre la [creación y evaluación de políticas](create.md)de uso de datos. Para obtener más información sobre las operaciones clave proporcionadas por la API de servicio de directivas, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
+Para obtener instrucciones paso a paso sobre cómo trabajar con acciones de marketing y políticas de uso de datos en la API, consulte el tutorial sobre la [creación y evaluación de políticas](create.md)de uso de datos. Para obtener más información sobre las operaciones clave proporcionadas por la [!DNL Policy Service] API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
-Para obtener información sobre cómo trabajar con las acciones y políticas de marketing en la interfaz de usuario de Platform, consulte la guía [del usuario de la directiva de uso de](./user-guide.md)datos.
+Para obtener información sobre cómo trabajar con las acciones y políticas de marketing en la interfaz de usuario, consulte la guía [!DNL Platform] del usuario de la directiva de uso de [](./user-guide.md)datos.
 
 ## Pasos siguientes
 
