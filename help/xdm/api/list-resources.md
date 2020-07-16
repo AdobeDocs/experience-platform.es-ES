@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recursos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Recursos de Lista
 
-Puede realizar una vista de una lista de todos los recursos del Registro de Esquemas de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud GET.
+Puede vista de una lista de todos los [!DNL Schema Registry] recursos de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud GET.
 
 >[!NOTE]
 >
->Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
+>Al enumerar los recursos, los [!DNL Schema Registry] resultados de límite se establecen en 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros [de](#paging)paginación. También se recomienda utilizar parámetros de consulta para [filtrar los resultados](#filtering) y reducir el número de recursos devueltos.
 
 **Formato API**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parámetro | Descripción |
 | --- | --- |
 | `{CONTAINER_ID}` | El contenedor donde se ubican los recursos (&quot;global&quot; o &quot;inquilino&quot;). |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a recuperar de la biblioteca de Esquemas. Los tipos válidos son `classes`, `mixins`, `schemas`, `datatypes`y `descriptors`. |
+| `{RESOURCE_TYPE}` | El tipo de recurso que se va a recuperar del [!DNL Schema Library]. Los tipos válidos son `classes`, `mixins`, `schemas`, `datatypes`y `descriptors`. |
 | `{QUERY_PARAMS`} | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
 
 **Solicitud**
@@ -78,7 +78,7 @@ La solicitud anterior utilizaba el encabezado `application/vnd.adobe.xed-id+json
 
 ## Uso de parámetros de consulta {#query}
 
-El Registro de Esquemas admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los recursos.
+La opción [!DNL Schema Registry] admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los recursos.
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ Puede filtrar los resultados utilizando el `property` parámetro, que se utiliza
 
 >[!TIP]
 >
->Puede utilizar el `property` parámetro para filtrar mezclas según su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase de Perfil XDM Individual.
+>Puede utilizar el `property` parámetro para filtrar mezclas según su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la [!DNL XDM Individual Profile] clase.
