@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear una clase
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 El principal componente de un esquema es una clase. La clase contiene el conjunto mínimo de campos que se deben definir para capturar los datos principales de un esquema. Por ejemplo, si diseñara un esquema para automóviles y camiones, lo más probable es que utilizaría una clase llamada Vehículo que describiera las propiedades comunes básicas de todos los vehículos.
 
-Adobe y otros socios Experience Platform proporcionan varias clases estándar, pero también puede definir sus propias clases y guardarlas en el Registro de Esquemas. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
+Adobe y otros [!DNL Experience Platform] socios proporcionan varias clases estándar, pero también puede definir sus propias clases y guardarlas en el [!DNL Schema Registry]. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_{TENANT_ID}` | La `TENANT_ID` Área de nombres de su organización. Todos los recursos creados por su organización deben incluir esta propiedad para evitar conflictos con otros recursos en el Registro de Esquemas. |
+| `_{TENANT_ID}` | La `TENANT_ID` Área de nombres de su organización. Todos los recursos creados por su organización deben incluir esta propiedad para evitar conflictos con otros recursos en la [!DNL Schema Registry]. |
 | `allOf` | lista de recursos cuyas propiedades van a heredar la nueva clase. Uno de los `$ref` objetos de la matriz define el comportamiento de la clase. En este ejemplo, la clase hereda el comportamiento &quot;record&quot;. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la clase recién creada, incluidos los `$id`, `meta:altId`y `version`. Estos tres valores son de sólo lectura y son asignados por el Registro de Esquemas.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la clase recién creada, incluidos los `$id`, `meta:altId`y `version`. Estos tres valores son de sólo lectura y los asigna el [!DNL Schema Registry].
 
 ```JSON
 {
