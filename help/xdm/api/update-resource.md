@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Actualizar un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Actualizar un recurso
 
-Puede modificar o actualizar los recursos en el contenedor del inquilino mediante una solicitud PATCH. El Registro de Esquemas admite todas las operaciones de parche de JSON estándar, incluidas la adición, eliminación y sustitución.
+Puede modificar o actualizar los recursos en el contenedor del inquilino mediante una solicitud PATCH. El [!DNL Schema Registry] admite todas las operaciones estándar de Parche JSON, incluidas la adición, eliminación y sustitución.
 
 Para obtener más información sobre JSON Patch, incluidas las operaciones disponibles, consulte la documentación [oficial de](http://jsonpatch.com/)JSON Patch.
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde el [!DNL Schema Library]. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
 | `{RESOURCE_ID}` | El `$id` URI con codificación URL o `meta:altId` del recurso. |
 
 **Solicitud**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{RESOURCE_TYPE}` | Tipo de recurso que se va a actualizar desde el [!DNL Schema Library]. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
 | `{RESOURCE_ID}` | El `$id` URI con codificación URL o `meta:altId` del recurso. |
 
 **Solicitud**
