@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un esquema ad-hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # Creación de un esquema ad-hoc
 
-En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de ingestión de datos para Experience Platform, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
+En circunstancias específicas, puede ser necesario crear un esquema [!DNL Experience Data Model] (XDM) con campos a los que se les asigne un solo conjunto de datos para su uso. Esto se denomina esquema &quot;ad-hoc&quot;. Los esquemas ad-hoc se utilizan en varios flujos de trabajo de ingesta de datos para [!DNL Experience Platform], incluyendo la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
 
-Este documento proporciona pasos generales para crear un esquema ad-hoc mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas. Está pensado para utilizarse junto con otros tutoriales de Experience Platform que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de esos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
+Este documento proporciona pasos generales para crear un esquema ad-hoc mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas. Está pensado para utilizarse junto con otros [!DNL Experience Platform] tutoriales que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de esos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico del sistema del modelo de datos de experiencia (XDM). Antes de iniciar este tutorial, consulte la siguiente documentación de XDM:
+Este tutorial requiere un conocimiento práctico del sistema [!DNL Experience Data Model] (XDM). Antes de iniciar este tutorial, consulte la siguiente documentación de XDM:
 
-- [Descripción general](../home.md)del sistema XDM: Descripción general de alto nivel de XDM y su implementación en Experience Platform.
+- [Descripción general](../home.md)del sistema XDM: Información general de alto nivel sobre XDM y su implementación en [!DNL Experience Platform].
 - [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los componentes básicos de los esquemas XDM.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.md) desarrollador para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
 ## Creación de una clase ad-hoc
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **Solicitud**
 
-La siguiente solicitud utiliza el encabezado Accept `application/vnd.adobe.xed-full+json; version=1`, que devuelve la forma expandida del esquema. Tenga en cuenta que al recuperar un recurso específico del Registro de Esquemas, el encabezado Accept de la solicitud debe incluir una versión principal del recurso en cuestión.
+La siguiente solicitud utiliza el encabezado Accept `application/vnd.adobe.xed-full+json; version=1`, que devuelve la forma expandida del esquema. Tenga en cuenta que al recuperar un recurso específico desde el [!DNL Schema Registry], el encabezado Accept de la solicitud debe incluir la versión principal del recurso en cuestión.
 
 ```shell
 curl -X GET \
@@ -305,4 +305,4 @@ Una respuesta correcta devuelve los detalles del esquema, incluidos todos los ca
 
 Siguiendo este tutorial, ha creado correctamente un nuevo esquema ad-hoc. Si se le ha traído a este documento como parte de otro tutorial, ahora puede utilizar el `$id` de su esquema ad-hoc para completar el flujo de trabajo como se le ha indicado.
 
-Para obtener más información sobre cómo trabajar con la API del Registro de Esquema, consulte la guía [para](../api/getting-started.md)desarrolladores.
+Para obtener más información sobre cómo trabajar con la [!DNL Schema Registry] API, consulte la guía [para](../api/getting-started.md)desarrolladores.
