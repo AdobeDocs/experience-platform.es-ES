@@ -4,33 +4,33 @@ solution: Experience Platform
 title: Guía del usuario del Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
 
 
-# Guía del usuario del Privacy Service
+# [!DNL Privacy Service] guía del usuario
 
-Este documento proporciona los pasos para crear y administrar solicitudes de privacidad mediante la interfaz de usuario del Privacy Service.
+Este documento proporciona los pasos para crear y administrar solicitudes de privacidad mediante la interfaz de [!DNL Privacy Service] usuario.
 
-## Examinar el panel de la interfaz de usuario del Privacy Service
+## Examinar el panel de la [!DNL Privacy Service] IU
 
-El panel de la interfaz de usuario del Privacy Service proporciona dos utilidades que le permiten realizar la vista del estado de sus trabajos de privacidad: **Informe** de estado y solicitudes **de trabajo**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
+El panel de la [!DNL Privacy Service] interfaz de usuario proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: **[!UICONTROL Informe]** de estado y solicitudes **[!UICONTROL de trabajo]**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
 
 ![panel de la interfaz de usuario](../images/user-guide/dashboard.png)
 
 ### Tipo de regulación
 
-Privacy Service admite solicitudes de trabajo para tres tipos de regulación:
+[!DNL Privacy Service] admite solicitudes de trabajo para tres tipos de regulación:
 
-* Reglamento general de protección de datos (RGPD) de la Unión Europea
-* La Ley de Privacidad del Consumidor de California (CCPA)
-* Ley de Protección de Datos Personales de Tailandia (PDPA_THA)
+* La Unión Europea [!DNL General Data Protection Regulation] (RGPD)
+* El [!DNL California Consumer Privacy Act] (CCPA)
+* Tailandia [!DNL Personal Data Protection Act] (PDPA_THA)
 
-Los trabajos para cada tipo de regulación se rastrean por separado. Para cambiar entre tipos de regulación, haga clic en el menú desplegable Tipo **de** regulación y seleccione la regulación deseada en la lista.
+Los trabajos para cada tipo de regulación se rastrean por separado. Para cambiar entre tipos de regulación, haga clic en el menú desplegable Tipo **[!UICONTROL de]** regulación y seleccione la regulación deseada en la lista.
 
 ![Lista desplegable Tipo de regulación](../images/user-guide/regulation.png)
 
@@ -56,7 +56,7 @@ Para vista de más detalles sobre un punto de datos determinado, haga clic en el
 
 >[!NOTE]
 >
->Cuando se ha aplicado un filtro al widget de solicitudes de trabajo, puede eliminarlo haciendo clic en la **X** de la píldora de filtro. Las solicitudes de trabajo luego vuelven a la lista de seguimiento predeterminada.
+>Cuando se ha aplicado un filtro al widget de solicitudes de trabajo, puede eliminarlo haciendo clic en la **[!UICONTROL X]** de la píldora de filtro. Las solicitudes de trabajo luego vuelven a la lista de seguimiento predeterminada.
 
 ### Solicitudes de trabajo
 
@@ -66,19 +66,19 @@ El widget de solicitudes de trabajo lista todas las solicitudes de trabajo dispo
 >
 >Los datos de los trabajos creados anteriormente solo son accesibles durante 30 días después de la fecha de finalización.
 
-Puede filtrar la lista escribiendo las palabras clave en la barra de búsqueda debajo del título de las solicitudes de trabajo. La lista filtros automáticamente a medida que escribe, mostrando las solicitudes que contienen valores que coinciden con los términos de búsqueda. También puede utilizar el menú desplegable **Solicitado en** para seleccionar un intervalo de tiempo para los trabajos enumerados.
+Puede filtrar la lista escribiendo las palabras clave en la barra de búsqueda debajo del título de las solicitudes de trabajo. La lista filtros automáticamente a medida que escribe, mostrando las solicitudes que contienen valores que coinciden con los términos de búsqueda. También puede utilizar el menú desplegable **[!UICONTROL Solicitado en]** para seleccionar un intervalo de tiempo para los trabajos enumerados.
 
 ![Opciones de búsqueda de solicitud de trabajo](../images/user-guide/job-search.png)
 
-Para vista de los detalles de una solicitud de trabajo concreta, haga clic en la ID de trabajo de la solicitud en la lista para abrir la página Detalles *del* trabajo.
+Para vista de los detalles de una solicitud de trabajo concreta, haga clic en la ID de trabajo de la solicitud en la lista para abrir la página Detalles *[!UICONTROL del]* trabajo.
 
 ![Detalles del trabajo de la interfaz de usuario de GDPR](../images/user-guide/job-details.png)
 
-Este cuadro de diálogo contiene información de estado sobre cada solución de Experience Cloud y su estado actual en relación con el trabajo general. Dado que cada trabajo de privacidad es asincrónico, la página muestra la fecha y hora de comunicación más reciente (GMT) de cada solución, ya que algunos requieren más tiempo que otros para procesar la solicitud.
+Este cuadro de diálogo contiene información de estado sobre cada [!DNL Experience Cloud] solución y su estado actual en relación con el trabajo general. Dado que cada trabajo de privacidad es asincrónico, la página muestra la fecha y hora de comunicación más reciente (GMT) de cada solución, ya que algunos requieren más tiempo que otros para procesar la solicitud.
 
 Si una solución ha proporcionado datos adicionales, se puede ver en este cuadro de diálogo. Puede vista de estos datos haciendo clic en filas de productos individuales.
 
-Para descargar los datos completos del trabajo como archivo CSV, haga clic en **Exportar a CSV** en la parte superior derecha del cuadro de diálogo.
+Para descargar los datos completos del trabajo como archivo CSV, haga clic en **[!UICONTROL Exportar a CSV]** en la parte superior derecha del cuadro de diálogo.
 
 ## Crear una nueva solicitud de trabajo de privacidad
 
@@ -86,7 +86,7 @@ Para descargar los datos completos del trabajo como archivo CSV, haga clic en **
 >
 >Para crear una solicitud de trabajo de privacidad, debe proporcionar información de identidad para los clientes específicos cuyos datos se van a obtener o eliminar. Consulte el documento sobre los datos de [identidad para las solicitudes](../identity-data.md) de privacidad antes de continuar con esta sección.
 
-La interfaz de usuario del Privacy Service proporciona dos métodos para crear nuevas solicitudes de trabajo:
+La interfaz de usuario [!DNL Privacy Service] proporciona dos métodos para crear nuevas solicitudes de trabajo:
 
 * [Uso del Generador de solicitudes](#request-builder)
 * [Cargar un archivo JSON](#json)
@@ -97,19 +97,19 @@ Los pasos para utilizar cada uno de estos métodos se proporcionan en las siguie
 
 Con el Creador de solicitudes, puede crear manualmente una nueva solicitud de trabajo de privacidad en la interfaz de usuario. El Generador de solicitudes se utiliza mejor para conjuntos de solicitudes más simples y pequeños, ya que el Generador de solicitudes limita las solicitudes para que solo tengan un tipo de ID por usuario. Para solicitudes más complicadas, es mejor [cargar un archivo](#json) JSON.
 
-Para realizar inicios con el creador de solicitudes, haga clic en **Crear solicitud** debajo del widget de informe de estado en la parte derecha de la pantalla.
+Para realizar inicios con el creador de solicitudes, haga clic en **[!UICONTROL Crear solicitud]** debajo del widget de informe de estado en la parte derecha de la pantalla.
 
 ![Haga clic en Crear solicitud](../images/user-guide/create-request.png)
 
-Se abre el cuadro de diálogo *Crear solicitud* , que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
+Se abre el cuadro de diálogo *[!UICONTROL Crear solicitud]* , que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Seleccione el tipo **de** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más **productos** disponibles de la lista.
+Seleccione el tipo **[!UICONTROL de]** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más **[!UICONTROL productos]** disponibles de la lista.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-En Tipo *de*&#x200B;Área de nombres, seleccione el tipo de Área de nombres correspondiente para los ID de cliente que se envían a Privacy Service.
+En Tipo *[!UICONTROL de]*&#x200B;Área de nombres, seleccione el tipo de Área de nombres correspondiente para los ID de cliente que se envían a [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -121,7 +121,7 @@ Al utilizar el tipo de Área de nombres _personalizada_ , debe escribir manualme
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Cuando termine, haga clic en **Crear**.
+Cuando termine, haga clic en **[!UICONTROL Crear]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -131,15 +131,15 @@ El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la u
 
 Al crear solicitudes más complicadas, como las que utilizan varios tipos de ID para cada asunto de datos que se está procesando, puede crear una solicitud cargando un archivo JSON.
 
-Haga clic en la flecha situada junto a **Crear solicitud**, debajo del widget de informe de estado en el lado derecho de la pantalla. En la lista de opciones que aparece, seleccione **Cargar JSON**.
+Haga clic en la flecha situada junto a **[!UICONTROL Crear solicitud]**, debajo del widget de informe de estado en el lado derecho de la pantalla. En la lista de opciones que aparece, seleccione **[!UICONTROL Cargar JSON]**.
 
 ![Opciones de creación de solicitudes](../images/user-guide/create-options.png)
 
-Aparece el cuadro de diálogo *Cargar JSON* , que proporciona una ventana para arrastrar y soltar el archivo JSON.
+Aparece el cuadro de diálogo *[!UICONTROL Cargar JSON]* , que proporciona una ventana para arrastrar y soltar el archivo JSON.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Si no tiene un archivo JSON para cargar, haga clic en **Descargar Adobe-GDPR-Request.json** para descargar una plantilla que puede rellenar según los valores recopilados de los temas de datos.
+Si no tiene un archivo JSON para cargar, haga clic en **[!UICONTROL Descargar Adobe-GDPR-Request.json]** para descargar una plantilla que puede rellenar según los valores recopilados de los temas de datos.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
@@ -147,10 +147,10 @@ Si no tiene un archivo JSON para cargar, haga clic en **Descargar Adobe-GDPR-Req
 
 Busque el archivo JSON en el equipo y arrástrelo a la ventana de diálogo. Si la carga se realiza correctamente, el nombre del archivo aparecerá en el cuadro de diálogo. Puede seguir agregando más archivos JSON según sea necesario arrastrándolos y soltándolos en el cuadro de diálogo.
 
-Cuando termine, haga clic en **Crear**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes _de_ trabajo junto con su estado de procesamiento actual.
+Cuando termine, haga clic en **[!UICONTROL Crear]**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes _de_ trabajo junto con su estado de procesamiento actual.
 
 ### Pasos siguientes
 
-Al leer este documento, ha aprendido a usar la interfaz de usuario del Privacy Service para crear un trabajo de privacidad, a realizar la vista de los detalles de un trabajo y a supervisar su estado de procesamiento, y a descargar los resultados una vez que se haya completado.
+Al leer este documento, ha aprendido a usar la interfaz de usuario para crear un trabajo de privacidad, vista de los detalles de un trabajo, supervisión de su estado de procesamiento y descarga los resultados una vez que se haya completado. [!DNL Privacy Service]
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la API de Privacy Service, consulte la guía para [desarrolladores](../api/getting-started.md).
+Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la [!DNL Privacy Service] API, consulte la guía [para](../api/getting-started.md)desarrolladores.
