@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del desarrollador de la API del servicio de directivas DULE
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Guía para desarrolladores de DULE [!DNL Policy Service] API
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del gobierno de datos de Adobe Experience Platform. El servicio de directivas DULE proporciona una API RESTful que le permite crear y administrar políticas de uso de datos para determinar qué acciones de mercadotecnia se pueden realizar con datos que se han etiquetado con ciertas etiquetas de uso de datos.
+El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Adobe Experience Platform [!DNL Data Governance]. El DULE [!DNL Policy Service] proporciona una API RESTful que le permite crear y administrar políticas de uso de datos para determinar qué acciones de mercadotecnia se pueden realizar con datos que se han etiquetado con ciertas etiquetas de uso de datos.
 
-Este documento proporciona instrucciones para realizar las operaciones clave disponibles en la API de servicio de directivas. Si aún no lo ha hecho, comience por revisar la información general [sobre el Gobierno de](../home.md) datos para familiarizarse con el marco DULE. Para obtener instrucciones paso a paso sobre cómo crear y aplicar políticas DULE, consulte el tutorial sobre políticas [DULE](../policies/create.md).
+Este documento proporciona instrucciones para realizar las operaciones clave disponibles en la [!DNL Policy Service] API. Si aún no lo ha hecho, comience por revisar la información general [sobre el Gobierno de](../home.md) datos para familiarizarse con el marco DULE. Para obtener instrucciones paso a paso sobre cómo crear y aplicar políticas DULE, consulte el tutorial sobre políticas [DULE](../policies/create.md).
 
-Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API de servicio de directivas.
+Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la [!DNL Policy Service] API.
 
 ## Getting started with DULE [!DNL Policy Service]
 
@@ -28,11 +28,11 @@ Antes de comenzar a trabajar con el [!DNL Policy Service], los datos de [!DNL Ex
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Administración](../home.md)de datos: Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
-   * [Etiquetas](../labels/overview.md)DULE: Las etiquetas de uso de datos se aplican a los campos de datos del Modelo de datos de experiencia (XDM), especificando restricciones para acceder a los datos.
-* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [!DNL Data Governance](../home.md):: Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
+   * [Etiquetas](../labels/overview.md)DULE: Las etiquetas de uso de datos se aplican a los campos de datos [!DNL Experience Data Model] (XDM), especificando restricciones para acceder a los datos.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Leer llamadas de API de muestra
 
