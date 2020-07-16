@@ -4,39 +4,39 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1467'
 ht-degree: 1%
 
 ---
 
 
-# Definir una relación entre dos esquemas mediante la API de Registro de Esquema
+# Definir una relación entre dos esquemas mediante la [!DNL Schema Registry] API
 
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
-Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquemas.
+Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por la organización mediante el uso del [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico del Modelo de datos de experiencia (XDM) y el sistema XDM. Antes de comenzar este tutorial, consulte la siguiente documentación:
+Este tutorial requiere un conocimiento práctico de [!DNL Experience Data Model] (XDM) y [!DNL XDM System]. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
 * [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en Experience Platform.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Introducción de los componentes básicos de los esquemas XDM.
-* [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.md) desarrollador para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
 ## Definir un esquema de origen y destino {#define-schemas}
 
 Se espera que ya haya creado los dos esquemas que se definirán en la relación. Este tutorial crea una relación entre los miembros del actual programa de lealtad de una organización (definido en un esquema de &quot;miembros de la lealtad&quot;) y sus hoteles favoritos (definido en un esquema de &quot;hoteles&quot;).
 
-Las relaciones de Esquema están representadas por un esquema **de** origen que tiene un campo que hace referencia a otro campo dentro de un esquema **de** destino. En los pasos siguientes, &quot;Miembros de la Lealtad&quot; será el esquema de origen, mientras que &quot;Hoteles&quot; actuará como el esquema de destino.
+Las relaciones de Esquema están representadas por un esquema **[!UICONTROL de]** origen que tiene un campo que hace referencia a otro campo dentro de un esquema **[!UICONTROL de]** destino. En los pasos siguientes, &quot;Miembros[!UICONTROL de la]Lealtad&quot; será el esquema de origen, mientras que &quot;[!UICONTROL Hoteles]&quot; actuará como el esquema de destino.
 
-Para definir una relación entre dos esquemas, primero debe adquirir los `$id` valores de ambos esquemas. Si conoce los nombres para mostrar (`title`) de los esquemas, puede encontrar sus `$id` valores realizando una solicitud GET al `/tenant/schemas` extremo en la API del Registro de Esquema.
+Para definir una relación entre dos esquemas, primero debe adquirir los `$id` valores de ambos esquemas. Si conoce los nombres para mostrar (`title`) de los esquemas, puede encontrar sus `$id` valores realizando una solicitud GET al `/tenant/schemas` extremo en la [!DNL Schema Registry] API.
 
 **Formato API**
 
@@ -104,11 +104,11 @@ Registre los `$id` valores de los dos esquemas entre los que desea definir una r
 
 ## Definición de campos de referencia para ambos esquemas
 
-En el Registro de Esquemas, los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas SQL: un campo del esquema de origen actúa como referencia a un campo de un esquema de destino. Al definir una relación, cada esquema debe tener un campo específico para utilizarse como referencia al otro esquema.
+Dentro de la tabla [!DNL Schema Registry], los descriptores de relación funcionan de manera similar a las claves externas en las tablas SQL: un campo del esquema de origen actúa como referencia a un campo de un esquema de destino. Al definir una relación, cada esquema debe tener un campo específico para utilizarse como referencia al otro esquema.
 
 >[!IMPORTANT]
 >
->Si los esquemas se van a habilitar para su uso en Perfil [de cliente en tiempo](../../profile/home.md)real, el campo de referencia para el esquema de destino debe ser su identidad **** principal. Esto se explica con más detalle más adelante en este tutorial.
+>Si los esquemas se van a habilitar para su uso en [!DNL Real-time Customer Profile](../../profile/home.md), el campo de referencia del esquema de destino debe ser su identidad **** principal. Esto se explica con más detalle más adelante en este tutorial.
 
 Si ninguno de los esquemas tiene un campo para este fin, es posible que tenga que crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;cadena&quot;.
 
@@ -332,9 +332,9 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 >[!NOTE]
 >
->Este paso solo es necesario para esquemas que se habilitarán para su uso en el Perfil [del cliente en tiempo](../../profile/home.md)real. Si no desea que esquema participe en una unión o si sus esquemas ya tienen identidades principales definidas, puede pasar al siguiente paso de [crear un descriptor](#create-descriptor) de identidad de referencia para el esquema de destino.
+>Este paso solo es necesario para esquemas que se habilitarán para su uso en [!DNL Real-time Customer Profile](../../profile/home.md). Si no desea que esquema participe en una unión o si sus esquemas ya tienen identidades principales definidas, puede pasar al siguiente paso de [crear un descriptor](#create-descriptor) de identidad de referencia para el esquema de destino.
 
-Para que los esquemas se puedan habilitar para su uso en el Perfil del cliente en tiempo real, deben tener una identidad principal definida. Además, el esquema de destino de una relación debe utilizar su identidad principal como campo de referencia.
+Para que los esquemas puedan utilizarse en [!DNL Real-time Customer Profile], deben tener una identidad principal definida. Además, el esquema de destino de una relación debe utilizar su identidad principal como campo de referencia.
 
 A efectos de este tutorial, el esquema de origen ya tiene una identidad principal definida, pero el esquema de destino no. Puede marcar un campo de esquema como un campo de identidad principal creando un descriptor de identidad. Esto se realiza realizando una solicitud POST al `/tenant/descriptors` extremo.
 
@@ -513,4 +513,4 @@ Una respuesta correcta devuelve los detalles del descriptor de relación recién
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente una relación uno a uno entre dos esquemas. Para obtener más información sobre cómo trabajar con descriptores mediante la API del Registro de Esquemas, consulte la guía [para desarrolladores de](../api/getting-started.md)Esquema Registry. Para ver los pasos sobre cómo definir relaciones de esquema en la interfaz de usuario, consulte el tutorial sobre la [definición de relaciones de esquema mediante el Editor](relationship-ui.md)de Esquemas.
+Siguiendo este tutorial, ha creado correctamente una relación uno a uno entre dos esquemas. Para obtener más información sobre cómo trabajar con descriptores mediante la [!DNL Schema Registry] API, consulte la guía [para desarrolladores de](../api/getting-started.md)Esquema Registry. Para ver los pasos sobre cómo definir relaciones de esquema en la interfaz de usuario, consulte el tutorial sobre la [definición de relaciones de esquema mediante el Editor](relationship-ui.md)de Esquemas.
