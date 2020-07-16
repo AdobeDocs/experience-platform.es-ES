@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Elimine un recurso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 7%
 
 ---
 
 
 # Elimine un recurso
 
-En ocasiones puede ser necesario eliminar (ELIMINAR) un recurso del Registro de Esquemas. Solo se pueden eliminar los recursos que cree en el contenedor del inquilino. Esto se lleva a cabo realizando una solicitud DELETE utilizando el `$id` del recurso que desea eliminar.
+En ocasiones puede ser necesario eliminar (DELETE) un recurso del [!DNL Schema Registry]. Solo se pueden eliminar los recursos que cree en el contenedor del inquilino. Esto se realiza realizando una solicitud de DELETE utilizando el `$id` del recurso que desea eliminar.
 
 **Formato API**
 
@@ -21,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Tipo de recurso que se va a eliminar de la biblioteca de Esquemas. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
+| `{RESOURCE_TYPE}` | Tipo de recurso que se va a eliminar del [!DNL Schema Library]. Los tipos válidos son `datatypes`, `mixins`, `schemas`y `classes`. |
 | `{RESOURCE_ID}` | El `$id` URI con codificación URL o `meta:altId` del recurso. |
 
 **Solicitud**
 
-Las solicitudes ELIMINAR no requieren encabezados Accept.
+DELETE solicitudes no requieren encabezados Accept.
 
 ```SHELL
 curl -X DELETE \
@@ -41,4 +44,4 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Puede confirmar la eliminación mediante una solicitud de búsqueda (GET) al recurso. Deberá incluir un encabezado Accept en la solicitud, pero deberá recibir un estado HTTP 404 (no encontrado) porque el recurso se ha eliminado del Registro de Esquemas.
+Puede confirmar la eliminación mediante una solicitud de búsqueda (GET) al recurso. Deberá incluir un encabezado Accept en la solicitud, pero deberá recibir un estado HTTP 404 (no encontrado) porque el recurso se ha eliminado del [!DNL Schema Registry].
