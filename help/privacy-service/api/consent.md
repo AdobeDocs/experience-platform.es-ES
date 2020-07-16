@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Consentimiento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Consentimiento
 
-Ciertas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. El punto final de la API de Privacy Service le permite procesar las solicitudes de consentimiento del cliente e integrarlas en el flujo de trabajo de privacidad. `/consent`
+Ciertas regulaciones requieren el consentimiento explícito del cliente antes de que se puedan recopilar sus datos personales. El `/consent` punto final de la [!DNL Privacy Service] API le permite procesar solicitudes de consentimiento del cliente e integrarlas en su flujo de trabajo de privacidad.
 
 Antes de utilizar esta guía, consulte la sección [Introducción](./getting-started.md) para obtener información sobre los encabezados de autenticación requeridos que se presentan en la llamada de API de ejemplo siguiente.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo determinar qué valores de identidad del cliente se envían a Privacy Service, consulte la guía sobre [proporcionar datos](../identity-data.md)de identidad.
+>Para obtener más información sobre cómo determinar a qué valores de identidad del cliente se enviarán [!DNL Privacy Service], consulte la guía para [proporcionar datos](../identity-data.md)de identidad.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) sin carga útil, lo que indica que la solicitud fue aceptada por el Privacy Service y se está procesando.
+Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) sin carga útil, lo que indica que la solicitud ha sido aceptada por [!DNL Privacy Service] y se está procesando.
