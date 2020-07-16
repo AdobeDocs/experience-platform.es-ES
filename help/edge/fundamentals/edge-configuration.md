@@ -4,9 +4,9 @@ seo-title: Configuración de Edge para el SDK web Experience Platform
 description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ ID única de una cuenta de destinatario. Para encontrarlo, puede navegar a [!UIC
 
 Destinatario permite a los clientes controlar los permisos mediante el uso de propiedades. Encontrará más información en la sección Permisos [de](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentación de Destinatario.
 
-El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL configuración] > Propiedades de [UICONTROL]
+El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL configuración] > [!UICONTROL Propiedades]
 
 ##### [!UICONTROL ID de Entorno de Destinatario]
 
