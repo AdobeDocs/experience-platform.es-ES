@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre PDPA (Tailandia)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: ccfc90fe6de80ab050c3b937be7626be4e90db1c
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Preguntas más frecuentes sobre PDPA (Tailandia)
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre la Ley de protección de datos personales de Tailandia (PDPA) y su implementación en Adobe Experience Cloud.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre el uso [!DNL Personal Data Protection Act] de Tailandia (PDPA) y su implementación en Adobe Experience Cloud.
 
 Las definiciones de los distintos términos relacionados con PDPA que se utilizan en este documento se encuentran en el artículo de terminología [del](./terminology.md) PDPA (Tailandia).
 
