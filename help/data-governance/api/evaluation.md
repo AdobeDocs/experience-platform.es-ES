@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Evaluación de políticas
 
-Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API de servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de directivas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
+Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la [!DNL Policy Service] API para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de directivas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 
 De forma predeterminada, **solo participan en la evaluación** las directivas cuyo estado está establecido en &quot;HABILITADO&quot;; sin embargo, puede utilizar el parámetro de consulta `?includeDraft=true` para incluir las directivas &quot;BORRADOR&quot; en la evaluación.
 
@@ -333,7 +333,7 @@ Además de proporcionar uno o más ID de conjuntos de datos, también se puede e
 Cuando evalúe políticas mediante campos de conjunto de datos, tenga en cuenta lo siguiente:
 
 * **Los nombres de los campos distinguen entre mayúsculas y minúsculas.** Al proporcionar campos, deben escribirse exactamente como aparecen en el conjunto de datos (por ejemplo, `firstName` vs `firstname`).
-* **Herencia de etiquetas de conjunto de datos.** las etiquetas de uso de datos se pueden aplicar en varios niveles y se heredan hacia abajo. Si las evaluaciones de directivas no devuelven el modo que pensaba, asegúrese de comprobar las etiquetas heredadas de los conjuntos de datos a los campos además de los aplicados en el nivel de campo.
+* **Herencia de etiquetas de conjunto de datos.** las etiquetas de uso de datos se pueden aplicar en varios niveles y se heredan hacia abajo. Si las evaluaciones de políticas no devuelven el modo que pensaba, asegúrese de comprobar las etiquetas heredadas de los conjuntos de datos a los campos además de los aplicados en el nivel de campo.
 
 **Formato API**
 
