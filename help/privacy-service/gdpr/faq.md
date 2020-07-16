@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre el RGPD
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
 
 
 # Preguntas más frecuentes sobre el RGPD
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el Reglamento general de protección de datos (RGPD) y su implementación en Adobe Experience Cloud.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre el [!DNL General Data Protection Regulation] (RGPD) y su implementación en Adobe Experience Cloud.
 
 Las definiciones de los diversos términos relacionados con el RGPD que se utilizan en este documento pueden encontrarse en el artículo sobre terminología [del](terminology.md) RGPD.
 
