@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos mediante API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 # Administrar etiquetas de uso de datos mediante API
 
-Este documento proporciona pasos para administrar las etiquetas de uso de datos mediante la API de servicio de directivas y la API de servicio de conjuntos de datos.
+Este documento proporciona pasos sobre cómo administrar las etiquetas de uso de datos mediante la [!DNL Policy Service] API y la [!DNL Dataset Service] API.
 
-La API [del servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) directivas proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
+El [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
 
-La API de servicio de dataset permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogos, que administra los metadatos del conjunto de datos.
+La [!DNL Dataset Service] API permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
 ## Primeros pasos
 
 Antes de leer esta guía, siga los pasos descritos en la sección [Introducción de la guía para desarrolladores de catálogos para recopilar las credenciales necesarias para realizar llamadas a](../../catalog/api/getting-started.md) [!DNL Platform] las API.
 
-Para realizar llamadas a los extremos del servicio de dataset descritos en este documento, debe tener el valor único `id` de un conjunto de datos específico. Si no tiene este valor, consulte la guía de [listado de objetos](../../catalog/api/list-objects.md) de catálogo para encontrar los ID de los conjuntos de datos existentes.
+Para realizar llamadas a los [!DNL Dataset Service] extremos descritos en este documento, debe tener el valor único `id` de un conjunto de datos específico. Si no tiene este valor, consulte la guía de [listado de objetos](../../catalog/api/list-objects.md) de catálogo para encontrar los ID de los conjuntos de datos existentes.
 
 ## Lista de todas las etiquetas {#list-labels}
 
@@ -110,7 +110,7 @@ Una respuesta correcta devuelve una lista de las etiquetas personalizadas recupe
 
 ## Buscar una etiqueta {#look-up-label}
 
-Puede buscar una etiqueta específica incluyendo la propiedad `name` de esa etiqueta en la ruta de una solicitud GET a la API de servicio de directivas.
+Puede buscar una etiqueta específica incluyendo la propiedad `name` de esa etiqueta en la ruta de una solicitud GET a la [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
 
 ## Crear o actualizar una etiqueta personalizada {#create-update-label}
 
-Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud PUT a la API de servicio de directivas.
+Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud PUT a la [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -230,7 +230,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada, con e
 
 ## Buscar etiquetas para un conjunto de datos {#look-up-dataset-labels}
 
-Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente haciendo una solicitud GET a la API de servicio de dataset.
+Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente haciendo una solicitud GET a la [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 
 ## Aplicar etiquetas a un conjunto de datos {#apply-dataset-labels}
 
-Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud POST o PUT a la API del servicio de conjunto de datos. El uso de cualquiera de estos métodos sobrescribe las etiquetas existentes y las reemplaza por las proporcionadas en la carga útil.
+Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud POST o PUT a la [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe las etiquetas existentes y las reemplaza por las proporcionadas en la carga útil.
 
 **Formato API**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `labels` | lista de las etiquetas de uso de datos que desea agregar al conjunto de datos. |
-| `optionalLabels` | lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos del campo del Modelo de datos de experiencia (XDM). Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/look-up-resource.md"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: lista de las etiquetas de uso de datos que desea agregar al campo. |
+| `optionalLabels` | lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/look-up-resource.md"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: lista de las etiquetas de uso de datos que desea agregar al campo. |
 
 **Respuesta**
 
@@ -350,7 +350,7 @@ Una respuesta correcta devuelve las etiquetas que se han agregado al conjunto de
 
 ## Eliminar etiquetas de un conjunto de datos {#remove-dataset-labels}
 
-Puede quitar las etiquetas aplicadas a un conjunto de datos haciendo una solicitud de DELETE a la API del servicio de conjunto de datos.
+Puede eliminar las etiquetas aplicadas a un conjunto de datos haciendo una solicitud de DELETE a la [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -381,7 +381,7 @@ Una respuesta correcta de estado HTTP 200 (Aceptar), que indica que se han elimi
 
 Al leer este documento, ha aprendido a administrar las etiquetas de uso de datos mediante API.
 
-Una vez agregadas las etiquetas de uso de datos en el nivel de conjunto de datos y campo, puede empezar a ingestar datos en Experience Platform. Para obtener más información, lea la documentación [sobre la ingestión de](../../ingestion/home.md)datos para obtener inicios.
+Una vez agregadas las etiquetas de uso de datos en los niveles de conjunto de datos y campo, puede empezar a ingestar datos en [!DNL Experience Platform]. Para obtener más información, lea la documentación [sobre la ingestión de](../../ingestion/home.md)datos para obtener inicios.
 
 Ahora también puede definir directivas de uso de datos en función de las etiquetas que haya aplicado. Para obtener más información, consulte la descripción general [de las directivas de uso de](../policies/overview.md)datos.
 
