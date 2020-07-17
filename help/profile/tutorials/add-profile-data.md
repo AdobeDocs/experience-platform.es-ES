@@ -4,38 +4,38 @@ solution: Adobe Experience Platform
 title: Añadir datos al Perfil del cliente en tiempo real
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
 
 
-# Añadir datos al Perfil del cliente en tiempo real
+# Añadir datos a [!DNL Real-time Customer Profile]
 
-Este tutorial describe los pasos necesarios para agregar datos al Perfil del cliente en tiempo real.
+Este tutorial describe los pasos necesarios para agregar datos a [!DNL Real-time Customer Profile].
 
-## Habilitar un esquema para el Perfil del cliente en tiempo real
+## Habilitar un esquema para [!DNL Real-time Customer Profile]
 
-Los datos que el Perfil del cliente en tiempo real ingesta en el Experience Platform para su uso deben cumplir con un esquema del modelo de datos de experiencia (XDM) habilitado para el Perfil. Para que un esquema esté habilitado para Perfil, debe implementar la clase XDM Individual Perfil o XDM ExperienceEvent.
+Los datos que se están ingeriendo [!DNL Experience Platform] para su uso [!DNL Real-time Customer Profile] deben cumplir un esquema [!DNL Experience Data Model] (XDM) habilitado para [!DNL Profile]. Para que un esquema esté habilitado para Perfil, debe implementar la [!DNL XDM Individual Profile] clase o [!DNL XDM ExperienceEvent] .
 
-Puede activar un esquema para utilizarlo en el Perfil de clientes en tiempo real mediante la API del Registro de Esquemas o la interfaz de usuario del Editor de Esquemas. Para empezar, siga los tutoriales para [crear un esquema con API](../../xdm/tutorials/create-schema-api.md) o [crear un esquema con la interfaz de usuario](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas.
+Puede habilitar un esquema para utilizarlo [!DNL Real-time Customer Profile] mediante la [!DNL Schema Registry] API o la interfaz de [!DNL Schema Editor] usuario. Para empezar, siga los tutoriales para [crear un esquema con API](../../xdm/tutorials/create-schema-api.md) o [crear un esquema con la interfaz de usuario](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas.
 
 ## Añadir datos mediante ingestión por lotes
 
-Todos los datos cargados a Platform mediante la ingestión por lotes se cargan en conjuntos de datos individuales. Antes de que el Perfil del cliente en tiempo real pueda utilizar estos datos, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre la [configuración de un conjunto de datos para Perfil y servicio](dataset-configuration.md)de identidad.
+Todos los datos cargados a [!DNL Platform] mediante la ingestión por lotes se cargan en conjuntos de datos individuales. Antes de que [!DNL Real-time Customer Profile]los datos puedan utilizarse, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre la [configuración de un conjunto de datos para Perfil y servicio](dataset-configuration.md)de identidad.
 
 Una vez configurado el conjunto de datos, puede realizar el inicio de la ingesta de datos. Consulte la guía [para desarrolladores de](../../ingestion/batch-ingestion/api-overview.md) ingestión por lotes para ver los pasos detallados sobre cómo cargar archivos en diferentes formatos.
 
 ## Añadir datos mediante la transmisión de la ingestión
 
-Cualquier dato ingerido por flujo que sea compatible con un esquema XDM habilitado para Perfil automáticamente agregará o sobrescribirá el registro apropiado en el Perfil del cliente en tiempo real. Si se proporciona más de una identidad en el registro o se consumen datos de series temporales, esas identidades se asignarán en el gráfico de identidad sin necesidad de realizar ninguna configuración adicional. Consulte la guía [para desarrolladores de](../../ingestion/tutorials/streaming-record-data.md) transmisiones de flujo continuo para obtener más información.
+Cualquier dato ingerido por flujo que sea compatible con un esquema XDM [!DNL Profile]habilitado agregará o sobrescribirá automáticamente el registro apropiado en [!DNL Real-time Customer Profile]. Si se proporciona más de una identidad en el registro o se consumen datos de series temporales, esas identidades se asignarán en el gráfico de identidad sin necesidad de realizar ninguna configuración adicional. Consulte la guía [para desarrolladores de](../../ingestion/tutorials/streaming-record-data.md) transmisiones de flujo continuo para obtener más información.
 
 ## Confirme que la carga se ha realizado correctamente
 
 Al cargar datos en un nuevo conjunto de datos por primera vez, o como parte de un proceso que involucra una nueva ETL o fuente de datos, se recomienda comprobar cuidadosamente los datos para asegurarse de que se han cargado correctamente.
 
-Mediante la API de acceso a Perfil de cliente en tiempo real, puede recuperar datos por lotes a medida que se cargan en un conjunto de datos. Si no puede recuperar ninguna de las entidades que espera, es posible que el conjunto de datos no esté habilitado para el Perfil. Después de confirmar que el conjunto de datos se ha habilitado, asegúrese de que el formato y los identificadores de los datos de origen admiten sus expectativas.
+Mediante la API de [!DNL Real-time Customer Profile] Access, puede recuperar datos por lotes a medida que se cargan en un conjunto de datos. Si no puede recuperar ninguna de las entidades que espera, es posible que el conjunto de datos no esté habilitado para [!DNL Profile]. Después de confirmar que el conjunto de datos se ha habilitado, asegúrese de que el formato y los identificadores de los datos de origen admiten sus expectativas.
 
-Para obtener instrucciones detalladas sobre cómo acceder a las entidades mediante la API de Perfil del cliente en tiempo real, consulte la guía [de extremo de](../api/entities.md)las entidades, también conocida como la &quot;API de acceso a Perfil&quot;.
+Para obtener instrucciones detalladas sobre cómo acceder a las entidades mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de extremo de](../api/entities.md)entidades, también conocida como &quot;[!DNL Profile Access] API&quot;.
