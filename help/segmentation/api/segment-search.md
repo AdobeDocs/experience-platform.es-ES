@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guía para desarrolladores de API de segmentación
+title: Guía del extremo de búsqueda de segmentos
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# Búsqueda de segmentos
+# Guía del extremo de búsqueda de segmentos
 
-La búsqueda de segmentos se utiliza para buscar e indexar campos configurables contenidos en varias fuentes de datos y devolverlos en tiempo casi real.
+La búsqueda de segmentos se utiliza para buscar los campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real.
 
 Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas de API para realizar acciones básicas mediante la API.
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de segmentación. Antes de continuar, consulte la guía para desarrolladores [de Segmentación](getting-started.md).
+Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
-En particular, la sección [de](getting-started.md) introducción de la guía para desarrolladores de Segmentación incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas exitosas a la API de la plataforma de experiencia.
-
-Además de los encabezados requeridos descritos en la sección Introducción, todas las solicitudes a la API de búsqueda de segmentos requieren el siguiente encabezado adicional:
+Además de los encabezados requeridos descritos en la sección de introducción, todas las solicitudes al extremo de búsqueda de segmentos requieren el siguiente encabezado adicional:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,11 +221,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con información estructural 
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora podrá comprender mejor cómo funciona la búsqueda de segmentos. Para obtener más información sobre la segmentación, lea la información general [sobre la](../home.md)segmentación.
+Después de leer esta guía, ahora podrá comprender mejor cómo funciona la búsqueda de segmentos.
 
 ## Apéndice {#appendix}
 
-Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Por lo tanto, para buscar un segmento llamado AAM o Plataforma, debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Así, por ejemplo, para buscar un segmento llamado AAM o Platform, debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en HTML, como el ejemplo que se muestra arriba.
 
