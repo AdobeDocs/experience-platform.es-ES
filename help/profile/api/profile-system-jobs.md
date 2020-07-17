@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Trabajos del sistema de Perfil: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # Extremo de trabajos del sistema de Perfil (Eliminar solicitudes)
 
-Adobe Experience Platform le permite ingerir datos de múltiples fuentes y generar perfiles sólidos para clientes individuales. Los datos ingeridos en Platform se almacenan en Data Lake y en el almacén de datos de Perfil del cliente en tiempo real. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del almacén de Perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere el uso de la API de Perfil del cliente en tiempo real para crear un trabajo del sistema de Perfil, también conocido como &quot;solicitud de eliminación&quot;, que también se puede modificar, supervisar o eliminar si es necesario.
+Adobe Experience Platform le permite ingerir datos de múltiples fuentes y generar perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL Data Lake] como en el [!DNL Real-time Customer Profile] almacén de datos. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del almacén de Perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere usar la [!DNL Real-time Customer Profile] API para crear un trabajo [!DNL Profile] del sistema, también conocido como &quot;[!DNL delete request]&quot;, que también se puede modificar, supervisar o eliminar si es necesario.
 
 >[!NOTE]
->Si está intentando eliminar conjuntos de datos o lotes del lago de datos, consulte la información general [del servicio de](../../catalog/home.md) catálogos para obtener instrucciones.
+>Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], consulte la información general [del servicio de](../../catalog/home.md) catálogos para obtener instrucciones.
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 ## Solicitudes de eliminación de Vistas
 
@@ -103,10 +103,10 @@ El inicio de una nueva solicitud de eliminación se realiza a través de una sol
 
 ### Eliminar un conjunto de datos
 
-Para eliminar un conjunto de datos, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. Experience Platform le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
+Para eliminar un conjunto de datos, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
 
 >[!CAUTION]
-> Cuando se intenta eliminar un conjunto de datos habilitado para Perfil mediante la interfaz de usuario del Experience Platform, el conjunto de datos se desactiva para la ingestión, pero no se elimina hasta que se crea una solicitud de eliminación mediante la API. Para obtener más información, consulte el [apéndice](#appendix) de este documento.
+> Al intentar eliminar un conjunto de datos [!DNL Profile]habilitado mediante la [!DNL Experience Platform] interfaz de usuario, el conjunto de datos se desactiva para la ingestión, pero no se elimina hasta que se crea una solicitud de eliminación mediante la API. Para obtener más información, consulte el [apéndice](#appendix) de este documento.
 
 **Formato API**
 
@@ -161,7 +161,7 @@ Para eliminar un lote, el ID de lote debe incluirse en el cuerpo de la solicitud
 >[!NOTE]
 > El motivo por el que no se pueden eliminar lotes para conjuntos de datos basados en esquemas de registros es porque los lotes de conjuntos de datos de tipo de registro sobrescriben los registros anteriores y, por lo tanto, no se pueden &quot;deshacer&quot; ni eliminar. La única manera de eliminar el impacto de los lotes erróneos para conjuntos de datos basados en esquemas de registros es volver a ingestar el lote con los datos correctos para sobrescribir los registros incorrectos.
 
-Para obtener más información sobre el comportamiento de registros y series temporales, consulte la [sección sobre comportamientos](../../xdm/home.md#data-behaviors) de datos XDM en la descripción general del sistema XDM.
+Para obtener más información sobre el comportamiento de registros y series temporales, consulte la [sección sobre comportamientos](../../xdm/home.md#data-behaviors) de datos XDM en la [!DNL XDM System] información general.
 
 **Formato API**
 
@@ -277,7 +277,7 @@ Una vez que el estado de la solicitud de eliminación `"COMPLETED"` puede confir
 
 ## Eliminar una solicitud de eliminación
 
-Experience Platform le permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, como si el trabajo de eliminación no se completó o se quedó atascado en la etapa de procesamiento. Para eliminar una solicitud de eliminación, puede realizar una solicitud de DELETE al extremo e incluir el ID de la solicitud de eliminación que desea eliminar en la ruta de la solicitud. `/system/jobs`
+[!DNL Experience Platform] le permite eliminar una solicitud anterior, lo cual puede resultar útil por varios motivos, incluso si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para eliminar una solicitud de eliminación, puede realizar una solicitud de DELETE al extremo e incluir el ID de la solicitud de eliminación que desea eliminar en la ruta de la solicitud. `/system/jobs`
 
 **Formato API**
 
@@ -306,19 +306,19 @@ Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un c
 
 ## Pasos siguientes
 
-Ahora que conoce los pasos necesarios para eliminar conjuntos de datos y lotes del almacén de Perfiles dentro del Experience Platform, puede eliminar de forma segura los datos que se han agregado por error o que su organización ya no necesita. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo que solo debe eliminar datos que esté seguro de que no necesita ahora y que no los necesitará en el futuro.
+Ahora que conoce los pasos necesarios para eliminar conjuntos de datos y lotes desde el [!DNL Profile Store] interior [!DNL Experience Platform], puede eliminar de forma segura los datos que se han agregado por error o que su organización ya no necesita. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo que solo debe eliminar datos que esté seguro de que no necesita ahora y que no los necesitará en el futuro.
 
 ## Apéndice {#appendix}
 
-La siguiente información complementa el acto de eliminar un conjunto de datos del almacén de Perfiles.
+La siguiente información complementa el acto de eliminar un conjunto de datos del [!DNL Profile Store].
 
-### Eliminación de un conjunto de datos mediante la interfaz de usuario del Experience Platform
+### Eliminación de un conjunto de datos mediante la [!DNL Experience Platform] IU
 
-Al utilizar la interfaz de usuario del Experience Platform para eliminar un conjunto de datos habilitado para Perfil, se abre un cuadro de diálogo en el que se pregunta: &quot;¿Realmente desea eliminar este conjunto de datos del lago de datos de experiencia? Utilice la API de &#39;trabajos de sistemas de perfil&#39; para eliminar este conjunto de datos del servicio de Perfil.&quot;
+Al utilizar la interfaz de usuario para eliminar un conjunto de datos que se ha habilitado para [!DNL Experience Platform] , se abre un cuadro de diálogo en el que se pregunta: &quot;¿Realmente desea eliminar este conjunto de datos del [!DNL Profile][!DNL Experience Data Lake]? Utilice la API &#39;p[!DNL rofile systems jobs]&#39; para eliminar este conjunto de datos del [!DNL Profile Service].&quot;
 
-Al hacer clic en **Eliminar** en la interfaz de usuario, se deshabilita el conjunto de datos para su inserción, pero NO se elimina automáticamente el conjunto de datos en el servidor. Para eliminar permanentemente el conjunto de datos, se debe crear una solicitud de eliminación manualmente siguiendo los pasos de esta guía para [crear una solicitud](#create-a-delete-request)de eliminación.
+Al hacer clic en **[!UICONTROL Eliminar]** en la interfaz de usuario, se deshabilita el conjunto de datos para su inserción, pero NO se elimina automáticamente el conjunto de datos en el servidor. Para eliminar permanentemente el conjunto de datos, se debe crear una solicitud de eliminación manualmente siguiendo los pasos de esta guía para [crear una solicitud](#create-a-delete-request)de eliminación.
 
-La siguiente imagen muestra la advertencia al intentar eliminar un conjunto de datos con Perfil habilitado mediante la interfaz de usuario.
+La siguiente imagen muestra la advertencia al intentar eliminar un conjunto de datos [!DNL Profile]habilitado mediante la interfaz de usuario.
 
 ![](../images/delete-profile-dataset.png)
 
