@@ -4,38 +4,39 @@ solution: Experience Platform
 title: Cumplimiento de las opciones de exclusión
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
 
 # Cumplimiento de las solicitudes de exclusión en segmentos
 
-Experience Platform permite a los clientes enviar solicitudes de exclusión con respecto al uso y el almacenamiento de sus datos en tiempo real con Perfil del cliente. Estas solicitudes de exclusión forman parte de la Ley de privacidad del consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién).
+[!DNL Experience Platform] permite a los clientes enviar solicitudes de exclusión en relación con el uso y el almacenamiento de sus datos en [!DNL Real-time Customer Profile]. Estas solicitudes de exclusión forman parte del [!DNL California Consumer Privacy Act] (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién).
 
 Una vez que un cliente ha optado por la exclusión, es importante que su organización respete dichas exclusiones al generar audiencias para actividades de marketing. Este documento describe detalles importantes sobre el cumplimiento de las solicitudes de exclusión.
 
 ## Primeros pasos
 
-El cumplimiento de las solicitudes de exclusión requiere conocer los distintos servicios de Adobe Experience Platform implicados. Antes de trabajar con solicitudes de exclusión, consulte la documentación de los siguientes servicios:
+El cumplimiento de las solicitudes de exclusión requiere comprender los distintos [!DNL Adobe Experience Platform] servicios involucrados. Antes de trabajar con solicitudes de exclusión, consulte la documentación de los siguientes servicios:
 
-- [Perfil](../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [Servicio](./home.md)de segmentación de la plataforma Adobe Experience: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
-- [Modelo de datos de experiencia (XDM)](../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Ayuda a las organizaciones a automatizar el cumplimiento de las regulaciones de privacidad de datos que involucran datos de clientes dentro de la plataforma. Estas normas incluyen:
-   - Ley de privacidad del consumidor de California (CCPA): Derechos de privacidad de datos para residentes de California, incluido el derecho de acceder y eliminar datos personales y de saber si se venden o revelan datos personales (y a quién).
-   - Reglamento general de protección de datos (RGPD): Derechos de privacidad de datos para miembros de la Unión Europea, incluyendo el &quot;Derecho de acceso&quot; y el &quot;Derecho a ser olvidado&quot;.
+- [!DNL Real-time Customer Profile](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md):: Permite generar segmentos de audiencia a partir de [!DNL Real-time Customer Profile] datos.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):: Ayuda a las organizaciones a automatizar el cumplimiento de las regulaciones de privacidad de datos que involucran datos de clientes dentro de [!DNL Platform].
 
 ## Mezclas de exclusión
 
-Para cumplir las solicitudes de exclusión de CCPA, uno de los esquemas que forma parte del esquema de unión debe contener los campos de exclusión necesarios del Modelo de datos de experiencia (XDM). Existen dos mezclas que se pueden utilizar para agregar campos de exclusión a un esquema; cada una de ellas se trata con más detalle en las secciones siguientes:
+Para cumplir las solicitudes de exclusión de CCPA, uno de los esquemas que forma parte del esquema de unión debe contener los campos de exclusión necesarios [!DNL Experience Data Model] (XDM). Existen dos mezclas que se pueden utilizar para agregar campos de exclusión a un esquema; cada una de ellas se trata con más detalle en las secciones siguientes:
 
 - [Privacidad](#profile-privacy)de Perfil: Se utiliza para capturar diferentes tipos de exclusión (general o de ventas/uso compartido).
 - [Detalles](#profile-preferences-details)de las preferencias de Perfil: Se utiliza para capturar solicitudes de exclusión para canales XDM específicos.
 
 Para obtener instrucciones detalladas sobre cómo añadir una mezcla a un esquema, consulte la sección &quot;Añadir una mezcla&quot; en la siguiente documentación de XDM:
 - [Tutorial](../xdm/api/getting-started.md)de la API del Registro de Esquemas.:: Creación de un esquema mediante la API del Registro de Esquema.
-- [Tutorial](../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Creación de un esquema mediante la interfaz de usuario de la plataforma.
+- [Tutorial](../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Creación de un esquema mediante la interfaz de usuario de Platform.
 
 Esta es una imagen de ejemplo que muestra las mezclas de exclusión agregadas a un esquema en la interfaz de usuario:
 
@@ -43,16 +44,16 @@ Esta es una imagen de ejemplo que muestra las mezclas de exclusión agregadas a 
 
 La estructura de cada mezcla, así como una descripción de los campos que contribuyen al esquema, se describen con más detalle en las siguientes secciones.
 
-### Privacidad de Perfil
+### [!DNL Profile Privacy]
 
-La combinación de privacidad de Perfil le permite capturar dos tipos de solicitudes de exclusión de CCPA de los clientes:
+La [!DNL Profile Privacy] combinación le permite capturar dos tipos de solicitudes de exclusión de CCPA de los clientes:
 
 1. Desactivación general
 2. Opción de exclusión de ventas/uso compartido
 
 ![](images/opt-outs/profile-privacy.png)
 
-La combinación de privacidad de Perfil contiene los campos siguientes:
+The [!DNL Profile Privacy] mixin contains the following fields:
 
 - Opciones de privacidad (`privacyOptOuts`): Matriz que contiene una lista de objetos de exclusión.
 - Tipo de exclusión (`optOutType`): Tipo de exclusión. Este campo es una enumeración con dos valores posibles:
@@ -65,7 +66,7 @@ La combinación de privacidad de Perfil contiene los campos siguientes:
    - Inclusión (`in`): El cliente ha elegido la opción de participar.
 - Marca de tiempo de exclusión (`timestamp`): Marca de tiempo de la señal de exclusión recibida.
 
-Para vista de la estructura completa de la combinación de privacidad de Perfil, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de la plataforma.
+Para la vista de la estructura completa de la [!DNL Profile Privacy] mezcla, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de Platform.
 
 ### Detalles de las preferencias de Perfil
 
@@ -98,7 +99,7 @@ El ejemplo JSON siguiente resalta cómo el objeto OptInOut puede capturar varias
 }
 ```
 
-Para vista de la estructura completa de la combinación de detalles de preferencias de Perfil, visite el repositorio [público de GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) XDM o previsualización la mezcla mediante la interfaz de usuario de la plataforma.
+Para vista de la estructura completa de la combinación de detalles de preferencias de Perfil, visite el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) XDM o previsualización la mezcla utilizando la [!DNL Platform] IU.
 
 ## Gestión de las opciones de exclusión en la segmentación
 
@@ -110,15 +111,15 @@ Las secciones siguientes muestran cómo agregar los campos correspondientes para
 
 ### Desactivación general
 
-La segmentación respeta automáticamente todos los perfiles que contienen el indicador de &quot;exclusión general&quot;, lo que significa que esos perfiles no se incluirán en las audiencias o exportaciones de forma predeterminada. Sin embargo, se recomienda agregar los campos apropiados para asegurarse de que los perfiles de exclusión no se incluyen en las audiencias y actividades de marketing.
+[!DNL Segmentation] honra automáticamente todos los perfiles que contengan el indicador de &quot;exclusión[!UICONTROL general]&quot;, lo que significa que dichos perfiles no se incluirán en las audiencias o exportaciones de forma predeterminada. Sin embargo, se recomienda agregar los campos apropiados para asegurarse de que los perfiles de exclusión no se incluyen en las audiencias y actividades de marketing.
 
-Esto se puede hacer mediante la interfaz de usuario del Generador de segmentos, agregando atributos de exclusión de **privacidad** . En este caso, el segmento está configurado para incluir solo a aquellos que han elegido participar (lo que significa que no tienen un indicador de exclusión general en su perfil). Esto se lleva a cabo declarando que &quot;Tipo de exclusión&quot; es igual a &quot;Opción de exclusión general&quot; y que &quot;Valor de exclusión&quot; es igual a &quot;Opción de inclusión&quot;.
+Esto se puede hacer mediante la interfaz de usuario mediante la adición de atributos de exclusión de **[!UICONTROL privacidad]** . En este caso, el segmento está configurado para incluir solamente a los que han adhesión (lo que significa que no tienen un indicador de exclusión general en su perfil). Esto se lleva a cabo declarando que el &quot;Tipo[!UICONTROL de]exclusión&quot; es igual a &quot;Opción de exclusióngeneral&quot; y el &quot;Valor[!UICONTROL de]exclusión&quot; es igual a &quot;[!UICONTROL Opción de exclusión]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### Opción de exclusión de ventas/uso compartido
 
-Si un usuario tiene un indicador de exclusión de venta/uso compartido establecido en su perfil, este perfil ya no debe usarse para ninguna actividad de marketing o creación de segmentos. Para garantizar que se cumpla este indicador, el &quot;Tipo de exclusión&quot; debe ser igual a &quot;Opción de participación en ventas&quot; y el &quot;Valor de exclusión&quot; debe ser igual a &quot;Opción de inclusión&quot;.
+Si un usuario tiene un indicador de exclusión de venta/uso compartido establecido en su perfil, este perfil ya no debe usarse para ninguna actividad de marketing o creación de segmentos. Para garantizar que se cumpla este indicador, el &quot;Tipo[!UICONTROL de]exclusión&quot; debe ser igual a &quot;Opción de exclusión[!UICONTROL de compartir]ventas&quot; y el &quot;Valor[!UICONTROL de]exclusión&quot; debe ser igual a &quot;[!UICONTROL Opción de inclusión]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -130,4 +131,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Para obtener más información sobre la segmentación, incluido el trabajo con definiciones de segmentos y audiencias a través de la API y la interfaz de usuario, lea la información general [de](./home.md)segmentación.
 
-Para obtener más información sobre la privacidad de datos dentro de la plataforma, incluido el modo en que Privacy Service ayuda a facilitar el cumplimiento automatizado de las normas legales y de privacidad de la organización, consulte la documentación [de](../privacy-service/home.md)Privacy Service.
+Para obtener más información sobre la privacidad de los datos dentro de [!DNL Platform]la empresa, incluso cómo [!DNL Privacy Service] ayuda a facilitar el cumplimiento automatizado de las normas legales y de privacidad de la organización, consulte la documentación de [!DNL Privacy Service](../privacy-service/home.md).
