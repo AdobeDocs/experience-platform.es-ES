@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tutoriales de segmentación
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Una vez desarrollada, probada y guardada la definición del segmento, puede eval
 
 ## Exportar datos de segmentos
 
-La exportación de segmentos que contienen [!DNL Profile] datos requiere primero [crear un conjunto de datos en el que se exportarán](../segmentation/tutorials/create-dataset-export-segment.md)los datos e iniciar un nuevo trabajo de exportación. Los pasos para generar un trabajo de exportación se encuentran en el tutorial [de la API de](../segmentation/tutorials/export-data.md)exportación.
+La exportación de segmentos que contienen [!DNL Profile] datos requiere primero [crear un conjunto de datos en el que se exportarán](../segmentation/tutorials/create-dataset-export-segment.md)los datos e iniciar un nuevo trabajo de exportación. Los pasos para generar un trabajo de exportación se encuentran en el tutorial sobre la [evaluación de un segmento](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configurar directivas de combinación
 
