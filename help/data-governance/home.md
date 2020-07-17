@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración de datos de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -85,15 +85,6 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 >Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
 
 Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la descripción general [de](./policies/overview.md)las políticas.
-
-## Versiones futuras
-
-[!DNL Data Governance] actualmente admite el etiquetado DULE en dos niveles (conjunto de datos y campo). [!DNL Data Governance] también admite la creación y administración de políticas de uso de datos y acciones de marketing a través de la API DULE [!DNL Policy Service] .
-
-Las versiones posteriores proporcionarán las siguientes funciones:
-
-* Aplicación de políticas: Utilice el marco de políticas para asesorar y aplicar políticas en diferentes patrones de acceso a datos.
-* Auditoría: Monitorear las actividades de acceso a datos e identificar los problemas de cumplimiento e informar al respecto.
 
 ## Pasos siguientes
 
