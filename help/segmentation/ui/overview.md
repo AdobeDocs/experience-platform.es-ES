@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2750'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Guía del usuario del Generador] de segmentos
+# [!DNL Segment Builder] guía del usuario
 
 [!DNL Adobe Experience Platform Segmentation Service] proporciona una API RESTful y una interfaz de usuario para crear definiciones de segmentos a partir de [!DNL Real-time Customer Profile] datos.
 
@@ -41,9 +41,9 @@ Al hacer clic en **[!UICONTROL Crear segmento]** en la esquina superior derecha 
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Espacio de trabajo Generador] de segmentos
+## [!DNL Segment Builder] workspace
 
-[!UICONTROL El Generador] de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos [!DNL Profile] de datos. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
+[!DNL Segment Builder] proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos [!DNL Profile] de datos. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ Al hacer clic en **[!UICONTROL Crear segmento]** en la esquina superior derecha 
 
 Los componentes básicos de las definiciones de segmentos son **[!UICONTROL Atributos]** y **[!UICONTROL Eventos]**. Además, los atributos y eventos contenidos en **[!UICONTROL Audiencias]** existentes también pueden utilizarse como componentes para nuevas definiciones.
 
-Puede ver estos bloques de creación en la sección *Campos* de la izquierda del espacio de trabajo del Generador [!UICONTROL de] segmentos. *[!UICONTROL Campos]* contiene una ficha para cada uno de los componentes principales: **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** y **[!UICONTROL Audiencias]**.
+Puede ver estos bloques de creación en la sección *[!UICONTROL Campos]* del lado izquierdo del [!DNL Segment Builder] espacio de trabajo. *[!UICONTROL Campos]* contiene una ficha para cada uno de los componentes principales: **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** y **[!UICONTROL Audiencias]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ También puede buscar [!UICONTROL Audiencias] mediante la barra de búsqueda, qu
 
 ## Lienzo del generador de reglas {#rule-builder-canvas}
 
-Una definición de segmento es un conjunto de reglas que se utilizan para describir las características clave o el comportamiento de una audiencia de destinatario. Estas reglas se crean con el lienzo *[!UICONTROL del]* generador de reglas, ubicado en el centro del Generador [!UICONTROL de]segmentos.
+Una definición de segmento es un conjunto de reglas que se utilizan para describir las características clave o el comportamiento de una audiencia de destinatario. Estas reglas se crean con el lienzo *[!UICONTROL del]* generador de reglas, ubicado en el centro de [!DNL Segment Builder].
 
 Para agregar una nueva regla a la definición del segmento, arrastre un mosaico desde la ficha *[!UICONTROL Campos]* y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agrega. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], [!UICONTROL Tipos de evento]y [!UICONTROL Audiencias].
 
@@ -105,7 +105,7 @@ Para agregar una nueva regla a la definición del segmento, arrastre un mosaico 
 
 Puede arrastrar y soltar una audiencia de la ficha *[!UICONTROL Audiencia]* en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición del segmento. Esto le permite incluir o excluir la pertenencia a una audiencia como un atributo en la nueva regla de segmento.
 
-Para [!DNL Platform] audiencias creadas con el Generador [!UICONTROL de]segmentos, se le ofrece la opción de convertir la audiencia en el conjunto de reglas que se utilizaron en la definición de segmentos para esa audiencia. Esta conversión hace una copia de la lógica de regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de que ha guardado los cambios recientes en la definición del segmento antes de convertirlo a lógica de regla.
+Para [!DNL Platform] audiencias creadas con [!DNL Segment Builder], se le ofrece la opción de convertir la audiencia en el conjunto de reglas que se utilizaron en la definición del segmento para esa audiencia. Esta conversión hace una copia de la lógica de regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de que ha guardado los cambios recientes en la definición del segmento antes de convertirlo a lógica de regla.
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ Para [!DNL Platform] audiencias creadas con el Generador [!UICONTROL de]segmento
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-Si surgen conflictos al convertir audiencias en reglas, el Generador [!UICONTROL de segmentos] intentará conservar las opciones existentes de la mejor manera posible.
+Si surgen conflictos al convertir audiencias en reglas, [!DNL Segment Builder] intentará conservar las opciones existentes en la medida de sus posibilidades.
 
 ### vista de código
 
-También puede realizar la vista de una versión basada en código de una regla creada en el Generador [!UICONTROL de segmentos]. Una vez que haya creado la regla dentro del lienzo del generador de reglas, puede seleccionar vista **[!UICONTROL de]** código para ver el segmento como PQL.
+Como alternativa, puede vista una versión basada en código de una regla creada en la [!DNL Segment Builder]. Una vez que haya creado la regla dentro del lienzo del generador de reglas, puede seleccionar vista **[!UICONTROL de]** código para ver el segmento como PQL.
 
 ![](../images/segment-builder/code-view.png)
 
@@ -257,7 +257,7 @@ El Generador de segmentos proporciona un flujo de trabajo enriquecido que le per
 - Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.
 - Estimaciones de Vista de su audiencia potencial, permitiéndole ajustar las definiciones de segmentos según sea necesario.
 - Habilite todas las definiciones de segmentos para la segmentación programada.
-- Habilite definiciones de segmentos especificadas para la segmentación de flujo continuo.
+- Active las definiciones de segmentos especificadas para la segmentación de flujo continuo.
 
 Para obtener más información sobre [!DNL Segmentation Service], siga leyendo la documentación y complementando su aprendizaje, vea los vídeos siguientes. Para obtener instrucciones paso a paso sobre cómo trabajar con [!DNL Segmentation Service] el uso de la [!DNL Segmentation Service] API, consulte el tutorial [Creación de segmentos de audiencia mediante APIs](../tutorials/create-a-segment.md) .
 
