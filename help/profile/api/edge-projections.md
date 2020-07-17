@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Proyecciones avanzadas: API de Perfil de clientes en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Definiciones de destinos y configuraciones de proyección de Edge
 
-Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la API de Perfil de clientes en tiempo real para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
+Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la [!DNL Real-time Customer Profile] API para trabajar con proyecciones de Edge, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 >[!NOTE]
 >Las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. En este documento `Content-Type` se utiliza más de uno. Preste especial atención a los encabezados de las llamadas de ejemplo para asegurarse de que utiliza lo correcto `Content-Type` para cada solicitud.
@@ -224,7 +224,7 @@ El objeto response muestra los detalles del destino de la proyección. El `id` a
 
 ### Actualizar un destino
 
-Un destino existente se puede actualizar realizando una solicitud PUT al extremo e incluyendo el ID del destino que se va a actualizar en la ruta de la solicitud. `/config/destinations` Esta operación consiste esencialmente en _reescribir_ el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
+Un destino existente se puede actualizar realizando una solicitud PUT al extremo e incluyendo el ID del destino que se va a actualizar en la ruta de la solicitud. `/config/destinations` Esta operación consiste esencialmente en _reescribir_ el destino, por lo que deben proporcionarse los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
 
 >[!CAUTION]
 >La respuesta de la API a la solicitud de actualización es inmediata, pero los cambios en las proyecciones se aplican asincrónicamente. En otras palabras, existe una diferencia horaria entre el momento en que se realiza la actualización a la definición del destino y el momento en que se aplica.
@@ -325,7 +325,7 @@ La solicitud de eliminación devuelve el estado HTTP 204 (sin contenido) y un cu
 
 ## Configuraciones de proyección
 
-Las configuraciones de proyección proporcionan información sobre los datos que deben estar disponibles en cada borde. En lugar de proyectar un esquema completo del Modelo de datos de experiencia (XDM) en el borde, una proyección solo proporciona datos o campos específicos del esquema. Su organización puede definir más de una configuración de proyección para cada esquema XDM.
+Las configuraciones de proyección proporcionan información sobre los datos que deben estar disponibles en cada borde. En lugar de proyectar un esquema completo [!DNL Experience Data Model] (XDM) en el borde, una proyección solo proporciona datos o campos específicos del esquema. Su organización puede definir más de una configuración de proyección para cada esquema XDM.
 
 ### Lista de todas las configuraciones de proyección
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Solicitud**
 
-La siguiente solicitud lista todas las configuraciones de proyección asociadas con la clase de esquema del modelo de datos de experiencia, Perfil individual XDM. Para obtener más información sobre XDM y su función en Platform, lea la información general [del sistema](../../xdm/home.md)XDM.
+La siguiente solicitud lista todas las configuraciones de proyección asociadas con la clase [!DNL Experience Data Model] esquema, [!DNL XDM Individual Profile]. Para obtener más información sobre XDM y su función en [!DNL Platform], lea la información general [del sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \
