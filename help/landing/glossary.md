@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **Control de acceso:** {#access-control} Control de acceso para [!DNL Experience Platform] vincular usuarios con permisos de acceso y entornos de simulación de pruebas mediante perfiles de productos en Adobe Admin Console.
 
-**ID de clave de acceso:** El ID de clave de acceso es un identificador único asociado a una clave de acceso secreto de Amazon S3. El ID de la clave de acceso y la clave de acceso secreto se utilizan conjuntamente para firmar solicitudes de AWS.
+**ID de clave de acceso:** El ID de clave de acceso es un identificador único asociado a una clave de acceso secreto [!DNL Amazon] S3. El ID de la clave de acceso y la clave de acceso secreto se utilizan conjuntamente para firmar solicitudes de AWS.
 
 **Acción:** En [!DNL Experience Platform Launch]concreto, una acción es un tipo específico de componente de regla que define lo que debe suceder después de que se produzca un evento y se evalúen y pasen las condiciones.
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 **Segmentación por lotes:** La segmentación por lotes es una alternativa a un proceso de selección de datos en curso y mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y almacena para que pueda exportarse para su uso.
 
-**Generar:** En [!DNL Experience Platform Launch], una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contiene todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
+**Generar:** En [!DNL Experience Platform Launch], una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contienen todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
 
 **Herramientas de Business Intelligence:** La inteligencia empresarial, también conocida como herramientas de &quot;BI&quot;, está integrada principalmente con el [!DNL Experience Platform Query Service]. Las herramientas de inteligencia comercial son tipos de software de aplicaciones que recopilan y procesan grandes cantidades de datos no estructurados de sistemas internos y externos.
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **Etiqueta de contrato C4:** `C4` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. C4 es la etiqueta más restrictiva, ya que engloba las etiquetas C5, C6 y C7.
 
-**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden utilizar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
+**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
 
 **C6 Etiqueta de contrato:** `C6` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. Los datos no se pueden usar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios.  Esto incluye el uso de datos recopilados anteriormente en el sitio sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra.
 
