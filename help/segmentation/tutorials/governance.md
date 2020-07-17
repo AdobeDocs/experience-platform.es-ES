@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1325'
 ht-degree: 1%
 
 ---
@@ -14,42 +14,42 @@ ht-degree: 1%
 
 # Aplicar la compatibilidad con el uso de datos para un segmento de audiencia mediante API
 
-En este tutorial se explican los pasos para reforzar la compatibilidad del uso de datos con los segmentos de audiencia de Perfil del cliente en tiempo real mediante API.
+En este tutorial se explican los pasos para aplicar la compatibilidad con el uso de datos a los segmentos de [!DNL Real-time Customer Profile] audiencia que utilizan API.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-- [Perfil](../../profile/home.md)del cliente en tiempo real: Perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos del Modelo de datos de experiencia (XDM) dentro de Platform. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
-   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por el Perfil del cliente en tiempo real para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para fines de administración de datos.
-- [Segmentación](../home.md): Cómo el Perfil del cliente en tiempo real divide un grupo grande de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
-- [Administración](../../data-governance/home.md)de datos: La Administración de datos proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
+- [!DNL Real-time Customer Profile](../../profile/home.md):: [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos [!DNL Experience Data Model] (XDM) dentro de [!DNL Platform]. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
+   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para fines de administración de datos.
+- [!DNL Segmentation](../home.md):: Cómo [!DNL Real-time Customer Profile] divide un gran grupo de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
+- [!DNL Data Governance](../../data-governance/home.md):: [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
    - [Directivas](../../data-governance/policies/overview.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
    - [Aplicación](../../data-governance/enforcement/overview.md)de políticas: Permite aplicar políticas de uso de datos y evitar operaciones de datos que constituyan infracciones de políticas.
-- [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -57,9 +57,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Buscar una directiva de combinación para una definición de segmento {#merge-policy}
 
-Este flujo de trabajo comienza por acceder a un segmento de audiencia conocido. Los segmentos que están habilitados para su uso en el Perfil del cliente en tiempo real contienen un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre los conjuntos de datos que se deben incluir en el segmento, que a su vez contienen las etiquetas de uso de datos aplicables.
+Este flujo de trabajo comienza por acceder a un segmento de audiencia conocido. Los segmentos que están habilitados para utilizarse en [!DNL Real-time Customer Profile] contienen un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre los conjuntos de datos que se deben incluir en el segmento, que a su vez contienen las etiquetas de uso de datos aplicables.
 
-Con la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentación, puede buscar una definición de segmento por su ID para encontrar la directiva de combinación asociada.
+Con la API, puede buscar una definición de segmento por su ID para encontrar la directiva de combinación asociada. [!DNL Segmentation]
 
 **Formato API**
 
@@ -126,7 +126,7 @@ Una respuesta correcta devuelve los detalles de la definición del segmento.
 
 ## Buscar los conjuntos de datos de origen de la directiva de combinación {#datasets}
 
-Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando el ID de directiva de combinación en una solicitud GET a la API de Perfil.
+Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando la ID de la directiva de combinación en una solicitud GET a la [!DNL Profile] API. Encontrará más información sobre las directivas de combinación en la guía de extremo de directivas de [combinación](../../profile/api/merge-policies.md).
 
 **Formato API**
 
@@ -375,7 +375,7 @@ Al actualizar la directiva de combinación de una definición de segmento, se aj
 
 ### Restringir campos de datos específicos al exportar el segmento
 
-Al exportar un segmento a un conjunto de datos mediante la API de Perfil del cliente en tiempo real, puede filtrar los datos incluidos en la exportación mediante el `fields` parámetro . Todos los campos de datos agregados a este parámetro se incluirán en la exportación, mientras que todos los demás campos de datos se excluirán.
+Al exportar un segmento a un conjunto de datos mediante la [!DNL Segmentation] API, puede filtrar los datos incluidos en la exportación mediante el `fields` parámetro . Todos los campos de datos agregados a este parámetro se incluirán en la exportación, mientras que todos los demás campos de datos se excluirán.
 
 Considere un segmento que tiene campos de datos con los nombres &quot;A&quot;, &quot;B&quot; y &quot;C&quot;. Si sólo desea exportar el campo &quot;C&quot;, el `fields` parámetro contendrá sólo el campo &quot;C&quot;. Al realizar esto, los campos &quot;A&quot; y &quot;B&quot; se excluirían al exportar el segmento.
 
@@ -383,4 +383,4 @@ Consulte la sección sobre [exportación de un segmento](./evaluate-a-segment.md
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para obtener más información sobre la administración de datos en Experience Platform, consulte la descripción general [de la administración de](../../data-governance/home.md)datos.
+Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para obtener más información sobre [!DNL Data Governance] en [!DNL Experience Platform], lea la información general de [!DNL Data Governance](../../data-governance/home.md).
