@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Entidades: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Extremo de entidades (acceso a Perfil)
 
-Adobe Experience Platform le permite acceder a los datos de Perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a perfiles mediante la interfaz de usuario de Platform, consulte la guía del usuario de [Perfil](../ui/user-guide.md).
+Adobe Experience Platform le permite acceder a [!DNL Real-time Customer Profile] los datos mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a perfiles mediante la [!DNL Platform] interfaz de usuario, consulte la guía [del usuario de](../ui/user-guide.md)Perfil.
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 ## Acceso a los datos de perfil por identidad
 
-Puede acceder a una entidad Perfil realizando una solicitud GET al extremo y proporcionando la identidad de la entidad como una serie de parámetros de consulta. `/access/entities` Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
+Para acceder a una [!DNL Profile] `/access/entities` entidad, realice una solicitud GET al extremo y proporcione la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
 
 Los parámetros de Consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
@@ -544,7 +544,7 @@ curl -X POST \
 | Propiedad | Descripción |
 |---|---|
 | `schema.name` | **(OBLIGATORIO)** El esquema XDM de la entidad que se va a recuperar |
-| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent` este valor, debe especificar el esquema de la entidad de perfil a la que están relacionados los eventos de series temporales. |
+| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent` este valor, debe especificar el esquema de la entidad perfil a la que están relacionados los eventos de series temporales. |
 | `identities` | **(OBLIGATORIO)** Una lista de matriz de perfiles desde los que recuperar eventos de series temporales asociadas. Cada entrada de la matriz se establece de una de las dos maneras siguientes: 1) utilizando una identidad completa consistente en un valor de ID y una Área de nombres o 2) proporcionando un XID. |
 | `fields` | Aísla los datos devueltos a un conjunto especificado de campos. Utilícelo para filtrar qué campos de esquema se incluyen en los datos recuperados. Ejemplo: personalEmail,persona.nombre,persona.género |
 | `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica ninguno en la llamada de servicio, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, la opción predeterminada es no combinar perfiles ni establecer vínculos de identidad. |
@@ -774,7 +774,7 @@ Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud 
 
 ## Acceso a eventos de series temporales en varias entidades de esquema
 
-Puede acceder a varias entidades conectadas mediante un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relación, lea la guía de extremo de [descriptores de la guía para desarrolladores de la API de registro de Esquema](../../xdm/api/descriptors.md).
+Puede acceder a varias entidades conectadas mediante un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relación, lea la guía de extremo de [!DNL Schema Registry] la guía de [descriptores de programadores de API](../../xdm/api/descriptors.md).
 
 Puede incluir parámetros de consulta en la ruta de la solicitud para especificar a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
@@ -884,11 +884,11 @@ Los resultados se paginan al recuperar eventos de series temporales. Si hay pág
 
 ## Pasos siguientes
 
-Siguiendo esta guía, ha accedido con éxito a los campos de datos, perfiles y datos de series temporales de Perfiles de clientes en tiempo real. Para obtener información sobre cómo acceder a otros recursos de datos almacenados en Platform, consulte la información general [sobre el acceso a](../../data-access/home.md)datos.
+Al seguir esta guía, se ha accedido correctamente a los campos [!DNL Real-time Customer Profile] de datos, perfiles y datos de series temporales. Para obtener más información sobre cómo acceder a otros recursos de datos almacenados en [!DNL Platform], consulte la información general [sobre el acceso a](../../data-access/home.md)datos.
 
 ## Apéndice {#appendix}
 
-En la siguiente sección se proporciona información adicional sobre el acceso a los datos de Perfil mediante la API.
+La siguiente sección proporciona información adicional sobre el acceso a [!DNL Profile] los datos mediante la API.
 
 ### Parámetros de Consulta {#query-parameters}
 
