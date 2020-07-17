@@ -4,50 +4,46 @@ solution: Experience Platform
 title: Trabajos de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '994'
 ht-degree: 3%
 
 ---
 
 
-# Guía para desarrolladores de trabajos de segmentos
+# Guía de extremo de trabajos de segmento
 
-Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle la forma en que el Perfil del cliente en tiempo real combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
+Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición [de](./segment-definitions.md)segmento, así como a cualquier directiva [de](../../profile/api/merge-policies.md) combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
 
 Esta guía proporciona información para ayudarle a comprender mejor los trabajos de segmentos e incluye ejemplos de llamadas a API para realizar acciones básicas mediante la API.
 
 ## Primeros pasos
 
-Los extremos de API que se utilizan en esta guía forman parte de la API de segmentación. Antes de continuar, consulte la guía para desarrolladores [de Segmentación](./getting-started.md).
+Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
-En particular, la sección [de](./getting-started.md#getting-started) introducción de la guía para desarrolladores de Segmentación incluye vínculos a temas relacionados, una guía para leer las llamadas de API de muestra en el documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
-
-## Recuperar una lista de trabajos de segmentos
+## Recuperar una lista de trabajos de segmentos {#retrieve-list}
 
 Puede recuperar una lista de todos los trabajos de segmentos para su organización de IMS realizando una solicitud GET al `/segment/jobs` extremo.
 
 **Formato API**
+
+El extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. `/segment/jobs` Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todos los trabajos de exportación disponibles para su organización. Se pueden incluir varios parámetros, separados por ampersands (`&`).
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:: (*Opcional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación.
-
 **Parámetros de Consulta**
 
-A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar los trabajos de segmentos. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todos los trabajos de segmentos disponibles para su organización.
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `start` | Especifica el desplazamiento inicial de los trabajos de segmento devueltos. |
-| `limit` | Especifica el número de trabajos de segmento devueltos por página. |
-| `status` | Filtros los resultados en función del estado. Los valores admitidos son NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELATION |
-| `sort` | Ordena los trabajos del segmento devueltos. Se escribe en el formato `[attributeName]:[desc|asc]`. |
-| `property` | Filtros segmenta los trabajos y obtiene coincidencias exactas para el filtro dado. Se puede escribir en cualquiera de los siguientes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrado en la clave de objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrado dentro de la matriz</li></ul> |
+| Parámetro | Descripción | Ejemplo |
+| --------- | ----------- | ------- |
+| `start` | Especifica el desplazamiento inicial de los trabajos de segmento devueltos. | `start=1` |
+| `limit` | Especifica el número de trabajos de segmento devueltos por página. | `limit=20` |
+| `status` | Filtros los resultados en función del estado. Los valores admitidos son NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELATION | `status=NEW` |
+| `sort` | Ordena los trabajos del segmento devueltos. Se escribe en el formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filtros segmenta los trabajos y obtiene coincidencias exactas para el filtro dado. Se puede escribir en cualquiera de los siguientes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrado en la clave de objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrado dentro de la matriz</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Solicitud**
 
@@ -157,9 +153,18 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
 }
 ```
 
-## Crear un nuevo trabajo de segmento
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `id` | Identificador de solo lectura generado por el sistema para el trabajo de segmento. |
+| `status` | Estado actual del trabajo del segmento. Los valores posibles para el estado incluyen &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; y &quot;SUCCED&quot;. |
+| `segments` | Objeto que contiene información sobre las definiciones de segmentos devueltas dentro del trabajo de segmentos. |
+| `segments.segment.id` | ID de la definición del segmento. |
+| `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
+| `metrics` | Objeto que contiene información de diagnóstico sobre el trabajo del segmento. |
 
-Puede crear un nuevo trabajo de segmento haciendo una solicitud POST al `/segment/jobs` extremo.
+## Crear un nuevo trabajo de segmento {#create}
+
+Puede crear un nuevo trabajo de segmento realizando una solicitud POST al extremo e incluyendo en el cuerpo el ID de la definición del segmento desde el cual desea crear una nueva audiencia. `/segment/jobs`
 
 **Formato API**
 
@@ -181,9 +186,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   {
     "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
   }
-]
- '
+]'
 ```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `segmentId` | ID de la definición de segmento para la que desea crear un trabajo de segmento. Encontrará más información sobre las definiciones de segmentos en la guía de punto final de definición de [segmento](./segment-definitions.md). |
 
 **Respuesta**
 
@@ -240,9 +248,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de s
 }
 ```
 
-## Recuperar un trabajo de segmento específico
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `id` | Identificador de solo lectura generado por el sistema para el trabajo de segmento recién creado. |
+| `status` | Estado actual del trabajo del segmento. Dado que el trabajo del segmento se acaba de crear, el estado siempre será &quot;NUEVO&quot;. |
+| `segments` | Objeto que contiene información sobre las definiciones de segmentos para las que se está ejecutando este trabajo de segmento. |
+| `segments.segment.id` | ID de la definición de segmento proporcionada. |
+| `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 
-Puede recuperar información detallada sobre un trabajo de segmento específico realizando una solicitud GET al extremo y proporcionando el valor del trabajo de segmento en la ruta de solicitud `/segment/jobs` y proporcionando el valor `id` del trabajo de segmento.
+## Recuperar un trabajo de segmento específico {#get}
+
+Puede recuperar información detallada sobre un trabajo de segmento específico realizando una solicitud GET al extremo y proporcionando el ID del trabajo de segmento que desea recuperar en la ruta de solicitud. `/segment/jobs`
 
 **Formato API**
 
@@ -328,9 +344,18 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-## Trabajos de recuperación masiva de segmentos
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `id` | Identificador de solo lectura generado por el sistema para el trabajo de segmento. |
+| `status` | Estado actual del trabajo del segmento. Los valores posibles para el estado incluyen &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; y &quot;SUCCED&quot;. |
+| `segments` | Objeto que contiene información sobre las definiciones de segmentos devueltas dentro del trabajo de segmentos. |
+| `segments.segment.id` | ID de la definición del segmento. |
+| `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
+| `metrics` | Objeto que contiene información de diagnóstico sobre el trabajo del segmento. |
 
-Puede recuperar información detallada sobre varios trabajos de segmentos especificados realizando una solicitud POST al extremo y proporcionando los `/segment/jobs/bulk-get` valores `id` de los trabajos de segmentos en el cuerpo de la solicitud.
+## Trabajos de recuperación masiva de segmentos {#bulk-get}
+
+Puede recuperar información detallada sobre varios trabajos de segmentos haciendo una solicitud POST al extremo y proporcionando los `/segment/jobs/bulk-get` valores `id` de los trabajos de segmentos en el cuerpo de la solicitud.
 
 **Formato API**
 
@@ -426,9 +451,21 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 }
 ```
 
-## Cancelar o eliminar un trabajo de segmento específico
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `id` | Identificador de solo lectura generado por el sistema para el trabajo de segmento. |
+| `status` | Estado actual del trabajo del segmento. Los valores posibles para el estado incluyen &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; y &quot;SUCCED&quot;. |
+| `segments` | Objeto que contiene información sobre las definiciones de segmentos devueltas dentro del trabajo de segmentos. |
+| `segments.segment.id` | ID de la definición del segmento. |
+| `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 
-Puede solicitar la eliminación de un trabajo de segmento especificado realizando una solicitud de DELETE al extremo y proporcionando el valor del trabajo de segmento en la ruta de acceso de la solicitud `/segment/jobs``id` .
+## Cancelar o eliminar un trabajo de segmento específico {#delete}
+
+Puede eliminar un trabajo de segmento específico realizando una solicitud de DELETE al extremo y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de la solicitud. `/segment/jobs`
+
+>[!NOTE]
+>
+>La respuesta de la API a la solicitud de eliminación es inmediata. Sin embargo, la eliminación real del trabajo del segmento es asincrónica. En otras palabras, existe una diferencia horaria entre cuándo se realiza la solicitud de eliminación en el trabajo del segmento y cuándo se aplica.
 
 **Formato API**
 
@@ -463,4 +500,4 @@ Una respuesta correcta devuelve el estado HTTP 204 con la siguiente información
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora podrá comprender mejor cómo funcionan los trabajos de segmentos. Para obtener más información sobre la segmentación, lea la información general [sobre la](../home.md)segmentación.
+Después de leer esta guía, ahora podrá comprender mejor cómo funcionan los trabajos de segmentos.
