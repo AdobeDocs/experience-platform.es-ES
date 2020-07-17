@@ -4,34 +4,32 @@ solution: Experience Platform
 title: Guía del desarrollador del servicio de segmentación
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
 
 
-# Guía del desarrollador del servicio de segmentación
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-La segmentación le permite crear segmentos y generar audiencias en Adobes Experience Platform a partir de los datos de Perfil del cliente en tiempo real.
+El servicio de segmentación por Adobe Experience Platform le permite crear segmentos y generar audiencias en Adobe Experience Platform a partir de sus [!DNL Real-time Customer Profile] datos.
 
-## Primeros pasos
+La guía para desarrolladores requiere una comprensión práctica de los distintos servicios de Experience Platform que se utilizan [!DNL Segmentation Service].
 
-Esta guía requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que se utilizan en la segmentación.
-
-- [Segmentación](../home.md): Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
-- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-- [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [!DNL Segmentation](../home.md):: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para utilizar la segmentación con éxito mediante la API.
+Las siguientes secciones proporcionan información adicional que deberá conocer para trabajar con la [!DNL Segmentation] API de forma satisfactoria.
 
-### Leer llamadas de API de muestra
+## Leer llamadas de API de muestra
 
-La documentación de la API del servicio de segmentación proporciona llamadas de API de ejemplo para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+La documentación de la [!DNL Segmentation Service] API proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
 
-### Encabezados requeridos
+## Encabezados requeridos
 
 La documentación de la API también requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para poder realizar correctamente llamadas a extremos de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en las llamadas de API de Experience Platform, como se muestra a continuación:
 
@@ -39,13 +37,13 @@ La documentación de la API también requiere que haya completado el tutorial [d
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo trabajar con entornos limitados en Experience Platform, consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
+>Para obtener más información sobre cómo trabajar con entornos limitados en [!DNL Experience Platform], consulte la documentación [general de los](../../sandboxes/home.md)entornos limitados.
 
 <!-- ## Estimates
 
@@ -95,4 +93,4 @@ La búsqueda de segmentos se utiliza para buscar e indexar campos configurables 
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API de segmentación, seleccione una de las subguías para aprender a utilizar los extremos específicos relacionados con la segmentación. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de Platform, consulte la guía [del usuario](../ui/overview.md)Segmentación.
+Para realizar llamadas mediante la [!DNL Segmentation Service] API, seleccione una de las guías de punto final disponibles mediante el panel de navegación izquierdo o en la información general de la guía del [desarrollador](./overview.md)
