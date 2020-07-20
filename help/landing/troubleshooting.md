@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre Adobe Experience Platform y guía de solución de problemas
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 2%
@@ -118,7 +118,7 @@ Muchas operaciones PATCH en [!DNL Platform] API utilizan cadenas de [puntero](ht
 
 ## ¿Puedo usar Postman para realizar llamadas a [!DNL Platform] las API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) es una herramienta útil para visualizar llamadas a las API de RESTful. Esta publicación [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Media describe cómo configurar Postman para que realice automáticamente la autenticación y la utilice para consumir [!DNL Experience Platform] API.
+[Postman](https://www.postman.com/) es una herramienta útil para visualizar llamadas a las API de RESTful. Esta publicación [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Media describe cómo configurar Postman para que realice automáticamente la autenticación y la utilice para consumir [!DNL Experience Platform] API.
 
 ## ¿Cuáles son los requisitos del sistema para [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
