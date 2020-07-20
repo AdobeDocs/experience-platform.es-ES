@@ -4,9 +4,9 @@ seo-title: Configuración del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 11%
 
 ---
@@ -74,7 +74,7 @@ Dominio utilizado para interactuar con los servicios de Adobe. Solo se utiliza s
 | -------- | ------------ | ----------------- |
 | Cadena | Sí | none |
 
-Su ID de organización de Experience Cloud asignado.  Al configurar varias instancias dentro de una página, debe configurar una diferente `orgId` para cada instancia.
+Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias instancias dentro de una página, debe configurar una diferente `orgId` para cada instancia.
 
 ## Recopilación de datos
 
@@ -134,7 +134,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!UICONTROL de]cookies de Audience Manager, lo que permite configurar cookies en función de la calificación de segmentos.
+Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite la configuración de cookies en función de la calificación de segmentos.
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Habilita los destinos [!UICONTROL de]cookies de Audience Manager, lo que permite
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!UICONTROL de]URL de Audience Manager, lo que permite activar las direcciones URL en función de la calificación del segmento.
+Habilita los destinos [!DNL Audience Manager] URL, lo que permite activar las direcciones URL en función de la calificación del segmento.
 
 ## Opciones de identidad
 
