@@ -1,27 +1,27 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
+user-guide-title: Ayuda de Platform sobre datos de clientes en tiempo real
 translation-type: tm+mt
-source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
+source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 11%
+source-wordcount: '440'
+ht-degree: 10%
 
 ---
 
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [Descripción general del producto](overview.md)
-* Real-time Customer Data Platform {#intro}
+* [Visión general de CDP en tiempo real](overview.md)
+* Primeros pasos {#intro}
    * [Primeros pasos](get-started.md)
    * [Resumen de las métricas](home-page-dashboards.md)
 * Administración {#admin}
    * [Información general sobre administración](administration/admin-overview.md)
 * Conjuntos de datos {#datasets}
    * [Conjuntos de datos](datasets/dataset.md)
-   * [Calidad de los datos en la plataforma](datasets/data-quality.md)
+   * [Calidad de los datos en Platform](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Información general sobre los destinos](destinations/destinations-overview.md)
    * [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md)
@@ -30,12 +30,12 @@ ht-degree: 11%
       * [Página de detalles de destino](destinations/destination-details-page.md)
    * Catálogo de destinos {#destinations-cat}
       * [Descripción general del catálogo de destinos](destinations/destinations-catalog.md)
-      * Destinos de Adobe{#adobe-destinations}
+      * Adobe destinations{#adobe-destinations}
          * [Información general sobre los destinos de Adobe](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Destinos publicitarios{#advertising-destinations}
          * [Descripción general de los destinos de publicidad](destinations/advertising-destinations.md)
-         * [Extensión de Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Extensión de la etiqueta de conversión de publicidad de Awin](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Extensión Awin Advertising Mastertag](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Extensión de beemray](/help/rtcdp/destinations/beemray-extension.md)
@@ -53,17 +53,17 @@ ht-degree: 11%
          * [Extensión de seguimiento de conversión de Pinterest](destinations/pinterest-extension.md)
          * [Extensión de etiqueta de sitio web universal de Twitter](destinations/twitter-uwt-extension.md)
       * Destinos de Analytics {#analytics-destinations}
-         * [Descripción general de los destinos de Analytics](destinations/analytics-destinations.md)
+         * [Información general sobre los destinos de Analytics](destinations/analytics-destinations.md)
          * [Admitir extensión de seguimiento de sitio web](/help/rtcdp/destinations/adform-extension.md)
          * [Extensión de Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
-         * [Extensión de Adobe Media Analytics para audio y vídeo](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+         * [Extensión de Adobe Media Analytics for Audio and Video](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [Extensión Clicktale](/help/rtcdp/destinations/clicktale-extension.md)
          * [Extensión Contentsquare](/help/rtcdp/destinations/contentsquare-extension.md)
          * [Extensión de decibelios](/help/rtcdp/destinations/decibel-extension.md)
          * [Extensión Demandbase](/help/rtcdp/destinations/demandbase-extension.md)
          * [Extensión Dialogtech](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Extensión de análisis de etiquetas de sitio global de Google](/help/rtcdp/destinations/gtag-analytics-extension.md)
-         * [Extensión de Google Universal Analytics](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+         * [Extensión Analytics universal de Google](/help/rtcdp/destinations/google-universal-analytics-extension.md)
          * [Extensión de JW Player Analytics (Beta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Extensión Nielsen BSDK](destinations/nielsen-bsdk-extension.md)
          * [Extensión del controlador IMA Nielsen](destinations/nielsen-ima-extension.md)
@@ -80,13 +80,13 @@ ht-degree: 11%
          * [Destino de Amazon S3](destinations/amazon-s3-destination.md)
          * [Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino de SFTP](destinations/sftp-destination.md)
-      * Destinos de la plataforma de Gestión de datos {#dmp-destinations}
-         * [Introducción a los destinos de la plataforma de Gestión de datos](destinations/dmp-destinations.md)
-         * [Extensión DIL del Administrador de Audiencias](/help/rtcdp/destinations/aam-dil-extension.md)
+      * Destinos de Platform de Gestión de datos {#dmp-destinations}
+         * [Gestión de datos de destinos de Platform información general](destinations/dmp-destinations.md)
+         * [Extensión DIL de Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinos de mercadotecnia de correo electrónico{#email-destinations}
          * [Introducción a los destinos de mercadotecnia por correo electrónico](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [Extensión de Analytics bisible](/help/rtcdp/destinations/bizible-extension.md)
+         * [Extensión Analytics bisible](/help/rtcdp/destinations/bizible-extension.md)
          * [Extensión de marketing](destinations/marketo-extension.md)
          * [Extensión de Marketo Munchkin](destinations/marketo-munchkin-extension.md)
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
@@ -131,16 +131,16 @@ ht-degree: 11%
 * Privacidad y administración de datos {#privacy}
    * [Resumen de privacidad](privacy/privacy-overview.md)
    * [Información general sobre la administración de datos](privacy/data-governance-overview.md)
-* Perfil del cliente en tiempo real {#profile}
+* Profiles {#profile}
    * [Perfil general](profile/profile-overview.md)
    * [Identidades y Áreas de nombres de identidad](profile/identities-overview.md)
    * [Combinar directivas](profile/merge-policies.md)
    * [Visor de Perfiles](profile/profile-viewer.md)
-* Segmentación {#segmentation}
+* Segmentos {#segmentation}
    * [Información general sobre la segmentación](segmentation/segmentation-overview.md)
    * [Guía del generador de segmentos](segmentation/segment-builder-guide.md)
 * Fuentes {#sources}
    * [Información general sobre fuentes](sources/sources-overview.md)
    * [Implementación de etiquetas de sitios web con Adobe Launch](sources/launch.md)
-* [Notas de la versión](https://www.adobe.com/go/platform-release-notes-en)
-* [Glosario](https://www.adobe.com/go/platform-glossary-en)
+* [Notas de la versión de Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Glosario Experience Platform](https://www.adobe.com/go/platform-glossary-en)
