@@ -1,26 +1,26 @@
 ---
-title: 'Adobe Destinatario y el SDK web de Adobe Experience Platform. '
-seo-title: SDK web de Adobe Experience Platform y uso de Adobe Destinatario
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia mediante Adobe Destinatario
-seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de la plataforma de experiencia mediante Adobe Destinatario
+title: 'Adobe Target y el SDK web de Adobe Experience Platform. '
+seo-title: SDK web de Adobe Experience Platform y uso de Adobe Target
+description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
+seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 2%
+source-wordcount: '634'
+ht-degree: 3%
 
 ---
 
 
-# Información general de Destinatario
+# [!DNL Target] Información general
 
-El SDK web de Adobe Experience Platform puede entregar y procesar experiencias personalizadas administradas en Adobe Destinatario en el canal web. Puede utilizar un editor WYSIWYG, denominado Compositor [de experiencias](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuales (VEC), o una interfaz no visual, el Compositor [de experiencias basadas en](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formularios, para crear, activar y ofrecer sus actividades y experiencias de personalización.
+El Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar experiencias personalizadas administradas en Adobe Target con el canal web. Puede utilizar un editor WYSIWYG, denominado Compositor [de experiencias](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuales (VEC), o una interfaz no visual, el Compositor [de experiencias basadas en](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formularios, para crear, activar y ofrecer sus actividades y experiencias de personalización.
 
-## Activación de Adobe Destinatario
+## Habilitar Adobe Target
 
-Para habilitar Destinatario, debe hacer lo siguiente:
+Para habilitar [!DNL Target], debe hacer lo siguiente:
 
-1. Active los tokens de respuesta actividad.id y experience.id en la interfaz de usuario de Destinatario.
+1. Active los tokens de respuesta actividad.id y experience.id en la [!DNL Target] interfaz de usuario.
 
 ![destinatario_reponse_token](../../solution-specific/target/assets/target_response_token.png)
 
@@ -32,13 +32,13 @@ A continuación, opcionalmente, también puede:
 * Añada `decisionScopes` a sus eventos para recuperar actividades específicas (útil para actividades creadas con el compositor basado en formularios).
 * Añada el [fragmento](../../solution-specific/target/flicker-management.md) de ocultamiento previo para ocultar solo determinadas partes de la página.
 
-## Uso del VEC de Adobe Destinatario
+## Uso del Adobe Target VEC
 
 Con el SDK, puede utilizar el VEC normalmente con una excepción: necesita tener instalada y activa la extensión [auxiliar de VEC de](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) destinatario.
 
 ## Actividades de VEC de procesamiento automático
 
-El SDK web de AEP tiene la capacidad de procesar automáticamente las experiencias definidas mediante el VEC de Adobe Destinatario en la web para los usuarios. Para indicar al SDK web de AEP que procese automáticamente actividades VEC, envíe un evento con `renderDecisions = true`:
+El SDK web de AEP tiene la capacidad de procesar automáticamente las experiencias definidas mediante el VEC de Adobe Target en la web para los usuarios. Para indicar al SDK web de AEP que procese automáticamente actividades VEC, envíe un evento con `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -61,7 +61,7 @@ alloy
 
 ## Uso del Compositor basado en formularios
 
-El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, segmentación de experiencias, personalización automatizada y actividades de Recomendaciones con diferentes tipos de respuestas, como JSON, HTML, Imagen, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Destinatario, se puede ejecutar la lógica empresarial principal. Para recuperar las decisiones de las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;temas de decisión&quot; para los que desee recuperar una decisión.
+El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, [!DNL Experience Targeting]Personalización automatizada y actividades de Recomendaciones con diferentes tipos de respuesta, como JSON, HTML, Image, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Target, se puede ejecutar la lógica de negocio principal. Para recuperar las decisiones de las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;temas de decisión&quot; para los que desee recuperar una decisión.
 
 ```javascript
 alloy
@@ -84,11 +84,11 @@ alloy
 
 ## Ámbitos de decisión
 
-`decisionScopes` define las secciones, ubicaciones o partes de las páginas en las que desea representar una experiencia personalizada. Son `decisionScopes` personalizables y están definidas por el usuario. Para los clientes actuales de Destinatario, también `decisionScopes` se conocen como &quot;mboxes&quot;. En la interfaz de usuario de Destinatario, `decisionScopes` aparece como &quot;ubicaciones&quot;.
+`decisionScopes` define las secciones, ubicaciones o partes de las páginas en las que desea representar una experiencia personalizada. Son `decisionScopes` personalizables y están definidas por el usuario. Para [!DNL Target] los clientes actuales, `decisionScopes` también se conocen como &quot;mboxes&quot;. En la [!DNL Target] interfaz de usuario, `decisionScopes` aparezca como &quot;ubicaciones&quot;.
 
 ## __Ámbito de vista__
 
-El SDK web de AEP proporciona una funcionalidad en la que puede recuperar acciones de VEC sin depender del SDK web de AEP para procesar las acciones de VEC. Envíe un evento con `__view__` la definición de `decisionScopes`.
+AEP [!DNL Web SDK] proporciona una funcionalidad en la que puede recuperar acciones de VEC sin depender de AEP [!DNL Web SDK] para procesar las acciones de VEC. Envíe un evento con `__view__` la definición de `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
@@ -111,25 +111,25 @@ alloy("sendEvent", {
 
 ## Audiencias en XDM
 
-Al definir Audiencias para las actividades de Destinatario que se enviarán mediante el SDK web de AEP, se debe definir y utilizar [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) . Después de definir esquemas, clases y mezclas XDM, puede crear una regla de audiencia de Destinatario definida por los datos XDM para la segmentación. En Destinatario, los datos XDM se muestran en el Generador de Audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
+Al definir Audiencias para las actividades de Destinatario que se enviarán mediante el SDK web de AEP, se debe definir y utilizar [XDM](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html) . Después de definir esquemas, clases y mezclas XDM, puede crear una regla de audiencia de Destinatario definida por los datos XDM para la segmentación. En Destinatario, los datos XDM se muestran en el Generador de Audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
 
 Si tiene actividades de Destinatario con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, tenga en cuenta que no se enviarán correctamente a través del SDK web de AEP. En lugar de utilizar parámetros personalizados o el perfil del usuario, debe utilizar XDM en su lugar. Sin embargo, hay campos de objetivo de audiencia predeterminados que se admiten mediante el SDK web de AEP y que no requieren XDM. Estos son los campos disponibles en la interfaz de usuario de Destinatario que no requieren XDM:
 
 * Biblioteca de segmentos
 * Geografía 
 * Red
-* Sistema operativo
+* Operating System
 * Páginas del sitio
-* Explorador
+* Browser
 * Fuentes de tráfico
 * Periodo de tiempo
 
 ## Terminología
 
-__Decisiones__ : En Destinatario, se correlacionan con la experiencia seleccionada de una Actividad.
+__Decisiones__ : En [!DNL Target], se correlacionan con la experiencia seleccionada de una Actividad.
 
-__Ámbito__ : el ámbito de aplicación de la decisión. En Destinatario, este es el mBox. El mbox global es el `__view__` ámbito.
+__Ámbito__ : el ámbito de aplicación de la decisión. En [!DNL Target], este es el mBox. El mbox global es el `__view__` ámbito.
 
-__Esquema__ - El esquema de una decisión es el tipo de oferta en el Destinatario.
+__Esquema__ - El esquema de una decisión es el tipo de oferta en [!DNL Target].
 
-__XDM__ : el XDM se serializa en notación de puntos y luego se coloca en Destinatario como parámetros mBox.
+__XDM__ : el XDM se serializa en notación de puntos y luego se coloca [!DNL Target] como parámetros de mBox.
