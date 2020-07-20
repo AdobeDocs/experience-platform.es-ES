@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía de extremos de Previsualizaciones y estimaciones
+title: Definiciones de Previsualizaciones y estimaciones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# Guía de extremos de Previsualizaciones y estimaciones
+# Definiciones de Previsualizaciones y estimaciones
 
 A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Adobe Experience Platform] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. **Las Previsualizaciones** proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. **Las estimaciones** proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
