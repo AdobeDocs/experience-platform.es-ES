@@ -4,19 +4,19 @@ seo-title: Variables asignadas automáticamente en Analytics con el SDK web de A
 description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web de Experience Platform
 seo-description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '543'
 ht-degree: 2%
 
 ---
 
 
-# Variables asignadas automáticamente en Analytics
+# Variables asignadas automáticamente en [!DNL Analytics]
 
-A continuación se muestra una lista de variables que Adobe Experience Platform Edge Network asigna automáticamente a Analytics.
+A continuación se muestra una lista de variables a las que el Adobe Experience Platform [!DNL Edge Network] asigna automáticamente [!DNL Analytics].
 
-| Ruta de campo XDM | Cadena de Consulta de Analytics / Encabezado HTTP | Descripción |
+| Ruta de campo XDM | [!DNL Analytics Query String] / Encabezado HTTP | Descripción |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | Asignación del parámetro de consulta de AppMeasurement PURCHASEID. |
 | `commerce.order.currencyCode` | `cc` | Asignación de CURRENCY, parámetro de consulta de AppMeasurement. |
