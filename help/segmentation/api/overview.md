@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias a partir [!DNL Adobe Experience Platform] de sus [!DNL Real-time Customer Profile] datos.
 
-La [!DNL Segmentation Service] API proporciona varios extremos que le permiten administrar mediante programación las operaciones de segmentación en [!DNL Experience Platform]. Este documento de información general proporciona introducciones de alto nivel a cada uno de estos extremos y vínculos a sus guías de punto final asociadas para obtener más información. Antes de leer las guías de punto final individuales, consulte la guía [de](getting-started.md) introducción para obtener información importante sobre los encabezados requeridos, leer las llamadas de API de muestra y mucho más.
+La [!DNL Segmentation Service] API proporciona varios extremos que le permiten administrar mediante programación las operaciones de segmentación en [!DNL Experience Platform]. Este documento de información general proporciona introducciones de alto nivel a cada uno de estos extremos y vínculos a sus guías de punto final asociadas para obtener más información. Antes de leer las guías de punto final individuales, consulte la guía [de](./getting-started.md) introducción para obtener información importante sobre los encabezados requeridos, leer las llamadas de API de muestra y mucho más.
 
 Para vista de todos los extremos disponibles y las operaciones de CRUD, consulte la referencia [de la API de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentación.
 
