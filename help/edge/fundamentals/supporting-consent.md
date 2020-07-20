@@ -1,12 +1,12 @@
 ---
 title: Apoyo al consentimiento
 seo-title: Compatibilidad con la preferencia de consentimiento del SDK web de Adobe Experience Platform
-description: Descubra cómo se admiten las preferencias de consentimiento con el SDK web de la plataforma de experiencia
-seo-description: Descubra cómo se admiten las preferencias de consentimiento con el SDK web de la plataforma de experiencia
+description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
+seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Dado que el usuario eligió exclusión, se rechazan las promesas que se devolvie
 
 >[!NOTE]
 >
->Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades y ofertas de productos de Adobe, la implementación actual es un enfoque de la inclusión total o nulo.  Esto solo se aplica al SDK web de Adobe Experience Platform y NO a otras bibliotecas JavaScript de Adobe.
+>Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades y ofertas de productos de Adobe, la implementación actual es un enfoque de la inclusión total o nulo.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
 
 ## Persistencia de las preferencias de consentimiento
 
