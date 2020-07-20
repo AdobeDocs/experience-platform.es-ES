@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Representación de contenido person
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Información general sobre las opciones de personalización
 
-El SDK web de Adobe Experience Platform permite consultar las soluciones de personalización de Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
+El Adobe Experience Platform [!DNL Web SDK] permite consultar las soluciones de personalización de Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
 
 ## Representación automática de contenido
 
@@ -92,7 +92,7 @@ Esto devolverá una lista de decisiones como un objeto JSON para cada decisión.
 
 >[!TIP]
 >
-> Si utiliza ámbitos de Destinatario que se convierten en mBoxes en el servidor, solo serán solicitudes a la vez en lugar de individualmente. El mbox global siempre se envía.
+> Si utiliza [!DNL Target] ámbitos que se convierten en mBoxes en el servidor, solo serán solicitudes a la vez en lugar de individualmente. El mbox global siempre se envía.
 
 ### Recuperar contenido automático
 
