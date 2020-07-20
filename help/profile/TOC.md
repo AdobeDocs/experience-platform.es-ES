@@ -3,33 +3,34 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Perfil de clientes en tiempo real
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 20%
+source-wordcount: '78'
+ht-degree: 21%
 
 ---
 
 
-# Perfil del cliente en tiempo real {#profile}
+# [!DNL Real-time Customer Profile] {#profile}
 
-* [Perfil general](home.md)
-* Guía para desarrolladores de API de Perfil {#api}
+* [[!DNL Profile] sobre validación](home.md)
+* [!DNL Profile] Guía para desarrolladores de API {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Proyecciones de Edge](api/edge-projections.md)
-   * [Entidades (acceso a Perfil)](api/entities.md)
+   * [Entidades ([!DNL Perfil] acceso)](api/entities.md)
+   * [Exportar trabajos ([!Perfil DNL] exportar)](api/export-jobs.md)
    * [Combinar directivas](api/merge-policies.md)
-   * [Trabajos del sistema de Perfil (Eliminar solicitudes)](api/profile-system-jobs.md)
+   * [[!DNL Profile] trabajos del sistema (eliminar solicitudes)](api/profile-system-jobs.md)
 * Guías de la interfaz de usuario {#ui}
-   * [Guía del usuario de Perfil](ui/user-guide.md)
+   * [[!DNL Profile] guía del usuario](ui/user-guide.md)
    * [Guía del usuario de directivas de combinación](ui/merge-policies.md)
 * Tutoriales {#tutorials}
-   * [Añadir datos en Perfil](tutorials/add-profile-data.md)
-   * [Configurar conjunto de datos para Perfil e identidad](tutorials/dataset-configuration.md)
+   * [Añadir datos a [!DNL Profile]](tutorials/add-profile-data.md)
+   * [Configurar conjunto de datos para [!DNL Profile] &amp; [!DNL Identity]](tutorials/dataset-configuration.md)
    * [Más tutoriales](https://docs.adobe.com/content/help/es-ES/experience-platform/tutorials/home.html)
 * [Procesamiento de solicitud de privacidad](privacy.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [[!DNL Platform] notas de la versión](https://www.adobe.com/go/platform-release-notes-en)
