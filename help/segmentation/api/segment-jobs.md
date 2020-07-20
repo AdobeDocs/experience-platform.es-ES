@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Trabajos de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 3%
 
 ---
 
 
-# Guía de extremo de trabajos de segmento
+# Extremo de trabajos de segmento
 
 Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición [de](./segment-definitions.md)segmento, así como a cualquier directiva [de](../../profile/api/merge-policies.md) combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
 
