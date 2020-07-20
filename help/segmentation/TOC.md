@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda del servicio de segmentación de Adobes Experience Platform
 translation-type: tm+mt
-source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
+source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '112'
 ht-degree: 8%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 8%
    - [Primeros pasos](api/getting-started.md)
    - [Trabajos de exportación](api/export-jobs.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)
+   - [Programaciones](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmentos](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
