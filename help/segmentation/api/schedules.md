@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Programaciones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
 
-# Guía del extremo de la programación
+# Extremo de programación
 
 Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día. Puede utilizar el extremo para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica. `/config/schedules`
 
