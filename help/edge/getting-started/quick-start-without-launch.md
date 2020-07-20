@@ -4,9 +4,9 @@ seo-title: 'inicio rápido del SDK web de Adobe Experience Platform '
 description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '515'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Bienvenido
 
-Esta guía le guiará por las diferentes formas de configurar el SDK web de Adobe Experience Platform. Para poder utilizar esta función, debe estar en la lista de permitidos. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
+Esta guía le guiará por las diferentes formas de configurar el Adobe Experience Platform [!DNL Web SDK]. Para poder utilizar esta función, debe estar en la lista de permitidos. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
-- Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funciona sin un CNAME pero necesita uno antes de ir a producción
-- Tenga derecho a Adobe Experience Platform Data Platform.  Si no ha adquirido Platform, le proporcionaremos Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
+- Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para [!DNL Analytics], debe utilizarlo. La prueba en desarrollo funciona sin un CNAME pero necesita uno antes de ir a producción
+- Tener derecho al Adobe Experience Platform [!DNL Data Platform].  Si no ha adquirido Platform, le proporcionaremos [!DNL Experience Platform Data Services Foundation] su uso de forma limitada con el SDK sin coste adicional.
 - Utilizar la versión más reciente del servicio de ID de Visitante
 
 ## Crear un ID de configuración
 
-Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge de Adobe Launch, aunque no utilice las funciones de administración de etiquetas. Esto le permite habilitar la red perimetral para enviar datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
+Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge de Adobe Launch, aunque no utilice las funciones de administración de etiquetas. Esto le permite habilitar el [!DNL Edge Network] envío de datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ Puede crear un ID de configuración con la herramienta [de configuración](../fu
 
 ## Preparación de un Esquema
 
-La red perimetral Experience Platform toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo espera la red de Edge que se formateen los datos. Para enviar datos, debe definir el esquema.
+El [!DNL Experience Platform Edge Network] toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo [!DNL Edge Network] espera que se formatee la información. Para enviar datos, debe definir el esquema.
 
 - [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
-- Añadir la mezcla de SDK web de Adobe Experience Platform en el esquema que ha creado
+- Añada la mezcla de Adobe Experience Platform [!DNL Web SDK] al esquema que ha creado
 
-El siguiente vídeo está diseñado para ayudarle en la creación de un conector de origen de esquema, conjunto de datos y flujo continuo para sus datos del SDK web.
+El siguiente vídeo está diseñado para ayudarle a crear un conector de esquema, conjunto de datos y origen de flujo continuo para sus [!DNL Web SDK] datos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
