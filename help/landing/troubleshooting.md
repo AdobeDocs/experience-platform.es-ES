@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas más frecuentes sobre Adobe Experience Platform y guía de solución de problemas
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1962'
 ht-degree: 2%
 
 ---
@@ -248,6 +248,6 @@ La siguiente es una lista de guías de solución de problemas y documentación d
 | Modelo de datos de experiencia (XDM) | [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Preguntas más frecuentes y guía de solución de problemas del sistema XDM](../xdm/troubleshooting-guide.md) |
 | Servicio de identidad | [API de servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Guía de solución de problemas del servicio de identidad](../identity-service/troubleshooting-guide.md) |
 | Servicio de Consulta | [API de servicio de Consulta](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Guía de solución de problemas del servicio de Consulta](../query-service/troubleshooting-guide.md) |
-| Perfil del cliente en tiempo real | [API de Perfil del cliente en tiempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| Perfil del cliente en tiempo real | [API de Perfil del cliente en tiempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Guía de solución de problemas de Perfil](../profile/troubleshooting.md) |
 | Sandboxes | [API de Simulador para pruebas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
 | Segmentación | [API de segmentación](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
