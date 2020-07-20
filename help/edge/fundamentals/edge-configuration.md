@@ -4,9 +4,9 @@ seo-title: Configuración de Edge para el SDK web Experience Platform
 description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configuración del borde
 
-La configuración del SDK web de Adobe Experience Platform se divide entre dos lugares. El comando [](configuring-the-sdk.md) configure del SDK controla los elementos que deben gestionarse en el cliente, como el `edgeDomain`. La configuración de Edge gestiona el resto de la configuración del SDK. Cuando se envía una solicitud a la red perimetral de Adobe Experience Platform, `edgeConfigId` se utiliza para hacer referencia a la configuración del lado del servidor. Esto le permite actualizar la configuración sin tener que realizar cambios de código en el sitio web.
+La configuración del Adobe Experience Platform [!DNL Web SDK] se divide entre dos lugares. El comando [](configuring-the-sdk.md) configure del SDK controla los elementos que deben gestionarse en el cliente, como el `edgeDomain`. La configuración de Edge gestiona el resto de la configuración del SDK. Cuando se envía una solicitud al Adobe Experience Platform [!DNL Edge Network], se `edgeConfigId` utiliza para hacer referencia a la configuración del lado del servidor. Esto le permite actualizar la configuración sin tener que realizar cambios de código en el sitio web.
 
 ## Creación de un ID de configuración de Edge
 
@@ -90,7 +90,7 @@ ID única de una cuenta de destinatario. Para encontrarlo, puede navegar a [!UIC
 
 ##### [!UICONTROL Token de propiedad]
 
-Destinatario permite a los clientes controlar los permisos mediante el uso de propiedades. Encontrará más información en la sección Permisos [de](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentación de Destinatario.
+[!DNL Target] permite a los clientes controlar los permisos mediante el uso de propiedades. Encontrará más información en la sección Permisos [de](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la [!DNL Target] documentación.
 
 El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL configuración] > [!UICONTROL Propiedades]
 
@@ -108,11 +108,11 @@ Todo lo que se necesita para enviar datos a Adobe Audience Manager es habilitar 
 
 ##### [!UICONTROL Destinos de cookies habilitados]
 
-Permite que el SDK comparta información de segmentos a través de [destinos](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) de cookies desde Audience Manager.
+Permite que el SDK comparta información de segmentos mediante [destinos](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) de cookies desde [!DNL Audience Manager].
 
 ##### [!UICONTROL Destinos de URL habilitados]
 
-Permite que el SDK comparta información de segmentos a través de destinos [URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Estos se configuran en Audience Manager.
+Permite que el SDK comparta información de segmentos a través de destinos [URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Estos se configuran en [!DNL Audience Manager].
 
 #### Adobe Analytics
 
