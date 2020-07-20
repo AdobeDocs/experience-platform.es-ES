@@ -4,9 +4,9 @@ seo-title: Ayuda del SDK web de Adobe Experience Platform
 description: Descubra qué es el SDK de Adobe Experience Platform Web y cómo se puede utilizar.
 seo-description: permite a los clientes de Adobe Experience Cloud interactuar con los distintos servicios del Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # ¿Qué es el SDK web de Adobe Experience Platform?
 
-Adobe Experience Platform Web SDK es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con los distintos servicios del Experience Cloud a través de Adobe Experience Platform Edge Network.
+Adobe Experience Platform Web SDK es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con los distintos servicios de la [!DNL Experience Cloud] mediante Adobe [!DNL Experience Platform Edge Network].
 
-En el siguiente vídeo se proporciona información general sobre el SDK web de Adobe Experience Platform y la red perimetral.
+En el siguiente vídeo se ofrece una descripción general del Adobe Experience Platform [!DNL Web SDK] y [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ El SDK web de Adobe Experience Platform sustituye a los siguientes SDK:
 * AT.js
 * DIL.js
 
-Esto no es sólo un envoltorio en torno a las bibliotecas existentes. Es una reescritura completa. Su propósito es acabar con los desafíos, ya que las etiquetas deben activarse en el orden correcto, con incoherencias con los desafíos de versiones de las bibliotecas y con una mejor administración de las dependencias. Es una nueva forma de implementar el Experience Cloud y es de código [abierto](https://github.com/adobe/alloy).
+Esto no es sólo un envoltorio en torno a las bibliotecas existentes. Es una reescritura completa. Su propósito es acabar con los desafíos, ya que las etiquetas deben activarse en el orden correcto, con incoherencias con los desafíos de versiones de las bibliotecas y con una mejor administración de las dependencias. Es una nueva forma de implementar el [!DNL Experience Cloud] y es de código [abierto](https://github.com/adobe/alloy).
 
-Además de una nueva biblioteca, existe un nuevo extremo que racionaliza las solicitudes HTTP a las soluciones de Adobe. Antes, Visitante.js enviaba una llamada de bloqueo al servicio de ID de visitante, luego AT.js enviaba una llamada a Adobe Target, DIL.js enviaba una llamada a Adobe Audience Manager y, finalmente, AppMeasurement.js enviaba una llamada a Adobe Analytics. Esta nueva biblioteca y punto final puede recuperar un ID, recuperar una [!DNL Target] experiencia, enviar datos al Audience Manager y pasar los datos al Adobe Experience Platform en una sola llamada.
+Además de una nueva biblioteca, existe un nuevo extremo que racionaliza las solicitudes HTTP a las soluciones de Adobe. Antes, Visitante.js enviaba una llamada de bloqueo al servicio de ID de visitante, luego AT.js enviaba una llamada a Adobe Target, DIL.js enviaba una llamada a Adobe Audience Manager y, finalmente, AppMeasurement.js enviaba una llamada a Adobe Analytics. Esta nueva biblioteca y punto final puede recuperar un ID, recuperar una [!DNL Target] experiencia, enviar datos a [!DNL Audience Manager]y pasar los datos al Adobe Experience Platform en una sola llamada.
 
-El siguiente vídeo muestra el SDK web de Adobe Experience Platform y la red perimetral en acción. El ejemplo de vídeo utiliza una sola llamada a Adobe que envía datos a Experience Platform, Analytics, Audience Manager y Destinatario.
+El siguiente vídeo muestra el Adobe Experience Platform [!DNL Web SDK] y [!DNL Edge Network] la acción. El ejemplo de vídeo utiliza una sola llamada a Adobe que envía datos a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]y [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
