@@ -355,7 +355,8 @@ La paginación se controla mediante los siguientes parámetros:
 Es posible filtrar los resultados de lista y se produce independientemente del mecanismo de paginación. Los Filtros simplemente omiten las instancias en el orden de las listas o solicitan explícitamente incluir solo las instancias que cumplen una condición determinada. Un cliente puede solicitar que la expresión de propiedades se utilice como filtro o puede especificar una lista de URI que se utilizarán como valores de la clave principal de las instancias.
 
 - **`property`**:: Contiene una ruta de nombre de propiedad seguida de un operador de comparación seguido de un valor. <br/>
-La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad de carga útil `status` y que los valores posibles son `draft`, `approved`y `archived` luego el parámetro de consulta `deleted` `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
+La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad payload 
+`status` y los valores posibles son `draft`, `approved`, `archived` y `deleted` luego el parámetro de consulta `property=_instance.status==approved` devuelve solo las instancias para las que se aprueba el estado. <br/>
 <br/>
 La propiedad que se va a comparar con el valor dado se identifica como una ruta. Los componentes de ruta individuales están separados por ".", como: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
