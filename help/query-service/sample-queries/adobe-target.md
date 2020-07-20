@@ -4,21 +4,24 @@ solution: Experience Platform
 title: consultas de muestra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 
-# consultas de muestra para datos de Adobe Destinatario
+# consultas de muestra para datos de Adobe Target
 
-Los datos de Adobe Destinatario se transforman en esquema XDM de Experience Evento y se ingieren en la plataforma de experiencia como conjuntos de datos para usted. Existen muchos casos de uso para el servicio de Consulta con estos datos, y las siguientes consultas de muestra deberían funcionar con los conjuntos de datos de Adobe Destinatario.
+Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren [!DNL Experience Platform] como conjuntos de datos. Existen muchos casos de uso para [!DNL Query Service] estos datos y las siguientes consultas de muestra deberían funcionar con los conjuntos de datos de Adobe Target.
 
 >[!NOTE]
 >En los siguientes ejemplos, deberá editar SQL para completar los parámetros esperados para sus consultas en función del conjunto de datos, las variables o el intervalo de tiempo que desee evaluar. Proporcione parámetros donde quiera que vea `{ }` en SQL.
 
-## Nombre de conjunto de datos estándar para la fuente de datos de Destinatario en la plataforma:
+## Nombre de conjunto de datos estándar para la fuente de datos de Destinatario en [!DNL Platform]:
 
-Eventos de experiencias de Adobe Destinatario (nombre descriptivo) <br>`adobe_target_experience_events` (nombre que se debe utilizar en la consulta)
+Eventos de experiencias de Adobe Target (nombre descriptivo) <br>`adobe_target_experience_events` (nombre que se utilizará en la consulta)
 
 ## Asignación parcial de campo XDM de alto nivel
 
@@ -28,7 +31,7 @@ El uso de `[ ]` denota una matriz
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
 | ID de actividad | `_experience.target.activities.activityID` |  |
-| ID de experiencia | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
+| ID de la experiencia | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | ID del segmento | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | Ámbito de Evento | `_experience.target.activities[].activityEvents[].eventScope` | Rastrea nuevos Visitantes y visitas |
 | ID del paso | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | ID de paso personalizado para Campaña |
