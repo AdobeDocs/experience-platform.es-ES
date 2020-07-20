@@ -1,12 +1,12 @@
 ---
 title: Interactuar con varias propiedades
-seo-title: SDK web de Adobe Experience Platform Interactuar con varias propiedades
-description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
-seo-description: Descubra cómo interactuar con varias propiedades del SDK web de la plataforma de experiencia
+seo-title: SDK web de Adobe Experience Platform que interactúa con varias propiedades
+description: Descubra cómo interactuar con varias propiedades del SDK web de Experience Platform
+seo-description: Descubra cómo interactuar con varias propiedades del SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -66,4 +66,4 @@ Asegúrese de ejecutar el comando `configure` para cada instancia antes de ejecu
 
 ## Limitaciones
 
-Para evitar conflictos con las cookies, solo una instancia del SDK web de Adobe Experience Platform dentro de una página puede tener un `edgeConfigId`.  Del mismo modo, solo una instancia del SDK web de Adobe Experience Platform puede tener un `orgId`.
+Para evitar conflictos con las cookies, solo una instancia de Adobe Experience Platform [!DNL Web SDK] dentro de una página puede tener un `edgeConfigId`.  Del mismo modo, sólo una instancia de Adobe Experience Platform [!DNL Web SDK] puede tener un `orgId`.
