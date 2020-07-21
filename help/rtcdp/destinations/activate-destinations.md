@@ -4,9 +4,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Para activar los datos que tiene en Adobe Real-time Customer Data Platform, asigne segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Para activar los datos que tiene en Adobe Real-time Customer Data Platform, asigne segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/desti
    ![ID de fidelidad como identidad](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Seleccione `Email_LC_SHA256` como identidad de destinatario si ha marcado las direcciones de correo electrónico de los clientes en la ingesta de datos en Adobe Experience Platform, según los requisitos [de hash de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico de Facebook. <br> Seleccione `Email` como identidad de destinatario si las direcciones de correo electrónico que utiliza no están marcadas por hash. CDP en tiempo real de Adobe realizará un hash de las direcciones de correo electrónico para cumplir con los requisitos de Facebook.
+   Seleccione `Email_LC_SHA256` como identidad de destinatario si ha marcado las direcciones de correo electrónico de los clientes en la ingesta de datos en Adobe Experience Platform, según los requisitos [!DNL Facebook] de hash de [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico. <br> Seleccione `Email` como identidad de destinatario si las direcciones de correo electrónico que utiliza no están marcadas por hash. CDP en tiempo real de Adobe realizará un hash de las direcciones de correo electrónico para cumplir con [!DNL Facebook] los requisitos.
 
    ![asignación de identidad después de rellenar los campos](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -113,11 +113,11 @@ Compruebe el destino de publicidad correspondiente en el que está activando los
 
 ### Destinos de redes sociales
 
-Para Facebook, una activación exitosa significa que una audiencia personalizada de Facebook se crearía mediante programación en el Administrador [de publicidades de](https://www.facebook.com/adsmanager/manage/)Facebook. La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
+Por ejemplo, [!DNL Facebook]una activación exitosa significa que se crearía una audiencia [!DNL Facebook] personalizada mediante programación en el Administrador [de publicidades de](https://www.facebook.com/adsmanager/manage/)Facebook. La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
 
 >[!TIP]
 >
->La integración entre Adobe Real-time CDP y Facebook admite los rellenos de audiencia históricos. Todas las cualificaciones del segmento histórico se envían a Facebook cuando activa los segmentos en el destino.
+>La integración entre CDP en tiempo real de Adobe y [!DNL Facebook] admite los rellenos de audiencia históricos. Todas las cualificaciones del segmento histórico se envían [!DNL Facebook] cuando activa los segmentos en el destino.
 
 ## Deshabilitar activación {#disable-activation}
 
