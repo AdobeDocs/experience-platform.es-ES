@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Crear un conjunto de datos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
 
 # Crear un conjunto de datos
 
-Para crear un conjunto de datos mediante la API de catálogo, debe conocer el valor del `$id` esquema del modelo de datos de experiencia (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud POST al extremo en la API de catálogo `/datasets` .
+Para crear un conjunto de datos mediante la [!DNL Catalog] API, debe conocer el `$id` valor del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud POST al `/datasets` extremo en la [!DNL Catalog] API.
 
 >[!NOTE]
 >
->Este documento solo cubre cómo crear un objeto de conjunto de datos en el catálogo. Para ver los pasos completos sobre cómo crear, rellenar y monitorear un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
+>Este documento solo cubre cómo crear un objeto de conjunto de datos en [!DNL Catalog]. Para ver los pasos completos sobre cómo crear, rellenar y monitorear un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
 
 **Formato API**
 
