@@ -4,31 +4,31 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 0%
+source-wordcount: '652'
+ht-degree: 2%
 
 ---
 
 
-# Destino de Facebook
+# [!DNL Facebook] Destino
 
 ## Información general {#overview}
 
-Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
+Active perfiles para sus [!DNL Facebook] campañas para la segmentación, personalización y supresión de audiencias en base a correos electrónicos con hash.
 
 ![Destino de Facebook en la interfaz de usuario de CDP en tiempo real](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo debe usar el destino de Facebook, aquí hay dos casos de uso de muestra que los clientes de la Plataforma de datos del cliente en tiempo real de Adobe pueden resolver con esta función.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL Facebook] destino, a continuación se presentan dos casos de uso de muestra que los clientes de Adobe Real-time Customer Data de Platform pueden resolver con esta función.
 
 
 ### Caso de uso n.º 1
 
 
-Un minorista en línea quiere llegar a los clientes existentes a través de las plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El minorista en línea puede ingerir direcciones de correo electrónico de su propio CRM al CDP en tiempo real de Adobe, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma social de Facebook, optimizando así el gasto en publicidad.
+Un minorista en línea quiere llegar a los clientes existentes a través de las plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El minorista en línea puede ingerir direcciones de correo electrónico de su propia CRM a CDP en tiempo real de Adobe, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma [!DNL Facebook] social, optimizando así su inversión en publicidad.
 
 
 ### Caso de uso n.º 2
@@ -38,15 +38,15 @@ Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y qui
 
 Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando las direcciones de correo electrónico como identificadores.
 
-A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia que pueden destinatario a través del destino de Facebook.
+A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia que pueden realizar destinatarios a través del [!DNL Facebook] destino.
 
 ## Especificaciones del destino {#destination-specs}
 
-### Administración de datos para destinos de Facebook {#data-governance}
+### Administración de datos para [!DNL Facebook] destinos {#data-governance}
 
 >[!IMPORTANT]
 >
->Los datos enviados a Facebook no deben incluir identidades vinculadas. Usted es responsable de cumplir esta obligación y puede hacerlo asegurándose de que los segmentos seleccionados para la activación no utilicen una opción de vinculación en su política de combinación. Obtenga más información sobre las políticas [de](/help/profile/ui/merge-policies.md)combinación.
+>Los datos enviados a no [!DNL Facebook] deben incluir identidades vinculadas. Usted es responsable de cumplir esta obligación y puede hacerlo asegurándose de que los segmentos seleccionados para la activación no utilicen una opción de vinculación en su política de combinación. Obtenga más información sobre las políticas [de](/help/profile/ui/merge-policies.md)combinación.
 
 ### Tipo de Activación {#activation-type}
 
@@ -57,16 +57,16 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
 1. Su cuenta [!DNL Facebook] de usuario debe tener el **[!DNL Manage campaigns]** permiso habilitado para la cuenta de publicidad que planea usar.
-2. Añada la cuenta comercial de **Adobe Experience Cloud** como socio publicitario en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador](https://www.facebook.com/business/help/1717412048538897) comercial en la documentación de Facebook para obtener más información.
+2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador](https://www.facebook.com/business/help/1717412048538897) comercial en la documentación de Facebook para obtener más información.
    >[!IMPORTANT]
-   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas** . Esto es necesario para la [!DNL Adobe Real-time CDP] integración.
-3. Lea y firme las [!DNL Facebook Custom Audiences] Condiciones de servicio. Para hacerlo, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` está su [!DNL Facebook Ad Account ID].
+   > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. Es necesario para la integración de [!DNL Adobe Real-time CDP].
+3. Lea y firme las [!DNL Facebook Custom Audiences] Condiciones de servicio. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
 
 ### Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Facebook exige que no se envíe información de identificación personal (PII) de manera clara. Por lo tanto, las audiencias activadas en Facebook deben bloquearse las direcciones de correo *hash* . Puede elegir entre hash de las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o bien puede elegir trabajar con las direcciones de correo electrónico de forma clara en la plataforma de experiencia y hacer que nuestro algoritmo las hash en la activación.
+[!DNL Facebook] exige que no se envíe con claridad ninguna información de identificación personal. Por lo tanto, las audiencias activadas en [!DNL Facebook] deben bloquearse las direcciones de correo electrónico con *hash* . Puede elegir hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede elegir trabajar con las direcciones de correo electrónico en Experience Platform y hacer que nuestro algoritmo las incluya en activación.
 
-Para obtener más información sobre la ingesta de direcciones de correo electrónico en la plataforma de experiencias, consulte la descripción general [de la ingestión por](/help/ingestion/batch-ingestion/overview.md) lotes y la descripción general [de la ingestión](/help/ingestion/streaming-ingestion/overview.md)por vapor.
+Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la información general [sobre la ingestión de](/help/ingestion/batch-ingestion/overview.md) lotes y la información general [sobre la ingestión](/help/ingestion/streaming-ingestion/overview.md)por lotes.
 
 Si selecciona hash para las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los siguientes requisitos:
 
@@ -80,16 +80,16 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 >[!IMPORTANT]
 >
->Si decide no usar hash en las direcciones de correo electrónico, Adobe Real-time CDP lo hará por usted cuando active segmentos en Facebook. En el flujo de trabajo [de](/help/rtcdp/destinations/activate-destinations.md#activate-data) activación (consulte el paso 5), seleccione la `Email` opción como se muestra a continuación para las direcciones *de correo electrónico* sin procesar y `Email_LC_SHA256` para las direcciones *de correo electrónico* con hash.
+>Si decide no usar hash en las direcciones de correo electrónico, Adobe Real-time CDP lo hará por usted cuando active segmentos en [!DNL Facebook]. En el flujo de trabajo [de](/help/rtcdp/destinations/activate-destinations.md#activate-data) activación (consulte el paso 5), seleccione la `Email` opción como se muestra a continuación para las direcciones *de correo electrónico* sin procesar y `Email_LC_SHA256` para las direcciones *de correo electrónico* con hash.
 
 
 ![Hashing en activación](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 ## Conectar al destino {#connect-destination}
 
-Para conectarse al destino de Facebook, consulte Flujo de trabajo [de autenticación de destinos de red](/help/rtcdp/destinations/social-network-destinations-workflow.md)social.
+Para conectarse al [!DNL Facebook] destino, consulte Flujo de trabajo [de autenticación de destinos de red](/help/rtcdp/destinations/social-network-destinations-workflow.md)social.
 
 
-## Activar segmentos en Facebook {#activate-segments}
+## Activar segmentos para [!DNL Facebook] {#activate-segments}
 
-Para obtener instrucciones sobre cómo activar segmentos en Facebook, consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
+Para obtener instrucciones sobre cómo activar segmentos en [!DNL Facebook], consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
