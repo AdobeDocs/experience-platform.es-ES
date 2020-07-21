@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía para desarrolladores de Data Access
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---
@@ -242,4 +242,4 @@ Para obtener más ejemplos, consulte el tutorial [de acceso a](tutorials/dataset
 
 ## Suscripción a eventos de ingesta de datos
 
-Platform pone a disposición eventos específicos de alto valor para su suscripción a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
+[!DNL Platform] pone a disposición de la suscripción eventos específicos de alto valor mediante [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
