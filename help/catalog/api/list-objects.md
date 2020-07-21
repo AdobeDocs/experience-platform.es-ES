@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Objetos de Lista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de objeto Catalog que se va a enumerar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a enumerar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con ampersands (`&`). Consulte la guía sobre [filtrado de datos](filter-data.md) del catálogo para obtener más información. |
 
 **Solicitud**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de objetos Catalog en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para el objeto Catalog en cuestión, que se puede utilizar en otra llamada a la [vista de ese objeto](look-up-object.md) específico para obtener más detalles.
+Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para el [!DNL Catalog] objeto en cuestión, que se puede utilizar en otra llamada a la [vista de ese objeto](look-up-object.md) específico para obtener más detalles.
 
 >[!NOTE]
 >
->Si un objeto devuelto no contiene una o varias de las propiedades solicitadas indicadas por la `properties` consulta, la respuesta devuelve sólo las propiedades solicitadas que incluye, como se muestra en &quot;Conjunto de datos de ejemplo 3&quot; y &quot;Conjunto de datos de ejemplo 4&quot; a continuación.
+>Si un objeto devuelto no contiene una o varias de las propiedades solicitadas indicadas por la `properties` consulta, la respuesta devuelve sólo las propiedades solicitadas que incluye, como se muestra en la ***`Sample Dataset 3`*** y en ***`Sample Dataset 4`*** .
 
 ```json
 {
