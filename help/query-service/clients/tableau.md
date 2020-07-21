@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Conectar con Tableau
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '74'
 ht-degree: 2%
 
 ---
 
 
-# Conectar con Tableau
+# Conectar con [!DNL Tableau]
 
-Instale Tableau si aún no está instalado.
+Instalar [!DNL Tableau], si no está instalado.
 
 >[!NOTE]
 >
->Puede obtener una prueba de 14 días de &quot;Tableau Desktop&quot; [aquí](https://www.tableau.com/products/desktop/download).
+>Puede obtener una prueba de 14 días de &quot;[!DNL Tableau] Desktop&quot; [aquí](https://www.tableau.com/products/desktop/download).
 >    
-> La versión `2018.1.2 (20181.18.0615.1128 64 bit)` se ha conectado correctamente al servicio de Consulta.
+> La versión `2018.1.2 (20181.18.0615.1128 64 bit)` se ha conectado correctamente a [!DNL Query Service].
 
-Ejecute Tableau y, en la pantalla de apertura, haga clic para abrir una conexión Postgres.
+Ejecutar [!DNL Tableau]y, en la pantalla de apertura, haga clic para abrir una [!DNL Postgres] conexión.
 
 ![Imagen](../images/clients/tableau/open-connection.png)
 
-Copie `Host, Port, Database, Username, Password` de forma individual desde la página Herramientas **de** Connect BI de la IU de Platform en los campos Tableau correspondientes.
+Copie `Host, Port, Database, Username, Password` de forma individual desde la página Herramientas [!DNL Platform] de **[!UICONTROL Connect BI de la]** interfaz de usuario en los campos Tableau correspondientes.
 
-Confirme que ha marcado la casilla **SSL obligatorio** antes de intentar la conexión.
+Confirme que ha marcado la casilla **[!UICONTROL SSL obligatorio]** antes de intentar la conexión.
 
 ![Imagen](../images/clients/tableau/ssl-required.png)
