@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones definidas por Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Uno de los grandes diferenciadores de Adobe es que comprenden los datos de experiencia y lo que los clientes necesitan para poder hacer con esos datos. Puede utilizar esta comprensión para crear funciones de ayuda que faciliten su trabajo.
 
-Este documento cubre las funciones definidas por Adobe (ADF) para admitir tres actividades clave de Analytics:
+Este documento cubre las funciones definidas por Adobe (ADF) para admitir tres [!DNL Analytics] actividades clave:
 - [Sesionización](#sessionization)
 - [Atribución](#attribution)
 - [Control de rutas](#pathing)
@@ -91,13 +91,13 @@ La atribución es la forma en que se asignan métricas o conversiones, como ingr
 
 En Adobe Analytics, la configuración de atribución se configura mediante variables como eVars y se generan a medida que se ingestan datos.
 
-Las FDA de atribución que se encuentran en el servicio de Consulta permiten definir y generar esas asignaciones en el momento de la consulta.
+Las FDA de atribución que se encuentran en [!DNL Query Service] permiten que esas asignaciones se definan y generen en tiempo de consulta.
 
 Este ejemplo se centra en la atribución de último toque, pero Adobe también oferta la atribución de primer toque.
 
 >[!NOTE]
 >
->Otras opciones con tiempos de espera y caducidad basada en eventos estarán disponibles en futuras versiones del Servicio de Consulta.
+>Otras opciones con tiempos de espera y caducidad basada en eventos estarán disponibles en futuras versiones de [!DNL Query Service].
 
 **Sintaxis:**
 
