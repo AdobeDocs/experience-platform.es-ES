@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Declaraciones preparadas
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 8%
 
 ---
 
 
 # Declaraciones preparadas
 
-En SQL, las sentencias preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. El servicio de Consulta de la plataforma de experiencia de Adobe admite instrucciones preparadas mediante una consulta parametrizada. Esto se puede utilizar para optimizar el rendimiento, ya que ya no tendrá que volver a analizar una consulta una y otra vez.
+En SQL, las sentencias preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. Adobe Experience Platform [!DNL Query Service] admite las declaraciones preparadas mediante una consulta parametrizada. Esto se puede utilizar para optimizar el rendimiento, ya que ya no tendrá que volver a analizar una consulta una y otra vez.
 
 ## Uso de declaraciones preparadas
 
