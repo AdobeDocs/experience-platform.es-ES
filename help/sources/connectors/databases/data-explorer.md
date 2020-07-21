@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector del Explorador de datos de Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,38 @@ ht-degree: 0%
 Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
 Se admiten diferentes tipos de bases de datos de terceros, incluyendo relacional, NoSQL o datas warehouses. La compatibilidad con proveedores de bases de datos incluye [!DNL Azure Data Explorer].
+
+## lista de permitidos de direcciones IP
+
+Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
+
+### Región del este de EE.UU.
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
+
+### Región de Europa Occidental
+
+- `13.69.67.192/28`
+- `13.69.107.112/28`
+- `13.69.112.128/28`
+- `40.74.24.192/26`
+- `40.74.26.0/23`
+- `40.113.176.232/29`
+- `52.236.187.112/28`
+
+### Australia Oriental
+
+- `13.70.74.144/28`
+- `20.37.193.0/25`
+- `20.37.193.128/26`
+- `20.37.198.224/29`
+- `40.79.163.80/28`
+- `40.79.171.160/28`
 
 La documentación siguiente proporciona información sobre cómo conectarse [!DNL Azure Data Explorer] a [!DNL Platform] través de API o de la interfaz de usuario:
 
