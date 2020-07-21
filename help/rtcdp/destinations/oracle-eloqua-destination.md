@@ -4,45 +4,49 @@ seo-title: Destino de Oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 seo-description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Oracle Eloqua
+# [!DNL Oracle Eloqua]
 
 ## Información general
 
-[Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
+[Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) es una plataforma de software como servicio (SaaS) para la automatización de la mercadotecnia ofrecida por [!DNL Oracle] que tiene como objetivo ayudar a los especialistas en mercadotecnia B2B y a las organizaciones a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 
-Para enviar datos de segmentos a Oracle Eloqua, primero debe [conectar el destino](#connect-destination) en la plataforma de datos del cliente en tiempo real de Adobe y, a continuación, [configurar una importación](#import-data-into-eloqua) de datos desde la ubicación del almacenamiento en Oracle Eloqua.
+Para enviar datos de segmentos a [!DNL Oracle Eloqua], primero debe [conectar el destino](#connect-destination) en Adobe Real-time Customer Data Platform y, a continuación, [configurar una importación](#import-data-into-eloqua) de datos desde la ubicación del almacenamiento en [!DNL Oracle Eloqua].
 
 ## Conectar al destino {#connect-destination}
 
-1. En **[!UICONTROL Connections > Destinations]**, seleccione Oracle Eloqua y, a continuación, seleccione **[!UICONTROL Connect destination]**.
+1. En **[!UICONTROL Conexiones > Destinos]**, seleccione [!DNL Oracle Eloqua]y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar a Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. En el **[!UICONTROL Authentication]** paso, si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione **[!UICONTROL Existing Account]** y seleccione una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL New Account]** configurar una nueva conexión. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Connect to destination]**. Para Oracle Eloqua, puede seleccionar entre **[!UICONTROL SFTP with Password]** y **[!UICONTROL SFTP with SSH Key]**. Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Connect to destination]**.
+2. En el paso **[!UICONTROL Autenticación]** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione Cuenta **** existente y seleccione una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Conectar con destino]**. Por [!DNL Oracle Eloqua], puede seleccionar entre **[!UICONTROL SFTP con contraseña]** y **[!UICONTROL SFTP con clave]** SSH. Rellene la información siguiente, según el tipo de conexión, y seleccione **[!UICONTROL Conectar con destino]**.
 
-   Para **[!UICONTROL SFTP with Password]** las conexiones, debe proporcionar Dominio, Puerto, Nombre de usuario y Contraseña.
-Para **[!UICONTROL SFTP with SSH Key]** las conexiones, debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
+   Para **[!UICONTROL SFTP con conexiones de contraseña]** , debe proporcionar Dominio, Puerto, Nombre de usuario y Contraseña.
+Para **[!UICONTROL SFTP con conexiones SSH Key]** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH.
 
    ![Configurar el asistente para Eloqua](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-3. En el **[!UICONTROL Setup]** paso, rellene la información relevante para su destino como se muestra a continuación:
-   * **[!UICONTROL Name]**:: Elija un nombre relevante para el destino.
-   * **[!UICONTROL Description]**:: Escriba una descripción para el destino.
-   * **[!UICONTROL Folder Path]**:: Proporcione la ruta en la ubicación del almacenamiento donde CDP en tiempo real depositará sus datos de exportación como archivos CSV o separados por tabuladores.
-   * **[!UICONTROL File Format]**:: **CSV** o **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
+3. En el paso **[!UICONTROL Configuración]** , rellene la información relevante para su destino como se muestra a continuación:
+   * **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
+   * **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
+   * **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en la ubicación del almacenamiento donde CDP en tiempo real depositará sus datos de exportación como archivos CSV o separados por tabuladores.
+   * **[!UICONTROL Formato]** de archivo: **CSV** o **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
+
    ![Información básica de Eloqua](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-4. Haga clic **[!UICONTROL Create destination]** después de rellenar los campos anteriores. El destino se ha creado y puede [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino.
+4. Haga clic en **[!UICONTROL Crear destino]** después de rellenar los campos anteriores. El destino se ha creado y puede [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino.
 
 ## Atributos de destino
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Oracle Eloqua, se recomienda seleccionar un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Eloqua] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
 
-## Configurar la importación de datos en Oracle Eloqua {#import-data-into-eloqua}
+## Configurar la importación de datos en [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Después de conectar CDP en tiempo real con su almacenamiento Amazon S3 o SFTP, debe configurar la importación de datos desde la ubicación del almacenamiento en Oracle Eloqua. Para obtener más información sobre cómo realizar esto, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) en el Centro de Ayuda de Oracle Eloqua.
+Después de conectar CDP en tiempo real con su almacenamiento Amazon S3 o SFTP, debe configurar la importación de datos desde la ubicación del almacenamiento en [!DNL Oracle Eloqua]. Para obtener información sobre cómo realizar esto, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) en la [!DNL Oracle Eloqua Help Center].
