@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Políticas eficaces de Vista
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Políticas eficaces de Vista
 
-Para vista de directivas efectivas para el usuario actual, realice una solicitud POST al extremo en la API de Control de acceso `/acl/effective-policies` . Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
+Para vista de directivas efectivas para el usuario actual, realice una solicitud POST al `/acl/effective-policies` extremo en la [!DNL Access Control] API. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
 
 **Formato API**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **Solicitud**
 
-Las siguientes solicitudes recuperan información sobre el permiso &quot;Administrar conjuntos de datos&quot; y el acceso al tipo de recurso &quot;esquemas&quot; del usuario actual.
+Las siguientes solicitudes recuperan información sobre el permiso &quot;[!UICONTROL Administrar conjuntos]de datos&quot; y el acceso al tipo de recurso &quot;[!UICONTROL esquemas]&quot; para el usuario actual.
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ Una respuesta correcta devuelve información sobre los permisos y tipos de recur
 
 ## Pasos siguientes
 
-En este documento se explica cómo realizar llamadas a la API de Control de acceso para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información sobre control de acceso para Experience Platform, consulte la descripción general [del](../home.md)control de acceso.
+Este documento explicaba cómo realizar llamadas a la [!DNL Access Control] API para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información sobre control de acceso para [!DNL Experience Platform], consulte la descripción general [del](../home.md)control de acceso.
 
 ## Apéndice
 
-Esta sección proporciona información adicional para utilizar la API de Control de acceso.
+Esta sección proporciona información adicional para utilizar la [!DNL Access Control] API.
 
 ### Permisos y tipos de recursos aceptados
 
