@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Introducción al lenguaje de Consulta de Perfil (PQL)
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '670'
+ht-degree: 2%
 
 ---
 
 
-# Introducción al lenguaje de Consulta de Perfil (PQL)
+# [!DNL Profile Query Language] Información general (PQL)
 
-El lenguaje de Consulta de Perfil (PQL) es un lenguaje de consulta compatible con el Modelo de datos de experiencia (XDM) diseñado para admitir la definición y ejecución de consultas de segmentación para datos de Perfil de clientes en tiempo real.
+[!DNL Profile Query Language] (PQL) es un lenguaje de consulta compatible con [!DNL Experience Data Model] (XDM) diseñado para admitir la definición y ejecución de consultas de segmentación para [!DNL Real-time Customer Profile] datos.
 
 Esta guía proporciona una descripción general de PQL, que abarca las directrices de formato y proporciona expresiones PQL de ejemplo.
 
@@ -86,4 +89,4 @@ La siguiente tabla describe las diferentes categorías de las funciones PQL admi
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a utilizar el lenguaje de Consulta de Perfil, puede utilizar PQL al crear y modificar segmentos. Para obtener más información sobre la segmentación, lea la información general [sobre la](../home.md)segmentación.
+Ahora que ha aprendido a usar [!DNL Profile Query Language], puede usar PQL al crear y modificar segmentos. Para obtener más información sobre la segmentación, lea la información general [sobre la](../home.md)segmentación.
