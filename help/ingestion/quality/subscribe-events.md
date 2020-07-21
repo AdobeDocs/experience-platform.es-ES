@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Suscripción a eventos de ingesta de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '832'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Notificaciones de ingestión de datos
 
-El proceso de ingestión de datos en Adobe Experience Platform consta de varios pasos. Una vez identificados los archivos de datos que se deben ingerir en Platform, se inicia el proceso de ingestión y cada paso se produce de forma consecutiva hasta que los datos se ingieren correctamente o se producen errores. El proceso de ingestión puede iniciarse mediante la API [de ingestión de datos de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o mediante la interfaz de usuario de Experience Platform.
+El proceso de ingestión de datos en Adobe Experience Platform consta de varios pasos. Una vez que se identifican los archivos de datos que se deben ingerir en [!DNL Platform], se inicia el proceso de ingestión y cada paso se produce de forma consecutiva hasta que los datos se ingieren correctamente o se producen errores. El proceso de ingestión se puede iniciar mediante la API [de ingestión de datos de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o mediante la interfaz de [!DNL Experience Platform] usuario.
 
-Los datos cargados en Platform deben seguir varios pasos para llegar a su destino, al Data Lake o al almacén de datos de Perfil del cliente en tiempo real. Cada paso implica el procesamiento de los datos, la validación de los datos y, a continuación, el almacenamiento de los datos antes de pasarlos al siguiente paso. Dependiendo de la cantidad de datos que se ingesten, este proceso puede llevar mucho tiempo y siempre hay una posibilidad de que el proceso falle debido a errores de validación, semántica o procesamiento. En el evento de un error, los problemas de datos deben corregirse y, a continuación, se debe reiniciar todo el proceso de ingestión utilizando los archivos de datos corregidos.
+Los datos cargados en [!DNL Platform] deben seguir varios pasos para llegar a su destino, al [!DNL Data Lake] o al almacén de datos [!DNL Real-time Customer Profile] . Cada paso implica el procesamiento de los datos, la validación de los datos y, a continuación, el almacenamiento de los datos antes de pasarlos al siguiente paso. Dependiendo de la cantidad de datos que se ingesten, este proceso puede llevar mucho tiempo y siempre hay una posibilidad de que el proceso falle debido a errores de validación, semántica o procesamiento. En el evento de un error, los problemas de datos deben corregirse y, a continuación, se debe reiniciar todo el proceso de ingestión utilizando los archivos de datos corregidos.
 
-Para ayudar a supervisar el proceso de ingestión, el Experience Platform permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso, notificándole el estado de los datos ingestados y los posibles fallos.
+Para ayudar a supervisar el proceso de ingestión, [!DNL Experience Platform] permite suscribirse a un conjunto de eventos que se publican en cada paso del proceso, notificándole el estado de los datos ingestados y los posibles fallos.
 
 ## eventos de notificación de estado disponibles
 
@@ -39,17 +39,17 @@ A continuación se muestra una lista de las notificaciones de estado de ingesta 
 
 ## esquema de carga útil de notificación
 
-El esquema de evento de notificación de ingestión de datos es un esquema del Modelo de datos de experiencia (XDM) que contiene campos y valores que proporcionan detalles sobre el estado de los datos que se están ingeriendo. Visite la repo pública de XDM GitHub para poder vista del último esquema [de carga útil de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notificación.
+El esquema de evento de notificación de ingesta de datos es un esquema [!DNL Experience Data Model] (XDM) que contiene campos y valores que proporcionan detalles sobre el estado de los datos que se están ingeriendo. Visite la repo pública de XDM [!DNL GitHub] para realizar la vista del último esquema [de carga útil de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notificación.
 
 ## Suscripción a las notificaciones de estado de ingesta de datos
 
-A través de los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante los enlaces web. Las secciones siguientes describen los pasos para suscribirse a las notificaciones de Platform para eventos de ingesta de datos mediante Adobe Developer Console.
+A través de los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante los enlaces web. Las secciones a continuación describen los pasos para suscribirse a las [!DNL Platform] notificaciones de eventos de ingesta de datos mediante Adobe Developer Console.
 
 ### Crear un nuevo proyecto en Adobe Developer Console
 
 Vaya a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vacío en la documentación de Adobe Developer Console.
 
-### Añadir eventos de Experience Platform al proyecto
+### Añadir [!DNL Experience Platform] eventos al proyecto
 
 Una vez creado un nuevo proyecto, navegue a la pantalla de información general de dicho proyecto. Desde aquí, haga clic en **[!UICONTROL Añadir evento]**.
 
@@ -91,4 +91,4 @@ Aparece la página de detalles del registro de evento recién creado, donde pued
 
 ## Pasos siguientes
 
-Una vez que haya registrado las notificaciones de Platform al proyecto, puede realizar la vista de eventos recibidos del panel del proyecto. Consulte la guía [Seguimiento de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
+Una vez que haya registrado [!DNL Platform] las notificaciones al proyecto, puede realizar la vista de eventos recibidos del panel del proyecto. Consulte la guía [Seguimiento de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
