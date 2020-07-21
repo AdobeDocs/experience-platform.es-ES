@@ -4,25 +4,25 @@ seo-title: Destino de Google Display y Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
 seo-description: 'Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización. '
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 
-# Destino de Google Display y Video 360
+# [!DNL Google Display & Video 360] Destino
 
 ## Información general
 
-Display &amp; Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
+[!DNL Display & Video 360], anteriormente conocido como [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales con objetivo de redireccionamiento y audiencia en todas las fuentes de inventario de visualización, vídeo y móvil.
 
 ## Especificaciones de destino
 
-Tenga en cuenta los siguientes detalles específicos de destinos de Google Display &amp; Video 360:
+Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Display & Video 360] destinos:
 
-* Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a los destinos de Google Display &amp; Video 360: **ID de cookie de Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
+* Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a [!DNL Google Display & Video 360] destinos: **ID de cookie de Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * Las audiencias activadas se crean mediante programación en la plataforma Google.
 * Actualmente, CDP en tiempo real de Adobe no incluye una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
 
@@ -32,13 +32,13 @@ Tenga en cuenta los siguientes detalles específicos de destinos de Google Displ
 
 ## Requisitos previos
 
-### Permitir lista
+### Lista de permitidos
 
 >[!NOTE]
 >
->La lista de permitidos es obligatoria antes de configurar el primer destino de Google Display &amp; Video 360 en Adobe Real-time CDP. Asegúrese de que Google haya completado el proceso de lista de permitidos descrito a continuación antes de crear un destino.
+>La lista de permitidos es obligatoria antes de configurar su primer [!DNL Google Display & Video 360] destino en Adobe Real-time CDP. Asegúrese de que Google haya completado el proceso de lista de permitidos que se describe a continuación antes de crear un destino.
 
-Antes de crear el destino de Google Display &amp; Video 360 en Adobe Real-time CDP, debe ponerse en contacto con Google para solicitar que Adobe se ponga en lista de proveedores de datos permitidos y que su cuenta se agregue a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
+Antes de crear el [!DNL Google Display & Video 360] destino en Adobe Real-time CDP, debe ponerse en contacto con Google para solicitar que Adobe se ponga en lista de proveedores de datos permitidos y que se agregue su cuenta a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
 
 * **ID** de cuenta: este es el ID de cuenta de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
 * **ID** del cliente: es el ID de cuenta de cliente de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
@@ -46,7 +46,7 @@ Antes de crear el destino de Google Display &amp; Video 360 en Adobe Real-time C
 
 ## Crear destino
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione Google Display &amp; Video 360 y, a continuación, **[!UICONTROL Crear destino]**.
+1. En **[!UICONTROL Conexiones > Destinos]**, seleccione [!DNL Google Display & Video 360]y seleccione **[!UICONTROL Crear destino]**.
    ![Destino de Connect Google Display y Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la información  básica del destino, así como los casos de uso de mercadotecnia que deben aplicarse a este destino. <br>
@@ -62,8 +62,8 @@ Antes de crear el destino de Google Display &amp; Video 360 en Adobe Real-time C
 
 >[!NOTE]
 >
->Al configurar un destino de Google Display &amp; Video 360, trabaje con el administrador de cuentas de Google o con un representante de Adobe para comprender qué tipo de cuenta tiene.
+>Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su representante [!DNL Google Account Manager] o con Adobe para saber qué tipo de cuenta tiene.
 
-## Activar segmentos en Google Display &amp; Video 360
+## Activar segmentos para [!DNL Google Display & Video 360]
 
-Para obtener instrucciones sobre cómo activar segmentos en Google Display &amp; Video 360, consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
+Para obtener instrucciones sobre cómo activar segmentos en [!DNL Google Display & Video 360], consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
