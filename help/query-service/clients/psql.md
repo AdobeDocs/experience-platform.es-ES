@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Conectar con PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
 # Conectar con PSQL
 
-PSQL es una interfaz de línea de comandos que se presenta al instalar Postgres en el equipo. Puede instalarlo siguiendo estas instrucciones.
+PSQL es una interfaz de línea de comandos que viene cuando se instala [!DNL Postgres] en el equipo. Puede instalarlo siguiendo estas instrucciones.
 
 ## Instalación de posters en un Mac
 
@@ -35,15 +38,15 @@ Después de ejecutar estos comandos, debe ver lo siguiente:
 /usr/local/bin/psql
 ```
 
-## Instalar posters en un PC
+## Instalar [!DNL Postgres] en un PC
 
-Descargue e instale Postgres desde esta [ubicación](https://www.postgresql.org/download/windows/).
+Descargue e instale [!DNL Postgres] desde esta [ubicación](https://www.postgresql.org/download/windows/).
 
 Edite la variable de ruta:
 
 ![Imagen](../images/clients/psql/path.png)
 
-Añada las dos líneas que se muestran y que incluyen &quot;Posturas&quot;.
+Añada las dos líneas mostradas que incluyen &quot;[!DNL Postgres]&quot;.
 
 Guarde las actualizaciones y, a continuación, abra un símbolo del sistema y escriba:
 
@@ -57,11 +60,11 @@ Deberías ver algo como esto:
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect PSQL y el servicio de Consulta
+## Connect PSQL y [!DNL Query Service]
 
-Vuelva a la interfaz de usuario de la plataforma en la página &quot;Herramientas de Connect BI&quot;.
+Vuelva a la [!DNL Platform] IU en la página Herramientas *[!UICONTROL de]* Connect BI.
 
-Haga clic en **copiar** para &quot;Comando PSQL&quot;.
+Haga clic en **[!UICONTROL Copiar]** para el comando *[!UICONTROL PSQL]*.
 
 ![Imagen](../images/clients/psql/connect-bi.png)
 
