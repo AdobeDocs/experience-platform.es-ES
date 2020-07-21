@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Validación de la ingesta de flujo continuo
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
@@ -20,28 +20,28 @@ El flujo continuo de la ingestión le permite cargar los datos en Adobe Experien
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-- [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-- [Transmisión](../streaming-ingestion/overview.md)por flujo continuo: Uno de los métodos mediante los cuales se pueden enviar datos al Experience Platform.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):: Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de Experience Platform, incluidos los que pertenecen al Registro de Esquemas, están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -49,7 +49,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Cobertura de validación
 
-El servicio de validación de flujo cubre la validación en las siguientes áreas:
+[!DNL Streaming Validation Service] abarca la validación en las siguientes áreas:
 - Intervalo
 - Presencia
 - Enum
@@ -140,7 +140,7 @@ La respuesta anterior lista cuántas violaciones de esquema se encontraron y cu�
 
 ## Validación asincrónica
 
-La validación asincrónica es un método de validación que no proporciona información inmediata. En su lugar, los datos se envían a un lote dañado en Data Lake para evitar la pérdida de datos. Estos datos fallidos se pueden recuperar posteriormente para mayor análisis y reproducción. Este método debe utilizarse en la producción. A menos que se solicite lo contrario, la transmisión por flujo continuo funciona en modo de validación asincrónico.
+La validación asincrónica es un método de validación que no proporciona información inmediata. En su lugar, los datos se envían a un lote dañado en [!DNL Data Lake] para evitar la pérdida de datos. Estos datos fallidos se pueden recuperar posteriormente para mayor análisis y reproducción. Este método debe utilizarse en la producción. A menos que se solicite lo contrario, la transmisión por flujo continuo funciona en modo de validación asincrónico.
 
 **Formato API**
 
@@ -154,7 +154,7 @@ POST /collection/{CONNECTION_ID}
 
 **Solicitud**
 
-Envíe la siguiente solicitud para transferir datos a la entrada de datos con validación asincrónica:
+Envíe la siguiente solicitud para transferir datos a su entrada de datos con validación asincrónica:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
