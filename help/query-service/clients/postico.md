@@ -4,11 +4,14 @@ solution: Experience Platform
 title: Conectar con Postico
 topic: connect
 translation-type: tm+mt
-source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '22'
+ht-degree: 0%
 
 ---
 
 
-# Conectar con Postico (Mac)
+# Conectar con [!DNL Postico] (Mac)
 
-Como cliente de copia de seguridad, los usuarios de Mac también pueden instalar Postico desde [https://eggerapps.at/postico/](https://eggerapps.at/postico/).
+Como cliente de copia de seguridad, los usuarios de Mac también pueden realizar la instalación [!DNL Postico] desde [https://eggerapps.at/postico/](https://eggerapps.at/postico/).
