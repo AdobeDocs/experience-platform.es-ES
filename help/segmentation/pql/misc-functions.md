@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funciones diversas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d7ec6240864916d3b54db8bd641f4917a38f9480
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 3%
 
 ---
 
 
 # Funciones diversas
 
-La siguiente función es una función diversa para el lenguaje de Consulta de Perfil (PQL). Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+La siguiente función es una función diversa para [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
 
 ## Let
 
