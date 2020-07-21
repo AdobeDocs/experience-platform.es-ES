@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ En este tutorial se explican los pasos para aplicar la compatibilidad con el uso
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md):: [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos [!DNL Experience Data Model] (XDM) dentro de [!DNL Platform]. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
-   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para fines de administración de datos.
+   - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para [!DNL Data Governance] fines específicos.
 - [!DNL Segmentation](../home.md):: Cómo [!DNL Real-time Customer Profile] divide un gran grupo de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
 - [!DNL Data Governance](../../data-governance/home.md):: [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
