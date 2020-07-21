@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitoreo de la ingesta de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Monitoreo de la ingesta de datos
 
-La ingestión de datos le permite ingerir sus datos en Adobe Experience Platform. Puede utilizar la ingestión por lotes, que le permite insertar los datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite ingestar los datos en Platform mediante puntos finales de flujo en tiempo real.
+La ingestión de datos le permite ingerir sus datos en Adobe Experience Platform. Puede utilizar la ingestión por lotes, que le permite insertar los datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite ingerir los datos para [!DNL Platform] utilizar puntos finales de flujo en tiempo real.
 
 Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso al Adobe Experience Platform.
 
 ## Monitoreo de la transmisión de datos end-to-end
 
-En la interfaz de usuario [del](https://platform.adobe.com)Experience Platform, haga clic en **Monitoreo** en el menú de navegación de la izquierda y, a continuación, haga clic en **Transmisión de extremo a extremo**.
+En la interfaz de usuario [del](https://platform.adobe.com)Experience Platform, haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda y, a continuación, haga clic en **[!UICONTROL Transmisión de extremo a extremo]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Aparece la página de supervisión *de flujo completo* . Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos transmitidos recibidos por Platform, un gráfico que muestra la tasa de eventos transmitidos que fueron procesados correctamente por el Perfil [del cliente en tiempo](../../profile/home.md)real, así como una lista detallada de los datos entrantes.
+Aparece la página de supervisión *[!UICONTROL de flujo completo]* . Este espacio de trabajo proporciona un gráfico que muestra la velocidad de eventos transmitidos que recibe [!DNL Platform], un gráfico que muestra la velocidad de eventos transmitidos que se procesaron correctamente por [!DNL Real-time Customer Profile](../../profile/home.md), así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -32,11 +32,11 @@ De forma predeterminada, el gráfico superior muestra la tasa de ingestión dura
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-El gráfico inferior muestra la tasa de eventos de flujo procesados correctamente por Perfiles en los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
+El gráfico inferior muestra la tasa de eventos de flujo procesados correctamente en [!DNL Profile] los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
 
 >[!NOTE]
 >
->Para que los datos se muestren en este gráfico, los datos deben habilitarse **explícitamente** para el Perfil. Para aprender a habilitar la transmisión de datos para Perfil, lea la guía [del usuario de](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)conjuntos de datos.
+>Para que los datos se muestren en este gráfico, los datos deben habilitarse **explícitamente** para [!DNL Profile]. Para aprender a habilitar la transmisión de datos para [!DNL Profile], lea la guía [del usuario de](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)conjuntos de datos.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -60,11 +60,11 @@ Además, los registros con errores proporcionan detalles sobre los errores que s
 
 ## Monitorear la ingesta de datos de extremo a extremo por lotes
 
-En la interfaz de usuario del [Experience Platform](https://platform.adobe.com), haga clic en **Monitoreo** en el menú de navegación de la izquierda.
+En el [!DNL Experience Platform UI](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-Se abre la página de supervisión **por lotes de extremo a extremo** , que muestra una lista de los lotes ingestados anteriormente. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
+Se abre la página de supervisión **[!UICONTROL por lotes de extremo a extremo]** , que muestra una lista de los lotes previamente ingestados. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
