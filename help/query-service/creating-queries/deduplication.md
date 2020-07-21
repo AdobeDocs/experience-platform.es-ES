@@ -4,17 +4,17 @@ solution: Experience Platform
 title: deduplicación de datos
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
 
-# deduplicación de datos en el servicio de Consulta
+# deduplicación de datos en [!DNL Query Service]
 
-El servicio de Consulta de Adobe Experience Platform admite la deduplicación de datos cuando se le puede exigir que elimine una fila completa de un cálculo o que ignore un conjunto específico de campos, ya que sólo una parte de los datos de la fila es un duplicado. El patrón común para la deduplicación implica el uso de la `ROW_NUMBER()` función en una ventana para un ID o par de ID durante un tiempo ordenado (mediante el campo Modelo de datos de experiencia (XDM) `timestamp` ) para devolver un nuevo campo que representa el número de veces que se ha detectado un duplicado. Cuando este valor es `1`, hace referencia a la instancia original y, en la mayoría de los casos, a la instancia que desea utilizar, ignorando todas las demás instancias. Esto generalmente se realiza dentro de una subselección donde la deduplicación se realiza en un nivel superior `SELECT` como realizar un recuento acumulado.
+Adobe Experience Platform [!DNL Query Service] admite la deduplicación de datos cuando se requiera quitar una fila completa de un cálculo o ignorar un conjunto específico de campos porque sólo una parte de los datos de la fila es un duplicado. El patrón común para la deduplicación implica el uso de la `ROW_NUMBER()` función en una ventana para un ID, o par de ID, durante el tiempo pedido (mediante el campo [!DNL Experience Data Model] (XDM) `timestamp` ) para devolver un nuevo campo que representa el número de veces que se ha detectado un duplicado. Cuando este valor es `1`, hace referencia a la instancia original y, en la mayoría de los casos, a la instancia que desea utilizar, ignorando todas las demás instancias. Esto generalmente se realiza dentro de una subselección donde la deduplicación se realiza en un nivel superior `SELECT` como realizar un recuento acumulado.
 
 ## Casos de uso
 
@@ -31,7 +31,7 @@ En el caso de duplicado ExperienceEvents, es probable que desee omitir toda la f
 
 >[!CAUTION]
 >
->Muchos DataSets en Experience Platform, incluidos los producidos por el conector de datos de Analytics de Adobe, ya tienen aplicada la deduplicación de nivel ExperienceEvent. Por lo tanto, volver a aplicar este nivel de deduplicación es innecesario y ralentizará la consulta. Es importante comprender la fuente de los DataSets y saber si ya se ha aplicado la deduplicación en el nivel de ExperienceEvent. Para todos los conjuntos de datos que se transmiten (por ejemplo, los de Adobe Target), deberá aplicar la deduplicación de nivel de ExperienceEvent porque dichos orígenes de datos tienen una semántica &#39;al menos una vez&#39;.
+>Muchos DataSets de [!DNL Experience Platform], incluidos los producidos por el conector de datos de Analytics de Adobe, ya tienen aplicada la deduplicación de nivel ExperienceEvent. Por lo tanto, volver a aplicar este nivel de deduplicación es innecesario y ralentizará la consulta. Es importante comprender la fuente de los DataSets y saber si ya se ha aplicado la deduplicación en el nivel de ExperienceEvent. Para todos los conjuntos de datos que se transmiten (por ejemplo, los de Adobe Target), deberá aplicar la deduplicación de nivel de ExperienceEvent porque dichos orígenes de datos tienen una semántica &#39;al menos una vez&#39;.
 
 **Ámbito:** Global
 
