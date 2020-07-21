@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Spark SQL funciones
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '4903'
+source-wordcount: '4900'
 ht-degree: 5%
 
 ---
 
 
-# Spark SQL funciones
+# [!DNL Spark] Funciones SQL
 
-Los ayudantes de Spark SQL proporcionan funciones Spark SQL integradas para ampliar la funcionalidad SQL.
+Los asistentes [!DNL Spark] SQL proporcionan funciones [!DNL Spark] SQL integradas para ampliar la funcionalidad SQL.
 
 Referencia: [Documentación de la función Spark SQL](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
