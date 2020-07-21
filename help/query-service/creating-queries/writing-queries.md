@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Escritura de consultas
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
 
 
-# Directrices generales para la ejecución de consultas en el Servicio de Consulta
+# Directrices generales para la ejecución de consultas en [!DNL Query Service]
 
-Este documento detalla detalles importantes que deben conocerse al escribir consultas en el servicio de Consulta de Adobe Experience Platform.
+Este documento detalla detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform [!DNL Query Service].
 
-Para obtener información detallada sobre la sintaxis SQL utilizada en el servicio de Consulta, lea la documentación [de sintaxis](../sql/syntax.md)SQL.
+Para obtener información detallada sobre la sintaxis SQL utilizada en [!DNL Query Service], lea la documentación [de sintaxis](../sql/syntax.md)SQL.
 
 ## Modelos de ejecución de Consulta
 
-El servicio de Consulta de Adobe Experience Platform tiene dos modelos de ejecución de consultas: interactiva y no interactiva. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
+Adobe Experience Platform [!DNL Query Service] tiene dos modelos de ejecución de consultas: interactiva y no interactiva. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
 
 ### Ejecución de consultas interactivas
 
-Las Consultas se pueden ejecutar de forma interactiva enviándolas a través de la interfaz de usuario del servicio de Consulta o [a través de un cliente](../clients/overview.md)conectado. Cuando se ejecuta el servicio de Consulta a través de un cliente conectado, se ejecuta una sesión activa entre el cliente y el servicio de Consulta hasta que la consulta enviada se devuelve o se agota el tiempo de espera.
+Las Consultas se pueden ejecutar de forma interactiva enviándolas a través de la [!DNL Query Service] interfaz de usuario o [a través de un cliente](../clients/overview.md)conectado. Cuando se ejecuta [!DNL Query Service] a través de un cliente conectado, se ejecuta una sesión activa entre el cliente y [!DNL Query Service] hasta que se devuelve o se agota el tiempo de espera de la consulta enviada.
 
 La ejecución de consultas interactivas tiene las siguientes limitaciones:
 
@@ -38,11 +38,11 @@ La ejecución de consultas interactivas tiene las siguientes limitaciones:
 >
 >Para anular la limitación máxima de filas, incluya `LIMIT 0` en la consulta. El tiempo de espera de consulta de 10 minutos sigue siendo válido.
 
-De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no se mantienen** . Para mantener los resultados como un conjunto de datos en Experience Platform, la consulta debe utilizar la `CREATE TABLE AS SELECT` sintaxis.
+De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no se mantienen** . Para mantener los resultados como un conjunto de datos en [!DNL Experience Platform], la consulta debe utilizar la `CREATE TABLE AS SELECT` sintaxis.
 
 ### Ejecución de consultas no interactivas
 
-Las Consultas enviadas a través de la API de servicio de Consulta se ejecutan de forma no interactiva. La ejecución no interactiva significa que el servicio de Consulta recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en Experience Platform para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
+Las Consultas enviadas a través de la [!DNL Query Service] API se ejecutan de forma no interactiva. La ejecución no interactiva significa que [!DNL Query Service] recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en [!DNL Experience Platform] para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
 
 ## Acceso a un campo específico dentro de un objeto
 
@@ -189,4 +189,4 @@ Las comillas tipográficas **no son** necesarias si utiliza la notación de corc
 
 ## Pasos siguientes
 
-Al leer este documento, se le han presentado algunas consideraciones importantes al escribir consultas con el servicio de Consulta. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la documentación [de sintaxis](../sql/syntax.md)SQL.
+Al leer este documento, se le han presentado algunas consideraciones importantes al escribir consultas usando [!DNL Query Service]. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la documentación [de sintaxis](../sql/syntax.md)SQL.
