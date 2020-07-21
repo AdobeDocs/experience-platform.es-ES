@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmisión de datos de series temporales
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Transmitir datos de series temporales al Adobe Experience Platform
 
-Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
+Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las [!DNL Data Ingestion Service] API de Adobe Experience Platform.
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco normalizado mediante el cual Platform organiza los datos de experiencia.
-- [Perfil](../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [Guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la API del Registro de Esquemas y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [Guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
 
 Además, este tutorial requiere que ya haya creado una conexión de flujo. Para obtener más información sobre la creación de una conexión de flujo continuo, lea el tutorial [](./create-streaming-connection.md)Crear una conexión de flujo continuo.
 
@@ -30,23 +30,23 @@ Las siguientes secciones proporcionan información adicional que debe conocer pa
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -54,7 +54,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Redactar un esquema basado en la clase XDM ExperienceEvent
 
-Para crear un conjunto de datos, primero deberá crear un nuevo esquema que implemente la clase ExperienceEvent de XDM. Para obtener más información sobre cómo crear esquemas, consulte la guía [para desarrolladores de la API de registro de](../../xdm/api/getting-started.md)Esquema.
+Para crear un conjunto de datos, primero deberá crear un nuevo esquema que implemente la [!DNL XDM ExperienceEvent] clase. Para obtener más información sobre cómo crear esquemas, consulte la guía [para desarrolladores de la API de registro de](../../xdm/api/getting-started.md)Esquema.
 
 **Formato API**
 
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | El nombre que desea usar para su esquema. Este nombre debe ser único. |
 | `description` | Una descripción significativa del esquema que está creando. |
-| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en el Perfil [del cliente en tiempo](../../profile/home.md)real. |
+| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en [!DNL Real-time Customer Profile](../../profile/home.md). |
 
 **Respuesta**
 
@@ -187,7 +187,7 @@ A continuación, agregue un descriptor [de](../../xdm/api/descriptors.md) identi
 
 1. La dirección de correo electrónico del trabajo se convertirá en un campo obligatorio. Esto significa que los mensajes enviados sin este campo no se validarán correctamente y no se ingerirán.
 
-2. El Perfil del cliente en tiempo real utilizará la dirección de correo electrónico del trabajo como identificador para ayudar a reunir más información sobre ese individuo.
+2. [!DNL Real-time Customer Profile] utilizará la dirección de correo electrónico de trabajo como identificador para ayudar a reunir más información sobre esa persona.
 
 ### Solicitud
 
@@ -246,7 +246,7 @@ Una vez que haya creado el esquema, deberá crear un conjunto de datos para inge
 
 >[!NOTE]
 >
->Este conjunto de datos se habilitará para el Perfil **del cliente en tiempo** real y la **identidad** estableciendo las etiquetas correspondientes.
+>Este conjunto de datos se habilitará para **[!DNL Real-time Customer Profile]** y **[!DNL Identity]** configurando las etiquetas correspondientes.
 
 **Formato API**
 
@@ -294,7 +294,7 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 
 ## Ingesta de datos de series temporales a la conexión de flujo continuo
 
-Con el conjunto de datos y la conexión de flujo en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de series temporales en Platform.
+Con el conjunto de datos y la conexión de flujo en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de series temporales dentro de [!DNL Platform].
 
 **Formato API**
 
@@ -379,7 +379,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles del Perfil recién transmitido.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la nueva transmisión [!DNL Profile].
 
 ```json
 {
@@ -401,11 +401,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del Perfil reci�
 
 ## Recuperar los datos de serie temporal recién ingestados
 
-Para validar los registros ingestados anteriormente, puede utilizar la API [de acceso a](../../profile/api/entities.md) Perfil para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
+Para validar los registros ingestados anteriormente, puede utilizar [!DNL Profile Access API](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
 
 >[!NOTE]
 >
->Si el ID de directiva de combinación no está definido y el esquema.</span>name o relatedSchema</span>.name es `_xdm.context.profile`, Perfil Access recuperará **todas** las identidades relacionadas.
+>Si el ID de directiva de combinación no está definido y el esquema.</span>name o relatedSchema</span>.name es `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** las identidades relacionadas.
 
 **Formato API**
 
@@ -503,6 +503,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de las entid
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede comprender cómo ingerir datos de registro en Platform mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la interfaz de usuario de Platform. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-flows.md) de datos.
+Al leer este documento, ahora puede comprender cómo ingerir datos de registro en [!DNL Platform] conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la [!DNL Platform] interfaz de usuario. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-flows.md) de datos.
 
 Para obtener más información sobre la transmisión por secuencias de ingestión en general, lea la información general sobre la [transmisión por secuencias](../streaming-ingestion/overview.md).
