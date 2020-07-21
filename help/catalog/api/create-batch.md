@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Crear un conjunto de datos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 4%
 
 ---
 
 
 # Crear un lote
 
-Para que un conjunto de datos ingeste datos, debe tener un lote asociado a él. Con el valor `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud POST al `/batches` extremo en la API del catálogo.
+Para que un conjunto de datos ingeste datos, debe tener un lote asociado a él. Con el valor `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud POST al `/batches` extremo en la [!DNL Catalog] API.
 
 **Formato API**
 
