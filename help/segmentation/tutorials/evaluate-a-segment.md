@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Evaluar un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Mediante una evaluación programada, su organización de IMS puede crear una pro
 
 >[!NOTE]
 >
->La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para Perfiles individuales XDM. Si su organización cuenta con más de cinco directivas de combinación para Perfiles individuales XDM dentro de un solo entorno de simulador de pruebas, no podrá usar la evaluación programada.
+>La evaluación programada puede habilitarse para entornos limitados con un máximo de cinco (5) directivas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco directivas de combinación para [!DNL XDM Individual Profile] dentro de un solo entorno de simulación de pruebas, no podrá usar la evaluación programada.
 
 ### Crear una programación
 
@@ -157,11 +157,11 @@ Se requieren los siguientes pasos para exportar la audiencia:
 
 Al exportar una audiencia, primero se debe crear un conjunto de datos de destinatario. Es importante que el conjunto de datos se configure correctamente para garantizar que la exportación se realiza correctamente.
 
-Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de muestra de API que se muestra a continuación). Para exportar un segmento, el conjunto de datos debe basarse en el Esquema de Unión de Perfil individual XDM (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de sólo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase, en este caso la clase de Perfil individual XDM. Para obtener más información sobre los esquemas de vista de uniones, consulte la sección Perfil de clientes en tiempo [real de la guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry.
+Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de muestra de API que se muestra a continuación). Para exportar un segmento, el conjunto de datos debe basarse en el [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de sólo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase, en este caso la clase de Perfil individual XDM. Para obtener más información sobre los esquemas de vista de uniones, consulte la sección Perfil de clientes en tiempo [real de la guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry.
 
 Existen dos maneras de crear el conjunto de datos necesario:
 
-- **Uso de API:** Los pasos siguientes en este tutorial describen cómo crear un conjunto de datos que haga referencia al Esquema de Unión de Perfil individual XDM mediante la API de catálogo.
+- **Uso de API:** Los pasos siguientes en este tutorial describen cómo crear un conjunto de datos que haga referencia al [!DNL XDM Individual Profile Union Schema] mediante la [!DNL Catalog] API.
 - **Uso de la interfaz de usuario:** Para utilizar la interfaz de usuario para crear un conjunto de datos que haga referencia al esquema de unión, siga los pasos del tutorial [!DNL Adobe Experience Platform] de la [interfaz de usuario y, a continuación, vuelva a este tutorial para continuar con los pasos para](../ui/overview.md) generar perfiles [](#generate-xdm-profiles-for-audience-members)de audiencia.
 
 Si ya tiene un conjunto de datos compatible y conoce su ID, puede continuar directamente con el paso para [generar perfiles](#generate-xdm-profiles-for-audience-members)de audiencia.
@@ -228,10 +228,10 @@ Encontrará información más detallada sobre el uso de este extremo en la guía
 
 ## Pasos siguientes
 
-Una vez que la exportación se haya completado correctamente, los datos estarán disponibles dentro del lago de datos en [!DNL Experience Platform]. A continuación, puede utilizar la API [de acceso a](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) datos para acceder a los datos mediante el `batchId` vínculo asociado a la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
+Una vez que la exportación se haya completado correctamente, los datos estarán disponibles dentro de la [!DNL Data Lake] en [!DNL Experience Platform]. A continuación, puede utilizar el [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acceder a los datos mediante el `batchId` vínculo asociado con la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la [!DNL Data Access] API para acceder y descargar archivos por lotes, siga el tutorial [Acceso a](../../data-access/tutorials/dataset-data.md)datos.
 
-También puede acceder a los datos de segmentos exportados correctamente mediante [!DNL Adobe Experience Platform Query Service]. Mediante la interfaz de usuario o la API RESTful, [!DNL Query Service] puede escribir, validar y ejecutar consultas en datos dentro del lago de datos.
+También puede acceder a los datos de segmentos exportados correctamente mediante [!DNL Adobe Experience Platform Query Service]. Con la interfaz de usuario o la API RESTful, [!DNL Query Service] puede escribir, validar y ejecutar consultas en los datos dentro de la [!DNL Data Lake].
 
 Para obtener más información sobre cómo consulta de datos de audiencia, consulte la documentación de [!DNL Query Service](../../query-service/home.md).
