@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía para desarrolladores de Consulta Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 ## Ejemplos de llamadas a API
 
-Las siguientes secciones explican las llamadas que puede realizar mediante el `/queries` punto final de la API del servicio de Consulta. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las siguientes secciones explican las llamadas que puede realizar mediante el `/queries` punto final de la [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de consultas
 
