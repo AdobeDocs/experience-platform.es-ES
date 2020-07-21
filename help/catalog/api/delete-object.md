@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Eliminar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Eliminar un objeto
 
-Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitud DELETE.
+Puede eliminar un [!DNL Catalog] objeto proporcionando su ID en la ruta de una solicitud de DELETE.
 
 >[!WARNING]
 >
->Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios de ruptura en otra parte del Experience Platform.
+>Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios de ruptura en otras partes de [!DNL Experience Platform].
 
 **Formato API**
 
@@ -32,7 +32,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto Catalog que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -60,4 +60,4 @@ Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que co
 
 >[!NOTE]
 >
->Si ningún objeto Catalog coincide con el ID proporcionado en la solicitud, puede recibir un código de estado HTTP 200, pero la matriz de respuesta estará vacía.
+>Si no hay ningún [!DNL Catalog] objeto que coincida con el ID proporcionado en la solicitud, puede recibir un código de estado HTTP 200, pero la matriz de respuesta estará vacía.
