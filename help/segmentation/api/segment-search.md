@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Extremo de búsqueda de segmentos
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ Después de leer esta guía, ahora podrá comprender mejor cómo funciona la bú
 
 ## Apéndice {#appendix}
 
-Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Así, por ejemplo, para buscar un segmento llamado AAM o Platform, debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Así, por ejemplo, para buscar un segmento llamado AAM o [!DNL Platform], debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en HTML, como el ejemplo que se muestra arriba.
 
