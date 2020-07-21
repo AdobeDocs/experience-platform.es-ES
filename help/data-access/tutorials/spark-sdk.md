@@ -4,27 +4,27 @@ solution: Experience Platform
 title: SDK de acceso a datos Spark seguro
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
 
 
-# SDK de acceso a datos Spark seguro
+# SDK seguro [!DNL Spark Data Access]
 
-El SDK de Secure Spark [!DNL Data Access] es un kit de desarrollo de software que permite leer y escribir conjuntos de datos desde Adobe Experience Platform.
+El SDK seguro [!DNL Spark] [!DNL Data Access] es un kit de desarrollo de software que permite leer y escribir conjuntos de datos desde Adobe Experience Platform.
 
 ## Primeros pasos
 
-Debe haber completado el tutorial de [autenticación](../../tutorials/authentication.md) para tener acceso a los valores y realizar llamadas al SDK de Secure Spark [!DNL Data Access] :
+Debe haber completado el tutorial de [autenticación](../../tutorials/authentication.md) para tener acceso a los valores y realizar llamadas al SDK seguro [!DNL Spark] [!DNL Data Access] :
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. El uso del SDK de Spark requiere el nombre y el ID del simulador para pruebas en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. El uso del [!DNL Spark] SDK requiere el nombre y el ID del simulador para pruebas en el que se realizará la operación:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
@@ -83,7 +83,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 El [!DNL Spark] SDK admite dos modos de lectura: interactivo y por lotes.
 
-El modo interactivo crea una conexión de Conectividad de base de datos Java (JDBC) [!DNL Query Service] y obtiene resultados a través de un JDBC regular `ResultSet` que se traduce automáticamente a un `DataFrame`. Este modo funciona de forma similar al método Spark incorporado `spark.read.jdbc()`. Este modo solo está diseñado para conjuntos de datos pequeños y solo requiere un token de usuario para la autenticación.
+El modo interactivo crea una conexión de Conectividad de base de datos Java (JDBC) [!DNL Query Service] y obtiene resultados a través de un JDBC regular `ResultSet` que se traduce automáticamente a un `DataFrame`. Este modo funciona de forma similar al [!DNL Spark] método integrado `spark.read.jdbc()`. Este modo solo está diseñado para conjuntos de datos pequeños y solo requiere un token de usuario para la autenticación.
 
 El modo Lote utiliza [!DNL Query Service]el comando COPY de para generar conjuntos de resultados de parquet en una ubicación compartida. Estos archivos de parquet pueden procesarse posteriormente. Este modo requiere un token de usuario y un token de servicio con el `acp.foundation.catalog.credentials` ámbito.
 
