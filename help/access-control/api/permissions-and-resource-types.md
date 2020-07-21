@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Nombres de Lista de permisos y tipos de recursos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
 
 Puede lista los nombres de todos los permisos y tipos de recursos realizando una solicitud GET al extremo `/acl/reference` . Estos nombres se pueden usar en llamadas de API para [vista de políticas](./effective-policies.md) efectivas para el usuario actual.
 
-Un **permiso** es una directiva que se administra a través de Adobe Admin Console y se asigna a cero o más directivas de tipo de recurso. Un tipo **de** recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de recurso de la Plataforma (como conjuntos de datos o esquemas).
+Un **permiso** es una política que se administra a través de Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo **de** recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de [!DNL Platform] recurso (como conjuntos de datos o esquemas).
 
 **Formato API**
 
