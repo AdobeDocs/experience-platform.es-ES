@@ -4,14 +4,17 @@ seo-title: Página Detalles de Destinos
 description: 'La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 seo-description: 'La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 1%
 
 ---
 
 
 # Página de detalles de destino {#destinations-details-page}
 
-La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. Para vista de estos detalles, vaya a **Destinos** > **Examinar** y haga clic en el nombre del destino con el que desea trabajar.
+La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. Para vista de estos detalles, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en el nombre del destino con el que desea trabajar.
 
 Los componentes principales de un destino individual son:
 
@@ -49,8 +52,8 @@ El carril correcto incluye información sobre el destino. Consulte la tabla sigu
 | Plataforma | Representa la plataforma de destino a la que se envían las audiencias. Consulte [Catálogo](/help/rtcdp/destinations/destinations-catalog.md) de destinos para obtener más información. |
 | Descripción | Puede editar la descripción del flujo de destino. |
 | Categoría | Indica el tipo de destino. Consulte [Catálogo](/help/rtcdp/destinations/destinations-catalog.md) de destinos para obtener más información. |
-| Tipo de conexión | Indica en qué formulario se envían las audiencias al destino. Puede estar basado en **cookies** o en **Perfiles**. |
-| Frecuencia | Indica la frecuencia con la que se envían las audiencias al destino. Puede ser por **flujo** o **por lotes**. |
+| Tipo de conexión | Indica en qué formulario se envían las audiencias al destino. Puede estar basado en **[!UICONTROL cookies]** o en **[!UICONTROL Perfiles]**. |
+| Frecuencia | Indica la frecuencia con la que se envían las audiencias al destino. Puede ser por **[!UICONTROL flujo]** o **[!UICONTROL por lotes]**. |
 | Identidad | Representa la Área de nombres de identidad aceptada por el destino. Por ejemplo, el campo Identidad puede ser GAID, IDFA o correo electrónico. Para todas las Áreas de nombres de identidad aceptadas, consulte Áreas de nombres estándar en la descripción general [de la Área de nombres de](../../identity-service/namespaces.md)identidad. |
 | Creado por | Indica el usuario que ha creado este flujo de destino. |
 | Creado | Indica la fecha y hora UTC en que se creó este flujo de destino. |
