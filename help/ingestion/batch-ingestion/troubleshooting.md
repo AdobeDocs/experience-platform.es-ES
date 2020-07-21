@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía de solución de problemas de inserción de lotes de Adobe Experience Platform
+title: Guía de resolución de problemas de inserción de lotes de Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 1%
 
 ---
 
 
 # Guía de resolución de problemas de ingestión por lotes
 
-Esta documentación ayudará a responder a las preguntas más frecuentes sobre las API de inserción de datos por lotes de la plataforma Adobe Experience Platform.
+Esta documentación ayudará a responder a las preguntas más frecuentes sobre [!DNL Batch Data Ingestion] las API de Adobe Experience Platform.
 
 ## Llamadas a la API por lotes
 
@@ -106,7 +109,7 @@ Para JSON multilínea, un objeto puede ocupar varias líneas, mientras que todos
 ]
 ```
 
-De forma predeterminada, la ingestión de datos por lotes utiliza JSON de una sola línea.
+De forma predeterminada, [!DNL Batch Data Ingestion] utiliza JSON de una sola línea.
 
 ### ¿Se admite la ingestión de CSV?
 
@@ -168,7 +171,7 @@ Un lote puede, en su ciclo vital, pasar por los siguientes estados:
 | Estado | Datos escritos en el maestro | Descripción |
 | ------ | ---------------------- | ----------- |
 | Abandonado |  | El cliente no pudo completar el lote en el intervalo de tiempo esperado. |
-| Anulado |  | El cliente ha llamado explícitamente, a través de las API de inserción de datos por lotes, una operación de anulación para el lote especificado. Una vez que un lote está en estado Cargado, no se puede anular el lote. |
+| Anulado |  | El cliente ha llamado explícitamente, mediante las [!DNL Batch Data Ingestion] API, a una operación de anulación para el lote especificado. Una vez que un lote está en estado Cargado, no se puede anular el lote. |
 | Activo/Correcto | x | El lote se ha promocionado correctamente de escenario a maestro y ahora está disponible para el consumo de flujo descendente. **Nota:** Activo y Éxito se utilizan indistintamente. |
 | Archivado |  | El lote ha sido archivado en almacenamiento frío. |
 | Fallado/Error |  | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Se registra un error procesable, junto con el lote, para permitir a los clientes corregir y volver a enviar los datos. **Nota:** Fallido y Error se utilizan indistintamente. |
@@ -190,7 +193,7 @@ Cuando un lote se está &quot;reintentando&quot;, significa que la ingestión de
 
 ### ¿Qué significa cuando un lote está &quot;Detenido&quot;?
 
-Cuando un lote se encuentra en &quot;Paralizado&quot;, significa que los servicios de inserción de datos están experimentando dificultades para ingerir el lote y todos los reintentos se han agotado.
+Cuando un lote se encuentra en &quot;Estancado&quot;, significa que [!DNL Data Ingestion Services] está experimentando dificultades para ingerir el lote y todos los reintentos se han agotado.
 
 ### ¿Qué significa si un lote sigue siendo &quot;Cargando&quot;?
 
@@ -225,7 +228,7 @@ Una vez corregidos los errores, se puede volver a cargar el lote.
 
 ### ¿Cómo se deben eliminar los lotes?
 
-En lugar de eliminarlos directamente del catálogo, los lotes deben eliminarse con cualquiera de los métodos que se indican a continuación:
+En lugar de eliminarlos directamente de [!DNL Catalog], los lotes deben eliminarse utilizando cualquiera de los métodos que se indican a continuación:
 
 1. Si el lote está en curso, se debe cancelar el lote.
 2. Si el lote se masteriza correctamente, se debe revertir el lote.
@@ -236,11 +239,11 @@ Las siguientes métricas a nivel de lote están disponibles para lotes en el est
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| inputByteSize | El número total de bytes que se han ensayo para que se procesen los servicios de inserción de datos. |
-| inputRecordSize | Número total de filas que se han montado para que se procesen los servicios de inserción de datos. |
-| outputByteSize | Número total de bytes que los servicios de inserción de datos arrojaron al lago de datos. |
-| outputRecordSize | Número total de filas que los servicios de inserción de datos arrojaron al lago de datos. |
-| partitionCount | Número total de particiones escritas en Data Lake. |
+| inputByteSize | El número total de bytes que se van a [!DNL Data Ingestion Services] procesar. |
+| inputRecordSize | El número total de filas que se van a [!DNL Data Ingestion Services] procesar. |
+| outputByteSize | Número total de bytes exportados por [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
+| outputRecordSize | El número total de filas que [!DNL Data Ingestion Services] se genera en [!DNL Data Lake]. |
+| partitionCount | Número total de particiones escritas en [!DNL Data Lake]. |
 
 ### ¿Por qué las métricas no están disponibles en algunos lotes?
 
