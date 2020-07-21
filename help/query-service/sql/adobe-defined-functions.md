@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Funciones definidas por Adobe
 topic: functions
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '2156'
+ht-degree: 3%
 
 ---
 
 
 # Funciones definidas por Adobe
 
-Las funciones definidas por Adobe (ADF) son funciones prediseñadas en el servicio de Consulta que ayudan a realizar tareas comerciales comunes en los datos de ExperienceEvent. Estas funciones incluyen funciones de sesionización y atribución como las que se encuentran en Adobe Analytics. Consulte la documentación [de](https://docs.adobe.com/content/help/en/analytics/landing/home.html) Adobe Analytics para obtener más información sobre Adobe Analytics y los conceptos subyacentes a los ADF definidos en esta página. Este documento proporciona información sobre las funciones definidas por Adobe disponibles en el servicio de Consulta.
+Las funciones definidas por Adobe (ADF) son funciones creadas previamente en [!DNL Query Service] que ayudan a realizar tareas comunes relacionadas con el negocio en [!DNL ExperienceEvent] los datos. Estas funciones incluyen funciones de sesionización y atribución como las que se encuentran en Adobe Analytics. Consulte la documentación [de](https://docs.adobe.com/content/help/es-ES/analytics/landing/home.html) Adobe Analytics para obtener más información sobre Adobe Analytics y los conceptos que subyacen a los ADF definidos en esta página. Este documento proporciona información sobre las funciones definidas por Adobe disponibles en [!DNL Query Service].
 
 ## Funciones de ventana
 
-La mayoría de la lógica empresarial requiere reunir los puntos de contacto para un cliente y solicitarlos por tiempo. Spark SQL proporciona esta compatibilidad en forma de funciones de ventana. Las funciones de ventana forman parte de SQL estándar y son compatibles con muchos otros motores SQL.
+La mayoría de la lógica empresarial requiere reunir los puntos de contacto para un cliente y solicitarlos por tiempo. Esta compatibilidad la proporciona [!DNL Spark] SQL en forma de funciones de ventana. Las funciones de ventana forman parte de SQL estándar y son compatibles con muchos otros motores SQL.
 
 Una función de ventana actualiza una agregación y devuelve un solo elemento por cada fila del subconjunto ordenado. La función de agregación más básica es `SUM()`. `SUM()` toma las filas y le da un total. Si, en cambio, aplica `SUM()` a una ventana, convirtiéndola en una función de ventana, recibirá una suma acumulativa con cada fila.
 
-La mayoría de los asistentes de Spark SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila añadido.
+La mayoría de los asistentes de [!DNL Spark] SQL son funciones de ventana que actualizan cada fila de la ventana, con el estado de esa fila añadido.
 
 ### Especificación
 
@@ -33,9 +36,9 @@ Sintaxis: `OVER ([partition] [order] [frame])`
 
 ## Sesionización
 
-Cuando se trabaja con datos de ExperienceEvent procedentes de un sitio web, una aplicación móvil, un sistema interactivo de respuesta de voz o cualquier otro canal de interacción con el cliente, ayuda que los eventos se puedan agrupar en torno a un período de actividad relacionado. Generalmente, tiene una intención específica de conducir su actividad, como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc. Esta agrupación ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
+Cuando se trabaja con [!DNL ExperienceEvent] datos procedentes de un sitio web, una aplicación móvil, un sistema interactivo de respuesta de voz o cualquier otro canal de interacción con el cliente, ayuda que los eventos se puedan agrupar en torno a un período de actividad relacionado. Generalmente, tiene una intención específica de conducir su actividad, como investigar un producto, pagar una factura, comprobar el saldo de la cuenta, rellenar una solicitud, etc. Esta agrupación ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información sobre la sesionización en Adobe Analytics, consulte la documentación sobre sesiones [](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)contextual.
+Para obtener más información acerca de la sesionización en Adobe Analytics, consulte la documentación sobre las sesiones [](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)contextual.
 
 ### Especificación
 
@@ -91,13 +94,13 @@ LIMIT 10
 
 Asociar las acciones de los clientes con el éxito es una parte importante para comprender los factores que influyen en la experiencia de los clientes. Las siguientes FDA admiten la atribución primera y última con diferentes configuraciones de caducidad.
 
-Para obtener más información sobre la atribución en Adobe Analytics, consulte la descripción general [de IQ de](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) atribución en la Guía de análisis de Analytics.
+Para obtener más información sobre la atribución en Adobe Analytics, consulte la descripción general [de IQ de](https://docs.adobe.com/content/help/es-ES/analytics/analyze/analysis-workspace/panels/attribution.html) atribución en la Guía [!DNL Analytics] de análisis.
 
 ### Atribución de primer toque
 
-Devuelve el primer valor de atribución de toque y los detalles de un solo canal en el conjunto de datos de destinatario ExperienceEvent. La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Devuelve el valor de atribución de primer toque y los detalles de un solo canal en el conjunto de datos de destinatario [!DNL ExperienceEvent] . La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver qué interacción ha llevado a una serie de acciones de los clientes. En el ejemplo que se muestra a continuación, el código de seguimiento inicial (`em:946426`) en los datos de ExperienceEvent se atribuye al 100 % (`1.0`) responsabilidad por las acciones del cliente, ya que fue la primera interacción.
+Esta consulta es útil si desea ver qué interacción ha llevado a una serie de acciones de los clientes. En el ejemplo que se muestra a continuación, el código de seguimiento inicial (`em:946426`) de los [!DNL ExperienceEvent] datos se atribuye 100% (`1.0`) de responsabilidad por las acciones del cliente, ya que fue la primera interacción.
 
 ### Especificación
 
@@ -113,8 +116,8 @@ Sintaxis: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([
 | Parámetros de objeto devueltos | Descripción |
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
-| `value` | El valor de `channelValue` ese es el primer toque en ExperienceEvent |
-| `timestamp` | Marca de hora del evento ExperienceEvent en el que se produjo el primer toque |
+| `value` | El valor de `channelValue` ese es el primer toque de la variable [!DNL ExperienceEvent] |
+| `timestamp` | Marca de hora del [!DNL ExperienceEvent] lugar en el que se produjo el primer toque |
 | `fraction` | Atribución del primer toque expresada como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -151,9 +154,9 @@ LIMIT 10
 
 ### Atribución de último toque
 
-Devuelve el valor de atribución de último toque y los detalles de un solo canal en el conjunto de datos de destinatario ExperienceEvent. La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Devuelve el valor de atribución de último toque y los detalles de un solo canal en el conjunto de datos de destinatario [!DNL ExperienceEvent] . La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver la interacción final en una serie de acciones de cliente. En el ejemplo que se muestra a continuación, el código de seguimiento del objeto devuelto es la última interacción de cada registro de ExperienceEvent. A cada código se le atribuye una (`1.0`) responsabilidad del 100 % por las acciones del cliente, ya que fue la última interacción.
+Esta consulta es útil si desea ver la interacción final en una serie de acciones de cliente. En el ejemplo que se muestra a continuación, el código de seguimiento del objeto devuelto es la última interacción de cada [!DNL ExperienceEvent] registro. A cada código se le atribuye una (`1.0`) responsabilidad del 100 % por las acciones del cliente, ya que fue la última interacción.
 
 ### Especificación
 
@@ -169,8 +172,8 @@ Sintaxis: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([p
 | Parámetros de objeto devueltos | Descripción |
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
-| `value` | El valor de `channelValue` ese es el último toque en ExperienceEvent |
-| `timestamp` | Marca de tiempo del evento ExperienceEvent en el que `channelValue` se utilizó el evento |
+| `value` | El valor de `channelValue` ese es el último toque de la variable [!DNL ExperienceEvent] |
+| `timestamp` | La marca de tiempo del [!DNL ExperienceEvent] lugar donde se `channelValue` utilizó el |
 | `fraction` | Atribución del último toque expresado como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -206,9 +209,9 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribución de primer toque con condición de caducidad
 
-Devuelve el primer valor de atribución de toque y los detalles de un solo canal en el conjunto de datos de destinatario ExperienceEvent, que caduca después o antes de una condición. La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
+Devuelve el primer valor de atribución de toque y los detalles de un solo canal del conjunto de datos de destinatario [!DNL ExperienceEvent] , que caducan después o antes de una condición. La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado.
 
-Esta consulta es útil si desea ver qué interacción llevó a una serie de acciones del cliente dentro de una porción del conjunto de datos de ExperienceEvent determinada por una condición de su selección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y se atribuye al código de seguimiento inicial de cada día la responsabilidad del 100% (`1.0`) por las acciones del cliente.
+Esta consulta es útil si desea ver qué interacción llevó a una serie de acciones del cliente dentro de una porción del [!DNL ExperienceEvent] conjunto de datos determinada por una condición de su selección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y se atribuye al código de seguimiento inicial de cada día la responsabilidad del 100% (`1.0`) por las acciones del cliente.
 
 #### Especificación
 
@@ -225,8 +228,8 @@ Sintaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, 
 | Parámetros de objeto devueltos | Descripción |
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
-| `value` | El valor de `channelValue` ese es el primer toque en ExperienceEvent antes de la variable `expCondition` |
-| `timestamp` | Marca de hora del evento ExperienceEvent en el que se produjo el primer toque |
+| `value` | El valor de `channelValue` ese es el primer toque en la [!DNL ExperienceEvent] sección anterior a `expCondition` |
+| `timestamp` | Marca de hora del [!DNL ExperienceEvent] lugar en el que se produjo el primer toque |
 | `fraction` | Atribución del primer toque expresada como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribución de primer toque con tiempo de espera de caducidad
 
-Devuelve el primer valor de atribución de toque y los detalles de un solo canal en el conjunto de datos de ExperienceEvent de destinatario para un período de tiempo especificado. La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver qué interacción, dentro de un intervalo de tiempo seleccionado, llevó a una acción del cliente. En el ejemplo que se muestra a continuación, el primer toque que se devuelve para cada acción del cliente es la interacción más temprana en los siete días anteriores (`expTimeout = 86400 * 7`).
+Devuelve el primer valor de atribución de toque y los detalles de un solo canal en el conjunto de datos de destinatario [!DNL ExperienceEvent] para un período de tiempo especificado. La consulta devuelve un `struct` objeto con el valor de primer toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver qué interacción, dentro de un intervalo de tiempo seleccionado, llevó a una acción del cliente. En el ejemplo que se muestra a continuación, el primer toque que se devuelve para cada acción del cliente es la interacción más temprana en los siete días anteriores (`expTimeout = 86400 * 7`).
 
 #### Especificación
 
@@ -279,7 +282,7 @@ Sintaxis: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVa
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
 | `value` | El valor de `channelValue` ese es el primer toque dentro del `expTimeout` intervalo especificado |
-| `timestamp` | Marca de hora del evento ExperienceEvent en el que se produjo el primer toque |
+| `timestamp` | Marca de hora del [!DNL ExperienceEvent] lugar en el que se produjo el primer toque |
 | `fraction` | Atribución del primer toque expresada como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -315,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribución de último toque con condición de caducidad
 
-Devuelve el valor de atribución de último toque y los detalles de un solo canal en el conjunto de datos de destinatario ExperienceEvent, que caduca después o antes de una condición. La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver la última interacción en una serie de acciones del cliente dentro de una porción del conjunto de datos de ExperienceEvent determinada por una condición de su selección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y se atribuye al último código de seguimiento de cada día la responsabilidad del 100% (`1.0`) por las acciones del cliente.
+Devuelve el valor de atribución de último toque y los detalles de un solo canal del conjunto de datos de destinatario [!DNL ExperienceEvent] , que caducan después o antes de una condición. La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver la última interacción en una serie de acciones del cliente dentro de una porción del conjunto de datos [!DNL ExperienceEvent] determinada por una condición de su selección. En el ejemplo que se muestra a continuación, se registra una compra (`commerce.purchases.value IS NOT NULL`) en cada uno de los cuatro días mostrados en los resultados (15, 21, 23 y 29 de julio) y se atribuye al último código de seguimiento de cada día la responsabilidad del 100% (`1.0`) por las acciones del cliente.
 
 #### Especificación
 
@@ -332,8 +335,8 @@ Sintaxis: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, e
 | Parámetros de objeto devueltos | Descripción |
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
-| `value` | El valor de `channelValue` ese es el último toque en ExperienceEvent antes de la variable `expCondition` |
-| `timestamp` | Marca de hora del evento ExperienceEvent en el que se produjo el último toque |
+| `value` | El valor de `channelValue` ese es el último toque en la [!DNL ExperienceEvent] sección anterior a la `expCondition` |
+| `timestamp` | Marca de hora del [!DNL ExperienceEvent] lugar donde se produjo el último toque |
 | `percentage` | Atribución del último toque expresado como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -369,7 +372,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Atribución de último toque con tiempo de espera de caducidad
 
-Devuelve el valor de atribución de último toque y los detalles de un solo canal en el conjunto de datos de ExperienceEvent de destinatario para un período de tiempo especificado. La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver la última interacción dentro de un intervalo de tiempo seleccionado. En el ejemplo que se muestra a continuación, el último toque que se devuelve para cada acción del cliente es la interacción final en los siete días siguientes (`expTimeout = 86400 * 7`).
+Devuelve el valor de atribución de último toque y los detalles de un solo canal en el conjunto de datos de destinatario [!DNL ExperienceEvent] para un período de tiempo especificado. La consulta devuelve un `struct` objeto con el valor de último toque, la marca de tiempo y la atribución para cada fila devuelta para el canal seleccionado. Esta consulta es útil si desea ver la última interacción dentro de un intervalo de tiempo seleccionado. En el ejemplo que se muestra a continuación, el último toque que se devuelve para cada acción del cliente es la interacción final en los siete días siguientes (`expTimeout = 86400 * 7`).
 
 #### Especificación
 
@@ -386,7 +389,7 @@ Sintaxis: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVal
 | ---------------------- | ------------- |
 | `name` | La etiqueta `channelName` introducida en el ADF |
 | `value` | El valor de `channelValue` ese es el último toque dentro del `expTimeout` intervalo especificado |
-| `timestamp` | Marca de hora del evento ExperienceEvent en el que se produjo el último toque |
+| `timestamp` | Marca de hora del [!DNL ExperienceEvent] lugar donde se produjo el último toque |
 | `percentage` | Atribución del último toque expresado como crédito fraccional |
 
 #### Consulta de ejemplo
@@ -647,4 +650,4 @@ LIMIT 10
 
 ## Pasos siguientes
 
-Mediante las funciones descritas aquí, puede escribir consultas para acceder a sus propios conjuntos de datos de ExperienceEvent mediante el servicio de Consulta. Para obtener más información sobre la creación de consultas en el servicio de Consulta, consulte la documentación sobre la [creación de consultas](../creating-queries/creating-queries.md).
+Mediante las funciones descritas aquí, puede escribir consultas para acceder a sus propios [!DNL ExperienceEvent] conjuntos de datos mediante [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación sobre la [creación de consultas](../creating-queries/creating-queries.md).
