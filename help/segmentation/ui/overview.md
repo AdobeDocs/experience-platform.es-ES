@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Trabajar con definiciones de segmentos requiere comprender los distintos [!DNL Experience Platform] servicios relacionados con la segmentación. Antes de leer esta guía del usuario, consulte la documentación de los siguientes servicios:
 
-- [!DNL Segmentation Service](../home.md):: El servicio de segmentación permite dividir los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
+- [!DNL Segmentation Service](../home.md):: [!DNL Segmentation Service] permite dividir los datos almacenados en [!DNL Experience Platform] que se relacionan con individuos (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
 - [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en Platform.
+- [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 También es importante conocer dos términos clave que se utilizan a través de este documento y comprender la diferencia entre ellos:
@@ -63,7 +63,7 @@ La ficha **[!UICONTROL Atributos]** permite examinar [!DNL Profile] los atributo
 
 ### Eventos
 
-La ficha **[!UICONTROL Eventos]** le permite crear una audiencia basada en eventos o acciones que se hayan realizado con elementos de datos XDM ExperienceEvent. También puede encontrar Tipos de evento en la ficha **[!UICONTROL Eventos]** , que son una colección de eventos de uso común que le permiten crear sus segmentos más rápidamente.
+La ficha **[!UICONTROL Eventos]** permite crear una audiencia basada en eventos o acciones que se hayan realizado con elementos [!DNL XDM ExperienceEvent] de datos. También puede encontrar Tipos de evento en la ficha **[!UICONTROL Eventos]** , que son una colección de eventos de uso común que le permiten crear sus segmentos más rápidamente.
 
 Además de poder buscar [!DNL ExperienceEvent] elementos, también puede buscar Tipos de evento. Los Tipos de evento utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin necesidad de buscar en la [!DNL XDM ExperienceEvent] clase el evento correcto. Por ejemplo: si se utiliza la barra de búsqueda para buscar &quot;carro&quot;, se devuelven los Tipos de evento &quot;[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones de carro de compras que se utilizan con mucha frecuencia al generar definiciones de segmentos.
 
