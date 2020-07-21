@@ -4,9 +4,9 @@ seo-title: Flujo de trabajo de los destinos de almacenamiento en la nube
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ En esta página se explica cómo puede conectarse a ubicaciones de almacenamient
 
    ![Conectar con destino de almacenamiento de nube](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. En el paso **[!UICONTROL Autenticación]** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Conectar con destino]**. <br> Consulte Destino de [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) , Destino de [Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) , Destino de centros [de Evento de](/help/rtcdp/destinations/azure-event-hubs-destination.md) Azure y Destino de [SFTP](/help/rtcdp/destinations/sftp-destination.md) para obtener detalles sobre la introducción de credenciales en el paso **Autenticación** .
+2. En el paso **[!UICONTROL Autenticación]** , si previamente ha configurado una conexión con el destino de almacenamiento de nube, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Conectar con destino]**. <br> Consulte Destino, destino, destino [y destino de](/help/rtcdp/destinations/amazon-s3-destination.md) SFTP [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) de Amazon S3 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) para obtener información detallada sobre las credenciales introducidas en el paso [Autenticación](/help/rtcdp/destinations/sftp-destination.md) **** .
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Para los destinos de Amazon S3, inserte el nombre **[!UICONTROL del]** bucket y 
 
    ![Conectar con destino de almacenamiento de nube SFTP: paso de autenticación](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Para los destinos de Amazon Kinesis, proporcione el nombre del flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+   Para [!DNL Amazon Kinesis] los destinos, especifique el nombre del flujo de datos existente en la [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
    ![Conectar con destino de almacenamiento de nube de Kinesis: paso de autenticación](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Para los destinos de los centros de Evento de Azure, proporcione el nombre del flujo de datos existente en su [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+   Para [!DNL Azure Event Hubs] los destinos, especifique el nombre del flujo de datos existente en la [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
    ![Conectar con destino de almacenamiento de nube de Kinesis: paso de autenticación](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
