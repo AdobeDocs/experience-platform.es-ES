@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administrar permisos para un perfil de producto
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Administrar permisos para un perfil de producto
 
-Inmediatamente después de [crear un nuevo perfil](#create-a-new-product-profile)de producto, se le pedirá que configure los permisos del perfil. Si está editando permisos para un perfil existente, seleccione el perfil en la ficha Perfiles ** del producto para abrir la página de detalles del perfil y, a continuación, haga clic en **Permisos**.
+Inmediatamente después de [crear un nuevo perfil](#create-a-new-product-profile)de producto, se le pedirá que configure los permisos del perfil. Si está editando permisos para un perfil existente, seleccione el perfil en la ficha Perfiles ** del producto para abrir la página de detalles del perfil y, a continuación, haga clic en **[!UICONTROL Permisos]**.
 
 ![perfil-permissions](../images/profile-permissions.png)
 
@@ -24,25 +24,25 @@ Haga clic en cualquier categoría de la lista para abrir la página *Editar perm
 
 ![edit-permissions](../images/edit-permissions.png)
 
-La página *Editar permisos* proporciona un espacio de trabajo para agregar y quitar permisos del perfil de productos seleccionado. La parte izquierda de la pantalla muestra una lista de categorías de permisos. Al hacer clic en una categoría se cambian los permisos que se muestran en Elementos *de permisos* disponibles.
+La página *[!UICONTROL Editar permisos]* proporciona un espacio de trabajo para agregar y quitar permisos del perfil de productos seleccionado. La parte izquierda de la pantalla muestra una lista de categorías de permisos. Al hacer clic en una categoría se cambian los permisos que se muestran en Elementos *[!UICONTROL de permisos]* disponibles.
 
 ![change-permissions-categoría](../images/change-permissions-category.png)
 
-Para agregar un permiso, haga clic en el icono de **signo más (+)** junto al nombre del permiso. También puede hacer clic en **Añadir todo** para agregar todos los permisos de la categoría actual al perfil. Los permisos Añadidos aparecen en Elementos *de permisos* incluidos.
+Para agregar un permiso, haga clic en el icono de **signo más (+)** junto al nombre del permiso. También puede hacer clic en **[!UICONTROL Añadir todo]** para agregar todos los permisos de la categoría actual al perfil. Los permisos Añadidos aparecen en Elementos *[!UICONTROL de permisos]* incluidos.
 
 ![add-permissions](../images/add-permissions.png)
 
 >[!NOTE]
 >
->La lista Elementos *de permisos* incluidos solo muestra los permisos agregados de la categoría seleccionada actualmente.
+>La lista Elementos *[!UICONTROL de permisos]* incluidos solo muestra los permisos agregados de la categoría seleccionada actualmente.
 
-Para quitar un permiso, haga clic en el icono **X** que hay junto al nombre del permiso o seleccione **Quitar todo** para quitar todos los permisos de la categoría actual. Los permisos eliminados vuelven a aparecer en Elementos de permisos *disponibles*.
+Para quitar un permiso, haga clic en el icono **X** que hay junto al nombre del permiso o seleccione **[!UICONTROL Quitar todo]** para quitar todos los permisos de la categoría actual. Los permisos eliminados vuelven a aparecer en Elementos de permisos *[!UICONTROL disponibles]*.
 
-Continúe con las categorías disponibles y agregue los permisos deseados. Cuando termine, haga clic en **Guardar**.
+Continúe con las categorías disponibles y agregue los permisos deseados. Cuando termine, haga clic en **[!UICONTROL Guardar]**.
 
 ![permissions-end](../images/permissions-finish.png)
 
-La ficha *Permisos* del perfil del producto vuelve a aparecer y muestra que los permisos seleccionados ya están activos.
+La ficha *[!UICONTROL Permisos]* del perfil del producto vuelve a aparecer y muestra que los permisos seleccionados ya están activos.
 
 ![added-permissions](../images/added-permissions.png)
 
