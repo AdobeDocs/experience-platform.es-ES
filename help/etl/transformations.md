@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Transformaciones ETL de muestra
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ En este artículo se muestran las siguientes transformaciones de ejemplo que pue
 
 ### Archivos de ejemplo
 
-Los archivos CSV y JSON de muestra están disponibles en la versión pública de GitHub de referencia de ETL mantenida por Adobe:
+Los archivos CSV y JSON de muestra están disponibles en la [!DNL GitHub] repo de referencia ETL pública que Adobe mantiene:
 
 - [CRM_perfiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_perfiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -46,10 +49,10 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 
 | Columna CSV | Ruta XDM | Formato de datos |
 | ---------- | -------- | --------------- |
-| TÍTULO | entity.name.courtesyTitle | Copiar como cadena |
-| F_NAME | people.name.firstName | Copiar como cadena |
-| L_NAME | people.name.lastName | Copiar como cadena |
-| SEXO | persona.gender | Transformar el sexo como persona correspondiente.valor de enumeración de género |
+| TÍTULO | person.name.courtesyTitle | Copiar como cadena |
+| F_NAME | person.name.firstName | Copiar como cadena |
+| L_NAME | person.name.lastName | Copiar como cadena |
+| SEXO | person.gender | Transformar el sexo como persona correspondiente.valor de enumeración de género |
 | DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transformar el valor de bornDayAndMonth como<br/>stringTransform donde el valor de bornDate es<br/>stringTransform donde el valor es &quot;valor&quot;. |
 | CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, principal:false}] | Copiar como cadena a la matriz CRMID en identityMap y establecer Principal como falso |
@@ -59,7 +62,7 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | TELÉFONO | homePhone.number | Copiar como cadena |
 | CALLE | homeAddress.street1 | Copiar como cadena |
 | CIUDAD | homeAddress.city | Copiar como cadena |
-| ESTADO | homeAddress.stateProvincia | Copiar como cadena |
+| ESTADO | homeAddress.stateProvince | Copiar como cadena |
 | PAÍS | homeAddress.country | Copiar como cadena |
 | ZIP | homeAddress.postalCode | Copiar como cadena |
 | LAT | homeAddress.latitude | Convertir en doble |
@@ -174,7 +177,7 @@ La jerarquía de un dataframe (como un archivo de parquet) debe coincidir con la
 
 ### Ejemplo de dataframe
 
-La estructura del siguiente ejemplo de dataframe se ha asignado a un esquema que implementa la clase de Perfil XDM Individual y contiene los campos más comunes asociados a esquemas de ese tipo.
+La estructura del siguiente ejemplo de dataframe se ha asignado a un esquema que implementa la [!DNL XDM Individual Profile] clase y contiene los campos más comunes asociados con esquemas de ese tipo.
 
 ```python
 [
@@ -247,7 +250,7 @@ La estructura del siguiente ejemplo de dataframe se ha asignado a un esquema que
 ]
 ```
 
-Al crear un dataframe para utilizarlo en la plataforma de Adobe Experience, es importante asegurarse de que su estructura jerárquica coincide exactamente con la de un esquema XDM existente para que los campos se asignen correctamente.
+Al construir un dataframe para utilizarlo en Adobe Experience Platform, es importante asegurarse de que su estructura jerárquica coincide exactamente con la de un esquema XDM existente para que los campos se asignen correctamente.
 
 ## Identidades al mapa de identidad
 
