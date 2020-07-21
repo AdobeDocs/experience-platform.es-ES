@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a la ingestión parcial por lotes de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Además, el [apéndice](#appendix) de este tutorial proporciona una referencia p
 Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform relacionados con la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Ingesta](./overview.md)por lotes: Método que [!DNL Platform] ingiere y almacena datos de archivos de datos, como CSV y Parquet.
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
@@ -42,7 +42,7 @@ Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -115,7 +115,7 @@ Ahora, puede cargar datos con el botón **Añadir datos** y se ingesta con inges
 
 ### Utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot; {#map-flow}
 
-Para utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot;, siga los pasos enumerados en el tutorial [](../tutorials/map-a-csv-file.md)Asignar un archivo CSV. Una vez que llegue al paso de *Añadir datos* , tome nota de los campos de diagnóstico de ingestión ** parcial y *[!UICONTROL error]* .
+Para utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot;, siga los pasos enumerados en el tutorial [](../tutorials/map-a-csv-file.md)Asignar un archivo CSV. Una vez que llegue al paso de *[!UICONTROL Añadir datos]* , tome nota de los campos de diagnóstico de ingestión ** parcial y *[!UICONTROL error]* .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
