@@ -4,25 +4,28 @@ solution: Experience Platform
 title: Transmisión de varios mensajes en una sola solicitud HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
+source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
 
 # Envío de varios mensajes en una sola solicitud HTTP
 
-Cuando se transmiten datos a Adobe Experience Platform, puede resultar caro realizar numerosas llamadas HTTP. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes en una sola solicitud es una manera excelente de optimizar los datos que se envían a la plataforma de experiencia.
+Al transmitir datos al Adobe Experience Platform, realizar numerosas llamadas HTTP puede resultar costoso. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes dentro de una sola solicitud es una excelente manera de optimizar los datos que se envían al Experience Platform.
 
-Este documento proporciona un tutorial para enviar varios mensajes a la plataforma de experiencias en una sola solicitud HTTP mediante la ingesta de flujo continuo.
+Este documento proporciona un tutorial para enviar varios mensajes al Experience Platform dentro de una sola solicitud HTTP mediante la ingesta de flujo continuo.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de la introducción de datos de la plataforma Adobe Experience Platform. Antes de comenzar este tutorial, consulte la siguiente documentación:
+Este tutorial requiere un conocimiento práctico de la ingesta de datos de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
-- [Información general](../home.md)sobre la inserción de datos: Abarca los conceptos básicos de la inserción de datos de la plataforma de experiencia, incluidos los métodos de inserción y los conectores de datos.
+- [Información general](../home.md)sobre la inserción de datos: Abarca los conceptos básicos de la ingestión de datos de Experience Platform, incluidos los métodos de ingesta y los conectores de datos.
 - [Información general](../streaming-ingestion/overview.md)sobre la ingestión de flujo: El flujo de trabajo y los componentes básicos de la inserción de flujo continuo, como conexiones de flujo continuo, conjuntos de datos, Perfil individual XDM y ExperienceEvent XDM.
 
-Este tutorial también requiere que haya completado el tutorial [Autenticación a la plataforma](../../tutorials/authentication.md) de experiencia de Adobe para realizar correctamente llamadas a las API de plataforma. La finalización del tutorial de autenticación proporciona el valor del encabezado Autorización requerido por todas las llamadas de API en este tutorial. El encabezado se muestra en las llamadas de ejemplo de la siguiente manera:
+Este tutorial también requiere que haya completado el tutorial [Autenticación a Adobe Experience Platform](../../tutorials/authentication.md) para realizar llamadas correctamente a las API de Platform. La finalización del tutorial de autenticación proporciona el valor del encabezado Autorización requerido por todas las llamadas de API en este tutorial. El encabezado se muestra en las llamadas de ejemplo de la siguiente manera:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 
@@ -32,7 +35,7 @@ Todas las solicitudes POST requieren un encabezado adicional:
 
 ## Creación de una conexión de flujo continuo
 
-Primero debe crear una conexión de flujo continuo para poder inicio de datos de flujo continuo en la plataforma de experiencia. Lea la guía [Crear una conexión](./create-streaming-connection.md) de flujo continuo para aprender a crear una conexión de flujo continuo.
+Primero debe crear una conexión de flujo continuo para poder inicio de datos de flujo continuo al Experience Platform. Lea la guía [Crear una conexión](./create-streaming-connection.md) de flujo continuo para aprender a crear una conexión de flujo continuo.
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una dirección URL única que puede utilizarse para transmitir datos a Platform.
 
@@ -40,7 +43,7 @@ Después de registrar una conexión de flujo continuo, usted, como productor de 
 
 El siguiente ejemplo muestra cómo enviar varios mensajes a un conjunto de datos específico dentro de una sola solicitud HTTP. Inserte la ID del conjunto de datos en el encabezado del mensaje para que ese mensaje se ingrese directamente en él.
 
-Puede obtener el ID de un conjunto de datos existente mediante la interfaz de usuario de la plataforma o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en la plataforma [de](https://platform.adobe.com) experiencias. Para ello, vaya a la ficha **Conjuntos** de datos, haga clic en el conjunto de datos para el que desea la ID y copie la cadena desde el campo ID **del** conjunto de datos en la ficha **Información** . Consulte la descripción general [del servicio de](../../catalog/home.md) catálogo para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
+Puede obtener el ID de un conjunto de datos existente mediante la interfaz de usuario de Platform o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en el [Experience Platform](https://platform.adobe.com) si ingresa a la ficha **Conjuntos** de datos, hace clic en el conjunto de datos para el que desea la ID y copia la cadena desde el campo ID **del** conjunto de datos en la ficha **Información** . Consulte la descripción general [del servicio de](../../catalog/home.md) catálogo para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
 
 En lugar de utilizar un conjunto de datos existente, puede crear un nuevo conjunto de datos. Lea el tutorial [Crear un conjunto de datos mediante API](../../catalog/api/create-dataset.md) para obtener más información sobre cómo crear un conjunto de datos mediante API.
 
@@ -68,9 +71,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -130,9 +130,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -223,7 +220,7 @@ El siguiente ejemplo muestra qué sucede cuando el lote incluye mensajes válido
 
 La carga útil de la solicitud es una matriz de objetos JSON que representan el evento en el esquema XDM. Tenga en cuenta que se deben cumplir las siguientes condiciones para validar correctamente el mensaje:
 - El `imsOrgId` campo del encabezado del mensaje debe coincidir con la definición de entrada. Si la carga útil de la solicitud no incluye un `imsOrgId` campo, el servicio principal de recopilación de datos (DCCS) agregará el campo automáticamente.
-- El encabezado del mensaje debe hacer referencia a un esquema XDM existente creado en la interfaz de usuario de la plataforma.
+- El encabezado del mensaje debe hacer referencia a un esquema XDM existente creado en la interfaz de usuario de Platform.
 - El `datasetId` campo debe hacer referencia a un conjunto de datos existente en Platform y su esquema debe coincidir con el esquema proporcionado en el `header` objeto dentro de cada mensaje incluido en el cuerpo de la solicitud.
 
 **Formato API**
@@ -250,9 +247,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -312,9 +306,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -326,9 +317,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -388,9 +376,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -440,9 +425,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "name": "_xdm.context.experienceevent"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -528,9 +510,9 @@ El segundo mensaje falló porque no tenía cuerpo de mensaje. La solicitud de re
 
 Error en el tercer mensaje debido a que se está utilizando un ID de organización de IMS no válido en el encabezado. La organización de IMS debe coincidir con el {CONNECTION_ID} al que intenta publicar. Para determinar qué ID de organización de IMS coincide con la conexión de flujo que está utilizando, puede realizar una `GET inlet` solicitud mediante la API [de inserción](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)de datos. Consulte [Recuperación de una conexión](./create-streaming-connection.md#get-data-collection-url) de flujo para ver un ejemplo de cómo recuperar las conexiones de flujo creadas anteriormente.
 
-El cuarto mensaje falló porque no seguía el esquema XDM esperado. El `xdmSchema` contenido incluido en el encabezado y el cuerpo de la solicitud no coincide con el esquema XDM del `{DATASET_ID}`. La corrección del esquema en el encabezado y cuerpo del mensaje le permite pasar la validación de DCCS y enviarse correctamente a Platform. El cuerpo del mensaje también debe actualizarse para que coincida con el esquema XDM de la plataforma `{DATASET_ID}` para que pase la validación de flujo en la plataforma. Para obtener más información sobre lo que sucede con los mensajes que se transmiten correctamente a la plataforma, consulte la sección [confirmar mensajes ingestados](#confirm-messages-ingested) de este tutorial.
+El cuarto mensaje falló porque no seguía el esquema XDM esperado. El `xdmSchema` contenido incluido en el encabezado y el cuerpo de la solicitud no coincide con el esquema XDM del `{DATASET_ID}`. La corrección del esquema en el encabezado y el cuerpo del mensaje le permite pasar la validación de DCCS y enviarse correctamente a Platform. El cuerpo del mensaje también debe actualizarse para que coincida con el esquema XDM de `{DATASET_ID}` para que pase la validación de flujo en Platform. Para obtener más información sobre lo que sucede con los mensajes que se transmiten correctamente a Platform, consulte la sección [Confirmar mensajes ingestados](#confirm-messages-ingested) de este tutorial.
 
-### Recuperar mensajes fallidos de la plataforma
+### Recuperar mensajes fallidos de Platform
 
 Los mensajes fallidos se identifican mediante un código de estado de error en la matriz de respuestas.
 Los mensajes no válidos se recopilan y almacenan en un lote &quot;error&quot; dentro del conjunto de datos especificado por `{DATASET_ID}`.
@@ -539,15 +521,15 @@ Lea la [guía de recuperación de lotes](../quality/retrieve-failed-batches.md) 
 
 ## Confirmar la ingesta de mensajes
 
-Los mensajes que pasan la validación de DCCS se transmiten a la plataforma. En la plataforma, los mensajes por lotes se prueban mediante la validación de flujo antes de ser ingeridos en el lago de datos. El estado de los lotes, sean exitosos o no, aparece dentro del conjunto de datos especificado por `{DATASET_ID}`.
+Los mensajes que pasan la validación de DCCS se transmiten a Platform. En Platform, los mensajes por lotes se prueban mediante validación de flujo continuo antes de ser ingeridos en el lago de datos. El estado de los lotes, sean exitosos o no, aparece dentro del conjunto de datos especificado por `{DATASET_ID}`.
 
-Puede realizar la vista del estado de los mensajes por lotes que se transmiten correctamente a la plataforma mediante la interfaz de usuario [de la plataforma de](https://platform.adobe.com) experiencias. Para ello, vaya a la ficha **Conjuntos** de datos, haga clic en el conjunto de datos en el que está realizando la secuencia de datos y marque la ficha Actividad **de** conjuntos de datos.
+Puede realizar la vista del estado de los mensajes por lotes que se transmiten correctamente a Platform mediante la interfaz de usuario [del](https://platform.adobe.com) Experience Platform. Para ello, vaya a la ficha **Conjuntos** de datos, haga clic en el conjunto de datos en el que se está transmitiendo y compruebe la ficha Actividad **del** conjunto de datos.
 
 Los mensajes por lotes que pasan la validación de flujo continuo en Platform se ingieren en el lago de datos. Los mensajes están disponibles para su análisis o exportación.
 
 ## Pasos siguientes
 
-Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente los mensajes en el conjunto de datos de destinatario, puede enviar sus propios datos en inicio a Platform. Para obtener información general sobre cómo realizar la consulta y recuperar datos ingestados desde Plataforma, consulte la guía de acceso [a](../../data-access/tutorials/dataset-data.md) datos.
+Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente los mensajes en el conjunto de datos de destinatario, puede enviar sus propios datos en inicio a Platform. Para obtener información general sobre cómo realizar la consulta y recuperar datos ingestados de Platform, consulte la guía de acceso [a](../../data-access/tutorials/dataset-data.md) datos.
 
 ## Apéndice
 
@@ -565,5 +547,5 @@ La siguiente tabla muestra los códigos de estado devueltos por los mensajes de 
 | 403 | No autorizado:  El token de autorización proporcionado no es válido o ha caducado. Esto solo se devuelve para las entradas que tienen habilitada la autenticación. |
 | 413 | Carga útil demasiado grande: se genera cuando la solicitud de carga útil total es buena a 1 MB. |
 | 429 | Demasiadas solicitudes dentro de un período de tiempo especificado. |
-| 500 | Error al procesar la carga útil. Consulte el cuerpo de la respuesta para ver un mensaje de error más específico (por ejemplo, no se especificó el esquema de carga útil de mensajes o no coincidió con la definición XDM en Platform). |
+| 500 | Error al procesar la carga útil. Consulte el cuerpo de respuesta para ver un mensaje de error más específico (por ejemplo, no se especificó el esquema de carga útil de mensajes o no coincidió con la definición XDM en Platform). |
 | 503 | El servicio no está disponible en este momento. Los clientes deben volver a intentarlo al menos tres veces con una estrategia exponencial de retroceso. |
