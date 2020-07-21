@@ -4,9 +4,9 @@ seo-title: 'inicio rápido del SDK web de Adobe Experience Platform '
 description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '517'
 ht-degree: 5%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 # Bienvenido
 
-Esta guía le guiará por las diferentes formas de configurar el Adobe Experience Platform [!DNL Web SDK]. Para poder utilizar esta función, debe estar en la lista de permitidos. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
+Esta guía le guiará por las diferentes formas de configurar el SDK web de Adobe Experience Platform. Para utilizar esta función, debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
-- Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para [!DNL Analytics], debe utilizarlo. La prueba en desarrollo funciona sin un CNAME pero necesita uno antes de ir a producción
-- Tener derecho al Adobe Experience Platform [!DNL Data Platform].  Si no ha adquirido Platform, le proporcionaremos [!DNL Experience Platform Data Services Foundation] su uso de forma limitada con el SDK sin coste adicional.
-- Utilizar la versión más reciente del servicio de ID de Visitante
+- Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funciona sin un CNAME, pero se necesita uno antes de ir a producción.
+- Tener derecho al Adobe Experience Platform.  Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
+- Utilice la versión más reciente del servicio de ID de Visitante.
 
 ## Crear un ID de configuración
 
