@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Sintaxis SQL
 
-El servicio de Consulta permite utilizar ANSI SQL estándar para `SELECT` sentencias y otros comandos limitados. Este documento muestra la sintaxis SQL admitida por el servicio de Consulta.
+[!DNL Query Service] proporciona la capacidad de utilizar ANSI SQL estándar para `SELECT` sentencias y otros comandos limitados. Este documento muestra la sintaxis SQL admitida por [!DNL Query Service].
 
 ## Definir una consulta SELECT
 
-La siguiente sintaxis define una `SELECT` consulta admitida por el servicio de Consulta:
+La siguiente sintaxis define una `SELECT` consulta admitida por [!DNL Query Service]:
 
 ```
 [ WITH with_query [, ...] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## CREAR TABLA COMO SELECCIONE
 
-La siguiente sintaxis define una consulta `CREATE TABLE AS SELECT` (CTAS) admitida por el servicio de Consulta:
+La siguiente sintaxis define una consulta `CREATE TABLE AS SELECT` (CTAS) admitida por [!DNL Query Service]:
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ Tenga en cuenta que para una consulta de CTAS determinada:
 
 ## INSERTAR EN
 
-La siguiente sintaxis define una `INSERT INTO` consulta admitida por el servicio de Consulta:
+La siguiente sintaxis define una `INSERT INTO` consulta admitida por [!DNL Query Service]:
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREAR VISTA
 
-La siguiente sintaxis define una `CREATE VIEW` consulta admitida por el servicio de Consulta:
+La siguiente sintaxis define una `CREATE VIEW` consulta admitida por [!DNL Query Service]:
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### VISTA DE COLOCACIÓN
 
-La siguiente sintaxis define una `DROP VIEW` consulta admitida por el servicio de Consulta:
+La siguiente sintaxis define una `DROP VIEW` consulta admitida por [!DNL Query Service]:
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Comandos SQL de Spark
+## [!DNL Spark] Comandos SQL
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### COMPROMISO
 
-No se toma ninguna medida en el Servicio de Consulta como respuesta a la declaración de transacción de confirmación.
+No se adoptan medidas en respuesta [!DNL Query Service] a la declaración de transacción de confirmación.
 
 ```
 COMMIT [ WORK | TRANSACTION ]
