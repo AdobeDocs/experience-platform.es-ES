@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Calidad de la ingestión de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 24df962656706d769a7034020d96a545e8f905ca
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 6%
 
 ---
 
 
-# Calidad de los datos en Adobe Experience Platform
+# Calidad de los datos en el Adobe Experience Platform
 
-Adobe Experience Platform ofrece garantías bien definidas de integridad, precisión y coherencia para cualquier dato cargado mediante una ingesta por lotes o por flujo continuo. El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingestión por lotes y por flujo continuo en la plataforma de experiencias.
+Adobe Experience Platform proporciona garantías bien definidas para la integridad, precisión y coherencia de cualquier dato cargado a través de una ingesta por lotes o de flujo continuo. El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingestión por lotes y por flujo continuo en [!DNL Experience Platform].
 
 ## Comprobaciones admitidas
 
@@ -21,12 +24,12 @@ Adobe Experience Platform ofrece garantías bien definidas de integridad, precis
 | Comprobación de enumeración | Sí | Sí |
 | Comprobación del rango (mín., máx.) | Sí | Sí |
 | Comprobación de campo obligatoria | Sí | Sí |
-| Comprobación de patrón | No | Sí  |
+| Comprobación de patrón | No | Sí |
 | Comprobación de formato | No | Sí |
 
 ## Comportamientos de validación admitidos
 
-Tanto la ingestión por lotes como la transmisión por flujo continuo impiden que los datos fallidos continúen en flujo descendente al mover datos incorrectos para su recuperación y análisis en Data Lake. La ingestión de datos proporciona las siguientes validaciones para la ingestión por lotes y por flujo continuo.
+Tanto la ingestión por lotes como la transmisión por flujo continuo impiden que los datos fallidos se desplacen hacia abajo al mover datos incorrectos para su recuperación y análisis en [!DNL Data Lake]. La ingestión de datos proporciona las siguientes validaciones para la ingestión por lotes y por flujo continuo.
 
 ### Ingesta por lotes
 
@@ -52,4 +55,4 @@ Se realizan las siguientes validaciones para la transmisión por secuencias de i
 | Conjunto de datos | Garantiza que el conjunto de datos se especifique, habilite y no se elimine. |
 | Encabezado | Garantiza que el encabezado se especifique y sea válido. |
 
-Encontrará más información sobre cómo la plataforma supervisa y valida los datos en la documentación [de](./monitor-data-flows.md)supervisión de los flujos de datos.
+Encontrará más información sobre cómo [!DNL Platform] monitorear y validar los datos en la documentación [de flujos de datos de](./monitor-data-flows.md)monitoreo.
