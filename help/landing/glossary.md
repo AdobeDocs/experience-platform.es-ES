@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
+source-wordcount: '6665'
 ht-degree: 0%
 
 ---
@@ -191,6 +191,8 @@ ht-degree: 0%
 **Categoría de destino:** Una categoría de destino es un grupo de [!DNL Real-time Customer Data Platform] destinos con características similares.
 
 **Catálogo de destino:** Un catálogo de destino es una lista de los destinos disponibles en el [!DNL Real-time Customer Data Platform].
+
+**Reglas de llamadas directas:** en [!DNL Experience Platform Launch], puede configurar una [!UICONTROL regla] de llamada  directa que se ejecute cuando se llame directamente desde la página. Si la carga de la página o la acción en el sitio es muy sencilla, o si es única y puede ejecutar un conjunto específico de instrucciones cada vez (configurado [!DNL eVar4] en X y activarse [!DNL event2] cada vez), puede utilizar una [!UICONTROL regla] de llamada directa. Consulte [!DNL Launch] la documentación relativa a la creación de [!UICONTROL reglas] de llamada directa.
 
 **Nombre para mostrar:** El nombre para mostrar es un nombre sencillo de usuario de un campo que se muestra en la interfaz de usuario.
 
