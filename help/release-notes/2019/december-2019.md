@@ -1,11 +1,14 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform '
-description: Notas de la versión de la plataforma de experiencia 11 de diciembre de 2019
+description: Notas de la versión del Experience Platform 11 de diciembre de 2019
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '668'
+ht-degree: 5%
 
 ---
 
@@ -16,23 +19,23 @@ source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [Servicio de segmentación](#segmentation)
-* [Servicio de decisiones](#decisioning)
-* [Fuentes](#sources)
-* [Sistema de modelo de datos de experiencia (XDM)](#xdm)
+* [!DNL Segmentation Service](#segmentation)
+* [!DNL Decisioning Service](#decisioning)
+* [!DNL Sources](#sources)
+* [!DNL Experience Data Model (XDM) System](#xdm)
 
-## Servicio de segmentación {#segmentation}
+## [!DNL Segmentation Service] {#segmentation}
 
-El servicio de segmentación de la plataforma de experiencia de Adobe proporciona una interfaz de usuario y una API RESTful que le permite crear segmentos y generar audiencias a partir de los datos de Perfil de clientes en tiempo real. Estos segmentos se configuran y mantienen de forma centralizada en Platform, lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+El servicio de segmentación por Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite crear segmentos y generar audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
 
-El servicio de segmentación define un subconjunto particular de perfiles al describir los criterios que distinguen a un grupo comercializable de personas dentro de la base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto concreto de perfiles describiendo los criterios que distinguen a un grupo comercializable de personas dentro de la base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 |--- | ---|
-| Ficha Audiencias combinadas en el Generador de segmentos | Las fichas _Segmentos_ y _Audiencias_ del Generador de segmentos se han combinado en una sola ficha _Audiencias_ . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la Audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
-| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el Generador de segmentos. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha _Campos_ y, a continuación, utilice el menú desplegable _Combinar directiva_ para seleccionar la directiva de combinación que desee utilizar. |
+| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL _Segmentos _]y[!UICONTROL _Audiencias_] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL _Audiencias _]. Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la Audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
+| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha [!UICONTROL _Campos _]y, a continuación, utilice el menú desplegable_[!UICONTROL  Combinar directiva]_ para seleccionar la directiva de combinación que desee utilizar. |
 
 **Problemas conocidos**
 
@@ -40,9 +43,9 @@ El servicio de segmentación define un subconjunto particular de perfiles al des
 
 Para obtener más información, consulte la descripción general [del servicio](../../segmentation/home.md)de segmentación.
 
-## Servicio de decisiones {#decisioning}
+## [!DNL Decisioning Service] {#decisioning}
 
-El servicio de toma de decisiones de la plataforma de experiencia de Adobe permite seleccionar de forma programada e inteligente la &quot;Mejor experiencia siguiente&quot; de un conjunto de opciones disponibles para un individuo determinado, distribuirlas en cualquier canal o aplicación y realizar sistemas de informes y análisis.
+Adobe Experience Platform [!DNL Decisioning Service] ofrece la capacidad de seleccionar programática e inteligentemente la &quot;Mejor experiencia siguiente&quot; de un conjunto de opciones disponibles para un individuo determinado, entregarlas a cualquier canal o aplicación y realizar sistemas de informes y análisis.
 
 **Nuevas funciones**
 
@@ -56,18 +59,18 @@ El servicio de toma de decisiones de la plataforma de experiencia de Adobe permi
 
 Consulte la información general [del servicio de](../../decisioning-service/home.md) decisiones para obtener una introducción completa al servicio.
 
-## Fuentes {#sources}
+## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingestar datos de fuentes externas y permitirle estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingestar datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-La plataforma de experiencia proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
+[!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | ---------- | ------------ |
-| Conexión de flujo continuo | La ingestión de flujo continuo le permite enviar datos desde dispositivos del lado del cliente y del servidor a la plataforma de experiencias en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
-| Compatibilidad con conectores para la tienda Google Cloud | Compatibilidad con la recopilación de datos de la Tienda Google Cloud. |
+| Conexión de flujo continuo | La ingestión por flujo continuo le permite enviar datos desde dispositivos cliente y servidor a [!DNL Experience Platform] en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
+| Compatibilidad con conectores para [!DNL Google Cloud Store] | Compatibilidad para recopilar datos de [!DNL Google Cloud Store]. |
 
 **Problemas conocidos**
 
@@ -75,11 +78,11 @@ La plataforma de experiencia proporciona una API RESTful y una interfaz de usuar
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
 
-## Sistema de modelo de datos de experiencia (XDM) {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
-La estandarización y la interoperabilidad son conceptos clave que sustentan la plataforma de experiencia. El modelo de datos de experiencia (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
-XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de la plataforma Adobe Experience. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
+XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación pueda comunicarse con los servicios en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
 
 **Nuevas funciones**
 
@@ -90,10 +93,10 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 **Corrección de errores**
 
 * Mantenimiento y mejoras relacionadas con controles de acceso y entornos limitados.
-* Compatibilidad con `eTag` el extremo `/descriptors` en la API del Registro de Esquema.
+* Compatibilidad con `eTag` el `/descriptors` extremo en la [!DNL Schema Registry] API.
 
 **Problemas conocidos**
 
 * None
 
-Para obtener más información sobre cómo trabajar con XDM mediante la API del Registro de Esquema y la interfaz de usuario del Editor de Esquemas, lea la documentación [del sistema](../../xdm/home.md)XDM.
+Para obtener más información sobre cómo trabajar con XDM mediante la [!DNL Schema Registry] API y la interfaz de usuario, lea la documentación [!DNL Schema Editor] del sistema [](../../xdm/home.md)XDM.
