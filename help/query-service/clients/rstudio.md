@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Conectar con RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# Conectar con RStudio
+# Conectar con [!DNL RStudio]
 
-Este documento recorre los pasos para conectar R Studio con el servicio de Consulta de Adobe Experience Platform.
+Este documento recorre los pasos para conectar R Studio con el Adobe Experience Platform [!DNL Query Service].
 
-Después de instalar RStudio, en la pantalla de la *consola* que aparece, primero deberá preparar el script R para utilizar PostgreSQL.
+Después de la instalación [!DNL RStudio], en la pantalla de la *consola* que aparece, primero deberá preparar la secuencia de comandos R para su uso [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Una vez que haya preparado el script R para utilizar PostgreSQL, ahora puede conectar RStudio al servicio de Consulta cargando el controlador PostgreSQL.
+Una vez preparado el script R para su uso [!DNL PostgreSQL], ahora puede conectarse [!DNL RStudio] a [!DNL Query Service] cargando el [!DNL PostgreSQL] controlador.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -45,11 +45,11 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar sus credenciales, inicie sesión en Platform, haga clic en **Consultas** y, a continuación, haga clic en **Credenciales**.
+>Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
 
 ## Pasos siguientes
 
-Ahora que se ha conectado al servicio de Consulta, puede escribir consultas para ejecutar y editar sentencias SQL. Por ejemplo, puede utilizar `dbGetQuery(con, sql)` para ejecutar consultas, donde `sql` es la consulta SQL que desea ejecutar.
+Ahora que se ha conectado a [!DNL Query Service], puede escribir consultas para ejecutar y editar sentencias SQL. Por ejemplo, puede utilizar `dbGetQuery(con, sql)` para ejecutar consultas, donde `sql` es la consulta SQL que desea ejecutar.
 
 La siguiente consulta utiliza un conjunto de datos que contiene [ExperienceEvents](../creating-queries/experience-event-queries.md) y crea un histograma de vistas de página de un sitio web, dada la altura de pantalla del dispositivo.
 
