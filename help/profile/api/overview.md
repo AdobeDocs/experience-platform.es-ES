@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 La [!DNL Real-time Customer Profile] API incluye varios extremos, como se describe a continuación. Visite las guías de punto final individuales para obtener más detalles y consulte la guía [de](getting-started.md) introducción para obtener información importante sobre los encabezados requeridos, la lectura de llamadas de API de muestra y mucho más.
 
-Para vista de todos los extremos disponibles y las operaciones de CRUD, consulte el marcador de referencia de la API de Perfil del cliente en tiempo [real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Para realizar la vista de todos los extremos disponibles y de las operaciones de CRUD, visite el marcador Referencia de la API de Perfil del cliente en tiempo [real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+Para obtener una guía sobre cómo trabajar con [!DNL Real-time Customer Profile] datos en la [!DNL Experience Platform] interfaz de usuario, consulte la guía [del usuario de](../ui/user-guide.md)Perfil.
 
 ## (Alfa) Atributos calculados {#computed-attributes}
 
@@ -52,4 +54,4 @@ Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL D
 
 ## Pasos siguientes {#next-steps}
 
-Para empezar a realizar llamadas mediante la [!DNL Real-time Customer Profile] API, lea la guía [de](getting-started.md) introducción y, a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales [!DNL Profile]relacionados específicos. Para obtener más información sobre cómo trabajar con [!DNL Profile] datos mediante la [!DNL Platform] interfaz de usuario, consulte la guía [de usuario de Perfil para clientes en tiempo](../ui/user-guide.md)real.
+Para empezar a realizar llamadas mediante la [!DNL Real-time Customer Profile] API, lea la guía [de](getting-started.md) introducción y, a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales [!DNL Profile]relacionados específicos. Para trabajar con [!DNL Profile] datos mediante la [!DNL Experience Platform] IU, consulte la guía [de usuario de Perfil de clientes en tiempo](../ui/user-guide.md)real.
