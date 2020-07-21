@@ -4,15 +4,15 @@ seo-title: (Beta) Destino de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '467'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) Destino de los centros de Evento de Azure
+# (Beta) [!DNL Azure Event Hubs] destino
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ Puede crear una conexión saliente en tiempo real con el [!DNL Azure Event Hubs]
 
 ## Casos de uso {#use-cases}
 
-Al utilizar los destinos de flujo continuo, como los centros de Evento de Azure, puede suministrar fácilmente eventos de segmentación de alto valor y atributos de perfil asociados a los sistemas que elija.
+Al utilizar los destinos de flujo continuo, como [!DNL Azure Event Hubs]el, puede transmitir fácilmente eventos de segmentación de alto valor y atributos de perfil asociados a los sistemas que elija.
 
-Por ejemplo, un cliente potencial descargó un documento técnico que los califica en un segmento de &quot;alta propensión a convertir&quot;. Al asignar el segmento en el que el cliente potencial se encuentra en el destino de los centros de Evento de Azure, recibirá este evento en los centros de Evento de Azure. Allí puede emplear un enfoque de &quot;hágalo usted mismo&quot; y describir la lógica empresarial sobre el evento, como piensa que funcionaría mejor con sus sistemas de TI empresariales.
+Por ejemplo, un cliente potencial descargó un documento técnico que los califica en un segmento de &quot;alta propensión a convertir&quot;. Al asignar el segmento en el que se encuentra el cliente potencial al [!DNL Azure Event Hubs] destino, recibirá este evento en [!DNL Azure Event Hubs]. Allí puede emplear un enfoque de &quot;hágalo usted mismo&quot; y describir la lógica empresarial sobre el evento, como piensa que funcionaría mejor con sus sistemas de TI empresariales.
 
 ## Destino de Connect {#connect-destination}
 
@@ -64,7 +64,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 ## Datos exportados {#exported-data}
 
-Los datos de Experience Platform exportados llegan [!DNL Azure Event Hubs] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
+Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Azure Event Hubs] JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
 
 ```
 {
