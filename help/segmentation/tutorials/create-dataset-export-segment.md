@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear un conjunto de datos para exportar un segmento de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Este tutorial está directamente relacionado con los pasos descritos en el tutor
 
 ## Primeros pasos
 
-Para exportar un segmento, el conjunto de datos debe basarse en el Esquema de Unión de Perfil individual XDM. Un esquema de unión es un esquema de sólo lectura generado por el sistema que agrega los campos de todos los esquemas que comparten la misma clase, en este caso la clase de Perfil individual XDM. Para obtener más información sobre los esquemas de vista de uniones, consulte la sección Perfil de clientes en tiempo [real de la guía](../../xdm/schema/composition.md#union)para desarrolladores de Esquema Registry.
+Para exportar un segmento, el conjunto de datos debe basarse en el [!DNL XDM Individual Profile Union Schema]. Un esquema de unión es un esquema de sólo lectura generado por el sistema que agrega los campos de todos los esquemas que comparten la misma clase, en este caso la [!DNL XDM Individual Profile] clase. Para obtener más información sobre los esquemas de vista de uniones, consulte la sección Perfil de clientes en tiempo [real de la guía](../../xdm/schema/composition.md#union)para desarrolladores de Esquema Registry.
 
 Para vista de esquemas de unión en la interfaz de usuario, haga clic en **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, haga clic en la ficha esquema **[!UICONTROL de]** Unión como se muestra a continuación.
 
@@ -53,7 +53,7 @@ En la pantalla *[!UICONTROL Crear conjunto de datos]* , haga clic en **[!UICONTR
 
 ## Seleccionar Esquema de Unión de Perfil individual XDM
 
-Para seleccionar el Esquema de Unión de Perfil individual XDM para utilizarlo en el conjunto de datos, busque el esquema &quot;Perfil[!UICONTROL individual]XDM&quot; con un tipo de &quot;[!UICONTROL Unión]&quot; en la pantalla *[!UICONTROL Seleccionar Esquema]* .
+Para seleccionar el [!DNL XDM Individual Profile Union Schema] que se usará en el conjunto de datos, busque el esquema &quot;Perfil[!UICONTROL individual]XDM&quot; con un tipo de &quot;[!UICONTROL Unión]&quot; en la pantalla *[!UICONTROL Seleccionar Esquema]* .
 
 Seleccione el botón de radio junto a Perfil **[!UICONTROL individual]** XDM y, a continuación, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha.
 
@@ -84,6 +84,6 @@ Tenga en cuenta el ID **[!UICONTROL del]** conjunto de datos, ya que este valor 
 
 ## Pasos siguientes
 
-Ahora que ha creado un conjunto de datos basado en el Esquema de Unión de Perfil individual XDM, puede utilizar el ID **[!UICONTROL de]** conjunto de datos para continuar con el tutorial de [evaluación y acceso a los resultados](./evaluate-a-segment.md) de segmentos.
+Ahora que ha creado un conjunto de datos basado en el [!DNL XDM Individual Profile Union Schema], puede utilizar el ID **[!UICONTROL del]** conjunto de datos para continuar con el tutorial de [evaluación y acceso a los resultados](./evaluate-a-segment.md) del segmento.
 
 En este momento, regrese al tutorial de resultados del segmento de evaluación y tome el paso [de generación de perfiles para miembros](./evaluate-a-segment.md#generate-profiles) de audiencia de la exportación de un flujo de trabajo de segmentos.
