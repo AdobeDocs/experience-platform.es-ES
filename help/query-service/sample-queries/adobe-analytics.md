@@ -4,14 +4,17 @@ solution: Experience Platform
 title: consultas de muestra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 1%
 
 ---
 
 
 # consultas de muestra para datos de Adobe Analytics
 
-Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en eventos de experiencia XDM y se transfieren a la plataforma de Adobe Experience como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el servicio de Consulta de la plataforma de experiencia de Adobe hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obtener más información sobre la asignación a ExperienceEvents de XDM.
+Los datos de los grupos de informes seleccionados de Adobe Analytics se transforman en XDM [!DNL ExperienceEvents] y se ingieren en Adobes Experience Platform como conjuntos de datos. Este documento describe una serie de casos de uso en los que el Adobe Experience Platform [!DNL Query Service] hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obtener más información sobre la asignación a XDM [!DNL ExperienceEvents].
 
 ## Primeros pasos
 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## Variables de comercialización (sintaxis del producto)
 
-En Adobe Analytics, los datos personalizados de nivel de producto se pueden recopilar mediante variables configuradas especialmente llamadas &quot;Variables de comercialización&quot;. Se basan en una eVar o en un Evento personalizado. La diferencia entre estas variables y su uso estándar es que representan un valor por separado para cada producto encontrado en la visita, en lugar de representar un solo valor para la visita. Estas variables se denominan variables de comercialización de sintaxis de producto. Esto permite la recopilación de información como una &quot;cantidad de descuento&quot; por producto o información sobre la &quot;ubicación en la página&quot; del producto en los resultados de búsqueda del cliente.
+En Adobe Analytics, los datos personalizados a nivel de producto se pueden recopilar a través de variables configuradas especialmente llamadas &quot;Variables de comercialización&quot;. Se basan en una eVar o en un Evento personalizado. La diferencia entre estas variables y su uso estándar es que representan un valor por separado para cada producto encontrado en la visita, en lugar de representar un solo valor para la visita. Estas variables se denominan variables de comercialización de sintaxis de producto. Esto permite la recopilación de información como una &quot;cantidad de descuento&quot; por producto o información sobre la &quot;ubicación en la página&quot; del producto en los resultados de búsqueda del cliente.
 
-Estos son los campos XDM para acceder a las variables de comercialización en el conjunto de datos de Analytics:
+Estos son los campos XDM para acceder a las variables de comercialización en el [!DNL Analytics] conjunto de datos:
 
 ### eVars
 
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-La siguiente consulta &#39;explota&#39; la `productListItems` y devuelve cada eVar de comercialización y cada evento por producto. El `_id` campo se incluye para mostrar la relación con la visita original. El `_id` valor es una clave principal única en el conjunto de datos de ExperienceEvent.
+La siguiente consulta &#39;explota&#39; la `productListItems` y devuelve cada eVar de comercialización y cada evento por producto. El `_id` campo se incluye para mostrar la relación con la visita original. El `_id` valor es una clave principal única en el [!DNL ExperienceEvent] conjunto de datos.
 
 ```sql
 SELECT
@@ -213,7 +216,7 @@ En sistema de informes, los pedidos, los ingresos, las vistas de productos y las
 | búsqueda interna:camisa de verano | 19.99 | 1 | 1 | 1 |
 | búsqueda interna:sombrero de invierno | 12.99 | 1 | 1 | 1 |
 
-Estos son los campos XDM para generar la sintaxis de conversión en el conjunto de datos de Analytics:
+Estos son los campos XDM para generar la sintaxis de conversión en el [!DNL Analytics] conjunto de datos:
 
 ### eVars
 
