@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante el Editor de Esquemas de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL _Añadir mezcla _]. Desde aquí, ha
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-El lienzo vuelve a aparecer con &quot;Relación[!UICONTROL de]lealtad&quot; en la sección _Mezclas_ . Haga clic en el nombre de la mezcla y, a continuación, haga clic en **[!UICONTROL Añadir campo]** junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
+El lienzo vuelve a aparecer con &quot;HotelFavorito&quot; en la sección _Mixins_ . Haga clic en el nombre de la mezcla y, a continuación, haga clic en **[!UICONTROL Añadir campo]** junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Cuando termine, haga clic en **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-El campo &quot;[!UICONTROL loyaltyRelationship]&quot; actualizado aparece en el lienzo. Haga clic en **[!UICONTROL Guardar]** para finalizar los cambios en el esquema.
+El campo &quot;[!UICONTROL favoritoHotel]&quot; actualizado aparece en el lienzo. Haga clic en **[!UICONTROL Guardar]** para finalizar los cambios en el esquema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
