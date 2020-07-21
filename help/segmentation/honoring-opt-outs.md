@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Cumplimiento de las opciones de exclusión
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 Para la vista de la estructura completa de la [!DNL Profile Privacy] mezcla, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de Platform.
 
-### Detalles de las preferencias de Perfil
+### [!DNL Profile Preferences Details]
 
-La combinación Detalles de preferencias de Perfil proporciona varios campos que representan las preferencias de los perfiles del cliente (como formato del correo electrónico, idioma preferido y huso horario). Uno de los campos incluidos en esta combinación, OptInOut (`optInOut`), permite establecer valores de exclusión para canales individuales.
+La [!DNL Profile Preferences Details] combinación proporciona varios campos que representan las preferencias de los perfiles del cliente (como formato del correo electrónico, idioma preferido y huso horario). Uno de los campos incluidos en esta combinación, OptInOut (`optInOut`), permite establecer valores de exclusión para canales individuales.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-La combinación Detalles de preferencias de Perfil contiene los siguientes campos relacionados con las opciones de exclusión:
+La [!DNL Profile Preferences Details] mezcla contiene los siguientes campos relacionados con las opciones de exclusión:
 
 - OptInOut (`optInOut`): Objeto donde cada clave representa un URI válido y conocido para un canal de comunicaciones y el estado activo de la exclusión para cada canal. Cada canal puede tener uno de los cuatro valores posibles:
    - No proporcionado (`not_provided`): No se ha proporcionado una solicitud de exclusión para este canal.
