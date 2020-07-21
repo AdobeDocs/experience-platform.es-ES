@@ -1,21 +1,24 @@
 ---
 title: Tipos y Categorías de destinos
 seo-title: Tipos y Categorías de destinos
-description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfil/segmento capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. '
-seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfil/segmento capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos.
+description: 'En Platform de datos de clientes en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. '
+seo-description: En Platform de datos de clientes en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos.
 translation-type: tm+mt
-source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
 # Tipos y Categorías de destino
 
-Lea esta página para conocer los distintos tipos y categorías de destinos de la plataforma de datos de clientes en tiempo real de Adobe.
+Lea esta página para conocer los distintos tipos y categorías de los destinos de Platform de Datos del cliente en tiempo real de Adobe.
 
 ## Tipos de destino
 
-En la plataforma de datos del cliente en tiempo real de Adobe, distinguimos dos tipos de destino: conexiones y extensiones. Existen dos tipos de destinos de conexión: destinos de exportación de Perfil y destinos de exportación de segmentos.
+En Adobe Real-time Customer Data Platform, distinguimos dos tipos de destino: conexiones y extensiones. Existen dos tipos de destinos de conexión: destinos de exportación de Perfil y destinos de exportación de segmentos.
 
 ![Tipos de destinos](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -23,7 +26,7 @@ En la plataforma de datos del cliente en tiempo real de Adobe, distinguimos dos 
 
 ### Conexiones
 
-**Los destinos de exportación** y **segmento de Perfil Exportar** en la plataforma de datos del cliente en tiempo real de Adobe capturan datos de evento, los combinan con otras fuentes de datos para formar el perfil [del cliente en tiempo](/help/profile/home.md)real, aplicar segmentación y exportar segmentos y perfiles cualificados a los destinos.
+**[!UICONTROL Perfil Exportar]** y exportar **[!UICONTROL segmentos Exportar]** destinos en datos de cliente en tiempo real de Adobe Platform captura datos de evento, los combina con otras fuentes de datos para formar el perfil [de cliente en tiempo](/help/profile/home.md)real, aplicar segmentación y exportar segmentos y perfiles cualificados a los destinos.
 
 <br> 
 
@@ -33,7 +36,7 @@ Los destinos de exportación de Perfil generan un archivo que contiene perfiles 
 
 #### Destinos de exportación de segmentos
 
-Los destinos de exportación de segmentos envían los perfiles y los segmentos para los que cumplen los requisitos a las plataformas de destino. Estos destinos utilizan ID de segmento o ID de usuario. Los destinos de publicidad como [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) son ejemplos de este tipo de destinos.
+Los destinos de exportación de segmentos envían los perfiles y los segmentos para los que cumplen los requisitos a las plataformas de destino. Estos destinos utilizan ID de segmento o ID de usuario. Los destinos de publicidad como [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) son ejemplos de estos tipos de destinos.
 
 #### Destinos de exportación de Perfiles y segmentos: descripción general de vídeo
 
