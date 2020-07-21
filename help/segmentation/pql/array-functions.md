@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de matriz, lista y conjunto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funciones de matriz, lista y conjunto
 
-Perfil Consulta Language (PQL) oferta funciones para facilitar la interacción con matrices, listas y cadenas. Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) oferta funciones para facilitar la interacción con matrices, listas y cadenas. Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
 
 ## En
 
@@ -104,7 +104,7 @@ La `subsetOf` función se utiliza para determinar si una matriz específica (mat
 
 **Ejemplo**
 
-La siguiente consulta de PQL define a las personas que han visitado todas sus ciudades favoritas.
+La siguiente consulta de PQL define las personas que han visitado todas sus ciudades favoritas.
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
