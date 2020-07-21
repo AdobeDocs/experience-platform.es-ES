@@ -1,22 +1,22 @@
 ---
-title: Descripción general de destinos
-seo-title: Descripción general de destinos
+title: Información general sobre destinos
+seo-title: Información general sobre destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
 
 
-# Destinations Overview {#overview}
+# [!DNL Destinations]sobre validación{#overview}
 
 ![Pancarta de información general sobre destinos](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Los destinos** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos de clientes en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+**[!DNL Destinations]** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Platform de datos de clientes en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 
 ## Destinos y fuentes {#destinations-and-sources}
 
@@ -48,14 +48,14 @@ La funcionalidad de destinos de CDP en tiempo real funciona con permisos de cont
 
 Para obtener más información sobre controles de acceso, consulte la guía del usuario de [Control de acceso](../../access-control/ui/overview.md).
 
-## Restricciones de administración de datos para activar datos en destinos {#data-governance}
+## [!DNL Data Governance] restricciones para activar datos en destinos {#data-governance}
 
 La administración de datos se impone para los destinos CDP en tiempo real mediante:
 
 * *Casos* de uso de marketing que puede seleccionar en el flujo de trabajo de creación de destinos;
 * *Directivas* de uso de datos que restringen la activación de datos que contienen determinadas etiquetas de uso en destinos con determinados casos de uso de marketing.
 
-Consulte la documentación de Administración de datos en tiempo real de CDP para obtener más información sobre casos [de uso de](/help/rtcdp/privacy/data-governance-overview.md#destinations) mercadotecnia y [resolución de violaciones](/help/rtcdp/privacy/data-governance-overview.md#enforcement)de políticas de datos.
+Consulte la [!DNL Data Governance] documentación de CDP en tiempo real para obtener más información sobre casos [de uso de](/help/rtcdp/privacy/data-governance-overview.md#destinations) mercadotecnia y [resolver violaciones](/help/rtcdp/privacy/data-governance-overview.md#enforcement)de políticas de datos.
 
 Para obtener más información sobre la selección de casos de uso de mercadotecnia en el flujo de trabajo de creación de destino, consulte las páginas siguientes para los distintos tipos de destino en CDP en tiempo real:
 
