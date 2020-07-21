@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Introducción a la ingestión de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# Introducción a la ingestión de lotes
+# [!DNL Batch Ingestion]sobre validación
 
-La API de inserción de lotes permite ingestar datos en Adobe Experience Platform como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
+La [!DNL Batch Ingestion] API permite ingerir datos en Adobe Experience Platform como archivos por lotes. Los datos que se ingieren pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
 
 La referencia [de la API de inserción de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) datos proporciona información adicional sobre estas llamadas de API.
 
@@ -24,17 +24,17 @@ El diagrama siguiente describe el proceso de ingestión por lotes:
 
 ## Uso de la API
 
-La API de inserción de datos permite ingestar datos como lotes (una unidad de datos que consta de uno o más archivos que se van a ingestar como una unidad) en Experience Platform en tres pasos básicos:
+La [!DNL Data Ingestion] API le permite ingerir datos como lotes (una unidad de datos que consta de uno o más archivos que se van a ingerir como una sola unidad) [!DNL Experience Platform] en tres pasos básicos:
 
 1. Crear un nuevo lote.
 2. Cargue archivos en un conjunto de datos especificado que coincida con el esquema XDM de los datos.
 3. Señale el final del lote.
 
 
-### Requisitos previos para la inserción de datos
+### [!DNL Data Ingestion] requisitos previos
 
 - Los datos que se van a cargar deben estar en los formatos Parquet o JSON.
-- Conjunto de datos creado en los servicios [](../../catalog/home.md)de catálogo.
+- Un conjunto de datos creado en el [!DNL Catalog services](../../catalog/home.md).
 - El contenido del archivo de parqué debe coincidir con un subconjunto del esquema del conjunto de datos que se está cargando en.
 - Tenga su Token de acceso único después de la autenticación.
 
@@ -47,23 +47,23 @@ Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en partes
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Finalización del lote de señales
 
-Una vez cargados todos los archivos en el lote, se puede indicar la finalización del lote. Al hacer esto, se crean las entradas **DataSetFile** del catálogo para los archivos completados y se asocian al lote generado anteriormente. El lote Catálogo se marca como correcto, lo que activa los flujos descendentes para ingestar los datos disponibles.
+Una vez cargados todos los archivos en el lote, se puede indicar la finalización del lote. Al hacer esto, las entradas [!DNL Catalog] DataSetFile **** se crean para los archivos completados y se asocian al lote generado anteriormente. A continuación, el [!DNL Catalog] lote se marca como correcto, lo que desencadena flujos descendentes para ingestar los datos disponibles.
 
 **Solicitud**
 
