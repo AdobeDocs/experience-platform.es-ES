@@ -4,9 +4,9 @@ seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Flujo de trabajo para crear destinos de redes sociales
 
-Este tutorial utiliza Facebook como ejemplo, pero el flujo de trabajo en Adobe Real-time Customer Data Platform será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de Adobe Real-time Customer Data Platform será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
 
 1. En **[!UICONTROL Destinos > Catálogo]**, desplácese hasta la categoría de **[!UICONTROL Social]** . Seleccione el destino preferido de la red social y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
@@ -39,7 +39,7 @@ Este tutorial utiliza Facebook como ejemplo, pero el flujo de trabajo en Adobe R
    >[!IMPORTANT]
    >
    > * El caso de uso de marketing de Personalización ** única de identidad está seleccionado de forma predeterminada para los destinos de redes sociales y no se puede eliminar.
-   > * Para destinos de Facebook. **[!UICONTROL El ID]** de cuenta es el ID de su cuenta de publicidad de Facebook. Puede encontrar este ID en el Administrador de publicidades de Facebook. Póngale el prefijo ID con `act_` como se muestra a continuación:
+   > * Para [!DNL Facebook] destinos. **[!UICONTROL La ID]** de cuenta es su [!DNL Facebook Ad Account ID]. Puede encontrar este ID en la página [!DNL Facebook Ads Manager]. Póngale el prefijo ID con `act_` como se muestra a continuación:
 
 
    ![Conectar con destino de red social: paso de configuración](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
