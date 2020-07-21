@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conjunto de datos mediante API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ Este documento proporciona pasos generales para crear un conjunto de datos media
 
 Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
 
-* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: Experience Platform le permite ingestar datos como archivos por lotes.
-* [Sistema](../../xdm/home.md)de modelo de datos de experiencia (XDM): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: [!DNL Experience Platform] permite ingestar datos como archivos por lotes.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de Platform.
+Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -60,9 +60,9 @@ Estas definiciones estándar permiten interpretar los datos de manera coherente,
 
 Este tutorial comienza donde termina el tutorial [de la API del Registro de](../../xdm/tutorials/create-schema-api.md) Esquemas, utilizando el esquema de miembros de lealtad creado durante ese tutorial.
 
-Si no ha completado el tutorial del Registro de Esquemas, inicio aquí y continúe con este tutorial de conjunto de datos solo una vez que haya redactado el esquema necesario.
+Si no ha completado el [!DNL Schema Registry] tutorial, inicio aquí y continúe con este tutorial de conjunto de datos solo una vez que haya redactado el esquema necesario.
 
-La siguiente llamada se puede utilizar para realizar la vista del esquema de miembros de lealtad que creó durante el tutorial de la API del Registro de Esquemas:
+Se puede utilizar la siguiente llamada para realizar la vista del esquema de miembros de lealtad que creó durante el tutorial de la [!DNL Schema Registry] API:
 
 **Formato API**
 
@@ -329,7 +329,7 @@ Un archivo cargado correctamente devuelve un cuerpo de respuesta en blanco y Est
 
 ## Finalización del lote de señales
 
-Después de cargar todos los archivos de datos en el lote, puede indicar que el lote se ha completado. La finalización de la señalización hace que el servicio cree entradas de catálogo `DataSetFile` para los archivos cargados y los asocie al lote generado anteriormente. El lote Catálogo se marca como correcto, lo que desencadena cualquier flujo descendente que luego pueda funcionar con los datos disponibles.
+Después de cargar todos los archivos de datos en el lote, puede indicar que el lote se ha completado. La finalización de la señalización hace que el servicio cree [!DNL Catalog] entradas `DataSetFile` para los archivos cargados y los asocie al lote generado anteriormente. El [!DNL Catalog] lote se marca como correcto, lo que desencadena cualquier flujo descendente que luego pueda funcionar con los datos disponibles.
 
 **Formato API**
 
