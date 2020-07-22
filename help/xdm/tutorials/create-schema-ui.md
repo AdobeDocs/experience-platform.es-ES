@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -273,7 +273,7 @@ El Editor de Esquemas permite habilitar un esquema para su uso con [!DNL Real-ti
 
 Para que un esquema se pueda utilizar con [!DNL Real-time Customer Profile], debe tener una identidad principal definida. Recibirá un mensaje de error &quot;Falta identidad principal&quot; si intenta habilitar un esquema sin definir primero una identidad principal.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 Para habilitar el esquema &quot;Miembros de lealtad&quot; para su uso en [!DNL Profile], haga clic en &quot;Miembros de lealtad&quot; en la sección *Estructura* del editor.
 
