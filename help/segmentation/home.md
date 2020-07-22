@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servicio de segmentación de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -215,8 +215,10 @@ Otro desafío tradicional para los especialistas en mercadotecnia ha sido la cre
 - Objeto
 - Mapa
 - Eventos
+- audiencias externas
+- Segmentos
 
-Puede encontrar información más detallada sobre estos tipos de datos admitidos en el documento [de tipos de datos de](./data-types.md)asistencia.
+Puede encontrar información más detallada sobre estos tipos de datos admitidos en el documento [de tipos de datos](./data-types.md)admitidos.
 
 ## Pasos siguientes
 
