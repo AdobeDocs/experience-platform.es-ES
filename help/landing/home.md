@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform general
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
+source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 3%
+source-wordcount: '820'
+ht-degree: 5%
 
 ---
 
@@ -34,34 +34,13 @@ En los siguientes vídeos se describe cómo [!DNL Experience Platform] se crean 
 
 ## Compatibilidad con navegadores
 
-El sitio web de Adobe Experience Platform y los sitios web asociados, como Adobe Admin Console, están diseñados para funcionar de forma óptima en las últimas versiones de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
+El sitio web de Adobe Experience Platform y los sitios web asociados, como Adobe Admin Console, están diseñados para funcionar de forma óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
 
-<table>
-<tr>
-  <th>Sistema operativo</th>
-  <th>Navegadores admitidos</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Última versión de Google Chrome</td>
-  <td>Última versión de Safari</td>
-  <td>Última versión de Firefox</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Última versión de Google Chrome</td>
-  <td>Última versión de Microsoft Edge</td>
-  <td>Última versión de Firefox</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Última versión de Google Chrome</td>
-  <td> </td>
-  <td>Última versión de Firefox</td>
-</tr>
-</table>
+| Sistema operativo | Navegadores admitidos |  |  |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome |  | Firefox&lt; |
 
 No admitido:
 
