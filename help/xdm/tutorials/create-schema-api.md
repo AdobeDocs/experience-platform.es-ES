@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -1015,7 +1015,7 @@ Una respuesta correcta devuelve Estado HTTP 201 (creado) con un cuerpo de respue
 }
 ```
 
-## Habilitar esquema para usar en [!DNL Real-time Customer Profile]
+## Habilitar esquema para usar en [!DNL Real-time Customer Profile] {#profile}
 
 Al agregar la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo, puede habilitar el esquema Miembros de lealtad para que lo utilice [!DNL Real-time Customer Profile].
 
