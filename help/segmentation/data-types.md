@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipos de datos del servicio de segmentación de Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '456'
+ht-degree: 3%
 
 ---
 
@@ -50,15 +50,15 @@ Como se muestra en la tabla siguiente, los datos de evento se representan utiliz
 | Botón de alternancia &quot;Aplicar regla de tiempo&quot; | Incorpora datos de fecha. |
 | Es igual a, no es igual a, inicios con, no inicio con, termina con, no termina con, contiene, no contiene, existe, no existe | Incorpora datos de cadena. |
 
-## Segmentos
-
-Las definiciones de segmentos existentes también pueden utilizarse como componentes de una nueva definición de segmento, agregando sus reglas basadas en atributos y eventos al nuevo segmento.
-
-## Audiencias
+### Uso compartido de audiencias
 
 Las audiencias externas también se pueden usar como componentes de una nueva definición de segmento, agregando sus reglas de atributos al nuevo segmento.
 
-Actualmente, solo se admite Adobe Audience Manager como audiencia. En el futuro se habilitarán fuentes adicionales.
+Actualmente, solo se admite Adobe Audience Manager como audiencia externa, y en el futuro se habilitarán fuentes adicionales. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con Platform en la guía de uso compartido de [audiencias de la documentación](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)de Adobe Audience Manager.
+
+### Uso compartido de segmentos
+
+Los segmentos creados en Platform se pueden usar en otros servicios [principales de](https://docs.adobe.com/content/help/es-ES/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para habilitar esta función, deberá ponerse en contacto con su arquitecto de soluciones o con su asesor.
 
 ## Otros tipos de datos
 
