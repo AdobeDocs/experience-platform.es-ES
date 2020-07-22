@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descriptores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -369,7 +369,7 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 
 #### Descriptor de identidad de referencia
 
-Los descriptores de identidad de referencia proporcionan un contexto de referencia a un campo de esquema, lo que permite vincularlo al campo de identidad principal de un esquema de destino. Los campos ya deben etiquetarse con un descriptor de identidad para poder aplicarles un descriptor de referencia.
+Los descriptores de identidad de referencia proporcionan un contexto de referencia a la identidad principal de un campo de esquema, lo que permite que los campos de otros esquemas hagan referencia a él. Los campos ya deben etiquetarse con un descriptor de identidad para poder aplicarles un descriptor de referencia.
 
 ```json
 {
