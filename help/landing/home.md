@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform general
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
+source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ En los siguientes vídeos se describe cómo [!DNL Experience Platform] se crean 
 
 ## Compatibilidad con navegadores
 
-El sitio web de Adobe Experience Platform y los sitios web asociados, como Adobe Admin Console, están diseñados para funcionar de forma óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
+El Adobe Experience Platform está diseñado para funcionar de forma óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
 
 | Sistema operativo | Navegadores admitidos |  |  |
 |---|---|---|---|
@@ -42,7 +42,7 @@ El sitio web de Adobe Experience Platform y los sitios web asociados, como Adobe
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox&lt; |
 
-No admitido:
+Estos exploradores no son compatibles:
 
 * Internet Explorer 10
 * Windows 8
