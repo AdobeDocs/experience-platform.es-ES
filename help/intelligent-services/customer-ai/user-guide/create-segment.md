@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear segmentos de clientes con puntuaciones predichas
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Crear segmentos de clientes con puntuaciones predichas
 
-Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos. Para ver un tutorial más sólido sobre la creación de segmentos, consulte la guía [de usuario del Generador](../../../segmentation/tutorials/create-a-segment.md)de segmentos.
+Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos. Para ver un tutorial más sólido sobre la creación de segmentos, consulte la guía [de usuario del Generador](../../../segmentation/ui/overview.md)de segmentos.
 
 >[!IMPORTANT]
 >
