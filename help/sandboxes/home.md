@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descripción general de los Simuladores para pruebas
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ En resumen, los entornos limitados proporcionan las siguientes ventajas:
 
 ## Control de acceso para entornos limitados
 
-De forma predeterminada, todos los usuarios de una organización tienen acceso a un entorno limitado de producción. Un administrador del sistema, un administrador de productos o un administrador de perfil de productos debe otorgar acceso a los entornos limitados que no sean de producción a través de [Adobe Admin Console](https://adminconsole.adobe.com).
+De forma predeterminada, todos los usuarios de una organización tienen acceso a un entorno limitado de producción. Un administrador del sistema, un administrador de productos o un administrador de perfil de productos deben otorgar acceso a los entornos limitados que no sean de producción a través de [Adobe Admin Console](https://adminconsole.adobe.com).
 
 Para poder vista, crear, actualizar o eliminar entornos limitados que no sean de producción, también se deben otorgar a los usuarios permisos de administración de Simuladores para pruebas.
 
@@ -46,11 +46,11 @@ Para obtener más información sobre la administración de funciones y permisos 
 
 ## Entornos aislados en la interfaz de usuario del Experience Platform
 
-En la interfaz [de usuario del](https://platform.adobe.com)Experience Platform, los usuarios pueden cambiar entre los entornos limitados a los que tienen acceso mediante el control del conmutador **de** simulador de pruebas en la parte superior izquierda de la pantalla.  Los usuarios con privilegios de administración de Simuladores para pruebas también tienen acceso a la ficha **Entornos** para pruebas de la izquierda, donde pueden realizar vistas y administrar entornos limitados para su organización. Para obtener más información sobre cómo trabajar con los entornos limitados en la interfaz de usuario, consulte la guía [del usuario del](ui/overview.md)simulador de pruebas.
+En la interfaz [de usuario del](https://platform.adobe.com)Experience Platform, los usuarios pueden cambiar entre los entornos limitados a los que tienen acceso mediante el control del conmutador **de** simulador de pruebas en la parte superior izquierda de la pantalla.  Los usuarios con privilegios de administración de Simuladores para pruebas también tienen acceso a la ficha **[!UICONTROL Entornos]** para pruebas de la izquierda, donde pueden realizar vistas y administrar entornos limitados para su organización. Para obtener más información sobre cómo trabajar con los entornos limitados en la interfaz de usuario, consulte la guía [del usuario del](ui/overview.md)simulador de pruebas.
 
 ## Simuladores de pruebas en API de Experience Platform
 
-Al realizar llamadas a API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) catálogo para realizar una vista de todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del simulador para pruebas (&quot;prod&quot;) se proporciona como encabezado en la solicitud de API:
+Al realizar llamadas a API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a la [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para que vista todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del entorno limitado (&quot;prod&quot;) se proporciona como encabezado en la solicitud de API:
 
 ```shell
 curl -X GET \
@@ -71,4 +71,4 @@ La API de Simulador para pruebas le permite administrar entornos limitados media
 
 Al leer este documento, se le han presentado los conceptos esenciales de los entornos limitados en Experience Platform. Para ver los pasos detallados sobre cómo administrar los entornos limitados, consulte la guía [de](ui/overview.md) usuario de la interfaz de usuario o la guía [para](./api/getting-started.md) desarrolladores de la API.
 
-Aunque los entornos limitados sirven como una herramienta valiosa para aislar entornos de Platform para su equipo de desarrollo, también puede administrar un control de acceso más granular mediante el uso del Admin Console de Adobe. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
+Aunque los entornos limitados son una herramienta valiosa para aislar entornos de Platform para su equipo de desarrollo, también puede administrar un control de acceso más granular mediante la Consola de administración de Adobe. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
