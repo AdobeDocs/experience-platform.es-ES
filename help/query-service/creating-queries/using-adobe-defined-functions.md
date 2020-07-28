@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # Uso de funciones definidas por Adobe
 
-Uno de los grandes diferenciadores de Adobe es que comprenden los datos de experiencia y lo que los clientes necesitan para poder hacer con esos datos. Puede utilizar esta comprensión para crear funciones de ayuda que faciliten su trabajo.
+Uno de los grandes diferenciadores del Adobe es que comprende los datos de experiencia y lo que los clientes necesitan para poder hacer con esos datos. Puede utilizar esta comprensión para crear funciones de ayuda que faciliten su trabajo.
 
-Este documento cubre las funciones definidas por Adobe (ADF) para admitir tres [!DNL Analytics] actividades clave:
+Este documento cubre las funciones definidas por Adobes (ADF) para admitir tres actividades clave [!DNL Analytics] :
 - [Sesionización](#sessionization)
 - [Atribución](#attribution)
 - [Control de rutas](#pathing)
@@ -89,7 +89,7 @@ LIMIT 31;
 
 La atribución es la forma en que se asignan métricas o conversiones, como ingresos, pedidos o suscripciones, a los esfuerzos de mercadotecnia.
 
-En Adobe Analytics, la configuración de atribución se configura mediante variables como eVars y se generan a medida que se ingestan datos.
+En Adobe Analytics, la configuración de atribución se configura mediante variables como eVars y se generan a medida que se ingestan los datos.
 
 Las FDA de atribución que se encuentran en [!DNL Query Service] permiten que esas asignaciones se definan y generen en tiempo de consulta.
 
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Recursos adicionales
 
-El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente PSQL. Además, en el vídeo también se utilizan ejemplos de propiedades individuales en un objeto XDM, el uso de funciones definidas por Adobe y el uso de CREATE TABLE AS SELECT (CTAS).
+El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente PSQL. Además, en el vídeo también se utilizan ejemplos de propiedades individuales en un objeto XDM, mediante funciones definidas por Adobe y mediante CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
