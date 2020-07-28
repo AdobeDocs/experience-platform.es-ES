@@ -48,30 +48,30 @@ La información personal también puede incluir información de actividad de Int
 - Historial de búsqueda
 - Información sobre la interacción de un consumidor con un sitio web, una aplicación o un anuncio
 
-Aunque CCPA abarca un amplio conjunto de información personal, las condiciones de contrato estándar de Adobe estipulan que la información personal confidencial (como SSN, información de licencia del conductor, información de cuenta financiera y datos biométricos) generalmente no se puede importar ni utilizar en [!DNL Experience Cloud] las aplicaciones.
+Aunque la CCPA abarca un amplio conjunto de información personal, las condiciones contractuales estándar del Adobe estipulan que la información personal delicada (como la SSN, la información de licencia del conductor, la información de cuenta financiera y los datos biométricos) generalmente no se pueden importar ni utilizar en [!DNL Experience Cloud] las solicitudes.
 
 ## ¿Cómo se aplican las diferentes funciones y responsabilidades del CCPA a [!DNL Experience Cloud]?
 
-Según la definición de CCPA, las siguientes funciones se aplican a Adobe y a sus clientes:
+Según la definición de CCPA, las siguientes funciones se aplican a Adobe y sus clientes:
 
 - Los clientes de Adobe (la parte que solicita la recopilación y el uso de información personal de los residentes de California) se considerarían un **negocio**.
-- Adobe, en su función de proporcionar el servicio, se consideraría un **Proveedor de servicio**.
+- El Adobe, en su función de prestar el servicio, se consideraría un **Proveedor de servicio**.
 
-Dada esta relación y el idioma del contrato de Adobe, las revelaciones a Adobe probablemente no se considerarían una &quot;venta&quot; para la que las empresas necesitarían proporcionar un aviso y una oferta de exclusión.
+Dada esta relación y el lenguaje del contrato del Adobe, la divulgación de información sobre el Adobe probablemente no se consideraría una &quot;venta&quot; para la cual las empresas tendrían que notificar y oferta una exclusión.
 
-Sin embargo, los servicios de Adobe se pueden utilizar para habilitar determinados intercambios de datos y transferencias a terceros. Estas transferencias de terceros podrían considerarse una &quot;venta&quot; y exigir legalmente la divulgación y la exclusión.  Los clientes deben trabajar con su asesor legal para evaluar casos de uso específicos a fin de evaluar los requisitos aplicables.
+No obstante, los servicios de Adobe pueden utilizarse para permitir determinados intercambios de datos y transferencias a terceros. Estas transferencias de terceros podrían considerarse una &quot;venta&quot; y exigir legalmente la divulgación y la exclusión.  Los clientes deben trabajar con su asesor legal para evaluar casos de uso específicos a fin de evaluar los requisitos aplicables.
 
 ## ¿Cuántos días tiene una empresa para responder a una solicitud del consumidor de acceder o eliminar información personal?
 
 Suponiendo que la empresa ha recopilado información personal y que puede autenticar o verificar la identidad de un consumidor particular de California, la CCPA permite que las solicitudes de los consumidores se satisfagan en un plazo de 45 días (con algunas excepciones).
 
-## ¿Cuál es la función de Adobe en el marco de CCPA?
+## ¿Cuál es la función del Adobe en el marco del Acuerdo sobre Contratación Pública?
 
-Como Proveedor de servicio, Adobe recopila y procesa información personal en nombre de la empresa y está obligado por contrato a utilizar dicha información únicamente para los fines específicos establecidos en el acuerdo.
+Como Proveedor de servicio, Adobe recopila y procesa información personal en nombre de la Empresa y está obligado contractualmente a utilizar esa información únicamente para los fines específicos establecidos en el acuerdo.
 
-Dada esta relación y el idioma del contrato de Adobe, la divulgación a Adobe entra dentro de las disposiciones legales para Proveedores de servicio, y probablemente no se considere una &quot;venta&quot; para la cual las empresas necesitarían proporcionar un aviso y una oferta de exclusión.
+Dada esta relación y el lenguaje de contrato del Adobe, la divulgación de información sobre el Adobe entra dentro de las disposiciones legales para los Proveedores de servicio, y probablemente no se considere una &quot;venta&quot; para la cual las empresas necesitarían dar aviso y oferta de una exclusión.
 
-Los servicios de Adobe se pueden utilizar para habilitar el uso compartido de determinados datos y las transferencias a terceros. Estas transferencias de terceros podrían considerarse una &quot;venta&quot; y exigir legalmente la divulgación y la exclusión.  Los clientes deben trabajar con su asesor legal para evaluar casos de uso específicos a fin de evaluar los requisitos aplicables.
+Los servicios de Adobe pueden utilizarse para permitir determinados intercambios de datos y transferencias a terceros. Estas transferencias de terceros podrían considerarse una &quot;venta&quot; y exigir legalmente la divulgación y la exclusión.  Los clientes deben trabajar con su asesor legal para evaluar casos de uso específicos a fin de evaluar los requisitos aplicables.
 
 ## ¿Cómo puedo cumplir con los requisitos de privacidad del consumidor según la CCPA si mantengo ciertos tipos de datos que están cubiertos por los requisitos?
 
@@ -81,8 +81,8 @@ Una vez que haya realizado los pasos necesarios para autenticar a los consumidor
 >
 >Todavía se está dando más orientación por parte del regulador de California sobre qué tipos de datos son elegibles para solicitudes de privacidad de los consumidores.
 
-## ¿oferta Adobe otras herramientas que pueden resultar útiles para cumplir los requisitos de CCPA?
+## ¿oferta el Adobe de otras herramientas que pueden ser útiles para cumplir los requisitos de la CCPA?
 
 Las aplicaciones de Adobe Experience Cloud proporcionan funciones de gestión de datos y control que pueden resultar útiles para las necesidades de privacidad de las compañías. Entre estas herramientas se encuentran el etiquetado del uso de datos, los controles de acceso basados en roles, la confusión de IP y las capacidades de hash.
 
-Adobe ha recibido varias certificaciones de sus prácticas de privacidad y seguridad, como una certificación ISO 27001 y una validación de RGPD TrustArc.
+Adobe ha recibido varias certificaciones de sus prácticas de privacidad y seguridad, como la certificación ISO 27001 y la validación de la RGPD TrustArc.
