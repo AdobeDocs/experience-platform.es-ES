@@ -20,7 +20,7 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 ### Solicitar parámetros de conexión para el servicio interactivo
 
-Puede recuperar los parámetros de conexión para utilizar el servicio [](../creating-queries/writing-queries.md) interactivo haciendo una solicitud GET al `/connection_parameters` extremo. Para obtener más información sobre los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación sobre los clientes [del servicio de](../clients/overview.md)Consulta.
+Puede recuperar los parámetros de conexión para utilizar el servicio [](../creating-queries/writing-queries.md) interactivo haciendo una solicitud de GET al `/connection_parameters` extremo. Para obtener más información sobre los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación sobre los clientes [del servicio de](../clients/overview.md)Consulta.
 
 **Formato API**
 
