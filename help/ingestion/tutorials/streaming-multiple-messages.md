@@ -29,7 +29,7 @@ Este tutorial también requiere que haya completado el tutorial [Autenticación 
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 
-Todas las solicitudes POST requieren un encabezado adicional:
+Todas las solicitudes de POST requieren un encabezado adicional:
 
 - Content-Type: application/json
 
