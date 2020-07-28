@@ -1,8 +1,8 @@
 ---
 title: Destino de Amazon Kinesis
 seo-title: Destino de Amazon Kinesis
-description: Cree una conexión saliente en tiempo real con el almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
-seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
+description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
+seo-description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El [!DNL Amazon Kinesis] destino de CDP en tiempo real de Adobe se encuentra actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+>El [!DNL Amazon Kinesis] destino en Adobe Real-time CDP está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 ## Información general {#overview}
 
@@ -27,7 +27,7 @@ Puede crear una conexión saliente en tiempo real con el [!DNL Amazon Kinesis] a
 
 * Para obtener más información sobre [!DNL Amazon Kinesis], consulte la documentación [de](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
 * Para conectarse a [!DNL Amazon Kinesis] través de llamadas de API, consulte el tutorial [de API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)flujo continuo.
-* Para conectarse a [!DNL Amazon Kinesis] mediante la interfaz de usuario de CDP en tiempo real de Adobe, consulte las secciones siguientes.
+* Para conectarse a [!DNL Amazon Kinesis] mediante la interfaz de usuario CDP en tiempo real de Adobe, consulte las secciones a continuación.
 
 ![Amazon Kinesis en la interfaz de usuario](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
@@ -46,7 +46,7 @@ Para [!DNL Amazon Kinesis] destinos, introduzca la siguiente información en el 
 
 ### En el paso Autenticación {#authentication-step}
 
-* **[!DNL Amazon Web Services]clave de acceso y clave **secreta: En[!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar acceso CDP en tiempo real de Adobe a su[!DNL Amazon Kinesis]cuenta. Obtenga más información en la documentación[de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon Web Services.
+* **[!DNL Amazon Web Services]clave de acceso y clave **secreta: En[!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su[!DNL Amazon Kinesis]cuenta. Obtenga más información en la documentación[de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **región**: Indicar a qué [!DNL Amazon Web Services] región se transmitirán los datos.
 
 ![Campos de entrada en el paso de cuenta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -117,7 +117,7 @@ Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Amazon K
 
 >[!MORELIKETHIS]
 >
->* [Conéctese a Amazon Kinesis y active los datos mediante llamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+>* [Conectar a Amazon Kinesis y activar datos mediante llamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md)
 
