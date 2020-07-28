@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de la gobernanza de datos de la plataforma Adobe Experience
+user-guide-title: Ayuda de la Administración de datos de Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 5%
 
 ---
 
@@ -29,4 +32,4 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Acciones de mercadotecnia](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
