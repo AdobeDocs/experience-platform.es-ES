@@ -40,7 +40,7 @@ El primer paso para crear una política DULE es determinar qué acción de merca
 
 ### Buscar una acción de mercadotecnia existente {#look-up}
 
-Puede consultar las acciones de marketing existentes que su directiva DULE debe evaluar mediante una solicitud GET a uno de los `/marketingActions` extremos.
+Puede consultar las acciones de marketing existentes que su directiva DULE debe evaluar mediante una solicitud de GET a uno de los `/marketingActions` extremos.
 
 **Formato API**
 
@@ -125,7 +125,7 @@ Cuando encuentre la acción de marketing que desea utilizar, registre el valor d
 
 ### Crear una nueva acción de mercadotecnia {#create-new}
 
-Puede crear una nueva acción de mercadotecnia realizando una solicitud PUT al extremo y proporcionando un nombre para la acción de mercadotecnia al final de la ruta de solicitud. `/marketingActions/custom/`
+Puede crear una nueva acción de mercadotecnia haciendo una solicitud de PUT al extremo y proporcionando un nombre para la acción de mercadotecnia al final de la ruta de solicitud. `/marketingActions/custom/`
 
 **Formato API**
 
@@ -221,7 +221,7 @@ Esta expresión se denomina expresión **de** política y es un objeto que conti
 >
 >Solo se admiten los operadores OR y AND.
 
-Una vez configurada la expresión de directivas, puede crear una nueva directiva DULE haciendo una solicitud POST al extremo del `/policies/custom` mismo.
+Una vez configurada la expresión de directivas, puede crear una nueva directiva DULE haciendo una solicitud de POST al extremo `/policies/custom` .
 
 **Formato API**
 
@@ -328,7 +328,7 @@ Registre el identificador URI de la directiva DULE recién creada, tal como se u
 >
 >Aunque este paso es opcional si desea dejar la directiva DULE en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido `ENABLED` para participar en la evaluación. Consulte el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) DULE para obtener información sobre cómo hacer excepciones para políticas en `DRAFT` estado.
 
-De forma predeterminada, las directivas DULE que tienen sus `status` propiedades establecidas para `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud PATCH en el extremo y proporcionando el identificador único para la directiva al final de la ruta de la solicitud. `/policies/custom/`
+De forma predeterminada, las directivas DULE que tienen sus `status` propiedades establecidas para `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud de PATCH al extremo y proporcionando el identificador único para la directiva al final de la ruta de la solicitud. `/policies/custom/`
 
 **Formato API**
 
@@ -342,7 +342,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Solicitud**
 
-La siguiente solicitud realiza una operación PATCH en la `status` propiedad de la directiva DULE, cambiando su valor de `DRAFT` a `ENABLED`.
+La siguiente solicitud realiza una operación de PATCH en la `status` propiedad de la directiva DULE, cambiando su valor de `DRAFT` a `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -363,7 +363,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `op` | El tipo de operación PATCH que se va a realizar. Esta solicitud realiza una operación de &quot;reemplazo&quot;. |
+| `op` | Tipo de operación de PATCH que se va a realizar. Esta solicitud realiza una operación de &quot;reemplazo&quot;. |
 | `path` | Ruta al campo que se va a actualizar. Al habilitar una directiva, el valor debe establecerse en &quot;/status&quot;. |
 | `value` | El nuevo valor que se asignará a la propiedad especificada en `path`. Esta solicitud establece la propiedad de la política en `status` &quot;HABILITADO&quot;. |
 
