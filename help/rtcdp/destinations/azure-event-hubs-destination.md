@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El [!DNL Azure Event Hubs] destino de CDP en tiempo real de Adobe se encuentra actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+>El [!DNL Azure Event Hubs] destino en Adobe Real-time CDP está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 ## Información general {#overview}
 
@@ -26,7 +26,7 @@ Puede crear una conexión saliente en tiempo real con el [!DNL Azure Event Hubs]
 
 * Para obtener más información sobre [!DNL Azure Event Hubs], consulte la documentación de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Para conectarse a [!DNL Azure Event Hubs] través de llamadas de API, consulte el tutorial [de API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)flujo continuo.
-* Para conectarse a [!DNL Azure Event Hubs] mediante la interfaz de usuario de CDP en tiempo real de Adobe, consulte las secciones siguientes.
+* Para conectarse a [!DNL Azure Event Hubs] mediante la interfaz de usuario CDP en tiempo real de Adobe, consulte las secciones a continuación.
 
 ![AWS Kinesis en la interfaz de usuario](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
@@ -108,5 +108,5 @@ Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Azure Ev
 >[!MORELIKETHIS]
 >
 >* [Conectar con los centros de Evento de Azure y activar datos mediante llamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [Destino de AWS Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+>* [Destino de Kinesis de AWS](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md)
