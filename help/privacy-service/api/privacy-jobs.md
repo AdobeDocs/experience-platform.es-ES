@@ -18,7 +18,7 @@ Este documento explica cómo trabajar con trabajos de privacidad mediante llamad
 
 ## Lista de todos los trabajos {#list}
 
-Puede realizar una vista de una lista de todos los trabajos de privacidad disponibles en su organización mediante una solicitud GET al `/jobs` extremo.
+Puede realizar una vista de una lista de todos los trabajos de privacidad disponibles en su organización mediante una solicitud de GET al `/jobs` extremo.
 
 **Formato API**
 
@@ -59,11 +59,11 @@ Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe
 
 ## Crear un trabajo de privacidad {#create-job}
 
-Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud POST al `/jobs` extremo.
+Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación acerca de los sujetos de datos cuyos datos desea acceder, eliminar o exclusión de venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga útil de una solicitud de POST al `/jobs` extremo.
 
 >[!NOTE]
 >
->Las aplicaciones compatibles de Adobe Experience Cloud utilizan valores diferentes para identificar los sujetos de datos. Consulte la guía sobre aplicaciones [de](../experience-cloud-apps.md) Privacy Service y Experience Cloud para obtener más información sobre los identificadores requeridos para las aplicaciones. Para obtener instrucciones más generales sobre cómo determinar a qué ID se envían [!DNL Privacy Service], consulte el documento sobre datos de [identidad en solicitudes](../identity-data.md)de privacidad.
+>Las aplicaciones compatibles de Adobe Experience Cloud utilizan diferentes valores para identificar los sujetos de datos. Consulte la guía sobre aplicaciones [de](../experience-cloud-apps.md) Privacy Service y Experience Cloud para obtener más información sobre los identificadores requeridos para las aplicaciones. Para obtener instrucciones más generales sobre cómo determinar a qué ID se envían [!DNL Privacy Service], consulte el documento sobre datos de [identidad en solicitudes](../identity-data.md)de privacidad.
 
 La [!DNL Privacy Service] API admite dos tipos de solicitudes de trabajo para datos personales:
 
@@ -148,7 +148,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `companyContexts` **(Requerido)** | Matriz que contiene información de autenticación para su organización. Cada identificador de la lista incluye los atributos siguientes: <ul><li>`namespace`:: Área de nombres de un identificador.</li><li>`value`:: El valor del identificador.</li></ul>Es **necesario** que uno de los identificadores utilice `imsOrgId` como su `namespace`, con `value` el identificador único de su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de compañía específicos del producto (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los valores potenciales incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
-| `users` **(Requerido)** | Matriz que contiene una colección de al menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador de un usuario que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Matriz que lista las acciones que se deben realizar en los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para el usuario. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la guía de [solución de problemas](../troubleshooting-guide.md#user-ids). |
+| `users` **(Requerido)** | Matriz que contiene una colección de por lo menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador de un usuario que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Matriz que lista las acciones que se deben realizar en los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete`o ambas.</li><li>`userIDs`:: Colección de identidades para el usuario. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la guía de [solución de problemas](../troubleshooting-guide.md#user-ids). |
 | `include` **(Requerido)** | Una matriz de productos de Adobe que se incluirán en el procesamiento. Si falta este valor o si está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre los valores [del producto](appendix.md) aceptados en el apéndice para obtener más información. |
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
@@ -331,7 +331,7 @@ Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar 
 
 ## Comprobar el estado de un trabajo {#check-status}
 
-Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo dicho trabajo `jobId` en la ruta de una solicitud GET al `/jobs` extremo.
+Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo dicho trabajo `jobId` en la ruta de una solicitud de GET al `/jobs` extremo.
 
 >[!IMPORTANT]
 >
