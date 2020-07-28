@@ -31,11 +31,11 @@ ht-degree: 10%
    * Catálogo de destinos {#destinations-cat}
       * [Descripción general del catálogo de destinos](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
-         * [Información general sobre los destinos de Adobe](destinations/adobe-destinations.md)
+         * [Introducción a los destinos de Adobe](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Destinos publicitarios{#advertising-destinations}
          * [Descripción general de los destinos de publicidad](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Extensión de la etiqueta de conversión de publicidad de Awin](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Extensión Awin Advertising Mastertag](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Extensión de beemray](/help/rtcdp/destinations/beemray-extension.md)
@@ -82,7 +82,7 @@ ht-degree: 10%
          * [Destino de SFTP](destinations/sftp-destination.md)
       * Destinos de Platform de Gestión de datos {#dmp-destinations}
          * [Gestión de datos de destinos de Platform información general](destinations/dmp-destinations.md)
-         * [Extensión DIL de Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
+         * [extensión del DIL del Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinos de mercadotecnia de correo electrónico{#email-destinations}
          * [Introducción a los destinos de mercadotecnia por correo electrónico](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -92,7 +92,7 @@ ht-degree: 10%
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [Extensión PebblePost](destinations/pebblepost-extension.md)
-         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+         * [Marketing Cloud de Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Descripción general de las extensiones de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Destinos de personalización {#personalization-destinations}
@@ -108,7 +108,7 @@ ht-degree: 10%
       * Destinos de redes sociales{#social-destinations}
          * [Visión general de los destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
-         * [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+         * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
       * Destinos de Encuesta {#survey-destinations}
          * [Introducción a los destinos de Encuesta](/help/rtcdp/destinations/survey-destinations.md)
@@ -131,7 +131,7 @@ ht-degree: 10%
 * Privacidad y administración de datos {#privacy}
    * [Resumen de privacidad](privacy/privacy-overview.md)
    * [Información general sobre la administración de datos](privacy/data-governance-overview.md)
-* Profiles {#profile}
+* Perfiles {#profile}
    * [Perfil general](profile/profile-overview.md)
    * [Identidades y Áreas de nombres de identidad](profile/identities-overview.md)
    * [Combinar directivas](profile/merge-policies.md)
