@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Nombres de Lista de permisos y tipos de recursos
 
-Puede lista los nombres de todos los permisos y tipos de recursos realizando una solicitud GET al extremo `/acl/reference` . Estos nombres se pueden usar en llamadas de API para [vista de políticas](./effective-policies.md) efectivas para el usuario actual.
+Puede lista los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET en el `/acl/reference` extremo. Estos nombres se pueden usar en llamadas de API para [vista de políticas](./effective-policies.md) efectivas para el usuario actual.
 
-Un **permiso** es una política que se administra a través de Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo **de** recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de [!DNL Platform] recurso (como conjuntos de datos o esquemas).
+Un **permiso** es una directiva que se administra a través del Adobe Admin Console y se asigna a cero o más directivas de tipo de recurso. Un tipo **de** recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de [!DNL Platform] recurso (como conjuntos de datos o esquemas).
 
 **Formato API**
 
