@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
-La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real. Con la plantilla de portátil ML **[!UICONTROL Python proporcionada por Adobe en tiempo]** real, esta guía trata la formación de un modelo, la creación de un DSL, la publicación de DSL en Edge y la puntuación de la solicitud. A medida que avance en la implementación del modelo de aprendizaje automático en tiempo real, se espera modificar la plantilla para adaptarla a las necesidades del conjunto de datos.
+La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real. Con el Adobe proporcionado para la plantilla de portátil ML **[!UICONTROL Python en tiempo]** real, esta guía cubre la formación de un modelo, la creación de un DSL, la publicación de DSL en Edge y la puntuación de la solicitud. A medida que avance en la implementación del modelo de aprendizaje automático en tiempo real, se espera modificar la plantilla para adaptarla a las necesidades del conjunto de datos.
 
 ## Creación de un bloc de notas de aprendizaje automático en tiempo real
 
@@ -88,7 +88,7 @@ Si desea utilizar un conjunto de datos desde dentro del Adobe Experience Platfor
 
 ![conjunto de datos rtml](../images/rtml/rtml-dataset.png)
 
-Para acceder a un conjunto de datos en el [!DNL JupyterLab] bloc de notas, seleccione la ficha **Datos** en la navegación izquierda de [!DNL JupyterLab]. Aparecerán los directorios *[!UICONTROL Datasets]* y *[!UICONTROL Esquemas]* . Seleccione **[!UICONTROL Conjuntos]** de datos y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta célula tiene tu `dataset_id`.
+Para acceder a un conjunto de datos del [!DNL JupyterLab] bloc de notas, seleccione la ficha **Datos** en la navegación izquierda de [!DNL JupyterLab]. Aparecerán los directorios *[!UICONTROL Datasets]* y *[!UICONTROL Esquemas]* . Seleccione **[!UICONTROL Conjuntos]** de datos y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta célula tiene tu `dataset_id`.
 
 ![acceso al conjunto de datos](../images/rtml/access-dataset.png)
 
@@ -399,7 +399,7 @@ Se le devuelve el DSL actualizado.
 
 ## Puntuación {#scoring}
 
-Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La plantilla ML *[!UICONTROL en tiempo]* real utiliza EdgeUtils para demostrar este proceso.
+Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud de POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La plantilla ML *[!UICONTROL en tiempo]* real utiliza EdgeUtils para demostrar este proceso.
 
 >[!NOTE]
 >Se requiere un pequeño tiempo de procesamiento antes de anotar inicios.
