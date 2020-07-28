@@ -31,7 +31,7 @@ En el caso de duplicado ExperienceEvents, es probable que desee omitir toda la f
 
 >[!CAUTION]
 >
->Muchos DataSets de [!DNL Experience Platform], incluidos los producidos por el conector de datos de Analytics de Adobe, ya tienen aplicada la deduplicación de nivel ExperienceEvent. Por lo tanto, volver a aplicar este nivel de deduplicación es innecesario y ralentizará la consulta. Es importante comprender la fuente de los DataSets y saber si ya se ha aplicado la deduplicación en el nivel de ExperienceEvent. Para todos los conjuntos de datos que se transmiten (por ejemplo, los de Adobe Target), deberá aplicar la deduplicación de nivel de ExperienceEvent porque dichos orígenes de datos tienen una semántica &#39;al menos una vez&#39;.
+>Muchos DataSets de [!DNL Experience Platform], incluidos los producidos por el conector de datos de Adobe Analytics, ya tienen aplicada la deduplicación de nivel de ExperienceEvent. Por lo tanto, volver a aplicar este nivel de deduplicación es innecesario y ralentizará la consulta. Es importante comprender la fuente de los DataSets y saber si ya se ha aplicado la deduplicación en el nivel de ExperienceEvent. Para todos los conjuntos de datos que se transmiten (por ejemplo, los de Adobe Target), deberá aplicar la deduplicación de nivel de ExperienceEvent porque dichos orígenes de datos tienen una semántica &#39;al menos una vez&#39;.
 
 **Ámbito:** Global
 
