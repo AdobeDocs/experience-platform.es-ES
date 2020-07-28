@@ -12,7 +12,7 @@ ht-degree: 1%
 ---
 
 
-# Cree destinos de marketing por correo electrónico y active los datos en [!DNL Real-time Customer Data Platform]
+# Crear destinos de marketing por correo electrónico y activar datos en Adobe [!DNL Real-time Customer Data Platform]
 
 Este tutorial muestra cómo utilizar las llamadas de API para conectarse a los datos de Adobe Experience Platform, crear un destino [de marketing de](../../rtcdp/destinations/email-marketing-destinations.md)correo electrónico, crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
@@ -20,7 +20,7 @@ En este tutorial se utiliza el destino de Adobe Campaign en todos los ejemplos, 
 
 ![Información general: los pasos para crear un destino y activar segmentos](../images/destinations/flow-api-destinations-steps-overview.png)
 
-Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe para conectar un destino y activar datos, consulte [Conectar un destino](../../rtcdp/destinations/connect-destination.md) y [Activar perfiles y segmentos en tutoriales de destino](../../rtcdp/destinations/activate-destinations.md) .
+Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe para conectar un destino y activar datos, consulte [Conectar un destino](../../rtcdp/destinations/connect-destination.md) y [Activar perfiles y segmentos en los tutoriales de destino](../../rtcdp/destinations/activate-destinations.md) .
 
 ## Introducción
 
@@ -80,13 +80,13 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Documentación de Swagger
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte la documentación de la API del servicio de [flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte la documentación de la API de servicio de [flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtener la lista de los destinos disponibles {#get-the-list-of-available-destinations}
 
 ![Pasos de destino paso 1](../images/destinations/flow-api-destinations-step1.png)
 
-Como primer paso, debe decidir a qué destino de mercadotecnia de correo electrónico desea activar los datos. Para empezar, realice una llamada para solicitar una lista de los destinos disponibles a los que puede conectar y activar segmentos. Realice la siguiente solicitud GET al extremo para devolver una lista de los destinos disponibles: `connectionSpecs`
+Como primer paso, debe decidir a qué destino de mercadotecnia de correo electrónico desea activar los datos. Para empezar, realice una llamada para solicitar una lista de los destinos disponibles a los que puede conectar y activar segmentos. Realice la siguiente solicitud de GET al punto final para devolver una lista de los destinos disponibles: `connectionSpecs`
 
 **Formato API**
 
@@ -467,9 +467,9 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos [!DNL Experience Platform] y el destino en el que activará los datos. Considere este paso como la construcción de la canalización, a través de la cual los datos fluirán más adelante, entre [!DNL Experience Platform] y el destino deseado.
 
-Para crear un flujo de datos, realice una solicitud POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
+Para crear un flujo de datos, realice una solicitud de POST, como se muestra a continuación, mientras proporciona los valores que se mencionan a continuación dentro de la carga útil.
 
-Realice la siguiente solicitud POST para crear un flujo de datos.
+Realice la siguiente solicitud de POST para crear un flujo de datos.
 
 **Formato API**
 
@@ -517,7 +517,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:: Utilice el flujo para el destino de marketing por correo electrónico al que desea conectarse. Para obtener la especificación de flujo, realice una operación GET en el `flowspecs` extremo. Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de marketing por correo electrónico al que desea conectarse. Por ejemplo, para Adobe Campaign, busque `upsToCampaign` y copie el `id` parámetro.
+* `{FLOW_SPEC_ID}`:: Utilice el flujo para el destino de marketing por correo electrónico al que desea conectarse. Para obtener la especificación de flujo, realice una operación de GET en el `flowspecs` extremo. Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de marketing por correo electrónico al que desea conectarse. Por ejemplo, para Adobe Campaign, busque `upsToCampaign` y copie el `id` parámetro.
 * `{SOURCE_CONNECTION_ID}`:: Utilice el ID de conexión de origen obtenido en el paso [Conectar con su Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`:: Utilice el ID de conexión de destinatario obtenido en el paso [Conectar con destino](#connect-to-email-marketing-destination)de marketing por correo electrónico.
 
@@ -539,7 +539,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y
 
 Después de crear todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de marketing por correo electrónico. En este paso, se selecciona qué segmentos y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
 
-Para activar segmentos en el nuevo destino, debe realizar una operación de PARCHE JSON, similar a la que se muestra a continuación. Puede activar varios segmentos y atributos de perfil en una sola llamada. Para obtener más información sobre JSON PATCH, consulte la especificación [](https://tools.ietf.org/html/rfc6902)RFC.
+Para activar segmentos en el nuevo destino, debe realizar una operación de PATCH JSON, similar a la que se muestra a continuación. Puede activar varios segmentos y atributos de perfil en una sola llamada. Para obtener más información sobre el PATCH JSON, consulte la especificación [](https://tools.ietf.org/html/rfc6902)RFC.
 
 **Formato API**
 
@@ -611,7 +611,7 @@ Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para va
 
 Como último paso del tutorial, debe validar que los segmentos y atributos de perfil se hayan asignado correctamente al flujo de datos.
 
-Para validar esto, realice la siguiente solicitud GET:
+Para validar esto, realice la siguiente solicitud de GET:
 
 **Formato API**
 
