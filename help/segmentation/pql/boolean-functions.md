@@ -20,7 +20,7 @@ Las funciones booleanas se utilizan para realizar lógica booleana en diferentes
 
 La `and` función se utiliza para crear una conjunción lógica.
 
-**Formato**
+**Format**
 
 ```sql
 {QUERY} and {QUERY}
@@ -38,7 +38,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 La `or` función se utiliza para crear una disyunción lógica.
 
-**Formato**
+**Format**
 
 ```sql
 {QUERY} or {QUERY}
@@ -56,7 +56,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 La `not` (o `!`) función se utiliza para crear una negación lógica.
 
-**Formato**
+**Format**
 
 ```sql
 not ({QUERY})
@@ -75,7 +75,7 @@ not (homeAddress.countryISO = "CA")
 
 La `if` función se utiliza para resolver una expresión en función de si una condición especificada es verdadera.
 
-**Formato**
+**Format**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
