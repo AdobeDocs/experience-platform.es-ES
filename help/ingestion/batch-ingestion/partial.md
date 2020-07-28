@@ -133,7 +133,7 @@ Si los lotes contienen errores, deberá recuperar la información de error sobre
 
 ### Comprobar estado {#check-status}
 
-Para comprobar el estado del lote ingestado, debe proporcionar el ID del lote en la ruta de una solicitud GET.
+Para comprobar el estado del lote ingestado, debe proporcionar el ID del lote en la ruta de una solicitud de GET.
 
 **Formato API**
 
