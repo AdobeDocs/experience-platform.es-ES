@@ -54,7 +54,7 @@ Antes de crear la imagen del Docker, revise los ejemplos de lectura y escritura 
 
 #### Leer un conjunto de datos
 
-En esta sección se describen los cambios necesarios para leer un conjunto de datos y se utiliza el ejemplo [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , proporcionado por Adobe.
+Esta sección describe los cambios necesarios para leer un conjunto de datos y utiliza el ejemplo [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , proporcionado por Adobe.
 
 **Forma antigua de leer un conjunto de datos**
 
