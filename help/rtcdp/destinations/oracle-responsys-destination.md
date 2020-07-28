@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) es una herramienta empresarial de marketing por correo electrónico para campañas de marketing entre canales ofrecida por [!DNL Oracle] para personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
 
-Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectarse al destino](#connect-destination) en Platform de datos de clientes en tiempo real de Adobe y, a continuación, [configurar una importación](#import-data-into-responsys) de datos desde la ubicación del almacenamiento en [!DNL Oracle Responsys].
+Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectarse al destino](#connect-destination) en Adobe Real-time Customer Data Platform y, a continuación, [configurar una importación](#import-data-into-responsys) de datos desde la ubicación del almacenamiento en [!DNL Oracle Responsys].
 
 ## Destino de Connect {#connect-destination}
 
@@ -45,7 +45,7 @@ Para **[!UICONTROL SFTP con conexiones SSH Key]** , debe proporcionar Dominio, P
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Responsys] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Responsys] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
 
 ## Configurar la importación de datos en [!DNL Oracle Responsys] {#import-data-into-responsys}
 
