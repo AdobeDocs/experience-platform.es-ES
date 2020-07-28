@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >A diferencia de otros extremos proporcionados en la API de Simulador para pruebas, este extremo está disponible para todos los usuarios, incluidos los que no tienen permisos de acceso a Administración de Simuladores para pruebas.
 
-Puede realizar una lista de los entornos limitados activos para el usuario actual mediante una solicitud GET al extremo raíz (`/`).
+Puede realizar una lista de los entornos limitados que están activos para el usuario actual realizando una solicitud de GET en el extremo raíz (`/`).
 
 **Formato API**
 
