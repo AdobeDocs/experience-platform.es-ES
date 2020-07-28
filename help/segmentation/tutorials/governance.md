@@ -126,7 +126,7 @@ Una respuesta correcta devuelve los detalles de la definición del segmento.
 
 ## Buscar los conjuntos de datos de origen de la directiva de combinación {#datasets}
 
-Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando la ID de la directiva de combinación en una solicitud GET a la [!DNL Profile] API. Encontrará más información sobre las directivas de combinación en la guía de extremo de directivas de [combinación](../../profile/api/merge-policies.md).
+Las políticas de combinación contienen información sobre sus conjuntos de datos de origen, que a su vez contienen etiquetas de uso de datos. Puede buscar los detalles de una directiva de combinación proporcionando el ID de directiva de combinación en una solicitud de GET a la [!DNL Profile] API. Encontrará más información sobre las directivas de combinación en la guía de extremo de directivas de [combinación](../../profile/api/merge-policies.md).
 
 **Formato API**
 
@@ -189,7 +189,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 
 Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar dichos conjuntos de datos en relación con acciones de marketing específicas a fin de comprobar si hay violaciones de directivas de uso de datos.
 
-Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de mercadotecnia en la ruta de una solicitud POST, mientras proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
+Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de mercadotecnia en la ruta de una solicitud de POST, mientras proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
@@ -200,7 +200,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva de uso de datos por la que está evaluando los conjuntos de datos. Según si Adobe o su organización han definido la directiva, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva de uso de datos por la que está evaluando los conjuntos de datos. Según si la política fue definida por Adobe o por su organización, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
 
 **Solicitud**
 
