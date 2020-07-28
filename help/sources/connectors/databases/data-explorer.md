@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Conector del Explorador de datos de Azure
+title: Conector de Data Explorer de Azure
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
@@ -57,11 +57,11 @@ La documentación siguiente proporciona información sobre cómo conectarse [!DN
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante API
 
-- [Creación de un conector del Explorador de datos de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
+- [Creación de un conector de Data Explorer de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
 - [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante la interfaz de usuario
 
-- [Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
+- [Creación de un conector de origen de Data Explorer de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
 - [Configurar un flujo de datos para un conector de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
