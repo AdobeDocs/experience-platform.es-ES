@@ -1,8 +1,8 @@
 ---
 title: Extensión de personalización web de marketing
 seo-title: Extensión de personalización web de marketing
-description: La extensión Personalización web de marketing es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Personalización web de marketing es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión Personalización web de marketing es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión Personalización web de marketing es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -18,9 +18,9 @@ ht-degree: 4%
 
 Esta extensión implementa la secuencia de comandos para las aplicaciones de Personalización [!DNL Marketo’s] web y ContentAI. [!DNL Marketo] La Personalización web identifica y personaliza de forma exclusiva el contenido según las características del visitante web, como las firmografías para visitantes anónimos y una amplia variedad de atributos de comportamiento dentro del Platform de [!DNL Marketo] participación para visitantes conocidos. [!DNL Marketo] ContentAI contiene funciones para las recomendaciones y la personalización basadas en AI para campañas web y de correo electrónico que son únicas para los clientes de B2B.
 
-[!DNL Marketo Web Personalization] es una extensión de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] es una extensión de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
-Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Visión general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
 ![Extensión de personalización web de marketing](assets/marketo-web-personalization-extension.png)
 
@@ -28,7 +28,7 @@ Este destino es una extensión de Experience Platform Launch. Para obtener más 
 
 Esta extensión está disponible en el [!DNL Destinations] catálogo para todos los clientes que han adquirido CDP en tiempo real de Adobe.
 
-Para utilizar esta extensión, necesita acceder al Experience Platform Launch. Experience Platform Launch se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida. Póngase en contacto con el administrador de su organización para obtener acceso a Launch y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
+Para utilizar esta extensión, necesita acceder al Experience Platform Launch. Experience Platform Launch se ofrece a los clientes de Adobe Experience Cloud como una función incluida de valor añadido. Póngase en contacto con el administrador de su organización para obtener acceso a Launch y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
