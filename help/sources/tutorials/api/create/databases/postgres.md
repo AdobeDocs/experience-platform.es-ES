@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión PSQL, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para PSQL es `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
+Para crear una conexión PSQL, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud de POST. El ID de especificación de conexión para PSQL es `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
 
 ```shell
 curl -X POST \
