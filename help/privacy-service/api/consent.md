@@ -20,7 +20,7 @@ Antes de utilizar esta guía, consulte la sección [Introducción](./getting-sta
 
 ## Procesar una solicitud de consentimiento del cliente
 
-Las solicitudes de consentimiento se procesan realizando una solicitud POST al `/consent` extremo.
+Las solicitudes de consentimiento se procesan realizando una solicitud de POST al `/consent` extremo.
 
 **Formato API**
 
