@@ -1,7 +1,7 @@
 ---
 title: Extensión de Adobe Target
 seo-title: Extensión de Adobe Target
-description: La extensión de Adobe Target es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión de Adobe Target es un destino de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
@@ -18,9 +18,9 @@ ht-degree: 16%
 
 Adobe Target es la solución de Adobe Experience Cloud que le proporciona todo lo necesario para adaptar y personalizar la experiencia de sus clientes a fin de maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
 
-Adobe Target es una extensión de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
+Adobe Target es una extensión de personalización en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
 
-Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en tiempo real de CDP de Adobe, consulte Información general [sobre las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
 ![Extensión de Adobe Target](/help/rtcdp/destinations/assets/adobe-target-extension.png)
 
