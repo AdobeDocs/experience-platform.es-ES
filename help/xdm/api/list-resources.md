@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Recursos de Lista
 
-Puede vista de una lista de todos los [!DNL Schema Registry] recursos de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud GET.
+Puede realizar una vista de una lista de todos los [!DNL Schema Registry] recursos de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud de GET.
 
 >[!NOTE]
 >
