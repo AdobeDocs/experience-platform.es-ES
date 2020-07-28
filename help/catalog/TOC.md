@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Ayuda de catálogos y conjuntos de datos
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 4%
 
 ---
 
@@ -29,6 +32,6 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Guía del usuario de conjuntos de datos](datasets/user-guide.md)
    * [Creación y rellenado de un conjunto de datos mediante API](datasets/create.md)
 * [Procesamiento de solicitudes de privacidad en Data Lake](privacy.md)
-* [Protección de datos en la plataforma de experiencia](data-protection.md)
+* [Protección de datos en Experience Platform](data-protection.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
