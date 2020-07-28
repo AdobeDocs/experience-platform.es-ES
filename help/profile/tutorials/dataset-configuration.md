@@ -199,7 +199,7 @@ Bajo la `tags` propiedad, puede ver eso `unifiedProfile` y `unifiedIdentity` est
 
 ### Habilitar el conjunto de datos {#enable-the-dataset}
 
-Si el conjunto de datos existente no se ha habilitado para [!DNL Profile] o [!DNL Identity Service], puede habilitarlo realizando una solicitud PATCH usando la ID del conjunto de datos.
+Si el conjunto de datos existente no se ha habilitado para [!DNL Profile] o [!DNL Identity Service], puede habilitarlo haciendo una solicitud de PATCH usando la ID del conjunto de datos.
 
 **Formato API**
 
@@ -231,7 +231,7 @@ curl -X PATCH \
 
 El cuerpo de la solicitud incluye una `tags` propiedad que contiene dos subpropiedades: `"unifiedProfile"` y `"unifiedIdentity"`. Los valores de estas subpropiedades son matrices que contienen la cadena `"enabled:true"`.
 
-**Respuesta** Una solicitud PATCH correcta devuelve Estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud PATCH. Ahora se han agregado las etiquetas `"unifiedProfile"` y `"unifiedIdentity"` y el conjunto de datos está habilitado para su uso en Perfil e Identity Services.
+**Respuesta** Una solicitud de PATCH correcta devuelve Estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Ahora se han agregado las etiquetas `"unifiedProfile"` y `"unifiedIdentity"` y el conjunto de datos está habilitado para su uso en Perfil e Identity Services.
 
 ```json
 [
