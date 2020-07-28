@@ -22,14 +22,14 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 Antes de leer esta guía, se recomienda que conozca los siguientes [!DNL Experience Platform] servicios:
 
-* [!DNL Privacy Service](../privacy-service/home.md):: Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en las aplicaciones de Adobe Experience Cloud.
+* [!DNL Privacy Service](../privacy-service/home.md):: Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en todas las aplicaciones de Adobe Experience Cloud.
 * [!DNL Catalog Service](home.md):: Sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform]. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
 * [!DNL Experience Data Model (XDM) System](../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [!DNL Identity Service](../identity-service/home.md):: Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 
 ## Explicación de las Áreas de nombres de identidad {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] une datos de identidad del cliente entre sistemas y dispositivos. [!DNL Identity Service] utiliza Áreas de nombres **[!UICONTROL de]** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un ID de Advertising Cloud de Adobe (&quot;AdCloud&quot;) o un ID de Adobe Target (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] une datos de identidad del cliente entre sistemas y dispositivos. [!DNL Identity Service] utiliza Áreas de nombres **[!UICONTROL de]** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantiene un almacén de Áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las Áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;Correo electrónico&quot; y &quot;ECID&quot;), mientras que la organización también puede crear Áreas de nombres personalizadas para satisfacer sus necesidades específicas.
 
@@ -68,7 +68,7 @@ Una vez configurados los campos correspondientes dentro del esquema como campos 
 >
 > Esta sección incluye llamadas a la API del Registro de Esquema. Para obtener información importante relacionada con el uso de la API, incluido el conocimiento del usuario `{TENANT_ID}` y el concepto de contenedores, consulte la sección de [introducción](../xdm/api/getting-started.md) de la guía para desarrolladores.
 
-Puede agregar un descriptor de identidad al esquema XDM de un conjunto de datos haciendo una solicitud POST al `/descriptors` extremo en la [!DNL Schema Registry] API.
+Puede agregar un descriptor de identidad al esquema XDM de un conjunto de datos haciendo una solicitud de POST al extremo del `/descriptors` en la [!DNL Schema Registry] API.
 
 **Formato API**
 
