@@ -34,7 +34,7 @@ Todos los segmentos de audiencia creados por el servicio [de segmentación de](.
 
 Además de heredar etiquetas de nivel de conjunto de datos, los segmentos heredan todas las etiquetas de nivel de campo de sus conjuntos de datos asociados de forma predeterminada. Según el modo en que la aplicación [!DNL Platform]basada consuma segmentos, es posible especificar qué campos se utilizan, impidiendo así que el segmento herede etiquetas de campos excluidos.
 
-Para obtener más información sobre cómo funciona la aplicación automática en tiempo real de CDP, consulte la descripción general [de la gestión de datos CDP en tiempo real de](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
+Para obtener más información sobre el funcionamiento de la aplicación automática en tiempo real de CDP, consulte la información general [sobre la administración de datos CDP en tiempo real de](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
 ### Herencia de los controles de exportación de datos de Adobe Audience Manager
 
