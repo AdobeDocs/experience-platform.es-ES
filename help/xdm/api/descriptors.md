@@ -28,7 +28,7 @@ Este documento proporciona llamadas de API de ejemplo para descriptores, así co
 
 ## Descriptores de Listas
 
-Se puede utilizar una sola solicitud GET para devolver una lista de todos los descriptores definidos por la organización.
+Se puede utilizar una sola solicitud de GET para devolver una lista de todos los descriptores definidos por la organización.
 
 **Formato API**
 
@@ -82,7 +82,7 @@ Al utilizar el encabezado `link` Accept, cada descriptor se muestra como un elem
 
 ## Buscar un descriptor
 
-Si desea vista de los detalles de un descriptor específico, puede buscar (GET) un descriptor individual usando su `@id`.
+Si desea realizar una vista de los detalles de un descriptor específico, puede buscar (GET) un descriptor individual utilizando su `@id`.
 
 **Formato API**
 
@@ -133,7 +133,7 @@ Una respuesta correcta devuelve los detalles del descriptor, incluidos su `@type
 
 ## Crear descriptor
 
-La [!DNL Schema Registry] permite definir varios tipos de descriptores diferentes. Cada tipo de descriptor requiere que se envíen sus propios campos específicos en la solicitud POST. En la sección del apéndice sobre la [definición de descriptores](#defining-descriptors)se ofrece una lista completa de los descriptores y los campos necesarios para definirlos.
+La [!DNL Schema Registry] permite definir varios tipos de descriptores diferentes. Cada tipo de descriptor requiere que se envíen sus propios campos específicos en la solicitud de POST. En la sección del apéndice sobre la [definición de descriptores](#defining-descriptors)se ofrece una lista completa de los descriptores y los campos necesarios para definirlos.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 ## Actualizar descriptor
 
-Puede actualizar un descriptor realizando una solicitud PUT que haga referencia al `@id` del descriptor que desea actualizar en la ruta de solicitud.
+Puede actualizar un descriptor realizando una solicitud de PUT que haga referencia al `@id` del descriptor que desea actualizar en la ruta de solicitud.
 
 **Formato API**
 
@@ -234,7 +234,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el `@id` del descr
 }
 ```
 
-Al realizar una solicitud de búsqueda (GET) para la vista del descriptor, se mostrará que los campos se han actualizado para reflejar los cambios enviados en la solicitud PUT.
+Al realizar una solicitud de búsqueda (GET) para la vista del descriptor, se mostrará que los campos se han actualizado para reflejar los cambios enviados en la solicitud de PUT.
 
 ## Eliminar descriptor
 
@@ -336,7 +336,7 @@ Los descriptores de nombres prácticos permiten al usuario modificar los valores
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, utilice &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en Caso de título. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
-| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de los valores sugeridos para el campo en la [!DNL Experience Platform] IU. Es importante tener en cuenta que `meta:enum` no declara una lista desglosada ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para los campos XDM principales definidos por Adobe. Si la propiedad source es un campo personalizado definido por su organización, debe editar la propiedad del campo directamente a través de una solicitud `meta:enum` [PATCH](./update-resource.md). |
+| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de los valores sugeridos para el campo en la [!DNL Experience Platform] IU. Es importante tener en cuenta que `meta:enum` no declara una lista desglosada ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para los campos XDM principales definidos por Adobe. Si la propiedad source es un campo personalizado definido por su organización, debe editar la propiedad del campo directamente a través de una solicitud `meta:enum` de [PATCH](./update-resource.md). |
 
 #### Descriptor de relación
 
