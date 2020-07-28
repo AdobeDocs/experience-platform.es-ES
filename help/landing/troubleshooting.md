@@ -22,7 +22,7 @@ La siguiente es una lista de respuestas a las preguntas más frecuentes sobre el
 
 ## ¿Qué son [!DNL Experience Platform] las API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta varias API de RESTful que utilizan solicitudes HTTP para acceder a [!DNL Platform] los recursos. Cada una de estas API de servicio expone varios extremos y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la documentación [de referencia de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API sobre Adobe I/O.
+[!DNL Experience Platform] oferta varias API de RESTful que utilizan solicitudes HTTP para acceder a [!DNL Platform] los recursos. Cada una de estas API de servicio expone varios extremos y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la documentación [de referencia de la](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API sobre la E/S de Adobe.
 
 ## ¿Cómo se formatea una solicitud de API? {#how-do-i-format-an-api-request}
 
@@ -30,7 +30,7 @@ Los formatos de solicitud varían en función de la [!DNL Platform] API utilizad
 
 ### Leer llamadas de API de ejemplo
 
-La documentación de [!DNL Experience Platform] muestra las llamadas de API de ejemplo de dos maneras diferentes. En primer lugar, la llamada se presenta en su formato **** API, una representación de plantilla que muestra únicamente la operación (GET, POST, PUT, PATCH, DELETE) y el punto final que se utiliza (por ejemplo, `/global/classes`). Algunas plantillas también muestran la ubicación de las variables para ilustrar cómo se debe formular una llamada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+La documentación de [!DNL Experience Platform] muestra las llamadas de API de ejemplo de dos maneras diferentes. En primer lugar, la llamada se presenta en su formato **** API, una representación de plantilla que muestra únicamente la operación (GET, POST, PUT, PATCH, DELETE) y el extremo que se utiliza (por ejemplo, `/global/classes`). Algunas plantillas también muestran la ubicación de las variables para ilustrar cómo se debe formular una llamada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
 A continuación, las llamadas se muestran como comandos cURL en una **solicitud**, que incluye los encabezados necesarios y la &quot;ruta base&quot; completa necesaria para interactuar correctamente con la API. La ruta de acceso base se debe anteponer a todos los extremos. Por ejemplo, el punto final mencionado `/global/classes` pasa a ser `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Verá el formato de API / patrón de solicitud en toda la documentación y se espera que utilice la ruta completa que se muestra en la solicitud de ejemplo al realizar sus propias llamadas a las API de Platform.
 
@@ -88,7 +88,7 @@ Para obtener más información sobre los extremos específicos en las API de Pla
 
 ## ¿Cuál es mi organización IMS? {#what-is-my-ims-organization}
 
-Una organización de IMS es una representación de Adobe de un cliente. Todas las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización de IMS tiene derecho a [!DNL Experience Platform], puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar en [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): en la ficha **Integraciones** , vaya a la sección **Información general** de cualquier integración concreta para encontrar el ID en Credenciales de **cliente**. Para obtener una descripción paso a paso de cómo autenticarse en [!DNL Platform], consulte el tutorial [de](../tutorials/authentication.md)autenticación.
+Una organización de IMS es una representación Adobe de un cliente. Cualquier solución de Adobe con licencia se integra con esta organización de clientes. Cuando una organización de IMS tiene derecho a [!DNL Experience Platform], puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar en la consola [de desarrolladores de](https://www.adobe.com/go/devs_console_ui)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de cualquier integración concreta para encontrar el ID en Credenciales de **cliente**. Para obtener una descripción paso a paso de cómo autenticarse en [!DNL Platform], consulte el tutorial [de](../tutorials/authentication.md)autenticación.
 
 ## ¿Dónde puedo encontrar mi clave de API? {#where-can-i-find-my-api-key}
 
@@ -112,9 +112,9 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 Para obtener información detallada sobre los parámetros de consulta disponibles para un servicio o extremo específico, consulte la documentación específica del servicio.
 
-## ¿Cómo se indica un campo JSON para actualizar en una solicitud PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## ¿Cómo se indica un campo JSON para actualizar en una solicitud de PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Muchas operaciones PATCH en [!DNL Platform] API utilizan cadenas de [puntero](https://tools.ietf.org/html/rfc6901) JSON para indicar las propiedades JSON que se van a actualizar. Normalmente, se incluyen en las cargas de solicitud con el formato de parche [](https://tools.ietf.org/html/rfc6902) JSON. Consulte la guía [de aspectos fundamentales de la](api-fundamentals.md) API para obtener información detallada sobre la sintaxis requerida para estas tecnologías.
+Muchas operaciones de PATCH en [!DNL Platform] API utilizan cadenas de [puntero](https://tools.ietf.org/html/rfc6901) JSON para indicar las propiedades de JSON que se van a actualizar. Normalmente, se incluyen en las cargas de solicitud con el formato de parche [](https://tools.ietf.org/html/rfc6902) JSON. Consulte la guía [de aspectos fundamentales de la](api-fundamentals.md) API para obtener información detallada sobre la sintaxis requerida para estas tecnologías.
 
 ## ¿Puedo usar Postman para realizar llamadas a [!DNL Platform] las API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
@@ -172,7 +172,7 @@ Este mensaje de error se muestra cuando falta un `Authorization` encabezado de u
 }
 ```
 
-Este mensaje de error se muestra cuando el token de acceso proporcionado en el `Authorization` encabezado no es válido. Asegúrese de que el token se ha introducido correctamente o [genere un nuevo token](../tutorials/authentication.md) en la consola de Adobe I/O.
+Este mensaje de error se muestra cuando el token de acceso proporcionado en el `Authorization` encabezado no es válido. Asegúrese de que el token se ha introducido correctamente o [genere un nuevo token](../tutorials/authentication.md) en la consola de E/S de Adobe.
 
 ### Se requiere la clave de API
 
@@ -217,7 +217,7 @@ Este mensaje de error se muestra cuando falta un encabezado de organización de 
 }
 ```
 
-Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/O (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` encabezado) no tiene derecho a realizar llamadas a [!DNL Experience Platform] las API para la organización IMS proporcionada en el `x-gw-ims-org-id` encabezado. Asegúrese de que ha proporcionado el ID correcto para su organización de IMS en el encabezado antes de intentarlo de nuevo. Si no conoce su ID de organización, puede encontrarlo en la consola [de E/S de](https://console.adobe.io)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para buscar el ID en Credenciales de **cliente**.
+Este mensaje de error se muestra cuando el usuario o la integración de E/S de Adobe (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` encabezado) no tiene derecho a realizar llamadas a [!DNL Experience Platform] API para la organización IMS proporcionada en el `x-gw-ims-org-id` encabezado. Asegúrese de que ha proporcionado el ID correcto para su organización de IMS en el encabezado antes de intentarlo de nuevo. Si no conoce el ID de organización, puede encontrarlo en la consola [de E/S de](https://console.adobe.io)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para buscar el ID en Credenciales de **cliente**.
 
 ### No se especificó un tipo de contenido válido
 
@@ -230,7 +230,7 @@ Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/
 }
 ```
 
-Este mensaje de error se muestra cuando una solicitud POST, PUT o PATCH tiene un `Content-Type` encabezado no válido o que falta. Asegúrese de que el encabezado esté incluido en la solicitud y de que su valor sea `application/json`.
+Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH tiene un `Content-Type` encabezado no válido o que falta. Asegúrese de que el encabezado esté incluido en la solicitud y de que su valor sea `application/json`.
 
 
 ## Directorio de solución de problemas del servicio {#service-troubleshooting-directory}
