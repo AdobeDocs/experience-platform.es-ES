@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 
 # Información recopilada automáticamente
 
-El SDK de Adobe Experience Cloud recopila una serie de elementos de información automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
+El SDK de Adobe Experience Cloud recopila una serie de datos automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
 
 ## Dispositivo (`device`)
 
@@ -50,13 +50,13 @@ Detalles sobre el entorno del explorador.
 
 ### Tipo de Entorno
 
-Explorador
+Browser
 
 | **Ruta en carga útil:** | **Ejemplo:** |
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-El tipo de entorno por el que salió a la luz la experiencia. El SDK de la plataforma Adobe Experience para JavaScript siempre se establece `browser`.
+El tipo de entorno por el que salió a la luz la experiencia. El SDK de Adobe Experience Platform para JavaScript siempre se establece `browser`.
 
 ### Altura de la ventanilla
 
@@ -112,7 +112,7 @@ Marca de hora local para el usuario final en formato ISO ampliado simplificado [
 
 Número de minutos que el usuario se desplaza con respecto a GMT.
 
-## Marca de hora
+## Marca de tiempo
 
 | **Ruta en carga útil:** | **Ejemplo:** |
 | ------------------------ | -------------------------- |
