@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en casos de uso de la experiencia del cliente. Esto permite que los analistas de mercadotecnia configuren predicciones específicas de las necesidades de una compañía mediante configuraciones de nivel empresarial sin necesidad de conocimientos de ciencia de datos. Además, los profesionales de mercadotecnia pueden activar las predicciones en aplicaciones [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]y de terceros.
 
-El siguiente vídeo está diseñado para admitir su comprensión de los servicios inteligentes. Con ejemplos de casos de uso empresarial, este vídeo explica un flujo de trabajo de alto nivel y describe las capacidades de la IA de atribución y de la AI del cliente.
+El siguiente vídeo está diseñado para admitir su comprensión de los servicios inteligentes. En este vídeo, que muestra casos de uso empresarial, se explica un flujo de trabajo de alto nivel y se describen las funciones tanto de Attribution AI como de AI del cliente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
@@ -26,7 +26,7 @@ Los servicios inteligentes, basados [!DNL Adobe Experience Platform]en, proporci
 
 ### Régimen rentable al mercado
 
-Adobe cuenta con experiencia en AI/ML combinada con una experiencia CXM profunda, y Intelligent Services ha sido diseñada específicamente para que los especialistas en mercadotecnia obtengan AI/ML de inmediato para casos de uso de mercadotecnia comunes sin necesidad de contratar científicos de datos escasos y costosos, lo que acelera la velocidad de comercialización y la capacidad de acción.
+Adobe tiene experiencia en IA/ML combinada con una profunda experiencia en CXM, y Servicios Inteligentes ha sido diseñado específicamente para que los especialistas en mercadotecnia obtengan AI/ML inmediatamente para casos de uso común de mercadotecnia sin necesidad de contratar científicos de datos escasos y costosos, lo que acelera la velocidad de comercialización y la capacidad de acción.
 
 ### Mayor precisión en perspectivas predictivas
 
@@ -56,4 +56,4 @@ Por último, puede decidir qué acciones realizar con las predicciones, como el 
 
 ## Pasos siguientes
 
-Actualmente, la API de atribución de oferta de servicios inteligentes y la AI del cliente. La IA de atribución permite a los especialistas en mercadotecnia impulsar de forma inteligente la eficacia de la mercadotecnia entre canales y campañas. Para obtener más información sobre la Atribución de IA, visite la información general sobre la [Atribución de AI](./attribution-ai/overview.md). La IA del cliente permite a los especialistas en marketing personalizar al máximo las experiencias de los clientes. Para obtener más información sobre la API del cliente, visite la descripción general [de la API del](./customer-ai/overview.md)cliente.
+Actualmente, la Attribution AI de oferta de Servicios Inteligentes y la API del cliente. Attribution AI permite a los especialistas en mercadotecnia impulsar de forma inteligente la eficacia de la mercadotecnia en canales y campañas. Para obtener más información sobre la Attribution AI, visite la descripción general [de la](./attribution-ai/overview.md)Attribution AI. La IA del cliente permite a los especialistas en marketing personalizar al máximo las experiencias de los clientes. Para obtener más información sobre la API del cliente, visite la descripción general [de la API del](./customer-ai/overview.md)cliente.
