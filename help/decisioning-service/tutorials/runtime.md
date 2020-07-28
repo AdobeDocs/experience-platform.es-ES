@@ -59,7 +59,7 @@ También es necesario para solicitudes en tiempo de ejecución:
 >
 >`UUID` es una cadena en formato UUID que es única globalmente y no debe reutilizarse para distintas llamadas de API
 
-[!DNL Decisioning Service] está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales, el repositorio de objetos principales XDM. [!DNL Platform’s] Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de usar una API POST, GET, PUT, PATCH o DELETE que indique el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
+[!DNL Decisioning Service] está controlado por una serie de objetos comerciales que están relacionados entre sí. Todos los objetos comerciales se almacenan en el repositorio de objetos comerciales, el repositorio de objetos principales XDM. [!DNL Platform’s] Una característica clave de este repositorio es que las API son ortogonales al tipo de objeto comercial. En lugar de utilizar una API de POST, GET, PUT, PATCH o DELETE que indique el tipo de recurso en su extremo de API, solo hay 6 extremos genéricos, pero aceptan o devuelven un parámetro que indica el tipo de objeto cuando se necesita esa desambición. El esquema debe estar registrado en el repositorio, pero más allá de eso el repositorio se puede utilizar para un conjunto de tipos de objetos de composición abierta.
 
 Las rutas de extremo de todas las API de repositorio de objetos principales XDM inicio con `https://platform.adobe.io/data/core/ode/`.
 
@@ -154,7 +154,7 @@ curl -X GET {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/diagnostics \
   -H 'x-request-id: {NEW_UUID}'
 ```
 
-El único parámetro para esta llamada de API es `containerId`. Los resultados de todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
+El único parámetro para esta llamada de API es `containerId`. Los resultados son todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
 
 **Respuesta**
 
@@ -181,7 +181,7 @@ Las aplicaciones pueden lograr un mejor rendimiento al solicitar una decisión d
 
 Es posible que dos actividades diferentes tengan la misma opción que sus &quot;mejores&quot;. Para evitar la repetición de una experiencia compuesta, de forma predeterminada, [!DNL Decisioning Service] se arbitran entre las actividades a las que se hace referencia en la misma solicitud. El arbitraje significa que para cada una de las actividades se tienen en cuenta sus opciones principales de N, pero no se propone ninguna opción más de una vez en todas esas actividades. Si dos actividades tienen la misma opción de clasificación superior, se elegirá una de ellas para que utilice su segunda opción o la tercera opción, y así sucesivamente. Estas reglas de anulación de duplicación intentan evitar que cualquiera de las actividades utilice su opción de reserva.
 
-La solicitud de decisión contiene los argumentos de su cuerpo de una solicitud POST. El cuerpo tiene el formato de valor de encabezado `Content-Type` JSON `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
+La solicitud de decisión contiene los argumentos de la solicitud del POST. El cuerpo tiene el formato de valor de encabezado `Content-Type` JSON `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
 El esquema y la versión de la solicitud compatibles en este momento son `https://ns.adobe.com/experience/offer-management/decision-request;version=0.9`. En el futuro, se proporcionarán esquemas o versiones de solicitudes adicionales.
 
