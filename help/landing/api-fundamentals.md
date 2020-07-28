@@ -18,7 +18,7 @@ Las API de Adobe Experience Platform emplean varias tecnologías subyacentes y s
 
 ## Puntero JSON {#json-pointer}
 
-JSON Pointer es una sintaxis de cadena estandarizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos dentro de documentos JSON. Un puntero JSON es una cadena de tokens separados por `/` caracteres, que especifica claves de objeto o índices de matriz, y los tokens pueden ser una cadena o un número. Las cadenas de puntero JSON se utilizan en muchas operaciones PATCH para [!DNL Platform] API, como se describe más adelante en este documento. Para obtener más información sobre JSON Pointer, consulte la documentación [general de](https://rapidjson.org/md_doc_pointer.html)JSON Pointer.
+JSON Pointer es una sintaxis de cadena estandarizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos dentro de documentos JSON. Un puntero JSON es una cadena de tokens separados por `/` caracteres, que especifica claves de objeto o índices de matriz, y los tokens pueden ser una cadena o un número. Las cadenas de puntero JSON se utilizan en muchas operaciones de PATCH para [!DNL Platform] API, como se describe más adelante en este documento. Para obtener más información sobre JSON Pointer, consulte la documentación [general de](https://rapidjson.org/md_doc_pointer.html)JSON Pointer.
 
 ### Ejemplo de objeto de esquema JSON
 
@@ -87,7 +87,7 @@ JSON Pointer es una sintaxis de cadena estandarizada ([RFC 6901](https://tools.i
 
 ## Parche JSON
 
-Existen muchas operaciones PATCH para [!DNL Platform] las API que aceptan objetos JSON Patch para sus cargas de solicitud. JSON Patch es un formato estandarizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para describir los cambios en un documento JSON. Le permite definir actualizaciones parciales a JSON sin necesidad de enviar el documento completo en un cuerpo de solicitud.
+Hay muchas operaciones de PATCH para [!DNL Platform] API que aceptan objetos JSON Patch para sus cargas de solicitud. JSON Patch es un formato estandarizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para describir los cambios en un documento JSON. Le permite definir actualizaciones parciales a JSON sin necesidad de enviar el documento completo en un cuerpo de solicitud.
 
 ### Ejemplo de objeto JSON Patch
 
@@ -98,7 +98,7 @@ Existen muchas operaciones PATCH para [!DNL Platform] las API que aceptan objeto
 }
 ```
 
-* `op`:: Tipo de operación de parche. Aunque JSON Patch admite varios tipos de operación diferentes, no todas las operaciones PATCH en [!DNL Platform] las API son compatibles con todos los tipos de operación. Los tipos de operaciones disponibles son:
+* `op`:: Tipo de operación de parche. Aunque JSON Patch admite varios tipos de operaciones diferentes, no todas las operaciones de PATCH en [!DNL Platform] las API son compatibles con cada tipo de operación. Los tipos de operaciones disponibles son:
    * `add`
    * `remove`
    * `replace`
