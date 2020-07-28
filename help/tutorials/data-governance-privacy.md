@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance] y [!DNL Privacy] tutoriales
+# [!DNL Data Governance] y [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) es el mecanismo central del Adobe Experience Platform [!DNL Data Governanc]e. Las funciones DULE permiten aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas. Antes de comenzar con las etiquetas, consulte la información general [sobre el Gobierno de](../data-governance/home.md) datos para obtener una introducción más sólida al marco de trabajo DULE dentro de [!DNL Platform].
 
@@ -36,4 +36,4 @@ Los segmentos que están habilitados para utilizarse en [!DNL Real-time Customer
 
 ## Get started with [!DNL Privacy Service]
 
-[!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario que le permiten administrar los datos personales de los sujetos de datos (clientes) en todas las aplicaciones de Adobe Experience Cloud. [!DNL Privacy Service] también proporciona un mecanismo central de auditoría y registro que le permite acceder al estado y los resultados de los trabajos que involucran [!DNL Experience Cloud] aplicaciones. Para obtener instrucciones sobre cómo crear y supervisar [!DNL Privacy Service] trabajos, siga los pasos que se indican en la guía [para desarrolladores de](../privacy-service/api/getting-started.md) Privacy Service o en la guía [de usuario de](../privacy-service/ui/overview.md)Privacy Service.
+[!DNL Privacy Service] proporciona una API de RESTful y una interfaz de usuario que le permiten administrar los datos personales de sus usuarios (clientes) en todas las aplicaciones de Adobe Experience Cloud. [!DNL Privacy Service] también proporciona un mecanismo central de auditoría y registro que le permite acceder al estado y los resultados de los trabajos que involucran [!DNL Experience Cloud] aplicaciones. Para obtener instrucciones sobre cómo crear y supervisar [!DNL Privacy Service] trabajos, siga los pasos que se indican en la guía [para desarrolladores de](../privacy-service/api/getting-started.md) Privacy Service o en la guía [de usuario de](../privacy-service/ui/overview.md)Privacy Service.
