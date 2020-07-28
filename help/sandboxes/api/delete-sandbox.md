@@ -18,7 +18,7 @@ Puede eliminar un simulador para pruebas realizando una solicitud de DELETE que 
 
 >[!NOTE]
 >
->Al realizar esta llamada de API, se actualiza la propiedad del `status` simulador para pruebas a &quot;eliminarse&quot; y se desactiva. Las solicitudes GET todavía pueden recuperar los detalles del entorno limitado después de eliminarlo.
+>Al realizar esta llamada de API, se actualiza la propiedad del `status` simulador para pruebas a &quot;eliminarse&quot; y se desactiva. Las solicitudes de GET aún pueden recuperar los detalles del entorno limitado después de eliminarlo.
 
 **Formato API**
 
