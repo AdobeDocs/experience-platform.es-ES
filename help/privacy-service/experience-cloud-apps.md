@@ -14,7 +14,7 @@ ht-degree: 22%
 
 # [!DNL Privacy Service] y [!DNL Experience Cloud] aplicaciones
 
-Adobe Experience Platform [!DNL Privacy Service] se ha creado para admitir solicitudes de privacidad de varias aplicaciones de Adobe Experience Cloud. Cada aplicación admite diferentes valores de producto e ID para identificar los sujetos de datos.
+Adobe Experience Platform [!DNL Privacy Service] está diseñado para admitir solicitudes de privacidad para varias aplicaciones de Adobe Experience Cloud. Cada aplicación admite diferentes valores de producto e ID para identificar los sujetos de datos.
 
 Este documento sirve como referencia para la documentación de [!DNL Experience Cloud] la aplicación que describe cómo configurar esa aplicación para operaciones relacionadas con la privacidad. Esto incluye cómo formatear y etiquetar los datos. Se cubren dos categorías de solicitudes:
 
@@ -29,7 +29,7 @@ A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones que
 
 | Aplicación | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] aprovecha las capacidades de exclusión global existentes proporcionadas por Adobe Privacy Center. Consulte la guía para [realizar solicitudes](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidad de datos para obtener más información.</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] aprovecha las capacidades de exclusión global existentes que proporciona el Centro de privacidad de Adobe. Consulte la guía para [realizar solicitudes](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidad de datos para obtener más información.</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] gestiona las solicitudes de exclusión mediante variables de sistema de informes de [privacidad](https://docs.adobe.com/content/help/es-ES/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentación de exclusión](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentación de exclusión](../segmentation/honoring-opt-outs.md)</li></ul> |
@@ -45,8 +45,8 @@ A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones que
 
 | Aplicación | Descripción de la documentación |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://helpx.adobe.com/es/campaign/kb/campaign-privacy.html) | Información general sobre las funcionalidades de RGPD para Adobe Campaign Classic. |
-| [Adobe Dynamic Tag Manager](https://docs.adobe.com/content/help/es-ES/dtm/using/tools/opt-in.html) | Pasos para evitar que las etiquetas de Adobe se activen hasta que se obtenga el consentimiento. |
-| [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Información general sobre cómo un administrador de privacidad del cliente o un administrador de AEM pueden gestionar solicitudes GDPR. |
+| [Adobe Campaign Classic](https://helpx.adobe.com/es/campaign/kb/campaign-privacy.html) | Información general sobre las funcionalidades del RGPD para Adobe Campaign Classic. |
+| [Administrador dinámico de etiquetas de Adobe](https://docs.adobe.com/content/help/es-ES/dtm/using/tools/opt-in.html) | Pasos para evitar que las etiquetas de Adobe se activen hasta que se obtenga el consentimiento. |
+| [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Información general sobre cómo un administrador de privacidad del cliente o AEM administrador puede gestionar solicitudes de RGPD. |
 | [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Pasos para hacer acceso al RGPD y eliminar solicitudes mediante Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
