@@ -75,7 +75,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Spark] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Spark] es `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
+Para crear una [!DNL Spark] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Spark] es `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
 
 ```shell
 curl -X POST \
