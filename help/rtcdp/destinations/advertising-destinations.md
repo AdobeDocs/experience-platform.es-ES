@@ -20,7 +20,7 @@ Al conectarse a un destino publicitario, las audiencias se envían como ID a la 
 
 Actualmente, CDP en tiempo real es compatible con los destinos publicitarios que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
-* [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+* [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Extensión de la etiqueta de conversión de publicidad de Awin](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Extensión Awin Advertising Mastertag](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Extensión de beemray](beemray-extension.md)
