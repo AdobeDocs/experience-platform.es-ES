@@ -20,7 +20,7 @@ Las siguientes secciones explican las llamadas que puede realizar mediante el `/
 
 ### Recuperar una lista de consultas
 
-Puede recuperar una lista de todas las consultas para su organización de IMS haciendo una solicitud GET al `/queries` extremo.
+Puede recuperar una lista de todas las consultas para su organización de IMS realizando una solicitud de GET al `/queries` extremo.
 
 **Formato API**
 
@@ -119,7 +119,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pa
 
 ### Cree una consulta
 
-Puede crear una nueva consulta haciendo una solicitud POST al `/queries` extremo.
+Puede crear una nueva consulta haciendo una solicitud de POST al `/queries` extremo.
 
 **Formato API**
 
@@ -202,7 +202,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 
 ### Recuperar una consulta por ID
 
-Puede recuperar información detallada sobre una consulta específica realizando una solicitud GET al extremo y proporcionando el valor de la consulta en la ruta de la solicitud `/queries``id` .
+Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al extremo y proporcionando el valor de la consulta `/queries` `id` en la ruta de la solicitud.
 
 **Formato API**
 
@@ -273,7 +273,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ### Cancelar una consulta
 
-Puede solicitar la eliminación de una consulta especificada realizando una solicitud PATCH al extremo y proporcionando el valor de la consulta en la ruta de acceso de la solicitud `/queries` `id` .
+Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al extremo y proporcionando el valor de la consulta `/queries` `id` en la ruta de la solicitud.
 
 **Formato API**
 
