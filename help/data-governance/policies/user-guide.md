@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] proporciona una interfaz de usu
 
 >[!IMPORTANT]
 >
->Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
+>Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
 
 ## Requisitos previos
 
@@ -69,7 +69,7 @@ Vuelve a aparecer la ficha *[!UICONTROL Examinar]* , que ahora lista la directiv
 
 ## Habilitar o deshabilitar una directiva de uso de datos {#enable}
 
-Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
+Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
 Puede habilitar o deshabilitar las directivas desde la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Directivas]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Estado]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
 
