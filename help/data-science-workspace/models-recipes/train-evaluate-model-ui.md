@@ -36,7 +36,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Proporcione un nombre para el modelo y revise las configuraciones de modelo predeterminadas. Las configuraciones predeterminadas se aplicaron durante la creación de la fórmula, para revisar y modificar los valores de configuración, haga clic en los valores mientras pulsa el doble. Para proporcionar un nuevo conjunto de configuraciones, haga clic en **[!UICONTROL Cargar nueva configuración]** y arrastre un archivo JSON que contenga configuraciones de modelo a la ventana del explorador. Haga clic en **[!UICONTROL Finalizar]** para crear el modelo.
-   >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
+   >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +55,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Las configuraciones predeterminadas proporcionadas durante la creación del Modelo se muestran, cambian y modifican en consecuencia haciendo clic en los valores con el doble. Haga clic en **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de formación.
-   >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de recomendaciones de productos. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
+   >[!NOTE]Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
