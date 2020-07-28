@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión ATS, su ID de especificación de conexión única debe proporcionarse como parte de la solicitud POST. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Para crear una conexión ATS, su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para ATS es `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
