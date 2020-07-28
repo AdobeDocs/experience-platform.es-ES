@@ -52,7 +52,7 @@ Para obtener más información sobre [!DNL Data Governance], consulte la informa
 
 ## Ingesta de datos {#ingestion}
 
-Adobe Experience Platform proporciona un completo conjunto de funciones para ingerir cualquier tipo y latencia de datos. Adobe Experience Platform [!DNL Data Ingestion] ofrece varias alternativas para la ingesta de datos, incluidas las API por lotes, las API de flujo, los conectores nativos de Adobe, los socios de integración de datos o la interfaz de usuario de Adobe Experience Platform.
+Adobe Experience Platform proporciona un completo conjunto de funciones para ingerir cualquier tipo y latencia de datos. Adobe Experience Platform [!DNL Data Ingestion] ofrece varias alternativas para la ingesta de datos, incluidas las API por lotes, las API de flujo, los conectores de Adobe nativos, los socios de integración de datos o la interfaz de usuario de Adobe Experience Platform.
 
 **Nuevas funciones**
 
@@ -69,7 +69,7 @@ Para obtener más información sobre la ingesta de datos en Platform, visite la 
 
 ## Destinos {#destinations}
 
-En [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para dichos socios de una manera transparente.
+En [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
 
 **Nuevos destinos**
 
@@ -78,7 +78,7 @@ Hay nuevos destinos disponibles donde puede activar los datos de Adobe Experienc
 | Destino | Descripción |
 |--- | ---|
 | Destinos de almacenamiento de nube | Ahora, CDP en tiempo real de Adobe puede entregar sus segmentos como archivos de datos en sus ubicaciones de almacenamiento en la nube [!DNL Amazon S3] o SFTP. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores. |
-| Destinos publicitarios | La tarjeta de destino ahora se divide en tres tarjetas de destino para las tres diferentes [!DNL Google] [!DNL Google] plataformas admitidas actualmente en el CDP en tiempo real de Adobe: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Destinos publicitarios | La tarjeta de destino ahora se divide en tres tarjetas de destino para las tres diferentes [!DNL Google] [!DNL Google] plataformas admitidas actualmente en Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
 Para obtener más información, visite la descripción general de [destinos](../../rtcdp/destinations/destinations-overview.md)
 
