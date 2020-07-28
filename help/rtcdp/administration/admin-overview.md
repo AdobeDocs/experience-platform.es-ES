@@ -22,7 +22,7 @@ Las siguientes secciones proporcionan introducciones a los componentes centrales
 
 ## Control de acceso
 
-Control de acceso se administra a través de [Adobe Admin Console](http://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], permitiéndole vincular a los usuarios con permisos y entornos limitados. Con esta función, los administradores pueden otorgar o restringir el acceso a capacidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
+El Control de acceso se administra a través del [Adobe Admin Console](http://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], permitiéndole vincular a los usuarios con permisos y entornos limitados. Con esta función, los administradores pueden otorgar o restringir el acceso a capacidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
 
 Para obtener más información sobre control de acceso, consulte la descripción general [del](../../access-control/home.md) control de acceso en la [!DNL Experience Platform] documentación.
 
