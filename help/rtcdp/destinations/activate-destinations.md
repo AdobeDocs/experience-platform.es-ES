@@ -1,8 +1,8 @@
 ---
 title: Activar perfiles y segmentos en un destino
 seo-title: Activar perfiles y segmentos en un destino
-description: Para activar los datos que tiene en Adobe Real-time Customer Data Platform, asigne segmentos a destinos. Para lograrlo, siga los pasos a continuación.
-seo-description: Para activar los datos que tiene en Adobe Real-time Customer Data Platform, asigne segmentos a destinos. Para lograrlo, siga los pasos a continuación.
+description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
+seo-description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Activar perfiles y segmentos en un destino
 
-Para activar los datos que tiene en Adobe Real-time Customer Data Platform, asigne segmentos a destinos. Para lograrlo, siga los pasos a continuación.
+Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 
 ## Requisitos previos {#prerequisites}
 
@@ -94,7 +94,7 @@ Siga los pasos a continuación para editar los flujos de activación existentes 
 
 ### Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
 
-Para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube, CDP en tiempo real de Adobe crea un archivo `.txt` o `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Se espera que cada día se cree un nuevo archivo en la ubicación del almacenamiento. The file format is:
+Para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube, CDP en tiempo real de Adobe crea un archivo delimitado por tabuladores `.txt` o `.csv` en la ubicación de almacenamiento proporcionada. Se espera que cada día se cree un nuevo archivo en la ubicación del almacenamiento. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Los archivos que recibiría en tres días consecutivos podrían tener este aspecto:
@@ -117,7 +117,7 @@ Por ejemplo, [!DNL Facebook]una activación exitosa significa que se crearía un
 
 >[!TIP]
 >
->La integración entre CDP en tiempo real de Adobe y [!DNL Facebook] admite los rellenos de audiencia históricos. Todas las cualificaciones del segmento histórico se envían [!DNL Facebook] cuando activa los segmentos en el destino.
+>La integración entre CDP en tiempo real de Adobe y [!DNL Facebook] admite los rellenos históricos de audiencias. Todas las cualificaciones del segmento histórico se envían [!DNL Facebook] cuando activa los segmentos en el destino.
 
 ## Deshabilitar activación {#disable-activation}
 
