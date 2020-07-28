@@ -48,11 +48,11 @@ Una vez recopiladas las credenciales necesarias, puede seguir los pasos a contin
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *Fuentes* . La ficha *Catálogo* muestra una serie de orígenes a los que se puede conectar [!DNL Platform]. Cada origen muestra el número de cuentas existentes asociadas a ellas.
 
-En la categoría *[!UICONTROL Cloud Almacenamiento]* , seleccione **[!UICONTROL Amazon Kinesis]** y haga clic **en el icono + (+)** para crear un nuevo [!DNL Kinesis] conector.
+En la categoría *[!UICONTROL Cloud Almacenamiento]* , seleccione Kinesis **[!UICONTROL de]** Amazon y haga clic **en el icono + (+)** para crear un nuevo [!DNL Kinesis] conector.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-Aparecerá el cuadro de diálogo *[!UICONTROL Conectar con Amazon Kinesis]* . En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá el cuadro de diálogo *[!UICONTROL Conectar a Amazon Kinesis]* . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
