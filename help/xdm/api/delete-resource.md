@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Elimine un recurso
 
-En ocasiones puede ser necesario eliminar (DELETE) un recurso del [!DNL Schema Registry]. Solo se pueden eliminar los recursos que cree en el contenedor del inquilino. Esto se realiza realizando una solicitud de DELETE utilizando el `$id` del recurso que desea eliminar.
+Ocasionalmente puede ser necesario eliminar (DELETE) un recurso del [!DNL Schema Registry]. Solo se pueden eliminar los recursos que cree en el contenedor del inquilino. Esto se realiza realizando una solicitud de DELETE utilizando el `$id` del recurso que desea eliminar.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitud**
 
-DELETE solicitudes no requieren encabezados Accept.
+DELETE solicitudes de  no requieren encabezados Accept.
 
 ```SHELL
 curl -X DELETE \
