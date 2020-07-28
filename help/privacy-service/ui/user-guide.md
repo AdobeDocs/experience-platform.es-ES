@@ -46,7 +46,7 @@ Haga clic en uno de los dos botones de alternancia que hay encima del gráfico p
 
 ![](../images/user-guide/hide-errors.png)
 
-Puede vista el número exacto de trabajos asociados con cualquier punto de datos de los gráficos pasando el ratón sobre el punto de datos en cuestión.
+Puede vista del número exacto de trabajos asociados con cualquier punto de datos de los gráficos pasando el ratón sobre el punto de datos en cuestión.
 
 ![Puntos de datos de pasar el ratón por encima](../images/user-guide/mouse-over.png)
 
