@@ -28,7 +28,7 @@ Finalmente, antes de iniciar este tutorial, revise la sección de [introducción
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
+Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 
 - Content-Type: application/json
 
@@ -48,7 +48,7 @@ En la tabla siguiente se describe una terminología común utilizada en este tut
 
 ## Crear un servicio ML con una ejecución de experimentos de formación existente y una puntuación programada
 
-Al publicar un experimento de formación Ejecutar como un servicio ML, puede programar la puntuación proporcionando detalles para el experimento de puntuación Ejecutar la carga útil de una solicitud POST. Esto resulta en la creación de una entidad de Experimento programada para la puntuación.
+Al publicar un experimento de formación Ejecutar como un servicio ML, puede programar la puntuación proporcionando detalles para el experimento de puntuación Ejecutar la carga útil de una solicitud de POST. Esto resulta en la creación de una entidad de Experimento programada para la puntuación.
 
 **Formato API**
 
