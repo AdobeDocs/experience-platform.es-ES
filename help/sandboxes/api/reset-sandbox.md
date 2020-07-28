@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Restablecer un entorno limitado
 
-Los entornos limitados de desarrollo tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud PUT que incluya el simulador para pruebas `name` en la ruta de solicitud.
+Los entornos limitados de desarrollo tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el simulador para pruebas `name` en la ruta de solicitud.
 
 **Formato API**
 
