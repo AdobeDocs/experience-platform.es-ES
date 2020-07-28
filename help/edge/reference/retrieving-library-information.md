@@ -2,7 +2,7 @@
 title: Recuperando información de biblioteca
 seo-title: Recuperación de información de biblioteca con el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo recuperar la biblioteca cargada en el sitio web
-seo-description: Descubra cómo recuperar información sobre la biblioteca cargada en el sitio web por El SDK de Adobe Experience Cloud recopila automáticamente
+seo-description: Obtenga información sobre cómo recuperar información sobre la biblioteca cargada en el sitio web por El SDK de Adobe Experience Cloud recopila automáticamente
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
