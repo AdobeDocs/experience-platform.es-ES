@@ -18,7 +18,7 @@ Para ofrecer mejores experiencias de cliente, debe recopilar y almacenar los dat
 
 El Adobe Experience Platform [!DNL Privacy Service] se desarrolló en respuesta a un cambio fundamental en la manera en que las empresas deben administrar los datos personales de sus clientes. El objetivo central de [!DNL Privacy Service] es automatizar el cumplimiento de las regulaciones de privacidad de datos que, cuando se violan, pueden resultar en importantes multas y interrumpir las operaciones de datos de su empresa.
 
-[!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar las solicitudes de datos de los clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder y eliminar datos personales de clientes desde las aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las normativas de privacidad legales y de la organización.
+[!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar las solicitudes de datos de los clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder y eliminar datos personales de clientes desde las aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las normativas legales y de privacidad de la organización.
 
 ## Getting started with [!DNL Privacy Service] {#getting-started}
 
@@ -31,7 +31,7 @@ Estas decisiones pueden resumirse en las siguientes preguntas:
 1. **¿He etiquetado correctamente mis datos?**
    * Los datos deben etiquetarse correctamente para que el servicio pueda determinar a qué campos acceder o eliminar durante los trabajos de privacidad. Consulte la sección sobre [etiquetado de datos](#label) para obtener más información.
 1. **¿Sé a qué ID enviar[!DNL Privacy Service]?**
-   * Al enviar solicitudes de privacidad, se deben proporcionar ID de cliente individuales específicos de determinadas aplicaciones de Adobe. Consulte las secciones sobre [proporcionar datos](#identity) de identidad y [realizar solicitudes](#requests) de privacidad para obtener más información.
+   * Al enviar solicitudes de privacidad, se deben proporcionar ID de cliente individuales específicos de aplicaciones de Adobe específicas. Consulte las secciones sobre [proporcionar datos](#identity) de identidad y [realizar solicitudes](#requests) de privacidad para obtener más información.
 1. **¿Cómo rastreo mis trabajos de privacidad?**
    * Una vez que haya realizado las solicitudes de privacidad, hay varias opciones para rastrear su estado y los resultados. Consulte la sección sobre [supervisión de trabajos](#monitor) de privacidad para obtener más información.
 
@@ -55,7 +55,7 @@ Además de las regulaciones legales, cualquier norma organizativa o industrial a
 
 ### Datos de etiqueta para solicitudes de privacidad {#label}
 
-Según las [!DNL Experience Cloud] aplicaciones que utilice, debe etiquetar los campos de datos específicos a los que se debe acceder o eliminar en respuesta a las solicitudes de privacidad. El proceso de etiquetado de datos varía según la aplicación. Para obtener información sobre cómo etiquetar datos para cada aplicación de Adobe admitida, consulte el documento en aplicaciones [](./experience-cloud-apps.md)Experience Cloud.
+Según las [!DNL Experience Cloud] aplicaciones que utilice, debe etiquetar los campos de datos específicos a los que se debe acceder o eliminar en respuesta a las solicitudes de privacidad. El proceso de etiquetado de datos varía según la aplicación. Para obtener información sobre cómo etiquetar datos para cada aplicación de Adobe admitida, consulte el documento en aplicaciones [de](./experience-cloud-apps.md)Experience Cloud.
 
 ### Determinar los tipos de datos de identidad a los que enviar [!DNL Privacy Service] {#identity}
 
@@ -95,7 +95,7 @@ Una vez que haya realizado trabajos de privacidad, tiene varias opciones para su
 | --- | --- |
 | [!DNL Privacy Service] IU | La interfaz de usuario [!DNL Privacy Service] proporciona un panel de supervisión que le permite realizar una vista de una representación visual del estado de todas las solicitudes activas. Consulte la guía [del usuario del](ui/overview.md) Privacy Service para obtener más información. |
 | [!DNL Privacy Service] API | Puede supervisar mediante programación el estado de los trabajos de privacidad mediante los extremos de búsqueda proporcionados por la [!DNL Privacy Service] API. Consulte la guía [para desarrolladores de](./api/getting-started.md) Privacy Service para ver los pasos detallados sobre cómo utilizar la API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] aproveche los Eventos de Adobe I/O enviados a un enlace web configurado para facilitar una automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo. Consulte el tutorial sobre la [suscripción a Eventos](./privacy-events.md) de privacidad para obtener más información. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] aproveche los Eventos de E/S de Adobe enviados a un enlace web configurado para facilitar la automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo. Consulte el tutorial sobre la [suscripción a Eventos](./privacy-events.md) de privacidad para obtener más información. |
 
 ## Pasos siguientes
 
