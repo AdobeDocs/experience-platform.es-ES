@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen OData genérico en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Creación de un conector [!DNL Generic OData] de origen en la interfaz de usuario
 
-> [!NOTE]
+>[!NOTE]
 > El [!DNL Generic OData] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
 Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen genérico de Protocolo de datos abiertos (en lo sucesivo denominado &quot;OData&quot;) mediante la interfaz de usuario. [!DNL Platform]
