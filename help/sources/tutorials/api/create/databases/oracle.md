@@ -69,7 +69,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Oracle] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Oracle] es `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
+Para crear una [!DNL Oracle] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Oracle] es `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
 
 ```shell
 curl -X POST \
