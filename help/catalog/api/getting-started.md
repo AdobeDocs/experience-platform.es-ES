@@ -54,7 +54,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Prácticas recomendadas para llamadas [!DNL Catalog] de API
 
-Al realizar solicitudes GET a la [!DNL Catalog] API, se recomienda incluir parámetros de consulta en las solicitudes para devolver solo los objetos y las propiedades que necesite. Las solicitudes sin filtrar pueden hacer que las cargas de respuesta superen los 3 GB de tamaño, lo que puede ralentizar el rendimiento general.
+Al realizar solicitudes de GET a la [!DNL Catalog] API, se recomienda incluir parámetros de consulta en las solicitudes para devolver solo los objetos y las propiedades que necesite. Las solicitudes sin filtrar pueden hacer que las cargas de respuesta superen los 3 GB de tamaño, lo que puede ralentizar el rendimiento general.
 
 Puede realizar la vista de objetos específicos incluyendo su ID en la ruta de la solicitud o utilizando parámetros de consulta como `properties` y `limit` para filtrar las respuestas. Los Filtros se pueden pasar como encabezados y como parámetros de consulta, y los que se pasan como parámetros de consulta tienen prioridad. Consulte el documento sobre el [filtrado de datos](filter-data.md) del catálogo para obtener más información.
 
