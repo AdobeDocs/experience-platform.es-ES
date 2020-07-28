@@ -5,6 +5,9 @@ description: description
 seo-description: descripción de seo
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '37'
+ht-degree: 5%
 
 ---
 
@@ -25,4 +28,4 @@ Extensiones
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Elija Edición > [!UICONTROL Processing Rules] para hacer algo. En su lugar, utilice [!DNL Microsoft Visual Code].
+Seleccione Editar > Reglas [!UICONTROL de procesamiento] para hacer algo. Utilice [!DNL Microsoft Visual Code].
