@@ -39,7 +39,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 | [!DNL Privacy Service] renovación de marca | El llamado anteriormente &quot;Servicio de RGPD&quot; ha sido renombrado a [!DNL Privacy Service] medida que el servicio ha crecido para apoyar otras regulaciones además del RGPD. |
 | Nuevos extremos de API | La ruta de acceso base para la [!DNL Privacy Service] API se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nueva propiedad requerida `regulation` | Al crear nuevos trabajos en la [!DNL Privacy Service] API, se debe proporcionar una `regulation` propiedad en la carga útil de la solicitud para indicar en qué regulación se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. Consulte el documento sobre trabajos [de](api/privacy-jobs.md) privacidad en la guía para [!DNL Privacy Service] desarrolladores para obtener más información. |
-| Compatibilidad con la autenticación Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación Adobe Primetime, utilizando `primetimeAuthentication` como valor de producto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| Compatibilidad con la autenticación de Adobe Primetime | [!DNL Privacy Service] ahora acepta solicitudes de acceso/eliminación de la autenticación de Adobe Primetime, utilizando `primetimeAuthentication` como valor de producto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Mejoras
 
@@ -55,7 +55,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 | --- | --- |
 | Panel de las métricas de solicitud | El nuevo panel de métricas en la interfaz de usuario [!DNL Privacy Service] proporciona visibilidad de las solicitudes de RGPD enviadas, erróneas y completadas. |
 | Generador de solicitudes | Para prestar servicios a organizaciones con usuarios técnicos y no técnicos que envían solicitudes de RGPD, se ha agregado la funcionalidad &quot;Crear solicitud&quot; a la interfaz de usuario. La capacidad de envío de archivos JSON aún está disponible en la interfaz de usuario para las organizaciones que prefieran seguir usándola. [!DNL Privacy Service] |
-| Notificaciones de Evento de trabajos de RGPD | Las notificaciones de Evento sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se enviaban anteriormente mediante avisos de correo electrónico individuales, las notificaciones de evento de GDPR son mensajes que aprovechan los eventos de Adobe I/O, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. [!DNL Privacy Service] Los usuarios de la interfaz de usuario pueden suscribirse a los eventos GDPR de Adobe I/O para recibir actualizaciones cuando se haya completado un producto o el trabajo GDPR. |
+| Notificaciones de Evento de trabajos de RGPD | Las notificaciones de Evento sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se enviaban anteriormente mediante avisos de correo electrónico individuales, las notificaciones de evento de RGPD son mensajes que aprovechan los eventos de E/S de Adobe, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. [!DNL Privacy Service] Los usuarios de la interfaz de usuario pueden suscribirse a eventos de RGPD de E/S de Adobe para recibir actualizaciones cuando se haya completado un producto o el trabajo de RGPD. |
 
 ## 18 de abril de 2019
 
@@ -87,7 +87,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 ### Mejoras
 
-* Aplique el `include` campo en cada envío POST.
+* Aplicar el campo en cada envío de POST `include` .
 * Aplicar el `include` campo al cargar JSON.
 
 ### Correcciones de errores
