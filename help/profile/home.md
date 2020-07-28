@@ -36,7 +36,7 @@ Un perfil es una representación de un sujeto, una organización o una persona, 
 
 ### eventos de series temporales
 
-Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
+Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, ya sea directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
 
 ### Identidades
 
@@ -78,11 +78,11 @@ Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizada
 [!DNL Platform] puede configurarse para enviar el registro y los datos de la serie temporal a [!DNL Profile], admitiendo la transmisión de flujo continuo en tiempo real y la ingestión por lotes. Para obtener más información, consulte el tutorial que describe cómo [agregar datos al Perfil](tutorials/add-profile-data.md)del cliente en tiempo real.
 
 >[!Nota]
->Los datos recopilados a través de las soluciones de Adobe, incluidos [!DNL Analytics Cloud], [!DNL Marketing Cloud]y [!DNL Advertising Cloud], entran [!DNL Experience Platform] y se ingieren en [!DNL Profile].
+>Los datos recopilados a través de soluciones de Adobe, incluidos [!DNL Analytics Cloud], [!DNL Marketing Cloud]y [!DNL Advertising Cloud], fluyen [!DNL Experience Platform] y se ingieren en [!DNL Profile].
 
 ### [!DNL Profile] métricas de ingestión
 
-Perspectivas de la capacidad de observación permite exponer métricas clave en Adobes Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingestión exitosas, los tamaños de registro ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
+Perspectivas de la capacidad de observación permite exponer métricas clave en Adobes Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registros ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
 
 ## [!DNL Data governance] y [!DNL Privacy]
 
