@@ -21,7 +21,7 @@ Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo re
 
 La siguiente guía describe las bibliotecas de nodos admitidas para aprendizaje automático en tiempo real.
 
-## Descubrimiento de nodos para su uso en la canalización ML
+## Detección de nodos para su uso en la canalización ML
 
 Copie el siguiente código en un [!DNL Python] bloc de notas para vista de todos los nodos disponibles para su uso.
 
@@ -57,7 +57,7 @@ Los nodos estándar se basan en bibliotecas de ciencia de datos de código abier
 
 ### ModelUpload
 
-El nodo ModelUpload es un nodo interno de Adobe que toma una ruta de modelo y carga el modelo desde la ruta de modelo local al almacén de blob de aprendizaje automático en tiempo real.
+El nodo ModelUpload es un nodo de Adobe interno que toma una ruta de modelo y carga el modelo desde la ruta de modelo local al almacén de blob de aprendizaje automático en tiempo real.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode es un nodo interno de Adobe que necesita un ID de modelo para extraer el modelo ONNX preentrenado y utilizarlo para realizar una puntuación en los datos entrantes.
+ONNXNode es un nodo de Adobe interno que necesita un ID de modelo para extraer el modelo ONNX preentrenado y utilizarlo para puntear en los datos entrantes.
 
 >[!TIP]
 >Especifique las columnas en el mismo orden en el que desea que se envíen los datos al modelo ONNX para puntuar.
@@ -128,7 +128,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | Para obtener más información, consulte la documentación de la API de [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obtener hiperparámetros de modelo. |
 | node_instance.process(data_message_from_previous_node) | El método `process()` toma DataMsg del nodo anterior y aplica la transformación. Esto depende del nodo actual que se esté utilizando. |
 
-### División
+### Split
 
 Utilice el nodo siguiente para dividir su juego de datos en tren y prueba pasando `train_size` o `test_size`. Esto devuelve un dataframe con un multi-índice. Puede acceder a los marcos de datos de prueba y tren mediante el siguiente ejemplo `msg5.data.xs(“train”)`.
 
