@@ -17,7 +17,7 @@ ht-degree: 2%
 >[!NOTE]
 >El [!DNL Apache Hive] conector on [!DNL Azure HDInsights] está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Apache Hive] a [!DNL Azure HDInsights][!DNL Experience Platform].
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Hive] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Hive] es `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
+Para crear una [!DNL Hive] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Hive] es `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
 
 ```shell
 curl -X POST \
