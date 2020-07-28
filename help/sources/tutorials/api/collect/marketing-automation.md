@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Recopilación de datos de automatización de mercadotecnia a través de las API y los conectores de origen
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a [!DNL Platform] través de las API y los conectores de origen.
 
@@ -63,7 +63,7 @@ Siga los pasos descritos en la guía para desarrolladores hasta que haya creado 
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud POST a la [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud de POST a la [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
@@ -136,7 +136,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destinatario realizando una solicitud POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema.
+Se puede crear un esquema XDM de destinatario realizando una solicitud de POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema.
 
 Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](../../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
 
@@ -244,7 +244,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de un conjunto de datos de destinatario
 
-Se puede crear un conjunto de datos de destinatario realizando una solicitud POST a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destinatario realizando una solicitud de POST a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
 **Formato API**
 
@@ -340,7 +340,7 @@ curl -X POST \
 
 ## Crear una asignación {#mapping}
 
-Para que los datos de origen se puedan ingerir en un conjunto de datos de destinatario, primero deben asignarse al esquema de destinatario al que se adhiere el conjunto de datos de destinatario. Esto se logra mediante la realización de una solicitud POST a la [!DNL Conversion Service] API con asignaciones de datos definidas en la carga útil de la solicitud.
+Para que los datos de origen se puedan ingerir en un conjunto de datos de destinatario, primero deben asignarse al esquema de destinatario al que se adhiere el conjunto de datos de destinatario. Esto se consigue realizando una solicitud de POST a [!DNL Conversion Service] API con asignaciones de datos definidas en la carga útil de la solicitud.
 
 **Formato API**
 
@@ -557,14 +557,14 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 ## Crear un flujo de datos
 
-El último paso hacia la recopilación de datos de automatización de mercadotecnia es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
+El último paso hacia la recopilación de datos de automatización de mercadotecnia es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores necesarios:
 
 * [ID de conexión de origen](#source)
 * [ID de conexión de Destinatario](#target)
 * [ID de asignación](#mapping)
 * [Id. de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores anteriormente mencionados dentro de la carga útil.
 
 Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
 
