@@ -28,7 +28,7 @@ Para realizar llamadas a los [!DNL Dataset Service] extremos descritos en este d
 
 ## Lista de todas las etiquetas {#list-labels}
 
-Con la [!DNL Policy Service] API, puede realizar la lista de todas `core` o `custom` las etiquetas haciendo una solicitud GET a `/labels/core` o `/labels/custom`, respectivamente.
+Con la [!DNL Policy Service] API, puede realizar la lista de todas `core` o `custom` las etiquetas mediante una solicitud de GET a `/labels/core` o `/labels/custom`, respectivamente.
 
 **Formato API**
 
@@ -110,7 +110,7 @@ Una respuesta correcta devuelve una lista de las etiquetas personalizadas recupe
 
 ## Buscar una etiqueta {#look-up-label}
 
-Puede buscar una etiqueta específica incluyendo la propiedad `name` de esa etiqueta en la ruta de una solicitud GET a la [!DNL Policy Service] API.
+Puede buscar una etiqueta específica incluyendo la propiedad de esa `name` etiqueta en la ruta de una solicitud de GET a la [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
 
 ## Crear o actualizar una etiqueta personalizada {#create-update-label}
 
-Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud PUT a la [!DNL Policy Service] API.
+Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT a la [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -230,7 +230,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada, con e
 
 ## Buscar etiquetas para un conjunto de datos {#look-up-dataset-labels}
 
-Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente haciendo una solicitud GET a la [!DNL Dataset Service] API.
+Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente haciendo una solicitud de GET a la [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 
 ## Aplicar etiquetas a un conjunto de datos {#apply-dataset-labels}
 
-Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud POST o PUT a la [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe las etiquetas existentes y las reemplaza por las proporcionadas en la carga útil.
+Puede crear un conjunto de etiquetas para un conjunto de datos proporcionándolas en la carga útil de una solicitud de POST o PUT a la [!DNL Dataset Service] API. El uso de cualquiera de estos métodos sobrescribe las etiquetas existentes y las reemplaza por las proporcionadas en la carga útil.
 
 **Formato API**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitud**
 
-La siguiente solicitud POST agrega una serie de etiquetas al conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud PUT.
+La siguiente solicitud de POST agrega una serie de etiquetas al conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de PUT.
 
 ```shell
 curl -X POST \
