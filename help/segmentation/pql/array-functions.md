@@ -20,7 +20,7 @@ ht-degree: 5%
 
 La `in` función se utiliza para determinar si un elemento es miembro de una matriz o lista.
 
-**Formato**
+**Format**
 
 ```sql
 {VALUE} in {ARRAY}
@@ -42,7 +42,7 @@ La `notIn` función se utiliza para determinar si un elemento no es miembro de u
 >
 >La `notIn` función *también* garantiza que ninguno de los dos valores sea igual a nulo. Por lo tanto, los resultados no son una negación exacta de la `in` función.
 
-**Formato**
+**Format**
 
 ```sql
 {VALUE} notIn {ARRAY}
@@ -60,7 +60,7 @@ person.birthMonth notIn [3, 6, 9]
 
 La `intersects` función se utiliza para determinar si dos matrices o listas tienen al menos un miembro común.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.intersects({ARRAY})
@@ -78,7 +78,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 La `intersection` función se utiliza para determinar los miembros comunes de dos matrices o listas.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.intersection({ARRAY})
@@ -96,7 +96,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 La `subsetOf` función se utiliza para determinar si una matriz específica (matriz A) es un subconjunto de otra matriz (matriz B). En otras palabras, que todos los elementos de la matriz A son elementos de la matriz B.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.subsetOf({ARRAY})
@@ -114,7 +114,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 La `supersetOf` función se utiliza para determinar si una matriz específica (matriz A) es un superconjunto de otra matriz (matriz B). En otras palabras, la matriz A contiene todos los elementos de la matriz B.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.supersetOf({ARRAY})
@@ -132,7 +132,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 La `includes` función se utiliza para determinar si una matriz o lista contiene un elemento determinado.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.includes({ITEM})
@@ -150,7 +150,7 @@ person.favoriteColors.includes("red")
 
 La `distinct` función se utiliza para quitar valores de duplicado de una matriz o lista.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.distinct()
@@ -168,7 +168,7 @@ person.orders.storeId.distinct().count() > 1
 
 La `groupBy` función se utiliza para dividir los valores de una matriz o lista en un grupo según el valor de la expresión.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.groupBy({EXPRESSION)
@@ -191,7 +191,7 @@ orders.groupBy(storeId)
 
 La `filter` función se utiliza para filtrar una matriz o lista según una expresión.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.filter({EXPRESSION})
@@ -214,7 +214,7 @@ person.filter(age >= 21)
 
 La `map` función se utiliza para crear una nueva matriz aplicando una expresión a cada elemento de una matriz determinada.
 
-**Formato**
+**Format**
 
 ```sql
 array.map(expression)
@@ -232,7 +232,7 @@ numbers.map(square)
 
 La `topN` función se utiliza para devolver los primeros `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.topN({VALUE}, {AMOUNT})
@@ -256,7 +256,7 @@ orders.topN(price, 5)
 
 La `bottomN` función se utiliza para devolver los últimos `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.bottomN({VALUE}, {AMOUNT})
@@ -280,7 +280,7 @@ orders.bottomN(price, 5)
 
 La `head` función se utiliza para devolver el primer elemento de la matriz o lista.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.head()
