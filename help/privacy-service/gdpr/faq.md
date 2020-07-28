@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Preguntas más frecuentes sobre el RGPD
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el [!DNL General Data Protection Regulation] (RGPD) y su implementación en Adobe Experience Cloud.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre el [!DNL General Data Protection Regulation] RGPD y su implementación en Adobe Experience Cloud.
 
 Las definiciones de los diversos términos relacionados con el RGPD que se utilizan en este documento pueden encontrarse en el artículo sobre terminología [del](terminology.md) RGPD.
 
