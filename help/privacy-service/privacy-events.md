@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Suscribirse a [!DNL Privacy Events]
 
-[!DNL Privacy Events] son mensajes proporcionados por Adobe Experience Platform [!DNL Privacy Service], que aprovechan los Eventos de Adobe I/O enviados a un webgancho configurado para facilitar una automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo.
+[!DNL Privacy Events] son mensajes proporcionados por Adobe Experience Platform [!DNL Privacy Service], que aprovechan los Eventos de E/S de Adobe enviados a un weblink configurado para facilitar la automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo.
 
 Actualmente existen cuatro tipos de notificaciones relacionadas con el ciclo vital de la solicitud de trabajo de privacidad:
 
@@ -25,7 +25,7 @@ Actualmente existen cuatro tipos de notificaciones relacionadas con el ciclo vit
 | Producto completado | Una de las soluciones asociadas con este trabajo ha completado su trabajo. |
 | Error del producto | Una de las soluciones informó de un error al procesar la solicitud. |
 
-Este documento proporciona los pasos para configurar una integración para [!DNL Privacy Service] las notificaciones dentro de Adobe I/O. Para obtener una descripción general de alto nivel de [!DNL Privacy Service] y sus funciones, consulte la descripción general [del](home.md)Privacy Service.
+Este documento proporciona los pasos para configurar una integración para [!DNL Privacy Service] las notificaciones dentro de E/S de Adobe. Para obtener una descripción general de alto nivel de [!DNL Privacy Service] y sus funciones, consulte la descripción general [del](home.md)Privacy Service.
 
 ## Primeros pasos
 
