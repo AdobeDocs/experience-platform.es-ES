@@ -65,11 +65,11 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Antes de conectarse [!DNL Platform] a una [!DNL Dynamics] cuenta, debe comprobar que existen especificaciones de conexión para [!DNL Dynamics]. Si no existen especificaciones de conexión, no se puede establecer una conexión.
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión para [!DNL Dynamics] realizar una solicitud GET y utilizar parámetros de consulta.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión [!DNL Dynamics] mediante una solicitud de GET y parámetros de consulta.
 
 **Formato API**
 
-El envío de una solicitud GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="dynamics-online"` para obtener información específica para [!DNL Dynamics].
+El envío de una solicitud de GET sin parámetros de consulta devolverá las especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="dynamics-online"` para obtener información específica para [!DNL Dynamics].
 
 ```http
 GET /connectionSpecs
@@ -144,7 +144,7 @@ Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Dyn
 
 Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por [!DNL Dynamics] cuenta, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
-Realice la siguiente solicitud POST para crear una conexión base.
+Realice la siguiente solicitud de POST para crear una conexión base.
 
 **Formato API**
 
