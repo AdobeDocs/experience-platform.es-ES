@@ -38,7 +38,7 @@ Los Esquemas solucionan este problema permitiendo que los datos se integren desd
 
 ### flujos de trabajo basados en Esquemas en [!DNL Experience Platform]
 
-La estandarización es un concepto clave detrás [!DNL Experience Platform]. XDM, dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
+La estandarización es un concepto clave detrás [!DNL Experience Platform]. XDM, impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
 
 La infraestructura en la que [!DNL Experience Platform] se construye, conocida como [!DNL XDM System], facilita los flujos de trabajo basados en esquemas e incluye los patrones de consumo [!DNL Schema Registry], [!DNL Schema Editor], metadatos de esquema y servicios. See the [XDM System overview](../home.md) for more information.
 
@@ -101,13 +101,13 @@ La composición de un esquema comienza asignando una clase. Las clases definen l
 
 Una clase también determina qué mezclas serán elegibles para su uso en el esquema. Esto se analiza más detalladamente en la sección de [mezclas](#mixin) que sigue.
 
-Existen clases estándar que se proporcionan con cada integración de [!DNL Experience Platform], conocidas como clases &quot;Industria&quot;. Las clases industriales son normas generalmente aceptadas que se aplican a un amplio conjunto de casos de uso. Algunos ejemplos de clases del sector incluyen las clases [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent] las clases proporcionadas por Adobe.
+Existen clases estándar que se proporcionan con cada integración de [!DNL Experience Platform], conocidas como clases &quot;Industria&quot;. Las clases industriales son normas generalmente aceptadas que se aplican a un amplio conjunto de casos de uso. Algunos ejemplos de clases del sector incluyen las [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent] clases proporcionadas por Adobe.
 
 [!DNL Experience Platform] también permite clases de &quot;proveedor&quot;, que son clases definidas por [!DNL Experience Platform] socios y que se ponen a disposición de todos los clientes que utilizan ese servicio o aplicación de proveedor dentro de [!DNL Platform].
 
 También hay clases que se utilizan para describir casos de uso más específicos para organizaciones individuales dentro de [!DNL Platform], llamadas clases de &quot;cliente&quot;. Las clases de cliente son definidas por una organización cuando no hay clases del sector o del proveedor disponibles para describir un caso de uso único.
 
-Por ejemplo, un esquema que representa a los miembros de un programa de Lealtad describe los datos de registro de un individuo y, por lo tanto, pueden basarse en la [!DNL XDM Individual Profile] clase, una clase industrial estándar definida por Adobe.
+Por ejemplo, un esquema que representa a los miembros de un programa de Lealtad describe los datos de registro de un individuo y, por lo tanto, se pueden basar en la [!DNL XDM Individual Profile] clase, una clase de sector estándar definida por el Adobe.
 
 ### Mixin {#mixin}
 
@@ -160,7 +160,7 @@ Algunas operaciones de datos utilizadas por los servicios y las aplicaciones pos
 * [!DNL Query Service](../../query-service/home.md)
 * [!DNL Data Science Workspace](../../data-science-workspace/home.md)
 
-Antes de crear un esquema para su uso en los servicios intermedios, revise la documentación apropiada para esos servicios a fin de comprender mejor los requisitos y las limitaciones sobre el terreno para las operaciones de datos a las que está destinado el esquema.
+Antes de crear un esquema para su uso en los servicios intermedios, revise la documentación apropiada para esos servicios a fin de comprender mejor los requisitos y limitaciones sobre el terreno para las operaciones de datos a las que está destinado el esquema.
 
 ### Campos XDM
 
@@ -182,7 +182,7 @@ El diagrama siguiente muestra estos esquemas y los campos que aporta cada mezcla
 
 ![](../images/schema-composition/composition.png)
 
-### Unión {#union}
+### Union {#union}
 
 Aunque [!DNL Experience Platform] le permite componer esquemas para casos de uso específicos, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase ExperienceEvent de XDM y dos esquemas basados en [!DNL XDM Individual Profile] la clase. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] y [!DNL XDM Individual Profile], respectivamente).
 
@@ -200,7 +200,7 @@ Todos los archivos de datos que se ingieran [!DNL Experience Platform] deben cum
 
 Ahora que comprendes los conceptos básicos de la composición de esquemas, estás listo para empezar a crear esquemas usando el [!DNL Schema Registry].
 
-El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] en Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobe, recursos del proveedor definidos por [!DNL Experience Platform] socios y clases, mezclas, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] en Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobes, recursos del proveedor definidos por [!DNL Experience Platform] socios y clases, mezclas, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
 
 Para empezar a componer esquemas mediante la interfaz de usuario, siga el tutorial [del Editor de](../tutorials/create-schema-ui.md) Esquemas para crear el esquema &quot;Miembros de lealtad&quot; mencionado a lo largo de este documento.
 
