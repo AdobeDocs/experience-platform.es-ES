@@ -177,7 +177,7 @@ Con la [!DNL Real-time Customer Profile] API, el `/config/mergePolicies` punto f
 
 ### Acceso a una única directiva de combinación por ID
 
-Puede obtener acceso a una única directiva de combinación mediante su ID, realizando una solicitud GET al extremo e incluyendo la `/config/mergePolicies` `mergePolicyId` en la ruta de la solicitud.
+Puede acceder a una única directiva de combinación mediante su ID realizando una solicitud de GET al extremo e incluyendo la `/config/mergePolicies` `mergePolicyId` en la ruta de la solicitud.
 
 **Formato API**
 
@@ -227,7 +227,7 @@ Consulte los [componentes de la sección de políticas](#components-of-merge-pol
 
 ### Recuperar varias directivas de combinación por sus ID
 
-Puede recuperar varias directivas de combinación haciendo una solicitud POST al extremo e incluyendo los ID de las directivas de combinación que desee recuperar en el cuerpo de la solicitud. `/config/mergePolicies/bulk-get`
+Puede recuperar varias directivas de combinación haciendo una solicitud de POST al extremo e incluyendo los ID de las directivas de combinación que desee recuperar en el cuerpo de la solicitud. `/config/mergePolicies/bulk-get`
 
 **Formato API**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve Estado HTTP 207 (Varios estados) y los detalles de las directivas de combinación cuyos ID se proporcionaron en la solicitud POST.
+Una respuesta correcta devuelve Estado HTTP 207 (Varios estados) y los detalles de las directivas de combinación cuyos ID se proporcionaron en la solicitud del POST.
 
 ```json
 { 
@@ -324,7 +324,7 @@ Consulte los [componentes de la sección de políticas](#components-of-merge-pol
 
 ### Lista de varias directivas de combinación por criterios
 
-Puede realizar la lista de varias directivas de combinación dentro de la organización de IMS enviando una solicitud GET al extremo y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. `/config/mergePolicies` Se pueden incluir varios parámetros, separados por signos de &amp;. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las directivas de combinación disponibles para su organización.
+Puede lista de varias directivas de combinación dentro de la organización de IMS enviando una solicitud de GET al extremo y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. `/config/mergePolicies` Se pueden incluir varios parámetros, separados por signos de &amp;. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las directivas de combinación disponibles para su organización.
 
 **Formato API**
 
@@ -435,7 +435,7 @@ Una respuesta correcta devuelve una lista paginada de directivas de combinación
 
 ## Crear una directiva de combinación
 
-Puede crear una nueva directiva de combinación para su organización haciendo una solicitud POST al `/config/mergePolicies` extremo.
+Puede crear una nueva directiva de combinación para su organización haciendo una solicitud de POST al `/config/mergePolicies` extremo.
 
 **Formato API**
 
@@ -524,7 +524,7 @@ Puede modificar una directiva de combinación existente editando atributos indiv
 
 ### Editar campos de directiva de combinación individuales
 
-Puede editar campos individuales para una directiva de combinación realizando una solicitud PATCH al punto final `/config/mergePolicies/{mergePolicyId}` :
+Puede editar campos individuales para una directiva de combinación realizando una solicitud de PATCH al punto final `/config/mergePolicies/{mergePolicyId}` :
 
 **Formato API**
 
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 |---|---|
-| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones PATCH en la documentación de Parche [JSON](http://jsonpatch.com) |
+| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones de PATCH en la documentación del parche [JSON](http://jsonpatch.com) |
 | `path` | Ruta del campo que se va a actualizar. Los valores aceptados son: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | El valor en el que se va a establecer el campo especificado. |
 
@@ -600,7 +600,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación rec
 
 ### Sobrescribir una directiva de combinación
 
-Otra forma de modificar una directiva de combinación es utilizar una solicitud PUT, que sobrescribe toda la directiva de combinación.
+Otra forma de modificar una directiva de combinación es utilizar una solicitud de PUT, que sobrescribe toda la directiva de combinación.
 
 **Formato API**
 
@@ -693,7 +693,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación act
 
 ## Eliminar una directiva de combinación
 
-Una directiva de combinación puede eliminarse realizando una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
+Una directiva de combinación se puede eliminar haciendo una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
 
 **Formato API**
 
@@ -720,7 +720,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud GET para la vista de la directiva de combinación por su ID. Si se eliminó la directiva de combinación, recibirá un error de estado HTTP 404 (no encontrado).
+Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud de GET para la vista de la directiva de combinación por su ID. Si se eliminó la directiva de combinación, recibirá un error de estado HTTP 404 (no encontrado).
 
 ## Pasos siguientes
 
