@@ -18,7 +18,7 @@ Las perspectivas contienen métricas que se utilizan para facultar a un científ
 
 ## Recuperar una lista de perspectivas
 
-Puede recuperar una lista de perspectivas realizando una sola solicitud GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de perspectivas realizando una sola solicitud de GET al extremo de perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -108,7 +108,7 @@ Una respuesta correcta devuelve una carga útil que incluye una lista de perspec
 
 ## Recuperar una perspectiva específica
 
-Para buscar una perspectiva en particular, realice una solicitud GET y proporcione un valor válido `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Para buscar una perspectiva en particular, realice una solicitud de GET y proporcione un valor válido `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -171,7 +171,7 @@ Una respuesta correcta devuelve una carga útil que incluye el identificador ún
 
 ## Añadir una nueva perspectiva de modelo
 
-Puede crear una nueva perspectiva de modelo realizando una solicitud POST y una carga útil que proporcione contexto, eventos y métricas para la nueva perspectiva de modelo. El campo de contexto utilizado para crear una nueva perspectiva del modelo no es necesario para tener servicios existentes adjuntos, pero puede elegir crear la nueva perspectiva del modelo con los servicios existentes proporcionando uno o varios de los ID correspondientes:
+Puede crear una nueva perspectiva de modelo realizando una solicitud de POST y una carga útil que proporcione contexto, eventos y métricas para la nueva perspectiva de modelo. El campo de contexto utilizado para crear una nueva perspectiva del modelo no es necesario para tener servicios existentes adjuntos, pero puede elegir crear la nueva perspectiva del modelo con los servicios existentes proporcionando uno o varios de los ID correspondientes:
 
 ```json
 "context": {
@@ -260,11 +260,11 @@ Una respuesta correcta devolverá una carga útil que tenga un `{INSIGHT_ID}` y 
 
 | Propiedad | Descripción |
 | --- | --- |
-| `insightId` | ID única que se crea para esta perspectiva en particular cuando se realiza una solicitud POST correcta. |
+| `insightId` | ID única que se crea para esta perspectiva en particular cuando se realiza una solicitud de POST correcta. |
 
 ## Recuperar una lista de métricas predeterminadas para algoritmos
 
-Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una sola solicitud GET al extremo de las métricas. Para consulta de una métrica en particular, realice una solicitud GET y proporcione un valor válido `{ALGORITHM}` en la ruta de solicitud.
+Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una sola solicitud de GET al extremo de la métrica. Para consulta de una métrica en particular, realice una solicitud de GET y proporcione un valor válido `{ALGORITHM}` en la ruta de la solicitud.
 
 **Formato de API**
 
