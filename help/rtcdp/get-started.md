@@ -1,8 +1,8 @@
 ---
-title: Introducción a los datos del cliente en tiempo real de Adobe Platform
-seo-title: Introducción a los datos del cliente en tiempo real de Adobe Platform
-description: Escenario de muestra para Platform de datos del cliente en tiempo real de Adobe
-seo-description: Escenario de muestra para Platform de datos del cliente en tiempo real de Adobe
+title: Introducción a los datos de cliente en tiempo real de Adobe Platform
+seo-title: Introducción a los datos de cliente en tiempo real de Adobe Platform
+description: Escenario de muestra para Adobe Datos del cliente en tiempo real Platform
+seo-description: Escenario de muestra para Adobe Datos del cliente en tiempo real Platform
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 0%
 ---
 
 
-# Introducción a los datos del cliente en tiempo real de Adobe Platform
+# Introducción a los datos de cliente en tiempo real de Adobe Platform
 
 Esta guía de introducción le guía a través de una implementación de muestra de Adobe Real-time Customer Data Platform (CDP en tiempo real). Puede utilizarlo como ejemplo al configurar su propia implementación. Aunque esta guía muestra ejemplos específicos, vincula a información adicional que puede utilizar al crear la configuración.
 
-Este ejemplo muestra el poder de Platform de datos del cliente en tiempo real de Adobe, con tecnología de Adobe Experience Platform, para:
+Este ejemplo muestra el poder de Adobe Real-time Customer Data Platform, con tecnología de Adobe Experience Platform, para:
 
 * Ingestar datos de varias fuentes
 * Combinarlos en un solo [!DNL real-time customer profile]
@@ -67,7 +67,7 @@ Cuando los clientes visitan el sitio por primera vez, usted no sabe nada de ello
 
 ![imagen](assets/luma-site.png)
 
-A medida que navegan, los datos se capturan en tiempo real y se envían no sólo a un grupo de informes de Adobe Analytics, sino también directamente a Adobe Experience Platform. A medida que se recopilan los datos, se empieza a formar una sola vista del consumidor, basada en los datos de comportamiento de [!DNL Experience Platform's real-time customer profile].
+A medida que navegan, los datos se capturan en tiempo real y se envían no sólo a un grupo de informes en Adobe Analytics, sino también directamente a Adobe Experience Platform. A medida que se recopilan los datos, se empieza a formar una sola vista del consumidor, basada en los datos de comportamiento de [!DNL Experience Platform's real-time customer profile].
 
 Muchos visitantes al sitio web son probablemente clientes repetidos que han comprado anteriormente a Luma.  Es importante que Luma personalice los mensajes y las ofertas para abordar tanto los visitantes nuevos como los repetidos, así como los clientes conocidos.
 
@@ -110,7 +110,7 @@ Ella hace clic en la página de inicio para explorar un poco más.
 
 Sarah recibe una experiencia de página de inicio personalizada que se distribuye dinámicamente, basada en su [!DNL Real-time Customer Profile] Adobe Experience Platform.
 
-Ella ve contenido relevante, gracias a la personalización impulsada por Adobe Sensei en Adobe Target, que tiene en cuenta sus compras pasadas y su afinidad hacia la fabricación de ropa y equipo. Luma también adapta el contenido del catálogo masculino a los engranajes en marcha para los hombres según su última exploración.
+Ella ve contenido relevante, gracias a la personalización impulsada por Adobe Sensei en el Adobe Target, que tiene en cuenta sus compras pasadas y la afinidad hacia las prendas de vestir y los engranajes. Luma también adapta el contenido del catálogo masculino a los engranajes en marcha para los hombres según su última exploración.
 
 Más abajo de la página, se muestran productos destacados a Sarah, así como una nueva bandeja de recomendaciones basada en los artículos que ha visto más recientemente.
 
@@ -135,7 +135,7 @@ El equipo de Luma tiene todos sus datos de comportamiento y de clientes en un so
 Pueden ingestar datos de todas las fuentes siguientes:
 
 * Datos de soluciones de Adobe Experience Cloud existentes
-* Fuentes que no son de Adobe, como el programa de lealtad de Luma, el centro de llamadas y los datos del sistema de puntos de venta
+* Fuentes que no son de Adobe, como el programa de lealtad de Luma, el centro de llamadas y los datos del sistema del punto de venta
 * Datos de flujo continuo en tiempo real de fuentes de datos Luma
 * Datos en tiempo real de soluciones de Adobe (no se requieren etiquetas nuevas)
 
@@ -236,8 +236,8 @@ Cuando agregó el segmento &quot;Abandonadores de carro de compras de regalos&qu
 
 Haga clic en **[!UICONTROL Enviar a destinos]**.
 
-En CDP en tiempo real de Adobe, Luma puede actuar sin problemas en sus segmentos de audiencia para la personalización.\
-Aquí vemos todos los destinos disponibles para que Luma envíe este destino, tanto a las soluciones Adobe como a las que no son de Adobe:
+En Adobe, CDP en tiempo real, Luma puede actuar sin problemas en sus segmentos de audiencia para la personalización.\
+Aquí vemos todos los destinos disponibles para que Luma envíe este destino a soluciones tanto de Adobe como de no Adobe:
 
 ![imagen](assets/luma-dest.png)
 
