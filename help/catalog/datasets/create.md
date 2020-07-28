@@ -469,7 +469,7 @@ Encontrará pasos detallados para trabajar con la API de acceso a datos en la gu
 
 ## Actualizar el esquema del conjunto de datos
 
-Puede agregar campos e ingerir datos adicionales en conjuntos de datos que haya creado. Para ello, primero debe actualizar el esquema agregando propiedades adicionales que definan los nuevos datos. Esto se puede hacer con las operaciones PATCH y/o PUT para actualizar el esquema existente.
+Puede agregar campos e ingerir datos adicionales en conjuntos de datos que haya creado. Para ello, primero debe actualizar el esquema agregando propiedades adicionales que definan los nuevos datos. Esto se puede hacer con operaciones de PATCH o PUT para actualizar el esquema existente.
 
 Para obtener más información sobre la actualización de esquemas, consulte la Guía [del desarrollador de API de](../../xdm/api/getting-started.md)Esquema Registry.
 
