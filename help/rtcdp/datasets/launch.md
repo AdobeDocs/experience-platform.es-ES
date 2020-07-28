@@ -48,8 +48,8 @@ En primer lugar, instale la extensión de Adobe Experience Platform [!DNL Web SD
 
    Los únicos ajustes que necesita ahora son:
 
-   * **ID de configuración:** Especifique el ID de configuración que obtuvo de su representante de Adobe.
-   * **Dominio de Edge:** Especifique el dominio Edge que obtuvo de su representante de Adobe.
+   * **ID de configuración:** Especifique el ID de configuración que obtuvo del representante de Adobe.
+   * **Dominio de Edge:** Especifique el dominio Edge que obtuvo del representante de Adobe.
 
 1. Haga clic en **[!UICONTROL Guardar]** y continúe con el paso siguiente.
 
