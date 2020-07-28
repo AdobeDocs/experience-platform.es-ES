@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un conector del Explorador de datos de Azure mediante la API de servicio de flujo
+title: Creación de un conector de Data Explorer de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL Azure Data Explorer] (en adelante, &quot;Explorador de datos&quot;) a [!DNL Experience Platform].
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL Azure Data Explorer] (en adelante, &quot;Data Explorer&quot;) a [!DNL Experience Platform].
 
 ## Primeros pasos
 
@@ -43,7 +43,7 @@ Para [!DNL Flow Service] conectarse con [!DNL Data Explorer], debe proporcionar 
 | `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
 | `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL Data Explorer] es `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
-Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)del Explorador de datos.
+Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)de Data Explorer.
 
 ### Leer llamadas de API de muestra
 
@@ -77,7 +77,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Data Explorer] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Data Explorer] es `0479cc14-7651-4354-b233-7480606c2ac3`.
+Para crear una [!DNL Data Explorer] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Data Explorer] es `0479cc14-7651-4354-b233-7480606c2ac3`.
 
 ```shell
 curl -X POST \
