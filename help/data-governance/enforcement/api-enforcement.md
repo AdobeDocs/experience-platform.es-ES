@@ -132,7 +132,7 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 ## Evaluar mediante conjuntos de datos
 
-Puede evaluar una directiva DULE probando una acción de mercadotecnia con uno o más conjuntos de datos desde los que se pueden recopilar etiquetas DULE. Esto se realiza realizando una solicitud POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcionando ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
+Puede evaluar una directiva DULE probando una acción de mercadotecnia con uno o más conjuntos de datos desde los que se pueden recopilar etiquetas DULE. Esto se lleva a cabo realizando una solicitud de POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcionando ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
