@@ -1,8 +1,8 @@
 ---
 title: Calidad de los datos en tiempo real de los datos del cliente en Platform
-seo-title: Calidad de los datos en Platform de datos de clientes en tiempo real de Adobe
+seo-title: Calidad de los datos en Adobe Datos del cliente en tiempo real Platform
 description: Un documento sobre la calidad de los datos en tiempo real de los datos de los clientes en Platform
-seo-description: Un documento que describe cómo funciona la calidad de los datos mediante la ingestión de datos y lotes en los datos del cliente en tiempo real de Adobe Platform
+seo-description: Un documento que describe cómo funciona la calidad de los datos mediante la ingestión de datos y lotes en Adobe Datos del cliente en tiempo real Platform
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 CDP en tiempo real se construye sobre Adobes Experience Platform y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidades. Por lo tanto, puede estar seguro de que sus datos se comprobarán y validarán a medida que se vayan ingeriendo.
 
-Para obtener información más detallada sobre la calidad de los datos, consulte la documentación sobre la calidad de los [datos en Adobe I/O](../../ingestion/quality/overview.md).
+Para obtener información más detallada sobre la calidad de los datos, lea la documentación sobre la calidad de los [datos en E/S](../../ingestion/quality/overview.md)de Adobe.
