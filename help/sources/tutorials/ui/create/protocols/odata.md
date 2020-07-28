@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 > El [!DNL Generic OData] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen genérico de Protocolo de datos abiertos (en lo sucesivo denominado &quot;OData&quot;) mediante la interfaz de usuario. [!DNL Platform]
+Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen genérico de Protocolo de datos abiertos (en lo sucesivo denominado &quot;OData&quot;) mediante la interfaz del [!DNL Platform] usuario.
 
 ## Primeros pasos
 
