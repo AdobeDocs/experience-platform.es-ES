@@ -16,7 +16,7 @@ ht-degree: 0%
 
 El principal componente de un esquema es una clase. La clase contiene el conjunto mínimo de campos que se deben definir para capturar los datos principales de un esquema. Por ejemplo, si diseñara un esquema para automóviles y camiones, lo más probable es que utilizaría una clase llamada Vehículo que describiera las propiedades comunes básicas de todos los vehículos.
 
-Adobe y otros [!DNL Experience Platform] socios proporcionan varias clases estándar, pero también puede definir sus propias clases y guardarlas en el [!DNL Schema Registry]. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
+Hay varias clases estándar proporcionadas por Adobe y otros [!DNL Experience Platform] socios, pero también puede definir sus propias clases y guardarlas en el [!DNL Schema Registry]. A continuación, puede componer un esquema que implemente la clase que ha creado y definir mezclas compatibles con la clase recién definida.
 
 >[!NOTE]
 >
@@ -152,4 +152,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Realizar una solicitud GET para lista de todas las clases en el contenedor del inquilino ahora incluiría la clase Property. También puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación URL para realizar la vista de la nueva clase directamente. Asegúrese de incluir el `version` en el encabezado Accept al realizar una solicitud de búsqueda.
+Realizar una solicitud de GET para la lista de todas las clases en el contenedor del inquilino ahora incluiría la clase Property. También puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para realizar vistas de la nueva clase directamente. Asegúrese de incluir el `version` en el encabezado Accept al realizar una solicitud de búsqueda.
