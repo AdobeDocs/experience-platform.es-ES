@@ -66,7 +66,7 @@ Para crear una [!DNL HubSpot] conexión, debe existir un conjunto de especificac
 
 **Formato API**
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="hubspot"` para obtener información específica para [!DNL HubSpot].
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud de GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="hubspot"` para obtener información específica para [!DNL HubSpot].
 
 ```http
 GET /connectionSpecs
