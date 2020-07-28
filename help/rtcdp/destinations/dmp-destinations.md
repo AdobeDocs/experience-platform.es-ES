@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Actualmente, Adobe Real-time Customer Data Platform admite los destinos de Platform (DMP) de Gestión de datos que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
-* [Extensión DIL de Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
+* [extensión del DIL del Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
