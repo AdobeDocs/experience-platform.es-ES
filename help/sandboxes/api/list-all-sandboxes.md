@@ -5,13 +5,16 @@ title: Lista de todos los entornos limitados
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
 
 # Lista de todos los entornos limitados
 
-Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o de otro tipo), realice una solicitud GET al `/sandboxes` punto final.
+Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o de otro tipo), realice una solicitud de GET al `/sandboxes` punto final.
 
 **Formato API**
 
