@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear una chispa de Apache en el conector de origen de Azure HDInsights en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creación de un [!DNL Apache Spark] conector de origen [!DNL Azure HDInsights] en la interfaz de usuario
 
-> [!NOTE]
+>[!NOTE]
 > El [!DNL Apache Spark] conector on [!DNL Azure HDInsights] está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
 Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector [!DNL Apache Spark] en [!DNL Azure HDInsights] origen mediante la interfaz [!DNL Platform] de usuario.
