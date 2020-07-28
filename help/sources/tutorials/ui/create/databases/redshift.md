@@ -53,7 +53,7 @@ En la categoría *[!UICONTROL Bases]* de datos, seleccione **[!UICONTROL Amazon 
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con Amazon Redshift]* . En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página *[!UICONTROL Conectar con Amazon Redshift]* . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
