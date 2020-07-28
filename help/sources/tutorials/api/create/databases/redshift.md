@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >El [!DNL Amazon Redshift] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a [!DNL Amazon Redshift] (en adelante, &quot;[!DNL Redshift]&quot;).
 
@@ -69,9 +69,9 @@ Para crear una [!DNL Redshift] conexión, debe existir un conjunto de especifica
 
 **Formato API**
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión para [!DNL Redshift] realizar una solicitud GET y utilizar parámetros de consulta.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión [!DNL Redshift] mediante una solicitud de GET y parámetros de consulta.
 
-El envío de una solicitud GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="amazon-redshift"` para obtener información específica para [!DNL Redshift].
+El envío de una solicitud de GET sin parámetros de consulta devolverá las especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="amazon-redshift"` para obtener información específica para [!DNL Redshift].
 
 ```http
 GET /connectionSpecs
