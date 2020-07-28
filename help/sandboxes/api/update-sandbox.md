@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Actualización de un simulador para pruebas
 
-Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud PATCH que incluya el simulador para pruebas `name` en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
+Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el simulador para pruebas `name` en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 
 >[!NOTE]
 >
