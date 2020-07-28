@@ -21,7 +21,7 @@ Los motores son la base de los modelos de aprendizaje automático en el área de
 >[!TIP]
 >Si no tiene una URL de Docker, visite los archivos de origen del [paquete en un tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obtener un tutorial paso a paso sobre la creación de una URL de host de Docker.
 
-Se requieren las credenciales del Registro de Docker para cargar un archivo de fórmula empaquetado, incluyendo la dirección URL del host de Docker, el nombre de usuario y la contraseña. Puede buscar esta información realizando la siguiente solicitud GET:
+Se requieren las credenciales del Registro de Docker para cargar un archivo de fórmula empaquetado, incluyendo la dirección URL del host de Docker, el nombre de usuario y la contraseña. Puede buscar esta información realizando la siguiente solicitud de GET:
 
 **Formato de API**
 
@@ -58,7 +58,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del re
 
 ## Creación de un motor mediante URL de acoplamiento {#docker-image}
 
-Puede crear un motor realizando una solicitud POST mientras proporciona sus metadatos y una URL de Docker que haga referencia a una imagen de Docker en formularios de varias partes.
+Puede crear un motor realizando una solicitud de POST mientras proporciona sus metadatos y una URL de Docker que haga referencia a una imagen de Docker en formularios de varias partes.
 
 **Formato de API**
 
@@ -138,7 +138,7 @@ curl -X POST \
 | `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para que se muestre en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor en una cadena vacía. |
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. El valor se puede establecer en Spark o PySpark. |
 | `mlLibrary` | Campo que se requiere al crear motores para las fórmulas de PySpark y Scala. Este campo debe definirse como `databricks-spark`. |
-| `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o el Dockerhub público (no autenticado). |
+| `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o Public (no autenticado) Dockerhub. |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
 
 **Respuesta**
@@ -172,7 +172,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 ## Creación de un motor de canalización de funciones mediante URL de acoplamiento {#feature-pipeline-docker}
 
-Puede crear una canalización de funciones Motor realizando una solicitud POST mientras proporciona sus metadatos y una URL de acoplamiento que haga referencia a una imagen de Docker.
+Puede crear una canalización de funciones Motor realizando una solicitud de POST mientras proporciona sus metadatos y una URL de acoplamiento que haga referencia a una imagen de Docker.
 
 **Formato API**
 
@@ -218,7 +218,7 @@ curl -X POST \
 | `name` | Nombre deseado para el motor de canalización de funciones. La fórmula correspondiente a este motor heredará este valor para que se muestre en la interfaz de usuario como nombre de la fórmula. |
 | `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para que se muestre en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor en una cadena vacía. |
 | `mlLibrary` | Campo que se requiere al crear motores para las fórmulas de PySpark y Scala. Este campo debe definirse como `databricks-spark`. |
-| `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o el Dockerhub público (no autenticado). |
+| `artifacts.default.image.location` | Ubicación de la imagen del Docker. Solo se admite Azure ACR o Public (no autenticado) Dockerhub. |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen del Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Tipo de embalaje del motor. Este valor debe establecerse en `docker`. |
 | `artifacts.default.defaultMLInstanceConfigs` | Los parámetros `pipeline.json` del archivo de configuración. |
@@ -254,7 +254,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del nu
 
 ## Recuperar una lista de motores
 
-Puede recuperar una lista de motores realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de motores realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -329,7 +329,7 @@ Una respuesta correcta devuelve una lista de motores y sus detalles.
 
 ### Recuperar un motor específico {#retrieve-specific}
 
-Puede recuperar los detalles de un motor específico realizando una solicitud GET que incluya el ID del motor deseado en la ruta de solicitud.
+Puede recuperar los detalles de un motor específico realizando una solicitud de GET que incluya el ID del motor deseado en la ruta de solicitud.
 
 **Formato de API**
 
@@ -383,11 +383,11 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 ## Actualizar un motor
 
-Puede modificar y actualizar un motor existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del motor de destinatario en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede modificar y actualizar un motor existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID del motor de destinatario en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!NOTE]
 >
->Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud de PUT.
 
 La siguiente llamada de API de ejemplo actualizará el nombre y la descripción de un motor al tener estas propiedades inicialmente:
 
@@ -474,7 +474,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un motor
 
-Puede eliminar un motor realizando una solicitud de DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
+Para eliminar un motor, realice una solicitud de  de DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
 
 **Formato de API**
 
