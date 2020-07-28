@@ -18,7 +18,7 @@ El desarrollo de modelos y la formación se realizan en el nivel Experimento, do
 
 ## Crear un experimento {#create-an-experiment}
 
-Puede crear un experimento realizando una solicitud POST mientras proporciona un nombre y un ID de instancia MLI válido en la carga útil de la solicitud.
+Puede crear un experimento realizando una solicitud de POST mientras proporciona un nombre y un ID de instancia MLI válido en la carga útil de la solicitud.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 
 ## Crear y ejecutar una ejecución de formación o puntuación {#experiment-training-scoring}
 
-Puede crear ejecuciones de puntuación o formación realizando una solicitud POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. Si se crea correctamente una ejecución de formación, se inicializará el procedimiento de formación del modelo y su finalización con éxito generará un modelo capacitado. La generación de modelos formados reemplazará a los ya existentes, de modo que un experimento solo puede utilizar un modelo entrenado en un momento dado.
+Puede crear ejecuciones de puntuación o formación realizando una solicitud de POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. Si se crea correctamente una ejecución de formación, se inicializará el procedimiento de formación del modelo y su finalización con éxito generará un modelo capacitado. La generación de modelos formados reemplazará a los ya existentes, de modo que un experimento solo puede utilizar un modelo entrenado en un momento dado.
 
 **Formato de API**
 
@@ -133,7 +133,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de experimentos
 
-Puede recuperar una lista de Experimentos que pertenezcan a una instancia MLI concreta realizando una sola solicitud GET y proporcionando un ID de instancia MLI válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de Experimentos que pertenezcan a una instancia MLI concreta realizando una sola solicitud de GET y proporcionando un ID de instancia MLI válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 
 **Formato de API**
@@ -199,7 +199,7 @@ Una respuesta correcta devuelve una lista de experimentos que comparten el mismo
 
 ## Recuperar un experimento específico {#retrieve-specific}
 
-Puede recuperar los detalles de un experimento específico realizando una solicitud GET que incluya el ID del experimento deseado en la ruta de solicitud.
+Puede recuperar los detalles de un experimento específico realizando una solicitud de GET que incluya el ID del experimento deseado en la ruta de solicitud.
 
 **Formato de API**
 
@@ -242,7 +242,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 
 ## Recuperar una lista de ejecuciones de experimentos
 
-Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un experimento determinado realizando una sola solicitud GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un experimento determinado realizando una sola solicitud de GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 >[!NOTE]
 >
@@ -303,11 +303,11 @@ Una respuesta correcta devuelve una carga útil que contiene una lista de ejecuc
 
 ## Actualizar un experimento
 
-Puede actualizar un experimento existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del experimento de destinatario en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar un experimento existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID del experimento de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para [recuperar el experimento por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud de PUT.
 
 La siguiente llamada de API de ejemplo actualiza el nombre de un experimento mientras que inicialmente tiene estas propiedades:
 
