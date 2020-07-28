@@ -44,7 +44,7 @@ Puede obtener más información sobre las cadenas de conexión y cómo obtenerla
 
 Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada a la que vincular su cuenta de MySQL a [!DNL Platform].
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
+Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
 
 Bajo la categoría *[!UICONTROL Bases]* de Datos, seleccione **[!UICONTROL MySQL]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione Origen **[!UICONTROL de]** Connect.
 
