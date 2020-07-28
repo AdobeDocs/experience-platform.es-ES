@@ -37,7 +37,7 @@ El siguiente diagrama de flujo de trabajo proporciona información general de al
 
 Hay varios componentes de Experience Platform involucrados en integraciones de conector ETL. La siguiente lista describe varios componentes y funcionalidades clave:
 
-- **Adobe Identity Management System (IMS)** : Proporciona un marco para la autenticación en los servicios de Adobe.
+- **Sistema Identity Management de Adobe (IMS)** : proporciona un marco para la autenticación en servicios de Adobe.
 - **Organización** de IMS: entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros.
 - **Usuario** de IMS: Miembros de una organización de IMS. La relación entre la organización y el usuario es entre muchos.
 - **[!DNL Sandbox]** - Una partición virtual de una sola [!DNL Platform] instancia, para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -326,7 +326,7 @@ La respuesta incluirá un conjunto de datos (`limit=1`) que muestra la propiedad
 
 ### Archivos de conjunto de datos de Lista mediante el atributo &quot;files&quot;
 
-También puede utilizar una solicitud GET para recuperar los detalles del archivo mediante el atributo &quot;files&quot;.
+También puede utilizar una solicitud de GET para recuperar los detalles del archivo mediante el atributo &quot;files&quot;.
 
 **Formato API**
 
@@ -392,7 +392,7 @@ La respuesta incluye el ID del archivo de conjunto de datos como propiedad de ni
 
 ### Obtener detalles del archivo
 
-Los ID de archivo de conjunto de datos devueltos en la respuesta anterior se pueden utilizar en una solicitud GET para obtener más detalles de archivo mediante la [!DNL Data Access] API.
+Los ID de archivo de conjunto de datos devueltos en la respuesta anterior se pueden utilizar en una solicitud de GET para obtener más detalles de archivo mediante la [!DNL Data Access] API.
 
 La descripción general [del acceso a](../data-access/home.md) datos contiene detalles sobre cómo utilizar la [!DNL Data Access] API.
 
@@ -552,7 +552,7 @@ La respuesta puede apuntar a un solo archivo o a un directorio. Encontrará deta
 
 ### Acceso al contenido del archivo
 
-El [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) se puede utilizar para acceder al contenido de un archivo específico. Para recuperar el contenido, se realiza una solicitud GET utilizando el valor devuelto para `_links.self.href` cuando se accede a un archivo con el ID del archivo.
+El [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) se puede utilizar para acceder al contenido de un archivo específico. Para recuperar el contenido, se realiza una solicitud de GET utilizando el valor devuelto para `_links.self.href` cuando se accede a un archivo con el ID de archivo.
 
 **Solicitud**
 
@@ -674,7 +674,7 @@ Se pueden programar nuevas tareas si el valor de &quot;estado&quot; del lote ant
 
 ### Obtener el estado del último lote por ID
 
-Se puede recuperar un estado de lote individual mediante el [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) envío de una solicitud GET mediante el `{BATCH_ID}`. El valor `{BATCH_ID}` utilizado sería el mismo que el ID devuelto cuando se creó el lote.
+Se puede recuperar un estado de lote individual mediante el [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) envío de una solicitud de GET mediante el `{BATCH_ID}`. El valor `{BATCH_ID}` utilizado sería el mismo que el ID devuelto cuando se creó el lote.
 
 **Solicitud**
 
