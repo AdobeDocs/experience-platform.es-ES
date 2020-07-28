@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 35%
    * [Ingesta de datos](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Área de trabajo de ciencia de datos](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/es-ES/debugger/using/experience-cloud-debugger.html)
-   * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
+   * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/es-ES/debugger/using-v2/experience-cloud-debugger.html)
    * [Servicio de decisiones](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extraer, Transformar, Cargar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
