@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
 
-Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Datos del cliente en tiempo real de Adobe Platform se integra con ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
+Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Datos de cliente en tiempo real de Adobe Platform se integra con ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
 
-Para enviar segmentos a destinos de marketing por correo electrónico para sus campañas, el CDP en tiempo real de Adobe primero debe conectarse al destino.
+Para enviar segmentos a destinos de marketing por correo electrónico para sus campañas, CDP en tiempo real de Adobe primero debe conectarse al destino.
 
 La conexión a destinos de marketing por correo electrónico es un proceso de tres pasos. Cada uno de los pasos se describe más abajo en esta página.
 
@@ -30,7 +30,7 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 2. En el paso **[!UICONTROL Autenticación]** , si ya ha configurado una conexión con el destino de marketing por correo electrónico, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector de tipo **[!UICONTROL de]** conexión, puede seleccionar entre **Amazon S3**, **SFTP con contraseña**, **SFTP con clave** SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
-   Para las conexiones **** S3, debe proporcionar el ID de la clave de acceso de Amazon y la clave de acceso secreto.
+   Para las conexiones **** S3, debe proporcionar el ID de clave de acceso de Amazon y la clave de acceso secreto.
 
    Para **SFTP con conexiones de contraseña** , debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
 
@@ -38,7 +38,7 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 3. En el paso **[!UICONTROL Configuración]** , introduzca un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el nuevo destino, así como el formato **** Archivo para los archivos exportados. <br>
 Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre **[!UICONTROL del]** depósito y la ruta **[!UICONTROL de]** carpeta en el destino de almacenamiento de nube donde se enviarán los archivos. Para la opción almacenamiento SFTP, inserte la ruta **[!UICONTROL de]** carpeta donde se enviarán los archivos. <br>
-También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br>
+También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br>
    ![Paso de configuración de correo electrónico](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Paso 2: seleccione qué miembros de segmento incluir en las exportaciones de destino {#select-segments}
@@ -82,7 +82,7 @@ En el selector de campos de Esquema, elija qué otros campos desea exportar al d
 Consulte los artículos de destino de marketing por correo electrónico individuales para obtener información sobre cómo importar datos de la ubicación del almacenamiento a los destinos:
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+* [Marketing Cloud de Salesforce](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
 * [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
 * [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
