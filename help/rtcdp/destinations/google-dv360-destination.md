@@ -24,7 +24,7 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Display
 
 * Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a [!DNL Google Display & Video 360] destinos: **ID de cookie de Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * Las audiencias activadas se crean mediante programación en la plataforma Google.
-* Actualmente, CDP en tiempo real de Adobe no incluye una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
+* El CDP en tiempo real de Adobe no incluye actualmente una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Display
 >
 >La lista de permitidos es obligatoria antes de configurar su primer [!DNL Google Display & Video 360] destino en Adobe Real-time CDP. Asegúrese de que Google haya completado el proceso de lista de permitidos que se describe a continuación antes de crear un destino.
 
-Antes de crear el [!DNL Google Display & Video 360] destino en Adobe Real-time CDP, debe ponerse en contacto con Google para solicitar que Adobe se ponga en lista de proveedores de datos permitidos y que se agregue su cuenta a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
+Antes de crear el [!DNL Google Display & Video 360] destino en Adobe Real-time CDP, debe ponerse en contacto con Google para solicitar Adobes para la lista de proveedores de datos permitidos y para que su cuenta se agregue a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
 
 * **ID** de cuenta: este es el ID de cuenta de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
 * **ID** del cliente: es el ID de cuenta de cliente de Adobe con Google. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
@@ -58,11 +58,11 @@ Antes de crear el [!DNL Google Display & Video 360] destino en Adobe Real-time C
    * Utilícelo `Invite Advertiser` para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360.
    * Utilícelo `Invite Partner` para permitir que las audiencias se compartan con todas las marcas de su cuenta de Display &amp; Video 360.
 * **[!UICONTROL ID]** de cuenta: Rellene su ID **[!DNL Invite partner]** o **[!DNL Invite advertiser]** de cuenta con Google. Normalmente, se trata de un ID de seis o siete dígitos.
-* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos.
+* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos.
 
 >[!NOTE]
 >
->Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su representante [!DNL Google Account Manager] o con Adobe para saber qué tipo de cuenta tiene.
+>Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su representante [!DNL Google Account Manager] o Adobe para saber qué tipo de cuenta tiene.
 
 ## Activar segmentos para [!DNL Google Display & Video 360]
 
