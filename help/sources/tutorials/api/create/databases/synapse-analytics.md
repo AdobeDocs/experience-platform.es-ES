@@ -17,7 +17,7 @@ ht-degree: 2%
 >[!NOTE]
 >El conector Analytics de la sinapsis de Azure está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos a los que conectarse [!DNL Azure Synapse Analytics] (en adelante, &quot;[!DNL Synapse]&quot;) a [!DNL Experience Platform].
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Synapse] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Synapse] es `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`.
+Para crear una [!DNL Synapse] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Synapse] es `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`.
 
 ```shell
 curl -X POST \
