@@ -20,7 +20,7 @@ Las funciones aritméticas se utilizan para realizar cálculos básicos en valor
 
 La función `+` (suma) se utiliza para encontrar la suma de dos expresiones de argumento.
 
-**Formato**
+**Format**
 
 ```sql
 {NUMBER} + {NUMBER}
@@ -38,7 +38,7 @@ product1.price + product2.price
 
 La función `*` (multiplicación) se utiliza para encontrar el producto de dos expresiones de argumentos.
 
-**Formato**
+**Format**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -56,7 +56,7 @@ product.inventory * product.price
 
 La función `-` (resta) se utiliza para encontrar la diferencia de dos expresiones de argumento.
 
-**Formato**
+**Format**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -74,7 +74,7 @@ product1.price - product2.price
 
 La función `/` (división) se utiliza para encontrar el cociente de dos expresiones de argumento.
 
-**Formato**
+**Format**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -92,7 +92,7 @@ totalProduct.price / totalProduct.sold
 
 La función `%` (modulo/resto) se utiliza para encontrar el resto después de dividir las dos expresiones de argumento.
 
-**Formato**
+**Format**
 
 ```sql
 {NUMBER} % {NUMBER}
