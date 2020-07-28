@@ -18,7 +18,7 @@ Un modelo es una instancia de una fórmula de aprendizaje automático que se cap
 
 ## Recuperar una lista de modelos
 
-Puede recuperar una lista de los detalles del modelo que pertenezcan a todos los modelos realizando una sola solicitud GET a /models. De forma predeterminada, esta lista se ordenará a sí misma del modelo creado más antiguo y limitará los resultados a 25. Puede elegir filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de detalles del modelo que pertenezca a todos los modelos realizando una sola solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a sí misma del modelo creado más antiguo y limitará los resultados a 25. Puede elegir filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato API**
 
@@ -100,7 +100,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
 
 ## Recuperar un modelo específico
 
-Puede recuperar una lista de los detalles del modelo que pertenezcan a un modelo concreto realizando una única solicitud GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de los detalles del modelo que pertenezcan a un modelo concreto realizando una sola solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -164,7 +164,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 ## Registro de un modelo pregenerado {#register-a-model}
 
-Puede registrar un modelo pregenerado realizando una solicitud POST al `/models` extremo. Para registrar el modelo, es necesario incluir los valores del `modelArtifact` archivo y de la `model` propiedad en el cuerpo de la solicitud.
+Puede registrar un modelo pregenerado realizando una solicitud de POST al `/models` extremo. Para registrar el modelo, es necesario incluir los valores del `modelArtifact` archivo y de la `model` propiedad en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -174,7 +174,7 @@ POST /models
 
 **Solicitud**
 
-El siguiente POST contiene los valores `modelArtifact` de archivo y `model` propiedad que se necesitan. Consulte la tabla siguiente para obtener más información sobre estos valores.
+El siguiente POST contiene los valores `modelArtifact` de archivo y `model` propiedad que son necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
 
 ```shell
 curl -X POST \
@@ -218,11 +218,11 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 ## Actualizar un modelo por ID
 
-Puede actualizar un modelo existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID del modelo de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar un modelo existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID del modelo de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para recuperar el modelo por ID. A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud de PUT.
 
 **Formato de API**
 
@@ -281,7 +281,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un modelo por ID
 
-Puede eliminar un solo modelo realizando una solicitud de DELETE que incluya el ID del modelo de destinatario en la ruta de la solicitud.
+Puede eliminar un solo modelo realizando una solicitud de DELETE que incluya el ID del modelo de destinatario en la ruta de solicitud.
 
 **Formato de API**
 
@@ -373,7 +373,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con 
 
 ## Recuperar una lista de transcodificaciones para un modelo {#retrieve-transcoded-model-list}
 
-Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud GET con su `{MODEL_ID}`.
+Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud de GET con el `{MODEL_ID}`.
 
 **Formato de API**
 
@@ -433,7 +433,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto json con 
 
 ## Recuperar un modelo transcodificado específico {#retrieve-transcoded-model}
 
-Puede recuperar un modelo transcodificado específico realizando una solicitud GET con el ID `{MODEL_ID}` y el ID de un modelo transcodificado.
+Para recuperar un modelo transcodificado específico, realice una solicitud de GET con el ID `{MODEL_ID}` de un modelo transcodificado.
 
 **Formato de API**
 
