@@ -72,7 +72,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión DB2, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para DB2 es `09182899-b429-40c9-a15a-bf3ddbc8ced7`.
+Para crear una conexión DB2, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para DB2 es `09182899-b429-40c9-a15a-bf3ddbc8ced7`.
 
 ```shell
 curl -X POST \
