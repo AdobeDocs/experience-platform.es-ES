@@ -5,6 +5,9 @@ title: Funciones de comparación
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +20,7 @@ Las funciones de comparación se utilizan para comparar diferentes expresiones y
 
 La función `=` (es igual a) comprueba si un valor o expresión es igual a otro valor o expresión.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} = {VALUE}
@@ -35,7 +38,7 @@ homeAddress.countryISO = "CA"
 
 La función `!=` (no igual) comprueba si un valor o expresión **no es** igual a otro valor o expresión.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} != {VALUE}
@@ -53,7 +56,7 @@ homeAddress.countryISO != "CA"
 
 La función `>` (buena que) se utiliza para comprobar si el primer valor es bueno que el segundo.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} > {EXPRESSION} 
@@ -71,7 +74,7 @@ person.birthMonth > 2
 
 La función `>=` (buena o igual que) se utiliza para comprobar si el primer valor es bueno o igual al segundo valor.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} >= {EXPRESSION} 
@@ -89,7 +92,7 @@ person.birthMonth >= 3
 
 La función de comparación `<` (menor que) se utiliza para comprobar si el primer valor es menor que el segundo.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} < {EXPRESSION} 
@@ -107,7 +110,7 @@ person.birthMonth < 2
 
 La función de comparación `<=` (menor o igual que) se utiliza para comprobar si el primer valor es menor o igual que el segundo.
 
-**Formato**
+**Format**
 
 ```sql
 {EXPRESSION} <= {EXPRESSION} 
