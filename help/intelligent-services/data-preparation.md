@@ -35,7 +35,7 @@ Si los datos se almacenan fuera de [!DNL Experience Platform], siga los pasos a 
 Si los datos ya están almacenados en [!DNL Platform], siga los pasos a continuación:
 
 1. Revise la estructura del esquema [](#cee-schema) Consumer ExperienceEvent y determine si los datos se pueden asignar a sus campos.
-1. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema e incorporarlos a los servicios inteligentes, o [siga los pasos de esta guía](#mapping) si desea asignarlos usted mismo.
+1. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar sus datos al esquema y a ingerirlos en los servicios inteligentes, o [siga los pasos de esta guía](#mapping) si desea asignar los datos usted mismo.
 
 ## Explicación del esquema de CEE {#cee-schema}
 
@@ -61,7 +61,7 @@ Aunque se recomienda encarecidamente el uso de todos los campos clave, hay dos c
 
 * [Campo de identidad principal](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:canal](#channel) (obligatorio solo para la atribución de AI)
+* [xdm:canal](#channel) (obligatorio solo para Attribution AI)
 
 #### Identidad primaria {#identity}
 
@@ -84,7 +84,7 @@ Este campo representa la fecha y hora en que se produjo el evento. Este valor de
 
 >[!NOTE]
 >
->Este campo solo es obligatorio cuando se utiliza Atribución AI.
+>Este campo solo es obligatorio cuando se utiliza Attribution AI.
 
 Este campo representa el canal de marketing relacionado con ExperienceEvent. El campo incluye información sobre el tipo de canal, el tipo de medio y el tipo de ubicación.
 
@@ -235,13 +235,13 @@ Este campo contiene información relacionada con actividades de marketing que es
 }
 ```
 
-Para obtener información completa sobre cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
+Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
 ## Asignación e ingesta de datos (#mapping)
 
 Una vez que haya determinado si los datos de eventos de marketing se pueden asignar al esquema CEE, el siguiente paso es determinar qué datos se van a incluir en Servicios inteligentes. Todos los datos históricos utilizados en Servicios Inteligentes deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
 
-Después de decidir el rango de datos que desea enviar, póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema e incorporarlos al servicio.
+Después de decidir el rango de datos que desea enviar, póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a ingerirlos al servicio.
 
 Si tiene una [!DNL Adobe Experience Platform] suscripción y desea asignar e ingestar los datos usted mismo, siga los pasos descritos en la sección siguiente.
 
@@ -281,7 +281,7 @@ Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario
 >
 >Las próximas versiones de Intelligent Services integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
 
-Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud PATCH a la API del servicio de catálogo.
+Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud de PATCH a la API de servicio de catálogo.
 
 Si va a ingerir datos de un archivo CSV local, puede pasar a la siguiente sección sobre [asignación e ingesta de datos](#ingest).
 
@@ -343,7 +343,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud PATCH.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH.
 
 ```json
 [
@@ -363,5 +363,5 @@ Este documento proporciona una guía general sobre la preparación de los datos 
 
 Una vez que haya rellenado correctamente un conjunto de datos con los datos de experiencia del cliente, puede utilizar Servicios inteligentes para generar perspectivas. Consulte los siguientes documentos para empezar:
 
-* [Información general de Atribución de IA](./attribution-ai/overview.md)
+* [Descripción general de Attribution AI](./attribution-ai/overview.md)
 * [Información general sobre el AI del cliente](./customer-ai/overview.md)
