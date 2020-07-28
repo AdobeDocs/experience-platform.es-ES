@@ -20,7 +20,7 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 ### Recuperar una lista de consultas programadas
 
-Puede recuperar una lista de todas las consultas programadas para su organización de IMS realizando una solicitud GET al `/schedules` extremo.
+Puede recuperar una lista de todas las consultas programadas para su organización de IMS realizando una solicitud de GET al `/schedules` extremo.
 
 **Formato API**
 
@@ -124,7 +124,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pr
 
 ### Crear una nueva consulta programada
 
-Puede crear una nueva consulta programada realizando una solicitud POST al `/schedules` extremo.
+Puede crear una nueva consulta programada realizando una solicitud de POST al `/schedules` extremo.
 
 **Formato API**
 
@@ -223,7 +223,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 
 ### Solicitar detalles de una consulta programada específica
 
-Puede recuperar información para una consulta programada específica realizando una solicitud GET al extremo y proporcionando su ID en la ruta de solicitud `/schedules` .
+Puede recuperar información de una consulta programada específica realizando una solicitud de GET al extremo y proporcionando su ID en la ruta de la solicitud. `/schedules`
 
 **Formato API**
 
@@ -306,9 +306,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la consulta p
 
 ### Actualizar detalles de una consulta programada específica
 
-Puede actualizar los detalles de una consulta programada específica realizando una solicitud PATCH al extremo y proporcionando su ID en la ruta de la solicitud `/schedules` .
+Puede actualizar los detalles de una consulta programada específica realizando una solicitud de PATCH al extremo y proporcionando su ID en la ruta de la solicitud `/schedules` .
 
-La solicitud PATCH admite dos rutas diferentes: `/state` y `/schedule/schedule`.
+La solicitud de PATCH admite dos rutas diferentes: `/state` y `/schedule/schedule`.
 
 ### Actualizar estado de consulta programado
 
@@ -415,7 +415,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Eliminar una consulta programada especificada
 
-Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
+Puede eliminar una consulta programada especificada realizando una solicitud de  DELETE al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
 
 >[!NOTE]
 >
