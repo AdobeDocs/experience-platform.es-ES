@@ -14,7 +14,7 @@ ht-degree: 100%
 # Notas de la versión de Adobe Experience Platform {#release-notes}
 
 * [Julio de 2020](latest/latest.md)
-* [junio de 2020](2020/june-2020.md)
+* [Junio de 2020](2020/june-2020.md)
 * [Mayo 2020](2020/may-2020.md)
 * [Abril de 2020](2020/april-2020.md)
 * [Marzo de 2020](2020/march-2020.md)
