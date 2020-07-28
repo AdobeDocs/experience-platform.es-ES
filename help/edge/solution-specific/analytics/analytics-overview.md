@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Envío de datos a Adobe Analytics
 
-El Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que puede utilizar Adobe Analytics.
+El Adobe Experience Platform [!DNL Web SDK] puede enviar datos a Adobe Analytics. Esto funciona traduciendo `xdm` a un formato que el Adobe Analytics puede utilizar.
 
 ## Configuración
 
