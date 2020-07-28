@@ -184,6 +184,6 @@ Esta sección proporciona información adicional sobre la creación de conexione
 
 ### Conexiones de flujo autenticadas
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso IMS como parte de la solicitud POST; si el testigo IMS es válido, los registros se marcan como recopilados de fuentes de confianza.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso de IMS como parte de la solicitud de POST; si el token de IMS es válido, los registros se marcan como recopilados de fuentes de confianza.
 
 Encontrará más información sobre la creación de una conexión de flujo autenticada en el tutorial [](create-authenticated-streaming-connection.md)de creación de una conexión de flujo autenticada.
