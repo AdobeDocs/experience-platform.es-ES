@@ -5,6 +5,9 @@ title: Fórmula de ventas minoristas
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +33,7 @@ La fórmula de previsión de ventas minoristas utiliza el aprendizaje automátic
 
 Para empezar, siga este [tutorial](../jupyterlab/create-a-recipe.md).
 
-En este tutorial se explicará cómo crear la fórmula de ventas minoristas en un bloc de notas de Jupyter y cómo utilizar el bloc de notas para crear fórmulas en la plataforma de experiencias de Adobe.
+En este tutorial se analizará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas para crear el flujo de trabajo de la fórmula con el fin de crear la fórmula en Adobe Experience Platform.
 
 ## esquema de datos
 
