@@ -1,8 +1,8 @@
 ---
 title: Adform extension
 seo-title: Adform extension
-description: La extensión Adform es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Adform es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión Adform es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión Adform es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -20,7 +20,7 @@ La extensión de seguimiento de sitios web de Adobe permite a los anunciantes im
 
 [!DNL Adform] es una extensión de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)
 
-Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en tiempo real de CDP de Adobe, consulte Información general [sobre las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
 ![Adform extension](/help/rtcdp/destinations/assets/adform-extension.png)
 
@@ -40,7 +40,7 @@ Para instalar la extensión Adform:
 4. En la ventana **[!UICONTROL Seleccionar la propiedad]** Launch disponible, seleccione la [!DNL Launch] propiedad en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en Launch. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [de la página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propiedades de la [!DNL Launch] documentación.
 5. El flujo de trabajo le lleva a [!DNL Launch] completar la instalación.
 
-Para obtener información sobre las opciones de configuración de extensión y la compatibilidad con la instalación, consulte la página [Formulario en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html).
+Para obtener más información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Formulario en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html).
 
 También puede instalar la extensión directamente en la interfaz del [Experience Platform Launch](https://launch.adobe.com/). Consulte [Añadir una nueva extensión](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) en la [!DNL Launch] documentación.
 
