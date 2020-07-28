@@ -18,7 +18,7 @@ Este tutorial irá a dos secciones principales. En primer lugar, creará un mode
 
 ## Conceptos introducidos:
 
-- **Fórmulas:** Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarios para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas empresariales específicos.
+- **Fórmulas:** Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarias para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas comerciales específicos.
 - **Modelo:** Un modelo es una instancia de una fórmula de aprendizaje automático que se capacita mediante datos históricos y configuraciones para resolver un caso de uso comercial.
 - **Formación:** La formación es el proceso de aprendizaje de patrones y perspectivas a partir de datos etiquetados.
 - **Puntuación:** La puntuación es el proceso de generación de perspectivas a partir de datos mediante un modelo capacitado.
@@ -308,7 +308,7 @@ El propósito de la formación es crear un modelo con las funciones y etiquetas 
 > 
 >_Las funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
 
-La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se pueden encontrar en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
+La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se encuentran en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
 Después de elegir el modelo de formación, ajustará el conjunto de datos de formación x e y al modelo y la función devolverá el modelo entrenado. Un ejemplo que lo muestra es el siguiente:
 
