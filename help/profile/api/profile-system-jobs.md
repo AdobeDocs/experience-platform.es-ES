@@ -25,7 +25,7 @@ El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Cu
 
 ## Solicitudes de eliminación de Vistas
 
-Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para realizar la vista de todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud GET al extremo del `/system/jobs` .
+Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para realizar la vista de todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud de GET al `/system/jobs` extremo.
 
 También puede utilizar parámetros de consulta opcionales para filtrar la lista de solicitudes de eliminación devueltas en la respuesta. Para utilizar varios parámetros, separe cada parámetro con un símbolo &amp;.
 
@@ -99,11 +99,11 @@ La respuesta incluye una matriz &quot;secundarios&quot; con un objeto para cada 
 
 ## Crear una solicitud de eliminación {#create-a-delete-request}
 
-El inicio de una nueva solicitud de eliminación se realiza a través de una solicitud POST al extremo, donde el ID del conjunto de datos o lote que se va a eliminar se proporciona en el cuerpo de la solicitud. `/systems/jobs`
+El inicio de una nueva solicitud de eliminación se realiza mediante una solicitud de POST al extremo, donde el ID del conjunto de datos o lote que se va a eliminar se proporciona en el cuerpo de la solicitud. `/systems/jobs`
 
 ### Eliminar un conjunto de datos
 
-Para eliminar un conjunto de datos, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
+Para eliminar un conjunto de datos, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud del POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
 
 >[!CAUTION]
 > Al intentar eliminar un conjunto de datos [!DNL Profile]habilitado mediante la [!DNL Experience Platform] interfaz de usuario, el conjunto de datos se desactiva para la ingestión, pero no se elimina hasta que se crea una solicitud de eliminación mediante la API. Para obtener más información, consulte el [apéndice](#appendix) de este documento.
@@ -152,11 +152,11 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 | Propiedad | Descripción |
 |---|---|
 | `id` | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
-| `dataSetId` | ID del conjunto de datos, tal como se especifica en la solicitud POST. |
+| `dataSetId` | ID del conjunto de datos, tal como se especifica en la solicitud del POST. |
 
 ### Eliminar un lote
 
-Para eliminar un lote, el ID de lote debe incluirse en el cuerpo de la solicitud POST. Tenga en cuenta que no puede eliminar lotes para conjuntos de datos en función de esquemas de registros. Solo se pueden eliminar los lotes de conjuntos de datos basados en esquemas de series temporales.
+Para eliminar un lote, el ID del lote debe incluirse en el cuerpo de la solicitud del POST. Tenga en cuenta que no puede eliminar lotes para conjuntos de datos en función de esquemas de registros. Solo se pueden eliminar los lotes de conjuntos de datos basados en esquemas de series temporales.
 
 >[!NOTE]
 > El motivo por el que no se pueden eliminar lotes para conjuntos de datos basados en esquemas de registros es porque los lotes de conjuntos de datos de tipo de registro sobrescriben los registros anteriores y, por lo tanto, no se pueden &quot;deshacer&quot; ni eliminar. La única manera de eliminar el impacto de los lotes erróneos para conjuntos de datos basados en esquemas de registros es volver a ingestar el lote con los datos correctos para sobrescribir los registros incorrectos.
@@ -207,7 +207,7 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 | Propiedad | Descripción |
 |---|---|
 | `id` | ID única, generada por el sistema y de solo lectura de la solicitud de eliminación. |
-| `batchId` | ID del lote, tal como se especifica en la solicitud POST. |
+| `batchId` | ID del lote, tal como se especifica en la solicitud del POST. |
 
 Si intenta iniciar una solicitud de eliminación para un lote de conjuntos de datos de registro, se producirá un error de 400 niveles, similar al siguiente:
 
@@ -302,7 +302,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Puede confirmar que la solicitud se eliminó realizando una solicitud GET para vista de la solicitud de eliminación por su ID. Esto debe devolver un estado HTTP 404 (no encontrado), que indica que se eliminó la solicitud de eliminación.
+Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Puede confirmar que la solicitud se eliminó realizando una solicitud de GET para realizar la vista de la solicitud de eliminación por su ID. Esto debe devolver un estado HTTP 404 (no encontrado), que indica que se eliminó la solicitud de eliminación.
 
 ## Pasos siguientes
 
