@@ -92,7 +92,7 @@ Una respuesta correcta devuelve una matriz que contiene la ID única, generada p
 
 ### Iniciar trabajo de exportación {#initiate}
 
-Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para que los datos de Perfil se mantengan en el conjunto de datos realizando una solicitud POST al extremo en la API de Perfil del cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud. `/export/jobs`
+Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para conservar los datos de Perfil en el conjunto de datos realizando una solicitud de POST al extremo en la API de Perfil de cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud. `/export/jobs`
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve un conjunto de datos rellenado con datos de Perf
 
 ## Lista de todos los trabajos de exportación
 
-Puede devolver una lista de todos los trabajos de exportación para una organización IMS concreta realizando una solicitud GET al `export/jobs` extremo. La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
+Puede devolver una lista de todos los trabajos de exportación para una organización IMS concreta realizando una solicitud de GET al `export/jobs` extremo. La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
 
 **Formato API**
 
@@ -331,7 +331,7 @@ La respuesta incluye un `records` objeto que contiene los trabajos de exportaci�
 
 ## Monitorear el progreso de exportación
 
-Para realizar una vista de los detalles de un trabajo de exportación específico o supervisar su estado a medida que se procesa, puede realizar una solicitud GET al `/export/jobs` extremo e incluir el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el `status` campo devuelve el valor &quot;SUCCEEDED&quot;.
+Para realizar una vista de los detalles de un trabajo de exportación específico o supervisar su estado a medida que se procesa, puede realizar una solicitud de GET al `/export/jobs` extremo e incluir el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el `status` campo devuelve el valor &quot;SUCCEEDED&quot;.
 
 **Formato API**
 
