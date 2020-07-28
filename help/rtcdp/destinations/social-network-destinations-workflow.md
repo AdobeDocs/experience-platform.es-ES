@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ## Flujo de trabajo para crear destinos de redes sociales
 
-Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de Adobe Real-time Customer Data Platform será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo en Adobe Datos del cliente en tiempo real Platform será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
 
 1. En **[!UICONTROL Destinos > Catálogo]**, desplácese hasta la categoría de **[!UICONTROL Social]** . Seleccione el destino preferido de la red social y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar al destino de red social](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
-2. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de red social, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de red social. Seleccione **[!UICONTROL Conectar a destino]** y esto le llevará al destino de red social seleccionado para iniciar sesión y conectar Adobe Experience Cloud a su cuenta de publicidad de red social.
+2. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de red social, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de red social. Seleccione **[!UICONTROL Conectar al destino]** y esto le llevará al destino de red social seleccionado para iniciar sesión y conectar Adobe Experience Cloud a su cuenta de publicidad de red social.
 
    >[!NOTE]
    >
@@ -30,11 +30,11 @@ Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de 
 
    ![Conectar con destino de red social: paso de autenticación](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
 
-3. Una vez confirmadas las credenciales y Adobe Experience Cloud conectado a la red social, puede seleccionar **[!UICONTROL Siguiente]** para continuar con el paso **[!UICONTROL Configuración]** .
+3. Una vez confirmadas las credenciales y que Adobe Experience Cloud esté conectado a la red social, puede seleccionar **[!UICONTROL Siguiente]** para continuar con el paso de **[!UICONTROL configuración]** .
 
    ![Credenciales confirmadas](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. En el paso **[!UICONTROL Configuración]** , escriba un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación y rellene el ID **[!UICONTROL de]** cuenta de su cuenta de publicidad de red social. <br> También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br> Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+4. En el paso **[!UICONTROL Configuración]** , escriba un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación y rellene el ID **[!UICONTROL de]** cuenta de su cuenta de publicidad de red social. <br> También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br> Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
    >[!IMPORTANT]
    >
