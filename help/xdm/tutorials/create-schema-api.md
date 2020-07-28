@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Creación de un esquema mediante la [!DNL Schema Registry] API
 
-El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro del Adobe Experience Platform. El [!DNL Schema Library] contiene recursos que Adobe, socios y proveedores cuyas aplicaciones utiliza le ponen a su disposición [!DNL Experience Platform] . El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro del Adobe Experience Platform. El [!DNL Schema Library] [!DNL Experience Platform] contiene los recursos que le ponen a su disposición el Adobe, los socios y los proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
 Este tutorial utiliza la [!DNL Schema Registry] API para guiarle por los pasos para componer un esquema con una clase estándar. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
 
@@ -191,7 +191,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Solicitud**
 
-Esta solicitud actualiza (PATCH) el esquema Miembros de lealtad para incluir los campos dentro de la mezcla &quot;perfil-persona-detalles&quot;.
+Esta solicitud actualiza (PATCH) el esquema Miembros de lealtad para incluir los campos dentro de la combinación &quot;perfil-persona-detalles&quot;.
 
 Al agregar la combinación &quot;perfil-persona-detalles&quot;, el esquema Miembros de lealtad ahora captura información sobre los miembros del programa de lealtad, como su nombre, apellidos y cumpleaños.
 
@@ -258,7 +258,7 @@ Ahora puede agregar otra mezcla estándar repitiendo los pasos usando otra mezcl
 
 >[!TIP]
 >
->Vale la pena revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede lista (GET) de todas las mezclas disponibles para su uso con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. En este caso, se trata de la [!DNL XDM Individual Profile] clase, por lo que se [!DNL XDM Individual Profile] utiliza `$id` :
+>Vale la pena revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede realizar la lista (GET) de todas las mezclas disponibles para su uso con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. En este caso, se trata de la [!DNL XDM Individual Profile] clase, por lo que se [!DNL XDM Individual Profile] utiliza `$id` :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -506,7 +506,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Solicitud**
 
-Esta solicitud actualiza (PATCH) el esquema de miembros de lealtad para incluir los campos dentro de la nueva combinación &quot;Detalles de miembros de lealtad&quot;.
+Esta solicitud actualiza (PATCH) el esquema Miembros de lealtad para incluir los campos dentro de la nueva combinación de &quot;Detalles de miembros de lealtad&quot;.
 
 ```SHELL
 curl -X PATCH \
@@ -575,7 +575,7 @@ Se puede ver que la mezcla se ha agregado correctamente porque la respuesta ahor
 
 ### Vista del esquema actual
 
-Ahora puede realizar una solicitud GET para la vista del esquema actual y ver cómo las mezclas agregadas han contribuido a la estructura general del esquema.
+Ahora puede realizar una solicitud de GET para vista del esquema actual y ver cómo las mezclas agregadas han contribuido a la estructura general del esquema.
 
 **Formato API**
 
@@ -816,7 +816,7 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 }
 ```
 
-Puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para la vista directa del nuevo tipo de datos. Asegúrese de incluir la solicitud de búsqueda `version` en el encabezado Accept.
+Puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo tipo de datos. Asegúrese de incluir la solicitud de búsqueda `version` en el encabezado Accept.
 
 ### Usar tipo de datos en esquema
 
@@ -908,7 +908,7 @@ La respuesta ahora incluye una referencia (`$ref`) al tipo de datos en el objeto
 }
 ```
 
-Al realizar una solicitud GET para buscar el esquema, ahora se muestra la referencia al tipo de datos en &quot;properties/_{TENANT_ID}&quot;, como se ve aquí:
+Al realizar una solicitud de GET para buscar el esquema, ahora se muestra la referencia al tipo de datos en &quot;properties/_{TENANT_ID}&quot;, como se ve a continuación:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1023,7 +1023,7 @@ Para obtener más información sobre cómo trabajar con vistas de unión, consul
 
 ### Añadir la etiqueta &quot;unión&quot;
 
-Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
+Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud de PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
 
 **Formato API**
 
@@ -1103,7 +1103,7 @@ La respuesta muestra que la operación se realizó correctamente y que el esquem
 
 ### esquemas de Lista en una unión
 
-Ahora ha agregado correctamente su esquema a la [!DNL XDM Individual Profile] unión. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud GET utilizando parámetros de consulta para filtrar la respuesta.
+Ahora ha agregado correctamente su esquema a la [!DNL XDM Individual Profile] unión. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud de GET utilizando parámetros de consulta para filtrar la respuesta.
 
 Con el parámetro de `property` consulta, puede especificar que solo se devuelvan los esquemas que contengan un `meta:immutableTags` campo que tenga un `meta:class` valor igual al `$id` de la [!DNL XDM Individual Profile] clase.
 
