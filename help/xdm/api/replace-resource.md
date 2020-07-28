@@ -14,17 +14,17 @@ ht-degree: 1%
 
 # Reemplazar un recurso
 
-La [!DNL Schema Registry] permite reemplazar un recurso completo mediante una operación PUT. Esta operación esencialmente vuelve a escribir el recurso, por lo tanto el cuerpo de la solicitud debe incluir todos los campos que serían necesarios al crear un nuevo recurso mediante una solicitud POST.
+El [!DNL Schema Registry] permite reemplazar un recurso completo mediante una operación de PUT. Esta operación esencialmente vuelve a escribir el recurso, por lo tanto el cuerpo de la solicitud debe incluir todos los campos que serían necesarios al crear un nuevo recurso mediante una solicitud de POST.
 
 Este método es especialmente útil si desea actualizar mucha información en el recurso a la vez.
 
 >[!NOTE]
 >
->Si solo desea actualizar parte de un recurso en lugar de reemplazarlo por completo, consulte el documento sobre la [actualización de un recurso mediante una operación](update-resource.md)PATCH.
+>Si solo desea actualizar parte de un recurso en lugar de reemplazarlo por completo, consulte el documento sobre la [actualización de un recurso mediante una operación](update-resource.md)de PATCH.
 
 **Formato API**
 
-Una solicitud PUT solo se puede realizar con los recursos definidos en el contenedor del inquilino.
+Una solicitud de PUT solo se puede realizar con los recursos definidos en el contenedor de inquilino.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -37,7 +37,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitud**
 
-Esta solicitud de ejemplo sustituye al tipo de datos de Construcción de propiedades que se creó en un ejemplo anterior. El cuerpo de la solicitud tiene un aspecto similar al de la solicitud POST utilizada para crear el tipo de datos, con la diferencia de que ahora contiene un conjunto actualizado de campos con nuevos valores que sustituyen a los definidos anteriormente.
+Esta solicitud de ejemplo sustituye al tipo de datos de Construcción de propiedades que se creó en un ejemplo anterior. El cuerpo de la solicitud tiene un aspecto similar al de la solicitud de POST utilizada para crear el tipo de datos, con la diferencia de que ahora contiene un conjunto actualizado de campos con nuevos valores que sustituyen a los definidos anteriormente.
 
 ```SHELL
 curl -X PUT \
