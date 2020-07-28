@@ -59,9 +59,9 @@ El primer paso para crear una conexión base de datos es recuperar un conjunto d
 
 **Formato API**
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión de una conexión base de datos realizando una solicitud GET y utilizando parámetros de consulta.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión de una conexión base de datos realizando una solicitud de GET y utilizando parámetros de consulta.
 
-El envío de una solicitud GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obtener información para la conexión base de datos.
+El envío de una solicitud de GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obtener información para la conexión base de datos.
 
 ```http
 GET /connectionSpecs
