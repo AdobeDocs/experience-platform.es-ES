@@ -66,11 +66,11 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Antes de conectarse [!DNL Platform] a una [!DNL Salesforce] cuenta, debe comprobar que existen especificaciones de conexión para [!DNL Salesforce]. Si no existen especificaciones de conexión, no se puede establecer una conexión.
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión para [!DNL Salesforce] realizar una solicitud GET y utilizar parámetros de consulta.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión [!DNL Salesforce] mediante una solicitud de GET y parámetros de consulta.
 
 **Formato API**
 
-El envío de una solicitud GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="salesforce"` para obtener información específica para [!DNL Salesforce].
+El envío de una solicitud de GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=name=="salesforce"` para obtener información específica para [!DNL Salesforce].
 
 ```http
 GET /connectionSpecs
@@ -147,7 +147,7 @@ Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Sal
 
 Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por [!DNL Salesforce] cuenta, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
-Realice la siguiente solicitud POST para crear una conexión base.
+Realice la siguiente solicitud de POST para crear una conexión base.
 
 **Formato API**
 
