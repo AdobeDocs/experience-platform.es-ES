@@ -72,7 +72,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión de Blob, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para Blob es `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+Para crear una conexión Blob, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para Blob es `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
 ```shell
 curl -X POST \
