@@ -20,7 +20,7 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 ### Recuperar una lista de todas las ejecuciones para una consulta programada especificada
 
-Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Esto se realiza realizando una solicitud GET al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` es el `id` valor de la consulta programada cuyas ejecuciones desea recuperar.
+Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Esto se realiza realizando una solicitud de GET al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` es el `id` valor de la consulta programada cuyas ejecuciones desea recuperar.
 
 **Formato API**
 
@@ -153,7 +153,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones 
 
 ### Activar inmediatamente una ejecución para una consulta programada específica
 
-Puede activar inmediatamente una ejecución para una consulta programada especificada realizando una solicitud POST al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` es el valor de la `id` consulta programada cuya ejecución desea activar.
+Puede activar inmediatamente una ejecución para una consulta programada especificada realizando una solicitud de POST al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` `id` es el valor de la consulta programada cuya ejecución desea activar.
 
 **Formato API**
 
@@ -184,7 +184,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Recuperar detalles de una ejecución para una consulta programada específica
 
-Puede recuperar detalles sobre una ejecución para una consulta programada específica haciendo una solicitud GET al extremo y proporcionando el ID de la consulta programada y la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+Puede recuperar detalles sobre una ejecución para una consulta programada específica realizando una solicitud de GET al extremo y proporcionando el ID de la consulta programada y la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
 
 **Formato API**
 
@@ -245,7 +245,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la ejecuc
 
 ### Detener inmediatamente una ejecución para una consulta programada específica
 
-Puede detener inmediatamente una ejecución para una consulta programada específica haciendo una solicitud PATCH al punto final y proporcionando el ID de la consulta programada y la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+Puede detener inmediatamente una ejecución para una consulta programada específica haciendo una solicitud de PATCH al extremo y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
 
 **Formato API**
 
