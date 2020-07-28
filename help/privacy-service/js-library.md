@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 
 # Información general sobre la biblioteca JavaScript de privacidad de Adobe
 
-Como procesador de datos, Adobe procesa los datos personales de acuerdo con las instrucciones y los permisos de su compañía. Como responsable del tratamiento de datos, determinará qué datos personales Adobe trata y almacena en su nombre. En función de la información que elija enviar a través de las soluciones de Adobe Experience Cloud, Adobe puede almacenar información privada aplicable a las normativas de privacidad, como el [!DNL General Data Protection Regulation] (RGPD) y el [!DNL California Consumer Privacy Act] (CPA). Consulte el documento sobre [privacidad en Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) para obtener más información sobre cómo las soluciones Experience Cloud recopilan datos privados.
+Como procesador de datos, Adobe procesa los datos personales de acuerdo con las instrucciones y los permisos de su compañía. Como responsable del tratamiento de datos, determinará qué datos personales Adobe trata y almacena en su nombre. En función de la información que elija enviar a través de las soluciones de Adobe Experience Cloud, Adobe puede almacenar información privada aplicable a las regulaciones de privacidad, tales como el [!DNL General Data Protection Regulation] (GDPR) y [!DNL California Consumer Privacy Act] (CCPA). Consulte el documento sobre [privacidad en Adobe Experience Cloud](https://www.adobe.com/es/privacy/marketing-cloud.html) para obtener más información sobre cómo las soluciones de Experience Cloud recopilan datos privados.
 
 La biblioteca **JavaScript de privacidad de** Adobe permite a los controladores de datos automatizar la recuperación de todas las identidades de sujeto de datos generadas por [!DNL Experience Cloud] soluciones para un dominio específico. Mediante la API proporcionada por [Adobe Experience Platform Privacy Service](home.md), estas identidades se pueden utilizar para crear solicitudes de acceso y eliminación de datos privados pertenecientes a esos temas de datos.
 
@@ -36,7 +36,7 @@ La siguiente tabla describe las diferentes funciones proporcionadas por la bibli
 
 >[!NOTE]
 >
->`removeIdentities` y `retrieveThenRemoveIdentities` solo elimine identidades del navegador para soluciones específicas de Adobe que las admitan. Por ejemplo, Adobe Audience Manager no elimina los ID de demdex almacenados en cookies de terceros, mientras que Adobe Target elimina todas las cookies que almacenan sus ID.
+>`removeIdentities` y `retrieveThenRemoveIdentities` solo elimine identidades del explorador para soluciones de Adobe específicas que las admitan. Por ejemplo, Adobe Audience Manager no elimina los ID de demdex almacenados en cookies de terceros, mientras que Adobe Target elimina todas las cookies que almacenan sus ID.
 
 Dado que las tres funciones representan procesos asincrónicos, cualquier identidad recuperada debe gestionarse mediante rellamadas o promesas.
 
@@ -46,7 +46,7 @@ Dado que las tres funciones representan procesos asincrónicos, cualquier identi
 Para realizar inicios con el [!DNL Privacy JS Library], debe instalarlo en el equipo mediante uno de los siguientes métodos:
 
 * Para realizar la instalación con npm, ejecute el siguiente comando: `npm install @adobe/adobe-privacy`
-* Utilice Adobe Launch Extension con el nombre `AdobePrivacy`
+* Utilice la extensión de inicio de Adobe con el nombre `AdobePrivacy`
 * Descargar de [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Cree una instancia de [!DNL Privacy JS Library]
@@ -63,7 +63,7 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-Para obtener una lista completa de los parámetros admitidos para distintas soluciones de Adobe, consulte la sección del apéndice sobre los parámetros [de configuración de soluciones de](#adobe-solution-configuration-parameters)Adobe admitidos.
+Para obtener una lista completa de los parámetros admitidos para distintas soluciones de Adobe, consulte la sección del apéndice sobre los parámetros [de configuración de la solución de](#adobe-solution-configuration-parameters)Adobe admitidos.
 
 ## Ejemplos de código
 
