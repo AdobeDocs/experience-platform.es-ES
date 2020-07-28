@@ -43,7 +43,7 @@ El esquema de evento de notificación de ingesta de datos es un esquema [!DNL Ex
 
 ## Suscripción a las notificaciones de estado de ingesta de datos
 
-A través de los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante los enlaces web. Las secciones a continuación describen los pasos para suscribirse a las [!DNL Platform] notificaciones de eventos de ingesta de datos mediante Adobe Developer Console.
+A través de Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, puede suscribirse a varios tipos de notificaciones mediante enlaces web. Las secciones a continuación describen los pasos para suscribirse a las [!DNL Platform] notificaciones de eventos de ingesta de datos mediante Adobe Developer Console.
 
 ### Crear un nuevo proyecto en Adobe Developer Console
 
@@ -79,7 +79,7 @@ En la pantalla siguiente, especifique un nombre y una descripción para el regis
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-Más abajo en la misma pantalla, puede configurar de forma opcional cómo recibir eventos. **[!UICONTROL Weblink]** le permite proporcionar una dirección de webgancho personalizada para recibir eventos, mientras que la acción **** Runtime le permite hacer lo mismo con [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Más abajo en la misma pantalla, puede configurar de forma opcional cómo recibir eventos. **[!UICONTROL Webhang]** le permite proporcionar una dirección de webgancho personalizada para recibir eventos, mientras que la acción **** Runtime le permite hacer lo mismo con [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 Este tutorial omite este paso de configuración opcional. Una vez que haya terminado, haga clic en **[!UICONTROL Guardar eventos]** configurados para completar el registro de eventos.
 
@@ -91,4 +91,4 @@ Aparece la página de detalles del registro de evento recién creado, donde pued
 
 ## Pasos siguientes
 
-Una vez que haya registrado [!DNL Platform] las notificaciones al proyecto, puede realizar la vista de eventos recibidos del panel del proyecto. Consulte la guía [Seguimiento de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
+Una vez que haya registrado [!DNL Platform] las notificaciones al proyecto, puede realizar la vista de eventos recibidos del panel del proyecto. Consulte la guía de Eventos [de E/S del Adobe de](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) rastreo para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
