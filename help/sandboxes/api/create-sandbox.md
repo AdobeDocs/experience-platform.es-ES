@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creación de un simulador para pruebas
 
-Puede crear un nuevo simulador para pruebas realizando una solicitud POST al `/sandboxes` extremo.
+Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al `/sandboxes` extremo.
 
 **Formato API**
 
@@ -44,7 +44,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Identificador que se utilizará para acceder al simulador para pruebas en solicitudes futuras. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. No puede contener espacios ni mayúsculas. |
-| `title` | Nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
+| `title` | Nombre legible en lenguaje natural que se utiliza para la visualización en la interfaz de usuario de Platform. |
 | `type` | Tipo de entorno limitado que se va a crear. Actualmente, una organización solo puede crear entornos limitados de tipo &quot;desarrollo&quot;. |
 
 **Respuesta**
