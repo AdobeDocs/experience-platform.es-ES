@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un conector de Amazon Kinesis mediante la API de servicio de flujo
+title: Creación de un conector Kinesis de Amazon mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
 source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
@@ -17,7 +17,7 @@ ht-degree: 2%
 >[!NOTE]
 >El [!DNL Amazon Kineses] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a una [!DNL Amazon Kinesis] cuenta.
 
