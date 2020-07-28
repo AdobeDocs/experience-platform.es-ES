@@ -20,7 +20,7 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 ### Recuperar una lista de plantillas de consulta
 
-Puede recuperar una lista de todas las plantillas de consulta para su organización de IMS realizando una solicitud GET al `/query-templates` extremo.
+Puede recuperar una lista de todas las plantillas de consulta para su organización de IMS realizando una solicitud de GET al `/query-templates` extremo.
 
 **Formato API**
 
@@ -111,7 +111,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 ### Creación de una plantilla de consulta
 
-Puede crear una plantilla de consulta realizando una solicitud POST al `/query-templates` extremo.
+Puede crear una plantilla de consulta realizando una solicitud de POST al `/query-templates` extremo.
 
 **Formato API**
 
@@ -174,7 +174,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con los detalles d
 
 ### Recuperar una plantilla de consulta especificada
 
-Puede recuperar una plantilla de consulta específica realizando una solicitud GET al extremo y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud. `/query-templates/{TEMPLATE_ID}`
+Puede recuperar una plantilla de consulta específica realizando una solicitud de GET al extremo y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud. `/query-templates/{TEMPLATE_ID}`
 
 **Formato API**
 
@@ -232,7 +232,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la planti
 
 ### Actualizar una plantilla de consulta especificada
 
-Puede actualizar una plantilla de consulta específica realizando una solicitud PUT en el extremo y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud. `/query-templates/{TEMPLATE_ID}`
+Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT al extremo y proporcionando el ID de la plantilla de consulta en la ruta de acceso de la solicitud. `/query-templates/{TEMPLATE_ID}`
 
 **Formato API**
 
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La solicitud PUT requiere que se rellene tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
+>La solicitud de PUT requiere que se rellene tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
