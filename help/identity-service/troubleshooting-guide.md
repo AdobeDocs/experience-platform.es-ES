@@ -91,11 +91,11 @@ Todas las organizaciones del Experience Platform proporcionan las siguientes Ár
 
 ## ¿Dónde puedo encontrar la lista de Áreas de nombres de identidad disponibles para mi organización?
 
-Mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)servicio de identidad, puede realizar una lista de todas las Áreas de nombres de identidad disponibles para su organización mediante una solicitud GET al `/idnamespace/identities` extremo. Consulte la sección sobre [listado de Áreas de nombres](./api/list-namespaces.md) disponibles en la descripción general de la API de servicio de identidad para obtener más información.
+Mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)servicio de identidad, puede realizar una lista de todas las Áreas de nombres de identidad disponibles para su organización mediante una solicitud de GET al `/idnamespace/identities` extremo. Consulte la sección sobre [listado de Áreas de nombres](./api/list-namespaces.md) disponibles en la descripción general de la API de servicio de identidad para obtener más información.
 
 ## ¿Cómo creo una Área de nombres personalizada para mi organización?
 
-Mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)servicio de identidad, puede crear una Área de nombres de identidad personalizada para su organización realizando una solicitud POST al `/idnamespace/identities` extremo. Consulte la sección sobre la [creación de una Área de nombres](./api/create-custom-namespace.md) personalizada en la descripción general de la API de servicio de identidad para obtener más información.
+Mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)servicio de identidad, puede crear una Área de nombres de identidad personalizada para su organización haciendo una solicitud de POST al `/idnamespace/identities` extremo. Consulte la sección sobre la [creación de una Área de nombres](./api/create-custom-namespace.md) personalizada en la descripción general de la API de servicio de identidad para obtener más información.
 
 ## ¿Qué son las identidades compuestas y los XID?
 
