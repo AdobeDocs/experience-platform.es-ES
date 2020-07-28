@@ -20,7 +20,7 @@ Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y h
 
 La `currentMonth` función devuelve el mes actual como un entero.
 
-**Formato**
+**Format**
 
 ```sql
 currentMonth()
@@ -38,7 +38,7 @@ person.birthMonth = currentMonth()
 
 La `getMonth` función devuelve el mes, como un entero, en función de una marca de tiempo determinada.
 
-**Formato**
+**Format**
 
 ```sql
 {TIMESTAMP}.getMonth()
@@ -56,7 +56,7 @@ person.birthdate.getMonth() = 6
 
 La `currentYear` función devuelve el año actual como un entero.
 
-**Formato**
+**Format**
 
 ```sql
 currentYear()
@@ -74,7 +74,7 @@ product.saleYear = currentYear()
 
 La `getYear` función devuelve el año, como un entero, en función de una marca de tiempo determinada.
 
-**Formato**
+**Format**
 
 ```sql
 {TIMESTAMP}.getYear()
@@ -92,7 +92,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 La `currentDayOfMonth` función devuelve el día actual del mes como un entero.
 
-**Formato**
+**Format**
 
 ```sql
 currentDayOfMonth()
@@ -110,7 +110,7 @@ person.birthDay = currentDayOfMonth()
 
 La `getDayOfMonth` función devuelve el día, como un entero, en función de una marca de tiempo determinada.
 
-**Formato**
+**Format**
 
 ```sql
 {TIMESTAMP}.getDayOfMonth()
@@ -128,7 +128,7 @@ product.sale.getDayOfMonth() <= 15
 
 La `occurs` función compara la función de marca de tiempo dada con un período de tiempo fijo.
 
-**Formato**
+**Format**
 
 La `occurs` función se puede escribir con cualquiera de los siguientes formatos:
 
