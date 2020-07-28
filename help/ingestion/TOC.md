@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda para la inserción de datos de Adobe Experience Platform
+user-guide-title: Ayuda para la ingestión de datos de Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 7%
 
 ---
 
@@ -37,4 +40,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Suscripción a eventos de ingesta de datos](quality/subscribe-events.md)
 - [Conectores de origen](source-connectors.md)
 - [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
