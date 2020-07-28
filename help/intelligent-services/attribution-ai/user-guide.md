@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: Guía del usuario de API de atribución
+title: Guía del usuario de Attribution AI
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 0%
 ---
 
 
-# Guía del usuario de API de atribución
+# Guía del usuario de Attribution AI
 
-La API de atribución, como parte de Servicios Inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con la API de atribución, los especialistas en mercadotecnia pueden medir y optimizar el gasto en mercadotecnia y publicidad al comprender el impacto de cada interacción del cliente en cada fase de los viajes de los clientes.
+Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con la Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de la interacción de cada cliente en cada fase de los viajes de los clientes.
 
-Este documento sirve como guía para interactuar con la API de atribución en la interfaz de usuario de Servicios inteligentes.
+Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 
 ## Crear una instancia
 
-En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el explorador *Servicios* y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **Abrir**.
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
-Aparece la página de servicio de Atribución de AI. Esta página lista las instancias de servicio de Atribución de AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en **Crear instancia** para comenzar.
+Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en **Crear instancia** para comenzar.
 
 ![Crear instancia](./images/user-guide/landing_page.png)
 
-A continuación, aparece la página de configuración de la API de atribución, donde puede proporcionar información básica y especificar un conjunto de datos para la instancia.
+A continuación, se abre la página de configuración para Attribution AI, donde puede proporcionar información básica y especificar un conjunto de datos para la instancia.
 
 ![página de configuración](./images/user-guide/setup_attribution.png)
 
@@ -40,7 +40,7 @@ En Información ** básica, proporcione un nombre y una descripción opcional pa
 
 ### Seleccionar un conjunto de datos
 
-Después de completar la información básica, haga clic en el menú desplegable rotulado **Seleccionar conjunto** de datos para seleccionar el conjunto de datos. El conjunto de datos se utiliza para entrenar el modelo y puntuar los datos subsiguientes que produce. Al seleccionar un conjunto de datos en el selector desplegable, solo se muestran los que son compatibles con la API de atribución y cumplen el esquema del Modelo de datos de experiencia (XDM). Una vez elegido un conjunto de datos, haga clic en **Siguiente** en la esquina superior derecha para continuar con la página de definición de eventos.
+Después de completar la información básica, haga clic en el menú desplegable rotulado **Seleccionar conjunto** de datos para seleccionar el conjunto de datos. El conjunto de datos se utiliza para entrenar el modelo y puntuar los datos subsiguientes que produce. Al seleccionar un conjunto de datos en el selector desplegable, solo se muestran los que son compatibles con la Attribution AI y cumplen el esquema del modelo de datos de experiencia (XDM). Una vez elegido un conjunto de datos, haga clic en **Siguiente** en la esquina superior derecha para continuar con la página de definición de eventos.
 
 ![página de configuración](./images/user-guide/initial_creation_attribution.png)
 
@@ -132,7 +132,7 @@ Una vez que haya terminado de definir todos los puntos de contacto necesarios, d
 
 ## Configuración avanzada de puntuación y formación
 
-La última página de Atribución de IA es la página *Avanzada* que se utiliza para configurar la formación y la puntuación.
+La última página de Attribution AI es la página *Avanzadas* que se utiliza para configurar la formación y la puntuación.
 
 ![nueva página avanzada](./images/user-guide/advanced_settings.png)
 
@@ -182,16 +182,16 @@ Para asegurarse de que obtiene el modelo más preciso posible, es importante cap
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia se ha completado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha creado correctamente una instancia de servicio en Atribución AI. Una vez que la instancia haya terminado de anotar (aproximadamente 24 horas), estará listo para [descubrir perspectivas](./discover-insights.md)de Atribución de AI. Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md) sin procesar.
+Siguiendo este tutorial, ha creado correctamente una instancia de servicio en Attribution AI. Una vez que la instancia haya terminado de anotar (aproximadamente 24 horas), estará listo para [descubrir perspectivas](./discover-insights.md)de Attribution AI. Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md) sin procesar.
 
 ## Recursos adicionales
 
-En el siguiente vídeo se describe un flujo de trabajo completo para crear una nueva instancia en la API de atribución.
+El siguiente vídeo describe un flujo de trabajo completo para crear una nueva instancia en Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
