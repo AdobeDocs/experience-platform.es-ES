@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión de SQL Server, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para SQL Server es `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
+Para crear una conexión de SQL Server, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud de POST. El ID de especificación de conexión para SQL Server es `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
