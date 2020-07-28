@@ -178,7 +178,7 @@ Un lote puede, en su ciclo vital, pasar por los siguientes estados:
 | Inactivo | x | El lote se promocionó correctamente, pero se ha revertido o ha caducado. El lote ya no estará disponible para el consumo de flujo descendente, pero los datos subyacentes permanecerán en Master hasta que se hayan retenido, archivado o eliminado de otro modo. |
 | Cargando |  | El cliente está escribiendo datos para el lote. El lote **no está** listo para la promoción en este momento. |
 | Cargado |  | El cliente ha terminado de escribir los datos del lote. El lote está listo para la promoción. |
-| Conservado |  | Los datos se han extraído de Master y de un archivo designado en Adobe Data Lake. |
+| Conservado |  | Los datos han sido extraídos de Master y de un archivo designado en Adobe Data Lake. |
 | Ensayo |  | El cliente ha indicado correctamente el lote para la promoción y los datos se están escalonando para su consumo en el flujo descendente. |
 | Reintentar |  | El cliente ha indicado el lote para la promoción, pero debido a un error, un servicio de supervisión de lotes lo está reintentando. Este estado se puede utilizar para indicar a los clientes que puede haber un retraso en la ingesta de datos. |
 | Detenido |  | El cliente ha indicado el lote para la promoción, pero después de `n` reintentos por parte de un servicio de supervisión de lotes, la promoción de lotes se ha estancado. |
