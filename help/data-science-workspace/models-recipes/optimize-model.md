@@ -56,7 +56,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-Una vez habilitada una clase de evaluador, se calcularán varias métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
+Una vez habilitada una clase de evaluador, se calculará una serie de métricas durante la formación de forma predeterminada. Las métricas predeterminadas se pueden declarar explícitamente agregando la siguiente línea a su `application.properties`.
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
