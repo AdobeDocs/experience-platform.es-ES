@@ -59,7 +59,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explore su almacenamiento de nube
 
-Con la conexión base para el almacenamiento de nube, puede explorar archivos y directorios realizando solicitudes GET. Al realizar solicitudes GET para explorar el almacenamiento de nube, debe incluir los parámetros de consulta que se enumeran en la tabla siguiente:
+Con la conexión base para el almacenamiento de nube, puede explorar archivos y directorios realizando solicitudes de GET. Al realizar solicitudes de GET para explorar el almacenamiento de nube, debe incluir los parámetros de consulta que se enumeran en la tabla siguiente:
 
 | Parámetro | Descripción |
 | --------- | ----------- |
@@ -110,9 +110,9 @@ Una respuesta correcta devuelve una matriz de archivos y carpetas que se encuent
 ]
 ```
 
-## Inspeccionar la estructura de un archivo
+## Inspect: la estructura de un archivo
 
-Para inspeccionar la estructura del archivo de datos desde el almacenamiento de nube, realice una solicitud GET mientras proporciona la ruta del archivo como parámetro de consulta.
+Para inspeccionar la estructura del archivo de datos desde el almacenamiento de la nube, realice una solicitud de GET mientras proporciona la ruta del archivo como parámetro de consulta.
 
 **Formato API**
 
