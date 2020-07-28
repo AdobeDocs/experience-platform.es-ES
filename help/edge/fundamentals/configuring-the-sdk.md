@@ -66,7 +66,7 @@ Indica si se debe habilitar la depuración. Al configurar esta configuración pa
 | -------- | ------------ | ------------------ |
 | Cadena | No | `beta.adobedc.net` |
 
-Dominio utilizado para interactuar con los servicios de Adobe. Solo se utiliza si tiene un dominio de origen (CNAME) que proxies solicitudes a la infraestructura Edge de Adobe.
+Dominio utilizado para interactuar con servicios de Adobe. Solo se utiliza si tiene un dominio de origen (CNAME) que proxies solicitudes a la infraestructura perimetral de Adobe.
 
 ### `orgId`
 
