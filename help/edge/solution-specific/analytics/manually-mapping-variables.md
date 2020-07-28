@@ -51,7 +51,7 @@ Para su uso por [!DNL Analytics], los datos XDM se acoplan con notación de punt
 
 Se puede acceder a todos los datos recopilados por la red Edge mediante reglas [de procesamiento](https://docs.adobe.com/content/help/es-ES/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). En [!DNL Analytics], puede utilizar reglas de procesamiento para incorporar datos de contexto en [!DNL Analytics] variables.
 
-Por ejemplo, en la regla siguiente, Analytics está configurado para rellenar los términos de búsqueda **interna (eVar2)** con los datos asociados con **a.x_atag.search.term(Context Data)**.
+Por ejemplo, en la regla siguiente, Analytics está configurado para rellenar los términos de búsqueda **interna (eVar2)** con los datos asociados con **a.x_atag.search.term(Datos de contexto)**.
 
 ![](assets/examplerule.png)
 
