@@ -5,13 +5,16 @@ title: Buscar un simulador para pruebas
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 2%
 
 ---
 
 
 # Buscar un simulador para pruebas
 
-Puede buscar un simulador para pruebas individual realizando una solicitud GET que incluya la propiedad del `name` simulador para pruebas en la ruta de solicitud.
+Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad del `name` simulador para pruebas en la ruta de solicitud.
 
 **Formato API**
 
