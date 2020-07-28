@@ -82,7 +82,7 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 
 >[!IMPORTANT]
 >
->Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
+>Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
 
 Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la descripción general [de](./policies/overview.md)las políticas.
 
