@@ -20,7 +20,7 @@ Trabajar con acciones de marketing en la API requiere que utilice el `/marketing
 
 ## Lista de todas las acciones de mercadotecnia
 
-Para vista de una lista de todas las acciones de marketing, se puede realizar una solicitud GET `/marketingActions/core` o `/marketingActions/custom` que devuelve todas las directivas del contenedor especificado.
+Para vista de una lista de todas las acciones de marketing, se puede realizar una solicitud de GET `/marketingActions/core` o `/marketingActions/custom` que devuelva todas las directivas del contenedor especificado.
 
 **Formato API**
 
@@ -97,7 +97,7 @@ El objeto response proporciona el número total de acciones de marketing en el c
 
 ## Buscar una acción de mercadotecnia específica
 
-También puede realizar una solicitud de búsqueda (GET) para vista de los detalles de una acción de mercadotecnia específica. Esto se lleva a cabo mediante el uso `name` de la acción de mercadotecnia. Si el nombre es desconocido, se puede encontrar usando la solicitud de listado (GET) que se mostró anteriormente.
+También puede realizar una solicitud de búsqueda (GET) para vista de los detalles de una acción de marketing específica. Esto se lleva a cabo mediante el uso `name` de la acción de mercadotecnia. Si el nombre es desconocido, se puede encontrar usando la solicitud de listado (GET) que se mostró anteriormente.
 
 **Formato API**
 
@@ -142,7 +142,7 @@ El objeto response contiene los detalles de la acción de marketing, incluida la
 
 ## Crear o actualizar una acción de marketing
 
-La [!DNL Policy Service] API le permite definir sus propias acciones de marketing, así como actualizar las existentes. Tanto la creación como la actualización se realizan mediante una operación PUT en el nombre de la acción de marketing.
+La [!DNL Policy Service] API le permite definir sus propias acciones de marketing, así como actualizar las existentes. La creación y la actualización se realizan mediante una operación de PUT en el nombre de la acción de marketing.
 
 **Formato API**
 
@@ -156,7 +156,7 @@ En la solicitud siguiente, observe que la carga útil `name` de la solicitud es 
 
 >[!NOTE]
 >
->Si no se proporciona el `{marketingActionName}` en la llamada, se producirá un error 405 (método no permitido), ya que no se le permitirá realizar directamente una PUT en el `/marketingActions/custom` extremo. Además, si la `name` carga útil no coincide con la `{marketingActionName}` de la ruta, recibirá un error 400 (solicitud incorrecta).
+>Si no se proporciona el `{marketingActionName}` en la llamada, se producirá un error 405 (método no permitido), ya que no se le permitirá realizar directamente un PUT en el extremo `/marketingActions/custom` . Además, si la `name` carga útil no coincide con la `{marketingActionName}` de la ruta, recibirá un error 400 (solicitud incorrecta).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +197,7 @@ Si se crea correctamente, recibirá un estado HTTP 201 (Creado) y el cuerpo de r
 
 ## Eliminar una acción de mercadotecnia
 
-Es posible eliminar las acciones de marketing enviando una solicitud de DELETE a la `{marketingActionName}` parte de la acción de marketing que desee eliminar.
+Es posible eliminar las acciones de marketing enviando una solicitud de  de DELETE a la parte `{marketingActionName}` de la acción de marketing que desee eliminar.
 
 >[!NOTE]
 >
@@ -224,4 +224,4 @@ curl -X DELETE \
 
 Si la acción de marketing se ha eliminado correctamente, el cuerpo de la respuesta estará en blanco con un estado HTTP 200 (correcto).
 
-Para confirmar la eliminación, intente buscar (OBTENER) la acción de marketing. Debe recibir un estado HTTP 404 (no encontrado) junto con un mensaje de error &quot;No encontrado&quot; porque la acción de marketing se ha eliminado.
+Puede confirmar la eliminación si intenta buscar (GET) la acción de marketing. Debe recibir un estado HTTP 404 (no encontrado) junto con un mensaje de error &quot;No encontrado&quot; porque la acción de marketing se ha eliminado.
