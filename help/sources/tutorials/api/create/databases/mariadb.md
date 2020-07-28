@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL MariaDB] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL MariaDB] es `3000eb99-cd47-43f3-827c-43caf170f015`.
+Para crear una [!DNL MariaDB] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL MariaDB] es `3000eb99-cd47-43f3-827c-43caf170f015`.
 
 ```shell
 curl -X POST \
