@@ -59,7 +59,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Validación sincrónica
 
-La validación sincrónica es un método de validación que proporciona información inmediata sobre los motivos por los que se ha producido un error en la ingestión. Sin embargo, si se produce un error, los registros en los que se ha producido un error al efectuar la validación se eliminan y se impide que se envíen en sentido descendente. Como resultado, la validación sincrónica sólo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas tanto del resultado de la validación XDM como, en caso de error, del motivo del error.
+La validación sincrónica es un método de validación que proporciona información inmediata sobre el motivo por el que se ha producido un error en la ingestión. Sin embargo, si se produce un error, los registros en los que se ha producido un error al efectuar la validación se eliminan y se impide que se envíen en sentido descendente. Como resultado, la validación sincrónica sólo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas tanto del resultado de la validación XDM como, en caso de error, del motivo del error.
 
 De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `synchronousValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el extremo de flujo está en el centro de datos VA7.
 
@@ -154,7 +154,7 @@ POST /collection/{CONNECTION_ID}
 
 **Solicitud**
 
-Envíe la siguiente solicitud para transferir datos a su entrada de datos con validación asincrónica:
+Envíe la siguiente solicitud para transferir datos a la entrada de datos con validación asincrónica:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
