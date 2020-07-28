@@ -18,7 +18,7 @@ Este documento proporciona un tutorial paso a paso para obtener acceso a una cue
 
 ## Autenticar para realizar llamadas de API
 
-Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes a las API de Adobe I/O deben autenticarse y autorizarse mediante estándares como OAuth y JSON Web Tokens (JWT). El JWT se utiliza junto con la información específica del cliente para generar su token de acceso personal.
+Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes a las API de E/S de Adobe deben autenticarse y autorizarse mediante estándares como OAuth y JSON Web Tokens (JWT). El JWT se utiliza junto con la información específica del cliente para generar su token de acceso personal.
 
 Este tutorial trata los pasos de la autenticación mediante la creación de un token de acceso que se describe en el siguiente diagrama de flujo:
 ![](images/authentication/authentication-flowchart.png)
@@ -29,7 +29,7 @@ Para realizar correctamente llamadas a [!DNL Experience Platform] API, necesita 
 
 * Una organización de IMS con acceso a Adobe Experience Platform
 * Una cuenta de Adobe ID registrada
-* Un administrador de Admin Console para agregarle como **desarrollador** y un **usuario** para un producto.
+* Un administrador Admin Console para agregarle como **desarrollador** y un **usuario** para un producto.
 
 Las siguientes secciones explican los pasos para crear un Adobe ID y convertirse en desarrollador y usuario de una organización.
 
@@ -43,7 +43,7 @@ Si no tiene un Adobe ID, puede crearlo siguiendo estos pasos:
 
 ## Convertirse en desarrollador y usuario de [!DNL Experience Platform] una organización
 
-Antes de crear integraciones en Adobe I/O, la cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Encontrará información detallada sobre las cuentas de desarrollador en el Admin Console en el documento [de](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) asistencia para la administración de desarrolladores.
+Antes de crear integraciones en la E/S de Adobe, su cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Encontrará información detallada sobre las cuentas de desarrollador del Admin Console en el documento [de](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) asistencia para la administración de desarrolladores.
 
 **Obtener acceso de desarrollador**
 
@@ -55,7 +55,7 @@ El administrador debe asignarle como desarrollador al menos un perfil de product
 
 ![](images/authentication/add-developer.png)
 
-Una vez que se le asigne como desarrollador, tendrá privilegios de acceso para crear integraciones en [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a la API de Adobe.
+Una vez que se le asigne como desarrollador, tendrá privilegios de acceso para crear integraciones en E/S [Adobe](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a la API de Adobe.
 
 **Obtener acceso de usuario**
 
