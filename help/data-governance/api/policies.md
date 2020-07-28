@@ -20,7 +20,7 @@ El extremo se utiliza para todas las llamadas de API relacionadas con la visuali
 
 ## Lista de todas las políticas
 
-Para vista de una lista de políticas, se puede realizar una solicitud GET a `/policies/core` o `/policies/custom` que devuelve todas las directivas para el contenedor especificado.
+Para vista de una lista de directivas, se puede realizar una solicitud de GET a `/policies/core` o que `/policies/custom` devuelva todas las directivas del contenedor especificado.
 
 **Formato API**
 
@@ -135,7 +135,7 @@ La respuesta incluye un &quot;recuento&quot; que muestra el número total de pol
 
 ## Buscar una directiva
 
-Cada directiva contiene un `id` campo que puede utilizarse para solicitar los detalles de una directiva específica. Si se desconoce el contenido `id` de una política, se puede encontrar mediante la solicitud de listado (GET) para lista de todas las directivas dentro de un contenedor específico (`core` o `custom`), como se muestra en el paso anterior.
+Cada directiva contiene un `id` campo que puede utilizarse para solicitar los detalles de una directiva específica. Si se desconoce el contenido `id` de una directiva, se puede encontrar mediante la solicitud de listado (GET) para lista de todas las directivas dentro de un contenedor específico (`core` o `custom`) como se muestra en el paso anterior.
 
 **Formato API**
 
@@ -312,7 +312,7 @@ Si se crea correctamente, recibirá un estado HTTP 201 (Creado) y el cuerpo de r
 
 ## Actualizar una directiva
 
-Es posible que deba actualizar una directiva de uso de datos después de haberla creado. Esto se realiza mediante una solicitud PUT a la política `id` con una carga útil que incluye la forma actualizada de la política en su totalidad. En otras palabras, la solicitud de PUT consiste esencialmente en _reescribir_ la política, por lo que el organismo debe incluir toda la información necesaria, como se muestra en el ejemplo siguiente.
+Es posible que deba actualizar una directiva de uso de datos después de haberla creado. Esto se realiza a través de una solicitud PUT a la política `id` con una carga útil que incluye la forma actualizada de la política en su totalidad. En otras palabras, la solicitud del PUT consiste esencialmente en _reescribir_ la política, por lo que el órgano debe incluir toda la información necesaria, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
@@ -404,9 +404,9 @@ Una solicitud de actualización correcta devuelve un estado HTTP 200 (Aceptar) y
 
 ## Actualizar una parte de una directiva
 
-Una porción específica de una directiva se puede actualizar mediante una solicitud PATCH. A diferencia de las solicitudes PUT que _reescriben_ la directiva, las solicitudes PATCH actualizan solo la ruta especificada en el cuerpo de la solicitud. Esto resulta especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita enviar la ruta específica que desea actualizar (`/status`) y su valor (`ENABLE` o `DISABLE`).
+Una porción específica de una directiva se puede actualizar mediante una solicitud de PATCH. A diferencia de las solicitudes de PUT que _reescriben_ la directiva, el PATCH solicita que se actualice únicamente la ruta especificada en el cuerpo de la solicitud. Esto resulta especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita enviar la ruta específica que desea actualizar (`/status`) y su valor (`ENABLE` o `DISABLE`).
 
-La [!DNL Policy Service] API admite actualmente operaciones &quot;add&quot;, &quot;replace&quot; y &quot;remove&quot; PATCH, y le permite combinar varias actualizaciones en una sola llamada agregando cada una como un objeto dentro de la matriz, como se muestra en los siguientes ejemplos.
+La [!DNL Policy Service] API admite actualmente operaciones de PATCH &quot;agregar&quot;, &quot;reemplazar&quot; y &quot;quitar&quot;, y permite combinar varias actualizaciones en una sola llamada agregando cada una como un objeto dentro de la matriz, como se muestra en los siguientes ejemplos.
 
 **Formato API**
 
@@ -432,7 +432,7 @@ En este ejemplo, utilizamos la operación &quot;reemplazar&quot; para cambiar el
 ]
 ```
 
-Al enviar varias operaciones PATCH en una sola solicitud, recuerde que se procesarán en el orden en que aparecen en la matriz, de modo que asegúrese de que envía las solicitudes en el orden correcto cuando sea necesario.
+Al enviar varias operaciones de PATCH en una sola solicitud, recuerde que se procesarán en el orden en que aparecen en la matriz, de modo que asegúrese de enviar las solicitudes en el orden correcto cuando sea necesario.
 
 ```SHELL
 curl -X PATCH \
@@ -506,7 +506,7 @@ Una solicitud de actualización correcta devolverá un estado HTTP 200 (Aceptar)
 
 ## Eliminar una directiva
 
-Si necesita eliminar una directiva que haya creado, puede hacerlo enviando una solicitud de DELETE al `id` de la directiva que desee eliminar. Se recomienda realizar primero una solicitud de búsqueda (GET) para vista de la directiva y confirmar que es la directiva correcta que desea eliminar. **Una vez eliminadas, las políticas no se pueden recuperar.**
+Si necesita eliminar una directiva que haya creado, puede hacerlo enviando una solicitud de  DELETE al nivel `id` de la directiva que desee eliminar. Se recomienda realizar primero una solicitud de búsqueda (GET) para realizar la vista de la directiva y confirmar que es la directiva correcta que desea eliminar. **Una vez eliminadas, las políticas no se pueden recuperar.**
 
 **Formato API**
 
@@ -529,4 +529,4 @@ curl -X DELETE \
 
 Si la directiva se ha eliminado correctamente, el cuerpo de la respuesta estará en blanco con un estado HTTP 200 (correcto).
 
-Para confirmar la eliminación, intente buscar (OBTENER) la directiva de nuevo. Debe recibir un estado HTTP 404 (no encontrado) junto con un mensaje de error &quot;No encontrado&quot; porque la directiva se ha eliminado.
+Para confirmar la eliminación, intente buscar (GET) la directiva de nuevo. Debe recibir un estado HTTP 404 (no encontrado) junto con un mensaje de error &quot;No encontrado&quot; porque la directiva se ha eliminado.
