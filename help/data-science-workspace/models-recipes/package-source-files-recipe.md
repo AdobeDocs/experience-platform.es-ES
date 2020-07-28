@@ -18,7 +18,7 @@ Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de o
 
 Conceptos para comprender:
 
-- **Fórmulas**: Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de inteligencia artificial o un conjunto de algoritmos, la lógica de procesamiento y la configuración necesarios para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas comerciales específicos.
+- **Fórmulas**: Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de inteligencia artificial o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarias para crear y ejecutar un modelo capacitado y, por lo tanto, ayuda a resolver problemas comerciales específicos.
 - **Archivos** de origen: Archivos individuales del proyecto que contienen la lógica de una fórmula.
 
 ## Requisitos previos
