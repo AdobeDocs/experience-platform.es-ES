@@ -36,7 +36,7 @@ La siguiente tabla describe varios tipos de identidad predefinidos y utilizados 
 >
 >Cada tipo de identidad también tiene un valor `namespaceId` entero, que se puede utilizar en lugar de la `namespace` cadena al establecer la propiedad `type` de la identidad en &quot;namespaceId&quot;. Consulte la sección sobre calificadores [de](#namespace-qualifiers) Área de nombres para obtener más información.
 
-Puede recuperar una lista de Áreas de nombres de identidad que esté utilizando su organización haciendo una solicitud GET al `idnamespace/identities` extremo en la [!DNL Identity Service] API. Consulte la guía [para desarrolladores de](../../identity-service/api/getting-started.md) Identity Service para obtener más información.
+Puede recuperar una lista de Áreas de nombres de identidad que esté utilizando su organización haciendo una solicitud de GET al `idnamespace/identities` extremo en la [!DNL Identity Service] API. Consulte la guía [para desarrolladores de](../../identity-service/api/getting-started.md) Identity Service para obtener más información.
 
 ## Calificadores de Área de nombres
 
