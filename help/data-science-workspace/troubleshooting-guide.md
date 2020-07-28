@@ -88,7 +88,7 @@ Para obtener una lista completa de [!DNL Python] las bibliotecas preinstaladas, 
 
 ## ¿Puedo instalar bibliotecas PySpark personalizadas?
 
-Desafortunadamente, no puede instalar bibliotecas adicionales para el núcleo PySpark. Sin embargo, puede ponerse en contacto con el representante de servicio al cliente de Adobe para que le instalen bibliotecas PySpark personalizadas.
+Desafortunadamente, no puede instalar bibliotecas adicionales para el núcleo PySpark. Sin embargo, puede ponerse en contacto con el representante de servicios al cliente de Adobe para que le instalen bibliotecas PySpark personalizadas.
 
 Para obtener una lista de las bibliotecas PySpark preinstaladas, consulte la sección de [apéndice de la Guía](./jupyterlab/overview.md#supported-libraries)del usuario de JupyterLab.
 
