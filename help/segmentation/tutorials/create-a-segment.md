@@ -56,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 El primer paso en la segmentación es definir un segmento, representado en una construcción denominada definición **de** segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado **PQL**. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
 
-Puede crear una nueva definición de segmento realizando una solicitud POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
+Puede crear una nueva definición de segmento realizando una solicitud de POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
 
 Para obtener una explicación detallada sobre cómo definir un segmento, lea la guía para desarrolladores de definiciones de [segmentos](../api/segment-definitions.md#create).
 
@@ -87,7 +87,7 @@ Las estimaciones suelen durar entre 10 y 15 segundos, comenzando con una estimac
 
 ### Crear un trabajo de previsualización
 
-Puede crear un nuevo trabajo de previsualización realizando una solicitud POST al `/preview` extremo.
+Puede crear un nuevo trabajo de previsualización realizando una solicitud de POST al `/preview` extremo.
 
 Encontrará instrucciones detalladas sobre la creación de un trabajo de previsualización en la guía de [previsualizaciones y estimaciones](../api/previews-and-estimates.md#create-preview).
 
