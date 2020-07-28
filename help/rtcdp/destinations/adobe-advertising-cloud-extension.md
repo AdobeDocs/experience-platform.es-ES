@@ -1,7 +1,7 @@
 ---
-title: Adobe Advertising Cloud Extension
-seo-title: Adobe Advertising Cloud extension
-description: La extensión Advertising Cloud de Adobe es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+title: Extensión Adobe Advertising Cloud
+seo-title: Adobe Advertising Cloud Extension
+description: La extensión Adobe Advertising Cloud es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
@@ -16,23 +16,23 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Esta es la [!DNL Advertising Cloud] extensión para implementar las etiquetas de segmento y [!DNL Advertising Cloud] conversión tanto para DSP como para Search (actualmente no se admite DCO).
+Esta es la [!DNL Advertising Cloud] extensión para implementar las etiquetas de segmento y [!DNL Advertising Cloud] conversión tanto para la DSP como para la búsqueda (actualmente no se admite DCO).
 
 Adobe Advertising Cloud es una extensión de publicidad en Adobe Real-time Customer Data Platform.
 
-Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en tiempo real de CDP de Adobe, consulte Información general [sobre las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
-![Adobe Advertising Cloud extension](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
+![Extensión Adobe Advertising Cloud](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo de destinos para todos los clientes que hayan adquirido CDP en tiempo real de Adobe.
+Esta extensión está disponible en el catálogo de destinos para todos los clientes que han adquirido CDP en tiempo real de Adobe.
 
 Para utilizar esta extensión, necesita acceder a [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida. Póngase en contacto con el administrador de su organización para obtener acceso a [!DNL Launch] y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
-Para instalar la extensión Adobe Advertising Cloud:
+Para instalar la extensión de Adobe Advertising Cloud:
 
 1. En la interfaz [CDP en tiempo real de](http://platform.adobe.com/)Adobe, vaya a **[!UICONTROL Destinos > Catálogo]**.
 2. Seleccione la extensión del catálogo o utilice la barra de búsqueda.
