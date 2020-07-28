@@ -401,7 +401,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la nueva tran
 
 ## Recuperar los datos de serie temporal recién ingestados
 
-Para validar los registros ingestados anteriormente, puede utilizar [!DNL Profile Access API](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
+Para validar los registros ingestados anteriormente, puede utilizar [!DNL Profile Access API](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud de GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
 
 >[!NOTE]
 >
