@@ -1,8 +1,8 @@
 ---
 title: Recuperando ID de Experience Cloud
 seo-title: SDK web de Adobe Experience Platform recuperando ID de Experience Cloud
-description: Obtenga información sobre cómo obtener el ID de Adobe Experience Cloud.
-seo-description: Obtenga información sobre cómo obtener el ID de Adobe Experience Cloud.
+description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
+seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
