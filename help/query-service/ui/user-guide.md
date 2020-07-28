@@ -124,7 +124,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 
 ## Pasos siguientes
 
-Ahora que sabe en qué funciones se encuentran disponibles [!DNL Query Editor] y cómo navegar por la aplicación, puede crear inicios para crear sus propias consultas directamente en [!DNL Platform]. Para obtener más información sobre cómo ejecutar consultas SQL con conjuntos de datos en [!DNL Data Lake], consulte la guía sobre cómo [ejecutar consultas][query-service-running-queries]. Para obtener consultas SQL de muestra para trabajar con datos de Analytics y Adobe Target de Adobe, consulte la referencia [de consultas de][query-service-sample-queries]ejemplo.
+Ahora que sabe en qué funciones se encuentran disponibles [!DNL Query Editor] y cómo navegar por la aplicación, puede crear inicios para crear sus propias consultas directamente en [!DNL Platform]. Para obtener más información sobre cómo ejecutar consultas SQL con conjuntos de datos en [!DNL Data Lake], consulte la guía sobre cómo [ejecutar consultas][query-service-running-queries]. Para obtener consultas SQL de muestra para trabajar con datos de Adobe Analytics y Adobe Target, consulte la referencia [de consultas de][query-service-sample-queries]ejemplo.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
