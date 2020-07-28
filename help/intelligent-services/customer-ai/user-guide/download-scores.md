@@ -114,7 +114,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de 
 
 ## Recupere la siguiente llamada de API con su ID de lote {#retrieve-the-next-api-call-with-your-batch-id}
 
-Una vez que tenga su ID de lote, podrá realizar una nueva solicitud GET a `/batches`. La solicitud devuelve un vínculo que se utiliza como la siguiente solicitud de API.
+Una vez que tenga su ID de lote, podrá realizar una nueva solicitud de GET a `/batches`. La solicitud devuelve un vínculo que se utiliza como la siguiente solicitud de API.
 
 **Formato API**
 
@@ -168,7 +168,7 @@ Una respuesta correcta devuelve una carga útil que contiene un `_links` objeto.
 
 ## Recuperar los archivos {#retrieving-your-files}
 
-Utilizando el `href` valor obtenido en el paso anterior como una llamada de API, realice una nueva solicitud GET para recuperar el directorio de archivos.
+Utilizando el `href` valor obtenido en el paso anterior como una llamada de API, realice una nueva solicitud de GET para recuperar el directorio de archivos.
 
 **Formato API**
 
@@ -234,14 +234,14 @@ La respuesta contiene una matriz de datos que puede tener una sola entrada o una
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `_links.self.href` | Dirección URL de solicitud GET utilizada para descargar un archivo en el directorio. |
+| `_links.self.href` | Dirección URL de solicitud de GET utilizada para descargar un archivo en el directorio. |
 
 
 Copie el `href` valor de cualquier objeto de archivo de la `data` matriz y, a continuación, continúe con el paso siguiente.
 
 ## Descargar los datos del archivo
 
-Para descargar los datos del archivo, realice una solicitud GET al `"href"` valor copiado en el paso anterior para [recuperar los archivos](#retrieving-your-files).
+Para descargar los datos del archivo, realice una solicitud de GET al `"href"` valor copiado en el paso anterior [para recuperar los archivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Asegúrese de que se encuentra en el directorio o la carpeta en los que desea guardar el archivo antes de realizar la solicitud GET.
+>Antes de realizar la solicitud de GET, asegúrese de que se encuentra en el directorio o la carpeta en los que desea guardar el archivo.
 
 **Respuesta**
 
