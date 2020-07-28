@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Políticas eficaces de Vista
 
-Para vista de directivas efectivas para el usuario actual, realice una solicitud POST al `/acl/effective-policies` extremo en la [!DNL Access Control] API. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
+Para vista de directivas efectivas para el usuario actual, realice una solicitud de POST al extremo en la `/acl/effective-policies` API [!DNL Access Control] . Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
 
 **Formato API**
 
@@ -73,7 +73,7 @@ Esta sección proporciona información adicional para utilizar la [!DNL Access C
 
 ### Permisos y tipos de recursos aceptados
 
-A continuación se muestra una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud POST al `/acl/active-permissions` extremo.
+A continuación se muestra una lista de permisos y tipos de recursos que se pueden incluir en la carga útil de una solicitud de POST al `/acl/active-permissions` extremo.
 
 **Permisos**
 
