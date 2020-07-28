@@ -20,7 +20,7 @@ ht-degree: 7%
 
 La `like` función se utiliza para determinar si una cadena coincide con un patrón especificado.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1} like {STRING_2}
@@ -43,7 +43,7 @@ city like "%es%"
 
 La `startsWith` función se utiliza para determinar si una cadena inicio con una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -67,7 +67,7 @@ person.name.startsWith("Joe")
 
 La `doesNotStartWith` función se utiliza para determinar si una cadena no está en inicio con una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -91,7 +91,7 @@ person.name.doesNotStartWith("Joe")
 
 La `endsWith` función se utiliza para determinar si una cadena termina con una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -115,7 +115,7 @@ person.emailAddress.endsWith(".com")
 
 La `doesNotEndWith` función se utiliza para determinar si una cadena no termina con una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -139,7 +139,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 La `contains` función se utiliza para determinar si una cadena contiene una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -163,7 +163,7 @@ person.emailAddress.contains("2010@gm")
 
 La `doesNotContain` función se utiliza para determinar si una cadena no contiene una subcadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -187,7 +187,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 La `equals` función se utiliza para determinar si una cadena es igual a la cadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -210,7 +210,7 @@ person.name.equals("John")
 
 La `notEqualTo` función se utiliza para determinar si una cadena no es igual a la cadena especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -233,7 +233,7 @@ person.name.notEqualTo("John")
 
 La `matches` función se utiliza para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre patrones coincidentes en expresiones regulares.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 La `regexGroup` función se utiliza para extraer información específica, basándose en la expresión habitual proporcionada.
 
-**Formato**
+**Format**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
