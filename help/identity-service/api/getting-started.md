@@ -52,7 +52,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### enrutamiento basado en la región
 
-La [!DNL Identity Service] API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización de IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada punto final garantiza que todas las solicitudes realizadas mediante la [!DNL Identity Service] API se dirijan a la región adecuada.
+La [!DNL Identity Service] API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización de IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada punto final garantiza que todas las solicitudes realizadas con la [!DNL Identity Service] API se dirijan a la región adecuada.
 
 Actualmente hay dos regiones admitidas por [!DNL Identity Service] las API: VA7 y NLD2.
 
