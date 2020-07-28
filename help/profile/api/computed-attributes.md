@@ -40,7 +40,7 @@ Los atributos calculados incluyen la creación de una expresión, o &quot;regla&
 Los casos de uso para atributos calculados pueden ir desde cálculos simples a referencias muy complejas. Estos son algunos ejemplos de casos de uso para atributos calculados:
 
 1. **[!UICONTROL Porcentajes]:**Un atributo simple calculado podría incluir tomar dos campos numéricos en un registro y dividirlos para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
-1. **[!UICONTROL Uso]de la aplicación:**Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° período de apertura, lo que estimula una mayor participación con su marca.
+1. **[!UICONTROL Uso]de la aplicación:**Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° número de aperturas, lo que estimula un compromiso más profundo con su marca.
 1. **[!UICONTROL Valores]acumulados:**La recopilación de totales en curso, como un valor de compra de por vida para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
 
 ## Configurar un atributo calculado
@@ -48,7 +48,7 @@ Los casos de uso para atributos calculados pueden ir desde cálculos simples a r
 Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con una mezcla para agregar el campo a un esquema existente o seleccionando un campo que ya haya definido en un esquema.
 
 >[!NOTE]
->Los atributos calculados no se pueden agregar a los campos de las mezclas definidas por Adobe. El campo debe estar dentro de la `tenant` Área de nombres, lo que significa que debe ser un campo definido y agregado a un esquema.
+>No se pueden agregar atributos calculados a los campos dentro de mezclas definidas por Adobe. El campo debe estar dentro de la `tenant` Área de nombres, lo que significa que debe ser un campo definido y agregado a un esquema.
 
 Para definir correctamente un campo de atributo calculado, el esquema debe estar activado [!DNL Profile] y aparecer como parte del esquema de unión de la clase en la que se basa el esquema. Para obtener más información sobre esquemas y uniones [!DNL Profile]habilitados, consulte la sección de la guía para [!DNL Schema Registry] desarrolladores sobre la [activación de un esquema para Perfil y visualización de esquemas](../../xdm/api/getting-started.md)de unión. También se recomienda examinar la [sección sobre uniones](../../xdm/schema/composition.md) en la documentación básica sobre la composición del esquema.
 
@@ -110,7 +110,7 @@ Ahora puede hacer clic en **[!UICONTROL Guardar]** para guardar el esquema actua
 
 Ahora, con el campo de atributo calculado identificado y la confirmación de que el esquema está habilitado para [!DNL Profile], puede configurar un atributo calculado.
 
-Comience por realizar una solicitud POST al extremo con un cuerpo de solicitud que contenga los detalles del atributo calculado que desea crear. `/config/computedAttributes`
+Comience por realizar una solicitud de POST al extremo con un cuerpo de solicitud que contenga los detalles del atributo calculado que desea crear. `/config/computedAttributes`
 
 **Formato API**
 
@@ -223,7 +223,7 @@ Los pasos para enumerar todos los atributos calculados y para ver un atributo ca
 
 ### Atributos calculados de Lista {#list-computed-attributes}
 
-La organización de IMS puede crear varios atributos calculados y realizar una solicitud GET al extremo le permite realizar la lista de todos los atributos calculados existentes para la organización. `/config/computedAttributes`
+La organización de IMS puede crear varios atributos calculados y realizar una solicitud de GET al extremo permite realizar la lista de todos los atributos calculados existentes para la organización. `/config/computedAttributes`
 
 **Formato API**
 
@@ -357,11 +357,11 @@ La respuesta también incluye una `children` matriz compuesta por uno o más obj
 | `_page.pageSize` | Número de atributos calculados devueltos en esta página de resultados. Si `pageSize` es igual a `totalCount`, significa que solo hay una página de resultados y se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
 | `children` | Matriz compuesta de uno o varios objetos, cada uno de los cuales contiene los detalles de un único atributo calculado. Si no se han definido atributos calculados, la `children` matriz está vacía. |
 | `id` | Un valor único, de sólo lectura, generado por el sistema y asignado automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección sobre la [creación de un atributo](#create-a-computed-attribute) calculado anteriormente en este tutorial. |
-| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder mediante una solicitud GET al `_links.next` valor. |
+| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET al `_links.next` valor. |
 
 ### Vista de un atributo calculado {#view-a-computed-attribute}
 
-También puede realizar una vista de un atributo calculado específico realizando una solicitud GET al extremo e incluyendo el ID de atributo calculado en la ruta de la solicitud. `/config/computedAttributes`
+También puede realizar una vista de un atributo calculado específico mediante una solicitud de GET al extremo e incluyendo el ID de atributo calculado en la ruta de la solicitud. `/config/computedAttributes`
 
 **Formato API**
 
@@ -432,7 +432,7 @@ curl -X GET \
 
 ## Actualizar un atributo calculado
 
-En caso de que necesite actualizar un atributo calculado existente, esto se puede hacer haciendo una solicitud PATCH al extremo e incluyendo el ID del atributo calculado que desea actualizar en la ruta de solicitud. `/config/computedAttributes`
+En caso de que necesite actualizar un atributo calculado existente, esto se puede hacer haciendo una solicitud de PATCH al extremo e incluyendo el ID del atributo calculado que desea actualizar en la ruta de la solicitud. `/config/computedAttributes`
 
 **Formato API**
 
@@ -476,11 +476,11 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo de respuesta vacío. Si desea confirmar que la actualización se ha realizado correctamente, puede realizar una solicitud GET para vista del atributo calculado por su ID.
+Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo de respuesta vacío. Si desea confirmar que la actualización se ha realizado correctamente, puede realizar una solicitud de GET para vista del atributo calculado por su ID.
 
 ## Eliminar un atributo calculado
 
-También es posible eliminar un atributo calculado mediante la API. Esto se realiza realizando una solicitud DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
+También es posible eliminar un atributo calculado mediante la API. Esto se realiza realizando una solicitud de DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
 
 >[!Nota]
 >
@@ -510,7 +510,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se realizó correctamente, puede realizar una solicitud GET para buscar el atributo calculado por su ID. Si se eliminó el atributo, recibirá un error de estado HTTP 404 (no encontrado).
+Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud de GET para buscar el atributo calculado por su ID. Si se eliminó el atributo, recibirá un error de estado HTTP 404 (no encontrado).
 
 ## Pasos siguientes
 
