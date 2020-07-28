@@ -16,7 +16,7 @@ ht-degree: 0%
 
 El conector de flujo para Adobe Experience Platform se basa en [!DNL Apache Kafka Connect]. Esta biblioteca se puede utilizar para transmitir eventos JSON de [!DNL Kafka] temas del centro de datos directamente a [!DNL Experience Platform] en tiempo real.
 
-El conector de flujo es un conector de receptor (unidireccional) que proporciona datos de [!DNL Kafka] temas a un punto final registrado en [!DNL Experience Platform]. Para utilizar este conector, debe descargar la biblioteca, agregarla a la implementación existente [!DNL Kafka] y configurar los [!DNL Kafka] temas en la URL HTTP de flujo de Adobe. El código adicional **no es** obligatorio. El conector admite las siguientes funciones:
+El conector de flujo es un conector (unidireccional) del receptor que proporciona datos de [!DNL Kafka] temas a un punto final registrado en [!DNL Experience Platform]. Para utilizar este conector, debe descargar la biblioteca, agregarla a la implementación existente [!DNL Kafka] y configurar los [!DNL Kafka] temas en la URL HTTP de flujo de Adobe. El código adicional **no es** obligatorio. El conector admite las siguientes funciones:
 
 - Recopilación autenticada de datos
 - Agrupación de mensajes para reducir las llamadas de red y aumentar el rendimiento
