@@ -5,13 +5,16 @@ title: Tipos de entorno limitado compatibles con la Lista
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '47'
+ht-degree: 4%
 
 ---
 
 
 # Tipos de entorno limitado compatibles con la Lista
 
-Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización haciendo una solicitud GET al `/sandboxTypes` extremo.
+Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización realizando una solicitud de GET al `/sandboxTypes` extremo.
 
 **Formato API**
 
