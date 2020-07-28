@@ -1,7 +1,7 @@
 ---
 title: Extensión de etiqueta de conversión de anunciante de Awin
 seo-title: Extensión de etiqueta de conversión de anunciante de Awin
-description: La extensión Etiqueta de conversión de anunciante de Awin es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión de la etiqueta de conversión de anunciante de Awin es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
@@ -18,15 +18,15 @@ ht-degree: 4%
 
 La etiqueta de conversión es la declaración del objeto JavaScript AWIN.Tracking.Sale, que se realiza en la página de confirmación para indicar a la etiqueta maestra que se ha producido una conversión. Posteriormente realizará las solicitudes de seguimiento necesarias.
 
-Awin Advertiser Conversion Tag es una extensión publicitaria en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Awin Advertiser Conversion Tag es una extensión publicitaria en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en tiempo real de CDP de Adobe, consulte Información general [sobre las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
 ![Awin Advertiser Conversiontag extension en la interfaz de usuario](/help/rtcdp/destinations/assets/awin-conversiontag-extension.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo de destinos para todos los clientes que hayan adquirido CDP en tiempo real de Adobe.
+Esta extensión está disponible en el catálogo de destinos para todos los clientes que han adquirido CDP en tiempo real de Adobe.
 
 Para utilizar esta extensión, necesita acceder a [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida. Póngase en contacto con el administrador de su organización para obtener acceso a [!DNL Launch] y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
