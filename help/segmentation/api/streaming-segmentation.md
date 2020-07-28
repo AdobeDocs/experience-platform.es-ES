@@ -92,7 +92,7 @@ Además, se aplican algunas directrices al realizar la segmentación de flujo:
 
 ## Recuperar todos los segmentos activados para la segmentación de flujo continuo
 
-Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de la organización de IMS realizando una solicitud GET al `/segment/definitions` extremo.
+Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de la organización de IMS realizando una solicitud de GET al `/segment/definitions` extremo.
 
 **Formato API**
 
@@ -294,7 +294,7 @@ Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de
 
 ### Crear una programación
 
-Al realizar una solicitud POST al extremo, puede crear una programación e incluir la hora específica en la que se debe activar la programación. `/config/schedules`
+Al realizar una solicitud de POST al extremo, puede crear una programación e incluir la hora específica en la que se debe activar la programación. `/config/schedules`
 
 **Formato API**
 
@@ -364,7 +364,7 @@ Una respuesta correcta devuelve los detalles de la programación recién creada.
 
 ### Habilitar una programación
 
-De forma predeterminada, una programación se desactiva cuando se crea, a menos que la `state` propiedad se establezca `active` en el cuerpo de la solicitud create (POST). Puede habilitar una programación (establecer la `state` en `active``/config/schedules` ) realizando una solicitud PATCH en el extremo e incluyendo el ID de la programación en la ruta de acceso.
+De forma predeterminada, una programación se desactiva cuando se crea, a menos que la `state` propiedad se establezca `active` en el cuerpo de solicitud create (POST). Puede habilitar una programación (establecer la `state` en `active``/config/schedules` ) realizando una solicitud de PATCH al extremo e incluyendo el ID de la programación en la ruta de acceso.
 
 **Formato API**
 
