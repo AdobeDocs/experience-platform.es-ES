@@ -29,7 +29,7 @@ Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.m
 
 ## Creación de una clase ad-hoc
 
-El comportamiento de los datos de un esquema XDM viene determinado por su clase subyacente. El primer paso para crear un esquema ad-hoc es crear una clase basada en el `adhoc` comportamiento. Esto se realiza realizando una solicitud POST al `/tenant/classes` extremo.
+El comportamiento de los datos de un esquema XDM viene determinado por su clase subyacente. El primer paso para crear un esquema ad-hoc es crear una clase basada en el `adhoc` comportamiento. Esto se realiza realizando una solicitud de POST al `/tenant/classes` extremo.
 
 **Formato API**
 
@@ -148,7 +148,7 @@ Una respuesta correcta devuelve los detalles de la nueva clase, reemplazando el 
 
 ## Creación de un esquema ad-hoc
 
-Una vez que haya creado una clase ad-hoc, puede crear un nuevo esquema que implemente esa clase realizando una solicitud POST al `/tenant/schemas` extremo.
+Una vez que haya creado una clase ad-hoc, puede crear un nuevo esquema que implemente esa clase realizando una solicitud de POST al `/tenant/schemas` extremo.
 
 **Formato API**
 
@@ -225,7 +225,7 @@ Una respuesta correcta devuelve los detalles del esquema recién creado, incluye
 >
 >Este paso es opcional. Si no desea inspeccionar la estructura de campos de su esquema ad-hoc, puede saltar a la sección de [próximos pasos](#next-steps) al final de este tutorial.
 
-Una vez creado el esquema ad-hoc, puede realizar una solicitud de búsqueda (GET) para vista del esquema en su formulario ampliado. Esto se lleva a cabo utilizando el encabezado Accept adecuado en la solicitud GET, como se muestra a continuación.
+Una vez creado el esquema ad-hoc, puede realizar una solicitud de búsqueda (GET) para vista del esquema en su formulario ampliado. Esto se lleva a cabo utilizando el encabezado Accept adecuado en la solicitud de GET, como se muestra a continuación.
 
 **Formato API**
 
