@@ -62,7 +62,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Dentro de la [!DNL Policy Service] API, todas las políticas y acciones de marketing se denominan `core` o `custom` recursos.
 
-Los recursos `core` son los definidos y mantenidos por Adobe, mientras que `custom` los recursos son creados y mantenidos por clientes individuales y, por lo tanto, son únicos y visibles únicamente para la organización de IMS que los creó. Como tal, las operaciones de listado y búsqueda (`GET`) son las únicas operaciones permitidas en `core` los recursos, mientras que las operaciones de listado, búsqueda y actualización (`POST`, `PUT`, `PATCH`y `DELETE`) están disponibles para `custom` los recursos.
+Los `core` recursos son los definidos y mantenidos por el Adobe, mientras que `custom` los recursos son creados y mantenidos por clientes individuales y, por lo tanto, son únicos y visibles únicamente para la organización de IMS que los creó. Como tal, las operaciones de listado y búsqueda (`GET`) son las únicas operaciones permitidas en `core` los recursos, mientras que las operaciones de listado, búsqueda y actualización (`POST`, `PUT`, `PATCH`y `DELETE`) están disponibles para `custom` los recursos.
 
 ## Estado de la directiva
 
@@ -74,7 +74,7 @@ Las políticas de &quot;BORRADOR&quot; también pueden considerarse en la evalua
 
 ## Nombres de acciones de marketing {#marketing-actions}
 
-Los nombres de las acciones de mercadotecnia son identificadores únicos para las acciones de mercadotecnia. Cada acción `core` de marketing tiene un nombre único que se aplica a todas las organizaciones de IMS. Adobe define y mantiene estos nombres. Mientras tanto, todas las acciones de mercadotecnia definidas por el cliente (`custom` los recursos) son únicas dentro de su organización individual y no son visibles ni se comparten con otras organizaciones de IMS.
+Los nombres de las acciones de mercadotecnia son identificadores únicos para las acciones de mercadotecnia. Cada acción `core` de marketing tiene un nombre único que se aplica a todas las organizaciones de IMS. Estos nombres se definen y mantienen por Adobe. Mientras tanto, todas las acciones de mercadotecnia definidas por el cliente (`custom` los recursos) son únicas dentro de su organización individual y no son visibles ni se comparten con otras organizaciones de IMS.
 
 Los pasos para trabajar con acciones de marketing en la [!DNL Policy Service] API se describen en la sección Acciones [de](#marketing-actions) marketing más adelante en este documento.
 
