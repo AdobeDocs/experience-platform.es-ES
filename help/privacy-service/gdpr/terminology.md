@@ -74,7 +74,7 @@ __Grupo de empresas:__ Una empresa de control y sus empresas controladas.
 
 ## I
 
-__Servicios de Identity Management (IMS):__ Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y la autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Servicios de Identity Management (IMS):__ Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __ID de organización de IMS:__ Se refiere a un token de autorización de Adobe para la autenticación servicio a servicio, que no requiere el inicio de sesión del usuario. Se emite a un cliente de IMS y no tiene ningún usuario asociado. Un cliente de IMS necesita un token de servicio para autorizar solicitudes de canal de retorno entre servicios. (El término “token de sistema” se utiliza de forma ocasional con el significado de “token de servicio”).
 
