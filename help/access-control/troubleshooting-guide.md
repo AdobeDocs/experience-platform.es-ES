@@ -20,7 +20,7 @@ Este documento proporciona respuestas a las preguntas más frecuentes sobre el c
 
 ## ¿Dónde puedo encontrar mis permisos de acceso actuales?
 
-Si es administrador del sistema, administrador del producto o administrador del perfil del producto de su organización de IMS, puede realizar la vista del perfil del producto asignado y de los permisos que proporciona en el Admin Console de Adobe. Consulte la guía [del usuario de](./ui/overview.md) control de acceso para obtener instrucciones sobre cómo desplazarse por la página [!DNL Admin Console] para vista de los permisos de un perfil de producto.
+Si es administrador del sistema, administrador del producto o administrador del perfil del producto de su organización de IMS, puede realizar la vista del perfil del producto asignado y de los permisos que proporciona dentro del Adobe Admin Console. Consulte la guía [del usuario de](./ui/overview.md) control de acceso para obtener instrucciones sobre cómo desplazarse por la página [!DNL Admin Console] para vista de los permisos de un perfil de producto.
 
 Si no es administrador, puede seguir enviando una solicitud al extremo de la API de Control de acceso para que realice la vista de los permisos de acceso actuales mediante el envío de una solicitud al `/acl/effective-policies` extremo. Consulte la sección &quot;Políticas eficaces para la Vista&quot; en la guía [para desarrolladores de](./api/effective-policies.md) control de acceso para obtener más información.
 
