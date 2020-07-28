@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Buscar un recurso
 
-Puede buscar recursos específicos realizando una solicitud GET que incluya el `$id` (URI con codificación URL) del recurso en la ruta de solicitud.
+Puede buscar recursos específicos realizando una solicitud de GET que incluya el `$id` (URI con codificación de URL) del recurso en la ruta de solicitud.
 
 **Formato API**
 
@@ -48,7 +48,7 @@ Las solicitudes de búsqueda de recursos requieren que `version` se incluyan en 
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin formato `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, se incluyen los descriptores. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, incluidos los descriptores. |
 
 >[!NOTE]
 >
