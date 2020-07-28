@@ -101,6 +101,6 @@ La lógica de decisión está organizada por actividades, cada una de las cuales
 
 Cada decisión se toma aplicando primero restricciones para reducir el número de opciones y luego clasificando las opciones restantes. Aunque la mayor parte de la lógica se evalúa dentro [!DNL Decisioning Service], se utilizan varios servicios auxiliares para ayudar con estos dos aspectos. Por ejemplo, un servicio de límite administra los límites superiores para determinar con qué frecuencia se puede utilizar una opción en cualquier decisión, y otro servicio puede alojar un modelo de aprendizaje automático que se utiliza para calcular las puntuaciones de un perfil y una opción.
 
-Para obtener más información sobre el uso de las API de repositorio, consulte el tutorial sobre [Administración de entidades de decisiones y reglas mediante API](./tutorials/entities.md)
+Para obtener más información sobre el uso de las API de repositorio, consulte el tutorial sobre la [gestión de entidades de decisiones y reglas mediante API](./tutorials/entities.md)
 
 Para obtener más información sobre el uso del [!DNL Decisioning Service] motor de ejecución, consulte el tutorial sobre [Uso del tiempo de ejecución del servicio de decisiones mediante API](./tutorials/runtime.md)
