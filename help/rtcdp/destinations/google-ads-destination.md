@@ -24,17 +24,17 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Ads] de
 
 * Puede enviar las siguientes [identidades](../../identity-service/namespaces.md) a [!DNL Google Ads] destinos: **ID de cookie de Google, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * Las audiencias activadas se crean mediante programación en la [!DNL Google] plataforma.
-* Actualmente, CDP en tiempo real de Adobe no incluye una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
+* El CDP en tiempo real de Adobe no incluye actualmente una métrica de medición para validar una activación correcta. Consulte los recuentos de audiencias en Google para validar la integración y comprender el tamaño del objetivo de audiencias.
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la funcionalidad [de sincronización de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID en el servicio de ID de Experience Cloud en el pasado (con Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar la sincronización de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a CDP en tiempo real de Adobe.
+>Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la funcionalidad [de sincronización de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID en el servicio de ID de Experience Cloud en el pasado (con Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a CDP en tiempo real de Adobe.
 
 ## Requisitos previos
 
 ### Cuenta [!DNL Google Ads] existente
 
-[!DNL Google] ha pausado [!DNL Google Ads] integraciones nuevas con proveedores de terceros. Debe tener una integración existente con [!DNL Google Ads] para poder realizar los pasos de lista de permitidos en la sección siguiente y crear un [!DNL Google Ads] destino en CDP en tiempo real de Adobe.
+[!DNL Google] ha pausado [!DNL Google Ads] integraciones nuevas con proveedores de terceros. Debe tener una integración existente con [!DNL Google Ads] para poder realizar los pasos de lista de permitidos en la siguiente sección y crear un [!DNL Google Ads] destino en Adobe Real-time CDP.
 
 ### Lista de permitidos
 
@@ -42,10 +42,10 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Ads] de
 >
 >La lista de permitidos es obligatoria antes de configurar su primer [!DNL Google Ads] destino en Adobe Real-time CDP. Asegúrese de que el proceso de lista de permitidos que se describe a continuación se haya completado [!DNL Google] antes de crear un destino.
 
-Antes de crear el [!DNL Google Ads] destino en Adobe Real-time CDP, debe ponerse en contacto [!DNL Google] para que Adobe se ponga en lista de proveedores de datos permitidos y para que su cuenta se agregue a la lista de permitidos. Póngase en contacto [!DNL Google] y proporcione la siguiente información:
+Antes de crear el [!DNL Google Ads] destino en Adobe Real-time CDP, debe ponerse en contacto [!DNL Google] para que el Adobe se ponga en la lista de proveedores de datos permitidos y para que su cuenta se agregue a la lista de permitidos. Póngase en contacto [!DNL Google] y proporcione la siguiente información:
 
 * **ID** de cuenta: es el ID de cuenta de Adobe con [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
-* **ID** del cliente: este es el ID de cuenta de cliente de Adobe con [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
+* **ID** del cliente: es el ID de cuenta de cliente de Adobe con [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
 * El tipo de cuenta: **AdWords**
 * **ID** de Google AdWords: Este es su ID con [!DNL Google]. El formato de ID suele ser 123-456-7890.
 
@@ -61,7 +61,7 @@ Antes de crear el [!DNL Google Ads] destino en Adobe Real-time CDP, debe ponerse
 * **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
 * **[!UICONTROL Tipo]** de cuenta: AdWords es la única opción disponible.
 * **[!UICONTROL ID]** de cuenta: Rellene su ID de cuenta con [!DNL Google Ads]. El formato de ID suele ser 123-456-7890.
-* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos de uso de mercadotecnia definidos por Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos.
+* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos.
 
 ## Activar segmentos para [!DNL Google Ads]
 
