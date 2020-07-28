@@ -200,7 +200,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Carga de archivos grande: carga de partes subsiguientes
 
-Una vez creado el archivo, todos los fragmentos subsiguientes se pueden cargar realizando solicitudes de PARCH repetidas, una para cada sección del archivo.
+Una vez creado el archivo, todos los fragmentos posteriores se pueden cargar realizando solicitudes repetidas de PATCH, una para cada sección del archivo.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
