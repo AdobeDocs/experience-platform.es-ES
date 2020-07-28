@@ -1,8 +1,8 @@
 ---
 title: Información general sobre destinos
 seo-title: Información general sobre destinos
-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
-seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos de clientes en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canales cruzados, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
 source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
