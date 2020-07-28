@@ -79,7 +79,7 @@ Dado que el usuario eligió exclusión, se rechazan las promesas que se devolvie
 
 >[!NOTE]
 >
->Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades y ofertas de productos de Adobe, la implementación actual es un enfoque de la inclusión total o nulo.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
+>Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión total o nulo.  Esto solo se aplica a las bibliotecas JavaScript de Adobe Experience Platform [!DNL Web SDK] y NO de otros Adobes.
 
 ## Persistencia de las preferencias de consentimiento
 
