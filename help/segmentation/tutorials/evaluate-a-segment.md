@@ -41,7 +41,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 >
 >Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
+Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 
 - Content-Type: application/json
 
@@ -63,19 +63,19 @@ Mediante una evaluación programada, su organización de IMS puede crear una pro
 
 ### Crear una programación
 
-Al realizar una solicitud POST al extremo, puede crear una programación e incluir la hora específica en la que se debe activar la programación. `/config/schedules`
+Al realizar una solicitud de POST al extremo, puede crear una programación e incluir la hora específica en la que se debe activar la programación. `/config/schedules`
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de [programaciones](../api/schedules.md#create)
 
 ### Habilitar una programación
 
-De forma predeterminada, una programación se desactiva cuando se crea, a menos que la `state` propiedad se establezca `active` en el cuerpo de la solicitud create (POST). Puede habilitar una programación (establecer la `state` en `active``/config/schedules` ) realizando una solicitud PATCH en el extremo e incluyendo el ID de la programación en la ruta de acceso.
+De forma predeterminada, una programación se desactiva cuando se crea, a menos que la `state` propiedad se establezca `active` en el cuerpo de solicitud create (POST). Puede habilitar una programación (establecer la `state` en `active``/config/schedules` ) realizando una solicitud de PATCH al extremo e incluyendo el ID de la programación en la ruta de acceso.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de [programaciones](../api/schedules.md#update-state)
 
 ### Actualizar la hora de programación
 
-La temporización de programación se puede actualizar realizando una solicitud PATCH al extremo e incluyendo el ID de la programación en la ruta de acceso. `/config/schedules`
+La temporización de programación se puede actualizar realizando una solicitud de PATCH al extremo e incluyendo el ID de la programación en la ruta de acceso. `/config/schedules`
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de [programaciones](../api/schedules.md#update-schedule)
 
@@ -87,14 +87,14 @@ La evaluación a petición le permite crear un trabajo de segmento para generar 
 
 Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición de segmento, así como a cualquier directiva de combinación que controle la forma en que [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
 
-Puede crear un nuevo trabajo de segmento realizando una solicitud POST al `/segment/jobs` extremo en la [!DNL Real-time Customer Profile] API.
+Puede crear un nuevo trabajo de segmento realizando una solicitud de POST al `/segment/jobs` extremo en la [!DNL Real-time Customer Profile] API.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de trabajos de [segmentos](../api/segment-jobs.md#create)
 
 
 ### Buscar estado del trabajo del segmento
 
-Puede usar el `id` para un trabajo de segmento específico para realizar una solicitud de búsqueda (GET) con el fin de vista del estado actual del trabajo.
+Puede usar el `id` para un trabajo de segmento específico para realizar una solicitud de búsqueda (GET) con el fin de realizar la vista del estado actual del trabajo.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de trabajos de [segmentos](../api/segment-jobs.md#get)
 
@@ -216,13 +216,13 @@ Una respuesta correcta devuelve una matriz que contiene la ID única de sólo le
 
 ### Generar perfiles para miembros de audiencia {#generate-profiles}
 
-Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para que los miembros de la audiencia permanezcan en el conjunto de datos realizando una solicitud POST al extremo de la `/export/jobs` [!DNL Real-time Customer Profile] API y proporcionando la ID del conjunto de datos y la información del segmento para los segmentos que desea exportar.
+Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para que los miembros de la audiencia permanezcan en el conjunto de datos realizando una solicitud de POST al `/export/jobs` extremo en la [!DNL Real-time Customer Profile] API y proporcionando la ID del conjunto de datos y la información del segmento para los segmentos que desea exportar.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de trabajos de [exportación](../api/export-jobs.md#create)
 
 ### Monitorear el progreso de exportación
 
-Como proceso de trabajo de exportación, puede supervisar su estado realizando una solicitud GET al extremo e incluyendo el `/export/jobs` `id` del trabajo de exportación en la ruta de acceso. El trabajo de exportación se completa una vez que el `status` campo devuelve el valor &quot;SUCCEEDED&quot;.
+Como proceso de trabajo de exportación, puede supervisar su estado realizando una solicitud de GET al `/export/jobs` extremo e incluyendo el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el `status` campo devuelve el valor &quot;SUCCEEDED&quot;.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de trabajos de [exportación](../api/export-jobs.md#get)
 
