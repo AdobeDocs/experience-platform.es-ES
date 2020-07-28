@@ -354,7 +354,7 @@ Esta respuesta devuelve un directorio que contiene dos archivos independientes, 
 
 ## Recuperar los metadatos de un archivo
 
-Puede recuperar los metadatos de un archivo realizando una solicitud HEAD. Esto devuelve los encabezados de metadatos del archivo, incluido su tamaño en bytes y en formato de archivo.
+Puede recuperar los metadatos de un archivo realizando una solicitud de HEAD. Esto devuelve los encabezados de metadatos del archivo, incluido su tamaño en bytes y en formato de archivo.
 
 **Formato API**
 
@@ -416,7 +416,7 @@ Una respuesta correcta devuelve el contenido del archivo.
 
 La [!DNL Data Access] API permite descargar archivos en fragmentos. Se puede especificar un encabezado de rango durante una `GET /files/{FILE_ID}` solicitud para descargar un rango específico de bytes de un archivo. Si no se especifica el intervalo, la API descargará el archivo completo de forma predeterminada.
 
-El ejemplo HEAD de la sección [](#retrieve-the-metadata-of-a-file) anterior proporciona el tamaño de un archivo específico en bytes.
+El ejemplo del HEAD en la sección [](#retrieve-the-metadata-of-a-file) anterior proporciona el tamaño de un archivo específico en bytes.
 
 **Formato API**
 
