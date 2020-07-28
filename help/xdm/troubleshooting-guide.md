@@ -42,7 +42,7 @@ Para obtener más información, consulte la sección de identificación [de](api
 
 ### ¿Cuándo impide un inicio de esquema romper cambios?
 
-Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [!DNL Real-time Customer Profile](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución [de](schema/composition.md#evolution) Esquemas.
+Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [!DNL Real-time Customer Profile](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución de [Esquemas](schema/composition.md#evolution) .
 
 ### ¿Cuál es el tamaño máximo de un tipo de campo largo?
 
@@ -60,7 +60,7 @@ Los campos se pueden marcar como identidades mediante la API o la interfaz de us
 
 En la API, las identidades se establecen creando descriptores de identidad. Los descriptores de identidad indican que una propiedad concreta de un esquema es un identificador único.
 
-Los descriptores de identidad se crean mediante una solicitud POST al extremo /descriptors. Si se realiza correctamente, recibirá un estado HTTP 201 (Creado) y un objeto de respuesta que contiene los detalles del nuevo descriptor.
+Los descriptores de identidad se crean mediante una solicitud de POST al extremo /descriptors. Si se realiza correctamente, recibirá un estado HTTP 201 (Creado) y un objeto de respuesta que contiene los detalles del nuevo descriptor.
 
 Para obtener más información sobre la creación de descriptores de identidad en la API, consulte la sección documento sobre [descriptores](api/descriptors.md) en la guía para [!DNL Schema Registry] desarrolladores.
 
@@ -80,7 +80,7 @@ Los Esquemas se habilitan para su uso [!DNL Real-time Customer Profile](../profi
 
 #### Activación de un esquema existente para [!DNL Profile] usar la API
 
-Realice una solicitud PATCH para actualizar el esquema y agregar el `meta:immutableTags` atributo como una matriz que contenga el valor &quot;unión&quot;. Si la actualización se realiza correctamente, la respuesta mostrará el esquema actualizado que ahora contiene la etiqueta de unión.
+Realice una solicitud de PATCH para actualizar el esquema y agregar el `meta:immutableTags` atributo como una matriz que contenga el valor &quot;unión&quot;. Si la actualización se realiza correctamente, la respuesta mostrará el esquema actualizado que ahora contiene la etiqueta de unión.
 
 Para obtener más información sobre el uso de la API para habilitar un esquema para su uso en [!DNL Real-time Customer Profile], consulte el documento de [uniones](./api/unions.md) de la guía para [!DNL Schema Registry] desarrolladores.
 
@@ -205,7 +205,7 @@ Para obtener una lista de los códigos de Área de nombres de identidad admitido
 
 ### Aceptar errores de encabezado
 
-La mayoría de las solicitudes GET de la [!DNL Schema Registry] API requieren un encabezado Accept para que el sistema pueda determinar cómo dar formato a la respuesta. A continuación se muestra una lista de errores comunes asociados con el encabezado Accept. Para obtener listas de encabezados Accept compatibles para diferentes solicitudes de API, consulte sus secciones correspondientes en la guía para desarrolladores de [Esquema Registry](api/getting-started.md).
+La mayoría de las solicitudes de GET de la [!DNL Schema Registry] API requieren un encabezado Accept para que el sistema pueda determinar cómo dar formato a la respuesta. A continuación se muestra una lista de errores comunes asociados con el encabezado Accept. Para obtener listas de encabezados Accept compatibles para diferentes solicitudes de API, consulte sus secciones correspondientes en la guía para desarrolladores de [Esquema Registry](api/getting-started.md).
 
 #### Se requiere el parámetro Accept header
 
