@@ -89,4 +89,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Al realizar una solicitud GET para lista de todos los esquemas en el contenedor del inquilino, ahora se incluirá el esquema de información de propiedad, o bien se puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo esquema. Recuerde incluir el `version` en el encabezado Aceptar para todas las solicitudes de búsqueda.
+Al realizar una solicitud de GET para la lista de todos los esquemas en el contenedor del inquilino, ahora se incluirá el esquema de información de propiedad, o bien se puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo esquema. Recuerde incluir el `version` en el encabezado Aceptar para todas las solicitudes de búsqueda.
