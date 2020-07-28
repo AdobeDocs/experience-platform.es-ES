@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Destinos de almacenamiento de nube {#cloud-storage-destinations}
 
-CDP en tiempo real de Adobe puede entregar sus segmentos como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores para [!DNL Amazon S3] y SFTP. Para [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] los destinos, los datos se transmiten fuera del Experience Platform en formato JSON.
+CDP en tiempo real de Adobe puede entregar sus segmentos como archivos de datos en sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores para [!DNL Amazon S3] y SFTP. Para [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] los destinos, los datos se transmiten fuera del Experience Platform en formato JSON.
 
 ![Destinos de almacenamiento de Adobe Cloud](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
