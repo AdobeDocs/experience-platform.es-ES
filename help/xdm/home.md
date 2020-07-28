@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Descripción general del sistema XDM
 
-La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
 XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación que se utilice para comunicarse con [!DNL Platform] los servicios. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que puede ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y expresar atributos de clientes para fines de personalización.
 
-XDM es el marco de base que permite a Adobe Experience Cloud, con [!DNL Experience Platform]tecnología, entregar el mensaje correcto a la persona adecuada, en el canal correcto y en el momento preciso. La metodología en la que [!DNL Experience Platform] se basa, **XDM System**, hace funcionar [!DNL Experience Data Model] esquemas para uso de [!DNL Platform] los servicios.
+XDM es el marco fundamental que permite a Adobe Experience Cloud, con [!DNL Experience Platform]tecnología, entregar el mensaje correcto a la persona correcta, en el canal correcto, en el momento preciso. La metodología en la que [!DNL Experience Platform] se basa, **XDM System**, hace funcionar [!DNL Experience Data Model] esquemas para uso de [!DNL Platform] los servicios.
 
 Este documento proporciona una visión general de la función del sistema XDM dentro de [!DNL Experience Platform].
 
@@ -32,7 +32,7 @@ Para obtener más información sobre el modelo de composición de esquema, inclu
 
 ### [!DNL Schema Registry] y [!DNL Schema Library]
 
-El **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos relacionados con el esquema en el Adobe Experience Platform **[!DNL Schema Library]**. El [!DNL Schema Library] contiene recursos estándar del sector que Adobe pone a su disposición, así como recursos de [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utiliza. La interfaz de usuario y la API del Registro de Esquema también se pueden usar para crear y administrar nuevos esquemas y recursos que son exclusivos de su organización.
+El **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos relacionados con el esquema en el Adobe Experience Platform **[!DNL Schema Library]**. El [!DNL Schema Library] contiene recursos estándar del sector que se ponen a su disposición por Adobe, así como recursos de [!DNL Experience Platform] socios y proveedores cuyas aplicaciones se utilizan. La interfaz de usuario y la API del Registro de Esquema también se pueden usar para crear y administrar nuevos esquemas y recursos que son exclusivos de su organización.
 
 Para obtener una guía completa de las principales operaciones disponibles en el [!DNL Schema Registry], consulte la guía [para desarrolladores de](api/getting-started.md)Esquema Registry.
 
@@ -95,9 +95,9 @@ El Perfil de clientes en tiempo real proporciona un perfil de consumo centraliza
 
 [!DNL Profile] mantiene una instancia de cada perfil de cliente, combinando los datos para formar una &quot;única fuente de verdad&quot; para el individuo. Estos datos unificados se representan usando lo que se conoce como &quot;vista de unión&quot;. Una vista de unión agrega los campos de todos los esquemas que implementan la misma clase en un solo esquema.  Al componer un esquema mediante la interfaz de usuario o la API, puede activar el esquema para utilizarlo con [!DNL Real-time Customer Profile] y etiquetarlo para incluirlo en la vista de unión. El esquema etiquetado participará en la definición de esquema a la que se alimenta [!DNL Profile].
 
-A medida que [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent] los datos son ingestados y administrados por [!DNL Catalog], se activa [!DNL Real-time Customer Profile] el inicio de la ingesta de datos habilitados para su uso. Cuanto más interacciones y detalles se ingieran, más robustos se volverán los perfiles individuales.
+A medida que [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent] los datos son ingestados y administrados por [!DNL Catalog], se desencadena [!DNL Real-time Customer Profile] la ingesta de datos habilitados para su uso. Cuanto más interacciones y detalles se ingieran, más robustos se volverán los perfiles individuales.
 
-[!DNL XDM Individual Profile] los datos ayudan a informar y potenciar las acciones en cualquier canal o integración de soluciones de Adobe, y cuando se combinan con un historial rico de datos de comportamiento e interacción, estos datos se utilizan para impulsar el aprendizaje automático. La [!DNL Real-time Customer Profile] API también puede utilizarse para enriquecer la funcionalidad de soluciones de terceros, CRM y soluciones propietarias.
+[!DNL XDM Individual Profile] los datos ayudan a informar y potenciar las acciones en cualquier integración de soluciones de canal o Adobe, y cuando se combinan con un historial rico de datos de comportamiento e interacción, estos datos se utilizan para impulsar el aprendizaje automático. La [!DNL Real-time Customer Profile] API también puede utilizarse para enriquecer la funcionalidad de soluciones de terceros, CRM y soluciones propietarias.
 
 Consulte la descripción general [del Perfil del cliente en tiempo](../profile/home.md) real para obtener más información.
 
@@ -105,7 +105,7 @@ Consulte la descripción general [del Perfil del cliente en tiempo](../profile/h
 
 Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para obtener perspectivas de los datos almacenados en [!DNL Experience Platform]. [!DNL Data Science Workspace] permite a los científicos de datos crear fórmulas basadas en XDM Individual [!DNL Profile] y en datos [!DNL XDM ExperienceEvent] sobre clientes y sus actividades, lo que facilita predicciones como la propensión a comprar y ofertas recomendadas que el individuo probablemente apreciará y usará.
 
-Con [!DNL Data Science Workspace], los científicos de datos pueden crear fácilmente API de servicios inteligentes con tecnología de aprendizaje automático. Estos servicios funcionan con otras soluciones de Adobe, incluidas Adobe Target y Adobe Analytics Cloud, para ayudarle a automatizar experiencias digitales personalizadas y con objetivos.
+Con [!DNL Data Science Workspace], los científicos de datos pueden crear fácilmente API de servicios inteligentes con tecnología de aprendizaje automático. Estos servicios funcionan con otras soluciones de Adobe, incluidos Adobe Target y Adobe Analytics Cloud, para ayudarle a automatizar experiencias digitales personalizadas y dirigidas.
 
 Para obtener más información sobre el uso de [!DNL Experience Platform] datos para activar perspectivas, consulte la información general [de](../data-science-workspace/home.md)Data Science Workspace.
 
