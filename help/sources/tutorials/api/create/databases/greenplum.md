@@ -17,7 +17,7 @@ ht-degree: 2%
 >[!NOTE]
 >El [!DNL GreenPlum] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL GreenPlum] a [!DNL Experience Platform].
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL GreenPlum] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL GreenPlum] es `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+Para crear una [!DNL GreenPlum] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL GreenPlum] es `37b6bf40-d318-4655-90be-5cd6f65d334b`.
 
 ```shell
 curl -X POST \
