@@ -76,7 +76,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL HubSpot] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL HubSpot] es `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
+Para crear una [!DNL HubSpot] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL HubSpot] es `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
 
 ```shell
 curl -X POST \
