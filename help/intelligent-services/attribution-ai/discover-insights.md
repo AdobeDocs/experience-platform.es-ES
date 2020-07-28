@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics
 solution: Experience Platform
-title: Descubrimiento de perspectivas en la API de atribución
+title: Descubrimiento de perspectivas en Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 1%
 ---
 
 
-# Descubrimiento de perspectivas en la API de atribución
+# Descubrimiento de perspectivas en Attribution AI
 
-Las instancias de servicio de API de atribución proporcionan perspectivas que pueden utilizarse para ayudar a tomar y medir decisiones de marketing relacionadas con el rendimiento de mercadotecnia y el retorno de la inversión. La selección de una instancia de servicio proporciona visualizaciones y filtros para ayudarle a comprender el impacto de cada interacción con los clientes en cada fase del viaje del cliente.
+Las instancias de servicio de Attribution AI proporcionan perspectivas que pueden utilizarse para ayudar a tomar y medir las decisiones de marketing relacionadas con el rendimiento de marketing y el retorno de la inversión. La selección de una instancia de servicio proporciona visualizaciones y filtros para ayudarle a comprender el impacto de cada interacción con los clientes en cada fase del viaje del cliente.
 
 Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Adobe Intelligent Services.
 
 ## Primeros pasos
 
-Para utilizar perspectivas para la API de atribución, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite la guía de la interfaz de usuario de [Atribución de archivos AI](./user-guide.md). Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
+Para utilizar perspectivas para Attribution AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite la guía [de la interfaz de usuario de](./user-guide.md)Attribution AI. Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
 
 ## Información general sobre perspectivas de instancias de servicio
 
-En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles de Adobe. En el contenedor de Atribución de AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **Abrir**.
 
 ![Acceso a la instancia](./images/insights/open_Attribution_ai.png)
 
-Aparece la página de servicio de Atribución de AI. Esta página lista las instancias de servicio de Atribución de AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en el nombre de una instancia de servicio para comenzar.
+Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en el nombre de una instancia de servicio para comenzar.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Para vista de detalles adicionales para una instancia de servicio, haga clic en 
 
 ![mostrar más](./images/insights/show-more.png)
 
-Aparece una lista detallada. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite la guía del usuario de [Atribución de AI](./user-guide.md).
+Aparece una lista detallada. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite la guía del usuario de [Attribution AI](./user-guide.md).
 
 ![mostrar detalles](./images/insights/advanced-details.png)
 
@@ -65,14 +65,14 @@ El botón *Más acciones* se encuentra en la navegación superior derecha junto 
 
 - **Eliminar**: Elimina la instancia.
 - **Descargar datos** de resumen: Descarga un archivo CSV que contiene los datos de resumen.
-- **Puntuaciones** de acceso: Al hacer clic en las puntuaciones ** de Access, se le redirecciona a las puntuaciones de [acceso del tutorial](./download-scores.md)Atribución de AI.
+- **Puntuaciones** de acceso: Al hacer clic en *Access score* , se le redirige a las puntuaciones de [acceso para el tutorial](./download-scores.md)de Attribution AI.
 - **Historial** de ejecución de Vistas: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](./images/insights/more-actions.png)
 
 ## Filtrado de datos
 
-Las perspectivas de la API de atribución le permiten filtrar los datos y actualizar automáticamente los elementos visuales de la interfaz de usuario en función de los filtros seleccionados.
+Las perspectivas de Attribution AI le permiten filtrar los datos y actualizar automáticamente los elementos visuales de la interfaz de usuario en función de los filtros seleccionados.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Las perspectivas de la API de atribución le permiten filtrar los datos y actual
 
 ### evento de conversión
 
-Cuando se crea una nueva instancia en la API de atribución, uno de los campos obligatorios es &quot;eventos de conversión&quot;. Los eventos de conversión son objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como los pedidos de comercio electrónico, las compras en el almacén y las visitas al sitio web.
+Cuando se crea una nueva instancia en Attribution AI, uno de los campos obligatorios es &quot;eventos de conversión&quot;. Los eventos de conversión son objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como los pedidos de comercio electrónico, las compras en el almacén y las visitas al sitio web.
 
 Desde la instancia, la lista desplegable eventos *de* conversión permite seleccionar cualquiera de los eventos definidos para la instancia a fin de filtrar los datos. Al seleccionar eventos específicos, se cambian las visualizaciones de la interfaz de usuario para rellenar solo las conversiones que pertenecen a esos eventos.
 
@@ -88,7 +88,7 @@ Desde la instancia, la lista desplegable eventos *de* conversión permite selecc
 
 ### Modelo de atribución
 
-Al hacer clic en el modelo ** Atribución se abre una lista desplegable con todos los modelos de atribución disponibles. Puede seleccionar varios modelos para comparar los resultados. Para obtener más información sobre los distintos modelos de atribución y cómo funcionan, visite la información general de [Atribución de AI](./overview.md) , que contiene una tabla con información sobre cada modelo.
+Al hacer clic en el modelo ** Atribución se abre una lista desplegable con todos los modelos de atribución disponibles. Puede seleccionar varios modelos para comparar los resultados. Para obtener más información sobre los distintos modelos de atribución y cómo funcionan, visite la información general de [Attribution AI](./overview.md) que contiene una tabla con información sobre cada modelo.
 
 ![modelo de atribución](./images/insights/attribution-model.png)
 
@@ -110,7 +110,7 @@ El filtro *Geografía* rellena los códigos de país en función de los modelos 
 
 >[!NOTE]
 >
->Este filtro solo está presente si ha realizado el modelado [opcional basado en](./user-guide.md#region-based-modeling-optional) región de pasos en la guía de interfaz de usuario de Atribución de AI al crear la instancia de servicio.
+>Este filtro solo está presente si ha realizado el modelado [opcional basado en](./user-guide.md#region-based-modeling-optional) región de pasos en la guía de interfaz de usuario de Attribution AI al crear la instancia de servicio.
 
 Este filtro le permite seleccionar cualquier región que configure en el proceso de creación de instancias.
 
@@ -162,10 +162,10 @@ La tarjeta campañas ** principales muestra información general sobre sus campa
 
 ## Pasos siguientes
 
-Una vez que haya terminado de filtrar los datos y pueda mostrar la información adecuada, tiene la opción de acceder a las puntuaciones. Para obtener una guía detallada sobre cómo acceder a las puntuaciones, visite las puntuaciones de [acceso en el tutorial de atribución de AI](./download-scores.md) . Además, también puede descargar los datos de resumen como se indica en [más acciones](#more-actions). Al seleccionar &quot;Descargar datos de resumen&quot; se descargan los datos de resumen agregados por fechas.
+Una vez que haya terminado de filtrar los datos y pueda mostrar la información adecuada, tiene la opción de acceder a las puntuaciones. Para obtener una guía detallada sobre cómo acceder a las puntuaciones, visite las puntuaciones de [acceso en el tutorial de Attribution AI](./download-scores.md) . Además, también puede descargar los datos de resumen como se indica en [más acciones](#more-actions). Al seleccionar &quot;Descargar datos de resumen&quot; se descargan los datos de resumen agregados por fechas.
 
 ## Recursos adicionales
 
-El siguiente vídeo está diseñado para ayudarle en el aprendizaje de cómo utilizar la página de perspectivas de Atribución de AI para comprender el retorno de la inversión de los canales y campañas de marketing.
+El siguiente vídeo está diseñado para ayudarle en el aprendizaje de cómo utilizar la página de perspectivas de Attribution AI para comprender el ROI de los canales y campañas de mercadotecnia.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
