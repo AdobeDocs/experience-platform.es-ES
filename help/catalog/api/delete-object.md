@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Eliminar un objeto
 
-Puede eliminar un [!DNL Catalog] objeto proporcionando su ID en la ruta de una solicitud de DELETE.
+Puede eliminar un [!DNL Catalog] objeto proporcionando su ID en la ruta de una solicitud de  DELETE.
 
 >[!WARNING]
 >
@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos eliminado. Este ID debe coincidir con el enviado en la solicitud de DELETE. Al realizar una solicitud GET en el objeto eliminado, se devuelve el estado HTTP 404 (no encontrado), lo que confirma que el conjunto de datos se ha eliminado correctamente.
+Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que contiene el ID del conjunto de datos eliminado. Este ID debe coincidir con el enviado en la solicitud del  de DELETE. Al realizar una solicitud de GET en el objeto eliminado, se devuelve el estado HTTP 404 (no encontrado), lo que confirma que el conjunto de datos se ha eliminado correctamente.
 
 ```json
 [
