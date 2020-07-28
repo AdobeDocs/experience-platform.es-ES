@@ -43,7 +43,7 @@ Este tutorial requiere que haya completado el tutorial [](../../tutorials/authen
 
 ## Crear un motor
 
-Los motores se pueden crear realizando una solicitud POST al extremo /motores. El motor creado se configura en función de la forma del archivo de fórmula empaquetado que debe incluirse como parte de la solicitud de API.
+Los motores se pueden crear realizando una solicitud de POST al extremo /motores. El motor creado se configura en función de la forma del archivo de fórmula empaquetado que debe incluirse como parte de la solicitud de API.
 
 ### Creación de un motor con una URL de acoplamiento {#create-an-engine-with-a-docker-url}
 
@@ -169,7 +169,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del motor recién creado, incluido su identificador único (`id`). La siguiente respuesta de ejemplo es para un [!DNL Python] motor. Las `executionType` claves y `type` cambian según la POST proporcionada.
+Una respuesta correcta devuelve una carga útil que contiene los detalles del motor recién creado, incluido su identificador único (`id`). La siguiente respuesta de ejemplo es para un [!DNL Python] motor. Las `executionType` teclas y `type` cambian según el POST suministrado.
 
 ```json
 {
