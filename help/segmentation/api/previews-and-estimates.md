@@ -40,7 +40,7 @@ El tamaño de muestra del análisis depende del número total de entidades del a
 
 ## Create a new preview {#create-preview}
 
-Puede crear una nueva previsualización haciendo una solicitud POST al `/preview` extremo.
+Puede crear una nueva previsualización haciendo una solicitud de POST al `/preview` extremo.
 
 >[!NOTE] Cuando se crea un trabajo de previsualización, se crea automáticamente un trabajo de estimación. Estos dos trabajos compartirán el mismo ID.
 
@@ -94,7 +94,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) con detalles de la p
 
 ## Recuperar los resultados de una previsualización específica {#get-preview}
 
-Puede recuperar información detallada sobre una previsualización específica realizando una solicitud GET al extremo y proporcionando el ID de previsualización en la ruta de la solicitud. `/preview`
+Puede recuperar información detallada sobre una previsualización específica realizando una solicitud de GET al extremo y proporcionando el ID de previsualización en la ruta de la solicitud. `/preview`
 
 **Formato API**
 
@@ -171,7 +171,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
-Una vez creado un trabajo de previsualización, puede utilizarlo `previewId` `/estimate` en la ruta de una solicitud GET al extremo de la información estadística de vista sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
+Una vez creado un trabajo de previsualización, puede utilizarlo `previewId` en la ruta de una solicitud de GET al `/estimate` extremo para vista de información estadística sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
 **Formato API**
 
