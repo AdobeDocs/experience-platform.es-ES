@@ -5,6 +5,9 @@ description: Las plataformas de Encuestas detectan eventos de encuesta, capturan
 seo-description: Las plataformas de Encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con CDP en tiempo real de Adobe.
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 Las plataformas de Encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con CDP en tiempo real de Adobe.
 
-Actualmente, la plataforma de datos del cliente en tiempo real de Adobe admite los destinos de encuesta que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, Adobe Datos del cliente en tiempo real Platform admite los destinos de encuesta que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 * [Extensión Foresee](/help/rtcdp/destinations/foresee-extension.md)
 * [Extensión InMoment](/help/rtcdp/destinations/inmoment-extension.md)
