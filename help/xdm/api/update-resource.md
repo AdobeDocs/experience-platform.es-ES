@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Actualizar un recurso
 
-Puede modificar o actualizar los recursos en el contenedor del inquilino mediante una solicitud PATCH. El [!DNL Schema Registry] admite todas las operaciones estándar de Parche JSON, incluidas la adición, eliminación y sustitución.
+Puede modificar o actualizar los recursos en el contenedor del inquilino mediante una solicitud de PATCH. El [!DNL Schema Registry] admite todas las operaciones estándar de Parche JSON, incluidas la adición, eliminación y sustitución.
 
 Para obtener más información sobre JSON Patch, incluidas las operaciones disponibles, consulte la documentación [oficial de](http://jsonpatch.com/)JSON Patch.
 
 >[!NOTE]
 >
->Si desea reemplazar un recurso completo por valores nuevos en lugar de actualizar campos individuales, consulte el documento sobre la [sustitución de un recurso mediante una operación](replace-resource.md)PUT.
+>Si desea reemplazar un recurso completo por valores nuevos en lugar de actualizar campos individuales, consulte el documento sobre [reemplazar un recurso mediante una operación](replace-resource.md)de PUT.
 
 ## Añadir mezclas a un esquema
 
@@ -39,7 +39,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Solicitud**
 
-Mediante una operación PATCH, puede actualizar un esquema para incluir campos definidos en una mezcla creada previamente. Para ello, debe realizar una solicitud PATCH al esquema utilizando su `meta:altId` o el URI con codificación de URL `$id` .
+Mediante una operación de PATCH, puede actualizar un esquema para incluir campos definidos en una mezcla creada previamente. Para ello, debe realizar una solicitud de PATCH al esquema utilizando su `meta:altId` o el URI con codificación de URL `$id` .
 
 El cuerpo de la solicitud incluye la operación (`op`) que desea realizar, dónde (`path`) desea realizar la operación y qué información (`value`) desea incluir en la operación. En este ejemplo, el valor de la mezcla `$id` se agrega a los campos `meta:extends` y `allOf` del esquema de destinatario.
 
@@ -100,7 +100,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. La mezcl
 
 ## Actualizar campos individuales para un recurso
 
-También puede enviar solicitudes PATCH que realicen varios cambios en campos individuales dentro de un recurso del Registro de Esquemas.
+También puede enviar solicitudes de PATCH que realicen varios cambios en campos individuales dentro de un recurso del Registro de Esquemas.
 
 **Formato API**
 
