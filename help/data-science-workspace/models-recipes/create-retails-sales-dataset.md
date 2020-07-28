@@ -26,7 +26,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
    - Certificado de cliente: `{PRIVATE_KEY}`
-- Datos de muestra y archivos de origen para la fórmula de venta [minorista](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales del repositorio [público de Git de](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
+- Datos de muestra y archivos de origen para la fórmula de venta [minorista](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales del repositorio [Git público de](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
 - [Python >= 2.7](https://www.python.org/downloads/) y los siguientes [!DNL Python] paquetes:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
