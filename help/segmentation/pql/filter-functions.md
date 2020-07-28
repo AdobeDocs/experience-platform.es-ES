@@ -20,7 +20,7 @@ Las funciones de filtro se utilizan para filtrar datos dentro de matrices en [!D
 
 La función `[]` (filter) permite aplicar filtros a una matriz y devolver un subconjunto de la matriz que coincida con la condición especificada.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}[filter]
@@ -38,7 +38,7 @@ xEvent[productListItems[SKU="PS"]]
 
 El operador `^` (arriba) permite hacer referencia a las propiedades de los niveles superiores de filtros.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}[{FILTER_1}[{FILTER_2} or ^{PROPERTY}]]
