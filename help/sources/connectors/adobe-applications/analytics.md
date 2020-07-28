@@ -20,11 +20,11 @@ Este documento proporciona información general sobre Adobe Analytics y describe
 
 ## Datos de Adobe Analytics y Analytics
 
-Adobe Analytics es un potente motor para ayudarle a obtener más información sobre sus clientes, cómo interactúan con sus propiedades web, ver dónde es eficaz su inversión en marketing digital e identificar áreas de mejora. Adobe Analytics gestiona billones de transacciones web al año y ADC le permite aprovechar fácilmente estos datos de comportamiento enriquecidos y enriquecer el Perfil del cliente en tiempo real en cuestión de minutos.
+Adobe Analytics es un potente motor que le ayuda a conocer más sobre sus clientes, cómo interactúan con sus propiedades web, ver dónde es eficaz su inversión en mercadotecnia digital e identificar áreas de mejora. Adobe Analytics gestiona billones de transacciones web por año y ADC le permite aprovechar fácilmente estos datos de comportamiento enriquecidos y enriquecer el Perfil del cliente en tiempo real en cuestión de minutos.
 
 ![](./images/analytics-data-experience-platform.png)
 
-En un nivel superior, Adobe Analytics recopila datos de varios canales digitales y de varios centros de datos de todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se ingieren en conjuntos de datos de Platform para su consumo por el Área de trabajo de ciencia de datos, el Servicio de Consulta y otras aplicaciones de descubrimiento de datos.
+En un nivel alto, Adobe Analytics recopila datos de diversos canales digitales y múltiples centros de datos en todo el mundo. Una vez recopilados los datos, las reglas de identificación de Visitante, segmentación y arquitectura de transformación (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, el Perfil del cliente en tiempo real los considera listos para el consumo. En un proceso paralelo al anterior, los mismos datos procesados se procesan mediante microlotes y se ingieren en conjuntos de datos de Platform para su consumo por el Área de trabajo de ciencia de datos, el Servicio de Consulta y otras aplicaciones de descubrimiento de datos.
 
 Consulte Introducción a las reglas [de procesamiento](https://docs.adobe.com/content/help/es-ES/analytics/admin/admin-tools/processing-rules/processing-rules.html) para obtener más información sobre las reglas de procesamiento.
 
@@ -40,7 +40,7 @@ Para obtener más información sobre XDM, consulte la descripción general [del 
 
 Cuando se establece una conexión de origen para llevar datos de Analytics al Experience Platform mediante la interfaz de usuario de Platform, los campos de datos se asignan automáticamente y se ingestan en el Perfil del cliente en tiempo real en cuestión de minutos. Para obtener instrucciones sobre cómo crear una conexión de origen con Adobe Analytics mediante la interfaz de usuario de Platform, consulte el tutorial [del conector de datos de](../../tutorials/ui/create/adobe-applications/analytics.md)Analytics.
 
-Para obtener información detallada sobre la asignación de campos que se produce entre Analytics y Experience Platform, visite la guía de asignación [de campos Analytics de](./mapping/analytics.md) Adobe.
+Para obtener información detallada sobre la asignación de campos que se produce entre Analytics y Experience Platform, visite la guía de asignación [de campos de](./mapping/analytics.md) Adobe Analytics.
 
 ## ¿Cuál es la latencia esperada para Analytics Data en Platform?
 
