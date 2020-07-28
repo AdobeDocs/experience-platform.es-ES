@@ -22,7 +22,7 @@ El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Cu
 
 ## Acceso a los datos de perfil por identidad
 
-Para acceder a una [!DNL Profile] `/access/entities` entidad, realice una solicitud GET al extremo y proporcione la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
+Para acceder a una [!DNL Profile] entidad, realice una solicitud de GET al `/access/entities` extremo y proporcione la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
 
 Los parámetros de Consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 ## Acceso a los datos de perfil por lista de identidades
 
-Puede acceder a varias entidades de perfil por sus identidades haciendo una solicitud POST al extremo y proporcionando las identidades en la carga útil `/access/entities` . Estas identidades consisten en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a varias entidades de perfil mediante sus identidades, realizando una solicitud de POST al extremo y proporcionando las identidades en la carga útil. `/access/entities` Estas identidades consisten en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
 
 **Formato API**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## Acceso a eventos de series temporales para un perfil por identidad
 
-Puede acceder a los eventos de series temporales según la identidad de la entidad de perfil asociada realizando una solicitud GET al `/access/entities` extremo. Esta identidad consiste en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a los eventos de series temporales según la identidad de la entidad de perfil asociada realizando una solicitud de GET al `/access/entities` extremo. Esta identidad consiste en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
 
 Los parámetros de Consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
@@ -411,7 +411,7 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 
 ### Acceder a una página de resultados subsiguiente
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la `_page.next` propiedad contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud GET al extremo, sin embargo debe asegurarse de reemplazarlo `/access/entities` `/entities` por el valor del URI proporcionado.
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la `_page.next` propiedad contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al `/access/entities` extremo; sin embargo, debe asegurarse de reemplazar `/entities` por el valor del URI proporcionado.
 
 >[!NOTE]
 >Asegúrese de que no se repita accidentalmente `/entities/` en la ruta de solicitud. Sólo debería aparecer una vez como, `/access/entities?start=...`
@@ -492,7 +492,7 @@ Una respuesta correcta devuelve la siguiente página de resultados. Esta respues
 
 ## Acceso a eventos de series temporales para varios perfiles por identidades
 
-Puede acceder a eventos de series temporales de varios perfiles asociados realizando una solicitud POST al extremo y proporcionando las identidades de perfil en la carga útil. `/access/entities` Cada una de estas identidades consta de un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a eventos de series temporales de varios perfiles asociados realizando una solicitud de POST al extremo y proporcionando las identidades de perfil en la carga útil. `/access/entities` Cada una de estas identidades consta de un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
 
 **Formato API**
 
@@ -770,7 +770,7 @@ En esta respuesta de ejemplo, el primer perfil de la lista (&quot;GkouAW-yD9aoRC
 
 Al recuperar eventos de series temporales, es posible que se devuelvan muchos resultados, por lo que los resultados se paginan con frecuencia. Si hay páginas de resultados subsiguientes para un perfil en particular, el `_links.next.payload` valor de ese perfil contendrá un objeto de carga útil.
 
-Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud POST adicional al extremo para recuperar la página siguiente de datos de series temporales para ese perfil. `access/entities`
+Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud de POST adicional al extremo para recuperar la página siguiente de los datos de la serie temporal para ese perfil. `access/entities`
 
 ## Acceso a eventos de series temporales en varias entidades de esquema
 
@@ -880,7 +880,7 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 
 ### Acceder a una página de resultados subsiguiente
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la `_page.next` propiedad contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente realizando solicitudes GET adicionales al `access/entities` punto final.
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la `_page.next` propiedad contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente realizando solicitudes de GET adicionales al `access/entities` punto final.
 
 ## Pasos siguientes
 
@@ -892,7 +892,7 @@ La siguiente sección proporciona información adicional sobre el acceso a [!DNL
 
 ### Parámetros de Consulta {#query-parameters}
 
-Los siguientes parámetros se utilizan en la ruta de las solicitudes GET al `/access/entities` extremo. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros requeridos están etiquetados, mientras que el resto son opcionales.
+Los siguientes parámetros se utilizan en la ruta de las solicitudes de GET al `/access/entities` extremo. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros requeridos están etiquetados, mientras que el resto son opcionales.
 
 | Parámetro | Descripción | Ejemplo |
 |---|---|---|
