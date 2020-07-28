@@ -98,13 +98,13 @@ El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL co
 
 [Los Entornos](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) en Adobe Target le ayudan a administrar su implementación en todas las etapas del desarrollo. Esta configuración especifica qué entorno se va a usar con cada entorno.
 
-Adobe recomienda establecer esta configuración de forma diferente para cada uno de sus entornos de configuración `dev`, `stage`y `prod` edge para mantener las cosas simples. Sin embargo, si ya tiene definidos entornos [!UICONTROL de] Adobe Target, puede utilizarlos.
+Adobe recomienda que esto se establezca de forma diferente para cada uno de los entornos de configuración `dev`, `stage`y `prod` borde para que las cosas sean sencillas. Sin embargo, si ya tiene definidos entornos [!UICONTROL de] Adobe Target, puede utilizarlos.
 
 #### Adobe Audience Manager
 
 Todo lo que se necesita para enviar datos a Adobe Audience Manager es habilitar esta sección. Los demás ajustes son opcionales pero se recomienda.
 
-![Bloque de configuración de Adobe Audiencia Manage](../../assets/edge_configuration_aam.png)
+![Audiencia de Adobe Administrar bloqueo de configuración](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinos de cookies habilitados]
 
