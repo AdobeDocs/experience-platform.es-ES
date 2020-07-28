@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Reemplazar un objeto
 
-Puede sobrescribir el contenido de un [!DNL Catalog] objeto mediante una solicitud PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
+Puede sobrescribir el contenido de un [!DNL Catalog] objeto mediante una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
 
 >[!NOTE]
 >
->Si sólo necesita actualizar algunos campos específicos dentro de un [!DNL Catalog] objeto, el uso de una solicitud PATCH puede resultar más eficaz.
+>Si solo necesita actualizar algunos campos específicos dentro de un [!DNL Catalog] objeto, el uso de una solicitud de PATCH puede resultar más eficaz.
 
 **Formato API**
 
@@ -58,7 +58,7 @@ curl -X PUT \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del objeto sobrescrito. Este ID debe coincidir con el enviado en la solicitud PUT. Al realizar una solicitud GET para este objeto, ahora se muestra que sus detalles se han sustituido por los proporcionados en la carga útil de la solicitud PUT anterior.
+Una respuesta correcta devuelve una matriz que contiene el ID del objeto sobrescrito. Este ID debe coincidir con el enviado en la solicitud de PUT. Al realizar una solicitud de GET para este objeto, ahora se muestra que sus detalles se han sustituido por los proporcionados en la carga útil de la solicitud de PUT anterior.
 
 ```json
 [
