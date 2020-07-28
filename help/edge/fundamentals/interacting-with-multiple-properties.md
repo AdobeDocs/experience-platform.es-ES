@@ -18,7 +18,7 @@ Hay algunos casos en los que podría interesarle interactuar con dos propiedades
 
 * Compañías que se han adquirido y que están trabajando en la integración de sus sitios web
 * Relaciones de uso compartido de datos entre varias compañías
-* Clientes que están probando nuevas soluciones de Adobe y que no desean interrumpir su implementación existente
+* Clientes que están probando nuevas soluciones de Adobe y no desean interrumpir su implementación existente
 
 El SDK permite crear una instancia independiente para cada propiedad agregando otro nombre a la matriz en el código base. En el siguiente ejemplo, hemos proporcionado dos nombres `mycustomname1` y `mycustomname2`.
 
