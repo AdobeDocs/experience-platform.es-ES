@@ -22,13 +22,13 @@ Active perfiles para sus [!DNL Facebook] campañas para la segmentación, person
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL Facebook] destino, a continuación se presentan dos casos de uso de muestra que los clientes de Adobe Real-time Customer Data de Platform pueden resolver con esta función.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se presentan dos casos de uso de muestra que los clientes de Platform pueden solucionar con esta función el Adobe de datos de clientes en tiempo real. [!DNL Facebook]
 
 
 ### Caso de uso n.º 1
 
 
-Un minorista en línea quiere llegar a los clientes existentes a través de las plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El minorista en línea puede ingerir direcciones de correo electrónico de su propia CRM a CDP en tiempo real de Adobe, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma [!DNL Facebook] social, optimizando así su inversión en publicidad.
+Un minorista en línea quiere llegar a los clientes existentes a través de las plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El minorista en línea puede ingerir direcciones de correo electrónico desde su propia CRM a Adobe de CDP en tiempo real, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma [!DNL Facebook] social, optimizando así la inversión en publicidad.
 
 
 ### Caso de uso n.º 2
