@@ -71,4 +71,4 @@ La API de Simulador para pruebas le permite administrar entornos limitados media
 
 Al leer este documento, se le han presentado los conceptos esenciales de los entornos limitados en Experience Platform. Para ver los pasos detallados sobre cómo administrar los entornos limitados, consulte la guía [de](ui/overview.md) usuario de la interfaz de usuario o la guía [para](./api/getting-started.md) desarrolladores de la API.
 
-Aunque los entornos limitados son una herramienta valiosa para aislar entornos de Platform para su equipo de desarrollo, también puede administrar un control de acceso más granular mediante la Consola de administración de Adobe. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
+Aunque los entornos limitados son una herramienta valiosa para aislar entornos de Platform para su equipo de desarrollo, también puede administrar un control de acceso más granular mediante Adobe Admin Console. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
