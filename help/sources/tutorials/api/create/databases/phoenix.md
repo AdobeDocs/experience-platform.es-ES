@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >El [!DNL Phoenix] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectar una [!DNL Phoenix] base de datos a [!DNL Experience Platform].
 
@@ -78,7 +78,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Phoenix] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL Phoenix] es `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
+Para crear una [!DNL Phoenix] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Phoenix] es `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
 
 ```shell
 curl -X POST \
