@@ -5,6 +5,9 @@ description: Las plataformas de personalización recopilan datos y perspectivas 
 seo-description: Las plataformas de personalización recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en mercadotecnia a navegar datos anónimos, ofreciendo ofertas o publicidades a clientes potenciales en base a actividades anteriores o como parte de segmentos de audiencia con hábitos similares.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 7%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 Las plataformas de personalización recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en mercadotecnia a navegar datos anónimos, ofreciendo ofertas o publicidades a clientes potenciales en base a actividades anteriores o como parte de segmentos de audiencia con hábitos similares.
 
-Actualmente, CDP en tiempo real de Adobe admite los destinos de personalización que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, Adobe Real-time CDP admite los destinos de personalización que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 * [Extensión de Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)
 * [Extensión de Adobe Target 2.0](/help/rtcdp/destinations/adobe-target-v2-extension.md)
