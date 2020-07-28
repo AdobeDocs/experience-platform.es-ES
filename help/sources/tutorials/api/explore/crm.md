@@ -56,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explorar las tablas de datos
 
-Con la conexión base del sistema CRM, puede explorar las tablas de datos realizando solicitudes GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
+Con la conexión base del sistema CRM, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
 
 **Formato API**
 
@@ -109,9 +109,9 @@ Una respuesta correcta es una matriz de tablas desde a su sistema CRM. Encuentre
 ]
 ```
 
-## Inspeccionar la estructura de una tabla
+## Inspect de la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde el sistema CRM, realice una solicitud GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde el sistema CRM, realice una solicitud de GET mientras especifica la ruta de una tabla como parámetro de consulta.
 
 **Formato API**
 
