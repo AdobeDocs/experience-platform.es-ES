@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de Espacio de trabajo de ciencias de datos de la plataforma Adobe Experience Platform
+user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
 source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ ht-degree: 3%
 * Creación de modelos {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
-   * [Guía del SDK de la plataforma (Python)](authoring/platform-sdk.md)
+   * [Guía del SDK de Platform (Python)](authoring/platform-sdk.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
    * [Creación y publicación de un tutorial del modelo de aprendizaje automático](models-recipes/create-publish-model.md)
    * [Crear el esquema y conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
@@ -62,4 +62,4 @@ ht-degree: 3%
 * [Guías de migración de fórmulas y portátiles](recipe-notebook-migration.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
