@@ -40,7 +40,7 @@ Consulte el tutorial sobre la [creación de segmentos mediante API](../../segmen
 
 ## Habilitar un esquema para la pertenencia a uniones
 
-Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
+Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud de PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 Cuando se establece la etiqueta &quot;unión&quot; en un esquema, el [!DNL Schema Registry] crea y mantiene automáticamente una unión para la clase en la que se basa el esquema. El `$id` de la unión es similar al estándar `$id` de una clase, con la única diferencia que se anexa con dos caracteres de subrayado y la palabra &quot;unión&quot; (`"__union"`).
 
-Para vista de una lista de uniones disponibles, puede realizar una solicitud GET al `/unions` extremo.
+Para vista de una lista de uniones disponibles, puede realizar una solicitud de GET al `/unions` extremo.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una `results` matriz e
 
 ## Buscar una unión específica
 
-Puede realizar una vista de una unión específica realizando una solicitud GET que incluya los datos `$id` y, según el encabezado Accept, algunos o todos los detalles de la unión.
+Puede realizar una vista de una unión específica realizando una solicitud de GET que incluya los datos `$id` y, según el encabezado Accept, algunos o todos los detalles de la unión.
 
 >[!NOTE]
 >
@@ -249,7 +249,7 @@ El formato de respuesta depende del encabezado Accept enviado en la solicitud. E
 
 ## esquemas de Lista en una unión
 
-Para ver qué esquemas forman parte de una unión específica, puede realizar una solicitud GET utilizando parámetros de consulta para filtrar los esquemas dentro del contenedor del inquilino.
+Para ver qué esquemas forman parte de una unión específica, puede realizar una solicitud de GET mediante parámetros de consulta para filtrar los esquemas dentro del contenedor del inquilino.
 
 Con el parámetro de `property` consulta, puede configurar la respuesta para que solo devuelva esquemas que contengan un `meta:immutableTags` campo y un `meta:class` igual a la clase a la que accede la unión.
 
