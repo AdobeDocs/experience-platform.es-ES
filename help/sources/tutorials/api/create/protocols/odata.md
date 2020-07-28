@@ -17,7 +17,7 @@ ht-degree: 2%
 >[!NOTE]
 >El [!DNL Generic OData] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL Generic OData] a [!DNL Experience Platform].
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL OData] conexión, se debe proporcionar su ID de especificación de conexión única como parte de la solicitud POST. El ID de especificación de conexión para [!DNL OData] es `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`.
+Para crear una [!DNL OData] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL OData] es `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`.
 
 ```shell
 curl -X POST \
