@@ -370,7 +370,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Solicitud**
 
-Puede revisar los datos de registros ingestados anteriormente con la siguiente solicitud GET.
+Puede revisar los datos del registro ingestados anteriormente con la siguiente solicitud de GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
