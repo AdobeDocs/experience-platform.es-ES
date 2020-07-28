@@ -1,8 +1,8 @@
 ---
 title: Extensión bisible
 seo-title: Extensión bisible
-description: La extensión Bisible es un destino de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Bizsible es un destino de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión Bizsible es un destino de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión Bizsible es un destino de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -18,9 +18,9 @@ ht-degree: 5%
 
 [!DNL Bizible] es la solución de atribución B2B líder en la industria que le proporciona una visibilidad incomparable de sus datos, para que pueda tomar decisiones inteligentes que impulsen el crecimiento.
 
-[!DNL Bizible] es una extensión de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] es una extensión de correo electrónico en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
-Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en tiempo real de CDP de Adobe, consulte Información general [sobre las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
 ![Extensión bisible](assets/bizible-extension.png)
 
@@ -40,7 +40,7 @@ Para instalar la [!DNL Bizible] extensión:
 4. En la ventana **[!UICONTROL Seleccionar la propiedad]** Launch disponible, seleccione la [!DNL Launch] propiedad en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en [!DNL Launch]. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [de la página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propiedades de la [!DNL Launch] documentación.
 5. El flujo de trabajo le lleva a [!DNL Launch] completar la instalación.
 
-Para obtener más información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Bizbible en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Bizbible en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 También puede instalar la extensión directamente en la interfaz del [Experience Platform Launch](https://launch.adobe.com/). Consulte [Añadir una nueva extensión](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) en la [!DNL Launch] documentación.
 
