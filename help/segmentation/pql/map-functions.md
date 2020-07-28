@@ -20,7 +20,7 @@ ht-degree: 6%
 
 La `get` función se utiliza para recuperar el valor de un mapa para una clave determinada.
 
-**Formato**
+**Format**
 
 ```sql
 {MAP}.get({STRING})
@@ -38,7 +38,7 @@ identityMap.get("example@example.com")
 
 La `keys` función se utiliza para recuperar todas las claves de un mapa determinado.
 
-**Formato**
+**Format**
 
 ```sql
 {MAP}.keys()
@@ -56,7 +56,7 @@ identityMap.keys()
 
 La `values` función se utiliza para recuperar todos los valores de un mapa determinado.
 
-**Formato**
+**Format**
 
 ```sql
 {MAP}.values()
