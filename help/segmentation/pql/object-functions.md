@@ -20,7 +20,7 @@ ht-degree: 5%
 
 La `isNull` función determina si no existe una referencia de objeto.
 
-**Formato**
+**Format**
 
 ```sql
 {OBJECT}.isNull()
@@ -38,7 +38,7 @@ person.homeAddress.isNull()
 
 La `isNotNull` función determina si existe una referencia de objeto.
 
-**Formato**
+**Format**
 
 ```sql
 {OBJECT}.isNotNull()
