@@ -130,7 +130,7 @@ Para vista del nuevo segmento en la interfaz de usuario de Platform, haga clic e
 
 ## Pasos siguientes
 
-Este documento describía las perspectivas proporcionadas por una instancia de servicio de inteligencia artificial del cliente. Ahora puede continuar con el tutorial sobre la [descarga de puntuaciones en la API](./download-scores.md) del cliente o explorar las otras guías de [Adobe Intelligent Services](../../home.md) que se ofrecen.
+Este documento describía las perspectivas proporcionadas por una instancia de servicio de inteligencia artificial del cliente. Ahora puede continuar con el tutorial sobre la [descarga de puntuaciones en la API](./download-scores.md) del cliente o explorar las otras guías de servicios [inteligentes de](../../home.md) Adobe que se ofrecen.
 
 ## Recursos adicionales
 
