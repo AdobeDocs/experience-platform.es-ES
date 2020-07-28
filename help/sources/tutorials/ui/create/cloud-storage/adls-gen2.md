@@ -44,7 +44,7 @@ Para obtener más información sobre estos valores, consulte [este documento](ht
 
 Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada que vincule su cuenta de ADLS Gen2 a [!DNL Platform].
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La ficha *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que se pueden utilizar para crear conexiones base de entrada. Cada origen muestra el número de conexiones base existentes asociadas a ellas.
+Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La ficha *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que se pueden utilizar para crear conexiones base de entrada. Cada origen muestra el número de conexiones base existentes asociadas a ellas.
 
 En la categoría *[!UICONTROL Cloud Almacenamiento]* , seleccione **[!UICONTROL Azure Data Lake Gen2]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la vista de origen de la misma. Para crear una nueva conexión base de entrada, haga clic en **[!UICONTROL Conectar origen]**.
 
