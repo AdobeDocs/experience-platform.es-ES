@@ -14,11 +14,11 @@ ht-degree: 5%
 
 # Productos
 
-Si tiene productos en el sitio, este es un conjunto predeterminado de cosas que puede desear enviar para habilitar la mayor cantidad de funciones de Adobe. Aunque esta es una sugerencia, proporciona un conjunto muy sólido de datos desde el inicio.
+Si tiene productos en el sitio, este es un conjunto predeterminado de cosas que puede desear enviar para habilitar la mayor cantidad de capacidades desde Adobe. Aunque esta es una sugerencia, proporciona un conjunto muy sólido de datos desde el inicio.
 
 Este documento utiliza la combinación Detalles [del comercio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent. La `commerce` mezcla se divide en dos partes: el `commerce` objeto y la `productListItems` matriz. El `commerce` objeto permite indicar qué acciones se están realizando en la `productListItems` matriz.
 
->[!TConsejo]
+>[!Tip]
 >
 >
 >Si está familiarizado con Adobe Analytics, el `commerce` está más relacionado con la `events` variable. El `productListItems` está más relacionado con la `products` variable.
@@ -27,7 +27,7 @@ Este documento utiliza la combinación Detalles [del comercio de](https://github
 
 A continuación se muestra una lista de `measures` disponible en el `commerce` objeto.
 
->[!TConsejo]
+>[!Tip]
 >
 >
 >Una medida tiene dos campos: `id` y `value`. La mayoría de las veces, solo usará el `value` campo (por ejemplo, `'value':1`). El `id` campo permite establecer un identificador único que se puede utilizar para realizar un seguimiento del momento en que se envió la medida. Consulte la documentación de XDM para [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
