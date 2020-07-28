@@ -20,7 +20,7 @@ Las programaciones automatizadas de capacitación y puntuación se definen con u
 
 ## Crear un MLService {#create-an-mlservice}
 
-Puede crear un MLService realizando una solicitud POST y una carga útil que proporcione un nombre para el servicio y un ID de instancia MLI válido. La instancia MLI utilizada para crear un servicio MLService no es necesaria para tener experimentos de formación existentes, pero puede elegir crear el servicio MLService con un modelo entrenado existente proporcionando la ID del experimento y la ID de ejecución de formación correspondientes.
+Puede crear un MLService realizando una solicitud de POST y una carga útil que proporcione un nombre para el servicio y un ID de instancia MLI válido. La instancia MLI utilizada para crear un servicio MLService no es necesaria para tener experimentos de formación existentes, pero puede elegir crear el servicio MLService con un modelo entrenado existente proporcionando la ID del experimento y la ID de ejecución de formación correspondientes.
 
 **Formato de API**
 
@@ -108,7 +108,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del nu
 
 ## Recuperar una lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Puede recuperar una lista de MLServices realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de MLServices realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -167,7 +167,7 @@ Una respuesta correcta devuelve una lista de MLServices y sus detalles, incluyen
 
 ## Recuperar un MLService específico {#retrieve-a-specific-mlservice}
 
-Puede recuperar los detalles de un experimento específico realizando una solicitud GET que incluya el ID de MLService deseado en la ruta de solicitud.
+Puede recuperar los detalles de un experimento específico realizando una solicitud de GET que incluya el ID de MLService deseado en la ruta de solicitud.
 
 **Formato de API**
 
@@ -211,11 +211,11 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ML
 
 ## Actualizar un MLService {#update-an-mlservice}
 
-Puede actualizar un MLService existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID de destinatario MLService en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar un MLService existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID de destinatario MLService en la ruta de la solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar el MLService por ID](#retrieve-a-specific-mlservice). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para [recuperar el MLService por ID](#retrieve-a-specific-mlservice). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud de PUT.
 
 **Formato de API**
 
