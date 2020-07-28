@@ -30,13 +30,13 @@ Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Exp
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría de aplicaciones *de* Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en la parte derecha de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Cuentas]**.
+En la categoría de aplicaciones *de* Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Cuentas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleccionar datos
 
-Aparece el paso *Adobe Analytics* . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Seleccionar datos]**.
+Aparece el paso de *Adobe Analytics* . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Seleccionar datos]**.
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Una vez creada la conexión, se crea automáticamente un esquema de destinatario
 * [Información general sobre el área de trabajo de ciencias de datos](../../../../../data-science-workspace/home.md)
 * [Visión general del servicio de Consulta](../../../../../query-service/home.md)
 
-El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de datos mediante el conector Adobe Analytics Source:
+El siguiente vídeo está diseñado para admitir su comprensión de la ingesta de datos mediante el conector Adobe Analytics Source:
 
 >[!WARNING]
 >
