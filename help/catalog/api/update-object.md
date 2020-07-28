@@ -14,14 +14,14 @@ ht-degree: 3%
 
 # Actualizar un objeto
 
-Puede actualizar parte de un [!DNL Catalog] objeto incluyendo su ID en la ruta de una solicitud PATCH. Este documento cubre los dos métodos para realizar operaciones PATCH en objetos Catalog:
+Puede actualizar parte de un [!DNL Catalog] objeto incluyendo su ID en la ruta de una solicitud de PATCH. Este documento cubre los dos métodos para realizar operaciones de PATCH en objetos Catalog:
 
 * Uso de campos
 * Uso de notación de parche JSON
 
 >[!NOTE]
 >
->Las operaciones PATCH de un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados.  Las modificaciones de los objetos interrelacionados deben realizarse directamente.
+>Las operaciones del PATCH en un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados.  Las modificaciones de los objetos interrelacionados deben realizarse directamente.
 
 ## Actualización mediante campos
 
@@ -58,7 +58,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud PATCH. Al realizar una solicitud GET para este conjunto de datos, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este conjunto de datos, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
 
 ```json
 [
@@ -107,7 +107,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del objeto actualizado. Este ID debe coincidir con el enviado en la solicitud PATCH. Al realizar una solicitud GET para este objeto, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
+Una respuesta correcta devuelve una matriz que contiene el ID del objeto actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este objeto, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
 
 ```json
 [
