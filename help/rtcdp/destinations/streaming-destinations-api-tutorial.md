@@ -12,11 +12,11 @@ ht-degree: 2%
 ---
 
 
-# Conéctese a los destinos de flujo continuo y active los datos en tiempo real de datos de cliente de Adobe en Platform mediante API
+# Conéctese a los destinos de flujo continuo y active los datos en tiempo real de los datos del cliente de Adobe en Platform mediante API
 
 >[!NOTE]
 >
->Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] de CDP en tiempo real de Adobe se encuentran actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
+>Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] en Adobe Real-time CDP están actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 En este tutorial se muestra cómo utilizar llamadas de API para conectarse a los datos de Adobe Experience Platform, crear una conexión a un destino de almacenamiento de nube de flujo continuo ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
@@ -68,13 +68,13 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger {#swagger-docs}
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte la documentación de la API del servicio de [flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas de API en este tutorial en Swagger. Consulte la documentación de la API de servicio de [flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtenga la lista de los destinos de flujo continuo disponibles {#get-the-list-of-available-streaming-destinations}
 
 ![Pasos de destino paso 1](/help/rtcdp/destinations/assets/step1-create-streaming-destination-api.png)
 
-Como primer paso, debe decidir a qué destino de flujo se activan los datos. Para empezar, realice una llamada para solicitar una lista de los destinos disponibles a los que puede conectar y activar segmentos. Realice la siguiente solicitud GET al extremo para devolver una lista de los destinos disponibles: `connectionSpecs`
+Como primer paso, debe decidir a qué destino de flujo se activan los datos. Para empezar, realice una llamada para solicitar una lista de los destinos disponibles a los que puede conectar y activar segmentos. Realice la siguiente solicitud de GET al punto final para devolver una lista de los destinos disponibles: `connectionSpecs`
 
 **Formato API**
 
@@ -259,10 +259,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{AUTHENTICATION_CREDENTIALS}`:: rellene el nombre del destino de flujo continuo, por ejemplo: `Amazon Kinesis authentication credentials` o `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`:: *Para[!DNL Amazon Kinesis]conexiones.* Su ID de acceso para la ubicación del almacenamiento de Amazon Kinesis.
-* `{SECRET_KEY}`:: *Para[!DNL Amazon Kinesis]conexiones.* La clave secreta para la ubicación del almacenamiento de Amazon Kinesis.
+* `{ACCESS_ID}`:: *Para[!DNL Amazon Kinesis]conexiones.* Su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
+* `{SECRET_KEY}`:: *Para[!DNL Amazon Kinesis]conexiones.* La clave secreta de la ubicación del almacenamiento de Amazon Kinesis.
 * `{REGION}`:: *Para[!DNL Amazon Kinesis]conexiones.* Región de su [!DNL Amazon Kinesis] cuenta donde CDP en tiempo real de Adobe transmitirá sus datos.
 * `{SAS_KEY_NAME}`:: *Para[!DNL Azure Event Hubs]conexiones.* Rellene el nombre de la clave SAS. Obtenga información sobre la autenticación con [!DNL Azure Event Hubs] claves SAS en la documentación [de](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`:: *Para[!DNL Azure Event Hubs]conexiones.* Rellene la clave SAS. Obtenga información sobre la autenticación con [!DNL Azure Event Hubs] claves SAS en la documentación [de](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
@@ -318,7 +318,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{BASE_CONNECTION_ID}`:: Utilice el ID de conexión base que obtuvo en el paso anterior.
 * `{CONNECTION_SPEC_ID}`:: Utilice la especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{NAME_OF_DATA_STREAM}`:: *Para[!DNL Amazon Kinesis]conexiones.* Proporcione el nombre del flujo de datos existente en la [!DNL Amazon Kinesis] cuenta. CDP en tiempo real de Adobe exportará datos a este flujo.
-* `{REGION}`:: *Para[!DNL Amazon Kinesis]conexiones.* Región de su cuenta de Amazon Kinesis donde CDP en tiempo real de Adobe transmitirá sus datos.
+* `{REGION}`:: *Para[!DNL Amazon Kinesis]conexiones.* Región de su cuenta de Kinesis de Amazon donde Adobe Real-time CDP transmitirá sus datos.
 * `{EVENT_HUB_NAME}`:: *Para[!DNL Azure Event Hubs]conexiones.* Rellene el [!DNL Azure Event Hub] nombre donde Adobe Real-time CDP transmitirá sus datos. Para obtener más información, consulte [Creación de un concentrador](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de eventos en la [!DNL Microsoft] documentación.
 
 **Respuesta**
@@ -337,9 +337,9 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos del Experience Platform y el destino en el que activará los datos. Considere este paso como la construcción de la canalización, a través de la cual los datos fluirán más adelante, entre el Experience Platform y el destino deseado.
 
-Para crear un flujo de datos, realice una solicitud POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
+Para crear un flujo de datos, realice una solicitud de POST, como se muestra a continuación, mientras proporciona los valores que se mencionan a continuación dentro de la carga útil.
 
-Realice la siguiente solicitud POST para crear un flujo de datos.
+Realice la siguiente solicitud de POST para crear un flujo de datos.
 
 **Formato API**
 
@@ -396,7 +396,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y
 
 Después de haber creado todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de flujo continuo. En este paso, se selecciona qué segmentos y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
 
-Para activar segmentos en el nuevo destino, debe realizar una operación de PARCHE JSON, similar a la que se muestra a continuación. Puede activar varios segmentos y atributos de perfil en una sola llamada. Para obtener más información sobre JSON PATCH, consulte la especificación [](https://tools.ietf.org/html/rfc6902)RFC.
+Para activar segmentos en el nuevo destino, debe realizar una operación de PATCH JSON, similar a la que se muestra a continuación. Puede activar varios segmentos y atributos de perfil en una sola llamada. Para obtener más información sobre el PATCH JSON, consulte la especificación [](https://tools.ietf.org/html/rfc6902)RFC.
 
 **Formato API**
 
@@ -480,7 +480,7 @@ Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para va
 
 Como último paso del tutorial, debe validar que los segmentos y atributos de perfil se hayan asignado correctamente al flujo de datos.
 
-Para validar esto, realice la siguiente solicitud GET:
+Para validar esto, realice la siguiente solicitud de GET:
 
 **Formato API**
 
