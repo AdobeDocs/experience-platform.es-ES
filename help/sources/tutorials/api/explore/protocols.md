@@ -55,7 +55,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explorar las tablas de datos
 
-Con el ID de conexión de la aplicación de protocolos, puede explorar las tablas de datos realizando solicitudes GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
+Con el ID de conexión de la aplicación de protocolos, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
 
 **Formato API**
 
@@ -115,9 +115,9 @@ Una respuesta correcta devuelve una matriz de tablas de la aplicación de protoc
 ]
 ```
 
-## Inspeccionar la estructura de una tabla
+## Inspect de la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde la aplicación de protocolos, realice una solicitud GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde la aplicación de protocolos, realice una solicitud de GET mientras especifica la ruta de una tabla como parámetro de consulta.
 
 **Formato API**
 
