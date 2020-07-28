@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen MySQL en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Creación de un conector de origen MySQL en la interfaz de usuario
 
-> [!NOTE]
+>[!NOTE]
 > El conector MySQL está en fase beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
 Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen MySQL mediante la interfaz de usuario de Platform.
@@ -44,7 +44,7 @@ Puede obtener más información sobre las cadenas de conexión y cómo obtenerla
 
 Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada a la que vincular su cuenta de MySQL a [!DNL Platform].
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
+Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *Catálogo* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
 
 Bajo la categoría *[!UICONTROL Bases]* de Datos, seleccione **[!UICONTROL MySQL]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione Origen **[!UICONTROL de]** Connect.
 
