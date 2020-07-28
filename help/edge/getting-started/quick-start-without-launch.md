@@ -22,7 +22,7 @@ Esta guía le guiará por las diferentes formas de configurar el SDK web de Adob
 
 ## Crear un ID de configuración
 
-Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge de Adobe Launch, aunque no utilice las funciones de administración de etiquetas. Esto le permite habilitar el [!DNL Edge Network] envío de datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
+Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge en Inicio de Adobe, aunque no utilice las funciones de administración de etiquetas. Esto le permite habilitar el [!DNL Edge Network] envío de datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
 
 >[!NOTE]
 >
