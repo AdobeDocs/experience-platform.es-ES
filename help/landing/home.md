@@ -65,7 +65,7 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 
 >[!NOTE]
 >
-> La selección de una región determina el idioma y el contenido de Adobe.com.
+> La selección de una región determina el idioma y el contenido en Adobe.com.
 
 1. Haga clic en el idioma actual en el pie de página de la [!DNL Experience Platform] interfaz.
 2. En la configuración de perfil, haga clic en **[!UICONTROL Cambiar región]**.
@@ -83,7 +83,7 @@ La documentación de Adobe Experience Platform está disponible en varios idioma
 
 >[!NOTE]
 >
->A partir de mayo de 2020, Adobe lanzará actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
+>A partir de mayo de 2020, Adobe está publicando actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
 >
 >* Vínculos a artículos destacados
 >* Recomendaciones de documentación relacionadas con el contexto
@@ -118,7 +118,7 @@ Para un rápido recorrido por la interfaz de [!DNL Experience Platform's] usuari
 
 * [**Conceptos básicos **](api-fundamentals.md)<br/>de APIsAprenda los conceptos básicos del trabajo con[!DNL Platform]las APIs.
 
-* [**Referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de[!DNL Experience Platform]Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas.*Estos documentos están alojados en Adobe I/O.*
+* [**Referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de[!DNL Experience Platform]Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas.*Estos documentos están alojados en E/S de Adobe.*
 
 ## Recursos de vídeo de integración de Adobe Experience Platform
 
@@ -126,7 +126,7 @@ Para un rápido recorrido por la interfaz de [!DNL Experience Platform's] usuari
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Una de las ventajas clave que ofrece Adobe Experience Platform es su capacidad de integración con otros servicios de Adobe existentes. En el siguiente vídeo se ofrece una descripción general de cómo se integran [!DNL Experience Platform] los servicios con [!DNL Experience Cloud] aplicaciones y funciones como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes], [!DNL Audience Library]y [!DNL Experience Platform Launch].
+Uno de los beneficios clave que ofrece el Adobe Experience Platform es su capacidad de integrarse con otros servicios de Adobe existentes. El siguiente vídeo ofrece información general sobre cómo se integran [!DNL Experience Platform] los servicios con [!DNL Experience Cloud] aplicaciones y funciones como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes], [!DNL Audience Library]y [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
