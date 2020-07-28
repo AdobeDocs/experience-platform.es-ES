@@ -146,7 +146,7 @@ Este error se produce cuando el `destinationId` proporcionado en una `POST /conf
 }
 ```
 
-Este error se produce al enviar una solicitud POST o PUT con un encabezado Content-Type no válido. Compruebe por Doble que está proporcionando un valor de tipo de contenido válido para el punto final que está utilizando.
+Este error se produce al enviar una solicitud de POST o PUT con un encabezado Content-Type no válido. Compruebe por Doble que está proporcionando un valor de tipo de contenido válido para el punto final que está utilizando.
 
 La mayoría de los extremos de Perfil aceptan &quot;application/json&quot; para el encabezado Content-Type, con las siguientes excepciones:
 
