@@ -116,4 +116,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Realizar una solicitud GET para lista de todos los tipos de datos en el contenedor del inquilino ahora incluiría el tipo de datos Construcción de propiedades. También puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo tipo de datos. Asegúrese de incluir la solicitud de búsqueda `version` en el encabezado Accept.
+Realizar una solicitud de GET para la lista de todos los tipos de datos en el contenedor del inquilino ahora incluiría el tipo de datos Construcción de propiedades. También puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo tipo de datos. Asegúrese de incluir la solicitud de búsqueda `version` en el encabezado Accept.
