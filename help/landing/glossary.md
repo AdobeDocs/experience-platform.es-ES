@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## A
 
-**Control de acceso:** {#access-control} Control de acceso para [!DNL Experience Platform] vincular usuarios con permisos de acceso y entornos de simulación de pruebas mediante perfiles de productos en Adobe Admin Console.
+**Control de acceso:** {#access-control} Control de acceso para [!DNL Experience Platform] vincular a los usuarios con permisos de acceso y entornos de simulación de pruebas mediante perfiles de productos en Adobe Admin Console.
 
 **ID de clave de acceso:** El ID de clave de acceso es un identificador único asociado a una clave de acceso secreto [!DNL Amazon] S3. El ID de la clave de acceso y la clave de acceso secreto se utilizan conjuntamente para firmar solicitudes de AWS.
 
@@ -30,13 +30,13 @@ ht-degree: 0%
 
 **Adobe Experience Platform:** Adobe Experience Platform estandariza los datos y el contenido en toda la empresa, lo que potencia los perfiles de los consumidores en tiempo real, permite la ciencia de datos y acelera la velocidad de contenido para impulsar la personalización de la experiencia a lo largo del viaje del cliente.
 
-**Conectores de Adobe:** Adobe Connectors son conexiones preconfiguradas creadas por Adobe para permitir que los datos entren y salgan de [!DNL Experience Platform]. Los conectores incluyen [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]y [!DNL Azure Blob].
+**Conectores de Adobe:** Los conectores de Adobe son conexiones preconfiguradas creadas por Adobe para permitir que los datos entren y salgan de [!DNL Experience Platform]. Los conectores incluyen [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]y [!DNL Azure Blob].
 
-**Adobe Intelligent Services:** Adobe Sensei es el marco de trabajo de inteligencia que [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
+**Servicios inteligentes de Adobe:** Adobe Sensei es el marco de inteligencia que se impone [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
 
-**Adobe I/O:** Adobe I/O forma parte de [!DNL Experience Platform] y proporciona acceso a todo lo que los desarrolladores necesitan para integrar, ampliar y personalizar el Adobe Experience Platform, incluidas las API, los eventos, la consola para desarrolladores y las útiles herramientas.
+**E/S Adobe:** La E/S de Adobe forma parte de [!DNL Experience Platform] y proporciona acceso a todo lo que los desarrolladores necesitan para integrar, ampliar y personalizar Adobes Experience Platform, incluyendo API, eventos, consola para desarrolladores y herramientas útiles.
 
-**Adobe Sensei:** Adobe Sensei es el marco de trabajo de inteligencia que [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
+**Adobe Sensei:** Adobe Sensei es el marco de inteligencia que se impone [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
 
 **Cubo Amazon S3:** [!DNL Amazon S3] los cubos son los contenedores fundamentales para los datos almacenados en el [!DNL Amazon] ecosistema. Los contenedores contienen objetos, cada objeto se almacena y recupera mediante una clave exclusiva asignada por el desarrollador.
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 **Combinación de atributos:** La combinación de atributos define cómo una política de combinación prioriza el valor de atributo de perfil en caso de conflictos de datos.
 
-**Atribución AI:** [!DNL Attribution AI] es un servicio de Adobe Sensei que ofrece funciones algorítmicas de atribución de varios canales en todo el ciclo de vida del cliente.
+**Attribution AI:** [!DNL Attribution AI] es un servicio de Adobe Sensei que ofrece funciones algorítmicas de atribución de múltiples canales en todo el ciclo de vida del cliente.
 
 **Audiencia**: Una audiencia es el conjunto resultante de perfiles que cumplen los criterios de una definición de segmento.
 
@@ -70,13 +70,13 @@ ht-degree: 0%
 
 **Lote:** El lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
 
-**Id. de lote:** El ID de lote es un identificador generado por Adobe para un lote de datos.
+**Id. de lote:** El ID de lote es un identificador generado por Adobes para un lote de datos.
 
 **Ingesta de lotes:** La ingestión por lotes permite a los usuarios ingerir petabytes de datos y hacerlos disponibles en los sistemas empresariales. Con las tecnologías más recientes, los usuarios ahora pueden ingerir cualquier esquema XDM y no XDM en [!DNL Experience Platform].
 
 **Segmentación por lotes:** La segmentación por lotes es una alternativa a un proceso de selección de datos en curso y mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y almacena para que pueda exportarse para su uso.
 
-**Generar:** En [!DNL Experience Platform Launch], una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contienen todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
+**Generar:** En [!DNL Experience Platform Launch], una compilación es una biblioteca implementada. La compilación es un archivo o conjunto de archivos que contiene todas las configuraciones y código necesarios para ejecutar la lógica comercial contenida dentro de esa biblioteca.
 
 **Herramientas de Business Intelligence:** La inteligencia empresarial, también conocida como herramientas de &quot;BI&quot;, está integrada principalmente con el [!DNL Experience Platform Query Service]. Las herramientas de inteligencia comercial son tipos de software de aplicaciones que recopilan y procesan grandes cantidades de datos no estructurados de sistemas internos y externos.
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **Etiqueta de contrato C4:** `C4` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir anuncios o contenido, ya sea en el sitio o entre sitios. C4 es la etiqueta más restrictiva, ya que engloba las etiquetas C5, C6 y C7.
 
-**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
+**Etiqueta de contrato C5:** `C5` la etiqueta de control de datos de contrato especifica que los datos no se pueden utilizar para dirigir el contenido o las publicidades a través de sitios basados en intereses. La segmentación o personalización basada en intereses se produce si se cumplen las tres condiciones siguientes:  Los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés del usuario, se utilizan en otro contexto, como en otro sitio o aplicación, y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias.
 
 **C6 Etiqueta de contrato:** `C6` la etiqueta de control de datos de contrato especifica que los datos no se pueden usar para la segmentación de anuncios en el sitio. Los datos no se pueden usar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios.  Esto incluye el uso de datos recopilados anteriormente en el sitio sobre el interés de los usuarios por seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra.
 
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 **Área de nombres de identidad personalizada:** Las Áreas de nombres de identidad personalizadas son identificadores creados por el cliente que se utilizan para representar las identidades de una organización o un caso empresarial específicos.
 
-**AI del cliente:** La API de cliente es un servicio de Adobe Sensei que enriquece los perfiles de los clientes con propiedades basadas en AI y potencia la segmentación de clientes y los esfuerzos de determinación de objetivos.
+**AI del cliente:** El servicio de inteligencia artificial del cliente es un servicio de Adobe Sensei que enriquece los perfiles del cliente con las propiedades basadas en AI y potencia la segmentación del cliente y los esfuerzos de determinación de objetivos.
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 **Etiquetas de conjunto de datos:** Las etiquetas de uso de datos se pueden agregar a los conjuntos de datos. Todos los campos dentro de ese conjunto de datos heredarán las etiquetas del conjunto de datos.
 
-**Área de trabajo de ciencia de datos:** [!DNL Data Science Workspace] dentro de [!DNL Experience Platform] permite a los clientes crear modelos de aprendizaje automático utilizando datos en todas las aplicaciones [!DNL Experience Platform] y de Adobe para generar perspectivas y predicciones inteligentes y crear experiencias digitales de usuario final encantadoras.
+**Área de trabajo de ciencia de datos:** [!DNL Data Science Workspace] dentro de [!DNL Experience Platform] permite a los clientes crear modelos de aprendizaje automático utilizando datos en aplicaciones [!DNL Experience Platform] y Adobes para generar perspectivas y predicciones inteligentes y crear experiencias digitales de usuario final deliciosas.
 
 **Fuente de datos:** Un origen de datos es un origen de datos designado por el usuario. Ejemplos de una fuente de datos son una aplicación móvil, eventos de perfil y/o experiencia, eventos de perfil de sitios web o una CRM.
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
 **Conjunto de datos:** Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, generalmente una tabla, que contiene esquemas (columnas) y campos (filas).
 
-**Id. de conjunto de datos:** Identificador generado por Adobe para un conjunto de datos ingerido.
+**Id. de conjunto de datos:** Identificador generado por Adobes para un conjunto de datos ingerido.
 
 **Salida de conjunto de datos:** El resultado del conjunto de datos proporciona un mecanismo para determinar qué se utilizará la opción *Crear tabla como selección* para una ejecución [!DNL Query Service] en particular.
 
@@ -218,7 +218,7 @@ ht-degree: 0%
 
 **Eventos:** Los Eventos son los datos de comportamiento asociados a un perfil.
 
-**Modelo de datos de experiencia (XDM):** [!DNL Experience Data Model] (XDM) es el concepto de utilizar esquemas estándar para unificar datos para su uso con [!DNL Experience Platform] las aplicaciones de Adobe Experience Cloud y Adobe Experience Cloud. XDM estandariza la forma en que se estructuran los datos y acelera y simplifica el proceso de obtener perspectivas a partir de cantidades masivas de datos.
+**Modelo de datos de experiencia (XDM):** [!DNL Experience Data Model] (XDM) es el concepto de utilizar esquemas estándar para unificar datos para su uso con aplicaciones [!DNL Experience Platform] y Adobe Experience Cloud. XDM estandariza la forma en que se estructuran los datos y acelera y simplifica el proceso de obtener perspectivas a partir de cantidades masivas de datos.
 
 **Experience Platform Launch:** [!DNL Launch] es un ecosistema de administración de etiquetas y SDK, integrado con [!DNL Experience Platform] y [!DNL Experience Cloud] aplicaciones. [!DNL Launch] proporciona herramientas para implementar, unificar y administrar integraciones de análisis, marketing y publicidad necesarias para potenciar las experiencias relevantes de los clientes en todos los dispositivos cliente.
 
@@ -356,7 +356,7 @@ ht-degree: 0%
 
 **Biblioteca de Ofertas:** En la biblioteca [!DNL Decisioning Service], la biblioteca de ofertas es una biblioteca central que se utiliza para administrar ofertas personalizadas y de reserva, reglas de decisión y actividades.
 
-**Organización:** Una organización es el nombre que se utiliza para identificar una compañía o un grupo específico dentro de una compañía en todos los productos de Adobe. El administrador puede configurar y administrar el acceso y los permisos de las funciones para los usuarios de una organización.
+**Organización:** Una organización es el nombre que se utiliza para identificar una compañía o un grupo específico dentro de una compañía entre productos de Adobe. El administrador puede configurar y administrar el acceso y los permisos de las funciones para los usuarios de una organización.
 
 **Sobrescribir estrategia de guardado:** `Overwrite` la estrategia de almacenamiento es una opción para ingerir datos de terceros a través de una conexión, donde el usuario especifica si los datos ingestados se sobrescribirán en una programación específica. [!DNL Experience Platform] ingiere el conjunto de datos especificado del origen de terceros y lo sobrescribe en [!DNL Experience Platform].
 
@@ -408,11 +408,11 @@ ht-degree: 0%
 
 ## R
 
-**Datos del cliente en tiempo real Platform:** Adobe [!DNL Real-time Customer Data Platform] aúna datos conocidos y desconocidos de clientes para crear perfiles de clientes de confianza con una integración simplificada, segmentación inteligente y activación en tiempo real a lo largo del viaje del cliente digital.
+**Datos del cliente en tiempo real Platform:** El Adobe [!DNL Real-time Customer Data Platform] aúna datos conocidos y desconocidos de clientes para crear perfiles de clientes confiables con una integración simplificada, segmentación inteligente y activación en tiempo real a lo largo del viaje digital del cliente.
 
 **Perfil del cliente en tiempo real:** [!DNL Real-time Customer Profile] es un perfil centralizado para la administración de experiencias personalizadas y con objetivos específicos.
 
-**Fórmula:** Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarios para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas empresariales específicos.
+**Fórmula:** Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarias para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas comerciales específicos.
 
 **Registro:** Un registro son datos que se mantienen como filas en un conjunto de datos.
 
@@ -442,7 +442,7 @@ ht-degree: 0%
 
 **Cambiador de Simulador de pruebas:** El control de simulador de pruebas de [!DNL Experience Platform] permite a los usuarios navegar entre los entornos limitados a los que tienen acceso. Si se cambia un simulador para pruebas, todo el contenido cambiará y puede alterar el acceso a las funciones en función de los permisos.
 
-**Programar:** Schedule es una especificación definida por el usuario sobre la frecuencia o cadencia de la ingesta de datos desde una fuente de datos de terceros a Adobe [!DNL Experience Platform].
+**Programar:** La programación es una especificación definida por el usuario sobre la frecuencia o cadencia de la ingestión de datos de una fuente de datos de terceros al Adobe [!DNL Experience Platform].
 
 **Puntuación:** La puntuación es el proceso de generación de perspectivas a partir de datos mediante un modelo capacitado.
 
@@ -472,11 +472,11 @@ ht-degree: 0%
 
 **Segmentación:** La segmentación es el proceso de dividir un gran grupo de clientes, clientes potenciales o consumidores en grupos más pequeños que comparten atributos similares y responderán de manera similar a las estrategias de mercadotecnia.
 
-**Marco para la detección del lenguaje Sensei ML:** Sensei ML Framework es un marco de aprendizaje automático unificado en Adobe que aprovecha los datos [!DNL Experience Platform] para empoderar a los científicos de datos en el desarrollo de servicios de inteligencia impulsados por el aprendizaje automático de una manera más rápida, escalable y reutilizable.
+**Marco para la detección del lenguaje Sensei ML:** Sensei ML Framework es un sistema de aprendizaje automático unificado en todo el Adobe que aprovecha los datos [!DNL Experience Platform] para empoderar a los científicos de datos en el desarrollo de servicios de inteligencia impulsados por el aprendizaje automático de una manera más rápida, escalable y reutilizable.
 
 **Etiquetas de datos sensibles:** Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos considerados sensibles, como distintos tipos de datos de comportamiento o geográficos que se desean marcar como sensibles.
 
-**Servicios:** Un potente marco para la operacionalización de los servicios AI y ML mediante Adobe Intelligent Services. Los servicios ofrecen experiencias personalizadas en tiempo real o ofrecen servicios inteligentes personalizados.
+**Servicios:** Un potente entorno para la operacionalización de los servicios AI y ML mediante el aprovechamiento de los servicios inteligentes de Adobe. Los servicios ofrecen experiencias personalizadas en tiempo real o ofrecen servicios inteligentes personalizados.
 
 **Etiqueta de datos S1:** `S1` la etiqueta de datos se utiliza para clasificar datos que especifican la latitud y la longitud que pueden utilizarse para determinar la ubicación exacta de un dispositivo.
 
@@ -492,7 +492,7 @@ ht-degree: 0%
 
 **Catálogo de origen:** Un catálogo de origen es una lista de fuentes disponibles en el [!DNL Real-time Customer Data Platform].
 
-**Área de nombres de identidad estándar:** Las Áreas de nombres de identidad estándar son identificadores predefinidos de Adobe, incluidas las soluciones estándar de Adobe y del sector utilizadas para identificar a los usuarios.
+**Área de nombres de identidad estándar:** Las Áreas de nombres de identidad estándar son identificadores predefinidos de Adobe, que incluyen soluciones estándar de Adobe y de la industria utilizadas para identificar a los usuarios.
 
 **Esquema estándar:** Los esquemas estándar consisten en clases y mezclas y están destinados a su reutilización.
 
