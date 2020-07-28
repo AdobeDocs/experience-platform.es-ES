@@ -225,7 +225,7 @@ Después de leer esta guía, ahora podrá comprender mejor cómo funciona la bú
 
 ## Apéndice {#appendix}
 
-Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Así, por ejemplo, para buscar un segmento llamado AAM o [!DNL Platform], debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las siguientes secciones proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Así, por ejemplo, para buscar un segmento denominado AAM o [!DNL Platform], debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en HTML, como el ejemplo que se muestra arriba.
 
