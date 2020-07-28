@@ -25,7 +25,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform proporciona un completo conjunto de funciones para ingerir cualquier tipo y latencia de datos. Adobe Experience Platform [!DNL Data Ingestion] ofrece varias alternativas para la ingesta de datos, incluidas las API por lotes, las API de flujo, los conectores nativos de Adobe, los socios de integración de datos o la interfaz de usuario de Adobe Experience Platform.
+Adobe Experience Platform proporciona un completo conjunto de funciones para ingerir cualquier tipo y latencia de datos. Adobe Experience Platform [!DNL Data Ingestion] ofrece varias alternativas para la ingesta de datos, incluidas las API por lotes, las API de flujo, los conectores de Adobe nativos, los socios de integración de datos o la interfaz de usuario de Adobe Experience Platform.
 
 **Nuevas funciones**
 
@@ -37,7 +37,7 @@ Para obtener más información, visite la documentación [de la ingestión](../.
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] es un servicio totalmente gestionado dentro del [!DNL Experience Platform] cual permite a los científicos de datos generar sin problemas perspectivas a partir de datos y contenido en todas las soluciones de Adobe y sistemas de terceros mediante la creación y la puesta en marcha de modelos de aprendizaje automático. [!DNL Data Science Workspace] está estrechamente integrado con [!DNL Platform] y potencia el ciclo de vida completo de la ciencia de datos, incluida la exploración y preparación de datos XDM, seguido del desarrollo y la operacionalización de modelos para enriquecerse automáticamente [!DNL Real-time Customer Profile] con perspectivas de aprendizaje automático.
+Adobe Experience Platform [!DNL Data Science Workspace] es un servicio totalmente gestionado dentro del [!DNL Experience Platform] cual permite a los científicos de datos generar sin problemas perspectivas a partir de datos y contenido a través de soluciones de Adobe y sistemas de terceros mediante la creación y la puesta en marcha de modelos de aprendizaje automático. [!DNL Data Science Workspace] está estrechamente integrado con [!DNL Platform] y potencia el ciclo de vida completo de la ciencia de datos, incluida la exploración y preparación de datos XDM, seguido del desarrollo y la operacionalización de modelos para enriquecerse automáticamente [!DNL Real-time Customer Profile] con perspectivas de aprendizaje automático.
 
 **Nuevas funciones**
 
@@ -66,7 +66,7 @@ You can use [!DNL Query Service] to build data analysis ecosystems, creating a p
 | Función | Descripción |
 | -----------| ---------- |
 | Mejoras en [!DNL Query Editor] | Se Añadió una función de guardado que le permite guardar una consulta y trabajar en ella más tarde. Se ha Añadido una ficha &quot;Examinar&quot; en la interfaz de usuario del [!DNL Query Service] Adobe Experience Platform que muestra consultas guardadas por los usuarios de la organización. Se ha implementado un panel &quot;Detalles de Consulta&quot; que muestra metadatos útiles sobre la consulta que se está viendo. |
-| Nuevas funciones de atribución | Funciones definidas por Adobe en [!DNL Query Service] consulta para atribución de canales con parámetros de caducidad. |
+| Nuevas funciones de atribución | Funciones definidas por Adobes en [!DNL Query Service] la consulta para atribución de canales con parámetros de caducidad. |
 | Mejoras en la sintaxis SQL | Compatibilidad con sintaxis iLike. |
 | Generar conjuntos de datos con un Esquema XDM definido | Se ha Añadido una nueva cláusula en Crear tabla como consultas de selección (CTAS) que permite especificar un esquema de destinatario. |
 
