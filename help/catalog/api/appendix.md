@@ -18,9 +18,9 @@ Este documento contiene información adicional para ayudarle a trabajar con la [
 
 ## Vista de objetos interrelacionados {#view-interrelated-objects}
 
-Algunos [!DNL Catalog] objetos pueden interrelacionarse con otros [!DNL Catalog] . Los campos con el prefijo `@` en las cargas de respuesta indican objetos relacionados. Los valores de estos campos toman la forma de un URI, que puede utilizarse en una solicitud GET independiente para recuperar los objetos relacionados que representan.
+Algunos [!DNL Catalog] objetos pueden interrelacionarse con otros [!DNL Catalog] . Los campos con el prefijo `@` en las cargas de respuesta indican objetos relacionados. Los valores de estos campos toman la forma de un URI, que puede utilizarse en una solicitud de GET independiente para recuperar los objetos relacionados que representan.
 
-El conjunto de datos de ejemplo devuelto en el documento al [buscar un conjunto de datos](look-up-object.md) específico contiene un `files` campo con el siguiente valor URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. El contenido del `files` campo se puede ver usando este URI como ruta para una nueva solicitud GET.
+El conjunto de datos de ejemplo devuelto en el documento al [buscar un conjunto de datos](look-up-object.md) específico contiene un `files` campo con el siguiente valor URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. El contenido del `files` campo se puede ver usando este URI como ruta para una nueva solicitud de GET.
 
 **Formato API**
 
@@ -110,7 +110,7 @@ Por ejemplo, si desea hacer referencia a un valor devuelto por una subsolicitud 
 
 >[!NOTE]
 >
->Cuando una subsolicitud ejecutada devuelve solamente la referencia a un objeto (como es el valor predeterminado para la mayoría de las solicitudes POST y PUT en la API del catálogo), esta referencia se asigna al valor `id` y se puede utilizar como `<<{OBJECT_ID}.id>>`.
+>Cuando una subsolicitud ejecutada devuelve sólo la referencia a un objeto (como es el valor predeterminado para la mayoría de las solicitudes de POST y PUT en la API del catálogo), esta referencia se asigna al valor `id` y se puede utilizar como `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -145,13 +145,13 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID proporcionado por el usuario que se adjunta al objeto de respuesta para que pueda hacer coincidir las solicitudes con las respuestas. [!DNL Catalog] no almacena este valor y simplemente lo devuelve en la respuesta con fines de referencia. |
-| `resource` | Ruta de recurso relativa a la raíz de la [!DNL Catalog] API. El protocolo y el dominio no deben formar parte de este valor y deben tener el prefijo &quot;/&quot;. <br/><br/> Cuando utilice PATCH o DELETE como subsolicitud `method`, incluya la ID del objeto en la ruta del recurso. No debe confundirse con el proporcionado por el usuario `id`, la ruta de recursos utiliza el ID del [!DNL Catalog] objeto mismo (por ejemplo, `resource: "/dataSets/1234567890"`). |
+| `resource` | Ruta de recurso relativa a la raíz de la [!DNL Catalog] API. El protocolo y el dominio no deben formar parte de este valor y deben tener el prefijo &quot;/&quot;. <br/><br/> Cuando utilice PATCH o DELETE como subsolicitud `method`, incluya la ID del objeto en la ruta de acceso del recurso. No debe confundirse con el proporcionado por el usuario `id`, la ruta de recursos utiliza el ID del [!DNL Catalog] objeto mismo (por ejemplo, `resource: "/dataSets/1234567890"`). |
 | `method` | Nombre del método (GET, PUT, POST, PATCH o DELETE) relacionado con la acción que se realiza en la solicitud. |
-| `body` | El documento JSON que normalmente se pasaría como carga útil en una solicitud POST, PUT o PATCH. Esta propiedad no es necesaria para solicitudes GET o DELETE. |
+| `body` | El documento JSON que normalmente se pasaría como carga útil en una solicitud de POST, PUT o PATCH. Esta propiedad no es necesaria para solicitudes de GET o DELETE. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de objetos que contiene el `id` que asignó a cada solicitud, el código de estado HTTP para la solicitud individual y la respuesta `body`. Dado que las tres solicitudes de muestra creaban nuevos objetos, el `body` de cada objeto es una matriz que contiene solamente el ID del objeto recién creado, como es el estándar con las respuestas POST más exitosas en [!DNL Catalog].
+Una respuesta correcta devuelve una matriz de objetos que contiene el `id` que asignó a cada solicitud, el código de estado HTTP para la solicitud individual y la respuesta `body`. Dado que las tres solicitudes de muestra creaban nuevos objetos, el `body` de cada objeto es una matriz que contiene solamente el ID del objeto recién creado, como es el estándar con las respuestas de POST más exitosas en [!DNL Catalog].
 
 ```json
 [
@@ -172,7 +172,7 @@ Una respuesta correcta devuelve una matriz de objetos que contiene el `id` que a
 ]
 ```
 
-Tenga cuidado al inspeccionar la respuesta a una solicitud múltiple, ya que deberá verificar el código de cada subsolicitud individual y no basarse únicamente en el código de estado HTTP para la solicitud POST principal.  Es posible que una sola subsolicitud devuelva un 404 (como una solicitud GET en un recurso no válido) mientras que la solicitud global devuelve 200.
+Tenga cuidado al inspeccionar la respuesta a una solicitud múltiple, ya que deberá comprobar el código de cada subsolicitud individual y no basarse únicamente en el código de estado HTTP para la solicitud del POST principal.  Es posible que una sola subsolicitud devuelva un 404 (como una solicitud de GET en un recurso no válido) mientras que la solicitud global devuelve 200.
 
 ## Encabezados de solicitud adicionales
 
@@ -182,13 +182,13 @@ Tenga cuidado al inspeccionar la respuesta a una solicitud múltiple, ya que deb
 
 Se recomienda utilizar el control de versiones de objetos para evitar el tipo de daños en los datos que se producen cuando varios usuarios guardan un objeto casi simultáneamente.
 
-La práctica recomendada al actualizar un objeto consiste en realizar primero una llamada de API a la vista (GET) en el objeto que se va a actualizar. Incluido en la respuesta (y en cualquier llamada donde la respuesta contenga un solo objeto) es un `E-Tag` encabezado que contiene la versión del objeto. Si se Añade la versión del objeto como un encabezado de solicitud denominado `If-Match` en las llamadas de actualización (PUT o PATCH), la actualización solo se realizará correctamente si la versión sigue siendo la misma, lo que ayudará a evitar conflictos de datos.
+La práctica recomendada al actualizar un objeto consiste en realizar primero una llamada de API a la vista (GET) del objeto que se va a actualizar. Incluido en la respuesta (y en cualquier llamada donde la respuesta contenga un solo objeto) es un `E-Tag` encabezado que contiene la versión del objeto. Si se Añade la versión del objeto como un encabezado de solicitud denominado `If-Match` en las llamadas de actualización (PUT o PATCH), la actualización solo se realizará correctamente si la versión sigue siendo la misma, lo que ayudará a evitar conflictos de datos.
 
 Si las versiones no coinciden (el objeto fue modificado por otro proceso desde que lo recuperó), recibirá el estado HTTP 412 (Error de condición previa) que indica que se ha denegado el acceso al recurso de destinatario.
 
 ### Pragma
 
-En ocasiones, es posible que desee validar un objeto sin guardar la información. El uso del `Pragma` encabezado con un valor de `validate-only` le permite enviar solicitudes POST o PUT únicamente con fines de validación, evitando que se mantengan los cambios en los datos.
+En ocasiones, es posible que desee validar un objeto sin guardar la información. El uso del `Pragma` encabezado con un valor de `validate-only` permite enviar solicitudes de POST o PUT únicamente para fines de validación, lo que evita que se mantengan los cambios en los datos.
 
 ## Compactación de datos
 
