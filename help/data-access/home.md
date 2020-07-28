@@ -36,4 +36,4 @@ Puede leer y escribir con conjuntos de datos mediante el [!DNL Spark] SDK. Encon
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] pone a disposición de la suscripción eventos específicos de alto valor mediante [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
+[!DNL Platform] pone a disposición de la suscripción eventos específicos de alto valor mediante la consola [de desarrollo de](https://www.adobe.com/go/devs_console_ui)Adobe. Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
