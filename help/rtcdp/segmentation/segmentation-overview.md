@@ -1,8 +1,8 @@
 ---
 title: Descripción general del servicio de segmentación
-seo-title: Servicio de segmentación en Adobe Real-time Customer Data Platform
+seo-title: Servicio de segmentación en Adobe Datos del cliente en tiempo real Platform
 description: Información general que describe el servicio de segmentación.
-seo-description: Información general que describe el servicio de segmentación y los segmentos en Platform de datos del cliente en tiempo real de Adobe.
+seo-description: Información general que describe el servicio de segmentación y los segmentos en Adobe Real-time Customer Data Platform.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
