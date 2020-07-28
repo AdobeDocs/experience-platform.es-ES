@@ -18,7 +18,7 @@ Una instancia MLI es un emparejamiento de un [motor](./engines.md) existente con
 
 ## Crear una instancia MLI {#create-an-mlinstance}
 
-Puede crear una instancia MLI realizando una solicitud POST mientras proporciona una carga útil de solicitud que consta de un ID de motor (`{ENGINE_ID}`) válido y un conjunto apropiado de configuraciones predeterminadas.
+Puede crear una instancia MLI realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consta de un identificador de motor (`{ENGINE_ID}`) válido y un conjunto apropiado de configuraciones predeterminadas.
 
 Si la ID del motor hace referencia a un motor PySpark o Spark, podrá configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU para fines de capacitación y puntuación. Consulte las secciones del apéndice sobre las configuraciones [de recursos](./appendix.md#resource-config) PySpark y Spark y las configuraciones [de CPU y GPU](./appendix.md#cpu-gpu-config) Python para obtener más información.
 
@@ -130,7 +130,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de instancias MLI
 
-Puede recuperar una lista de instancias MLI realizando una sola solicitud GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de instancias MLI realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -198,7 +198,7 @@ Una respuesta exitosa devuelve una lista de instancias MLI y sus detalles.
 
 ## Recuperar una instancia MLI específica {#retrieve-specific}
 
-Puede recuperar los detalles de una instancia MLI específica realizando una solicitud GET que incluya el ID de la instancia MLI deseada en la ruta de solicitud.
+Puede recuperar los detalles de una instancia MLI específica realizando una solicitud de GET que incluya el ID de la instancia MLI deseada en la ruta de solicitud.
 
 **Formato de API**
 
@@ -271,11 +271,11 @@ Una respuesta exitosa devuelve los detalles de la instancia MLI.
 
 ## Actualizar una instancia MLI
 
-Puede actualizar una instancia MLI existente sobrescribiendo sus propiedades mediante una solicitud PUT que incluya el ID de instancia MLI de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
+Puede actualizar una instancia MLI existente sobrescribiendo sus propiedades mediante una solicitud de PUT que incluya el ID de instancia MLI de destinatario en la ruta de solicitud y proporcionando una carga útil JSON que contenga propiedades actualizadas.
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud PUT, se sugiere que primero realice una solicitud GET para [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se sugiere que primero realice una solicitud de GET para [recuperar la instancia MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud de PUT.
 
 La siguiente llamada de API de ejemplo actualizará los parámetros de puntuación y formación de una entidad MLI al tener inicialmente estas propiedades:
 
@@ -405,7 +405,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar instancias MLI por ID de motor
 
-Puede eliminar todas las instancias MLI que compartan el mismo motor realizando una solicitud de DELETE que incluya el ID del motor como parámetro de consulta.
+Puede eliminar todas las instancias MLI que compartan el mismo motor realizando una solicitud de  DELETE que incluya el ID del motor como parámetro de consulta.
 
 **Formato de API**
 
