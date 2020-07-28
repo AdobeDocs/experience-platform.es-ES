@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Funciones definidas por Adobe
 
-Las funciones definidas por Adobe (ADF) son funciones creadas previamente en [!DNL Query Service] que ayudan a realizar tareas comunes relacionadas con el negocio en [!DNL ExperienceEvent] los datos. Estas funciones incluyen funciones de sesionización y atribución como las que se encuentran en Adobe Analytics. Consulte la documentación [de](https://docs.adobe.com/content/help/es-ES/analytics/landing/home.html) Adobe Analytics para obtener más información sobre Adobe Analytics y los conceptos que subyacen a los ADF definidos en esta página. Este documento proporciona información sobre las funciones definidas por Adobe disponibles en [!DNL Query Service].
+Las funciones definidas por Adobe (ADF) son funciones prediseñadas en [!DNL Query Service] que ayudan a realizar tareas comunes relacionadas con el negocio en [!DNL ExperienceEvent] los datos. Estas funciones incluyen funciones de sesionización y atribución como las que se encuentran en Adobe Analytics. Consulte la documentación [de](https://docs.adobe.com/content/help/es-ES/analytics/landing/home.html) Adobe Analytics para obtener más información sobre Adobe Analytics y los conceptos subyacentes a las FDA definidas en esta página. Este documento proporciona información para las funciones definidas por Adobe disponibles en [!DNL Query Service].
 
 ## Funciones de ventana
 
@@ -94,7 +94,7 @@ LIMIT 10
 
 Asociar las acciones de los clientes con el éxito es una parte importante para comprender los factores que influyen en la experiencia de los clientes. Las siguientes FDA admiten la atribución primera y última con diferentes configuraciones de caducidad.
 
-Para obtener más información sobre la atribución en Adobe Analytics, consulte la descripción general [de IQ de](https://docs.adobe.com/content/help/es-ES/analytics/analyze/analysis-workspace/panels/attribution.html) atribución en la Guía [!DNL Analytics] de análisis.
+Para obtener más información sobre la atribución en Adobe Analytics, consulte la descripción general [de la](https://docs.adobe.com/content/help/es-ES/analytics/analyze/analysis-workspace/panels/attribution.html) Attribution IQ en la Guía [!DNL Analytics] de análisis.
 
 ### Atribución de primer toque
 
