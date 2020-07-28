@@ -112,7 +112,7 @@ El objeto response incluye una `duleLabels` matriz que debe coincidir con las et
 
 ## Evaluar las directivas mediante conjuntos de datos y una acción de mercadotecnia
 
-También puede evaluar las infracciones de directivas especificando el ID de uno o varios conjuntos de datos desde los que se pueden recopilar las etiquetas de uso de datos. Esto se lleva a cabo realizando una solicitud POST al extremo principal o personalizado `/constraints` de una acción de marketing y especificando los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra a continuación.
+También puede evaluar las infracciones de directivas especificando el ID de uno o varios conjuntos de datos desde los que se pueden recopilar las etiquetas de uso de datos. Esto se realiza realizando una solicitud de POST al extremo principal o personalizado `/constraints` de una acción de marketing y especificando los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra a continuación.
 
 **Formato API**
 
@@ -328,7 +328,7 @@ Si la acción de mercadotecnia especificada infringe una directiva que involucra
 
 ## Evaluar directivas mediante conjuntos de datos, campos y una acción de marketing
 
-Además de proporcionar uno o más ID de conjuntos de datos, también se puede especificar un subconjunto de campos dentro de cada conjunto de datos, lo que indica que sólo se deben evaluar las etiquetas de uso de datos de esos campos. De forma similar a la solicitud POST que solo incluye conjuntos de datos, esta solicitud agrega campos específicos para cada conjunto de datos al cuerpo de la solicitud.
+Además de proporcionar uno o más ID de conjuntos de datos, también se puede especificar un subconjunto de campos dentro de cada conjunto de datos, lo que indica que sólo se deben evaluar las etiquetas de uso de datos de esos campos. De forma similar a la solicitud del POST que solo incluye conjuntos de datos, esta solicitud agrega campos específicos para cada conjunto de datos al cuerpo de la solicitud.
 
 Cuando evalúe políticas mediante campos de conjunto de datos, tenga en cuenta lo siguiente:
 
