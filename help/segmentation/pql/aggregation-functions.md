@@ -20,7 +20,7 @@ Las funciones de agregación se utilizan para agrupar varios valores dentro de m
 
 La `count` función devuelve el número de elementos dentro de la matriz dada.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.count()
@@ -38,7 +38,7 @@ orders.count()
 
 La `sum` función devuelve la suma de todos los valores seleccionados dentro de la matriz.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.sum()
@@ -56,7 +56,7 @@ orders.sum(order.price)
 
 La `average` función devuelve la media aritmética de todos los valores seleccionados dentro de la matriz.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.average()
@@ -74,7 +74,7 @@ orders.average(order.price)
 
 La `min` función devuelve el menor de todos los valores seleccionados dentro de la matriz.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.min()
@@ -92,7 +92,7 @@ orders.min(order.price)
 
 La `max` función devuelve el mayor de todos los valores seleccionados dentro de la matriz.
 
-**Formato**
+**Format**
 
 ```sql
 {ARRAY}.max()
