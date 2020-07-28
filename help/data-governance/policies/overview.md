@@ -37,7 +37,7 @@ Cuando el uso de datos se produce en el servicio de su organización, se deben i
 >
 >Si utiliza [!DNL Real-time Customer Data Platform], puede configurar casos de uso de mercadotecnia en destinos para automatizar la aplicación de políticas. Consulte el documento sobre Administración de [datos en tiempo real CDP](../../rtcdp/privacy/data-governance-overview.md) para obtener más información.
 
-Consulte el apéndice de este documento para ver una lista de las acciones [de marketing definidas por Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la API DULE [!DNL Policy Service] o la interfaz de [!DNL Experience Platform ]usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
+Consulte el apéndice del presente documento para ver una lista de las acciones [de marketing definidas por el Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la API DULE [!DNL Policy Service] o la interfaz de [!DNL Experience Platform ]usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -53,7 +53,7 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 
 >[!IMPORTANT]
 >
->Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
+>Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
 Para obtener instrucciones paso a paso sobre cómo trabajar con acciones de marketing y políticas de uso de datos en la API, consulte el tutorial sobre la [creación y evaluación de políticas](create.md)de uso de datos. Para obtener más información sobre las operaciones clave proporcionadas por la [!DNL Policy Service] API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
@@ -67,9 +67,9 @@ Este documento proporcionó una introducción a las políticas de uso de datos d
 
 La siguiente sección proporciona información adicional sobre las políticas de uso de datos.
 
-### Acciones de marketing definidas por Adobe {#core-actions}
+### Acciones de mercadotecnia definidas por Adobes {#core-actions}
 
-En la tabla siguiente se describen las principales acciones de marketing que Adobe proporciona de forma predeterminada.
+En la tabla siguiente se describen las principales acciones de mercadotecnia que el Adobe proporciona de forma predeterminada.
 
 >[!NOTE]
 >
