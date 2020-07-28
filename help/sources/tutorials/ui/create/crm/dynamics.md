@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a Microsoft Dynamics source connector in the UI
+title: Creación de un conector de origen de Microsoft Dynamics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
@@ -12,7 +12,7 @@ ht-degree: 1%
 ---
 
 
-# Create a [!DNL Microsoft Dynamics] source connector in the UI
+# Creación de un conector [!DNL Microsoft Dynamics] de origen en la interfaz de usuario
 
 Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos CRM de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL Microsoft Dynamics] (en adelante denominado &quot;[!DNL Dynamics]&quot;) mediante la interfaz [!DNL Platform] de usuario.
 
