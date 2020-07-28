@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Este documento proporciona información general sobre [!DNL JupyterLab] y sus ca
 
 ## [!DNL JupyterLab] en [!DNL Experience Platform]
 
-La integración de JupyterLab de Experience Platform se acompaña de cambios en la arquitectura, consideraciones de diseño, extensiones de bloc de notas personalizadas, bibliotecas preinstaladas y una interfaz temática de Adobe.
+La integración de JupyterLab de Experience Platform va acompañada de cambios arquitectónicos, consideraciones de diseño, extensiones personalizadas de portátiles, bibliotecas preinstaladas y una interfaz temática de Adobe.
 
 La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en Platform:
 
@@ -44,7 +44,7 @@ La estandarización y la interoperabilidad son conceptos clave que sustentan [!D
 * **[!DNL Catalog Service]::**Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
 * **[!DNL Query Service]::**Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
 * **[!DNL Sensei ML Framework]::**Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
-* **[!DNL Experience Data Model (XDM)]::**La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform.[El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), dirigido por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+* **[!DNL Experience Data Model (XDM)]::**La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform.[El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ En las secciones siguientes se proporciona información sobre las característic
 * [Recurso de ejecución de PySpark/Spark](#execution-resource)
 * [Iniciador](#launcher)
 
-### Acceso [!DNL JupyterLab] {#access-jupyterlab}
+### Access [!DNL JupyterLab] {#access-jupyterlab}
 
 En [Adobe Experience Platform](https://platform.adobe.com), seleccione **Equipos portátiles** en la columna de navegación izquierda. Deje que transcurra algún tiempo para que se inicialice [!DNL JupyterLab] completamente.
 
@@ -160,7 +160,7 @@ El *iniciador* personalizado le proporciona plantillas de bloc de notas útiles 
 | Eventos XDM | Un bloc de notas precargado que muestra la exploración de datos en datos de Evento de experiencias con valor posterior, centrado en características comunes en la estructura de datos. |
 | Consultas XDM | Un bloc de notas precargado que muestra consultas empresariales de muestra sobre los datos de Experience Evento. |
 | Agregación | Un bloc de notas precargado que muestra flujos de trabajo de muestra a grandes cantidades acumuladas de datos en trozos más pequeños y manejables. |
-| Clúster | Un bloc de notas precargado que muestra el proceso de modelado integral del aprendizaje automático mediante algoritmos de agrupamiento. |
+| Clustering | Un bloc de notas precargado que muestra el proceso de modelado integral del aprendizaje automático mediante algoritmos de agrupamiento. |
 
 Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disponibilidad de plantillas para cada núcleo se asigna en la siguiente tabla:
 
@@ -175,7 +175,7 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregación</strong></th>
-        <th><strong>Clúster</strong></th>
+        <th><strong>Clustering</strong></th>
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>
@@ -388,7 +388,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Leer desde un conjunto de datos en PySpark/[!DNL Spark]/Scala
 
-Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha Explorador **de** datos desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
+Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha de **Data Explorer** desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
 
 #### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
 
