@@ -472,7 +472,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Carga de grandes fragmentos de archivos
 
-Ahora que el archivo se ha creado, todos los fragmentos subsiguientes se pueden cargar realizando solicitudes de PARCHE repetidas, una para cada sección del archivo.
+Ahora que el archivo se ha creado, todos los fragmentos posteriores se pueden cargar realizando solicitudes repetidas de PATCH, una para cada sección del archivo.
 
 **Formato API**
 
@@ -821,7 +821,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminar un lote {#delete-a-batch}
 
-Un lote puede eliminarse realizando la siguiente solicitud POST con el parámetro de `action=REVERT` consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de elementos no utilizados. El lote se recopilará de forma asíncrona, y en ese momento se marcará como &quot;eliminado&quot;.
+Un lote puede eliminarse realizando la siguiente solicitud de POST con el parámetro de `action=REVERT` consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de elementos no utilizados. El lote se recopilará de forma asíncrona, y en ese momento se marcará como &quot;eliminado&quot;.
 
 **Formato API**
 
