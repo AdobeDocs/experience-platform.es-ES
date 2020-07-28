@@ -20,7 +20,7 @@ Los cuantificadores lógicos pueden utilizarse para afirmar condiciones con matr
 
 La `exists` función determina la existencia de un elemento en una matriz, siempre que cumpla la condición proporcionada.
 
-**Formato**
+**Format**
 
 ```sql
 exists {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -45,7 +45,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 La `forall` función determina todos los elementos de una matriz que cumplen todas las condiciones determinadas.
 
-**Formato**
+**Format**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
