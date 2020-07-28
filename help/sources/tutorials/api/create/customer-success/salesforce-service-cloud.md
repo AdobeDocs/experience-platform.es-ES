@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >El [!DNL Salesforce Service Cloud] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a [!DNL Salesforce Service Cloud] (en adelante, &quot;SSC&quot;).
 
@@ -68,7 +68,7 @@ Para crear una conexión SSC, debe existir un conjunto de especificaciones de co
 
 **Formato API**
 
-Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="salesforce-service-cloud"` para obtener información específica para SSC.
+Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Si se envía una solicitud de GET al extremo, se devolverán las especificaciones de conexión de todos los orígenes disponibles. `/connectionSpecs` También puede incluir la consulta `property=name=="salesforce-service-cloud"` para obtener información específica para SSC.
 
 ```http
 GET /connectionSpecs
@@ -141,7 +141,7 @@ Una respuesta correcta devuelve las especificaciones de conexión para SSC, incl
 }
 ```
 
-## Create a base connection
+## Creación de una conexión base
 
 Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión de base por cuenta SSC, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
