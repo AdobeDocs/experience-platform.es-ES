@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear el esquema y conjunto de datos de ventas minoristas
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -98,7 +98,7 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
    python bootstrap.py
    ```
 
-   > [!NOTE] La secuencia de comandos puede tardar varios minutos en completarse.
+   >[!NOTE] La secuencia de comandos puede tardar varios minutos en completarse.
 
 ## Pasos siguientes
 
