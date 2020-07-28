@@ -44,7 +44,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como las llamadas POST, PUT y PATCH) deben incluir un `Content-Type` encabezado. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
+Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como llamadas de POST, PUT y PATCH) deben incluir un `Content-Type` encabezado. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
 
 ## Pasos siguientes
 
