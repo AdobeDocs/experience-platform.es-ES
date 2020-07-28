@@ -186,4 +186,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Al realizar una solicitud GET para lista de todas las mezclas en el contenedor del inquilino, ahora se incluirá la combinación Detalles del vehículo, o bien se puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación URL para realizar la vista de la nueva mezcla directamente. Recuerde incluir el `version` en el encabezado Aceptar para todas las solicitudes de búsqueda.
+Al realizar una solicitud de GET para la lista de todas las mezclas en el contenedor del inquilino, ahora se incluirá la combinación Detalles del vehículo, o bien se puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa de la nueva mezcla. Recuerde incluir el `version` en el encabezado Aceptar para todas las solicitudes de búsqueda.
