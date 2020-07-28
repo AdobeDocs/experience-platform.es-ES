@@ -32,7 +32,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 ## Recuperar métricas de observabilidad
 
-Puede recuperar las métricas de observabilidad realizando una solicitud GET al extremo en la API de perspectivas de `/metrics` observación.
+Puede recuperar las métricas de observabilidad realizando una solicitud de GET al extremo en la API de perspectivas de la `/metrics` observación.
 
 **Formato API**
 
