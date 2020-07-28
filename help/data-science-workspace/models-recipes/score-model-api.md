@@ -108,7 +108,7 @@ La siguiente es la respuesta después de crear el experimento programado.
 
 ### Crear una ejecución de experimento para la puntuación
 
-Ahora con el modelo entrenado, podemos crear una Carrera de Experimentos para la puntuación. El valor del `modelId` parámetro es el `id` parámetro devuelto en la solicitud de modelo GET anterior.
+Ahora con el modelo entrenado, podemos crear una Carrera de Experimentos para la puntuación. El valor del `modelId` parámetro es el `id` parámetro devuelto en la solicitud del modelo de GET anterior.
 
 **Solicitud**
 
