@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Explorar un sistema de éxito del cliente mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para explorar los sistemas de éxito del cliente (CS).
 
@@ -56,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explorar las tablas de datos
 
-Con la conexión base del sistema CS, puede explorar las tablas de datos realizando solicitudes GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
+Con la conexión base del sistema CS, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o en la que desea realizar la ingesta [!DNL Platform].
 
 **Formato API**
 
@@ -116,9 +116,9 @@ Una respuesta correcta devuelve una matriz de tablas del sistema CS. Encuentre l
 ]
 ```
 
-## Inspeccionar la estructura de una tabla
+## Inspect de la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde el sistema CS, realice una solicitud GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde el sistema CS, realice una solicitud de GET mientras especifica la ruta de una tabla como parámetro de consulta.
 
 **Formato API**
 
