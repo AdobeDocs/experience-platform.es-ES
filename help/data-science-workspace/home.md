@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Información general sobre el área de trabajo de ciencias de datos
 
-Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para generar perspectivas a partir de los datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a realizar predicciones mediante el uso de contenido y recursos de datos en todas las soluciones de Adobe.
+Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para generar perspectivas a partir de los datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a realizar predicciones utilizando su contenido y recursos de datos en las soluciones de Adobe.
 
 Los científicos de datos de todos los niveles encontrarán herramientas sofisticadas y fáciles de usar que apoyen el rápido desarrollo, la capacitación y el ajuste de las recetas de aprendizaje automático -todos los beneficios de la tecnología de IA, sin la complejidad.
 
@@ -44,13 +44,13 @@ Antes de profundizar en los detalles de [!DNL Data Science Workspace], aquí hay
 
 | Término | Definición |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] en [!DNL Experience Platform] permite a los clientes crear modelos de aprendizaje automático utilizando datos en todas las soluciones [!DNL Experience Platform] y de Adobe para generar perspectivas y predicciones inteligentes y crear experiencias digitales de usuario final encantadoras. |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] dentro de [!DNL Experience Platform] permite a los clientes crear modelos de aprendizaje automático utilizando datos en las soluciones de Adobe [!DNL Experience Platform] y en todas partes para generar perspectivas y predicciones inteligentes y crear experiencias digitales de usuario final deliciosas. |
 | Inteligencia artificial | La inteligencia artificial es una teoría y un desarrollo de sistemas informáticos capaces de realizar tareas que normalmente requieren inteligencia humana, como la percepción visual, el reconocimiento del habla, la toma de decisiones y la traducción entre idiomas. |
 | Aprendizaje automático | El aprendizaje automático es el campo de estudio que permite a las computadoras aprender sin programarse explícitamente. |
-| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework es un marco de aprendizaje automático unificado en Adobe que aprovecha los datos [!DNL Experience Platform] para potenciar a los científicos de datos en el desarrollo de servicios de inteligencia impulsados por el aprendizaje automático de forma más rápida, escalable y reutilizable. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) es el esfuerzo de estandarización que lleva a cabo Adobe para definir esquemas estándar como [!DNL Profile] y [!DNL ExperienceEvent], para la administración de la experiencia del cliente. |
+| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework es un sistema de aprendizaje automático unificado en todo el Adobe que aprovecha los datos [!DNL Experience Platform] para empoderar a los científicos de datos en el desarrollo de servicios de inteligencia impulsados por el aprendizaje automático de manera más rápida, escalable y reutilizable. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) es el esfuerzo de estandarización liderado por el Adobe para definir esquemas estándar como [!DNL Profile] y [!DNL ExperienceEvent], para la administración de la experiencia del cliente. |
 | [!DNL JupyterLab] | [!DNL JupyterLab] es una interfaz web de código abierto para Project Jupyter y está estrechamente integrada en [!DNL Experience Platform]. |
-| Fórmulas | Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarios para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas empresariales específicos. |
+| Fórmulas | Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo AI o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarias para crear y ejecutar un modelo capacitado y, por tanto, ayuda a resolver problemas comerciales específicos. |
 | Modelo | Un modelo es una instancia de una fórmula de aprendizaje automático que se capacita mediante datos históricos y configuraciones para resolver un caso de uso comercial. |
 | Capacitación | La formación es el proceso de aprendizaje de patrones y perspectivas a partir de datos etiquetados. |
 | Modelo capacitado | Un modelo formado representa el resultado ejecutable de un proceso de formación de modelo, en el que se aplicó un conjunto de datos de formación a la instancia de modelo. Un modelo capacitado mantendrá una referencia a cualquier servicio Web inteligente que se cree a partir de él. El modelo entrenado es adecuado para la puntuación y la creación de un servicio Web inteligente. Las modificaciones de un modelo capacitado se pueden rastrear como una nueva versión. |
@@ -63,7 +63,7 @@ El siguiente gráfico describe la relación jerárquica entre Fórmulas, Modelos
 
 ## Explicación [!DNL Data Science Workspace]
 
-Con [!DNL Data Science Workspace], los científicos de datos pueden optimizar el proceso engorroso de descubrir perspectivas en grandes conjuntos de datos. Basado en un entorno de aprendizaje automático y un tiempo de ejecución comunes, [!DNL Data Science Workspace] ofrece administración avanzada de flujos de trabajo, administración de modelos y escalabilidad. Los servicios inteligentes admiten la reutilización de las fórmulas de aprendizaje automático para potenciar una variedad de aplicaciones creadas con productos y soluciones de Adobe.
+Con [!DNL Data Science Workspace], los científicos de datos pueden optimizar el proceso engorroso de descubrir perspectivas en grandes conjuntos de datos. Basado en un entorno de aprendizaje automático y un tiempo de ejecución comunes, [!DNL Data Science Workspace] ofrece administración avanzada de flujos de trabajo, administración de modelos y escalabilidad. Los servicios inteligentes admiten la reutilización de las fórmulas de aprendizaje automático para potenciar diversas aplicaciones creadas con productos y soluciones de Adobe.
 
 ### Acceso a datos de un solo nivel
 
@@ -107,7 +107,7 @@ El espacio de trabajo de ciencia de datos aporta una gran flexibilidad al proces
 
 ### Operacionalización
 
-Cuando estás satisfecho con tu fórmula, son sólo unos clics para crear un servicio inteligente. No se requiere codificación: puede hacerlo usted mismo, sin tener que contratar a un desarrollador o ingeniero. Por último, publique el servicio inteligente en Adobe IO y estará listo para que lo consuma su equipo de experiencia digital.
+Cuando estás satisfecho con tu fórmula, son sólo unos clics para crear un servicio inteligente. No se requiere codificación: puede hacerlo usted mismo, sin tener que contratar a un desarrollador o ingeniero. Por último, publique el servicio inteligente en E/S de Adobe y estará listo para que su equipo de experiencia digital lo consuma.
 
 <!--You can also publish your intelligent service to the Service Gallery, where it's available to specific people, specific organizations, or everyone who develops data solutions on Adobe Experience Platform. You can even share it with your external partners, and they can share their intelligent service with you. And the next time you're starting a new recipe, you can check the Service Gallery to see if there's a similar intelligent service you can use to get started. -->
 
@@ -121,7 +121,7 @@ Los científicos de datos pueden aprovechar las nuevas tecnologías y conjuntos 
 
 ### Control de acceso en [!DNL Data Science Workspace]
 
-Control de acceso para [!DNL Experience Platform] se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
+Control de acceso para [!DNL Experience Platform] se administra a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -135,10 +135,10 @@ La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso
 
 ### Seguridad y paz mental
 
-La seguridad de los datos es una prioridad máxima para Adobe. Adobe protege sus datos con los procesos y controles de seguridad desarrollados para ayudarle a cumplir con las normas, regulaciones y certificaciones aceptadas por el sector.
+La seguridad de los datos es una de las principales prioridades del Adobe. Adobe protege sus datos con los procesos y controles de seguridad desarrollados para ayudarle a cumplir con las normas, regulaciones y certificaciones aceptadas por el sector.
 
 La seguridad está integrada en el software y los servicios como parte del ciclo de vida seguro del producto de Adobe.
-Para obtener más información sobre la seguridad de los datos y el software de Adobe, el cumplimiento de normas y mucho más, visite la página de seguridad en https://www.adobe.com/security.html.
+Para obtener más información sobre la seguridad de los datos de Adobe y software, el cumplimiento de normas y más, visite la página de seguridad en https://www.adobe.com/security.html.
 
 ### Compatibilidad con Simulador para pruebas
 
@@ -207,9 +207,9 @@ Un servicio inteligente publicado se puede configurar para formarse automáticam
 
 [!DNL Data Science Workspace] ayuda a optimizar y simplificar el flujo de trabajo de la ciencia de datos, desde la recopilación de datos hasta los algoritmos y los servicios inteligentes, para los científicos de datos de todos los niveles de habilidades. Con las herramientas sofisticadas [!DNL Data Science Workspace] que proporciona, puede acortar considerablemente el tiempo de los datos a las perspectivas.
 
-Lo que es más importante, pone las capacidades de optimización algorítmica y ciencia de datos de la plataforma de marketing líder de Adobe en manos de los científicos de datos empresariales. [!DNL Data Science Workspace] Por primera vez, las empresas pueden incorporar algoritmos propios a la plataforma, aprovechando las potentes funciones de aprendizaje automático y de IA de Adobe para ofrecer experiencias de cliente altamente personalizadas a gran escala.
+Lo que es más importante, [!DNL Data Science Workspace] pone las capacidades de optimización algorítmica y ciencia de datos de la plataforma de marketing líder del Adobe en manos de los científicos de datos empresariales. Por primera vez, las empresas pueden incorporar algoritmos propios a la plataforma, aprovechando las potentes capacidades de aprendizaje automático y de IA del Adobe para ofrecer experiencias de cliente altamente personalizadas a gran escala.
 
-Con la combinación de experiencia en la marca y el aprendizaje automático y la destreza en IA de Adobe, las empresas tienen el poder de generar más valor empresarial y lealtad a la marca dando a los clientes lo que desean, antes de pedirlo.
+Con la combinación de conocimientos de marca y el aprendizaje automático y la destreza en IA de los Adobes, las empresas tienen el poder de impulsar más valor comercial y lealtad de marca dando a los clientes lo que desean, antes de pedirlo.
 
 Para obtener información adicional, como un flujo de trabajo diario completo, lea la documentación de introducción [a](./walkthrough.md) Data Science Workspace.
 
