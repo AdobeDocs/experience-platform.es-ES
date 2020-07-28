@@ -29,7 +29,7 @@ Una proyección se puede enrutar a uno o varios bordes especificando las ubicaci
 
 ### Lista de todos los destinos
 
-Puede realizar una lista de los destinos Edge que ya se han creado para su organización mediante una solicitud GET al extremo del `/config/destinations` .
+Puede realizar una lista de los destinos Edge que ya se han creado para su organización mediante una solicitud de GET al `/config/destinations` extremo.
 
 **Formato API**
 
@@ -102,14 +102,14 @@ La respuesta incluye una `projectionDestinations` matriz con los detalles de cad
 
 | Propiedad | Descripción |
 |---|---|
-| `_links.self.href` | En el nivel superior, coincide con la ruta utilizada para realizar la solicitud GET. Dentro de cada objeto de destino individual, esta ruta se puede utilizar en una solicitud GET para buscar directamente los detalles de un destino específico. |
+| `_links.self.href` | En el nivel superior, coincide con la ruta utilizada para realizar la solicitud de GET. Dentro de cada objeto de destino individual, esta ruta se puede utilizar en una solicitud de GET para buscar directamente los detalles de un destino específico. |
 | `id` | Dentro de cada objeto de destino, `"id"` muestra el identificador único de sólo lectura generado por el sistema para el destino. Este ID se utiliza al hacer referencia a un destino específico y al crear configuraciones de proyección. |
 
 Para obtener más información sobre los atributos de un destino individual, consulte la sección sobre [creación de un destino](#create-a-destination) que se muestra a continuación.
 
 ### Create a destination {#create-a-destination}
 
-Si el destino que necesita no existe ya, puede crear un nuevo destino de proyección realizando una solicitud POST al extremo del `/config/destinations` .
+Si el destino que necesita aún no existe, puede crear un nuevo destino de proyección realizando una solicitud de POST al `/config/destinations` extremo.
 
 **Formato API**
 
@@ -122,7 +122,7 @@ POST /config/destinations
 La siguiente solicitud crea un nuevo destino Edge.
 
 >[!NOTE]
->La solicitud POST para crear un destino requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
+>La solicitud del POST para crear un destino requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ Una respuesta correcta devuelve los detalles del destino Edge recién creado, in
 
 ### Vista de un destino
 
-Si conoce la ID única de un destino de proyección, puede realizar una solicitud de búsqueda para vista de sus detalles. Esto se lleva a cabo realizando una solicitud GET al extremo e incluyendo el ID del destino en la ruta de la solicitud. `/config/destinations`
+Si conoce la ID única de un destino de proyección, puede realizar una solicitud de búsqueda para vista de sus detalles. Esto se lleva a cabo realizando una solicitud de GET al extremo e incluyendo el ID del destino en la ruta de la solicitud. `/config/destinations`
 
 **Formato API**
 
@@ -224,7 +224,7 @@ El objeto response muestra los detalles del destino de la proyección. El `id` a
 
 ### Actualizar un destino
 
-Un destino existente se puede actualizar realizando una solicitud PUT al extremo e incluyendo el ID del destino que se va a actualizar en la ruta de la solicitud. `/config/destinations` Esta operación consiste esencialmente en _reescribir_ el destino, por lo que deben proporcionarse los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
+Un destino existente se puede actualizar realizando una solicitud de PUT al extremo e incluyendo el ID del destino que se va a actualizar en la ruta de la solicitud. `/config/destinations` Esta operación consiste esencialmente en _reescribir_ el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
 
 >[!CAUTION]
 >La respuesta de la API a la solicitud de actualización es inmediata, pero los cambios en las proyecciones se aplican asincrónicamente. En otras palabras, existe una diferencia horaria entre el momento en que se realiza la actualización a la definición del destino y el momento en que se aplica.
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 La siguiente solicitud actualiza el destino existente para incluir una segunda ubicación (`dataCenters`).
 
 >[!IMPORTANT]
->La solicitud PUT requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
+>La solicitud del PUT requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
 curl -X PUT \
@@ -292,7 +292,7 @@ La respuesta incluye los detalles actualizados del destino, incluido su ID y el 
 
 ### Eliminar un destino
 
-Si su organización ya no requiere un destino de proyección, puede eliminarlo realizando una solicitud DELETE al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
+Si su organización ya no requiere un destino de proyección, puede eliminarlo realizando una solicitud de  DELETE al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
 
 >[!CAUTION]
 >La respuesta de la API a la solicitud de eliminación es inmediata, pero los cambios reales en los datos de los bordes se producen asincrónicamente. En otras palabras, los datos de perfil se eliminarán de todos los bordes (el `dataCenters` especificado en el destino de la proyección), pero el proceso tardará un tiempo en completarse.
@@ -329,7 +329,7 @@ Las configuraciones de proyección proporcionan información sobre los datos que
 
 ### Lista de todas las configuraciones de proyección
 
-Puede realizar la lista de todas las configuraciones de proyección que se han creado para su organización haciendo una solicitud GET al extremo del `/config/projections` . También puede agregar parámetros opcionales a la ruta de la solicitud para acceder a las configuraciones de proyección de un esquema en particular o buscar una proyección individual por su nombre.
+Puede realizar la lista de todas las configuraciones de proyección que se han creado para su organización mediante una solicitud de GET al `/config/projections` extremo. También puede agregar parámetros opcionales a la ruta de la solicitud para acceder a las configuraciones de proyección de un esquema en particular o buscar una proyección individual por su nombre.
 
 **Formato API**
 
@@ -429,7 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Solicitud**
 
 >[!NOTE]
->La solicitud POST para crear una configuración requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
+>La solicitud del POST para crear una configuración requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
 curl -X POST \
