@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Examinar el espacio de trabajo de control de acceso
 
-Para configurar control de acceso para [!DNL Experience Platform] mediante el Admin Console de Adobe, debe ser administrador de una organización de IMS que tenga una suscripción a [!DNL Experience Platform]. Aunque Adobe admite jerarquías de administrador flexibles para organizaciones IMS, debe contar con privilegios de administrador **[!UICONTROL del]** sistema, administrador **[!UICONTROL del]** producto o administrador **[!UICONTROL del perfil del]** producto para configurar control de acceso. Consulte el artículo del Centro de ayuda de Adobe sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
+Para configurar controles de acceso para [!DNL Experience Platform] mediante Adobe Admin Console, debe ser administrador de una organización de IMS que tenga una suscripción a [!DNL Experience Platform]. Si bien Adobe admite jerarquías de administrador flexibles para organizaciones IMS, debe contar con privilegios de administrador **** del sistema, administrador **[!UICONTROL del]** producto o administrador **[!UICONTROL del perfil del]** producto para configurar control de acceso. Consulte el artículo de Adobe Help Center sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
 
 Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
 
@@ -26,7 +26,7 @@ Aparece el espacio de trabajo control de acceso para Adobe Experience Platform, 
 
 ![platform-access-control](../images/platform-access-control.png)
 
-Esta guía del usuario se centra en cómo usar el [!DNL Admin Console] para asignar permisos de acceso para [!DNL Platform]. Para obtener información más general sobre cómo navegar por el [!DNL Admin Console], consulte la guía del usuario de [Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
+Esta guía del usuario se centra en cómo usar el [!DNL Admin Console] para asignar permisos de acceso para [!DNL Platform]. Para obtener información más general sobre cómo desplazarse por el [!DNL Admin Console], consulte la guía del usuario del [Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
 
 ## Pasos siguientes
 
