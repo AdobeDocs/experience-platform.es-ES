@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Buscar varios objetos
 
-Si desea realizar una vista de varios objetos específicos, en lugar de realizar una solicitud por objeto, [!DNL Catalog] proporciona un método abreviado sencillo para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud GET para devolver varios objetos específicos incluyendo una lista de ID separada por comas.
+Si desea realizar una vista de varios objetos específicos, en lugar de realizar una solicitud por objeto, [!DNL Catalog] proporciona un método abreviado sencillo para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separada por comas.
 
 >[!NOTE]
 >
