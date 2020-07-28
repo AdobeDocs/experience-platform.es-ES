@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos necesarios para transferir datos de parqué desde un sistema de almacenamiento en la nube de terceros.
 
@@ -198,7 +198,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM de destinatario, ahora se puede crear una conexión de origen mediante una solicitud POST a la [!DNL Flow Service] API. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destinatario recuperado en el paso anterior.
+Con la creación de un esquema XDM de destinatario, ahora se puede crear una conexión de origen mediante una solicitud de POST a la [!DNL Flow Service] API. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destinatario recuperado en el paso anterior.
 
 **Formato API**
 
@@ -265,7 +265,7 @@ Siga los pasos descritos en la guía para desarrolladores hasta que haya creado 
 
 ## Creación de un conjunto de datos de destinatario
 
-Se puede crear un conjunto de datos de destinatario realizando una solicitud POST a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destinatario realizando una solicitud de POST a la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)catálogo, proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
 **Formato API**
 
@@ -369,12 +369,12 @@ Una respuesta correcta devuelve el identificador único (`id`) de la nueva conex
 
 ## Crear un flujo de datos
 
-El último paso hacia la ingesta de datos de parqué desde un almacenamiento de nube de terceros es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
+El último paso hacia la ingesta de datos de parqué desde un almacenamiento de nube de terceros es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores necesarios:
 
 - [ID de conexión de origen](#source)
 - [ID de conexión de Destinatario](#target)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente en la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores anteriormente mencionados dentro de la carga útil.
 
 **Formato API**
 
