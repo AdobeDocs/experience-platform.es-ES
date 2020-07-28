@@ -16,7 +16,7 @@ ht-degree: 0%
 
 El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobe, los socios [!DNL Experience Platform] y los proveedores cuyas aplicaciones utilice. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
+Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobes, socios [!DNL Experience Platform] y proveedores cuyas aplicaciones utiliza. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Schema Registry] API. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el [!DNL Schema Registry].
 
@@ -59,7 +59,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Conozca su TENANT_ID {#know-your-tenant_id}
 
-A lo largo de esta guía verá referencias a un `TENANT_ID`. Este ID se utiliza para garantizar que los recursos que cree tengan el espacio de nombres correcto y estén contenidos en la organización de IMS. Si no conoce su ID, puede acceder a él realizando la siguiente solicitud GET:
+A lo largo de esta guía verá referencias a un `TENANT_ID`. Este ID se utiliza para garantizar que los recursos que cree tengan el espacio de nombres correcto y estén contenidos en la organización de IMS. Si no conoce su ID, puede acceder a él realizando la siguiente solicitud de GET:
 
 **Formato API**
 
@@ -165,7 +165,7 @@ Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_I
 
 ### contenedor global
 
-El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas proporcionados por Adobe y [!DNL Experience Platform] el socio. Sólo puede realizar solicitudes de lista y búsqueda (GET) con respecto al contenedor global.
+El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas proporcionados por el Adobe y [!DNL Experience Platform] el socio estándar. Solo puede realizar solicitudes de lista y búsqueda (GET) en el contenedor global.
 
 ### contenedor del inquilino
 
