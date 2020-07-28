@@ -179,7 +179,7 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 | hit_time_gmt | receivedTimestamp | string | Marca de hora de la visita, basada en tiempo Unix. |
 | hitid_high + hitid_low | _id | string | Identificador único para identificar una visita. |
 | hitid_low | _id | string | Se utiliza junto con hitid_high para identificar de forma exclusiva una visita. |
-| Consejo | environment.ipV4 | string | Dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
+| ip | environment.ipV4 | string | Dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | Booleano | Versión de JavaScript utilizada. |
 | mcvisid_high + mcvisid_low | identityMap | object | ID del Visitante del Experience Cloud. |
 | mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | ID del Visitante del Experience Cloud. |
@@ -193,9 +193,9 @@ La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (
 
 ## Campos de asignación avanzada
 
-Los campos seleccionados (conocidos como &quot;valores postales&quot;) requieren transformaciones más avanzadas para poder asignarlos correctamente de los campos de Adobe Analytics al Modelo de datos de experiencia (XDM). La realización de estas transformaciones avanzadas implica el uso del servicio de Consulta Adobe Experience Platfrom y de funciones prediseñadas (llamadas funciones definidas por Adobe) para la sesionización, atribución y deduplicación.
+Los campos seleccionados (conocidos como &quot;valores postales&quot;) requieren transformaciones más avanzadas para poder asignarlos correctamente desde los campos de Adobe Analytics al Modelo de datos de experiencia (XDM). La realización de estas transformaciones avanzadas implica el uso del servicio de Consulta Adobe Experience Platfrom y funciones prediseñadas (llamadas funciones definidas por Adobe) para la sesionización, atribución y deduplicación.
 
-Para obtener más información sobre la realización de estas transformaciones mediante el servicio de Consulta, visite la documentación de funciones [definidas por](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
+Para obtener más información sobre la realización de estas transformaciones mediante el servicio de Consulta, visite la documentación de funciones [definidas por el](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
 
 La siguiente tabla incluye columnas que muestran el nombre del campo Analytics (campo ** Analytics), el campo XDM correspondiente (campo ** XDM) y su tipo (tipo ** XDM), así como una descripción del campo (*Descripción*).
 
