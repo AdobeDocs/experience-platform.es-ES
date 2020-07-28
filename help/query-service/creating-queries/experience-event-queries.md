@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Pasos siguientes
 
-Para obtener más información sobre consultas de muestra que utilizan funciones definidas por Adobe (ADF), consulte la guía Funciones definidas por Adobe. Para obtener instrucciones generales sobre la ejecución de consultas, lea la [guía sobre la ejecución de consultas en el Servicio](./writing-queries.md)de Consulta.
+Para obtener más información sobre consultas de muestra que utilizan funciones definidas por Adobe (ADF), lea la guía Funciones definidas por Adobe. Para obtener instrucciones generales sobre la ejecución de consultas, lea la [guía sobre la ejecución de consultas en el Servicio](./writing-queries.md)de Consulta.
 
