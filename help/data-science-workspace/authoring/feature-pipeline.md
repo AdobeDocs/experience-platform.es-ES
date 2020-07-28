@@ -39,7 +39,7 @@ Para ejecutar una fórmula en cualquier organización, se requiere lo siguiente:
 - Un esquema transformado y un conjunto de datos vacío basado en ese esquema.
 - Un esquema de salida y un conjunto de datos vacío basados en ese esquema.
 
-Todos los conjuntos de datos anteriores deben cargarse en la [!DNL Platform] interfaz de usuario. Para configurar esta opción, utilice el script de [arranque proporcionado por Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+Todos los conjuntos de datos anteriores deben cargarse en la [!DNL Platform] interfaz de usuario. Para configurarlo, utilice el script de [arranque proporcionado por el Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Clases de flujo de funciones
 
@@ -398,36 +398,36 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Creación de un motor de canalización de funciones {#create-engine-api}
 
-Una vez que tenga la ubicación de la imagen del Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de funciones mediante la [!DNL Sensei Machine Learning] API realizando una POST en `/engines`. La creación correcta de un motor de canalización de funciones le proporciona un identificador único del motor (`id`). Asegúrese de guardar este valor antes de continuar.
+Una vez que tenga la ubicación de la imagen del Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de funciones mediante la [!DNL Sensei Machine Learning] API realizando un POST en `/engines`. La creación correcta de un motor de canalización de funciones le proporciona un identificador único del motor (`id`). Asegúrese de guardar este valor antes de continuar.
 
 ### Crear una instancia MLI {#create-mlinstance}
 
-Con su nueva creación `engineID`, debe [crear una MLIsistance](../api/mlinstances.md#create-an-mlinstance) haciendo una solicitud POST al `/mlInstance` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles de la instancia MLI recién creada, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
+Con su nueva creación `engineID`, debe [crear una MLIsistance](../api/mlinstances.md#create-an-mlinstance) haciendo una solicitud de POST al `/mlInstance` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles de la instancia MLI recién creada, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
 ### Crear un experimento {#create-experiment}
 
-A continuación, debe [crear un experimento](../api/experiments.md#create-an-experiment). Para crear un experimento necesita tener el identificador único (`id`) MLIsistance y realizar una solicitud POST al `/experiment` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
+A continuación, debe [crear un experimento](../api/experiments.md#create-an-experiment). Para crear un experimento necesita tener el identificador único (`id`) de MLIsistance y realizar una solicitud de POST al `/experiment` extremo. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
 ### Especificar la tarea de canalización de la función de ejecución de experimentos {#specify-feature-pipeline-task}
 
-Después de crear un experimento, debe cambiar el modo del experimento a `featurePipeline`. Para cambiar el modo, realice una POST adicional a [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con su `EXPERIMENT_ID` y en el cuerpo de envío `{ "mode":"featurePipeline"}` para especificar una ejecución del experimento de la canalización de funciones.
+Después de crear un experimento, debe cambiar el modo del experimento a `featurePipeline`. Para cambiar el modo, haga un POST adicional a [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con su `EXPERIMENT_ID` y en el cuerpo envíe `{ "mode":"featurePipeline"}` para especificar una ejecución de Experimento de canalización de funciones.
 
-Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
+Una vez completado, realice una solicitud de GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
 ### Especifique la tarea de formación de ejecución del experimento {#training}
 
-A continuación, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de ejecución de formación. Realice una POST en `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo, establezca el modo en `train` y envíe una matriz de tareas que contengan los parámetros de formación. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento solicitado.
+A continuación, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de ejecución de formación. Establezca un POST en `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo en el modo `train` y envíe una matriz de tareas que contengan los parámetros de formación. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento solicitado.
 
-Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
+Una vez completado, realice una solicitud de GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
 ### Especifique la tarea de puntuación de la ejecución del experimento {#scoring}
 
 >[!NOTE]
 > Para completar este paso, debe tener al menos una ejecución de formación correcta asociada con el experimento.
 
-Después de una ejecución de formación correcta, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de la ejecución de puntuación. Realice una POST a `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el `mode` atributo en &quot;score&quot;. Esto inicio tu carrera de Experimento de puntaje.
+Después de una ejecución de formación correcta, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de la ejecución de puntuación. Haga un POST a `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el `mode` atributo en &quot;score&quot;. Esto inicio tu carrera de Experimento de puntaje.
 
-Una vez completado, realice una solicitud GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
+Una vez completado, realice una solicitud de GET para `/experiments/{EXPERIMENT_ID}`[recuperar el estado](../api/experiments.md#retrieve-specific) del experimento y espere a que se actualice el estado del experimento para finalizarlo.
 
 Una vez finalizada la puntuación, la canalización de funciones debería estar operativa.
 
