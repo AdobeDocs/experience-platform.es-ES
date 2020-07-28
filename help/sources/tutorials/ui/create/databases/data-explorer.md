@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creación de un conector de origen del Explorador de datos de Azure en la interfaz de usuario
+title: Creación de un conector de origen de Data Explorer de Azure en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
@@ -39,10 +39,10 @@ Para acceder a su [!DNL Data Explorer] cuenta en [!DNL Platform], debe proporcio
 | `endpoint` | Extremo del [!DNL Data Explorer] servidor. |
 | `database` | Nombre de la [!DNL Data Explorer] base de datos. |
 | `tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
-| `servicePrincipalId` | ID principal de servicio único que se utiliza para conectarse a la base de datos del Explorador de datos. |
-| `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la base de datos del Explorador de datos. |
+| `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la base de datos de Datas Explorer. |
+| `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la base de datos de Datas Explorer. |
 
-Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)del Explorador de datos.
+Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)de Data Explorer.
 
 ## Conectar su [!DNL Azure Data Explorer] cuenta
 
@@ -52,11 +52,11 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría *[!UICONTROL Bases de datos]* , seleccione Explorador **[!UICONTROL de datos de]** Azure y haga clic **en el icono + (+)** para crear un nuevo conector del Explorador de datos.
+En la categoría *[!UICONTROL Bases de datos]* , seleccione Data Explorer **[!UICONTROL de]** Azure y haga clic **en el icono + (+)** para crear un nuevo conector de Data Explorer.
 
 ![catálogo](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con el Explorador]* de datos de Azure. En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página *[!UICONTROL Conectar con la Data Explorer]* de Azure. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
