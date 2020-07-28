@@ -1,17 +1,20 @@
 ---
 title: Extensiones de Experience Platform Launch
 seo-title: Extensiones de Experience Platform Launch
-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece a los clientes una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
-seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece a los clientes una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
+description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
+seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 translation-type: tm+mt
 source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 21%
 
 ---
 
 
 # Experience Platform Launch extensions {#experience-platform-launch-extensions}
 
-Experience Platform Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece a los clientes una alternativa sencilla para implementar y gestionar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente. Launch se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida.
+Experience Platform Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes. Launch se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida.
 
 Para obtener una introducción a las funciones de Experience Platform Launch, consulte los recursos siguientes:
 * [Documentación del Experience Platform Launch](https://docs.adobe.com/content/help/es-ES/launch/using/overview.html)
@@ -19,7 +22,7 @@ Para obtener una introducción a las funciones de Experience Platform Launch, co
 
 ## Cómo encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe {#how-to-find-extensions-in-interface}
 
-Para buscar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe, busque **[!UICONTROL Destinations > Catalog]** y seleccione **[!UICONTROL Extensions]** en el **[!UICONTROL Types]** filtro.
+Para buscar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe, vaya a **[!UICONTROL Destinos > Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]** .
 
 ![Filtro Extensiones en la interfaz](/help/rtcdp/destinations/assets/extensions-filter.png)
 
@@ -27,13 +30,13 @@ Para buscar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe
 
 Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
-**Los destinos de exportación** de Perfiles y segmentos en la plataforma de datos del cliente de Adobe en tiempo real capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [de almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+**Perfil/Segmento Exportar** destinos en Adobe Datos del cliente en tiempo real Platform captura datos de evento, los combina con otras fuentes de datos, aplica segmentación y exporta segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [del almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 ## Ventajas de utilizar extensiones de Launch {#extensions-benefits}
 
-El Experience Platform Launch es gratuito para los clientes existentes de Experience Cloud. Launch simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que puede instalar, configurar, actualizar y eliminar. Launch tiene una pequeña huella en el sitio web y le permite mantener las páginas cargadas rápidamente.
+El Experience Platform Launch es gratuito para los clientes Experience Cloud existentes. Launch simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que puede instalar, configurar, actualizar y eliminar. Launch tiene una pequeña huella en el sitio web y le permite mantener las páginas cargadas rápidamente.
 
 >[!IMPORTANT]
 >
@@ -56,7 +59,7 @@ Las extensiones de inicio pueden encontrarse bajo las siguientes categorías en 
 
 * [Publicidad](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
-* [Plataforma de Gestión de datos](/help/rtcdp/destinations/dmp-destinations.md)
+* [Gestión de datos Platform](/help/rtcdp/destinations/dmp-destinations.md)
 * [Destinos de mercadotecnia de correo electrónico](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalización](/help/rtcdp/destinations/personalization-destinations.md)
 * [Encuestas](/help/rtcdp/destinations/survey-destinations.md)
