@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Cree un esquema con la variable [!DNL Schema Editor]
 
-El [!DNL Schema Registry] proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos del Adobe Experience Platform [!DNL Schema Library]. El [!DNL Schema Library] contiene recursos que Adobe, socios Experience Platform y proveedores cuyas aplicaciones utiliza, así como recursos que define y guarda en el [!DNL Schema Registry].
+El [!DNL Schema Registry] proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos del Adobe Experience Platform [!DNL Schema Library]. El [!DNL Schema Library] contiene los recursos que le ponen a su disposición Adobes, socios Experience Platform y proveedores cuyas aplicaciones utiliza, así como los recursos que define y guarda en el [!DNL Schema Registry].
 
 Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en [!DNL Experience Platform]. Si prefiere componer un esquema con la API de Registro de Esquema, lea la guía [para desarrolladores de](../api/getting-started.md) Esquema Registry antes de intentar el tutorial para [crear un esquema con la API](create-schema-api.md).
 
@@ -34,7 +34,7 @@ Este tutorial requiere que tenga acceso a [!DNL Experience Platform]. Si no tien
 
 El espacio de trabajo Esquemas dentro de [!DNL Experience Platform] proporciona una visualización del [!DNL Schema Library], lo que le permite realizar vistas y administrar todos los esquemas disponibles, así como componer otros nuevos. El espacio de trabajo también incluye el Editor de Esquemas, el lienzo en el que se compondrá un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión [!DNL Experience Platform], haga clic en **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación del [!DNL Schema Library]) en la que puede realizar vistas, administrar y personalizar todos los esquemas disponibles para usted. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
+Después de iniciar sesión [!DNL Experience Platform], haga clic en **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y se le dirigirá al espacio de trabajo Esquemas. Verá una lista de esquemas (una representación del [!DNL Schema Library]) en la que puede realizar vistas, administrar y personalizar todos los esquemas disponibles para usted. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
 
 Haga clic en el icono de filtro situado junto a la barra de búsqueda para utilizar las capacidades de filtrado de todos los recursos del Registro, incluidos los tipos de datos, las clases y las mezclas.
 
