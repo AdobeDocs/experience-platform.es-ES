@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Con los destinos de las redes sociales, puede activar perfiles para sus campañas para direccionamiento de audiencias, personalización y supresión basados en correos electrónicos con hash.
 
-Datos de cliente en tiempo real de Adobe Actualmente, Platform admite los siguientes destinos de red social:
+Datos de cliente en tiempo real de Adobe Platform admite actualmente los siguientes destinos de red social:
 
-* [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
