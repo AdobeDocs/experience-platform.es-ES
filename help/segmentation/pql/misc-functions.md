@@ -20,7 +20,7 @@ La siguiente función es una función diversa para [!DNL Profile Query Language]
 
 La `let` función permite almacenar una expresión como una variable para utilizarla posteriormente en una consulta.
 
-**Formato**
+**Format**
 
 ```sql
 let {VARIABLE} = {EXPRESSION}
