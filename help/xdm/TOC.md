@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda del sistema del modelo de datos de experiencia (XDM)
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: d4ed33ea4684049e8604ce214cb351d0cb949ed4
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 7%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 7%
 * esquemas XDM {#schema}
    * [Conceptos básicos de la composición de esquemas](schema/composition.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
+   * Casos de uso de Esquema
+      * [Mezcla de consentimiento de privacidad](schema/privacy-consent.md)
 * API del Registro de Esquemas {#api}
    * [Primeros pasos](api/getting-started.md)
    * [Recursos de Lista](api/list-resources.md)
