@@ -4,7 +4,7 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -20,14 +20,6 @@ Esta guía le guía por las diferentes formas de configurar el SDK web de Adobe 
 - Tener derecho al Adobe Experience Platform. Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
 - Utilice la versión más reciente del servicio de ID de Visitante.
 
-## Crear un ID de configuración
-
-Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge en Launch. Esto le permite habilitar la red perimetral para enviar datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
-
->[!NOTE]
->
->La organización debe estar en una lista blanca para esta función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
-
 ## Preparación de un Esquema
 
 La red perimetral Experience Platform toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo espera la red de Edge que se formateen los datos. Para enviar datos, debe definir el esquema.
@@ -42,6 +34,14 @@ Inicie sesión para iniciar e instale la `AEP Web SDK` extensión. Cuando instal
 
 
 Para obtener más información sobre las distintas opciones de configuración, consulte [Configuración del SDK](../fundamentals/configuring-the-sdk.md).
+
+## Crear un ID de configuración
+
+Puede crear un ID de configuración con la herramienta [de configuración](../fundamentals/edge-configuration.md) Edge en Launch. Esto le permite habilitar la red perimetral para enviar datos a las distintas soluciones. Los detalles de cómo encontrar cada opción se encuentran en la página Herramienta [de configuración de](../fundamentals/edge-configuration.md) Edge.
+
+>[!NOTE]
+>
+>La organización debe estar en una lista blanca para esta función. Póngase en contacto con su CSM para que se le ponga en la lista para una eventual lista blanca.
 
 ## Crear un elemento de datos basado en su Esquema
 
