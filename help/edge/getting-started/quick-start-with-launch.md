@@ -4,7 +4,7 @@ seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -29,6 +29,9 @@ La red perimetral Experience Platform toma los datos como XDM. XDM es un formato
 3. Cree un conjunto de datos a partir del esquema que ha creado.
 
 El siguiente vídeo está diseñado para ayudarle a crear un conector de esquema, conjunto de datos y origen de flujo continuo para sus [!DNL Web SDK] datos.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Inicie sesión para iniciar e instale la `AEP Web SDK` extensión. Cuando instale el SDK, se le pedirá que configure la extensión. Introduzca el ID de configuración que ha solicitado anteriormente. La extensión rellena automáticamente el identificador de organización.
 
