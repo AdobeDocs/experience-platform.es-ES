@@ -4,9 +4,9 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ Para conectarse al [!DNL Facebook] destino, consulte Flujo de trabajo [de autent
 ## Activar segmentos para [!DNL Facebook] {#activate-segments}
 
 Para obtener instrucciones sobre cómo activar segmentos en [!DNL Facebook], consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
+
+## Datos exportados {#exported-data}
+
+Por [!DNL Facebook], una activación exitosa significa que se crearía una audiencia [!DNL Facebook] personalizada mediante programación en [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
+
+>[!TIP]
+>
+>La integración entre CDP en tiempo real de Adobe y [!DNL Facebook] admite los rellenos históricos de audiencias. Todas las cualificaciones del segmento histórico se envían [!DNL Facebook] cuando activa los segmentos en el destino.
