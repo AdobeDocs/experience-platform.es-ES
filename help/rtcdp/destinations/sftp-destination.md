@@ -4,9 +4,9 @@ seo-title: Destino de SFTP
 description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 seo-description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -29,3 +29,7 @@ Para los destinos SFTP, introduzca la siguiente información en el flujo de trab
 * **Host**: la dirección de la ubicación del almacenamiento SFTP
 * **Nombre de usuario**: el nombre de usuario para iniciar sesión en la ubicación del almacenamiento SFTP
 * **Contraseña**: la contraseña para iniciar sesión en la ubicación del almacenamiento SFTP
+
+## Datos exportados {#exported-data}
+
+Para [!SFTP] los destinos, Adobe Real-time CDP crea un archivo delimitado por tabuladores `.txt` o `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte Destinos de [correo electrónico de Marketing y Destinos](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) de almacenamiento de Cloud en el tutorial de activación de segmentos.
