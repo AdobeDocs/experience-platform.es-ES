@@ -4,9 +4,9 @@ seo-title: Destino de publicidades de Google
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 seo-description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,6 @@ Antes de crear el [!DNL Google Ads] destino en Adobe Real-time CDP, debe ponerse
 
 Para obtener instrucciones sobre cómo activar segmentos en [!DNL Google Ads], consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
 
+## Datos exportados
+
+Para verificar si los datos se han exportado correctamente al [!DNL Google Ads] destino, compruebe su [!DNL Google Ads] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en su cuenta.
