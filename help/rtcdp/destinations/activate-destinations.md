@@ -4,9 +4,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -92,20 +92,20 @@ Siga los pasos a continuación para editar los flujos de activación existentes 
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
-### Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
+### Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube {#esp-and-cloud-storage}
 
 Para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube, CDP en tiempo real de Adobe crea un archivo delimitado por tabuladores `.txt` o `.csv` en la ubicación de almacenamiento proporcionada. Se espera que cada día se cree un nuevo archivo en la ubicación del almacenamiento. The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Los archivos que recibiría en tres días consecutivos podrían tener este aspecto:
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-La presencia de estos archivos en la ubicación del almacenamiento es la confirmación de la activación correcta.
+La presencia de estos archivos en la ubicación del almacenamiento es la confirmación de la activación correcta. Para comprender la estructura de los archivos exportados, puede [descargar un archivo](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv).csv de muestra. Este archivo de ejemplo incluye los atributos `person.firstname`de perfil, `person.lastname`, `person.gender`, `person.birthyear`y `personalEmail.address`.
 
 ### Destinos publicitarios
 
