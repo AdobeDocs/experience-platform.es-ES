@@ -4,7 +4,7 @@ seo-title: Extensiones de Experience Platform Launch
 description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 21%
@@ -22,7 +22,7 @@ Para obtener una introducción a las funciones de Experience Platform Launch, co
 
 ## Cómo encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe {#how-to-find-extensions-in-interface}
 
-Para buscar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe, vaya a **[!UICONTROL Destinos > Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]** .
+Para encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Adobe, vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** y seleccione **[!UICONTROL Extensions]** en el filtro **[!UICONTROL Types]** .
 
 ![Filtro Extensiones en la interfaz](/help/rtcdp/destinations/assets/extensions-filter.png)
 
