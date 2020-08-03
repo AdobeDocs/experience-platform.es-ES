@@ -4,7 +4,7 @@ seo-title: Espacio de trabajo Destinos
 description: En Adobe Real-time Customer Data Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 seo-description: En Adobe Real-time Customer Data Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 3%
@@ -34,7 +34,7 @@ Para obtener más información sobre las categorías de destino e información s
 
 ## [!UICONTROL Examinar] {#browse}
 
-La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **[!UICONTROL habilitada]** activada establecen el destino en activo y viceversa. También puede realizar la vista de los destinos en los que tiene flujos de datos seleccionando **[!UICONTROL Segmentos > Examinar]** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
+La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **[!UICONTROL habilitada]** activada establecen el destino en activo y viceversa. También puede realizar la vista de los destinos en los que fluyen los datos seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
 
 ![Ficha Examinar](/help/rtcdp/destinations/assets/browse-tab.png)
 
