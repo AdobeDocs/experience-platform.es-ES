@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 seo-description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el desti
 
 ## Destino de Connect {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione Adobe Campaign y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione Adobe Campaign y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar con la campaña de adobe](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
@@ -53,7 +53,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Adobe Campaign, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino de Adobe Campaign, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
 
 ## Datos exportados {#exported-data}
 
