@@ -4,7 +4,7 @@ seo-title: Destinos de mercadotecnia de correo electrónico
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%
@@ -24,7 +24,7 @@ En el flujo de destino de conexión, descrito en la sección siguiente, conécte
 
 ## Paso 1: Conectar destino {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar al destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
