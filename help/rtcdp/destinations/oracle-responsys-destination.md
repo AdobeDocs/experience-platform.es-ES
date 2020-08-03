@@ -4,7 +4,7 @@ seo-title: Destino de Oracle Responsys
 description: Responsys es una herramienta de mercadotecnia de correo electrónico empresarial para campañas de mercadotecnia entre canales ofrecidas por Oracle para personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
 seo-description: Responsys es una herramienta de mercadotecnia de correo electrónico empresarial para campañas de mercadotecnia entre canales ofrecidas por Oracle para personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para enviar datos de segmentos a [!DNL Oracle Responsys], primero debe [conectar
 
 ## Destino de Connect {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione [!DNL Oracle Responsys]y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Oracle Responsys]y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar a Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
@@ -49,7 +49,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Responsys] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Responsys] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
 
 ## Datos exportados {#exported-data}
 
