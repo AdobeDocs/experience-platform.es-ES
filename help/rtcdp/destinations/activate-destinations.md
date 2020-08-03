@@ -4,7 +4,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Datos del cliente en tiempo real Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para activar datos en destinos, debe haber [conectado correctamente un destino](
 
 ## Activar datos {#activate-data}
 
-1. En **[!UICONTROL Destinos > Examinar]**, seleccione el destino en el que desea activar los segmentos.
+1. En **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**, seleccione el destino en el que desea activar los segmentos.
 2. Haga clic en el nombre del destino. Esto le lleva al flujo Activar.
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Tenga en cuenta que si ya existe un flujo de activación para un destino, puede ver los segmentos que se están enviando al destino. Seleccione **[!UICONTROL Editar activación]** en el carril derecho y siga los pasos a continuación para modificar los detalles de la activación.
 3. Seleccione **[!UICONTROL Activar]**;
