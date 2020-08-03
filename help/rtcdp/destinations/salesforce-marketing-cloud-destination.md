@@ -4,7 +4,7 @@ seo-title: Marketing Cloud de Salesforce
 description: Salesforce Marketing Cloud es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 seo-description: Salesforce Marketing Cloud es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar viajes para que los visitantes y clientes puedan personalizar su experiencia.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Para enviar datos de segmentos a [!DNL Salesforce Marketing Cloud], primero debe
 
 ## Destino de Connect {#connect-destination}
 
-1. En **[!UICONTROL Conexiones > Destinos]**, seleccione [!DNL Salesforce Marketing Cloud]y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Salesforce Marketing Cloud]y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
 
    ![Conectar a Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
