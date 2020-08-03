@@ -4,7 +4,7 @@ seo-title: Extensión de DoubleClick Floodlight (Beta)
 description: La extensión DoubleClick Floodlight (Beta) es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: La extensión DoubleClick Floodlight (Beta) es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 Esta extensión permite una implementación rápida y sencilla de [!DNL DoubleClick Floodlight] etiquetas usando el formato tradicional de los reflectores (no la etiqueta del sitio global). Nota: Esta extensión está en versión beta.
 
-[!DNL DoubleClick Floodlight] (Beta) es una extensión de publicidad en Adobe Real-time Customer Data Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la documentación de [!DNL Google] soporte para [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) es una extensión de publicidad en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la documentación de [!DNL Google] soporte para [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
 Este destino es una extensión de Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch en Adobe Real-time CDP, consulte Visión general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -34,7 +34,7 @@ Para utilizar esta extensión, necesita acceder al Experience Platform Launch. E
 
 Para instalar la extensión DoubleClick Floodlight (Beta):
 
-1. En la interfaz [CDP en tiempo real de](http://platform.adobe.com/)Adobe, vaya a **[!UICONTROL Destinos > Catálogo]**.
+1. En la interfaz [CDP en tiempo real de](http://platform.adobe.com/)Adobe, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 3. Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Instalar extensión]** en el carril derecho. Si el control **[!UICONTROL Instalar extensión]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]** . Consulte [Requisitos previos](#prerequisites).
 4. En la ventana **[!UICONTROL Seleccionar la propiedad]** Launch disponible, seleccione la propiedad Launch en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en Launch. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [de la página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propiedades de la documentación de Launch.
