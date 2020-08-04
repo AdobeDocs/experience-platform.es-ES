@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a los conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o
 Consulte la información general [de](../../data-governance/home.md) Administración de datos para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en [!DNL Platform], consulte las siguientes guías:
 
 * [Administrar etiquetas en la interfaz de usuario](../../data-governance/labels/user-guide.md)
-* [Administrar etiquetas en la API](../../data-governance/labels/api.md)
+* [Administrar etiquetas de conjuntos de datos en la API](../../data-governance/labels/dataset-api.md)
 
 ## Conjuntos de datos en servicios [!DNL Platform] descendentes
 
