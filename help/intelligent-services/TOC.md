@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 translation-type: tm+mt
-source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 3%
+source-wordcount: '67'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 * Attribution AI {#attribution-ai}
    * [Información general](attribution-ai/overview.md)
    * [Introducción a Attribution AI](attribution-ai/getting-started.md)
+   * [Entrada y salida](attribution-ai/input-output.md)
    * [Guía de interfaz de usuario](attribution-ai/user-guide.md)
    * [Descubrimiento de perspectivas](attribution-ai/discover-insights.md)
    * [Acceso a las puntuaciones](attribution-ai/download-scores.md)
@@ -30,4 +31,4 @@ ht-degree: 3%
       * [Descubrimiento de perspectivas](customer-ai/user-guide/discover-insights.md)
       * [Crear segmentos con puntuaciones de AI del cliente](customer-ai/user-guide/create-segment.md)
       * [Descarga de puntuaciones](customer-ai/user-guide/download-scores.md)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
