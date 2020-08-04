@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos para conjuntos de datos mediante API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 2%
 
 ---
 
 
 # Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 
-El [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las capacidades del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
+El [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
 Este documento explica cómo administrar las etiquetas para conjuntos de datos y campos mediante el uso de la variable [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las etiquetas de uso de datos mediante llamadas de API, consulte la guía [de extremo de](../api/labels.md) etiquetas para la [!DNL Policy Service API].
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitud**
 
-La siguiente solicitud de POST agrega una serie de etiquetas al conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de PUT.
+La siguiente solicitud de PUT actualiza las etiquetas existentes para un conjunto de datos, así como un campo específico dentro de ese conjunto de datos. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de POST.
+
+>[!IMPORTANT]
+>
+>Se debe proporcionar un `If-Match` encabezado válido al realizar solicitudes de PUT al `/datasets/{DATASET_ID}/labels` extremo. Consulte la sección [del](#if-match) apéndice para obtener más información sobre el uso del encabezado requerido.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Solicitud**
 
+La siguiente solicitud elimina las etiquetas del conjunto de datos especificado en la ruta.
+
+>[!IMPORTANT]
+>
+>Se debe proporcionar un `If-Match` encabezado válido al realizar solicitudes de DELETE al `/datasets/{DATASET_ID}/labels` extremo. Consulte la sección [del](#if-match) apéndice para obtener más información sobre el uso del encabezado requerido.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Respuesta**
@@ -182,3 +194,17 @@ Una vez agregadas las etiquetas de uso de datos en los niveles de conjunto de da
 Ahora también puede definir directivas de uso de datos en función de las etiquetas que haya aplicado. Para obtener más información, consulte la descripción general [de las directivas de uso de](../policies/overview.md)datos.
 
 Para obtener más información sobre la administración de conjuntos de datos en [!DNL Experience Platform], consulte la descripción general [de](../../catalog/datasets/overview.md)conjuntos de datos.
+
+## Apéndice {#appendix}
+
+La siguiente sección contiene información adicional sobre cómo trabajar con etiquetas mediante la API de servicio de Dataset.
+
+### [!DNL If-Match] header {#if-match}
+
+Al realizar llamadas de API que actualizan las etiquetas existentes de un conjunto de datos (PUT y DELETE), se debe incluir un `If-Match` encabezado que indique la versión actual de la entidad de etiqueta de conjunto de datos en el servicio de conjunto de datos. Para evitar conflictos de datos, el servicio solo actualizará la entidad del conjunto de datos si la cadena incluida coincide con la etiqueta de versión más reciente generada por el sistema para ese conjunto de datos. `If-Match`
+
+>[!NOTE]
+>
+>Si no existen etiquetas actualmente para el conjunto de datos en cuestión, las nuevas etiquetas solo se pueden agregar mediante una solicitud de POST, lo que no requiere un `If-Match` encabezado. Una vez agregadas las etiquetas a un conjunto de datos, se asigna un `etag` valor que puede utilizarse para actualizar o quitar las etiquetas más adelante.
+
+Para recuperar la versión más reciente de la entidad de etiqueta de conjunto de datos, realice una solicitud [de](#look-up) GET al `/datasets/{DATASET_ID}/labels` extremo. El valor actual se devuelve en la respuesta bajo un `etag` encabezado. Al actualizar las etiquetas de conjuntos de datos existentes, lo mejor es realizar primero una solicitud de búsqueda para el conjunto de datos a fin de recuperar su último `etag` valor antes de utilizar ese valor en el `If-Match` encabezado de la solicitud de PUT o DELETE subsiguiente.
