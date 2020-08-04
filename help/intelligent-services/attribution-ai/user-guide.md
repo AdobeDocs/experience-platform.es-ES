@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de Attribution AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Si necesita más de una conversión, haga clic en **Añadir conversión** para c
 
 ![agregar conversión](./images/user-guide/add_conversion.png)
 
-### Definir ventana retroactiva
+### Definir ventana retroactiva {#lookback-window}
 
 Una vez que haya terminado de definir la conversión, deberá confirmar la ventana retrospectiva. Con las teclas de flecha o haciendo clic en el valor predeterminado (56), especifique cuántos días antes del evento de conversión desea incluir puntos de contacto. Los puntos de contacto se definen en el paso siguiente.
 
@@ -172,9 +172,9 @@ Por último, escriba el código de país en la lista desplegable *Introducir val
 
 ![región](./images/user-guide/region-based.png)
 
-### Ventana Formación
+### Ventana Formación {#training-window}
 
-Para asegurarse de que obtiene el modelo más preciso posible, es importante capacitar a su modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se entrena con 2 trimestres (6 meses) de datos. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede elegir entrenar con uno o cuatro cuartos de datos (3 a 12 meses).
+Para asegurarse de que obtiene el modelo más preciso posible, es importante capacitar a su modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se entrena con 2 trimestres (6 meses) de datos de eventos de conversión. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede elegir entrenar con uno o cuatro cuartos de datos (3 a 12 meses).
 
 >[!NOTE]
 >
