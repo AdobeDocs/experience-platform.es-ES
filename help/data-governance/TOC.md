@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de la Administración de datos de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 6%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 5%
 * [Información general sobre la administración de datos](home.md)
 * Etiquetas de uso de datos {#labels}
    * [Información general sobre las etiquetas de uso de datos](labels/overview.md)
+   * [Etiquetas de uso de datos principales](labels/reference.md)
    * [Administrar etiquetas de uso de datos en la interfaz de usuario](labels/user-guide.md)
-   * [Administrar etiquetas de uso de datos en la API](labels/api.md)
-   * [Etiquetas de uso de datos admitidas](labels/reference.md)
+   * [Administrar etiquetas para conjuntos de datos y campos mediante API](labels/dataset-api.md)
 * Directivas de uso de datos {#policies}
    * [Información general sobre las directivas de uso de datos](policies/overview.md)
    * [Guía del usuario de directivas de uso de datos](policies/user-guide.md)
@@ -26,8 +26,9 @@ ht-degree: 5%
 * Aplicación de políticas {#enforcement}
    * [Información general sobre la aplicación de políticas](enforcement/overview.md)
    * [Aplicar directivas de uso de datos mediante la API de servicio de directivas](enforcement/api-enforcement.md)
-* API de servicio de directivas DULE {#api}
+* Guía para desarrolladores de API de servicios de directivas {#api}
    * [Primeros pasos](api/getting-started.md)
+   * [Etiquetas](api/labels.md)
    * [Políticas](api/policies.md)
    * [Acciones de mercadotecnia](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
