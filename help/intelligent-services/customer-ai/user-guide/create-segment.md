@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear segmentos de clientes con puntuaciones predichas
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Crear segmentos de clientes con puntuaciones predichas
 
-Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos. Para ver un tutorial más sólido sobre la creación de segmentos, consulte la guía [de usuario del Generador](../../../segmentation/ui/overview.md)de segmentos.
+Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos. Para ver un tutorial más sólido sobre la creación de segmentos, consulte la guía [de usuario del Generador](../../../segmentation/ui/segment-builder.md)de segmentos.
 
 >[!IMPORTANT]
 >
 >Para utilizar este método, es necesario habilitar el Perfil del cliente en tiempo real para el conjunto de datos.
 
-En la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y, a continuación, haga clic en **[!UICONTROL Crear segmento]**.
+En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y, a continuación, haga clic en **[!UICONTROL Crear segmento]**.
 
 ![](../images/user-guide/segments.png)
 
