@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->El siguiente documento indica cómo utilizar la segmentación de flujo mediante la API. Para obtener información sobre el uso de la segmentación por flujo continuo mediante la interfaz de usuario, consulte la guía [del Generador de](../ui/overview.md#streaming-segmentation)segmentos.
+>El siguiente documento indica cómo utilizar la segmentación de flujo mediante la API. Para obtener información sobre el uso de la segmentación de flujo mediante la interfaz de usuario, consulte la guía de la interfaz de usuario de segmentación de [flujo continuo](../ui/streaming-segmentation.md).
 
 La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real mientras se concentran en la riqueza de los datos. Con la segmentación de flujo continuo, la cualificación de segmentos ahora se produce cuando los datos llegan a [!DNL Platform]su destino, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
@@ -403,4 +403,4 @@ La misma operación puede utilizarse para deshabilitar una programación reempla
 
 Ahora que ha habilitado segmentos nuevos y existentes para la segmentación de flujo continuo y ha habilitado la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos para su organización.
 
-Para obtener información sobre cómo realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la guía del usuario [del Generador de segmentos](../ui/overview.md).
+Para obtener información sobre cómo realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la guía del usuario [del Generador de segmentos](../ui/segment-builder.md).
