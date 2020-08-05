@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Además de estas métricas, la sección Métricas de perfil también proporciona
 
 El recuento de perfiles muestra el número total de perfiles que tiene su organización dentro de [!DNL Experience Platform], después de que la directiva de combinación predeterminada de su organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca en diferentes canales, pero estos fragmentos se combinarán (según la política de combinación predeterminada) y devolverá un recuento de perfiles &quot;1&quot; porque todos están relacionados con el mismo individuo.
 
-El recuento de perfiles también incluye tanto perfiles con atributos (datos de registros) como perfiles que contienen únicamente datos de series temporales (eventos), como perfiles Adobe Analytics. El recuento de perfiles se actualiza con regularidad para proporcionar un número total actualizado de perfiles dentro de Platform.
+El recuento de perfiles también incluye tanto perfiles con atributos (datos de registros) como perfiles que contienen únicamente datos de series temporales (eventos), como perfiles Adobe Analytics. El recuento de perfiles se actualiza con regularidad para proporcionar un número total actualizado de perfiles dentro de la plataforma.
 
 Cuando la ingestión de registros en el [!DNL Profile Store] aumento o la disminución del recuento en más de un 5%, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos siguientes a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
 
@@ -88,7 +88,7 @@ Una vez introducido un valor, seleccione **[!UICONTROL Mostrar perfil]** y se de
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Detalles del Perfil
+### Detalles del Perfil {#profile-detail}
 
 Al seleccionar el ID **[!UICONTROL de]** Perfil, se abre la ficha _[!UICONTROL Detalle]_. Esta página muestra información sobre el perfil seleccionado, incluidos atributos básicos, identidades vinculadas y canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
 
