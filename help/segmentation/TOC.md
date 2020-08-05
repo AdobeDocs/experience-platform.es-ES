@@ -1,17 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda del servicio de segmentación de Adobes Experience Platform
+user-guide-title: Ayuda del servicio de segmentación de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 8%
+source-wordcount: '116'
+ht-degree: 9%
 
 ---
 
 
-# Ayuda del servicio de segmentación de Adobes Experience Platform {#segmentation}
+# Ayuda del servicio de segmentación de Adobe Experience Platform {#segmentation}
 
 - [Información general](home.md)
 - [Tipos de datos de segmentación](data-types.md)
@@ -27,6 +27,8 @@ ht-degree: 8%
    - [Segmentación por flujo continuo](api/streaming-segmentation.md)
 - Interfaz de usuario de segmentación {#ui}
    - [Información general](ui/overview.md)
+   - [Generador de segmentos](ui/segment-builder.md)
+   - [Segmentación por flujo continuo](ui/streaming-segmentation.md)
 - [Cumplimiento de las opciones de exclusión](honoring-opt-outs.md)
 - [Segmentación multientidad](multi-entity-segmentation.md)
 - Idioma de Consulta de Perfil {#pql}
@@ -48,4 +50,4 @@ ht-degree: 8%
    - [Crear un conjunto de datos para exportar datos](tutorials/create-dataset-export-segment.md)
    - [Aplicar la conformidad de uso de datos para segmentos](tutorials/governance.md)
 - [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
