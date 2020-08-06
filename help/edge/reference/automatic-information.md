@@ -1,12 +1,12 @@
 ---
 title: Información recopilada automáticamente
-seo-title: Información recopilada automáticamente por el SDK web de Adobe Experience Platform
+seo-title: Información recopilada automáticamente por Adobe Experience Platform Web SDK
 description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 seo-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,13 @@ Identificador del kit de desarrollo de software (SDK).  Este campo utiliza un UR
 | **Ruta en carga útil:** | **Ejemplo:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Entorno
+
+| **Ruta en carga útil:** | **Ejemplo:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Colocar contexto (`placeContext`)
 
