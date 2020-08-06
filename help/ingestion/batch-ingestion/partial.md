@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Introducción a la ingestión parcial por lotes de Adobes Experience Platform
+title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -23,10 +23,10 @@ Además, el [apéndice](#appendix) de este tutorial proporciona una referencia p
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform relacionados con la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que intervienen en la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Ingesta](./overview.md)por lotes: Método que [!DNL Platform] ingiere y almacena datos de archivos de datos, como CSV y Parquet.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
@@ -58,14 +58,12 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 Puede crear un nuevo lote con la ingestión parcial activada.
 
-Para crear un nuevo lote, siga los pasos de la guía [para desarrolladores de](./api-overview.md)ingestión por lotes. Una vez que llegue al paso *Crear lote* , agregue el siguiente campo dentro del cuerpo de la solicitud:
+Para crear un nuevo lote, siga los pasos de la guía [para desarrolladores de](./api-overview.md)ingestión por lotes. Una vez que llegue al paso **[!UICONTROL Crear lote]** , agregue el siguiente campo dentro del cuerpo de la solicitud:
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -85,17 +83,17 @@ Para habilitar un lote para la ingestión parcial a través de la interfaz de us
 
 ### Crear una nueva conexión de origen {#new-source}
 
-Para crear una nueva conexión de origen, siga los pasos que se enumeran en la descripción general [de](../../sources/home.md)Fuentes. Una vez que llegue al paso de detalle *[!UICONTROL de]* flujo de datos, tome nota de los campos de diagnóstico *[!UICONTROL de ingestión]* parcial y ** error.
+Para crear una nueva conexión de origen, siga los pasos que se enumeran en la descripción general [de](../../sources/home.md)Fuentes. Una vez que llegue al paso de detalle **[!UICONTROL de]** flujo de datos, tome nota de los campos de diagnóstico **[!UICONTROL de ingestión]** parcial y **** error.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-La *[!UICONTROL conmutación de ingestión]* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+La **[!UICONTROL conmutación de ingestión]** parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
+La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la opción de alternancia de ingestión **** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+El umbral **[!UICONTROL de]** error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
 
 ### Usar un conjunto de datos existente {#existing-dataset}
 
@@ -103,29 +101,103 @@ Para utilizar un conjunto de datos existente, seleccione un conjunto de datos pa
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-La *[!UICONTROL conmutación de ingestión]* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+La **[!UICONTROL conmutación de ingestión]** parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
+La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la opción de alternancia de ingestión **** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión **** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+El umbral **[!UICONTROL de]** error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
 
 Ahora, puede cargar datos con el botón **Añadir datos** y se ingesta con ingestión parcial.
 
 ### Utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot; {#map-flow}
 
-Para utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot;, siga los pasos enumerados en el tutorial [](../tutorials/map-a-csv-file.md)Asignar un archivo CSV. Una vez que llegue al paso de *[!UICONTROL Añadir datos]* , tome nota de los campos de diagnóstico de ingestión ** parcial y *[!UICONTROL error]* .
+Para utilizar el flujo &quot;[!UICONTROL Asignar CSV al esquema]XDM&quot;, siga los pasos enumerados en el tutorial [](../tutorials/map-a-csv-file.md)Asignar un archivo CSV. Una vez que llegue al paso de **[!UICONTROL Añadir datos]** , tome nota de los campos de diagnóstico de ingestión **** parcial y **[!UICONTROL error]** .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-La *[!UICONTROL conmutación de ingestión]* parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
+La **[!UICONTROL conmutación de ingestión]** parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-La opción de *[!UICONTROL diagnóstico]* de errores solo aparece cuando la opción de alternancia de ingestión ** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
+La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la opción de alternancia de ingestión **** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión **** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-El umbral *[!UICONTROL de]* error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+El umbral **[!UICONTROL de]** error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+
+## Descarga de metadatos de nivel de archivo {#download-metadata}
+
+Adobe Experience Platform permite a los usuarios descargar los metadatos de los archivos de entrada. Los metadatos se conservarán en un plazo [!DNL Platform] de hasta 30 días.
+
+### Archivos de entrada de Lista {#list-files}
+
+La siguiente solicitud le permitirá vista de una lista de todos los archivos proporcionados en un lote finalizado.
+
+**Solicitud**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devolverá el estado HTTP 200 con objetos JSON que contengan objetos de ruta que detallen dónde se guardaron los metadatos.
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### Recuperar metadatos de archivo de entrada {#retrieve-metadata}
+
+Una vez que haya recuperado una lista de todos los diferentes archivos de entrada, puede recuperar los metadatos del archivo individual utilizando el punto final siguiente.
+
+**Solicitud**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devolverá el estado HTTP 200 con objetos JSON que contengan objetos de ruta que detallen dónde se guardaron los metadatos.
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
 
 ## Recuperar errores parciales de ingesta por lotes {#retrieve-errors}
 
@@ -155,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Respuesta**
+**Respuesta sin errores**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre el estado del lote.
 
@@ -164,10 +236,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -186,7 +256,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -199,7 +270,86 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-Si el lote tiene un error y los diagnósticos de error están habilitados, el estado será &quot;correcto&quot; con más información sobre el error proporcionado en un archivo de error descargable.
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede obtener restando el `inputRecordCount` valor de la `outputRecordCount`. Este valor se generará en todos los lotes, independientemente de si `errorDiagnostics` está activado. |
+
+**Respuesta con errores**
+
+Si el lote tiene uno o más errores y tiene habilitados los diagnósticos de error, el estado incluirá más información `success` sobre los errores proporcionados tanto en la respuesta como en un archivo de error descargable.
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-1212-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
+             "recordCount": 3
+           }
+        ]
+    }
+}
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | Número de filas que no se pudieron procesar debido al análisis, la conversión o la validación. Este valor se puede obtener restando el `inputRecordCount` valor de la `outputRecordCount`. Este valor se generará en todos los lotes, independientemente de si `errorDiagnostics` está activado. |
+| `errors.recordCount` | El número de filas en las que se produjo un error en el código de error especificado. Este valor **solo** se genera si `errorDiagnostics` está activado. |
+
+>[!NOTE]
+>
+>Si los diagnósticos de error no están disponibles, aparecerá el siguiente mensaje de error:
+> 
+```json
+> {
+>         "errors": [{
+>                 "code": "INGEST-1211-400",
+>                 "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>         }]
+> }
+> ```
 
 ## Pasos siguientes {#next-steps}
 
@@ -207,12 +357,11 @@ Este tutorial trata sobre cómo crear o modificar un conjunto de datos para habi
 
 ## Tipos de error de ingestión parcial por lotes {#appendix}
 
-La ingestión parcial de lotes tiene cuatro tipos de error diferentes al ingerir datos.
+La ingestión parcial de lotes tiene tres tipos de error diferentes al ingerir datos.
 
 - [Archivos ilegibles](#unreadable)
 - [esquemas o encabezados no válidos](#schemas-headers)
 - [Filas no analizables](#unparsable)
-- [Conversión XDM no válida](#conversion)
 
 ### Archivos ilegibles {#unreadable}
 
@@ -229,7 +378,7 @@ Si el lote ingestado tiene filas inanalizables, los errores del lote se almacena
 **Formato API**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | Parámetro | Descripción |
@@ -239,7 +388,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **Solicitud**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -252,68 +401,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las filas ina
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### Conversión XDM no válida {#conversion}
-
-Si el lote ingestado tiene conversiones XDM no válidas, los errores del lote se almacenarán en un archivo al que se puede acceder mediante el siguiente extremo.
-
-**Formato API**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{BATCH_ID}` | El `id` valor del lote desde el que está recuperando la información de error. |
-
-**Solicitud**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de los errores en la conversión XDM.
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
