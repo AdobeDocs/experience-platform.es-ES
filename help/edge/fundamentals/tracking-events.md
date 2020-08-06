@@ -4,9 +4,9 @@ seo-title: Seguimiento de eventos del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,27 @@ alloy("sendEvent", {
 });
 ```
 
+### Anulación del ID del conjunto de datos
+
+En algunos casos de uso, es posible que desee enviar un evento a un conjunto de datos que no sea el configurado en la interfaz de usuario de configuración. Para ello, debe definir la `datasetId` opción en el `sendEvent` comando:
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Añadir información de identidad
+
+La información de identidad personalizada también se puede agregar al evento. Consulte [Recuperación de ID de Experience Cloud](./identity.md)
+
 ## Uso de la API sendBeacon
 
-Puede ser complicado enviar datos de evento justo antes de que el usuario haya navegado fuera de la página web. Si la solicitud tarda demasiado, el explorador podría cancelarla. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Cuando se utiliza `sendBeacon`, el navegador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no mantiene presionada la navegación de la página. Para indicar a Adobe Experience Platform [!DNL Web SDK] que utilice `sendBeacon`, agregue la opción `"documentUnloading": true` al comando evento.  Vea el siguiente ejemplo:
+Puede ser complicado enviar datos de evento justo antes de que el usuario haya navegado fuera de la página web. Si la solicitud tarda demasiado, el explorador podría cancelarla. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Cuando se utiliza `sendBeacon`, el navegador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no mantiene presionada la navegación de la página. Para indicar a Adobe Experience Platform [!DNL Web SDK] que lo utilice `sendBeacon`, agregue la opción `"documentUnloading": true` al comando evento.  Vea el siguiente ejemplo:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +118,7 @@ alloy("sendEvent", {
 });
 ```
 
-Los exploradores han impuesto límites a la cantidad de datos que se pueden enviar `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 K. Si el explorador rechaza el evento porque la carga útil es demasiado grande, el Adobe Experience Platform [!DNL Web SDK] vuelve a utilizar su método de transporte normal (por ejemplo, la recuperación).
+Los exploradores han impuesto límites a la cantidad de datos que se pueden enviar `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 K. Si el explorador rechaza el evento porque la carga útil es demasiado grande, Adobe Experience Platform [!DNL Web SDK] vuelve a utilizar su método de transporte normal (por ejemplo, recuperar).
 
 ## Gestión de respuestas de eventos
 
