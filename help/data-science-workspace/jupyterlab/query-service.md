@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servicio de Consulta en el bloc de notas de Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -38,13 +38,17 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL Archivo]** y, a continuación, seleccione **[!UICONTROL Nuevo iniciador]**.
+   >[!NOTE]
+   >
+   >Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL Archivo]** y, a continuación, seleccione **[!UICONTROL Nuevo iniciador]**.
 
 2. En la ficha Iniciador, haga clic en el icono **[!UICONTROL Vacío]** de un entorno Python 3 para abrir un bloc de notas vacío.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] Python 3 es actualmente el único entorno admitido para el servicio de Consulta en portátiles.
+   >[!NOTE]
+   >
+   >Python 3 es actualmente el único entorno admitido para el servicio de Consulta en portátiles.
 
 3. En el carril de selección de la izquierda, haga clic en el icono **[!UICONTROL Datos]** y en el doble haga clic en el directorio **[!UICONTROL Conjuntos]** de datos para lista de todos los conjuntos de datos.
 
@@ -86,7 +90,9 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - `target_month` :: Mes específico del que procede el destinatario.
    - `target_day` :: Día específico del que proceden los datos de destinatario.
 
-   >[!NOTE] Puede cambiar estos valores en cualquier momento. Al hacerlo, asegúrese de ejecutar la celda variables para que se apliquen los cambios.
+   >[!NOTE]
+   >
+   >Puede cambiar estos valores en cualquier momento. Al hacerlo, asegúrese de ejecutar la celda variables para que se apliquen los cambios.
 
 ## Consulta de datos {#query-your-data}
 
