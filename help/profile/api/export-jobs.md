@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Trabajos de exportación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Este documento proporciona instrucciones paso a paso para crear y administrar tr
 
 >[!NOTE]
 >
->Esta guía cubre el uso de trabajos de exportación en el [!DNL Profile API]. Para obtener información sobre cómo administrar los trabajos de exportación para el servicio de segmentación por Adobe Experience Platform, consulte la guía sobre los trabajos de [exportación en la API](../../profile/api/export-jobs.md)de segmentación.
+>Esta guía cubre el uso de trabajos de exportación en el [!DNL Profile API]. Para obtener información sobre cómo administrar los trabajos de exportación para el servicio de segmentación de Adobe Experience Platform, consulte la guía sobre los trabajos de [exportación en la API](../../profile/api/export-jobs.md)de segmentación.
 
 Además de crear un trabajo de exportación, también puede acceder a [!DNL Profile] los datos mediante el `/entities` punto final, también conocido como &quot;[!DNL Profile Access]&quot;. Consulte la guía de extremo de [entidades](./entities.md) para obtener más información. Para ver los pasos sobre cómo acceder a [!DNL Profile] los datos mediante la interfaz de usuario, consulte la guía [del](../ui/user-guide.md)usuario.
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Requerido)** Información de destino de los datos exportados:<ul><li>`destination.datasetId`:: **(Requerido)** El ID del conjunto de datos en el que se exportan los datos.</li><li>`destination.segmentPerBatch`:: *(Opcional)* Un valor booleano que, si no se proporciona, toma como valor predeterminado `false`. Un valor de `false` exporta todos los ID de segmento en un único ID de lote. Un valor de `true` exporta un ID de segmento en un ID de lote. Tenga en cuenta que la configuración del valor que se va a definir `true` puede afectar al rendimiento de exportación de lotes.</li></ul> |
 | `schema.name` | **(Requerido)** El nombre del esquema asociado con el conjunto de datos donde se exportan los datos. |
 
->[!NOTE] Para exportar solo datos de Perfil y no incluir datos de series temporales relacionados, elimine el objeto &quot;extraFields&quot; de la solicitud.
+>[!NOTE]
+>
+>Para exportar solo datos de Perfil y no incluir datos de series temporales relacionados, elimine el objeto &quot;extraFields&quot; de la solicitud.
 
 **Respuesta**
 
@@ -408,7 +410,7 @@ curl -X GET \
 
 ## Cancelar un trabajo de exportación
 
-Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, como si el trabajo de exportación no se completó o se quedó atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al extremo e incluir el `/export/jobs` `id` del trabajo de exportación que desea cancelar en la ruta de la solicitud.
+Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, como si el trabajo de exportación no se completó o se quedó atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al extremo e incluir el trabajo `/export/jobs` `id` de exportación que desea cancelar en la ruta de la solicitud.
 
 **Formato API**
 
@@ -441,7 +443,7 @@ Una vez que la exportación se haya completado correctamente, los datos estarán
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la API de acceso a datos para acceder y descargar archivos por lotes, siga el tutorial [de acceso a](../../data-access/tutorials/dataset-data.md)datos.
 
-También puede acceder a los datos de Perfil de cliente en tiempo real exportados correctamente mediante el servicio de Consulta de Adobes Experience Platform. El servicio de Consulta, que utiliza la interfaz de usuario o la API RESTful, le permite escribir, validar y ejecutar consultas en los datos dentro de Data Lake.
+También puede acceder a los datos de Perfil de cliente en tiempo real exportados correctamente mediante el servicio de Consulta de Adobe Experience Platform. El servicio de Consulta, que utiliza la interfaz de usuario o la API RESTful, le permite escribir, validar y ejecutar consultas en los datos dentro de Data Lake.
 
 Para obtener más información sobre cómo consulta de datos de audiencia, consulte la documentación [del servicio de](../../query-service/home.md)Consulta.
 
