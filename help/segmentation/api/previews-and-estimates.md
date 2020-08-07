@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definiciones de Previsualizaciones y estimaciones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -36,13 +36,17 @@ El tamaño de muestra del análisis depende del número total de entidades del a
 | 1 a 20 millones | 1 millón |
 | Más de 20 millones | 5 % del total |
 
->[!NOTE] Las estimaciones generalmente tardan entre 10 y 15 segundos en ejecutarse, comenzando con una estimación aproximada y refinándose a medida que se leen más registros.
+>[!NOTE]
+>
+>Las estimaciones generalmente tardan entre 10 y 15 segundos en ejecutarse, comenzando con una estimación aproximada y refinándose a medida que se leen más registros.
 
 ## Create a new preview {#create-preview}
 
 Puede crear una nueva previsualización haciendo una solicitud de POST al `/preview` extremo.
 
->[!NOTE] Cuando se crea un trabajo de previsualización, se crea automáticamente un trabajo de estimación. Estos dos trabajos compartirán el mismo ID.
+>[!NOTE]
+>
+>Cuando se crea un trabajo de previsualización, se crea automáticamente un trabajo de estimación. Estos dos trabajos compartirán el mismo ID.
 
 **Formato API**
 
