@@ -1,12 +1,12 @@
 ---
 title: Instalación del SDK web de Adobe Experience Platform
-seo-title: SDK web de Adobe Experience Platform al instalar el SDK
+seo-title: Adobe Experience Platform Web SDK instalar el SDK
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,16 @@ ht-degree: 1%
 
 # Instalación del SDK {#installing-the-sdk}
 
-El Adobe Experience Platform [!DNL Web SDK] está disponible en una red de envío de contenido (CDN) para su uso. Puede hacer referencia a este archivo o descargarlo y alojarlo en su propia infraestructura. Está disponible en una versión minimizada y no minimizada. La versión no minimizada resulta útil para la depuración.
+La forma preferida de utilizar el SDK web de Adobe Experience Platform es mediante [Launch](http://launch.adobe.com/). Busque el `AEP Web SDK` en el catálogo de extensiones, instálelo y luego configure la extensión.
 
-* Versión minimizada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Versión no minimizada: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+El SDK web de AEP también está disponible en un CDN para su uso. Puede hacer referencia a este archivo o descargarlo y alojarlo en su propia infraestructura. Está disponible en una versión minimizada y no minimizada. La versión no minimizada resulta útil para la depuración.
+
+Estructura URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min.js O alloy.js para la versión sin miniatura.
+
+Por ejemplo:
+
+* Minimizado: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* No minimizado: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Añadir el código {#adding-the-code}
 
