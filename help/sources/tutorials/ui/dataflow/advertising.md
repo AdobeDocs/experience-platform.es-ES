@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de publicidad en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -96,7 +96,9 @@ Seleccione **[!UICONTROL Cargar datos incrementales por]** para asignar la colum
 
 Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**.
 
->[!TIP] **[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
+>[!TIP]
+>
+>**[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
 
 Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
 
