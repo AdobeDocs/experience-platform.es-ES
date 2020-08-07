@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Definir una relación entre dos esquemas mediante la [!DNL Schema Registry] API
 
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
 Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas que pertenecen a diferentes clases, se debe agregar un campo **de** relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
 
@@ -38,7 +38,9 @@ Se espera que ya haya creado los dos esquemas que se definirán en la relación.
 
 Las relaciones de Esquema están representadas por un esquema **de** origen que tiene un campo que hace referencia a otro campo dentro de un esquema **de** destino. En los pasos siguientes, &quot;[!DNL Loyalty Members]&quot; será el esquema de origen, mientras que &quot;[!DNL Hotels]&quot; actuará como el esquema de destino.
 
->[!IMPORTANT] Para establecer una relación, ambos esquemas deben tener identidades primarias definidas y estar habilitados para [!DNL Real-time Customer Profile]. Consulte la sección sobre la [activación de un esquema para su uso en Perfil](./create-schema-api.md#profile) en el tutorial de creación de esquema si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
+>[!IMPORTANT]
+>
+>Para establecer una relación, ambos esquemas deben tener identidades primarias definidas y estar habilitados para [!DNL Real-time Customer Profile]. Consulte la sección sobre la [activación de un esquema para su uso en Perfil](./create-schema-api.md#profile) en el tutorial de creación de esquema si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
 
 Para definir una relación entre dos esquemas, primero debe adquirir los `$id` valores de ambos esquemas. Si conoce los nombres para mostrar (`title`) de los esquemas, puede encontrar sus `$id` valores realizando una solicitud de GET al `/tenant/schemas` extremo en la [!DNL Schema Registry] API.
 
@@ -116,7 +118,9 @@ Dentro de la [!DNL Schema Registry], los descriptores de relación funcionan de 
 
 En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `email` campo que sirve como identidad principal del esquema y, por lo tanto, también actuará como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarse como referencia y debe recibir una nueva mezcla que añada un nuevo campo al esquema: `favoriteHotel`.
 
->[!NOTE] Si el esquema de origen ya tiene un campo dedicado que se va a utilizar como campo de referencia, puede avanzar en el paso para [crear un descriptor](#reference-identity)de referencia.
+>[!NOTE]
+>
+>Si el esquema de origen ya tiene un campo dedicado que se va a utilizar como campo de referencia, puede avanzar en el paso para [crear un descriptor](#reference-identity)de referencia.
 
 ### Crear una nueva mezcla
 
