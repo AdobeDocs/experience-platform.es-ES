@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Programaciones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 3%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 Una respuesta correcta devuelve el estado HTTP 200 con una lista de programaciones para la organización de IMS especificada como JSON.
 
->[!NOTE] La siguiente respuesta se ha truncado para el espacio y muestra únicamente la primera programación devuelta.
+>[!NOTE]
+>
+>La siguiente respuesta se ha truncado para el espacio y muestra únicamente la primera programación devuelta.
 
 ```json
 {
@@ -322,7 +324,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ## Eliminar una programación específica
 
-Puede solicitar la eliminación de una programación específica realizando una solicitud de  DELETE al extremo y proporcionando el ID de la programación que desea eliminar en la ruta de la solicitud. `/config/schedules`
+Para solicitar la eliminación de una programación específica, realice una solicitud de DELETE al extremo y proporcione el ID de la programación que desea eliminar en la ruta de la solicitud. `/config/schedules`
 
 **Formato API**
 
