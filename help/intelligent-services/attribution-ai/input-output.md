@@ -5,7 +5,7 @@ title: Entrada y salida de Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 3%
