@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Conectar a destinos de flujo continuo y activar datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1809'
 ht-degree: 2%
 
 ---
 
 
-# Conéctese a los destinos de flujo continuo y active los datos en tiempo real de los datos del cliente de Adobe en Platform mediante API
+# Conéctese a los destinos de flujo continuo y active los datos en la plataforma de datos del cliente en tiempo real de Adobe mediante API
 
 >[!NOTE]
 >
 >Los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] en Adobe Real-time CDP están actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
-En este tutorial se muestra cómo utilizar llamadas de API para conectarse a los datos de Adobe Experience Platform, crear una conexión a un destino de almacenamiento de nube de flujo continuo ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Evento Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
+En este tutorial se muestra cómo utilizar llamadas de API para conectarse a sus datos de Adobe Experience Platform, crear una conexión a un destino de almacenamiento de flujo en la nube (centros de Evento de[Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
 Este tutorial utiliza el destino en todos los ejemplos, pero los pasos son idénticos para [!DNL Amazon Kinesis] [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe pa
 
 ## Introducción
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [!DNL Catalog Service](../../catalog/home.md):: [!DNL Catalog] es el sistema de registro para la ubicación y linaje de datos dentro del Experience Platform.
-* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para activar datos en destinos de flujo continuo en CDP en tiempo real de Adobe.
 
@@ -49,17 +49,18 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados opcionales y requeridos {#gather-values}
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](/help/tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](/help/tutorials/authentication.md)autenticación. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Los recursos del Experience Platform se pueden aislar en entornos limitados virtuales específicos. En las solicitudes a las API de Platform, puede especificar el nombre y la ID del entorno limitado en el que se realizará la operación. Son parámetros opcionales.
+Los recursos del Experience Platform se pueden aislar en entornos limitados virtuales específicos. En las solicitudes a las API de plataforma, puede especificar el nombre y la ID del entorno limitado en el que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Para obtener más información sobre los entornos limitados en Experience Platform, consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
