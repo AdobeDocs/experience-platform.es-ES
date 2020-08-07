@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: accc94ae8f19ca3a1575b4408f85155a17741335
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Crear destinos de marketing por correo electrónico y activar datos en Adobe [!DNL Real-time Customer Data Platform]
 
-Este tutorial muestra cómo utilizar las llamadas de API para conectarse a los datos de Adobe Experience Platform, crear un destino [de marketing de](../../rtcdp/destinations/email-marketing-destinations.md)correo electrónico, crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
+Este tutorial muestra cómo utilizar las llamadas de API para conectarse a sus datos de Adobe Experience Platform, crear un destino [de marketing de](../../rtcdp/destinations/email-marketing-destinations.md)correo electrónico, crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
-En este tutorial se utiliza el destino de Adobe Campaign en todos los ejemplos, pero los pasos son idénticos para todos los destinos de marketing por correo electrónico.
+Este tutorial utiliza el destino de Adobe Campaign en todos los ejemplos, pero los pasos son idénticos para todos los destinos de marketing por correo electrónico.
 
 ![Información general: los pasos para crear un destino y activar segmentos](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -24,7 +24,7 @@ Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe pa
 
 ## Introducción
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [!DNL Catalog Service](../../catalog/home.md):: [!DNL Catalog] es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
@@ -55,7 +55,8 @@ Los recursos de [!DNL Experience Platform] pueden aislarse en entornos limitados
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Para obtener más información sobre los entornos limitados de [!DNL Experience Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
