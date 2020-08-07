@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics
 solution: Experience Platform
 title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
 
 
-# Preparación de datos para su uso en Servicios inteligentes
+# Preparación de datos para su uso en [!DNL Intelligent Services]
 
-Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los conjuntos de datos que se utilizan en Servicios inteligentes deben cumplir el esquema XDM de **Consumer ExperienceEvent (CEE)** .
+Para [!DNL Intelligent Services] descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. [!DNL Intelligent Services] aproveche los esquemas [!DNL Experience Data Model] (XDM) para lograrlo. Específicamente, todos los conjuntos de datos utilizados en [!DNL Intelligent Services] deben cumplir el esquema XDM de **Consumer ExperienceEvent (CEE)** .
 
 Este documento proporciona una guía general sobre cómo asignar los datos de eventos de marketing de varios canales a este esquema, esbozando información sobre los campos importantes dentro del esquema para ayudarle a determinar cómo asignar los datos de manera efectiva a su estructura.
 
@@ -28,36 +28,36 @@ Si los datos se almacenan fuera de [!DNL Experience Platform], siga los pasos a 
 
 1. Póngase en contacto con los servicios de consultoría de Adobe para solicitar las credenciales de acceso para un contenedor de Almacenamiento de blob de Azure dedicado.
 1. Con las credenciales de acceso, cargue los datos en el contenedor Blob.
-1. Trabaje con los servicios de consultoría de Adobe para obtener los datos asignados al esquema [](#cee-schema) Consumer ExperienceEvent e ingeridos en Servicios inteligentes.
+1. Trabaje con los servicios de consultoría de Adobe para obtener los datos asignados al esquema [](#cee-schema) Consumer ExperienceEvent e ingeridos en [!DNL Intelligent Services].
 
 ### [!DNL Experience Platform] preparación de datos
 
 Si los datos ya están almacenados en [!DNL Platform], siga los pasos a continuación:
 
 1. Revise la estructura del esquema [](#cee-schema) Consumer ExperienceEvent y determine si los datos se pueden asignar a sus campos.
-1. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar sus datos al esquema y a ingerirlos en los servicios inteligentes, o [siga los pasos de esta guía](#mapping) si desea asignar los datos usted mismo.
+1. Póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a [!DNL Intelligent Services]ingerirlos o [seguir los pasos de esta guía](#mapping) si desea asignarlos usted mismo.
 
 ## Explicación del esquema de CEE {#cee-schema}
 
-El esquema Consumer ExperienceEvent describe el comportamiento de una persona en relación con eventos de marketing digital (web o móvil), así como con la actividad comercial en línea o sin conexión. El uso de este esquema es necesario para Servicios Inteligentes debido a sus campos (columnas) semánticamente bien definidos, evitando nombres desconocidos que de otra manera harían que los datos fueran menos claros.
+El esquema Consumer ExperienceEvent describe el comportamiento de una persona en relación con eventos de marketing digital (web o móvil), así como con la actividad comercial en línea o sin conexión. Se requiere el uso de este esquema [!DNL Intelligent Services] debido a sus campos (columnas) semánticamente bien definidos, evitando nombres desconocidos que de otro modo harían que los datos resultaran menos claros.
 
 El esquema CEE, al igual que todos los esquemas de ExperienceEvent de XDM, captura el estado del sistema basado en series temporales cuando se produjo un evento (o conjunto de eventos), incluido el momento y la identidad del sujeto involucrado. Los Eventos de experiencias son registros de hechos de lo que ocurrió, y por lo tanto son inmutables y representan lo que pasó sin agregación ni interpretación.
 
-Los servicios inteligentes utilizan varios campos clave dentro de este esquema para generar perspectivas a partir de los datos de sus eventos de marketing, todos los cuales se pueden encontrar en el nivel raíz y se expanden para mostrar los subcampos requeridos.
+[!DNL Intelligent Services] utilice varios campos clave dentro de este esquema para generar perspectivas a partir de los datos de eventos de marketing, todos los cuales se pueden encontrar en el nivel raíz y expandirse para mostrar los subcampos requeridos.
 
 ![](./images/data-preparation/schema-expansion.gif)
 
 Al igual que todos los esquemas XDM, la mezcla CEE es extensible. En otras palabras, se pueden agregar campos adicionales a la mezcla CEE y, si es necesario, se pueden incluir variaciones diferentes en varios esquemas.
 
-Puede encontrarse un ejemplo completo de la mezcla en el repositorio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)público y debe utilizarse como referencia para los campos clave descritos en la sección siguiente.
+Encontrará un ejemplo completo de la mezcla en el repositorio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)público. Además, puede crear vistas y copiar el siguiente archivo [](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) JSON para ver un ejemplo de cómo se pueden estructurar los datos para cumplir con el esquema CEE. Consulte estos dos ejemplos cuando conozca los campos clave descritos en la sección siguiente para determinar cómo puede asignar sus propios datos al esquema.
 
 ## Campos clave
 
-Existen varios campos clave dentro de la mezcla CEE que deben utilizarse para que los servicios inteligentes generen perspectivas útiles. Esta sección describe el caso de uso y los datos esperados para estos campos, y proporciona vínculos a la documentación de referencia para obtener más ejemplos.
+Existen varios campos clave dentro de la mezcla CEE que deben utilizarse para [!DNL Intelligent Services] generar perspectivas útiles. Esta sección describe el caso de uso y los datos esperados para estos campos, y proporciona vínculos a la documentación de referencia para obtener más ejemplos.
 
 ### Campos obligatorios
 
-Aunque se recomienda encarecidamente el uso de todos los campos clave, hay dos campos **necesarios** para que los servicios inteligentes funcionen:
+Aunque se recomienda encarecidamente el uso de todos los campos clave, hay dos campos **necesarios** para [!DNL Intelligent Services] que funcionen:
 
 * [Campo de identidad principal](#identity)
 * [xdm:timestamp](#timestamp)
@@ -65,13 +65,13 @@ Aunque se recomienda encarecidamente el uso de todos los campos clave, hay dos c
 
 #### Identidad primaria {#identity}
 
-Uno de los campos de su esquema debe configurarse como un campo de identidad principal, lo que permite a los servicios inteligentes vincular cada instancia de datos de series temporales a una persona individual.
+Uno de los campos del esquema debe configurarse como un campo de identidad principal, que permite [!DNL Intelligent Services] vincular cada instancia de datos de series temporales a una persona individual.
 
 Debe determinar el mejor campo para utilizarlo como identidad principal en función de la fuente y la naturaleza de los datos. Un campo de identidad debe incluir una Área de nombres **de** identidad que indique el tipo de datos de identidad que el campo espera como valor. Algunos valores de Área de nombres válidos son:
 
 * &quot;email&quot;
 * &quot;phone&quot;
-* &quot;mcid&quot; (para ID de Adobe Audience Manager)
+* &quot;mcid&quot; (para Adobe Audience Manager ID)
 * &quot;aaid&quot; (para Adobe Analytics ID)
 
 Si no está seguro de qué campo debe utilizar como identidad principal, póngase en contacto con los servicios de consultoría de Adobe para determinar cuál es la mejor solución.
@@ -90,7 +90,7 @@ Este campo representa el canal de marketing relacionado con ExperienceEvent. El 
 
 ![](./images/data-preparation/channel.png)
 
-**esquema de ejemplo**
+**Esquema de ejemplo**
 
 ```json
 {
@@ -120,7 +120,7 @@ En la tabla siguiente se proporcionan algunos ejemplos de canales de marketing a
 
 ### Campos recomendados
 
-El resto de los campos clave se describen en esta sección. Aunque estos campos no son necesariamente necesarios para que los servicios inteligentes funcionen, se recomienda encarecidamente que utilice tantos como sea posible para obtener perspectivas más enriquecidas.
+El resto de los campos clave se describen en esta sección. Aunque estos campos no son necesariamente necesarios para [!DNL Intelligent Services] que funcionen, se recomienda encarecidamente que utilice tantos como sea posible para obtener perspectivas más enriquecidas.
 
 #### xdm:productListItems
 
@@ -128,7 +128,7 @@ Este campo es una matriz de artículos que representan los productos seleccionad
 
 ![](./images/data-preparation/productListItems.png)
 
-**esquema de ejemplo**
+**Esquema de ejemplo**
 
 ```json
 [
@@ -157,7 +157,7 @@ Este campo contiene información específica sobre el comercio acerca de Experie
 
 ![](./images/data-preparation/commerce.png)
 
-**esquema de ejemplo**
+**Esquema de ejemplo**
 
 ```json
 {
@@ -195,7 +195,7 @@ Este campo representa los detalles web relacionados con ExperienceEvent, como la
 
 ![](./images/data-preparation/web.png)
 
-**esquema de ejemplo**
+**Esquema de ejemplo**
 
 ```json
 {
@@ -225,7 +225,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 
 ![](./images/data-preparation/marketing.png)
 
-**esquema de ejemplo**
+**Esquema de ejemplo**
 
 ```json
 {
@@ -239,7 +239,7 @@ Para obtener información completa acerca de cada uno de los subcampos requerido
 
 ## Asignación e ingesta de datos (#mapping)
 
-Una vez que haya determinado si los datos de eventos de marketing se pueden asignar al esquema CEE, el siguiente paso es determinar qué datos se van a incluir en Servicios inteligentes. Todos los datos históricos utilizados en Servicios Inteligentes deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
+Una vez que haya determinado si los datos de los eventos de mercadotecnia se pueden asignar al esquema de CEE, el siguiente paso es determinar en qué datos se van a importar [!DNL Intelligent Services]. Todos los datos históricos utilizados en [!DNL Intelligent Services] deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
 
 Después de decidir el rango de datos que desea enviar, póngase en contacto con los servicios de consultoría de Adobe para ayudarle a asignar los datos al esquema y a ingerirlos al servicio.
 
@@ -249,9 +249,9 @@ Si tiene una [!DNL Adobe Experience Platform] suscripción y desea asignar e ing
 
 >[!NOTE]
 >
->Los pasos a continuación requieren una suscripción al Experience Platform. Si no tiene acceso a Platform, vaya a la sección de pasos [](#next-steps) siguientes.
+>Los pasos a continuación requieren una suscripción al Experience Platform. Si no tiene acceso a Plataforma, vaya a la sección de [próximos pasos](#next-steps) .
 
-Esta sección describe el flujo de trabajo para asignar e ingerir datos en Experience Platform para su uso en Servicios inteligentes, incluidos vínculos a tutoriales para ver los pasos detallados.
+En esta sección se describe el flujo de trabajo para asignar e ingerir datos en Experience Platform para su uso en [!DNL Intelligent Services], incluidos los vínculos a tutoriales para ver los pasos detallados.
 
 #### Crear un esquema y un conjunto de datos de CEE
 
@@ -271,7 +271,7 @@ Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos bas
 * [Crear un conjunto de datos en la interfaz de usuario](../catalog/datasets/user-guide.md#create) (siga el flujo de trabajo para usar un esquema existente)
 * [Creación de un conjunto de datos en la API](../catalog/datasets/create.md)
 
-Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de Platform dentro del espacio de trabajo *[!UICONTROL Conjuntos]* de datos.
+Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de la plataforma dentro del espacio de trabajo *[!UICONTROL Conjuntos]* de datos.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -279,7 +279,7 @@ Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario
 
 >[!NOTE]
 >
->Las próximas versiones de Intelligent Services integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
+>Las próximas versiones de [!DNL Intelligent Services] integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
 
 Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud de PATCH a la API de servicio de catálogo.
 
@@ -339,7 +339,7 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en Platform, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
+>Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en la plataforma, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
 
 **Respuesta**
 
@@ -353,15 +353,17 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 #### Asignar y transferir datos {#ingest}
 
-Después de crear un esquema y un conjunto de datos de CEE, puede asignar en inicio las tablas de datos al esquema y transferir esos datos a Platform. Consulte el tutorial sobre la [asignación de un archivo CSV a un esquema](../ingestion/tutorials/map-a-csv-file.md) XDM para ver los pasos para realizar esto en la interfaz de usuario. Una vez que se ha rellenado un conjunto de datos, se puede utilizar el mismo conjunto de datos para ingestar archivos de datos adicionales.
+Después de crear un esquema y un conjunto de datos de CEE, puede asignar inicios a las tablas de datos en el esquema e ingerirlos en la plataforma. Consulte el tutorial sobre la [asignación de un archivo CSV a un esquema](../ingestion/tutorials/map-a-csv-file.md) XDM para ver los pasos para realizar esto en la interfaz de usuario. Puede utilizar el siguiente archivo [JSON de](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) muestra para probar el proceso de ingestión antes de utilizar sus propios datos.
 
-Si los datos se almacenan en una aplicación de terceros admitida, también puede optar por crear un conector [de](../sources/home.md) origen para transferir los datos de eventos de marketing a Platform en tiempo real.
+Una vez que se ha rellenado un conjunto de datos, se puede utilizar el mismo conjunto de datos para ingestar archivos de datos adicionales.
+
+Si los datos se almacenan en una aplicación de terceros admitida, también puede crear un conector [de](../sources/home.md) origen para ingerir los datos de eventos de marketing en tiempo [!DNL Platform] real.
 
 ## Pasos siguientes {#next-steps}
 
-Este documento proporciona una guía general sobre la preparación de los datos para su uso en Servicios inteligentes. Si necesita asesoramiento adicional en función de su caso de uso, póngase en contacto con la asistencia de consultoría de Adobe.
+Este documento proporciona una guía general sobre cómo preparar sus datos para su uso en [!DNL Intelligent Services]. Si necesita asesoramiento adicional en función de su caso de uso, póngase en contacto con la asistencia de consultoría de Adobe.
 
-Una vez que haya rellenado correctamente un conjunto de datos con los datos de experiencia del cliente, puede utilizar Servicios inteligentes para generar perspectivas. Consulte los siguientes documentos para empezar:
+Una vez que haya rellenado correctamente un conjunto de datos con los datos de experiencia del cliente, puede utilizarlo [!DNL Intelligent Services] para generar perspectivas. Consulte los siguientes documentos para empezar:
 
 * [Descripción general de Attribution AI](./attribution-ai/overview.md)
 * [Información general sobre el AI del cliente](./customer-ai/overview.md)
