@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y publicación de un tutorial del modelo de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Para crear un modelo de aprendizaje automático que haga recomendaciones de prod
 
 ### Explore los datos y comprenda los esquemas
 
-1. Inicie sesión en el [Adobe Experience Platform](https://platform.adobe.com/) y haga clic en **[!UICONTROL Conjuntos]** de datos para lista de todos los conjuntos de datos existentes y seleccione el conjunto de datos que desee explorar. En este caso, el [!DNL Analytics] conjunto de datos Conjunto de datos **dorado postValues**.
+1. Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com/) y haga clic en **[!UICONTROL Conjuntos]** de datos para lista de todos los conjuntos de datos existentes y seleccione el conjunto de datos que desee explorar. En este caso, el [!DNL Analytics] conjunto de datos Conjunto de datos **dorado postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Seleccione Conjunto de datos **[!UICONTROL de Previsualización]** cerca de la parte superior derecha para examinar los registros de muestra y, a continuación, haga clic en **[!UICONTROL Cerrar]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -73,7 +73,7 @@ Los demás conjuntos de datos se han rellenado previamente con lotes para obtene
 
 ## Crear el modelo {#author-your-model}
 
-El segundo componente del [!DNL Data Science Workspace] ciclo vital implica la creación de fórmulas y modelos. La fórmula Product Recommendations está diseñada para generar recomendaciones de productos a escala mediante el uso de datos de compras anteriores y aprendizaje automático.
+El segundo componente del ciclo de vida [!DNL Data Science Workspace] incluye la creación de fórmulas y modelos. La fórmula Product Recommendations está diseñada para generar recomendaciones de productos a escala mediante el uso de datos de compras anteriores y aprendizaje automático.
 
 Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendizaje automático y lógica diseñados para resolver problemas específicos. Lo que es más importante, las fórmulas le permiten democratizar el aprendizaje automático en toda la organización, lo que permite a otros usuarios acceder a un modelo para casos de uso dispares sin necesidad de escribir ningún código.
 
@@ -117,7 +117,9 @@ Puede optar por esperar a que finalice la ejecución de formación o continuar c
 
    No se pueden aprender los hiperparámetros, por lo tanto deben asignarse antes de que se produzcan las ejecuciones de formación. El ajuste de los hiperparámetros puede cambiar la precisión del modelo entrenado. Dado que la optimización de un modelo es un proceso iterativo, es posible que se requieran múltiples ejercicios de capacitación antes de lograr una evaluación satisfactoria.
 
-   >[!TIP] Establezca **[!UICONTROL num_recommendations]** en 10.
+   >[!TIP]
+   >
+   >Establezca **[!UICONTROL num_recommendations]** en 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Una vez finalizada la nueva ejecución de formación, aparecerá un punto de datos adicional en el gráfico de evaluación del modelo, lo que puede tardar varios minutos.
