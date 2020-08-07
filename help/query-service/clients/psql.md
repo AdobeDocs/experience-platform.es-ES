@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar con PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -68,7 +68,9 @@ Haga clic en **[!UICONTROL Copiar]** para el comando *[!UICONTROL PSQL]*.
 
 ![Imagen](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]:: Si está en un equipo, utilice un editor de texto para eliminar los saltos de línea en la cadena de comandos y, a continuación, copie la cadena.
+>[!IMPORTANT]
+>
+>Si está en un equipo, utilice un editor de texto para eliminar los saltos de línea en la cadena de comandos y, a continuación, copie la cadena.
 
 Pegue la cadena de comandos en un terminal o ventana de comandos y pulse Intro.
 
