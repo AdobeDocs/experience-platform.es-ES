@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuración de un flujo de datos para un conector por lotes de almacenamiento de nube en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Un flujo de datos es una tarea programada que recupera e ingiere datos de un ori
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
@@ -115,7 +115,9 @@ Proporcione valores para la programación y seleccione **[!UICONTROL Siguiente]*
 
 Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**. Puede seguir editando en un conjunto de flujos de datos para una ingestión de frecuencia única, siempre y cuando el tiempo de inicio permanezca en el futuro. Una vez transcurrido el tiempo de inicio, ya no se puede editar el valor de frecuencia de una sola vez.
 
->[!TIP] **[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
+>[!TIP]
+>
+>**[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
 
 Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
 
