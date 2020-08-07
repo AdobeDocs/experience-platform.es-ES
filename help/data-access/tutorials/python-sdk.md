@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK de acceso a datos de Python seguro
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -128,7 +128,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 El [!DNL Python] SDK admite determinados operadores para ayudar a filtrar el conjunto de datos.
 
->[!NOTE] Las funciones utilizadas para filtrar distinguen entre mayúsculas y minúsculas.
+>[!NOTE]
+>
+>Las funciones utilizadas para filtrar distinguen entre mayúsculas y minúsculas.
 
 ```python
 eq() = '='
