@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1377'
 ht-degree: 1%
 
 ---
@@ -66,28 +66,29 @@ Es posible que se requieran encabezados adicionales para completar solicitudes e
 
 Para que un segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
-| Tipo de Consulta | Detalles |
+| Tipo de consulta | Detalles |
 | ---------- | ------- |
 | Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
 | Visita entrante dentro de un período de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante **en los últimos siete días**. |
+| Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. |
 | Visita entrante que hace referencia a un perfil dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o varios atributos de perfil, **en los últimos siete días**. |
 | Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o varios atributos de perfil. |
 
 La siguiente sección lista ejemplos de definición de segmentos que **no se habilitarán** para la segmentación de flujo continuo.
 
-| Tipo de Consulta | Detalles |
+| Tipo de consulta | Detalles |
 | ---------- | ------- | 
 | Visita entrante dentro de un período de tiempo relativo | Si la definición del segmento se refiere a un evento entrante **no** dentro del período **de siete días**&#x200B;últimos. Por ejemplo, en las **últimas dos semanas**. |
 | Visita entrante que hace referencia a un perfil dentro de una ventana relativa | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento entrante **no** dentro del **último período** de siete días.</li><li>Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM).</li></ul> |
 | Varios eventos que hacen referencia a un perfil | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento que **no** se produce en **las últimas 24 horas**.</li><li>Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM).</li></ul> |
-| consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |
+| Consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |
 
 Además, se aplican algunas directrices al realizar la segmentación de flujo:
 
-| Tipo de Consulta | Directrices |
+| Tipo de consulta | Directrices |
 | ---------- | -------- |
-| consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
+| Consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
 | Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Solo se permiten pedidos de tiempo simples (antes y después) entre los eventos.</li><li>Los eventos individuales **no se pueden** negar. Sin embargo, toda la consulta **puede** ser anulada.</li></ul> |
 
 ## Recuperar todos los segmentos activados para la segmentación de flujo continuo
