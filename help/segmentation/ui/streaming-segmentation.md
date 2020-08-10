@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -28,28 +28,29 @@ La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a l
 
 Una consulta se evaluará automáticamente con segmentación de flujo continuo si cumple cualquiera de los siguientes criterios:
 
-| Tipo de Consulta | Detalles | Ejemplo |
+| Tipo de consulta | Detalles | Ejemplo |
 | ---------- | ------- | ------- |
 | Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Visita entrante dentro de un período de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante **en los últimos siete días**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |  |
 | Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Visita entrante que hace referencia a un perfil dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o varios atributos de perfil, **en los últimos siete días**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o varios atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 La siguiente sección lista ejemplos de definición de segmentos que **no se habilitarán** para la segmentación de flujo continuo.
 
-| Tipo de Consulta | Detalles | Ejemplo |
+| Tipo de consulta | Detalles | Ejemplo |
 | ---------- | ------- | ------- |
 | Visita entrante dentro de un período de tiempo relativo | Si la definición del segmento se refiere a un evento entrante **no** dentro del período **de siete días**&#x200B;últimos. Por ejemplo, en las **últimas dos semanas**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
 | Visita entrante que hace referencia a un perfil dentro de una ventana relativa | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento entrante **no** dentro del **último período** de siete días.</li><li>Definición de segmento que incluye [!DNL Adobe Audience Manager (AAM)] segmentos o características.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
 | Varios eventos que hacen referencia a un perfil | Las siguientes opciones **no admitirán** la segmentación de flujo continuo:<ul><li>Un evento que **no** se produce en **las últimas 24 horas**.</li><li>Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM).</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
-| consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |  |
+| Consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |  |
 
 Además, se aplican algunas directrices al realizar la segmentación de flujo:
 
-| Tipo de Consulta | Directrices |
+| Tipo de consulta | Directrices |
 | ---------- | -------- |
-| consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
+| Consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
 | Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Solo se permiten pedidos de tiempo simples (antes y después) entre los eventos.</li><li>Los eventos individuales **no se pueden** negar. Sin embargo, toda la consulta **puede** ser anulada.</li></ul> |
 
 ## Detalles del segmento de segmentación de flujo continuo
