@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Conceptos para comprender:
 
 ## Creación de fórmulas
 
-inicios de creación de fórmulas con empaquetado de archivos de origen para crear un archivo de archivo. Los archivos de origen definen la lógica de aprendizaje automático y los algoritmos utilizados para resolver un problema específico que se encuentra en la mano, y se escriben en [!DNL Python], R, PySpark o Scala. Los archivos de archivo creados toman la forma de una imagen de Docker. Una vez creado, el archivo empaquetado se importa en [!DNL Data Science Workspace] para crear una fórmula [en la interfaz de usuario](./import-packaged-recipe-ui.md) o [mediante la API](./import-packaged-recipe-api.md).
+Inicios de creación de fórmulas con empaquetado de archivos de origen para crear un archivo de archivo. Los archivos de origen definen la lógica de aprendizaje automático y los algoritmos utilizados para resolver un problema específico que se encuentra en la mano, y se escriben en [!DNL Python], R, PySpark o Scala. Los archivos de archivo creados toman la forma de una imagen de Docker. Una vez creado, el archivo empaquetado se importa en [!DNL Data Science Workspace] para crear una fórmula [en la interfaz de usuario](./import-packaged-recipe-ui.md) o [mediante la API](./import-packaged-recipe-api.md).
 
 ### Creación de modelos basados en el acoplamiento {#docker-based-model-authoring}
 
@@ -38,7 +38,7 @@ Una imagen de Docker permite a un desarrollador empaquetar una aplicación con t
 
 La imagen de Docker creada se inserta en el Registro de Contenedor de Azure mediante las credenciales proporcionadas durante el flujo de trabajo de creación de fórmulas.
 
-Para obtener las credenciales de Azure Contenedor Registry, inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. En la columna de navegación izquierda, navegue a **[!UICONTROL Flujos de trabajo]**. Seleccione **[!UICONTROL Importar fórmula]** , luego seleccione **[!UICONTROL Iniciar]**. Consulte la captura de pantalla siguiente para obtener referencia.
+Para obtener las credenciales del Registro de Contenedor de Azure, inicie sesión en [Adobe Experience Platform](https://platform.adobe.com). En la columna de navegación izquierda, navegue a **[!UICONTROL Flujos de trabajo]**. Seleccione **[!UICONTROL Importar fórmula]** , luego seleccione **[!UICONTROL Iniciar]**. Consulte la captura de pantalla siguiente para obtener referencia.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
