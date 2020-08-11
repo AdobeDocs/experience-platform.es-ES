@@ -1,12 +1,12 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Ayuda de Platform sobre datos de clientes en tiempo real
+user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 10%
+source-wordcount: '443'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 10%
    * [Información general sobre administración](administration/admin-overview.md)
 * Conjuntos de datos {#datasets}
    * [Conjuntos de datos](datasets/dataset.md)
-   * [Calidad de los datos en Platform](datasets/data-quality.md)
+   * [Calidad de los datos en la plataforma](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Información general sobre los destinos](destinations/destinations-overview.md)
    * [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md)
@@ -35,7 +35,7 @@ ht-degree: 10%
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Destinos publicitarios{#advertising-destinations}
          * [Descripción general de los destinos de publicidad](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Extensión Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Extensión de la etiqueta de conversión de publicidad de Awin](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Extensión Awin Advertising Mastertag](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Extensión de beemray](/help/rtcdp/destinations/beemray-extension.md)
@@ -47,13 +47,14 @@ ht-degree: 10%
          * [Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
          * [Extensión Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Coincidencia de clientes de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extensión gtag de Google](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extensión de etiqueta de LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
          * [Extensión de seguimiento de conversión de Pinterest](destinations/pinterest-extension.md)
          * [Extensión de etiqueta de sitio web universal de Twitter](destinations/twitter-uwt-extension.md)
       * Destinos de Analytics {#analytics-destinations}
-         * [Información general sobre los destinos de Analytics](destinations/analytics-destinations.md)
+         * [Descripción general de los destinos de Analytics](destinations/analytics-destinations.md)
          * [Admitir extensión de seguimiento de sitio web](/help/rtcdp/destinations/adform-extension.md)
          * [Extensión de Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Extensión de Adobe Media Analytics for Audio and Video](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
@@ -63,7 +64,7 @@ ht-degree: 10%
          * [Extensión Demandbase](/help/rtcdp/destinations/demandbase-extension.md)
          * [Extensión Dialogtech](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Extensión de análisis de etiquetas de sitio global de Google](/help/rtcdp/destinations/gtag-analytics-extension.md)
-         * [Extensión Analytics universal de Google](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+         * [Extensión de Google Universal Analytics](/help/rtcdp/destinations/google-universal-analytics-extension.md)
          * [Extensión de JW Player Analytics (Beta)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Extensión Nielsen BSDK](destinations/nielsen-bsdk-extension.md)
          * [Extensión del controlador IMA Nielsen](destinations/nielsen-ima-extension.md)
@@ -80,13 +81,13 @@ ht-degree: 10%
          * [Destino de Amazon S3](destinations/amazon-s3-destination.md)
          * [Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destino de SFTP](destinations/sftp-destination.md)
-      * Destinos de Platform de Gestión de datos {#dmp-destinations}
-         * [Gestión de datos de destinos de Platform información general](destinations/dmp-destinations.md)
+      * Destinos de la plataforma de gestión de datos {#dmp-destinations}
+         * [Introducción a los destinos de la plataforma de gestión de datos](destinations/dmp-destinations.md)
          * [extensión del DIL del Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinos de mercadotecnia de correo electrónico{#email-destinations}
          * [Introducción a los destinos de mercadotecnia por correo electrónico](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [Extensión Analytics bisible](/help/rtcdp/destinations/bizible-extension.md)
+         * [Extensión de Analytics bisible](/help/rtcdp/destinations/bizible-extension.md)
          * [Extensión de marketing](destinations/marketo-extension.md)
          * [Extensión de Marketo Munchkin](destinations/marketo-munchkin-extension.md)
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
@@ -110,8 +111,8 @@ ht-degree: 10%
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Destinos de Encuesta {#survey-destinations}
-         * [Introducción a los destinos de Encuesta](/help/rtcdp/destinations/survey-destinations.md)
+      * Destinos de encuesta {#survey-destinations}
+         * [Introducción a los destinos de encuesta](/help/rtcdp/destinations/survey-destinations.md)
          * [Extensión Foresee](/help/rtcdp/destinations/foresee-extension.md)
          * [Extensión InMoment](/help/rtcdp/destinations/inmoment-extension.md)
          * [Qualtrics Website, extensión de comentarios](destinations/qualtrics-extension.md)
@@ -135,7 +136,7 @@ ht-degree: 10%
    * [Perfil general](profile/profile-overview.md)
    * [Identidades y Áreas de nombres de identidad](profile/identities-overview.md)
    * [Combinar directivas](profile/merge-policies.md)
-   * [Visor de Perfiles](profile/profile-viewer.md)
+   * [Visor de perfiles](profile/profile-viewer.md)
 * Segmentos {#segmentation}
    * [Información general sobre la segmentación](segmentation/segmentation-overview.md)
    * [Guía del generador de segmentos](segmentation/segment-builder-guide.md)
