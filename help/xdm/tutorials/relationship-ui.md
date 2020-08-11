@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante el Editor de Esquemas de Esquema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
+source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -14,35 +14,41 @@ ht-degree: 0%
 
 # Defina una relación entre dos esquemas mediante la variable [!DNL Schema Editor]
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante del Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
-Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por la organización mediante el uso de [!DNL Schema Editor] en la interfaz de [!DNL Experience Platform] usuario. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre la [definición de una relación mediante la API](relationship-api.md)del Registro de Esquema.
+Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas que pertenecen a diferentes clases, se debe agregar un campo **de** relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
+
+Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de Esquemas en la interfaz de usuario [!DNL Experience Platform] . Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre la [definición de una relación mediante la API](relationship-api.md)del Registro de Esquema.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de [!DNL XDM System] y [!DNL Schema Editor] de la [!DNL Experience Platform] IU. Antes de comenzar este tutorial, consulte la siguiente documentación:
+Este tutorial requiere un conocimiento práctico de [!DNL XDM System] y del Editor de Esquemas en la [!DNL Experience Platform] interfaz de usuario. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
-* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en Experience Platform.
+* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en [!DNL Experience Platform].
 * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Introducción de los componentes básicos de los esquemas XDM.
 * [Cree un esquema con el Editor](create-schema-ui.md)de Esquemas: Un tutorial que cubre los conceptos básicos del trabajo con el [!DNL Schema Editor].
 
 ## Definir un esquema de origen y destino
 
-Se espera que ya haya creado los dos esquemas que se definirán en la relación. Para fines de demostración, este tutorial crea una relación entre los miembros del programa de lealtad de una organización (definido en un esquema de &quot;miembros[!UICONTROL de la]lealtad&quot;) y sus hoteles favoritos (definido en un esquema de &quot;hoteles&quot;).
+Se espera que ya haya creado los dos esquemas que se definirán en la relación. Para fines de demostración, este tutorial crea una relación entre los miembros del programa de lealtad de una organización (definido en un esquema &quot;Miembros[!UICONTROL de la]lealtad&quot;) y sus hoteles favoritos (definido en un esquema &quot;[!DNL Hotels]&quot;).
 
-Las relaciones de Esquema están representadas por un esquema **[!UICONTROL de]** origen que tiene un campo que hace referencia a otro campo dentro de un esquema **[!UICONTROL de]** destino. En los pasos siguientes, &quot;Miembros[!UICONTROL de la]Lealtad&quot; será el esquema de origen, mientras que &quot;Hoteles&quot; actuará como el esquema de destino.
+>[!IMPORTANT]
+>
+>Para establecer una relación, ambos esquemas deben tener identidades primarias definidas y estar habilitados para [!DNL Real-time Customer Profile]. Consulte la sección sobre la [activación de un esquema para su uso en Perfil](./create-schema-ui.md#profile) en el tutorial de creación de esquema si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
+
+Las relaciones de esquema están representadas por un campo dedicado dentro de un esquema **de** origen que hace referencia a otro campo dentro de un esquema **de** destino. En los pasos siguientes, &quot;Miembros[!UICONTROL de]lealtad&quot; será el esquema de origen, mientras que &quot;[!DNL Hotels]&quot; actuará como el esquema de destino.
 
 Con fines de referencia, las siguientes secciones describen la estructura de cada esquema utilizado en este tutorial antes de definir una relación.
 
-### [!UICONTROL esquema de miembros] de lealtad
+### [!UICONTROL Esquema de miembros] de lealtad
 
-El esquema de origen &quot;Miembros[!UICONTROL de]lealtad&quot; es el esquema que se creó en el tutorial para [crear un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un objeto de &quot;[!UICONTROL lealtad]&quot; en su Área de nombres &quot;[!UICONTROL \_inquilinoId]&quot;, que incluye varios campos específicos de lealtad. Uno de estos campos, &quot;[!UICONTROL loyaltyId]&quot;, sirve como identidad principal para el esquema en la Área de nombres &quot;[!UICONTROL Email]&quot;. Como se muestra en Propiedades _de_ Esquema, este esquema se ha habilitado para su uso en [!DNL Real-time Customer Profile](../../profile/home.md).
+El esquema de origen &quot;Miembros[!UICONTROL de]lealtad&quot; se basa en la clase XDM [!DNL Individual Profile] y es el esquema que se creó en el tutorial para [crear un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un objeto de &quot;[!UICONTROL lealtad]&quot; bajo su Área de nombres &quot;\_inquilinoId&quot;, que incluye varios campos específicos de lealtad. Uno de estos campos, &quot;loyaltyId&quot;, sirve como identidad principal para el esquema en la Área de nombres &quot;[!UICONTROL Email]&quot;. Como se muestra en Propiedades _[!UICONTROL de]_Esquema, este esquema se ha habilitado para su uso en[!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### esquema de hoteles
+### Esquema de hoteles
 
-El esquema de destino &quot;[!UICONTROL Hoteles]&quot; contiene campos que describen un hotel, incluyen su dirección, marca, número de habitaciones y clasificación por estrellas. El campo &quot;[!UICONTROL hotelId]&quot; sirve como identidad principal para el esquema bajo la Área de nombres &quot;ECID&quot;. A diferencia de &quot;Miembros[!UICONTROL de]lealtad&quot;, este esquema no se ha habilitado para [!DNL Real-time Customer Profile].
+El esquema de destino &quot;[!UICONTROL Hoteles]&quot; está basado en una clase &quot;[!UICONTROL Hoteles]&quot; personalizada y contiene campos que describen un hotel. El campo &quot;[!UICONTROL correo electrónico]&quot; sirve como identidad principal para el esquema en la Área de nombres &quot;[!UICONTROL Correo electrónico]&quot;. Al igual que &quot;Miembros[!UICONTROL de]lealtad&quot;, este esquema también se ha habilitado para [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
@@ -54,23 +60,23 @@ El esquema de destino &quot;[!UICONTROL Hoteles]&quot; contiene campos que descr
 
 Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo específico para utilizarlo como referencia al esquema de destino. Puede agregar este campo al esquema de origen creando una nueva mezcla.
 
-Para Inicio, haga clic en **[!UICONTROL Añadir]** en la sección _Mezclas_ .
+Para inicio, haga clic en **[!UICONTROL Añadir]** en la sección _[!UICONTROL Mezclas]_.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL _Añadir mezcla _]. Desde aquí, haga clic en**[!UICONTROL  Crear nueva combinación ]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para la nueva combinación. Haga clic en**[!UICONTROL  Añadir mezcla ]**cuando termine.
+Aparecerá el cuadro de diálogo _[!UICONTROL Añadir mezcla]_. Desde aquí, haga clic en**[!UICONTROL  Crear nueva combinación ]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para la nueva combinación. Haga clic en**[!UICONTROL  Añadir mezcla ]**cuando termine.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-El lienzo vuelve a aparecer con &quot;HotelFavorito&quot; en la sección _Mixins_ . Haga clic en el nombre de la mezcla y, a continuación, haga clic en **[!UICONTROL Añadir campo]** junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
+El lienzo vuelve a aparecer con &quot;Relación[!UICONTROL de]lealtad&quot; en la sección _[!UICONTROL Mezclas]_. Haga clic en el nombre de la mezcla y, a continuación, haga clic en**[!UICONTROL  Añadir campo ]**junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Aparece un nuevo campo en el lienzo bajo la Área de nombres &quot;[!UICONTROL \_inquilinoId]&quot;. En Propiedades [!UICONTROL __]del campo, proporcione un nombre de campo y un nombre para mostrar para el campo y defina su tipo en &quot;[!UICONTROL Cadena]&quot;.
+Aparece un nuevo campo en el lienzo bajo la Área de nombres &quot;\_inquilinoId&quot;. En Propiedades __del campo, proporcione un nombre de campo y un nombre para mostrar para el campo y defina su tipo en &quot;[!UICONTROL Cadena]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Cuando termine, haga clic en **[!UICONTROL Aplicar]**.
+When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
@@ -82,11 +88,11 @@ El campo &quot;[!UICONTROL favoritoHotel]&quot; actualizado aparece en el lienzo
 
 Una vez definido el esquema de origen, puede designarlo como un campo de relación.
 
-Haga clic en el campo de referencia en el lienzo y, a continuación, desplácese hacia abajo en Propiedades _[!UICONTROL del]_campo hasta que aparezca la casilla de verificación**[!UICONTROL  Relación ]**. Seleccione la casilla de verificación para mostrar los parámetros necesarios para configurar un campo de relación.
+Seleccione el campo de referencia en el lienzo y, a continuación, desplácese hacia abajo en Propiedades _[!UICONTROL del]_campo hasta que aparezca la casilla de verificación**[!UICONTROL  Relación ]**. Seleccione la casilla de verificación para mostrar los parámetros necesarios para configurar un campo de relación.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Haga clic en el menú desplegable del Esquema **[!UICONTROL de]** referencia y seleccione el esquema de destino de la relación (&quot;[!UICONTROL Hoteles]&quot; en este ejemplo). Si el esquema de destino está habilitado para la unión, el campo Área de nombres **[!UICONTROL de identidad de]** referencia se establece automáticamente en la Área de nombres de la identidad principal del esquema de destino. Si el esquema no tiene definida una identidad principal, debe seleccionar manualmente la Área de nombres que va a utilizar en el menú desplegable. Click **[!UICONTROL Apply]** when finished.
+Seleccione la lista desplegable para el Esquema **[!UICONTROL de]** referencia y seleccione el esquema de destino para la relación (&quot;[!UICONTROL Hoteles]&quot; en este ejemplo). Si el esquema de destino está habilitado para Perfil, el campo **[!UICONTROL Referencia de Área de nombres]** de identidad se establece automáticamente en la Área de nombres de la identidad principal del esquema de destino. Si el esquema no tiene definida una identidad principal, debe seleccionar manualmente la Área de nombres que va a utilizar en el menú desplegable. Click **[!UICONTROL Apply]** when finished.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
