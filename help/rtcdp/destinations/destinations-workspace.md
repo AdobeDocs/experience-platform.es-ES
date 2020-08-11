@@ -1,20 +1,20 @@
 ---
 title: Espacio de trabajo Destinos
 seo-title: Espacio de trabajo Destinos
-description: En Adobe Real-time Customer Data Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
-seo-description: En Adobe Real-time Customer Data Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
+description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
+seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 3%
+source-wordcount: '807'
+ht-degree: 2%
 
 ---
 
 
 # Espacio de trabajo Destinos {#destinations-workspace}
 
-En Adobe Real-time Customer Data Platform, seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Destinations] .
+En la plataforma de datos del cliente en tiempo real de Adobe, seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Destinos] .
 
 El espacio de trabajo [!UICONTROL Destinos] consta de cuatro secciones, **[!UICONTROL Catálogo]**, **[!UICONTROL Examinar]**, **[!UICONTROL Cuentas]** y Vista **[!UICONTROL del sistema]**, que se describen en las secciones siguientes.
 
@@ -22,15 +22,34 @@ El espacio de trabajo [!UICONTROL Destinos] consta de cuatro secciones, **[!UICO
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos ofrecidos por Adobe a los que se pueden enviar datos.
+La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos disponibles en Adobe Real-time CDP, a los que puede enviar datos.
 
-Utilice la funcionalidad de búsqueda de la página para localizar un destino específico o destinos de filtro mediante el control de **[!UICONTROL Categorías]** .
+La interfaz de usuario CDP en tiempo real de Adobe proporciona una serie de opciones de búsqueda y filtro en la página del catálogo de destinos:
 
-Seleccione un destino en el catálogo para abrir el carril derecho. Aquí puede configurar una conexión con el destino (destino **[!UICONTROL de]** Connect), vista de las conexiones de destino existentes (destinos **[!UICONTROL de]** exploración) o obtener información más detallada sobre cada destino consultando la documentación (documentación **[!UICONTROL de]** Vista).
+* Utilice la funcionalidad de búsqueda de la página para localizar un destino específico.
+* Filtre los destinos mediante el control de **[!UICONTROL Categorías]** .
+* Alternar entre **[!UICONTROL Todos los destinos]** y **[!UICONTROL Mis destinos]**. Cuando se selecciona **[!UICONTROL Todos los destinos]** , se muestran todos los destinos CDP en tiempo real de Adobe disponibles. Cuando se selecciona **[!UICONTROL Mis destinos]** , solo puede ver los destinos con los que ha establecido una conexión.
+* Seleccione para **[!UICONTROL Conexiones]** de vista y/o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte Tipos [de destino y Categorías](/help/rtcdp/destinations/destination-types.md).
 
-![Opciones de catálogo de destino](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![filtros de destinos y demostración de búsqueda](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-Para obtener más información sobre las categorías de destino e información sobre cada destino, consulte Catálogo [de destino](/help/rtcdp/destinations/destinations-catalog.md).
+Las tarjetas de destino contienen un control **[!UICONTROL Configurar]** o **[!UICONTROL Activar]** y un control secundario que muestra más opciones. Todos ellos se describen a continuación:
+
+| Control | Descripción |
+---------|----------
+| [!UICONTROL Configurar] | Permite crear una conexión con el destino. |
+| [!UICONTROL Activar] | Una vez que haya establecido una conexión con el destino, puede activar segmentos. |
+| [!UICONTROL Cuenta de vista] | Vista las cuentas que ha conectado para un destino. |
+| [!UICONTROL Flujos de datos de vista] | Vista de los flujos de activación de datos que existen para un destino |
+| [!UICONTROL Documentación de vista] | Abre un vínculo a la página de documentación de ese destino específico, para obtener más información y ayudarle a configurarla. |
+
+![Controles en la tarjeta de destinos](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Seleccione una tarjeta de destino en el catálogo para abrir el carril correcto.  Aquí puede ver una descripción del destino. El carril derecho proporciona los mismos controles descritos en la tabla anterior, así como una descripción del destino y una indicación de la categoría y el tipo de destino.
+
+![Opciones de catálogo de destino](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+Para obtener más información sobre las categorías de destino e información sobre cada destino, consulte el Catálogo [de](/help/rtcdp/destinations/destinations-catalog.md) destino y Tipos y Categorías [de](/help/rtcdp/destinations/destination-types.md)destino.
 
 ## [!UICONTROL Examinar] {#browse}
 
@@ -71,7 +90,7 @@ En la ficha **[!UICONTROL Cuentas]** , puede obtener más información sobre las
 
 ## [!UICONTROL Vista del sistema] {#system-view}
 
-La ficha Vista **** del sistema muestra una representación gráfica de los flujos de activación que ha configurado en el Platform de datos del cliente en tiempo real.
+La ficha Vista **** del sistema muestra una representación gráfica de los flujos de activación que ha configurado en la plataforma de datos del cliente en tiempo real.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
