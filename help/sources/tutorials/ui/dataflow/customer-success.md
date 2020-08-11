@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de éxito de cliente en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 
 - [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
+   - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [Perfil](../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que ya haya creado una cuenta de éxito de cliente. Puede encontrar una lista de tutoriales para crear diferentes conectores de éxito de clientes en la interfaz de usuario en la descripción general [de los conectores](../../../home.md)de origen.
@@ -80,13 +80,13 @@ Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una pro
 | --- | --- |
 | Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
-| Tiempo de Inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión. |
+| Tiempo de inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión. |
 | Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
 | Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
 Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
 
-Para establecer la hora de inicio para la ingestión, ajuste la fecha y la hora que se muestran en el cuadro de hora del inicio. También puede seleccionar el icono de calendario para editar el valor de tiempo del inicio. La hora de Inicio debe ser buena o igual a la hora UTC actual.
+Para establecer la hora de inicio para la ingestión, ajuste la fecha y la hora que se muestran en el cuadro de hora del inicio. También puede seleccionar el icono de calendario para editar el valor de tiempo del inicio. La hora de inicio debe ser buena o igual a la hora UTC actual.
 
 Seleccione **[!UICONTROL Cargar datos incrementales por]** para asignar la columna delta. Este campo ofrece una distinción entre los datos nuevos y los existentes.
 
@@ -126,9 +126,13 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![revisión](../../../images/tutorials/dataflow/customer-success/review.png)
 
-## Monitorear y eliminar el flujo de datos
+## Monitorear el flujo de datos
 
-Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. Para obtener más información sobre cómo supervisar y eliminar el flujo de datos, consulte el tutorial sobre [supervisión y eliminación de flujos de datos](../monitor.md).
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él para ver información sobre tasas de ingestión, éxito y errores. Para obtener más información sobre cómo supervisar el flujo de datos, consulte el tutorial sobre la [supervisión de cuentas y flujos de datos en la interfaz de usuario](../monitor.md).
+
+## Eliminar el flujo de datos
+
+Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función *[!UICONTROL Eliminar]* disponible en el espacio de trabajo *[!UICONTROL Flujos]* de datos. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre la [eliminación de flujos de datos en la interfaz de usuario](../delete.md).
 
 ## Pasos siguientes
 
