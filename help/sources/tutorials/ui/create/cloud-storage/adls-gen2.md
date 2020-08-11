@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Azure Data Lake Almacenamiento Gen2 en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Creación de un conector [!DNL Azure Data Lake Storage Gen2] de origen en la interfaz de usuario
 
-Los conectores de origen en Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para autenticar un conector de origen [!DNL Azure Data Lake Storage Gen2] (en adelante, &quot;ADLS Gen2&quot;) mediante la interfaz de [!DNL Platform] usuario.
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para autenticar un conector de origen [!DNL Azure Data Lake Storage Gen2] (en adelante, &quot;ADLS Gen2&quot;) mediante la interfaz de [!DNL Platform] usuario.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 - [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
+   - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Si ya tiene una conexión base ADLS Gen2, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
@@ -44,9 +44,9 @@ Para obtener más información sobre estos valores, consulte [este documento](ht
 
 Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada que vincule su cuenta de ADLS Gen2 a [!DNL Platform].
 
-Inicie sesión en <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La ficha *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que se pueden utilizar para crear conexiones base de entrada. Cada origen muestra el número de conexiones base existentes asociadas a ellas.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La ficha *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que se pueden utilizar para crear conexiones base de entrada. Cada origen muestra el número de conexiones base existentes asociadas a ellas.
 
-En la categoría *[!UICONTROL Cloud Almacenamiento]* , seleccione **[!UICONTROL Azure Data Lake Gen2]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la vista de origen de la misma. Para crear una nueva conexión base de entrada, haga clic en **[!UICONTROL Conectar origen]**.
+En la categoría *[!UICONTROL Cloud Almacenamiento]* , seleccione **[!UICONTROL Azure Data Lake Gen2]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la vista de origen de la misma. Para crear una nueva conexión base de entrada, haga clic en **[!UICONTROL Añadir datos]**.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
@@ -66,4 +66,4 @@ Para conectar una cuenta existente, seleccione la cuenta ADLS Gen2 con la que de
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión base con su cuenta de ADLS Gen2. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a Platform](../../dataflow/batch/cloud-storage.md).
+Siguiendo este tutorial, ha establecido una conexión base con su cuenta de ADLS Gen2. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento de nube a la plataforma](../../dataflow/batch/cloud-storage.md).
