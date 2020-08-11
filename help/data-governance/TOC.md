@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de la Administración de datos de Adobe Experience Platform
+user-guide-title: Ayuda de Administración de datos de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 6%
+source-wordcount: '107'
+ht-degree: 7%
 
 ---
 
@@ -27,10 +27,11 @@ ht-degree: 6%
    * [Información general sobre la aplicación de políticas](enforcement/overview.md)
    * [Aplicar directivas de uso de datos mediante la API de servicio de directivas](enforcement/api-enforcement.md)
 * Guía para desarrolladores de API de servicios de directivas {#api}
+   * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Etiquetas](api/labels.md)
    * [Políticas](api/policies.md)
    * [Acciones de mercadotecnia](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
