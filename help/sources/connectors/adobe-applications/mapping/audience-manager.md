@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Campo de asignación de Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Campos de asignación de Audience Manager
 
-Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (en tiempo real, integrados y datos de Perfil) y sus correspondientes campos XDM.
+Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (Tiempo real, En el tablero y Datos de Perfil) y sus correspondientes campos XDM.
 
 Consulte el diccionario [de campo](../../../../xdm/schema/field-dictionary.md) XDM para obtener más información sobre cada campo XDM.
 
@@ -36,29 +36,12 @@ Tipo: Datos en tiempo real
 | `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvincia</li><li>d_city → ciudad</li><li>d_postal → postalCode</li><li>d_lat → latitud</li><li>d_longitude → longitud</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → nombre de SO </li><li>d_os_version → os_version</li></ul> |
-| `Signals` | ExperienceEvent.signals |
 
-## Datos de entrada **(obsoleto)**
-
-Tipo: ExperienceEvent
-
-| Campo de entrada | Campo XDM |
-| --- | --- |
-| `uuid` | `ExperienceEvent.identityMap[<ID Type>]` |
-| `deviceIds` | `ExperienceEvent.identityMap["CORE"] And calculated ECIDs  ExperienceEvent.identityMap["ECID"]` |
-| `signals` | `ExperienceEvent.signals` |
-| `b_time` | `ExperienceEvent.timeStamp` |
-| `overwrite` | `overwriteTraits` |
-
->[!NOTE]
->
->Los campos entrantes están programados para quedar obsoletos en una versión futura.
-
-## Datos de Perfil
+## Datos de perfil
 
 Tipo: Perfil XDM
 
-| Campo Perfil | Campo XDM |
+| Campo perfil | Campo XDM |
 | --- | --- |
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
