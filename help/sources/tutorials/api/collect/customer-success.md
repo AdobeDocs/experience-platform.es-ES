@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilar datos de un sistema de éxito de cliente mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1697'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Recopilar datos de un sistema de éxito de cliente mediante conectores de origen y API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 En este tutorial se explican los pasos para recuperar datos de un sistema de éxito de cliente y pasarlos a través de [!DNL Platform] las API y los conectores de origen.
 
@@ -22,11 +22,11 @@ En este tutorial se explican los pasos para recuperar datos de un sistema de éx
 
 Este tutorial requiere que tenga acceso a un sistema de éxito de cliente de terceros a través de una conexión válida e información sobre el archivo en el que desea introducir [!DNL Platform], incluida la ruta y la estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar una base de datos o sistema NoSQL con la API](../explore/customer-success.md) de servicio de flujo antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 * [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
 * [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -132,7 +132,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Creación de un esquema destinatario XDM {#target}
+## Creación de un esquema destinatario XDM {#target-schema}
 
 En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen. Este esquema XDM de destinatario también amplía la clase de Perfil individual XDM.
 
@@ -285,7 +285,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Creación de una conexión de destinatario
+## Creación de una conexión de destinatario {#target-connection}
 
 Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -418,7 +418,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Recuperar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y de traerlos a Platform. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos realizando una solicitud de GET a la API de servicio de flujo. Las especificaciones de flujo de datos son responsables de recopilar datos de un sistema de éxito de clientes de terceros.
+Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a la Plataforma. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos realizando una solicitud de GET a la API de servicio de flujo. Las especificaciones de flujo de datos son responsables de recopilar datos de un sistema de éxito de clientes de terceros.
 
 **Formato API**
 
@@ -565,7 +565,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debe tener preparados los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source)
-* [ID de conexión de Destinatario](#target)
+* [ID de conexión de destinatario](#target)
 * [ID de asignación](#mapping)
 * [Id. de especificación de flujo de datos](#specs)
 
@@ -625,6 +625,18 @@ curl -X POST \
     }'
 ```
 
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `flowSpec.id` | ID [de especificación de](#specs) flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
+| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
+| `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
+
 **Respuesta**
 
 Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
@@ -636,15 +648,9 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 }
 ```
 
-| Propiedad | Descripción |
-| --- | --- |
-| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
-| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
-| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
-| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
-| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
-| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
+## Monitorear el flujo de datos
+
+Una vez creado el flujo de datos, puede supervisar los datos que se están ingeriendo a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API ](../monitor.md)
 
 ## Pasos siguientes
 
