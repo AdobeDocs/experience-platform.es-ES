@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 0%
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
    - [Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
    - [Creación de una conexión de base de datos mediante la API de servicio de flujo](tutorials/api/create-dataset-base-connection.md)
+   - [Monitorear flujos de datos mediante la API de servicio de flujo](tutorials/api/monitor.md)
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Creación de un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
