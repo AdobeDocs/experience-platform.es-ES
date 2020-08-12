@@ -5,9 +5,9 @@ title: Entrada y salida de Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2075'
 ht-degree: 3%
 
 ---
@@ -82,18 +82,6 @@ La Attribution AI genera lo siguiente:
 - [Puntuaciones granulares sin procesar](#raw-granular-scores)
 - [Puntuaciones agregadas](#aggregated-attribution-scores)
 
-En los ejemplos siguientes, se utilizó un resultado CSV de muestra con fines ilustrativos. A continuación se presentan algunas de las características del archivo de muestra.
-
-- El archivo no tenía ningún evento simulado.
-- El archivo no tenía eventos de solo conversión (no contenía filas de puntuación con 0 como puntuación marginal).
-- Características de los datos:
-   - 368 filas de muestra en total.
-   - Al menos 8 conversiones con 3 canales distintos cada una.
-   - 151 conversiones de tipo de conversión `“Digital_Product_Purchase”`.
-   - 10 puntos de contacto distintos, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-   - Las conversiones y los puntos de contacto oscilan entre 8 y 9 meses, respectivamente.
-   - Las filas se ordenan por `id`, `conversion_timestamp` y `touchpoint_timestamp`.
-
 **Ejemplo de esquema de salida:**
 
 ![](./images/input-output/schema_output.gif)
@@ -139,15 +127,15 @@ La siguiente tabla describe los campos de esquema en la salida del ejemplo de pu
 | customerProfile (objeto) | False | Detalles de identidad del usuario utilizado para crear el modelo. |
 | identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
 | id (Cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
-| Área de nombres (Cadena) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
-| touchpointsDetail (Matriz de objetos) | True | lista de detalles de puntos de contacto que llevan a la conversión ordenada por incidencia de punto de contacto o marca de hora. |
+| área de nombres (Cadena) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
+| touchpointsDetail (Matriz de objetos) | True | Lista de detalles de puntos de contacto que llevan a la conversión ordenada por incidencia de punto de contacto o marca de hora. |
 | touchpointName (String) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
 | score (objeto) | True | Contribución de touchpoint a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección Puntuaciones [de atribución](#aggregated-attribution-scores) agregadas. |
 | touchPoint (objeto) | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección puntuaciones [](#aggregated-scores) agregadas. |
 
 ### Visualización de rutas de puntuación sin procesar (IU) {#raw-score-path}
 
-Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Para Inicio, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma y, a continuación, busque y seleccione el esquema de puntuaciones AI de atribución desde la ficha *[!UICONTROL Examinar]* .
+Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Para inicio, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma y, a continuación, busque y seleccione el esquema de puntuaciones AI de atribución desde la ficha *[!UICONTROL Examinar]* .
 
 ![Elija su esquema](./images/input-output/schemas_browse.png)
 
