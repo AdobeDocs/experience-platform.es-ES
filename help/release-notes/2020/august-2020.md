@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '297'
 ht-degree: 7%
 
 ---
@@ -15,37 +15,38 @@ ht-degree: 7%
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: 10 de junio de 2020**
+**Fecha de lanzamiento: 12 de agosto de 2020**
 
-Nuevas funciones de Adobe Experience Platform:
+Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!Espacio de trabajo de ciencias de datos DNL]](#dsw)
+- [[!Fuentes DNL]](#sources)
 
-## [!DNL Access control] {#access-control}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Experience Platform] aprovecha los perfiles de productos de [Adobe Admin Console](https://adminconsole.adobe.com) para vincular a los usuarios con permisos y entornos limitados. Los permisos controlan el acceso a una variedad de funciones de Platform, como modelado de datos, administración de perfiles y administración de simuladores de pruebas.
+[!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para generar perspectivas a partir de los datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a realizar predicciones mediante el uso de contenido y recursos de datos en las soluciones de Adobe.
 
-**Funciones principales**
-
-| Función | Descripción |
-|--- | ---|
-| Permisos | En la ficha [!DNL Admin Console], dentro de un perfil de [!DNL Platform] producto, puede personalizar [!DNL Platform] las funciones disponibles para los usuarios conectados a ese perfil. Las categorías de permisos disponibles incluyen: [!UICONTROL Modelado]de datos, [!UICONTROL Gestión de datos], Administración [!UICONTROL de]Perfiles, [!UICONTROL Identidades], Monitoreo [!UICONTROL de]datos, Administración de Simuladores de pruebas , Destinaciones, Fuentes. |
-| Acceso a los entornos limitados | La ficha [!UICONTROL _Permisos _]de un perfil[!DNL Platform]de producto puede otorgar a los usuarios acceso a entornos limitados específicos. Para obtener más información, consulte la sección sobre[entornos](#sandboxes)limitados más abajo. |
-
-Para obtener más información, consulte la descripción general [del](../../access-control/home.md)control de acceso.
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] está diseñada para enriquecer las aplicaciones de experiencia digital a escala global. Las Compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, la prueba y la implementación de estas aplicaciones al mismo tiempo que garantizan el cumplimiento de normas operacionales. Para satisfacer esta necesidad, [!DNL Experience Platform] proporciona entornos limitados que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
-
-**Funciones principales**
+**Nuevas funciones**
 
 | Función | Descripción |
-|--- | ---|
-| Simulador de pruebas de producción | [!DNL Experience Platform] proporciona un solo entorno limitado de producción, que no se puede eliminar ni restablecer. |
-| Entornos limitados que no son de producción | Se pueden crear varios entornos limitados que no sean de producción para una sola [!DNL Platform] instancia, lo que permite probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. |
-| Mezclador de Simulador para pruebas | En la interfaz de usuario, el conmutador de simulador de pruebas situado en la esquina superior izquierda de la pantalla permite cambiar entre los entornos limitados disponibles mediante un menú desplegable. [!DNL Experience Platform] |
-| `x-sandbox-name` header | Todas las llamadas a [!DNL Experience Platform] las API deben ahora incluir el nuevo `x-sandbox-name` encabezado, cuyo valor hace referencia al `name` atributo del simulador para pruebas en el que tendrá lugar la operación. |
+| ------- | ----------- |
+| Mejoras de VM en [!DNL JupyterLab] | Se mejoró la estabilidad de las máquinas [!DNL JupyterLab notebook] virtuales de larga ejecución. |
 
-Para obtener más información, consulte la descripción general [de los](../../sandboxes/home.md)entornos limitados.
+Para obtener más información sobre [!DNL JupyterLab], consulte la guía del [[!DNL JupyterLab] usuario](../../data-science-workspace/jupyterlab/overview.md).
+
+## Fuentes {#sources}
+
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+[!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Supervisión de la ejecución de flujo | Los usuarios pueden supervisar todas las ejecuciones de flujo y ver una vista detallada de cada ejecución, incluido el estado de finalización, la duración de la ejecución, la lista de archivos procesados, los errores y las métricas. Consulte el documento de flujos de datos de [supervisión](../../sources/tutorials/ui/monitor.md) para obtener más información. |
+| Actualización de cuentas | Los usuarios pueden actualizar las credenciales, el nombre y la descripción de cualquier cuenta existente para proporcionar información más significativa y corregir cualquier error que se haya creado. |
+| Notificaciones de ejecución de flujo | Los usuarios pueden suscribirse a los eventos y registrar los enlaces web para recibir notificaciones en tiempo real sobre el estado, las métricas y los errores relacionados con las ejecuciones de flujo. |
+| Mejoras en el catálogo de la interfaz de usuario | Actualizaciones en la pantalla del catálogo de fuentes para facilitar el acceso a las acciones principales de los objetos seleccionados. |
+
+Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
