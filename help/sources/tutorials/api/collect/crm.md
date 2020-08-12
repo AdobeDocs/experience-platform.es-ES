@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos CRM mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7988dd97af133caf9ecfb3448be6b7d895c5df7c
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1662'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Recopilación de datos CRM mediante conectores de origen y API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a [!DNL Platform] través de conectores de origen y API.
 
@@ -22,11 +22,11 @@ Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros
 
 Este tutorial requiere que tenga acceso a un sistema CRM de terceros a través de una conexión válida e información sobre la tabla en la que desea incluir [!DNL Platform], incluyendo la ruta y la estructura de la tabla. Si no tiene esta información, consulte el tutorial sobre [explorar sistemas CRM mediante la API](../explore/crm.md) de servicio de flujo antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 * [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
 * [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -39,7 +39,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de Platform, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a las API de plataforma, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -613,7 +613,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 El último paso para recopilar datos CRM es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source)
-* [ID de conexión de Destinatario](#target)
+* [ID de conexión de destinatario](#target)
 * [ID de asignación](#mapping)
 * [Id. de especificación de flujo de datos](#specs)
 
@@ -666,13 +666,15 @@ curl -X POST \
 ```
 
 | Propiedad | Descripción |
-| --- | --- |
-| `flowSpec.id` | ID de especificación de flujo recuperado en el paso anterior. |
-| `sourceConnectionIds` | ID de conexión de origen recuperado en un paso anterior. |
-| `targetConnectionIds` | El ID de conexión de destinatario recuperado en un paso anterior. |
-| `transformations.params.mappingId` | El ID de asignación recuperado en un paso anterior. |
-| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
-| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | ID [de especificación de](#specs) flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
+| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
+| `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
@@ -686,6 +688,10 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 }
 ```
+
+## Monitorear el flujo de datos
+
+Una vez creado el flujo de datos, puede supervisar los datos que se están ingeriendo a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API ](../monitor.md)
 
 ## Pasos siguientes
 
