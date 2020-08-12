@@ -4,9 +4,9 @@ seo-title: Destino de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,9 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
    >[!IMPORTANT]
    >
-   > Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es su ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
+   > * El caso de uso de la mercadotecnia **[!UICONTROL Combinar con PII]** está seleccionado de forma predeterminada para el [!DNL Google Customer Match] destino y no se puede eliminar.
+   > * Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es su ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
+
 
    ![Coincidencia de clientes de Connect Google: paso de autenticación](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
 Después de completar el flujo de activación, cambie a su cuenta de **[!UICONTROL Google Ads]** . Los segmentos activados ahora se mostrarán en su cuenta de Google como listas de clientes. Tenga en cuenta que, según el tamaño del segmento, algunas audiencias no se rellenarán a menos que haya más de 100 usuarios activos para servir.
+
+## Recursos adicionales {#additional-resources}
+
+* [Integrar la coincidencia de clientes de Google: tutorial de vídeo](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
