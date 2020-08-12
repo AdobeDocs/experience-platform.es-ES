@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5b5e1f9a1465a3ec252bac9ba376abc8f2781b1
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 En este tutorial se explican los pasos para recuperar datos de una base de datos de terceros e incorporarlos [!DNL Platform] a través de las API y los conectores de origen.
 
@@ -22,11 +22,11 @@ En este tutorial se explican los pasos para recuperar datos de una base de datos
 
 Este tutorial requiere que tenga una conexión válida a una base de datos de terceros, así como información sobre el archivo en el que desea introducir [!DNL Platform] (incluida la ruta y estructura del archivo). Si no dispone de esta información, consulte el tutorial sobre la [exploración de una base de datos mediante la API](../explore/database-nosql.md) de servicio de flujo antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+   * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 * [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
 * [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -132,7 +132,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Creación de un esquema destinatario XDM {#target}
+## Creación de un esquema destinatario XDM {#target-schema}
 
 En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen. Este esquema destinatario XDM también amplía la [!DNL XDM Individual Profile] clase.
 
@@ -283,7 +283,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Creación de una conexión de destinatario
+## Creación de una conexión de destinatario {#target-connection}
 
 Ahora tiene los identificadores únicos para una conexión base de datos, un esquema de destinatario y un conjunto de datos de destinatario. Con estos identificadores, puede crear una conexión de destinatario utilizando la [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API para especificar el conjunto de datos que contendrá los datos de origen de entrada.
 
@@ -561,7 +561,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debe tener preparados los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source)
-* [ID de conexión de Destinatario](#target)
+* [ID de conexión de destinatario](#target)
 * [ID de asignación](#mapping)
 * [Id. de especificación de flujo de datos](#specs)
 
@@ -623,13 +623,14 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `flowSpec.id` | El ID de especificación de flujo de datos asociado a la base de datos. |
-| `sourceConnectionIds` | ID de conexión de origen asociado a la base de datos. |
-| `targetConnectionIds` | ID de conexión de destinatario asociado a la base de datos. |
+| `flowSpec.id` | ID [de especificación de](#specs) flujo recuperado en el paso anterior. |
+| `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
+| `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
+| `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
 | `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 | `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
-| `scheduleParams.startTime` | La hora de inicio del flujo de datos en tiempo de generación en segundos. |
-| `scheduleParams.frequency` | Los valores de frecuencia seleccionables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere el intervalo cuando la frecuencia se establece como `once` y debe ser buena o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
@@ -642,6 +643,11 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Monitorear el flujo de datos
+
+Una vez creado el flujo de datos, puede supervisar los datos que se están ingeriendo a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API ](../monitor.md)
+
 
 ## Pasos siguientes
 
