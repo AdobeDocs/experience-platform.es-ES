@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conector del Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,14 @@ ht-degree: 1%
 
 # Conector del Audience Manager
 
-El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a Platform:
+El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a la plataforma:
 
-- **Datos en tiempo real:** Datos capturados en tiempo real en el servidor de recopilación de datos de Audience Manager. Estos datos se utilizan en Audience Manager para rellenar características basadas en reglas y aparecerán en Platform en el tiempo de latencia más corto.
-- **Datos incorporados (de entrada):** Estos son los archivos cargados por un usuario en una ubicación de Amazon S3 alojada por un Audience Manager. Audience Manager utiliza estos datos para rellenar las características integradas con el método de archivo de entrada y tendrá cierta latencia.
-- **Datos de Perfil:** Audience Manager utiliza datos en tiempo real y datos incorporados para derivar perfiles de clientes. Estos perfiles se utilizan para rellenar los gráficos de identidad y las características en la realización de segmentos.
+- **Datos en tiempo real:** Datos capturados en tiempo real en el servidor de recopilación de datos de Audience Manager. Estos datos se utilizan en Audience Manager para rellenar características basadas en reglas y aparecerán en la plataforma en el tiempo de latencia más corto.
+- **Datos de perfil:** Audience Manager utiliza datos en tiempo real y datos incorporados para derivar perfiles de clientes. Estos perfiles se utilizan para rellenar los gráficos de identidad y las características en la realización de segmentos.
 
-El conector del Audience Manager asigna estas categorías de datos al esquema del modelo de datos de experiencia (XDM) y las envía a Platform. Los datos en tiempo real y los datos incorporados se envían como datos de ExperienceEvent XDM, mientras que los datos de Perfil se envían como Perfiles individuales XDM.
+El conector del Audience Manager asigna estas categorías de datos al esquema del modelo de datos de experiencia (XDM) y las envía a la plataforma. Los datos en tiempo real se envían como datos de ExperienceEvent XDM, mientras que los datos de Perfil se envían como Perfiles individuales XDM.
 
-Para obtener instrucciones sobre cómo crear una conexión con Adobe Audience Manager mediante la interfaz de usuario de Platform, consulte el tutorial [del conector del](../../tutorials/ui/create/adobe-applications/audience-manager.md)Audience Manager.
+Para obtener instrucciones sobre cómo crear una conexión con Adobe Audience Manager mediante la interfaz de usuario de la plataforma, consulte el tutorial [del conector del](../../tutorials/ui/create/adobe-applications/audience-manager.md)Audience Manager.
 
 ## ¿Qué es el modelo de datos de experiencia (XDM)?
 
@@ -34,7 +33,7 @@ Para obtener más información sobre cómo se utiliza XDM en Experience Platform
 
 ## Ejemplos de esquemas XDM
 
-A continuación se muestran ejemplos de la estructura de Audience Manager asignada a XDM ExperienceEvent y al Perfil individual XDM en Platform.
+A continuación se muestran ejemplos de la estructura de Audience Manager asignada a XDM ExperienceEvent y a XDM Individual Perfil en la plataforma.
 
 ### ExperienceEvent: para datos en tiempo real y datos integrados
 
@@ -48,7 +47,7 @@ A continuación se muestran ejemplos de la estructura de Audience Manager asigna
 
 Consulte la documentación de los campos [de asignación de](./mapping/audience-manager.md) Audience Manager para obtener más información.
 
-## Gestión de datos en Platform
+## Gestión de datos en la plataforma
 
 ### Conjuntos de datos
 
@@ -62,19 +61,17 @@ Los conjuntos de datos de Audience Manager están deshabilitados para el Perfil 
 | Actualizaciones de Perfil en tiempo real de Audience Manager | Este conjunto de datos permite la segmentación en tiempo real de características y segmentos de Audience Manager. Incluye información sobre el enrutamiento regional, la característica y la pertenencia a segmentos de Edge. Mantenga este conjunto de datos habilitado para la ingestión de Perfiles. |
 | Datos de dispositivos Audience Manager | Datos del dispositivo con ECID y realizaciones de segmentos correspondientes agregadas en Audience Manager. |
 | Datos de Perfil del dispositivo Audience Manager | Se utiliza para diagnósticos de conector de Audience Manager. |
-| Perfiles autenticados por Audience Manager | Este conjunto de datos contiene perfiles autenticados por el Audience Manager. |
+| perfiles autenticados por Audience Manager | Este conjunto de datos contiene perfiles autenticados por el Audience Manager. |
 | Metadatos de Perfiles autenticados por Audience Manager | Se utiliza para diagnósticos del conector de Audience Manager. |
-| {Id. de origen de datos} de entrada de Audience Manager **(obsoleto)** | Este conjunto de datos representa los registros incorporados en el Audience Manager a través del método de archivo de entrada. Este flujo de datos está obsoleto y se eliminará en una versión posterior. |
-| Metadatos de entrada de Audience Manager **(obsoleto)** | Se utiliza para diagnósticos de conector de Audience Manager. Este flujo de datos está obsoleto y se eliminará en una versión posterior. |
 
 ### Conexiones
 
-Adobe Audience Manager crea una conexión en el catálogo: **Conexión** de Audience Manager. Catalog es el sistema de registros para la ubicación y linaje de datos dentro del Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
+Adobe Audience Manager crea una conexión en el catálogo: **Conexión** de Audience Manager. Catalog es el sistema de registros para la ubicación y linaje de datos dentro de Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
 
-## ¿Cuál es la latencia esperada para los datos de Audience Manager en Platform?
+## ¿Cuál es la latencia esperada para los datos de Audience Manager en la plataforma?
 
 | Datos del Audience Manager | Latencia | Notas |
 | --- | --- | --- |
-| Datos en tiempo real | &lt; 35 minutos. | Tiempo desde la captura en el nodo Tiempo real hasta la aparición en Platform Data Lake. |
-| Datos de entrada | &lt; 13 horas | Tiempo desde que se captura en los cubos S3 hasta que aparece en Platform Data Lake. |
-| Datos de Perfil | &lt; 2 días | Tiempo desde la captura de datos en tiempo real/entrantes hasta la adición a un perfil de usuario y la aparición definitiva en Platform Data Lake. |
+| Datos en tiempo real | &lt; 35 minutos. | Tiempo desde que se captura en el nodo Tiempo real hasta que aparece en el Lago de datos de plataforma. |
+| Datos de entrada | &lt; 13 horas | Tiempo desde que se captura en los bloques S3 hasta que aparece en el lago de datos de plataforma. |
+| Datos de perfil | &lt; 2 días | Tiempo desde la captura de datos en tiempo real/entrantes hasta la adición a un perfil de usuario y la aparición definitiva en Platform Data Lake. |
