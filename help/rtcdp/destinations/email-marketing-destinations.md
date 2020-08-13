@@ -4,9 +4,9 @@ seo-title: Destinos de mercadotecnia de correo electrónico
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
 
-Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Datos de cliente en tiempo real de Adobe Platform se integra con ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
+Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. La plataforma de datos del cliente en tiempo real de Adobe se integra con los ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
 
 Para enviar segmentos a destinos de marketing por correo electrónico para sus campañas, CDP en tiempo real de Adobe primero debe conectarse al destino.
 
@@ -47,15 +47,21 @@ En la página **[!UICONTROL Seleccionar segmentos]** , seleccione qué segmentos
 
 ![Seleccionar segmentos](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Paso 3: Seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
+## Paso 3: Configuración de nombres de archivo
+
+Para obtener información sobre las opciones de edición de nombres de archivo, consulte el paso [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) en el tutorial de activación de destinos.
+
+## Paso 4: Seleccionar atributos: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
 
 En este paso, está seleccionando los campos que desea exportar a destinos de marketing por correo electrónico.
 
-![Atributos de destino](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Atributos de destino](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+Para obtener más información sobre este paso, consulte el paso [Seleccionar atributos](/help/rtcdp/destinations/activate-destinations.md#select-attributes) en el tutorial de activación de destinos.
 
 ### Identidad {#identity}
 
-Le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de lealtad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en el esquema de unión.
+Le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Este es el campo en el que se definen las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de lealtad o un número de teléfono. Consulte la tabla siguiente para ver los identificadores únicos más comunes y su campo XDM en el esquema.
 
 | Identificador único | Campo XDM en Esquema unificado |
 ---------|----------
@@ -76,8 +82,9 @@ En el selector de campos de Esquema, elija qué otros campos desea exportar al d
 | Estado de la dirección | `homeAddress.stateProvince` |
 | Dirección Código postal | `homeAddress.postalCode` |
 | Cumpleaños | `person.birthDayAndMonth` |
+| Membresía del segmento | `segmentMembership.status` |
 
-## Paso 3: Importar datos desde la ubicación del almacenamiento al destino
+## Paso 5: Importar datos desde la ubicación del almacenamiento al destino
 
 Consulte los artículos de destino de marketing por correo electrónico individuales para obtener información sobre cómo importar datos de la ubicación del almacenamiento a los destinos:
 
@@ -89,3 +96,8 @@ Consulte los artículos de destino de marketing por correo electrónico individu
 ## Activar segmentos en destinos de mercadotecnia de correo electrónico
 
 Para obtener instrucciones sobre cómo activar segmentos en destinos de marketing de correo electrónico, consulte [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md).
+
+## Recursos adicionales
+
+* [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md)
+* [Creación de destinos de marketing por correo electrónico y activación de datos mediante la API de servicio de flujo](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
