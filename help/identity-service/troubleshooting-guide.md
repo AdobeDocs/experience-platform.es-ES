@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de solución de problemas de Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Guía de solución de problemas del servicio de identidad
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para los errores más comunes. Para preguntas y solución de problemas con [!DNL Platform] las API en general, consulte la guía [de solución de problemas de la API de](../landing/troubleshooting.md)Adobe Experience Platform.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para errores comunes. Para preguntas y solución de problemas con [!DNL Platform] las API en general, consulte la guía [de solución de problemas de la API de](../landing/troubleshooting.md)Adobe Experience Platform.
 
 Los datos que identifican a un único cliente suelen estar fragmentados en los distintos dispositivos y sistemas que utilizan para interactuar con su marca. [!DNL Identity Service] recopila estas identidades fragmentadas, lo que facilita una comprensión completa del comportamiento del cliente para que pueda ofrecer experiencias digitales impactantes en tiempo real. Para obtener más información, consulte la descripción general [del servicio de](./home.md)identidad.
 
@@ -72,20 +72,20 @@ Los campos de identidad deben asociarse con una Área de nombres de identidad ex
 
 Para obtener instrucciones paso a paso para definir una Área de nombres al crear un descriptor de identidad mediante la API, consulte la sección sobre la [creación de un descriptor](../xdm/tutorials/create-schema-ui.md) en la guía para desarrolladores de Esquema Registry. Para marcar un campo de esquema como una identidad en la interfaz de usuario, siga los pasos del tutorial [Editor de](../xdm/tutorials/create-schema-api.md)Esquemas.
 
-## ¿Cuáles son las Áreas de nombres de identidad estándar proporcionadas por el Experience Platform?
+## ¿Cuáles son las Áreas de nombres de identidad estándar proporcionadas por el Experience Platform? {#standard-namespaces}
 
 Todas las organizaciones del Experience Platform proporcionan las siguientes Áreas de nombres estándar:
 
 | Nombre para mostrar | ID | Código | Descripción |
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | nombre heredado: &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | alias: &quot;ID de Adobe Marketing Cloud&quot;, &quot;ID de Adobe Experience Cloud&quot;, &quot;ID de Adobe Experience Platform&quot; |
+| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
 | Correo electrónico | 6 | Correo electrónico |  |
 | Correo electrónico (SHA256, minúscula) | 11 | Correos electrónicos | Área de nombres estándar para correo electrónico predefinido. Los valores proporcionados en esta Área de nombres se convierten en minúsculas antes de utilizar el hash SHA-256. |
 | Phone | 7 | Phone |  |
 | AID de Windows | 8 | WAID |  |
 | Adcloud | 411 | Adcloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | ID de Destinatario |
+| Adobe Target | 9 | TNTID | ID de destinatario |
 | ID de publicidad de Google | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID para anunciantes |
 
@@ -107,13 +107,13 @@ Identity Service crea un hash criptográfico unidireccional sólido de PII antes
 
 ## ¿Debería cifrar toda la PII antes de enviarla a Platform?
 
-No es necesario cifrar manualmente los datos PII antes de ingerirlos en Platform. Al aplicar la etiqueta de uso de datos a todos los campos de datos aplicables, Platform convierte automáticamente estos campos en valores de ID con hash tras la ingestión. `I1`
+No es necesario cifrar manualmente los datos PII antes de ingerirlos en la plataforma. Al aplicar la etiqueta de uso de datos a todos los campos de datos aplicables, Platform convierte automáticamente estos campos en valores de ID con hash tras la ingestión. `I1`
 
 Para ver los pasos sobre cómo aplicar y administrar etiquetas de uso de datos, consulte el tutorial [de etiquetas de uso de](../data-governance/labels/user-guide.md)datos.
 
 ## ¿Hay alguna consideración al ocultar identidades basadas en PII?
 
-Si va a enviar valores PII con hash a Identity Service, debe utilizar el mismo método de codificación en todos los conjuntos de datos. Esto garantiza que el mismo valor de identidad en todos los conjuntos de datos genere los mismos valores hash y que se pueda hacer coincidir y vincular correctamente en el gráfico de identidad.
+Si va a enviar valores PII con hash a Identity Service, debe utilizar el mismo método de codificación en todos los conjuntos de datos. Esto garantiza que el mismo valor de identidad entre conjuntos de datos genere los mismos valores hash y que se pueda hacer coincidir y vincular correctamente en el gráfico de identidad.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
 <!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
@@ -232,7 +232,7 @@ Este mensaje de error se muestra cuando la organización de IMS no se ha aprovis
 }
 ```
 
-En el caso de este error, el token de acceso no es válido. Los Tokenes de acceso caducan cada 24 horas y deben regenerarse para continuar usando [!DNL Platform] API. Consulte el tutorial [de](../tutorials/authentication.md) autenticación para obtener instrucciones sobre cómo generar nuevos tokenes de acceso.
+En el caso de este error, el token de acceso no es válido. Los tokenes de acceso caducan cada 24 horas y deben regenerarse para continuar usando [!DNL Platform] API. Consulte el tutorial [de](../tutorials/authentication.md) autenticación para obtener instrucciones sobre cómo generar nuevos tokenes de acceso.
 
 ### El token del servicio de autorización no es válido
 
@@ -244,7 +244,7 @@ En el caso de este error, el token de acceso no es válido. Los Tokenes de acces
 }
 ```
 
-En el caso de este error, el token de acceso no es válido. Los Tokenes de acceso caducan cada 24 horas y deben regenerarse para continuar usando [!DNL Platform] API. Consulte el tutorial [de](../tutorials/authentication.md) autenticación para obtener instrucciones sobre cómo generar nuevos tokenes de acceso.
+En el caso de este error, el token de acceso no es válido. Los tokenes de acceso caducan cada 24 horas y deben regenerarse para continuar usando [!DNL Platform] API. Consulte el tutorial [de](../tutorials/authentication.md) autenticación para obtener instrucciones sobre cómo generar nuevos tokenes de acceso.
 
 ### El token de usuario no tiene un contexto de producto válido
 
@@ -300,7 +300,7 @@ Este error se muestra cuando se produce una excepción inesperada en la ejecuci�
 
 A continuación se muestra una lista de mensajes de error relacionados con [!DNL Identity Service] el uso de la API [de inserción de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)datos.
 
-### esquema XDM desconocido
+### Esquema XDM desconocido
 
 ```json
 {
