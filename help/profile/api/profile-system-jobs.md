@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 'Trabajos del sistema de Perfil: API de Perfil del cliente en tiempo real'
+title: 'Trabajos del sistema de perfil: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -12,9 +12,9 @@ ht-degree: 2%
 ---
 
 
-# Extremo de trabajos del sistema de Perfil (Eliminar solicitudes)
+# Extremo de trabajos del sistema de perfil (Eliminar solicitudes)
 
-Adobe Experience Platform le permite ingerir datos de múltiples fuentes y generar perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL Data Lake] como en el [!DNL Real-time Customer Profile] almacén de datos. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del almacén de Perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere usar la [!DNL Real-time Customer Profile] API para crear un trabajo [!DNL Profile] del sistema, también conocido como &quot;[!DNL delete request]&quot;, que también se puede modificar, supervisar o eliminar si es necesario.
+Adobe Experience Platform le permite ingerir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL Data Lake] como en el [!DNL Real-time Customer Profile] almacén de datos. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del almacén de Perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere usar la [!DNL Real-time Customer Profile] API para crear un trabajo [!DNL Profile] del sistema, también conocido como &quot;[!DNL delete request]&quot;, que también se puede modificar, supervisar o eliminar si es necesario.
 
 >[!NOTE]
 >Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], consulte la información general [del servicio de](../../catalog/home.md) catálogos para obtener instrucciones.
@@ -23,7 +23,7 @@ Adobe Experience Platform le permite ingerir datos de múltiples fuentes y gener
 
 El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
-## Solicitudes de eliminación de Vistas
+## Solicitudes de eliminación de vistas
 
 Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para realizar la vista de todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud de GET al `/system/jobs` extremo.
 
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **Solicitud**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
