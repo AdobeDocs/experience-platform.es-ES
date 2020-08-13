@@ -4,7 +4,7 @@ seo-title: Configuración del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 10%
@@ -78,7 +78,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias ins
 
 ## Recopilación de datos
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
@@ -126,7 +126,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
 
-## Opciones de Audiencias
+## Opciones de audiencias
 
 ### `cookieDestinationsEnabled`
 
