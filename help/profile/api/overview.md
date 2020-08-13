@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Profile] Guía para desarrolladores de API
 
-[!DNL Real-time Customer Profile] le permite ver una vista holística de cada uno de sus clientes individuales dentro del Adobe Experience Platform. [!DNL Profile] le permite consolidar datos de clientes dispares de varios canales, como datos en línea, sin conexión, CRM y de terceros, en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con el cliente.
+[!DNL Real-time Customer Profile] le permite ver una vista holística de cada uno de sus clientes individuales dentro de Adobe Experience Platform. [!DNL Profile] le permite consolidar datos de clientes dispares de varios canales, como datos en línea, sin conexión, CRM y de terceros, en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con el cliente.
 
 La [!DNL Real-time Customer Profile] API incluye varios extremos, como se describe a continuación. Visite las guías de punto final individuales para obtener más detalles y consulte la guía [de](getting-started.md) introducción para obtener información importante sobre los encabezados requeridos, la lectura de llamadas de API de muestra y mucho más.
 
@@ -36,7 +36,7 @@ Adobe Experience Platform permite la personalización en tiempo real de las expe
 
 ## Entidades ([!DNL Profile] acceso) {#entities}
 
-Mediante Adobe Experience Platform puede acceder a [!DNL Real-time Customer Profile] los datos mediante las API de RESTful o la interfaz de usuario. Para aprender a acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API, siga los pasos descritos en la guía [de extremo de](entities.md)las entidades. Para acceder a perfiles mediante la [!DNL Platform] IU, consulte la guía [del usuario de](../ui/user-guide.md)Perfil.
+A través de Adobe Experience Platform puede acceder a [!DNL Real-time Customer Profile] los datos mediante las API de RESTful o la interfaz de usuario. Para aprender a acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API, siga los pasos descritos en la guía [de extremo de](entities.md)las entidades. Para acceder a perfiles mediante la [!DNL Platform] IU, consulte la guía [del usuario de](../ui/user-guide.md)Perfil.
 
 ## Trabajos de exportación ([!DNL Profile] exportación) {#profile-export}
 
@@ -46,9 +46,13 @@ Mediante Adobe Experience Platform puede acceder a [!DNL Real-time Customer Prof
 
 Al reunir datos de varias fuentes en [!DNL Experience Platform], las políticas de combinación son las reglas que [!DNL Platform] se utilizan para determinar cómo se priorizarán los datos y qué datos se combinarán para crear perfiles de clientes individuales. Con la API, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. [!DNL Real-time Customer Profile] Para obtener más información sobre cómo trabajar con políticas de combinación mediante la API, visite la guía [de extremo de directivas de](merge-policies.md)combinación.
 
-Para obtener una guía sobre cómo trabajar con políticas de combinación mediante la [!DNL Platform] interfaz de usuario, consulte la guía [del usuario](../ui/merge-policies.md)Combinar directivas.
+Para obtener una guía sobre cómo trabajar con políticas de combinación mediante la [!DNL Platform] interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
 
-## Trabajos del sistema de Perfil {#profile-system-jobs}
+## Estado de muestra de previsualización ([!DNL Profile] previsualización) {#profile-preview}
+
+Como los datos habilitados para Perfil se ingieren en Experience Platform, se almacenan en el almacén de datos de Perfil. A medida que aumenta o disminuye el número de registros en el almacén de Perfiles, se ejecuta un trabajo de muestra que incluye información sobre cuántos fragmentos de perfil y perfiles combinados hay en el almacén de datos. Mediante la API de Perfil puede realizar previsualizaciones de la muestra más reciente de éxito, así como de la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad. Para empezar a usar el punto final, consulte la guía `/profilepreviewstatus` de extremo de estado de muestra de [previsualización](preview-sample-status.md).
+
+## Trabajos del sistema de perfil {#profile-system-jobs}
 
 Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL Data Lake] como en el [!DNL Real-time Customer Profile] almacén de datos. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del [!DNL Profile] almacén para eliminar los datos que ya no necesite o que se agregaron por error. Esto requiere utilizar la API para crear una [!DNL Profile System Job], conocida como &quot;[!DNL delete request]&quot;, que también se puede modificar, supervisar o eliminar si es necesario. Para aprender a trabajar con solicitudes de eliminación mediante el `/system/jobs` punto final de la [!DNL Real-time Customer Profile] API, siga los pasos descritos en la guía [de extremo de trabajos del sistema de](profile-system-jobs.md)perfil.
 
