@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 0%
 
 ---
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **Estrategia de ahorro de Delta:** `Delta save strategy` es una opción para la ingesta de datos de terceros a través de una conexión. La opción permite al usuario especificar que se ingrese en las filas de datos de origen nuevas o modificadas [!DNL Experience Platform]. Las filas nuevas se agregan al final del conjunto de datos y las filas cambiadas se actualizan en el conjunto de datos el [!DNL Experience Platform].
 
-**Destino:** En [!DNL Real-time Customer Data Platform] un destino es un término general para cualquier sistema, como una aplicación de Adobe, un servidor de publicidad o una red de publicidad, donde se activa y se entrega una audiencia.
+**Destino:** En [!DNL Real-time Customer Data Platform] un destino es un término general para cualquier extremo, como una aplicación de Adobe, una plataforma de publicidad, un servicio de almacenamiento en la nube o un servicio de marketing, donde se activa y se entrega una audiencia.
 
 **Categoría de destino:** Una categoría de destino es un grupo de [!DNL Real-time Customer Data Platform] destinos con características similares.
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]::**Una interfaz web de código abierto para Project[!DNL Jupyter]y está estrechamente integrada en[!DNL Experience Platform].
+**[!DNL JupyterLab]::** Una interfaz web de código abierto para Project [!DNL Jupyter] y está estrechamente integrada en [!DNL Experience Platform].
 
-**[!DNL Jupyter Notebook]::**Aplicación web de código abierto que permite a los usuarios crear y compartir documentos que contengan código activo, ecuaciones, visualizaciones y texto narrativo.
+**[!DNL Jupyter Notebook]::** Aplicación web de código abierto que permite a los usuarios crear y compartir documentos que contengan código activo, ecuaciones, visualizaciones y texto narrativo.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **Simulador para pruebas sin producción:** Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar datos de otros entornos limitados y que generalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los entornos limitados que no son de producción se pueden restaurar y eliminar.
 
-**[!DNL Notebooks]::**[!DNL Notebooks]se crean utilizando *[!DNL Jupyter Notebook]*y contienen descripción de análisis, resultados y se pueden ejecutar para realizar análisis de datos.
+**[!DNL Notebooks]::** [!DNL Notebooks] se crean utilizando *[!DNL Jupyter Notebook]* y contienen descripción de análisis, resultados y se pueden ejecutar para realizar análisis de datos.
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 **Exportación de perfil:** [!DNL Profile] export es uno de los dos tipos de destinos en [!DNL Real-time Customer Data Platform]. [!DNL Profile] export genera un archivo que contiene perfiles y atributos, utiliza datos PII sin procesar con correo electrónico y se utiliza para integrarse con las plataformas de automatización de correo electrónico y mercadotecnia.
 
-**Fragmento de perfil de perfil:** Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular.
+**Fragmento de perfil:** Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular.
 
 **ID de perfil:** Un ID de perfil es un identificador generado automáticamente asociado a un tipo de identidad y representa un perfil.
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **Método de evaluación de segmentos:** La evaluación programada de segmentos permite una programación recurrente para ejecutar un trabajo de exportación en un momento específico, mientras que la evaluación a pedido implica la creación de un trabajo de segmento para generar la audiencia inmediatamente.
 
-**Exportación de segmentos:** La exportación de segmentos es uno de los dos tipos de destinos y envía los perfiles que cumplen los requisitos y se han asignado al destino. Utiliza ID de segmento y usuario y datos seudónimos, y normalmente se integra con las redes sociales y otras plataformas de destinatario de medios digitales.
+**Exportación de segmentos:** La exportación de segmentos es uno de los dos tipos de destinos en [!DNL Real-time Customer Data Platform]. Con la exportación de segmentos, puede enviar los perfiles que califican y se han asignado al destino. Utiliza ID de segmento y usuario y datos seudónimos, y normalmente se integra con las redes sociales y otras plataformas de destinatario de medios digitales.
 
 **ID del segmento:** El ID de segmento es un identificador generado automáticamente asociado a un segmento.
 
