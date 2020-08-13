@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -100,7 +100,9 @@ Aparece el panel previsualización *[!UICONTROL de diagnóstico de]* errores. Es
 
 Esta sección también incluye una previsualización de la columna que contiene el error.
 
-> [!IMPORTANT] Para habilitar la previsualización *[!UICONTROL de diagnósticos de]* error, debe activar los diagnósticos de ingestión ** parcial y *[!UICONTROL error al configurar un flujo de datos]* . Al hacerlo, el sistema podrá analizar todos los registros ingestados durante la ejecución del flujo.
+>[!IMPORTANT]
+>
+>Para habilitar la previsualización *[!UICONTROL de diagnósticos de]* error, debe activar los diagnósticos de ingestión ** parcial y *[!UICONTROL error al configurar un flujo de datos]* . Al hacerlo, el sistema podrá analizar todos los registros ingestados durante la ejecución del flujo.
 
 ![Previsualización-error-diagnósticos](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
