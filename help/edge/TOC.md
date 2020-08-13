@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
+source-git-commit: 3a0ef81980910cedcec69a2a53bcf270b8d12d00
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 16%
+source-wordcount: '101'
+ht-degree: 15%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 16%
 
 * [Visión general del SDK web](home.md)
 * Primeros pasos {#get-started}
-   * [inicio rápido con Launch](getting-started/quick-start-with-launch.md)
-   * [inicio rápido sin lanzamiento](getting-started/quick-start-without-launch.md)
+   * [Inicio rápido con Launch](getting-started/quick-start-with-launch.md)
+   * [Inicio rápido sin lanzamiento](getting-started/quick-start-without-launch.md)
 * Aspectos básicos {#fundamentals}
    * [Instalación del SDK](fundamentals/installing-the-sdk.md)
    * [Ejecución de comandos](fundamentals/executing-commands.md)
    * [Configuración del borde](fundamentals/edge-configuration.md)
    * [Configuración del SDK](fundamentals/configuring-the-sdk.md)
-   * [eventos de seguimiento](fundamentals/tracking-events.md)
+   * [Eventos de seguimiento](fundamentals/tracking-events.md)
    * [Combinación de datos de evento](fundamentals/merging-event-data.md)
    * [Depuración](fundamentals/debugging.md)
    * [Interactuar con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
@@ -36,6 +36,7 @@ ht-degree: 16%
       * [Información general de Analytics](solution-specific/analytics/analytics-overview.md)
       * [Asignación manual de variables en Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Variables asignadas automáticamente](solution-specific/analytics/automatically-mapped-vars.md)
+      * [Envío de datos a Adobe Analytics](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Información general sobre Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
