@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Perfil de clientes en tiempo real
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 21%
+source-wordcount: '84'
+ht-degree: 20%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 21%
    * [Entidades ([!DNL Perfil] acceso)](api/entities.md)
    * [Exportar trabajos ([!Perfil DNL] exportar)](api/export-jobs.md)
    * [Combinar directivas](api/merge-policies.md)
+   * [Estado de muestra de previsualización ( previsualización [!DNL Perfil])](api/preview-sample-status.md)
    * [[!DNL Profile] trabajos del sistema (eliminar solicitudes)](api/profile-system-jobs.md)
 * Guías de la interfaz de usuario {#ui}
    * [[!DNL Profile] guía del usuario](ui/user-guide.md)
