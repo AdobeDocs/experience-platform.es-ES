@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Tutoriales de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 9%
+source-wordcount: '41'
+ht-degree: 12%
 
 ---
 
@@ -15,14 +15,12 @@ ht-degree: 9%
 
 * [Información general sobre Tutorials](home.md)
 * [Autenticar en API de Experience Platform](authentication.md)
-* [Acceso a datos de Platform](data-access.md)
+* [Datos de la plataforma de acceso](data-access.md)
 * [Administración de datos y privacidad](data-governance-privacy.md)
 * [Área de trabajo de ciencia de datos](data-science-workspace.md)
 * [Decisión](decisioning.md)
-* Destinos {#destinations}
-   * [Crear un destino y activar datos (API)](destinations/api-tutorial.md)
-   * [Destino de marketing por correo electrónico (API)](destinations/email-marketing-api.md)
-* [Ingestar datos en Platform](data-ingestion.md)
+* [Destinos](destinations.md)
+* [Ingestar datos en la plataforma](data-ingestion.md)
 * [Perfiles e identidades](configure-profile.md)
 * [Esquemas y descriptores de relaciones](schemas.md)
 * [Segmentos y audiencias](segmentation.md)
