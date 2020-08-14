@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 6%
 
 ---
 
@@ -65,7 +65,6 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 | Función | Descripción |
 | ------- | ----------- |
 | Supervisión de la ejecución de flujo | Los usuarios pueden supervisar todas las ejecuciones de flujo y ver una vista detallada de cada ejecución, incluido el estado de finalización, la duración de la ejecución, la lista de archivos procesados, los errores y las métricas. Consulte el documento de flujos de datos de [supervisión](../../sources/tutorials/ui/monitor.md) para obtener más información. |
-| Actualización de cuentas | Los usuarios pueden actualizar las credenciales, el nombre y la descripción de cualquier cuenta existente para proporcionar información más significativa y corregir cualquier error que se haya creado. |
 | Notificaciones de ejecución de flujo | Los usuarios pueden suscribirse a los eventos y registrar los enlaces web para recibir notificaciones en tiempo real sobre el estado, las métricas y los errores relacionados con las ejecuciones de flujo. |
 | Mejoras en el catálogo de la interfaz de usuario | Actualizaciones en la pantalla del catálogo de fuentes para facilitar el acceso a las acciones principales de los objetos seleccionados. |
 
