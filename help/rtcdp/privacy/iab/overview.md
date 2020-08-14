@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en tiempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
+source-git-commit: 28106d5db179e71f47b7e071b359ffe4934a3bbe
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2388'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,7 @@ Esta guía también requiere una comprensión práctica de los siguientes servic
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 * [Perfil](../../../profile/home.md)del cliente en tiempo real: Aprovecha [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos del Data Lake y persiste en los perfiles de los clientes en su propio almacén de datos independiente.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): Biblioteca de JavaScript del lado del cliente que le permite integrar varios [!DNL Platform] servicios en el sitio web orientado al cliente.
+   * [Comandos](../../../edge/fundamentals/supporting-consent.md)de consentimiento del SDK: Información general sobre el caso de uso de los comandos del SDK relacionados con el consentimiento que se muestran en esta guía.
 * [Servicio](../../../segmentation/home.md)de segmentación de Adobe Experience Platform: Permite dividir [!DNL Real-time Customer Profile] los datos en grupos de individuos que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
 
 Además de los [!DNL Platform] servicios mencionados anteriormente, también debe estar familiarizado con [los destinos](../../destinations/destinations-overview.md) y su uso en [!DNL Real-time CDP].
@@ -61,7 +62,7 @@ Las siguientes secciones describen cómo se recopilan y aplican los datos de con
 
 Además de los comandos del SDK activados por los enlaces de cambio de consentimiento de CMP, los datos de consentimiento también pueden fluir [!DNL Experience Platform] a través de cualquier dato XDM generado por el cliente que se cargue directamente en un conjunto de datos [!DNL Profile]habilitado.
 
-Cualquier segmento compartido con [!DNL Platform] Adobe Audience Manager (a través del conector de [!DNL Audience Manager] origen o de otro modo) también puede contener datos de consentimiento, siempre que se hayan aplicado los campos correspondientes a esos segmentos a través de [!DNL Experience Cloud Identity Service]. Para obtener más información sobre la recopilación de datos de consentimiento en [!DNL Audience Manager], consulte el documento del complemento de [Adobe Audience Manager para IAB TCF](https://docs.adobe.com/help/es-ES/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Cualquier segmento compartido con [!DNL Platform] Adobe Audience Manager (a través del conector de [!DNL Audience Manager] origen o de otro modo) también puede contener datos de consentimiento, siempre que los campos correspondientes se hayan aplicado a esos segmentos a través de [!DNL Experience Cloud Identity Service]. Para obtener más información sobre la recopilación de datos de consentimiento en [!DNL Audience Manager], consulte el documento del complemento de [Adobe Audience Manager para IAB TCF](https://docs.adobe.com/help/es-ES/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Aplicación de consentimiento descendente
 
@@ -90,7 +91,7 @@ Este cuadro de diálogo debe permitir que el cliente adhesión o salga de lo sig
 
 Independientemente del método que utilice para recopilar los datos, el objetivo es generar un valor de cadena basado en las opciones de consentimiento elegidas por el cliente, llamadas cadena **de** consentimiento.
 
-En la especificación TCF, las cadenas de consentimiento se utilizan para codificar los detalles relevantes sobre la configuración de consentimiento del cliente, en términos de propósitos de mercadotecnia específicos, según se definen en políticas y proveedores. [!DNL Real-time CDP] utiliza estas cadenas para almacenar la configuración de consentimiento para cada cliente y, por lo tanto, debe generarse una nueva cadena de consentimiento cada vez que cambie dicha configuración.
+En la especificación TCF, las cadenas de consentimiento se utilizan para codificar los detalles relevantes sobre la configuración de consentimiento del cliente, en términos de propósitos de mercadotecnia específicos, según se definen en las políticas y los proveedores. [!DNL Real-time CDP] utiliza estas cadenas para almacenar la configuración de consentimiento para cada cliente y, por lo tanto, debe generarse una nueva cadena de consentimiento cada vez que cambie dicha configuración.
 
 Las cadenas de consentimiento sólo pueden ser creadas por un CMP registrado en el TCF de IAB. Para obtener más información sobre cómo generar cadenas de consentimiento usando su CMP particular, consulte la guía [de formato de la cadena de](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) consentimiento en la repo de IAB TCF GitHub.
 
