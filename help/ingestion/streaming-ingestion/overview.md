@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
 solution: Experience Platform
-title: Introducción a la ingesta de flujo de Adobes Experience Platform
+title: Introducción a la ingestión de flujo continuo de Adobe Experience Platform
 topic: overview
+description: La ingestión de flujo continuo para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos cliente y servidor al Experience Platform en tiempo real.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '272'
 ht-degree: 3%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 3%
 
 # Introducción a la ingesta de flujo continuo
 
-La ingestión por flujo continuo para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos cliente y servidor a [!DNL Experience Platform] en tiempo real.
+La ingestión de flujo continuo para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos cliente y servidor a [!DNL Experience Platform] en tiempo real.
 
 ## ¿Qué se puede hacer con la ingestión por streaming?
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes mediante la generación de una [!DNL Real-time Customer Profile] para cada uno de sus clientes individuales. La transmisión por secuencias de la ingestión desempeña un papel clave en la creación de estos perfiles, ya que le permite entregar [!DNL Profile] datos en el [!DNL Data Lake] sitio con la menor latencia posible.
+Adobe Experience Platform le permite dirigir experiencias coordinadas, coherentes y relevantes mediante la generación de una [!DNL Real-time Customer Profile] para cada uno de sus clientes individuales. La transmisión por secuencias de la ingestión desempeña un papel clave en la creación de estos perfiles, ya que le permite entregar [!DNL Profile] datos en el [!DNL Data Lake] sitio con la menor latencia posible.
 
 El siguiente vídeo está diseñado para ayudarle a comprender mejor la transmisión por secuencias de ingestión y describe los conceptos anteriores.
 
