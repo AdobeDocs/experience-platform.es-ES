@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: Guía para desarrolladores de Consulta Service
+title: Guía para desarrolladores de consulta Service
 topic: query templates
+description: Esta guía para desarrolladores proporciona pasos para realizar varias operaciones en la API de servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ Esta guía para desarrolladores proporciona pasos para realizar varias operacion
 
 ## Primeros pasos
 
-Esta guía requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que se utilizan [!DNL Query Service].
+Esta guía requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que se utilizan [!DNL Query Service].
 
 - [!DNL Query Service](../home.md):: Proporciona la capacidad de consulta de conjuntos de datos y capturar las consultas resultantes como nuevos conjuntos de datos en [!DNL Experience Platform].
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
@@ -52,9 +53,9 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 - [Consultas](queries.md)
 - [Parámetros de conexión](connection-parameters.md)
-- [consultas programadas](scheduled-queries.md)
+- [Consultas programadas](scheduled-queries.md)
 - [Ejecuta para consultas programadas](runs-scheduled-queries.md)
-- [Plantillas de Consulta](query-templates.md)
+- [Plantillas de consulta](query-templates.md)
 
 ## Pasos siguientes
 
