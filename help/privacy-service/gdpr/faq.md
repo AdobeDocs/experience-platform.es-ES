@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Preguntas más frecuentes sobre el RGPD
 topic: troubleshooting
+description: Este documento ofrece respuestas a las preguntas más frecuentes sobre el Reglamento General de Protección de Datos (RGPD) y su implementación en Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Un controlador **de** datos es la entidad que determina los fines, las condicion
 
 ## ¿Cuál es la diferencia entre el consentimiento explícito y sin ambigüedades del sujeto de datos?
 
-El RGPD refuerza las condiciones para el consentimiento válido del sujeto de datos. Las Compañías ya no pueden establecer términos y condiciones de oferta que sean difíciles de comprender, ya que la solicitud de consentimiento debe presentarse de manera inteligible y fácilmente accesible. La finalidad del tratamiento de datos debe indicarse inequívocamente en la solicitud de obtener el consentimiento del interesado.
+El RGPD refuerza las condiciones para el consentimiento válido del sujeto de datos. Las compañías ya no pueden establecer términos y condiciones de oferta que sean difíciles de comprender, ya que la solicitud de consentimiento debe presentarse de manera inteligible y fácilmente accesible. La finalidad del tratamiento de datos debe indicarse inequívocamente en la solicitud de obtener el consentimiento del interesado.
 
 **El consentimiento** explícito debe ser claro y distinguible de otras cuestiones, proporcionado de forma inteligible y fácilmente accesible, utilizando lenguaje simple. Además, debe ser tan fácil retirar el consentimiento como concederlo. &#x200B; Sólo se requiere el consentimiento explícito para el tratamiento de datos personales sensibles, donde nada menos que &quot;adhesión&quot; será suficiente. Sin embargo, en el caso de los datos no sensibles, el consentimiento **** inequívoco es aceptable.
 
