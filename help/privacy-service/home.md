@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Para ofrecer mejores experiencias de cliente, debe recopilar y almacenar los datos personales de sus clientes. Al utilizar estos datos, es importante comprender y respetar la privacidad de sus clientes. Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder a sus datos personales o eliminarlos de sus almacenes de datos si así lo solicitan.
 
-El Adobe Experience Platform [!DNL Privacy Service] se desarrolló en respuesta a un cambio fundamental en la manera en que las empresas deben administrar los datos personales de sus clientes. El objetivo central de [!DNL Privacy Service] es automatizar el cumplimiento de las regulaciones de privacidad de datos que, cuando se violan, pueden resultar en importantes multas y interrumpir las operaciones de datos de su empresa.
+Adobe Experience Platform [!DNL Privacy Service] se desarrolló en respuesta a un cambio fundamental en la forma en que se requiere que las empresas gestionen los datos personales de sus clientes. El objetivo central de [!DNL Privacy Service] es automatizar el cumplimiento de las regulaciones de privacidad de datos que, cuando se violan, pueden resultar en importantes multas y interrumpir las operaciones de datos de su empresa.
 
 [!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar las solicitudes de datos de los clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder y eliminar datos personales de clientes desde las aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las normativas legales y de privacidad de la organización.
 
@@ -61,7 +61,7 @@ Según las [!DNL Experience Cloud] aplicaciones que utilice, debe etiquetar los 
 
 Para [!DNL Privacy Service] procesar una solicitud de privacidad de un cliente, se debe proporcionar al menos un valor de identidad único para ese cliente en la propia solicitud. Un valor de identidad único es cualquier dato que puede utilizarse para identificar a una persona individual y sus datos personales almacenados en sus almacenes [!DNL Experience Cloud] de datos. [!DNL Privacy Service] utiliza esta información de identidad para localizar y procesar los datos personales del cliente según la naturaleza de la solicitud (acceso, eliminación o exclusión).
 
-Según las [!DNL Experience Cloud] aplicaciones que utilice su sistema CRM, el tipo y la cantidad de valores de identidad que debe proporcionar para cada cliente variarán. Algunas aplicaciones utilizan sus propios valores de ID de cliente internos (como ID de Adobe Target), mientras que otras soluciones dependen de identificadores globales de Adobe [!DNL Experience Cloud Identity Service] (ECID) que rastrean la actividad de los clientes en todas [!DNL Experience Cloud] las aplicaciones. Además, la información personal genérica como una dirección de correo electrónico o un número de teléfono también puede servir como datos de identidad válidos.
+Según las [!DNL Experience Cloud] aplicaciones que utilice su sistema CRM, el tipo y la cantidad de valores de identidad que debe proporcionar para cada cliente variarán. Algunas aplicaciones utilizan sus propios valores de ID de cliente internos (como Adobe Target ID), mientras que otras soluciones dependen de identificadores globales de Adobe [!DNL Experience Cloud Identity Service] (ECID) que rastrean la actividad del cliente en todas [!DNL Experience Cloud] las aplicaciones. Además, la información personal genérica como una dirección de correo electrónico o un número de teléfono también puede servir como datos de identidad válidos.
 
 El documento sobre datos de [identidad para solicitudes](./identity-data.md) de privacidad proporciona información más detallada sobre los tipos de información de identidad que se aceptan para [!DNL Privacy Service]. El documento también proporciona instrucciones sobre cómo aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada de sus clientes a medida que interactúan con su sitio web y enviar esos datos a [!DNL Privacy Service] las solicitudes de API.
 
