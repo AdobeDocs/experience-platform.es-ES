@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Añadir datos al Perfil del cliente en tiempo real
 topic: tutorial
+description: Este tutorial describe los pasos necesarios para agregar datos al Perfil del cliente en tiempo real.
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
