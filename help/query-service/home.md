@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Servicio de Consulta de Adobe Experience Platform
 topic: overview
+description: Este documento proporciona una visión general de la función del servicio de Consulta dentro del Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Query Service]sobre validación
 
-Adobe Experience Platform ingesta datos de una amplia variedad de fuentes. Un desafío importante para los especialistas en mercadotecnia es darle sentido a estos datos para obtener perspectivas sobre sus clientes. Adobe Experience Platform [!DNL Query Service] facilita esto al permitirle utilizar SQL estándar para la consulta de datos en [!DNL Platform]. Con [!DNL Query Service], puede unir cualquier conjunto de datos en el [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en el sistema de informes, el aprendizaje automático o la ingestión en [!DNL Real-time Customer Profile]. Este documento ofrece una visión general de la función de [!DNL Query Service] dentro de [!DNL Experience Platform].
+Adobe Experience Platform ingesta datos desde una amplia variedad de fuentes. Un desafío importante para los especialistas en mercadotecnia es darle sentido a estos datos para obtener perspectivas sobre sus clientes. Adobe Experience Platform [!DNL Query Service] lo facilita al permitirle utilizar SQL estándar para la consulta de datos en [!DNL Platform]. Con [!DNL Query Service], puede unir cualquier conjunto de datos en el [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para su uso en el sistema de informes, el aprendizaje automático o la ingestión en [!DNL Real-time Customer Profile]. Este documento ofrece una visión general de la función de [!DNL Query Service] dentro de [!DNL Experience Platform].
 
 [!DNL Query Service] permite que las marcas conecten el viaje de los clientes en línea y sin conexión y comprendan la atribución de omni-canal. El siguiente vídeo muestra cómo un negocio de experiencia puede aprovechar [!DNL Query Service] para abordar casos de uso clave y cómo [!DNL Query Service] funciona.
 
