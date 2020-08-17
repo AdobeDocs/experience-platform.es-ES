@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorials
+description: En este tutorial se explican los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Cree un esquema con la variable [!DNL Schema Editor]
 
-El [!DNL Schema Registry] proporciona una interfaz de usuario y una API RESTful desde la que puede realizar la vista y la gestión de todos los recursos del Adobe Experience Platform [!DNL Schema Library]. El [!DNL Schema Library] contiene los recursos que le ponen a su disposición Adobes, socios Experience Platform y proveedores cuyas aplicaciones utiliza, así como los recursos que define y guarda en el [!DNL Schema Registry].
+El [!DNL Schema Registry] proporciona una interfaz de usuario y una API RESTful desde la que puede realizar vistas y administrar todos los recursos del Adobe Experience Platform [!DNL Schema Library]. El [!DNL Schema Library] contiene los recursos que le ponen a su disposición Adobes, socios Experience Platform y proveedores cuyas aplicaciones utiliza, así como los recursos que define y guarda en el [!DNL Schema Registry].
 
 Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en [!DNL Experience Platform]. Si prefiere componer un esquema con la API de Registro de Esquema, lea la guía [para desarrolladores de](../api/getting-started.md) Esquema Registry antes de intentar el tutorial para [crear un esquema con la API](create-schema-api.md).
 
@@ -22,7 +23,7 @@ Este tutorial también incluye pasos para [definir una nueva clase](#create-new-
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los diversos aspectos del Adobe Experience Platform que implica el uso del Editor de Esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
+Este tutorial requiere un conocimiento práctico de los diversos aspectos de Adobe Experience Platform que intervienen en el uso del Editor de Esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
 
 * [!DNL Experience Data Model (XDM)](../home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los esquemas XDM y sus componentes, incluidas clases, mezclas, tipos de datos y campos.
@@ -48,16 +49,16 @@ Para empezar a componer un esquema, haga clic en **[!UICONTROL Crear Esquema]** 
 
 Aparece el Editor ** de Esquemas. Este es el lienzo sobre el cual compondrás tu esquema. Al llegar al editor, se crea automáticamente un &quot;Esquema sin título&quot; en la sección *Estructura* del lienzo para que pueda empezar a personalizarlo.
 
-![Editor de Esquemas](../images/tutorials/create-schema/schema_editor.png)
+![Editor de esquemas](../images/tutorials/create-schema/schema_editor.png)
 
 A la derecha del editor se encuentran las Propiedades *del* Esquema, donde puede proporcionar un nombre para el esquema (mediante el campo Nombre **[!UICONTROL para]** mostrar). Una vez introducido un nombre, el lienzo se actualiza para reflejar el nuevo nombre del esquema.
 
-![Lienzo del Esquema](../images/tutorials/create-schema/name_schema.png)
+![Lienzo del esquema](../images/tutorials/create-schema/name_schema.png)
 
 A la hora de decidir un nombre para el esquema, hay que tener en cuenta varias consideraciones importantes:
 
-* Los nombres de los Esquemas deben ser cortos y descriptivos para que el esquema pueda encontrarse fácilmente en la biblioteca más adelante.
-* Los nombres de los Esquemas deben ser únicos, lo que significa que también deben ser lo suficientemente específicos como para que no se vuelvan a utilizar en el futuro. Por ejemplo: si su organización tiene programas de lealtad separados para diferentes marcas, sería aconsejable nombrar a su esquema &quot;Miembros de lealtad de la marca A&quot; para que sea más fácil distinguir de otros esquemas relacionados con la lealtad que pueda definir más adelante.
+* Los nombres de los esquemas deben ser cortos y descriptivos para que el esquema pueda encontrarse fácilmente en la biblioteca más adelante.
+* Los nombres de los esquemas deben ser únicos, lo que significa que también deben ser lo suficientemente específicos como para que no se vuelvan a utilizar en el futuro. Por ejemplo: si su organización tiene programas de lealtad separados para diferentes marcas, sería aconsejable nombrar a su esquema &quot;Miembros de lealtad de la marca A&quot; para que sea más fácil distinguir de otros esquemas relacionados con la lealtad que pueda definir más adelante.
 * De forma opcional, puede proporcionar información adicional sobre el esquema mediante el campo **[!UICONTROL Descripción]** .
 
 Este tutorial contiene un esquema para ingestar datos relacionados con los miembros de un programa de lealtad, por lo que el esquema se denomina &quot;Miembros de lealtad&quot;.
@@ -162,7 +163,7 @@ Dentro de ese nodo con espacio de nombres hay un &quot;[!UICONTROL nuevo campo]&
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Mediante el uso de Propiedades *[!UICONTROL de]* campo en la parte derecha del editor, cree un campo de &quot;[!UICONTROL lealtad]&quot; con el tipo &quot;[!UICONTROL Objeto]&quot; que se utilizará para mantener los campos relacionados con la lealtad. Cuando termine, haga clic en **[!UICONTROL Aplicar]**.
+Mediante el uso de Propiedades *[!UICONTROL de]* campo en la parte derecha del editor, cree un campo de &quot;[!UICONTROL lealtad]&quot; con el tipo &quot;[!UICONTROL Objeto]&quot; que se utilizará para mantener los campos relacionados con la lealtad. When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ Los cambios se aplican y aparece el nuevo objeto de &quot;[!UICONTROL lealtad]&q
 
 Cada campo requiere la siguiente información:
 
-* **[!UICONTROL Nombre]del campo:**Nombre del campo, escrito en caso de camello. Ejemplo: loyaltyLevel
-* **[!UICONTROL Nombre]para mostrar:**Nombre del campo, escrito en caso de título. Ejemplo: Nivel de fidelidad
-* **[!UICONTROL Tipo]:**Tipo de datos del campo. Esto incluye los tipos escalares básicos y cualquier tipo de datos definido en el[!DNL Schema Registry]. Ejemplos: cadena, entero, booleano, Persona, Dirección, Número de teléfono, etc.
-* **[!UICONTROL Descripción]:**Debe incluirse una descripción opcional del campo, escrita en caso de sentencia. (200 caracteres como máximo)
+* **[!UICONTROL Nombre]del campo:** Nombre del campo, escrito en caso de camello. Ejemplo: loyaltyLevel
+* **[!UICONTROL Nombre]para mostrar:** Nombre del campo, escrito en caso de título. Ejemplo: Nivel de fidelidad
+* **[!UICONTROL Tipo]:** Tipo de datos del campo. Esto incluye los tipos escalares básicos y cualquier tipo de datos definido en el [!DNL Schema Registry]. Ejemplos: cadena, entero, booleano, Persona, Dirección, Número de teléfono, etc.
+* **[!UICONTROL Descripción]:** Debe incluirse una descripción opcional del campo, escrita en caso de sentencia. (200 caracteres como máximo)
 
 El primer campo del objeto Lealtad será una cadena llamada &quot;[!UICONTROL loyaltyId]&quot;. Al establecer el tipo del nuevo campo en &quot;[!UICONTROL String]&quot;, la ventana Propiedades *[!UICONTROL del]* campo se llena con varias opciones para aplicar restricciones, como Valor **** predeterminado, **[!UICONTROL Formato]** y Longitud **** máxima.
 
@@ -214,10 +215,10 @@ Cuando haya completado todas las propiedades del campo, haga clic en **[!UICONTR
 
 Más información sobre las restricciones adicionales disponibles:
 
-* **[!UICONTROL Requerido]:**Indica que el campo es obligatorio para la ingesta de datos. Cualquier dato cargado en un conjunto de datos basado en este esquema que no contenga este campo fallará durante la ingestión.
-* **[!UICONTROL Matriz]:**Indica que el campo contiene una matriz de valores, cada uno con el tipo de datos especificado. Por ejemplo, si selecciona un tipo de datos de &quot;Cadena&quot; y marca la casilla &quot;Matriz&quot; significa que el campo contendrá una matriz de cadenas.
-* **[!UICONTROL Enum]:**Indica que este campo debe contener uno de los valores de una lista enumerada de valores posibles.
-* **[!UICONTROL Identidad]:**Indica que este campo es un campo de identidad. Más información sobre los campos de identidad se proporciona[más adelante en este tutorial](#identity-field).
+* **[!UICONTROL Requerido]:** Indica que el campo es obligatorio para la ingesta de datos. Cualquier dato cargado en un conjunto de datos basado en este esquema que no contenga este campo fallará durante la ingestión.
+* **[!UICONTROL Matriz]:** Indica que el campo contiene una matriz de valores, cada uno con el tipo de datos especificado. Por ejemplo, si selecciona un tipo de datos de &quot;Cadena&quot; y marca la casilla &quot;Matriz&quot; significa que el campo contendrá una matriz de cadenas.
+* **[!UICONTROL Enum]:** Indica que este campo debe contener uno de los valores de una lista enumerada de valores posibles.
+* **[!UICONTROL Identidad]:** Indica que este campo es un campo de identidad. Más información sobre los campos de identidad se proporciona [más adelante en este tutorial](#identity-field).
 
 ## Conversión de un objeto de varios campos en un tipo de datos {#datatype}
 
@@ -237,7 +238,7 @@ En un esquema futuro, ahora puede asignar un campo al **[!UICONTROL Tipo]** de &
 
 ## Definición de un campo de esquema como campo de identidad {#identity-field}
 
-Los Esquemas se utilizan para ingerir datos en [!DNL Experience Platform]y, en última instancia, los datos se utilizan para identificar a personas y unir la información proveniente de múltiples fuentes. Para ayudar con este proceso, los campos clave pueden marcarse como campos &quot;[!UICONTROL Identidad]&quot;.
+Los esquemas se utilizan para ingerir datos en [!DNL Experience Platform]y, en última instancia, los datos se utilizan para identificar a personas y unir la información proveniente de múltiples fuentes. Para ayudar con este proceso, los campos clave pueden marcarse como campos &quot;[!UICONTROL Identidad]&quot;.
 
 [!DNL Experience Platform] facilita la identificación de un campo de identidad mediante el uso de una casilla de verificación **[!UICONTROL Identidad]** en la [!DNL Schema Editor].
 
@@ -317,7 +318,7 @@ La siguiente información se complementa con el tutorial del Editor de Esquemas.
 
 [!DNL Experience Platform] proporciona la flexibilidad necesaria para definir un esquema basado en una clase exclusiva de su organización.
 
-Abra el cuadro de diálogo *[!UICONTROL Asignar clase]* haciendo clic en **[!UICONTROL Asignar]** en la sección *[!UICONTROL Clase]* del Editor de Esquemas. En el cuadro de diálogo, seleccione **[!UICONTROL Crear nueva clase ]**.
+Abra el cuadro de diálogo *[!UICONTROL Asignar clase]* haciendo clic en **[!UICONTROL Asignar]** en la sección *[!UICONTROL Clase]* del Editor de Esquemas. En el cuadro de diálogo, seleccione **[!UICONTROL Crear nueva clase]**.
 
 A continuación, puede asignar a la nueva clase un nombre **[!UICONTROL para]** mostrar (un nombre corto, descriptivo, único y práctico para la clase), una **[!UICONTROL descripción]** y un **[!UICONTROL comportamiento]** (&quot;[!UICONTROL registro]&quot; o &quot;serie[!UICONTROL temporal]&quot;) para los datos que el esquema definirá.
 
