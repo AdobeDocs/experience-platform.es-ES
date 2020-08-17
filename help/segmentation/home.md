@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: Servicio de segmentación de Adobes Experience Platform
+title: Servicio de segmentación de Adobe Experience Platform
 topic: overview
+description: Este documento proporciona información general sobre el servicio de segmentación y la función que desempeña en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API de RESTful que le permite crear segmentos y generar audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos centralmente en [!DNL Platform]y son fácilmente accesibles para cualquier solución de Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos centralmente en [!DNL Platform]y son fácilmente accesibles para cualquier solución de Adobe.
 
-Este documento proporciona una visión general de [!DNL Segmentation Service] la función que desempeña en el Adobe Experience Platform.
+Este documento proporciona información general sobre [!DNL Segmentation Service] y la función que desempeña en Adobe Experience Platform.
 
 ## Getting started with [!DNL Segmentation Service]
 
@@ -102,7 +103,7 @@ Estas funciones avanzadas se analizan con más detalle en las siguientes seccion
 
 ## Segmentación secuencial {#sequential}
 
-Un viaje de usuario estándar es secuencial. Adobe Experience Platform le permite definir una serie ordenada de segmentos para reflejar este viaje, capturando así secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado mediante la línea de tiempo del evento visual en la [!DNL Segment Builder].
+Un viaje de usuario estándar es secuencial. Adobe Experience Platform le permite definir una serie ordenada de segmentos para reflejar este viaje y capturar así secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado mediante la línea de tiempo del evento visual en la [!DNL Segment Builder].
 
 Un ejemplo de un viaje del cliente que requeriría una segmentación secuencial sería la vista del producto > adición del producto > cierre de compra > Sin compra.
 
@@ -215,7 +216,7 @@ Otro desafío tradicional para los especialistas en mercadotecnia ha sido la cre
 - Objeto
 - Mapa
 - Eventos
-- audiencias externas
+- Audiencias externas
 - Segmentos
 
 Puede encontrar información más detallada sobre estos tipos de datos admitidos en el documento [de tipos de datos](./data-types.md)admitidos.
