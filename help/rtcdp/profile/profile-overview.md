@@ -1,10 +1,11 @@
 ---
+keywords: rtcdp profile;real-time customer profile
 title: Información general sobre el Perfil del cliente en tiempo real
-seo-title: Perfil del cliente en tiempo real en datos del cliente en tiempo real Platform
-description: Información general sobre cómo los datos de clientes en tiempo real Platform le permiten dirigir experiencias relevantes, coherentes y coordinadas para sus clientes mediante Perfiles de clientes en tiempo real.
-seo-description: Datos del cliente en tiempo real Platform, Perfil, datos, experiencias, canales
+seo-title: Perfil del cliente en tiempo real en la plataforma de datos del cliente en tiempo real
+description: Información general sobre cómo la plataforma de datos de clientes en tiempo real le permite dirigir experiencias relevantes, coherentes y coordinadas para sus clientes mediante Perfiles de clientes en tiempo real.
+seo-description: Plataforma de datos del cliente en tiempo real, Perfil, datos, experiencias, canales
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ## Perfiles en [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] le permite dirigir experiencias coherentes y coordinadas para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Ofrecer estas experiencias personalizadas para que se sientan pertinentes y oportunas no es una pequeña hazaña, pero se puede lograr mediante el uso de [!DNL Real-time Customer Profile], parte del Adobe Experience Platform. CDP en tiempo real está construido sobre [!DNL Experience Platform] y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidades, incluida la creación de perfiles. Estas vistas agregadas de un cliente individual reúnen datos de sus muchos canales de mercadotecnia y de los diversos sistemas que su organización utiliza actualmente para almacenar datos de clientes.
+[!DNL Real-time Customer Data Platform] le permite dirigir experiencias coherentes y coordinadas para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Ofrecer estas experiencias personalizadas para que se sientan relevantes y oportunas no es poca cosa, pero se puede lograr a través del uso de [!DNL Real-time Customer Profile], parte de Adobe Experience Platform. CDP en tiempo real está construido sobre [!DNL Experience Platform] y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidades, incluida la creación de perfiles. Estas vistas agregadas de un cliente individual reúnen datos de sus muchos canales de mercadotecnia y de los diversos sistemas que su organización utiliza actualmente para almacenar datos de clientes.
 
 ## Identidades y Áreas de nombres de identidad
 
@@ -28,7 +29,7 @@ A medida que los datos del cliente se reúnen, se combinan en un único perfil m
 
 Al reunir los datos de los clientes, las políticas de combinación son las reglas que [!DNL Platform] se utilizan para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Para obtener más información sobre las políticas de combinación, consulte la descripción general [de las políticas de](/help/rtcdp/profile/merge-policies.md)combinación.
 
-## Visor de Perfiles
+## Visor de perfiles
 
 [!DNL Platform] le permite realizar fácilmente vistas de perfiles de clientes y buscar perfiles específicos mediante varios atributos. Para obtener más información sobre cómo vista de perfiles en [!DNL Platform], consulte la descripción general [del visor de](/help/rtcdp/profile/profile-viewer.md)perfil.
 
