@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
 solution: Experience Platform
 title: Segmentación multientidad
 topic: overview
+description: La segmentación de varias entidades es la capacidad de ampliar los datos de Perfil con datos adicionales basados en productos, almacenes u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de Perfil.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -22,10 +23,10 @@ Para obtener más información sobre la segmentación multientidad, siga leyendo
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que implican el uso de la segmentación. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en el uso de la segmentación. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [!DNL Real-time Customer Profile](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [Servicio](./home.md)de segmentación de Adobes Experience Platform: Permite generar segmentos a partir del Perfil del cliente en tiempo real.
+- [Servicio](./home.md)de segmentación de Adobe Experience Platform: Permite generar segmentos a partir del Perfil del cliente en tiempo real.
 - [!DNL Experience Data Model (XDM)](../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Cómo definir relaciones XDM
