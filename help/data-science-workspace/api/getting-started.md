@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Guía para desarrolladores de la API de aprendizaje automático de Sensei
 topic: Developer guide
+description: En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la API de aprendizaje automático Sensei y se muestran las llamadas de API para realizar operaciones de CRUD en varios recursos del área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
