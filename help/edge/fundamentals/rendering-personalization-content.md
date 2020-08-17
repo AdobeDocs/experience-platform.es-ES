@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK Representación de contenido person
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Información general sobre las opciones de personalización
 
-El Adobe Experience Platform [!DNL Web SDK] permite consultar las soluciones de personalización en Adobe, incluido el Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
+El Adobe Experience Platform [!DNL Web SDK] admite la consulta de las soluciones de personalización en Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../../edge/solution-specific/target/flicker-management.md).
 
 ## Representación automática de contenido
 
@@ -40,15 +40,15 @@ El procesamiento de contenido personalizado es asíncrono, por lo que no debe da
 
 ## Representación manual de contenido
 
-Puede solicitar la lista de decisiones para que se devuelvan como una promesa en el `event` comando utilizando `scopes`. Un ámbito es una cadena que permite a la solución de personalización saber qué decisión desea.
+Puede solicitar la lista de las decisiones que se devolverán como una promesa en el `sendEvent` comando especificando la `decisionScopes` opción. Un ámbito es una cadena que permite a la solución de personalización saber qué decisión desea.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Esto devolverá una lista de decisiones como un objeto JSON para cada decisión.
 
 >[!TIP]
 >
-> Si utiliza [!DNL Target] ámbitos que se convierten en mBoxes en el servidor, solo serán solicitudes a la vez en lugar de individualmente. El mbox global siempre se envía.
+> Si utiliza [!DNL Target], los ámbitos se convierten en mBoxes en el servidor, solo se solicitan de forma simultánea en lugar de individualmente. El mbox global siempre se envía.
 
 ### Recuperar contenido automático
 
-Si desea que el `result.decisions` informe incluya las decisiones de procesamiento automático, puede establecer `renderDecisions` en false e incluir el ámbito especial `__view__`.
+Si desea `result.decisions` incluir las decisiones de procesamiento automático y NO tener a Alloy procesarlas automáticamente, puede establecer `renderDecisions` en `false`e incluir el ámbito especial `__view__`.
