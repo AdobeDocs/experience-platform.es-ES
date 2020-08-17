@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guía del usuario de conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -18,16 +18,16 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 
 ## Primeros pasos
 
-Esta guía del usuario requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Conjuntos](overview.md)de datos: La construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante la [!DNL Schema Editor] interfaz de [!DNL Platform] usuario.
+   * [Editor](../../xdm/tutorials/create-schema-ui.md)de esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante la [!DNL Schema Editor] interfaz de [!DNL Platform] usuario.
 * [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [!DNL Data Governance](../../data-governance/home.md):: Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
 
-## datasets de Vista
+## datasets de vista
 
 En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para abrir el panel *[!UICONTROL Conjuntos]* de datos. El panel lista todos los conjuntos de datos disponibles para su organización. Se muestran detalles de cada conjunto de datos de la lista, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de la ingestión más reciente.
 
@@ -50,7 +50,7 @@ En la ventana previsualización, la vista jerárquica del esquema para el conjun
 
 Para obtener métodos más sólidos para acceder a los datos, [!DNL Experience Platform] proporciona servicios de flujo descendente como [!DNL Query Service] y [!DNL JupyterLab] para explorar y analizar los datos. Consulte los siguientes documentos para obtener más información:
 
-* [Visión general del servicio de Consulta](../../query-service/home.md)
+* [Visión general del servicio de consulta](../../query-service/home.md)
 * [Guía del usuario de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Crear un conjunto de datos {#create}
@@ -152,5 +152,5 @@ Si desea eliminar el lote, puede hacerlo haciendo clic en **[!UICONTROL Eliminar
 Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en la interfaz del [!DNL Experience Platform] usuario. Para ver los pasos sobre cómo realizar flujos de trabajo comunes [!DNL Platform] que involucran conjuntos de datos, consulte los siguientes tutoriales:
 
 * [Creación de un conjunto de datos mediante API](create.md)
-* [Datos del conjunto de datos de Consulta mediante la API de acceso a datos](../../data-access/home.md)
+* [Datos del conjunto de datos de consulta mediante la API de acceso a datos](../../data-access/home.md)
 * [Configurar un conjunto de datos para el Perfil de clientes en tiempo real y el servicio de identidad mediante API](../../profile/tutorials/dataset-configuration.md)
