@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: Creación de un simulador para pruebas
 topic: developer guide
+description: Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al extremo "/sandboxes".
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '151'
 ht-degree: 2%
 
 ---
@@ -44,7 +45,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Identificador que se utilizará para acceder al simulador para pruebas en solicitudes futuras. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. No puede contener espacios ni mayúsculas. |
-| `title` | Nombre legible en lenguaje natural que se utiliza para la visualización en la interfaz de usuario de Platform. |
+| `title` | Nombre legible en lenguaje natural que se utiliza para la visualización en la interfaz de usuario de la plataforma. |
 | `type` | Tipo de entorno limitado que se va a crear. Actualmente, una organización solo puede crear entornos limitados de tipo &quot;desarrollo&quot;. |
 
 **Respuesta**
