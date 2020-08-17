@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Información general sobre destinos
 seo-title: Información general sobre destinos
-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
-seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde el Platform de datos del cliente en tiempo real. Puede utilizar Destinos en el Platform de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ![Pancarta de información general sobre destinos](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**[!DNL Destinations]** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Platform de datos de clientes en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+**[!DNL Destinations]** son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 
 ## Destinos y fuentes {#destinations-and-sources}
 
@@ -44,7 +45,7 @@ Para obtener información detallada, consulte la descripción general [de tipos 
 
 ## Destinos y Controles de acceso {#access-controls}
 
-La funcionalidad de destinos de CDP en tiempo real funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
+La funcionalidad de destinos de CDP en tiempo real funciona con los permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
 
 Para obtener más información sobre controles de acceso, consulte la guía del usuario de [Control de acceso](../../access-control/ui/overview.md).
 
