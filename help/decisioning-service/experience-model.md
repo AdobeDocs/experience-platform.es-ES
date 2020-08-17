@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: modelo de dominio de decisiones de experiencia
 topic: overview
+description: En esta sección se explican los componentes del servicio de toma de decisiones y se detallan las formas en que interactúan esos componentes. Los conceptos y sus relaciones forman el *Dominio* del problema de toma de decisiones. Estos componentes fundamentales entran en juego independientemente de cómo utilice el servicio de toma de decisiones].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ En esta sección se explican los componentes de y se detallan las formas en que 
 
 ## Opciones de decisión
 
-Una opción *de* decisión de experiencia es una experiencia potencial que se puede presentar a un cliente específico. Una opción también se denomina opción o alternativa. Al decidir la siguiente mejor opción para un cliente, [!DNL Decisioning Service] considera las opciones ***d<sub>1</sub>***a***<sub>dN</sub>*** entre un conjunto finito de opciones **`D`**.
+Una opción *de* decisión de experiencia es una experiencia potencial que se puede presentar a un cliente específico. Una opción también se denomina opción o alternativa. Al decidir la siguiente mejor opción para un cliente, [!DNL Decisioning Service] considera las opciones ***d<sub>1</sub>*** a ***<sub>dN</sub>*** entre un conjunto finito de opciones **`D`**.
 
-Las decisiones se toman identificando la mejor opción entre un conjunto de opciones disponibles. Un enfoque es eliminar sucesivamente las opciones *de* decisión ***<sub>di</sub>***desde el conjunto de*** D ***hasta que solo quede uno y luego elija un &quot;ganador&quot; al azar del conjunto restante. Otra forma de toma de decisiones es clasificar las opciones de decisión restantes (elegibles) según el resultado esperado.
+Las decisiones se toman identificando la mejor opción entre un conjunto de opciones disponibles. Un enfoque es eliminar sucesivamente las opciones *de* decisión ***<sub>di</sub>*** desde el conjunto de ***D*** hasta que solo quede uno y luego elija un &quot;ganador&quot; al azar del conjunto restante. Otra forma de toma de decisiones es clasificar las opciones de decisión restantes (elegibles) según el resultado esperado.
 
 ### Conjunto finito de opciones de decisión
 
@@ -52,7 +53,7 @@ El marco general de decisión se muestra en el diagrama siguiente.
 
 *Las actividades* de decisión configuran el algoritmo y proporcionan parámetros para una estrategia de decisión específica. Los parámetros de estrategia incluyen las restricciones aplicadas a las opciones y a la función de clasificación. Todas las decisiones se adoptan en el contexto de una actividad. [!DNL Decisioning Service] aloja muchas actividades y las actividades se pueden reutilizar entre canales. En cualquier momento dado, la mejor opción se evalúa en función del conjunto más reciente de restricciones, reglas y modelos.
 
-Una actividad de decisión define la recopilación de las opciones de decisión que se han de considerar. filtros el subconjunto de todas las opciones que son de interés para esta actividad. Esto permite [!DNL Decisioning service] administrar categorías de temas dentro del catálogo de todas las opciones.
+Una actividad de decisión define la recopilación de las opciones de decisión que se han de considerar. Filtros el subconjunto de todas las opciones que son de interés para esta actividad. Esto permite [!DNL Decisioning service] administrar categorías de temas dentro del catálogo de todas las opciones.
 
 Una actividad de decisión especifica una opción *de* reserva en caso de que las restricciones combinadas descalifiquen todas las demás opciones. Esto significa que siempre hay una respuesta a la pregunta: ¿Cuál es actualmente la opción &quot;mejor&quot;?
 
@@ -64,7 +65,7 @@ Hasta ahora, sólo se describió la *lógica* empresarial que afecta la decisió
 
 Los datos de contexto de decisión pueden dividirse en datos relacionados con el perfil del usuario, datos comerciales y datos recopilados internamente.
 
-- *Las entidades* de Perfil se utilizan para representar los datos del usuario final, pero no todas las entidades de perfil representan a un individuo. Podría ser un hogar, un grupo social o cualquier otro tema. Los eventos de experiencias son registros de datos de serie temporal adjuntos a un perfil. Si hay una experiencia, estos datos son el *tema* de esta experiencia.
+- *Las entidades* de perfil se utilizan para representar los datos del usuario final, pero no todas las entidades de perfil representan a un individuo. Podría ser un hogar, un grupo social o cualquier otro tema. Los eventos de experiencias son registros de datos de serie temporal adjuntos a un perfil. Si hay una experiencia, estos datos son el *tema* de esta experiencia.
 - Por otro lado, están las entidades *comerciales*. Se pueden considerar como los *objetos* de las interacciones. A menudo se hace referencia a esas entidades en los eventos de experiencia de las entidades de perfil. Ejemplos de entidades comerciales son sitios web y páginas, tiendas, detalles de productos, contenido digital, datos de inventario de productos, etc.
 - La última categoría de datos en el contexto de decisión son los datos que se crearon durante el funcionamiento del [!DNL Decisioning Service]. Todos los eventos de decisión entran en esa categoría, junto con las respuestas de los clientes, los datos de propuesta forman un conjunto de datos internos denominado el historial *de* proposición-respuesta.
 
