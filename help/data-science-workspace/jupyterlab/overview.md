@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
+description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
-ht-degree: 12%
+source-wordcount: '3684'
+ht-degree: 11%
 
 ---
 
 
 # [!DNL JupyterLab] guía del usuario
 
-[!DNL JupyterLab] es una interfaz de usuario basada en web para <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> y está estrechamente integrada en [!DNL Adobe Experience Platform]. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
+[!DNL JupyterLab] es una interfaz de usuario basada en web para [Project Jupyter](https://jupyter.org/) y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
 
 Este documento proporciona información general sobre [!DNL JupyterLab] y sus características, así como instrucciones para realizar acciones comunes.
 
@@ -22,14 +23,14 @@ Este documento proporciona información general sobre [!DNL JupyterLab] y sus ca
 
 La integración de JupyterLab de Experience Platform va acompañada de cambios arquitectónicos, consideraciones de diseño, extensiones personalizadas de portátiles, bibliotecas preinstaladas y una interfaz temática de Adobe.
 
-La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en Platform:
+La siguiente lista describe algunas de las características exclusivas de JupyterLab en la plataforma:
 
 | Función | Descripción |
 | --- | --- |
 | **Kernels** | Los kernels proporcionan al portátil y a otros [!DNL JupyterLab] front-end la capacidad de ejecutar e introducir código en diferentes lenguajes de programación. [!DNL Experience Platform] proporciona núcleos adicionales para admitir el desarrollo en [!DNL Python], R, PySpark y [!DNL Spark]. Consulte la sección [kernels](#kernels) para obtener más detalles. |
 | **Acceso a datos** | Acceda directamente a los conjuntos de datos existentes desde dentro [!DNL JupyterLab] con compatibilidad total con las capacidades de lectura y escritura. |
-| **[!DNL Platform]integración de servicios ** | Las integraciones integradas le permiten utilizar otros [!DNL Platform] servicios directamente desde dentro [!DNL JupyterLab]. En la sección sobre [Integración con otros servicios](#service-integration)de Platform se proporciona una lista completa de las integraciones admitidas. |
-| **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y el Experience Platform, incluida la comunicación de servicio a servicio de Platform, se cifran y autentican a través del <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Platform]integración de servicios** | Las integraciones integradas le permiten utilizar otros [!DNL Platform] servicios directamente desde dentro [!DNL JupyterLab]. En la sección sobre [Integración con otros servicios](#service-integration)de la Plataforma se proporciona una lista completa de las integraciones admitidas. |
+| **Autenticación** | Además del modelo <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de seguridad integrado de</a>JupyterLab, todas las interacciones entre la aplicación y el Experience Platform, incluida la comunicación entre servicio y servicio de plataforma, se cifran y autentican a través del <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliotecas de desarrollo** | En [!DNL Experience Platform], [!DNL JupyterLab] proporciona bibliotecas preinstaladas para [!DNL Python], R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
 | **Controlador de biblioteca** | Cuando las bibliotecas preinstaladas no están adaptadas a sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de [!DNL Platform] los datos y mantenerlos seguros. Consulte la sección [kernels](#kernels) para obtener más detalles. |
 
@@ -41,10 +42,10 @@ La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. La integración de [!DNL JupyterLab] on [!DNL Platform] como un IDE integrado le permite interactuar con otros [!DNL Platform] servicios, permitiéndole utilizar [!DNL Platform] todo su potencial. Los siguientes [!DNL Platform] servicios están disponibles en [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]::**Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
-* **[!DNL Query Service]::**Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
-* **[!DNL Sensei ML Framework]::**Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
-* **[!DNL Experience Data Model (XDM)]::**La estandarización y la interoperabilidad son conceptos clave que sustentan el Adobe Experience Platform.[El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
+* **[!DNL Catalog Service]::** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
+* **[!DNL Query Service]::** Acceda y explore conjuntos de datos mediante SQL, proporcionando un acceso a los datos más bajo en los costes generales cuando se trata de grandes cantidades de datos.
+* **[!DNL Sensei ML Framework]::** Desarrollo de modelos con la capacidad de entrenar y marcar datos, así como la creación de fórmulas con un solo clic.
+* **[!DNL Experience Data Model (XDM)]::** La estandarización y la interoperabilidad son conceptos clave para Adobe Experience Platform. [El modelo de datos de experiencia (XDM)](https://www.adobe.com/go/xdm-home-en), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
 >[!NOTE]
 >
@@ -136,7 +137,7 @@ Algunas funciones y características se limitan a determinados núcleos, como se
 
 ### Sesiones de núcleo {#kernel-sessions}
 
-Cada portátil o actividad activa en [!DNL JupyterLab] utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **[!DNL Python]3 **y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
+Cada portátil o actividad activa en [!DNL JupyterLab] utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar expandiendo la ficha Terminales de **ejecución y núcleos** desde la barra lateral izquierda. El tipo y estado del núcleo para un portátil se puede identificar observando la parte superior derecha de la interfaz del bloc de notas. En el diagrama siguiente, el núcleo asociado al bloc de notas es **[!DNL Python]3** y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo de ralentí y un círculo sólido implica un núcleo ocupado.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -254,7 +255,7 @@ Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service
 
 #### [!DNL Python] límites de datos del bloc de notas
 
-**esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 2 millones de filas (aproximadamente 6,1 GB de datos en disco) de datos XDM en menos de 22 minutos. Añadir filas adicionales puede provocar errores.
+**Esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 2 millones de filas (aproximadamente 6,1 GB de datos en disco) de datos XDM en menos de 22 minutos. Añadir filas adicionales puede provocar errores.
 
 | Número de filas | 1K | 10K | 100K | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
@@ -270,7 +271,7 @@ Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service
 
 #### Límites de datos del portátil R
 
-**esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 1 millón de filas de datos XDM (datos de 3 GB en disco) en menos de 13 minutos.
+**Esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 1 millón de filas de datos XDM (datos de 3 GB en disco) en menos de 13 minutos.
 
 | Número de filas | 1K | 10K | 100K | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
@@ -286,7 +287,7 @@ Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service
 
 #### Límites de datos de portátiles PySpark ([!DNL Python] núcleo):
 
-**esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 20 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
+**Esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 20 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
 
 | Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -304,7 +305,7 @@ Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service
 
 #### [!DNL Spark] Límites de datos de portátiles (kernel Scala):
 
-**esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 18 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
+**Esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 18 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
 
 | Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
