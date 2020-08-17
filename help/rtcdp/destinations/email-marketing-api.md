@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,8 @@ Los recursos de [!DNL Experience Platform] pueden aislarse en entornos limitados
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Para obtener más información sobre los entornos limitados de [!DNL Experience Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
