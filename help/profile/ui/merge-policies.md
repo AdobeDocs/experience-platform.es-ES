@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Esta guía requiere una comprensión práctica de los diversos [!DNL Experience 
 * [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-## Directivas de combinación de Vistas
+## Directivas de combinación de vistas
 
 En la interfaz de usuario, puede empezar a trabajar con políticas de combinación y ver una lista de las políticas de combinación existentes de su organización haciendo clic en el [!DNL Experience Platform] Perfil **[!UICONTROL en el carril izquierdo y, a continuación, seleccionando la ficha]** Combinar políticas **** .
 
-![página de aterrizaje de políticas de combinación](../images/merge-policies/landing.png)
+![Página de aterrizaje de políticas de combinación](../images/merge-policies/landing.png)
 
 Los detalles de cada directiva de combinación disponible para su organización están visibles en la página de aterrizaje, incluidos el nombre *[!UICONTROL de la]* directiva, la directiva *[!UICONTROL de combinación]* predeterminada y el *[!UICONTROL Esquema]*.
 
@@ -44,14 +44,14 @@ Para seleccionar qué detalles están visibles o para agregar columnas adicional
 
 Para crear una nueva directiva de combinación, haga clic en **[!UICONTROL Crear directiva]** de combinación cerca de la parte superior derecha de la ficha **[!UICONTROL Combinar directivas]** .
 
-![página de aterrizaje de políticas de combinación](../images/merge-policies/create-new.png)
+![Página de aterrizaje de políticas de combinación](../images/merge-policies/create-new.png)
 
 Aparece la pantalla **[!UICONTROL Crear directiva]** de combinación, que le permite proporcionar información importante para la nueva directiva de combinación.
 
 ![](../images/merge-policies/create.png)
 
 * **[!UICONTROL Nombre]**: El nombre de la directiva de combinación debe ser descriptivo pero conciso.
-* **[!UICONTROL Esquema]**: esquema asociado a la directiva de combinación. Esto especifica el esquema XDM para el que se crea esta directiva de combinación. Las organizaciones pueden crear varias directivas de combinación por esquema.
+* **[!UICONTROL Esquema]**: Esquema asociado a la directiva de combinación. Esto especifica el esquema XDM para el que se crea esta directiva de combinación. Las organizaciones pueden crear varias directivas de combinación por esquema.
 * **[!UICONTROL Coincidencia]** de ID: Este campo define cómo determinar las identidades relacionadas de un cliente. Existen dos valores posibles:
    * **[!UICONTROL Ninguno]**: No realice ninguna vinculación de identidad.
    * **[!UICONTROL Gráfico]** privado: Realice la vinculación de identidad en función del gráfico de identidad privado.
@@ -76,11 +76,12 @@ Una vez que haya terminado de crear la directiva de combinación, haga clic en *
 
 Puede modificar una directiva de combinación existente a través de la ficha *[!UICONTROL Combinar directivas]* haciendo clic en el nombre *[!UICONTROL de]* directiva de la directiva de combinación que desee editar.
 
-![página de aterrizaje de políticas de combinación](../images/merge-policies/select-edit.png)
+![Página de aterrizaje de políticas de combinación](../images/merge-policies/select-edit.png)
 
 Cuando aparece la pantalla *[!UICONTROL Editar directiva]* de combinación, puede realizar cambios en los tipos de combinación ** Nombre *[!UICONTROL ,]* Esquema *[!UICONTROL ,]* ID *[!UICONTROL y]* ** Atributo, así como seleccionar si esta directiva será o no la directiva de combinación predeterminada de su organización.
 
->[!Nota]
+>[!NOTE]
+>
 >No se puede editar la ID de la directiva de combinación, que se muestra en la parte superior de la pantalla de edición. Se trata de un ID de sólo lectura, generado por el sistema, que no se puede cambiar.
 
 ![](../images/merge-policies/edit-screen.png)
@@ -91,11 +92,11 @@ Una vez que haya realizado los cambios necesarios, haga clic en **[!UICONTROL Gu
 
 ## Infracción de la política de gestión de datos
 
-Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las directivas de uso de datos definidas por la organización. Las políticas de uso de datos forman parte del Adobe Experience Platform [!DNL Data Governance] y son reglas que describen los tipos de acciones de mercadotecnia que se le permite realizar o se le restringe, con datos específicos [!DNL Platform] . Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y la organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibiría una notificación de &quot;infracción de directiva de control de datos detectada&quot; al intentar guardar la directiva de combinación.
+Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las directivas de uso de datos definidas por la organización. Las políticas de uso de datos forman parte de Adobe Experience Platform [!DNL Data Governance] y son reglas que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a datos específicos en [!DNL Platform] datos específicos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y la organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibiría una notificación de &quot;infracción de directiva de control de datos detectada&quot; al intentar guardar la directiva de combinación.
 
 Esta notificación incluye una lista de las directivas de uso de datos que se han infringido y le permite vista de los detalles de la infracción seleccionando una directiva de la lista. Al seleccionar una directiva infringida, la ficha *Lineación* de datos proporciona el *motivo de la infracción* y las activaciones ** afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha infringido la directiva de uso de datos.
 
-Para obtener más información sobre cómo se realiza la administración de datos dentro del Adobe Experience Platform, lea la información general [sobre la administración de](../../data-governance/home.md)datos.
+Para obtener más información sobre el rendimiento de la administración de datos dentro de Adobe Experience Platform, lea la información general [sobre la administración de](../../data-governance/home.md)datos.
 
 ![](../images/merge-policies/policy-violation.png)
 
