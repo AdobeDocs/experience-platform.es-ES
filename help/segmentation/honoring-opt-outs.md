@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: Cumplimiento de las opciones de exclusión
 topic: overview
+description: 'Experience Platform permite a sus clientes enviar solicitudes de exclusión con respecto al uso y el almacenamiento de sus datos dentro del Perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de privacidad del consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién). '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -31,12 +32,12 @@ El cumplimiento de las solicitudes de exclusión requiere comprender los distint
 
 Para cumplir las solicitudes de exclusión de CCPA, uno de los esquemas que forma parte del esquema de unión debe contener los campos de exclusión necesarios [!DNL Experience Data Model] (XDM). Existen dos mezclas que se pueden utilizar para agregar campos de exclusión a un esquema; cada una de ellas se trata con más detalle en las secciones siguientes:
 
-- [Privacidad](#profile-privacy)de Perfil: Se utiliza para capturar diferentes tipos de exclusión (general o de ventas/uso compartido).
-- [Detalles](#profile-preferences-details)de las preferencias de Perfil: Se utiliza para capturar solicitudes de exclusión para canales XDM específicos.
+- [Privacidad](#profile-privacy)de perfil: Se utiliza para capturar diferentes tipos de exclusión (general o de ventas/uso compartido).
+- [Detalles](#profile-preferences-details)de las preferencias de perfil: Se utiliza para capturar solicitudes de exclusión para canales XDM específicos.
 
 Para obtener instrucciones detalladas sobre cómo añadir una mezcla a un esquema, consulte la sección &quot;Añadir una mezcla&quot; en la siguiente documentación de XDM:
-- [Tutorial](../xdm/api/getting-started.md)de la API del Registro de Esquemas.:: Creación de un esquema mediante la API del Registro de Esquema.
-- [Tutorial](../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Creación de un esquema mediante la interfaz de usuario de Platform.
+- [Tutorial](../xdm/api/getting-started.md)de la API del Registro de esquemas.:: Creación de un esquema mediante la API del Registro de Esquema.
+- [Tutorial](../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Creación de un esquema mediante la interfaz de usuario de la plataforma.
 
 Esta es una imagen de ejemplo que muestra las mezclas de exclusión agregadas a un esquema en la interfaz de usuario:
 
@@ -66,7 +67,7 @@ The [!DNL Profile Privacy] mixin contains the following fields:
    - Inclusión (`in`): El cliente ha elegido la opción de participar.
 - Marca de tiempo de exclusión (`timestamp`): Marca de tiempo de la señal de exclusión recibida.
 
-Para la vista de la estructura completa de la [!DNL Profile Privacy] mezcla, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de Platform.
+Para la vista de la estructura completa de la [!DNL Profile Privacy] mezcla, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de la plataforma.
 
 ### [!DNL Profile Preferences Details]
 
