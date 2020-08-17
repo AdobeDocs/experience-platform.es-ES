@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor
 solution: Experience Platform
-title: Guía del Editor de Consultas del servicio de Consulta de Adobes Experience Platform
+title: Guía del usuario del Editor de consultas
 topic: query editor
+description: El Editor de consultas es una herramienta interactiva proporcionada por el servicio de Consulta de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para la análisis y la exploración de datos, y permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1086'
 ht-degree: 1%
 
 ---
@@ -32,11 +33,11 @@ Para obtener más información sobre los conceptos y las características de [!D
 
 Consultas ejecutadas desde [!DNL Query Editor] ejecución interactiva. Esto significa que si cierra el explorador o se desplaza, la consulta se cancela. Esto también se aplica a las consultas realizadas para generar conjuntos de datos a partir de resultados de consulta.
 
-## Creación de Consultas mediante [!DNL Query Editor]
+## Creación de consultas mediante [!DNL Query Editor]
 
 Con [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para los datos de experiencia del cliente. Todas las consultas ejecutadas [!DNL Query Editor]o guardadas están disponibles para todos los usuarios de la organización con acceso a [!DNL Query Service].
 
-### Acceso [!DNL Query Editor]
+### Acceso al [!DNL Query Editor]
 
 En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir el [!DNL Query Service] espacio de trabajo. A continuación, haga clic en **[!UICONTROL Crear Consulta]** en la parte superior derecha de la pantalla para escribir consultas en inicio. Este vínculo está disponible desde cualquiera de las páginas del [!DNL Query Service] espacio de trabajo.
 
@@ -44,7 +45,7 @@ En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL
 
 ### Escritura de consultas
 
-[!UICONTROL El Editor] de Consultas está organizado para que la escritura de consultas sea lo más fácil posible. La captura de pantalla siguiente muestra cómo aparece el editor en la interfaz de usuario, con el botón **Reproducir** y el campo de entrada SQL resaltados.
+[!UICONTROL El Editor] de consultas está organizado para que la escritura de consultas sea lo más fácil posible. La captura de pantalla siguiente muestra cómo aparece el editor en la interfaz de usuario, con el botón **Reproducir** y el campo de entrada SQL resaltados.
 
 ![Imagen](../images/queries/query-editor-overview/editor.png)
 
@@ -74,7 +75,7 @@ Cuando se detectan errores, puede realizar la vista de los mensajes de error esp
 
 ![Imagen](../images/queries/query-editor-overview/linting-error.png)
 
-### Detalles de Consulta
+### Detalles de consulta
 
 Mientras visualiza una consulta en [!DNL Query Editor], el panel Detalles *[!UICONTROL de la]* Consulta proporciona herramientas para administrar la consulta seleccionada.
 
@@ -94,7 +95,7 @@ Consulte la descripción general [de la interfaz de usuario del servicio de][que
 
 >[!NOTE]
 >
->El registro no guarda las Consultas que no se ejecutan. Para que la consulta esté disponible en [!DNL Query Service], debe ejecutarse o guardarse en [!DNL Query Editor].
+>El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en [!DNL Query Service], debe ejecutarse o guardarse en [!DNL Query Editor].
 
 ## Ejecución de consultas mediante el Editor de Consultas
 
@@ -110,7 +111,7 @@ La consola proporciona información sobre el estado y el funcionamiento de [!DNL
 >
 >La consola solo muestra los errores que se han producido al ejecutar una consulta. No muestra errores de validación de consulta antes de ejecutar una consulta.
 
-### Resultados de Consulta
+### Resultados de consulta
 
 Una vez finalizada la consulta, los resultados se muestran en la ficha *[!UICONTROL Resultados]* , junto a la ficha *[!UICONTROL Consola]* . Esta vista muestra el resultado tabular de la consulta, mostrando hasta 100 filas. Esta vista le permite comprobar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, elimine los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con el resultado. Consulte el tutorial [][query-service-create-datasets] Generación de conjuntos de datos para obtener instrucciones sobre cómo generar un conjunto de datos a partir de resultados de consulta en [!DNL Query Editor].
 
