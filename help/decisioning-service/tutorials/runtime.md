@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 topic: tutorial
+description: 'Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de Decisioning Service mediante las API de Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 
-Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de [!DNL Decisioning Service] utilizar API de Adobe Experience Platform.
+Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de [!DNL Decisioning Service] utilizar las API de Adobe Experience Platform.
 
 ## Primeros pasos
 
@@ -71,7 +72,7 @@ La activación de las entidades lógicas del negocio se produce de manera autom�
 
 ### Efectos de las colocaciones, filtros y estados del ciclo vital
 
-Las Ofertas se crean continuamente, se producen cambios en su estado de ciclo vital o pueden obtener nuevas representaciones de contenido. El filtro de oferta de una actividad puede cambiar, coincidir o filtrar ofertas cuyos conjuntos de etiquetas se han actualizado. Este proceso puede estar bastante involucrado y las aplicaciones y los servicios deben saber cuál será el conjunto de candidatos resultante de una actividad. El motor de ejecución de decisiones proporciona una API de actividad a ofertas que filtros ofertas que no están aprobadas, que no coinciden con el filtro de oferta o que no tienen una representación para la ubicación a la que hace referencia la actividad.
+Las ofertas se crean continuamente, se producen cambios en su estado de ciclo vital o pueden obtener nuevas representaciones de contenido. El filtro de oferta de una actividad puede cambiar, coincidir o filtrar ofertas cuyos conjuntos de etiquetas se han actualizado. Este proceso puede estar bastante involucrado y las aplicaciones y los servicios deben saber cuál será el conjunto de candidatos resultante de una actividad. El motor de ejecución de decisiones proporciona una API de actividad a ofertas que filtros ofertas que no están aprobadas, que no coinciden con el filtro de oferta o que no tienen una representación para la ubicación a la que hace referencia la actividad.
 
 **Solicitud**
 
@@ -139,7 +140,7 @@ Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron
 
 ### API de diagnóstico y solución de problemas
 
-Las Actividades, ofertas y reglas de elegibilidad se compilan en un formato interno (catálogo de ofertas de tiempo de ejecución) que utiliza el motor de ejecución del servicio de decisiones. La compilación puede detectar errores que no fueron detectados por las comprobaciones realizadas cuando se almacenaron los objetos y se establecieron vínculos en el repositorio de objetos principales XDM.
+Las actividades, ofertas y reglas de elegibilidad se compilan en un formato interno (catálogo de ofertas de tiempo de ejecución) que utiliza el motor de ejecución del servicio de decisiones. La compilación puede detectar errores que no fueron detectados por las comprobaciones realizadas cuando se almacenaron los objetos y se establecieron vínculos en el repositorio de objetos principales XDM.
 
 Se proporciona una API de diagnóstico para obtener los errores de compilación que se produjeron en ese paso y, en caso de que no haya errores para obtener información sobre cuándo se recompilaron por última vez las reglas y actividades.
 
@@ -154,7 +155,7 @@ curl -X GET {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/diagnostics \
   -H 'x-request-id: {NEW_UUID}'
 ```
 
-El único parámetro para esta llamada de API es `containerId`. Los resultados son todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
+El único parámetro para esta llamada de API es `containerId`. Los resultados de todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
 
 **Respuesta**
 
