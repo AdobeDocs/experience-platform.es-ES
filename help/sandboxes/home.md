@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox
 solution: Experience Platform
 title: Descripción general de los Simuladores para pruebas
 topic: overview
+description: Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital.
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -14,15 +15,15 @@ ht-degree: 0%
 
 # Descripción general de los Simuladores para pruebas
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las Compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, la prueba y la implementación de estas aplicaciones al mismo tiempo que garantizan el cumplimiento de normas operacionales.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, la prueba y la implementación de estas aplicaciones al mismo tiempo que garantizan el cumplimiento de normas operacionales.
 
-Para satisfacer esta necesidad, Experience Platform proporciona **entornos** limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Este documento proporciona información general de alto nivel sobre los entornos limitados en Experience Platform.
 
 ## Aspectos básicos de los entornos limitados
 
-Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite un entorno limitado de producción y varios entornos limitados que no sean de producción, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.).  Todo el contenido y las acciones realizadas dentro de un entorno limitado solo se limitan a ese entorno limitado y no afectan a ningún otro entorno limitado.
+Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite un entorno limitado de producción y varios entornos limitados que no sean de producción, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de la Plataforma (incluidos esquemas, conjuntos de datos, perfiles, etc.).  Todo el contenido y las acciones realizadas dentro de un entorno limitado solo se limitan a ese entorno limitado y no afectan a ningún otro entorno limitado.
 
 Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Además, los entornos limitados que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no son de producción no se pueden convertir en entornos limitados de producción.
 
@@ -71,4 +72,4 @@ La API de Simulador para pruebas le permite administrar entornos limitados media
 
 Al leer este documento, se le han presentado los conceptos esenciales de los entornos limitados en Experience Platform. Para ver los pasos detallados sobre cómo administrar los entornos limitados, consulte la guía [de](ui/overview.md) usuario de la interfaz de usuario o la guía [para](./api/getting-started.md) desarrolladores de la API.
 
-Aunque los entornos limitados son una herramienta valiosa para aislar entornos de Platform para su equipo de desarrollo, también puede administrar un control de acceso más granular mediante Adobe Admin Console. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
+Aunque los entornos limitados sirven como una valiosa herramienta para aislar los entornos de la plataforma para su equipo de desarrollo, también puede administrar controles de acceso más granulares mediante Adobe Admin Console. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
