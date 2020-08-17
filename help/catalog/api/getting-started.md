@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Guía del desarrollador del servicio de catálogo
 topic: developer guide
+description: En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio mediante la API de catálogo. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el catálogo.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] guía para desarrolladores
 
-[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro del Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. Consulte la información general [del](../home.md) catálogo para obtener más información.
+[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. Consulte la información general [del](../home.md) catálogo para obtener más información.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Catalog] API. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante [!DNL Catalog].
 
@@ -56,7 +57,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Al realizar solicitudes de GET a la [!DNL Catalog] API, se recomienda incluir parámetros de consulta en las solicitudes para devolver solo los objetos y las propiedades que necesite. Las solicitudes sin filtrar pueden hacer que las cargas de respuesta superen los 3 GB de tamaño, lo que puede ralentizar el rendimiento general.
 
-Puede realizar la vista de objetos específicos incluyendo su ID en la ruta de la solicitud o utilizando parámetros de consulta como `properties` y `limit` para filtrar las respuestas. Los Filtros se pueden pasar como encabezados y como parámetros de consulta, y los que se pasan como parámetros de consulta tienen prioridad. Consulte el documento sobre el [filtrado de datos](filter-data.md) del catálogo para obtener más información.
+Puede realizar la vista de objetos específicos incluyendo su ID en la ruta de la solicitud o utilizando parámetros de consulta como `properties` y `limit` para filtrar las respuestas. Los filtros se pueden pasar como encabezados y como parámetros de consulta, y los que se pasan como parámetros de consulta tienen prioridad. Consulte el documento sobre el [filtrado de datos](filter-data.md) del catálogo para obtener más información.
 
 Dado que algunas consultas pueden suponer una carga pesada para la API, se han implementado límites globales en [!DNL Catalog] consultas para admitir más prácticas recomendadas.
 
