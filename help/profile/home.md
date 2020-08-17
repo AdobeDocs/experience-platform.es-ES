@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ La relación entre [!DNL Real-time Customer Profile] y otros servicios dentro de
 
 ### Perfiles y datos de registro
 
-Un perfil es una representación de un sujeto, una organización o una persona, también denominada datos de registro. Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellidos y dirección de correo electrónico. Con [!DNL Experience Platform], puede personalizar perfiles para utilizar tipos de datos relevantes para su empresa. La clase estándar [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] es la clase preferida sobre la que se crea un esquema al describir datos de registros de clientes y proporciona la información integral a muchas interacciones entre los servicios de Platform. Para obtener más información sobre cómo trabajar con esquemas en [!DNL Experience Platform], lea la descripción general [del sistema](../xdm/home.md)XDM.
+Un perfil es una representación de un sujeto, una organización o una persona, también denominada datos de registro. Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellidos y dirección de correo electrónico. Con [!DNL Experience Platform], puede personalizar perfiles para utilizar tipos de datos relevantes para su empresa. La clase estándar [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] es la clase preferida en la que se genera un esquema al describir datos de registros de clientes y proporciona la información integral a muchas interacciones entre los servicios de plataforma. Para obtener más información sobre cómo trabajar con esquemas en [!DNL Experience Platform], lea la descripción general [del sistema](../xdm/home.md)XDM.
 
-### eventos de series temporales
+### Eventos de series temporales
 
 Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, ya sea directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
 
@@ -46,7 +46,7 @@ Cada empresa quiere comunicarse con sus clientes de una manera que se sienta per
 
 Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para potenciar las experiencias de sus clientes individuales. Cuando se crea un segmento de audiencia, el ID de ese segmento se agrega a la lista de pertenencias a segmentos para todos los perfiles que cumplen los requisitos. Las reglas de segmentos se generan y aplican a los [!DNL Real-time Customer Profile] datos mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información sobre la segmentación, lea la información general [del servicio de](../segmentation/home.md)segmentación.
 
-### Fragmentos de Perfil y esquemas de unión {#profile-fragments-and-union-schemas}
+### Fragmentos de perfil y esquemas de unión {#profile-fragments-and-union-schemas}
 
 Una de las características clave de [!DNL Real-time Customer Profile] es la capacidad de unificar datos de varios canales. Cuando [!DNL Real-time Customer Profile] se utiliza para acceder a una entidad, puede suministrarle una vista combinada de todos los fragmentos de perfil de dicha entidad en todos los conjuntos de datos, denominados vistas de unión y posibles mediante lo que se conoce como esquema de unión. [!DNL Real-time Customer Profile] los datos se combinan entre fuentes cuando su ID accede a una entidad o perfil o se exportan como un segmento. Para obtener más información sobre el acceso a perfiles y vistas de unión mediante la [!DNL Real-time Customer Profile] API, visite la guía [de extremo de](api/entities.md)entidades.
 
@@ -59,7 +59,7 @@ Al reunir datos de varias fuentes y combinarlos para ver una vista completa de c
 >[!IMPORTANT]
 >La funcionalidad de atributo calculada que se describe en este documento está en alfa. La documentación y las funciones están sujetas a cambios.
 
-Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos. Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información. Para obtener más información sobre los atributos calculados e instrucciones paso a paso para trabajar con ellos mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de extremo de atributos](api/computed-attributes.md)calculados. Esta guía le ayudará a comprender mejor la función que los atributos calculados desempeñan en el Adobe Experience Platform, e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas.
+Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos. Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información. Para obtener más información sobre los atributos calculados e instrucciones paso a paso para trabajar con ellos mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de extremo de atributos](api/computed-attributes.md)calculados. Esta guía le ayudará a comprender mejor la función que los atributos calculados desempeñan en Adobe Experience Platform, e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas.
 
 ## Componentes en tiempo real
 
@@ -71,18 +71,19 @@ La entrada en tiempo real es posible a través de un proceso llamado transmisió
 
 ### Configuraciones y destinos de proyección de Edge
 
-Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Para obtener más información y empezar a trabajar con proyecciones mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de puntos finales de proyección de](api/edge-projections.md)Edge.
+Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Para obtener más información y empezar a trabajar con proyecciones mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de puntos finales de proyección de](api/edge-projections.md)Edge.
 
 ## Añadir datos a [!DNL Real-time Customer Profile]
 
 [!DNL Platform] puede configurarse para enviar el registro y los datos de la serie temporal a [!DNL Profile], admitiendo la transmisión de flujo continuo en tiempo real y la ingestión por lotes. Para obtener más información, consulte el tutorial que describe cómo [agregar datos al Perfil](tutorials/add-profile-data.md)del cliente en tiempo real.
 
->[!Nota]
+>[!NOTE]
+>
 >Los datos recopilados a través de soluciones de Adobe, incluidos [!DNL Analytics Cloud], [!DNL Marketing Cloud]y [!DNL Advertising Cloud], fluyen [!DNL Experience Platform] y se ingieren en [!DNL Profile].
 
 ### [!DNL Profile] métricas de ingestión
 
-Perspectivas de la capacidad de observación permite exponer métricas clave en Adobes Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registros ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
+Las perspectivas de visibilidad le permiten exponer métricas clave en Adobe Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingestión exitosas, los tamaños de registro ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
 
 ## [!DNL Data governance] y [!DNL Privacy]
 
@@ -110,7 +111,7 @@ En lo que se refiere al acceso a los datos, la gobernanza de los datos desempeñ
 | Profundidad de JSON para asociación de varias entidades | La profundidad máxima de JSON es **4**. |
 | Datos de series temporales | Los datos de series temporales **no están** permitidos en entidades [!DNL Profile] no personales. |
 | Relaciones de esquema de personas que no son personas | Las relaciones de esquema con personas que no son personas **no están** permitidas. |
-| Fragmento de Perfil | El tamaño máximo recomendado de un fragmento de perfil es de **10 kB**.<br><br> El tamaño máximo absoluto de un fragmento de perfil es de **1 MB**. |
+| Fragmento de perfil | El tamaño máximo recomendado de un fragmento de perfil es de **10 kB**.<br><br> El tamaño máximo absoluto de un fragmento de perfil es de **1 MB**. |
 | Entidad no personal | El tamaño total máximo de una entidad individual no personal es de **200 MB**. |
 | Conjuntos de datos por entidad no personal | Se puede asociar un máximo de **1** conjunto de datos a una entidad que no sea personal. |
 
