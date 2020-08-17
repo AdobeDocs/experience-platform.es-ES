@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
+description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Seleccione la ficha *[!UICONTROL Examinar]* para examinar los perfiles por ident
 
 ![](../images/user-guide/profiles-browse.png)
 
-### Métricas de Perfil {#profile-metrics}
+### Métricas de perfil {#profile-metrics}
 
 A la derecha de la ficha *[!UICONTROL Examinar]* hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
 
@@ -48,7 +49,7 @@ Además de estas métricas, la sección Métricas de perfil también proporciona
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
-### Recuento de Perfiles {#profile-count}
+### Recuento de perfiles {#profile-count}
 
 El recuento de perfiles muestra el número total de perfiles que tiene su organización dentro de [!DNL Experience Platform], después de que la directiva de combinación predeterminada de su organización haya combinado fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca en diferentes canales, pero estos fragmentos se combinarán (según la política de combinación predeterminada) y devolverá un recuento de perfiles &quot;1&quot; porque todos están relacionados con el mismo individuo.
 
@@ -88,7 +89,7 @@ Una vez introducido un valor, seleccione **[!UICONTROL Mostrar perfil]** y se de
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Detalles del Perfil {#profile-detail}
+### Detalles del perfil {#profile-detail}
 
 Al seleccionar el ID **[!UICONTROL de]** Perfil, se abre la ficha _[!UICONTROL Detalle]_. Esta página muestra información sobre el perfil seleccionado, incluidos atributos básicos, identidades vinculadas y canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
 
@@ -106,7 +107,7 @@ Para obtener más información sobre las directivas de combinación, consulte la
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
-## esquema de Unión
+## Esquema de unión
 
 Seleccione la ficha Esquema *de* Unión para la vista de los esquemas de unión [!DNL Profile Store]. Un esquema de unión es una combinación de todos los campos [!DNL Experience Data Model] (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en [!DNL Real-time Customer Profile]. Seleccione una clase en la lista izquierda para vista de la estructura de su esquema de unión en el lienzo.
 
