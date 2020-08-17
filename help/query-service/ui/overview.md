@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de Consulta de Adobe Experience Platform
 topic: guide
+description: El servicio de Consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, vista de consultas ejecutadas anteriormente y acceso a consultas guardadas por usuarios dentro de la organización de IMS.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 2%
+source-wordcount: '617'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL Query Service] guía
 
-El Adobe Experience Platform [!DNL Query Service] proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, vista de consultas ejecutadas anteriormente y acceso a consultas guardadas por usuarios dentro de la organización de IMS. Para acceder a la interfaz de usuario dentro del [Adobe Experience Platform][platform-ui], seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo.
+El Adobe Experience Platform [!DNL Query Service] proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, vista de consultas ejecutadas anteriormente y acceso a consultas guardadas por usuarios dentro de la organización de IMS. Para acceder a la interfaz de usuario de [Adobe Experience Platform][platform-ui], seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo.
 
 ## [!DNL Query Editor]
 
@@ -28,7 +29,7 @@ El [!DNL Query Editor] permite escribir y ejecutar consultas sin utilizar un cli
 
 ## Examinar
 
-La ficha *[!UICONTROL Examinar]* muestra las consultas guardadas por los usuarios de la organización. Es útil considerarlos proyectos de consulta, ya que las consultas guardadas aquí todavía pueden estar en construcción. Las Consultas que se muestran en la ficha *[!UICONTROL Examinar]* también se muestran como consultas de ejecución en la ficha *[!UICONTROL Registro]* si ya las ha ejecutado anteriormente [!DNL Query Service].
+La ficha *[!UICONTROL Examinar]* muestra las consultas guardadas por los usuarios de la organización. Es útil considerarlos proyectos de consulta, ya que las consultas guardadas aquí todavía pueden estar en construcción. Las consultas que se muestran en la ficha *[!UICONTROL Examinar]* también se muestran como consultas de ejecución en la ficha *[!UICONTROL Registro]* si ya las ha ejecutado anteriormente [!DNL Query Service].
 
 ![Imagen](../images/queries/ui-overview/browse.png)
 
