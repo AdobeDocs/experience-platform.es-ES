@@ -4,7 +4,7 @@ seo-title: Seguimiento de vínculos a Adobe Analytics con Adobe Experience Platf
 description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
