@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
-title: Tipos de datos del servicio de segmentación de Adobes Experience Platform
+title: Tipos de datos del servicio de segmentación de Adobe Experience Platform
 topic: overview
+description: Todos los tipos de datos XDM son compatibles con el servicio de segmentación. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 3%
 
 ---
 
 
-# Tipos de datos compatibles con Adobe Experience Platform [!DNL Segmentation Service]
+# Tipos de datos admitidos por Adobe Experience Platform [!DNL Segmentation Service]
 
 Todos los tipos de datos XDM son compatibles en [!DNL Segmentation Service]. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
 
@@ -54,11 +55,11 @@ Como se muestra en la tabla siguiente, los datos de evento se representan utiliz
 
 Las audiencias externas también se pueden usar como componentes de una nueva definición de segmento, agregando sus reglas de atributos al nuevo segmento.
 
-Actualmente, solo se admite Adobe Audience Manager como audiencia externa, y en el futuro se habilitarán fuentes adicionales. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con Platform en la guía de uso compartido de [audiencias de la documentación](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)de Adobe Audience Manager.
+Actualmente, solo se admite Adobe Audience Manager como audiencia externa, y en el futuro se habilitarán fuentes adicionales. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con plataforma en la guía de uso compartido de [audiencias de la documentación](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)de Adobe Audience Manager.
 
 ### Uso compartido de segmentos
 
-Los segmentos creados en Platform se pueden usar en otros servicios [principales de](https://docs.adobe.com/content/help/es-ES/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para habilitar esta función, deberá ponerse en contacto con su arquitecto de soluciones o con su asesor.
+Los segmentos creados en la plataforma se pueden usar en otros servicios [principales de](https://docs.adobe.com/content/help/es-ES/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para habilitar esta función, deberá ponerse en contacto con su arquitecto de soluciones o con su asesor.
 
 ## Otros tipos de datos
 
