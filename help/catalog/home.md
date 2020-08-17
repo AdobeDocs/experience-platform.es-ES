@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Información general del servicio de catálogo
 topic: overview
+description: Catalog Service es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. Aunque todos los datos que se ingestan en el Experience Platform se almacenan en el Data Lake como archivos y directorios, Catalog guarda los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y supervisión.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 6%
+source-wordcount: '783'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Catalog Service]sobre validación
 
-[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro del Adobe Experience Platform. Aunque todos los datos que se ingestan [!DNL Experience Platform] se almacenan en el [!DNL Data Lake] como archivos y directorios, [!DNL Catalog] guarda los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y supervisión.
+[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. Aunque todos los datos que se ingestan [!DNL Experience Platform] se almacenan en el [!DNL Data Lake] como archivos y directorios, [!DNL Catalog] guarda los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y supervisión.
 
 En pocas palabras, [!DNL Catalog] actúa como un almacén de metadatos o un &quot;[!UICONTROL catálogo]&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform]. Puede usar [!DNL Catalog] para responder a las siguientes preguntas:
 
@@ -57,7 +58,7 @@ La siguiente tabla describe los distintos tipos de objetos admitidos por [!DNL C
 | Cuenta | `/accounts` | Al crear conexiones de origen, se deben proporcionar credenciales de autenticación. Una cuenta representa una colección de credenciales de autenticación que se utilizaron para crear una conexión de un tipo específico. Cada conexión tiene un conjunto de parámetros únicos que se mantienen [!DNL Catalog] y aseguran en un [!DNL Azure Key Vault]. |
 | Lote | `/batches` | Los lotes son unidades de datos compuestas por uno o más archivos que se van a introducir como una sola unidad. Un objeto de lote [!DNL Catalog] describe las métricas de ingestión del lote (como el número de registros procesados o el tamaño del disco) y también puede incluir vínculos a conjuntos de datos, vistas y otros recursos que se vieron afectados por la operación por lotes. |
 | Conexión | `/connections` | Una conexión es una única instancia de un conector de origen, exclusivo de su organización y configurado con las credenciales de autenticación correspondientes para el tipo de conector. |
-| Conector | `/connectors` | Los conectores definen la forma en que las conexiones de origen deben recopilar datos de otras aplicaciones de Adobe (como Adobe Analytics y Adobe Audience Manager), fuentes de almacenamiento en la nube de terceros (como [!DNL Azure Blob]los servidores FTP [!DNL Amazon S3], FTP y SFTP) y sistemas CRM de terceros (como [!DNL Microsoft Dynamics] y [!DNL Salesforce]). |
+| Conector | `/connectors` | Los conectores definen la forma en que las conexiones de origen deben recopilar datos de otras aplicaciones de Adobe (como Adobe Analytics y Adobe Audience Manager), fuentes de almacenamiento en la nube de terceros (como [!DNL Azure Blob]los servidores FTP, [!DNL Amazon S3]FTP y SFTP) y sistemas CRM de terceros (como [!DNL Microsoft Dynamics] y [!DNL Salesforce]). |
 | Conjunto de datos | `/dataSets` | Un conjunto de datos es un almacenamiento y una estructura de administración que se utiliza para recopilar datos (generalmente una tabla) que contiene un esquema (columnas) y campos (filas). Consulte la información general [de los](./datasets/overview.md) conjuntos de datos para obtener más información. |
 | Archivo de conjunto de datos | `/datasetFiles` | Los archivos de conjunto de datos representan bloques de datos que se han guardado en [!DNL Platform]. Como registros de archivos literales, es allí donde puede encontrar el tamaño del archivo, el número de registros que contiene y una referencia al lote que ingesta el archivo. |
 
