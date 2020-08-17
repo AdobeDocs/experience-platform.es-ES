@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
 solution: Experience Platform
 title: Monitoreo de la ingesta de datos
 topic: overview
+description: Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 La ingestión de datos le permite ingerir sus datos en Adobe Experience Platform. Puede utilizar la ingestión por lotes, que le permite insertar los datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite ingerir los datos para [!DNL Platform] utilizar puntos finales de flujo en tiempo real.
 
-Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso al Adobe Experience Platform.
+Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 
 ## Monitoreo de la transmisión de datos end-to-end
 
@@ -64,7 +65,7 @@ En el [!DNL Experience Platform UI](https://platform.adobe.com), haga clic en **
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-Se abre la página de supervisión **[!UICONTROL por lotes de extremo a extremo]** , que muestra una lista de los lotes previamente ingestados. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
+Se abre la página de supervisión **[!UICONTROL por lotes de extremo a extremo]** , que muestra una lista de los lotes ingestados anteriormente. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
