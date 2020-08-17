@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
 solution: Experience Platform
 title: Conector de Salesforce
 topic: overview
+description: Experience Platform proporciona soporte para la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con proveedores CRM incluye Salesforce.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # [!DNL Salesforce] conector
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
 [!DNL Experience Platform] permite la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con los proveedores de CRM incluye [!DNL Salesforce].
 
-## lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
 Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
 
