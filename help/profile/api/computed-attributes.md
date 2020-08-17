@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Atributos calculados: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Los atributos calculados permiten calcular automáticamente el valor de los camp
 
 Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información.
 
-Esta guía le ayudará a comprender mejor los atributos calculados dentro del Adobe Experience Platform e incluye llamadas de API de muestra para realizar operaciones CRUD básicas mediante el `/config/computedAttributes` punto final.
+Esta guía le ayudará a comprender mejor los atributos calculados dentro de Adobe Experience Platform e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas mediante el `/config/computedAttributes` punto final.
 
 ## Primeros pasos
 
@@ -33,15 +33,15 @@ Adobe Experience Platform le permite importar y combinar fácilmente datos de m�
 
 Parte de la información recopilada en el perfil se puede entender fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o basarse en otros campos y valores para generar la información (por ejemplo, &quot;total de compras de duración&quot;). Para facilitar la comprensión de estos datos de un vistazo, [!DNL Platform] permite crear atributos **** calculados que realizan automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
 
-Los atributos calculados incluyen la creación de una expresión, o &quot;regla&quot;, que funciona con los datos entrantes y almacena el valor resultante en un atributo o evento de perfil. Las Expresiones se pueden definir de varias formas diferentes, lo que le permite especificar que una regla evalúe únicamente los eventos entrantes, los datos de evento y perfil entrantes o los eventos de evento, perfil e historial entrantes.
+Los atributos calculados incluyen la creación de una expresión, o &quot;regla&quot;, que funciona con los datos entrantes y almacena el valor resultante en un atributo o evento de perfil. Las expresiones se pueden definir de varias formas diferentes, lo que le permite especificar que una regla evalúe únicamente los eventos entrantes, los datos de evento y perfil entrantes o los eventos de evento, perfil e historial entrantes.
 
 ### Casos de uso
 
 Los casos de uso para atributos calculados pueden ir desde cálculos simples a referencias muy complejas. Estos son algunos ejemplos de casos de uso para atributos calculados:
 
-1. **[!UICONTROL Porcentajes]:**Un atributo simple calculado podría incluir tomar dos campos numéricos en un registro y dividirlos para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
-1. **[!UICONTROL Uso]de la aplicación:**Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° número de aperturas, lo que estimula un compromiso más profundo con su marca.
-1. **[!UICONTROL Valores]acumulados:**La recopilación de totales en curso, como un valor de compra de por vida para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
+1. **[!UICONTROL Porcentajes]:** Un atributo simple calculado podría incluir tomar dos campos numéricos en un registro y dividirlos para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
+1. **[!UICONTROL Uso]de la aplicación:** Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° período de apertura, lo que estimula una mayor participación con su marca.
+1. **[!UICONTROL Valores]acumulados:** La recopilación de totales en curso, como un valor de compra de por vida para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
 
 ## Configurar un atributo calculado
 
@@ -221,7 +221,7 @@ Al trabajar con atributos calculados mediante la API, hay dos opciones para acce
 
 Los pasos para enumerar todos los atributos calculados y para ver un atributo calculado específico se describen en las secciones siguientes.
 
-### Atributos calculados de Lista {#list-computed-attributes}
+### Atributos calculados de lista {#list-computed-attributes}
 
 La organización de IMS puede crear varios atributos calculados y realizar una solicitud de GET al extremo permite realizar la lista de todos los atributos calculados existentes para la organización. `/config/computedAttributes`
 
@@ -480,10 +480,9 @@ Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cue
 
 ## Eliminar un atributo calculado
 
-También es posible eliminar un atributo calculado mediante la API. Esto se realiza realizando una solicitud de DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
+También es posible eliminar un atributo calculado mediante la API. Esto se lleva a cabo realizando una solicitud de DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
 
->[!Nota]
->
+>[!NOTE]
 >
 >Tenga cuidado al eliminar un atributo calculado, ya que puede estar en uso en más de un esquema y la operación de DELETE no se puede deshacer.
 
