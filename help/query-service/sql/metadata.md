@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: Comandos de metadatos
 topic: metadata
+description: Lista de comandos PSQL que se admiten actualmente para consultar metadatos.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
