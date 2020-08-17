@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Datos de identidad para solicitudes de privacidad
 topic: overview
+description: Este documento proporciona una guía general sobre cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '643'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # Datos de identidad para solicitudes de privacidad
 
-Para que Adobe Experience Platform [!DNL Privacy Service] procese las solicitudes de los clientes para sus datos privados (incluidas las solicitudes de acceso, eliminación o exclusión de venta), debe proporcionarse un identificador único que vincule a un cliente específico con sus datos privados almacenados en las aplicaciones habilitadas para Adobe Experience Cloud. [!DNL Privacy Service] a continuación, utiliza estos identificadores para recopilar todos los datos almacenados bajo la identidad del cliente [!DNL Experience Cloud]y procesarlos según la solicitud del cliente.
+Para que Adobe Experience Platform [!DNL Privacy Service] procese las solicitudes de los clientes para sus datos privados (incluidas las solicitudes de acceso, eliminación o exclusión de la venta), debe contar con identificadores únicos que vinculen a un cliente específico con sus datos privados almacenados en las aplicaciones habilitadas para Adobe Experience Cloud. [!DNL Privacy Service] a continuación, utiliza estos identificadores para recopilar todos los datos almacenados bajo la identidad del cliente [!DNL Experience Cloud]y procesarlos según la solicitud del cliente.
 
 Este documento proporciona una guía general sobre cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
 
