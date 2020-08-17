@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: Extremo de búsqueda de segmentos
 topic: guide
+description: La búsqueda de segmentos se utiliza para buscar los campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas de API para realizar acciones básicas mediante la API.
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -242,7 +243,7 @@ La siguiente tabla lista los campos que se pueden buscar dentro del parámetro d
 | segmentName | El segmento coincide con el nombre del segmento de la búsqueda especificada. |
 | segmentDescription | El segmento coincide con la descripción del segmento de la búsqueda especificada. |
 
-### expresión de búsqueda {#search-expression}
+### Expresión de búsqueda {#search-expression}
 
 La siguiente tabla lista los detalles específicos de cómo funcionan las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
 
