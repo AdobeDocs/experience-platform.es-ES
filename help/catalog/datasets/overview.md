@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Introducción a los conjuntos de datos
 topic: datasets
+description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '723'
 ht-degree: 2%
 
 ---
@@ -40,7 +41,7 @@ Para obtener más información, consulte la descripción general [de la inserci�
 
 ## Aplicación de etiquetas de uso a conjuntos de datos
 
-Adobe Experience Platform [!DNL Data Governance] permite administrar los datos de los clientes para garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. El uso del etiquetado y la aplicación del uso de datos (DULE) como su marco de trabajo principal [!DNL Data Governance] permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se aplican a esos datos.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El uso del etiquetado y la aplicación del uso de datos (DULE) como su marco de trabajo principal [!DNL Data Governance] permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se aplican a esos datos.
 
 Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o a campos de conjuntos de datos individuales. Las etiquetas agregadas en el nivel de conjunto de datos son heredadas por todos los campos dentro de ese conjunto de datos.
 
@@ -58,7 +59,7 @@ A continuación se muestra una lista de servicios de flujo descendente que utili
 * [!DNL Data Access API](../../data-access/home.md):: Permite acceder y descargar el contenido de los archivos almacenados en los conjuntos de datos.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Permite unir identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
 * [!DNL Real-time Customer Profile](../../profile/home.md):: Aprovecha [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos de los perfiles del cliente [!DNL Data Lake] y los mantiene en su propio almacén de datos independiente.
-* [Servicio](../../segmentation/home.md)de segmentación de Adobes Experience Platform: Le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
+* [Servicio](../../segmentation/home.md)de segmentación de Adobe Experience Platform: Le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utiliza aprendizaje automático e inteligencia artificial para descubrir perspectivas en grandes conjuntos de datos.
 * [Servicio](../../query-service/home.md)de Consulta de Adobe Experience Platform: Permite utilizar SQL estándar para consulta de datos en [!DNL Experience Platform], unir cualquier conjunto de datos dentro del [!DNL Data Lake] y capturar los resultados de consulta como un nuevo conjunto de datos para su uso en sistema de informes, [!DNL Data Science Workspace]o [!DNL Real-time Customer Profile].
 * [Servicio](../../decisioning-service/home.md)de decisiones de Adobe Experience Platform: Aprovecha [!DNL Real-time Customer Profile] para determinar la opción más probable que un cliente elegirá a partir de un conjunto de opciones, en función de los datos de comportamiento que [!DNL Profile] extraen de conjuntos de datos habilitados.
