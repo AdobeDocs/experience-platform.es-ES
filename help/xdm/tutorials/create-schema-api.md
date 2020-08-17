@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorials
+description: Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Creación de un esquema mediante la [!DNL Schema Registry] API
 
-El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro del Adobe Experience Platform. El [!DNL Schema Library] [!DNL Experience Platform] contiene los recursos que le ponen a su disposición el Adobe, los socios y los proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] en Adobe Experience Platform. El [!DNL Schema Library] [!DNL Experience Platform] contiene los recursos que le ponen a su disposición el Adobe, los socios y los proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
 Este tutorial utiliza la [!DNL Schema Registry] API para guiarle por los pasos para componer un esquema con una clase estándar. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
@@ -954,7 +955,7 @@ Al realizar una solicitud de GET para buscar el esquema, ahora se muestra la ref
 
 ### Definir un descriptor de identidad
 
-Los Esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [!DNL Real-time Customer Profile](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
+Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [!DNL Real-time Customer Profile](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
 
 Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
 
@@ -1101,7 +1102,7 @@ La respuesta muestra que la operación se realizó correctamente y que el esquem
 }
 ```
 
-### esquemas de Lista en una unión
+### Esquemas de lista en una unión
 
 Ahora ha agregado correctamente su esquema a la [!DNL XDM Individual Profile] unión. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud de GET utilizando parámetros de consulta para filtrar la respuesta.
 
@@ -1179,7 +1180,7 @@ Una vez creado más de un esquema, puede definir las relaciones entre ellos medi
 
 La siguiente información complementa el tutorial de API.
 
-## esquema de miembros de lealtad completa {#complete-schema}
+## Esquema de miembros de lealtad completa {#complete-schema}
 
 A lo largo de este tutorial, se compone un esquema para describir los miembros de un programa de lealtad de minorista.
 
