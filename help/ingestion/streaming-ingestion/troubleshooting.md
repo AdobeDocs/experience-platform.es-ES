@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Solución de problemas de ingestión de flujo continuo
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guía de solución de problemas de inserción de flujo continuo
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre la transmisión de la ingestión en Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otros [!DNL Platform] servicios, incluidos los que se encuentran en todas [!DNL Platform] las API, consulte la guía de solución de problemas del [Experience Platform](../../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre la transmisión de la ingesta por flujo continuo en Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otros [!DNL Platform] servicios, incluidos los que se encuentran en todas [!DNL Platform] las API, consulte la guía de solución de problemas del [Experience Platform](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] proporciona API RESTful que puede utilizar para transferir datos a [!DNL Experience Platform]. Los datos ingestados se utilizan para actualizar perfiles de clientes individuales en tiempo casi real, lo que le permite ofrecer experiencias relevantes y personalizadas en varios canales. Lea la información general [sobre la ingestión de](../home.md) datos para obtener más información sobre el servicio y los diferentes métodos de ingestión. Para ver los pasos sobre cómo utilizar las API de inserción de flujo continuo, lea la descripción general [de](../streaming-ingestion/overview.md)la ingesta de flujo.
 
