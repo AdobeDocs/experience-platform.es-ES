@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filtrar datos del catálogo mediante parámetros de consulta
 topic: developer guide
+description: La API de servicio de catálogo permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Una de las prácticas recomendadas para Catalog es utilizar filtros en todas las llamadas de API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 1%
 
 ---
@@ -396,7 +397,7 @@ El parámetro de `orderBy` consulta permite ordenar los datos de respuesta en fu
 
 En una lista separada por comas se pueden proporcionar varias propiedades de ordenación. Si la primera propiedad de ordenación produce varios objetos que contienen el mismo valor para esa propiedad, se utilizará la segunda propiedad de ordenación para ordenar los objetos coincidentes.
 
-Por ejemplo, considere la siguiente consulta: `orderBy=name,desc:created`. Los resultados se ordenan en orden ascendente según la primera propiedad de clasificación, `name`. En los casos en que varios registros comparten la misma `name` propiedad, los registros coincidentes se ordenan por la segunda propiedad de ordenación, `created`. Si ningún registro devuelto comparte lo mismo `name`, la `created` propiedad no se tiene en cuenta en la ordenación.
+For example, consider the following query: `orderBy=name,desc:created`. Los resultados se ordenan en orden ascendente según la primera propiedad de clasificación, `name`. En los casos en que varios registros comparten la misma `name` propiedad, los registros coincidentes se ordenan por la segunda propiedad de ordenación, `created`. Si ningún registro devuelto comparte lo mismo `name`, la `created` propiedad no se tiene en cuenta en la ordenación.
 
 
 **Formato API**
@@ -573,7 +574,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | Parámetro | Descripción |
 | --- | --- |
 | `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{CONDITION}` | expresión condicional que indica para qué propiedad se va a realizar la consulta y cómo se va a evaluar su valor. A continuación se proporcionan ejemplos. |
+| `{CONDITION}` | Expresión condicional que indica para qué propiedad se va a realizar la consulta y cómo se va a evaluar su valor. A continuación se proporcionan ejemplos. |
 
 El valor del `property` parámetro admite varios tipos diferentes de expresiones condicionales. La siguiente tabla describe la sintaxis básica de las expresiones admitidas:
 
