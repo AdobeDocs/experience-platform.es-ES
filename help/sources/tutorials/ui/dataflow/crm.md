@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
 title: Configurar un flujo de datos para un conector CRM en la interfaz de usuario
 topic: overview
+description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta CRM.
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
