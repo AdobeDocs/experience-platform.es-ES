@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
 solution: Experience Platform
 title: Guía del usuario del Generador de segmentos del servicio de segmentación
 topic: ui guide
+description: 'El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ La ficha **[!UICONTROL Atributos]** permite examinar [!DNL Profile] los atributo
 
 La ficha **[!UICONTROL Eventos]** permite crear una audiencia basada en eventos o acciones que se hayan realizado con elementos [!DNL XDM ExperienceEvent] de datos. También puede encontrar Tipos de evento en la ficha **[!UICONTROL Eventos]** , que son una colección de eventos de uso común que le permiten crear sus segmentos más rápidamente.
 
-Además de poder buscar [!DNL ExperienceEvent] elementos, también puede buscar Tipos de evento. Los Tipos de evento utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin necesidad de buscar en la [!DNL XDM ExperienceEvent] clase el evento correcto. Por ejemplo: si se utiliza la barra de búsqueda para buscar &quot;carro&quot;, se devuelven los Tipos de evento &quot;[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones de carro de compras que se utilizan con mucha frecuencia al generar definiciones de segmentos.
+Además de poder buscar [!DNL ExperienceEvent] elementos, también puede buscar Tipos de evento. Los tipos de evento utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin necesidad de buscar en la [!DNL XDM ExperienceEvent] clase el evento correcto. Por ejemplo: si se utiliza la barra de búsqueda para buscar &quot;carro&quot;, se devuelven los Tipos de evento &quot;[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones de carro de compras que se utilizan con mucha frecuencia al generar definiciones de segmentos.
 
 Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra de búsqueda, que utiliza la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Los resultados de búsqueda comienzan a llenarse a medida que se ingresan palabras completas. Por ejemplo, para generar una regla basada en el campo XDM `ExperienceEvent.commerce.productViews`, escriba &quot;vistas de producto&quot; en el inicio de búsqueda. Una vez escrita la palabra &quot;producto&quot;, comienzan a aparecer los resultados de la búsqueda. Cada resultado incluye la jerarquía de objetos a la que pertenece.
 
@@ -86,7 +87,7 @@ Para [!DNL Platform] audiencias creadas con [!DNL Segment Builder], se le ofrece
 
 Si surgen conflictos al convertir audiencias en reglas, [!DNL Segment Builder] intentará conservar las opciones existentes en la medida de sus posibilidades.
 
-### vista de código
+### Vista de código
 
 Como alternativa, puede vista una versión basada en código de una regla creada en la [!DNL Segment Builder]. Una vez que haya creado la regla dentro del lienzo del generador de reglas, puede seleccionar vista **[!UICONTROL de]** código para ver el segmento como PQL.
 
@@ -98,7 +99,7 @@ La vista de código proporciona un botón que le permite copiar el valor del seg
 
 ## Contenedores
 
-Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los Contenedores permiten controlar el orden de ejecución mediante el uso de consultas anidadas.
+Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los contenedores permiten controlar el orden de ejecución mediante el uso de consultas anidadas.
 
 Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un nuevo contenedor, seleccione las elipses (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Añadir contenedor]**.
 
@@ -140,7 +141,7 @@ A medida que siga generando la definición del segmento, puede realizar la vista
 
 >[!NOTE]
 >
->Las estimaciones de Audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de un millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades se utilizan 1 millón de entidades; y para más de 20 millones de entidades se utiliza el 5% del total. Encontrará más información sobre la generación de estimaciones de segmentos en la sección [de generación de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimaciones del tutorial de creación de segmentos.
+>Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de un millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades se utilizan 1 millón de entidades; y para más de 20 millones de entidades se utiliza el 5% del total. Encontrará más información sobre la generación de estimaciones de segmentos en la sección [de generación de](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimaciones del tutorial de creación de segmentos.
 
 ## Próximos pasos y recursos adicionales {#next-steps}
 
@@ -148,9 +149,9 @@ El Generador de segmentos proporciona un flujo de trabajo enriquecido que le per
 
 - Cree definiciones de segmentos mediante una combinación de atributos, eventos y audiencias existentes como componentes básicos.
 - Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.
-- Estimaciones de Vista de su audiencia potencial, permitiéndole ajustar las definiciones de segmentos según sea necesario.
+- Estimaciones de vista de su audiencia potencial, permitiéndole ajustar las definiciones de segmentos según sea necesario.
 - Habilite todas las definiciones de segmentos para la segmentación programada.
-- Habilite definiciones de segmentos especificadas para la segmentación de flujo continuo.
+- Active las definiciones de segmentos especificadas para la segmentación de flujo continuo.
 
 Para obtener más información sobre [!DNL Segmentation Service], siga leyendo la documentación y complementando su aprendizaje, vea los vídeos siguientes. Para obtener más información sobre las otras partes de la [!DNL Segmentation Service] interfaz de usuario, lea la guía del [[!DNL Segmentation Service] usuario](./overview.md)
 
