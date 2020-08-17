@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Servicio de decisiones
 topic: overview
+description: El servicio de toma de decisiones permite crear experiencias personalizadas, optimizadas y orquestadas en aplicaciones que se ejecutan en Adobe Experience Platform. Con el servicio de toma de decisiones, puede determinar la mejor opción a partir de un conjunto de opciones disponibles. Estas opciones, también denominadas alternativas, pueden ser ofertas, recomendaciones de productos, componentes de contenido para una experiencia web, secuencias de comandos de conversación y acciones que se deben realizar.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,7 @@ Las experiencias se pueden personalizar [!DNL Decisioning Service] en tiempo rea
 
 Las decisiones se pueden tomar de muchas maneras. Un método consiste en eliminar las opciones sucesivamente hasta que sólo quede una o hasta que se hayan reducido las opciones y haya algún subconjunto restante o hasta que se elija al azar un ganador del conjunto reducido. Una variante de este enfoque para elegir la opción ganadora según una fórmula calculada. La clasificación de las opciones elegibles se realiza mediante una función. Para la toma de decisiones de oferta, esa función podría calcular el coste, el valor de la oferta para la empresa y utilizar una opción predefinida de la probabilidad de que el usuario final acepte la oferta. La puntuación resultante podría utilizarse para ordenar las ofertas.
 
-Alternativamente o de manera adicional, una estrategia podría basarse en los resultados obtenidos de interacciones previas con clientes similares a los que se propusieron opciones similares. En esta estrategia, se aprende la función que calculó los valores de prioridad. El valor óptimo de los resultados está ligado a los objetivos de la actividad y el indicador de rendimiento de la predicción es la frecuencia con que se logró el resultado después de que se propuso la opción.
+Otra posibilidad es que una estrategia se base en los resultados obtenidos de interacciones anteriores con clientes similares a los que se han propuesto opciones similares. En esta estrategia, se aprende la función que calculó los valores de prioridad. El valor óptimo de los resultados está ligado a los objetivos de la actividad y el indicador de rendimiento de la predicción es la frecuencia con que se logró el resultado después de que se propuso la opción.
 
 ### Estrategia de decisión
 
