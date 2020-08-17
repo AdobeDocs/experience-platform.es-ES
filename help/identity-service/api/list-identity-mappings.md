@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity
 solution: Experience Platform
-title: Asignaciones de identidad de Lista
+title: Asignaciones de identidad de lista
 topic: API guide
+description: Una asignación es una colección de todas las identidades de un clúster para una Área de nombres específica.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '263'
+ht-degree: 1%
 
 ---
 
 
-# Asignaciones de identidad de Lista
+# Asignaciones de identidad de lista
 
 Una asignación es una colección de todas las identidades de un clúster para una Área de nombres específica.
 
