@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Terminología del RGPD
 topic: troubleshooting
+description: A continuación figura una lista de las definiciones de términos clave relacionados con el Reglamento General de Protección de Datos (RGPD).
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -24,7 +25,7 @@ __Enlace de reglas corporativas (BCR):__ Se ha establecido un conjunto de normas
 
 __Datos__ biométricos Cualquier dato personal relacionado con las características físicas, fisiológicas o conductuales de una persona que permita su identificación única.
 
-## C
+## C  
 
 __Consentimiento:__ Consentimiento libremente dado, específico, informado y explícito mediante declaración o acción que signifique un acuerdo para el tratamiento de sus datos personales.
 
