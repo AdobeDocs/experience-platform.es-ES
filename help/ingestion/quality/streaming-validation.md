@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Validación de la ingesta de flujo continuo
 topic: overview
+description: 'El flujo continuo de la ingestión le permite cargar los datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ El flujo continuo de la ingestión le permite cargar los datos en Adobe Experien
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 - [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):: Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
@@ -59,7 +60,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Validación sincrónica
 
-La validación sincrónica es un método de validación que proporciona información inmediata sobre el motivo por el que se ha producido un error en la ingestión. Sin embargo, si se produce un error, los registros en los que se ha producido un error al efectuar la validación se eliminan y se impide que se envíen en sentido descendente. Como resultado, la validación sincrónica sólo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas tanto del resultado de la validación XDM como, en caso de error, del motivo del error.
+La validación sincrónica es un método de validación que proporciona información inmediata sobre los motivos por los que se ha producido un error en la ingestión. Sin embargo, si se produce un error, los registros en los que se ha producido un error al efectuar la validación se eliminan y se impide que se envíen en sentido descendente. Como resultado, la validación sincrónica sólo debe utilizarse durante el proceso de desarrollo. Al realizar la validación sincrónica, se informa a los autores de llamadas tanto del resultado de la validación XDM como, en caso de error, del motivo del error.
 
 De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `synchronousValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el extremo de flujo está en el centro de datos VA7.
 
