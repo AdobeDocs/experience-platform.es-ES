@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
+description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name<span>@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 1%
+source-wordcount: '761'
+ht-degree: 4%
 
 ---
 
 
 # Información general sobre la Área de nombres de identidad
 
-Las Áreas de nombres de identidad son un componente de [!DNL Identity Service](./home.md) esas actividades que sirven de indicadores del contexto al que se relaciona la identidad. Por ejemplo, distinguen un valor de &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico.
+Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. Por ejemplo, distinguen un valor de &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID de CRM numérico.
 
 ## Primeros pasos
 
-Trabajar con Áreas de nombres de identidad requiere comprender los diversos servicios de Adobe Experience Platform involucrados. Antes de comenzar a trabajar con Áreas de nombres, consulte la documentación de los siguientes servicios:
+Trabajar con Áreas de nombres de identidad requiere comprender los distintos servicios de Adobe Experience Platform involucrados. Antes de comenzar a trabajar con Áreas de nombres, consulte la documentación de los siguientes servicios:
 
 - [!DNL Real-time Customer Profile](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [!DNL Identity Service](./home.md):: Obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
