@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
-title: Adobe Experience Platform general
+title: Información general de Adobe Experience Platform
 topic: getting started
+description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes desde cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '872'
 ht-degree: 3%
 
 ---
 
 
-# Adobe Experience Platform general
+# Información general de Adobe Experience Platform
 
 >[!NOTE]
 >
->La documentación de Adobe Experience Platform se ha movido recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
+>La documentación de Adobe Experience Platform se ha trasladado recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
 
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsen la experiencia del cliente. [!DNL Experience Platform] permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. [!DNL Experience Platform] permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 
 Basado en API abiertas, [!DNL Experience Platform] expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de soluciones empresariales mediante herramientas conocidas. [!DNL Experience Platform] también ayuda a los asociados a crear e integrar sus propios productos y tecnologías según sea necesario. Este poder y flexibilidad hacen [!DNL Experience Platform] único en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
 
@@ -108,17 +109,17 @@ Para un rápido recorrido por la interfaz de [!DNL Experience Platform's] usuari
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
 
-## documentos y recursos de referencia
+## Documentos y recursos de referencia
 
-* [**Notas **](../release-notes/latest/latest.md)<br/>de la versiónBuscar información sobre la versión más reciente y revisar las versiones anteriores[!DNL Experience Platform].
+* [**Notas**](../release-notes/latest/latest.md)<br/> de la versiónBuscar información sobre la versión más reciente y revisar las versiones anteriores [!DNL Experience Platform] .
 
-* [**Glosario **](glossary.md)<br/>Revisar terminología de Adobe Experience Platform.
+* [**Glosario**](glossary.md)<br/> Revise la terminología de Adobe Experience Platform.
 
-* [**Guía **](troubleshooting.md)<br/>de solución de problemasEncuentre soluciones para errores comunes y respuestas a preguntas más frecuentes.
+* [**Guía**](troubleshooting.md)<br/> de solución de problemasEncuentre soluciones para errores comunes y respuestas a preguntas más frecuentes.
 
-* [**Conceptos básicos **](api-fundamentals.md)<br/>de APIsAprenda los conceptos básicos del trabajo con[!DNL Platform]las APIs.
+* [**Conceptos básicos**](api-fundamentals.md)<br/> de APIsAprenda los conceptos básicos del trabajo con [!DNL Platform] las APIs.
 
-* [**Referencia **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de[!DNL Experience Platform]Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas.*Estos documentos están alojados en E/S de Adobe.*
+* [**Referencia**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de API a las API de [!DNL Experience Platform] Discover, incluidos encabezados, parámetros, solicitudes de muestra y respuestas. *Estos documentos están alojados en E/S de Adobe.*
 
 ## Recursos de vídeo de integración de Adobe Experience Platform
 
@@ -126,11 +127,11 @@ Para un rápido recorrido por la interfaz de [!DNL Experience Platform's] usuari
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Uno de los beneficios clave que ofrece el Adobe Experience Platform es su capacidad de integrarse con otros servicios de Adobe existentes. El siguiente vídeo ofrece información general sobre cómo se integran [!DNL Experience Platform] los servicios con [!DNL Experience Cloud] aplicaciones y funciones como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes], [!DNL Audience Library]y [!DNL Experience Platform Launch].
+Una de las ventajas clave que ofrece Adobe Experience Platform es su capacidad de integrarse con otros servicios de Adobe existentes. El siguiente vídeo ofrece información general sobre cómo se integran [!DNL Experience Platform] los servicios con [!DNL Experience Cloud] aplicaciones y capacidades como Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes], [!DNL Audience Library], y [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Para obtener más información sobre la arquitectura que potencia el Adobe Experience Platform, vea el siguiente vídeo:
+Para obtener información adicional sobre la arquitectura que potencia Adobe Experience Platform, vea el siguiente vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
