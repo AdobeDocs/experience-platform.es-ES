@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Guía de inicio rápido del servicio de Consulta de Adobe Experience Platform
 topic: quickstart
+description: Guía de inicio rápido para el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Guía de inicio rápido
 
-1. Para utilizarlo [!DNL Query Service], su organización debe estar aprovisionada para Adobes Experience Platform y el administrador debe darle acceso a ella.
+1. Para utilizarlo [!DNL Query Service], su organización debe estar aprovisionada para Adobe Experience Platform y el administrador debe concederle acceso.
 2. Si todavía no ha ingerido los datos en Adobe Experience Platform, entonces es ahí donde debe realizar el inicio. Consulte la documentación de ingestión de datos.
-3. Después de ingerir los datos en Adobe Experience Platform, puede empezar a trabajar con [!DNL Query Service] Platform UI [](ui/overview.md). Por ejemplo, puede utilizar el navegador de Adobe Experience Platform [!DNL Query Editor](ui/user-guide.md) para escribir, validar y ejecutar consultas.
+3. Después de haber ingerido los datos en Adobe Experience Platform, puede empezar a trabajar con [!DNL Query Service] la IU [de](ui/overview.md)plataforma. Por ejemplo, puede utilizar Adobe Experience Platform basado en explorador [!DNL Query Editor](ui/user-guide.md) para escribir, validar y ejecutar consultas.
 
 
 [!DNL Query Service] también proporciona una forma de conectar herramientas externas para emitir consultas. Para obtener instrucciones sobre cómo conectar una herramienta como una herramienta Business Intelligence o una interfaz de línea de comandos, lea [Conectar una herramienta](clients/overview.md).
