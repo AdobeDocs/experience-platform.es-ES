@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Introducción a la ingestión de datos de Adobe Experience Platform
 topic: overview
+description: Este documento presenta las tres principales maneras en que se ingieren los datos en la Plataforma, con vínculos a la documentación de información general correspondiente para obtener información más detallada.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 9%
 
 ---
 
 
 # Información general sobre la inserción de datos
 
-Adobe Experience Platform reúne los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingestión de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales [!DNL Platform] se ingieren datos de estas fuentes, así como la forma en que se conservan esos datos dentro del Data Lake para que los [!DNL Platform] servicios posteriores los utilicen.
+Adobe Experience Platform reúne los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingestión de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales [!DNL Platform] se ingieren datos de estas fuentes, así como la forma en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios [!DNL Platform] descendentes.
 
 Este documento presenta las tres principales maneras en que se ingieren los datos [!DNL Platform], con vínculos a su respectiva documentación general para obtener información más detallada.
 
@@ -42,7 +43,7 @@ Consulte la descripción general [de](../sources/home.md) Fuentes para obtener m
 
 ## Próximos pasos y recursos adicionales
 
-Este documento ofreció una breve introducción a los diferentes aspectos de [!DNL Data Ingestion] la [!DNL Experience Platform]. Siga leyendo la documentación general de cada método de ingestión para familiarizarse con sus diferentes capacidades, casos de uso y prácticas recomendadas. También puede proporcionar su aprendizaje mediante el siguiente vídeo de información general sobre la ingestión. Para obtener información sobre cómo [!DNL Experience Platform] realizar un seguimiento de los metadatos de los registros ingestados, consulte la descripción general [del servicio de](../catalog/home.md)catálogos.
+Este documento ofreció una breve introducción a los diferentes aspectos de [!DNL Data Ingestion] la [!DNL Experience Platform]. Siga leyendo la documentación general de cada método de ingestión para familiarizarse con sus diferentes capacidades, casos de uso y prácticas recomendadas. También puede complementar su aprendizaje viendo el siguiente vídeo de información general sobre la ingestión. Para obtener información sobre cómo [!DNL Experience Platform] realizar un seguimiento de los metadatos de los registros ingestados, consulte la descripción general [del servicio de](../catalog/home.md)catálogos.
 
 >[!WARNING]
 >
