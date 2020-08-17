@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment
 solution: Experience Platform
 title: Crear un segmento
 topic: tutorial
+description: Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API de servicio de segmentación de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Crear un segmento
 
-Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API [del servicio de segmentación por Adobe Experience Platform de](../api/getting-started.md)DNL.
+Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API [del servicio de segmentación Adobe Experience Platform de](../api/getting-started.md)DNL.
 
 Para obtener información sobre cómo generar segmentos mediante la interfaz de usuario, consulte la guía [Generador de segmentos](../ui/overview.md).
 
@@ -62,14 +63,14 @@ Para obtener una explicación detallada sobre cómo definir un segmento, lea la 
 
 ## Calcular y previsualización de una audiencia {#estimate-and-preview-an-audience}
 
-A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Real-time Customer Profile] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las Previsualizaciones proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
+A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Real-time Customer Profile] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las previsualizaciones proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 
 Al estimar y previsualizar su audiencia, puede probar y optimizar sus predicados PQL hasta que produzcan un resultado deseado, donde se pueden utilizar en una definición de segmento actualizada.
 
 Existen dos pasos necesarios para realizar una previsualización o una estimación del segmento:
 
 1. [Crear un trabajo de previsualización](#create-a-preview-job)
-2. [previsualización](#view-an-estimate-or-preview) o estimación de Vista con el ID del trabajo de previsualización
+2. [Previsualización](#view-an-estimate-or-preview) o estimación de vista con el ID del trabajo de previsualización
 
 ### Cómo se generan las estimaciones
 
