@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
-title: Objetos de Lista
+title: Objetos de lista
 topic: developer guide
+description: Puede recuperar una lista de todos los objetos disponibles de un tipo específico a través de una sola llamada de API, siendo recomendable incluir filtros que limiten el tamaño de la respuesta.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 1%
 
 ---
 
 
-# Objetos de Lista
+# Objetos de lista
 
 Puede recuperar una lista de todos los objetos disponibles de un tipo específico a través de una sola llamada de API, siendo recomendable incluir filtros que limiten el tamaño de la respuesta.
 
