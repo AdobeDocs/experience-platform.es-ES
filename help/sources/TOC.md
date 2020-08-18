@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 - [Información general sobre los conectores de origen](home.md)
 - Conectores de origen disponibles {#connectors}
    - Aplicaciones de Adobe {#adobe-applications}
+      - [Conector de datos de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
       - [Conector de datos de Analytics](connectors/adobe-applications/analytics.md)
       - [Conector del Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Conector de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
@@ -133,6 +134,7 @@ ht-degree: 0%
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Creación de un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
+         - [Conector de datos de clasificaciones de Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
          - [Conector Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Conector de atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
