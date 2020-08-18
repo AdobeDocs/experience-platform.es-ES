@@ -4,9 +4,9 @@ seo-title: Destino del administrador de publicidad de Google
 description: 'Google Ad Manager, anteriormente conocido como DoubleClick para editores o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeos y en aplicaciones móviles. '
 seo-description: 'Google Ad Manager, anteriormente conocido como DoubleClick para editores o DoubleClick AdX, es una plataforma de servicio de publicidad de Google que proporciona a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeos y en aplicaciones móviles. '
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,17 @@ Antes de crear el [!DNL Google Ad Manager] destino en Adobe Real-time CDP, debe 
 * **ID** de cuenta: es el ID de cuenta de Adobe con [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
 * **ID** del cliente: es el ID de cuenta de cliente de Adobe con [!DNL Google]. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para obtener este ID.
 * **ID** de red: esta es su cuenta con [!DNL Google Ad Manager]
-* **ID** del vínculo de Audiencia: esta es su cuenta con [!DNL Google Ad Manager]
+* **ID** del vínculo de audiencia: esta es su cuenta con [!DNL Google Ad Manager]
 * El tipo de cuenta. **DFP por comprador** de Google **o** AdX.
 
-## Crear destino
+## Configurar destino
 
-1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Google Ad Manager]y seleccione **[!UICONTROL Crear destino]**.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Google Ad Manager]y seleccione **[!UICONTROL Configurar]**.
    ![Destino de Connect Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
+
+   >[!NOTE]
+   >
+   >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
 2. En el paso **Configuración** del flujo de trabajo de creación de destino, rellene la información  básica del destino. <br>
 
