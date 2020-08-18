@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de PayPal en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,12 @@ Los conectores de origen de Adobe Experience Platform permiten la ingesta de dat
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión [!DNL PayPal] base, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/payments.md)
+Si ya tiene una conexión válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [!DNL PayPal] [configuración de un flujo de datos](../../dataflow/payments.md)
 
 ### Recopilar las credenciales necesarias
 
@@ -36,27 +36,29 @@ Para acceder a su [!DNL PayPal] cuenta [!DNL Platform], debe proporcionar los si
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | Dirección URL de la [!DNL PayPal] instancia. |
+| `host` | The URL of the [!DNL PayPal] instance. |
 | `clientID` | ID de cliente asociado a la [!DNL PayPal] aplicación. |
 | `clientSecret` | El secreto de cliente asociado a la [!DNL PayPal] aplicación. |
 
-Para obtener más información sobre cómo empezar, consulte este documento de [PayPal](https://developer.paypal.com/docs/api/overview/#get-credentials)
+Para obtener más información sobre cómo empezar, consulte este [[!DNL PayPal] documento](https://developer.paypal.com/docs/api/overview/#get-credentials)
 
 ## Conectar su [!DNL PayPal] cuenta
 
-Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada con la que vincular la [!DNL PayPal] cuenta a [!DNL Platform].
+Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL PayPal] cuenta a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes con los que puede crear una cuenta.
 
-En la categoría *[!UICONTROL CRM]* , seleccione **[!UICONTROL PayPal]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione **[!UICONTROL Añadir datos]**.
+Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
+
+En la categoría **[!UICONTROL Pagos]** , seleccione **[!UICONTROL PayPal]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL PayPal] conector.
 
 ![catálogo](../../../../images/tutorials/create/paypal/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con PayPal]* . En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con PayPal]** . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la conexión base con un nombre, una descripción opcional y sus [!DNL PayPal] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus [!DNL PayPal] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
 ![connect](../../../../images/tutorials/create/paypal/connect.png)
 
@@ -68,4 +70,4 @@ Para conectar una cuenta existente, seleccione la [!DNL PayPal] cuenta con la qu
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión de base con su [!DNL PayPal] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para llevar datos CRM a la plataforma](../../dataflow/payments.md).
+Siguiendo este tutorial, ha establecido una conexión con su [!DNL PayPal] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incluir [!DNL Platform]](../../dataflow/payments.md)datos de pago.
