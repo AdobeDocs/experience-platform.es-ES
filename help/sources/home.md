@@ -5,9 +5,9 @@ title: Información general sobre Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,6 @@ Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los
 - [!DNL GreenPlum](connectors/databases/greenplum.md) conector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) conector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) conector
-- [!DNL MariaDB](connectors/databases/mariadb.md) conector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) conector
 - [!DNL MySQL](connectors/databases/mysql.md) conector
 - [!DNL Oracle](connectors/databases/oracle.md) conector
