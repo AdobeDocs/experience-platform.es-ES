@@ -1,12 +1,12 @@
 ---
-title: Adobe Advertising Cloud Extension
-seo-title: Adobe Advertising Cloud Extension
-description: La extensión Adobe Advertising Cloud es un destino publicitario en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+title: Extensión Adobe Advertising Cloud
+seo-title: Extensión Adobe Advertising Cloud
+description: La extensión Adobe Advertising Cloud es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '476'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Esta es la [!DNL Advertising Cloud] extensión para implementar las etiquetas de segmento y [!DNL Advertising Cloud] conversión tanto para la DSP como para la búsqueda (actualmente no se admite DCO).
 
-Adobe Advertising Cloud es una extensión de publicidad en Adobe Real-time Customer Data Platform.
+Adobe Advertising Cloud es una extensión de publicidad en la plataforma de datos del cliente en tiempo real de Adobe.
 
 Este destino es una [!DNL Experience Platform Launch] extensión. Para obtener más información sobre cómo funcionan [!DNL Launch] las extensiones en Adobe en tiempo real CDP, consulte Visión general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -36,7 +36,7 @@ Para instalar la extensión de Adobe Advertising Cloud:
 
 1. En la interfaz [CDP en tiempo real de](http://platform.adobe.com/)Adobe, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Seleccione la extensión del catálogo o utilice la barra de búsqueda.
-3. Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Instalar extensión]** en el carril derecho. Si el control **[!UICONTROL Instalar extensión]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]** . Consulte [Requisitos previos](#prerequisites).
+3. Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configurar]** en el carril derecho. Si el control **[!UICONTROL Configurar]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]** . Consulte [Requisitos previos](#prerequisites).
 4. En la ventana **[!UICONTROL Seleccionar la propiedad]** Launch disponible, seleccione la [!DNL Launch] propiedad en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en [!DNL Launch]. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [de la página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propiedades de la [!DNL Launch] documentación.
 5. El flujo de trabajo le lleva a [!DNL Launch] completar la instalación.
 
