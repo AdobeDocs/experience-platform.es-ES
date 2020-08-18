@@ -4,9 +4,9 @@ seo-title: Destinos de mercadotecnia de correo electrónico
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ La conexión a destinos de marketing por correo electrónico es un proceso de tr
 
 En el flujo de destino de conexión, descrito en la sección siguiente, conéctese a Amazon S3 o SFTP. CDP en tiempo real exporta sus segmentos como `.csv` `.txt` o como archivos y los envía a su ubicación preferida. Programe la importación de datos en su plataforma de marketing por correo electrónico desde la ubicación de almacenamiento habilitada en CDP en tiempo real. El proceso de importación de datos varía según el socio. Consulte los artículos de destinos individuales para obtener más información.
 
-## Paso 1: Conectar destino {#connect-destination}
+## Paso 1: Configuración del destino {#connect-destination}
 
-1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
    ![Conectar al destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
