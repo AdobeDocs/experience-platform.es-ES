@@ -4,9 +4,9 @@ seo-title: Destino de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,10 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 1. En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, desplácese hasta la categoría **[!UICONTROL Publicidad]** . Seleccione [!DNL Google Customer Match]y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
    ![Conectar con el destino de Coincidencia de clientes de Google](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+
+   >[!NOTE]
+   >
+   >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
 2. En el paso **Cuenta** , si ha configurado anteriormente una conexión con su [!DNL Google Customer Match] destino, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con [!DNL Google Customer Match]. Seleccione **[!UICONTROL Conectar al destino]** para iniciar sesión y conectar Adobe Experience Cloud a su [!DNL Google Ad] cuenta.
 
