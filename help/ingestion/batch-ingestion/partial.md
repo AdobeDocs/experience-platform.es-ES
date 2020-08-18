@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -129,7 +129,7 @@ El umbral **[!UICONTROL de]** error permite establecer el porcentaje de errores 
 
 Adobe Experience Platform permite a los usuarios descargar los metadatos de los archivos de entrada. Los metadatos se conservarán en un plazo [!DNL Platform] de hasta 30 días.
 
-### Archivos de entrada de Lista {#list-files}
+### Archivos de entrada de lista {#list-files}
 
 La siguiente solicitud le permitirá vista de una lista de todos los archivos proporcionados en un lote finalizado.
 
@@ -360,20 +360,20 @@ Este tutorial trata sobre cómo crear o modificar un conjunto de datos para habi
 La ingestión parcial de lotes tiene tres tipos de error diferentes al ingerir datos.
 
 - [Archivos ilegibles](#unreadable)
-- [esquemas o encabezados no válidos](#schemas-headers)
+- [Esquemas o encabezados no válidos](#schemas-headers)
 - [Filas no analizables](#unparsable)
 
 ### Archivos ilegibles {#unreadable}
 
 Si el lote ingestado tiene archivos ilegibles, los errores del lote se adjuntarán al lote mismo. Encontrará más información sobre cómo recuperar el lote dañado en la guía [de](../quality/retrieve-failed-batches.md)recuperación de lotes con errores.
 
-### esquemas o encabezados no válidos {#schemas-headers}
+### Esquemas o encabezados no válidos {#schemas-headers}
 
 Si el lote ingestado tiene un esquema no válido o encabezados no válidos, los errores del lote se adjuntarán al lote mismo. Encontrará más información sobre cómo recuperar el lote dañado en la guía [de](../quality/retrieve-failed-batches.md)recuperación de lotes con errores.
 
 ### Filas no analizables {#unparsable}
 
-Si el lote ingestado tiene filas inanalizables, los errores del lote se almacenarán en un archivo al que se pueda acceder mediante el punto final que se describe a continuación.
+Si el lote que ha ingestado tiene filas inanalizables, puede utilizar el punto final siguiente para la vista de una lista de archivos que contengan errores.
 
 **Formato API**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de las filas inanalizables.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de los archivos que tienen errores.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+A continuación, puede recuperar información detallada sobre los errores mediante el extremo [de recuperación de](#retrieve-metadata)metadatos.
+
+A continuación se muestra una respuesta de ejemplo de recuperación del archivo de error:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
