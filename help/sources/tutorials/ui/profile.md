@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Activar datos de origen de entrada para rellenar perfiles de cliente
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ Los datos entrantes del conector de origen se pueden utilizar para enriquecer y 
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [Sistema](../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [Perfil](../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
+- [[!Perfil del cliente en tiempo real de DNL]](../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que ya haya creado y configurado un conector de origen.  Puede encontrar una lista de tutoriales para crear diferentes conectores en la interfaz de usuario en la descripción general [de los conectores](../../home.md)de origen.
 
@@ -39,23 +39,23 @@ En el espacio de trabajo Fuentes, haga clic en la ficha **[!UICONTROL Examinar]*
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-Se abre la pantalla actividad *[!UICONTROL de]* origen de la conexión, que muestra los conjuntos de datos en los que la conexión está invirtiendo datos de origen. Haga clic en el nombre del conjunto de datos para el que desee habilitar [!DNL Profile].
+Se abre la pantalla actividad **[!UICONTROL de]** origen de la conexión, que muestra los conjuntos de datos en los que la conexión está invirtiendo datos de origen. Haga clic en el nombre del conjunto de datos para el que desee habilitar [!DNL Profile].
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-Aparece la pantalla *[!UICONTROL actividad]* del conjunto de datos. La columna *[!UICONTROL Propiedades]* del lado derecho de la pantalla muestra los detalles del conjunto de datos e incluye un conmutador de **[!UICONTROL Perfil]** y un vínculo al esquema al que se adhiere el conjunto de datos. Haga clic en el nombre del esquema para vista de su composición.
+Aparece la pantalla **[!UICONTROL actividad]** del conjunto de datos. La columna **[!UICONTROL Propiedades]** del lado derecho de la pantalla muestra los detalles del conjunto de datos e incluye un conmutador de **[!UICONTROL Perfil]** y un vínculo al esquema al que se adhiere el conjunto de datos. Haga clic en el nombre del esquema para vista de su composición.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-Aparece el Editor *[!UICONTROL de]* Esquemas, que muestra la estructura del esquema en el lienzo central. Dentro del lienzo, seleccione el campo que se va a establecer como identidad principal. En la ficha Propiedades *[!UICONTROL del]* campo que aparece, seleccione la casilla **[!UICONTROL Identidad]** y, a continuación, la identidad **** principal. Finalmente, seleccione una Área de nombres **** de identidad adecuada y haga clic en **[!UICONTROL Aplicar]**.
+Aparece el Editor **[!UICONTROL de]** Esquemas, que muestra la estructura del esquema en el lienzo central. Dentro del lienzo, seleccione el campo que se va a establecer como identidad principal. En la ficha Propiedades *[!UICONTROL del]* campo que aparece, seleccione la casilla de verificación **[!UICONTROL Identidad]** y, a continuación, la identidad **** principal. Finalmente, seleccione una Área de nombres **** de identidad adecuada y haga clic en **[!UICONTROL Aplicar]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-Haga clic en el objeto de nivel superior de la estructura del esquema y aparecerá la columna de propiedades *[!UICONTROL del]* Esquema. Active el esquema para [!DNL Profile] alternar el conmutador de **[!UICONTROL Perfil]** . Haga clic en **[!UICONTROL Guardar]** para finalizar los cambios.
+Haga clic en el objeto de nivel superior de la estructura del esquema y aparecerá la columna de propiedades **[!UICONTROL del]** Esquema. Active el esquema para [!DNL Profile] alternar el conmutador de **[!UICONTROL Perfil]** . Haga clic en **[!UICONTROL Guardar]** para finalizar los cambios.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-Ahora que el esquema está habilitado para [!DNL Profile], vuelva a la pantalla de actividad *[!UICONTROL del]* conjunto de datos y habilite el conjunto de datos para [!DNL Profile] hacerlo haciendo clic en el botón de alternancia del **[!UICONTROL Perfil]** en la columna *Propiedades* .
+Ahora que el esquema está habilitado para [!DNL Profile], vuelva a la pantalla de actividad **[!UICONTROL del]** conjunto de datos y habilite el conjunto de datos para [!DNL Profile] hacerlo haciendo clic en el botón de alternancia del **[!UICONTROL Perfil]** en la columna **[!UICONTROL Propiedades]** .
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
@@ -63,8 +63,8 @@ Con el esquema y el conjunto de datos habilitados para [!DNL Profile], los datos
 
 >[!NOTE]
 >
->Los datos existentes dentro de un conjunto de datos recientemente habilitado no son consumidos por [!DNL Profile]
+>Los datos existentes dentro de un conjunto de datos recientemente habilitado no son consumidos por [!DNL Profile].
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha activado correctamente los datos de entrada para [!DNL Profile] la población. Para obtener más información, consulte la descripción general [del Perfil del cliente en tiempo](../../../profile/home.md)real.
+Siguiendo este tutorial, ha activado correctamente los datos de entrada para [!DNL Profile] la población. For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
