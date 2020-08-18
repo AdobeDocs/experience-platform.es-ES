@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Crear una chispa de Apache en el conector de origen de Azure HDInsights en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: '469'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Creación de un [!DNL Apache Spark] conector de origen [!DNL Azure HDInsights] en la interfaz de usuario
 
 >[!NOTE]
+>
 > El [!DNL Apache Spark] conector on [!DNL Azure HDInsights] está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector [!DNL Apache Spark] en [!DNL Azure HDInsights] origen mediante la interfaz [!DNL Platform] de usuario.
@@ -44,21 +45,21 @@ Para obtener más información sobre cómo empezar, consulte [este documento](ht
 
 ## Conectar su [!DNL Spark] cuenta
 
-Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva [!DNL Spark] cuenta con la que conectarse [!DNL Platform].
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL Spark] cuenta a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría *[!UICONTROL Bases]* de datos, seleccione **[!UICONTROL Chispa]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión de entrada, seleccione **[!UICONTROL Añadir datos]**.
+En la categoría **[!UICONTROL Bases de datos]** , seleccione **[!UICONTROL Desencadenar]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Spark] conector.
 
 ![catálogo](../../../../images/tutorials/create/spark/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con la chispa]* . En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con la chispa]** . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la conexión con un nombre, una descripción opcional y sus [!DNL Spark] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva cuenta.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus [!DNL Spark] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
 ![new](../../../../images/tutorials/create/spark/new.png)
 
@@ -70,4 +71,4 @@ Para conectar una cuenta existente, seleccione la [!DNL Spark] cuenta con la que
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su [!DNL Spark] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos a Platform](../../dataflow/databases.md).
+Siguiendo este tutorial, ha establecido una conexión con su [!DNL Spark] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incluir [!DNL Platform]](../../dataflow/databases.md)datos.
