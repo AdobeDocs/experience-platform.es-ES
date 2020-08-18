@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Spark SQL funciones
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
+source-wordcount: '4996'
 ht-degree: 5%
 
 ---
@@ -24,17 +24,18 @@ Referencia: [Documentación de la función Spark SQL](https://spark.apache.org/d
 
 ## Categorías
 
-- [Funciones y operadores matemáticos y estadísticos](#math-and-statistical-operators-and-functions)
+- [Funciones y operadores matemáticos y estadísticos](#math)
 - [Operadores lógicos](#logical-operators)
-- [Funciones de fecha y hora](#date/time-functions)
-- [Funciones Acumuladas](#aggregate-functions)
+- [Funciones de fecha y hora](#datetime-functions)
+- [Funciones acumuladas](#aggregate-functions)
 - [Matrices](#arrays)
-- [Funciones de conversión de tipos de datos](#datatype-casting-functions)
-- [Funciones de conversión y formato](#conversion-and-formatting-functions)
+- [Funciones de conversión de tipos de datos](#datatype-casting)
+- [Funciones de conversión y formato](#conversion)
 - [Evaluación de datos](#data-evaluation)
 - [Información actual](#current-information)
+- [Funciones de orden superior](#higher-order)
 
-### Funciones y operadores matemáticos y estadísticos
+### Funciones y operadores matemáticos y estadísticos {#math}
 
 #### Módulo
 
@@ -744,7 +745,7 @@ Ejemplo:
 
 `variance(expr)`:: Devuelve la varianza de muestra calculada a partir de los valores de un grupo.
 
-### Operadores lógicos
+### Operadores lógicos {#logical-operators}
 
 #### No lógico
 
@@ -1007,7 +1008,7 @@ Ejemplo:
  true
 ```
 
-### Funciones de fecha y hora
+### Funciones de fecha y hora {#datetime-functions}
 
 #### add_month
 
@@ -1425,13 +1426,13 @@ Ejemplo:
 
 Desde: 1.5.0
 
-### Funciones Acumuladas
+### Funciones acumuladas {#aggregate-functions}
 
 #### aprox_count_different
 
 `approx_count_distinct(expr[, relativeSD])`:: Devuelve la cardinalidad estimada por HyperLogLog++. `relativeSD` define el error máximo de estimación permitido.
 
-### Matrices
+### Matrices {#arrays}
 
 #### array
 
@@ -1809,7 +1810,7 @@ Ejemplos:
 
 Desde: 2.4.0
 
-### Funciones de conversión de tipos de datos
+### Funciones de conversión de tipos de datos {#datatype-casting}
 
 #### bigint
 
@@ -1894,7 +1895,7 @@ Ejemplos:
 
 `tinyint(expr)`:: Transmite el valor `expr` al tipo de datos de destinatario `tinyint`.
 
-### Funciones de conversión y formato
+### Funciones de conversión y formato {#conversion}
 
 #### ascii
 
@@ -2403,7 +2404,7 @@ Ejemplo:
 >
 >La función no es determinística.
 
-### Evaluación de datos
+### Evaluación de datos {#data-evaluation}
 
 #### fusionarse
 
@@ -2996,7 +2997,7 @@ Ejemplo:
  cc
 ```
 
-### Información actual
+### Información actual {#current-information}
 
 #### current_database
 
@@ -3026,3 +3027,65 @@ Desde: 1.5.0
 `now()`:: Devuelve la marca de tiempo actual en el inicio de la evaluación de consultas.
 
 Desde: 1.5.0
+
+### Funciones de orden superior {#higher-order}
+
+#### transformar
+
+`transform(array, lambdaExpression): array`
+
+Transforme los elementos de una matriz mediante la función .
+
+Si hay dos argumentos para la función lambda, el segundo argumento significa el índice del elemento.
+
+Ejemplo:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### existe
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Compruebe si un predicado contiene uno o varios elementos de la matriz.
+
+Ejemplo:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filtre la matriz de entrada utilizando el predicado determinado.
+
+Ejemplo:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### acumulado
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Aplique un operador binario a un estado inicial y a todos los elementos de la matriz y lo reduzca a un solo estado. El estado final se convierte en el resultado final aplicando una función de finalización.
+
+Ejemplo:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
