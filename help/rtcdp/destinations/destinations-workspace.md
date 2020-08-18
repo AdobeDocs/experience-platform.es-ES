@@ -5,7 +5,7 @@ seo-title: Espacio de trabajo Destinos
 description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Las tarjetas de destino contienen un control **[!UICONTROL Configurar]** o **[!U
 | [!UICONTROL Configurar] | Permite crear una conexión con el destino. |
 | [!UICONTROL Activar] | Una vez que haya establecido una conexión con el destino, puede activar segmentos. |
 | [!UICONTROL Cuenta de vista] | Vista las cuentas que ha conectado para un destino. |
-| [!UICONTROL Flujos de datos de vista] | Vista de los flujos de activación de datos que existen para un destino |
+| [!UICONTROL Flujos de datos de vista] | Vista los flujos de activación de datos que existen para un destino. |
 | [!UICONTROL Documentación de vista] | Abre un vínculo a la página de documentación de ese destino específico, para obtener más información y ayudarle a configurarla. |
 
 ![Controles en la tarjeta de destinos](/help/rtcdp/destinations/assets/destination-card-options.png)
