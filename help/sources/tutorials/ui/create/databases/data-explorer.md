@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de Data Explorer de Azure en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 0%
+source-wordcount: '486'
+ht-degree: 1%
 
 ---
 
@@ -23,10 +23,10 @@ Los conectores de origen de Adobe Experience Platform permiten la ingesta de dat
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Si ya tiene una conexión válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [!DNL Data Explorer] configuración de un flujo de datos [](../../dataflow/databases.md).
 
@@ -36,31 +36,31 @@ Para acceder a su [!DNL Data Explorer] cuenta en [!DNL Platform], debe proporcio
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `endpoint` | Extremo del [!DNL Data Explorer] servidor. |
-| `database` | Nombre de la [!DNL Data Explorer] base de datos. |
+| `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `database` | The name of the [!DNL Data Explorer] database. |
 | `tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
-| `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la base de datos de Datas Explorer. |
-| `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la base de datos de Datas Explorer. |
+| `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
+| `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
 
-Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)de Data Explorer.
+Para obtener más información sobre cómo empezar, consulte [ [!DNL Data Explorer] este documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
 ## Conectar su [!DNL Azure Data Explorer] cuenta
 
-Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva [!DNL Data Explorer] cuenta con la que conectarse [!DNL Platform].
+Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL Data Explorer] cuenta a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *Fuentes* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear una cuenta de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes para los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría *[!UICONTROL Bases de datos]* , seleccione Data Explorer **[!UICONTROL de]** Azure seguida de **[!UICONTROL Añadir datos]** para crear un nuevo conector de Data Explorer.
+En la categoría **[!UICONTROL Bases de datos]** , seleccione Data Explorer **[!UICONTROL de]** Azure. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo conector de Data Explorer.
 
 ![catálogo](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con la Data Explorer]* de Azure. En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con la Data Explorer]** de Azure. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la conexión con un nombre, una descripción opcional y sus [!DNL Data Explorer] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva cuenta.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus [!DNL Data Explorer] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
 ![connect](../../../../images/tutorials/create/data-explorer/new.png)
 
@@ -72,4 +72,4 @@ Para conectar una cuenta existente, seleccione la [!DNL Data Explorer] cuenta co
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su [!DNL Data Explorer] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos a Platform](../../dataflow/databases.md).
+Siguiendo este tutorial, ha establecido una conexión con su [!DNL Data Explorer] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incluir [!DNL Platform]](../../dataflow/databases.md)datos.
