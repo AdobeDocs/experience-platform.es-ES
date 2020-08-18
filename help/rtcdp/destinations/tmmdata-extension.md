@@ -1,12 +1,12 @@
 ---
 title: Extensión TMMData
 seo-title: Extensión TMMData
-description: La extensión TMMData es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión TMMData es un destino de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión TMMData es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión TMMData es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-[!DNL TMMData's] La plataforma base para Adobe Marketing Cloud proporciona a los equipos de mercadotecnia las herramientas para acceder y combinar todas sus fuentes de datos críticas, incluidos los datos internos/externos y en línea/sin conexión, para una análisis completa y segura entre canales, con configuración automatizada de campañas e importaciones directas a Adobe y otras herramientas de análisis e inteligencia comercial.
+[!DNL TMMData's] La plataforma de base para Adobe Marketing Cloud proporciona a los equipos de marketing las herramientas para acceder y combinar todas sus fuentes de datos críticas, incluidos los datos internos/externos y en línea/sin conexión, con el fin de lograr una análisis completa y segura entre canales, con configuración automatizada de campañas e importaciones directas a Adobe y otras herramientas de análisis e inteligencia comercial.
 
 [!DNL TMMData] es una extensión de análisis en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
@@ -36,7 +36,7 @@ Para instalar la [!DNL TMMData] extensión:
 
 1. En la interfaz [CDP en tiempo real de](http://platform.adobe.com/)Adobe, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 2. Seleccione la extensión del catálogo o utilice la barra de búsqueda.
-3. Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Instalar extensión]** en el carril derecho. Si el control **[!UICONTROL Instalar extensión]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]** . Consulte [Requisitos previos](#prerequisites).
+3. Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configurar]** en el carril derecho. Si el control **[!UICONTROL Configurar]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]** . Consulte [Requisitos previos](#prerequisites).
 4. En la ventana **[!UICONTROL Seleccionar la propiedad]** Launch disponible, seleccione la propiedad Launch en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en Launch. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [de la página](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propiedades de la documentación de Launch.
 5. El flujo de trabajo le lleva a Iniciar para completar la instalación.
 
