@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de atributos del cliente en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 7%
+source-wordcount: '352'
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ La pantalla actividad ** de origen lista todas las conexiones establecidas anter
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-En la lista de conjuntos de datos de perfiles de atributos del cliente disponibles, seleccione el que desee incluir en la plataforma y haga clic en **Siguiente**.
+En la lista de conjuntos de datos de perfiles de atributos del cliente disponibles, seleccione el que desee incluir [!DNL Platform] y haga clic en **Siguiente**.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Aparece el paso *Revisar* , que le permite revisar la nueva conexión de entrada
 
 ## Pasos siguientes
 
-Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un conjunto de datos para contener los datos entrantes. Cuando se completa la ingestión inicial, los datos de perfil de atributos del cliente pueden ser utilizados por los servicios de plataforma descendente, como el servicio de Perfil y segmentación del cliente en tiempo real. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, se crea automáticamente un esquema de destinatario y un conjunto de datos para contener los datos entrantes. Cuando se completa la ingestión inicial, los datos de perfil de atributos del cliente pueden ser utilizados por servicios de flujo [!DNL Platform] descendente como [!DNL Real-time Customer Profile] y [!DNL Segmentation Service]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general sobre el Perfil del cliente en tiempo real](../../../../../profile/home.md)
-* [Descripción general del servicio de segmentación](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] sobre validación](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] sobre validación](../../../../../segmentation/home.md)
