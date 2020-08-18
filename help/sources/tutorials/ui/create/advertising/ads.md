@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación de un conector de origen de Google AdWords en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 0%
+source-wordcount: '482'
+ht-degree: 1%
 
 ---
 
@@ -23,12 +23,12 @@ Los conectores de origen de Adobe Experience Platform permiten la ingesta de dat
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [Perfil](../../../../../profile/home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una [!DNL Google AdWords] conexión, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/payments.md)
+Si ya tiene una conexión válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [!DNL Google AdWords] [configuración de un flujo de datos](../../dataflow/payments.md)
 
 ### Recopilar las credenciales necesarias
 
@@ -36,29 +36,31 @@ Para acceder a su [!DNL Google AdWords] cuenta [!DNL Platform], debe proporciona
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `clientCustomerId` | ID de cliente de la cuenta de AdWords. |
+| `clientCustomerId` | ID de cliente de la [!DNL AdWords] cuenta. |
 | `developerToken` | El testigo del programador asociado a la cuenta del administrador. |
-| `refreshToken` | El token de actualización obtenido de [!DNL Google] para autorizar el acceso a AdWords. |
+| `refreshToken` | Distintivo de actualización obtenido de [!DNL Google] para autorizar el acceso a [!DNL AdWords]. |
 | `clientId` | El ID de cliente de la [!DNL Google] aplicación utilizada para adquirir el autentificador de actualización. |
 | `clientSecret` | El secreto de cliente de la [!DNL Google] aplicación que se utiliza para adquirir el autentificador de actualización. |
 
-Para obtener más información sobre cómo empezar, consulte este documento [de AdWords de](https://developers.google.com/adwords/api/docs/guides/authentication)Google.
+Para obtener más información sobre cómo empezar, consulte este [[!DNL Google AdWords] documento](https://developers.google.com/adwords/api/docs/guides/authentication).
 
 ## Conectar su [!DNL Google AdWords] cuenta
 
-Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva conexión de base de entrada con la que vincular la [!DNL Google AdWords] cuenta a [!DNL Platform].
+Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL Google AdWords] cuenta a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo *[!UICONTROL Fuentes]* . La pantalla *[!UICONTROL Catálogo]* muestra una serie de orígenes para los que puede crear conexiones de base de entrada y cada origen muestra el número de conexiones de base existentes asociadas a ellos.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes con los que puede crear una cuenta.
 
-En la categoría *[!UICONTROL Publicidad]* , seleccione **[!UICONTROL Google AdWords]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para crear una nueva conexión base de entrada, seleccione **[!UICONTROL Añadir datos]**.
+Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
+
+En la categoría **[!UICONTROL Publicidad]** , seleccione **[!UICONTROL Google AdWords]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Google AdWords] conector.
 
 ![catálogo](../../../../images/tutorials/create/ads/catalog.png)
 
-Aparece la página *[!UICONTROL Conectar con Google AdWords]* . En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con Google AdWords]** . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la conexión base con un nombre, una descripción opcional y sus [!DNL Google AdWords] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión base.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus [!DNL Google AdWords] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
 ![connect](../../../../images/tutorials/create/ads/connect.png)
 
@@ -70,4 +72,4 @@ Para conectar una cuenta existente, seleccione la [!DNL Google AdWords] cuenta c
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión de base con su [!DNL Google AdWords] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incluir datos de publicidad en Platform](../../dataflow/advertising.md).
+Siguiendo este tutorial, ha establecido una conexión con su [!DNL Google AdWords] cuenta. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir [!DNL Platform]](../../dataflow/advertising.md)datos de publicidad.
