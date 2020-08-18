@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -30,13 +30,13 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría de aplicaciones *de* Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Cuentas]**.
+En la categoría de aplicaciones **[!UICONTROL de]** Adobe, seleccione **[!UICONTROL Adobe Analytics]** para mostrar una barra de información en el lado derecho de la pantalla. La barra de información proporciona una breve descripción de la fuente seleccionada, así como opciones para conectarse con la fuente o la vista de la misma. Para vista de cuentas existentes, seleccione **[!UICONTROL Cuentas]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleccionar datos
 
-Aparece el paso de *Adobe Analytics* . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Seleccionar datos]**.
+Aparece el paso de **[!UICONTROL Adobe Analytics]** . En esta pantalla se muestran los flujos de conjuntos de datos previamente establecidos para Analytics. Puede crear un nuevo flujo de conjuntos de datos haciendo clic en **[!UICONTROL Seleccionar datos]**.
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ En la lista de los grupos de informes disponibles, seleccione el que desee inclu
 
 ### Asigne un nombre al flujo de conjuntos de datos
 
-Aparece el paso de detalle *del flujo de* datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de conjuntos de datos. ¡Seleccione **[UICONTROL! Siguiente]** al finalizar.
+Aparece el paso de detalle **[!UICONTROL del flujo de]** datos, donde debe proporcionar un nombre y una descripción opcional para el flujo de conjuntos de datos. Seleccione **[!UICONTROL Siguiente]** cuando termine.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Revise el flujo de conjuntos de datos
 
-Aparece el paso *Revisar* , que le permite revisar el nuevo flujo de conjuntos de datos enlazados en Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, entre ellas:
+Aparece el paso **[!UICONTROL Revisar]** , que le permite revisar el nuevo flujo de conjuntos de datos enlazados en Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, entre ellas:
 
-* *Conexión*: Muestra el tipo de conexión de origen y el grupo de informes seleccionado.
-* *Asignar campos* de conjunto de datos y mapa: Al crear otros conectores de origen, este contenedor muestra en qué conjunto de datos se están invirtiendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos. El esquema de salida y el conjunto de datos se configuran automáticamente para los flujos de conjuntos de datos de Analytics.
+* **[!UICONTROL Conexión]**: Muestra el tipo de conexión de origen y el grupo de informes seleccionado.
+* **[!UICONTROL Asignar campos]** de conjunto de datos y mapa: Al crear otros conectores de origen, este contenedor muestra en qué conjunto de datos se están invirtiendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos. El esquema de salida y el conjunto de datos se configuran automáticamente para los flujos de conjuntos de datos de Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Monitoree el flujo de conjuntos de datos
 
-Una vez creado el flujo del conjunto de datos, puede monitorear los datos que se están ingeriendo a través de él. En la pantalla *Catálogo* , seleccione Flujos *de* conjuntos de datos para la vista de una lista de flujos establecidos asociados a su cuenta de Analytics.
+Una vez creado el flujo del conjunto de datos, puede monitorear los datos que se están ingeriendo a través de él. En la pantalla **[!UICONTROL Catálogo]** , seleccione Flujos **[!UICONTROL de]** conjuntos de datos para la vista de una lista de flujos establecidos asociados a su cuenta de Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
