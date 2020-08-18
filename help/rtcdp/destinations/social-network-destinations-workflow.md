@@ -4,9 +4,9 @@ seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ ht-degree: 0%
 
 ## Flujo de trabajo para crear destinos de redes sociales
 
-Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo en Adobe Datos del cliente en tiempo real Platform será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de la plataforma de datos del cliente en tiempo real de Adobe será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
 
-1. En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, desplácese hasta la categoría de **[!UICONTROL Social]** . Seleccione el destino preferido de la red social y, a continuación, seleccione Destino **[!UICONTROL de]** Connect.
+1. En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, desplácese hasta la categoría de **[!UICONTROL Social]** . Seleccione el destino preferido de la red social y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
    ![Conectar al destino de red social](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+
+   >[!NOTE]
+   >
+   >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
 2. En el paso **Autenticación** , si previamente ha configurado una conexión con el destino de red social, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de red social. Seleccione **[!UICONTROL Conectar al destino]** y esto le llevará al destino de red social seleccionado para iniciar sesión y conectar Adobe Experience Cloud a su cuenta de publicidad de red social.
 
