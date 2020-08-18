@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1973'
 ht-degree: 1%
 
 ---
@@ -185,7 +185,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-### VISTA DE COLOCACIÓN
+### Vista DE COLOCACIÓN
 
 La siguiente sintaxis define una `DROP VIEW` consulta admitida por [!DNL Query Service]:
 
@@ -450,7 +450,7 @@ SHOW DateStyle;
 (1 row)
 ```
 
-### TRANSACCIÓN DE INICIOS
+### TRANSACCIÓN DE inicios
 
 Este comando se analiza y devuelve el comando completado al cliente. Es lo mismo que el `BEGIN` comando.
 
@@ -462,3 +462,22 @@ where transaction_mode is one of:
     ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
     READ WRITE | READ ONLY
 ```
+
+### COPIAR
+
+Este comando envía la salida de cualquier consulta SELECT a una ubicación específica. El usuario debe tener acceso a esta ubicación para que este comando se ejecute correctamente.
+
+```
+COPY  query
+    TO '%scratch_space%/folder_location'
+    [  WITH FORMAT 'format_name']
+
+where 'format_name' is be one of:
+    'parquet', 'csv', 'json'
+
+'parquet' is the default format.
+```
+
+>[!NOTE]
+>
+>La ruta de salida completa será `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
