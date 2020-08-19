@@ -1,10 +1,11 @@
 ---
+keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Destino de Amazon S3
 seo-title: Destino de Amazon S3
 description: Cree una conexión directa de salida a su almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos delimitados por tabuladores o CSV desde Adobe Experience Platform a sus propios cubos S3.
 seo-description: Cree una conexión directa de salida a su almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos delimitados por tabuladores o CSV desde Adobe Experience Platform a sus propios cubos S3.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -24,7 +25,7 @@ Consulte Flujo de trabajo de destinos de almacenamiento [Cloud ](/help/rtcdp/des
 
 Para [!DNL Amazon S3] destinos, introduzca la siguiente información en el flujo de trabajo de creación de destinos:
 
-* **[!DNL Amazon S3]clave de acceso y clave[!DNL Amazon S3]secreta **: En[!DNL Amazon S3], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su[!DNL Amazon S3]cuenta.
+* **[!DNL Amazon S3]clave de acceso y clave[!DNL Amazon S3]secreta**: En [!DNL Amazon S3], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su [!DNL Amazon S3] cuenta.
 
 >[!IMPORTANT]
 >
