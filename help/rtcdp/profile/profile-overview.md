@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp profile;real-time customer profile
+keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Información general sobre el Perfil del cliente en tiempo real
 seo-title: Perfil del cliente en tiempo real en la plataforma de datos del cliente en tiempo real
 description: Información general sobre cómo la plataforma de datos de clientes en tiempo real le permite dirigir experiencias relevantes, coherentes y coordinadas para sus clientes mediante Perfiles de clientes en tiempo real.
 seo-description: Plataforma de datos del cliente en tiempo real, Perfil, datos, experiencias, canales
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
