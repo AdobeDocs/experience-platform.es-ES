@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign
 seo-title: Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 seo-description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -18,7 +19,7 @@ ht-degree: 1%
 
 Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión. Consulte [Acerca de Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obtener más información.
 
-Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en Adobe Real-time Customer Data Platform y, a continuación, [configurar una importación](#import-data-into-campaign) de datos desde la ubicación de almacenamiento en Adobe Campaign.
+Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en la plataforma de datos del cliente en tiempo real de Adobe y, a continuación, [configurar una importación](#import-data-into-campaign) de datos desde la ubicación del almacenamiento en Adobe Campaign.
 
 ## Destino de Connect {#connect-destination}
 
@@ -43,7 +44,7 @@ Para **[!UICONTROL SFTP con conexiones SSH Key]** , debe proporcionar Dominio, P
    * **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en la ubicación del almacenamiento donde CDP en tiempo real depositará sus datos de exportación como archivos CSV o separados por tabuladores.
    * **[!UICONTROL Formato]** de archivo: **CSV** o **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
 
-   ![Información básica de Campaña](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
+   ![Información básica de campaña](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
 1. Haga clic en **[!UICONTROL Crear]** después de rellenar los campos anteriores. El destino ya está conectado y puede [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el destino.
 
@@ -77,4 +78,4 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Configurar la importación de datos en Adobe Campaign {#import-data-into-campaign}
 
-Después de conectar CDP en tiempo real con su almacenamiento [!DNL Amazon S3] o SFTP, debe configurar la importación de datos desde la ubicación del almacenamiento en Adobe Campaign. Para obtener información sobre cómo realizar esto, consulte [Importación de datos](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) en la documentación de la Ayuda de Adobe Campaign.
+Después de conectar CDP en tiempo real con su almacenamiento [!DNL Amazon S3] o SFTP, debe configurar la importación de datos desde la ubicación del almacenamiento a Adobe Campaign. Para obtener información sobre cómo realizar esto, consulte [Importación de datos](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) en la documentación de la Ayuda de Adobe Campaign.
