@@ -4,7 +4,7 @@ seo-title: Configuración de Edge para el SDK web Experience Platform
 description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configuración del borde
 
-La configuración del Adobe Experience Platform [!DNL Web SDK] se divide entre dos lugares. El comando [](configuring-the-sdk.md) configure del SDK controla los elementos que deben gestionarse en el cliente, como el `edgeDomain`. La configuración de Edge gestiona el resto de la configuración del SDK. Cuando se envía una solicitud al Adobe Experience Platform [!DNL Edge Network], se `edgeConfigId` utiliza para hacer referencia a la configuración del lado del servidor. Esto le permite actualizar la configuración sin tener que realizar cambios de código en el sitio web.
+La configuración del Adobe Experience Platform [!DNL Web SDK] se divide entre dos lugares. El comando [](configuring-the-sdk.md) configure del SDK controla los elementos que deben gestionarse en el cliente, como el `edgeDomain`. La configuración de Edge gestiona el resto de la configuración del SDK. Cuando se envía una solicitud al Adobe Experience Platform [!DNL Edge Network], `edgeConfigId` se utiliza para hacer referencia a la configuración del lado del servidor. Esto le permite actualizar la configuración sin tener que realizar cambios de código en el sitio web.
 
 ## Creación de un ID de configuración de Edge
 
@@ -23,8 +23,6 @@ Los ID de configuración de Edge se pueden crear en Adobe [!DNL Launch] con la h
 ![navegación de la herramienta de configuración de borde](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la documentación [!DNL Launch] para obtener más información.
 
@@ -36,7 +34,7 @@ Esta configuración predeterminada se utiliza para crear los tres primeros entor
 
 El ID utilizado en el SDK `edgeConfigId` es un ID compuesto que especifica la configuración y el entorno. Si no hay entorno, se utiliza el entorno de producción.
 
-### Configuración de Entorno
+### Configuración de entorno
 
 A continuación se muestran los ajustes disponibles para un entorno. La mayoría de las secciones se pueden habilitar o deshabilitar. Cuando se deshabilita, la configuración se guarda pero no se activa.
 
@@ -62,13 +60,13 @@ La configuración que se muestra aquí le permite enviar datos al Adobe Experien
 
 ##### [!UICONTROL Simulador para pruebas]
 
-Los Simuladores para pruebas son ubicaciones en el Adobe Experience Platform que permiten a los clientes aislar sus datos e implementaciones entre sí. Para obtener más información sobre cómo funcionan, consulte la documentación [de los](../../sandboxes/home.md)Simuladores para pruebas.
+Los Simuladores para pruebas son ubicaciones del Adobe Experience Platform que permiten a los clientes aislar sus datos e implementaciones entre sí. Para obtener más información sobre cómo funcionan, consulte la documentación [de los](../../sandboxes/home.md)Simuladores para pruebas.
 
 ##### [!UICONTROL Entrada de flujo continuo]
 
-Una entrada de flujo continuo es un origen HTTP en el Adobe Experience Platform. Se crean en la ficha [!UICONTROL Fuentes] del Adobe Experience Platform como una API HTTP.
+Una entrada de flujo continuo es un origen HTTP en el Adobe Experience Platform. Se crean en la ficha [!UICONTROL Fuentes] de Adobe Experience Platform como una API HTTP.
 
-##### [!UICONTROL Conjunto de datos de Evento]
+##### [!UICONTROL Conjunto de datos de evento]
 
 Las configuraciones de Edge admiten el envío de datos a conjuntos de datos que tienen un esquema de clase [!UICONTROL Experience Evento].
 
@@ -80,8 +78,6 @@ Para configurar Adobe Target, debe proporcionar un código de cliente. Los demá
 
 >[!NOTE]
 >
->
->
 >La organización asociada con el código de cliente debe coincidir con la organización en la que se crea el ID de configuración.
 
 ##### [!UICONTROL Código de cliente]
@@ -92,11 +88,11 @@ ID única de una cuenta de destinatario. Para encontrarlo, puede navegar a [!UIC
 
 [!DNL Target] permite a los clientes controlar los permisos mediante el uso de propiedades. Encontrará más información en la sección Permisos [de](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la [!DNL Target] documentación.
 
-El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL configuración] > [!UICONTROL Propiedades]
+El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL Configuración] > [!UICONTROL Propiedades]
 
-##### [!UICONTROL ID de Entorno de Destinatario]
+##### [!UICONTROL ID de Entorno de destinatario]
 
-[Los Entornos](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) en Adobe Target le ayudan a administrar su implementación en todas las etapas del desarrollo. Esta configuración especifica qué entorno se va a usar con cada entorno.
+[Los entornos](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) de Adobe Target le ayudan a administrar su implementación en todas las etapas de desarrollo. Esta configuración especifica qué entorno se va a usar con cada entorno.
 
 Adobe recomienda que esto se establezca de forma diferente para cada uno de los entornos de configuración `dev`, `stage`y `prod` borde para que las cosas sean sencillas. Sin embargo, si ya tiene definidos entornos [!UICONTROL de] Adobe Target, puede utilizarlos.
 
@@ -116,7 +112,7 @@ Permite que el SDK comparta información de segmentos a través de destinos [URL
 
 #### Adobe Analytics
 
-Controla si los datos se envían a Adobe Analytics. Encontrará más información en la Información general de [Analytics](../solution-specific/analytics/analytics-overview.md).
+Controla si los datos se envían a Adobe Analytics. Encontrará más información en Información general sobre [Analytics](../solution-specific/analytics/analytics-overview.md).
 
 ![Bloque de configuración de Adobe Analytics](../../assets/edge_configuration_aa.png)
 
