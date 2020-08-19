@@ -1,10 +1,11 @@
 ---
+keywords: SFTP;sftp
 title: Destino de SFTP
 seo-title: Destino de SFTP
 description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 seo-description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
