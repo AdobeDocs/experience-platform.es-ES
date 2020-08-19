@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Destino de Amazon Kinesis
 seo-title: Destino de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -23,7 +24,7 @@ ht-degree: 2%
 
 El [!DNL Kinesis Data Streams] servicio le permite [!DNL Amazon Web Services] recopilar y procesar grandes flujos de registros de datos en tiempo real.
 
-Puede crear una conexión saliente en tiempo real con el [!DNL Amazon Kinesis] almacenamiento para transmitir datos desde el Adobe Experience Platform.
+Puede crear una conexión saliente en tiempo real con el [!DNL Amazon Kinesis] almacenamiento para transmitir datos desde Adobe Experience Platform.
 
 * Para obtener más información sobre [!DNL Amazon Kinesis], consulte la documentación [de](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
 * Para conectarse a [!DNL Amazon Kinesis] través de llamadas de API, consulte el tutorial [de API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)flujo continuo.
@@ -46,7 +47,7 @@ Para [!DNL Amazon Kinesis] destinos, introduzca la siguiente información en el 
 
 ### En el paso Autenticación {#authentication-step}
 
-* **[!DNL Amazon Web Services]clave de acceso y clave **secreta: En[!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su[!DNL Amazon Kinesis]cuenta. Obtenga más información en la documentación[de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En [!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su [!DNL Amazon Kinesis] cuenta. Obtenga más información en la documentación [de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **región**: Indicar a qué [!DNL Amazon Web Services] región se transmitirán los datos.
 
 ![Campos de entrada en el paso de cuenta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
