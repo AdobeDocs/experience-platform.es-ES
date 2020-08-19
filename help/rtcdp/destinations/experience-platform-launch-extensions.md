@@ -1,10 +1,11 @@
 ---
+keywords: launch extensions;launch extension;launch destinations
 title: Extensiones de Experience Platform Launch
 seo-title: Extensiones de Experience Platform Launch
 description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 21%
@@ -30,7 +31,7 @@ Para encontrar las extensiones de Launch en la interfaz CDP en tiempo real de Ad
 
 Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
-**Perfil/Segmento Exportar** destinos en Adobe Datos del cliente en tiempo real Platform captura datos de evento, los combina con otras fuentes de datos, aplica segmentación y exporta segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [del almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+**Los destinos de exportación** de perfiles y segmentos en Adobe La plataforma de datos del cliente en tiempo real capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [del almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
@@ -53,13 +54,13 @@ Las extensiones de inicio le permiten satisfacer diversos casos de uso de client
 * Puede activar una aplicación de cuadro de chat del lado del cliente en el momento adecuado en función de cómo interactúen los usuarios con sus páginas, según las reglas que configure en Launch.
 
 
-## categorías de extensión {#extension-categories}
+## Categorías de extensión {#extension-categories}
 
 Las extensiones de inicio pueden encontrarse bajo las siguientes categorías en Adobe Real-time CDP:
 
 * [Publicidad](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
-* [Gestión de datos Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [Plataforma de gestión de datos](/help/rtcdp/destinations/dmp-destinations.md)
 * [Destinos de mercadotecnia de correo electrónico](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalización](/help/rtcdp/destinations/personalization-destinations.md)
 * [Encuestas](/help/rtcdp/destinations/survey-destinations.md)
