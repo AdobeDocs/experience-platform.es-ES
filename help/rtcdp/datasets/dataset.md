@@ -1,10 +1,11 @@
 ---
+keywords: datasets;rtcdp datasets
 title: Información general del conjunto de datos
 seo-title: Información general sobre conjuntos de datos en Adobe Experience Platform
 description: Información general sobre conjuntos de datos en Adobe Experience Platform
 seo-description: Información general sobre conjuntos de datos en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
