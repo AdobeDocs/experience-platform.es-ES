@@ -1,10 +1,11 @@
 ---
+keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: Extensión PebblePost
 seo-title: Extensión PebblePost
 description: La extensión PebblePost es un destino de correo electrónico en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: La extensión PebblePost es un destino de correo electrónico en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 4%
