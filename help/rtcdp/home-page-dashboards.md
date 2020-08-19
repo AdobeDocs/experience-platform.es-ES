@@ -1,20 +1,21 @@
 ---
-title: Paneles y Páginas de inicio de Platform para datos de clientes en tiempo real
-seo-title: Paneles y Páginas de inicio de Platform para datos de clientes en tiempo real
+keywords: metrics overview; rtcdp metrics overview
+title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
+seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
 description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
 seo-description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # [!DNL Real-time Customer Data Platform] información general sobre métricas
 
-La página de inicio Adobe Real-time Customer Data Platform (CDP en tiempo real), que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
+La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe, que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
 
 La página de inicio es sólo uno de los lugares en los que aparecen las tarjetas de métricas. CDP en tiempo real proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre las audiencias de datos, perfiles y segmentos del sistema.
 
@@ -22,7 +23,7 @@ La página de inicio es sólo uno de los lugares en los que aparecen las tarjeta
 
 Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no aparece el panel en la página de inicio. En este caso, la página de inicio proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos (es decir, a medida que se crean <!--sources-->conjuntos de datos, perfiles, segmentos y destinos y los datos fluyen al sistema), el panel se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
 
-## vista de panel de Página de inicio
+## Vista de panel de página de inicio
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
@@ -39,7 +40,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![imagen](assets/home-recent.jpg)
 
-Las métricas adicionales (por ejemplo, para perfiles y segmentos) están disponibles en otras partes del Platform de datos del cliente en tiempo real.
+Las métricas adicionales (por ejemplo, para perfiles y segmentos) están disponibles en otras partes de la Plataforma de datos del cliente en tiempo real.
 
 ### Conjuntos de datos
 
