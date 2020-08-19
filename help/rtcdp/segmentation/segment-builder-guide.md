@@ -1,12 +1,13 @@
 ---
-title: Guía del Generador de segmentos
+keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
+title: Guía del Generador de segmentos para la plataforma de datos del cliente en tiempo real
 seo-title: Uso del Generador de segmentos del servicio de segmentación en la plataforma de datos del cliente en tiempo real
 description: Guía que describe cómo utilizar el Generador de segmentos.
 seo-description: Guía del usuario que describe cómo utilizar el Generador de segmentos del servicio de segmentación en la plataforma de datos del cliente en tiempo real.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
