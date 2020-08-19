@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Información general sobre la administración de datos
-seo-title: Administración de datos en tiempo real de datos de clientes Platform
+seo-title: Administración de datos en la plataforma de datos del cliente en tiempo real
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] (CDP en tiempo real) aúna los datos de varios sistemas empresariales, lo que permite a los especialistas en mercadotecnia identificar, comprender y captar mejor a sus clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que CDP en tiempo real cumpla con las políticas de uso al manejar sus datos.
 
-Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de CDP en tiempo real, permitiéndole definir políticas de uso, categorizar los datos en base a esas políticas y verificar las infracciones de políticas al realizar ciertas acciones de mercadotecnia.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de CDP en tiempo real, permitiéndole definir políticas de uso, categorizar los datos en base a esas políticas y verificar las infracciones de políticas al realizar ciertas acciones de mercadotecnia.
 
-CDP en tiempo real se basa en el Adobe Experience Platform y, por lo tanto, la mayoría de las [!DNL Data Governance] capacidades se incluyen en la [!DNL Experience Platform] documentación. Este documento está diseñado para complementar la información general [de la Administración de](../../data-governance/home.md) datos [!DNL Experience Platform], y describe las características de la Administración disponibles en CDP en tiempo real. Se tratan los siguientes temas:
+CDP en tiempo real se basa en Adobe Experience Platform y, por lo tanto, la mayoría de las [!DNL Data Governance] capacidades se cubren en la [!DNL Experience Platform] documentación. Este documento está diseñado para complementar la información general [de la Administración de](../../data-governance/home.md) datos [!DNL Experience Platform], y describe las características de la Administración disponibles en CDP en tiempo real. Se tratan los siguientes temas:
 
 * [Aplicar etiquetas de uso a los datos](#labels)
 * [Administrar directivas de uso de datos](#policies)
