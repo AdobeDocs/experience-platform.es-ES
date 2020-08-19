@@ -1,10 +1,11 @@
 ---
+keywords: Invoca;invoca
 title: Extensión Etiquetas de Invoca
 seo-title: Extensión Etiquetas de Invoca
 description: La extensión Etiquetas de Invoca es una voz del destino del cliente en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
