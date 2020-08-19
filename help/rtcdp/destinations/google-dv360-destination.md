@@ -1,10 +1,11 @@
 ---
+keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Destino de Google Display y Video 360
 seo-title: Destino de Google Display y Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
 seo-description: 'Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización. '
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%
