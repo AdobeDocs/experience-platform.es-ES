@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Destino de Facebook
 seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -22,7 +23,7 @@ Active perfiles para sus [!DNL Facebook] campañas para la segmentación, person
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se presentan dos casos de uso de muestra que los clientes de Platform pueden solucionar con esta función el Adobe de datos de clientes en tiempo real. [!DNL Facebook]
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se presentan dos casos de uso de muestra que los clientes de la Plataforma de datos de clientes en tiempo real de Adobe pueden solucionar con esta función. [!DNL Facebook]
 
 
 ### Caso de uso n.º 1
@@ -48,7 +49,7 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 >
 >Los datos enviados a no [!DNL Facebook] deben incluir identidades vinculadas. Usted es responsable de cumplir esta obligación y puede hacerlo asegurándose de que los segmentos seleccionados para la activación no utilicen una opción de vinculación en su política de combinación. Obtenga más información sobre las políticas [de](/help/profile/ui/merge-policies.md)combinación.
 
-### Tipo de Activación {#activation-type}
+### Tipo de activación {#activation-type}
 
 **Exportación** de segmentos: está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono, etc.) se usa en el destino de Facebook.
 
@@ -64,7 +65,7 @@ Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cump
 
 ### Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-[!DNL Facebook] exige que no se envíe con claridad ninguna información de identificación personal. Por lo tanto, las audiencias activadas en [!DNL Facebook] deben bloquearse las direcciones de correo electrónico con *hash* . Puede elegir hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede elegir trabajar con las direcciones de correo electrónico en Experience Platform y hacer que nuestro algoritmo las incluya en activación.
+[!DNL Facebook] exige que no se envíe con claridad ninguna información de identificación personal. Por lo tanto, las audiencias activadas en [!DNL Facebook] deben bloquearse las direcciones de correo electrónico con *hash* . Puede elegir hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede elegir trabajar con las direcciones de correo electrónico de forma clara en Experience Platform y hacer que nuestro algoritmo las incluya en activación.
 
 Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la información general [sobre la ingestión de](/help/ingestion/batch-ingestion/overview.md) lotes y la información general [sobre la ingestión](/help/ingestion/streaming-ingestion/overview.md)por lotes.
 
