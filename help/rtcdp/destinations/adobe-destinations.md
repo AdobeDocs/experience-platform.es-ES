@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: Destinos de Adobe
 seo-title: Destinos de Adobe
 description: Administre la experiencia de sus clientes conectando sus datos en Adobe Real-time CDP a otras soluciones de Adobe Experience Cloud para direccionamiento publicitario, personalización, automatización de mercadotecnia y mucho más
 seo-description: Administre la experiencia de sus clientes conectando sus datos en Adobe Real-time CDP a otras soluciones de Adobe Experience Cloud para direccionamiento publicitario, personalización, automatización de mercadotecnia y mucho más
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 21%
@@ -16,7 +17,7 @@ ht-degree: 21%
 
 Administre su experiencia con el cliente conectando sus datos en Adobe Real-time CDP a otras soluciones de Adobe Experience Cloud para segmentación de anuncios, personalización, automatización de marketing y mucho más.
 
-* [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+* [Extensión Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Extensión de Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
 * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
