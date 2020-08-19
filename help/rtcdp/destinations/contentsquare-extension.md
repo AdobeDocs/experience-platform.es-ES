@@ -1,10 +1,11 @@
 ---
+keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Extensión Contentsquare
 seo-title: Extensión Contentsquare
 description: La extensión Contentsquare es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 seo-description: La extensión Contentsquare es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 6%
