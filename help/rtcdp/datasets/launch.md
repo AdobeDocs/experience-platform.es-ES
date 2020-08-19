@@ -1,10 +1,11 @@
 ---
+keywords: website tags;web tags;launch tutorial
 title: Tutorial Implemente etiquetas de sitios web con Adobe Launch
 seo-title: Implementación de etiquetas de sitios web con Adobe Launch
 description: Uso de Adobe Launch para implementar las etiquetas de sitios web en Adobe Experience Platform
 seo-description: Uso de Adobe Launch para implementar las etiquetas de sitios web en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 9%
@@ -26,11 +27,11 @@ En este tutorial se explica cómo implementar las etiquetas del sitio web para e
 
 Este tutorial contiene los siguientes pasos:
 
-1. Instale la extensión del Adobe Experience Platform [!DNL Web SDK] .
+1. Instale la extensión de Adobe Experience Platform [!DNL Web SDK] .
 1. Cree una regla para indicar [!DNL Launch] qué datos enviar.
 1. Agrupar la extensión y la regla en una biblioteca.
 
-## Instalación de la extensión del Adobe Experience Platform [!DNL Web SDK]
+## Instalación de la extensión Adobe Experience Platform [!DNL Web SDK]
 
 En primer lugar, instale la extensión de Adobe Experience Platform [!DNL Web SDK] .
 
@@ -38,7 +39,7 @@ En primer lugar, instale la extensión de Adobe Experience Platform [!DNL Web SD
 
    ![imagen](assets/launch-overview.png)
 
-1. Seleccione la extensión del SDK web de Adobe Experience Platform desde la [!DNL Launch] extensión [!DNL Catalog]Se abre la pantalla de configuración.
+1. Seleccione la extensión Adobe Experience Platform Web SDK en la [!DNL Launch] extensión [!DNL Catalog]Se abre la pantalla de configuración.
 
    ![imagen](assets/launch-extension-install.png)
 
@@ -79,7 +80,7 @@ A continuación, [agrupe la extensión](https://docs.adobe.com/content/help/es-E
 
 ![imagen](assets/launch-add-changes-to-library.png)
 
-Después de completar la prueba, promocione la biblioteca a través del flujo de trabajo para que se pueda implementar en el sitio de producción. Ahora los datos fluyen de cada usuario individual al Adobe Experience Platform.
+Después de completar la prueba, promocione la biblioteca a través del flujo de trabajo para que se pueda implementar en el sitio de producción. Los datos fluyen desde cada usuario individual a Adobe Experience Platform.
 
 ![imagen](assets/launch-promote-library.png)
 
