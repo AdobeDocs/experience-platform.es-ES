@@ -1,12 +1,13 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: Información general sobre administración
 seo-title: Visión general de la administración de CDP en tiempo real
-description: description
+description: 'Este documento proporciona una visión general de las funciones de administración de la Plataforma de datos de clientes en tiempo real, con tecnología de Adobe Experience Platform. '
 seo-description: descripción de seo
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Las siguientes secciones proporcionan introducciones a los componentes centrales
 
 ## Control de acceso
 
-El Control de acceso se administra a través del [Adobe Admin Console](http://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], permitiéndole vincular a los usuarios con permisos y entornos limitados. Con esta función, los administradores pueden otorgar o restringir el acceso a capacidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
+El control de acceso se administra a través del [Adobe Admin Console](http://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], permitiéndole vincular a los usuarios con permisos y entornos limitados. Con esta función, los administradores pueden otorgar o restringir el acceso a capacidades específicas de CDP en tiempo real para conjuntos definidos de usuarios.
 
 Para obtener más información sobre control de acceso, consulte la descripción general [del](../../access-control/home.md) control de acceso en la [!DNL Experience Platform] documentación.
 
@@ -31,8 +32,8 @@ Para obtener más información sobre control de acceso, consulte la descripción
 
 ## Sandboxes
 
-Adobe Experience Platform (y CDP en tiempo real por extensión) está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las Compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben ocuparse del desarrollo, las pruebas y la implementación de estas aplicaciones, al tiempo que garantizan el cumplimiento de normas operacionales.
+Adobe Experience Platform (y CDP en tiempo real, por extensión) está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben ocuparse del desarrollo, las pruebas y la implementación de estas aplicaciones, al tiempo que garantizan el cumplimiento de normas operacionales.
 
-Para satisfacer esta necesidad, Adobe Experience Platform proporciona &quot;entornos limitados&quot;, lo que permite dividir una sola [!DNL Platform] instancia en entornos virtuales independientes que se pueden utilizar para desarrollar y desarrollar aplicaciones de experiencia digital.
+Para satisfacer esta necesidad, Adobe Experience Platform proporciona &quot;entornos limitados&quot;, lo que le permite dividir una sola [!DNL Platform] instancia en entornos virtuales independientes que se pueden utilizar para desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Para obtener más información sobre los entornos limitados, consulte la descripción general [de los](../../sandboxes/home.md) entornos limitados en la [!DNL Experience Platform] documentación.
