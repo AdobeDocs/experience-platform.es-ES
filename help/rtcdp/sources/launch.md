@@ -1,11 +1,11 @@
 ---
-keywords: Launch;launch
+keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
 title: Tutorial Implemente etiquetas de sitios web con Adobe Launch
 seo-title: Implementación de etiquetas de sitios web con Adobe Launch
 description: Uso de Adobe Launch para implementar las etiquetas de sitios web en Adobe Experience Platform
 seo-description: Uso de Adobe Launch para implementar las etiquetas de sitios web en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 8%
