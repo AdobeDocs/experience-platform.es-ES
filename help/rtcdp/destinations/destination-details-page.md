@@ -1,13 +1,14 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: Página Detalles de Destinos
 seo-title: Página Detalles de Destinos
 description: 'La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 seo-description: 'La página de detalles de un destino individual proporciona información general sobre los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -39,7 +40,7 @@ Esta sección muestra qué segmentos están asignados actualmente al destino, as
 ---------|----------|
 | Nombre del segmento | El nombre del segmento. |
 | Descripción del segmento | Descripción del segmento. |
-| Fecha de Inicio | La fecha a partir de la cual se activan estos segmentos en el destino. |
+| Fecha de inicio | La fecha a partir de la cual se activan estos segmentos en el destino. |
 | Fecha final | Fecha en la que estos segmentos dejarán de activarse en el destino. |
 | ID de asignación | *No disponible para destinos* de marketing por correo electrónico. Indica el ID por el que se conoce el segmento en la plataforma de destino. |
 
