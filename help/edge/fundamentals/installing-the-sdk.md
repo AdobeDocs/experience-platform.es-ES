@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK instalar el SDK
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 1%
@@ -54,6 +54,7 @@ El código base crea una función global denominada `alloy`. Utilice esta funci�
 En este ejemplo, se cambia el nombre de la función global `mycustomname`en lugar de `alloy`.
 
 >[!IMPORTANT]
+>
 >Para evitar posibles problemas, utilice un nombre que contenga al menos un carácter que no sea un dígito y que no entre en conflicto con el nombre de una propiedad que ya se encuentre en `window`.
 
 Este código base, además de crear una función global, también carga código adicional contenido en un archivo externo \(`alloy.js`\) alojado en un servidor. De forma predeterminada, este código se carga asincrónicamente para permitir que la página web tenga el máximo rendimiento posible. Ésta es la implementación recomendada.
