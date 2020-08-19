@@ -1,10 +1,10 @@
 ---
-title: eventos de seguimiento
+title: Eventos de seguimiento
 seo-title: Seguimiento de eventos del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 translation-type: tm+mt
-source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# eventos de seguimiento
+# Eventos de seguimiento
 
 Para enviar datos de evento al Adobe Experience Cloud, utilice el `sendEvent` comando . El `sendEvent` comando es la forma principal de enviar datos al [!DNL Experience Cloud]sitio y recuperar contenido personalizado, identidades y destinos de audiencia.
 
@@ -43,6 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
+>
 >Hay un límite de 32 KB en los datos que se pueden enviar en cada evento del campo XDM.
 
 ### Envío de datos que no son XDM
