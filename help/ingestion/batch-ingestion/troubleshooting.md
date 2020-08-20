@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas de ingestión de lotes de Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### ¿Por qué no aparecen los datos cargados en el conjunto de datos?
+
+Para que los datos aparezcan en el conjunto de datos, el lote debe marcarse como completado. Todos los archivos que desee ingerir deben cargarse antes de marcar el lote como completado. A continuación se muestra un ejemplo de cómo marcar un lote como completo:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### ¿Cómo se ingiere JSON multilínea?
