@@ -1,10 +1,11 @@
 ---
-title: inicio rápido con javascript sin formato
+title: Inicio rápido con javascript sin formato
 seo-title: 'inicio rápido del SDK web de Adobe Experience Platform '
 description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para utilizar el SDK web de Experience Platform para recopilar datos
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 5%
@@ -17,7 +18,7 @@ ht-degree: 5%
 Esta guía le guiará por las diferentes formas de configurar el SDK web de Adobe Experience Platform. Para utilizar esta función, debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
 - Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funciona sin un CNAME, pero se necesita uno antes de ir a producción.
-- Tener derecho al Adobe Experience Platform.  Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
+- Tener derecho a Adobe Experience Platform.  Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
 - Utilice la versión más reciente del servicio de ID de Visitante.
 
 ## Preparación de un Esquema
@@ -25,7 +26,7 @@ Esta guía le guiará por las diferentes formas de configurar el SDK web de Adob
 El [!DNL Experience Platform Edge Network] toma los datos como XDM. XDM es un formato de datos que permite definir esquemas. El esquema define cómo [!DNL Edge Network] espera que se formatee la información. Para enviar datos, debe definir el esquema.
 
 - [Crear un esquema](../../xdm/tutorials/create-schema-ui.md)
-- Añada la mezcla de Adobe Experience Platform [!DNL Web SDK] al esquema que ha creado
+- Añadir la mezcla de Adobe Experience Platform [!DNL Web SDK] en el esquema creado
 
 El siguiente vídeo está diseñado para ayudarle a crear un conector de esquema, conjunto de datos y origen de flujo continuo para sus [!DNL Web SDK] datos.
 
