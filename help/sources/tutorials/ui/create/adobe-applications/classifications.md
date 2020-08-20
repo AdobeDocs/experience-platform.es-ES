@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Creación de un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial proporciona los pasos para crear un conector de datos de clasifica
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!Sandboxes DNL]](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
@@ -37,7 +37,7 @@ En la categoría de aplicaciones **[!UICONTROL de]** Adobe, seleccione la tarjet
 
 Aparece el paso de adición de datos **[!UICONTROL de origen de]** Analytics. Seleccione **[!UICONTROL Clasificaciones]** en el encabezado superior para ver una lista de [!DNL Classifications] conjuntos de datos, incluida información sobre su ID **[!UICONTROL de]** Dimension, el nombre **[!UICONTROL del grupo de]** informes y la ID **[!UICONTROL del grupo de]** informes.
 
-Cada página muestra hasta diez conjuntos de datos diferentes [!DNL Classifications] entre los que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de conjuntos de datos que ha seleccionado, así como sus nombres. [!DNL Classifications] Este panel también le permite eliminar cualquier conjunto de [!DNL Classifications] datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
+Cada página muestra hasta diez conjuntos de datos diferentes [!DNL Classifications] entre los que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de conjuntos de datos que ha seleccionado, así como sus nombres. [!DNL Classifications] Este panel también le permite eliminar cualquier conjunto [!DNL Classifications] de datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
 
 Puede seleccionar hasta 30 conjuntos de datos diferentes [!DNL Classifications] para [!DNL Platform].
 
@@ -57,7 +57,7 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Monitorear y eliminar el flujo de datos de las clasificaciones
+## Monitorear el flujo de datos de las clasificaciones
 
 Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. En la pantalla **[!UICONTROL Catálogo]** , seleccione **[!UICONTROL Flujos]** de datos para la vista de una lista de flujos establecidos asociados a su [!DNL Classifications] cuenta.
 
@@ -69,13 +69,13 @@ Seleccione el conjunto de datos de **[!UICONTROL Destinatario]** al que desee ac
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-La página **[!UICONTROL actividad]** de conjunto de datos muestra información sobre el conjunto de datos de destinatario seleccionado, incluidos detalles sobre el estado del lote, la ID del conjunto de datos y el esquema. Seleccione **[!UICONTROL Eliminar conjunto de datos]** para eliminar.
+La página **[!UICONTROL actividad]** de conjunto de datos muestra información sobre el conjunto de datos de destinatario seleccionado, incluidos detalles sobre el estado del lote, la ID del conjunto de datos y el esquema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Aunque es posible eliminar conjuntos de datos para otros conectores de origen, no se admite actualmente en el conector de datos de clasificaciones de Analytics. Si elimina un conjunto de datos por error, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
-Aparece un cuadro de diálogo que confirma la eliminación. Seleccione **[!UICONTROL Eliminar]** para completar.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Pasos siguientes
 
