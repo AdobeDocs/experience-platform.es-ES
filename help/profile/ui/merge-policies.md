@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,19 @@ Esta guía requiere una comprensión práctica de los diversos [!DNL Experience 
 
 ## Directivas de combinación de vistas
 
-En la interfaz de usuario, puede empezar a trabajar con políticas de combinación y ver una lista de las políticas de combinación existentes de su organización haciendo clic en el [!DNL Experience Platform] Perfil **[!UICONTROL en el carril izquierdo y, a continuación, seleccionando la ficha]** Combinar políticas **** .
+En la interfaz de usuario, puede empezar a trabajar con políticas de combinación y ver una lista de las políticas de combinación existentes de su organización seleccionando [!DNL Experience Platform] Perfiles **[!UICONTROL en el carril izquierdo y, a continuación, seleccionando la ficha]** Combinar políticas **** .
 
 ![Página de aterrizaje de políticas de combinación](../images/merge-policies/landing.png)
 
-Los detalles de cada directiva de combinación disponible para su organización están visibles en la página de aterrizaje, incluidos el nombre *[!UICONTROL de la]* directiva, la directiva *[!UICONTROL de combinación]* predeterminada y el *[!UICONTROL Esquema]*.
+Los detalles de cada directiva de combinación disponible para su organización están visibles en la página de aterrizaje, incluidos el nombre [!UICONTROL de la]directiva, la directiva [!UICONTROL de combinación]predeterminada y el [!UICONTROL Esquema].
 
-Para seleccionar qué detalles están visibles o para agregar columnas adicionales a la pantalla, seleccione el icono del selector de columnas de la derecha y haga clic en el nombre de una columna para agregarla o quitarla de la vista.
+Para seleccionar qué detalles están visibles o para agregar columnas adicionales a la pantalla, seleccione el icono del selector de columnas y haga clic en el nombre de una columna para agregarla o eliminarla de la vista.
 
 ![](../images/merge-policies/adjust-view.png)
 
 ## Crear una directiva de combinación
 
-Para crear una nueva directiva de combinación, haga clic en **[!UICONTROL Crear directiva]** de combinación cerca de la parte superior derecha de la ficha **[!UICONTROL Combinar directivas]** .
+Para crear una nueva directiva de combinación, seleccione **[!UICONTROL Crear directiva]** de combinación.
 
 ![Página de aterrizaje de políticas de combinación](../images/merge-policies/create-new.png)
 
@@ -55,30 +55,56 @@ Aparece la pantalla **[!UICONTROL Crear directiva]** de combinación, que le per
 * **[!UICONTROL Coincidencia]** de ID: Este campo define cómo determinar las identidades relacionadas de un cliente. Existen dos valores posibles:
    * **[!UICONTROL Ninguno]**: No realice ninguna vinculación de identidad.
    * **[!UICONTROL Gráfico]** privado: Realice la vinculación de identidad en función del gráfico de identidad privado.
-* **[!UICONTROL Combinación]** de atributos: Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existe para un cliente individual. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, existe la posibilidad de que se produzcan conflictos entre los valores de propiedad de perfil y se debe especificar la prioridad. El uso de la combinación *de* atributos permite especificar los valores de perfil de conjuntos de datos que se deben priorizar si se produce un conflicto de combinación. Existen dos valores posibles:
-   * **[!UICONTROL Marca de hora pedida]**: En caso de conflicto, dé prioridad al perfil que se actualizó más recientemente.
+* **[!UICONTROL Combinación]** de atributos: Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existe para un cliente individual. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, existe la posibilidad de que haya atributos de perfil en conflicto y se debe especificar la prioridad. El uso de la combinación [!UICONTROL de] atributos permite especificar qué valores de perfil de conjuntos de datos priorizar si se produce un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registros). Existen dos valores posibles:
+   * **[!UICONTROL Marca de hora pedida]**: En caso de conflicto, dé prioridad al perfil que se actualizó más recientemente. [!UICONTROL La marca de tiempo pedida] también admite marcas de hora personalizadas que tienen prioridad sobre las marcas de hora del sistema al combinar datos dentro del mismo conjunto de datos (varias identidades) o entre conjuntos de datos. Para obtener más información, consulte la sección ordenada [de](#timestamp-ordered) marca de tiempo que se muestra a continuación.
    * **[!UICONTROL Prioridad]** del conjunto de datos: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Al seleccionar esta opción, debe seleccionar los conjuntos de datos relacionados y su orden de prioridad. Consulte los detalles sobre la prioridad [del](#dataset-precedence) conjunto de datos a continuación para obtener más información.
 * **[!UICONTROL Directiva]** de combinación predeterminada: Botón de alternancia que permite seleccionar si esta directiva de combinación será o no la predeterminada para su organización. Si el selector está activado y se guarda la nueva directiva, la directiva predeterminada anterior se actualiza automáticamente para que ya no sea la predeterminada.
 
+### Marca de hora solicitada {#timestamp-ordered}
+
+A medida que los registros de Perfil se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando se selecciona [!UICONTROL Marca de tiempo] como tipo de combinación [!UICONTROL de] atributos para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
+
+Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
+
+>[!NOTE]
+>
+>Esta capacidad solo está disponible para la ingestión en conjuntos de datos. Si los registros se ingieren utilizando el mismo conjunto de datos, se produce el comportamiento de reemplazo predeterminado.
+
+### Uso de marcas de hora personalizadas {#custom-timestamps}
+
+Para utilizar una marca de tiempo personalizada, se debe agregar la mezcla [!UICONTROL de detalles de auditoría del sistema de origen] externo al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `lastUpdatedDate` campo.
+
+Cuando se ingesta un registro con el `lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros entre conjuntos de datos. Si no `lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
+
+>[!NOTE]
+>
+>Debe asegurarse de que la `lastUpdatedDate` marca de tiempo se rellena al ingerir una actualización en el mismo registro.
+
+La siguiente captura de pantalla muestra los campos en la combinación de detalles de auditoría del sistema de origen [!UICONTROL externo]. Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la interfaz de usuario, incluida cómo agregar mezclas a esquemas, visite el [tutorial para crear un esquema mediante la interfaz de usuario](../../xdm/tutorials/create-schema-ui.md).
+
+![](../images/merge-policies/custom-timestamp-mixin.png)
+
+Para trabajar con marcas de hora personalizadas mediante la API, consulte el Apéndice de la guía [de extremo de directivas de](../api/merge-policies.md) combinación y, a continuación, la sección [Uso de marcas de hora](../api/merge-policies.md#custom-timestamps)personalizadas.
+
 ### Prioridad de conjunto de datos {#dataset-precedence}
 
-Al seleccionar un valor de combinación *[!UICONTROL de]* atributos, puede seleccionar la prioridad ** de conjunto de datos, que le permite dar prioridad a los fragmentos de perfil según el conjunto de datos del que provienen.
+Al seleccionar un valor de combinación [!UICONTROL de] atributos, puede seleccionar la prioridad  de conjunto de datos, que le permite dar prioridad a los fragmentos de perfil según el conjunto de datos del que provienen.
 
 Un caso de uso de ejemplo sería si su organización tuviera información presente en un conjunto de datos que sea preferible o de confianza sobre los datos de otro conjunto de datos.
 
-Al seleccionar la prioridad ** del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos ** disponibles (o utilice la casilla de verificación para seleccionar todos) los conjuntos de datos que se incluirán. A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel Conjuntos de datos ** seleccionados y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, luego al segundo más alto, y así sucesivamente.
+Al seleccionar la prioridad del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos  disponibles (o utilice la casilla de verificación para seleccionar todos) los conjuntos de datos que se incluirán. A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel Conjuntos de datos  seleccionados y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, luego al segundo más alto, y así sucesivamente.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Una vez que haya terminado de crear la directiva de combinación, haga clic en **[!UICONTROL Guardar]** para volver a la ficha *[!UICONTROL Combinar directivas]* , donde la nueva directiva de combinación aparece ahora en la lista de políticas.
+Una vez que haya terminado de crear la directiva de combinación, seleccione **[!UICONTROL Guardar]** para volver a la ficha [!UICONTROL Combinar directivas] , donde la nueva directiva de combinación aparece ahora en la lista de políticas.
 
 ## Editar una directiva de combinación
 
-Puede modificar una directiva de combinación existente a través de la ficha *[!UICONTROL Combinar directivas]* haciendo clic en el nombre *[!UICONTROL de]* directiva de la directiva de combinación que desee editar.
+Puede modificar una directiva de combinación existente a través de la ficha [!UICONTROL Combinar directivas] haciendo clic en el nombre [!UICONTROL de]directiva* de la directiva de combinación que desee editar.
 
 ![Página de aterrizaje de políticas de combinación](../images/merge-policies/select-edit.png)
 
-Cuando aparece la pantalla *[!UICONTROL Editar directiva]* de combinación, puede realizar cambios en los tipos de combinación ** Nombre *[!UICONTROL ,]* Esquema *[!UICONTROL ,]* ID *[!UICONTROL y]* ** Atributo, así como seleccionar si esta directiva será o no la directiva de combinación predeterminada de su organización.
+Cuando aparece la pantalla [!UICONTROL Editar directiva] de combinación, puede realizar cambios en los tipos de combinación Nombre [!UICONTROL ,]Esquema [!UICONTROL ,] ID [!UICONTROL y]  Atributo, así como seleccionar si esta directiva será o no la directiva de combinación predeterminada de su organización.
 
 >[!NOTE]
 >
@@ -86,15 +112,15 @@ Cuando aparece la pantalla *[!UICONTROL Editar directiva]* de combinación, pued
 
 ![](../images/merge-policies/edit-screen.png)
 
-Una vez que haya realizado los cambios necesarios, haga clic en **[!UICONTROL Guardar]** para volver a la ficha *[!UICONTROL Combinar directivas]* , donde la información actualizada de la directiva de combinación ya está visible.
+Una vez realizados los cambios necesarios, seleccione **[!UICONTROL Guardar]** para volver a la ficha [!UICONTROL Combinar directivas] , donde la información actualizada de la directiva de combinación ya está visible.
 
 ![](../images/merge-policies/edited.png)
 
 ## Infracción de la política de gestión de datos
 
-Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las directivas de uso de datos definidas por la organización. Las políticas de uso de datos forman parte de Adobe Experience Platform [!DNL Data Governance] y son reglas que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a datos específicos en [!DNL Platform] datos específicos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y la organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibiría una notificación de &quot;infracción de directiva de control de datos detectada&quot; al intentar guardar la directiva de combinación.
+Al crear o actualizar una directiva de combinación, se realiza una comprobación para determinar si la directiva de combinación infringe alguna de las directivas de uso de datos definidas por la organización. Las políticas de uso de datos forman parte de Adobe Experience Platform [!DNL Data Governance] y son reglas que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a datos específicos en [!DNL Platform] datos específicos. Por ejemplo, si se utilizara una directiva de combinación para crear un segmento que se activara en un destino de terceros y la organización tuviera una directiva de uso de datos que impidiera la exportación de datos específicos a terceros, recibiría una notificación de &quot;infracción de directiva de administración de[!UICONTROL datos detectada]&quot; al intentar guardar la directiva de combinación.
 
-Esta notificación incluye una lista de las directivas de uso de datos que se han infringido y le permite vista de los detalles de la infracción seleccionando una directiva de la lista. Al seleccionar una directiva infringida, la ficha *Lineación* de datos proporciona el *motivo de la infracción* y las activaciones ** afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha infringido la directiva de uso de datos.
+Esta notificación incluye una lista de las directivas de uso de datos que se han infringido y le permite vista de los detalles de la infracción seleccionando una directiva de la lista. Al seleccionar una directiva infringida, la ficha [!UICONTROL Línea] de datos proporciona el motivo de la infracción y las activaciones afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha infringido la directiva de uso de datos.
 
 Para obtener más información sobre el rendimiento de la administración de datos dentro de Adobe Experience Platform, lea la información general [sobre la administración de](../../data-governance/home.md)datos.
 
