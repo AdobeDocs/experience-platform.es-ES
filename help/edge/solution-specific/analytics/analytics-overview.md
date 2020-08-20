@@ -1,13 +1,14 @@
 ---
 title: Envío de datos a Adobe Analytics
-seo-title: Envío de datos a Adobe Analytics con el SDK web de Adobe Experience Platform
+seo-title: Envío de datos a Adobe Analytics con Adobe Experience Platform Web SDK
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web Experience Platform
 seo-description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web Experience Platform
+keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -22,11 +23,11 @@ Adobe Analytics recopila automáticamente los datos que envía si tiene un grupo
 
 ## Datos asignados automáticamente
 
-El Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. La lista completa de las variables asignadas automáticamente aparece [aquí](../analytics/automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] asigna automáticamente muchas variables XDM. La lista completa de las variables asignadas automáticamente aparece [aquí](../analytics/automatically-mapped-vars.md).
 
 ## Datos asignados manualmente
 
-Se puede acceder a todos los datos recopilados por la red Edge mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
+Se puede acceder a todos los datos recopilados por la red perimetral mediante reglas de procesamiento. Los datos se acoplan con notación de puntos y están disponibles como contextData.
 
 Si tuvieras un esquema así.
 
