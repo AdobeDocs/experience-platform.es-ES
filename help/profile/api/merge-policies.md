@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2381'
 ht-degree: 1%
 
 ---
@@ -55,8 +55,8 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 | `id` | El sistema generó un identificador único asignado en el momento de la creación |
 | `name` | Nombre descriptivo por el cual se puede identificar la directiva de combinación en vistas de lista. |
 | `imsOrgId` | ID de organización a la que pertenece esta directiva de combinación |
-| `identityGraph` | [Objeto gráfico](#identity-graph) de identidad que indica el gráfico de identidad desde el que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de Perfil encontrados para todas las identidades relacionadas. |
-| `attributeMerge` | [Objeto de combinación](#attribute-merge) de atributos que indica la forma en que la directiva de combinación dará prioridad a los valores de atributos de perfil en caso de conflictos de datos. |
+| `identityGraph` | [Objeto gráfico](#identity-graph) de identidad que indica el gráfico de identidad desde el que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
+| `attributeMerge` | [Objeto de combinación](#attribute-merge) de atributos que indica la forma en que la directiva de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
 | `schema` | El objeto [esquema](#schema) en el que se puede utilizar la directiva de combinación. |
 | `default` | Valor booleano que indica si esta directiva de combinación es la predeterminada para el esquema especificado. |
 | `version` | [!DNL Platform] versión mantenida de la directiva de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una directiva de combinación. |
@@ -111,7 +111,7 @@ Donde `{IDENTITY_GRAPH_TYPE}` es uno de los siguientes:
 
 ### Combinación de atributos {#attribute-merge}
 
-Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, existe la posibilidad de que haya valores en conflicto para las propiedades de perfil y se debe especificar la prioridad. Con `attributeMerge`, puede especificar qué valores de perfil de conjuntos de datos se priorizarán en el evento de un conflicto de combinación.
+Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, es posible que haya atributos de perfil en conflicto y se debe especificar la prioridad. Con `attributeMerge`, puede especificar qué atributos de perfil se priorizarán en el evento de un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registro).
 
 **attributeMerge, objeto**
 
@@ -123,11 +123,11 @@ Un fragmento de perfil es la información de perfil para una sola identidad de l
 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
-* **&quot;timestampOrdered&quot;**: (predeterminado) Dar prioridad al perfil que se actualizó en último lugar en caso de conflicto. Con este tipo de combinación, no es necesario el `data` atributo.
-* **&quot;dataSetPrience&quot;** : Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
-   * **&quot;order&quot;**: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
+* **`timestampOrdered`**:: (predeterminado) Dar prioridad al perfil que se actualizó en último lugar en caso de conflicto. Con este tipo de combinación, no es necesario el `data` atributo. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre conjuntos de datos. Para obtener más información, consulte la sección Apéndice sobre el [uso de marcas de hora](#custom-timestamps)personalizadas.
+* **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
+   * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
 
-**Ejemplo de objeto attributeMerge con el tipo dataSetPrience**
+**Ejemplo de objeto attributeMerge con`dataSetPrecedence`type**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
     }
 ```
 
-**Ejemplo de un objeto attributeMerge con un tipo timestampOrdered**
+**Ejemplo de objeto attributeMerge con`timestampOrdered`type**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
 ### Esquema {#schema}
 
-El objeto esquema especifica el esquema XDM para el que se crea esta directiva de combinación.
+El objeto esquema especifica el esquema del modelo de datos de experiencia (XDM) para el que se crea esta directiva de combinación.
 
-**`schema`object **
+**`schema`object**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esque
         "name": "_xdm.context.profile"
     }
 ```
+
+Para obtener más información sobre XDM y trabajar con esquemas en Experience Platform, lea la información general [del sistema](../../xdm/home.md)XDM.
 
 ## Directivas de combinación de acceso {#access-merge-policies}
 
@@ -693,7 +695,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación act
 
 ## Eliminar una directiva de combinación
 
-Una directiva de combinación se puede eliminar haciendo una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
+Una directiva de combinación se puede eliminar realizando una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
 
 **Formato API**
 
@@ -724,7 +726,42 @@ Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un c
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar directivas de combinación para su organización de IMS, puede utilizarlas para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la documentación [del servicio de segmentación por](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
+Ahora que sabe cómo crear y configurar directivas de combinación para su organización de IMS, puede utilizarlas para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la documentación [del servicio de segmentación de](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
+
+## Apéndice
+
+### Uso de marcas de hora personalizadas {#custom-timestamps}
+
+A medida que los registros de Perfil se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando `timestampOrdered` se selecciona como `attributeMerge` tipo para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
+
+Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
+
+Para utilizar una marca de tiempo personalizada, se debe agregar la mezcla [de detalles de auditoría del sistema de origen](#mixin-details) externo al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
+
+>[!NOTE]
+>
+>Debe asegurarse de que la `xdm:lastUpdatedDate` marca de tiempo se rellena al enviar un PATCH en el mismo registro.
+
+Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del registro de esquema, incluida la forma de agregar mezclas a esquemas, visite el [tutorial para crear un esquema mediante la API](../../xdm/tutorials/create-schema-api.md).
+
+Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección sobre el [uso de marcas de hora](../ui/merge-policies.md#custom-timestamps) personalizadas en la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
+
+#### Detalles de la combinación de detalles de auditoría del sistema de origen externo {#mixin-details}
+
+En el siguiente ejemplo se muestran los campos correctamente rellenados en el Mezclador de detalles de auditoría del sistema de origen externo. La combinación completa JSON también se puede ver en la repo [pública del Modelo de datos de experiencia (XDM) en GitHub](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) .
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 
