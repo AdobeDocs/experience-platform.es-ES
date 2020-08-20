@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Apéndice para desarrolladores de Esquema Registry
+title: Apéndice para desarrolladores de esquema Registry
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 4%
@@ -37,7 +37,7 @@ A continuación se muestra una comparación paralela que muestra los campos rela
   <td>
   <pre class="JSON language-JSON hljs">
         { "xdm:bornDate": { "title": "Fecha de nacimiento", "tipo": "string", "format": "date", }, "xdm:bornDayAndMonth": { "title": "Fecha de nacimiento", "tipo": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear": { "title": "Año de nacimiento", "tipo": "integer", "Minimum": 1, "máximo": 32767 }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
