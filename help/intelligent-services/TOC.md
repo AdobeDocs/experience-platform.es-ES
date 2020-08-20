@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 2%
+source-wordcount: '88'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 2%
    * [Guía de interfaz de usuario](attribution-ai/user-guide.md)
    * [Descubrimiento de perspectivas](attribution-ai/discover-insights.md)
    * [Acceso a las puntuaciones](attribution-ai/download-scores.md)
+* Content and Commerce AI (beta) {#content-commerce-ai}
+   * [Información general](content-commerce-ai/overview.md)
+   * [Primeros pasos](content-commerce-ai/getting-started.md)
+   * Content and Commerce AI API{#api}
+      * [Extracción de color](content-commerce-ai/api/color-extraction.md)
+      * [Extracción de palabras clave](content-commerce-ai/api/keyword-extraction.md)
+      * [Clasificación de texto](content-commerce-ai/api/text-classification.md)
+      * [Similitud visual](content-commerce-ai/api/visual-similarity.md)
 * AI del cliente {#customer-ai}
    * [Información general](customer-ai/overview.md)
    * [Introducción a la API del cliente](customer-ai/getting-started.md)
