@@ -3,8 +3,9 @@ title: Seguimiento de vínculos y páginas con Adobe Analytics
 seo-title: Seguimiento de vínculos a Adobe Analytics con Adobe Experience Platform Web SDK
 description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
