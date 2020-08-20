@@ -3,8 +3,9 @@ title: Información recopilada automáticamente
 seo-title: Información recopilada automáticamente por Adobe Experience Platform Web SDK
 description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 seo-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
+keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 8%
@@ -48,7 +49,7 @@ Ancho de la pantalla (en píxeles).
 
 Detalles sobre el entorno del explorador.
 
-### Tipo de Entorno
+### Tipo de entorno
 
 Browser
 
@@ -141,7 +142,7 @@ Detalles sobre la página en la que se encuentra el usuario.
 
 La dirección URL de la página actual.
 
-### URL de Remitente del reenvío
+### URL de remitente del reenvío
 
 | **Ruta en carga útil:** | **Ejemplo:** |
 | ---------------------------------- | ----------------------------------------- |
