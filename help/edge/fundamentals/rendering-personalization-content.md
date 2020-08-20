@@ -3,8 +3,9 @@ title: Representación de contenido personalizado
 seo-title: Adobe Experience Platform Web SDK Representación de contenido personalizado
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
+keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
