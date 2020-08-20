@@ -5,7 +5,7 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Los campos que se marcan comúnmente como &quot;[!UICONTROL Identidad]&quot; inc
 
 Es importante pensar en las identidades de los clientes durante la fase de planificación de esquemas para ayudar a garantizar que los datos se reúnan a fin de generar el perfil más sólido posible. Consulte la descripción general de [Adobe Experience Platform Identity Service](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` es un campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus Áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
 
@@ -200,7 +200,7 @@ Algunas operaciones de datos utilizadas por los servicios y las aplicaciones pos
 * [!DNL Query Service](../../query-service/home.md)
 * [!DNL Data Science Workspace](../../data-science-workspace/home.md)
 
-Antes de crear un esquema para su uso en los servicios intermedios, revise la documentación apropiada para esos servicios a fin de comprender mejor los requisitos y las limitaciones sobre el terreno para las operaciones de datos a las que está destinado el esquema.
+Antes de crear un esquema para su uso en los servicios intermedios, revise la documentación apropiada para esos servicios a fin de comprender mejor los requisitos y limitaciones sobre el terreno para las operaciones de datos a las que está destinado el esquema.
 
 ### Campos XDM
 
