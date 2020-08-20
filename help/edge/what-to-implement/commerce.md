@@ -3,10 +3,11 @@ title: Productos
 seo-title: Productos de soporte con Adobe Experience Platform Web SDK
 description: Obtenga información sobre cómo agregar datos si tiene productos o un carro de compras con el SDK web Experience Platform
 seo-description: Obtenga información sobre cómo agregar datos si tiene productos o un carro de compras con el SDK web Experience Platform
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 6%
 
 ---
@@ -18,8 +19,7 @@ Si tiene productos en el sitio, este es un conjunto predeterminado de cosas que 
 
 Este documento utiliza la combinación Detalles [del comercio de](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent. La `commerce` mezcla se divide en dos partes: el `commerce` objeto y la `productListItems` matriz. El `commerce` objeto permite indicar qué acciones se están realizando en la `productListItems` matriz.
 
->[!Tip]
->
+>[!TIP]
 >
 >Si está familiarizado con Adobe Analytics, el `commerce` está más relacionado con la `events` variable. El `productListItems` está más relacionado con la `products` variable.
 
@@ -27,7 +27,7 @@ Este documento utiliza la combinación Detalles [del comercio de](https://github
 
 A continuación se muestra una lista de `measures` disponible en el `commerce` objeto.
 
->[!Tip]
+>[!TIP]
 >
 >Una medida tiene dos campos: `id` y `value`. La mayoría de las veces, solo usará el `value` campo (por ejemplo, `'value':1`). El `id` campo permite establecer un identificador único que se puede utilizar para realizar un seguimiento del momento en que se envió la medida. Consulte la documentación de XDM para [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
