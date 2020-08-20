@@ -1,10 +1,11 @@
 ---
-title: inicio rápido con Launch
+title: Inicio rápido con Launch
 seo-title: inicio rápido del SDK web de Adobe Experience Platform con Launch
 description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
 seo-description: Guía de inicio rápido para usar la extensión del SDK web Experience Platform para recopilar datos
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -14,10 +15,10 @@ ht-degree: 5%
 
 # Bienvenido
 
-Esta guía le guía por las diferentes formas de configurar el SDK web de Adobe Experience Platform en Launch. Para utilizar esta función debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
+Esta guía le guiará por las diferentes formas de configurar el SDK web de Adobe Experience Platform en Launch. Para utilizar esta función debe tener una lista blanca. Si desea subirse a la lista de espera, póngase en contacto con su CSM.
 
 - Habilite un dominio de [origen (CNAME)](https://docs.adobe.com/content/help/es-ES/core-services/interface/ec-cookies/cookies-first-party.html) . Si ya tiene un CNAME para Analytics, debe utilizarlo. La prueba en desarrollo funciona sin un CNAME, pero se necesita uno antes de ir a producción.
-- Tener derecho al Adobe Experience Platform. Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
+- Tener derecho a Adobe Experience Platform. Si no ha adquirido Platform, Adobe le proporcionará Experience Platform Data Services Foundation para que lo utilice de forma limitada con el SDK sin cargo adicional.
 - Utilice la versión más reciente del servicio de ID de Visitante.
 
 ## Preparación de un Esquema
