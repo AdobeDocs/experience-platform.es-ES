@@ -3,8 +3,9 @@ title: Recuperando ID de Experience Cloud
 seo-title: Adobe Experience Platform Web SDK Recuperación de ID de Experience Cloud
 description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
+keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 5%
