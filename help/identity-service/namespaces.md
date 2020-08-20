@@ -5,7 +5,7 @@ title: Servicio de ID de Adobe Experience Platform
 topic: overview
 description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name<span>@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 4%
@@ -49,7 +49,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | No personas | Se utiliza para almacenar identificadores que necesitan Áreas de nombres, pero que no están vinculados a un clúster de personas. Estos identificadores se filtran desde el gráfico de identidad. Los casos de uso posibles incluyen datos relacionados con productos, organizaciones, tiendas, etc. (Por ejemplo, un SKU de producto). |
 | Phone | Las identidades de este tipo incluyen PII. Esto indica [!DNL Identity Service] que el valor se debe gestionar con sensibilidad. |
 
-### Áreas de nombres estándar
+### Áreas de nombres estándar {#standard}
 
 Adobe Experience Platform proporciona varias Áreas de nombres de identidad que están disponibles para todas las organizaciones. Se conocen como Áreas de nombres estándar y se pueden ver mediante la [!DNL Identity Service] API o a través de la [!DNL Platform] interfaz de usuario.
 
