@@ -3,8 +3,9 @@ title: Asignación manual de variables en Analytics
 seo-title: Asignación manual de variables en Analytics con SDK web
 description: Asignación manual de variables en Analytics mediante reglas de procesamiento
 seo-description: asignación manual de variables a Analytics mediante reglas de procesamiento con SDK web
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 47%
