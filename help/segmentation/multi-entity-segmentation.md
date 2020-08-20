@@ -5,7 +5,7 @@ title: Segmentación multientidad
 topic: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos de Perfil con datos adicionales basados en productos, almacenes u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de Perfil.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 La segmentación de varias entidades es la capacidad de ampliar [!DNL Profile] datos con datos adicionales basados en productos, almacenes u otras clases que no son de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del [!DNL Profile] esquema.
 
-Para obtener más información sobre la segmentación multientidad, siga leyendo la documentación y complementando su aprendizaje, vea el siguiente vídeo o explorando la descripción general [de la](./home.md)segmentación.]
+Para obtener más información sobre la segmentación multientidad, siga leyendo la documentación y complementando su aprendizaje, vea el siguiente vídeo o explore la información general [de la](./home.md)segmentación.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
