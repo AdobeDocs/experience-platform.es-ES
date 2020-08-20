@@ -1,10 +1,11 @@
 ---
 title: 'Adobe Target y el SDK web de Adobe Experience Platform. '
-seo-title: SDK web de Adobe Experience Platform y uso de Adobe Target
+seo-title: Adobe Experience Platform Web SDK y uso de Adobe Target
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -14,9 +15,9 @@ ht-degree: 3%
 
 # [!DNL Target] Información general
 
-El Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar experiencias personalizadas administradas en Adobe Target con el canal web. Puede utilizar un editor WYSIWYG, denominado Compositor [de experiencias](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuales (VEC), o una interfaz no visual, el Compositor [de experiencias basadas en](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formularios, para crear, activar y ofrecer sus actividades y experiencias de personalización.
+El Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar experiencias personalizadas administradas en Adobe Target en el canal web. Puede utilizar un editor WYSIWYG, denominado Compositor [de experiencias](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuales (VEC), o una interfaz no visual, el Compositor [de experiencias basadas en](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)formularios, para crear, activar y ofrecer sus actividades y experiencias de personalización.
 
-## Habilitar Adobe Target
+## Activación de Adobe Target
 
 Para habilitar [!DNL Target], debe hacer lo siguiente:
 
@@ -32,7 +33,7 @@ A continuación, opcionalmente, también puede:
 * Añada `decisionScopes` a sus eventos para recuperar actividades específicas (útil para actividades creadas con el compositor basado en formularios).
 * Añada el [fragmento](../../solution-specific/target/flicker-management.md) de ocultamiento previo para ocultar solo determinadas partes de la página.
 
-## Uso del Adobe Target VEC
+## Uso del VEC de Adobe Target
 
 Con el SDK, puede utilizar el VEC normalmente con una excepción: necesita tener instalada y activa la extensión [auxiliar de VEC de](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) destinatario.
 
@@ -61,7 +62,7 @@ alloy
 
 ## Uso del Compositor basado en formularios
 
-El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, [!DNL Experience Targeting], Automated Personalization y actividades de Recommendations con diferentes tipos de respuesta, como JSON, HTML, Image, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Target, se puede ejecutar la lógica de negocio principal. Para recuperar las decisiones de las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;temas de decisión&quot; para los que desee recuperar una decisión.
+El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, [!DNL Experience Targeting], Automated Personalization y actividades de Recommendations con diferentes tipos de respuesta, como JSON, HTML, Image, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Target, se puede ejecutar la lógica principal de su negocio. Para recuperar las decisiones de las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;temas de decisión&quot; para los que desee recuperar una decisión.
 
 ```javascript
 alloy
