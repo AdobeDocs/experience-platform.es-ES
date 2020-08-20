@@ -1,10 +1,11 @@
 ---
 title: Variables asignadas automáticamente en Analytics
-seo-title: Variables asignadas automáticamente en Analytics con el SDK web de Adobe Experience Platform
-description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web de Experience Platform
-seo-description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web de Experience Platform
+seo-title: Variables asignadas automáticamente en Analytics con Adobe Experience Platform Web SDK
+description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web Experience Platform
+seo-description: Aprenda qué variables se asignan automáticamente en Analytics con el SDK web Experience Platform
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Variables asignadas automáticamente en [!DNL Analytics]
 
-A continuación se muestra una lista de variables a las que el Adobe Experience Platform [!DNL Edge Network] asigna automáticamente [!DNL Analytics].
+A continuación se muestra una lista de variables a las que Adobe Experience Platform [!DNL Edge Network] asigna automáticamente [!DNL Analytics].
 
 | Ruta de campo XDM | [!DNL Analytics Query String] / Encabezado HTTP | Descripción |
 | ---------- | ------------------------- | -------- |
