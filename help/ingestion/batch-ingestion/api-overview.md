@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía para desarrolladores de Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2670'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ La ingestión de datos proporciona una API RESTful mediante la cual puede realiz
 
 Las siguientes secciones proporcionan información adicional que debe conocer o tener disponible para realizar llamadas exitosas a la API de inserción por lotes.
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 - [Ingesta](./overview.md)por lotes: Permite ingerir datos en Adobe Experience Platform como archivos por lotes.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Leer llamadas de API de muestra
 
@@ -38,22 +38,19 @@ Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato
 
 Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
-- Autorización: Portador `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un `Content-Type` encabezado adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada. En esta guía se utilizan los siguientes tipos de contenido:
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un `Content-Type` encabezado adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
 
 ## Tipos
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del lote al que desea cargar. |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de acceso al archivo es la ubicación en la que se guardará en el Adobe. |
 
 **Solicitud**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Respuesta**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del lote al que desea cargar. |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de acceso al archivo es la ubicación en la que se guardará en el Adobe. |
 
 **Solicitud**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Respuesta**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del lote al que desea cargar. |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de acceso al archivo es la ubicación en la que se guardará en el Adobe. |
 
 **Solicitud**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En enteros, el principio y el final del intervalo solicitado. |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 
 **Respuesta**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del lote al que desea cargar. |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de acceso al archivo es la ubicación en la que se guardará en el Adobe. |
 
 **Solicitud**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 
 **Respuesta**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del lote al que desea cargar. |
 | `{DATASET_ID}` | ID del conjunto de datos de referencia del lote. |
-| `{FILE_NAME}` | Nombre del archivo que desea cargar. |
+| `{FILE_NAME}` | Nombre del archivo que desea cargar. Esta ruta de acceso al archivo es la ubicación en la que se guardará en el Adobe. |
 
 **Solicitud**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de archivo es la ruta de archivo local, como `Users/sample-user/Downloads/sample.json`. |
 
 **Respuesta**
 
