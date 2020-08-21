@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Recopilación de datos de pago mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 1%
+source-wordcount: '1702'
+ht-degree: 2%
 
 ---
 
@@ -136,7 +136,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 En pasos anteriores, se creó un esquema XDM ad-hoc para estructurar los datos de origen. Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen. Este esquema destinatario XDM también amplía la clase XDM [!DNL Individual Profile] .
 
-Se puede crear un esquema XDM de destinatario realizando una solicitud de POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
+Se puede crear un esquema XDM de destinatario realizando una solicitud de POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/tutorials/create-schema-ui.html) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
 
 **Formato API**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
 | `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
 | `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
-| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
+| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. El formato de fecha admitido para `deltaColumn` es `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
 | `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
