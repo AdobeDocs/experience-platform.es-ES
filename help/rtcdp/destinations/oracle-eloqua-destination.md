@@ -5,7 +5,7 @@ seo-title: Destino de Oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 seo-description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 31b74067903cf7a2ecc4b8f81c11585b672a75ad
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 ## Atributos de destino {#destination-attributes}
 
-Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Eloqua] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se utilizarán como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de marketing por correo electrónico.
+Al [activar segmentos](/help/rtcdp/destinations/activate-destinations.md) en el [!DNL Oracle Eloqua] destino, le recomendamos que seleccione un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [Selección de los campos de esquema que se van a utilizar como atributos de destino en los archivos](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) exportados en Destinos de mercadotecnia de correo electrónico.
 
 ## Datos exportados {#exported-data}
 
