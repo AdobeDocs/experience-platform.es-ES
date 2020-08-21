@@ -5,9 +5,9 @@ title: Extracción de color
 topic: Developer guide
 description: El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '742'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ Consulte la tabla debajo de la carga útil de ejemplo para obtener más informac
 
 >[!CAUTION]
 >
->`analyzer_id` determina qué [!DNL Sensei Content Framework] se utiliza. Verifique que dispone de la información adecuada `analyzer_id` antes de realizar su solicitud.
+>`analyzer_id` determina qué [!DNL Sensei Content Framework] se utiliza. Verifique que dispone de la información adecuada `analyzer_id` antes de realizar su solicitud. Para el servicio de extracción de palabras clave, el `analyzer_id` ID es: `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -119,7 +119,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `analyzer_id` | ID del [!DNL Sensei] servicio en el que se implementa la solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. | Sí |
+| `analyzer_id` | ID del [!DNL Sensei] servicio en el que se implementa la solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de Content and Commerce AI para configurar un ID personalizado. | Sí |
 | `application-id` | ID de la aplicación creada. | Sí |
 | `data` | Matriz que contiene un objeto JSON con cada objeto de la matriz que representa un documento. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la `data` matriz. Cualquiera de las propiedades restantes que se describen a continuación en esta tabla se puede sobrescribir desde dentro `data`. | Sí |
 | `language` | Idioma del texto de entrada. El valor predeterminado es `en`. | No |
