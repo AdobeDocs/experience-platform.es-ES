@@ -3,11 +3,11 @@ keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Extensión Mastertag de Awin Advertiser
 seo-title: Extensión Mastertag de Awin Advertiser
 description: La extensión Mastertag de Awin Advertiser es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: null
+seo-description: La extensión Mastertag de Awin Advertiser es un destino publicitario en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---
