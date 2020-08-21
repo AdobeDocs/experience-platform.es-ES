@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de protocolo mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1669'
 ht-degree: 1%
 
 ---
@@ -645,7 +645,7 @@ curl -X POST \
 | `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
 | `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
 | `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
-| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
+| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. El formato admitido para `deltaColumn` cuando se utiliza Generic OData es `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
 | `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
