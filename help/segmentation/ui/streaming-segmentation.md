@@ -5,9 +5,9 @@ title: Segmentación por flujo continuo
 topic: ui guide
 description: La segmentación por flujo continuo en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a la plataforma, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a la plataforma, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ Después de crear un segmento de flujo continuo habilitado, puede realizar vista
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-En concreto, se muestran detalles sobre el tamaño **** total de audiencia cualificada. Si un trabajo se ha ejecutado en las últimas 24 horas, se muestra el tamaño **** total de audiencias cualificadas del trabajo, además de un gráfico de líneas para la audiencia agregada. De lo contrario, se muestra el tamaño **[!UICONTROL de audiencia estimado]** total, además de una línea de tendencia de visualización.
+En concreto, se muestran detalles sobre el tamaño **** total de audiencia cualificada. El tamaño **** total de audiencias cualificadas muestra el número total de audiencias cualificadas de la última ejecución del trabajo de segmentos completado. Si un trabajo de segmento no se completó en las últimas 24 horas, el número de audiencias se tomará de una estimación en su lugar.
+
+Debajo hay un gráfico de líneas que muestra el número de segmentos que fueron calificados y descalificados en las últimas 24 horas. La lista desplegable se puede ajustar para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
