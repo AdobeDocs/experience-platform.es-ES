@@ -3,12 +3,12 @@ keywords: target extension;target
 title: Extensión de Adobe Target
 seo-title: Extensión de Adobe Target
 description: La extensión Adobe Target es un destino de personalización en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: null
+seo-description: La extensión Adobe Target es un destino de personalización en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 17%
+source-wordcount: '556'
+ht-degree: 16%
 
 ---
 
