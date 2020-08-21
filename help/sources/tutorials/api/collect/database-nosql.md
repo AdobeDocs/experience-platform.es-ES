@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1733'
 ht-degree: 1%
 
 ---
@@ -601,7 +601,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
@@ -627,7 +631,7 @@ curl -X POST \
 | `sourceConnectionIds` | El ID [de conexión de](#source) origen recuperado en un paso anterior. |
 | `targetConnectionIds` | El ID [de conexión de](#target-connection) destinatario recuperado en un paso anterior. |
 | `transformations.params.mappingId` | ID [de](#mapping) asignación recuperada en un paso anterior. |
-| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
+| `transformations.params.deltaColum` | Columna designada utilizada para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. El formato de fecha admitido para `deltaColumn` es `yyyy-MM-dd HH:mm:ss`. Si utiliza el Almacenamiento de tabla de Azure, el formato admitido para `deltaColumn` es `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | ID de asignación asociada a la base de datos. |
 | `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
