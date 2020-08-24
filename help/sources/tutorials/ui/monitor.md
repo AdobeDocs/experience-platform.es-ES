@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Esta sección también incluye una previsualización de la columna que contiene 
 
 ![Previsualización-error-diagnósticos](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Después de previsualizar los errores, puede seleccionar **[!UICONTROL Descargar]** desde el panel de información general **[de las ejecuciones de flujo de datos de]** UICONTROL para acceder a los diagnósticos de error completos y descargar el manifiesto del archivo. Consulte los documentos sobre diagnóstico [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) errores y [descarga de metadatos](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obtener más información.
+Después de obtener una vista previa de los errores, puede seleccionar **[!UICONTROL Descargar]** desde el panel de información general **** de las ejecuciones de flujo de datos para acceder a los diagnósticos de error completos y descargar el manifiesto del archivo. Consulte los documentos sobre diagnóstico [de](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) errores y [descarga de metadatos](../../../ingestion/batch-ingestion/partial.md#download-metadata) para obtener más información.
 
 ![Previsualización-error-diagnósticos](../../images/tutorials/monitor/download.png)
 
