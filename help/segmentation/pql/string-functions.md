@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de cadena
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '754'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Funciones de cadena
 
-[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con cadenas. Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con cadenas. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## Como
 
