@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones aritméticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '227'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funciones aritméticas
 
-Las funciones aritméticas se utilizan para realizar cálculos básicos en valores en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Las funciones aritméticas se utilizan para realizar cálculos básicos en valores en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## Add
 
