@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de datos de Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -51,7 +51,9 @@ Para obtener información detallada sobre la asignación de campos que se produc
 | Nuevos datos en Data Lake | &lt; 45 minutos |
 | Rellenar datos (13 meses de datos o 10 mil millones de eventos, lo que sea menor) | &lt; 4 semanas |
 
->[!NOTE] La latencia variará según la configuración del cliente, los volúmenes de datos y las aplicaciones de consumo. Por ejemplo, si la implementación de Analytics está configurada con `A4T` la latencia de Canalización, aumentará a 5-10 minutos.
+>[!NOTE]
+>
+>La latencia variará según la configuración del cliente, los volúmenes de datos y las aplicaciones de consumo. Por ejemplo, si la implementación de Analytics está configurada con `A4T` la latencia de Canalización, aumentará a 5-10 minutos.
 
 ## Identificadores principales en datos de Analytics
 
