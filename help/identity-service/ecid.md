@@ -5,7 +5,7 @@ title: Adobe Experience Platform ECID
 topic: overview
 description: El identificador de Experience Cloud (ECID) es el módulo del lado del cliente que proporciona acceso a la administración de identidades, y que cumple tres funciones principales.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 45f2423741ad993765408a9f60e2df6238671b9f
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 8%
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 # Descripción general de ECID
 
-El [!DNL Experience Cloud Identifier] (ECID) es el módulo del lado del cliente que proporciona acceso a la administración de identidades, y cumple tres funciones principales:
+El [!DNL Experience Cloud Identity Service] (ECID) es el módulo del lado del cliente que proporciona acceso a la administración de identidades, y cumple tres funciones principales:
 
 - Identificar cada visitante
 - Proporcionar sincronización con los socios
