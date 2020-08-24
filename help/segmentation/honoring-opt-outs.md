@@ -5,7 +5,7 @@ title: Cumplimiento de las opciones de exclusión
 topic: overview
 description: 'Experience Platform permite a sus clientes enviar solicitudes de exclusión con respecto al uso y el almacenamiento de sus datos dentro del Perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de privacidad del consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Esta es una imagen de ejemplo que muestra las mezclas de exclusión agregadas a 
 
 La estructura de cada mezcla, así como una descripción de los campos que contribuyen al esquema, se describen con más detalle en las siguientes secciones.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 La [!DNL Profile Privacy] combinación le permite capturar dos tipos de solicitudes de exclusión de CCPA de los clientes:
 
@@ -69,7 +69,7 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 Para la vista de la estructura completa de la [!DNL Profile Privacy] mezcla, consulte el repositorio [público GitHub de](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM o la previsualización de la mezcla mediante la interfaz de usuario de la plataforma.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 La [!DNL Profile Preferences Details] combinación proporciona varios campos que representan las preferencias de los perfiles del cliente (como formato del correo electrónico, idioma preferido y huso horario). Uno de los campos incluidos en esta combinación, OptInOut (`optInOut`), permite establecer valores de exclusión para canales individuales.
 
