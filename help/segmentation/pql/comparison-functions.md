@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de comparación
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '292'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # Funciones de comparación
 
-Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, regresando `true` o `false` en consecuencia. Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, regresando `true` o `false` en consecuencia. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## Es igual a
 
