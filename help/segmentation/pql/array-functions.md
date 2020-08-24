@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de matriz, lista y conjunto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '734'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funciones de matriz, lista y conjunto
 
-[!DNL Profile Query Language] (PQL) oferta funciones para facilitar la interacción con matrices, listas y cadenas. Encontrará más información sobre otras funciones de PQL en la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+[!DNL Profile Query Language] (PQL) oferta funciones para facilitar la interacción con matrices, listas y cadenas. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
 ## En
 
@@ -177,7 +177,7 @@ La `groupBy` función se utiliza para dividir los valores de una matriz o lista 
 | Argumento | Descripción |
 | --------- | ----------- |
 | `{ARRAY}` | Matriz o lista que se va a agrupar. |
-| `{EXPRESSION}` | expresión que asigna cada elemento de la matriz o lista devuelta. |
+| `{EXPRESSION}` | Expresión que asigna cada elemento de la matriz o lista devuelta. |
 
 **Ejemplo**
 
@@ -228,7 +228,7 @@ La siguiente consulta PQL crea una nueva matriz de números y cuadrados el valor
 numbers.map(square)
 ```
 
-## Primero `n` en arreglo de discos
+## Primero `n` en arreglo de discos {#first-n}
 
 La `topN` función se utiliza para devolver los primeros `N` elementos de una matriz, cuando se ordenan en orden ascendente según la expresión numérica dada.
 
@@ -288,7 +288,7 @@ La `head` función se utiliza para devolver el primer elemento de la matriz o li
 
 **Ejemplo**
 
-La siguiente consulta PQL devuelve el primero de los cinco pedidos principales con el precio más alto. Encontrará más información sobre la `topN` función en la [primera sección `n` de la matriz](#first-n-in-array) .
+La siguiente consulta PQL devuelve el primero de los cinco pedidos principales con el precio más alto. Encontrará más información sobre la `topN` función en la [primera sección `n` de la matriz](#first-n) .
 
 ```sql
 orders.topN(price, 5).head()
