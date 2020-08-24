@@ -5,9 +5,9 @@ title: Introducción al lenguaje de Consulta de perfil (PQL)
 topic: developer guide
 description: Esta guía proporciona una descripción general de PQL, que abarca las directrices de formato y proporciona expresiones PQL de ejemplo.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -81,6 +81,7 @@ La siguiente tabla describe las diferentes categorías de las funciones PQL admi
 | Matriz, lista y conjunto | Se utiliza para interactuar con matrices, listas y conjuntos. Encontrará más información sobre estas funciones en el documento [de funciones](./array-functions.md)array, lista y set. |
 | Mapa | Se utiliza para interactuar con mapas. Puede encontrar más información sobre estas funciones en el documento [de funciones de](./map-functions.md)mapa. |
 | Cadena | Se utiliza para interactuar con cadenas. Encontrará más información sobre estas funciones en el documento [de funciones de](./string-functions.md)cadena. |
+| Objeto | Se utiliza para interactuar con objetos. Puede encontrar más información sobre estas funciones en el documento [de funciones de](./object-functions.md)objeto. |
 | Aritmética | Se utiliza para realizar aritmética básica en elementos PQL. Encontrará más información sobre estas funciones en el documento de funciones [aritméticas](./arithmetic-functions.md) |
 | Agregación | Se utiliza para combinar los resultados de una matriz en un resultado único. Puede encontrar más información sobre las funciones de agregación en el documento [de funciones de](./aggregation-functions.md)agregación. |
 | Fecha y hora | Se utiliza junto con objetos date, time y datetime. Encontrará más información sobre estas funciones en el documento [de funciones de](./datetime-functions.md)fecha y hora. |
