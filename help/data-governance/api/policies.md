@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 2%
@@ -35,7 +35,7 @@ GET /policies/custom
 
 La siguiente solicitud recupera una lista de directivas personalizadas definidas por su organización.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 **Solicitud**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -282,7 +282,7 @@ POST /policies/custom
 
 La siguiente solicitud crea una nueva directiva que restringe que la acción `exportToThirdParty` de marketing se realice en los datos que contienen etiquetas `C1 OR (C3 AND C7)`.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -396,7 +396,7 @@ En este ejemplo, las condiciones para exportar datos a un tercero han cambiado y
 
 La siguiente solicitud actualiza la directiva existente para incluir la nueva expresión de directiva. Tenga en cuenta que, como esta solicitud esencialmente vuelve a escribir la directiva, todos los campos deben incluirse en la carga útil, incluso aunque algunos de sus valores no se estén actualizando.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **Solicitud**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **Solicitud**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 La siguiente solicitud actualiza la lista de las directivas principales habilitadas en función de los ID proporcionados en la carga útil.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
