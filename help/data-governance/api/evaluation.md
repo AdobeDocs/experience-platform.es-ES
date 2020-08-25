@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Políticas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%
@@ -52,7 +52,7 @@ La solicitud de ejemplo siguiente evalúa una acción de mercadotecnia con las e
 >
 >Tenga en cuenta los `AND` operadores y `OR` en sus expresiones de directiva. En el ejemplo siguiente, si alguna de las etiquetas (`C1` o `C3`) hubiera aparecido sola en la solicitud, la acción de marketing no habría violado esta política. Se necesitan ambas etiquetas (`C1` y `C3`) para devolver la directiva violada. Asegúrese de que está evaluando las políticas cuidadosamente y definiendo las expresiones de políticas con el mismo cuidado.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La siguiente solicitud realiza la acción de mercadotecnia con un conjunto de tres conjuntos de datos para evaluar cualquier infracción de directiva. `crossSiteTargeting`
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La siguiente solicitud prueba la acción de mercadotecnia `crossSiteTargeting` en un conjunto específico de campos que pertenecen a tres conjuntos de datos. La carga útil es similar a una solicitud de [evaluación que solo involucra conjuntos](#datasets)de datos, agregando campos específicos para cada conjunto de datos desde los que recopilar etiquetas.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -540,7 +540,7 @@ La carga útil de una solicitud de evaluación masiva debe ser una matriz de obj
 >
 >Si algún trabajo de evaluación de la lista contiene una matriz `entityList` y una `labels` matriz, se producirá un error. Si desea evaluar la misma acción de mercadotecnia en base a conjuntos de datos y etiquetas, debe incluir trabajos de evaluación independientes para esa acción de mercadotecnia.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | URI de la acción de marketing que se va a probar con etiquetas o conjuntos de datos para detectar infracciones de directivas. |
 | `includeDraft` | De forma predeterminada, solo las directivas habilitadas participan en la evaluación. Si `includeDraft` se establece en `true`, también participarán las políticas que están en `DRAFT` estado. |
-| `labels` | Matriz de etiquetas de uso de datos para probar la acción de mercadotecnia.<br><br>**IMPORTANTE **: Al utilizar esta propiedad, NO se debe incluir una`entityList`propiedad en el mismo objeto. Para evaluar la misma acción de marketing mediante conjuntos de datos o campos, debe incluir un objeto independiente en la carga útil de la solicitud que contenga una`entityList`matriz. |
-| `entityList` | Matriz de conjuntos de datos y campos (opcionalmente) específicos dentro de esos conjuntos de datos para probar la acción de mercadotecnia.<br><br>**IMPORTANTE **: Al utilizar esta propiedad, NO se debe incluir una`labels`propiedad en el mismo objeto. Para evaluar la misma acción de marketing mediante etiquetas de uso de datos específicas, debe incluir un objeto independiente en la carga útil de la solicitud que contenga una`labels`matriz. |
+| `labels` | Matriz de etiquetas de uso de datos para probar la acción de mercadotecnia.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, NO se debe incluir una `entityList` propiedad en el mismo objeto. Para evaluar la misma acción de marketing mediante conjuntos de datos o campos, debe incluir un objeto independiente en la carga útil de la solicitud que contenga una `entityList` matriz. |
+| `entityList` | Matriz de conjuntos de datos y campos (opcionalmente) específicos dentro de esos conjuntos de datos para probar la acción de mercadotecnia.<br><br>**IMPORTANTE**: Al utilizar esta propiedad, NO se debe incluir una `labels` propiedad en el mismo objeto. Para evaluar la misma acción de marketing mediante etiquetas de uso de datos específicas, debe incluir un objeto independiente en la carga útil de la solicitud que contenga una `labels` matriz. |
 | `entityType` | El tipo de entidad con el que se va a probar la acción de marketing. Actualmente, solo `dataSet` se admite. |
 | `entityId` | ID de un conjunto de datos para probar la acción de marketing. |
 | `entityMeta.fields` | (Opcional) Una lista de campos específicos dentro del conjunto de datos para probar la acción de mercadotecnia. |
