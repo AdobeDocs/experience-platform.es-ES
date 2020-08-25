@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Acciones de mercadotecnia
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Una acción de mercadotecnia, en el contexto de Adobe Experience Platform [!DNL Data Governance], es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
-Puede administrar las acciones de marketing de su organización mediante el uso del `/marketingActions` punto final en la API de servicio de directivas.
+Puede administrar las acciones de marketing de su organización mediante el uso del `/marketingActions` extremo en la API de servicio de directivas.
 
 ## Primeros pasos
 
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 La siguiente solicitud recupera una lista de acciones de mercadotecnia personalizadas que mantiene su organización.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La siguiente solicitud recupera una acción de marketing personalizada denominada `combineData`.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La siguiente solicitud crea una nueva acción de mercadotecnia denominada `crossSiteTargeting`, siempre que no exista aún una acción de mercadotecnia con el mismo nombre en el sistema. Si existe una acción de marketing, esta llamada actualiza esa acción de marketing en función de las propiedades proporcionadas en la carga útil. `crossSiteTargeting`
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre de la acción de marketing que se va a crear o actualizar. <br><br>**IMPORTANTE **: Esta propiedad debe coincidir con la`{MARKETING_ACTION_NAME}`de la ruta; de lo contrario, se producirá un error HTTP 400 (Solicitud incorrecta). En otras palabras, una vez creada una acción de marketing, no se puede cambiar su`name`propiedad. |
+| `name` | Nombre de la acción de marketing que se va a crear o actualizar. <br><br>**IMPORTANTE**: Esta propiedad debe coincidir con la `{MARKETING_ACTION_NAME}` de la ruta; de lo contrario, se producirá un error HTTP 400 (Solicitud incorrecta). En otras palabras, una vez creada una acción de marketing, no se puede cambiar su `name` propiedad. |
 | `description` | Una descripción opcional que proporciona un contexto adicional para la acción de marketing. |
 
 **Respuesta**
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Solicitud**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
