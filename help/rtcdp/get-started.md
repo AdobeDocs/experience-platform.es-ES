@@ -5,7 +5,7 @@ seo-title: Introducción a la plataforma de datos del cliente en tiempo real de 
 description: Ejemplo de escenario para la plataforma de datos del cliente en tiempo real de Adobe
 seo-description: Ejemplo de escenario para la plataforma de datos del cliente en tiempo real de Adobe
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Este tutorial incluye los siguientes pasos:
 1. Genere el perfil [](#customer-profile)del cliente.
 1. [Personalice](#personalizing-the-user-experience) la experiencia del usuario.
 1. Utilice [varias fuentes](#using-multiple-data-sources)de datos.
-1. [Configure un origen](#configuring-a-data-source)de datos.
+1. [Configure a data source](#configuring-a-data-source).
 1. [Recopilar los datos](#bringing-the-data-together-for-a-specific-customer) de un cliente específico.
 1. Configure [segmentos](#segments).
 1. Configure [los destinos](#destinations).
@@ -74,7 +74,7 @@ Muchos visitantes al sitio web son probablemente clientes repetidos que han comp
 
 ### Primera visita del nuevo cliente
 
-Por ejemplo, un visitante no identificado navega a la sección de hombres del sitio de Luma y vista a una pareja que lleva camisas sudaderas.
+Por ejemplo, un visitante sin identificar navega a la sección de hombres del sitio de Luma y vista a una pareja que lleva camisas sudaderas.
 
 ![imagen](assets/luma-sweatshirts.png)
 
@@ -216,7 +216,7 @@ El equipo de ciencia de datos Luma ha creado modelos en torno a la propensión a
 
 Modifique o cree un segmento que represente a los abandonadores del carro de compras que parecen estar en proceso de comprar un regalo:
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
@@ -255,7 +255,7 @@ En este escenario, Luma quiere volver a dirigir esta audiencia con personalizaci
 
 ### Destinos de programación
 
-También puede programar el inicio del segmento o finalizarlo en un momento determinado. El segmento se publicará y se actualizará automáticamente en las plataformas configuradas en las fechas programadas.
+También puede programar el segmento para que se inicio o finalice en un momento determinado. El segmento se publicará y se actualizará automáticamente en las plataformas configuradas en las fechas programadas.
 
 >[!NOTE]
 >De forma opcional, si hace clic en el campo de fecha, automáticamente se programan 90 días de espera.
@@ -280,7 +280,7 @@ Al guardar, un lienzo de flujo de datos visual muestra el segmento asignado desd
 
 ![imagen](assets/luma-flow.png)
 
-## Vinculación de identidad entre dispositivos
+## Cross-device identity stitching
 
 Sarah explora un sitio de medios sociales en su dispositivo móvil, y ve un anuncio de Luma. Le recuerda el artículo que dejó en su carro.
 
