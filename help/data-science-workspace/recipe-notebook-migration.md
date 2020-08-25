@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Los cambios recientes [!DNL Data Science Workspace] requieren que las fórmulas 
    - [Preparación de secuencias de comandos de doctorado](#pyspark-prepare-docker)
    - [crear la fórmula con docker](#pyspark-create-recipe)
 
-## [!DNL Spark] guía de migración {#spark-migration-guide}
+## [!DNL Spark] migration guide {#spark-migration-guide}
 
 El artefacto de fórmula generado por los pasos de compilación es ahora una imagen de Docker que contiene el archivo binario .jar. Además, la sintaxis utilizada para leer y escribir conjuntos de datos mediante el [!DNL Platform] SDK ha cambiado y requiere que modifique el código de fórmula.
 
@@ -462,7 +462,7 @@ Con PySpark 3 ([!DNL Spark] 2.4) `org_id` y ya `dataset_id` no es necesario defi
 
 >[!TIP]
 >
->—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
+>—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar `batch` el modo cuando se leen grandes cantidades de datos.
 
 ## Creación de un datafame local
 
@@ -567,7 +567,7 @@ pd0.show(10, False)
 
 >[!TIP]
 >
->—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
+>—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar `batch` el modo cuando se leen grandes cantidades de datos.
 
 Las siguientes imágenes resaltan las diferencias clave para volver a escribir datos [!DNL Platform] en PySpark 2.3 y PySpark 2.4. Este ejemplo utiliza los blocs de notas de inicio de *Agregación* que se proporcionan en la [!DNL JupyterLab Launcher].
 
@@ -647,7 +647,7 @@ El uso de [!DNL Spark] 2.4 con el núcleo Scala requiere que usted defina `val s
 
 ![importación y definición de chispa](./images/migration/spark-scala/start-session.png)
 
-## Datos de Consulta
+## Datos de consulta
 
 Con Scala ([!DNL Spark] 2.4) ya no se admite `%%` sparkMagic. Ya no se pueden utilizar las siguientes operaciones:
 
@@ -769,6 +769,7 @@ El bloc de notas Scala ([!DNL Spark] 2.4) utiliza el núcleo Scala que requiere 
 >[!TIP]
 >
 >En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`. Esto elimina la necesidad de definir variables si sabe que sólo se van a usar una sola vez. El ejemplo siguiente toma `val userToken` el ejemplo anterior y lo declara en línea dentro de `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
