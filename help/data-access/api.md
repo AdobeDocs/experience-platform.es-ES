@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía para desarrolladores de Data Access
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Guía para desarrolladores de Data Access
 
-La API de acceso a datos admite el Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la capacidad de descubrimiento y accesibilidad de conjuntos de datos ingestados dentro de [!DNL Experience Platform].
+La API de acceso a datos admite Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la capacidad de descubrimiento y accesibilidad de conjuntos de datos ingestados dentro de [!DNL Experience Platform].
 
 ![Acceso a datos en el Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -232,9 +232,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 **Respuesta**
 
-```
-Contents of the file
-```
+`Contents of the file`
 
 ## Ejemplos de código adicionales
 
