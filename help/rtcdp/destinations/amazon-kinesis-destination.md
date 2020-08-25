@@ -5,7 +5,7 @@ seo-title: Destino de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -76,7 +76,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Amazon Kinesis] JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
@@ -118,7 +118,7 @@ Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Amazon K
 
 >[!MORELIKETHIS]
 >
->* [Conectar a Amazon Kinesis y activar datos mediante llamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+>* [Conéctese a Amazon Kinesis y active los datos mediante llamadas de API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destino de los centros de Evento de Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md)
 
