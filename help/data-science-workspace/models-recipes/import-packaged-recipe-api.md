@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importación de una fórmula empaquetada (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Este tutorial requiere que haya completado el tutorial [](../../tutorials/authen
 
 - `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.
 - `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
-- `{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.
+- `{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.
 
 ## Crear un motor
 
@@ -50,6 +50,7 @@ Los motores se pueden crear realizando una solicitud de POST al extremo /motores
 Para crear un motor con un archivo de fórmula empaquetado almacenado en un contenedor de Docker, debe proporcionar la URL de Docker al archivo de fórmula empaquetado.
 
 >[!CAUTION]
+>
 > Si está utilizando [!DNL Python] o R, utilice la siguiente solicitud. Si utiliza PySpark o Scala, utilice el ejemplo de solicitud PySpark/Scala ubicado debajo del ejemplo de Python/R.
 
 **Formato API**
