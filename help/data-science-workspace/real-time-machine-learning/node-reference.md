@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de referencia de nodos de aprendizaje automático en tiempo real
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,13 +15,14 @@ ht-degree: 1%
 # Guía de referencia de nodos de aprendizaje automático en tiempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
 Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo realiza una tarea específica y se puede encadenar mediante vínculos para formar un gráfico que represente una canalización ML. La tarea que realiza un nodo representa una operación en datos de entrada, como una transformación de datos o esquemas, o una inferencia de aprendizaje automático. El nodo envía el valor transformado o inferido a los nodos siguientes.
 
 La siguiente guía describe las bibliotecas de nodos admitidas para aprendizaje automático en tiempo real.
 
-## Detección de nodos para su uso en la canalización ML
+## Descubrimiento de nodos para su uso en la canalización ML
 
 Copie el siguiente código en un [!DNL Python] bloc de notas para vista de todos los nodos disponibles para su uso.
 
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode es un nodo de Adobe interno que necesita un ID de modelo para extraer el modelo ONNX preentrenado y utilizarlo para puntear en los datos entrantes.
 
 >[!TIP]
+>
 >Especifique las columnas en el mismo orden en el que desea que se envíen los datos al modelo ONNX para puntuar.
 
 ```python
@@ -121,7 +123,7 @@ msg6 = model_train.process(msg5)
 | Valor | Descripción |
 | --- | --- |
 | características | Características de entrada al modelo (lista de cadenas). <br> Por ejemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nombre de columna de Destinatario (cadena). |
+| label | Nombre de columna de destinatario (cadena). |
 | modo | Tren/prueba (cadena). |
 | model_path | Ruta al modelo guardado localmente en formato onnx. |
 | params.model | Ruta de importación absoluta al modelo (cadena), por ejemplo: `sklearn.linear_model.LogisticRegression`. |
