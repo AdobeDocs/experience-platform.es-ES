@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tutoriales de Área de trabajo de Data Science
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] tutoriales
 
-Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de los datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a realizar predicciones utilizando su contenido y recursos de datos en las soluciones de Adobe. Los científicos de datos de todos los niveles tienen herramientas sofisticadas y fáciles de usar que respaldan el rápido desarrollo, capacitación y ajuste de recetas de aprendizaje automático -todos los beneficios de la tecnología de IA, sin la complejidad.
+Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a realizar predicciones mediante el uso de contenido y recursos de datos en las soluciones de Adobe. Los científicos de datos de todos los niveles tienen herramientas sofisticadas y fáciles de usar que respaldan el rápido desarrollo, capacitación y ajuste de recetas de aprendizaje automático -todos los beneficios de la tecnología de IA, sin la complejidad.
 
 Para obtener más información, lea la información general [de](../data-science-workspace/home.md)Data Science Workspace.
 
@@ -61,7 +61,6 @@ Para obtener más información, siga los archivos de origen del [paquete en un t
 
 >[!NOTE]
 >
->
 >Este tutorial requiere que tenga una URL de archivo [!DNL Docker] de origen. Visite los archivos de origen del [paquete en un tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) de fórmula si no tiene una URL de archivo [!DNL Docker] de origen.
 
 Los tutoriales de las fórmulas de importación proporcionan información sobre cómo configurar e importar una fórmula empaquetada. Al final de este tutorial, puede crear, entrenar y evaluar un modelo en Adobe Experience Platform [!DNL Data Science Workspace].
@@ -74,7 +73,7 @@ Para obtener más información, siga el tutorial [de importación de una](../dat
 
 ## Formación y evaluación de un modelo
 
-En Adobe Experience Platform [!DNL Data Science Workspace], se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que sea apropiada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
+En Adobe Experience Platform [!DNL Data Science Workspace], se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
 
 **Este tutorial le ayudará a:**
 - Crear un nuevo modelo.
@@ -96,13 +95,13 @@ Para empezar, siga el tutorial sobre la [optimización de un modelo](../data-sci
 
 ## Puntuación de un modelo
 
-La puntuación en el Adobe Experience Platform [!DNL Data Science Workspace] se puede lograr mediante la introducción de datos de entrada en un modelo capacitado existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote.
+La puntuación en Adobe Experience Platform [!DNL Data Science Workspace] se puede lograr mediante la alimentación de datos de entrada en un modelo capacitado existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote.
 
 **Este tutorial le ayudará a:**
 - Crear una nueva carrera de puntuación.
 - Vista los resultados de puntuación.
 
-Para empezar, siga el tutorial [de puntaje de una](../data-science-workspace/models-recipes/score-model-api.md) API de modelo o el tutorial [de la](../data-science-workspace/models-recipes/score-model-ui.md)interfaz de usuario.
+Para empezar, siga el tutorial [de una](../data-science-workspace/models-recipes/score-model-api.md) API de modelo o el tutorial [de la](../data-science-workspace/models-recipes/score-model-ui.md)interfaz de usuario.
 
 ## Publicación de un modelo como servicio
 
@@ -110,7 +109,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] le permite publicar el m
 
 **Este tutorial le ayudará a:**
 - Publicar un modelo como servicio.
-- Puntee los datos mediante un servicio a través de la Galería [!DNL Platform] de [!UICONTROL servicios].
+- Puntuación de datos mediante un servicio mediante la Galería [!DNL Platform] de [!UICONTROL servicios].
 
 Para empezar, siga el tutorial [de publicación de un modelo como](../data-science-workspace/models-recipes/publish-model-service-api.md) API de servicio o el tutorial [de](../data-science-workspace/models-recipes/publish-model-service-ui.md)interfaz de usuario.
 
@@ -127,6 +126,7 @@ Para empezar, siga la [programación de un tutorial](../data-science-workspace/m
 ## Creación de una canalización de funciones
 
 >[!NOTE]
+>
 >Actualmente, las tuberías de funciones solo están disponibles mediante API.
 
 Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través del [!DNL Sensei Machine Learning Framework Runtime].
