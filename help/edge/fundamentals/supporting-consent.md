@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo admitir las preferencias de consen
 seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -26,13 +26,13 @@ Si el usuario exclusión todos los fines, el SDK no realiza ninguna de estas tar
 
 ## Configuración del consentimiento
 
-De forma predeterminada, el usuario está adhesión para todos los fines. Para evitar que el SDK realice las tareas anteriores hasta que el usuario adhesión, pase `"defaultConsent": { "general": "pending" }` durante la configuración del SDK lo siguiente:
+De forma predeterminada, el usuario está adhesión para todos los fines. Para evitar que el SDK realice las tareas anteriores hasta que el usuario adhesión, pase `"defaultConsent": "pending"` durante la configuración del SDK lo siguiente:
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
