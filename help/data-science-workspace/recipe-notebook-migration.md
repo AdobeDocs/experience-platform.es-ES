@@ -365,7 +365,7 @@ Todos los blocs de notas [!DNL Spark] 2.4 requieren que inicialice la sesión co
   <th>Código</th>
   <td>
   <pre class="JSON language-JSON hljs">
-  [!Chispa]
+  [!DNL Chispa]
 </pre>
   </td>
   <td>

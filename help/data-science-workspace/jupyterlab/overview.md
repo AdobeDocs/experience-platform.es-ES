@@ -172,7 +172,7 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <th><strong>Inicio</strong></th>
         <th><strong>Ventas minoristas</strong></th>
         <th><strong>Generador de fórmulas</strong></th>
-        <th><strong>[!Servicio de Consulta]</strong></th>
+        <th><strong>[!DNL Servicio de Consulta]</strong></th>
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregación</strong></th>
