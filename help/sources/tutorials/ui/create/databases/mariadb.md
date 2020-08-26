@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen MariaDB en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creación de un conector [!DNL MariaDB] de origen en la interfaz de usuario
 
 >[!NOTE]
+>
 > El [!DNL MariaDB] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen Maria DB mediante la interfaz de [!DNL Platform] usuario.
