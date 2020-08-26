@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introducción al aprendizaje automático en tiempo real
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Introducción al aprendizaje automático en tiempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
 Para utilizar el aprendizaje automático en tiempo real, debe tener acceso a una organización aprovisionada con Adobe Experience Platform y [!DNL Data Science Workspace]. Además, necesita disponer de un conjunto de datos completo para su uso en la formación y la puntuación.
@@ -25,14 +26,15 @@ Las guías para aprendizaje automático en tiempo real requieren una comprensió
 
 - **DSL:** Idioma específico del dominio.
 - **Edge:** El servicio de puntuación de aprendizaje automático en tiempo real se puede ejecutar en clústeres de Edge más cerca de sus activaciones y aplicaciones.
-- **Hub:** El alfa actual ejecuta el servicio de puntuación de aprendizaje automático en tiempo real en el Adobe Experience Platform Hub mientras que Experience Edge Network está en desarrollo.
+- **Hub:** El alfa actual ejecuta el servicio de puntuación de aprendizaje automático en tiempo real en Adobe Experience Platform Hub mientras que Experience Edge Network está en desarrollo.
 - **Nodo:** Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo realiza una tarea específica y se puede encadenar mediante vínculos para formar un gráfico que represente una canalización ML. La tarea que realiza un nodo representa una operación en datos de entrada, como una transformación de datos o esquemas, o una inferencia de aprendizaje automático. El nodo envía el valor transformado o inferido a los nodos siguientes.
 
 ## Conjuntos de datos en Adobe Experience Platform
 
-Para realizar inicios mediante aprendizaje automático en tiempo real, debe tener acceso a un conjunto de datos. Tiene la opción de usar un conjunto de datos externo y cargarlo en su [!DNL JupyterLab] entorno o crear un nuevo conjunto de datos en Platform si aún no lo ha hecho.
+Para realizar inicios mediante aprendizaje automático en tiempo real, debe tener acceso a un conjunto de datos. Tiene la opción de usar un conjunto de datos externo y cargarlo en su [!DNL JupyterLab] entorno o crear un nuevo conjunto de datos dentro de la plataforma si aún no lo ha hecho.
 
 >[!NOTE]
+>
 >Si ya tiene un conjunto de datos que desea utilizar, puede omitir los pasos [](#next-steps)Siguiente.
 
 ### Usar un conjunto de datos externo
