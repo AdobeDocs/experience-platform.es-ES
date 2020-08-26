@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motores
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Una respuesta correcta devuelve una carga útil que contiene los detalles del registro del Docker, incluyendo la URL del Docker (`host`), el nombre de usuario (`username`) y la contraseña (`password`).
 
 >[!NOTE]
->
 >
 >La contraseña del Docker cambia cada vez que `{ACCESS_TOKEN}` se actualiza.
 
@@ -254,7 +253,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del nu
 
 ## Recuperar una lista de motores
 
-Puede recuperar una lista de motores realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de motores realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -474,7 +473,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar un motor
 
-Para eliminar un motor, realice una solicitud de  de DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
+Puede eliminar un motor realizando una solicitud de DELETE mientras especifica el ID del motor de destinatario en la ruta de la solicitud. Al eliminar un motor, se eliminarán en cascada todas las instancias de MLI que hagan referencia a dicho motor, incluidas las ejecuciones de experimentos y experimentos que pertenezcan a dichas instancias de MLI.
 
 **Formato de API**
 
