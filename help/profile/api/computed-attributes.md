@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Atributos calculados: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -12,9 +12,10 @@ ht-degree: 1%
 ---
 
 
-# Extremo de atributos calculados (alfa)
+# (Alfa) Extremo de atributos calculados
 
 >[!IMPORTANT]
+>
 >La funcionalidad de atributo calculada descrita en este documento se encuentra actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos.
@@ -48,6 +49,7 @@ Los casos de uso para atributos calculados pueden ir desde cálculos simples a r
 Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con una mezcla para agregar el campo a un esquema existente o seleccionando un campo que ya haya definido en un esquema.
 
 >[!NOTE]
+>
 >No se pueden agregar atributos calculados a los campos dentro de mezclas definidas por Adobe. El campo debe estar dentro de la `tenant` Área de nombres, lo que significa que debe ser un campo definido y agregado a un esquema.
 
 Para definir correctamente un campo de atributo calculado, el esquema debe estar activado [!DNL Profile] y aparecer como parte del esquema de unión de la clase en la que se basa el esquema. Para obtener más información sobre esquemas y uniones [!DNL Profile]habilitados, consulte la sección de la guía para [!DNL Schema Registry] desarrolladores sobre la [activación de un esquema para Perfil y visualización de esquemas](../../xdm/api/getting-started.md)de unión. También se recomienda examinar la [sección sobre uniones](../../xdm/schema/composition.md) en la documentación básica sobre la composición del esquema.
@@ -89,6 +91,7 @@ Después de hacer clic en **[!UICONTROL Añadir campo]** , se abre un nuevo obje
 Mediante la sección Propiedades *[!UICONTROL del]* campo a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
 
 >[!NOTE]
+>
 >El tipo del campo debe ser del mismo tipo que el valor del atributo calculado. Por ejemplo, si el valor del atributo calculado es una cadena, el campo que se está definiendo en el esquema debe ser una cadena.
 
 Cuando termine, haga clic en **[!UICONTROL Aplicar]** y aparecerá el nombre del campo, así como su tipo en la sección *[!UICONTROL Estructura]* del editor.
@@ -100,6 +103,7 @@ Cuando termine, haga clic en **[!UICONTROL Aplicar]** y aparecerá el nombre del
 Antes de continuar, asegúrese de que el esquema esté habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección *[!UICONTROL Estructura]* del editor para que aparezca la ficha Propiedades *[!UICONTROL del]* Esquema. Si el control deslizante del **[!UICONTROL Perfil]** es azul, el esquema se ha activado para [!DNL Profile].
 
 >[!NOTE]
+>
 >La activación de un esquema para [!DNL Profile] no se puede deshacer, por lo que si hace clic en el control deslizante una vez activado, no tendrá que correr el riesgo de deshabilitarlo.
 
 ![](../images/computed-attributes/Profile.png)
@@ -152,7 +156,7 @@ curl -X POST \
 | `{TENANT_ID}` | Si no está familiarizado con su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la guía para desarrolladores de [Esquema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros miembros de la organización de IMS a determinar el atributo calculado correcto que se debe utilizar. |
 | `expression.value` | Una expresión válida [!DNL Profile Query Language] (PQL). Para obtener más información sobre PQL y vínculos a consultas compatibles, lea la descripción general [de](../../segmentation/pql/overview.md)PQL. |
-| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent. |
+| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase ExperienceEvent XDM. |
 
 **Respuesta**
 
@@ -354,7 +358,7 @@ La respuesta también incluye una `children` matriz compuesta por uno o más obj
 | Propiedad | Descripción |
 |---|---|
 | `_page.totalCount` | El número total de atributos calculados definidos por la organización de IMS. |
-| `_page.pageSize` | Número de atributos calculados devueltos en esta página de resultados. Si `pageSize` es igual a `totalCount`, significa que solo hay una página de resultados y se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
+| `_page.pageSize` | El número de atributos calculados devueltos en esta página de resultados. Si `pageSize` es igual a `totalCount`, significa que solo hay una página de resultados y se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
 | `children` | Matriz compuesta de uno o varios objetos, cada uno de los cuales contiene los detalles de un único atributo calculado. Si no se han definido atributos calculados, la `children` matriz está vacía. |
 | `id` | Un valor único, de sólo lectura, generado por el sistema y asignado automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección sobre la [creación de un atributo](#create-a-computed-attribute) calculado anteriormente en este tutorial. |
 | `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET al `_links.next` valor. |
