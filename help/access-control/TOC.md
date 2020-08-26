@@ -1,9 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Control de acceso en la ayuda de Adobe Experience Platform
+user-guide-title: control de acceso en la Ayuda de Adobe Experience Platform
+user-guide-description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 6%
@@ -14,17 +15,17 @@ ht-degree: 6%
 # Access control {#access-control}
 
 * [Control de acceso general](home.md)
-* IU de Control de acceso {#ui}
+* IU de control de acceso {#ui}
    * [Información general](ui/overview.md)
    * [Examinar el espacio de trabajo de control de acceso](ui/browse.md)
    * [Administrar permisos para un perfil de producto](ui/permissions.md)
    * [Administrar detalles y servicios adicionales para un perfil de producto](ui/details-and-services.md)
    * [Crear un nuevo perfil de producto](ui/create-profile.md)
    * [Administrar usuarios para un perfil de producto](ui/users.md)
-* API de Control de acceso {#api}
+* API de control de acceso {#api}
    * [Primeros pasos](api/getting-started.md)
-   * [Nombres de Lista de permisos y tipos de recursos](api/permissions-and-resource-types.md)
-   * [Políticas eficaces de Vista](api/effective-policies.md)
+   * [Nombres de lista de permisos y tipos de recursos](api/permissions-and-resource-types.md)
+   * [Políticas eficaces de vista](api/effective-policies.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
