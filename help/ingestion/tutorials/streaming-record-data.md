@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Transmisión de datos de registros
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1055'
 ht-degree: 2%
 
 ---
 
 
-# Transmitir datos de registro al Adobe Experience Platform
+# Transmitir datos de registro a Adobe Experience Platform
 
 Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las [!DNL Data Ingestion Service] API de Adobe Experience Platform.
 
@@ -22,7 +22,7 @@ Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Ex
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
 - [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [Guía](../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
+- [Guía](../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
 
 Además, este tutorial requiere que ya haya creado una conexión de flujo. Para obtener más información sobre la creación de una conexión de flujo continuo, lea el tutorial [](./create-streaming-connection.md)Crear una conexión de flujo continuo.
 
@@ -264,7 +264,7 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 
 ## Ingesta de datos de registro en la conexión de flujo continuo
 
-Una vez que el conjunto de datos y la conexión de flujo están implementados, puede ingestar registros JSON con formato XDM para ingestar datos de registro en [!DNL Platform].
+Con el conjunto de datos y la conexión de flujo en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de registro en [!DNL Platform].
 
 **Formato API**
 
@@ -352,7 +352,7 @@ Para validar los registros ingestados anteriormente, puede utilizar [!DNL Profil
 
 >[!NOTE]
 >
->Si el ID de directiva de combinación no está definido y el esquema.</span>name o relatedSchema</span>.name es `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** las identidades relacionadas.
+>Si el ID de directiva de combinación no está definido y el `schema.name` valor o `relatedSchema.name` está `_xdm.context.profile`, [!DNL Profile Access] buscará **todas** las identidades relacionadas.
 
 **Formato API**
 
