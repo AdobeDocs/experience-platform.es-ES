@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Creación de un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -22,8 +22,8 @@ Este tutorial proporciona los pasos para crear un conector de datos de clasifica
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-* [[!DNL Perfil del cliente en tiempo real de]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Sandboxes DNL]](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Seleccione las clasificaciones
 
@@ -37,7 +37,7 @@ En la categoría de aplicaciones **[!UICONTROL de]** Adobe, seleccione la tarjet
 
 Aparece el paso de adición de datos **[!UICONTROL de origen de]** Analytics. Seleccione **[!UICONTROL Clasificaciones]** en el encabezado superior para ver una lista de [!DNL Classifications] conjuntos de datos, incluida información sobre su ID **[!UICONTROL de]** Dimension, el nombre **[!UICONTROL del grupo de]** informes y la ID **[!UICONTROL del grupo de]** informes.
 
-Cada página muestra hasta diez conjuntos de datos diferentes [!DNL Classifications] entre los que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de conjuntos de datos que ha seleccionado, así como sus nombres. [!DNL Classifications] Este panel también le permite eliminar cualquier conjunto [!DNL Classifications] de datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
+Cada página muestra hasta diez conjuntos de datos diferentes [!DNL Classifications] entre los que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de conjuntos de datos que ha seleccionado, así como sus nombres. [!DNL Classifications] Este panel también le permite eliminar cualquier conjunto de [!DNL Classifications] datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
 
 Puede seleccionar hasta 30 conjuntos de datos diferentes [!DNL Classifications] para [!DNL Platform].
 
@@ -72,6 +72,7 @@ Seleccione el conjunto de datos de **[!UICONTROL Destinatario]** al que desee ac
 La página **[!UICONTROL actividad]** de conjunto de datos muestra información sobre el conjunto de datos de destinatario seleccionado, incluidos detalles sobre el estado del lote, la ID del conjunto de datos y el esquema.
 
 >[!IMPORTANT]
+>
 >Aunque es posible eliminar conjuntos de datos para otros conectores de origen, no se admite actualmente en el conector de datos de clasificaciones de Analytics. Si elimina un conjunto de datos por error, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
