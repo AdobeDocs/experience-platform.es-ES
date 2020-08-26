@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector HubSpot mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
@@ -15,15 +15,16 @@ ht-degree: 1%
 # Creación de un [!DNL HubSpot] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >El [!DNL HubSpot] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL Experience Platform] a [!DNL HubSpot].
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -38,7 +39,7 @@ Para [!DNL Flow Service] conectarse con [!DNL HubSpot], debe proporcionar las si
 | ---------- | ----------- |
 | ID de cliente | ID de cliente asociado a la [!DNL HubSpot] aplicación. |
 | Secreto del cliente | El secreto de cliente asociado a la [!DNL HubSpot] aplicación. |
-| Token de acceso | El token de acceso obtenido al autenticar inicialmente la integración de OAuth. |
+| token de acceso | El token de acceso obtenido al autenticar inicialmente la integración de OAuth. |
 | Actualizar token | El autentificador de actualización obtenido al autenticar inicialmente la integración de OAuth. |
 | ID de especificación de conexión | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL HubSpot] es: `cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
 
