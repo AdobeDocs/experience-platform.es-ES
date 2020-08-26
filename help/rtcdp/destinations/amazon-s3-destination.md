@@ -5,9 +5,9 @@ seo-title: Destino de Amazon S3
 description: Cree una conexión directa de salida a su almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos delimitados por tabuladores o CSV desde Adobe Experience Platform a sus propios cubos S3.
 seo-description: Cree una conexión directa de salida a su almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos delimitados por tabuladores o CSV desde Adobe Experience Platform a sus propios cubos S3.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ Consulte Flujo de trabajo de destinos de almacenamiento [Cloud ](/help/rtcdp/des
 
 Para [!DNL Amazon S3] destinos, introduzca la siguiente información en el flujo de trabajo de creación de destinos:
 
-* **[!DNL Amazon S3]clave de acceso y clave[!DNL Amazon S3]secreta**: En [!DNL Amazon S3], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su [!DNL Amazon S3] cuenta.
+* **[!DNL Amazon S3]clave de acceso y clave[!DNL Amazon S3]secreta**: En [!DNL Amazon S3], genere un `access key - secret access key` par para otorgar acceso CDP en tiempo real de Adobe a su [!DNL Amazon S3] cuenta. Obtenga más información en la documentación [de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 
 >[!IMPORTANT]
 >
->Adobe Real-time CDP necesita `write` permisos en el objeto bucket donde se entregarán los archivos de exportación.
+>Adobe Real-time CDP necesita `write` permisos en el objeto de bloque donde se entregarán los archivos de exportación.
 
 ## Datos exportados {#exported-data}
 
