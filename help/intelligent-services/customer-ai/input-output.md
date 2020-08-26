@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entrada y salida de AI del cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -33,6 +33,7 @@ Los siguientes ejemplos proporcionados utilizan una fórmula sencilla para ayuda
 Longitud mínima de los datos requerida = población elegible + ventana de resultados
 
 >[!NOTE]
+>
 > 30 es el número mínimo de días requeridos para la población elegible. Si no se proporciona, el valor predeterminado es 120 días.
 
 Ejemplos :
@@ -50,6 +51,7 @@ Además de los datos mínimos requeridos, la API del cliente también funciona m
 La IA del cliente genera varios atributos para perfiles individuales que se consideran elegibles. Existen dos maneras de consumir la puntuación en función de lo que haya aprovisionado. Si tiene habilitado el Perfil de cliente en tiempo real para su conjunto de datos, puede consumirlo mediante el Perfil de cliente en tiempo real. Si no tiene Perfil de cliente en tiempo real, puede descargar el conjunto de datos de salida de AI del cliente disponible en el lago de datos.
 
 >[!NOTE]
+>
 >Los valores de salida son consumidos por el Perfil del cliente en tiempo real, que puede utilizarse para crear y definir segmentos.
 
 En la tabla siguiente se describen los distintos atributos encontrados en la salida de la API del cliente:
