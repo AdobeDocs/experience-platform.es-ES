@@ -5,7 +5,7 @@ title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil de clientes en tiempo real es un almacén de entidades de búsqueda genérico que combina datos de diversos activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Un perfil es una representación de un sujeto, una organización o una persona, 
 
 ### Eventos de series temporales
 
-Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, ya sea directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
+Los datos de series temporales proporcionan una instantánea del sistema en el momento en que un sujeto realizó una acción, directa o indirectamente, así como datos que detallan el propio evento. Representados por la clase de esquema estándar XDM ExperienceEvent, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro, vínculos en los que se hace clic y vídeos vistos. Los datos de series temporales pueden utilizarse para basar las reglas de segmentación en y se puede acceder a los eventos de forma individual en el contexto de un perfil.
 
 ### Identidades
 
@@ -58,6 +58,7 @@ Al reunir datos de varias fuentes y combinarlos para ver una vista completa de c
 ### (Alfa) Configuración de atributos calculados
 
 >[!IMPORTANT]
+>
 >La funcionalidad de atributo calculada que se describe en este documento está en alfa. La documentación y las funciones están sujetas a cambios.
 
 Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos. Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información. Para obtener más información sobre los atributos calculados e instrucciones paso a paso para trabajar con ellos mediante la [!DNL Real-time Customer Profile] API, consulte la guía [de extremo de atributos](api/computed-attributes.md)calculados. Esta guía le ayudará a comprender mejor la función que los atributos calculados desempeñan en Adobe Experience Platform, e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas.
@@ -66,7 +67,7 @@ Los atributos calculados permiten calcular automáticamente el valor de los camp
 
 Esta sección presenta los componentes que permiten [!DNL Real-time Customer Profile] actualizar y supervisar los datos de registros y series temporales en tiempo real.
 
-### Transmisión de flujo continuo y de ingestión
+### Transmisión de flujo continuo e ingestión y segmentación de flujo continuo
 
 La entrada en tiempo real es posible a través de un proceso llamado transmisión de la ingesta. A medida que se ingieren datos de series temporales y perfiles, decide incluir o excluir automáticamente esos datos de segmentos mediante un proceso continuo denominado segmentación por flujo continuo, antes de combinarlos con datos existentes y actualizar la vista de unión. [!DNL Real-time Customer Profile] Como resultado, puede realizar cálculos instantáneamente y tomar decisiones para ofrecer experiencias mejoradas e individualizadas a los clientes a medida que interactúan con su marca. Mientras se ingieren, los datos también se someten a validación para garantizar que se ingieran correctamente y se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre la validación que se realiza durante la ingestión, lea la descripción general [de la calidad de la ingestión de](../ingestion/quality/overview.md)datos.
 
@@ -84,7 +85,7 @@ Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizada
 
 ### [!DNL Profile] métricas de ingestión
 
-Las perspectivas de visibilidad le permiten exponer métricas clave en Adobe Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingestión exitosas, los tamaños de registro ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
+Las perspectivas de visibilidad le permiten exponer métricas clave en Adobe Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registros ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
 
 ## [!DNL Data governance] y [!DNL Privacy]
 
@@ -132,7 +133,6 @@ En lo que se refiere al acceso a los datos, la gobernanza de los datos desempeñ
 
 >[!NOTE]
 >
->
 >Una entidad no personal hace referencia a cualquier clase XDM que **no forme** parte de [!DNL Profile].
 
 ## Próximos pasos y recursos adicionales
@@ -140,6 +140,7 @@ En lo que se refiere al acceso a los datos, la gobernanza de los datos desempeñ
 Para obtener más información sobre [!DNL Real-time Customer Profile], siga leyendo la documentación y complementando su aprendizaje en el siguiente vídeo o explorando otros tutoriales [de vídeo](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)Experience Platform.
 
 >[!WARNING]
+>
 >La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la guía [del usuario de Perfil del cliente en tiempo](ui/user-guide.md) real para obtener las capturas de pantalla y las funciones más recientes de la interfaz de usuario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
