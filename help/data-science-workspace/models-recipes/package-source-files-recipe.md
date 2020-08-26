@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -49,9 +49,11 @@ Se abre la página *Configurar* . Proporcione un nombre *de* fórmula adecuado, 
 Seleccione el *motor de ejecución* correspondiente y, a continuación, elija una **[!UICONTROL clasificación]** para el *tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
 
 >[!NOTE]
->*El tipo *es la clase de problema de aprendizaje automático para el que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la ejecución de la formación.
+>
+>*El tipo* es la clase de problema de aprendizaje automático para el que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la ejecución de la formación.
 
 >[!TIP]
+>
 >- Para [!DNL Python] las fórmulas, seleccione el tiempo de ejecución de **[!UICONTROL Python]** .
 >- Para las fórmulas R, seleccione el tiempo de ejecución de **[!UICONTROL R]** .
 >- Para las fórmulas de PySpark, seleccione el tiempo de ejecución de **[!UICONTROL PySpark]** . Se rellena automáticamente un tipo de artefacto.
@@ -63,6 +65,7 @@ Seleccione el *motor de ejecución* correspondiente y, a continuación, elija un
 Tenga en cuenta los valores de Host *de* Docker, *Nombre de usuario* y *Contraseña*. Se utilizan para generar e insertar la [!DNL Docker] imagen en los flujos de trabajo que se describen a continuación.
 
 >[!NOTE]
+>
 >La dirección URL de origen se proporciona después de completar los pasos que se describen a continuación. El archivo de configuración se explica en tutoriales posteriores que se encuentran en los [próximos pasos](#next-steps).
 
 ### Empaquetar los archivos de origen
@@ -180,6 +183,7 @@ A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/s
 ```
 
 >[!TIP]
+>
 >Si recibe un error de permiso al intentar iniciar sesión en Docker mediante la `login.sh` secuencia de comandos, intente utilizar el comando `bash login.sh`.
 
 Al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
