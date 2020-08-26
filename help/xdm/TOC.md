@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Ayuda del sistema del modelo de datos de experiencia (XDM)
+user-guide-description: Experience Data Model (XDM) is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way.
 translation-type: tm+mt
-source-git-commit: ef11e3c4f0a3be42e17080f8b2deb464ae6fcd2a
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 6%
@@ -14,14 +15,14 @@ ht-degree: 6%
 # Sistema de modelo de datos de experiencia (XDM) {#xdm}
 
 * [Descripción general del sistema XDM](home.md)
-* esquemas XDM {#schema}
+* Esquemas XDM {#schema}
    * [Conceptos básicos de la composición de esquemas](schema/composition.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
-   * Casos de uso de Esquema {#use-cases}
+   * Casos de uso de esquema {#use-cases}
       * [Mezcla de consentimiento de privacidad](schema/privacy-consent.md)
-* API del Registro de Esquemas {#api}
+* API del Registro de esquemas {#api}
    * [Primeros pasos](api/getting-started.md)
-   * [Recursos de Lista](api/list-resources.md)
+   * [Recursos de lista](api/list-resources.md)
    * [Buscar un recurso](api/look-up-resource.md)
    * [Actualizar un recurso](api/update-resource.md)
    * [Reemplazar un recurso](api/replace-resource.md)
@@ -32,7 +33,7 @@ ht-degree: 6%
    * [Crear un esquema](api/create-schema.md)
    * [Uniones](api/unions.md)
    * [Descriptores](api/descriptors.md)
-   * [esquemas específicos](api/ad-hoc.md)
+   * [Esquemas específicos](api/ad-hoc.md)
    * [Apéndice](api/appendix.md)
 * Tutoriales {#tutorials}
    * [Creación de un esquema (API)](tutorials/create-schema-api.md)
@@ -42,4 +43,4 @@ ht-degree: 6%
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
