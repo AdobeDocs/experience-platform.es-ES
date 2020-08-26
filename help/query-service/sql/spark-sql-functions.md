@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Spark SQL funciones
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a10508770a862621403bad94c14db4529051020c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '4996'
+source-wordcount: '4991'
 ht-degree: 5%
 
 ---
@@ -43,7 +43,7 @@ Referencia: [Documentación de la función Spark SQL](https://spark.apache.org/d
 
 Ejemplos:
 
-```
+```sql
 > SELECT 2 % 1.8;
  0.2
 > SELECT MOD(2, 1.8);
@@ -56,7 +56,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT 2 * 3;
  6
 ```
@@ -67,7 +67,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT 1 + 2;
  3
 ```
@@ -78,7 +78,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT 2 - 1;
  1
 ```
@@ -89,7 +89,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 3 / 2;
  1.5
 > SELECT 2L / 2L;
@@ -102,7 +102,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT abs(-1);
   1
 ```
@@ -113,7 +113,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT acos(1);
  0.0
 > SELECT acos(2);
@@ -126,7 +126,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT approx_percentile(10.0, array(0.5, 0.4, 0.1), 100);
  [10.0,10.0,10.0]
 > SELECT approx_percentile(10.0, 0.5, 100);
@@ -139,7 +139,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT asin(0);
  0.0
 > SELECT asin(2);
@@ -152,14 +152,14 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT atan(0);
  0.0
 ```
 
 #### atan2
 
-`atan2(exprY, exprX)`:: Devuelve el ángulo en radianes entre el eje X positivo de un plano y el punto proporcionado por las coordenadas (`exprX`, `exprY`), como si se calculara mediante `java.lang.Math.atan2`.
+`atan2(exprY, exprX)`:: Devuelve el ángulo en radianes entre el eje x positivo de un plano y el punto proporcionado por las coordenadas (`exprX`, `exprY`), como si se calculara mediante `java.lang.Math.atan2`.
 
 Argumentos:
 
@@ -167,7 +167,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT atan2(0, 0);
  0.0
 ```
@@ -182,7 +182,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT cardinality(array('b', 'd', 'c', 'a'));
  4
 > SELECT cardinality(map('a', 1, 'b', 2));
@@ -197,7 +197,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > Select cbrt(27.0);
  3.0
 ```
@@ -208,7 +208,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT ceil(-0.1);
  0
 > SELECT ceil(5);
@@ -221,7 +221,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT ceiling(-0.1);
  0
 > SELECT ceiling(5);
@@ -234,7 +234,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT conv('100', 2, 10);
  4
 > SELECT conv(-10, 16, -10);
@@ -251,7 +251,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT cos(0);
  1.0
 ```
@@ -279,7 +279,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT cot(1);
  0.6420926159343306
 ```
@@ -294,7 +294,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT e();
  2.718281828459045
 ```
@@ -305,7 +305,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT exp(0);
  1.0
 ```
@@ -316,7 +316,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT expm1(0);
  0.0
 ```
@@ -338,7 +338,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT floor(-0.1);
  -1
 > SELECT floor(5);
@@ -351,7 +351,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT greatest(10, 9, 2, 4, 3);
  10
 ```
@@ -362,7 +362,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT hypot(3, 4);
  5.0
 ```
@@ -378,7 +378,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT least(10, 9, 2, 4, 3);
  2
 ```
@@ -389,7 +389,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT levenshtein('kitten', 'sitting');
  3
 ```
@@ -400,7 +400,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT ln(1);
  0.0
 ```
@@ -411,7 +411,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT log(10, 100);
  2.0
 ```
@@ -422,7 +422,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT log10(10);
  1.0
 ```
@@ -433,7 +433,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT log1p(0);
  0.0
 ```
@@ -444,7 +444,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT log2(2);
  1.0
 ```
@@ -471,7 +471,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT negative(1);
  -1
 ```
@@ -492,7 +492,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT percentile_approx(10.0, array(0.5, 0.4, 0.1), 100);
  [10.0,10.0,10.0]
 > SELECT percentile_approx(10.0, 0.5, 100);
@@ -505,7 +505,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT pi();
  3.141592653589793
 ```
@@ -516,7 +516,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT pmod(10, 3);
  1
 > SELECT pmod(-10, 3);
@@ -533,7 +533,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT pow(2, 3);
  8.0
 ```
@@ -544,7 +544,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT power(2, 3);
  8.0
 ```
@@ -559,7 +559,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT radians(180);
  3.141592653589793
 ```
@@ -570,7 +570,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT rand();
  0.9629742951434543
 > SELECT rand(0);
@@ -589,7 +589,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT randn();
  -0.3254147983080288
 > SELECT randn(0);
@@ -608,7 +608,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT rint(12.3456);
  12.0
 ```
@@ -619,7 +619,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT round(2.5, 0);
  3.0
 ```
@@ -630,7 +630,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sign(40);
  1.0
 ```
@@ -641,7 +641,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT signum(40);
  1.0
 ```
@@ -656,7 +656,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sin(0);
  0.0
 ```
@@ -671,7 +671,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sinh(0);
  0.0
 ```
@@ -682,7 +682,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sqrt(4);
  2.0
 ```
@@ -713,7 +713,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT tan(0);
  0.0
 ```
@@ -728,7 +728,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT tanh(0);
  0.0
 ```
@@ -761,7 +761,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 1 < 2;
  true
 > SELECT 1.1 < '1';
@@ -784,7 +784,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 2 <= 2;
  true
 > SELECT 1.0 <= '1';
@@ -803,11 +803,11 @@ Ejemplos:
 
 Argumentos:
 
-- `expr1, expr2`:: Las dos expresiones deben ser del mismo tipo o se pueden convertir en un tipo común, y deben ser un tipo que se pueda utilizar en comparación de igualdad. No se admite el tipo de mapa. Para tipos complejos como matriz/estructura, los tipos de datos de los campos deben poder pedirse.
+- `expr1, expr2`:: Las dos expresiones deben ser del mismo tipo o se pueden convertir en un tipo común y deben ser un tipo que se pueda utilizar en comparación de igualdad. No se admite el tipo de mapa. Para tipos complejos como matriz/estructura, los tipos de datos de los campos deben poder pedirse.
 
 Ejemplos:
 
-```
+```sql
 > SELECT 2 = 2;
  true
 > SELECT 1 = '1';
@@ -828,7 +828,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 2 > 1;
  true
 > SELECT 2 > '1.1';
@@ -851,7 +851,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 2 >= 1;
  true
 > SELECT 2.0 >= '2.1';
@@ -870,7 +870,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT 3 ^ 5;
  2
 ```
@@ -885,7 +885,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT arrays_overlap(array(1, 2, 3), array(3, 4, 5));
  true
 ```
@@ -898,7 +898,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT assert_true(0 < 1);
  NULL
 ```
@@ -909,7 +909,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT if(1 < 2, 'a', 'b');
  a
 ```
@@ -920,7 +920,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT ifnull(NULL, array('2'));
  ["2"]
 ```
@@ -934,7 +934,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT 1 in(1, 2, 3);
  true
 > SELECT 1 in(2, 3, 4);
@@ -951,7 +951,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT isnan(cast('NaN' as double));
  true
 ```
@@ -962,7 +962,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT isnotnull(1);
  true
 ```
@@ -973,7 +973,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT isnull(1);
  false
 ```
@@ -984,7 +984,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT nanvl(cast('NaN' as double), 123);
  123.0
 ```
@@ -1003,7 +1003,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_boolean('<a><b>1</b></a>','a/b');
  true
 ```
@@ -1016,7 +1016,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT add_months('2016-08-31', 1);
  2016-09-30
 ```
@@ -1029,7 +1029,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT date_add('2016-07-30', 1);
  2016-07-31
 ```
@@ -1042,7 +1042,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT date_format('2016-04-08', 'y');
  2016
 ```
@@ -1055,7 +1055,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT date_sub('2016-07-30', 1);
  2016-07-29
 ```
@@ -1068,7 +1068,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT date_trunc('YEAR', '2015-03-05T09:32:05.359');
  2015-01-01 00:00:00
 > SELECT date_trunc('MM', '2015-03-05T09:32:05.359');
@@ -1087,7 +1087,7 @@ Desde: 2.3.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT datediff('2009-07-31', '2009-07-30');
  1
 
@@ -1103,7 +1103,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT day('2009-07-30');
  30
 ```
@@ -1116,7 +1116,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT dayofmonth('2009-07-30');
  30
 ```
@@ -1129,7 +1129,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT dayofweek('2009-07-30');
  5
 ```
@@ -1142,7 +1142,7 @@ Desde: 2.3.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT dayofyear('2016-04-09');
  100
 ```
@@ -1155,7 +1155,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT from_unixtime(0, 'yyyy-MM-dd HH:mm:ss');
  1970-01-01 00:00:00
 ```
@@ -1168,7 +1168,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT from_utc_timestamp('2016-08-31', 'Asia/Seoul');
  2016-08-31 09:00:00
 ```
@@ -1181,7 +1181,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT hour('2009-07-30 12:58:59');
  12
 ```
@@ -1194,7 +1194,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT last_day('2009-01-12');
  2009-01-31
 ```
@@ -1207,7 +1207,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT minute('2009-07-30 12:58:59');
  58
 ```
@@ -1220,7 +1220,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT month('2016-07-30');
  7
 ```
@@ -1233,7 +1233,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT months_between('1997-02-28 10:30:00', '1996-10-30');
  3.94959677
 > SELECT months_between('1997-02-28 10:30:00', '1996-10-30', false);
@@ -1248,7 +1248,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT next_day('2015-01-14', 'TU');
  2015-01-20
 ```
@@ -1261,7 +1261,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT quarter('2016-08-31');
  3
 ```
@@ -1274,7 +1274,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT second('2009-07-30 12:58:59');
  59
 ```
@@ -1287,7 +1287,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT to_date('2009-07-30 04:17:52');
  2009-07-30
 > SELECT to_date('2016-12-31', 'yyyy-MM-dd');
@@ -1302,7 +1302,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT to_timestamp('2016-12-31 00:12:00');
  2016-12-31 00:12:00
 > SELECT to_timestamp('2016-12-31', 'yyyy-MM-dd');
@@ -1317,7 +1317,7 @@ Desde: 2.2.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT to_unix_timestamp('2016-04-08', 'yyyy-MM-dd');
  1460041200
 ```
@@ -1330,7 +1330,7 @@ Desde: 1.6.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT to_utc_timestamp('2016-08-31', 'Asia/Seoul');
  2016-08-30 15:00:00
 ```
@@ -1343,7 +1343,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT trunc('2009-02-12', 'MM');
  2009-02-01
 > SELECT trunc('2015-10-27', 'YEAR');
@@ -1358,7 +1358,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT unix_timestamp();
  1476884637
 > SELECT unix_timestamp('2016-04-08', 'yyyy-MM-dd');
@@ -1373,7 +1373,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT weekday('2009-07-30');
  3
 ```
@@ -1386,7 +1386,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT weekofyear('2008-02-20');
  8
 ```
@@ -1404,7 +1404,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT CASE WHEN 1 > 0 THEN 1 WHEN 2 > 0 THEN 2.0 ELSE 1.2 END;
  1
 > SELECT CASE WHEN 1 < 0 THEN 1 WHEN 2 > 0 THEN 2.0 ELSE 1.2 END;
@@ -1419,7 +1419,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT year('2016-07-30');
  2016
 ```
@@ -1440,7 +1440,7 @@ Desde: 1.5.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array(1, 2, 3);
  [1,2,3]
 ```
@@ -1451,7 +1451,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_contains(array(1, 2, 3), 2);
  true
 ```
@@ -1462,7 +1462,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_distinct(array(1, 2, 3, null, 3));
  [1,2,3,null]
 ```
@@ -1475,7 +1475,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_except(array(1, 2, 3), array(1, 3, 5));
  [2]
 ```
@@ -1488,7 +1488,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_intersect(array(1, 2, 3), array(1, 3, 5));
  [1,3]
 ```
@@ -1501,7 +1501,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT array_join(array('hello', 'world'), ' ');
  hello world
 > SELECT array_join(array('hello', null ,'world'), ' ');
@@ -1518,7 +1518,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_max(array(1, 20, null, 3));
  20
 ```
@@ -1531,7 +1531,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_min(array(1, 20, null, 3));
  1
 ```
@@ -1544,7 +1544,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_position(array(3, 2, 1), 1);
  3
 ```
@@ -1557,7 +1557,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_remove(array(1, 2, 3, null, 3), 3);
  [1,2,null]
 ```
@@ -1570,7 +1570,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_repeat('123', 2);
  ["123","123"]
 ```
@@ -1583,7 +1583,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_sort(array('b', 'd', null, 'c', 'a'));
  ["a","b","c","d",null]
 ```
@@ -1596,7 +1596,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT array_union(array(1, 2, 3), array(1, 3, 5));
  [1,2,3,5]
 ```
@@ -1609,7 +1609,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT arrays_zip(array(1, 2, 3), array(2, 3, 4));
  [{"0":1,"1":2},{"0":2,"1":3},{"0":3,"1":4}]
 > SELECT arrays_zip(array(1, 2), array(2, 3), array(3, 4));
@@ -1626,7 +1626,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT element_at(array(1, 2, 3), 2);
  2
 > SELECT element_at(map(1, 'a', 2, 'b'), 2);
@@ -1641,7 +1641,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT explode(array(10, 20));
  10
  20
@@ -1653,7 +1653,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT explode_outer(array(10, 20));
  10
  20
@@ -1665,7 +1665,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT find_in_set('ab','abc,b,ab,c,def');
  3
 ```
@@ -1676,7 +1676,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT flatten(array(array(1, 2), array(3, 4)));
  [1,2,3,4]
 ```
@@ -1689,7 +1689,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT inline(array(struct(1, 'a'), struct(2, 'b')));
  1  a
  2  b
@@ -1701,7 +1701,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT inline_outer(array(struct(1, 'a'), struct(2, 'b')));
  1  a
  2  b
@@ -1713,7 +1713,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT posexplode(array(10,20));
  0  10
  1  20
@@ -1725,7 +1725,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT posexplode_outer(array(10,20));
  0  10
  1  20
@@ -1737,7 +1737,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT reverse('Spark SQL');
  LQS krapS
 > SELECT reverse(array(2, 1, 4, 3));
@@ -1745,6 +1745,7 @@ Ejemplos:
 ```
 
 Desde: 1.5.0
+
 >[!NOTE]
 >
 >La lógica de aumento para matrices está disponible desde la versión 2.4.0.
@@ -1755,7 +1756,7 @@ Desde: 1.5.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT shuffle(array(1, 20, 3, 5));
  [3,1,5,20]
 > SELECT shuffle(array(1, 20, null, 3));
@@ -1763,6 +1764,7 @@ Ejemplos:
 ```
 
 Desde: 2.4.0
+
 >[!NOTE]
 >
 >no es determinística.
@@ -1773,7 +1775,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT slice(array(1, 2, 3, 4), 2, 2);
  [2,3]
 > SELECT slice(array(1, 2, 3, 4), -2, 2);
@@ -1788,7 +1790,7 @@ Desde: 2.4.0
 
 Ejemplos:
 
-```
+```sql
 > SELECT sort_array(array('b', 'd', null, 'c', 'a'), true);
  [null,"a","b","c","d"]
 ```
@@ -1799,7 +1801,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT zip_with(array(1, 2, 3), array('a', 'b', 'c'), (x, y) -> (y, x));
  [{"y":"a","x":1},{"y":"b","x":2},{"y":"c","x":3}]
 > SELECT zip_with(array(1, 2), array(3, 4), (x, y) -> x + y);
@@ -1830,7 +1832,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT cast('10' as int);
  10
 ```
@@ -1861,7 +1863,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT map(1.0, '2', 3.0, '4');
  {1.0:"2",3.0:"4"}
 ```
@@ -1876,7 +1878,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT str_to_map('a:1,b:2,c:3', ',', ':');
  map("a":"1","b":"2","c":"3")
 > SELECT str_to_map('a');
@@ -1903,7 +1905,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT ascii('222');
  50
 > SELECT ascii(2);
@@ -1916,7 +1918,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT base64('Spark SQL');
  U3BhcmsgU1FM
 ```
@@ -1927,7 +1929,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT bin(13);
  1101
 > SELECT bin(-13);
@@ -1942,7 +1944,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT bit_length('Spark SQL');
  72
 ```
@@ -1953,7 +1955,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT char(65);
  A
 ```
@@ -1964,7 +1966,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT char_length('Spark SQL ');
  10
 > SELECT CHAR_LENGTH('Spark SQL ');
@@ -1979,7 +1981,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT character_length('Spark SQL ');
  10
 > SELECT CHAR_LENGTH('Spark SQL ');
@@ -1994,7 +1996,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT chr(65);
  A
 ```
@@ -2008,7 +2010,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT degrees(3.141592653589793);
  180.0
 ```
@@ -2019,7 +2021,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT format_number(12332.123456, 4);
  12,332.1235
 > SELECT format_number(12332.123456, '##################.###');
@@ -2032,7 +2034,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT from_json('{"a":1, "b":0.8}', 'a INT, b DOUBLE');
  {"a":1, "b":0.8}
 > SELECT from_json('{"time":"26/08/2015"}', 'time Timestamp', map('timestampFormat', 'dd/MM/yyyy'));
@@ -2047,7 +2049,7 @@ Desde: 2.2.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT hash('Spark', array(123), 2);
  -1321691492
 ```
@@ -2058,7 +2060,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT hex(17);
  11
 > SELECT hex('Spark SQL');
@@ -2071,7 +2073,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT initcap('sPark sql');
  Spark Sql
 ```
@@ -2082,7 +2084,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT lcase('SparkSql');
  sparksql
 ```
@@ -2093,7 +2095,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT lower('SparkSql');
  sparksql
 ```
@@ -2104,7 +2106,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT lpad('hi', 5, '??');
  ???hi
 > SELECT lpad('hi', 1, '??');
@@ -2128,7 +2130,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT map_from_arrays(array(1.0, 3.0), array('2', '4'));
  {1.0:"2",3.0:"4"}
 ```
@@ -2141,7 +2143,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT map_from_entries(array(struct(1, 'a'), struct(2, 'b')));
  {1:"a",2:"b"}
 ```
@@ -2154,7 +2156,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT md5('Spark');
  8cde774d6f7333752ed72cacddb05126
 ```
@@ -2165,7 +2167,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT rpad('hi', 5, '??');
  hi???
 > SELECT rpad('hi', 1, '??');
@@ -2184,7 +2186,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT rtrim('    SparkSQL   ');
  SparkSQL
 > SELECT rtrim('LQSa', 'SSparkSQLS');
@@ -2197,7 +2199,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sha('Spark');
  85f5955f4b27a9a4c2aab6ffe5d7189fc298b92c
 ```
@@ -2208,7 +2210,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sha1('Spark');
  85f5955f4b27a9a4c2aab6ffe5d7189fc298b92c
 ```
@@ -2219,7 +2221,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT sha2('Spark', 256);
  529bc3b07127ecb7e53a4dcf1991d9152c24537d919178022b2c42657f79a26b
 ```
@@ -2230,7 +2232,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT soundex('Miller');
  M460
 ```
@@ -2241,7 +2243,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT stack(2, 1, 2, 3);
  1  2
  3  NULL
@@ -2253,7 +2255,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT substr('Spark SQL', 5);
  k SQL
 > SELECT substr('Spark SQL', -3);
@@ -2268,7 +2270,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT substring('Spark SQL', 5);
  k SQL
 > SELECT substring('Spark SQL', -3);
@@ -2283,7 +2285,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT to_json(named_struct('a', 1, 'b', 2));
  {"a":1,"b":2}
 > SELECT to_json(named_struct('time', to_timestamp('2015-08-26', 'yyyy-MM-dd')), map('timestampFormat', 'dd/MM/yyyy'));
@@ -2308,7 +2310,7 @@ Desde: 2.2.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT translate('AaBbCc', 'abc', '123');
  A1B2C3
 ```
@@ -2332,7 +2334,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT trim('    SparkSQL   ');
  SparkSQL
 > SELECT trim('SL', 'SSparkSQLS');
@@ -2351,7 +2353,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT ucase('SparkSql');
  SPARKSQL
 ```
@@ -2362,7 +2364,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT unbase64('U3BhcmsgU1FM');
  Spark SQL
 ```
@@ -2373,7 +2375,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT decode(unhex('537061726B2053514C'), 'UTF-8');
  Spark SQL
 ```
@@ -2384,7 +2386,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT upper('SparkSql');
  SPARKSQL
 ```
@@ -2395,7 +2397,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT uuid();
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
@@ -2412,7 +2414,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT coalesce(NULL, 1, NULL);
  1
 ```
@@ -2431,7 +2433,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT concat('Spark', 'SQL');
  SparkSQL
 > SELECT concat(array(1, 2, 3), array(4, 5), array(6));
@@ -2448,7 +2450,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT concat_ws(' ', 'Spark', 'SQL');
   Spark SQL
 ```
@@ -2467,7 +2469,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT crc32('Spark');
  1557323817
 ```
@@ -2478,7 +2480,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT decode(encode('abc', 'utf-8'), 'utf-8');
  abc
 ```
@@ -2489,7 +2491,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT elt(1, 'scala', 'java');
  scala
 ```
@@ -2500,7 +2502,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT encode('abc', 'utf-8');
  abc
 ```
@@ -2519,18 +2521,18 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT get_json_object('{"a":"b"}', '$.a');
  b
 ```
 
 #### agrupar
 
-<!-- was blank --->
+<!-- was blank -->
 
 #### group_id
 
-<!-- was blank --->
+<!-- was blank -->
 
 #### instr
 
@@ -2538,7 +2540,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT instr('SparkSQL', 'SQL');
  6
 ```
@@ -2549,7 +2551,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT json_tuple('{"a":1, "b":2}', 'a', 'b');
  1  2
 ```
@@ -2577,9 +2579,10 @@ Ejemplo:
 
 Ejemplo:
 
-> SELECT left(&#39;Spark SQL&#39;, 3);
-Spa
-
+```sql
+> SELECT left('Spark SQL', 3);
+ Spa
+```
 
 #### length
 
@@ -2587,7 +2590,7 @@ Spa
 
 Ejemplos:
 
-```
+```sql
 > SELECT length('Spark SQL ');
  10
 > SELECT CHAR_LENGTH('Spark SQL ');
@@ -2602,7 +2605,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT locate('bar', 'foobarbar');
  4
 > SELECT locate('bar', 'foobarbar', 5);
@@ -2617,7 +2620,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT map_concat(map(1, 'a', 2, 'b'), map(2, 'c', 3, 'd'));
  {1:"a",2:"c",3:"d"}
 ```
@@ -2630,7 +2633,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT map_keys(map(1, 'a', 2, 'b'));
  [1,2]
 ```
@@ -2641,7 +2644,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT map_values(map(1, 'a', 2, 'b'));
  ["a","b"]
 ```
@@ -2656,7 +2659,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT nullif(2, 2);
  NULL
 ```
@@ -2667,7 +2670,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT nvl(NULL, array('2'));
  ["2"]
 ```
@@ -2678,7 +2681,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT nvl2(NULL, 2, 1);
  1
 ```
@@ -2689,7 +2692,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT parse_url('http://spark.apache.org/path?query=1', 'HOST')
  spark.apache.org
 > SELECT parse_url('http://spark.apache.org/path?query=1', 'QUERY')
@@ -2704,7 +2707,7 @@ Ejemplos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT position('bar', 'foobarbar');
  4
 > SELECT position('bar', 'foobarbar', 5);
@@ -2723,7 +2726,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT regexp_extract('100-200', '(\\d+)-(\\d+)', 1);
  100
 ```
@@ -2734,7 +2737,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT regexp_replace('100-200', '(\\d+)', 'num');
  num-num
 ```
@@ -2745,7 +2748,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT repeat('123', 2);
  123123
 ```
@@ -2761,7 +2764,7 @@ Argumentos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT replace('ABCabc', 'abc', 'DEF');
  ABCDEF
 ```
@@ -2780,7 +2783,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT schema_of_json('[{"col":0}]');
  array<struct<col:int>>
 ```
@@ -2793,7 +2796,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT sentences('Hi there! Good morning.');
  [["Hi","there"],["Good","morning"]]
 ```
@@ -2813,7 +2816,7 @@ Argumentos:
 
 Ejemplos:
 
-```
+```sql
 > SELECT sequence(1, 5);
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
@@ -2830,7 +2833,7 @@ Desde: 2.4.0
 
 Ejemplo:
 
-```
+```sql
 > SELECT shiftleft(2, 1);
  4
 ```
@@ -2841,7 +2844,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT shiftright(4, 1);
  2
 ```
@@ -2852,7 +2855,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT shiftrightunsigned(4, 1);
  2
 ```
@@ -2863,7 +2866,7 @@ Ejemplo:
 
 Ejemplos:
 
-```
+```sql
 > SELECT size(array('b', 'd', 'c', 'a'));
  4
 > SELECT size(map('a', 1, 'b', 2));
@@ -2878,7 +2881,7 @@ Ejemplos:
 
 Ejemplo:
 
-```
+```sql
 > SELECT concat(space(2), '1');
    1
 ```
@@ -2889,7 +2892,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT split('oneAtwoBthreeC', '[ABC]');
  ["one","two","three",""]
 ```
@@ -2900,7 +2903,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT substring_index('www.apache.org', '.', 2);
  www.apache
 ```
@@ -2915,7 +2918,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath('<a><b>b1</b><b>b2</b><b>b3</b><c>c1</c><c>c2</c></a>','a/b/text()');
  ['b1','b2','b3']
 ```
@@ -2926,7 +2929,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_double('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3.0
 ```
@@ -2937,7 +2940,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_float('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3.0
 ```
@@ -2948,7 +2951,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_int('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3
 ```
@@ -2959,7 +2962,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_long('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3
 ```
@@ -2970,7 +2973,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_number('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3.0
 ```
@@ -2981,7 +2984,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_short('<a><b>1</b><b>2</b></a>', 'sum(a/b)');
  3
 ```
@@ -2992,7 +2995,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT xpath_string('<a><b>b</b><c>cc</c></a>','a/c');
  cc
 ```
@@ -3005,7 +3008,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```sql
 > SELECT current_database();
  default
 ```
@@ -3040,7 +3043,7 @@ Si hay dos argumentos para la función lambda, el segundo argumento significa el
 
 Ejemplo:
 
-```
+```sql
 > SELECT transform(array(1, 2, 3), x -> x + 1);
   [2,3,4]
 > SELECT transform(array(1, 2, 3), (x, i) -> x + i);
@@ -3056,7 +3059,7 @@ Compruebe si un predicado contiene uno o varios elementos de la matriz.
 
 Ejemplo:
 
-```
+```sql
 > SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
   true
 ```
@@ -3069,7 +3072,7 @@ Filtre la matriz de entrada utilizando el predicado determinado.
 
 Ejemplo:
 
-```
+```sql
 > SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
  [1,3]
 ```
@@ -3083,7 +3086,7 @@ Aplique un operador binario a un estado inicial y a todos los elementos de la ma
 
 Ejemplo:
 
-```
+```sql
 > SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
   6
 > SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
