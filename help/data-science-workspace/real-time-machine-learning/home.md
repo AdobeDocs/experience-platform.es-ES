@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre aprendizaje automático en tiempo real
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Información general sobre aprendizaje automático en tiempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
 El aprendizaje automático en tiempo real puede aumentar considerablemente la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferenciación en tiempo real y al aprendizaje continuo en el [!DNL Experience Edge].
@@ -39,7 +40,7 @@ Los datos se ingieren y transforman con el [!DNL Experience Data Model] (XDM) en
 
 ### Creación  
 
-Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o incorporándolo como un modelo ONNX serializado previamente capacitado en portátiles Jupyter de Adobe Experience Platform.
+Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o incorporándolo como un modelo ONNX serializado previamente capacitado en equipos portátiles Adobe Experience Platform Jupyter.
 
 ### Implementación
 
@@ -51,13 +52,14 @@ Utilice el punto final de la API de REST de predicción para generar perspectiva
 
 ### Entrega
 
-A continuación, los especialistas en marketing pueden definir segmentos y reglas que asignen puntuaciones de aprendizaje automático en tiempo real a experiencias mediante Adobe Target. Esto permite que visitantes del sitio web de su marca se muestren en tiempo real como una experiencia hiperpersonalizada de la misma página o de la página siguiente.
+Los especialistas en marketing pueden definir segmentos y reglas que asignen puntuaciones de aprendizaje automático en tiempo real a experiencias mediante Adobe Target. Esto permite que visitantes del sitio web de su marca se muestren en tiempo real como una experiencia hiperpersonalizada de la misma página o de la página siguiente.
 
 ## Funcionalidad actual
 
 El aprendizaje automático en tiempo real se encuentra actualmente en alfa. La funcionalidad que se describe a continuación está sujeta a cambios a medida que más funciones y nodos están disponibles.
 
 >[!NOTE]
+>
 > Limitaciones alfa:
 > - Actualmente, solo se admiten modelos basados en ONNX.
 > - Las funciones utilizadas en los nodos no se pueden serializar. Por ejemplo, una función lambda utilizada en un nodo Pandas.
