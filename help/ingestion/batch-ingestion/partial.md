@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -83,7 +83,7 @@ Para habilitar un lote para la ingestión parcial a través de la interfaz de us
 
 ### Crear una nueva conexión de origen {#new-source}
 
-Para crear una nueva conexión de origen, siga los pasos que se enumeran en la descripción general [de](../../sources/home.md)Fuentes. Una vez que llegue al paso de detalle **[!UICONTROL de]** flujo de datos, tome nota de los campos de diagnóstico **[!UICONTROL de ingestión]** parcial y **** error.
+Para crear una nueva conexión de origen, siga los pasos que se enumeran en la descripción general [de](../../sources/home.md)Fuentes. Una vez que llegue al paso de detalle **[!UICONTROL de]** Flujo de datos, tome nota de los campos de **[!UICONTROL ingesta]** parcial y diagnóstico de **[!UICONTROL errores]** .
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
