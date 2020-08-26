@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -81,7 +81,7 @@ El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior
 
 - **[!UICONTROL Eliminar]**: Elimina la instancia.
 - **[!UICONTROL Puntuaciones]** de acceso: Al hacer clic en las puntuaciones *de* Access, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
-- **[!UICONTROL Historial]** de ejecución de Vistas: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
+- **[!UICONTROL Historial]** de ejecución de vistas: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](../images/insights/more-actions.png)
 
@@ -91,7 +91,7 @@ Resumen de puntuación muestra el número total de perfiles puntuados y los cate
 
 >[!NOTE]
 >
->Si se trata de una puntuación de propensión a la conversión, las puntuaciones altas se muestran en verde y las bajas en rojo. Si predices una tendencia a la agitación, esto es volteado, las puntuaciones altas están en rojo y las bajas son verdes. El cubo medio permanece amarillo independientemente del tipo de propensión que elija.
+>Si se trata de una puntuación de propensión a la conversión, las puntuaciones altas se muestran en verde y las bajas en rojo. Si predices una tendencia a la agitación, esto es volteado, las puntuaciones altas están en rojo y las bajas son verdes. El bloque mediano permanece amarillo independientemente del tipo de propensión que elija.
 
 ![resumen de puntuación](../images/insights/scoring-summary.png)
 
@@ -112,6 +112,7 @@ Para cada bloque de puntuación, se genera una tarjeta que muestra los 10 factor
 Al hacer clic en el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques de baja, media y alta propensión se le redirige al generador de segmentos.
 
 >[!NOTE]
+>
 >El botón **[!UICONTROL Crear segmento]** solo está disponible si el Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el Perfil de clientes en tiempo real, visite la información general [sobre el Perfil de clientes en tiempo](../../../rtcdp/overview.md)real.
 
 ![Haga clic en Crear segmento](../images/insights/influential-factors-create-segment.png)
@@ -124,7 +125,7 @@ El generador de segmentos se utiliza para definir un segmento. Al seleccionar **
 
 ![Rellenar segmento](../images/insights/segment-saving.png)
 
-Para vista del nuevo segmento en la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
+Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
 
 ![Todos los segmentos](../images/insights/Segments-dashboard.png)
 
