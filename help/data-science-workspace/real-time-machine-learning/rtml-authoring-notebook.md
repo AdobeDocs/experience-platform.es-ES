@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del portátil de aprendizaje automático en tiempo real
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Guía del usuario de portátiles de aprendizaje automático en tiempo real (Alpha)
 
 >[!IMPORTANT]
+>
 >El aprendizaje automático en tiempo real todavía no está disponible para todos los usuarios. Esta función está en alfa y aún se está probando. Este documento está sujeto a cambios.
 
 La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real. Con el Adobe proporcionado para la plantilla de portátil ML **[!UICONTROL Python en tiempo]** real, esta guía cubre la formación de un modelo, la creación de un DSL, la publicación de DSL en Edge y la puntuación de la solicitud. A medida que avance en la implementación del modelo de aprendizaje automático en tiempo real, se espera modificar la plantilla para adaptarla a las necesidades del conjunto de datos.
@@ -34,6 +35,7 @@ Aparece el [!DNL JupyterLab] iniciador. Desplácese hacia abajo hasta Aprendizaj
 Inicio importando todos los paquetes necesarios para el modelo. Asegúrese de importar cualquier paquete que tenga pensado utilizar para la creación de nodos.
 
 >[!NOTE]
+>
 >Su lista de las importaciones puede diferir según el modelo que desee hacer. Esta lista cambiará a medida que se agreguen nuevos nodos con el paso del tiempo. Consulte la guía [de referencia de](./node-reference.md) nodos para obtener una lista completa de los nodos disponibles.
 
 ```python
@@ -80,11 +82,12 @@ Mediante una de las siguientes opciones, se va a escribir [!DNL Python] código 
 Inicio cargando los datos de la formación.
 
 >[!NOTE]
+>
 >En la plantilla ML **en tiempo** real, el conjunto de datos [CSV de seguro de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automóvil se toma de [!DNL Github].
 
 ![Carga de datos de capacitación](../images/rtml/load_training.png)
 
-Si desea utilizar un conjunto de datos desde dentro del Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` por el valor adecuado.
+Si desea utilizar un conjunto de datos desde Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` por el valor adecuado.
 
 ![conjunto de datos rtml](../images/rtml/rtml-dataset.png)
 
@@ -116,7 +119,8 @@ Con la plantilla ML *[!UICONTROL en tiempo]* real, debe analizar, preprocesar, e
 La celda Transformaciones *[!UICONTROL de]* datos de plantillas ML *en tiempo* real debe modificarse para que funcione con su propio conjunto de datos. Generalmente esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación de datos o la ingeniería de funciones.
 
 >[!NOTE]
->El siguiente ejemplo se ha resumido para fines de legibilidad mediante `[ ... ]`. vista y expanda la sección de transformaciones de datos de plantillas ML *en tiempo* real para la celda de código completa.
+>
+>El siguiente ejemplo se ha resumido para fines de legibilidad mediante `[ ... ]`. Vista y expanda la sección de transformaciones de datos de plantillas ML *en tiempo* real para la celda de código completa.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -199,7 +203,7 @@ Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de res
 
 A continuación, debe crear la canalización de formación. Este aspecto será similar al de cualquier otro archivo de canalización de formación, excepto que necesita convertir y generar un archivo ONNX.
 
-Mediante las transformaciones de datos definidas en la celda anterior, modifique la plantilla. El siguiente código resaltado se utiliza para generar un archivo ONNX en la canalización de funciones. vista de la plantilla ML *en tiempo* real para la celda de código de canalización completa.
+Mediante las transformaciones de datos definidas en la celda anterior, modifique la plantilla. El siguiente código resaltado se utiliza para generar un archivo ONNX en la canalización de funciones. Vista de la plantilla ML *en tiempo* real para la celda de código de canalización completa.
 
 ```python
 #for generating onnx
@@ -240,6 +244,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >Cambie el valor de la `model_path` cadena (`model.onnx`) para cambiar el nombre del modelo.
 
 ```python
@@ -247,6 +252,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >La siguiente celda no es editable ni eliminable y es necesaria para que funcione la aplicación de aprendizaje automático en tiempo real.
 
 ```python
@@ -275,13 +281,13 @@ Esta sección describe cómo crear un DSL. Va a crear los nodos que incluyen cua
 
 >[!IMPORTANT]
 >
->
->El uso del nodo ONNX es obligatorio. Sin el nodo ONNX, la aplicación no se realizará correctamente.
+>El uso del nodo ONNX es obligatorio. Sin el nodo ONNX, la aplicación no tendrá éxito.
 
 ### Creación de nodos
 
 >[!NOTE]
-> Es probable que tenga varios nodos según el tipo de datos que se esté utilizando. En el siguiente ejemplo se describe sólo un nodo en la plantilla ML *en tiempo* real. vista la sección Creación *de* nodos de plantillas ML *en tiempo* real para la celda de código completa.
+>
+> Es probable que tenga varios nodos según el tipo de datos que se esté utilizando. En el siguiente ejemplo se describe sólo un nodo en la plantilla ML *en tiempo* real. Vista la sección Creación *de* nodos de plantillas ML *en tiempo* real para la celda de código completa.
 
 El nodo Pandas siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de introducir los parámetros como una función de mapa. El ejemplo siguiente lo hace mediante `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Después de haber colocado el mapa, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación en su lugar o no. De forma predeterminada, `"inplace": False` crea una nueva columna. Se ha configurado la compatibilidad para proporcionar un nuevo nombre de columna para agregarlo en una versión posterior. La última línea `cols` puede ser un nombre de columna o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo `leasing` se especifica. Para obtener más información sobre los nodos disponibles y cómo utilizarlos, visite la guía de referencia de [nodos](./node-reference.md).
 
@@ -326,6 +332,7 @@ nodes = [json_df_node,
 A continuación, conecte los nodos con los bordes. Cada tupla es una [!DNL Edge] conexión.
 
 >[!TIP]
+>
 > Dado que los nodos dependen linealmente entre sí (cada nodo depende de la salida del nodo anterior), puede crear vínculos utilizando una simple comprensión de lista Python. Agregue sus propias conexiones si un nodo depende de varias entradas.
 
 ```python
@@ -346,11 +353,13 @@ Una vez completado, se devuelve un `edge` objeto que contiene cada uno de los no
 ## Publicar en Edge (Hub)
 
 >[!NOTE]
+>
 >El aprendizaje automático en tiempo real se implementa y administra temporalmente en Adobe Experience Platform Hub. Para obtener más información, consulte la sección de información general sobre la arquitectura [de aprendizaje automático en tiempo](./home.md#architecture)real.
 
 Ahora que ha creado un gráfico DSL, puede implementarlo en el [!DNL Edge].
 
 >[!IMPORTANT]
+>
 >No publicar con [!DNL Edge] frecuencia, esto puede sobrecargar los [!DNL Edge] nodos. No se recomienda publicar el mismo modelo varias veces.
 
 ```python
@@ -365,6 +374,7 @@ print(f'Service ID: {service_id}')
 Si no necesita actualizar su DSL, puede saltar a la [puntuación](#scoring).
 
 >[!NOTE]
+>
 >Las siguientes celdas solo son necesarias si desea actualizar un DSL existente que se haya publicado en Edge.
 
 Es probable que sus modelos sigan desarrollándose. En lugar de crear un servicio completamente nuevo, es posible actualizar un servicio existente con el nuevo modelo. Puede definir un nodo que desee actualizar, asignarle un nuevo ID y luego volver a cargar el nuevo DSL en el [!DNL Edge].
@@ -402,6 +412,7 @@ Se le devuelve el DSL actualizado.
 Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud de POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puedes hacerlo desde Postman. La plantilla ML *[!UICONTROL en tiempo]* real utiliza EdgeUtils para demostrar este proceso.
 
 >[!NOTE]
+>
 >Se requiere un pequeño tiempo de procesamiento antes de anotar inicios.
 
 ```python
@@ -410,7 +421,7 @@ import time
 time.sleep(20)
 ```
 
-Utilizando el mismo esquema que se utilizó en la formación, se generan datos de puntuación de muestra. Estos datos se utilizan para crear un marco de datos de puntuación y luego se convierten en un diccionario de puntuación. vista de la plantilla ML *en tiempo* real para la celda de código completa.
+Utilizando el mismo esquema que se utilizó en la formación, se generan datos de puntuación de muestra. Estos datos se utilizan para crear un marco de datos de puntuación y luego se convierten en un diccionario de puntuación. Vista de la plantilla ML *en tiempo* real para la celda de código completa.
 
 ![Datos de puntuación](../images/rtml/generate-score-data.png)
 
@@ -448,6 +459,7 @@ La respuesta devuelta es una matriz de los servicios implementados.
 ## Eliminar una aplicación o un ID de servicio implementados de la [!DNL Edge] (opcional)
 
 >[!CAUTION]
+>
 >Esta celda se utiliza para eliminar la aplicación Edge implementada. No utilice la siguiente celda a menos que necesite eliminar una aplicación implementada [!DNL Edge] .
 
 ```python
