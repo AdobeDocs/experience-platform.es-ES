@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una chispa Apache en el conector HDInsights de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 2%
@@ -15,15 +15,16 @@ ht-degree: 2%
 # Crear un [!DNL Apache Spark] conector de [!DNL Azure] HDInsights mediante la [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >El [!DNL Apache Spark] conector on [!DNL Azure HDInsights] está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Apache Spark] en [!DNL Azure HDInsights] (en adelante, &quot;[!DNL Spark]&quot;) a [!DNL Experience Platform].
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -105,7 +106,7 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.host` | El host del [!DNL Spark] servidor. |
+| `auth.params.host` | The host of the [!DNL Spark] server. |
 | `auth.params.username` | El nombre de usuario asociado a la [!DNL Spark] conexión. |
 | `auth.params.password` | La contraseña asociada a la [!DNL Spark] conexión. |
 | `connectionSpec.id` | ID de especificación de [!DNL Spark] conexión: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
