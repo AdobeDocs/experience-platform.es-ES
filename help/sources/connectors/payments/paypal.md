@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector PayPal
 topic: overview
 translation-type: tm+mt
-source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -15,13 +15,14 @@ ht-degree: 0%
 # Conector (Beta) [!DNL PayPal]
 
 >[!NOTE]
+>
 >El [!DNL PayPal] conector está en versión beta. Consulte la descripción general [de](../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
 [!DNL Experience Platform] proporciona soporte para la ingesta de datos desde una aplicación de pagos de terceros. La asistencia para proveedores de pagos incluye [!DNL PayPal].
 
-## lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
 Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
 
