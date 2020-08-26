@@ -28,7 +28,7 @@ Este documento proporciona pasos para suscribirse a eventos, registrar enlaces w
 Este documento requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Perfil del cliente en tiempo real de]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] representa los múltiples métodos mediante los cuales [!DNL Platform] ingesta datos de estas fuentes, así como la forma en que dichos datos se conservan dentro del [!DNL Data Lake] para su uso por parte de los servicios [!DNL Platform] intermedios.
 
 Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la siguiente [documentación](https://requestbin.com/blog/working-with-webhooks/) para obtener más información sobre los enlaces web.

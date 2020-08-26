@@ -20,7 +20,7 @@ ht-degree: 20%
    * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Proyecciones de Edge](api/edge-projections.md)
    * [Entidades ([!DNL Perfil] acceso)](api/entities.md)
-   * [Exportar trabajos ([!Perfil DNL] exportar)](api/export-jobs.md)
+   * [Exportar trabajos ([!Perfil] exportar)](api/export-jobs.md)
    * [Combinar directivas](api/merge-policies.md)
    * [Estado de muestra de previsualización ( previsualización [!DNL Perfil])](api/preview-sample-status.md)
    * [[!DNL Profile] trabajos del sistema (eliminar solicitudes)](api/profile-system-jobs.md)

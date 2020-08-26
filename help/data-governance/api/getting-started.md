@@ -21,9 +21,9 @@ La [!DNL Policy Service] API le permite crear y administrar varios recursos rela
 
 El uso de la guía para desarrolladores requiere un conocimiento práctico de los distintos [!DNL Experience Platform] servicios que se utilizan para trabajar con las capacidades de administración de datos. Antes de comenzar a trabajar con el [!DNL Policy Service API], consulte la documentación de los siguientes servicios:
 
-* [[!Administración de datos DNL]](../home.md): Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
+* [[!DNL Administración de datos]](../home.md): Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
 * [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Perfil del cliente en tiempo real de]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Leer llamadas de API de muestra

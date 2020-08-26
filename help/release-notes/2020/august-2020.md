@@ -19,9 +19,9 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!Espacio de trabajo de ciencias de datos DNL]](#dsw)
+- [[!DNL Espacio de trabajo de ciencias de datos]](#dsw)
 - [!DNL Destinations](#destinations)
-- [[!Fuentes DNL]](#sources)
+- [[!DNL Fuentes]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
