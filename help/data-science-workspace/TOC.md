@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
+user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -18,7 +19,7 @@ ht-degree: 3%
 * Equipos portátiles JupyterLab {#jupyterlab}
    * [Guía del usuario de JupyterLab](jupyterlab/overview.md)
    * [Analizar los datos con portátiles](jupyterlab/analyze-your-data.md)
-   * [Servicio de Consulta en el bloc de notas de Jupyter](jupyterlab/query-service.md)
+   * [Servicio de consulta en el bloc de notas de Jupyter](jupyterlab/query-service.md)
    * [Creación de una fórmula con blocs de notas Jupyter](jupyterlab/create-a-recipe.md)
    * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizaje automático de Sensei {#api}
@@ -42,11 +43,11 @@ ht-degree: 3%
 * Creación de modelos {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
-   * [Guía del SDK de Platform (Python)](authoring/platform-sdk.md)
+   * [Guía del SDK de la plataforma (Python)](authoring/platform-sdk.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
    * [Creación y publicación de un tutorial del modelo de aprendizaje automático](models-recipes/create-publish-model.md)
    * [Crear el esquema y conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
-   * [esquemas y conjuntos de datos de Previsualización](models-recipes/preview-schema-data.md)
+   * [Esquemas y conjuntos de datos de previsualización](models-recipes/preview-schema-data.md)
    * [Empaquetar archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
    * [Importación de una fórmula empaquetada (IU)](models-recipes/import-packaged-recipe-ui.md)
    * [Importación de una fórmula empaquetada (API)](models-recipes/import-packaged-recipe-api.md)
@@ -62,4 +63,4 @@ ht-degree: 3%
 * [Guías de migración de fórmulas y portátiles](recipe-notebook-migration.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
