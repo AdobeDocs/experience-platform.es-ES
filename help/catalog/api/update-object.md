@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Actualizar un objeto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Puede actualizar parte de un [!DNL Catalog] objeto incluyendo su ID en la ruta d
 
 >[!NOTE]
 >
->Las operaciones del PATCH en un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados.  Las modificaciones de los objetos interrelacionados deben realizarse directamente.
+>Las operaciones del PATCH en un objeto no pueden modificar sus campos ampliables, que representan objetos interrelacionados. Las modificaciones de los objetos interrelacionados deben realizarse directamente.
 
 ## Actualización mediante campos
 
