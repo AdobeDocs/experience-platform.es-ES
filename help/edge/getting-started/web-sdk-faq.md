@@ -4,15 +4,15 @@ seo-title: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platfo
 description: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
 seo-description: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
 
-# Preguntas más frecuentes sobre Adobe Experience Platform Web SDK
+# Preguntas frecuentes
 
 Esta pregunta frecuente incluye preguntas que se plantean a menudo sobre el SDK web de Adobe/
 
