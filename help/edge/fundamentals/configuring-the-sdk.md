@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 10%
@@ -107,9 +107,9 @@ Configure esta opción para configurar una llamada de retorno que se llame para 
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Objeto | No | `{"general": "in"}` |
+| Objeto | No | `"in"` |
 
-Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `{"general": "pending"}`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Compatibilidad con el consentimiento](supporting-consent.md) para obtener más información.
+Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `"pending"`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Compatibilidad con el consentimiento](supporting-consent.md) para obtener más información.
 
 ## Opciones de personalización
 
