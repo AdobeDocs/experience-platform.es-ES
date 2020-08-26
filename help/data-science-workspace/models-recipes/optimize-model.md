@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Optimizar un modelo
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Después de implementar y entrenar un modelo, el próximo paso que un científic
 
 Actualmente, Model Insights Framework admite los siguientes tiempos de ejecución:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 El código de muestra de las fórmulas se encuentra en el repositorio [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) , en `recipes`. En este tutorial se hará referencia a archivos específicos de este repositorio.
@@ -95,7 +95,7 @@ El evaluador personalizado se puede proporcionar ampliando la interfaz de `MLEva
 
 Una vez definida en la fórmula, el siguiente paso es habilitarla en las fórmulas. Esto se realiza en el archivo [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) de la `resources` carpeta del proyecto. Aquí el `evaluation.class` se establece en la `Evaluator` clase definida en `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
