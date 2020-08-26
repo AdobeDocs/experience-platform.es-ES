@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creación de una canalización de funciones
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Creación de una canalización de funciones
 
 >[!IMPORTANT]
+>
 > Las tuberías de funciones actualmente solo están disponibles mediante API.
 
 Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime (en adelante, &quot;Runtime&quot;).
@@ -24,7 +25,7 @@ Este documento describe las distintas clases que se encuentran en una canalizaci
 El siguiente flujo de trabajo se produce cuando se ejecuta una canalización de funciones:
 
 1. La fórmula carga el conjunto de datos en una canalización.
-2. La transformación de funciones se realiza en el conjunto de datos y se vuelve a escribir en el Adobe Experience Platform.
+2. La transformación de funciones se realiza en el conjunto de datos y se vuelve a escribir en Adobe Experience Platform.
 3. Los datos transformados se cargan para la formación.
 4. La canalización de funciones define las etapas con el regresor de aumento de degradado como modelo elegido.
 5. La canalización se utiliza para ajustar los datos de capacitación y se crea el modelo capacitado.
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Ahora que ha creado la canalización de funciones, debe crear una imagen de Docker para realizar una llamada a los extremos de la canalización de funciones en la [!DNL Sensei Machine Learning] API. Necesita una URL de imagen de Docker para realizar una llamada a los extremos de la canalización de funciones.
 
 >[!TIP]
+>
 >Si no tiene una URL de Docker, visite los archivos de origen del [paquete en un tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obtener un tutorial paso a paso sobre la creación de una URL de host de Docker.
 
 Opcionalmente, también puede utilizar la siguiente colección Postman para ayudarle a completar el flujo de trabajo de la API de canalización de funciones:
@@ -423,6 +425,7 @@ Una vez completado, realice una solicitud de GET para `/experiments/{EXPERIMENT_
 ### Especifique la tarea de puntuación de la ejecución del experimento {#scoring}
 
 >[!NOTE]
+>
 > Para completar este paso, debe tener al menos una ejecución de formación correcta asociada con el experimento.
 
 Después de una ejecución de formación correcta, debe [especificar la tarea](../api/experiments.md#experiment-training-scoring)de la ejecución de puntuación. Haga un POST a `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el `mode` atributo en &quot;score&quot;. Esto inicio tu carrera de Experimento de puntaje.
