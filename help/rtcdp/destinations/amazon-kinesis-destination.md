@@ -5,9 +5,9 @@ seo-title: Destino de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '437'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Para [!DNL Amazon Kinesis] destinos, introduzca la siguiente información en el 
 
 ### En el paso Autenticación {#authentication-step}
 
-* **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En [!DNL Amazon Web Services], genere una clave de acceso: par de claves de acceso secreto para otorgar a Adobe acceso CDP en tiempo real a su [!DNL Amazon Kinesis] cuenta. Obtenga más información en la documentación [de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En [!DNL Amazon Web Services], genere un `access key - secret access key` par para otorgar acceso CDP en tiempo real de Adobe a su [!DNL Amazon Kinesis] cuenta. Obtenga más información en la documentación [de los servicios Web de](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **región**: Indicar a qué [!DNL Amazon Web Services] región se transmitirán los datos.
 
 ![Campos de entrada en el paso de cuenta](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
