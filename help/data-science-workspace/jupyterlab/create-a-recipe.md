@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -25,12 +25,11 @@ Este tutorial irá a dos secciones principales. En primer lugar, creará un mode
 
 ## Introducción al entorno del [!DNL JupyterLab] portátil
 
-La creación de una fórmula desde cero se puede realizar dentro de [!DNL Data Science Workspace]. Para inicio, vaya al [Adobe Experience Platform](https://platform.adobe.com) y haga clic en la ficha **[!UICONTROL Equipos portátiles]** de la izquierda. Para crear un nuevo bloc de notas, seleccione la plantilla Generador de fórmulas en el [!DNL JupyterLab Launcher].
+La creación de una fórmula desde cero se puede realizar dentro de [!DNL Data Science Workspace]. Para realizar inicios, vaya a [Adobe Experience Platform](https://platform.adobe.com) y haga clic en la ficha **[!UICONTROL Equipos portátiles]** de la izquierda. Para crear un nuevo bloc de notas, seleccione la plantilla Generador de fórmulas en el [!DNL JupyterLab Launcher].
 
 El [!UICONTROL bloc de notas Generador] de fórmulas le permite ejecutar ejecuciones de puntuación y formación dentro del bloc de notas. Esto le ofrece la flexibilidad de realizar cambios en sus `train()` y `score()` métodos entre la ejecución de experimentos en los datos de capacitación y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula para utilizarla [!DNL Data Science Workspace] con la funcionalidad de fórmula integrada en el bloc de notas del Creador de fórmulas.
 
 >[!NOTE]
->
 >
 >El bloc de notas del Creador de fórmulas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo es compatible [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores.
 
 ### Archivos de configuración {#configuration-files}
@@ -96,7 +94,7 @@ Para buscar el conjunto de datos y los ID de esquema, vaya a la ficha Datos de l
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-La misma información se puede encontrar en [Adobe Experience Platform](https://platform.adobe.com/) en las fichas **[Esquema](https://platform.adobe.com/schema)**y**[Conjuntos](https://platform.adobe.com/dataset/overview)** de datos.
+La misma información se puede encontrar en [Adobe Experience Platform](https://platform.adobe.com/) en las fichas **[Esquema](https://platform.adobe.com/schema)** y **[Conjuntos](https://platform.adobe.com/dataset/overview)** de datos.
 
 De forma predeterminada, se establecen los siguientes parámetros de configuración al acceder a los datos:
 
@@ -122,12 +120,11 @@ En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/st
 
 >[!NOTE]
 >
->
 >En el bloc de notas del Creador de fórmulas, los datos se cargan mediante el cargador de `platform_sdk` datos.
 
 ### [!DNL Platform] SDK {#platform-sdk}
 
-Para ver un tutorial detallado sobre el uso del cargador de `platform_sdk` datos, visite la guía del SDK de [Platform](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación de compilación, la lectura básica de datos y la escritura básica de datos.
+Para ver un tutorial detallado sobre el uso del cargador de `platform_sdk` datos, visite la guía del SDK de la [plataforma](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación de compilación, la lectura básica de datos y la escritura básica de datos.
 
 ### Fuentes externas {#external-sources}
 
@@ -153,8 +150,7 @@ Ahora los datos están en el objeto dataframe y se pueden analizar y manipular e
 
 >[!CAUTION]
 >
->
-> `data_access_sdk_python` ya no se recomienda, consulte [Convertir código de acceso a datos en SDK](../authoring/platform-sdk.md) de Platform para obtener una guía sobre el uso del cargador de `platform_sdk` datos.
+> `data_access_sdk_python` ya no se recomienda, consulte [Convertir código de acceso a datos en SDK](../authoring/platform-sdk.md) de plataforma para obtener una guía sobre el uso del cargador de `platform_sdk` datos.
 
 Los usuarios pueden cargar datos mediante el SDK de acceso a datos. La biblioteca se puede importar en la parte superior de la página incluyendo la línea:
 
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >Como se indica en la sección [Archivo de](#configuration-files)configuración, al acceder a los datos desde [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,11 +299,10 @@ El `pipeline.py` archivo incluye lógica para la formación y la puntuación.
 El propósito de la formación es crear un modelo con las funciones y etiquetas de su conjunto de datos de formación.
 
 >[!NOTE]
->
 > 
 >_Las funciones_ hacen referencia a la variable de entrada utilizada por el modelo de aprendizaje automático para predecir las _etiquetas_.
 
-La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se encuentran en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
+La `train()` función debe incluir el modelo de capacitación y devolver el modelo capacitado. Algunos ejemplos de distintos modelos se pueden encontrar en la documentación [de la guía de usuario](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
 Después de elegir el modelo de formación, ajustará el conjunto de datos de formación x e y al modelo y la función devolverá el modelo entrenado. Un ejemplo que lo muestra es el siguiente:
 
@@ -471,7 +465,7 @@ Después de pulsar el botón, se le pedirá que introduzca un nombre de fórmula
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Una vez que presione **[!UICONTROL Aceptar]** podrá navegar a la nueva fórmula del [Adobe Experience Platform](https://platform.adobe.com/). Puede hacer clic en el botón Fórmulas **[!UICONTROL de]** Vista para llevarlo a la ficha **[!UICONTROL Fórmulas]** en Modelos **[!UICONTROL ML]**
+Una vez que presione **[!UICONTROL Aceptar]** podrá navegar a la nueva fórmula en [Adobe Experience Platform](https://platform.adobe.com/). Puede hacer clic en el botón Fórmulas **[!UICONTROL de]** Vista para llevarlo a la ficha **[!UICONTROL Fórmulas]** en Modelos **[!UICONTROL ML]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
