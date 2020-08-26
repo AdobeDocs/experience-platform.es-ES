@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Entidades: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -20,11 +20,11 @@ Adobe Experience Platform le permite acceder a [!DNL Real-time Customer Profile]
 
 El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
-## Acceso a los datos de perfil por identidad
+## Acceso a datos de perfil por identidad
 
 Para acceder a una [!DNL Profile] entidad, realice una solicitud de GET al `/access/entities` extremo y proporcione la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
 
-Los parámetros de Consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
+Los parámetros de consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
 **Formato API**
 
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Si un gráfico relacionado vincula más de 50 identidades, este servicio devolverá el estado HTTP 422 y el mensaje &quot;Demasiadas identidades relacionadas&quot;. Si recibe este error, considere la posibilidad de agregar más parámetros de consulta para limitar la búsqueda.
 
 ## Acceso a los datos de perfil por lista de identidades
@@ -185,7 +186,7 @@ curl -X POST \
 | `identities` | ***(Requerido)*** Matriz que contiene una lista de identidades para las entidades a las que desea acceder. |
 | `identities.entityId` | ID de una entidad a la que desee acceder. |
 | `identities.entityIdNS.code` | Área de nombres de un identificador de entidad a la que desea acceder. |
-| `timeFilter.startTime` | Tiempo de Inicio del filtro de intervalo de tiempo, incluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el comienzo del tiempo disponible. |
+| `timeFilter.startTime` | Tiempo de inicio del filtro de intervalo de tiempo, incluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el comienzo del tiempo disponible. |
 | `timeFilter.endTime` | Filtro de intervalo de tiempo de finalización, excluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el final del tiempo disponible. |
 | `limit` | Número de registros que devolver. Solo se aplica al número de eventos de experiencia devueltos. Predeterminado: 1000. |
 | `orderby` | Orden de los eventos de experiencia recuperados por marca de tiempo, escrito `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
@@ -334,7 +335,7 @@ curl -X POST \
 
 Puede acceder a los eventos de series temporales según la identidad de la entidad de perfil asociada realizando una solicitud de GET al `/access/entities` extremo. Esta identidad consiste en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
 
-Los parámetros de Consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
+Los parámetros de consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección de parámetros [de](#query-parameters) consulta del apéndice se proporciona una lista completa de los parámetros válidos.
 
 **Formato API**
 
@@ -360,6 +361,7 @@ curl -X GET \
 Una respuesta correcta devuelve una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de la solicitud.
 
 >[!NOTE]
+>
 >En la solicitud se especificó un límite de uno (`limit=1`), por lo que `count` en la respuesta siguiente se indica 1 y sólo se devuelve una entidad.
 
 ```json
@@ -414,6 +416,7 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la `_page.next` propiedad contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al `/access/entities` extremo; sin embargo, debe asegurarse de reemplazar `/entities` por el valor del URI proporcionado.
 
 >[!NOTE]
+>
 >Asegúrese de que no se repita accidentalmente `/entities/` en la ruta de solicitud. Sólo debería aparecer una vez como, `/access/entities?start=...`
 
 **Formato API**
@@ -890,7 +893,7 @@ Al seguir esta guía, se ha accedido correctamente a los campos [!DNL Real-time 
 
 La siguiente sección proporciona información adicional sobre el acceso a [!DNL Profile] los datos mediante la API.
 
-### Parámetros de Consulta {#query-parameters}
+### Parámetros de consulta {#query-parameters}
 
 Los siguientes parámetros se utilizan en la ruta de las solicitudes de GET al `/access/entities` extremo. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros requeridos están etiquetados, mientras que el resto son opcionales.
 
