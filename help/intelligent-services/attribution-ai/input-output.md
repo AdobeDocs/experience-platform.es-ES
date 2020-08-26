@@ -5,7 +5,7 @@ title: Entrada y salida de Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -37,7 +37,7 @@ No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obl
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
-| Comercio | Conversión |
+| Comercio | Conversión  |
 
 Generalmente, la atribución se ejecuta en columnas de conversión como pedido, compras y cierres de compra en &quot;comercio&quot;. Las columnas &quot;canal&quot; y &quot;marketing&quot; son muy recomendadas para definir puntos de contacto para obtener buenas perspectivas. Sin embargo, puede incluir cualquier otra columna adicional junto con las columnas anteriores para configurarla como una definición de conversión o punto de contacto.
 
@@ -69,6 +69,7 @@ De forma predeterminada, Attribution AI define la ventana de formación como los
 Longitud mínima de los datos requerida = ventana de capacitación + ventana retrospectiva
 
 >[!TIP]
+>
 > La longitud mínima de datos requerida para una aplicación con configuraciones predeterminadas es: 2 trimestres (180 días) + 56 días = 236 días.
 
 Ejemplo :
@@ -126,7 +127,7 @@ La siguiente tabla describe los campos de esquema en la salida del ejemplo de pu
 | commerce_order_purchaseCity (String) | True | Columna adicional del conjunto de datos de puntuación. <br> **Ejemplo:** city: San José |
 | customerProfile (objeto) | False | Detalles de identidad del usuario utilizado para crear el modelo. |
 | identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
-| id (Cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
+| id (Cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 1734876272540865634468320891369597404 |
 | área de nombres (Cadena) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
 | touchpointsDetail (Matriz de objetos) | True | Lista de detalles de puntos de contacto que llevan a la conversión ordenada por incidencia de punto de contacto o marca de hora. |
 | touchpointName (String) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
@@ -201,7 +202,7 @@ Las puntuaciones agregadas se pueden descargar en formato CSV desde la interfaz 
 | canal (Cadena) | ENUM | False | La `channel._type` propiedad que se utiliza para proporcionar una clasificación aproximada de canales con propiedades similares en [!DNL Consumer Experience Event] XDM. <br> **Ejemplo**: BUSCAR |
 | action (String) | ENUM | False | La `mediaAction` propiedad se utiliza para proporcionar un tipo de acción de medios de evento de experiencias. <br> **Ejemplo**: HAGA CLIC EN |
 | campaña_group (String) | Definido por el usuario | True | Nombre del grupo de campañas donde varias campañas se agrupan como &#39;50%_DISCOUNT&#39;. <br> **Ejemplo**: COMERCIAL |
-| campaña_name (Cadena) | Definido por el usuario | True | Nombre de la campaña utilizada para identificar la campaña de marketing como &#39;50%_DISCOUNT_USA&#39; o &#39;50%_DISCOUNT_ASIA&#39;. <br> **Ejemplo**: Venta de Acción de Gracias |
+| campaña_name (String) | Definido por el usuario | True | Nombre de la campaña utilizada para identificar la campaña de marketing como &#39;50%_DISCOUNT_USA&#39; o &#39;50%_DISCOUNT_ASIA&#39;. <br> **Ejemplo**: Venta de Acción de Gracias |
 
 **Referencia de puntuación sin procesar (agregado)**
 
