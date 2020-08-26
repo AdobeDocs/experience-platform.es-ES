@@ -5,7 +5,7 @@ title: Guía del usuario de JupyterLab
 topic: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 11%
@@ -172,7 +172,7 @@ Algunas plantillas de bloc de notas están limitadas a ciertos núcleos. La disp
         <th><strong>Inicio</strong></th>
         <th><strong>Ventas minoristas</strong></th>
         <th><strong>Generador de fórmulas</strong></th>
-        <th><strong>[!DNL Servicio de Consulta]</strong></th>
+        <th><strong>[!Servicio de Consulta DNL]</strong></th>
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregación</strong></th>
@@ -237,6 +237,7 @@ Para abrir un nuevo *iniciador*, haga clic en **Archivo > Nuevo iniciador**. Tam
 En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior derecha para abrir la configuración *del servidor* portátil. Puede activar la GPU y asignar la cantidad de memoria que necesita con el control deslizante. La cantidad de memoria que puede asignar depende de cuánto haya proporcionado su organización. Seleccione **[!UICONTROL Actualizar configuraciones]** para guardar.
 
 >[!NOTE]
+>
 >Solo se aprovisiona una GPU por organización para equipos portátiles. Si la GPU está en uso, debe esperar a que el usuario que la haya reservado en ese momento la publique. Esto se puede hacer cerrando la sesión o dejando la GPU en estado inactivo durante cuatro o más horas.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`.
 
 ### Uso de la magia de %dataset en los blocs de notas PySpark 3 ([!DNL Spark] 2.4) {#magic}
@@ -603,7 +605,6 @@ timedf.show()
 ```
 
 >[!TIP]
->
 >
 >En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`. Esto elimina la necesidad de definir variables si sabe que sólo se van a usar una sola vez. El siguiente ejemplo toma `val userToken` del ejemplo anterior y lo declara en línea dentro de `option` como alternativa:
 > 
