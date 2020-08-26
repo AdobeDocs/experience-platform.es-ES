@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: consultas de muestra
+title: Consultas de muestra
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%
@@ -12,16 +12,17 @@ ht-degree: 2%
 ---
 
 
-# consultas de muestra para datos de Adobe Target
+# Consultas de muestra para datos de Adobe Target
 
-Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren [!DNL Experience Platform] como conjuntos de datos. Existen muchos casos de uso para [!DNL Query Service] estos datos y las siguientes consultas de muestra deberían funcionar con los conjuntos de datos de Adobe Target.
+Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren [!DNL Experience Platform] como conjuntos de datos. Existen muchos casos de uso para [!DNL Query Service] estos datos y las siguientes consultas de muestra deberían funcionar con sus conjuntos de datos de Adobe Target.
 
 >[!NOTE]
+>
 >En los siguientes ejemplos, deberá editar SQL para completar los parámetros esperados para sus consultas en función del conjunto de datos, las variables o el intervalo de tiempo que desee evaluar. Proporcione parámetros donde quiera que vea `{ }` en SQL.
 
 ## Nombre de conjunto de datos estándar para la fuente de datos de Destinatario en [!DNL Platform]:
 
-Eventos de experiencias de Adobe Target (nombre descriptivo) <br>`adobe_target_experience_events` (nombre que se utilizará en la consulta)
+eventos de experiencias de Adobe Target (nombre descriptivo) <br>`adobe_target_experience_events` (nombre que se debe utilizar en la consulta)
 
 ## Asignación parcial de campo XDM de alto nivel
 
@@ -33,7 +34,7 @@ El uso de `[ ]` denota una matriz
 | ID de actividad | `_experience.target.activities.activityID` |  |
 | ID de la experiencia | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | ID del segmento | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
-| Ámbito de Evento | `_experience.target.activities[].activityEvents[].eventScope` | Rastrea nuevos Visitantes y visitas |
+| Ámbito de evento | `_experience.target.activities[].activityEvents[].eventScope` | Rastrea nuevos Visitantes y visitas |
 | ID del paso | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | ID de paso personalizado para Campaña |
 | Precio total | `commerce.order.priceTotal` |  |
 
@@ -171,7 +172,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## visitantes de retorno, visitas, impresiones para ID de experiencia, ID de segmento y EventScope para un día determinado
+## Visitantes de retorno, visitas, impresiones para ID de experiencia, ID de segmento y EventScope para un día determinado
 
 ```sql
 SELECT
