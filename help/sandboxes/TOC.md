@@ -1,9 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Cajas de pruebas en la ayuda de Adobe Experience Platform
+user-guide-title: Entornos aislados en la Ayuda de Adobe Experience Platform
+user-guide-description: Adobe Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications. Using sandboxes, you can run multiple digital experience applications in parallel and cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 5%
@@ -19,7 +20,7 @@ ht-degree: 5%
    * [Guía del usuario del Simulador para pruebas](ui/user-guide.md)
 * API de Simulador para pruebas {#api}
    * [Primeros pasos](api/getting-started.md)
-   * [Tipos de entorno limitado compatibles con la Lista](api/list-sandbox-types.md)
+   * [Tipos de entorno limitado compatibles con la lista](api/list-sandbox-types.md)
    * [Lista de todos los entornos limitados](api/list-all-sandboxes.md)
    * [Lista de entornos limitados activos para el usuario actual](api/list-active-sandboxes.md)
    * [Buscar un simulador para pruebas](api/look-up-sandbox.md)
@@ -29,4 +30,4 @@ ht-degree: 5%
    * [Eliminar un entorno limitado](api/delete-sandbox.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
-* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
