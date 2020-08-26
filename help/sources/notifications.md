@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -28,14 +28,14 @@ Este documento proporciona pasos para suscribirse a eventos, registrar enlaces w
 Este documento requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Perfil del cliente en tiempo real de]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] representa los múltiples métodos mediante los cuales [!DNL Platform] ingesta datos de estas fuentes, así como la forma en que dichos datos se conservan dentro del [!DNL Data Lake] para su uso por parte de los servicios [!DNL Platform] intermedios.
 
 Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la siguiente [documentación](https://requestbin.com/blog/working-with-webhooks/) para obtener más información sobre los enlaces web.
 
 ## Registre su webgancho
 
-Para recibir notificaciones sobre el estado de la ejecución de flujo, debe registrar un webgancho especificando una URL de webgancho única como parte de los detalles de registro de evento. Para conectar un enlace web a su [!DNL I/O Events] suscripción, visite el servicio [de](https://webhook.site/) webgancho y copie la URL única proporcionada.
+Para recibir notificaciones sobre el estado de la ejecución del flujo, debe registrar un webgancho especificando una URL de webgancho única como parte de los detalles del registro de evento. Para conectar un enlace web a su [!DNL I/O Events] suscripción, visite el servicio [de](https://webhook.site/) webgancho y copie la URL única proporcionada.
 
 ![webock](./images/notifications/webhook-url.png)
 
@@ -44,6 +44,7 @@ Para recibir notificaciones sobre el estado de la ejecución de flujo, debe regi
 Una vez que haya adquirido una dirección URL de enlace web única, vaya a los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html) Adobe y siga los pasos descritos en el documento de notificaciones [de ingesta de](../ingestion/quality/subscribe-events.md) datos para suscribirse a eventos de inicio.
 
 >[!IMPORTANT]
+>
 >Durante el proceso de suscripción, asegúrese de seleccionar [!DNL Platform] las notificaciones como proveedor de evento y seleccionar las siguientes suscripciones de evento:
 >
 >* **[!UICONTROL Ejecución de flujo de origen de Experience Platform correcta]**
@@ -60,6 +61,7 @@ Con su webgancho conectado y la suscripción de evento completa, puede inicio re
 Una notificación devuelve información como el número de trabajos de inserción ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con la ejecución de flujo en formato JSON. La carga útil de respuesta puede clasificarse como `sources_flow_run_success` o `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >Si la ingestión parcial está habilitada durante el proceso de creación de flujo, un flujo que contenga tanto las ingestaciones correctas como las fallidas se marcará como `sources_flow_run_success` solo si el número de errores está por debajo del porcentaje de umbral de error establecido durante el proceso de creación de flujo. Si una ejecución de flujo correcta contiene errores, estos se incluirán como parte de la carga útil de retorno.
 
 ### Correcto
@@ -322,6 +324,7 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 | `fileInfo` | Dirección URL que proporciona información general sobre los archivos que se ingirieron de forma satisfactoria o no. |
 
 >[!NOTE]
+>
 >Consulte el [apéndice](#errors) para obtener más información sobre los mensajes de error.
 
 ## Pasos siguientes
