@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Proyecciones avanzadas: API de Perfil de clientes en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -14,13 +14,14 @@ ht-degree: 2%
 
 # Definiciones de destinos y configuraciones de proyección de Edge
 
-Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la [!DNL Real-time Customer Profile] API para trabajar con proyecciones de Edge, incluidos destinos y configuraciones.
+Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizadas en varios canales en tiempo real, es necesario disponer de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como bordes. Un edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan bordes para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Esta guía proporciona instrucciones detalladas para utilizar la [!DNL Real-time Customer Profile] API para trabajar con proyecciones de Edge, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
 El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 >[!NOTE]
+>
 >Las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type` encabezado. En este documento `Content-Type` se utiliza más de uno. Preste especial atención a los encabezados de las llamadas de ejemplo para asegurarse de que utiliza lo correcto `Content-Type` para cada solicitud.
 
 ## Destinos de proyección
@@ -53,6 +54,7 @@ curl -X GET \
 La respuesta incluye una `projectionDestinations` matriz con los detalles de cada destino mostrados como un objeto individual dentro de la matriz. Si no se ha configurado ninguna proyección, la `projectionDestinations` matriz devuelve vacío.
 
 >[!NOTE]
+>
 >Esta respuesta se abrevió para el espacio y muestra solo dos destinos.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 La siguiente solicitud crea un nuevo destino Edge.
 
 >[!NOTE]
+>
 >La solicitud del POST para crear un destino requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
@@ -227,11 +230,12 @@ El objeto response muestra los detalles del destino de la proyección. El `id` a
 Un destino existente se puede actualizar realizando una solicitud de PUT al extremo e incluyendo el ID del destino que se va a actualizar en la ruta de la solicitud. `/config/destinations` Esta operación consiste esencialmente en _reescribir_ el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
 
 >[!CAUTION]
+>
 >La respuesta de la API a la solicitud de actualización es inmediata, pero los cambios en las proyecciones se aplican asincrónicamente. En otras palabras, existe una diferencia horaria entre el momento en que se realiza la actualización a la definición del destino y el momento en que se aplica.
 
 **Formato API**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 La siguiente solicitud actualiza el destino existente para incluir una segunda ubicación (`dataCenters`).
 
 >[!IMPORTANT]
+>
 >La solicitud del PUT requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
@@ -292,14 +297,15 @@ La respuesta incluye los detalles actualizados del destino, incluido su ID y el 
 
 ### Eliminar un destino
 
-Si su organización ya no requiere un destino de proyección, puede eliminarlo realizando una solicitud de  DELETE al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
+Si su organización ya no necesita un destino de proyección, puede eliminarlo realizando una solicitud de DELETE al extremo e incluyendo el ID del destino que desea eliminar en la ruta de solicitud. `/config/destinations`
 
 >[!CAUTION]
+>
 >La respuesta de la API a la solicitud de eliminación es inmediata, pero los cambios reales en los datos de los bordes se producen asincrónicamente. En otras palabras, los datos de perfil se eliminarán de todos los bordes (el `dataCenters` especificado en el destino de la proyección), pero el proceso tardará un tiempo en completarse.
 
 **Formato API**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | Nombre de la configuración de proyección a la que desea acceder. |
 
 >[!NOTE]
+>
 >`schemaName` es necesario cuando se utiliza el `name` parámetro, ya que el nombre de configuración de la proyección solo es único en el contexto de una clase de esquema.
 
 **Solicitud**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Solicitud**
 
 >[!NOTE]
+>
 >La solicitud del POST para crear una configuración requiere un `Content-Type` encabezado específico, como se muestra a continuación. El uso de un encabezado incorrecto `Content-Type` provoca un error de estado HTTP 415 (Tipo de medio no admitido).
 
 ```shell
@@ -506,6 +514,7 @@ Un selector es una lista separada por comas de los nombres de campo XDM. En una 
    * El ejemplo anterior es equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >Tanto la notación de puntos como la notación entre paréntesis se admiten para los subcampos de referencia. Sin embargo, se recomienda utilizar la notación con puntos porque es más concisa y proporciona una mejor ilustración de la jerarquía de campos.
 
 * Cada campo de un selector se especifica en relación con la raíz de la respuesta.
@@ -610,6 +619,7 @@ Devuelve sólo el campo de ciudad de todos los elementos de la matriz de direcci
 ```
 
 >[!NOTE]
+>
 >Siempre que se devuelve un campo anidado, la proyección incluye los objetos principales que lo rodean. Los campos principales no incluyen ningún otro campo secundario a menos que también estén seleccionados explícitamente.
 
 **direcciones(tipo,ciudad)**
