@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de Data Explorer de Azure mediante la API de servicio de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 1%
@@ -15,15 +15,16 @@ ht-degree: 1%
 # Creación de un [!DNL Azure Data Explorer] conector mediante la [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >El [!DNL Azure Data Explorer] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos a los que conectarse [!DNL Azure Data Explorer] (en adelante, &quot;Data Explorer&quot;) a [!DNL Experience Platform].
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -36,8 +37,8 @@ Para [!DNL Flow Service] conectarse con [!DNL Data Explorer], debe proporcionar 
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `endpoint` | Extremo del [!DNL Data Explorer] servidor. |
-| `database` | Nombre de la [!DNL Data Explorer] base de datos. |
+| `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `database` | The name of the [!DNL Data Explorer] database. |
 | `tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
@@ -109,8 +110,8 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.endpoint` | Extremo del [!DNL Data Explorer] servidor. |
-| `auth.params.database` | Nombre de la [!DNL Data Explorer] base de datos. |
+| `auth.params.endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `auth.params.database` | The name of the [!DNL Data Explorer] database. |
 | `auth.params.tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `auth.params.servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `auth.params.servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
