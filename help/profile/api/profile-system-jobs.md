@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Trabajos del sistema de perfil: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 Adobe Experience Platform le permite ingerir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Platform] se almacenan tanto en el almacén [!DNL Data Lake] como en el [!DNL Real-time Customer Profile] almacén de datos. Ocasionalmente puede ser necesario eliminar un conjunto de datos o lote del almacén de Perfiles para eliminar datos que ya no son necesarios o que se agregaron por error. Esto requiere usar la [!DNL Real-time Customer Profile] API para crear un trabajo [!DNL Profile] del sistema, también conocido como &quot;[!DNL delete request]&quot;, que también se puede modificar, supervisar o eliminar si es necesario.
 
 >[!NOTE]
+>
 >Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], consulte la información general [del servicio de](../../catalog/home.md) catálogos para obtener instrucciones.
 
 ## Primeros pasos
@@ -106,6 +107,7 @@ El inicio de una nueva solicitud de eliminación se realiza mediante una solicit
 Para eliminar un conjunto de datos, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud del POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
 
 >[!CAUTION]
+>
 > Al intentar eliminar un conjunto de datos [!DNL Profile]habilitado mediante la [!DNL Experience Platform] interfaz de usuario, el conjunto de datos se desactiva para la ingestión, pero no se elimina hasta que se crea una solicitud de eliminación mediante la API. Para obtener más información, consulte el [apéndice](#appendix) de este documento.
 
 **Formato API**
@@ -159,6 +161,7 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 Para eliminar un lote, el ID del lote debe incluirse en el cuerpo de la solicitud del POST. Tenga en cuenta que no puede eliminar lotes para conjuntos de datos en función de esquemas de registros. Solo se pueden eliminar los lotes de conjuntos de datos basados en esquemas de series temporales.
 
 >[!NOTE]
+>
 > El motivo por el que no se pueden eliminar lotes para conjuntos de datos basados en esquemas de registros es porque los lotes de conjuntos de datos de tipo de registro sobrescriben los registros anteriores y, por lo tanto, no se pueden &quot;deshacer&quot; ni eliminar. La única manera de eliminar el impacto de los lotes erróneos para conjuntos de datos basados en esquemas de registros es volver a ingestar el lote con los datos correctos para sobrescribir los registros incorrectos.
 
 Para obtener más información sobre el comportamiento de registros y series temporales, consulte la [sección sobre comportamientos](../../xdm/home.md#data-behaviors) de datos XDM en la [!DNL XDM System] información general.
