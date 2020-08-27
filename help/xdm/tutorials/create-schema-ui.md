@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;schema;Schema;create schema;en
 solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorials
-description: En este tutorial se explican los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
+description: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 0%
 
 ---
@@ -27,15 +27,15 @@ Si prefiere componer un esquema con la [!DNL Schema Registry] API en su lugar, c
 
 Este tutorial requiere un conocimiento práctico de los diversos aspectos de Adobe Experience Platform relacionados con la creación de esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
 
-* [!DNL Experience Data Model (XDM)](../home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!Modelo de datos de experiencia DNL (XDM)]](../home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los esquemas XDM y sus componentes, incluidas clases, mezclas, tipos de datos y campos.
-* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Examinar esquemas existentes en el espacio de trabajo [!UICONTROL Esquemas] {#browse}
 
 El espacio de trabajo [!UICONTROL Esquemas] de la [!DNL Platform] interfaz de usuario proporciona una visualización de la [!DNL Schema Library], lo que le permite administrar vistas de los esquemas disponibles para su organización. El espacio de trabajo también incluye el [!DNL Schema Editor], el lienzo en el que puede componer un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo de **[!UICONTROL Esquemas]** . La ficha **[!UICONTROL Examinar]** muestra una lista de esquemas (una representación del [!DNL Schema Library]) que se pueden vista y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
+Después de iniciar sesión [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo de **[!UICONTROL Esquemas]** . La ficha **[!UICONTROL Examinar]** muestra una lista de esquemas (una representación del [!DNL Schema Library]) que se pueden vista y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
 
 Seleccione el icono de filtro situado junto a la barra de búsqueda para utilizar las capacidades de filtrado de todos los recursos del Registro, incluidos los tipos de datos, las clases y las mezclas. También puede filtrar en función de si los recursos son propiedad de Adobe o de su organización, y si se han habilitado para su uso en [!DNL Real-time Customer Profile].
 
@@ -245,11 +245,11 @@ Ahora todos los datos ingestados en el campo &quot;[!DNL loyaltyId]&quot; se uti
 >
 >Una vez que un campo de esquema se haya establecido como identidad principal, recibirá un mensaje de error si posteriormente intenta establecer otro campo del esquema como principal. Cada esquema puede contener sólo un campo de identidad principal.
 
-Para obtener más información sobre cómo trabajar con identidades en [!DNL Experience Platform], consulte la [!DNL Identity Service](../../identity-service/home.md) documentación.
+Para obtener más información sobre cómo trabajar con identidades en [!DNL Experience Platform], consulte la documentación de [[!DNL Identity Service]](../../identity-service/home.md) .
 
 ## Habilitar el esquema para utilizarlo en [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) aprovecha los datos de identidad en [!DNL Experience Platform] para proporcionar una vista holística de cada cliente individual. El servicio crea sólidos perfiles de 360° de atributos del cliente, así como cuentas con marca de hora de cada interacción que los clientes han tenido en cualquier sistema integrado con [!DNL Experience Platform].
+[[!DNL Perfil del cliente en tiempo real]](../../profile/home.md) aprovecha los datos de identidad en [!DNL Experience Platform] para proporcionar una vista holística de cada cliente individual. El servicio crea sólidos perfiles de 360° de atributos del cliente, así como cuentas con marca de hora de cada interacción que los clientes han tenido en cualquier sistema integrado con [!DNL Experience Platform].
 
 Para que un esquema se pueda utilizar con [!DNL Real-time Customer Profile], debe tener una identidad principal definida. Recibirá un mensaje de error si intenta habilitar un esquema sin definir primero una identidad principal.
 
