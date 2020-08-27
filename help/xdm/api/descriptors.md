@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descriptores
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Descriptores
 
-Los Esquemas definen una vista estática de las entidades de datos, pero no proporcionan detalles específicos sobre cómo los datos basados en estos esquemas (conjuntos de datos, por ejemplo) pueden relacionarse entre sí. Adobe Experience Platform permite describir estas relaciones y otros metadatos interpretativos sobre un esquema mediante descriptores.
+Los esquemas definen una vista estática de las entidades de datos, pero no proporcionan detalles específicos sobre cómo los datos basados en estos esquemas (conjuntos de datos, por ejemplo) pueden relacionarse entre sí. Adobe Experience Platform le permite describir estas relaciones y otros metadatos interpretativos sobre un esquema mediante descriptores.
 
-Los descriptores de Esquema son metadatos de nivel de inquilino, lo que significa que son exclusivos de la organización de IMS y todas las operaciones de descriptor se realizan en el contenedor de inquilino.
+Los descriptores de esquema son metadatos de nivel de inquilino, lo que significa que son exclusivos de la organización de IMS y todas las operaciones de descriptor se realizan en el contenedor de inquilino.
 
 Cada esquema puede tener una o varias entidades descriptoras de esquema aplicadas. Cada entidad descriptor de esquema incluye un descriptor `@type` y el `sourceSchema` objeto al que se aplica. Una vez aplicados, estos descriptores se aplicarán a todos los conjuntos de datos creados mediante el esquema.
 
@@ -26,7 +26,7 @@ Este documento proporciona llamadas de API de ejemplo para descriptores, así co
 >
 >Los descriptores requieren encabezados Accept únicos que reemplazan `xed` por `xdm`, pero de lo contrario tienen un aspecto muy similar a los encabezados Accept utilizados en otras partes del [!DNL Schema Registry]. Los encabezados Accept adecuados se han incluido en las llamadas de ejemplo siguientes, pero tenga especial cuidado de asegurarse de que se utilizan los encabezados correctos.
 
-## Descriptores de Listas
+## Descriptores de listas
 
 Se puede utilizar una sola solicitud de GET para devolver una lista de todos los descriptores definidos por la organización.
 
@@ -300,9 +300,9 @@ Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de
 | `xdm:sourceSchema` | El `$id` URI del esquema en el que se está definiendo el descriptor. |
 | `xdm:sourceVersion` | Versión principal del esquema de origen. |
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar con &quot;/&quot; y no terminar con una. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, utilice &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | Valor `id` o `code` de la Área de nombres de identidad. Se puede encontrar una lista de Áreas de nombres usando el [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | Valor `id` o `code` de la Área de nombres de identidad. Se puede encontrar una lista de Áreas de nombres mediante la [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | `xdm:id` o `xdm:code`, según el `xdm:namespace` utilizado. |
-| `xdm:isPrimary` | Un valor booleano opcional. Si es true, indica el campo como identidad principal. Los Esquemas solo pueden contener una identidad primaria. |
+| `xdm:isPrimary` | Un valor booleano opcional. Si es true, indica el campo como identidad principal. Los esquemas solo pueden contener una identidad primaria. |
 
 #### Descriptor de nombres descriptivos
 
