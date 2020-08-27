@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Servicio de Consulta en el bloc de notas de Jupyter
+title: Servicio de consulta en el bloc de notas de Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
 
 
-# Servicio de Consulta en el bloc de notas de Jupyter
+# Servicio de consulta en el bloc de notas de Jupyter
 
 [!DNL Adobe Experience Platform] le permite utilizar el lenguaje de Consulta estructurado (SQL) [!DNL Data Science Workspace] integrándolo [!DNL Query Service] en [!DNL JupyterLab] como función estándar.
 
@@ -27,14 +27,14 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 - Un [!DNL Adobe Analytics] conjunto de datos
 
 - Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!Modelo de datos de experiencia DNL (XDM) y sistema XDM]](../../xdm/home.md)
+   - [[!Servicio de Consulta DNL]](../../query-service/home.md)
+   - [[!Sintaxis SQL del servicio de Consulta DNL]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Acceso [!DNL JupyterLab] y [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. En [!DNL Experience Platform](https://platform.adobe.com), vaya a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
+1. En [[!Experience Platform DNL]](https://platform.adobe.com), desplácese a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -126,7 +126,7 @@ ORDER  BY Hour;
 
 En la consulta anterior, el destinatario `_acp_year` de la `WHERE` cláusula se define como el valor de `target_year`. Incluya las variables en las consultas SQL, contándolas entre llaves (`{}`).
 
-La primera línea de la consulta contiene la variable opcional `hourly_visitor`. Los resultados de la Consulta se almacenarán en esta variable como un dataframe de Pandas. El almacenamiento de resultados en un dataframe permite visualizar posteriormente los resultados de la consulta utilizando un paquete [!DNL Python] deseado. Ejecute el siguiente [!DNL Python] código en una celda nueva para generar un gráfico de barras:
+La primera línea de la consulta contiene la variable opcional `hourly_visitor`. Los resultados de la consulta se almacenarán en esta variable como un dataframe de Pandas. El almacenamiento de resultados en un dataframe permite visualizar posteriormente los resultados de la consulta utilizando un paquete [!DNL Python] deseado. Ejecute el siguiente [!DNL Python] código en una celda nueva para generar un gráfico de barras:
 
 ```python
 trace = go.Bar(
