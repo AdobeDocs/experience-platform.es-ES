@@ -5,9 +5,9 @@ title: Guía del desarrollador del servicio de catálogo
 topic: developer guide
 description: En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio mediante la API de catálogo. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el catálogo.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] guía para desarrolladores
 
-[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. Consulte la información general [del](../home.md) catálogo para obtener más información.
+[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. Consulte la [[!DNL Catalog] información general](../home.md) para obtener más información.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Catalog] API. A continuación, la guía proporciona ejemplos de llamadas de API para realizar operaciones clave mediante [!DNL Catalog].
 
