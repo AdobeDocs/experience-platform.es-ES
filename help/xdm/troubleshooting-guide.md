@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas del sistema del modelo de datos de experiencia (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre el sistema [!DNL Experience Data Model] (XDM), así como una guía de resolución de problemas para errores comunes. Para preguntas y solución de problemas relacionados con otros servicios de Adobe Experience Platform, consulte la guía de solución de problemas del [Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)**es una especificación de código abierto que define esquemas estandarizados para la administración de la experiencia del cliente. La metodología en la que[!DNL Experience Platform]se basa,**XDM System **, hace funcionar[!DNL Experience Data Model]esquemas para uso de[!DNL Platform]los servicios. El **[!DNL Schema Registry]**proporciona una interfaz de usuario y una API RESTful para acceder al **[!DNL Schema Library]**dentro de[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
+**[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de la experiencia del cliente. La metodología en la que [!DNL Experience Platform] se basa, **XDM System**, hace funcionar [!DNL Experience Data Model] esquemas para uso de [!DNL Platform] los servicios. El **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder al **[!DNL Schema Library]** dentro de [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## Preguntas frecuentes
 
@@ -42,7 +42,7 @@ Para obtener más información, consulte la sección de identificación [de](api
 
 ### ¿Cuándo impide un inicio de esquema romper cambios?
 
-Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [!DNL Real-time Customer Profile](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución de [Esquemas](schema/composition.md#evolution) .
+Los cambios de interrupción se pueden realizar en un esquema siempre que nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [[!DNL Perfil del cliente en tiempo real]](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución de [Esquemas](schema/composition.md#evolution) .
 
 ### ¿Cuál es el tamaño máximo de un tipo de campo largo?
 
@@ -52,7 +52,7 @@ Para obtener más información sobre los tipos de campo, consulte la sección [D
 
 ### ¿Cómo defino las identidades de mi esquema?
 
-En [!DNL Experience Platform]realidad, las identidades se utilizan para identificar a un sujeto (generalmente una persona individual) independientemente de las fuentes de datos que se interpreten. Se definen en esquemas marcando los campos clave como &quot;Identidad&quot;. Los campos de identidad que se utilizan habitualmente incluyen dirección de correo electrónico, número de teléfono, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM y otros campos de ID únicos.
+En [!DNL Experience Platform]realidad, las identidades se utilizan para identificar a un sujeto (generalmente una persona individual) independientemente de las fuentes de datos que se interpreten. Se definen en esquemas marcando los campos clave como &quot;Identidad&quot;. Los campos más utilizados para la identidad incluyen dirección de correo electrónico, número de teléfono, [[!DNL ID de Experience Cloud (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM y otros campos de ID únicos.
 
 Los campos se pueden marcar como identidades mediante la API o la interfaz de usuario.
 
@@ -76,7 +76,7 @@ Las identidades primarias son opcionales, ya que los esquemas pueden tener 0 o 1
 
 ### ¿Cómo habilito un esquema para su uso en [!DNL Real-time Customer Profile]?
 
-Los Esquemas se habilitan para su uso [!DNL Real-time Customer Profile](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot;, ubicada en el `meta:immutableTags` atributo del esquema. La activación de un esquema para su uso [!DNL Profile] puede realizarse mediante la API o la interfaz de usuario.
+Los esquemas se habilitan para su uso en [[!DNL Perfil del cliente en tiempo real]](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot;, ubicada en el `meta:immutableTags` atributo del esquema. La activación de un esquema para su uso [!DNL Profile] puede realizarse mediante la API o la interfaz de usuario.
 
 #### Activación de un esquema existente para [!DNL Profile] usar la API
 
@@ -93,7 +93,7 @@ Para obtener más información, consulte la sección sobre el [uso en Perfil](./
 
 ### ¿Puedo editar un esquema de unión directamente?
 
-Los esquemas de Unión son de sólo lectura y son generados automáticamente por el sistema. No se pueden editar directamente. Los esquemas de Unión se crean para una clase específica cuando se agrega una etiqueta &quot;unión&quot; al esquema que implementa esa clase.
+Los esquemas de unión son de sólo lectura y son generados automáticamente por el sistema. No se pueden editar directamente. Los esquemas de unión se crean para una clase específica cuando se agrega una etiqueta &quot;unión&quot; al esquema que implementa esa clase.
 
 Para obtener más información sobre uniones en XDM, consulte la sección [uniones](./api/unions.md) en la guía para desarrolladores de [!DNL Schema Registry] API.
 
