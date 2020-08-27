@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Etiquetas de uso de datos principales
 topic: labels
+description: Este documento describe todas las etiquetas de uso de datos admitidas actualmente por Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1882'
 ht-degree: 2%
 
 ---
@@ -87,7 +88,7 @@ La combinación de datos de varios sitios, incluida una combinación de datos in
 
 Es probable que el uso de datos externos solo para objetivos también se considere objetivo basado en intereses, ya que los datos externos se recopilan y procesan normalmente para hacer inferencias sobre los intereses de los usuarios.
 
-Sin embargo, dirigir el contenido o las publicidades que utilicen solo datos en el sitio no suele considerarse objetivo basado en intereses. La segmentación en el sitio que de otra manera no se califica como segmentación basada en intereses se trata como dos etiquetas distintas. Específicamente, la etiqueta C6 aborda el objetivo y sistema de informes de publicidad en el sitio y habla específicamente de selección de publicidad, envío y sistema de informes, y la etiqueta C7 aborda la selección de contenido, el envío y el sistema de informes en el sitio (objetivo de contenido en el sitio).
+Sin embargo, dirigir contenido o publicidades que usen solamente datos en el sitio no suele considerarse objetivo basado en intereses. La segmentación en el sitio que de otra manera no se califica como segmentación basada en intereses se trata como dos etiquetas distintas. Específicamente, la etiqueta C6 aborda el objetivo y sistema de informes de publicidad en el sitio y habla específicamente de selección de publicidad, envío y sistema de informes, y la etiqueta C7 aborda la selección de contenido, el envío y el sistema de informes en el sitio (objetivo de contenido en el sitio).
 
 Finalmente, usted puede interpretar la etiqueta y saber cómo se aplican los datos con esa etiqueta. Como referencia, a continuación se proporcionan los marcos de la Junta de Auditores Internos y el DAA:
 
@@ -125,4 +126,4 @@ Algunos contratos incluyen prohibiciones explícitas del uso de datos para la ci
 
 #### C10 {#c10}
 
-Algunas directivas de uso de datos restringen el uso de datos de identidad enlazados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+Algunas directivas de uso de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
