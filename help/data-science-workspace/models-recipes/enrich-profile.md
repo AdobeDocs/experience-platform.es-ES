@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -26,18 +26,18 @@ Este documento proporciona un tutorial paso a paso para enriquecerse [!DNL Real-
 
 Este tutorial requiere un conocimiento práctico de los diversos aspectos de la [!DNL Adobe Experience Platform] ingesta [!DNL Profile] de datos y la creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en Platform.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+* [[!Perfil del cliente en tiempo real de DNL]](../../rtcdp/overview.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-time Customer Profile] el enlace de identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
+* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
 Además de los documentos mencionados, se recomienda revisar también las siguientes guías sobre esquemas y el Editor de Esquemas:
 
 * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Describe los esquemas XDM, los componentes básicos, los principios y las prácticas recomendadas para la composición de esquemas que se van a utilizar en [!DNL Experience Platform].
-* [Tutorial](../../xdm/tutorials/create-schema-ui.md)del Editor de Esquemas: Proporciona instrucciones detalladas para crear esquemas con el Editor de Esquemas en [!DNL Experience Platform].
+* [Tutorial](../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Proporciona instrucciones detalladas para crear esquemas con el Editor de Esquemas en [!DNL Experience Platform].
 
 ## Crear un esquema de salida y un conjunto de datos {#create-an-output-schema-and-dataset}
 
-El primer paso hacia el enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de puntuación es saber qué objeto real (como una persona) definen sus datos. Conocer los datos le permite describir y diseñar una estructura que tenga un significado para los datos, como diseñar una base de datos relacional.
+El primer paso hacia el enriquecimiento [!DNL Real-time Customer Profile] con perspectivas de puntuación es saber qué objeto real (como una persona) definen sus datos. Conocer los datos le permite describir y diseñar una estructura que se adapte a los datos, como diseñar una base de datos relacional.
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). En esta sección se proporcionan instrucciones básicas para crear un esquema con el generador de esquemas. Para ver un tutorial más detallado, consulte el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas.
 
