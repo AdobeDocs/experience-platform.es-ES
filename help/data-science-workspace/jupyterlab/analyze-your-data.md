@@ -5,7 +5,7 @@ title: Analizar los datos con portátiles
 topic: Tutorial
 description: Este tutorial se centra en cómo utilizar los blocs de notas Jupyter, creados en el espacio de trabajo de ciencias de la información, para acceder, explorar y visualizar sus datos.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Ahora, podemos hacer clic con el botón derecho en el conjunto de datos y selecc
 
 >[!TIP]
 >
->consulte la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
+>Consulte la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
