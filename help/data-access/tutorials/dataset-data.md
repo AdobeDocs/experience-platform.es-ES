@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Información general sobre el acceso a los datos
 topic: tutorial
+description: Este documento proporciona un tutorial paso a paso que explica cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. También se le presentarán algunas de las características únicas de la API de acceso a datos, como paginación y descargas parciales.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +19,7 @@ Este documento proporciona un tutorial paso a paso que explica cómo localizar, 
 
 ## Primeros pasos
 
-Este tutorial explica cómo crear y rellenar un conjunto de datos. Consulte el tutorial [de creación de](../../catalog/datasets/create.md) conjuntos de datos para obtener más información.
+Este tutorial requiere un conocimiento práctico sobre cómo crear y rellenar un conjunto de datos. Consulte el tutorial [de creación de](../../catalog/datasets/create.md) conjuntos de datos para obtener más información.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
 
