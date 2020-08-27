@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: Flujo de trabajo de ETL
 topic: overview
+description: Diversas herramientas de extracción, transformación y carga (ETL) pueden tener un formato diferente, pero la mayoría de ellas exponen una funcionalidad similar para ayudar a combinar varias fuentes de datos.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
