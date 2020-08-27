@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Autenticar y acceder a las API de Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 1%
 
 ---
@@ -33,9 +33,9 @@ Para realizar correctamente llamadas a [!DNL Experience Platform] API, necesita 
 
 Las siguientes secciones explican los pasos para crear un Adobe ID y convertirse en desarrollador y usuario de una organización.
 
-### Creación de un Adobe ID
+### Crear un Adobe ID
 
-Si no tiene un Adobe ID, puede crearlo siguiendo estos pasos:
+Si no tiene un Adobe ID, puede crearlo siguiendo los pasos siguientes:
 
 1. Vaya a [Adobe Developer Console](https://console.adobe.io)
 2. Haga clic en **[!UICONTROL crear una cuenta nueva]**
@@ -47,7 +47,7 @@ Antes de crear integraciones en la E/S de Adobe, su cuenta debe tener permisos d
 
 **Obtener acceso de desarrollador**
 
-Póngase en contacto con un [!DNL Admin Console] administrador de su organización para agregarle como desarrollador para uno de los productos de su organización mediante el uso de [!DNL Admin Console](https://adminconsole.adobe.com/).
+Póngase en contacto con un [!DNL Admin Console] administrador de su organización para agregarle como desarrollador para uno de los productos de su organización mediante el [[!Admin Console DNL]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -155,7 +155,7 @@ Si su respuesta es similar a la que se muestra a continuación, sus credenciales
 
 ## Usar Postman para autenticación JWT y llamadas de API
 
-[Postman](https://www.getpostman.com/) es una herramienta popular para trabajar con las API de RESTful. Esta publicación [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Media describe cómo configurar el postman para que realice automáticamente la autenticación JWT y la utilice para consumir las API de Adobe Experience Platform.
+[Postman](https://www.getpostman.com/) es una herramienta popular para trabajar con las API de RESTful. Esta publicación [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Media describe cómo configurar postman para que realice automáticamente la autenticación JWT y la utilice para consumir las API de Adobe Experience Platform.
 
 ## Pasos siguientes
 
