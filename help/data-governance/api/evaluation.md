@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Políticas
 topic: developer guide
+description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API de servicio de directivas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de directivas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
