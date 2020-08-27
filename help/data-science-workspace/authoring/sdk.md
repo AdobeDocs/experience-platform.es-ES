@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science W
 solution: Experience Platform
 title: Guía para desarrolladores de SDK
 topic: Overview
+description: El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y tuberías de funciones que se pueden utilizar en Adobe Experience Platform Data Science Workspace, proporcionando plantillas implementables en PySpark y Spark (Scala).
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '964'
 ht-degree: 1%
 
 ---
@@ -37,7 +38,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Carga y devolución de datos de Platform como marco de datos de Pandas</p>
+                <p>Carga y devolución de datos de plataforma como un DataFrame de Pandas</p>
             </td>
             <td>
                 <ul>
@@ -65,7 +66,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Sp
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Carga y devolución de datos de Platform como marco de datos</p>
+                <p>Carga y devolución de datos de plataforma como marco de datos</p>
             </td>
             <td>
                 <ul>
@@ -211,7 +212,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Py
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de Platform</p>
+                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
             </td>
             <td>
                 <ul>
@@ -239,7 +240,7 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Sp
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de Platform</p>
+                <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
             </td>
             <td>
                 <ul>
