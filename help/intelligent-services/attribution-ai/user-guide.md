@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Guía del usuario de Attribution AI
 topic: User guide
+description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Después de completar la información básica, haga clic en el menú desplegable
 
 Existen tres tipos diferentes de datos de entrada que se utilizan para definir eventos:
 
-- **eventos de conversión:** Objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como pedidos de comercio electrónico, compras en el almacén y visitas al sitio web.
+- **Eventos de conversión:** Objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como pedidos de comercio electrónico, compras en el almacén y visitas al sitio web.
 - **Ventana retroactiva:** Proporciona un intervalo de tiempo que indica cuántos días antes de incluir los puntos de contacto del evento de conversión.
 - **Puntos de contacto:** eventos de marketing de nivel de destinatario, individual o cookie utilizados para evaluar el impacto numérico o de ingresos de las conversiones.
 
@@ -182,7 +183,7 @@ Para asegurarse de que obtiene el modelo más preciso posible, es importante cap
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia se ha completado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
