@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear el esquema y conjunto de datos de ventas minoristas
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Una explicación práctica de los siguientes conceptos utilizados en este tutorial:
-   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+   - [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md)
    - [Conceptos básicos de la composición de esquemas](../../xdm/schema/field-dictionary.md)
 
 ## Crear esquema y conjunto de datos de ventas minoristas
@@ -42,7 +42,7 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
 
 ### Configuración de archivos
 
-1. Dentro del paquete de recursos del [!DNL Experience Platform] tutorial, navegue hasta el directorio `bootstrap`y ábralo `config.yaml` con un editor de texto adecuado.
+1. Dentro del paquete de recursos del [!DNL Experience Platform] tutorial, navegue hasta el directorio `bootstrap`y abra `config.yaml` con un editor de texto adecuado.
 2. En la `Enterprise` sección , introduzca los siguientes valores:
 
    ```yaml
