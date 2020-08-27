@@ -358,7 +358,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{S3 or SFTP}`:: rellene el tipo de conexión deseado para este destino. En el catálogo [de](../../rtcdp/destinations/destinations-catalog.md)destino, desplácese hasta el destino que prefiera para ver si se admiten los tipos de conexión S3 o SFTP.
 * `{ACCESS_ID}`:: Su ID de acceso para la ubicación del almacenamiento [!DNL Amazon] S3.
 * `{SECRET_KEY}`:: La clave secreta para la ubicación del almacenamiento [!DNL Amazon] S3.
