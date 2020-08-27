@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
 solution: Experience Platform
-title: Nombres de Lista de permisos y tipos de recursos
+title: Nombres de lista de permisos y tipos de recursos
 topic: developer guide
+description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Puede realizar una lista de los nombres de todos los permisos y tipos de recursos mediante una solicitud de GET al extremo /acl/reference. Estos nombres se pueden utilizar en llamadas de API para vista de políticas eficaces para el usuario actual.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
 
 
-# Nombres de Lista de permisos y tipos de recursos
+# Nombres de lista de permisos y tipos de recursos
 
 Puede lista los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET en el `/acl/reference` extremo. Estos nombres se pueden usar en llamadas de API para [vista de políticas](./effective-policies.md) efectivas para el usuario actual.
 
