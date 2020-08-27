@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 6%
+source-wordcount: '894'
+ht-degree: 5%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 6%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](#xdm)
+* [[!Privacy Service DNL]](#privacy)
+* [[!Fuentes DNL]](#sources)
+* [[!Destinos DNL]](#destinations)
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
-XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación pueda comunicarse con los servicios en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
+XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
 
 **Nuevas funciones**
 
@@ -77,12 +77,12 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 | Compatibilidad adicional con formatos de archivo para almacenamientos en la nube | La ingestión de archivos desde almacenamientos en la nube ahora es compatible con los formatos de archivo Parquet y JSON compatibles con XDM. |
 | Compatibilidad con permisos de control de acceso | El marco de control de acceso de Adobe Experience Platform proporciona los permisos necesarios para otorgar acceso a fuentes en la ingesta de datos. Según el nivel de permiso, un usuario puede realizar vistas de fuentes, administrar fuentes o denegarle el acceso. |
 
-**Permisos de Control de acceso**
+**Permisos de control de acceso**
 
 | Categoría | Permiso | Descripción |
 |--- | --- | ---|
 | Ingesta de datos | Administrar fuentes | Acceso para leer, crear, editar y deshabilitar fuentes. |
-| Ingesta de datos | Fuentes de Vista | Acceso de sólo lectura a los orígenes disponibles en la ficha *[!UICONTROL Catálogo]* y a los orígenes autenticados en la ficha *[!UICONTROL Examinar]* . |
+| Ingesta de datos | Fuentes de vista | Acceso de sólo lectura a los orígenes disponibles en la ficha *[!UICONTROL Catálogo]* y a los orígenes autenticados en la ficha *[!UICONTROL Examinar]* . |
 
 **Problemas conocidos**
 
@@ -98,14 +98,14 @@ En CDP [en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integ
 
 | Función | Descripción |
 |--- | ---|
-| Compatibilidad con permisos de control de acceso | La funcionalidad Destinations de CDP en tiempo real funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. |
+| Compatibilidad con permisos de control de acceso | La funcionalidad Destinations de CDP en tiempo real funciona con los permisos de control de acceso de Adobe Experience Platform. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. |
 
-**Permisos de Control de acceso**
+**Permisos de control de acceso**
 
 | Categoría | Permiso | Descripción |
 |--- | --- | ---|
 | Destinos | Administrar destinos | Acceso para leer, crear, editar y deshabilitar destinos. |
-| Destinos | Destinos de Vista | Acceso de sólo lectura a los destinos disponibles en la ficha [!UICONTROL _Catálogo _]y a los destinos autenticados en la ficha_ Examinar _. |
+| Destinos | Destinos de vista | Acceso de sólo lectura a los destinos disponibles en la ficha [!UICONTROL _Catálogo_] y a los destinos autenticados en la ficha _Examinar_ . |
 | Destinos | Activar destinos | Capacidad para activar datos en destinos. Este permiso requiere que se agregue &quot;Administrar destinos&quot; o &quot;Destinos de Vista&quot; al perfil del producto. |
 
 **Problemas conocidos**
