@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Aplicar directivas de uso de datos mediante la [!DNL Policy Service] API
 
-Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de marketing con esas etiquetas, puede usar el [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
+Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing con esas etiquetas, puede utilizar la [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 
 >[!NOTE]
 >
