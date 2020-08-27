@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar entidades del servicio de decisiones mediante API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ El tutorial consta de dos partes:
 
 Este tutorial requiere un conocimiento práctico de los [!DNL Experience Platform] servicios y las convenciones de API. El [!DNL Platform] repositorio es un servicio que utilizan otros [!DNL Platform] servicios para almacenar objetos comerciales y diversos tipos de metadatos. Proporciona una forma segura y flexible de administrar y consulta esos objetos para que los utilicen varios servicios de tiempo de ejecución. El [!DNL Decisioning Service] es uno de esos. Antes de comenzar este tutorial, consulte la documentación siguiente:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [!DNL Decisioning Service](./../home.md):: Explica los conceptos y componentes utilizados para la toma de decisiones sobre experiencias en general y para la toma de decisiones sobre Ofertas en particular. Ilustra las estrategias utilizadas para elegir la mejor opción para presentar durante la experiencia del cliente.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):: PQL es un lenguaje potente para escribir expresiones sobre instancias de XDM. PQL se utiliza para definir las reglas de decisión.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [[!Servicio de decisiones DNL]](./../home.md): Explica los conceptos y componentes utilizados para la toma de decisiones sobre experiencias en general y para la toma de decisiones sobre Ofertas en particular. Ilustra las estrategias utilizadas para elegir la mejor opción para presentar durante la experiencia del cliente.
+- [[!Lenguaje de Consulta de Perfil DNL (PQL)]](../../segmentation/pql/overview.md): PQL es un lenguaje potente para escribir expresiones sobre instancias de XDM. PQL se utiliza para definir las reglas de decisión.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
@@ -64,7 +64,7 @@ Además de los encabezados enumerados anteriormente, las API para crear, leer, a
 
 - Las rutas de extremo para todas las API de repositorio inicio con `https://platform.adobe.io/data/core/xcore/`.
 
-Los formatos de carga útil de API se negocian con un `Accept` o `Content-Type` encabezado. Los formatos de mensaje en el encabezado `Accept` o `Content-Type` se indican con un valor `application/vnd.adobe.platform.xcore.{FORMAT}+json` donde {FORMAT} depende de la solicitud de la API del repositorio o del mensaje de respuesta específicos, según la siguiente tabla.
+Los formatos de carga útil de API se negocian con un `Accept` o `Content-Type` encabezado. Los formatos de mensaje en el encabezado `Accept` o `Content-Type` se indican mediante un valor `application/vnd.adobe.platform.xcore.{FORMAT}+json` donde {FORMAT} depende de la solicitud de la API del repositorio o del mensaje de respuesta específicos, según la siguiente tabla.
 
 | Variante FORMAT | Descripción de la entidad de solicitud o respuesta |
 | --- | --- |
@@ -96,9 +96,9 @@ La lista de contenedores accesibles se obtiene llamando al extremo raíz del rep
 
 Un administrador puede agrupar entidades principales, recursos y permisos de acceso similares en perfiles. Esto reduce la carga de administración y es compatible con la interfaz de usuario [del Admin Console de](https://adminconsole.adobe.com)Adobe. Debe ser administrador de productos de Adobe Experience Platform en su organización para crear perfiles y asignarles usuarios.
 
-Es suficiente crear perfiles de productos que coincidan con determinados permisos en un solo paso y, a continuación, simplemente agregar usuarios a esos perfiles. Los Perfiles actúan como grupos a los que se han concedido permisos y todos los usuarios reales o técnicos de ese grupo heredan esos permisos.
+Es suficiente crear perfiles de productos que coincidan con determinados permisos en un solo paso y, a continuación, simplemente agregar usuarios a esos perfiles. Los perfiles actúan como grupos a los que se han concedido permisos y todos los usuarios reales o técnicos de ese grupo heredan esos permisos.
 
-### contenedores de Lista accesibles para usuarios e integraciones
+### Contenedores de lista accesibles para usuarios e integraciones
 
 Cuando el administrador haya concedido acceso a contenedores para usuarios regulares o integraciones, esos contenedores aparecerán en la llamada lista &quot;Principal&quot; del repositorio. La lista puede ser diferente para diferentes usuarios o integraciones, ya que es un subconjunto de todos los contenedores accesibles para el llamante. La lista de contenedores puede filtrarse por su asociación a contextos de productos. Se llama al parámetro filter `product` y se puede repetir. Si se proporciona más de un filtro de contexto de producto, se devolverá la unión de los contenedores que tienen asociaciones con cualquiera de los contextos de producto determinados. Tenga en cuenta que un solo contenedor se puede asociar a varios contextos de producto.
 
@@ -292,7 +292,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 La API de repositorio responderá con un estado 304 No modificado cuando la última revisión de la instancia sea esa con la etiqueta dada.
 
-### Instancias de Lista para un esquema: clasificación y paginación
+### Instancias de lista para un esquema: clasificación y paginación
 
 Los clientes no podrán realizar un seguimiento de las instancias que están creando y, por lo tanto, acceder a ellas mediante su instanceId físico. El uso de la API de instancia de lectura será la excepción. Los clientes tampoco saben qué instancias han creado otros clientes.
 
@@ -352,7 +352,7 @@ La paginación se controla mediante los siguientes parámetros:
 
 ### Filtrado de listas
 
-Es posible filtrar los resultados de lista y se produce independientemente del mecanismo de paginación. Los Filtros simplemente omiten las instancias en el orden de las listas o solicitan explícitamente incluir solo las instancias que cumplen una condición determinada. Un cliente puede solicitar que la expresión de propiedades se utilice como filtro o puede especificar una lista de URI que se utilizarán como valores de la clave principal de las instancias.
+Es posible filtrar los resultados de lista y se produce independientemente del mecanismo de paginación. Los filtros simplemente omiten las instancias en el orden de las listas o solicitan explícitamente incluir solo las instancias que cumplen una condición determinada. Un cliente puede solicitar que la expresión de propiedades se utilice como filtro o puede especificar una lista de URI que se utilizarán como valores de la clave principal de las instancias.
 
 - **`property`**:: Contiene una ruta de nombre de propiedad seguida de un operador de comparación seguido de un valor. <br/>
 La lista de instancias devueltas contiene aquellas para las que la expresión se evalúa como verdadera. Por ejemplo, suponiendo que la instancia tiene una propiedad payload 
@@ -585,7 +585,7 @@ Al utilizar las API con el tipo de contenido `application/vnd.adobe.platform.xco
 
 ### Propiedades de oferta general
 
-Las Ofertas son un tipo de opción de decisión y el esquema de ofertas JSON hereda las propiedades de opción estándar que tendrá cada instancia de opción.
+Las ofertas son un tipo de opción de decisión y el esquema de ofertas JSON hereda las propiedades de opción estándar que tendrá cada instancia de opción.
 
 - **`@id`** - Un identificador único para cada opción que es la clave principal y se utiliza para hacer referencia a la opción de otros objetos. Esta propiedad se asigna cuando se crea la instancia, es inmutable y no editable.
 - **`xdm:name`** - Cada opción tiene un nombre que se utiliza con fines de búsqueda y visualización. El nombre no es inmutable y no se puede utilizar para identificar la instancia de forma exclusiva. El nombre se puede seleccionar libremente pero debe ser único en todas las instancias de oferta.
@@ -604,9 +604,9 @@ Consulte [Actualización y parche de instancias](#updating-and-patching-instance
 
 Cada instancia de oferta puede tener un conjunto opcional de propiedades que solo son características para esa instancia. Las diferentes ofertas pueden tener claves diferentes para esas propiedades, pero los valores deben ser cadenas. Estas propiedades se pueden usar en reglas de decisión y segmentación. También son accesibles para reunir la experiencia decidida para personalizar aún más los mensajes.
 
-### Ciclo de vida de Oferta
+### Ciclo de vida de oferta
 
-Existe un flujo de transición de estado simple que seguirán todas las Opciones. inicios en un estado de borrador y cuando estén listos, su estado se establecerá en aprobado. Una vez pasada la fecha de finalización, se pueden mover al estado archivado. En ese estado, se pueden eliminar o reutilizar moviéndolas de nuevo al estado de redacción.
+Existe un flujo de transición de estado simple que seguirán todas las Opciones. Inicios en un estado de borrador y cuando estén listos, su estado se establecerá en aprobado. Una vez pasada la fecha de finalización, se pueden mover al estado archivado. En ese estado, se pueden eliminar o reutilizar moviéndolas de nuevo al estado de redacción.
 
 ![](../images/entities/offer-lifecycle.png)
 
@@ -628,8 +628,8 @@ Consulte [Actualización y parche de instancias](#updating-and-patching-instance
 
 ### Representaciones y colocaciones
 
-Las Ofertas son opciones de decisión que tienen representaciones de contenido. Cuando se toma una decisión, la opción se selecciona y su identificador se utiliza para obtener el contenido o las referencias de contenido para la colocación que se debe proporcionar. Una oferta puede tener más de una representación, pero cada una de ellas debe tener una referencia de ubicación diferente. Esto garantiza que con una ubicación determinada la representación se pueda determinar sin ambigüedades.
-Durante la operación de decisión, la colocación se determina junto con el objeto de actividad. Las Ofertas que no están representadas con esa ubicación como referencia se eliminan automáticamente de la lista de opciones.
+Las ofertas son opciones de decisión que tienen representaciones de contenido. Cuando se toma una decisión, la opción se selecciona y su identificador se utiliza para obtener el contenido o las referencias de contenido para la colocación que se debe proporcionar. Una oferta puede tener más de una representación, pero cada una de ellas debe tener una referencia de ubicación diferente. Esto garantiza que con una ubicación determinada la representación se pueda determinar sin ambigüedades.
+Durante la operación de decisión, la colocación se determina junto con el objeto de actividad. Las ofertas que no están representadas con esa ubicación como referencia se eliminan automáticamente de la lista de opciones.
 
 Antes de agregar representaciones a una oferta, deben existir instancias de colocación. Estas instancias se crean con el identificador`https://ns.adobe.com/experience/offer-management/offer-placement`de esquema.
 
@@ -767,15 +767,15 @@ Para eliminar los valores de límite, la operación &quot;agregar&quot; se susti
 
 ### Limitaciones de elegibilidad
 
-Las Ofertas se pueden seleccionar condicionalmente en el proceso de decisión. Cuando una oferta de personalización tiene una referencia a una regla de elegibilidad, la condición de la regla debe evaluarse como verdadera para que el objeto de oferta se considere para un perfil determinado. Las reglas de elegibilidad se crean y administran independientemente de las opciones de decisión y se puede hacer referencia a la misma regla desde varias ofertas de personalización.
+Las ofertas se pueden seleccionar condicionalmente en el proceso de decisión. Cuando una oferta de personalización tiene una referencia a una regla de elegibilidad, la condición de la regla debe evaluarse como verdadera para que el objeto de oferta se considere para un perfil determinado. Las reglas de elegibilidad se crean y administran independientemente de las opciones de decisión y se puede hacer referencia a la misma regla desde varias ofertas de personalización.
 
 La referencia a la regla está incrustada en la propiedad `xdm:selectionConstraint`:
 
 - **`xdm:eligibilityRule`** - Esta propiedad contiene una referencia a una regla de elegibilidad. El valor es el `@id` de una instancia de esquemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-También se puede Añadir y eliminar una regla con una operación de PATCH:
+También se puede añadir y eliminar una regla con una operación de PATCH:
 
-```
+```json
 [
   {
     "op":   "replace",
@@ -819,7 +819,7 @@ Consulte [Actualización y parche de instancias](#updating-and-patching-instance
 
 ## Administración de reglas de decisión
 
-Las Reglas de elegibilidad reúnen las condiciones que se evalúan para determinar si una determinada opción de decisión es elegible para un perfil determinado. La asociación de una regla a una o varias opciones de decisión define implícitamente que para esta opción la regla debe evaluarse como verdadera para que la opción se considere para este usuario. La regla puede contener pruebas en atributos de perfil, puede evaluar expresiones que impliquen eventos de experiencia para este perfil y puede incluir datos de contexto que se pasaron a la solicitud de decisión. Por ejemplo: una condición puede describirse como:
+Las reglas de elegibilidad reúnen las condiciones que se evalúan para determinar si una determinada opción de decisión es elegible para un perfil determinado. La asociación de una regla a una o varias opciones de decisión define implícitamente que para esta opción la regla debe evaluarse como verdadera para que la opción se considere para este usuario. La regla puede contener pruebas en atributos de perfil, puede evaluar expresiones que impliquen eventos de experiencia para este perfil y puede incluir datos de contexto que se pasaron a la solicitud de decisión. Por ejemplo: una condición puede describirse como:
 
 > &quot;Incluya a personas que tengan el estatus de élite y hayan volado en un vuelo tres veces en los últimos 6 meses que tengan el número de vuelo del vuelo actual&quot;.
 
@@ -852,7 +852,7 @@ Las reglas se alinean naturalmente con los segmentos en la regla [!DNL Experienc
 
 ### Creación de etiquetas y ofertas de etiquetado
 
-Las Ofertas pueden organizarse en colecciones en las que cada colección define la condición de filtro que se aplicará. Actualmente, la expresión de filtro de una colección puede tener uno de los dos formularios:
+Las ofertas pueden organizarse en colecciones en las que cada colección define la condición de filtro que se aplicará. Actualmente, la expresión de filtro de una colección puede tener uno de los dos formularios:
 
 1. El `@id` parámetro de la oferta debe coincidir con uno de una lista de identificadores para que la oferta esté en la colección. Este filtro es simplemente una lista desglosada de los URI de las ofertas de la colección.
 2. Una oferta puede tener una lista de referencias de etiquetas y el filtro de la colección consta de una lista de etiquetas. La oferta se encuentra en la colección cuando:\
