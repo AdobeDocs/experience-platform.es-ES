@@ -5,9 +5,9 @@ title: Trabajar con el tiempo de ejecución del servicio de decisiones mediante 
 topic: tutorial
 description: 'Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de Decisioning Service mediante las API de Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Este documento proporciona un tutorial para trabajar con los servicios de tiempo
 
 Este tutorial requiere una comprensión práctica de los [!DNL Experience Platform] servicios que intervienen en la toma de decisiones y la determinación de la siguiente mejor oferta para presentar durante las experiencias de los clientes. Antes de comenzar este tutorial, consulte la documentación siguiente:
 
-- [!DNL Decisioning Service](./../home.md):: Proporciona el marco para agregar y eliminar ofertas y crear algoritmos para elegir lo mejor que se puede presentar durante la experiencia del cliente.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):: PQL se utiliza para definir reglas y filtros.
+- [[!Servicio de decisiones DNL]](./../home.md): Proporciona el marco para agregar y eliminar ofertas y crear algoritmos para elegir lo mejor que se puede presentar durante la experiencia del cliente.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [[!Lenguaje de Consulta de Perfil DNL (PQL)]](../../segmentation/pql/overview.md): PQL se utiliza para definir reglas y filtros.
 - [Administrar reglas y objetos de decisiones mediante API](./entities.md): Antes de utilizar el tiempo de ejecución de los servicios de decisiones, deberá configurar las entidades relacionadas.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
@@ -72,7 +72,7 @@ La activación de las entidades lógicas del negocio se produce de manera autom�
 
 ### Efectos de las colocaciones, filtros y estados del ciclo vital
 
-Las ofertas se crean continuamente, se producen cambios en su estado de ciclo vital o pueden obtener nuevas representaciones de contenido. El filtro de oferta de una actividad puede cambiar, coincidir o filtrar ofertas cuyos conjuntos de etiquetas se han actualizado. Este proceso puede estar bastante involucrado y las aplicaciones y los servicios deben saber cuál será el conjunto de candidatos resultante de una actividad. El motor de ejecución de decisiones proporciona una API de actividad a ofertas que filtros ofertas que no están aprobadas, que no coinciden con el filtro de oferta o que no tienen una representación para la ubicación a la que hace referencia la actividad.
+Las ofertas se crean continuamente, se producen cambios en su estado de ciclo vital o pueden obtener nuevas representaciones de contenido. El filtro de oferta de una actividad puede cambiar, coincidir o filtrar ofertas cuyos conjuntos de etiquetas se han actualizado. Este proceso puede estar bastante involucrado y las aplicaciones y los servicios necesitan saber cuál será el conjunto de candidatos resultante de una actividad. El motor de ejecución de decisiones proporciona una API de actividad a ofertas que filtros ofertas que no están aprobadas, que no coinciden con el filtro de oferta o que no tienen una representación para la ubicación a la que hace referencia la actividad.
 
 **Solicitud**
 
@@ -155,7 +155,7 @@ curl -X GET {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/diagnostics \
   -H 'x-request-id: {NEW_UUID}'
 ```
 
-El único parámetro para esta llamada de API es `containerId`. Los resultados de todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
+El único parámetro para esta llamada de API es `containerId`. Los resultados son todas las actualizaciones de todos los clientes que han modificado las reglas de decisión, ofertas, actividades o filtros de oferta en ese contenedor. Hay un pequeño retraso de unos segundos entre el momento en que se actualizaron los objetos y el momento en que finaliza la compilación. La última marca de tiempo de actualización y los errores se devuelven en la respuesta a la llamada de diagnóstico.
 
 **Respuesta**
 
