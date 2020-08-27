@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,10 @@ En este tutorial se explican los pasos para aplicar la compatibilidad con el uso
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):: [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos [!DNL Experience Data Model] (XDM) dentro de [!DNL Platform]. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos [!DNL Experience Data Model] (XDM) dentro de [!DNL Platform]. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
    - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para [!DNL Data Governance] fines específicos.
-- [!DNL Segmentation](../home.md):: Cómo [!DNL Real-time Customer Profile] divide un gran grupo de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
-- [!DNL Data Governance](../../data-governance/home.md):: [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
+- [[!Segmentación DNL]](../home.md): Cómo [!DNL Real-time Customer Profile] divide un gran grupo de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
+- [[!Administración de datos DNL]](../../data-governance/home.md): [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
    - [Directivas](../../data-governance/policies/overview.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
    - [Aplicación](../../data-governance/enforcement/overview.md)de políticas: Permite aplicar políticas de uso de datos y evitar operaciones de datos que constituyan infracciones de políticas.
@@ -383,4 +383,4 @@ Consulte la sección sobre [exportación de un segmento](./evaluate-a-segment.md
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para obtener más información sobre [!DNL Data Governance] en [!DNL Experience Platform], lea la información general de [!DNL Data Governance](../../data-governance/home.md).
+Siguiendo este tutorial, ha buscado las etiquetas de uso de datos asociadas con un segmento de audiencia y las ha probado para detectar infracciones de políticas en relación con acciones de marketing específicas. Para más información sobre [!DNL Data Governance] en [!DNL Experience Platform], lea la descripción general de [[!DNL Data Governance]](../../data-governance/home.md).
