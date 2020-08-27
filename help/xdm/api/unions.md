@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Uniones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Uniones
 
-Las Uniones (o vistas de unión) son esquemas de sólo lectura generados por el sistema que acumulados los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y están habilitados para [!DNL Real-time Customer Profile](../../profile/home.md).
+Las uniones (o vistas de unión) son esquemas de sólo lectura generados por el sistema que acumulados los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) y que están habilitados para [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md).
 
 Este documento cubre conceptos esenciales para trabajar con uniones en la API del Registro de Esquemas, incluidas las llamadas de muestra para diversas operaciones. Para obtener información más general sobre uniones en XDM, consulte la sección sobre uniones en los [conceptos básicos de la composición](../schema/composition.md#union)de esquemas.
 
-## Mezclas de Unión
+## Mezclas de unión
 
 El [!DNL Schema Registry] incluye automáticamente tres mezclas dentro del esquema de unión: `identityMap`, `timeSeriesEvents`, y `segmentMembership`.
 
@@ -28,13 +28,13 @@ Un esquema de unión `identityMap` es una representación de las identidades con
 
 See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
-### eventos de series temporales
+### Eventos de series temporales
 
 La `timeSeriesEvents` matriz es una lista de eventos de series temporales que se relacionan con los esquemas de registros asociados a la unión. Cuando [!DNL Profile] los datos se exportan a conjuntos de datos, esta matriz se incluye para cada registro. Esto resulta útil en varios casos de uso, como el aprendizaje automático, en el que los modelos necesitan un historial de comportamiento completo de un perfil además de sus atributos de registro.
 
 ### Mapa de pertenencia a segmentos
 
-El `segmentMembership` mapa almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente mediante la API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)de segmentación, se actualiza el mapa. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager.
+El `segmentMembership` mapa almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente mediante la API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)de segmentación, se actualiza el mapa. `segmentMembership` también almacena todos los segmentos de audiencia preevaluados que se ingieren en la plataforma, lo que permite la integración con otras soluciones como Adobe Audience Manager.
 
 Consulte el tutorial sobre la [creación de segmentos mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
@@ -115,7 +115,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 }
 ```
 
-## uniones de Lista
+## Uniones de lista
 
 Cuando se establece la etiqueta &quot;unión&quot; en un esquema, el [!DNL Schema Registry] crea y mantiene automáticamente una unión para la clase en la que se basa el esquema. El `$id` de la unión es similar al estándar `$id` de una clase, con la única diferencia que se anexa con dos caracteres de subrayado y la palabra &quot;unión&quot; (`"__union"`).
 
@@ -168,7 +168,7 @@ Puede realizar una vista de una unión específica realizando una solicitud de G
 
 >[!NOTE]
 >
->Las búsquedas de Uniones están disponibles mediante el `/unions` extremo y `/schemas` para habilitarlas para usarlas en [!DNL Profile] exportaciones a un conjunto de datos.
+>Las búsquedas de uniones están disponibles mediante el `/unions` extremo y `/schemas` para habilitarlas para usarlas en [!DNL Profile] exportaciones a un conjunto de datos.
 
 **Formato API**
 
@@ -193,7 +193,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-Las solicitudes de búsqueda de Uniones requieren que `version` se incluyan en el encabezado Accept.
+Las solicitudes de búsqueda de uniones requieren que `version` se incluyan en el encabezado Accept.
 
 Los siguientes encabezados Accept están disponibles para las búsquedas de esquemas de unión:
 
@@ -247,7 +247,7 @@ El formato de respuesta depende del encabezado Accept enviado en la solicitud. E
 }
 ```
 
-## esquemas de Lista en una unión
+## Esquemas de lista en una unión
 
 Para ver qué esquemas forman parte de una unión específica, puede realizar una solicitud de GET mediante parámetros de consulta para filtrar los esquemas dentro del contenedor del inquilino.
 
