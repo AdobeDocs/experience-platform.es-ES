@@ -5,9 +5,9 @@ seo-title: Privacidad en el Perfil de datos del cliente en tiempo real
 description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 seo-description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] le permite agilizar el proceso 
 
 Existen dos métodos para enviar solicitudes individuales de datos del RGPD y la CPA para acceder y eliminar datos de clientes:
 
-* Utilice [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) para crear y supervisar solicitudes de acceso y eliminación en un espacio de trabajo visual. Consulte el tutorial [de la interfaz de usuario del](../../privacy-service/ui/overview.md) Privacy Service para obtener instrucciones paso a paso.
-* Utilice el [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) para administrar las solicitudes de acceso y eliminación con llamadas de API RESTful. Consulte el tutorial [de API de](../../privacy-service/api/getting-started.md) Privacy Service para obtener instrucciones paso a paso.
+* Utilice la [[!IU de Privacy Service DNL]](https://gdprui.cloud.adobe.io/) para crear y supervisar solicitudes de acceso y eliminación en un espacio de trabajo visual. Consulte el tutorial [de la interfaz de usuario del](../../privacy-service/ui/overview.md) Privacy Service para obtener instrucciones paso a paso.
+* Utilice la [[!DNL API de Privacy Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) para administrar las solicitudes de acceso y eliminación con las llamadas RESTful API. Consulte el tutorial [de API de](../../privacy-service/api/getting-started.md) Privacy Service para obtener instrucciones paso a paso.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
