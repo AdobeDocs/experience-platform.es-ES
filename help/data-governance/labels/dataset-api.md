@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos para conjuntos de datos mediante API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '916'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 
-El [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
+La [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
 Este documento explica cómo administrar las etiquetas para conjuntos de datos y campos mediante el uso de la variable [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las etiquetas de uso de datos mediante llamadas de API, consulte la guía [de extremo de](../api/labels.md) etiquetas para la [!DNL Policy Service API].
 
@@ -74,8 +74,8 @@ Una respuesta correcta devuelve las etiquetas de uso de datos que se han aplicad
 
 | Propiedad | Descripción |
 | --- | --- |
-| `labels` | lista de las etiquetas de uso de datos que se han aplicado al conjunto de datos. |
-| `optionalLabels` | lista de campos individuales dentro del conjunto de datos que tienen etiquetas de uso de datos aplicadas a ellos. |
+| `labels` | Lista de las etiquetas de uso de datos que se han aplicado al conjunto de datos. |
+| `optionalLabels` | Lista de campos individuales dentro del conjunto de datos que tienen etiquetas de uso de datos aplicadas a ellos. |
 
 ## Aplicar etiquetas a un conjunto de datos {#apply}
 
@@ -126,8 +126,8 @@ curl -X PUT \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `labels` | lista de las etiquetas de uso de datos que desea agregar al conjunto de datos. |
-| `optionalLabels` | lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/look-up-resource.md"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: lista de las etiquetas de uso de datos que desea agregar al campo. |
+| `labels` | Lista de las etiquetas de uso de datos que desea agregar al conjunto de datos. |
+| `optionalLabels` | Lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/look-up-resource.md"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: Lista de las etiquetas de uso de datos que desea agregar al campo. |
 
 **Respuesta**
 
