@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: SDK de acceso a datos Spark seguro
 topic: tutorial
+description: El SDK de acceso a datos Secure Spark es un kit de desarrollo de software que permite leer y escribir conjuntos de datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -31,7 +32,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
 
-## Configuración de Entorno
+## Configuración de entorno
 
 El SDK [!DNL Spark] espera que proporcione las credenciales en las variables de entorno o en las opciones de fuente de datos.
 
@@ -140,7 +141,7 @@ El [!DNL Spark] SDK admite dos métodos de filtrado: Uso de una expresión SQL o
 
 A continuación se muestra un ejemplo del uso de estas funciones de filtrado:
 
-#### expresión SQL
+#### EXPRESIÓN SQL
 
 ```scala
 df.where("age > 15")
