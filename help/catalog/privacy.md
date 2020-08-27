@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 Antes de leer esta guía, se recomienda que conozca los siguientes [!DNL Experience Platform] servicios:
 
-* [!DNL Privacy Service](../privacy-service/home.md):: Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en todas las aplicaciones de Adobe Experience Cloud.
-* [!DNL Catalog Service](home.md):: Sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform]. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [!DNL Identity Service](../identity-service/home.md):: Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
+* [[!Privacy Service DNL]](../privacy-service/home.md): Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en todas las aplicaciones de Adobe Experience Cloud.
+* [[!Servicio de catálogo DNL]](home.md): Sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform]. Proporciona una API que se puede utilizar para actualizar los metadatos del conjunto de datos.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Identity Service]](../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 
 ## Explicación de las Áreas de nombres de identidad {#namespaces}
 
