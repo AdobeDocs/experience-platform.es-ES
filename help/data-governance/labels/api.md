@@ -5,9 +5,9 @@ title: 'Administrar etiquetas de uso de datos mediante API '
 topic: developer guide
 description: La API de servicio de dataset permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogos, que administra los metadatos del conjunto de datos.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Este documento proporciona pasos sobre cómo administrar las etiquetas de uso de datos mediante la [!DNL Policy Service] API y la [!DNL Dataset Service] API.
 
-El [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
+La [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
 
 La [!DNL Dataset Service] API permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
