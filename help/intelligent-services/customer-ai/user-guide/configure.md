@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: Configuración de una instancia de AI de cliente
 topic: Instance creation
+description: Los servicios inteligentes proporcionan una API de cliente como un servicio de Adobe Sensei sencillo de usar que se puede configurar para diferentes casos de uso. Las siguientes secciones proporcionan los pasos para configurar una instancia de AI del cliente.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Los servicios inteligentes proporcionan una API de cliente como un servicio de A
 
 ## Configurar la instancia {#set-up-your-instance}
 
-En la interfaz de usuario de Platform, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el navegador de **[!UICONTROL servicios]** y muestra todos los servicios disponibles. En el contenedor de AI del cliente, haga clic en **[!UICONTROL Abrir]**.
+En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el navegador de **[!UICONTROL servicios]** y muestra todos los servicios disponibles. En el contenedor de AI del cliente, haga clic en **[!UICONTROL Abrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
