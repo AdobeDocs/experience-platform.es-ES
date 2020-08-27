@@ -1,18 +1,19 @@
 ---
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
-title: esquemas y conjuntos de datos de Previsualización
+title: Esquemas y conjuntos de datos de previsualización
 topic: Tutorial
+description: El siguiente documento describe la vista previa de esquemas y conjuntos de datos en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
 
-# esquemas y conjuntos de datos de Previsualización
+# Esquemas y conjuntos de datos de previsualización
 
 Una vez completada correctamente la secuencia de comandos de arranque desde el tutorial [Crear el esquema de ventas minoristas y el conjunto de datos](./create-retails-sales-dataset.md) . Los esquemas de salida y los conjuntos de datos se pueden ver en [!DNL Experience Platform]. Para realizar la vista de los esquemas y conjuntos de datos, siga los pasos a continuación:
 
