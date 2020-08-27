@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: consultas de muestra
+title: Consultas de muestra
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -12,9 +12,9 @@ ht-degree: 1%
 ---
 
 
-# consultas de muestra para datos de Adobe Analytics
+# Consultas de muestra para datos de Adobe Analytics
 
-Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en XDM [!DNL ExperienceEvents] y se ingieren en Adobes Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el Adobe Experience Platform [!DNL Query Service] hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obtener más información sobre la asignación a XDM [!DNL ExperienceEvents].
+Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en XDM [!DNL ExperienceEvents] y se ingieren en Adobe Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que Adobe Experience Platform [!DNL Query Service] hace uso de estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics. Consulte la documentación [de asignación de campos de](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics para obtener más información sobre la asignación a XDM [!DNL ExperienceEvents].
 
 ## Primeros pasos
 
@@ -112,7 +112,7 @@ ORDER BY total_order_revenue DESC
 LIMIT  10;
 ```
 
-### Recuentos de Eventos por día
+### Recuentos de eventos por día
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
@@ -135,7 +135,7 @@ Estos son los campos XDM para acceder a las variables de comercialización en el
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,13 +143,13 @@ Donde `[#]` es un índice de matriz y `evar#` es la variable de eVar específica
 
 ### Eventos personalizados
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
 Donde `[#]` es un índice de matriz y `event#` es la variable de evento personalizada específica.
 
-### consultas de muestra
+### Consultas de muestra
 
 Esta es una consulta de muestra que devuelve un eVar de comercialización y un evento para el primer producto encontrado en el `productListItems`.
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 Se encuentra el error &quot;No existe dicho campo de estructura&quot; cuando intenta recuperar un campo que no existe en el conjunto de datos actual. Evalúe el motivo devuelto en el mensaje de error para identificar un campo disponible y, a continuación, actualice la consulta y vuelva a ejecutarlo.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Estos son los campos XDM para generar la sintaxis de conversión en el [!DNL Ana
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,13 +228,13 @@ Dónde `evar#` está la variable de eVar específica.
 
 ### Producto
 
-```
+```console
 productListItems[#].sku
 ```
 
 Donde `[#]` es un índice de matriz.
 
-### consultas de muestra
+### Consultas de muestra
 
 A continuación se muestra una consulta de muestra que vincula el valor al par de productos y eventos específico, en este caso el evento de vista del producto.
 
