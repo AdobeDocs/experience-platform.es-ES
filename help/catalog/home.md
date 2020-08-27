@@ -5,9 +5,9 @@ title: Información general del servicio de catálogo
 topic: overview
 description: Catalog Service es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. Aunque todos los datos que se ingestan en el Experience Platform se almacenan en el Data Lake como archivos y directorios, Catalog guarda los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y supervisión.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '782'
 ht-degree: 5%
 
 ---
@@ -64,4 +64,4 @@ La siguiente tabla describe los distintos tipos de objetos admitidos por [!DNL C
 
 ## Pasos siguientes
 
-Este documento proporcionó una introducción [!DNL Catalog Service] y la manera en que funciona dentro del bueno ámbito de [!DNL Experience Platform]. Consulte la guía [para desarrolladores de](api/getting-started.md) catálogos para ver los pasos para interactuar con los distintos extremos de esa [!DNL Catalog] API. También se recomienda consultar la guía sobre el [filtrado de datos](api/filter-data.md) del catálogo para seguir las prácticas recomendadas para limitar los datos devueltos en las respuestas de la API.
+Este documento proporcionó una introducción [!DNL Catalog Service] y la manera en que funciona dentro del bueno ámbito de [!DNL Experience Platform]. Consulte la guía [[!DNL Catalog] para](api/getting-started.md) desarrolladores para ver los pasos para interactuar con los diferentes extremos de esa [!DNL Catalog] API. También se recomienda consultar la guía sobre el [filtrado de datos](api/filter-data.md) del catálogo para seguir las prácticas recomendadas para limitar los datos devueltos en las respuestas de la API.
