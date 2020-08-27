@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conjuntos de datos vs. tablas y esquemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Para vista de las tablas disponibles [!DNL Platform] con SQL, puede utilizar `\d
 
 `\d` muestra la vista PostgreSQL estándar
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ Para vista de las tablas disponibles [!DNL Platform] con SQL, puede utilizar `\d
 
 `SHOW TABLES;` es un comando personalizado que proporciona una vista más detallada y presenta la tabla, así como el nombre del conjunto de datos que se encuentra en la [!DNL Platform] interfaz de usuario.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ Para vista del esquema raíz de una tabla, utilice el `\d table_name` comando .
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ Para ir más allá en el esquema, utilice caracteres de subrayado (`_`) para dec
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------
