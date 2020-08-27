@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Puntuación de un modelo (API)
 topic: Tutorial
+description: Este tutorial le mostrará cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimentos.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
@@ -36,7 +37,7 @@ curl -X POST \
 
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.\
+`{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.\
 `{JSON_PAYLOAD}`:: Objeto de ejecución del experimento que se va a enviar. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
@@ -124,7 +125,7 @@ curl -X POST \
 
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`:: Su valor de clave de API específico se encuentra en su integración única de Adobe Experience Platform.\
+`{API_KEY}`:: Su valor clave de API específica se encuentra en su integración única de Adobe Experience Platform.\
 `{EXPERIMENT_ID}`:: ID correspondiente al experimento que desea destinatario. Esto se encuentra en la respuesta al crear el experimento.\
 `{JSON_PAYLOAD}`:: Datos que se van a publicar. El ejemplo que utilizamos en nuestro tutorial está aquí:
 
@@ -217,7 +218,7 @@ Dado que existen varias ejecuciones de experimento para un experimento específi
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto puede realizarse consultando una solicitud de DELETE a la `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
