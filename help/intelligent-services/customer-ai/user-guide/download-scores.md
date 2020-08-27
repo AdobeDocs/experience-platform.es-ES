@@ -3,10 +3,11 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: Descarga de puntuaciones en la API del cliente
 topic: Downloading scores
+description: La API del cliente le permite descargar puntuaciones en formato de archivo de parqué.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '945'
 ht-degree: 2%
 
 ---
