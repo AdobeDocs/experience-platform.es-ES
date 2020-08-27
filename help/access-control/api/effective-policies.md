@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
-title: Políticas eficaces de Vista
+title: Políticas eficaces de vista
 topic: developer guide
+description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Este documento sirve como guía para la vista de políticas eficaces mediante la API de control de acceso para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
 
 
-# Políticas eficaces de Vista
+# Políticas eficaces de vista
 
 Para vista de directivas efectivas para el usuario actual, realice una solicitud de POST al extremo en la `/acl/effective-policies` API [!DNL Access Control] . Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
 
