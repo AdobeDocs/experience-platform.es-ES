@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guía del usuario de conjuntos de datos
 topic: datasets
+description: Esta guía del usuario de conjuntos de datos proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
