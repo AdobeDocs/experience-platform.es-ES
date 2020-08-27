@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset api;manage data usage;data usage api
 solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos para conjuntos de datos mediante API '
 topic: developer guide
+description: La API de servicio de dataset permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogos, que administra los metadatos del conjunto de datos.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
