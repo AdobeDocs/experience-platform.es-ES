@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
+description: Las siguientes guías describen los pasos y la información necesarios para migrar las fórmulas y los blocs de notas existentes en el área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3330'
 ht-degree: 0%
 
 ---
@@ -462,7 +463,7 @@ Con PySpark 3 ([!DNL Spark] 2.4) `org_id` y ya `dataset_id` no es necesario defi
 
 >[!TIP]
 >
->—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar el `batch` modo cuando se leen grandes cantidades de datos.
+>—mode se puede establecer en `interactive` o `batch`. El valor predeterminado para —mode es `interactive`. Se recomienda utilizar `batch` el modo cuando se leen grandes cantidades de datos.
 
 ## Creación de un datafame local
 
