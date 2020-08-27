@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guía del SDK de Platform
+title: Guía del SDK de la plataforma
 topic: SDK authoring
+description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python a la nueva plataforma Python platform_sdk en Python y R.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '470'
 ht-degree: 5%
 
 ---
