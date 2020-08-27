@@ -5,7 +5,7 @@ title: Guía del usuario de JupyterLab
 topic: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 11%
@@ -155,8 +155,8 @@ El *iniciador* personalizado le proporciona plantillas de bloc de notas útiles 
 | --- | --- |
 | En blanco | Un archivo de bloc de notas vacío. |
 | Inicio | Un bloc de notas precargado que muestra la exploración de datos mediante datos de ejemplo. |
-| Ventas minoristas | Un bloc de notas previamente rellenado que presenta la fórmula <a href="https://adobe.ly/2wOgO3L" target="_blank">de venta al</a> por menor utilizando datos de ejemplo. |
-| Generador de fórmulas | Plantilla de bloc de notas para crear una fórmula en [!DNL JupyterLab]. Se rellena previamente con código y comentarios que muestran y describen el proceso de creación de fórmulas. Consulte el tutorial <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de fórmula del</a> bloc de notas para obtener un tutorial detallado. |
+| Ventas minoristas | Un bloc de notas previamente rellenado que presenta la fórmula [de venta al](https://adobe.ly/2wOgO3L) por menor utilizando datos de muestra. |
+| Generador de fórmulas | Plantilla de bloc de notas para crear una fórmula en [!DNL JupyterLab]. Se rellena previamente con código y comentarios que muestran y describen el proceso de creación de fórmulas. Consulte el tutorial [de fórmula del](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) bloc de notas para obtener un tutorial detallado. |
 | [!DNL Query Service] | Un bloc de notas precargado que muestra el uso de [!DNL Query Service] directamente [!DNL JupyterLab] con flujos de trabajo de muestra proporcionados que analizan los datos a escala. |
 | Eventos XDM | Un bloc de notas precargado que muestra la exploración de datos en datos de Evento de experiencias con valor posterior, centrado en características comunes en la estructura de datos. |
 | Consultas XDM | Un bloc de notas precargado que muestra consultas empresariales de muestra sobre los datos de Experience Evento. |
@@ -455,9 +455,9 @@ Un comando [!DNL Data Science Workspace] mágico personalizado para leer o escri
 
 ### Consulta de datos mediante [!DNL Query Service] la [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] permite utilizar SQL en un [!DNL Python] bloc de notas para acceder a los datos a través del servicio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Consulta de</a>Adobe Experience Platform. El acceso a los datos a través de [!DNL Query Service] puede ser útil para tratar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Se debe tener en cuenta que la consulta de datos mediante [!DNL Query Service] el uso tiene un límite de tiempo de procesamiento de diez minutos.
+[!DNL JupyterLab] on [!DNL Platform] permite utilizar SQL en un [!DNL Python] bloc de notas para acceder a los datos a través del servicio [de Consulta de](https://www.adobe.com/go/query-service-home-en)Adobe Experience Platform. El acceso a los datos a través de [!DNL Query Service] puede ser útil para tratar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Se debe tener en cuenta que la consulta de datos mediante [!DNL Query Service] el uso tiene un límite de tiempo de procesamiento de diez minutos.
 
-Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de comprender bien la sintaxis <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service]</a>SQL.
+Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de comprender bien la sintaxis [[!DNL Query Service] ](https://www.adobe.com/go/query-service-sql-syntax-en)SQL.
 
 La consulta de datos mediante [!DNL Query Service] requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
 
@@ -731,7 +731,7 @@ timedf.show()
 | elástico | 4.0.30.44 |
 | py-xgboox | 0.60 |
 | opencv | 3.1.0 |
-| pyarrow | 0.8.0 |
+| moto | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-almacenamiento-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
