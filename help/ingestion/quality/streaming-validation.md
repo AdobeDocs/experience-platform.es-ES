@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Validación de la ingesta de flujo continuo
 topic: overview
-description: 'El flujo continuo de la ingestión le permite cargar los datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
+description: 'El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 3%
 
 # Validación de la ingesta de flujo continuo
 
-El flujo continuo de la ingestión le permite cargar los datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.
+El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):: Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
+- [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!Ingesta de flujo DNL]](../streaming-ingestion/overview.md): Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
