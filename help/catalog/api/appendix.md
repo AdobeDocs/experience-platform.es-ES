@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Apéndice de la guía del desarrollador del servicio de catálogo
 topic: developer guide
+description: Este documento contiene información adicional para ayudarle a trabajar con la API de catálogo en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -182,7 +183,7 @@ Tenga cuidado al inspeccionar la respuesta a una solicitud múltiple, ya que deb
 
 Se recomienda utilizar el control de versiones de objetos para evitar el tipo de daños en los datos que se producen cuando varios usuarios guardan un objeto casi simultáneamente.
 
-La práctica recomendada al actualizar un objeto consiste en realizar primero una llamada de API a la vista (GET) del objeto que se va a actualizar. Incluido en la respuesta (y en cualquier llamada donde la respuesta contenga un solo objeto) es un `E-Tag` encabezado que contiene la versión del objeto. Si se Añade la versión del objeto como un encabezado de solicitud denominado `If-Match` en las llamadas de actualización (PUT o PATCH), la actualización solo se realizará correctamente si la versión sigue siendo la misma, lo que ayudará a evitar conflictos de datos.
+La práctica recomendada al actualizar un objeto consiste en realizar primero una llamada de API a la vista (GET) del objeto que se va a actualizar. Incluido en la respuesta (y en cualquier llamada donde la respuesta contenga un solo objeto) es un `E-Tag` encabezado que contiene la versión del objeto. Si se añade la versión del objeto como un encabezado de solicitud denominado `If-Match` en las llamadas de actualización (PUT o PATCH), la actualización solo se realizará correctamente si la versión sigue siendo la misma, lo que ayudará a evitar conflictos de datos.
 
 Si las versiones no coinciden (el objeto fue modificado por otro proceso desde que lo recuperó), recibirá el estado HTTP 412 (Error de condición previa) que indica que se ha denegado el acceso al recurso de destinatario.
 
