@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de una conexión de flujo autenticada
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -18,14 +18,14 @@ La recopilación de datos autenticada permite a los servicios de Adobe Experienc
 
 ## Primeros pasos
 
-Se requiere el registro de la conexión de flujo para el inicio de datos de flujo continuo en el Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de datos de flujo.
+Se requiere el registro de la conexión de flujo para poder inicio de datos de flujo continuo a Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de datos de flujo.
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una dirección URL única que puede utilizarse para transmitir datos a [!DNL Platform].
 
 Este tutorial también requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
-- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para realizar llamadas a las API de inserción de flujo continuo.
 
