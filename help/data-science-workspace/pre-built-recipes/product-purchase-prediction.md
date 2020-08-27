@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de compra del producto
 topic: overview
+description: La fórmula Predicción de compra de productos permite predecir la probabilidad de un determinado tipo de evento de compra del cliente, por ejemplo, una compra de producto.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 7%
+source-wordcount: '382'
+ht-degree: 6%
 
 ---
 
@@ -32,7 +33,7 @@ Su marca busca aumentar las ventas trimestrales de su línea de productos a trav
 
 La fórmula Predicción de compra de productos utiliza aprendizaje automático para predecir el comportamiento de compra de los clientes. Para ello, aplica un clasificador de bosque aleatorio personalizado y un Modelo de datos de experiencia (XDM) de dos niveles para predecir la probabilidad de un evento de compra. El modelo utiliza datos de entrada que incorporan la información de perfil del cliente y el historial de compras pasado y establece de forma predeterminada parámetros de configuración predeterminados determinados por nuestros Data Scientists para mejorar la precisión predictiva.
 
-## esquema de datos
+## Esquema de datos
 
 Esta fórmula utiliza esquemas [](../../xdm/home.md) XDM para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
