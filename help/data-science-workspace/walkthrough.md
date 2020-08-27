@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Recorrido de Área de trabajo de ciencias de datos
 topic: Walkthrough
+description: Este documento proporciona un tutorial para Adobe Experience Platform Data Science Workspace. Específicamente, el flujo de trabajo general que un científico de datos podría llevar a cabo para resolver un problema mediante el aprendizaje automático.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -14,12 +15,12 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] tutorial
 
-Este documento proporciona un tutorial para el Adobe Experience Platform [!DNL Data Science Workspace]. Específicamente, analizaremos el flujo de trabajo general que un científico de datos podría llevar a cabo para resolver un problema usando el aprendizaje automático.
+Este documento proporciona un tutorial para Adobe Experience Platform [!DNL Data Science Workspace]. Específicamente, analizaremos el flujo de trabajo general que un científico de datos podría llevar a cabo para resolver un problema usando el aprendizaje automático.
 
 ## Requisitos previos
 
 - Una cuenta de Adobe ID registrada
-   - La cuenta de Adobe ID debe haber sido agregada a una organización con acceso a Adobes Experience Platform y [!DNL Data Science Workspace]
+   - La cuenta de Adobe ID debe haberse agregado a una organización con acceso a Adobe Experience Platform y a la variable [!DNL Data Science Workspace]
 
 ## Motivación del científico de datos
 
@@ -29,7 +30,7 @@ Un minorista enfrenta muchos desafíos para seguir siendo competitivo en el merc
 
 La solución de un científico de datos es aprovechar la riqueza de datos históricos a los que tiene acceso un minorista, predecir tendencias futuras y optimizar las decisiones de precios. Usaremos datos de ventas anteriores para entrenar nuestro modelo de aprendizaje automático y usaremos el modelo para predecir las tendencias futuras de venta. Con esto, el minorista podrá tener perspectivas que le ayudarán a realizar cambios en los precios.
 
-En este resumen, vamos a seguir los pasos que un científico de datos podría seguir para realizar un conjunto de datos y crear un modelo para predecir las ventas semanales. Iremos a las siguientes secciones en el bloc de notas sobre ventas minoristas de muestra en Adobe Experience Platform [!DNL Data Science Workspace]:
+En este resumen, vamos a seguir los pasos que un científico de datos podría seguir para realizar un conjunto de datos y crear un modelo para predecir las ventas semanales. Iremos a las siguientes secciones en el bloc de notas de ventas minoristas de muestra en Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuración](#setup)
 - [Exploración de datos](#exploring-data)
@@ -114,7 +115,7 @@ Usando nuestro conjunto de datos de antes, podemos generar la tabla y el diagram
 
 ![](./images/walkthrough/box_whisker.png)
 
-Para mostrar la distribución de datos se utiliza una casilla y un diagrama de whisky. Las líneas exteriores del trazado muestran los cuartiles superior e inferior, mientras que el cuadro abarca el rango intercuartil. La línea del cuadro marca la mediana. Cualquier punto de datos que supere 1,5 veces el cuartil superior o inferior se marcará como un círculo. Estos puntos se consideran periféricos.
+Para mostrar la distribución de datos se utiliza una casilla y un diagrama de whisky. Las líneas exteriores del trazado muestran los cuartiles superior e inferior, mientras que el cuadro abarca el rango intercuartil. La línea del cuadro marca la mediana. Los puntos de datos que superen 1,5 veces el cuartil superior o inferior se marcarán como un círculo. Estos puntos se consideran periféricos.
 
 Luego, podemos trazar las ventas semanales con el tiempo. Solamente mostraremos la salida de la primera tienda. El código del cuaderno genera 6 parcelas correspondientes a 6 de las 45 tiendas de nuestro conjunto de datos.
 
