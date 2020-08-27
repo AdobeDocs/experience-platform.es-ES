@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: Control de acceso general
 topic: overview
+title: Control de acceso general
+description: Control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 translation-type: tm+mt
-source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1131'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # Control de acceso general
 
-El control de acceso para [!DNL Experience Platform] se proporciona a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], que vinculan a los usuarios con permisos y entornos limitados.
+Control de acceso para [!DNL Experience Platform] se proporciona a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en [!DNL Admin Console], que vinculan a los usuarios con permisos y entornos limitados.
 
 ## Jerarquía de controles de acceso y flujo de trabajo
 
