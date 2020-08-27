@@ -5,9 +5,9 @@ title: Creación de un conjunto de datos mediante API
 topic: datasets
 description: Este documento proporciona pasos generales para crear un conjunto de datos con las API de Adobe Experience Platform y rellenar el conjunto de datos con un archivo.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1259'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ Este documento proporciona pasos generales para crear un conjunto de datos con l
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: [!DNL Experience Platform] permite ingestar datos como archivos por lotes.
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
