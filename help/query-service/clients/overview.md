@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar clientes al servicio de Consulta
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '56'
+source-wordcount: '75'
 ht-degree: 0%
 
 ---
@@ -18,10 +18,10 @@ En esta sección se explica cómo conectarse a [!DNL Query Service] desde una va
 
 Se proporcionan instrucciones para los siguientes clientes:
 
-- [!DNL Aqua Data Studio](./aqua-data-studio.md)
-- [!DNL Looker](./looker.md)
-- [!DNL Postico (Mac)](./postico.md)
-- [!DNL Power BI (PC)](./power-bi.md)
-- [!DNL PSQL](./psql.md)
-- [!DNL RStudio](./rstudio.md)
-- [!DNL Tableau](./tableau.md)
+- [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!Valor de búsqueda de DNL]](./looker.md)
+- [[!DNL Postico (Mac)]](./postico.md)
+- [[!Power BI DNL (PC)]](./power-bi.md)
+- [[!DNL PSQL]](./psql.md)
+- [[!DNL RStudio]](./rstudio.md)
+- [[!DNL Tableau]](./tableau.md)
