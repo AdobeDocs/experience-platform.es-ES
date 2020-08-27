@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Primeros pasos
 topic: API guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # [!DNL Identity Service] Guía para desarrolladores de API
 
-Adobe Experience Platform [!DNL Identity Service] gestiona la identificación de sus clientes entre dispositivos, canales cruzados y casi en tiempo real en lo que se conoce como gráfico de identidad dentro de Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] gestiona la identificación de sus clientes entre dispositivos, entre canales y casi en tiempo real en lo que se conoce como gráfico de identidad dentro de Adobe Experience Platform.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [!DNL Identity Service](../home.md):: Resuelve el desafío fundamental que plantea la fragmentación de los datos de perfil de los clientes. Para ello, combina identidades entre dispositivos y sistemas en los que los clientes interactúan con su marca.
-- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Identity Service]](../home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de perfil de los clientes. Para ello, combina identidades entre dispositivos y sistemas en los que los clientes interactúan con su marca.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer o tener disponible para realizar llamadas a la [!DNL Identity Service] API correctamente.
 
@@ -50,7 +50,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 - Content-Type: application/json
 
-### enrutamiento basado en la región
+### Enrutamiento basado en la región
 
 La [!DNL Identity Service] API emplea extremos específicos de la región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización de IMS, se determina y almacena una región dentro del perfil de organización de IMS. El uso de la región correcta con cada punto final garantiza que todas las solicitudes realizadas con la [!DNL Identity Service] API se dirijan a la región adecuada.
 
