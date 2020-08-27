@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía para desarrolladores de Control de acceso
+title: Guía para desarrolladores de control de acceso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 1%
 
 [!DNL Access control] for [!DNL Experience Platform] se administra a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../home.md) control de acceso para obtener más información.
 
-Esta guía para desarrolladores proporciona información sobre cómo dar formato a las solicitudes al [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)y abarca las siguientes operaciones:
+Esta guía para desarrolladores proporciona información sobre cómo dar formato a sus solicitudes a la [[!DNL Control de acceso API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)y abarca las siguientes operaciones:
 
-- [Nombres de Lista de permisos y tipos de recursos](./permissions-and-resource-types.md)
-- [Directivas eficaces de Vista para el usuario actual](./effective-policies.md)
+- [Nombres de lista de permisos y tipos de recursos](./permissions-and-resource-types.md)
+- [Directivas eficaces de vista para el usuario actual](./effective-policies.md)
 
 ## Primeros pasos
 
