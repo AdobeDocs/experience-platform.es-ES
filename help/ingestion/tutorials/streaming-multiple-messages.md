@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmisión de varios mensajes en una sola solicitud HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Envío de varios mensajes en una sola solicitud HTTP
 
-Al transmitir datos al Adobe Experience Platform, realizar numerosas llamadas HTTP puede resultar costoso. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes dentro de una sola solicitud es una excelente manera de optimizar los datos que se envían a [!DNL Experience Platform].
+Al transmitir datos a Adobe Experience Platform, realizar numerosas llamadas HTTP puede resultar costoso. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes dentro de una sola solicitud es una excelente manera de optimizar los datos que se envían a [!DNL Experience Platform].
 
 Este documento proporciona un tutorial para el envío de varios mensajes a [!DNL Experience Platform] una sola solicitud HTTP mediante la ingesta de flujo continuo.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico del Adobe Experience Platform [!DNL Data Ingestion]. Antes de comenzar este tutorial, consulte la siguiente documentación:
+Este tutorial requiere un conocimiento práctico de Adobe Experience Platform [!DNL Data Ingestion]. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
 - [Información general](../home.md)sobre la inserción de datos: Abarca los conceptos básicos de [!DNL Experience Platform Data Ingestion], incluidos los métodos de inserción y los conectores de datos.
 - [Información general](../streaming-ingestion/overview.md)sobre la ingestión de flujo: El flujo de trabajo y los componentes básicos de la inserción de flujo continuo, como conexiones de flujo continuo, conjuntos de datos [!DNL XDM Individual Profile]y [!DNL XDM ExperienceEvent].
 
-Este tutorial también requiere que haya completado el tutorial [Autenticación a Adobe Experience Platform](../../tutorials/authentication.md) para poder realizar correctamente llamadas a [!DNL Platform] las API. La finalización del tutorial de autenticación proporciona el valor del encabezado Autorización requerido por todas las llamadas de API en este tutorial. El encabezado se muestra en las llamadas de ejemplo de la siguiente manera:
+Este tutorial también requiere que haya completado el tutorial [Autenticación a Adobe Experience Platform](../../tutorials/authentication.md) para realizar correctamente llamadas a [!DNL Platform] las API. La finalización del tutorial de autenticación proporciona el valor del encabezado Autorización requerido por todas las llamadas de API en este tutorial. El encabezado se muestra en las llamadas de ejemplo de la siguiente manera:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 
@@ -491,7 +491,7 @@ La respuesta de ejemplo anterior muestra mensajes de error para la solicitud ant
 
 El primer mensaje se envió correctamente a [!DNL Platform] y no se ve afectado por los resultados de los otros mensajes. Como resultado, al intentar reenviar los mensajes fallidos, no es necesario volver a incluir este mensaje.
 
-El segundo mensaje falló porque no tenía cuerpo de mensaje. La solicitud de recopilación espera que los elementos de mensaje tengan secciones de encabezado y cuerpo válidas. Si se Añade el siguiente código después del encabezado del segundo mensaje, se corregirá la solicitud y se permitirá que el segundo mensaje pase la validación:
+El segundo mensaje falló porque no tenía cuerpo de mensaje. La solicitud de recopilación espera que los elementos de mensaje tengan secciones de encabezado y cuerpo válidas. Si se añade el siguiente código después del encabezado del segundo mensaje, se corregirá la solicitud y se permitirá que el segundo mensaje pase la validación:
 
 ```JSON
       "body": {
@@ -508,9 +508,9 @@ El segundo mensaje falló porque no tenía cuerpo de mensaje. La solicitud de re
     },
 ```
 
-Error en el tercer mensaje debido a que se está utilizando un ID de organización de IMS no válido en el encabezado. La organización de IMS debe coincidir con el {CONNECTION_ID} al que intenta publicar. Para determinar qué ID de organización de IMS coincide con la conexión de flujo que está utilizando, puede realizar una `GET inlet` solicitud con el [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [Recuperación de una conexión](./create-streaming-connection.md#get-data-collection-url) de flujo para ver un ejemplo de cómo recuperar las conexiones de flujo creadas anteriormente.
+Error en el tercer mensaje debido a que se está utilizando un ID de organización de IMS no válido en el encabezado. La organización de IMS debe coincidir con el {CONNECTION_ID} al que intenta publicar. Para determinar qué ID de organización de IMS coincide con la conexión de flujo que está utilizando, puede realizar una `GET inlet` solicitud utilizando la [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [Recuperación de una conexión](./create-streaming-connection.md#get-data-collection-url) de flujo para ver un ejemplo de cómo recuperar las conexiones de flujo creadas anteriormente.
 
-El cuarto mensaje falló porque no seguía el esquema XDM esperado. El `xdmSchema` contenido incluido en el encabezado y el cuerpo de la solicitud no coincide con el esquema XDM del `{DATASET_ID}`. La corrección del esquema en el encabezado y el cuerpo del mensaje le permite pasar la validación de DCCS y enviarse correctamente a [!DNL Platform]. El cuerpo del mensaje también debe actualizarse para que coincida con el esquema XDM de `{DATASET_ID}` para que pase la validación de flujo en [!DNL Platform]. Para obtener más información sobre lo que sucede con los mensajes que se transmiten correctamente a Platform, consulte la sección [Confirmar mensajes ingestados](#confirm-messages-ingested) de este tutorial.
+El cuarto mensaje falló porque no seguía el esquema XDM esperado. El `xdmSchema` contenido incluido en el encabezado y el cuerpo de la solicitud no coincide con el esquema XDM del `{DATASET_ID}`. La corrección del esquema en el encabezado y el cuerpo del mensaje le permite pasar la validación de DCCS y enviarse correctamente a [!DNL Platform]. El cuerpo del mensaje también debe actualizarse para que coincida con el esquema XDM de `{DATASET_ID}` para que pase la validación de flujo en [!DNL Platform]. Para obtener más información sobre lo que sucede con los mensajes que se transmiten correctamente a la plataforma, consulte la sección [confirmar mensajes ingestados](#confirm-messages-ingested) de este tutorial.
 
 ### Recuperar mensajes fallidos de [!DNL Platform]
 
@@ -529,7 +529,7 @@ Los mensajes por lotes que pasan la validación de flujo continuo [!DNL Platform
 
 ## Pasos siguientes
 
-Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente en el conjunto de datos de destinatario, puede enviar por inicio sus propios datos a [!DNL Platform]. Para obtener información general sobre cómo consulta y recuperación de datos ingestados desde [!DNL Platform], consulte la [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guía.
+Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente en el conjunto de datos de destinatario, puede enviar por inicio sus propios datos a [!DNL Platform]. Para obtener información general sobre cómo consulta y recuperación de datos ingestados desde [!DNL Platform], consulte la guía [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
 
 ## Apéndice
 
