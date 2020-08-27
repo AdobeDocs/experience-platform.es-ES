@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 5%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!Servicio de segmentación DNL]](#segmentation)
+* [[!Servicio de decisiones DNL]](#decisioning)
+* [[!Fuentes DNL]](#sources)
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-El servicio de segmentación por Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite crear segmentos y generar audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
 
 [!DNL Segmentation Service] define un subconjunto concreto de perfiles describiendo los criterios que distinguen a un grupo comercializable de personas dentro de la base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
@@ -34,8 +34,8 @@ El servicio de segmentación por Adobe Experience Platform proporciona una inter
 
 | Función | Descripción |
 |--- | ---|
-| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL _Segmentos _]y[!UICONTROL _Audiencias_] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL _Audiencias _]. Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la Audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
-| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha [!UICONTROL _Campos _]y, a continuación, utilice el menú desplegable_[!UICONTROL  Combinar directiva]_ para seleccionar la directiva de combinación que desee utilizar. |
+| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL _Segmentos_] y [!UICONTROL _Audiencias_] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL _Audiencias_] . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
+| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha [!UICONTROL _Campos_] y, a continuación, utilice el menú desplegable _[!UICONTROL Combinar directiva]_ para seleccionar la directiva de combinación que desee utilizar. |
 
 **Problemas conocidos**
 
@@ -69,7 +69,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 | Función | Descripción |
 | ---------- | ------------ |
-| Conexión de flujo continuo | La ingestión por flujo continuo le permite enviar datos desde dispositivos cliente y servidor a [!DNL Experience Platform] en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
+| Conexión de flujo continuo | La ingestión por flujo continuo le permite enviar datos desde dispositivos del lado del cliente y del servidor a [!DNL Experience Platform] en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
 | Compatibilidad con conectores para [!DNL Google Cloud Store] | Compatibilidad para recopilar datos de [!DNL Google Cloud Store]. |
 
 **Problemas conocidos**
@@ -82,13 +82,13 @@ Para obtener más información sobre las fuentes, consulte la descripción gener
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
-XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación pueda comunicarse con los servicios en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
+XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 |--- | ---|
-| Validación de esquema mejorada | Nuevas comprobaciones para asegurarse de que las referencias se resuelven en campos adicionales según lo esperado. Se Añadieron comprobaciones adicionales a los campos definidos como una matriz de objetos para asegurarse de que los objetos están completamente definidos. Se han mejorado los mensajes de error para ayudar a identificar y corregir problemas. |
+| Validación de esquema mejorada | Nuevas comprobaciones para asegurarse de que las referencias se resuelven en campos adicionales según lo esperado. Se añadieron comprobaciones adicionales a los campos definidos como una matriz de objetos para asegurarse de que los objetos están completamente definidos. Se han mejorado los mensajes de error para ayudar a identificar y corregir problemas. |
 
 **Corrección de errores**
 
