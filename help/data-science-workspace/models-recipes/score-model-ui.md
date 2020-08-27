@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Puntuación de un modelo (IU)
 topic: Tutorial
+description: 'La puntuación en Adobe Experience Platform Data Science Workspace se puede conseguir mediante la incorporación de datos de entrada a un modelo ya existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote. '
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Puntuación de un modelo (IU)
 
-La puntuación en el Adobe Experience Platform [!DNL Data Science Workspace] se puede lograr mediante la introducción de datos de entrada en un modelo capacitado existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote.
+La puntuación en Adobe Experience Platform [!DNL Data Science Workspace] se puede lograr mediante la alimentación de datos de entrada en un modelo capacitado existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote.
 
 Este tutorial muestra los pasos necesarios para marcar un modelo en la interfaz de usuario [!DNL Data Science Workspace] .
 
@@ -46,7 +47,7 @@ Revise y confirme las configuraciones de puntuación y haga clic en **[!UICONTRO
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Una ejecución de puntuación mostrará cualquiera de los cuatro estados siguientes: Pendiente, Completado, Fallido o En ejecución, y se actualizan automáticamente. Continúe con el paso siguiente si el estado es &quot;Completado&quot; o &quot;Fallido&quot;.
 
-## Resultados de puntuación de Vista
+## Resultados de puntuación de vista
 
 1. Busque la ejecución de formación que se utilizó para la ejecución de puntuación y haga clic en el nombre para vista de la página **[!UICONTROL Evaluación]** .
 
