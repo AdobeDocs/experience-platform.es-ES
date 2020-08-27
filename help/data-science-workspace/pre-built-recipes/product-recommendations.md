@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de recomendación de producto
 topic: overview
+description: La fórmula Product Recommendations le permite ofrecer recomendaciones de productos personalizadas que se adaptan a las necesidades e intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle una visión detallada de los productos que pueden interesarle.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 3%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -26,16 +27,16 @@ La fórmula Product Recommendations utiliza el aprendizaje automático para anal
 
 ## ¿Cómo empiezo?
 
-Puede comenzar siguiendo el tutorial de Adobe Experience Platform Lab (consulte el enlace de laboratorio más abajo). Este tutorial le mostrará cómo crear la fórmula de Recommendations de producto en un bloc de notas de Jupyter siguiendo el flujo de trabajo de [portátil para las fórmulas](../jupyterlab/create-a-recipe.md) e implementando la fórmula en [!DNL Experience Platform][!DNL Data Science Workspace].
+Puede comenzar siguiendo el tutorial de Adobe Experience Platform Lab (consulte el enlace de Lab más abajo). Este tutorial le mostrará cómo crear la fórmula de Recommendations de producto en un bloc de notas de Jupyter siguiendo el flujo de trabajo de [portátil para las fórmulas](../jupyterlab/create-a-recipe.md) e implementando la fórmula en [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Laboratorio: Predecir el futuro con el área de trabajo de ciencias de datos](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos de laboratorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## esquema de datos
+## Esquema de datos
 
 Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM personalizados para modelar los datos de entrada y salida:
 
-### esquema de datos de entrada
+### Esquema de datos de entrada
 
 | Nombre del campo | Tipo |
 --- | ---
@@ -44,7 +45,7 @@ Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM pers
 | timestamp | Cadena |
 | userId | Cadena |
 
-### esquema de datos de salida
+### Esquema de datos de salida
 
 | Nombre del campo | Tipo |
 --- | ---
