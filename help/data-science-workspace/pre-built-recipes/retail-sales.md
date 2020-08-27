@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Fórmula de ventas minoristas
 topic: overview
+description: La fórmula Ventas al por menor le permite predecir la previsión de ventas de todas las tiendas que se hayan iniciado durante un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -33,9 +34,9 @@ La fórmula de previsión de ventas minoristas utiliza el aprendizaje automátic
 
 Para empezar, siga este [tutorial](../jupyterlab/create-a-recipe.md).
 
-En este tutorial se analizará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas para crear el flujo de trabajo de la fórmula con el fin de crear la fórmula en Adobe Experience Platform.
+En este tutorial se analizará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas para el flujo de trabajo de la fórmula a fin de crear la fórmula en Adobe Experience Platform.
 
-## esquema de datos
+## Esquema de datos
 
 Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
