@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform le permite reunir datos de múltiples fuentes y combin
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte del [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+El punto final de API utilizado en esta guía forma parte de la [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 ## Componentes de políticas de combinación {#components-of-merge-policies}
 
