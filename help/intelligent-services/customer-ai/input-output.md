@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform
 title: Entrada y salida de AI del cliente
 topic: Getting started
+description: El siguiente documento describe las diferentes entradas y salidas utilizadas en la API del cliente.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
