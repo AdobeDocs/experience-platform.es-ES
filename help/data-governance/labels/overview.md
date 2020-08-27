@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Información general sobre las etiquetas de uso de datos
 topic: labels
+description: El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Gobierno de datos de Adobe Experience Platform. Las funciones DULE permiten aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos (también conocidas como etiquetas DULE) en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Información general sobre las etiquetas de uso de datos
 
-Adobe Experience Platform [!DNL Data Governance] permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas.
+Adobe Experience Platform [!DNL Data Governance] permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada uno según las políticas de uso de datos relacionadas.
 
 Este documento proporciona información general sobre las etiquetas de uso de datos de [!DNL Experience Platform]. Antes de leer esta guía, consulte la información general [sobre el Gobierno de](../home.md) datos para obtener una introducción más sólida al marco de administración de datos.
 
@@ -30,7 +31,7 @@ Además de las etiquetas proporcionadas por Adobe, también puede definir sus pr
 
 ## Herencia de etiquetas para segmentos de audiencia
 
-Todos los segmentos de audiencia creados por el servicio [de segmentación de](../../segmentation/home.md) Adobes Experience Platform heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite que las aplicaciones creadas sobre [!DNL Experience Platform] (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionen una aplicación automática de la directiva de uso de datos al activar segmentos en destinos.
+Todos los segmentos de audiencia creados por el servicio [de segmentación de](../../segmentation/home.md) Adobe Experience Platform heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite que las aplicaciones creadas sobre [!DNL Experience Platform] (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionen una aplicación automática de la directiva de uso de datos al activar segmentos en destinos.
 
 Además de heredar etiquetas de nivel de conjunto de datos, los segmentos heredan todas las etiquetas de nivel de campo de sus conjuntos de datos asociados de forma predeterminada. Según el modo en que la aplicación [!DNL Platform]basada consuma segmentos, es posible especificar qué campos se utilizan, impidiendo así que el segmento herede etiquetas de campos excluidos.
 
