@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Definiciones de Previsualizaciones y estimaciones
+title: Definiciones de previsualizaciones y estimaciones
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
 
 
-# Definiciones de Previsualizaciones y estimaciones
+# Definiciones de previsualizaciones y estimaciones
 
-A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Adobe Experience Platform] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. **Las Previsualizaciones** proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. **Las estimaciones** proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
+A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Adobe Experience Platform] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. **Las previsualizaciones** proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. **Las estimaciones** proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
 ## Primeros pasos
 
@@ -73,7 +73,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `predicateExpression` | expresión de PQL para la consulta de los datos. |
+| `predicateExpression` | Expresión de PQL para la consulta de los datos. |
 | `predicateType` | Tipo de predicado de la expresión de consulta en `predicateExpression`. Actualmente, el único valor aceptado para esta propiedad es `pql/text`. |
 | `predicateModel` | Nombre del esquema [!DNL Experience Data Model] (XDM) en el que se basan los datos de perfil. |
 
@@ -171,7 +171,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `results` | Una lista de los ID de entidad, junto con sus identidades relacionadas. Los vínculos proporcionados se pueden utilizar para buscar las entidades especificadas mediante el [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | Una lista de los ID de entidad, junto con sus identidades relacionadas. Los vínculos proporcionados se pueden utilizar para buscar las entidades especificadas mediante la [[!DNL API de acceso a Perfil]](../../profile/api/entities.md). |
 
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
