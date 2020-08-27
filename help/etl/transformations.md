@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Transformaciones ETL de muestra
 topic: overview
+description: En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación y carga (ETL).
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -53,7 +54,7 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | F_NAME | person.name.firstName | Copiar como cadena |
 | L_NAME | person.name.lastName | Copiar como cadena |
 | SEXO | person.gender | Transformar el sexo como persona correspondiente.valor de enumeración de género |
-| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transformar el valor de bornDayAndMonth como<br/>stringTransform donde el valor de bornDate es<br/>stringTransform donde el valor es &quot;valor&quot;. |
+| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transformar el valor de bornDayAndMonth como<br/>stringTransform donde el valor de bornDate es<br/>stringTransform donde el valor de bornYear es corto |
 | CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, principal:false}] | Copiar como cadena a la matriz CRMID en identityMap y establecer Principal como falso |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copiar como cadena a la primera entrada en la matriz ECID en identityMap y establecer Principal como falso |
@@ -171,7 +172,7 @@ El siguiente ejemplo muestra las dos primeras filas del CSV transformado en XDM,
 }
 ```
 
-## esquema Dataframe a XDM
+## Esquema Dataframe a XDM
 
 La jerarquía de un dataframe (como un archivo de parquet) debe coincidir con la del esquema XDM en el que se está cargando.
 
