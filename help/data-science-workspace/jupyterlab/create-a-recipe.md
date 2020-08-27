@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2295'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Las dos secciones siguientes abarcarán la carga de datos y la preparación de d
 
 En este paso se utiliza el dataframe [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)pandas. Los datos se pueden cargar desde archivos en [!DNL Adobe Experience Platform] el uso del [!DNL Platform] SDK (`platform_sdk`) o de fuentes externas mediante las funciones `read_csv()` o `read_json()` de pandas.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [Fuentes externas](#external-sources)
 
 >[!NOTE]
