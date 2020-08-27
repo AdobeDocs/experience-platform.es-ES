@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creación de una canalización de funciones
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
@@ -438,4 +438,4 @@ Una vez finalizada la puntuación, la canalización de funciones debería estar 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la [!DNL Sensei Machine Learning] API. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante el uso del [!DNL Sensei Machine Learning API](../api/getting-started.md).
+Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la [!DNL Sensei Machine Learning] API. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante la [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
