@@ -5,7 +5,7 @@ seo-title: (Beta) Destino de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 [!DNL Azure Event Hubs] es una plataforma de transmisión de datos importantes y un servicio de ingestión de evento. Puede recibir y procesar millones de eventos por segundo. Los datos enviados a un concentrador de evento se pueden transformar y almacenar mediante cualquier proveedor de análisis en tiempo real o adaptadores de almacenamiento o lotes.
 
-Puede crear una conexión saliente en tiempo real con su [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde Adobe Experience Platform.
+Puede crear una conexión saliente en tiempo real con el [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde Adobe Experience Platform.
 
 * Para obtener más información sobre [!DNL Azure Event Hubs], consulte la documentación de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Para conectarse a [!DNL Azure Event Hubs] través de llamadas de API, consulte el tutorial [de API de destinos de](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)flujo continuo.
@@ -67,7 +67,7 @@ Consulte [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/a
 
 Los datos exportados [!DNL Experience Platform] llegan al formato [!DNL Azure Event Hubs] JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
