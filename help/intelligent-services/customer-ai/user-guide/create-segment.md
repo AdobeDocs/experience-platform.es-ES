@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: Crear segmentos de clientes con puntuaciones predichas
 topic: Create a segment
+description: Cuando se completa una ejecución de predicción, los Perfiles consumen automáticamente las puntuaciones de propensión predichas. El enriquecimiento de Perfiles con puntuaciones de AI de cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. Esta sección proporciona los pasos para crear segmentos mediante el Generador de segmentos.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -40,4 +41,4 @@ Por encima de la columna *Campos* de la izquierda, haga clic en el icono de **en
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha encontrado audiencias basadas en sus puntuaciones de tendencia con el Generador de segmentos. Ahora puede realizar el destinatario de sus audiencias activándolas en los destinos. Consulte la descripción general [de](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) destinos para obtener más información.
+Al seguir este tutorial, ha encontrado audiencias basadas en sus puntuaciones de tendencia mediante el Generador de segmentos. Ahora puede realizar el destinatario de sus audiencias activándolas en los destinos. Consulte la descripción general [de](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) destinos para obtener más información.
