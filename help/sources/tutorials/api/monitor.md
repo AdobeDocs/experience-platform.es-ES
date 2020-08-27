@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorear flujos y ejecuciones
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-En este tutorial se explican los pasos para supervisar los datos de ejecución del flujo para comprobar si están completos, los errores y las métricas que utilizan el [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+En este tutorial se explican los pasos para supervisar los datos de ejecución del flujo para comprobar si están completos, los errores y las métricas que utilizan la [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
@@ -29,7 +29,7 @@ Este tutorial también requiere que tenga conocimientos prácticos sobre los sig
 * [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para poder supervisar correctamente las ejecuciones de flujo mediante la [!DNL Flow Service] API.
+Las siguientes secciones proporcionan información adicional que deberá conocer para poder supervisar correctamente las ejecuciones de flujo mediante la [!DNL Flow Service] API.
 
 ### Leer llamadas de API de muestra
 
