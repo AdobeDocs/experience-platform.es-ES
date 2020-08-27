@@ -5,9 +5,9 @@ title: Filtrar datos del catálogo mediante parámetros de consulta
 topic: developer guide
 description: La API de servicio de catálogo permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Una de las prácticas recomendadas para Catalog es utilizar filtros en todas las llamadas de API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -201,14 +201,14 @@ La respuesta incluye un objeto JSON que contiene dos elementos de nivel superior
 
 Algunos objetos Catalog admiten el uso de un `tags` atributo. Las etiquetas pueden adjuntar información a un objeto y luego utilizarse para recuperarlo. La elección de las etiquetas que se deben utilizar y la forma de aplicarlas depende de los procesos de la organización.
 
-Existen algunas limitaciones que se deben tener en cuenta al utilizar etiquetas:
+Existen algunas limitaciones que hay que tener en cuenta al usar etiquetas:
 
 * Los únicos objetos Catalog que admiten etiquetas actualmente son conjuntos de datos, lotes y conexiones.
 * Los nombres de las etiquetas son exclusivos de la organización de IMS.
 * Los procesos de Adobe pueden aprovechar las etiquetas para determinados comportamientos. Los nombres de estas etiquetas llevan el prefijo &quot;adobe&quot; como estándar. Por lo tanto, debe evitar esta convención al declarar nombres de etiquetas.
 * Los siguientes nombres de etiquetas están reservados para su uso en todas partes [!DNL Experience Platform]y, por lo tanto, no se pueden declarar como nombres de etiqueta para su organización:
-   * `unifiedProfile`:: Este nombre de etiqueta está reservado para los conjuntos de datos que [!DNL Real-time Customer Profile](../../profile/home.md).
-   * `unifiedIdentity`:: Este nombre de etiqueta está reservado para los conjuntos de datos que [!DNL Identity Service](../../identity-service/home.md).
+   * `unifiedProfile`:: Este nombre de etiqueta está reservado para que los conjuntos de datos sean ingestados por [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md).
+   * `unifiedIdentity`:: Este nombre de etiqueta está reservado para que los conjuntos de datos se ingesten por [[!DNL Identity Service]](../../identity-service/home.md).
 
 A continuación se muestra un ejemplo de un conjunto de datos que contiene una `tags` propiedad. Las etiquetas de esa propiedad adoptan la forma de pares clave-valor, y cada valor de etiqueta aparece como una matriz que contiene una sola cadena:
 
@@ -584,7 +584,7 @@ El valor del `property` parámetro admite varios tipos diferentes de expresiones
 | ! | Al prefijar un &quot;`!`&quot; en el valor de un `property` parámetro, sólo se devuelven objetos en los que la propiedad **no existe** . | `property=!name` |
 | ~ | Devuelve sólo objetos cuyos valores de propiedad (cadena) coinciden con una expresión normal proporcionada después del símbolo de virgulilla (`~`). | `property=name~^example` |
 | == | Devuelve sólo objetos cuyos valores de propiedad coinciden exactamente con la cadena proporcionada después del símbolo doble-es (`==`). | `property=name==exampleName` |
-| != | Devuelve sólo objetos cuyos valores de propiedad **no coinciden con** la cadena proporcionada después del símbolo no-es (`!=`). | `property=name!=exampleName` |
+| != | Devuelve únicamente objetos cuyos valores de propiedad **no coinciden con** la cadena proporcionada después del símbolo no-es (`!=`). | `property=name!=exampleName` |
 | &lt; | Devuelve sólo objetos cuyos valores de propiedad sean inferiores (pero no iguales) a una cantidad declarada. | `property=version<1.0.0` |
 | &lt;= | Devuelve sólo objetos cuyos valores de propiedad sean inferiores (o iguales a) una cantidad declarada. | `property=version<=1.0.0` |
 | > | Devuelve sólo objetos cuyos valores de propiedad son buenos (pero no iguales a) una cantidad declarada. | `property=version>1.0.0` |
