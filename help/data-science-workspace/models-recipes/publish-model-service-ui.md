@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics
+keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: Publicación de un modelo como servicio (UI)
 topic: Tutorial
+description: Adobe Experience Platform Data Science Workspace le permite publicar el modelo evaluado y capacitado como un servicio, lo que permite a los usuarios de la organización de IMS puntuar datos sin necesidad de crear sus propios modelos.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Si prefiere publicar un modelo con las API de aprendizaje automático de Sensei,
 
 ## Publicación de un modelo {#publish-a-model}
 
-1. En Adobe Experience Platform, haga clic en el vínculo **[!UICONTROL Modelos]** ubicado en la columna de navegación izquierda para lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a publicar como servicio.
+1. En Adobe Experience Platform, haga clic en el vínculo **[!UICONTROL Modelos]** ubicado en la columna de navegación izquierda para realizar la lista de todos los modelos existentes. Busque y haga clic en el nombre del modelo que se va a publicar como servicio.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
 2. Haga clic en **[!UICONTROL Publicar]** cerca de la parte superior derecha de la página de información general del modelo para inicio de un proceso de creación de servicios.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
@@ -39,7 +40,7 @@ Si prefiere publicar un modelo con las API de aprendizaje automático de Sensei,
 
 ## Puntuación mediante un servicio {#access-a-service}
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** situada en la columna de navegación izquierda para acceder a la Galería *[!UICONTROL de servicios]*. Busque el servicio que desee utilizar y haga clic en **[!UICONTROL Puntuación]**.
+1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** ubicada en la columna de navegación izquierda para acceder a la Galería *[!UICONTROL de servicios]*. Busque el servicio que desee utilizar y haga clic en **[!UICONTROL Puntuación]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Seleccione un conjunto de datos de entrada adecuado para la ejecución de puntuación y haga clic en **[!UICONTROL Siguiente]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
