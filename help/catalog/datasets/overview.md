@@ -5,9 +5,9 @@ title: Introducción a los conjuntos de datos
 topic: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '731'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ Adobe Experience Platform [!DNL Data Governance] le permite administrar los dato
 
 Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o a campos de conjuntos de datos individuales. Las etiquetas agregadas en el nivel de conjunto de datos son heredadas por todos los campos dentro de ese conjunto de datos.
 
-Consulte la información general [de](../../data-governance/home.md) Administración de datos para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en [!DNL Platform], consulte las siguientes guías:
+Consulte la información general [de Gobierno de](../../data-governance/home.md) datos para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en [!DNL Platform], consulte las siguientes guías:
 
 * [Administrar etiquetas en la interfaz de usuario](../../data-governance/labels/user-guide.md)
 * [Administrar etiquetas de conjuntos de datos en la API](../../data-governance/labels/dataset-api.md)
@@ -56,9 +56,9 @@ Una vez que los datasets se han utilizado para almacenar datos ingestados, estos
 
 A continuación se muestra una lista de servicios de flujo descendente que utilizan conjuntos de datos para diversas operaciones. Consulte la documentación de cada servicio para obtener más información.
 
-* [!DNL Data Access API](../../data-access/home.md):: Permite acceder y descargar el contenido de los archivos almacenados en los conjuntos de datos.
+* [[!DNL Data Access API]](../../data-access/home.md): Permite acceder y descargar el contenido de los archivos almacenados en los conjuntos de datos.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Permite unir identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
-* [!DNL Real-time Customer Profile](../../profile/home.md):: Aprovecha [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos de los perfiles del cliente [!DNL Data Lake] y los mantiene en su propio almacén de datos independiente.
+* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Aprovecha [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos de los perfiles del cliente [!DNL Data Lake] y los mantiene en su propio almacén de datos independiente.
 * [Servicio](../../segmentation/home.md)de segmentación de Adobe Experience Platform: Le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro del [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utiliza aprendizaje automático e inteligencia artificial para descubrir perspectivas en grandes conjuntos de datos.
 * [Servicio](../../query-service/home.md)de Consulta de Adobe Experience Platform: Permite utilizar SQL estándar para consulta de datos en [!DNL Experience Platform], unir cualquier conjunto de datos dentro del [!DNL Data Lake] y capturar los resultados de consulta como un nuevo conjunto de datos para su uso en sistema de informes, [!DNL Data Science Workspace]o [!DNL Real-time Customer Profile].
