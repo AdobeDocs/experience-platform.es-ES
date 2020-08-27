@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics
+keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: Optimizar un modelo
 topic: Tutorial
+description: El marco de perspectivas de modelo proporciona al científico de datos herramientas en el área de trabajo de ciencias de datos para realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
