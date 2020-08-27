@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a l
 
 Esta guía para desarrolladores requiere un conocimiento práctico de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación por flujo continuo. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [!DNL Segmentation](../home.md):: Proporciona la capacidad de crear segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
+- [[!Segmentación DNL]](../home.md): Proporciona la capacidad de crear segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
