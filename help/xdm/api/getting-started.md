@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía para desarrolladores de API de registro de esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -167,9 +167,21 @@ Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_I
 
 El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas proporcionados por el Adobe y [!DNL Experience Platform] el socio estándar. Solo puede realizar solicitudes de lista y búsqueda (GET) en el contenedor global.
 
+Un ejemplo de una llamada que utiliza el contenedor global sería el siguiente:
+
+```http
+GET /global/classes
+```
+
 ### Contenedor del inquilino
 
 No debe confundirse con su único `TENANT_ID`, el contenedor del inquilino contiene todas las clases, mezclas, tipos de datos, esquemas y descriptores definidos por una organización de IMS. Son exclusivas de cada organización, lo que significa que no son visibles ni manejables por otras organizaciones de IMS. Puede realizar todas las operaciones de CRUD (GET, POST, PUT, PATCH, DELETE) con los recursos que cree en el contenedor del inquilino.
+
+Un ejemplo de una llamada que utiliza el contenedor del inquilino sería el siguiente:
+
+```http
+POST /tenant/mixins
+```
 
 Cuando se crea una clase, una mezcla, un esquema o un tipo de datos en el contenedor del inquilino, se guarda en el  [!DNL Schema Registry] y se asigna un `$id` URI que incluye su `TENANT_ID`. Esto `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de `$id` valores.
 
