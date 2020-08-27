@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 **Fecha de la versión: 18 de noviembre de 2019**
 
 Nuevas funciones de Adobe Experience Platform:
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL Plataforma de datos del cliente en tiempo real]](#rtcdp)
+* [[!Destinos DNL]](#destinations)
+* [[!Fuentes DNL]](#sources)
 
 Actualizaciones de funciones existentes:
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!Espacio de trabajo de ciencias de datos DNL]](#dsw)
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](#xdm)
+* [[!DNL Perfil del cliente en tiempo real]](#profile)
+* [[!Servicio de segmentación DNL]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
@@ -85,7 +85,7 @@ Consulte el catálogo [de](../../rtcdp/destinations/destinations-catalog.md) des
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamientos basados en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
@@ -172,7 +172,7 @@ Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz d
 | Segmentación programada | Los usuarios ahora pueden habilitar la evaluación programada de segmentos para todos los segmentos a través de la interfaz de usuario y la API. Una vez habilitados, todos los segmentos se evaluarán una vez al día. Esto no afecta a las capacidades de segmentación a petición que siguen funcionando como antes.<br/><br/>Nota: La función de segmentación programada no se puede usar en entornos limitados con más de cinco directivas de combinación para [!DNL XDM Individual Profile]. |
 | Segmentación por flujo continuo | La compatibilidad con la evaluación continua de segmentos (segmentación de flujo) permite evaluar la mayoría de las reglas de segmentos a medida que pasan los datos [!DNL Platform]. Esta función significa que la pertenencia a segmentos estará actualizada sin necesidad de ejecutar trabajos de segmentación programados. Se aplican algunas excepciones, como los segmentos que utilizan relaciones entre varias entidades o con cargas útiles enriquecidas. |
 | Segmentos como bloques de creación | Al crear segmentos mediante la interfaz de usuario del Generador de segmentos, los usuarios ahora pueden utilizar segmentos definidos previamente como componentes básicos para segmentos adicionales. <ul><li>Haga referencia a la pertenencia a la audiencia actual: se actualiza a medida que las personas entran y salen de las audiencias.</li><li>Lógica de copia: tome la definición de segmento seleccionada y duplicado en el nuevo segmento.</li></ul> |
-| Membresía en el segmento de vista por Área de nombres de ID | La pertenencia a segmentos ahora se puede ver mediante la Área de nombres de ID (correo electrónico, ECID y recuento total). |
+| Membresía del segmento de vista por Área de nombres de ID | La pertenencia a segmentos ahora se puede ver mediante la Área de nombres de ID (correo electrónico, ECID y recuento total). |
 | Compatibilidad con RBAC | El Generador de segmentos ahora ofrece compatibilidad con controles de acceso y permisos básicos basados en roles. |
 | Compatibilidad mejorada con el uso compartido de audiencias externas entre las soluciones [!DNL Platform] y Adobe | Ahora los usuarios pueden introducir metadatos de audiencia externos (no[!DNL Experience Platform]) en situaciones en las que el número de audiencias es grande o no se conoce a priori. Esta versión incluye el acceso a los metadatos para los clientes que han aprovisionado el conector de la solución. [!DNL Audience Manager] Estos metadatos de audiencia se pueden usar en el Generador de segmentos para crear nuevos [!DNL Experience Platform] segmentos. <br/><br/> Además, los segmentos creados en [!DNL Experience Platform] estarán ahora disponibles para su uso en soluciones de Adobe integradas, incluidas [!DNL Audience Manager], [!DNL Target]y [!DNL Ad Cloud]. |
 
