@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Formación y evaluación de un modelo (IU)
 topic: Tutorial
+description: En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +40,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
 
    >[!NOTE]
    >
-   >Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
+   >Las configuraciones son únicas y específicas de la fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -61,7 +62,7 @@ Este tutorial requiere una fórmula existente. Si no tiene una fórmula, siga el
 
    >[!NOTE]
    >
-   >Las configuraciones son únicas y específicas de su fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
+   >Las configuraciones son únicas y específicas de la fórmula deseada, lo que significa que las configuraciones de la fórmula de ventas minoristas no funcionarán para la fórmula de Recommendations del producto. Consulte la sección de [referencia](#reference) para obtener una lista de las configuraciones de las fórmulas de venta minorista.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
@@ -108,7 +109,7 @@ Los parámetros adicionales determinan las propiedades técnicas del modelo:
 | `ACP_DSW_TARGET_FEATURES` | Cadena | Lista de atributos de esquema de salida separados por comas. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Booleano | Determina si las características de entrada y salida se pueden modificar |
 | `tenantId` | Cadena | Este ID garantiza que los recursos que cree tengan un espacio de nombres adecuado y estén contenidos en la organización de IMS. [Siga los pasos aquí](../../xdm/api/getting-started.md#know-your-tenant_id) para encontrar su ID de inquilino. |
-| `ACP_DSW_TRAINING_XDM_SCHEMA` | Cadena | esquema de entrada utilizado para la formación de un modelo. |
+| `ACP_DSW_TRAINING_XDM_SCHEMA` | Cadena | Esquema de entrada utilizado para la formación de un modelo. |
 | `evaluation.labelColumn` | Cadena | Etiqueta de columna para visualizaciones de evaluación. |
-| `evaluation.metrics` | Cadena | lista separada por comas de las métricas de evaluación que se utilizarán para evaluar un modelo. |
-| `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Cadena | esquema de salida utilizado para marcar un modelo. |
+| `evaluation.metrics` | Cadena | Lista separada por comas de las métricas de evaluación que se utilizarán para evaluar un modelo. |
+| `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Cadena | Esquema de salida utilizado para marcar un modelo. |
