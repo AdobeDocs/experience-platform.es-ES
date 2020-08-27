@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: Descubrimiento de perspectivas en Attribution AI
 topic: Attribution AI insights
+description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -66,7 +67,7 @@ El botón *Más acciones* se encuentra en la navegación superior derecha junto 
 - **Eliminar**: Elimina la instancia.
 - **Descargar datos** de resumen: Descarga un archivo CSV que contiene los datos de resumen.
 - **Puntuaciones** de acceso: Al hacer clic en *Access score* , se le redirige a las puntuaciones de [acceso para el tutorial](./download-scores.md)de Attribution AI.
-- **Historial** de ejecución de Vistas: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
+- **Historial** de ejecución de vistas: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](./images/insights/more-actions.png)
 
@@ -78,7 +79,7 @@ Las perspectivas de Attribution AI le permiten filtrar los datos y actualizar au
 >
 >De forma predeterminada, cada filtro se establece en &quot;Todo&quot; excepto el filtro del modelo ** Atribución, que se establece en &quot;Conversiones atribuidas incrementales e influenciadas&quot;.
 
-### evento de conversión
+### Evento de conversión
 
 Cuando se crea una nueva instancia en Attribution AI, uno de los campos obligatorios es &quot;eventos de conversión&quot;. Los eventos de conversión son objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como los pedidos de comercio electrónico, las compras en el almacén y las visitas al sitio web.
 
@@ -154,7 +155,7 @@ Al hacer clic en las elipses en la parte superior derecha de la tarjeta *Desglos
 
 ![touchpoints](./images/insights/breakdown-by-touchpoints.png)
 
-## campañas principales
+## Campañas principales
 
 La tarjeta campañas ** principales muestra información general sobre sus campañas y el rendimiento de la campaña en cada canal. Esta tarjeta puede ayudar a informar a su equipo de la efectividad de una campaña específica para un canal determinado y proporcionar una perspectiva de dónde realizar más inversiones.
 
