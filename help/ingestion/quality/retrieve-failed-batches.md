@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Recuperar lotes con errores
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
@@ -20,10 +20,10 @@ En este tutorial se explican los pasos para recuperar información sobre un lote
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [!DNL Data Ingestion](../home.md):: Métodos por los que se pueden enviar datos [!DNL Experience Platform].
+- [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!Ingesta de datos DNL]](../home.md): Métodos por los que se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
