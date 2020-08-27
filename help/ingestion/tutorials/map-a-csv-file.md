@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Asignación de un archivo CSV a un esquema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -22,14 +22,14 @@ Además, en el apéndice de este tutorial se proporciona más información sobre
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md):: El método mediante el cual [!DNL Platform] ingesta datos de archivos de datos proporcionados por el usuario.
+- [[!Modelo de datos de experiencia DNL (sistema XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Ingesta por lotes]](../batch-ingestion/overview.md): El método mediante el cual [!DNL Platform] ingesta datos de archivos de datos proporcionados por el usuario.
 
 Este tutorial también requiere que ya haya creado un conjunto de datos para ingestar los datos de CSV. Para ver los pasos para crear un conjunto de datos en la interfaz de usuario, consulte el tutorial [de ingesta de](./ingest-batch-data.md)datos.
 
 ## Elegir un destino
 
-Inicie sesión en [!DNL Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Flujos de trabajo]** en la barra de navegación izquierda para acceder al espacio de trabajo de *[!UICONTROL Flujos de trabajo]* .
+Inicie sesión en [[!DNL Adobe Experience Platform]](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Flujos de trabajo]** en la barra de navegación izquierda para acceder al espacio de trabajo de *[!UICONTROL Flujos de trabajo]* .
 
 En la pantalla **[!UICONTROL Flujos de trabajo]** , seleccione **[!UICONTROL Asignar CSV al esquema]** XDM en la sección **[!UICONTROL de ingesta]** de datos y, a continuación, seleccione **[!UICONTROL Iniciar]**.
 
@@ -117,7 +117,7 @@ Una vez asignado y creado el archivo CSV, puede supervisar los datos que se est�
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios [!DNL Platform] de flujo descendente como [!DNL Real-time Customer Profile]. Consulte la información general [!DNL Real-time Customer Profile](../../profile/home.md) para obtener más información.
+Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios [!DNL Platform] de flujo descendente como [!DNL Real-time Customer Profile]. Consulte la descripción general de [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md) para obtener más información.
 
 ## Apéndice
 
@@ -133,7 +133,7 @@ Por ejemplo, para concatenar campos CSV de **ciudad** y **país** y asignarlos a
 
 La siguiente tabla lista todas las funciones de asignación admitidas, incluidas las expresiones de muestra y sus resultados.
 
-| Función | Descripción | expresión de muestra | Salida de muestra |
+| Función | Descripción | Expresión de muestra | Salida de muestra |
 | -------- | ----------- | ----------------- | ------------- |
 | concat | Concatena cadenas determinadas. | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explosionar | Divide la cadena según un regex y devuelve una matriz de partes. | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
