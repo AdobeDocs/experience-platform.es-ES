@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Solución de problemas de ingestión de flujo continuo
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ Si [!DNL Real-time Customer Profile] rechaza un mensaje, lo más probable es que
 
 Existen dos tipos de Áreas de nombres de identidad: predeterminado y personalizado. Cuando utilice Áreas de nombres personalizadas, asegúrese de que la Área de nombres se ha registrado en [!DNL Identity Service]. Consulte la descripción general [de la Área de nombres de](../../identity-service/namespaces.md) identidad para obtener más información sobre el uso de Áreas de nombres predeterminadas y personalizadas.
 
-Puede usar el [!DNL Experience Platform UI](https://platform.adobe.com) para ver más información sobre el motivo por el que un mensaje ha fallado en la ingestión. Haga clic en **[!UICONTROL Monitoreo]** en el panel de navegación izquierdo y, a continuación, vista la ficha _[!UICONTROL Flujo de extremo a extremo]_para ver los lotes de mensajes transmitidos durante un período de tiempo seleccionado.
+Puede utilizar la [[!IU de Experience Platform DNL]](https://platform.adobe.com) para obtener más información sobre el motivo por el que un mensaje no se puede ingestar. Haga clic en **[!UICONTROL Monitoreo]** en el panel de navegación izquierdo y, a continuación, vista la ficha _[!UICONTROL Flujo de extremo a extremo]_ para ver los lotes de mensajes transmitidos durante un período de tiempo seleccionado.
