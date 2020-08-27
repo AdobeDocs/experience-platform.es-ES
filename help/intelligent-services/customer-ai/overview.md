@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: Información general sobre el AI del cliente
 topic: Customer AI overview
+description: La API del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
