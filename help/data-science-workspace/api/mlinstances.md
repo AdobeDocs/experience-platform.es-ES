@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: Instancias MLI
 topic: Developer guide
+description: Una instancia MLI es un emparejamiento de un motor existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetros de puntuación o configuraciones de recursos de hardware.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '601'
 ht-degree: 4%
 
 ---
@@ -130,7 +131,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de instancias MLI
 
-Puede recuperar una lista de instancias MLI realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de la solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de instancias MLI realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
 
 **Formato de API**
 
@@ -405,7 +406,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles actual
 
 ## Eliminar instancias MLI por ID de motor
 
-Puede eliminar todas las instancias MLI que compartan el mismo motor realizando una solicitud de  DELETE que incluya el ID del motor como parámetro de consulta.
+Puede eliminar todas las instancias MLI que compartan el mismo motor realizando una solicitud de DELETE que incluya el identificador del motor como parámetro de consulta.
 
 **Formato de API**
 
