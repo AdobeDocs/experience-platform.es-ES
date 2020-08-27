@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Descripción general de Attribution AI
 topic: Attribution AI
+description: 'Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en mercadotecnia pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de mercadotecnia individual en los viajes de los clientes. Algunos ejemplos de puntos de contacto son: impresiones de anuncios en pantalla, envíos de correo electrónico, aperturas de correo electrónico y clics de búsqueda paga.'
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -34,9 +35,9 @@ El siguiente vídeo está diseñado para admitir su comprensión de la Attributi
 
 Se puede utilizar Attribution AI para ayudar con los siguientes casos de uso de ejemplo:
 
-- **sistema de informes** Ejecutivo: Permita que los ejecutivos entiendan el verdadero impacto incremental de la mercadotecnia, tanto en su conjunto como por canal, región, SKU, etc.
+- **Sistema de informes** Ejecutivo: Permita que los ejecutivos entiendan el verdadero impacto incremental de la mercadotecnia, tanto en su conjunto como por canal, región, SKU, etc.
 - **Asignación** presupuestaria: Informe las decisiones de asignación presupuestaria en todos los canales de marketing.
-- **Optimización** de Campaña: En cada canal, comprenda qué campañas, elementos creativos y palabras clave funcionan mejor para qué SKU o términos. Esto le permite mirar cada canal para que el equipo de mercadotecnia pueda optimizar sus tácticas.
+- **Optimización** de campaña: En cada canal, comprenda qué campañas, elementos creativos y palabras clave funcionan mejor para qué SKU o términos. Esto le permite mirar cada canal para que el equipo de mercadotecnia pueda optimizar sus tácticas.
 - **Atribución** de canal completo: Comprender el impacto de la mercadotecnia en todo el viaje del cliente. Por ejemplo, el inicio de sesión con cuenta gratuita en la conversión paga y más allá.
 - **Evaluaciones** de socios: Evaluar la eficacia de los organismos y asociados sobre la base de los resultados de la atribución.
 
