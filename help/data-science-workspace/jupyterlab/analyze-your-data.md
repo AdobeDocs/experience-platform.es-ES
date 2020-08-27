@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analizar los datos con portátiles
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ Este tutorial se centra en cómo utilizar los blocs de notas Jupyter, creados en
 
 Se introducen los siguientes conceptos:
 
-- **[!DNL JupyterLab]::**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)es la interfaz basada en web de próxima generación para Project Jupyter, y está estrechamente integrada en[!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]::** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter, y está estrechamente integrada en [!DNL Adobe Experience Platform].
 - **Lotes:** Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad. Se crean nuevos lotes cuando se agregan datos a un conjunto de datos.
-- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la [!DNL Platform SDK](../authoring/platform-sdk.md) guía.
+- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Explorar blocs de notas en el área de trabajo de ciencias de datos
 
@@ -52,7 +52,7 @@ La fórmula de ventas minoristas es un ejemplo independiente que utiliza el mism
 
 >[!NOTE]
 >
->El `data_access_sdk_python` se ha desaprobado y ya no se recomienda. Consulte el tutorial sobre la [conversión del SDK de acceso a datos al SDK](../authoring/platform-sdk.md) de Platform para convertir el código. Los mismos pasos a continuación se aplican para este tutorial.
+>El `data_access_sdk_python` se ha desaprobado y ya no se recomienda. Consulte el tutorial sobre la [conversión del SDK de acceso a datos al SDK](../authoring/platform-sdk.md) de plataforma para convertir su código. Los mismos pasos a continuación se aplican para este tutorial.
 
 Pasaremos a acceder a los datos internamente desde [!DNL Adobe Experience Platform] y a los datos externamente. Utilizaremos la `data_access_sdk_python` biblioteca para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca de paneles [!DNL Python] .
 
@@ -70,7 +70,7 @@ Finalmente, podemos echar un vistazo a cómo se ven nuestros datos. Podemos util
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### [!DNL Experience Platform] data
+#### [!DNL Experience Platform] datos
 
 Ahora, vamos a pasar a acceder a [!DNL Experience Platform] los datos.
 
@@ -90,7 +90,7 @@ Ahora, podemos hacer clic con el botón derecho en el conjunto de datos y selecc
 
 >[!TIP]
 >
->consulte la [!DNL Platform SDK](../authoring/platform-sdk.md) guía para convertir el código.
+>consulte la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -179,7 +179,7 @@ Usando nuestro conjunto de datos de antes, podemos generar la tabla y el diagram
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Para mostrar la distribución de datos se utiliza una casilla y un diagrama de whisky. Las líneas exteriores del trazado muestran los cuartiles superior e inferior, mientras que el cuadro abarca el rango intercuartil. La línea del cuadro marca la mediana. Cualquier punto de datos que supere 1,5 veces el cuartil superior o inferior se marcará como un círculo. Estos puntos se consideran periféricos.
+Para mostrar la distribución de datos se utiliza una casilla y un diagrama de whisky. Las líneas exteriores del trazado muestran los cuartiles superior e inferior, mientras que el cuadro abarca el rango intercuartil. La línea del cuadro marca la mediana. Los puntos de datos que superen 1,5 veces el cuartil superior o inferior se marcarán como un círculo. Estos puntos se consideran periféricos.
 
 ##### Gráficos multivariados
 
