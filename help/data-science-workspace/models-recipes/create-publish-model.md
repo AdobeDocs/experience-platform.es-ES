@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación y publicación de un tutorial del modelo de aprendizaje automático
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,10 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 * Descargue los tres archivos necesarios [!DNL Jupyter Notebook] del repositorio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">público de [!DNL Git] Adobe, que se utilizarán para mostrar el flujo de trabajo</a>en [!DNL JupyterLab] [!DNL Data Science Workspace].
 
 * Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   * [!DNL Experience Data Model](../../xdm/home.md):: El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
+   * [[!Modelo de datos de experiencia DNL]](../../xdm/home.md): El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
    * Conjuntos de datos: Una construcción de almacenamiento y administración para los datos reales. Una instancia física de instancia de un Esquema [](../../xdm/schema/field-dictionary.md)XDM.
    * Lotes: Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
-   * [!DNL JupyterLab]:: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project [!DNL Jupyter] y está estrechamente integrada en [!DNL Experience Platform].
+   * [!DNL JupyterLab]:: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project [!DNL Jupyter] y está estrechamente integrada en [!DNL Experience Platform].
 
 ## Preparación de los datos {#prepare-your-data}
 
@@ -67,7 +67,7 @@ Los demás conjuntos de datos se han rellenado previamente con lotes para obtene
 
 | Nombre del conjunto de datos | Esquema | Descripción |
 | ----- | ----- | ----- |
-| Valores posteriores del conjunto de datos dorados | esquema Conjunto de datos dorado | [!DNL Analytics] datos de origen del sitio web |
+| Valores posteriores del conjunto de datos dorados | Esquema Conjunto de datos dorado | [!DNL Analytics] datos de origen del sitio web |
 | Recommendations Input Dataset | Esquema de entrada Recommendations | Los datos [!DNL Analytics] se transforman en un conjunto de datos de capacitación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Product Recommendations. `itemid` y `userid` corresponden a un producto comprado por ese cliente. |
 | Recommendations Output Dataset | Recommendations Output Esquema | El conjunto de datos para el que se almacenan los resultados de puntuación contendrá la lista de los productos recomendados para cada cliente. |
 
@@ -151,7 +151,7 @@ El paso final en el flujo de trabajo de Data Science es poner en marcha el model
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
-### Perspectivas puntuadas de Vista
+### Perspectivas puntuadas de vista
 
 Una vez finalizada la ejecución de la puntuación, podrá realizar la previsualización de los resultados y la vista de las perspectivas generadas.
 
