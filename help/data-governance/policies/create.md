@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crear una directiva de uso de datos en la API
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Adobe Experience Platform [!DNL Data Governance]. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
+El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central de Adobe Experience Platform [!DNL Data Governance]. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
 
 Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la [!DNL Policy Service] API. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
@@ -22,9 +22,9 @@ Este documento proporciona un tutorial paso a paso para crear una directiva DULE
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de las políticas DULE:
 
-* [!DNL Data Governance](../home.md):: Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
+* [[!Administración de datos DNL]](../home.md): Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
 * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para acceder a los datos.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) [!DNL Policy Service] desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
@@ -123,7 +123,7 @@ Una respuesta correcta devuelve el número total de acciones de mercadotecnia en
 
 Cuando encuentre la acción de marketing que desea utilizar, registre el valor de su `href` propiedad. Este valor se utiliza durante el próximo paso de [crear una directiva](#create-policy)DULE.
 
-### Crear una nueva acción de mercadotecnia {#create-new}
+### Create a new marketing action {#create-new}
 
 Puede crear una nueva acción de mercadotecnia haciendo una solicitud de PUT al extremo y proporcionando un nombre para la acción de mercadotecnia al final de la ruta de solicitud. `/marketingActions/custom/`
 
