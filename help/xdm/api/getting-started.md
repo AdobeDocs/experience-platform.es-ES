@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guía para desarrolladores de API de registro de Esquema
+title: Guía para desarrolladores de API de registro de esquema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de Esquemas en Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Mediante la API del Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobes, socios [!DNL Experience Platform] y proveedores cuyas aplicaciones utiliza. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
+Con la API de Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform. Esto incluye los definidos por Adobes, socios [!DNL Experience Platform] y proveedores cuyas aplicaciones utiliza. También puede utilizar llamadas de API para crear nuevos esquemas y recursos para su organización, así como vistas y recursos de edición que ya haya definido.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Schema Registry] API. A continuación, la guía proporciona llamadas de API de muestra para realizar operaciones clave mediante el [!DNL Schema Registry].
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM.
-* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a la [!DNL Schema Registry] API correctamente.
 
@@ -163,19 +163,19 @@ Una respuesta correcta devuelve información sobre el uso de la [!DNL Schema Reg
 
 Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor **** global y el contenedor **de** inquilinos.
 
-### contenedor global
+### Contenedor global
 
 El contenedor global contiene todas las clases, mezclas, tipos de datos y esquemas proporcionados por el Adobe y [!DNL Experience Platform] el socio estándar. Solo puede realizar solicitudes de lista y búsqueda (GET) en el contenedor global.
 
-### contenedor del inquilino
+### Contenedor del inquilino
 
 No debe confundirse con su único `TENANT_ID`, el contenedor del inquilino contiene todas las clases, mezclas, tipos de datos, esquemas y descriptores definidos por una organización de IMS. Son exclusivas de cada organización, lo que significa que no son visibles ni manejables por otras organizaciones de IMS. Puede realizar todas las operaciones de CRUD (GET, POST, PUT, PATCH, DELETE) con los recursos que cree en el contenedor del inquilino.
 
 Cuando se crea una clase, una mezcla, un esquema o un tipo de datos en el contenedor del inquilino, se guarda en el  [!DNL Schema Registry] y se asigna un `$id` URI que incluye su `TENANT_ID`. Esto `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de `$id` valores.
 
-## Identificación del Esquema {#schema-identification}
+## Identificación del esquema {#schema-identification}
 
-Los Esquemas se identifican con un `$id` atributo en forma de URI, como:
+Los esquemas se identifican con un `$id` atributo en forma de URI, como:
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
 
