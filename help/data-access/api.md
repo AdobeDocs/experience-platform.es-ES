@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: Guía para desarrolladores de Data Access
 topic: developer guide
+description: La API de acceso a datos admite Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la capacidad de descubrimiento y accesibilidad de conjuntos de datos ingestados dentro de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '512'
 ht-degree: 4%
 
 ---
