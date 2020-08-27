@@ -5,9 +5,9 @@ title: Introducción a Adobe Experience Platform Batch Ingestion
 topic: overview
 description: La API de inserción por lotes permite ingestar datos en Adobe Experience Platform como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ La [!DNL Data Ingestion] API le permite ingerir datos como lotes (una unidad de 
 ### [!DNL Data Ingestion] requisitos previos
 
 - Los datos que se van a cargar deben estar en los formatos Parquet o JSON.
-- Un conjunto de datos creado en el [!DNL Catalog services](../../catalog/home.md).
+- Un conjunto de datos creado en los [[!DNL Catalog services]](../../catalog/home.md).
 - El contenido del archivo de parqué debe coincidir con un subconjunto del esquema del conjunto de datos que se está cargando en.
 - Tenga su Token de acceso único después de la autenticación.
 
