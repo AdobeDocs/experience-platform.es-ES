@@ -5,9 +5,9 @@ title: Servicio de ID de Adobe Experience Platform
 topic: overview
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al enlazar identidades entre dispositivos y sistemas, permitiéndole ofrecer experiencias digitales personales y impactantes en tiempo real.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -146,4 +146,4 @@ Adobe Experience Platform se creó teniendo en cuenta la privacidad e incluye un
 
 ## Pasos siguientes
 
-Ahora que comprendes los conceptos clave de [!DNL Identity Service] y su papel dentro de [!DNL Experience Platform], puedes empezar a aprender a trabajar con tu gráfico de identidad usando el [!DNL Identity Service API](./api/getting-started.md).
+Ahora que comprende los conceptos clave de [!DNL Identity Service] y su función dentro de [!DNL Experience Platform], puede empezar a aprender a trabajar con su gráfico de identidad utilizando la [[!DNL Identity Service API]](./api/getting-started.md).
