@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1621'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Si prefiere utilizar la interfaz de usuario en el CDP en tiempo real de Adobe pa
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [!DNL Catalog Service](../../catalog/home.md):: [!DNL Catalog] es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
-* [!DNL Sandboxes](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!Servicio de catálogo DNL]](../../catalog/home.md): [!DNL Catalog] es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
+* [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para activar datos en destinos de marketing por correo electrónico en CDP en tiempo real de Adobe.
 
@@ -112,7 +112,7 @@ curl -X GET \
 
 -->
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -179,7 +179,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -247,7 +247,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -334,7 +334,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -358,7 +358,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{S3 or SFTP}`:: rellene el tipo de conexión deseado para este destino. En el catálogo [de](../../rtcdp/destinations/destinations-catalog.md)destino, desplácese hasta el destino que prefiera para ver si se admiten los tipos de conexión S3 o SFTP.
 * `{ACCESS_ID}`:: Su ID de acceso para la ubicación del almacenamiento [!DNL Amazon] S3.
 * `{SECRET_KEY}`:: La clave secreta para la ubicación del almacenamiento [!DNL Amazon] S3.
@@ -417,7 +417,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -550,7 +550,7 @@ PATCH /flows
 
 **Solicitud**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -622,7 +622,7 @@ GET /flows
 
 **Solicitud**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -639,7 +639,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 La respuesta devuelta debe incluir en el `transformations` parámetro los segmentos y los atributos de perfil que ha enviado en el paso anterior. A continuación se muestra un parámetro `transformations` de muestra en la respuesta:
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
