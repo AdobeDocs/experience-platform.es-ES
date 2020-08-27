@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Apéndice
 topic: Developer guide
+description: Las siguientes secciones proporcionan información de referencia para diversas funciones de la API de aprendizaje automático Sensei.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 4%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 4%
 
 Las siguientes secciones proporcionan información de referencia para varias funciones de la [!DNL Sensei Machine Learning] API.
 
-## Parámetros de Consulta para la recuperación de recursos {#query}
+## Parámetros de consulta para la recuperación de recursos {#query}
 
 La [!DNL Sensei Machine Learning] API admite parámetros de consulta al recuperar recursos. Los parámetros de consulta disponibles y sus usos se describen en la tabla siguiente:
 
