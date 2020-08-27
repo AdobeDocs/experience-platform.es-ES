@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transmisión de datos de registros
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1072'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo co
 
 Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
-- [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [Guía](../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
 
 Además, este tutorial requiere que ya haya creado una conexión de flujo. Para obtener más información sobre la creación de una conexión de flujo continuo, lea el tutorial [](./create-streaming-connection.md)Crear una conexión de flujo continuo.
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | El nombre que desea usar para su esquema. Este nombre debe ser único. |
 | `description` | Una descripción significativa del esquema que está creando. |
-| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md). |
 
 **Respuesta**
 
@@ -348,7 +348,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la nueva tran
 
 ## Recuperar los datos de registro recién ingestados
 
-Para validar los registros ingestados anteriormente, puede utilizar [!DNL Profile Access API](../../profile/api/entities.md) para recuperar los datos del registro.
+Para validar los registros ingestados anteriormente, puede utilizar la [[!DNL API de acceso a Perfil]](../../profile/api/entities.md) para recuperar los datos del registro.
 
 >[!NOTE]
 >
