@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '993'
 ht-degree: 5%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 5%
 **Fecha de publicación: 8 de abril de 2020**
 
 Nuevas funciones de Adobe Experience Platform:
-* [!DNL Intelligent Services](#intelligent)
+* [[!Servicios inteligentes DNL]](#intelligent)
 
 Actualizaciones de funciones existentes:
-* [!DNL Experience Data Model (XDM)](#xdm)
-* [!DNL Data Governance](#governance)
-* [!DNL Destinations](#destinations)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
+* [[!Modelo de datos de experiencia DNL (XDM)]](#xdm)
+* [[!Gobierno de datos DNL]](#governance)
+* [[!Destinos DNL]](#destinations)
+* [[!Privacy Service DNL]](#privacy)
+* [[!Fuentes DNL]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -49,7 +49,7 @@ Para obtener más información [!DNL Intelligent Services] y qué tiene que ver 
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
-XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación pueda comunicarse con los servicios en Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
+XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes para fines de personalización.
 
 **Nuevas funciones**
 
@@ -90,7 +90,7 @@ Para obtener más información, consulte la información general [sobre el Gobie
 
 ## Destinos {#destinations}
 
-En [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
+En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
 
 **Nuevos destinos**
 
@@ -112,7 +112,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con PDPA | Las solicitudes de privacidad ahora se pueden crear y rastrear bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la `regulation` matriz acepta el valor &quot;pdpa_tha&quot;. |
-| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Áreas de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](../../privacy-service/ui/user-guide.md) usuario para obtener más información. |
+| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Área de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](../../privacy-service/ui/user-guide.md) usuario para obtener más información. |
 | Desuso de punto final antiguo | El punto final (`data/privacy/gdpr`) de la API anterior ha quedado obsoleto. |
 
 Problemas conocidos
