@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de directivas de uso de datos
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Adobe Experience Platform [!DNL Data Governance] proporciona una interfaz de usu
 
 Esta guía requiere una comprensión práctica de los siguientes [!DNL Experience Platform] conceptos:
 
-- [!DNL Data Governance](../home.md)
+- [[!Gobierno de datos DNL]](../home.md)
 - [Directivas de uso de datos](./overview.md)
 
-## Directivas de uso de datos de Vista {#view-policies}
+## Directivas de uso de datos de vista {#view-policies}
 
 En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
 
@@ -51,7 +51,7 @@ A continuación, seleccione las etiquetas de uso de datos en las que se basará 
 
 ![](../images/policies/add-labels.png)
 
-Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y, a continuación, haga clic en **[!UICONTROL Siguiente]** para continuar.
+Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Puede habilitar o deshabilitar las directivas desde la ficha *[!UICONTROL Examin
 
 ![](../images/policies/enable-policy.png)
 
-## Acciones de mercadotecnia de Vista {#view-marketing-actions}
+## Acciones de mercadotecnia de vista {#view-marketing-actions}
 
 En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Acciones **[!UICONTROL de]** marketing para la vista de una lista de acciones de marketing disponibles definidas por Adobe y su propia organización.
 
