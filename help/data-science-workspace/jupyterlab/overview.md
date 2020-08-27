@@ -691,14 +691,14 @@ timedf.show()
 | python-sndish | 0.5.4 |
 | ipywebrtc | 0.5.0 |
 | jupyter_client | 5.3.1 |
-| wordcloud | 1.5.0 |
+| pydcloud | 1.5.0 |
 | grafviz | 2.40.1 |
 | python-graphviz | 0.11.1 |
 | azure-almacenamiento | 0.36.0 |
 | [!DNL jupyterlab] | 1.0.4 |
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
-| nodejs | 12.3.0 |
+| r nodejs | 12.3.0 |
 | mock | 3.0.5 |
 | ipympl | 0.3.3 |
 | fonts-anacond | 1.0 |
