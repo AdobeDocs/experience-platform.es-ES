@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario de conjuntos de datos
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Conjuntos](overview.md)de datos: La construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)de esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante la [!DNL Schema Editor] interfaz de [!DNL Platform] usuario.
-* [!DNL Real-time Customer Profile](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [!DNL Data Governance](../../data-governance/home.md):: Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
+* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Administración de datos DNL]](../../data-governance/home.md): Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
 
 ## datasets de vista
 
