@@ -5,7 +5,7 @@ title: Creación y publicación de un tutorial del modelo de aprendizaje automá
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace proporciona los medios para lograr su objetivo mediante la fórmula de Recommendations de producto prediseñada. Siga este tutorial para ver cómo puede acceder a los datos de minoristas y comprenderlos, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en Área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    * Valores posteriores del conjunto de datos dorados
    * Esquema Conjunto de datos dorado
 
-* Descargue los tres archivos necesarios [!DNL Jupyter Notebook] del repositorio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">público de [!DNL Git] Adobe, que se utilizarán para mostrar el flujo de trabajo</a>en [!DNL JupyterLab] [!DNL Data Science Workspace].
+* Descargue los tres [!DNL Jupyter Notebook] archivos necesarios del [Adobe [!DNL Git] publicRepository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), que se utilizarán para mostrar el [!DNL JupyterLab] flujo de trabajo en [!DNL Data Science Workspace].
 
 * Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
    * [[!Modelo de datos de experiencia DNL]](../../xdm/home.md): El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
