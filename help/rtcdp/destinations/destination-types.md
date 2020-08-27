@@ -5,9 +5,9 @@ seo-title: Tipos y Categorías de destinos
 description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. '
 seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Los destinos de exportación de perfil generan un archivo que contiene perfiles 
 
 #### Destinos de exportación de segmentos
 
-Los destinos de exportación de segmentos envían los perfiles y los segmentos para los que cumplen los requisitos a las plataformas de destino. Estos destinos utilizan ID de segmento o ID de usuario. Los destinos de publicidad como [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) son ejemplos de estos tipos de destinos.
+Los destinos de exportación de segmentos envían los perfiles y los segmentos para los que cumplen los requisitos a las plataformas de destino. Estos destinos utilizan ID de segmento o ID de usuario. Los destinos de publicidad como [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) o [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) son ejemplos de este tipo de destinos.
 
 #### Destinos de exportación de perfiles y segmentos: descripción general de vídeo
 
