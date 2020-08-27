@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '307'
 ht-degree: 6%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 6%
 
 Nuevas funciones de Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!Control de acceso DNL]](#access-control)
+- [[!Sandboxes de DNL]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Nuevas funciones de Adobe Experience Platform:
 | Función | Descripción |
 |--- | ---|
 | Permisos | En la ficha [!DNL Admin Console], dentro de un perfil de [!DNL Platform] producto, puede personalizar [!DNL Platform] las funciones disponibles para los usuarios conectados a ese perfil. Las categorías de permisos disponibles incluyen: [!UICONTROL Modelado]de datos, [!UICONTROL Gestión de datos], Administración [!UICONTROL de]Perfiles, [!UICONTROL Identidades], Monitoreo [!UICONTROL de]datos, Administración de Simuladores de pruebas , Destinaciones, Fuentes. |
-| Acceso a los entornos limitados | La ficha [!UICONTROL _Permisos _]de un perfil[!DNL Platform]de producto puede otorgar a los usuarios acceso a entornos limitados específicos. Para obtener más información, consulte la sección sobre[entornos](#sandboxes)limitados más abajo. |
+| Acceso a los entornos limitados | La ficha [!UICONTROL _Permisos_] de un perfil [!DNL Platform] de producto puede otorgar a los usuarios acceso a entornos limitados específicos. Para obtener más información, consulte la sección sobre [entornos](#sandboxes) limitados más abajo. |
 
 Para obtener más información, consulte la descripción general [del](../../access-control/home.md)control de acceso.
 
