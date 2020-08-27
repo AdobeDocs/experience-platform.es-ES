@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1433'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Si prefiere trabajar con políticas de combinación mediante la [!DNL Real-time 
 
 Esta guía requiere una comprensión práctica de los diversos [!DNL Experience Platform] servicios relacionados con las políticas de fusión. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-* [!DNL Real-time Customer Profile](../home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [!DNL Identity Service](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!Perfil del cliente en tiempo real de DNL]](../home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
+* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Directivas de combinación de vistas
 
