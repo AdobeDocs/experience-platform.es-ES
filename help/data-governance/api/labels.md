@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extremo de etiquetas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 80526bc0fea9e1854174a2edf9389ff0c4e98f71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '493'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Las etiquetas de uso de datos le permiten clasificar los datos según las polít
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte del [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 ## Recuperar una lista de etiquetas {#list}
 
