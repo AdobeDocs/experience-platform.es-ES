@@ -3,10 +3,11 @@ keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;p
 solution: Adobe Experience Platform Data Science Workspace
 title: Creación de una canalización de funciones
 topic: Tutorial
+description: Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime. Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizadas mediante el SDK de creación de modelos en PySpark.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
