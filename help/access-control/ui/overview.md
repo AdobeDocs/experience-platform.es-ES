@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
 solution: Experience Platform
-title: Guía del usuario de Control de acceso
+title: Guía del usuario de control de acceso
 topic: user guide
+description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Este documento sirve como guía para desplazarse por el Admin Console y administrar control de acceso para la plataforma.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
 
 
-# Guía del usuario de Control de acceso
+# Guía del usuario de control de acceso
 
 Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas [!DNL Platform] capacidades mediante el uso de [Adobe Admin Console](https://adminconsole.adobe.com). Este documento sirve como guía para desplazarse por el [!DNL Admin Console] control de acceso para administrar [!DNL Platform]. Para obtener una descripción general de alto nivel del control de acceso en [!DNL Experience Platform], consulte la descripción general [del](./../home.md)control de acceso.
 
