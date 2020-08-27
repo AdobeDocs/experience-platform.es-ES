@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de publicidad a través de las API y los conectores de origen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1644'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,11 @@ Este tutorial requiere que tenga información sobre el archivo que desea introdu
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../../../../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
-* [!DNL Catalog Service](../../../../catalog/home.md):: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
-* [!DNL Batch ingestion](../../../../ingestion/batch-ingestion/overview.md):: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
+* [[!Servicio de catálogo DNL]](../../../../catalog/home.md): Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
+* [[!DNL Ingesta por lotes]](../../../../ingestion/batch-ingestion/overview.md): La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para conectarse correctamente a un sistema de publicidad mediante la [!DNL Flow Service] API.
@@ -563,7 +563,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 ## Crear un flujo de datos
 
-El último paso hacia la recopilación de datos publicitarios es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
+El último paso hacia la recopilación de datos publicitarios es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores necesarios:
 
 * [ID de conexión de origen](#source)
 * [ID de conexión de destinatario](#target)
