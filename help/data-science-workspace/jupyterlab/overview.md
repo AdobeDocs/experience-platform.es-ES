@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: Guía del usuario de JupyterLab
 topic: Overview
-description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos.
+description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3702'
 ht-degree: 11%
 
 ---
@@ -691,14 +691,14 @@ timedf.show()
 | python-sndish | 0.5.4 |
 | ipywebrtc | 0.5.0 |
 | jupyter_client | 5.3.1 |
-| pydcloud | 1.5.0 |
+| wordcloud | 1.5.0 |
 | grafviz | 2.40.1 |
 | python-graphviz | 0.11.1 |
 | azure-almacenamiento | 0.36.0 |
 | [!DNL jupyterlab] | 1.0.4 |
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
-| r nodejs | 12.3.0 |
+| nodejs | 12.3.0 |
 | mock | 3.0.5 |
 | ipympl | 0.3.3 |
 | fonts-anacond | 1.0 |
