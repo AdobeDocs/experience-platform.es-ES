@@ -5,7 +5,7 @@ title: Introducción a la ingestión de datos de Adobe Experience Platform
 topic: overview
 description: Este documento presenta las tres principales maneras en que se ingieren los datos en la Plataforma, con vínculos a la documentación de información general correspondiente para obtener información más detallada.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 9%
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 Adobe Experience Platform reúne los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingestión de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales [!DNL Platform] se ingieren datos de estas fuentes, así como la forma en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios [!DNL Platform] descendentes.
 
-Este documento presenta las tres principales maneras en que se ingieren los datos [!DNL Platform], con vínculos a su respectiva documentación general para obtener información más detallada.
+Este documento presenta las tres formas principales en que se ingieren los datos [!DNL Platform], con vínculos a la documentación general correspondiente para obtener información más detallada.
 
 ## Ingesta por lotes
 
@@ -47,6 +47,6 @@ Este documento ofreció una breve introducción a los diferentes aspectos de [!D
 
 >[!WARNING]
 >
-> El término &quot;Perfil unificado&quot; que se utiliza en el siguiente vídeo no está actualizado. Los términos [!DNL "Profile"] o [!DNL "Real-time Customer Profile"] son los términos correctos utilizados en la [!DNL Experience Platform] documentación. Consulte la documentación para obtener las últimas funciones.
+>El término &quot;Perfil unificado&quot; que se utiliza en el siguiente vídeo no está actualizado. Los términos [!DNL "Profile"] o [!DNL "Real-time Customer Profile"] son los términos correctos utilizados en la [!DNL Experience Platform] documentación. Consulte la documentación para obtener las últimas funciones.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
