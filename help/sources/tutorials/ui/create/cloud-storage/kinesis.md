@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen de Amazon Kinesis en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
    - [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [!DNL Kinesis] configuración de un flujo de datos [](../../dataflow/streaming/cloud-storage.md).
+Si ya tiene una conexión válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [!DNL Kinesis] configuración de un flujo de datos [](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Recopilar las credenciales necesarias
 
@@ -71,4 +71,4 @@ Para conectar una cuenta existente, seleccione la [!DNL Kinesis] cuenta con la q
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha conectado a su [!DNL Kinesis] cuenta a [!DNL Platform]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos del almacenamiento de nube a [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+Siguiendo este tutorial, se ha conectado a su [!DNL Kinesis] cuenta a [!DNL Platform]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos del almacenamiento de nube a [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
