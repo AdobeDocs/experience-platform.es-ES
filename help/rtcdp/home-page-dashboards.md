@@ -5,7 +5,7 @@ seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en 
 description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
 seo-description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -19,7 +19,7 @@ La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP e
 
 La página de inicio es sólo uno de los lugares en los que aparecen las tarjetas de métricas. CDP en tiempo real proporciona tarjetas de métricas a lo largo de toda la experiencia. Estas métricas le informan sobre las audiencias de datos, perfiles y segmentos del sistema.
 
-![imagen](assets/home2.jpg)
+![imagen](assets/home.png)
 
 Si no hay datos en el sistema cuando inicia sesión en CDP en tiempo real, no aparece el panel en la página de inicio. En este caso, la página de inicio proporciona material de aprendizaje para una primera experiencia de usuario. A medida que se recopilan los datos (es decir, a medida que se crean <!--sources-->conjuntos de datos, perfiles, segmentos y destinos y los datos fluyen al sistema), el panel se actualiza automáticamente para mostrar información sobre esos datos<!-- in metric cards-->.
 
@@ -31,16 +31,16 @@ El panel se divide en<!-- two areas.-->:
 
 * **La tabla de clasificación** está en la parte superior del panel. La tabla de clasificación muestra el número de conjuntos de datos, perfiles, segmentos y destinos del sistema.
 
-   ![imagen](assets/home-leaderboard2.jpg)
+   ![imagen](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Los elementos** recientes lista los cinco conjuntos de datos, fuentes, segmentos y destinos más recientes agregados al sistema.
 
-   ![imagen](assets/home-recent.jpg)
+   ![imagen](assets/recent.png)
 
-Las métricas adicionales (por ejemplo, para perfiles y segmentos) están disponibles en otras partes de la Plataforma de datos del cliente en tiempo real.
+Hay métricas adicionales, por ejemplo para perfiles y segmentos, disponibles en otras partes de la Plataforma de datos del cliente en tiempo real.
 
 ### Conjuntos de datos
 
