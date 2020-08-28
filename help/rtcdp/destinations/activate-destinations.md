@@ -5,7 +5,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real de Adobe asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -51,9 +51,9 @@ En el flujo de trabajo **[!UICONTROL Activar destino]** , en la página **[!UICO
 
 ### **[!UICONTROL Paso de asignación]** de identidades {#identity-mapping}
 
-![Paso de asignación de identidades](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 Se aplica a: destinos sociales y destino publicitario de Coincidencia de clientes de Google
+
+![Paso de asignación de identidades](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 Para los destinos ** sociales, en el paso Asignación **[!UICONTROL de]** identidad, puede seleccionar atributos de origen para asignarlos como identidades de destinatario en el destino. Este paso es opcional u obligatorio, según la identidad principal que utilice en el esquema. <br> 
 
