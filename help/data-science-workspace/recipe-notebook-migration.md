@@ -5,7 +5,7 @@ title: Guías de migración de fórmulas y portátiles
 topic: Tutorial
 description: Las siguientes guías describen los pasos y la información necesarios para migrar las fórmulas y los blocs de notas existentes en el área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # Guías de migración de fórmulas y portátiles
 
 >[!NOTE]
+>
 >Los equipos portátiles y las fórmulas que utilizan [!DNL Python]/R no se ven afectados. La migración solo se aplica a las fórmulas y los blocs de notas PySpark/[!DNL Spark] (2.3).
 
 Las siguientes guías describen los pasos y la información necesarios para migrar las fórmulas y los blocs de notas existentes.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > El tiempo de espera del modo interactivo finaliza si las consultas se ejecutan más de 10 minutos. Si va a ingerir más de unos cuantos gigabytes de datos, se recomienda cambiar al modo &quot;por lotes&quot;. El modo de lotes tarda más en inicio, pero puede manejar conjuntos de datos más grandes.
 
 #### Escribir en un conjunto de datos
@@ -138,6 +140,7 @@ La fórmula Scala se encuentra en el siguiente directorio `experience-platform-d
 Se necesita un nuevo archivo en la carpeta de fórmulas para utilizar el flujo de trabajo basado en docker. Copie y pegue el archivo de Dockerfile desde la carpeta de fórmulas ubicada en `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Opcionalmente, también puede copiar y pegar el código siguiente en un nuevo archivo llamado `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > El archivo jar de ejemplo que se muestra a continuación `ml-retail-sample-spark-*-jar-with-dependencies.jar` debe reemplazarse por el nombre del archivo jar de la fórmula.
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > El tiempo de espera del modo interactivo finaliza si las consultas se ejecutan más de 10 minutos. Si va a ingerir más de unos cuantos gigabytes de datos, se recomienda cambiar al modo &quot;por lotes&quot;. El modo de lotes tarda más en inicio, pero puede manejar conjuntos de datos más grandes.
 
 #### Escribir en un conjunto de datos
@@ -275,6 +279,7 @@ La fórmula PySpark se encuentra en el siguiente directorio `experience-platform
 Se necesita un nuevo archivo en la carpeta de fórmulas para utilizar el flujo de trabajo basado en docker. Copie y pegue el archivo de Dockerfile desde la carpeta de fórmulas ubicada en `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Opcionalmente, también puede copiar y pegar el código siguiente y crear un nuevo archivo llamado `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > El archivo de ejemplo de huevo que se muestra a continuación `pysparkretailapp-*.egg` debe reemplazarse por el nombre del archivo de huevo de la fórmula.
 
 ```scala
