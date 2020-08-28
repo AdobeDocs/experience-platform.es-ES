@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ingestar datos en Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 0%
@@ -148,6 +148,6 @@ Para obtener más información sobre la ingestión por lotes, lea la informació
 
 >[!WARNING]
 >
-> La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+>La interfaz de usuario que [!DNL Platform] se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
