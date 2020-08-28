@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,13 @@ ht-degree: 1%
 >
 >El siguiente documento indica cómo utilizar la segmentación de flujo mediante la API. Para obtener información sobre el uso de la segmentación de flujo mediante la interfaz de usuario, consulte la guía de la interfaz de usuario de segmentación de [flujo continuo](../ui/streaming-segmentation.md).
 
-La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real mientras se concentran en la riqueza de los datos. Con la segmentación de flujo continuo, la cualificación de segmentos ahora se produce cuando los datos llegan a [!DNL Platform]su destino, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
+La segmentación por flujo continuo [!DNL Adobe Experience Platform] permite a los clientes realizar la segmentación en tiempo casi real mientras se concentran en la riqueza de los datos. Con la segmentación de flujo continuo, la cualificación de segmentos ahora se produce cuando los datos de flujo llegan a [!DNL Platform]su destino, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que se pasan los datos [!DNL Platform], lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 
 ![](../images/api/streaming-segment-evaluation.png)
+
+>[!NOTE]
+>
+>La segmentación por flujo continuo solo se puede utilizar para evaluar los datos que se transmiten a la plataforma. En otras palabras, los datos ingestados mediante la ingestión por lotes no se evaluarán mediante la segmentación de flujo continuo y requerirán que se active la evaluación por lotes.
 
 ## Primeros pasos
 
