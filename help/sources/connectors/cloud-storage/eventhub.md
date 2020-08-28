@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de los centros de Evento de Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -65,4 +65,4 @@ La documentación siguiente proporciona información sobre cómo conectarse [!DN
 ## Conectar [!DNL Azure Event Hubs] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Creación de un conector de origen de los centros de Evento de Azure en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
