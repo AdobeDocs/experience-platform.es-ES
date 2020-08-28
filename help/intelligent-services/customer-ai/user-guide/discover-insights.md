@@ -5,7 +5,7 @@ title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 description: La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La API del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -122,7 +122,9 @@ Al hacer clic en el botón **[!UICONTROL Crear segmento]** en cualquiera de los 
 
 El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** en la página Perspectivas, la API del cliente agrega automáticamente la información de los bloques seleccionados al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Nombre* y *Descripción* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, haga clic en **[!UICONTROL Guardar]** en la parte superior derecha.
 
->!![NOTE] Dado que las puntuaciones de tendencia se escriben en el perfil individual, están disponibles en el Generador de segmentos como cualquier otro atributo de perfil. Al navegar al generador de segmentos para crear nuevos segmentos, puede ver todas las distintas puntuaciones de tendencia en la Área de nombres de la API del cliente.
+>[!NOTE]
+>
+>Dado que las puntuaciones de tendencia se escriben en el perfil individual, están disponibles en el Generador de segmentos como cualquier otro atributo de perfil. Al navegar al generador de segmentos para crear nuevos segmentos, puede ver todas las distintas puntuaciones de tendencia en la Área de nombres de la API del cliente.
 
 ![Rellenar segmento](../images/insights/segment-saving.png)
 
