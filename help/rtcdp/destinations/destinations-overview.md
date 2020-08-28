@@ -5,9 +5,9 @@ seo-title: Información general sobre destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos desde la plataforma de datos del cliente en tiempo real. Puede utilizar Destinos en la plataforma de datos del cliente en tiempo real de Adobe para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Para obtener más información sobre controles de acceso, consulte la guía del 
 La administración de datos se impone para los destinos CDP en tiempo real mediante:
 
 * *Casos* de uso de marketing que puede seleccionar en el flujo de trabajo de creación de destinos;
-* *Directivas* de uso de datos que restringen la activación de datos que contienen determinadas etiquetas de uso en destinos con determinados casos de uso de marketing.
+* *Directivas* de uso de datos que restringen la activación de datos que contienen ciertas etiquetas de uso en destinos con determinados casos de uso de mercadotecnia.
 
 Consulte la [!DNL Data Governance] documentación de CDP en tiempo real para obtener más información sobre casos [de uso de](/help/rtcdp/privacy/data-governance-overview.md#destinations) mercadotecnia y [resolver violaciones](/help/rtcdp/privacy/data-governance-overview.md#enforcement)de políticas de datos.
 
@@ -67,4 +67,4 @@ Para obtener más información sobre la selección de casos de uso de mercadotec
 * [Destinos de mercadotecnia de correo electrónico](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Para obtener más información sobre las infracciones de la directiva de datos en el flujo de trabajo de activación de segmentos, consulte el paso 7 en [Activar perfiles y segmentos en un destino](/help/rtcdp/destinations/activate-destinations.md).
+Para obtener más información sobre las infracciones de la directiva de datos en el flujo de trabajo de activación de segmentos, consulte el paso Revisar en [Activar perfiles y segmentos a un destino](/help/rtcdp/destinations/activate-destinations.md#review).
