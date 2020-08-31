@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Este documento proporciona los pasos para crear y administrar solicitudes de pri
 
 El panel de la [!DNL Privacy Service] interfaz de usuario proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: **[!UICONTROL Informe]** de estado y solicitudes **[!UICONTROL de trabajo]**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
 
-![panel de la interfaz de usuario](../images/user-guide/dashboard.png)
+![PANEL de la interfaz de usuario](../images/user-guide/dashboard.png)
 
 ### Tipo de regulación
 
@@ -36,7 +36,7 @@ Los trabajos para cada tipo de regulación se rastrean por separado. Para cambia
 
 Al cambiar el tipo de regulación, el panel se actualiza para mostrar todas las operaciones, filtros, utilidades y diálogos de creación de empleo que se aplican a la regulación seleccionada.
 
-![panel actualizado](../images/user-guide/dashboard-update.png)
+![Panel actualizado](../images/user-guide/dashboard-update.png)
 
 ### Informe de estado
 
@@ -46,7 +46,7 @@ Haga clic en uno de los dos botones de alternancia que hay encima del gráfico p
 
 ![](../images/user-guide/hide-errors.png)
 
-Puede vista del número exacto de trabajos asociados con cualquier punto de datos de los gráficos pasando el ratón sobre el punto de datos en cuestión.
+Puede vista el número exacto de trabajos asociados con cualquier punto de datos de los gráficos pasando el ratón sobre el punto de datos en cuestión.
 
 ![Puntos de datos de pasar el ratón por encima](../images/user-guide/mouse-over.png)
 
@@ -86,7 +86,7 @@ Para descargar los datos completos del trabajo como archivo CSV, haga clic en **
 >
 >Para crear una solicitud de trabajo de privacidad, debe proporcionar información de identidad para los clientes específicos cuyos datos se van a obtener o eliminar. Consulte el documento sobre los datos de [identidad para las solicitudes](../identity-data.md) de privacidad antes de continuar con esta sección.
 
-La interfaz de usuario [!DNL Privacy Service] proporciona dos métodos para crear nuevas solicitudes de trabajo:
+La [!DNL Privacy Service] interfaz de usuario proporciona dos métodos para crear nuevas solicitudes de trabajo:
 
 * [Uso del Generador de solicitudes](#request-builder)
 * [Cargar un archivo JSON](#json)
@@ -121,7 +121,7 @@ Al utilizar el tipo de Área de nombres _personalizada_ , debe escribir manualme
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Cuando termine, haga clic en **[!UICONTROL Crear]**.
+When finished, click **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -147,7 +147,7 @@ Si no tiene un archivo JSON para cargar, haga clic en **[!UICONTROL Descargar Ad
 
 Busque el archivo JSON en el equipo y arrástrelo a la ventana de diálogo. Si la carga se realiza correctamente, el nombre del archivo aparecerá en el cuadro de diálogo. Puede seguir agregando más archivos JSON según sea necesario arrastrándolos y soltándolos en el cuadro de diálogo.
 
-Cuando termine, haga clic en **[!UICONTROL Crear]**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes _de_ trabajo junto con su estado de procesamiento actual.
+When finished, click **[!UICONTROL Create]**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes _de_ trabajo junto con su estado de procesamiento actual.
 
 ### Pasos siguientes
 
