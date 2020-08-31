@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Conectar a destinos de flujo continuo y activar datos
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
 
 
-# Conéctese a los destinos de flujo continuo y active los datos en la plataforma de datos del cliente en tiempo real de Adobe mediante API
+# Conéctese a los destinos de flujo continuo y active los datos mediante llamadas de API en la plataforma de datos del cliente en tiempo real de Adobe
 
 >[!NOTE]
 >
