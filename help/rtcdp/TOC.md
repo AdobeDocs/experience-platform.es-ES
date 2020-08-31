@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ayuda de la plataforma de datos del cliente en tiempo real
 user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 10%
@@ -48,7 +48,7 @@ ht-degree: 10%
          * [Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
          * [Extensión Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-         * [Destino del cliente de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
+         * [Coincidencia de clientes de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extensión gtag de Google](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extensión de etiqueta de LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
@@ -111,8 +111,8 @@ ht-degree: 10%
          * [Visión general de los destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-         * [Vídeo de Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Costos de encuesta {#survey-destinations}
+         * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
+      * Destinos de encuesta {#survey-destinations}
          * [Introducción a los destinos de encuesta](/help/rtcdp/destinations/survey-destinations.md)
          * [Extensión Foresee](/help/rtcdp/destinations/foresee-extension.md)
          * [Extensión InMoment](/help/rtcdp/destinations/inmoment-extension.md)
@@ -127,7 +127,7 @@ ht-degree: 10%
    * Tutoriales de la interfaz de usuario de Destinations {#dest-tutorials}
       * [Conectar a un destino](/help/rtcdp/destinations/connect-destination.md)
       * [Activar perfiles y segmentos en un destino](destinations/activate-destinations.md)
-   * Tutoriales de la API de destino {#api-tutorials}
+   * Tutoriales de la API de destinos {#api-tutorials}
       * [Conéctese a los destinos de flujo continuo (AWS Kinesis y los centros de Evento de Azure) y active los datos](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Conectarse a destinos de marketing por correo electrónico y activar datos](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacidad y administración de datos {#privacy}
