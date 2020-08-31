@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
 
 
-# Crear destinos de marketing por correo electrónico y activar datos en Adobe [!DNL Real-time Customer Data Platform]
+# Crear destinos de marketing por correo electrónico y activar datos mediante llamadas de API en Adobe [!DNL Real-time Customer Data Platform]
 
 Este tutorial muestra cómo utilizar las llamadas de API para conectarse a sus datos de Adobe Experience Platform, crear un destino [de marketing de](../../rtcdp/destinations/email-marketing-destinations.md)correo electrónico, crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
