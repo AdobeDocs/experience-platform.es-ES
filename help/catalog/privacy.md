@@ -5,7 +5,7 @@ title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en Data Lake.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
