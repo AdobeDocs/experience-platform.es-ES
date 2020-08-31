@@ -5,9 +5,9 @@ topic: overview
 title: Control de acceso general
 description: Control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1162'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ En el [!DNL Admin Console], los permisos se asignan a los usuarios mediante el u
 
 ## Simuladores y permisos
 
-[!DNL Experience Platform] proporciona acceso a un entorno limitado de producción y le permite crear **entornos** limitados que no sean de producción. Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar datos de otros entornos limitados y que generalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los **[!UICONTROL permisos]** de un perfil de productos proporcionan a los usuarios del perfil acceso a [!DNL Platform] las funciones de los entornos del simulador para pruebas a los que se les ha concedido acceso.
+Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar datos de otros entornos limitados y que generalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los **[!UICONTROL permisos]** de un perfil de productos proporcionan a los usuarios del perfil acceso a [!DNL Platform] las funciones de los entornos del simulador para pruebas a los que se les ha concedido acceso. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados sin producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con el administrador de la organización IMS o con el representante de ventas de Adobe para obtener más información.
 
 Para obtener más información sobre los entornos limitados de [!DNL Experience Platform], consulte la información general [de los](../sandboxes/home.md)entornos limitados.
 
