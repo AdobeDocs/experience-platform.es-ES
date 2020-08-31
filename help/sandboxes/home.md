@@ -5,9 +5,9 @@ title: Descripción general de los Simuladores para pruebas
 topic: overview
 description: Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este documento proporciona información general de alto nivel sobre los entornos
 
 Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite un entorno limitado de producción y varios entornos limitados que no sean de producción, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de la Plataforma (incluidos esquemas, conjuntos de datos, perfiles, etc.).  Todo el contenido y las acciones realizadas dentro de un entorno limitado solo se limitan a ese entorno limitado y no afectan a ningún otro entorno limitado.
 
-Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Además, los entornos limitados que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no son de producción no se pueden convertir en entornos limitados de producción.
+Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Además, los entornos limitados que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no son de producción no se pueden convertir en entornos limitados de producción. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados sin producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con el administrador de la organización IMS o con el representante de ventas de Adobe para obtener más información.
 
 >[!NOTE]
 >
