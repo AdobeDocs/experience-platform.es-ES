@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; database; sql; no sql; data warehouse
 solution: Experience Platform
 title: Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 topic: overview
+description: En este tutorial se explican los pasos para recuperar datos de una base de datos de terceros e incorporarlos a la plataforma mediante conectores de origen y la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 1%
 
 # Recopilación de datos de una base de datos de terceros mediante conectores de origen y API
 
-[[!Servicio de flujo DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-En este tutorial se explican los pasos para recuperar datos de una base de datos de terceros e incorporarlos [!DNL Platform] a través de las API y los conectores de origen.
+En este tutorial se explican los pasos para recuperar datos de una base de datos de terceros e incorporarlos [!DNL Platform] mediante conectores de origen y la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
 
 ## Primeros pasos
 
@@ -24,11 +25,11 @@ Este tutorial requiere que tenga una conexión válida a una base de datos de te
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
-* [Servicio](../../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
-* [Ingesta](../../../../ingestion/batch-ingestion/overview.md)por lotes: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
+* [[!Servicio de catálogo DNL]](../../../../catalog/home.md): Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
+* [[!DNL Ingesta por lotes]](../../../../ingestion/batch-ingestion/overview.md): La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para conectarse correctamente a una base de datos de terceros mediante la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
@@ -41,29 +42,21 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
-
-## Creación de una clase y un esquema XDM ad-hoc
-
-Para introducir datos externos [!DNL Platform] a través de conectores de origen, se debe crear una clase y un esquema XDM ad-hoc para los datos de origen sin procesar.
-
-Para crear una clase ad-hoc y un esquema, siga los pasos descritos en el tutorial [de esquema](../../../../xdm/tutorials/ad-hoc.md)ad-hoc. Al crear una clase ad-hoc, todos los campos encontrados en los datos de origen deben describirse dentro del cuerpo de la solicitud.
-
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado un esquema ad-hoc. Obtenga y almacene el identificador único (`$id`) del esquema ad-hoc y, a continuación, continúe con el paso siguiente de este tutorial.
+* `Content-Type: application/json`
 
 ## Creación de una conexión de origen {#source}
 
-Con la creación de un esquema XDM ad-hoc, ahora se puede crear una conexión de origen mediante una solicitud de POST a la [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, un archivo de datos de origen y una referencia al esquema que describe los datos de origen.
+Puede crear una conexión de origen realizando una solicitud de POST a la [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión, una ruta al archivo de datos de origen y un ID de especificación de conexión.
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "A test source connector for a third-party database",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/21b30fa2c00a2a8d7c3010272dffa16d3cc9eec504aa6c7",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "ADMIN.E2E"
@@ -117,7 +106,6 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `baseConnectionId` | ID de conexión del origen de la base de datos de terceros. |
-| `data.schema.id` | El `$id` funcionamiento del esquema XDM ad-hoc. |
 | `params.path` | Ruta del archivo de origen. |
 | `connectionSpec.id` | ID de especificación de conexión del origen de la base de datos de terceros. Consulte el [apéndice](#appendix) para ver una lista de los ID de especificaciones de la base de datos. |
 
