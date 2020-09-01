@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Tutoriales de acceso a datos
 topic: tutorial
+description: Adobe Experience Platform permite a los usuarios descubrir y acceder a conjuntos de datos ingestados dentro del Experience Platform mediante la API de acceso a datos.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Adobe Experience Platform permite a los usuarios descubrir y acceder a conjuntos
 
 ## Acceso a datos mediante API
 
-Descubra cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform, así como algunas de las características únicas de la API de acceso a datos, como paginación y descargas parciales. Para empezar, siga el tutorial [de la API de acceso a](../data-access/tutorials/dataset-data.md)datos.
+Descubra cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos de Adobe Experience Platform, así como algunas de las características únicas de la API de acceso a datos, como paginación y descargas parciales. Para empezar, siga el tutorial [de la API de acceso a](../data-access/tutorials/dataset-data.md)datos.
 
 ## Crear un conjunto de datos
 
