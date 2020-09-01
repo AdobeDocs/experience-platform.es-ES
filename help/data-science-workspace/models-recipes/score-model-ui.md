@@ -5,7 +5,7 @@ title: Puntuación de un modelo (IU)
 topic: Tutorial
 description: 'La puntuación en Adobe Experience Platform Data Science Workspace se puede conseguir mediante la incorporación de datos de entrada a un modelo ya existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Se crea una ejecución de puntuación mediante configuraciones optimizadas a par
 5. El paso final del flujo de trabajo le solicita que configure la ejecución de puntuación. El modelo utiliza estas configuraciones para la ejecución de puntuación.
 Tenga en cuenta que no podrá eliminar los parámetros heredados que se establecieron durante la creación del modelo. Puede editar o revertir los parámetros no heredados haciendo clic en el valor o en el icono de revertir al pasar el ratón sobre la entrada.
    ![](../images/models-recipes/score/configuration.png)
-Revise y confirme las configuraciones de puntuación y haga clic en **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de puntuación. Se le dirigirá a la ficha Ejecuciones *de* puntuación y la nueva ejecución de puntuación mostrará un estado.
+Revise y confirme las configuraciones de puntuación y haga clic en **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de puntuación. Se le dirigirá a la ficha Ejecuciones **[!UICONTROL de]** puntuación y la nueva ejecución de puntuación mostrará un estado.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Una ejecución de puntuación mostrará cualquiera de los cuatro estados siguientes: Pendiente, Completado, Fallido o En ejecución, y se actualizan automáticamente. Continúe con el paso siguiente si el estado es &quot;Completado&quot; o &quot;Fallido&quot;.
 
