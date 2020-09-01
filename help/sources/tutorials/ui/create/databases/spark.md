@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: Crear una chispa de Apache en el conector de origen de Azure HDInsights en la interfaz de usuario
 topic: overview
+description: Este tutorial proporciona los pasos para crear una chispa de Apache en el conector de origen de Azure HDInsights mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
