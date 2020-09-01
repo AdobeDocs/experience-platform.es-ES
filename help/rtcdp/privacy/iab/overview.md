@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en tiempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Las siguientes secciones describen cómo se recopilan y aplican los datos de con
 
 Además de los comandos del SDK activados por los enlaces de cambio de consentimiento de CMP, los datos de consentimiento también pueden fluir [!DNL Experience Platform] a través de cualquier dato XDM generado por el cliente que se cargue directamente en un conjunto de datos [!DNL Profile]habilitado.
 
-Cualquier segmento compartido con [!DNL Platform] Adobe Audience Manager (a través del conector de [!DNL Audience Manager] origen o de otro modo) también puede contener datos de consentimiento, siempre que se hayan aplicado los campos correspondientes a esos segmentos a través de [!DNL Experience Cloud Identity Service]. Para obtener más información sobre la recopilación de datos de consentimiento en [!DNL Audience Manager], consulte el documento del complemento de [Adobe Audience Manager para IAB TCF](https://docs.adobe.com/help/es-ES/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Cualquier segmento compartido con [!DNL Platform] Adobe Audience Manager (a través del conector de [!DNL Audience Manager] origen o de otro modo) también puede contener datos de consentimiento, siempre que los campos correspondientes se hayan aplicado a esos segmentos a través de [!DNL Experience Cloud Identity Service]. Para obtener más información sobre la recopilación de datos de consentimiento en [!DNL Audience Manager], consulte el documento del complemento de [Adobe Audience Manager para IAB TCF](https://docs.adobe.com/help/es-ES/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Aplicación de consentimiento descendente
 
@@ -121,7 +121,7 @@ Una vez configurado el CMP para generar cadenas de consentimiento, debe integrar
 
 Para que el SDK pueda enviar datos a [!DNL Experience Platform], primero debe crear una nueva configuración Edge para [!DNL Platform] en [!DNL Adobe Experience Platform Launch]. En la documentación [del](../../../edge/fundamentals/edge-configuration.md)SDK se proporcionan pasos específicos para crear una nueva configuración.
 
-Después de proporcionar un nombre único para la configuración, seleccione el botón de alternar situado junto a *[!UICONTROL Adobe Experience Platform]*. A continuación, utilice los siguientes valores para completar el resto del formulario:
+Después de proporcionar un nombre único para la configuración, seleccione el botón de alternar situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
 
 | Campo de configuración de Edge | Valor |
 | --- | --- |
