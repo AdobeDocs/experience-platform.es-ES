@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
 topic: enforcement
-description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con dichas etiquetas, puede utilizar la API de servicio de directivas DULE para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de la política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
+description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con dichas etiquetas, puede utilizar la API de servicio de directivas para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '936'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Aplicar directivas de uso de datos mediante la [!DNL Policy Service] API
 
-Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing con esas etiquetas, puede utilizar la [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
+Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing con dichas etiquetas, puede utilizar la [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ Este documento proporciona pasos sobre cómo utilizar la [!DNL Policy Service] A
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes conceptos clave involucrados en la aplicación de las políticas DULE:
+Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la aplicación de las políticas de uso de datos:
 
 * [Administración](../home.md)de datos: Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
    * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a conjuntos de datos (y/o a campos individuales dentro de esos conjuntos de datos), especificando restricciones para el uso de los datos.
-   * [Directivas](../policies/overview.md)de uso de datos: Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que están permitidas o restringidas para determinados conjuntos de etiquetas DULE.
+   * [Directivas](../policies/overview.md)de uso de datos: Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que están permitidas o restringidas para determinados conjuntos de etiquetas de uso de datos.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) [!DNL Policy Service] desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Policy Service] API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
-## Evaluar mediante etiquetas DULE y una acción de mercadotecnia
+## Evaluar mediante etiquetas y una acción de marketing
 
-Puede evaluar una política probando una acción de mercadotecnia con un conjunto de etiquetas DULE que podrían estar presentes en un conjunto de datos. Esto se realiza mediante el uso del parámetro de `duleLabels` consulta, donde las etiquetas DULE se proporcionan como una lista de valores separados por comas, como se muestra en el ejemplo siguiente.
+Puede evaluar una política probando una acción de marketing en comparación con un conjunto de etiquetas de uso de datos que podrían estar presentes en un conjunto de datos. Esto se realiza mediante el uso del parámetro de `duleLabels` consulta, donde las etiquetas se proporcionan como una lista de valores separados por comas, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
@@ -47,7 +47,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva DULE que está evaluando. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva de uso de datos que está evaluando. |
 | `{LABEL_1}` | Etiqueta de uso de datos para probar la acción de marketing. Se debe proporcionar al menos una etiqueta. Cuando se proporcionan varias etiquetas, deben separarse con comas. |
 
 **Solicitud**
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve la dirección URL de la acción de marketing, las etiquetas DULE con las que se probó y una lista de cualquier directiva DULE que se infringiera como resultado de probar la acción con dichas etiquetas. En este ejemplo, la directiva &quot;Exportar datos a terceros&quot; se muestra en la matriz, lo que indica que la acción de marketing desencadenó la infracción de directiva esperada. `violatedPolicies`
+Una respuesta correcta devuelve la dirección URL de la acción de marketing, las etiquetas de uso con las que se probó y una lista de las directivas que se infringieron como resultado de probar la acción con dichas etiquetas. En este ejemplo, la directiva &quot;Exportar datos a terceros&quot; se muestra en la matriz, lo que indica que la acción de marketing desencadenó la infracción de directiva esperada. `violatedPolicies`
 
 ```json
 {
@@ -129,11 +129,11 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 | Propiedad | Descripción |
 | --- | --- |
-| `violatedPolicies` | Una matriz que enumera las directivas DULE que se infringieron al probar la acción de mercadotecnia (especificada en `marketingActionRef`) en comparación con la proporcionada `duleLabels`. |
+| `violatedPolicies` | Una matriz que enumera las directivas que se infringieron al probar la acción de mercadotecnia (especificada en `marketingActionRef`) en comparación con la proporcionada `duleLabels`. |
 
 ## Evaluar mediante conjuntos de datos
 
-Puede evaluar una directiva DULE probando una acción de mercadotecnia con uno o más conjuntos de datos desde los que se pueden recopilar etiquetas DULE. Esto se lleva a cabo realizando una solicitud de POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcionando ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
+Puede evaluar una directiva de uso de datos probando una acción de mercadotecnia con uno o más conjuntos de datos desde los que se pueden recopilar etiquetas. Esto se lleva a cabo realizando una solicitud de POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcionando ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato API**
 
@@ -144,7 +144,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada con la directiva DULE que está evaluando. |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing asociada a la directiva que está evaluando. |
 
 **Solicitud**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve la dirección URL de la acción de marketing, las etiquetas DULE recopiladas de los conjuntos de datos proporcionados y una lista de cualquier directiva DULE que se haya infringido como resultado de probar la acción con dichas etiquetas. En este ejemplo, la directiva &quot;Exportar datos a terceros&quot; se muestra en la matriz, lo que indica que la acción de marketing desencadenó la infracción de directiva esperada. `violatedPolicies`
+Una respuesta correcta devuelve la dirección URL de la acción de marketing, las etiquetas de uso recopiladas de los conjuntos de datos proporcionados y una lista de las directivas que se infringieron como resultado de probar la acción con dichas etiquetas. En este ejemplo, la directiva &quot;Exportar datos a terceros&quot; se muestra en la matriz, lo que indica que la acción de marketing desencadenó la infracción de directiva esperada. `violatedPolicies`
 
 ```json
 {
@@ -362,12 +362,12 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 | Propiedad | Descripción |
 | --- | --- |
-| `duleLabels` | Una lista de las etiquetas DULE que se han extraído de los conjuntos de datos proporcionados en la carga útil de la solicitud. |
-| `discoveredLabels` | Una lista de los conjuntos de datos que se proporcionaron en la carga útil de la solicitud, que muestra las etiquetas DULE de nivel de conjunto de datos y de nivel de campo que se encontraron en cada una. |
-| `violatedPolicies` | Una matriz que enumera las directivas DULE que se infringieron al probar la acción de mercadotecnia (especificada en `marketingActionRef`) en comparación con la proporcionada `duleLabels`. |
+| `duleLabels` | Una lista de las etiquetas de uso de datos que se extrajeron de los conjuntos de datos proporcionados en la carga útil de la solicitud. |
+| `discoveredLabels` | Una lista de los conjuntos de datos que se proporcionaron en la carga útil de la solicitud, que muestra las etiquetas de nivel de conjunto de datos y de campo que se encontraron en cada una. |
+| `violatedPolicies` | Una matriz que enumera las directivas que se infringieron al probar la acción de mercadotecnia (especificada en `marketingActionRef`) en comparación con la proporcionada `duleLabels`. |
 
 ## Pasos siguientes
 
-Al leer este documento, comprobó correctamente si hay infracciones de políticas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas DULE. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente las infracciones de directiva cuando se produzcan.
+Al leer este documento, comprobó correctamente si hay infracciones de directivas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas de uso de datos. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente las infracciones de directiva cuando se produzcan.
 
 Para ver los pasos sobre cómo aplicar políticas de uso de datos para segmentos de audiencia en [!DNL Real-time Customer Profile], consulte el siguiente [tutorial](../../segmentation/tutorials/governance.md).
