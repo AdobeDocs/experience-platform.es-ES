@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;update;Update;patch;PATCH
 solution: Experience Platform
 title: Actualizar un recurso
+description: 'Puede modificar o actualizar los recursos en el contenedor del inquilino mediante una solicitud de PATCH. El Registro de Esquemas admite todas las operaciones de parche de JSON estándar, incluidas la adición, eliminación y sustitución. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
