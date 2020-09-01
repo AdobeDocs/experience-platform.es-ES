@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ats;ATS
 solution: Experience Platform
 title: Creación de un conector de origen de Almacenamiento de tabla de Azure en la interfaz de usuario
 topic: overview
+description: Este tutorial proporciona los pasos para crear un conector de origen de Azure Table Almacenamiento (en adelante, "ATS") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
