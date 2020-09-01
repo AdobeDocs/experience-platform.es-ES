@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform] permite a las compañías reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capten mejor a los clientes. [!DNL Experience Platform] incluye una infraestructura de administración de datos end-to-end, que incluye el etiquetado y cumplimiento del uso de datos (DULE), para garantizar el uso adecuado de los datos dentro [!DNL Platform] y cuando se comparten entre sistemas.
+[!DNL Experience Platform] permite a las compañías reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capten mejor a los clientes. [!DNL Experience Platform] incluye una infraestructura de administración de datos end-to-end para garantizar el uso adecuado de los datos dentro [!DNL Platform] y cuando se comparten entre sistemas.
 
 Adobe Experience Platform [!DNL Data Governance] es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave en [!DNL Experience Platform] varios niveles, incluyendo catalogación, linaje de datos, etiquetado de uso de datos, políticas de acceso a datos e controles de acceso en datos para acciones de mercadotecnia.
 
