@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
 solution: Experience Platform
 title: Monitorear flujos y ejecuciones
 topic: overview
+description: En este tutorial se explican los pasos para supervisar los datos de ejecución del flujo para comprobar si están completos, los errores y las métricas que utilizan la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
