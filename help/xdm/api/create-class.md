@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Crear una clase
+description: El principal componente de un esquema es una clase. La clase contiene el conjunto mínimo de campos que se deben definir para capturar los datos principales de un esquema. Por ejemplo, si diseñara un esquema para automóviles y camiones, lo más probable es que utilizaría una clase llamada Vehículo que describiera las propiedades comunes básicas de todos los vehículos.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -84,7 +85,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `_{TENANT_ID}` | La `TENANT_ID` Área de nombres de su organización. Todos los recursos creados por su organización deben incluir esta propiedad para evitar conflictos con otros recursos en la [!DNL Schema Registry]. |
-| `allOf` | lista de recursos cuyas propiedades van a heredar la nueva clase. Uno de los `$ref` objetos de la matriz define el comportamiento de la clase. En este ejemplo, la clase hereda el comportamiento &quot;record&quot;. |
+| `allOf` | Lista de recursos cuyas propiedades van a heredar la nueva clase. Uno de los `$ref` objetos de la matriz define el comportamiento de la clase. En este ejemplo, la clase hereda el comportamiento &quot;record&quot;. |
 
 **Respuesta**
 
