@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar con Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # Conectar con [!DNL Aqua Data Studio]
 
-Este documento camina por los pasos para conectarse [!DNL Aqua Data Studio] con el Adobe Experience Platform [!DNL Query Service].
+Este documento recorre los pasos para conectarse [!DNL Aqua Data Studio] con Adobe Experience Platform [!DNL Query Service].
 
 Después de la instalación [!DNL Aqua Data Studio], primero debe registrar el servidor. En el menú principal, haga clic en **[!UICONTROL Servidor]** y, a continuación, en **[!UICONTROL Registrar servidor]**.
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Registrar servidor]* . En la ficha *[!UICONTROL General]* , seleccione **[!UICONTROL PostgreSQL]** en la lista del lado izquierdo. En el cuadro de diálogo que aparece, proporcione los siguientes detalles para la configuración del servidor.
+Aparece el cuadro de diálogo **[!UICONTROL Registrar servidor]** . En la ficha **[!UICONTROL General]** , seleccione **[!UICONTROL PostgreSQL]** en la lista del lado izquierdo. En el cuadro de diálogo que aparece, proporcione los siguientes detalles para la configuración del servidor.
 
 - **[!UICONTROL Nombre]**: Nombre de la conexión.
 - **[!UICONTROL Nombre de inicio de sesión y contraseña]**: Las credenciales de inicio de sesión que se utilizarán. El nombre de usuario adopta la forma de `ORG_ID@AdobeOrg`.
 - **[!UICONTROL Host y puerto]**: El punto final del host y su puerto para [!DNL Query Service].
-- **[!UICONTROL Base de datos]:**Base de datos que se utilizará.
+- **[!UICONTROL Base de datos]:** Base de datos que se utilizará.
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo encontrar las credenciales de inicio de sesión, el host, el puerto y el nombre de la base de datos, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
+>Para obtener más información sobre cómo encontrar las credenciales de inicio de sesión, el host, el puerto y el nombre de la base de datos, visite la página de [credenciales en la plataforma](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-Select the **[!UICONTROL Driver]** tab. En *[!UICONTROL Parámetros]*, establezca el valor como `?sslmode=require`
+Select the **[!UICONTROL Driver]** tab. En **[!UICONTROL Parámetros]**, establezca el valor como `?sslmode=require`
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
@@ -41,4 +41,4 @@ Después de introducir los detalles de la conexión, haga clic en **[!UICONTROL 
 
 ## Pasos siguientes
 
-Ahora que se ha conectado a [!DNL Query Service], puede utilizar el analizador *[!UICONTROL de]* Consultas en [!DNL Aqua Data Studio] para ejecutar y editar sentencias SQL. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía de consultas [en ejecución](../creating-queries/creating-queries.md).
+Ahora que se ha conectado a [!DNL Query Service], puede utilizar el analizador **[!UICONTROL de]** Consultas en [!DNL Aqua Data Studio] para ejecutar y editar sentencias SQL. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía de consultas [en ejecución](../creating-queries/creating-queries.md).
