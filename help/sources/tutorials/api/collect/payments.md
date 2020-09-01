@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; payment; paypal
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Recopilación de datos de pago mediante conectores de origen y API
 topic: overview
-description: En este tutorial se explican los pasos para recuperar datos de una aplicación de pago de terceros e incorporarlos a la plataforma mediante conectores de origen y la API de servicio de flujo.
+description: Este tutorial trata los pasos para recuperar datos de una aplicación de pago e ingerirlos en la plataforma a través de conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1743'
 ht-degree: 2%
 
 ---
