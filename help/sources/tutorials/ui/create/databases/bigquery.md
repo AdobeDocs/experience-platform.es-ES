@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
 title: Creación de un conector de origen de Google Big Consulta en la interfaz de usuario
 topic: overview
+description: Este tutorial proporciona los pasos para crear un conector de origen de Google Big Consulta (en adelante, "GBQ") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '510'
+ht-degree: 0%
 
 ---
 
