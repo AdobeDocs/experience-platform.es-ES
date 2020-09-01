@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
-title: Áreas de nombres disponibles de Lista
+title: Áreas de nombres disponibles de lista
 topic: API guide
+description: Lista de todas las Áreas de nombres disponibles.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '72'
 ht-degree: 5%
 
 ---
 
 
-# Áreas de nombres disponibles de Lista
+# Áreas de nombres disponibles de lista
 
 **Formato API**
 
