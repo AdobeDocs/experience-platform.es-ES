@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Actualización de un simulador para pruebas
 topic: developer guide
+description: Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el nombre del simulador para pruebas en la ruta de la solicitud y la propiedad que desea actualizar en la carga útil de la solicitud.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
