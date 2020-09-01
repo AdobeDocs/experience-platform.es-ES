@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Calidad de la ingestión de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 6%
@@ -12,9 +12,9 @@ ht-degree: 6%
 ---
 
 
-# Calidad de los datos en el Adobe Experience Platform
+# Calidad de datos en Adobe Experience Platform
 
-Adobe Experience Platform proporciona garantías bien definidas para la integridad, precisión y coherencia de cualquier dato cargado a través de una ingesta por lotes o de flujo continuo. El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingestión por lotes y por flujo continuo en [!DNL Experience Platform].
+Adobe Experience Platform ofrece garantías bien definidas de integridad, precisión y coherencia para cualquier dato cargado mediante una ingesta por lotes o por flujo continuo. El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingestión por lotes y por flujo continuo en [!DNL Experience Platform].
 
 ## Comprobaciones admitidas
 
@@ -53,6 +53,6 @@ Se realizan las siguientes validaciones para la transmisión por secuencias de i
 | Organización IMS | Garantiza que la organización de IMS que aparece en la lista sea una organización válida. |
 | Nombre del origen | Garantiza que se especifique el nombre del origen de datos. |
 | Conjunto de datos | Garantiza que el conjunto de datos se especifique, habilite y no se elimine. |
-| Encabezado | Garantiza que el encabezado se especifique y sea válido. |
+| Header | Garantiza que el encabezado se especifique y sea válido. |
 
 Encontrará más información sobre cómo [!DNL Platform] monitorear y validar los datos en la documentación [de flujos de datos de](./monitor-data-flows.md)monitoreo.
