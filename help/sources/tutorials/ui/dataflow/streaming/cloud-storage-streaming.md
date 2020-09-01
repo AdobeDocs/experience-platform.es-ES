@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
 title: Configuración de un flujo de datos para un conector de flujo de almacenamiento en la nube en la interfaz de usuario
 topic: overview
+description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector base del almacenamiento de nube.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
