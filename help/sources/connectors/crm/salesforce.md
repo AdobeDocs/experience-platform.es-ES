@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Conector de Salesforce
 topic: overview
 description: Experience Platform proporciona soporte para la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con proveedores CRM incluye Salesforce.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
