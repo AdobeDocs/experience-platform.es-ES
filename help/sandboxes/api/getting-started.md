@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Guía para desarrolladores de la API de Simulador para pruebas
 topic: developer guide
+description: Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de Simulador para pruebas para administrar entornos limitados en Experience Platform, e incluye ejemplos de llamadas a la API para realizar diversas operaciones.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Guía para desarrolladores de la API de Simulador para pruebas
 
-Los Simuladores para pruebas en Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción.
+Los Simuladores para pruebas de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción.
 
 Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de Simulador para pruebas para administrar entornos limitados en Experience Platform, e incluye ejemplos de llamadas a la API para realizar diversas operaciones.
 
@@ -28,7 +29,7 @@ Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato
 
 ### Recopilar valores para encabezados necesarios
 
-Esta guía requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para realizar llamadas correctamente a las API de Platform. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Esta guía requiere que haya completado el tutorial [de](../../tutorials/authentication.md) autenticación para realizar llamadas a las API de plataforma correctamente. La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
