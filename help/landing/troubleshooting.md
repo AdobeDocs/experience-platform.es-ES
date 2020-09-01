@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Preguntas más frecuentes sobre Adobe Experience Platform y guía de solución de problemas
+title: Guía de solución de problemas y preguntas más frecuentes de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1951'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # [!DNL Platform] Preguntas más frecuentes y guía de solución de problemas
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el Adobe Experience Platform, así como una guía de solución de problemas de alto nivel para los errores comunes que se pueden encontrar en cualquier [!DNL Experience Platform] API. Para obtener guías de solución de problemas sobre [!DNL Platform] servicios individuales, consulte el directorio [de solución de problemas del](#service-troubleshooting-directory) servicio más abajo.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform, así como una guía de solución de problemas de alto nivel para los errores comunes que se pueden encontrar en cualquier [!DNL Experience Platform] API. Para obtener guías de solución de problemas sobre [!DNL Platform] servicios individuales, consulte el directorio [de solución de problemas del](#service-troubleshooting-directory) servicio más abajo.
 
 ## Preguntas más frecuentes {#faq}
 
-La siguiente es una lista de respuestas a las preguntas más frecuentes sobre el Adobe Experience Platform.
+La siguiente es una lista de respuestas a las preguntas más frecuentes sobre Adobe Experience Platform.
 
 ## ¿Qué son [!DNL Experience Platform] las API? {#what-are-experience-platform-apis}
 
@@ -26,13 +26,13 @@ La siguiente es una lista de respuestas a las preguntas más frecuentes sobre el
 
 ## ¿Cómo se formatea una solicitud de API? {#how-do-i-format-an-api-request}
 
-Los formatos de solicitud varían en función de la [!DNL Platform] API utilizada. La mejor manera de aprender a estructurar las llamadas de API es siguiendo los ejemplos que se proporcionan en la documentación del [!DNL Platform] servicio concreto que se utiliza.
+Los formatos de solicitud varían en función de la [!DNL Platform] API utilizada. La mejor manera de aprender a estructurar las llamadas de API es seguir los ejemplos que se proporcionan en la documentación del [!DNL Platform] servicio concreto que se utiliza.
 
 ### Leer llamadas de API de ejemplo
 
-La documentación de [!DNL Experience Platform] muestra las llamadas de API de ejemplo de dos maneras diferentes. En primer lugar, la llamada se presenta en su formato **** API, una representación de plantilla que muestra únicamente la operación (GET, POST, PUT, PATCH, DELETE) y el extremo que se utiliza (por ejemplo, `/global/classes`). Algunas plantillas también muestran la ubicación de las variables para ilustrar cómo se debe formular una llamada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+La documentación de [!DNL Experience Platform] muestra las llamadas de API de ejemplo de dos maneras diferentes. En primer lugar, la llamada se presenta en su formato **** API, una representación de plantilla que muestra únicamente la operación (GET, POST, PUT, PATCH, DELETE) y el punto final que se utiliza (por ejemplo, `/global/classes`). Algunas plantillas también muestran la ubicación de las variables para ilustrar cómo se debe formular una llamada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-A continuación, las llamadas se muestran como comandos cURL en una **solicitud**, que incluye los encabezados necesarios y la &quot;ruta base&quot; completa necesaria para interactuar correctamente con la API. La ruta de acceso base se debe anteponer a todos los extremos. Por ejemplo, el punto final mencionado `/global/classes` pasa a ser `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Verá el formato de API / patrón de solicitud en toda la documentación y se espera que utilice la ruta completa que se muestra en la solicitud de ejemplo al realizar sus propias llamadas a las API de Platform.
+A continuación, las llamadas se muestran como comandos cURL en una **solicitud**, que incluye los encabezados necesarios y la &quot;ruta base&quot; completa necesaria para interactuar correctamente con la API. La ruta de acceso base se debe anteponer a todos los extremos. Por ejemplo, el punto final mencionado `/global/classes` pasa a ser `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Verá el formato de API / patrón de solicitud en toda la documentación y se espera que utilice la ruta completa que se muestra en la solicitud de ejemplo al realizar sus propias llamadas a las API de plataforma.
 
 ### Ejemplo de solicitud de API
 
@@ -84,7 +84,7 @@ La respuesta ilustra lo que esperaría recibir tras una llamada correcta a la AP
 }
 ```
 
-Para obtener más información sobre los extremos específicos en las API de Platform, incluidos los encabezados y los cuerpos de solicitud requeridos, consulte la documentación [de referencia de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
+Para obtener más información sobre los extremos específicos en las API de plataforma, incluidos los encabezados y los cuerpos de solicitud requeridos, consulte la documentación [de referencia de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
 
 ## ¿Cuál es mi organización IMS? {#what-is-my-ims-organization}
 
@@ -92,15 +92,15 @@ Una organización de IMS es una representación Adobe de un cliente. Cualquier s
 
 ## ¿Dónde puedo encontrar mi clave de API? {#where-can-i-find-my-api-key}
 
-Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). En la consola, en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica y encontrará la clave en Credenciales de **cliente**. Para ver un tutorial paso a paso sobre cómo autenticarse [!DNL Platform], consulte el tutorial [de](../tutorials/authentication.md)autenticación.
+Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). En la consola, en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica y encontrará la clave en Credenciales de **cliente**. Para obtener una descripción paso a paso de cómo autenticarse [!DNL Platform], consulte el tutorial [de](../tutorials/authentication.md)autenticación.
 
 ## ¿Cómo consigo un token de acceso? {#how-do-i-get-an-access-token}
 
-Se requieren Tokenes de acceso en el encabezado Autorización de todas las llamadas de API. Pueden generarse mediante un `curl` comando, siempre que tenga acceso a una integración para una organización de IMS. Las Tokenes de acceso solo son válidas durante 24 horas, tras las cuales se debe generar un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokenes de acceso, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
+Se requieren tokenes de acceso en el encabezado Autorización de todas las llamadas de API. Pueden generarse mediante un `curl` comando, siempre que tenga acceso a una integración para una organización de IMS. Las tokenes de acceso solo son válidas durante 24 horas, tras las cuales se debe generar un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokenes de acceso, consulte el tutorial [de](../tutorials/authentication.md)autenticación.
 
 ## ¿Cómo se utilizan los parámetros de consulta? {#how-do-i-user-query-parameters}
 
-Algunos extremos [!DNL Platform] de API aceptan parámetros de consulta para localizar información específica y filtrar los resultados devueltos en la respuesta. Los parámetros de Consulta se anexan para solicitar rutas con un símbolo de interrogación (`?`), seguido de uno o varios parámetros de consulta con el formato `paramName=paramValue`. Al combinar varios parámetros en una sola llamada, debe utilizar un símbolo (`&`) para separar parámetros individuales. En el siguiente ejemplo se muestra cómo se representa en la documentación una solicitud que utiliza varios parámetros de consulta.
+Algunos extremos [!DNL Platform] de API aceptan parámetros de consulta para localizar información específica y filtrar los resultados devueltos en la respuesta. Los parámetros de consulta se anexan para solicitar rutas con un símbolo de interrogación (`?`), seguido de uno o varios parámetros de consulta con el formato `paramName=paramValue`. Al combinar varios parámetros en una sola llamada, debe utilizar un símbolo (`&`) para separar parámetros individuales. En el siguiente ejemplo se muestra cómo se representa en la documentación una solicitud que utiliza varios parámetros de consulta.
 
 Algunos ejemplos de parámetros de consulta que se utilizan con frecuencia son:
 
@@ -238,16 +238,15 @@ Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH tiene
 La siguiente es una lista de guías de solución de problemas y documentación de referencia de API para [!DNL Experience Platform] las API. Cada guía de solución de problemas proporciona respuestas a las preguntas más frecuentes y soluciones a problemas específicos de [!DNL Platform] servicios individuales. Los documentos de referencia de API proporcionan una guía completa de todos los extremos disponibles para cada servicio y muestran los cuerpos de solicitud de muestra, las respuestas y los códigos de error que puede recibir.
 
 | Service | Referencia de API | Resolución de problemas |
---- | --- | ---
-| Control de acceso | [API de Control de acceso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guía de solución de problemas de Control de acceso](../access-control/troubleshooting-guide.md) |
-| Catalog | [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| Ingesta de datos (lote) | [API de inserción de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guía de resolución de problemas de ingestión por lotes](../ingestion/batch-ingestion/troubleshooting.md) |
-| Ingesta de datos (flujo continuo) | [API de inserción de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guía de solución de problemas de inserción de flujo continuo](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Área de trabajo de ciencia de datos | [API de aprendizaje automático de Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Guía de solución de problemas de Área de trabajo de Data Science](../data-science-workspace/troubleshooting-guide.md) |
-| Rótulo y aplicación del uso de datos (DULE) | [API de servicio de directivas DULE](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| Modelo de datos de experiencia (XDM) | [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Preguntas más frecuentes y guía de solución de problemas del sistema XDM](../xdm/troubleshooting-guide.md) |
-| Servicio de identidad | [API de servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Guía de solución de problemas del servicio de identidad](../identity-service/troubleshooting-guide.md) |
-| Servicio de Consulta | [API de servicio de Consulta](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Guía de solución de problemas del servicio de Consulta](../query-service/troubleshooting-guide.md) |
-| Perfil del cliente en tiempo real | [API de Perfil del cliente en tiempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Guía de solución de problemas de Perfil](../profile/troubleshooting.md) |
+| --- | --- | --- |
+| Control de acceso | [API de control de acceso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guía de solución de problemas de control de acceso](../access-control/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guía de resolución de problemas de ingestión por lotes](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guía de solución de problemas de ingestión por flujo continuo](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei API de aprendizaje automático]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guía de solución de problemas](../data-science-workspace/troubleshooting-guide.md) |
+| Administración de datos de Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Servicio de ID de Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guía de solución de problemas](../identity-service/troubleshooting-guide.md) |
+| Servicio de Consulta de Adobe Experience Platform | [[!DNL API de servicio de Consulta]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guía de solución de problemas](../query-service/troubleshooting-guide.md) |
+| Segmentación de Adobe Experience Platform | [[!API de segmentación DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL API de registro de Esquema]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Preguntas más frecuentes y guía de solución de problemas](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guía de solución de problemas](../profile/troubleshooting.md) |
 | Sandboxes | [API de Simulador para pruebas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
-| Segmentación | [API de segmentación](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
