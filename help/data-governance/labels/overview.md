@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Información general sobre las etiquetas de uso de datos
 topic: labels
-description: El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Gobierno de datos de Adobe Experience Platform. Las funciones DULE permiten aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos (también conocidas como etiquetas DULE) en Experience Platform.
+description: La Administración de datos de Adobe Experience Platform le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, y categorizar cada una según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
