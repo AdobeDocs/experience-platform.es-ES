@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de una conexión de flujo continuo mediante la interfaz de usuario
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -22,34 +22,34 @@ Para inicio de datos de flujo continuo a [!DNL Experience Platform], primero deb
 
 Después de registrar una conexión de flujo, tendrá una dirección URL única que puede utilizarse para transmitir datos a [!DNL Platform].
 
-Tenga en cuenta que para completar esta guía, necesitará tener acceso al Adobe Experience Platform. Si no tiene acceso a [!DNL Platform], póngase en contacto con el administrador del sistema antes de continuar.
+Tenga en cuenta que para completar esta guía, necesitará tener acceso a Adobe Experience Platform. Si no tiene acceso a [!DNL Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
 ## Creación de una conexión de flujo continuo
 
-Después de iniciar sesión en la interfaz de usuario, haga clic en [!DNL Experience Platform] Fuentes **[!UICONTROL para abrir la ficha]** Catálogo ** . Esta página muestra los tipos de origen disponibles como tarjetas individuales, y cada tarjeta contiene una burbuja que muestra el número de flujos de datos que se han creado desde conexiones de flujo a conjuntos de datos.
+Después de iniciar sesión en la interfaz de usuario, haga clic en [!DNL Experience Platform] Fuentes **[!UICONTROL para abrir la ficha]** Catálogo **** . Esta página muestra los tipos de origen disponibles como tarjetas individuales, y cada tarjeta contiene una burbuja que muestra el número de flujos de datos que se han creado desde conexiones de flujo a conjuntos de datos.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-En la página *[!UICONTROL Fuentes]* , haga clic en API **** HTTP y, a continuación, en **[!UICONTROL Connect source]**.
+En la página **[!UICONTROL Fuentes]** , haga clic en API **** HTTP y, a continuación, en **[!UICONTROL Connect source]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Aparece la pantalla *[!UICONTROL Conectar a HTTP]* . En Detalles ** del servicio, proporcione el **[!UICONTROL nombre]** y una **[!UICONTROL descripción]** para la nueva conexión de flujo continuo.
+Aparece la pantalla **[!UICONTROL Conectar a HTTP]** . En Detalles **** del servicio, proporcione el **[!UICONTROL nombre]** y una **[!UICONTROL descripción]** para la nueva conexión de flujo continuo.
 
-En Autenticación *[!UICONTROL de cuenta]*, seleccione las siguientes propiedades de configuración para la conexión de flujo continuo:
+En Autenticación **[!UICONTROL de cuenta]**, seleccione las siguientes propiedades de configuración para la conexión de flujo continuo:
 
-- **[!UICONTROL Autenticación]:**Indica si la conexión de flujo requiere autenticación. La autenticación garantiza que los datos se recopilen a partir de fuentes de confianza. Se recomienda activarlo si se trata de información personal identificable (PII).
-- **[!UICONTROL Compatibilidad]de Esquema XDM:**Indica si esta conexión de transmisión enviará o no eventos compatibles con esquemas XDM. De forma predeterminada, esta propiedad está**activada **.
+- **[!UICONTROL Autenticación]:** Indica si la conexión de flujo requiere autenticación. La autenticación garantiza que los datos se recopilen a partir de fuentes de confianza. Se recomienda activarlo si se trata de información personal identificable (PII).
+- **[!UICONTROL Compatibilidad]de Esquema XDM:** Indica si esta conexión de transmisión enviará o no eventos compatibles con esquemas XDM. De forma predeterminada, esta propiedad está **activada**.
 
-Una vez que haya terminado de seleccionar las propiedades de configuración, haga clic en **[!UICONTROL Connect]**. La conexión HTTP de flujo se ha creado y ahora se puede ver en la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Fuentes]* .
+Una vez que haya terminado de seleccionar las propiedades de configuración, haga clic en **[!UICONTROL Connect]**. La conexión HTTP de flujo se ha creado y ahora se puede ver en la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Fuentes]** .
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Desde la ficha *[!UICONTROL Examinar]* , puede hacer clic en la conexión HTTP de flujo recién creada y vista los detalles de esa conexión.
+Desde la ficha **[!UICONTROL Examinar]** , puede hacer clic en la conexión HTTP de flujo recién creada y vista los detalles de esa conexión.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-Al hacer clic en el hipervínculo del nombre de la conexión, puede seleccionar los datos que se mostrarán configurando qué conjunto de datos está conectado, haciendo clic en *[!UICONTROL Seleccionar datos]*.
+Al hacer clic en el hipervínculo del nombre de la conexión, puede seleccionar los datos que se mostrarán configurando qué conjunto de datos está conectado, haciendo clic en **[!UICONTROL Seleccionar datos]**.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
@@ -77,4 +77,4 @@ Después de hacer clic en **[!UICONTROL Siguiente]**, puede revisar los detalles
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión HTTP de flujo que le permite utilizar el extremo de flujo para acceder a una variedad de [!DNL Data Ingestion] API. Para obtener instrucciones para crear una conexión de flujo en la API, lea el tutorial [de](../tutorials/create-streaming-connection.md)creación de una conexión de flujo.
+Siguiendo este tutorial, ha creado una conexión HTTP de flujo que le permite utilizar el extremo de flujo para acceder a una variedad de [!DNL Data Ingestion] API. Para obtener instrucciones sobre cómo crear una conexión de flujo en la API, lea el tutorial [de](../tutorials/create-streaming-connection.md)creación de una conexión de flujo.
