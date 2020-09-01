@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Crear una directiva de uso de datos
 topic: policies
-description: El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Gobierno de datos de Adobe Experience Platform. La API del servicio de directivas DULE le permite crear y administrar políticas DULE para determinar qué acciones de marketing se pueden realizar con datos que contengan determinadas etiquetas DULE. Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la API de servicio de directivas.
+description: La API de servicio de directivas le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos. Este documento proporciona un tutorial paso a paso para crear una política mediante la API de servicio de directivas.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1209'
 ht-degree: 2%
 
 ---
@@ -15,33 +15,33 @@ ht-degree: 2%
 
 # Crear una directiva de uso de datos en la API
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central de Adobe Experience Platform [!DNL Data Governance]. La [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contienen ciertas etiquetas DULE.
+La API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) directivas permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos.
 
-Este documento proporciona un tutorial paso a paso para crear una directiva DULE mediante la [!DNL Policy Service] API. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
+Este documento proporciona un tutorial paso a paso para crear una política mediante la [!DNL Policy Service] API. Para obtener una guía más completa de las distintas operaciones disponibles en la API, consulte la guía [para desarrolladores de](../api/getting-started.md)Policy Service.
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de las políticas DULE:
+Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de políticas:
 
 * [[!Administración de datos DNL]](../home.md): Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
 * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para acceder a los datos.
 * [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) [!DNL Policy Service] desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la API DULE, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Policy Service] API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Definir una acción de mercadotecnia {#define-action}
 
 En el [!DNL Data Governance] marco, una acción de marketing es una acción que realiza un consumidor de [!DNL Experience Platform] datos, para la cual es necesario verificar las infracciones de las políticas de uso de datos.
 
-El primer paso para crear una política DULE es determinar qué acción de mercadotecnia evaluará la política. Esto se puede realizar con una de las siguientes opciones:
+El primer paso para crear una política de uso de datos es determinar qué acción de mercadotecnia evaluará la política. Esto se puede realizar con una de las siguientes opciones:
 
 * [Buscar una acción de mercadotecnia existente](#look-up)
 * [Crear una nueva acción de mercadotecnia](#create-new)
 
 ### Buscar una acción de mercadotecnia existente {#look-up}
 
-Puede consultar las acciones de marketing existentes que su directiva DULE debe evaluar mediante una solicitud de GET a uno de los `/marketingActions` extremos.
+Puede buscar las acciones de marketing existentes que su política debe evaluar realizando una solicitud de GET en uno de los `/marketingActions` extremos.
 
 **Formato API**
 
@@ -122,7 +122,7 @@ Una respuesta correcta devuelve el número total de acciones de mercadotecnia en
 | --- | --- |
 | `_links.self.href` | Cada elemento de la `children` matriz contiene un identificador URI para la acción de marketing de la lista. |
 
-Cuando encuentre la acción de marketing que desea utilizar, registre el valor de su `href` propiedad. Este valor se utiliza durante el próximo paso de [crear una directiva](#create-policy)DULE.
+Cuando encuentre la acción de marketing que desea utilizar, registre el valor de su `href` propiedad. Este valor se utiliza durante el siguiente paso de la [creación de una directiva](#create-policy).
 
 ### Create a new marketing action {#create-new}
 
@@ -188,13 +188,13 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
 | --- | --- |
 | `_links.self.href` | ID de URI de la acción de marketing. |
 
-Registre el identificador URI de la acción de marketing recién creada, tal como se utilizará en el próximo paso de crear una directiva DULE.
+Registre el identificador URI de la acción de marketing recién creada, tal como se utilizará en el próximo paso de crear una política.
 
-## Crear una directiva DULE {#create-policy}
+## Crear una directiva {#create-policy}
 
-La creación de una nueva directiva requiere que proporcione el identificador URI de una acción de marketing con una expresión de las etiquetas DULE que prohíben esa acción de marketing.
+La creación de una nueva directiva requiere que proporcione el identificador URI de una acción de marketing con una expresión de las etiquetas de uso que prohíben esa acción de marketing.
 
-Esta expresión se denomina expresión **de** política y es un objeto que contiene (A) una etiqueta DULE o (B) un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas. Por ejemplo, una política relativa a la exportación de datos a un tercero podría estar prohibida si están presentes `C1 OR (C3 AND C7)` etiquetas. Esta expresión se especificaría como:
+Esta expresión se denomina expresión **de** directiva y es un objeto que contiene (A) una etiqueta o (B) un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas. Por ejemplo, una política relativa a la exportación de datos a un tercero podría estar prohibida si están presentes `C1 OR (C3 AND C7)` etiquetas. Esta expresión se especificaría como:
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ Esta expresión se denomina expresión **de** política y es un objeto que conti
 >
 >Solo se admiten los operadores OR y AND.
 
-Una vez configurada la expresión de directivas, puede crear una nueva directiva DULE haciendo una solicitud de POST al extremo `/policies/custom` .
+Una vez configurada la expresión de directiva, puede crear una nueva directiva haciendo una solicitud de POST al extremo del `/policies/custom` extremo.
 
 **Formato API**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **Solicitud**
 
-La siguiente solicitud crea una directiva DULE llamada &quot;Exportar datos a terceros&quot; proporcionando una acción de marketing y una expresión de política en la carga útil de la solicitud.
+La siguiente solicitud crea una directiva denominada &quot;Exportar datos a terceros&quot;, que proporciona una acción de marketing y una expresión de política en la carga útil de la solicitud.
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `marketingActionRefs` | Matriz que contiene el `href` valor de una acción de marketing, obtenido en el paso [](#define-action)anterior. Aunque el ejemplo anterior lista una sola acción de marketing, también se pueden proporcionar varias acciones. |
-| `deny` | El objeto de expresión de directivas. Define las etiquetas y condiciones DULE que harían que la política rechazara la acción de marketing a la que se hace referencia en `marketingActionRefs`. |
+| `deny` | El objeto de expresión de directivas. Define las etiquetas y condiciones de uso que harían que la política rechazara la acción de marketing a la que se hace referencia en `marketingActionRefs`. |
 
 **Respuesta**
 
@@ -319,17 +319,17 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles de la
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | Valor de sólo lectura generado por el sistema que identifica de forma exclusiva la política DULE. |
+| `id` | Valor de sólo lectura generado por el sistema que identifica de forma exclusiva la política. |
 
-Registre el identificador URI de la directiva DULE recién creada, tal como se utiliza en el paso siguiente para habilitar la directiva.
+Registre el identificador URI de la directiva recién creada, tal como se utiliza en el paso siguiente para habilitar la directiva.
 
-## Habilitar la directiva DULE
+## Habilitar la directiva
 
 >[!NOTE]
 >
->Aunque este paso es opcional si desea dejar la directiva DULE en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una directiva debe tener su estado establecido `ENABLED` para participar en la evaluación. Consulte el tutorial sobre la [aplicación de políticas](../enforcement/api-enforcement.md) DULE para obtener información sobre cómo hacer excepciones para políticas en `DRAFT` estado.
+>Aunque este paso es opcional si desea dejar su política en `DRAFT` estado, tenga en cuenta que, de forma predeterminada, una política debe tener su estado establecido `ENABLED` para participar en la evaluación. Consulte la guía sobre la aplicación de [políticas](../enforcement/api-enforcement.md) para obtener información sobre cómo hacer excepciones para directivas en `DRAFT` estado.
 
-De forma predeterminada, las directivas DULE que tienen sus `status` propiedades establecidas para `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud de PATCH al extremo y proporcionando el identificador único para la directiva al final de la ruta de la solicitud. `/policies/custom/`
+De forma predeterminada, las directivas que tienen sus `status` propiedades establecidas para `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud de PATCH al extremo y proporcionando el identificador único para la directiva al final de la ruta de la solicitud. `/policies/custom/`
 
 **Formato API**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Solicitud**
 
-La siguiente solicitud realiza una operación de PATCH en la `status` propiedad de la directiva DULE, cambiando su valor de `DRAFT` a `ENABLED`.
+La siguiente solicitud realiza una operación de PATCH en la `status` propiedad de la política, cambiando su valor de `DRAFT` a `ENABLED`.
 
 ```shell
 curl -X PATCH \
