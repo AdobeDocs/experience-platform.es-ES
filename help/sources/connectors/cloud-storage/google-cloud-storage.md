@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conector de Almacenamiento de Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobe Experience Platform proporciona conectividad nativa para proveedores de nu
 
 Las fuentes de almacenamiento de nube pueden incorporar sus propios datos [!DNL Platform] sin necesidad de descargarlos, darles formato o cargarlos. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. [!DNL Platform] le permite traer datos desde [!DNL Google Cloud Storage] lotes.
 
-## lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
 Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
 
@@ -60,7 +60,7 @@ Aparece la página **[!UICONTROL Configuración]** . Desde aquí puede ver infor
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-La página **[!UICONTROL Interoperabilidad]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de usuario. Si todavía no ha establecido un proyecto predeterminado para el acceso interoperable, puede configurarlo desde la sección Proyecto *[!UICONTROL predeterminado para el acceso]* interoperable. Si ya se ha establecido un proyecto predeterminado, la sección mostrará una confirmación de que se ha establecido un proyecto como predeterminado.
+La página **[!UICONTROL Interoperabilidad]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de usuario. Si todavía no ha establecido un proyecto predeterminado para el acceso interoperable, puede configurarlo desde la sección Proyecto **[!UICONTROL predeterminado para el acceso]** interoperable. Si ya se ha establecido un proyecto predeterminado, la sección mostrará una confirmación de que se ha establecido un proyecto como predeterminado.
 
 Para generar un nuevo ID de clave de acceso y una clave de acceso secreta para su cuenta de usuario, seleccione **[!UICONTROL Crear una clave]**.
 
