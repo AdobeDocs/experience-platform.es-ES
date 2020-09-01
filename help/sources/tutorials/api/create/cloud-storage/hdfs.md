@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Creación de un conector HDFS de Apache mediante la API de servicio de flujo
 topic: overview
+description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar un sistema de archivos distribuido Apache Hadoop (en lo sucesivo, "HDFS") al Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '561'
 ht-degree: 2%
 
 ---
