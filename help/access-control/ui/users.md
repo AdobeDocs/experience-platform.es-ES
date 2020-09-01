@@ -5,7 +5,7 @@ title: Administrar usuarios para un perfil de producto
 topic: user guide
 description: Este documento muestra cómo administrar usuarios para un perfil de productos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 1%
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Administrar usuarios para un perfil de producto
 
-Para asignar o eliminar usuarios de un perfil de producto, abra la página de detalles del perfil y vaya a la ficha *[!UICONTROL Usuarios]* . Desde aquí, haga clic en **[!UICONTROL Añadir usuario]**.
+Para asignar o eliminar usuarios de un perfil de producto, abra la página de detalles del perfil y vaya a la ficha **[!UICONTROL Usuarios]** . Desde aquí, haga clic en **[!UICONTROL Añadir usuario]**.
 
 ![add-users-button](../images/add-users-button.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Añadir usuario]* . Con el campo de búsqueda, puede buscar usuarios para agregarlos por nombre o por correo electrónico. A medida que escriba, los usuarios coincidentes aparecerán en una ventana de autocompletar debajo del cuadro de texto.
+Aparece el cuadro de diálogo **[!UICONTROL Añadir usuario]** . Con el campo de búsqueda, puede buscar usuarios para agregarlos por nombre o por correo electrónico. A medida que escriba, los usuarios coincidentes aparecerán en una ventana de autocompletar debajo del cuadro de texto.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ Una vez seleccionado un usuario, haga clic en **[!UICONTROL Guardar]** para agre
 
 ![add-user-save](../images/add-user-save.png)
 
-La ficha *[!UICONTROL Usuarios]* del perfil de productos vuelve a aparecer, donde ahora aparece el usuario agregado.
+La ficha **[!UICONTROL Usuarios]** del perfil de productos vuelve a aparecer, donde ahora aparece el usuario agregado.
 
 ![user-added](../images/user-added.png)
 
