@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Asignación de un archivo CSV a un esquema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 2%
@@ -29,13 +29,13 @@ Este tutorial también requiere que ya haya creado un conjunto de datos para ing
 
 ## Elegir un destino
 
-Inicie sesión en [[!DNL Adobe Experience Platform]](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Flujos de trabajo]** en la barra de navegación izquierda para acceder al espacio de trabajo de *[!UICONTROL Flujos de trabajo]* .
+Inicie sesión en [[!DNL Adobe Experience Platform]](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Flujos de trabajo]** en la barra de navegación izquierda para acceder al espacio de trabajo de **[!UICONTROL Flujos de trabajo]** .
 
 En la pantalla **[!UICONTROL Flujos de trabajo]** , seleccione **[!UICONTROL Asignar CSV al esquema]** XDM en la sección **[!UICONTROL de ingesta]** de datos y, a continuación, seleccione **[!UICONTROL Iniciar]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-Aparece el flujo de trabajo *[!UICONTROL Asignar CSV al esquema]* XDM, comenzando en el paso *[!UICONTROL Destino]* . Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede usar un conjunto de datos existente o crear uno nuevo.
+Aparece el flujo de trabajo **[!UICONTROL Asignar CSV al esquema]** XDM, comenzando en el paso **[!UICONTROL Destino]** . Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede usar un conjunto de datos existente o crear uno nuevo.
 
 **Usar un conjunto de datos existente**
 
@@ -49,27 +49,27 @@ Para ingestar los datos CSV en un nuevo conjunto de datos, seleccione **[!UICONT
 
 ## Añadir datos
 
-Aparece el paso *[!UICONTROL Añadir datos]* . Arrastre y suelte el archivo CSV en el espacio proporcionado o seleccione **[!UICONTROL Elegir archivos]** para introducir manualmente el archivo CSV.
+Aparece el paso **[!UICONTROL Añadir datos]** . Arrastre y suelte el archivo CSV en el espacio proporcionado o seleccione **[!UICONTROL Elegir archivos]** para introducir manualmente el archivo CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-La sección Datos *[!UICONTROL de]* ejemplo aparece una vez cargado el archivo, mostrando las primeras diez filas de datos. Una vez que confirme que los datos se han cargado según lo esperado, seleccione **[!UICONTROL Siguiente]**.
+La sección Datos **[!UICONTROL de]** ejemplo aparece una vez cargado el archivo, mostrando las primeras diez filas de datos. Una vez que confirme que los datos se han cargado según lo esperado, seleccione **[!UICONTROL Siguiente]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Asignar campos CSV a campos de esquema XDM
 
-Aparece el paso *[!UICONTROL Asignación]* . Las columnas del archivo CSV se muestran en Campo ** de origen, con sus correspondientes campos de esquema XDM en Campo *[!UICONTROL de]* Destinatario. Los campos de destinatario no seleccionados están delineados en rojo. Puede utilizar la opción de campos de filtro para reducir la lista de los campos de origen disponibles.
+Aparece el paso **[!UICONTROL Asignación]** . Las columnas del archivo CSV se muestran en Campo **** de origen, con sus correspondientes campos de esquema XDM en Campo **[!UICONTROL de]** Destinatario. Los campos de destinatario no seleccionados están delineados en rojo. Puede utilizar la opción de campos de filtro para reducir la lista de los campos de origen disponibles.
 
 Para asignar una columna CSV a un campo XDM, seleccione el icono de esquema junto al campo de destinatario correspondiente de la columna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Aparece la ventana *[!UICONTROL Seleccionar esquema]* . Aquí puede desplazarse por la estructura del esquema XDM y localizar el campo al que desea asignar la columna CSV. Haga clic en un campo XDM para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Seleccionar]**.
+Aparece la ventana **[!UICONTROL Seleccionar esquema]** . Aquí puede desplazarse por la estructura del esquema XDM y localizar el campo al que desea asignar la columna CSV. Haga clic en un campo XDM para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Seleccionar]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-La pantalla *[!UICONTROL Asignación]* vuelve a aparecer y el campo XDM seleccionado aparece ahora en Campo ** Destinatario.
+La pantalla **[!UICONTROL Asignación]** vuelve a aparecer y el campo XDM seleccionado aparece ahora en Campo **** Destinatario.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Si no desea asignar una columna CSV concreta, puede eliminar la asignación haci
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-Si desea agregar una nueva asignación, seleccione **[!UICONTROL Añadir nueva asignación]** en la parte superior de la lista Campo *[!UICONTROL de]* origen.
+Si desea agregar una nueva asignación, seleccione **[!UICONTROL Añadir nueva asignación]** en la parte superior de la lista Campo **[!UICONTROL de]** origen.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ La siguiente sección proporciona información adicional para asignar columnas C
 
 ### Funciones de asignación
 
-Determinadas funciones de asignación se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen. Para utilizar una función, escríbala en Campo ** de origen con la sintaxis y las entradas adecuadas.
+Determinadas funciones de asignación se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen. Para utilizar una función, escríbala en Campo **** de origen con la sintaxis y las entradas adecuadas.
 
 Por ejemplo, para concatenar campos CSV de **ciudad** y **país** y asignarlos al campo XDM de **ciudad** , establezca el campo de origen como `concat(city, ", ", county)`.
 
