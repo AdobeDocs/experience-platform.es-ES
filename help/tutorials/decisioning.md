@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriales de decisiones
 topic: tutorial
+description: El servicio de toma de decisiones permite crear experiencias personalizadas, optimizadas y orquestadas en aplicaciones que se ejecutan en Adobe Experience Platform. Con el servicio de toma de decisiones, puede determinar la mejor opción a partir de un conjunto de opciones disponibles.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -18,8 +19,8 @@ ht-degree: 0%
 
 ## Trabajo con [!DNL Decisioning Service] tiempo de ejecución
 
-Aprenda a trabajar con los servicios de tiempo de ejecución de [!DNL Decisioning Service] utilizar las API de Adobe Experience Platform siguiendo el [trabajo del tutorial](../decisioning-service/tutorials/runtime.md)de tiempo de ejecución de Decisioning Service.
+Aprenda a trabajar con los servicios de tiempo de ejecución de [!DNL Decisioning Service] usar las API de Adobe Experience Platform siguiendo el [trabajo del tutorial](../decisioning-service/tutorials/runtime.md)de tiempo de ejecución de Decisioning Service.
 
 ## Administrar [!DNL Decisioning Service] entidades
 
-Para ver un tutorial que muestra cómo trabajar con las entidades comerciales del [!DNL Decisioning Service] uso de las API de Adobe Experience Platform, visite el tutorial [](../decisioning-service/tutorials/entities.md)administrar objetos de decisiones y reglas.
+Para ver un tutorial que muestra cómo trabajar con las entidades comerciales de [!DNL Decisioning Service] uso de las API de Adobe Experience Platform, visite el tutorial [](../decisioning-service/tutorials/entities.md)administrar objetos y reglas de toma de decisiones.
