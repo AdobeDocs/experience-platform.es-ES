@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Solución de problemas de ingestión de flujo continuo
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Puede agrupar varios mensajes en una única carga útil de solicitud y transmiti
 
 Todos los datos que se envían a [!DNL Platform] (de forma satisfactoria o no) se almacenan como archivos por lotes antes de persistir en los conjuntos de datos. El estado de procesamiento de los lotes aparece dentro del conjunto de datos al que se enviaron.
 
-Puede comprobar si los datos se han ingestado correctamente comprobando la actividad del conjunto de datos mediante la interfaz [de usuario del](https://platform.adobe.com)Experience Platform. Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para mostrar una lista de conjuntos de datos. Seleccione el conjunto de datos al que está transmitiendo desde la lista mostrada para abrir la página de actividad *[!UICONTROL del]* conjunto de datos, mostrando todos los lotes enviados durante un período de tiempo seleccionado. Para obtener más información sobre el uso [!DNL Experience Platform] para supervisar flujos de datos, consulte la guía sobre [supervisión de flujos](../quality/monitor-data-flows.md)de datos de flujo continuo.
+Puede comprobar si los datos se han ingestado correctamente comprobando la actividad del conjunto de datos mediante la interfaz [de usuario del](https://platform.adobe.com)Experience Platform. Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para mostrar una lista de conjuntos de datos. Seleccione el conjunto de datos al que está transmitiendo desde la lista mostrada para abrir la página de actividad **[!UICONTROL del]** conjunto de datos, mostrando todos los lotes enviados durante un período de tiempo seleccionado. Para obtener más información sobre el uso [!DNL Experience Platform] para supervisar flujos de datos, consulte la guía sobre [supervisión de flujos](../quality/monitor-data-flows.md)de datos de flujo continuo.
 
 Si los datos no se han podido transferir y desea recuperarlos de [!DNL Platform], puede recuperar los lotes con errores enviando sus ID al [!DNL Data Access API]. Consulte la guía para [recuperar lotes](../quality/retrieve-failed-batches.md) con errores para obtener más información.
 
@@ -100,4 +100,4 @@ Si [!DNL Real-time Customer Profile] rechaza un mensaje, lo más probable es que
 
 Existen dos tipos de Áreas de nombres de identidad: predeterminado y personalizado. Cuando utilice Áreas de nombres personalizadas, asegúrese de que la Área de nombres se ha registrado en [!DNL Identity Service]. Consulte la descripción general [de la Área de nombres de](../../identity-service/namespaces.md) identidad para obtener más información sobre el uso de Áreas de nombres predeterminadas y personalizadas.
 
-Puede utilizar la [[!IU de Experience Platform DNL]](https://platform.adobe.com) para obtener más información sobre el motivo por el que un mensaje no se puede ingestar. Haga clic en **[!UICONTROL Monitoreo]** en el panel de navegación izquierdo y, a continuación, vista la ficha _[!UICONTROL Flujo de extremo a extremo]_ para ver los lotes de mensajes transmitidos durante un período de tiempo seleccionado.
+Puede utilizar la [[!IU de Experience Platform DNL]](https://platform.adobe.com) para obtener más información sobre el motivo por el que un mensaje no se puede ingestar. Haga clic en **[!UICONTROL Monitoreo]** en el panel de navegación izquierdo y, a continuación, vista la ficha **[!UICONTROL Flujo de extremo a extremo]** para ver los lotes de mensajes transmitidos durante un período de tiempo seleccionado.
