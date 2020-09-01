@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cs;CS;customer success system
 solution: Experience Platform
 title: Explorar un sistema de éxito del cliente mediante la API de servicio de flujo
 topic: overview
+description: Este tutorial utiliza la API de servicio de flujo para explorar los sistemas de éxito del cliente (CS).
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '582'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Explorar un sistema de éxito del cliente mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para explorar los sistemas de éxito del cliente (CS).
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -29,7 +30,7 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 ### Obtención de una conexión base
 
-Para explorar el sistema CS mediante [!DNL Platform] API, debe disponer de un ID de conexión base válido. Si todavía no dispone de una conexión de base para el sistema CS con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
+Para explorar el sistema CS mediante [!DNL Platform] API, debe disponer de un ID de conexión base válido. Si todavía no tiene una conexión de base para el sistema CS con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -177,4 +178,4 @@ Una respuesta correcta devuelve la estructura de la tabla especificada. Los deta
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado su sistema CS, ha encontrado la ruta de la tabla en la que desea realizar la ingesta [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema CS e incluirlos en Platform](../collect/customer-success.md).
+Siguiendo este tutorial, ha explorado su sistema CS, ha encontrado la ruta de la tabla en la que desea realizar la ingesta [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema CS e incluirlos en la plataforma](../collect/customer-success.md).
