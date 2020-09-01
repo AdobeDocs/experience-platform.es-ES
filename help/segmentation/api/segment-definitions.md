@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: Definiciones de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Extremo de definiciones de segmentos
 
-Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o dato de serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
+Adobe Experience Platform permite crear segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o dato de serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
 
 Esta guía proporciona información para ayudarle a comprender mejor las definiciones de segmentos e incluye ejemplos de llamadas de API para realizar acciones básicas mediante la API.
 
@@ -35,7 +35,7 @@ GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-**Parámetros de Consulta**
+**Parámetros de consulta**
 
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
@@ -465,7 +465,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 
 ## Eliminar una definición de segmento específica {#delete}
 
-Puede solicitar la eliminación de una definición de segmento específica realizando una solicitud de  DELETE al extremo y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de la solicitud. `/segment/definitions`
+Puede solicitar la eliminación de una definición de segmento específica realizando una solicitud de DELETE al extremo y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de la solicitud. `/segment/definitions`
 
 **Formato API**
 
