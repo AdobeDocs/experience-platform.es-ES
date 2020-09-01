@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Conector Gen2 de Azure Data Lake Almacenamiento
 topic: overview
+description: La siguiente documentación proporciona información sobre cómo conectar Azure Data Lake Almacenamiento Gen2 a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 4d3899e8a91d15da7e40523a03285f3ccec27191
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Adobe Experience Platform proporciona conectividad nativa para proveedores de nu
 
 Las fuentes de almacenamiento de nube pueden incorporar sus propios datos [!DNL Platform] sin necesidad de descargarlos, darles formato o cargarlos. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. [!DNL Platform] le permite introducir datos desde [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) a través de lotes.
 
-## lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
 Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
 
