@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 5%
@@ -35,7 +35,7 @@ El servicio de segmentación de Adobe Experience Platform proporciona una interf
 | Función | Descripción |
 |--- | ---|
 | Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL _Segmentos_] y [!UICONTROL _Audiencias_] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL _Audiencias_] . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
-| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha [!UICONTROL _Campos_] y, a continuación, utilice el menú desplegable _[!UICONTROL Combinar directiva]_ para seleccionar la directiva de combinación que desee utilizar. |
+| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha **[!UICONTROL Campos]** y, a continuación, utilice el menú desplegable **[!UICONTROL Combinar directiva]** para seleccionar la directiva de combinación que desee utilizar. |
 
 **Problemas conocidos**
 
