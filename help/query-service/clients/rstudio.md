@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
 title: Conectar con RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Conectar con [!DNL RStudio]
 
-Este documento recorre los pasos para conectar R Studio con el Adobe Experience Platform [!DNL Query Service].
+Este documento recorre los pasos para conectar R Studio con Adobe Experience Platform [!DNL Query Service].
 
 Después de la instalación [!DNL RStudio], en la pantalla de la *consola* que aparece, primero deberá preparar la secuencia de comandos R para su uso [!DNL PostgreSQL].
 
@@ -45,7 +45,7 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales en Platform](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
+>Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales de la plataforma](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
 
 ## Pasos siguientes
 
