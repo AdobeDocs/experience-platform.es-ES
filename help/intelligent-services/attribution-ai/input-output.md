@@ -5,7 +5,7 @@ title: Entrada y salida de Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -136,11 +136,11 @@ La siguiente tabla describe los campos de esquema en la salida del ejemplo de pu
 
 ### Visualización de rutas de puntuación sin procesar (IU) {#raw-score-path}
 
-Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Para inicio, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma y, a continuación, busque y seleccione el esquema de puntuaciones AI de atribución desde la ficha *[!UICONTROL Examinar]* .
+Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Para inicio, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma y, a continuación, busque y seleccione el esquema de puntuaciones AI de atribución desde la ficha **[!UICONTROL Examinar]** .
 
 ![Elija su esquema](./images/input-output/schemas_browse.png)
 
-A continuación, seleccione un campo en la ventana *[!UICONTROL Estructura]* de la interfaz de usuario y se abre la ficha Propiedades *[!UICONTROL del]* campo. En las propiedades ** Campo es el campo *[!UICONTROL Ruta]* que se asigna a las puntuaciones sin procesar.
+A continuación, seleccione un campo en la ventana **[!UICONTROL Estructura]** de la interfaz de usuario y se abre la ficha Propiedades **[!UICONTROL del]** campo. En las propiedades **** Campo es el campo **[!UICONTROL Ruta]** que se asigna a las puntuaciones sin procesar.
 
 ![Elegir un Esquema](./images/input-output/field_properties.png)
 
