@@ -5,7 +5,7 @@ title: Guía del usuario de directivas de uso de datos
 topic: policies
 description: El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo Directivas de la interfaz de usuario de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Esta guía requiere una comprensión práctica de los siguientes [!DNL Experienc
 
 ## Directivas de uso de datos de vista {#view-policies}
 
-En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo *[!UICONTROL Directivas]* . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
+En la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Directivas]** para abrir el espacio de trabajo **[!UICONTROL Directivas]** . En la ficha **[!UICONTROL Examinar]** , puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de marketing y el estado.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Haga clic en una directiva de la lista para vista de su descripción y tipo. Si 
 
 ## Crear una directiva de uso de datos personalizada {#create-policy}
 
-Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el espacio de trabajo *[!UICONTROL Directivas]* .
+Para crear una nueva directiva de uso de datos personalizada, haga clic en **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el espacio de trabajo **[!UICONTROL Directivas]** .
 
 ![](../images/policies/create-policy-button.png)
 
-Aparece el flujo de trabajo *[!UICONTROL Crear directiva]* . Inicio proporcionando un nombre y una descripción para la nueva directiva.
+Aparece el flujo de trabajo **[!UICONTROL Crear directiva]** . Inicio proporcionando un nombre y una descripción para la nueva directiva.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ A continuación, seleccione las etiquetas de uso de datos en las que se basará 
 
 ![](../images/policies/add-labels.png)
 
-Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y haga clic en **[!UICONTROL Siguiente]** para continuar.
+Aparece el paso **[!UICONTROL Seleccionar acciones]** de mercadotecnia. Elija las acciones de mercadotecnia correspondientes en la lista proporcionada y haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ Aparece el paso *[!UICONTROL Seleccionar acciones]* de mercadotecnia. Elija las 
 
 ![](../images/policies/add-marketing-actions.png)
 
-Aparece el paso *[!UICONTROL Revisar]* , que le permite revisar los detalles de la nueva directiva antes de crearla. Una vez que esté satisfecho, haga clic en **[!UICONTROL Finalizar]** para crear la directiva.
+Aparece el paso **[!UICONTROL Revisar]** , que le permite revisar los detalles de la nueva directiva antes de crearla. Una vez que esté satisfecho, haga clic en **[!UICONTROL Finalizar]** para crear la directiva.
 
 ![](../images/policies/policy-review.png)
 
-Vuelve a aparecer la ficha *[!UICONTROL Examinar]* , que ahora lista la directiva recién creada con el estado &quot;Borrador&quot;. Para habilitar la directiva, consulte la siguiente sección.
+Vuelve a aparecer la ficha **[!UICONTROL Examinar]** , que ahora lista la directiva recién creada con el estado &quot;Borrador&quot;. Para habilitar la directiva, consulte la siguiente sección.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ Vuelve a aparecer la ficha *[!UICONTROL Examinar]* , que ahora lista la directiv
 
 Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
-Puede habilitar o deshabilitar las directivas desde la ficha *[!UICONTROL Examinar]* del espacio de trabajo *[!UICONTROL Directivas]* . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En *[!UICONTROL Estado]*, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
+Puede habilitar o deshabilitar las directivas desde la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Directivas]** . Seleccione una directiva personalizada de la lista para mostrar sus detalles a la derecha. En **[!UICONTROL Estado]**, seleccione el botón de alternancia para habilitar o deshabilitar la directiva.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ En el espacio de trabajo **[!UICONTROL Directivas]** , seleccione la ficha Accio
 
 ## Crear una acción de mercadotecnia {#create-marketing-action}
 
-Para crear una nueva acción de mercadotecnia personalizada, haga clic en **[!UICONTROL Crear acción]** de mercadotecnia en la esquina superior derecha de la ficha Acciones **[!UICONTROL de]** mercadotecnia en el espacio de trabajo *[!UICONTROL Directivas]* .
+Para crear una nueva acción de mercadotecnia personalizada, haga clic en **[!UICONTROL Crear acción]** de mercadotecnia en la esquina superior derecha de la ficha Acciones **[!UICONTROL de]** mercadotecnia en el espacio de trabajo **[!UICONTROL Directivas]** .
 
 ![](../images/policies/create-marketing-action.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Crear acción]* de marketing. Escriba un nombre y una descripción para la acción de marketing y haga clic en **[!UICONTROL Crear]**.
+Aparece el cuadro de diálogo **[!UICONTROL Crear acción]** de marketing. Escriba un nombre y una descripción para la acción de marketing y haga clic en **[!UICONTROL Crear]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-La acción recién creada aparece en la ficha Acciones *[!UICONTROL de]* mercadotecnia. Ahora puede usar la acción de marketing al [crear nuevas directivas](#create-policy)de uso de datos.
+La acción recién creada aparece en la ficha Acciones **[!UICONTROL de]** mercadotecnia. Ahora puede usar la acción de marketing al [crear nuevas directivas](#create-policy)de uso de datos.
 
 ![](../images/policies/created-marketing-action.png)
 
