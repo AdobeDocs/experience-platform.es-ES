@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;third party database;database flow service
 solution: Experience Platform
 title: Explorar una base de datos mediante la API de servicio de flujo
 topic: overview
+description: Este tutorial utiliza la API de servicio de flujo para explorar el contenido y la estructura de archivos de una base de datos de terceros.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -14,18 +15,18 @@ ht-degree: 2%
 
 # Explorar una base de datos mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para explorar el contenido y la estructura de archivos de una base de datos de terceros.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos de terceros mediante la API [!DNL Flow Service] .
+Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a una base de datos de terceros mediante la API [!DNL Flow Service] .
 
 ### Recopilar las credenciales necesarias
 
@@ -155,4 +156,4 @@ Una respuesta correcta devuelve la estructura de la tabla especificada. Los deta
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado la base de datos, ha encontrado la ruta de la tabla en la que desea realizar la ingesta [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de la base de datos y llevarlos a Platform](../collect/database-nosql.md).
+Siguiendo este tutorial, ha explorado la base de datos, ha encontrado la ruta de la tabla en la que desea realizar la ingesta [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de la base de datos e incluirlos en la plataforma](../collect/database-nosql.md).
