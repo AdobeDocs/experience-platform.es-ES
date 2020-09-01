@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Guía del usuario del servicio de segmentación
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 Trabajar con definiciones de segmentos requiere comprender los distintos [!DNL Experience Platform] servicios relacionados con la segmentación. Antes de leer esta guía del usuario, consulte la documentación de los siguientes servicios:
 
-- [[!DNL Servicio de segmentación]](../home.md): [!DNL Segmentation Service] permite dividir los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños.
-- [[!DNL Perfil del cliente en tiempo real de]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!Servicio de segmentación DNL]](../home.md): [!DNL Segmentation Service] permite dividir los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños.
+- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite la creación de perfiles de clientes mediante el enlace de identidades de fuentes de datos dispares que se están ingeriendo en [!DNL Platform].
-- [[!DNL Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 También es importante conocer dos términos clave que se utilizan a través de este documento y comprender la diferencia entre ellos:
 - **Definición** del segmento: Conjunto de reglas utilizado para describir las características o los comportamientos clave de una audiencia de destinatario.
@@ -77,7 +77,7 @@ La sección Resumen **** del segmento proporciona información como el ID, el no
 
 Además, tiene la opción de editar el segmento. Si selecciona **[!UICONTROL Editar segmento]** , se le dirigirá al [!DNL Segment Builder]. Para obtener información más detallada sobre el uso del [!DNL Segment Builder] espacio de trabajo, lea la guía del [[!DNL Segment Builder] usuario](./segment-builder.md).
 
-### audiencia total en el segmento
+### Audiencia total en el segmento
 
 La sección audiencia **[!UICONTROL total en el segmento]** muestra la cantidad total de perfiles que califican para el segmento.
 
@@ -91,7 +91,7 @@ La sección Destinos **** activados muestra los destinos para los que está acti
 >
 > Los destinos son una función disponible con [!DNL Real-time Customer Data Platform]y le permiten exportar datos a plataformas externas. Para obtener más información sobre los destinos, lea la información general sobre [los destinos](../../rtcdp/destinations/destinations-overview.md). Para obtener información sobre cómo activar un segmento en un destino, lea la [guía sobre cómo activar segmentos en un destino](../../rtcdp/destinations/activate-destinations.md).
 
-### Muestras de Perfil
+### Muestras de perfil
 
 Debajo hay una muestra de perfiles que califican para el segmento, donde se detalla información que incluye el [!DNL Profile] ID, el nombre, el apellido y el correo electrónico personal.
 
