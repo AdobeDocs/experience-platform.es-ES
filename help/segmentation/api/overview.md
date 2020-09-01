@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
-title: Guía para desarrolladores de Adobe Experience Platform Segmentation Service
+title: Guía del desarrollador del servicio de segmentación de Adobe Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 467
 ht-degree: 0%
 
 ---
 
 
-# Guía del desarrollador de la API de Adobe Experience Platform [!DNL Segmentation Service]
+# Guía para desarrolladores de Adobe Experience Platform [!DNL Segmentation Service] API
 
 [!DNL Adobe Experience Platform Segmentation Service] le permite crear segmentos y generar audiencias a partir [!DNL Adobe Experience Platform] de sus [!DNL Real-time Customer Profile] datos.
 
@@ -28,7 +28,7 @@ Para obtener más información sobre el uso de este extremo, lea la guía de ext
 
 ## Previsualizaciones y estimaciones
 
-Las Previsualizaciones proporcionan una lista paginada de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. Puede usar el extremo para crear un nuevo trabajo de previsualización o buscar los resultados de un trabajo de previsualización específico. `/preview`
+Las previsualizaciones proporcionan una lista paginada de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. Puede usar el extremo para crear un nuevo trabajo de previsualización o buscar los resultados de un trabajo de previsualización específico. `/preview`
 
 Las estimaciones proporcionan información estadística para definiciones de segmentos, como tamaño de audiencia proyectado, intervalo de confianza y desviación estándar de errores. Puede utilizar el punto final para realizar la vista de una estimación de una definición de segmento. `/estimate`
 
