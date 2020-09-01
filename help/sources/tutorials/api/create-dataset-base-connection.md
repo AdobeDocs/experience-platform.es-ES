@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
 solution: Experience Platform
 title: Creación de una conexión base de datos Experience Platform mediante la API de servicio de flujo
 topic: overview
+description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '724'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Creación de una conexión de base de datos [!DNL Experience Platform] mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Para conectar datos de un origen de terceros a [!DNL Platform], primero debe establecerse una conexión base de conjuntos de datos.
 
@@ -22,11 +23,11 @@ Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes del Adobe Experience Platform:
+Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema](../../../xdm/home.md)de modelo de datos de experiencia (XDM): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Guía](../../../xdm/api/getting-started.md)para desarrolladores de Esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+   * [Guía](../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 * [Servicio](../../../catalog/home.md)de catálogo: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
 * [Ingesta](../../../ingestion/batch-ingestion/overview.md)por lotes: La API de ingestión por lotes permite ingerir datos en Experience Platform como archivos por lotes.
 * [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -61,7 +62,7 @@ El primer paso para crear una conexión base de datos es recuperar un conjunto d
 
 Cada fuente disponible tiene su propio conjunto exclusivo de especificaciones de conexión para describir propiedades del conector, como los requisitos de autenticación. Puede consultar las especificaciones de conexión de una conexión base de datos realizando una solicitud de GET y utilizando parámetros de consulta.
 
-El envío de una solicitud de GET sin parámetros de consulta devolverá especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obtener información para la conexión base de datos.
+El envío de una solicitud de GET sin parámetros de consulta devolverá las especificaciones de conexión para todos los orígenes disponibles. Puede incluir la consulta `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` para obtener información para la conexión base de datos.
 
 ```http
 GET /connectionSpecs
@@ -184,7 +185,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 Siguiendo este tutorial, ha creado una conexión de base de datos mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar esta conexión base para crear una conexión de destinatario. Los siguientes tutoriales explican los pasos para crear una conexión de destinatario, en función de la categoría del conector de origen que esté utilizando:
 
-* [almacenamiento de nube](./collect/cloud-storage.md)
+* [Almacenamiento de nube](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
 * [Éxito del cliente](./collect/customer-success.md)
 * [Database](./collect/database-nosql.md)
