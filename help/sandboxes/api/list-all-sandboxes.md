@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: Lista de todos los entornos limitados
 topic: developer guide
+description: Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o no), realice una solicitud de GET al extremo /sandboxes.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '205'
+ht-degree: 1%
 
 ---
 
@@ -100,7 +101,7 @@ Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a
 | --- | --- |
 | `name` | Nombre del simulador para pruebas. Se utiliza con fines de búsqueda en llamadas de API. |
 | `title` | Nombre para mostrar del simulador para pruebas. |
-| `state` | Estado de procesamiento actual del simulador para pruebas. El estado de un simulador para pruebas puede ser cualquiera de los siguientes: <br/><ul><li>**creación**: Se ha creado el simulador para pruebas, pero el sistema sigue aprovisionándolo.</li><li>**activo**: El simulador para pruebas se crea y se activa.</li><li>**error**: Debido a un error, el sistema no pudo aprovisionar el simulador para pruebas y está deshabilitado.</li><li>**eliminado**: El simulador para pruebas se ha desactivado manualmente.</li></ul> |
+| `state` | Estado de procesamiento actual del simulador para pruebas. El estado de un simulador para pruebas puede ser cualquiera de los siguientes: <br/><ul><li>**creación**: Se ha creado el simulador para pruebas, pero el sistema sigue aprovisionándolo.</li><li>**activo**: El simulador para pruebas se crea y se activa.</li><li>**error**: Debido a un error, el sistema no pudo aprovisionar el simulador para pruebas y está deshabilitado.</li><li>**eliminado**: El simulador para pruebas se ha deshabilitado manualmente.</li></ul> |
 | `type` | El tipo de entorno limitado, ya sea &quot;desarrollo&quot; o &quot;producción&quot;. |
 | `isDefault` | Una propiedad booleana que indica si este entorno limitado es el entorno limitado predeterminado para la organización. Generalmente este es el entorno limitado de producción. |
 | `eTag` | Identificador de una versión específica del simulador para pruebas. Este valor se utiliza para el control de versiones y la eficacia del almacenamiento en caché y se actualiza cada vez que se realiza un cambio en el simulador para pruebas. |
