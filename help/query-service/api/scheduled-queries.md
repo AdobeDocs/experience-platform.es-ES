@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: Guía para desarrolladores de Consulta Service
+title: Guía para desarrolladores de consulta Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 ---
 
 
-# consultas programadas
+# Consultas programadas
 
 ## Ejemplos de llamadas a API
 
@@ -33,13 +33,13 @@ GET /schedules?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Opcional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
 
-**Parámetros de Consulta**
+**Parámetros de consulta**
 
 A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar consultas programadas. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las consultas programadas disponibles para su organización.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Al Añadir un `-` antes de crear (`orderby=-created`), los elementos se ordenarán en orden descendente. |
+| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`), los elementos se ordenarán en orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Default value: 20*) |
 | `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Default value: 0*) |
 | `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `templateId`y `userId`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que) y `==` (igual a). Por ejemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas programadas en las que el ID de usuario sea el especificado. |
@@ -415,7 +415,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Eliminar una consulta programada especificada
 
-Puede eliminar una consulta programada especificada realizando una solicitud de  DELETE al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
+Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo y proporcionando el ID de la consulta programada que desea eliminar en la ruta de la solicitud. `/schedules`
 
 >[!NOTE]
 >
