@@ -5,7 +5,7 @@ topic: overview
 title: Control de acceso general
 description: Control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Un flujo de trabajo de alto nivel para obtener y asignar permisos de acceso se p
 - El administrador puede realizar la vista de los perfiles [predeterminados del](#product-profiles) producto o crear nuevos perfiles de productos del cliente según sea necesario.
 - El administrador puede editar los permisos y usuarios de cualquier perfil de producto existente.
 - Al crear o editar un perfil de producto, el administrador agrega usuarios al perfil mediante la ficha **[!UICONTROL Usuarios]** y concede permisos a estos usuarios (como &quot;[!UICONTROL Leer conjuntos]de datos&quot; o &quot;[!UICONTROL Administrar Esquemas]&quot;) accediendo a la ficha **[!UICONTROL Permisos]** . Del mismo modo, el administrador puede asignar acceso a los entornos limitados mediante la misma ficha de permisos.
-- Cuando los usuarios inician sesión en la interfaz de usuario, su acceso a [!DNL Experience Platform] [!DNL Platform] las funciones depende de los permisos que se les han concedido desde el paso 2. Por ejemplo, si un usuario no tiene el permiso &quot;Conjuntos[!UICONTROL de datos de]Vista&quot;, la ficha *[!UICONTROL Conjuntos]* de datos del menú lateral no estará visible para ese usuario.
+- Cuando los usuarios inician sesión en la interfaz de usuario, su acceso a [!DNL Experience Platform] [!DNL Platform] las funciones depende de los permisos que se les han concedido desde el paso 2. Por ejemplo, si un usuario no tiene el permiso &quot;Conjuntos[!UICONTROL de datos de]Vista&quot;, la ficha **[!UICONTROL Conjuntos]** de datos del menú lateral no estará visible para ese usuario.
 
 Para ver los pasos más detallados sobre cómo administrar el control de acceso en [!DNL Experience Platform], consulte la guía [del usuario de](./ui/overview.md)control de acceso.
 
@@ -95,10 +95,10 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Sandbox Administration] | [!UICONTROL Entornos aislados de vistas] | Acceso de sólo lectura para entornos limitados pertenecientes a su organización. |
 | [!DNL Sandbox Administration] | [!UICONTROL Restablecer un Simulador para pruebas] | Capacidad para restablecer un entorno limitado. |
 | [!DNL Destinations] | [!UICONTROL Administrar destinos] | Acceso para leer, crear, editar y deshabilitar destinos.* |
-| [!DNL Destinations] | [!UICONTROL Destinos de vista] | Acceso de sólo lectura a los destinos disponibles en la ficha *[!UICONTROL Catálogo]* y a los destinos autenticados en la ficha *[!UICONTROL Examinar]* .* |
+| [!DNL Destinations] | [!UICONTROL Destinos de vista] | Acceso de sólo lectura a los destinos disponibles en la ficha **[!UICONTROL Catálogo]** y a los destinos autenticados en la ficha **[!UICONTROL Examinar]** .* |
 | [!DNL Destinations] | [!UICONTROL Activar destinos] | Capacidad para activar datos en destinos activos que se hayan creado. Este permiso requiere que se concedan &quot;Destinos de Vista&quot; o &quot;Administrar [!UICONTROL destinos&quot;] al usuario que activará los destinos.* |
 | [!DNL Data Ingestion] | [!UICONTROL Administrar fuentes] | Acceso para leer, crear, editar y deshabilitar fuentes. |
-| [!DNL Data Ingestion] | [!UICONTROL Fuentes de vista] | Acceso de sólo lectura a los orígenes disponibles en la ficha *[!UICONTROL Catálogo]* y a los orígenes autenticados en la ficha *[!UICONTROL Examinar]* . |
+| [!DNL Data Ingestion] | [!UICONTROL Fuentes de vista] | Acceso de sólo lectura a los orígenes disponibles en la ficha **[!UICONTROL Catálogo]** y a los orígenes autenticados en la ficha **[!UICONTROL Examinar]** . |
 | [!DNL Data Science Workspace] | [!UICONTROL Administrar área de trabajo de ciencias de datos] | Acceso para leer, crear, editar y eliminar en [!DNL Data Science Workspace]. |
 
 _(*) Este permiso requiere disposiciones para[!DNL Real-time Customer Data Platform]. Para obtener más información sobre CDP en tiempo real, lea la información general[de CDP en tiempo](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)real._
