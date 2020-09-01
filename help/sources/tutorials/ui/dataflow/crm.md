@@ -5,7 +5,7 @@ title: Configurar un flujo de datos para un conector CRM en la interfaz de usuar
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta CRM.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1353'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [[!DNL Perfil del cliente en tiempo real de]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que ya haya creado una cuenta de CRM. Puede encontrar una lista de tutoriales para crear diferentes conectores CRM en la interfaz de usuario en la descripción general [de los conectores](../../../home.md)de origen.
 
@@ -41,7 +41,7 @@ Seleccione el directorio que desee utilizar y haga clic en **[!UICONTROL Siguien
 
 ## Asignación de campos de datos a un esquema XDM
 
-Aparece el paso *[!UICONTROL Asignación]* , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos.
+Aparece el paso **[!UICONTROL Asignación]** , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos.
 
 Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede utilizar un conjunto de datos existente o crear un nuevo conjunto de datos.
 
@@ -51,7 +51,7 @@ Para ingerir datos en un conjunto de datos existente, seleccione **[!UICONTROL U
 
 ![use-existente-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Seleccionar conjunto de datos]* . Busque el conjunto de datos que desee utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
+Aparece el cuadro de diálogo **[!UICONTROL Seleccionar conjunto de datos]** . Busque el conjunto de datos que desee utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
 
 ![select-existente-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
 
@@ -63,7 +63,7 @@ Puede adjuntar un campo de esquema introduciendo un nombre de esquema en la barr
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-Aparecerá el cuadro de diálogo *[!UICONTROL Seleccionar esquema]* . Seleccione el esquema que desee aplicar al nuevo conjunto de datos y haga clic en **[!UICONTROL Finalizado]**.
+Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccione el esquema que desee aplicar al nuevo conjunto de datos y haga clic en **[!UICONTROL Finalizado]**.
 
 ![select-esquema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
@@ -75,14 +75,14 @@ Una vez asignados los datos de origen, haga clic en **[!UICONTROL Siguiente]**.
 
 ## Programar ejecuciones de ingestión
 
-Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una programación de ingestión para ingestar automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
+Aparece el paso **[!UICONTROL Programación]** , que le permite configurar una programación de ingestión para ingestar automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
 
 | Campo | Descripción |
 | --- | --- |
 | Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
 | Tiempo de inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión. |
-| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
+| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si **[!UICONTROL Rellenar ]*está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si*Rellenar *está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo*[!UICONTROL de ]*Inicio. Los archivos cargados antes de la hora*[!UICONTROL de]** Inicio no se ingieren. |
 | Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
 Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
@@ -107,9 +107,9 @@ Una vez que haya proporcionado los valores adecuados a la programación, selecci
 
 ## Proporcionar detalles de flujo de datos
 
-Aparece el paso de detalles ** de flujo de datos, que le permite asignar un nombre y una breve descripción del nuevo flujo de datos.
+Aparece el paso de detalles **** de flujo de datos, que le permite asignar un nombre y una breve descripción del nuevo flujo de datos.
 
-Durante este proceso, también puede activar los diagnósticos *[!UICONTROL de ingestión]* parcial y de *[!UICONTROL error]*. La activación de la ingestión ** parcial permite ingestar datos que contengan errores hasta un determinado umbral. Una vez habilitada la inserción *[!UICONTROL parcial]* , arrastre el *[!UICONTROL dial de umbral de error %]* para ajustar el umbral de error del lote. Como alternativa, puede ajustar manualmente el umbral seleccionando el cuadro de entrada. Para obtener más información, consulte la información general sobre la ingestión [parcial de lotes](../../../../ingestion/batch-ingestion/partial.md).
+Durante este proceso, también puede activar los diagnósticos **[!UICONTROL de ingestión]** parcial y de **[!UICONTROL error]**. La activación de la ingestión **** parcial permite ingestar datos que contengan errores hasta un determinado umbral. Una vez habilitada la inserción **[!UICONTROL parcial]** , arrastre el **[!UICONTROL dial de umbral de error %]** para ajustar el umbral de error del lote. Como alternativa, puede ajustar manualmente el umbral seleccionando el cuadro de entrada. Para obtener más información, consulte la información general sobre la ingestión [parcial de lotes](../../../../ingestion/batch-ingestion/partial.md).
 
 Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]**.
 
@@ -119,9 +119,9 @@ Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]
 
 Aparece el paso *Revisar* , que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* *[!UICONTROL Detalles]* de la conexión: Muestra el tipo de origen, la ruta de acceso relevante del archivo de origen seleccionado y la cantidad de columnas dentro de ese archivo de origen.
-* *[!UICONTROL Detalles]* de asignación: Muestra en qué conjunto de datos se están ingeriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
-* *[!UICONTROL Detalles]* de programación: Muestra el período activo, la frecuencia y el intervalo del programa de ingestión.
+* **[!UICONTROL Detalles]** de la conexión: Muestra el tipo de origen, la ruta de acceso relevante del archivo de origen seleccionado y la cantidad de columnas dentro de ese archivo de origen.
+* **[!UICONTROL Detalles]** de asignación: Muestra en qué conjunto de datos se están ingeriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Detalles]** de programación: Muestra el período activo, la frecuencia y el intervalo del programa de ingestión.
 
 Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finalizar]** y permita que se cree el flujo de datos.
 
@@ -133,7 +133,7 @@ Una vez creado el flujo de datos, puede monitorear los datos que se están inger
 
 ## Eliminar el flujo de datos
 
-Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función *[!UICONTROL Eliminar]* disponible en el espacio de trabajo *[!UICONTROL Flujos]* de datos. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre la [eliminación de flujos de datos en la interfaz de usuario](../delete.md).
+Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función **[!UICONTROL Eliminar]** disponible en el espacio de trabajo **[!UICONTROL Flujos]** de datos. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre la [eliminación de flujos de datos en la interfaz de usuario](../delete.md).
 
 ## Pasos siguientes
 
@@ -156,11 +156,11 @@ Las secciones siguientes proporcionan información adicional para trabajar con c
 
 Cuando se crea un flujo de datos, se activa inmediatamente y se ingieren datos según la programación que se le haya dado. Puede desactivar un flujo de datos activo en cualquier momento siguiendo las instrucciones que se indican a continuación.
 
-En la pantalla de *[!UICONTROL autenticación]* , seleccione el nombre de la conexión asociada al flujo de datos que desea deshabilitar.
+En la pantalla de **[!UICONTROL autenticación]** , seleccione el nombre de la conexión asociada al flujo de datos que desea deshabilitar.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
-Aparece la página actividad __ de origen. Seleccione el flujo de datos activo de la lista para abrir su columna *[!UICONTROL Propiedades]* en el lado derecho de la pantalla, que contiene un botón de alternancia **[!UICONTROL Habilitado]** . Haga clic en el botón de alternancia para deshabilitar el flujo de datos. Se puede utilizar la misma opción para volver a habilitar un flujo de datos después de desactivarlo.
+Aparece la página actividad **** de origen. Seleccione el flujo de datos activo de la lista para abrir su columna **[!UICONTROL Propiedades]** en el lado derecho de la pantalla, que contiene un botón de alternancia **[!UICONTROL Habilitado]** . Haga clic en el botón de alternancia para deshabilitar el flujo de datos. Se puede utilizar la misma opción para volver a habilitar un flujo de datos después de desactivarlo.
 
 ![disable](../../../images/tutorials/dataflow/crm/disable.png)
 
