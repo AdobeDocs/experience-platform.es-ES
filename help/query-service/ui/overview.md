@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;query
+keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
 title: Guía de la interfaz de usuario del servicio de Consulta de Adobe Experience Platform
 topic: guide
 description: El servicio de Consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, vista de consultas ejecutadas anteriormente y acceso a consultas guardadas por usuarios dentro de la organización de IMS.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 3%
