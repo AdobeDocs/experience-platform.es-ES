@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del Simulador para pruebas
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Este documento proporciona pasos para realizar diversas operaciones relacionadas
 
 ## Entornos limitados de vista
 
-En la interfaz de usuario del Experience Platform, haga clic en **[!UICONTROL Entornos]** aislados en el panel de navegación izquierdo para abrir el panel _[!UICONTROL Entornos]_ aislados. El panel lista todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creativo, eliminado o fallido).
+En la interfaz de usuario del Experience Platform, haga clic en **[!UICONTROL Entornos]** aislados en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Entornos]** aislados. El panel lista todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creativo, eliminado o fallido).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ Para crear un nuevo simulador para pruebas en la interfaz de usuario, haga clic 
 
 ![](../images/ui/create-sandbox-button.png)
 
-Aparece el cuadro de diálogo _[!UICONTROL Crear Simulador para pruebas]_ , en el que se le solicita que proporcione un título y un nombre para mostrar para el simulador para pruebas. El título **de la** pantalla debe ser legible por el usuario y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El **[!UICONTROL nombre]** del simulador para pruebas es un identificador en minúsculas que se utiliza en las llamadas de API y, por tanto, debe ser único y conciso.
+Aparece el cuadro de diálogo **[!UICONTROL Crear Simulador para pruebas]** , en el que se le solicita que proporcione un título y un nombre para mostrar para el simulador para pruebas. El título **de la** pantalla debe ser legible por el usuario y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El **[!UICONTROL nombre]** del simulador para pruebas es un identificador en minúsculas que se utiliza en las llamadas de API y, por tanto, debe ser único y conciso.
 
 When finished, click **[!UICONTROL Create]**.
 
@@ -56,7 +56,7 @@ When finished, click **[!UICONTROL Create]**.
 >
 >Dado que está restringido a la creación de tipos de entorno limitado que no sean de producción únicamente, la opción de **[!UICONTROL tipo]** está bloqueada en &quot;No de producción&quot; y no se puede manipular.
 
-Una vez que haya terminado de crear el simulador para pruebas, actualice la página y aparecerá el nuevo simulador para pruebas en el panel _[!UICONTROL Entornos]_ con el estado &quot;[!UICONTROL Creación]&quot;. Los nuevos entornos limitados tardan aproximadamente 15 minutos en ser aprovisionados por el sistema, después de lo cual su estado cambia a &quot;[!UICONTROL Activo]&quot;.
+Una vez que haya terminado de crear el simulador para pruebas, actualice la página y aparecerá el nuevo simulador para pruebas en el panel **[!UICONTROL Entornos]** con el estado &quot;[!UICONTROL Creación]&quot;. Los nuevos entornos limitados tardan aproximadamente 15 minutos en ser aprovisionados por el sistema, después de lo cual su estado cambia a &quot;[!UICONTROL Activo]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Aparece un cuadro de diálogo que le solicita que confirme su elección. Click *
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Aparece un mensaje de confirmación y se elimina el simulador de pruebas del espacio de trabajo de _[!UICONTROL Simuladores de pruebas]_ .
+Aparece un mensaje de confirmación y se elimina el simulador de pruebas del espacio de trabajo de **[!UICONTROL Simuladores de pruebas]** .
 
 ## Pasos siguientes
 
