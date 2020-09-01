@@ -5,9 +5,9 @@ title: Guía del usuario de directivas de uso de datos
 topic: policies
 description: El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo Directivas de la interfaz de usuario de Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Si las directivas de uso existentes no están utilizando la acción de marketing
 
 ## Pasos siguientes
 
-Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre cómo administrar políticas mediante la API de directiva DULE, consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
+Este documento proporciona información general sobre cómo administrar las políticas de uso de datos en la [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre cómo administrar las directivas mediante el uso de [!DNL Policy Service API], consulte la guía [para](../api/getting-started.md)desarrolladores. Para obtener información sobre cómo aplicar políticas de uso de datos, consulte la descripción general [de la aplicación de](../enforcement/overview.md)políticas.
 
 En el siguiente vídeo se muestra cómo trabajar con las políticas de uso en la [!DNL Experience Platform] interfaz de usuario:
 
