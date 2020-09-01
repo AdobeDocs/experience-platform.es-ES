@@ -5,7 +5,7 @@ title: Servicio de ID de Adobe Experience Platform
 topic: overview
 description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name<span>@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 4%
@@ -43,7 +43,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | --- | --- |
 | Cookie | Estas identidades son fundamentales para la expansión y constituyen la mayoría del gráfico de identidad. Sin embargo, por naturaleza se descienden rápidamente y pierden su valor con el tiempo. La eliminación de cookies se gestiona especialmente en el gráfico de identidad. |
 | Dispositivo cruzado | Esto indica que [!DNL Identity Service] debería considerar esto como un identificador de personas fuerte y por lo tanto preservarlo para siempre. Algunos ejemplos son: ID de inicio de sesión, ID de CRM, ID de lealtad, etc. |
-| Device | Incluye IDFA, GAID y otros ID de IOT. Pueden compartirlas las personas de los hogares. |
+| Device  | Incluye IDFA, GAID y otros ID de IOT. Pueden compartirlas las personas de los hogares. |
 | Correo electrónico | Las identidades de este tipo incluyen información de identificación personal (PII). Es una indicación para [!DNL Identity Service] gestionar el valor con sensibilidad. |
 | Dispositivo móvil | Las identidades de este tipo incluyen PII. Es una indicación para [!DNL Identity Service] gestionar el valor con sensibilidad. |
 | No personas | Se utiliza para almacenar identificadores que necesitan Áreas de nombres, pero que no están vinculados a un clúster de personas. Estos identificadores se filtran desde el gráfico de identidad. Los casos de uso posibles incluyen datos relacionados con productos, organizaciones, tiendas, etc. (Por ejemplo, un SKU de producto). |
@@ -53,7 +53,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 
 Adobe Experience Platform proporciona varias Áreas de nombres de identidad que están disponibles para todas las organizaciones. Se conocen como Áreas de nombres estándar y se pueden ver mediante la [!DNL Identity Service] API o a través de la [!DNL Platform] interfaz de usuario.
 
-Para vista de Áreas de nombres estándar en la interfaz de usuario, haga clic en **[!UICONTROL Identidades]** en el carril izquierdo y, a continuación, haga clic en la ficha *[!UICONTROL Examinar]* . Se mostrarán todas las Áreas de nombres de identidad accesibles para su organización, pero las que tengan &quot;[!UICONTROL Estándar]&quot; como &quot;[!UICONTROL Propietario]&quot; son las Áreas de nombres estándar proporcionadas por Adobe.
+Para vista de Áreas de nombres estándar en la interfaz de usuario, haga clic en **[!UICONTROL Identidades]** en el carril izquierdo y, a continuación, haga clic en la ficha **[!UICONTROL Examinar]** . Se mostrarán todas las Áreas de nombres de identidad accesibles para su organización, pero las que tengan &quot;[!UICONTROL Estándar]&quot; como &quot;[!UICONTROL Propietario]&quot; son las Áreas de nombres estándar proporcionadas por Adobe.
 
 Luego puede hacer clic en una de las Áreas de nombres enumeradas para obtener detalles de la vista.
 
@@ -71,7 +71,7 @@ Las Áreas de nombres que defina son privadas para su organización y requieren 
 
 ![](./images/create-identity-namespace.png)
 
-De forma similar a las Áreas de nombres estándar, puede hacer clic en una Área de nombres personalizada desde la ficha *[!UICONTROL Examinar]* para vista de sus detalles. Sin embargo, con una Área de nombres personalizada también puede editar su Nombre para mostrar y su Descripción desde el área de detalles.
+De forma similar a las Áreas de nombres estándar, puede hacer clic en una Área de nombres personalizada desde la ficha **[!UICONTROL Examinar]** para vista de sus detalles. Sin embargo, con una Área de nombres personalizada también puede editar su Nombre para mostrar y su Descripción desde el área de detalles.
 
 >[!NOTE]
 >
