@@ -5,7 +5,7 @@ title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 description: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 0%
@@ -113,7 +113,7 @@ De forma similar al campo &quot;[!UICONTROL nombre]&quot;, los campos que acaba 
 
 El esquema &quot;Miembros[!UICONTROL de la]lealtad&quot; pretende capturar datos relacionados con los miembros de un programa de lealtad, por lo que requerirá algunos campos específicos relacionados con la lealtad. No hay mezclas estándar disponibles que contengan los campos necesarios, por lo tanto deberá definir una nueva mezcla.
 
-Esta vez, cuando abra el cuadro de diálogo *[!UICONTROL Añadir mezcla]* , seleccione **[!UICONTROL Crear nueva combinación]**. Luego se le pedirá que proporcione un **[!UICONTROL Nombre]** para mostrar y una **[!UICONTROL Descripción]** para la mezcla.
+Esta vez, cuando abra el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , seleccione **[!UICONTROL Crear nueva combinación]**. Luego se le pedirá que proporcione un **[!UICONTROL Nombre]** para mostrar y una **[!UICONTROL Descripción]** para la mezcla.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
