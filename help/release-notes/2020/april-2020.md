@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '991'
 ht-degree: 5%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Platform [!DNL Data Governance] es una serie de estrategias y t
 
 Para comenzar con la administración de datos, es necesario comprender a fondo las regulaciones, las obligaciones contractuales y las políticas corporativas que se aplican a los datos del cliente. Desde allí, los datos pueden clasificarse aplicando las etiquetas de uso de datos correspondientes, y su uso puede controlarse mediante la definición de políticas de uso de datos.
 
-El marco DULE simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos a través de la interfaz de [!DNL Experience Platform] usuario y la API DULE [!DNL Policy Service] .
+El [!DNL Data Governance] marco simplifica y racionaliza el proceso de categorización de datos y creación de políticas de uso de datos a través de la interfaz de [!DNL Experience Platform] usuario y la [!DNL Policy Service] API.
 
 **Nuevas funciones**
 
@@ -98,7 +98,7 @@ Adobe Real-time CDP ahora admite la activación de datos a más de cincuenta [!D
 
 | Documentación | Descripción |
 |--- | ---|
-| [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real de Adobe y recomienda cuándo utilizar cada uno de estos destinos. |
+| [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real de Adobe y recomienda cuándo usar cada uno de estos destinos. |
 | [Extensiones de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Esta página explica cuáles son las extensiones, las listas utilizan casos para utilizarlas y los vínculos a la documentación de cada [!DNL Launch] [!DNL Launch] extensión en Adobe Real-time CDP. |
 
 Para obtener más información, consulte la información general sobre [los destinos](/help/rtcdp/destinations/destinations-overview.md).
