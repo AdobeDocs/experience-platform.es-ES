@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
-title: deduplicación de datos
+title: Deduplicación de datos
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 ---
 
 
-# deduplicación de datos en [!DNL Query Service]
+# Deduplicación de datos en [!DNL Query Service]
 
 Adobe Experience Platform [!DNL Query Service] admite la deduplicación de datos cuando se requiera quitar una fila completa de un cálculo o ignorar un conjunto específico de campos porque sólo una parte de los datos de la fila es un duplicado. El patrón común para la deduplicación implica el uso de la `ROW_NUMBER()` función en una ventana para un ID, o par de ID, durante el tiempo pedido (mediante el campo [!DNL Experience Data Model] (XDM) `timestamp` ) para devolver un nuevo campo que representa el número de veces que se ha detectado un duplicado. Cuando este valor es `1`, hace referencia a la instancia original y, en la mayoría de los casos, a la instancia que desea utilizar, ignorando todas las demás instancias. Esto generalmente se realiza dentro de una subselección donde la deduplicación se realiza en un nivel superior `SELECT` como realizar un recuento acumulado.
 
