@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
 title: Creación de consultas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 3%
@@ -20,6 +20,6 @@ La siguiente documentación le ayudará a comprender mejor los conceptos princip
 
 - [Conjuntos de datos vs. tablas y esquemas](./datasets-and-tables.md)
 - [Directrices generales para la redacción de consultas](./writing-queries.md)
-- [consultas de ExperienceEvent](./experience-event-queries.md)
+- [Consultas de ExperienceEvent](./experience-event-queries.md)
 - [Incorporación de conjuntos de datos](./joining-datasets.md)
 - [Desduplicación de datos](./deduplication.md)
