@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Puede filtrar la lista escribiendo las palabras clave en la barra de búsqueda d
 
 ![Opciones de búsqueda de solicitud de trabajo](../images/user-guide/job-search.png)
 
-Para vista de los detalles de una solicitud de trabajo concreta, haga clic en la ID de trabajo de la solicitud en la lista para abrir la página Detalles *[!UICONTROL del]* trabajo.
+Para vista de los detalles de una solicitud de trabajo concreta, haga clic en la ID de trabajo de la solicitud en la lista para abrir la página Detalles **[!UICONTROL del]** trabajo.
 
 ![Detalles del trabajo de la interfaz de usuario de GDPR](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ Para realizar inicios con el creador de solicitudes, haga clic en **[!UICONTROL 
 
 ![Haga clic en Crear solicitud](../images/user-guide/create-request.png)
 
-Se abre el cuadro de diálogo *[!UICONTROL Crear solicitud]* , que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
+Se abre el cuadro de diálogo **[!UICONTROL Crear solicitud]** , que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Seleccione el tipo **[!UICONTROL de]** trabajo de la solicitud (&quot;Eliminar&q
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-En Tipo *[!UICONTROL de]*&#x200B;Área de nombres, seleccione el tipo de Área de nombres correspondiente para los ID de cliente que se envían a [!DNL Privacy Service].
+En Tipo **[!UICONTROL de]**&#x200B;Área de nombres, seleccione el tipo de Área de nombres correspondiente para los ID de cliente que se envían a [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ Haga clic en la flecha situada junto a **[!UICONTROL Crear solicitud]**, debajo 
 
 ![Opciones de creación de solicitudes](../images/user-guide/create-options.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Cargar JSON]* , que proporciona una ventana para arrastrar y soltar el archivo JSON.
+Aparece el cuadro de diálogo **[!UICONTROL Cargar JSON]** , que proporciona una ventana para arrastrar y soltar el archivo JSON.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
