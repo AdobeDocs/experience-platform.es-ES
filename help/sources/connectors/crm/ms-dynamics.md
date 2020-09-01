@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Conector de Microsoft Dynamics
 topic: overview
+description: La siguiente documentación proporciona información sobre cómo conectar Microsoft Dynamics a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Conector de Microsoft Dynamics
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
 [!DNL Experience Platform] permite la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con los proveedores de CRM incluye [!DNL Microsoft Dynamics].
 
-## lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
 Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes.
 
