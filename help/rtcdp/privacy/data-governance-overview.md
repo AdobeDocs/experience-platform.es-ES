@@ -5,7 +5,7 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Si se produce una infracción de directiva al intentar activar un segmento (o [r
 
 ![](assets/violation-popover.png)
 
-La ficha *[!UICONTROL Detalles]* de la ventana emergente indica la acción que activó la infracción y el motivo por el que se produjo la infracción, y proporciona sugerencias sobre cómo resolver el problema en forma potencial.
+La ficha **[!UICONTROL Detalles]** de la ventana emergente indica la acción que activó la infracción y el motivo por el que se produjo la infracción, y proporciona sugerencias sobre cómo resolver el problema en forma potencial.
 
 Haga clic en Línea **[!UICONTROL de datos]** para rastrear los destinos, segmentos, políticas de combinación o conjuntos de datos cuyas etiquetas de datos activaron la infracción.
 
