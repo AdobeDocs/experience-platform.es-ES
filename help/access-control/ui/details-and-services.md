@@ -5,7 +5,7 @@ title: Administrar detalles y servicios adicionales para un perfil de producto
 topic: user guide
 description: Este documento cubre los pasos necesarios para administrar detalles y servicios adicionales para un perfil de productos en Adobe Admin Console. Puede configurar los detalles de un perfil y acceder a servicios adicionales desde el menú Configuración de Perfil.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 1%
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 # Administrar detalles y servicios adicionales para un perfil de producto
 
-Puede configurar los detalles de un perfil y acceder a servicios adicionales desde el menú Configuración *[!UICONTROL de]* Perfil. Para acceder al menú, haga clic en **[!UICONTROL Configuración]** en la página Perfil ** del producto.
+Puede configurar los detalles de un perfil y acceder a servicios adicionales desde el menú Configuración **[!UICONTROL de]** Perfil. Para acceder al menú, haga clic en **[!UICONTROL Configuración]** en la página Perfil **** del producto.
 
 ![perfil-configuración](../images/profile-settings.png)
 
-Aparece el menú Configuración *[!UICONTROL de]* Perfil, empezando en la ficha *[!UICONTROL Detalles]* . Esta ficha le permite introducir y editar el nombre **[!UICONTROL y la]** descripción del **[!UICONTROL Perfil]**. También puede modificar el **[!UICONTROL nombre]** para mostrar y la configuración de notificación por correo electrónico de su cuenta.
+Aparece el menú Configuración **[!UICONTROL de]** Perfil, empezando en la ficha **[!UICONTROL Detalles]** . Esta ficha le permite introducir y editar el nombre **[!UICONTROL y la]** descripción del **[!UICONTROL Perfil]**. También puede modificar el **[!UICONTROL nombre]** para mostrar y la configuración de notificación por correo electrónico de su cuenta.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
-Haga clic en **[!UICONTROL Servicios]** para acceder a la página *[!UICONTROL Servicios]* .
+Haga clic en **[!UICONTROL Servicios]** para acceder a la página **[!UICONTROL Servicios]** .
 
 ![services-page](../images/services-page.png)
 
-El menú *[!UICONTROL Servicios]* le permite modificar el acceso de un perfil a [!DNL Platform] servicios adicionales que se configuraron inicialmente cuando se creó el perfil. Según su [!DNL Platform] suscripción, estos servicios pueden incluir:
+El menú **[!UICONTROL Servicios]** le permite modificar el acceso de un perfil a [!DNL Platform] servicios adicionales que se configuraron inicialmente cuando se creó el perfil. Según su [!DNL Platform] suscripción, estos servicios pueden incluir:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
