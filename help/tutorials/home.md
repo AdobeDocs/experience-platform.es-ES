@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Servicio de Consulta de Adobe Experience Platform
 topic: overview
+description: Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación del Experience Platform, de modo que para obtener los mejores resultados, mantenga los documentos disponibles mientras completa los tutoriales.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
