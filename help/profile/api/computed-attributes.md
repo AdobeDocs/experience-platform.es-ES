@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 'Atributos calculados: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -60,7 +60,7 @@ El flujo de trabajo de este tutorial utiliza un esquema [!DNL Profile]habilitado
 
 Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, agregar una mezcla y definir un campo. Si prefiere utilizar la [!DNL Schema Registry] API, consulte la guía [para desarrolladores de](../../xdm/api/getting-started.md) Esquema Registry para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para su uso con [!DNL Real-time Customer Profile].
 
-En la interfaz de usuario, haga clic en **[!UICONTROL Esquemas]** en el carril izquierdo y utilice la barra de búsqueda de la ficha *[!UICONTROL Examinar]* para encontrar rápidamente el esquema que desea actualizar.
+En la interfaz de usuario, haga clic en **[!UICONTROL Esquemas]** en el carril izquierdo y utilice la barra de búsqueda de la ficha **[!UICONTROL Examinar]** para encontrar rápidamente el esquema que desea actualizar.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -70,7 +70,7 @@ Una vez localizado el esquema, haga clic en su nombre para abrir el [!DNL Schema
 
 ### Crear una mezcla
 
-Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** junto a *Mezclinas* en la sección *[!UICONTROL Composición]* en la parte izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
+Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** junto a *Mezclinas* en la sección **[!UICONTROL Composición]** en la parte izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
 
 Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añadir mezcla]** cuando la haya completado.
 
@@ -78,29 +78,29 @@ Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añ
 
 ### Añadir un campo de atributo calculado en el esquema
 
-La nueva mezcla debe aparecer ahora en la sección *[!UICONTROL Mezclas]* en *[!UICONTROL Composición]*. Haga clic en el nombre de la mezcla y aparecerán varios botones de campo **** Añadir en la sección *[!UICONTROL Estructura]* del editor.
+La nueva mezcla debe aparecer ahora en la sección **[!UICONTROL Mezclas]** en **[!UICONTROL Composición]**. Haga clic en el nombre de la mezcla y aparecerán varios botones de campo **** Añadir en la sección *[!UICONTROL Estructura]** del editor.
 
 Seleccione **[!UICONTROL Añadir campo]** junto al nombre del esquema para agregar un campo de nivel superior, o bien puede seleccionar agregar el campo en cualquier lugar dentro del esquema que prefiera.
 
-Después de hacer clic en **[!UICONTROL Añadir campo]** , se abre un nuevo objeto, denominado por su ID de inquilino, que muestra que el campo está en la Área de nombres correcta. Dentro de ese objeto, aparece un campo ** Nuevo. Esto sucede si el campo en el que se va a definir el atributo calculado.
+Después de hacer clic en **[!UICONTROL Añadir campo]** , se abre un nuevo objeto, denominado por su ID de inquilino, que muestra que el campo está en la Área de nombres correcta. Dentro de ese objeto, aparece un campo **** Nuevo. Esto sucede si el campo en el que se va a definir el atributo calculado.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Configurar el campo
 
-Mediante la sección Propiedades *[!UICONTROL del]* campo a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
+Mediante la sección Propiedades **[!UICONTROL del]** campo a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
 
 >[!NOTE]
 >
 >El tipo del campo debe ser del mismo tipo que el valor del atributo calculado. Por ejemplo, si el valor del atributo calculado es una cadena, el campo que se está definiendo en el esquema debe ser una cadena.
 
-Cuando termine, haga clic en **[!UICONTROL Aplicar]** y aparecerá el nombre del campo, así como su tipo en la sección *[!UICONTROL Estructura]* del editor.
+Cuando termine, haga clic en **[!UICONTROL Aplicar]** y aparecerá el nombre del campo, así como su tipo en la sección **[!UICONTROL Estructura]** del editor.
 
 ![](../images/computed-attributes/Apply.png)
 
 ### Habilitar esquema para [!DNL Profile]
 
-Antes de continuar, asegúrese de que el esquema esté habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección *[!UICONTROL Estructura]* del editor para que aparezca la ficha Propiedades *[!UICONTROL del]* Esquema. Si el control deslizante del **[!UICONTROL Perfil]** es azul, el esquema se ha activado para [!DNL Profile].
+Antes de continuar, asegúrese de que el esquema esté habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección **[!UICONTROL Estructura]** del editor para que aparezca la ficha Propiedades **[!UICONTROL del]** Esquema. Si el control deslizante del **[!UICONTROL Perfil]** es azul, el esquema se ha activado para [!DNL Profile].
 
 >[!NOTE]
 >
