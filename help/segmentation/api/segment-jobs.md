@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: Trabajos de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 3%
@@ -35,7 +35,7 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Parámetros de Consulta**
+**Parámetros de consulta**
 
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
@@ -461,7 +461,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 
 ## Cancelar o eliminar un trabajo de segmento específico {#delete}
 
-Puede eliminar un trabajo de segmento específico realizando una solicitud de  DELETE al extremo y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de la solicitud. `/segment/jobs`
+Puede eliminar un trabajo de segmento específico realizando una solicitud de DELETE al extremo y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de la solicitud. `/segment/jobs`
 
 >[!NOTE]
 >
