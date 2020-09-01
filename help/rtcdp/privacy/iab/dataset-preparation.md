@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en tiempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -79,11 +79,11 @@ En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Esquemas]
 
 ### Crear un esquema de consentimiento basado en registros {#profile-schema}
 
-En la ficha **[!UICONTROL Examinar]** del espacio de trabajo *[!UICONTROL Esquemas]*, cree un nuevo esquema basado en la**[!DNL XDM Individual Profile]clase **. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]**en la sección *[!UICONTROL Mezclas]*de la izquierda del lienzo.
+En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]**, cree un nuevo esquema basado en la **[!DNL XDM Individual Profile]clase**. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Añadir mezcla]* . Desde aquí, seleccione Privacidad **[!UICONTROL de]** Perfil en la lista. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, haga clic en **[!UICONTROL Añadir mezcla]**.
+Aparece el cuadro de diálogo **[!UICONTROL Añadir mezcla]** . Desde aquí, seleccione Privacidad **[!UICONTROL de]** Perfil en la lista. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, haga clic en **[!UICONTROL Añadir mezcla]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ Para [!DNL Real-time CDP] asociar los datos de consentimiento que recibe a perfi
 >
 >Los pasos para establecer un campo de identidad principal para un esquema se encuentran en el tutorial [de creación de](../../../xdm/tutorials/create-schema-ui.md#identity-field)esquema.
 
-Para habilitar el esquema para [!DNL Profile], haga clic en el nombre del esquema en el carril izquierdo para abrir el cuadro de diálogo de propiedades *[!UICONTROL del]* Esquema en el carril derecho. Desde aquí, haga clic en el botón de alternancia de **[!UICONTROL Perfil]** .
+Para habilitar el esquema para [!DNL Profile], haga clic en el nombre del esquema en el carril izquierdo para abrir el cuadro de diálogo de propiedades **[!UICONTROL del]** Esquema en el carril derecho. Desde aquí, haga clic en el botón de alternancia de **[!UICONTROL Perfil]** .
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ Por último, haga clic en **[!UICONTROL Guardar]** para confirmar los cambios.
 
 ### Crear un esquema de consentimiento basado en series temporales {#event-schema}
 
-En la ficha **[!UICONTROL Examinar]** del espacio de trabajo *[!UICONTROL Esquemas]*, cree un nuevo esquema basado en la**[!DNL XDM ExperienceEvent]clase **. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]**en la sección *[!UICONTROL Mezclas]*de la izquierda del lienzo.
+En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]**, cree un nuevo esquema basado en la **[!DNL XDM ExperienceEvent]clase**. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
 
 ![](../assets/iab/add-mixin-event.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Añadir mezcla]* . Desde aquí, seleccione Mezcla **[!UICONTROL de privacidad de]** Experience evento en la lista. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, haga clic en **[!UICONTROL Añadir mezcla]**.
+Aparece el cuadro de diálogo **[!UICONTROL Añadir mezcla]** . Desde aquí, seleccione Mezcla **[!UICONTROL de privacidad de]** Experience evento en la lista. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, haga clic en **[!UICONTROL Añadir mezcla]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ En la página siguiente, seleccione **[!UICONTROL Crear conjunto de datos desde 
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-Aparece el flujo de trabajo _[!UICONTROL Crear conjunto de datos a partir de esquema]_, comenzando por el paso_[!UICONTROL  Seleccionar esquema]_ . En la lista proporcionada, busque uno de los esquemas de consentimiento que creó anteriormente. De forma opcional, puede utilizar la búsqueda para reducir los resultados y encontrar el esquema más fácilmente. Haga clic en el botón de radio situado junto al esquema para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Siguiente]** para continuar.
+Aparece el flujo de trabajo **[!UICONTROL Crear conjunto de datos a partir de esquema]** , comenzando por el paso **[!UICONTROL Seleccionar esquema]** . En la lista proporcionada, busque uno de los esquemas de consentimiento que creó anteriormente. De forma opcional, puede utilizar la búsqueda para reducir los resultados y encontrar el esquema más fácilmente. Haga clic en el botón de radio situado junto al esquema para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-Aparece el paso _[!UICONTROL Configurar conjunto de datos]_. Proporcione un nombre y una descripción únicos y fáciles de identificar para el conjunto de datos antes de hacer clic en**[!UICONTROL  Finalizar ]**.
+Aparece el paso **[!UICONTROL Configurar conjunto de datos]** . Proporcione un nombre y una descripción únicos y fáciles de identificar para el conjunto de datos antes de hacer clic en **[!UICONTROL Finalizar]**.
 
 ![](../assets/iab/dataset-configure.png)
 
