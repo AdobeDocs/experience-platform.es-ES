@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: Este tutorial proporciona los pasos para crear un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario para incluir datos de clasificaciones en Adobe Experience Platform.
 solution: Experience Platform
 title: Creación de un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
