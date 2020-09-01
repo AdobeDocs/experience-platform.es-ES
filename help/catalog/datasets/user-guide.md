@@ -5,9 +5,9 @@ title: Guía del usuario de conjuntos de datos
 topic: datasets
 description: Esta guía del usuario de conjuntos de datos proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
    * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)de esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante la [!DNL Schema Editor] interfaz de [!DNL Platform] usuario.
 * [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!Administración de datos DNL]](../../data-governance/home.md): Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
 
 ## datasets de vista
 
@@ -114,7 +114,7 @@ Si un conjunto de datos ya contiene datos y se habilita para [!DNL Profile], los
 
 ## Administrar y aplicar la administración de datos en un conjunto de datos
 
-El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo de control de datos principal para [!DNL Experience Platform]. Las etiquetas DULE permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la información general [sobre el Gobierno de](../../data-governance/home.md) datos para obtener más información sobre las etiquetas o consulte la guía [del usuario sobre las etiquetas de uso de](../../data-governance/labels/overview.md) datos para obtener instrucciones sobre cómo aplicar etiquetas a los conjuntos de datos.
+Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la información general [sobre el Gobierno de](../../data-governance/home.md) datos para obtener más información sobre las etiquetas o consulte la guía [del usuario sobre las etiquetas de uso de](../../data-governance/labels/overview.md) datos para obtener instrucciones sobre cómo aplicar etiquetas a los conjuntos de datos.
 
 ## Eliminar un conjunto de datos
 
