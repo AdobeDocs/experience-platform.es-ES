@@ -5,9 +5,9 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ El diagrama siguiente ilustra cómo se integra la aplicación de políticas en e
 
 ![](assets/enforcement-flow.png)
 
-Cuando se activa un segmento por primera vez, DULE [!DNL Policy Service] comprueba si hay infracciones de directivas en función de los siguientes factores:
+Cuando se activa un segmento por primera vez, comprueba [!DNL Policy Service] si hay infracciones de directivas en función de los siguientes factores:
 
 * Las etiquetas de uso de datos aplicadas a los campos y conjuntos de datos dentro del segmento que se va a activar.
 * El propósito de marketing del destino.
