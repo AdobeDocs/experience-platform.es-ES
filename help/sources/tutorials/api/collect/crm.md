@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; crm; salesforce; dynamics
+keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
 title: Recopilación de datos CRM mediante conectores de origen y API
 topic: overview
-description: En este tutorial se explican los pasos para recuperar datos de una CRM de terceros e incorporarlos a la plataforma mediante conectores de origen y la API de servicio de flujo.
+description: Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a la plataforma a través de conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
