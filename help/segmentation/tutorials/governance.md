@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): [!DNL Real-time Customer Profile] es un almacén de entidades de búsqueda genérico y se utiliza para administrar datos [!DNL Experience Data Model] (XDM) dentro de [!DNL Platform]. Perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
    - [Combinar directivas](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada bajo ciertas condiciones. Las directivas de combinación se pueden configurar para [!DNL Data Governance] fines específicos.
 - [[!Segmentación DNL]](../home.md): Cómo [!DNL Real-time Customer Profile] divide un gran grupo de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
-- [[!Administración de datos DNL]](../../data-governance/home.md): [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos (DULE), utilizando los siguientes componentes:
+- [[!Administración de datos DNL]](../../data-governance/home.md): [!DNL Data Governance] proporciona la infraestructura para el etiquetado y la aplicación del uso de datos mediante los siguientes componentes:
    - [Etiquetas](../../data-governance/labels/user-guide.md)de uso de datos: Etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de sensibilidad con el que tratar sus datos respectivos.
    - [Directivas](../../data-governance/policies/overview.md)de uso de datos: Configuraciones que indican qué acciones de mercadotecnia se permiten en los datos clasificados por etiquetas de uso de datos particulares.
    - [Aplicación](../../data-governance/enforcement/overview.md)de políticas: Permite aplicar políticas de uso de datos y evitar operaciones de datos que constituyan infracciones de políticas.
@@ -187,7 +187,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 >
 > En este paso se asume que tiene al menos una directiva de uso de datos activa que impide que se realicen acciones de marketing específicas en los datos que contienen determinadas etiquetas. Si no tiene ninguna política de uso aplicable para los conjuntos de datos que se están evaluando, siga el tutorial [de creación de](../../data-governance/policies/create.md) directivas para crear uno antes de continuar con este paso.
 
-Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar dichos conjuntos de datos en relación con acciones de marketing específicas a fin de comprobar si hay violaciones de directivas de uso de datos.
+Una vez que haya obtenido los ID de los conjuntos de datos de origen de la directiva de combinación, puede utilizar la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) directivas para evaluar dichos conjuntos de datos en relación con acciones de marketing específicas a fin de comprobar si hay violaciones de directivas de uso de datos.
 
 Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de mercadotecnia en la ruta de una solicitud de POST, mientras proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
