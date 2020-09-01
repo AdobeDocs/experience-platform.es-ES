@@ -5,7 +5,7 @@ title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con el área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 0%
@@ -132,7 +132,7 @@ La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso
 
 | Permiso | Habilitado | Desactivado |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Proporciona acceso a todos los servicios de [!DNL Data Science Workspace]. | El acceso a la API y a la interfaz de usuario para todos los servicios dentro de [!DNL Data Science Workspace] se desactiva. Mientras está deshabilitado, se evita el enrutamiento a las páginas [!DNL Data Science Workspace] Modelos *[!UICONTROL y]* Servicios ** . |
+| [!DNL Manage Data Science Workspace] | Proporciona acceso a todos los servicios de [!DNL Data Science Workspace]. | El acceso a la API y a la interfaz de usuario para todos los servicios dentro de [!DNL Data Science Workspace] se desactiva. Mientras está deshabilitado, se evita el enrutamiento a las páginas [!DNL Data Science Workspace] Modelos **[!UICONTROL y]** Servicios **** . |
 
 ### Seguridad y paz mental
 
