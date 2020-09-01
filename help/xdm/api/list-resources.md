@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: Recursos de lista
+description: Puede realizar una vista de una lista de todos los recursos del Registro de Esquemas de un tipo determinado (clases, mezclas, esquemas, tipos de datos o descriptores) dentro de un contenedor realizando una sola solicitud de GET.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '538'
 ht-degree: 2%
 
 ---
