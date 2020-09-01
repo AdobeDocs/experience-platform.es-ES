@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox troubleshooting
 solution: Experience Platform
 title: Guía de solución de problemas de Simuladores para pruebas
 topic: troubleshooting guide
+description: Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos limitados de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d4ae318f43904dd73756985512c303fa7149b678
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
