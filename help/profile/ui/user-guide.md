@@ -5,7 +5,7 @@ title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -29,19 +29,19 @@ Esta guía del usuario requiere comprender los distintos [!DNL Experience Platfo
 
 ## Información general
 
-En la [[!IU de Experience Platform DNL]](http://platform.adobe.com), haga clic en **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la ficha _[!UICONTROL Información general]_ . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
+En la [[!IU de Experience Platform DNL]](http://platform.adobe.com), haga clic en **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la ficha **[!UICONTROL Información general]** . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Examinar
 
-Seleccione la ficha *[!UICONTROL Examinar]* para examinar los perfiles por identidad.
+Seleccione la ficha **[!UICONTROL Examinar]** para examinar los perfiles por identidad.
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Métricas de perfil {#profile-metrics}
 
-A la derecha de la ficha *[!UICONTROL Examinar]* hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
+A la derecha de la ficha **[!UICONTROL Examinar]** hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
 
 Estas métricas de perfil se evalúan mediante la directiva de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida la definición de una directiva de combinación predeterminada, consulte la guía [de usuario Políticas de](merge-policies.md)combinación.
 
@@ -59,13 +59,13 @@ Cuando la ingestión de registros en el [!DNL Profile Store] aumento o la dismin
 
 ### Perfiles por Área de nombres {#profiles-by-namespace}
 
-La métrica *[!UICONTROL Perfiles por Área de nombres]* muestra el recuento total y el desglose de Áreas de nombres en todos los perfiles combinados de su almacén de Perfiles. El número total de perfiles por Área de nombres (es decir, sumar los valores mostrados para cada Área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría tener varias Áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias Áreas de nombres con ese cliente individual.
+La métrica **[!UICONTROL Perfiles por Área de nombres]** muestra el recuento total y el desglose de Áreas de nombres en todos los perfiles combinados de su almacén de Perfiles. El número total de perfiles por Área de nombres (es decir, sumar los valores mostrados para cada Área de nombres) siempre será mayor que la métrica de recuento de perfiles porque un perfil podría tener varias Áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias Áreas de nombres con ese cliente individual.
 
 De forma similar a la métrica de recuento [de](#profile-count) perfiles, cuando la ingestión de registros en el recuento [!DNL Profile Store] aumenta o disminuye en más de un 5 %, se activa un trabajo para actualizar las métricas de Área de nombres. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingestión por lotes, dentro de los 15 minutos posteriores a la ingestión satisfactoria de un lote en el [!DNL Profile Store], si se alcanza el umbral de aumento o reducción del 5 %, se ejecuta un trabajo para actualizar las métricas.
 
 ### Combinar directiva
 
-El selector de directivas **[!UICONTROL de]** combinación selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar la opción `X` situada junto a la directiva de combinación predeterminada para abrir un cuadro de diálogo *[!UICONTROL Seleccionar directiva]* de combinación donde puede elegir otra directiva de combinación. Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
+El selector de directivas **[!UICONTROL de]** combinación selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar la opción `X` situada junto a la directiva de combinación predeterminada para abrir un cuadro de diálogo **[!UICONTROL Seleccionar directiva]** de combinación donde puede elegir otra directiva de combinación. Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario](merge-policies.md)Combinar directivas.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -75,13 +75,13 @@ El selector de Área de nombres **[!UICONTROL de]** identidad abre un cuadro de 
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-En el cuadro de diálogo *[!UICONTROL Seleccionar Área de nombres]* de identidad, elija la Área de nombres por la que desea realizar la búsqueda o utilice la barra de **[!UICONTROL búsqueda]** del cuadro de diálogo para empezar a escribir el nombre de una Área de nombres. Puede seleccionar una Área de nombres para vista de detalles adicionales, y una vez encontrada la Área de nombres que desea buscar puede seleccionar el botón de radio y pulsar **[!UICONTROL Seleccionar]** para continuar.
+En el cuadro de diálogo **[!UICONTROL Seleccionar Área de nombres]** de identidad, elija la Área de nombres por la que desea realizar la búsqueda o utilice la barra de **[!UICONTROL búsqueda]** del cuadro de diálogo para empezar a escribir el nombre de una Área de nombres. Puede seleccionar una Área de nombres para vista de detalles adicionales, y una vez encontrada la Área de nombres que desea buscar puede seleccionar el botón de radio y pulsar **[!UICONTROL Seleccionar]** para continuar.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Valor de identidad
 
-Después de seleccionar una Área de nombres **** de identidad, vuelva a la ficha *[!UICONTROL Examinar]* , donde puede introducir un valor **** de identidad. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para la Área de nombres proporcionada. Por ejemplo, si selecciona la Área de nombres **[!UICONTROL de]** identidad &quot;Correo electrónico&quot;, se requiere un valor **[!UICONTROL de]** identidad en forma de una dirección de correo electrónico válida.
+Después de seleccionar una Área de nombres **** de identidad, vuelva a la ficha **[!UICONTROL Examinar]** , donde puede introducir un valor **** de identidad. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para la Área de nombres proporcionada. Por ejemplo, si selecciona la Área de nombres **[!UICONTROL de]** identidad &quot;Correo electrónico&quot;, se requiere un valor **[!UICONTROL de]** identidad en forma de una dirección de correo electrónico válida.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -91,17 +91,17 @@ Una vez introducido un valor, seleccione **[!UICONTROL Mostrar perfil]** y se de
 
 ### Detalles del perfil {#profile-detail}
 
-Al seleccionar el ID **[!UICONTROL de]** Perfil, se abre la ficha _[!UICONTROL Detalle]_ . Esta página muestra información sobre el perfil seleccionado, incluidos atributos básicos, identidades vinculadas y canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
+Al seleccionar el ID **[!UICONTROL de]** Perfil, se abre la ficha **[!UICONTROL Detalle]** . Esta página muestra información sobre el perfil seleccionado, incluidos atributos básicos, identidades vinculadas y canales de contacto disponibles. La información de perfil mostrada se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puede vista información adicional relacionada con el perfil, incluidos *[!UICONTROL Atributos]*, *[!UICONTROL Eventos]* y *[!UICONTROL Segmentos]* a los que pertenece el perfil.
+Puede vista información adicional relacionada con el perfil, incluidos **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** y **[!UICONTROL Segmentos]** a los que pertenece el perfil.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Combinar directivas
 
-Seleccione la ficha *[!UICONTROL Combinar políticas]* para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
+Seleccione la ficha **[!UICONTROL Combinar políticas]** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
 
 Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario Políticas de](merge-policies.md)combinación.
 
