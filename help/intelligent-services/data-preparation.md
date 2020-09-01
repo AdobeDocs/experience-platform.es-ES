@@ -5,7 +5,7 @@ title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 description: 'Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los datasets que se utilizan en Servicios inteligentes] deben cumplir con el esquema XDM de Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 1%
@@ -236,7 +236,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 }
 ```
 
-Para obtener información completa sobre cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
+Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
 ## Asignación e ingesta de datos (#mapping)
 
@@ -272,7 +272,7 @@ Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos bas
 * [Crear un conjunto de datos en la interfaz de usuario](../catalog/datasets/user-guide.md#create) (siga el flujo de trabajo para usar un esquema existente)
 * [Creación de un conjunto de datos en la API](../catalog/datasets/create.md)
 
-Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de la plataforma dentro del espacio de trabajo *[!UICONTROL Conjuntos]* de datos.
+Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de la plataforma dentro del espacio de trabajo **[!UICONTROL Conjuntos]** de datos.
 
 ![](images/data-preparation/dataset-location.png)
 
