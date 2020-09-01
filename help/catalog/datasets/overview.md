@@ -5,9 +5,9 @@ title: Introducción a los conjuntos de datos
 topic: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Para obtener más información, consulte la descripción general [de la inserci�
 
 ## Aplicación de etiquetas de uso a conjuntos de datos
 
-Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El uso del etiquetado y la aplicación del uso de datos (DULE) como su marco de trabajo principal [!DNL Data Governance] permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se aplican a esos datos.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El [!DNL Data Governance] marco permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se aplican a dichos datos.
 
 Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o a campos de conjuntos de datos individuales. Las etiquetas agregadas en el nivel de conjunto de datos son heredadas por todos los campos dentro de ese conjunto de datos.
 
