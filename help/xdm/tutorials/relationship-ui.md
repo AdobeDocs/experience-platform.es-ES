@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante el Editor de Esquemas de Esquema
+description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de Esquemas en la interfaz de usuario del Experience Platform.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Con fines de referencia, las siguientes secciones describen la estructura de cad
 
 ### [!UICONTROL Esquema de miembros] de lealtad
 
-El esquema de origen &quot;Miembros[!UICONTROL de]lealtad&quot; se basa en la clase XDM [!DNL Individual Profile] y es el esquema que se creó en el tutorial para [crear un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un objeto de &quot;[!UICONTROL lealtad]&quot; bajo su Área de nombres &quot;\_inquilinoId&quot;, que incluye varios campos específicos de lealtad. Uno de estos campos, &quot;loyaltyId&quot;, sirve como identidad principal para el esquema en la Área de nombres &quot;[!UICONTROL Email]&quot;. Como se muestra en Propiedades _[!UICONTROL de]_Esquema, este esquema se ha habilitado para su uso en[!DNL Real-time Customer Profile].
+El esquema de origen &quot;Miembros[!UICONTROL de]lealtad&quot; se basa en la clase XDM [!DNL Individual Profile] y es el esquema que se creó en el tutorial para [crear un esquema en la interfaz de usuario](create-schema-ui.md). Incluye un objeto de &quot;[!UICONTROL lealtad]&quot; bajo su Área de nombres &quot;\_inquilinoId&quot;, que incluye varios campos específicos de lealtad. Uno de estos campos, &quot;loyaltyId&quot;, sirve como identidad principal para el esquema en la Área de nombres &quot;[!UICONTROL Email]&quot;. Como se muestra en Propiedades _[!UICONTROL de]_ Esquema, este esquema se ha habilitado para su uso en [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,19 +61,19 @@ El esquema de destino &quot;[!UICONTROL Hoteles]&quot; está basado en una clase
 
 Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo específico para utilizarlo como referencia al esquema de destino. Puede agregar este campo al esquema de origen creando una nueva mezcla.
 
-Para inicio, haga clic en **[!UICONTROL Añadir]** en la sección _[!UICONTROL Mezclas]_.
+Para inicio, haga clic en **[!UICONTROL Añadir]** en la sección _[!UICONTROL Mezclas]_ .
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Aparecerá el cuadro de diálogo _[!UICONTROL Añadir mezcla]_. Desde aquí, haga clic en**[!UICONTROL  Crear nueva combinación ]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para la nueva combinación. Haga clic en**[!UICONTROL  Añadir mezcla ]**cuando termine.
+Aparecerá el cuadro de diálogo _[!UICONTROL Añadir mezcla]_ . Desde aquí, haga clic en **[!UICONTROL Crear nueva combinación]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para la nueva combinación. Haga clic en **[!UICONTROL Añadir mezcla]** cuando termine.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-El lienzo vuelve a aparecer con &quot;Relación[!UICONTROL de]lealtad&quot; en la sección _[!UICONTROL Mezclas]_. Haga clic en el nombre de la mezcla y, a continuación, haga clic en**[!UICONTROL  Añadir campo ]**junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
+El lienzo vuelve a aparecer con &quot;Relación[!UICONTROL de]lealtad&quot; en la sección _[!UICONTROL Mezclas]_ . Haga clic en el nombre de la mezcla y, a continuación, haga clic en **[!UICONTROL Añadir campo]** junto al campo de nivel raíz &quot;Miembros[!UICONTROL de]lealtad&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Aparece un nuevo campo en el lienzo bajo la Área de nombres &quot;\_inquilinoId&quot;. En Propiedades __del campo, proporcione un nombre de campo y un nombre para mostrar para el campo y defina su tipo en &quot;[!UICONTROL Cadena]&quot;.
+Aparece un nuevo campo en el lienzo bajo la Área de nombres &quot;\_inquilinoId&quot;. En Propiedades __ del campo, proporcione un nombre de campo y un nombre para mostrar para el campo y defina su tipo en &quot;[!UICONTROL Cadena]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -88,7 +89,7 @@ El campo &quot;[!UICONTROL favoritoHotel]&quot; actualizado aparece en el lienzo
 
 Una vez definido el esquema de origen, puede designarlo como un campo de relación.
 
-Seleccione el campo de referencia en el lienzo y, a continuación, desplácese hacia abajo en Propiedades _[!UICONTROL del]_campo hasta que aparezca la casilla de verificación**[!UICONTROL  Relación ]**. Seleccione la casilla de verificación para mostrar los parámetros necesarios para configurar un campo de relación.
+Seleccione el campo de referencia en el lienzo y, a continuación, desplácese hacia abajo en Propiedades _[!UICONTROL del]_ campo hasta que aparezca la casilla de verificación **[!UICONTROL Relación]** . Seleccione la casilla de verificación para mostrar los parámetros necesarios para configurar un campo de relación.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
