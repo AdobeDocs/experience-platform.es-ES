@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario del servicio de Consulta de Adobe Experie
 topic: guide
 description: El servicio de Consulta de Adobe Experience Platform proporciona una interfaz de usuario que puede utilizarse para escribir y ejecutar consultas, vista de consultas ejecutadas anteriormente y acceso a consultas guardadas por usuarios dentro de la organización de IMS.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 3%
@@ -19,30 +19,30 @@ El Adobe Experience Platform [!DNL Query Service] proporciona una interfaz de us
 
 ## [!DNL Query Editor]
 
-El [!DNL Query Editor] permite escribir y ejecutar consultas sin utilizar un cliente externo. Haga clic en **[!UICONTROL Crear Consulta]** para abrir la [!DNL Query Editor] y crear una nueva consulta. También puede acceder al [!DNL Query Editor] seleccionando una consulta en las fichas *[!UICONTROL Registro]* o *[!UICONTROL Examinar]* . Al seleccionar una consulta previamente ejecutada o guardada, se abrirá el [!DNL Query Editor] y se mostrará el SQL para la consulta seleccionada.
+El [!DNL Query Editor] permite escribir y ejecutar consultas sin utilizar un cliente externo. Haga clic en **[!UICONTROL Crear Consulta]** para abrir la [!DNL Query Editor] y crear una nueva consulta. También puede acceder al [!DNL Query Editor] seleccionando una consulta en las fichas **[!UICONTROL Registro]** o **[!UICONTROL Examinar]** . Al seleccionar una consulta previamente ejecutada o guardada, se abrirá el [!DNL Query Editor] y se mostrará el SQL para la consulta seleccionada.
 
 ![Imagen](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] proporciona espacio de edición en el que puede empezar a escribir una consulta. A medida que escribe, el editor completa automáticamente las palabras reservadas, tablas y nombres de campo SQL en las tablas. Cuando termine de escribir la consulta, haga clic en el botón **Reproducir** para ejecutar la consulta. La ficha *[!UICONTROL Consola]* debajo del editor muestra lo que [!DNL Query Service] se está haciendo actualmente, indicando cuándo se ha devuelto una consulta. La ficha *[!UICONTROL Resultado]* , junto a la consola, muestra los resultados de la consulta. Consulte la guía [del Editor de][query-editor] Consultas para obtener más información sobre el uso de [!DNL Query Editor].
+[!DNL Query Editor] proporciona espacio de edición en el que puede empezar a escribir una consulta. A medida que escribe, el editor completa automáticamente las palabras reservadas, tablas y nombres de campo SQL en las tablas. Cuando termine de escribir la consulta, haga clic en el botón **Reproducir** para ejecutar la consulta. La ficha **[!UICONTROL Consola]** debajo del editor muestra lo que [!DNL Query Service] se está haciendo actualmente, indicando cuándo se ha devuelto una consulta. La ficha **[!UICONTROL Resultado]** , junto a la consola, muestra los resultados de la consulta. Consulte la guía [del Editor de][query-editor] Consultas para obtener más información sobre el uso de [!DNL Query Editor].
 
 ![Imagen](../images/queries/ui-overview/query-editor.png)
 
 ## Examinar
 
-La ficha *[!UICONTROL Examinar]* muestra las consultas guardadas por los usuarios de la organización. Es útil considerarlos proyectos de consulta, ya que las consultas guardadas aquí todavía pueden estar en construcción. Las consultas que se muestran en la ficha *[!UICONTROL Examinar]* también se muestran como consultas de ejecución en la ficha *[!UICONTROL Registro]* si ya las ha ejecutado anteriormente [!DNL Query Service].
+La ficha **[!UICONTROL Examinar]** muestra las consultas guardadas por los usuarios de la organización. Es útil considerarlos proyectos de consulta, ya que las consultas guardadas aquí todavía pueden estar en construcción. Las consultas que se muestran en la ficha **[!UICONTROL Examinar]** también se muestran como consultas de ejecución en la ficha **[!UICONTROL Registro]** si ya las ha ejecutado anteriormente [!DNL Query Service].
 
 ![Imagen](../images/queries/ui-overview/browse.png)
 
 | Columna | Descripción |
 | --- | --- |
-| Nombre | El nombre de la consulta creada por el usuario. Puede hacer clic en el nombre para abrir la consulta en el [!DNL Query Editor]. También puede utilizar la barra de búsqueda para buscar el nombre de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
+| Nombre | El nombre de la consulta creada por el usuario. Puede hacer clic en el nombre para abrir la consulta en la [!DNL Query Editor]. También puede utilizar la barra de búsqueda para buscar el nombre de una consulta. Las búsquedas distinguen entre mayúsculas y minúsculas. |
 | SQL | Los primeros caracteres de la consulta SQL. Al pasar el ratón sobre el código se muestra la consulta completa. |
 | Modificado por | Último usuario que modificó la consulta. Cualquier usuario de su organización con acceso a [!DNL Query Service] puede modificar consultas. |
 | Última modificación | Fecha y hora de la última modificación de la consulta, en el huso horario del explorador. |
 
 ## Registro
 
-La ficha *[!UICONTROL Registro]* proporciona una lista de consultas que se han ejecutado anteriormente. De forma predeterminada, el registro lista las consultas en la cronología inversa.
+La ficha **[!UICONTROL Registro]** proporciona una lista de consultas que se han ejecutado anteriormente. De forma predeterminada, el registro lista las consultas en la cronología inversa.
 
 ![Imagen](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ La ficha *[!UICONTROL Registro]* proporciona una lista de consultas que se han e
 
 ## Credenciales
 
-La ficha *[!UICONTROL Credenciales]* muestra sus [!DNL Postgres] credenciales. Haga clic en el icono **[!UICONTROL Copiar]** situado junto a cualquier campo para almacenar su contenido en el búfer de teclado. Para obtener más información sobre cómo utilizar estas credenciales para conectarse con clientes externos, lea la guía [][connect-clients]Conectar con clientes.
+La ficha **[!UICONTROL Credenciales]** muestra sus [!DNL Postgres] credenciales. Haga clic en el icono **[!UICONTROL Copiar]** situado junto a cualquier campo para almacenar su contenido en el búfer de teclado. Para obtener más información sobre cómo utilizar estas credenciales para conectarse con clientes externos, lea la guía [][connect-clients]Conectar con clientes.
 
 ![Imagen](../images/queries/ui-overview/credentials.png)
 
