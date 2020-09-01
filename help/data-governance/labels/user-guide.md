@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Guía del usuario de etiquetas de uso de datos
 topic: labels
-description: Esta guía del usuario cubre los pasos para trabajar con etiquetas de uso de datos (también conocidas como etiquetas DULE) dentro de la interfaz de usuario de Adobe Experience Platform.
+description: Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Guía del usuario de etiquetas de uso de datos
 
-Esta guía del usuario cubre los pasos para trabajar con etiquetas de uso de datos (también conocidas como etiquetas DULE) dentro de la interfaz del [!DNL Experience Platform] usuario. Antes de utilizar la guía, consulte la descripción general [de la gobernanza de](../home.md) datos para obtener una introducción más sólida al marco de trabajo DULE.
+Esta guía del usuario cubre los pasos para trabajar con etiquetas de uso de datos dentro de la interfaz del [!DNL Experience Platform] usuario. Antes de utilizar la guía, consulte la [[!DNL Data Governance] descripción general](../home.md) para obtener una introducción más sólida al [!DNL Data Governance] marco.
 
 ## Administración de etiquetas de uso de datos en el nivel de conjunto de datos
 
