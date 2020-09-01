@@ -5,7 +5,7 @@ title: Guía del usuario del Generador de segmentos del servicio de segmentació
 topic: ui guide
 description: 'El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -131,7 +131,7 @@ Para seleccionar una directiva de combinación para la definición del segmento,
 
 ## Propiedades del segmento
 
-Al crear una definición de segmento, la sección Propiedades *[!UICONTROL del]* segmento en el lado derecho del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
+Al crear una definición de segmento, la sección Propiedades **[!UICONTROL del]** segmento en el lado derecho del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
 En la sección Propiedades **** del segmento también puede especificar información importante sobre la definición del segmento, incluidos su **[!UICONTROL nombre]** y **[!UICONTROL descripción]**. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
