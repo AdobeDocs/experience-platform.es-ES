@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Configuración de un flujo de datos para un conector de protocolo en la interfaz de usuario
 topic: overview
+description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Adobe Experience Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante la cuenta de protocolos.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [[!DNL Perfil del cliente en tiempo real de]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!Perfil del cliente en tiempo real de DNL]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que ya haya creado una cuenta de protocolos. Puede encontrar una lista de tutoriales para crear diferentes conectores de protocolo en la interfaz de usuario en la descripción general [de los conectores](../../../home.md)de origen.
 
