@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Tutoriales de Perfil para clientes en tiempo real
 topic: tutorial
+description: Este documento describe los pasos necesarios y proporciona vínculos a tutoriales para completar cada flujo de trabajo individual.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Para configurar [!DNL Real-time Customer Profile] la organización, debe complet
 
 ## Habilitar esquema para [!DNL Profile] y [!DNL Identity]
 
-Para poder ingerir datos en Adobe Experience Platform y utilizarlos en la creación de datos [!DNL Real-time Customer Profiles], se debe crear un esquema que proporcione la estructura de los datos que se van a ingerir y que el esquema se debe habilitar para su uso en [!DNL Profile] y Adobe Experience Platform [!DNL Identity Service]. Para obtener instrucciones paso a paso sobre la creación de un esquema habilitado tanto para [!DNL Profile] como para [!DNL Identity Service], consulte los tutoriales para [crear un esquema con la API](../xdm/tutorials/create-schema-api.md) del Registro de Esquema o [crear un esquema con la interfaz de usuario](../xdm/tutorials/create-schema-ui.md)de Esquema Builder.
+Antes de poder ingerir datos en Adobe Experience Platform y utilizarlos en la creación de datos [!DNL Real-time Customer Profiles], se debe crear un esquema que proporcione la estructura de los datos que se van a ingerir y que el esquema se debe habilitar para su uso en [!DNL Profile] y Adobe Experience Platform [!DNL Identity Service]. Para obtener instrucciones paso a paso sobre la creación de un esquema habilitado tanto para [!DNL Profile] como para [!DNL Identity Service], consulte los tutoriales para [crear un esquema con la API](../xdm/tutorials/create-schema-api.md) del Registro de Esquema o [crear un esquema con la interfaz de usuario](../xdm/tutorials/create-schema-ui.md)de Esquema Builder.
 
 ## Configure un conjunto de datos para [!DNL Profile] y [!DNL Identity]
 
