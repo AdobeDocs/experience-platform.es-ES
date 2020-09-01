@@ -5,7 +5,7 @@ title: Crear un nuevo perfil de producto
 topic: user guide
 description: Este documento cubre los pasos necesarios para crear un nuevo perfil de productos en Adobe Admin Console. Para crear un nuevo perfil en inicio, vaya a la ficha Perfiles del producto y haga clic en Nuevo Perfil.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Crear un nuevo perfil de producto
 
-Para crear un nuevo perfil en inicio, vaya a la ficha Perfiles ** del producto y haga clic en **[!UICONTROL Nuevo Perfil]**.
+Para crear un nuevo perfil en inicio, vaya a la ficha Perfiles **** del producto y haga clic en **[!UICONTROL Nuevo Perfil]**.
 
 ![new-perfil-button](../images/new-profile-button.png)
 
-Aparecerá el cuadro de diálogo _[!UICONTROL Crear nuevo Perfil]_ , en el que se le pedirá que introduzca un nombre **[!UICONTROL de]** Perfil y una **[!UICONTROL descripción]** para el nuevo perfil. Si desea que el nombre para mostrar del perfil sea diferente, desmarque **[!UICONTROL Igual que el nombre]** del Perfil e introduzca el nombre para mostrar en el cuadro de texto que aparece. En Notificaciones ** de usuario, puede alternar si se notificará a los usuarios por correo electrónico cuando se agreguen o eliminen del perfil.
+Aparecerá el cuadro de diálogo **[!UICONTROL Crear nuevo Perfil]** , en el que se le pedirá que introduzca un nombre **[!UICONTROL de]** Perfil y una **[!UICONTROL descripción]** para el nuevo perfil. Si desea que el nombre para mostrar del perfil sea diferente, desmarque **[!UICONTROL Igual que el nombre]** del Perfil e introduzca el nombre para mostrar en el cuadro de texto que aparece. En Notificaciones **** de usuario, puede alternar si se notificará a los usuarios por correo electrónico cuando se agreguen o eliminen del perfil.
 
 When finished, click **[!UICONTROL Next]**.
 
