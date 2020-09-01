@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suscripción a eventos de ingesta de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 2%
@@ -55,7 +55,7 @@ Una vez creado un nuevo proyecto, navegue a la pantalla de información general 
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Aparece el cuadro de diálogo _[!UICONTROL Añadir eventos]_ . Haga clic en **[!UICONTROL Experience Platform]** para filtrar la lista de opciones disponibles y, a continuación, haga clic en Notificaciones **[!UICONTROL de]** plataforma antes de hacer clic en **[!UICONTROL Siguiente]**.
+Aparece el cuadro de diálogo **[!UICONTROL Añadir eventos]** . Haga clic en **[!UICONTROL Experience Platform]** para filtrar la lista de opciones disponibles y, a continuación, haga clic en Notificaciones **[!UICONTROL de]** plataforma antes de hacer clic en **[!UICONTROL Siguiente]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
