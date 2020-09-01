@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;label identities
 solution: Experience Platform
 title: Etiquetar un campo como identidad
 topic: api guide
+description: Los campos que contienen información de identificación personal (PII) pueden etiquetarse como campos de identidad. El servicio de identidad interpreta un valor proporcionado en un campo de identidad como una identidad. La Área de nombres de la identidad se especifica como parte del etiquetado del campo.
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
