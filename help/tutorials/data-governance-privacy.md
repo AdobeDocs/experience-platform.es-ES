@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriales sobre administración de datos y privacidad
 topic: tutorial
-description: El etiquetado y cumplimiento del uso de datos (DULE) es el mecanismo central del Gobierno de datos de Adobe Experience Platform. Las funciones DULE permiten aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas.
+description: Este documento proporciona una visión general de los diferentes tutoriales disponibles relacionados con Adobe Experience Platform Data Governance y Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] y [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) es el mecanismo central de Adobe Experience Platform [!DNL Data Governance]. Las funciones DULE permiten aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada una según las políticas de uso de datos relacionadas. Antes de comenzar con las etiquetas, consulte la información general [sobre el Gobierno de](../data-governance/home.md) datos para obtener una introducción más sólida al marco de trabajo DULE dentro de [!DNL Platform].
+El Gobierno de datos de Adobe Experience Platform permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, categorizar cada uno según las políticas de uso de datos relacionadas y evaluar las infracciones de políticas cuando se realizan determinadas acciones en dichos conjuntos de datos o campos. Antes de comenzar con los tutoriales enumerados en este documento, consulte la [[!DNL Data Governance] descripción general](../data-governance/home.md) para obtener una introducción más sólida a la guía.
 
 Adobe Experience Platform [!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario que le permiten coordinar las solicitudes de privacidad y cumplimiento de normas en varias soluciones. Para obtener más información, lea la descripción general [del](../privacy-service/home.md)Privacy Service.
 
@@ -25,11 +25,11 @@ Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campo
 
 ## Crear directivas de uso de datos
 
-La API DULE [!DNL Policy Service] le permite crear y administrar políticas DULE para determinar qué acciones de mercadotecnia se pueden realizar con datos que contengan determinadas etiquetas DULE. Para empezar, lea la descripción general [de las directivas de uso de](../data-governance/policies/overview.md)datos.
+La [!DNL Policy Service] API le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso. Para empezar, lea la descripción general [de las directivas de uso de](../data-governance/policies/overview.md)datos.
 
 ## Aplicar directivas de uso de datos
 
-Una vez que haya creado las etiquetas de etiquetado y cumplimiento de uso de datos (DULE) para sus datos y haya creado políticas DULE para acciones de marketing en relación con dichas etiquetas, puede utilizar la API DULE [!DNL Policy Service] para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas DULE constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API. Para empezar, visite la descripción general [de la aplicación de](../data-governance/enforcement/overview.md)políticas.
+Una vez que haya agregado las etiquetas de uso para los datos y haya creado políticas para acciones de marketing en relación con dichas etiquetas, puede usar el [!DNL Policy Service API] para evaluar si una acción de marketing constituye una infracción de política cuando se realiza en un conjunto de datos o en un grupo arbitrario de etiquetas de uso. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API. Para empezar, visite la descripción general [de la aplicación de](../data-governance/enforcement/overview.md)políticas.
 
 ## Aplicar la conformidad de uso de datos para un segmento de audiencia
 
