@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
 solution: Experience Platform
 title: Creación de un conector de origen de Adobe Audience Manager en la interfaz de usuario
 topic: overview
+description: Este tutorial lo acompaña a través de los pasos para crear un conector de origen para Adobe Audience Manager con el fin de incorporar datos de Evento de experiencias de consumo a la plataforma mediante la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
