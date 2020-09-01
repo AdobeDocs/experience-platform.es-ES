@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Creación de un conector Phoenix mediante la API de servicio de flujo
 topic: overview
+description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar una base de datos Phoenix al Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
