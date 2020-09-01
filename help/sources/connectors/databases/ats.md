@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
 title: Conector de Almacenamiento de tabla de Azure
 topic: overview
+description: La siguiente documentación proporciona información sobre cómo conectar el Almacenamiento de tablas de Azure a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
