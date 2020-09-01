@@ -5,7 +5,7 @@ title: Programar un modelo (IU)
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace le permite configurar las ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de calificación y capacitación puede ayudar a mantener y mejorar la eficiencia de un servicio a través del tiempo, al mantenerse al día con los patrones dentro de sus datos.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace] le permite configurar las ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de calificación y capacitación puede ayudar a mantener y mejorar la eficiencia de un servicio a través del tiempo, al mantenerse al día con los patrones dentro de sus datos.
 
-En este tutorial se explican los pasos para configurar las programaciones de capacitación y puntuación en un servicio existente a través de la Galería *[!UICONTROL de servicios]*. Se divide en las siguientes secciones principales:
+En este tutorial se explican los pasos para configurar las programaciones de capacitación y puntuación en un servicio existente a través de la Galería **[!UICONTROL de servicios]**. Se divide en las siguientes secciones principales:
 
 - [Configurar puntuación programada](#configure-scheduled-scoring)
 - [Configurar la formación programada](#configure-scheduled-training)
@@ -51,7 +51,7 @@ La configuración de las ejecuciones de formación programadas en un servicio ga
 
 Una vez creado el servicio, puede seguir los pasos que se indican a continuación para configurar y aplicar una programación de formación:
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** ubicada en la columna de navegación izquierda para acceder a la Galería *[!UICONTROL de servicios]*. Busque el servicio en el que desea programar las ejecuciones de formación y haga clic en **[!UICONTROL Abrir]** para vista de la página de *Información general* .
+1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** ubicada en la columna de navegación izquierda para acceder a la Galería **[!UICONTROL de servicios]**. Busque el servicio en el que desea programar las ejecuciones de formación y haga clic en **[!UICONTROL Abrir]** para vista de la página de *Información general* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. La página Información general muestra la información de capacitación del servicio. Haga clic en el vínculo **[!UICONTROL Actualizar programación]** para configurar una programación de formación.
