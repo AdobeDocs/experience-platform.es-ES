@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: Generar conjuntos de datos a partir de resultados de consulta
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ El verdadero poder de [!DNL Query Service] se revela cuando se utilizan consulta
 1. Escriba la consulta con un cliente conectado y valide la salida.
 2. Inicie sesión en la interfaz de usuario y vaya a Consultas. [!DNL Platform]
 3. Busque su consulta en la lista y pase el ratón sobre la fila.
-4. Haga clic en **[!UICONTROL Crear conjunto de datos]**. ![Imagen](../images/queries/create-datasets/click-create-dataset.png)
+4. Click **[!UICONTROL Create Dataset]**. ![Imagen](../images/queries/create-datasets/click-create-dataset.png)
 5. Escriba un nombre de conjunto de datos, precedido de su ID de LDAP (no tiene que ser único ni SQL seguro; el sistema genera un &quot;nombre de tabla&quot; basado en el nombre proporcionado aquí).
 6. Introduzca una descripción del conjunto de datos y haga clic en **[!UICONTROL Ejecutar Consulta]**.![Imagen](../images/queries/create-datasets/run-query.png)
 7. Observe la consulta completa y luego vaya a la página de lista del conjunto de datos para ver el conjunto de datos que acaba de crear.
