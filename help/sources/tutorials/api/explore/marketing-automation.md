@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation
 solution: Experience Platform
 title: Explorar un sistema de automatización de marketing mediante la API de servicio de flujo
 topic: overview
+description: Este tutorial utiliza la API de servicio de flujo para explorar los sistemas de automatización de marketing.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 2%
+source-wordcount: '608'
+ht-degree: 1%
 
 ---
 
 
 # Explorar un sistema de automatización de marketing mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes distintas dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la [!DNL Flow Service] API para explorar los sistemas de automatización de marketing.
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Adobe Experience Platform:
+Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
@@ -29,7 +30,7 @@ Las siguientes secciones proporcionan información adicional que deberá conocer
 
 ### Recopilar las credenciales necesarias
 
-Este tutorial requiere que tenga una conexión válida con la aplicación de automatización de marketing de terceros desde la que desee ingestar datos. Una conexión válida implica el ID de especificación de conexión y el ID de conexión de la aplicación. Encontrará más información sobre la creación de una conexión de automatización de marketing y la recuperación de estos valores en el tutorial de [conexión de una fuente de automatización de marketing con Platform](../../api/create/marketing-automation/hubspot.md) .
+Este tutorial requiere que tenga una conexión válida con la aplicación de automatización de marketing de terceros desde la que desee ingestar datos. Una conexión válida implica el ID de especificación de conexión y el ID de conexión de la aplicación. Encontrará más información sobre la creación de una conexión de automatización de marketing y la recuperación de estos valores en el tutorial [Conectar una fuente de automatización de marketing con Plataforma](../../api/create/marketing-automation/hubspot.md) .
 
 ### Leer llamadas de API de muestra
 
@@ -185,4 +186,4 @@ Una respuesta correcta devuelve la estructura de una tabla. Los detalles relativ
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado su sistema de automatización de mercadotecnia, ha encontrado la ruta de la tabla a la que desea acceder [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema de automatización de marketing y llevarlos a Platform](../collect/marketing-automation.md).
+Siguiendo este tutorial, ha explorado su sistema de automatización de mercadotecnia, ha encontrado la ruta de la tabla a la que desea acceder [!DNL Platform]y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema de automatización de marketing y llevarlos a la plataforma](../collect/marketing-automation.md).
