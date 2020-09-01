@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar un flujo de datos para un conector de publicidad en la interfaz de usuario
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 0%
@@ -23,13 +23,13 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial](../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [[!DNL Perfil del cliente en tiempo real de]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!Perfil del cliente en tiempo real de DNL]](../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que ya haya creado una cuenta de publicidad. Puede encontrar una lista de tutoriales para crear diferentes conectores de pago en la interfaz de usuario en la descripción general [de los conectores](../../../home.md)de origen.
 
 ## Seleccionar datos
 
-Después de crear la cuenta de publicidad, aparece el paso *[!UICONTROL Seleccionar datos]* , que proporciona una interfaz interactiva para explorar la jerarquía de archivos.
+Después de crear la cuenta de publicidad, aparece el paso **[!UICONTROL Seleccionar datos]** , que proporciona una interfaz interactiva para explorar la jerarquía de archivos.
 
 - La mitad izquierda de la interfaz es un navegador de directorios, que muestra los archivos y directorios del servidor.
 - La mitad derecha de la interfaz permite la previsualización de hasta 100 filas de datos desde un archivo compatible.
@@ -40,7 +40,7 @@ Seleccione el directorio que desee utilizar y, a continuación, seleccione **[!U
 
 ## Asignación de campos de datos a un esquema XDM
 
-Aparece el paso *[!UICONTROL Asignación]* , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos.
+Aparece el paso **[!UICONTROL Asignación]** , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos.
 
 Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede utilizar un conjunto de datos existente o crear un nuevo conjunto de datos.
 
@@ -50,7 +50,7 @@ Para ingerir datos en un conjunto de datos existente, seleccione **[!UICONTROL U
 
 ![use-existente-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-Aparece el cuadro de diálogo *[!UICONTROL Seleccionar conjunto de datos]* . Busque el conjunto de datos que desee utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
+Aparece el cuadro de diálogo **[!UICONTROL Seleccionar conjunto de datos]** . Busque el conjunto de datos que desee utilizar, selecciónelo y haga clic en **[!UICONTROL Continuar]**.
 
 ![select-existente-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -62,7 +62,7 @@ Puede adjuntar un campo de esquema introduciendo un nombre de esquema en la barr
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-Aparecerá el cuadro de diálogo *[!UICONTROL Seleccionar esquema]* . Seleccione el esquema que desee aplicar al nuevo conjunto de datos y haga clic en **[!DNL Done]**.
+Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccione el esquema que desee aplicar al nuevo conjunto de datos y haga clic en **[!DNL Done]**.
 
 ![select-esquema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
@@ -74,14 +74,14 @@ Una vez asignados los datos de origen, haga clic en **[!UICONTROL Siguiente]**.
 
 ## Programar ejecuciones de ingestión
 
-Aparece el paso *[!UICONTROL Programación]* , que le permite configurar una programación de ingestión para ingestar automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
+Aparece el paso **[!UICONTROL Programación]** , que le permite configurar una programación de ingestión para ingestar automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. La siguiente tabla describe los diferentes campos configurables para la programación:
 
 | Campo | Descripción |
 | --- | --- |
 | Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
 | Tiempo de inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión. |
-| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si *[!UICONTROL Rellenar]* está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si *Rellenar* está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo *[!UICONTROL de]* Inicio. Los archivos cargados antes de la hora *[!UICONTROL de]* Inicio no se ingieren. |
+| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si **[!UICONTROL Rellenar]** está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si **[!UICONTROL Rellenar]** está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo **[!UICONTROL de]** Inicio. Los archivos cargados antes de la hora **[!UICONTROL de]** Inicio no se ingieren. |
 | Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
 Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
