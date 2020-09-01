@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Información general sobre la combinación de privacidad
+description: La combinación de privacidad y preferencias de marketing (consentimiento) es una combinación de modelo de datos de experiencia (XDM) destinada a admitir la recopilación de permisos y preferencias de usuario generadas por CMP y otras fuentes de los clientes. El presente documento abarca la estructura y el uso previsto de los diversos campos proporcionados por la mezcla.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ Este documento requiere una comprensión práctica de [!DNL Experience Data Mode
 * [Descripción general del sistema XDM](http://www.adobe.com/go/xdm-home-en)
 * [Conceptos básicos de la composición de esquemas](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
-## Ejemplo de Esquema {#schema}
+## Ejemplo de esquema {#schema}
 
 >[!NOTE]
 >
@@ -266,7 +267,7 @@ La siguiente tabla describe los valores aceptados para `xdm:basisOfProcessing`:
 
 | Valor | Descripción |
 | --- | --- |
-| `consent` **(Predeterminado)** | Se permite la recopilación de datos para el propósito especificado, dado que el individuo ha proporcionado un permiso explícito. Es el valor predeterminado de `xdm:basisOfProcessing` si no se proporciona ningún otro valor. <br><br>**IMPORTANTE **: Los valores para`xdm:choice`y`xdm:optOutValue`solo se respetan cuando`xdm:basisOfProcessing`se establece en`consent`. Si se utiliza cualquiera de los demás valores descritos en esta tabla`xdm:basisOfProcessing`en su lugar, se ignoran las opciones de consentimiento del individuo. |
+| `consent` **(Predeterminado)** | Se permite la recopilación de datos para el propósito especificado, dado que el individuo ha proporcionado un permiso explícito. Es el valor predeterminado de `xdm:basisOfProcessing` si no se proporciona ningún otro valor. <br><br>**IMPORTANTE**: Los valores para `xdm:choice` y `xdm:optOutValue` solo se respetan cuando `xdm:basisOfProcessing` se establece en `consent`. Si se utiliza cualquiera de los demás valores descritos en esta tabla `xdm:basisOfProcessing` en su lugar, se ignoran las opciones de consentimiento del individuo. |
 | `compliance` | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones jurídicas de la empresa. |
 | `contract` | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones contractuales con la persona. |
 | `legitimate_interest` | El interés legítimo de las empresas en recopilar y procesar estos datos con el fin especificado es mayor que el daño potencial que supone para la persona. |
@@ -301,7 +302,7 @@ La siguiente tabla describe los valores aceptados para `xdm:type`:
 | `in_home` | Mensajes en casa. |
 | `in_store` | Mensajes en la tienda. |
 | `in_vehicle` | Mensajes en el vehículo. |
-| `offers` | ofertas especiales. |
+| `offers` | Ofertas especiales. |
 | `phone_calls` | Datos relacionados con las interacciones de llamadas telefónicas. |
 | `push_notifications` | Notificaciones push. |
 | `sms` | Mensajes SMS. |
@@ -310,7 +311,7 @@ La siguiente tabla describe los valores aceptados para `xdm:type`:
 | `third_party_content` | Contenido o artículos mostrados en el sitio web que son proporcionados por una entidad no relacionada. |
 | `third_party_offers` | Ofertas o publicidades que se muestran en el sitio web de servicios publicitarios de una entidad no relacionada. |
 
-### esquema [!DNL Privacy Consent] completo {#full-schema}
+### Esquema [!DNL Privacy Consent] completo {#full-schema}
 
 El siguiente JSON representa el [!DNL Privacy Consent] esquema completo tal como aparece en el Registro de Esquemas:
 
