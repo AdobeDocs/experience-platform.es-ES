@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: Creación de un conector de origen de atributos del cliente en la interfaz de usuario
 topic: overview
+description: Este tutorial proporciona los pasos para crear un conector de origen en la interfaz de usuario para recopilar datos de perfil de atributos del cliente en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '374'
 ht-degree: 8%
 
 ---
