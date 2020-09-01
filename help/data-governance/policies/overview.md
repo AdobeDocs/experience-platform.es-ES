@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
 title: Información general sobre las directivas de uso de datos
 topic: policies
-description: Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe la realización de datos dentro de Experience Platform.
+description: Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las directivas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se restringe el rendimiento de los datos dentro de Experience Platform.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunt
 >
 >Las acciones de marketing por sí solas no restringen el uso de datos. Deben incluirse en las directivas de uso de datos habilitadas para que esas acciones se evalúen en caso de infracciones de políticas.
 
-Cuando el uso de datos se produce en el servicio de su organización, se deben indicar las acciones de mercadotecnia relevantes para que se puedan identificar las infracciones de política. A continuación, puede utilizar la [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para comprobar si hay infracciones de políticas en la integración.
+Cuando el uso de datos se produce en el servicio de su organización, se deben indicar las acciones de mercadotecnia relevantes para que se puedan identificar las infracciones de política. A continuación, puede utilizar la API [de servicio de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) directivas para comprobar si hay infracciones de políticas en la integración.
 
 >[!NOTE]
 >
 >Si utiliza [!DNL Real-time Customer Data Platform], puede configurar casos de uso de mercadotecnia en destinos para automatizar la aplicación de políticas. Consulte el documento sobre Administración de [datos en tiempo real CDP](../../rtcdp/privacy/data-governance-overview.md) para obtener más información.
 
-Consulte el apéndice del presente documento para ver una lista de las acciones [de marketing definidas por el Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la API DULE [!DNL Policy Service] o la interfaz de [!DNL Experience Platform ]usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
+Consulte el apéndice del presente documento para ver una lista de las acciones [de marketing definidas por el Adobe](#core-actions)disponibles. También puede definir sus propias acciones de marketing personalizadas mediante la [!DNL Policy Service] API o la interfaz de [!DNL Experience Platform ]usuario. En la siguiente sección se proporciona más información sobre cómo trabajar con las acciones y políticas de marketing.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,7 +50,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Administración de directivas de uso de datos {#manage}
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden utilizar la API DULE [!DNL Policy Service] [!DNL Experience Platform] o la interfaz de usuario para administrar y evaluar las políticas relacionadas con las acciones de marketing que se realizan en datos que contienen etiquetas de uso de datos. Puede crear y actualizar políticas, determinar el estado de una política y trabajar con acciones de marketing para evaluar si una acción específica infringe una política de uso de datos.
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden utilizar la [!DNL Policy Service] [!DNL Experience Platform] API o la interfaz de usuario para administrar y evaluar las políticas relacionadas con las acciones de marketing que se están realizando en datos que contienen etiquetas de uso de datos. Puede crear y actualizar políticas, determinar el estado de una política y trabajar con acciones de marketing para evaluar si una acción específica infringe una política de uso de datos.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Para obtener información sobre cómo trabajar con las acciones y políticas de 
 
 ## Pasos siguientes
 
-Este documento proporcionó una introducción a las políticas de uso de datos dentro del marco DULE. Ahora puede seguir leyendo la documentación del proceso a la que se ha vinculado a través de esta guía para obtener más información sobre cómo trabajar con políticas en la API y la interfaz de usuario.
+Este documento proporcionó una introducción a las políticas de uso de datos dentro del [!DNL Data Governance] marco. Ahora puede seguir leyendo la documentación del proceso a la que se ha vinculado a través de esta guía para obtener más información sobre cómo trabajar con políticas en la API y la interfaz de usuario.
 
 ## Apéndice
 
