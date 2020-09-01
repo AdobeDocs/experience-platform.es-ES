@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Para crear una nueva conexión de origen, siga los pasos que se enumeran en la d
 
 La **[!UICONTROL conmutación de ingestión]** parcial le permite habilitar o deshabilitar el uso de la ingestión parcial por lotes.
 
-La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la opción de alternancia de ingestión **** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión ** parcial, los diagnósticos de error mejorados se aplican automáticamente.
+La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la opción de alternancia de ingestión **** parcial está desactivada. Esta función permite [!DNL Platform] generar mensajes de error detallados sobre los lotes ingestados. Si se activa la opción de alternancia de ingestión **** parcial, los diagnósticos de error mejorados se aplican automáticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
