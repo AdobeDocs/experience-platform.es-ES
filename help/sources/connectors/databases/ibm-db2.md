@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: Conector IBM DB2
 topic: overview
+description: La siguiente documentación proporciona información sobre cómo conectar IBM DB2 a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
