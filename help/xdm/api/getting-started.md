@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: Guía para desarrolladores de API de registro de esquema
+description: El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas de Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. Con la API de Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
