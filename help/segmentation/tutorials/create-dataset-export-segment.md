@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Crear un conjunto de datos para exportar un segmento de audiencia
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,14 +26,14 @@ Para exportar un segmento, el conjunto de datos debe basarse en el [!DNL XDM Ind
 
 Para vista de esquemas de unión en la interfaz de usuario, haga clic en **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, haga clic en la ficha esquema **[!UICONTROL de]** Unión como se muestra a continuación.
 
-![Ficha esquema de Unión en la interfaz de usuario de Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Ficha esquema de unión en la interfaz de usuario de Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Espacio de trabajo de conjuntos de datos
 
 El espacio de trabajo de conjuntos de datos dentro de la interfaz de usuario le permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos. [!DNL Experience Platform]
 
-Para vista del espacio de trabajo de conjuntos de datos, haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo y, a continuación, haga clic en la ficha *[!UICONTROL Examinar]* . El espacio de trabajo de conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con *[!UICONTROL Nombre]*, *[!UICONTROL Creado]* (fecha y hora), *[!UICONTROL Origen]*, *[!UICONTROL Esquema]* y Estado **** del último lote, así como la fecha y hora en que el conjunto de datos fue la Última actualización. Según el ancho de cada columna, puede que sea necesario desplazarse hacia la izquierda o la derecha para ver todas las columnas.
+Para vista del espacio de trabajo de conjuntos de datos, haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo y, a continuación, haga clic en la ficha **[!UICONTROL Examinar]** . El espacio de trabajo de conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con **[!UICONTROL Nombre]**, **[!UICONTROL Creado]** (fecha y hora), **[!UICONTROL Origen]**, **[!UICONTROL Esquema]** y Estado ******** del último lote, así como la fecha y hora en que el conjunto de datos fue la Última actualización. Según el ancho de cada columna, puede que sea necesario desplazarse hacia la izquierda o la derecha para ver todas las columnas.
 
 >[!NOTE]
 >
@@ -47,21 +47,21 @@ Para crear un conjunto de datos, haga clic en **[!UICONTROL Crear conjunto]** de
 
 ![Haga clic en Crear conjunto de datos](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-En la pantalla *[!UICONTROL Crear conjunto de datos]* , haga clic en **[!UICONTROL Crear conjunto de datos desde Esquema]** para continuar.
+En la pantalla **[!UICONTROL Crear conjunto de datos]** , haga clic en **[!UICONTROL Crear conjunto de datos desde Esquema]** para continuar.
 
 ![Seleccionar fuente de datos](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## Seleccionar Esquema de Unión de Perfil individual XDM
 
-Para seleccionar el [!DNL XDM Individual Profile Union Schema] que se usará en el conjunto de datos, busque el esquema &quot;Perfil[!UICONTROL individual]XDM&quot; con un tipo de &quot;[!UICONTROL Unión]&quot; en la pantalla *[!UICONTROL Seleccionar Esquema]* .
+Para seleccionar el [!DNL XDM Individual Profile Union Schema] que se usará en el conjunto de datos, busque el esquema &quot;Perfil[!UICONTROL individual]XDM&quot; con un tipo de &quot;[!UICONTROL Unión]&quot; en la pantalla **[!UICONTROL Seleccionar Esquema]** .
 
 Seleccione el botón de radio junto a Perfil **[!UICONTROL individual]** XDM y, a continuación, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha.
 
 ![Seleccionar esquema](../images/tutorials/segment-export-dataset/select-schema.png)
 
-## Configurar conjunto de datos
+## Configurar el conjunto de datos
 
-En la pantalla **[!UICONTROL Configurar conjunto de datos]** , se le pedirá que asigne un *[!UICONTROL nombre]* al conjunto de datos y también puede proporcionar una *[!UICONTROL descripción]* del conjunto de datos.
+En la pantalla **[!UICONTROL Configurar conjunto de datos]** , se le pedirá que asigne un **[!UICONTROL nombre]** al conjunto de datos y también puede proporcionar una **[!UICONTROL descripción]** del conjunto de datos.
 
 **Notas sobre los nombres de conjuntos de datos:**
 - Los nombres de los conjuntos de datos deben ser cortos y descriptivos para que el conjunto de datos pueda encontrarse fácilmente en la biblioteca más adelante.
@@ -70,17 +70,17 @@ En la pantalla **[!UICONTROL Configurar conjunto de datos]** , se le pedirá que
 
 Una vez que el conjunto de datos tenga un nombre y una descripción, haga clic en **[!UICONTROL Finalizar]**.
 
-![Configurar conjunto de datos](../images/tutorials/segment-export-dataset/configure-dataset.png)
+![Configurar el conjunto de datos](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
-## actividad de conjunto de datos
+## Actividad de conjunto de datos
 
-Ahora se ha creado un conjunto de datos vacío y se le ha devuelto a la ficha Actividad *[!UICONTROL del]* conjunto de datos en el espacio de trabajo [!UICONTROL Conjuntos] de datos. Debe ver el nombre del conjunto de datos en la esquina superior izquierda del espacio de trabajo, junto con una notificación de que &quot;No se han agregado lotes&quot;. Esto es de esperar, ya que todavía no ha agregado ningún lote a este conjunto de datos.
+Ahora se ha creado un conjunto de datos vacío y se le ha devuelto a la ficha Actividad **[!UICONTROL del]** conjunto de datos en el espacio de trabajo [!UICONTROL Conjuntos] de datos. Debe ver el nombre del conjunto de datos en la esquina superior izquierda del espacio de trabajo, junto con una notificación de que &quot;No se han agregado lotes&quot;. Esto es de esperar, ya que todavía no ha agregado ningún lote a este conjunto de datos.
 
-En la parte derecha del espacio de trabajo Conjunto de datos, verá la ficha **[!UICONTROL Información]** que contiene información relacionada con el nuevo conjunto de datos, como ID *[!UICONTROL de]* conjunto de datos, *[!UICONTROL Nombre]*, *[!UICONTROL Descripción]*, Nombre *[!UICONTROL de]******* tabla,de datos, Streaming, OrigenDeDatos y OrigenFuente. La ficha [!UICONTROL Información] también incluye información sobre cuándo se *[!UICONTROL creó]* el conjunto de datos y su fecha de *[!UICONTROL última modificación]* .
+En la parte derecha del espacio de trabajo Conjunto de datos, verá la ficha **[!UICONTROL Información]** que contiene información relacionada con el nuevo conjunto de datos, como ID **[!UICONTROL de]** conjunto de datos, **[!UICONTROL Nombre]**, **[!UICONTROL Descripción]**, Nombre **[!UICONTROL de]************** tabla,de datos, Streaming, OrigenDeDatos y OrigenFuente. La ficha [!UICONTROL Información] también incluye información sobre cuándo se **[!UICONTROL creó]** el conjunto de datos y su fecha de **[!UICONTROL última modificación]** .
 
 Tenga en cuenta el ID **[!UICONTROL del]** conjunto de datos, ya que este valor es necesario para completar el flujo de trabajo de exportación del segmento de audiencia.
 
-![actividad de conjunto de datos](../images/tutorials/segment-export-dataset/dataset-activity.png)
+![Actividad de conjunto de datos](../images/tutorials/segment-export-dataset/dataset-activity.png)
 
 ## Pasos siguientes
 
