@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -55,16 +55,16 @@ Aparece la pantalla **[!UICONTROL Crear directiva]** de combinación, que le per
 * **[!UICONTROL Coincidencia]** de ID: Este campo define cómo determinar las identidades relacionadas de un cliente. Existen dos valores posibles:
    * **[!UICONTROL Ninguno]**: No realice ninguna vinculación de identidad.
    * **[!UICONTROL Gráfico]** privado: Realice la vinculación de identidad en función del gráfico de identidad privado.
-* **[!UICONTROL Combinación]** de atributos: Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existe para un cliente individual. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, existe la posibilidad de que haya atributos de perfil en conflicto y se debe especificar la prioridad. El uso de la combinación [!UICONTROL de] atributos permite especificar qué valores de perfil de conjuntos de datos priorizar si se produce un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registros). Existen dos valores posibles:
-   * **[!UICONTROL Marca de hora pedida]**: En caso de conflicto, dé prioridad al perfil que se actualizó más recientemente. [!UICONTROL La marca de tiempo pedida] también admite marcas de hora personalizadas que tienen prioridad sobre las marcas de hora del sistema al combinar datos dentro del mismo conjunto de datos (varias identidades) o entre conjuntos de datos. Para obtener más información, consulte la sección ordenada [de](#timestamp-ordered) marca de tiempo que se muestra a continuación.
-   * **[!UICONTROL Prioridad]** del conjunto de datos: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Al seleccionar esta opción, debe seleccionar los conjuntos de datos relacionados y su orden de prioridad. Consulte los detalles sobre la prioridad [del](#dataset-precedence) conjunto de datos a continuación para obtener más información.
+* **[!UICONTROL Combinación]** de atributos: Un fragmento de perfil contiene información para una sola identidad de la lista de identidades que existen para un cliente individual. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, existe la posibilidad de que haya atributos de perfil en conflicto y se debe especificar la prioridad. El uso de la combinación [!UICONTROL de] atributos permite especificar qué valores de perfil de conjuntos de datos priorizar si se produce un conflicto de combinación entre conjuntos de datos de tipo clave-valor (datos de registros). Existen dos valores posibles:
+   * **[!UICONTROL Marca de hora pedida]**: En el evento de un conflicto, se da prioridad al perfil que se actualizó más recientemente. [!UICONTROL La marca de tiempo pedida] también admite marcas de hora personalizadas que tienen prioridad sobre las marcas de hora del sistema al combinar datos dentro del mismo conjunto de datos (varias identidades) o entre conjuntos de datos. Para obtener más información, consulte la sección ordenada [de](#timestamp-ordered) marca de tiempo que se muestra a continuación.
+   * **[!UICONTROL Prioridad]** del conjunto de datos: En el evento de un conflicto, dé prioridad a los fragmentos de perfil según el conjunto de datos del que provienen. Al seleccionar esta opción, debe elegir los conjuntos de datos relacionados y su orden de prioridad. Consulte los detalles sobre la prioridad [del](#dataset-precedence) conjunto de datos a continuación para obtener más información.
 * **[!UICONTROL Directiva]** de combinación predeterminada: Botón de alternancia que permite seleccionar si esta directiva de combinación será o no la predeterminada para su organización. Si el selector está activado y se guarda la nueva directiva, la directiva predeterminada anterior se actualiza automáticamente para que ya no sea la predeterminada.
 
 ### Marca de hora solicitada {#timestamp-ordered}
 
 A medida que los registros de Perfil se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando se selecciona [!UICONTROL Marca de tiempo] como tipo de combinación [!UICONTROL de] atributos para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
 
-Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
+Ocasionalmente puede haber casos de uso en los que es necesario proporcionar una marca de tiempo personalizada y la directiva de combinación debe cumplir la marca de tiempo personalizada en lugar de la marca de tiempo del sistema. Algunos ejemplos de esto incluyen rellenar datos o garantizar el orden correcto de eventos si los registros se ingieren por orden.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ La siguiente captura de pantalla muestra los campos en la combinación de detall
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-Para trabajar con marcas de hora personalizadas mediante la API, consulte el Apéndice de la guía [de extremo de directivas de](../api/merge-policies.md) combinación y, a continuación, la sección [Uso de marcas de hora](../api/merge-policies.md#custom-timestamps)personalizadas.
+Para trabajar con marcas de hora personalizadas mediante la API, consulte el Apéndice de la guía [de extremo de directivas de](../api/merge-policies.md) combinación y la sección [Uso de marcas de hora](../api/merge-policies.md#custom-timestamps)personalizadas.
 
 ### Prioridad de conjunto de datos {#dataset-precedence}
 
@@ -92,7 +92,7 @@ Al seleccionar un valor de combinación [!UICONTROL de] atributos, puede selecci
 
 Un caso de uso de ejemplo sería si su organización tuviera información presente en un conjunto de datos que sea preferible o de confianza sobre los datos de otro conjunto de datos.
 
-Al seleccionar la prioridad del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos  disponibles (o utilice la casilla de verificación para seleccionar todos) los conjuntos de datos que se incluirán. A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel Conjuntos de datos  seleccionados y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, luego al segundo más alto, y así sucesivamente.
+Al seleccionar [!UICONTROL Prioridad]del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos  disponibles los conjuntos de datos que se incluirán (o utilice la casilla de verificación para seleccionar todos). A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel Conjuntos de datos  seleccionados y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, al segundo más alto, y así sucesivamente.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Una vez que haya terminado de crear la directiva de combinación, seleccione **[
 
 ## Editar una directiva de combinación
 
-Puede modificar una directiva de combinación existente a través de la ficha [!UICONTROL Combinar directivas] haciendo clic en el nombre [!UICONTROL de]directiva* de la directiva de combinación que desee editar.
+Puede modificar una directiva de combinación existente mediante la ficha [!UICONTROL Combinar directivas] seleccionando el nombre **[!UICONTROL de la]** directiva para la directiva de combinación que desee editar.
 
 ![Página de aterrizaje de políticas de combinación](../images/merge-policies/select-edit.png)
 
-Cuando aparece la pantalla [!UICONTROL Editar directiva] de combinación, puede realizar cambios en los tipos de combinación Nombre [!UICONTROL ,]Esquema [!UICONTROL ,] ID [!UICONTROL y]  Atributo, así como seleccionar si esta directiva será o no la directiva de combinación predeterminada de su organización.
+Cuando aparece la pantalla **[!UICONTROL Editar directiva]** de combinación, puede realizar cambios en los tipos de combinación Nombre [!UICONTROL ,]Esquema [!UICONTROL ,] ID [!UICONTROL y]  Atributo, así como seleccionar si esta directiva será o no la directiva de combinación predeterminada de su organización.
 
 >[!NOTE]
 >
