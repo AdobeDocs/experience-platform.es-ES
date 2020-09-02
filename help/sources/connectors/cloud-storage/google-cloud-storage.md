@@ -5,9 +5,9 @@ title: Conector de Almacenamiento de Google Cloud
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar Google Cloud Almacenamiento a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,17 @@ Para generar un nuevo ID de clave de acceso y una clave de acceso secreta para s
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Puede utilizar el ID de clave de acceso y la clave de acceso secreto recién generados para conectar su [!DNL Google Cloud Storage] cuenta a [!DNL Platform].
+
+## Restricciones de nombres para archivos y directorios
+
+A continuación se muestra una lista de restricciones que debe tener en cuenta al nombrar el archivo o directorio de almacenamiento de nube.
+
+- Los nombres de los componentes de directorio y archivo no pueden exceder los 255 caracteres.
+- Los nombres de directorio y archivo no pueden terminar con una barra diagonal (`/`). Si se proporciona, se eliminará automáticamente.
+- Los siguientes caracteres de URL reservados deben tener un escape correcto: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- No se permiten los siguientes caracteres: `" \ / : | < > * ?`.
+- No se permiten caracteres de ruta de URL no válidos. Los puntos de código como `\uE000`, aunque válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, Sección 2.2: Reglas](https://www.ietf.org/rfc/rfc2616.txt) básicas y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
 
 ## Conectar [!DNL Google Cloud Storage] a [!DNL Platform]
 
