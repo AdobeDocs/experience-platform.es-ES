@@ -5,9 +5,9 @@ title: Personalización de detalles de perfil
 description: 'Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de Perfil de clientes en tiempo real en la interfaz de usuario de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Después de guardar, volverá a la ficha [!UICONTROL Detalle] , donde se verán 
 
 ## Restaurar tarjetas predeterminadas
 
-Si en cualquier momento decide que desea eliminar los cambios y volver a la vista predeterminada, puede restaurar rápida y fácilmente todas las tarjetas y atributos predeterminados. Para ello, seleccione **[UICONTROL Modificar panel]** y, a continuación, **[UICONTROL Restaurar tarjetas]** predeterminadas. Esto eliminará todas las personalizaciones (incluido el cambio de tamaño) que haya realizado. Para continuar, seleccione **[UICONTROL Guardar]** para guardar los cambios o, si seleccionó restaurar por error, seleccione **[UICONTROL Cancelar]** para evitar guardar los cambios y mantener las modificaciones realizadas.
+Si en cualquier momento decide que desea eliminar los cambios y volver a la vista predeterminada, puede restaurar rápida y fácilmente todas las tarjetas y atributos predeterminados. Para ello, seleccione **[!UICONTROL Modificar panel]** y, a continuación, **[!UICONTROL Restaurar tarjetas]** predeterminadas. Esto eliminará todas las personalizaciones (incluido el cambio de tamaño) que haya realizado. A continuación, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o, si no desea restaurar el valor predeterminado, seleccione **[!UICONTROL Cancelar]** para conservar los cambios realizados.
 
 >[!NOTE]
 >
