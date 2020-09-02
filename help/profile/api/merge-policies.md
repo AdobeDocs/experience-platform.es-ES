@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2382'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Un fragmento de perfil es la información de perfil para una sola identidad de l
 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
-* **`timestampOrdered`**:: (predeterminado) Dar prioridad al perfil que se actualizó en último lugar en caso de conflicto. Con este tipo de combinación, no es necesario el `data` atributo. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre conjuntos de datos. Para obtener más información, consulte la sección Apéndice sobre el [uso de marcas de hora](#custom-timestamps)personalizadas.
+* **`timestampOrdered`**:: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, no es necesario el `data` atributo. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre conjuntos de datos. Para obtener más información, consulte la sección Apéndice sobre el [uso de marcas de hora](#custom-timestamps)personalizadas.
 * **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
    * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
 
@@ -734,23 +734,23 @@ Esta sección proporciona información adicional relacionada con el trabajo con 
 
 ### Uso de marcas de hora personalizadas {#custom-timestamps}
 
-A medida que los registros de Perfil se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando `timestampOrdered` se selecciona como `attributeMerge` tipo para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
+Como los registros se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando `timestampOrdered` se selecciona como `attributeMerge` tipo para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
 
 Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
 
-Para utilizar una marca de tiempo personalizada, se debe agregar la mezcla [de detalles de auditoría del sistema de origen](#mixin-details) externo al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
+Para utilizar una marca de tiempo personalizada, debe agregarse la [[!DNL External Source System Audit Details Mixin]](#mixin-details) a su esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
 
 >[!NOTE]
 >
 >Debe asegurarse de que la `xdm:lastUpdatedDate` marca de tiempo se rellena al enviar un PATCH en el mismo registro.
 
-Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del registro de esquema, incluida la forma de agregar mezclas a esquemas, visite el [tutorial para crear un esquema mediante la API](../../xdm/tutorials/create-schema-api.md).
+Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de Esquemas, incluida la forma de agregar mezclas a esquemas, visite el [tutorial para crear un esquema mediante la API](../../xdm/tutorials/create-schema-api.md).
 
 Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección sobre el [uso de marcas de hora](../ui/merge-policies.md#custom-timestamps) personalizadas en la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
 
-#### Detalles de la combinación de detalles de auditoría del sistema de origen externo {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] detalles {#mixin-details}
 
-En el siguiente ejemplo se muestran los campos correctamente rellenados en el Mezclador de detalles de auditoría del sistema de origen externo. La combinación completa JSON también se puede ver en la repo [pública del Modelo de datos de experiencia (XDM) en GitHub](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) .
+En el siguiente ejemplo se muestran los campos rellenados correctamente en el [!DNL External Source System Audit Details Mixin]. La combinación completa JSON también se puede ver en la repo [pública del Modelo de datos de experiencia (XDM) en GitHub](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) .
 
 ```json
 {
