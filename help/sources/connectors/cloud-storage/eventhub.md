@@ -5,9 +5,9 @@ title: Conector de los centros de Evento de Azure
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar los centros de Evento de Azure a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Conectar [!DNL Azure Event Hubs] a [!DNL Platform]
+
 La documentación siguiente proporciona información sobre cómo conectarse [!DNL Azure Event Hubs] a [!DNL Platform] través de API o de la interfaz de usuario:
 
-## Conectar [!DNL Azure Event Hubs] a [!DNL Platform] mediante API
+### Uso de API
 
 - [Creación de un conector de concentradores de Evento de Azure mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
 - [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
-## Conectar [!DNL Azure Event Hubs] a [!DNL Platform] mediante la interfaz de usuario
+### Uso de la interfaz de usuario
 
 - [Creación de un conector de origen de los centros de Evento de Azure en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
