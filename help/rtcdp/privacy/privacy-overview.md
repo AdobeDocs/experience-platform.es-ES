@@ -5,10 +5,10 @@ seo-title: Privacidad en el Perfil de datos del cliente en tiempo real
 description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 seo-description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Privacy Service] le permite agilizar el proceso 
 
 Existen dos métodos para enviar solicitudes individuales de datos del RGPD y la CPA para acceder y eliminar datos de clientes:
 
-* Utilice la [[!IU de Privacy Service DNL]](https://gdprui.cloud.adobe.io/) para crear y supervisar solicitudes de acceso y eliminación en un espacio de trabajo visual. Consulte el tutorial [de la interfaz de usuario del](../../privacy-service/ui/overview.md) Privacy Service para obtener instrucciones paso a paso.
+* Utilice la [[!IU de Privacy Service DNL]](https://privacyui.cloud.adobe.io/) para crear y supervisar solicitudes de acceso y eliminación en un espacio de trabajo visual. Consulte la guía [del usuario del](../../privacy-service/ui/overview.md) Privacy Service para obtener instrucciones paso a paso.
 * Utilice la [[!DNL API de Privacy Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) para administrar las solicitudes de acceso y eliminación con las llamadas RESTful API. Consulte el tutorial [de API de](../../privacy-service/api/getting-started.md) Privacy Service para obtener instrucciones paso a paso.
 
 <!-- (Capability will not be available for November GA) 
