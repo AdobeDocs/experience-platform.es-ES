@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
 solution: Experience Platform
 title: Guía para desarrolladores de SDK
 topic: Overview
 description: El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y tuberías de funciones que se pueden utilizar en Adobe Experience Platform Data Science Workspace, proporcionando plantillas implementables en PySpark y Spark (Scala).
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 1%
