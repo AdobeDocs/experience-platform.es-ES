@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 solution: Adobe Experience Platform
 title: Información general sobre la combinación de privacidad
 description: La combinación de privacidad y preferencias de marketing (consentimiento) es una combinación de modelo de datos de experiencia (XDM) destinada a admitir la recopilación de permisos y preferencias de usuario generadas por CMP y otras fuentes de los clientes. El presente documento abarca la estructura y el uso previsto de los diversos campos proporcionados por la mezcla.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 1%
