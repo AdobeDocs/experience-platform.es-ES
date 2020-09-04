@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
 topic: enforcement
 description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con dichas etiquetas, puede utilizar la API de servicio de directivas para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
