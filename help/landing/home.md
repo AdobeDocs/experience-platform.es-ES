@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Información general de Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes desde cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 3%
+source-wordcount: '936'
+ht-degree: 5%
 
 ---
 
@@ -82,6 +82,13 @@ La documentación de Adobe Experience Platform está disponible en varios idioma
 
 [!DNL Experience Platform] la documentación se proporciona en múltiples formatos para una variedad de funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, así como para leer breves descripciones de cada uno de los [!DNL Platform] servicios, visite la información general [de la documentación del](documentation/overview.md)Experience Platform. O bien, para empezar a aprender más sobre un [!DNL Platform] servicio específico de inmediato, seleccione una guía de la lista alfabética en el panel de navegación izquierdo.
 
+### Documentación para los servicios de aplicaciones creados sobre [!DNL Experience Platform]
+
+Además de los servicios de navegación de la izquierda, Adobe ha creado otros servicios de aplicaciones sobre Experience Platform. Puede encontrar la documentación de estos servicios en sus propios repositorios de documentación, a continuación:
+
+* [[!Customer Journey Analytics DNL]](https://docs.adobe.com/content/help/es-ES/analytics-platform/using/cja-landing.html)
+* [[!Journey Orchestration DNL]](https://docs.adobe.com/content/help/es-ES/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >A partir de mayo de 2020, Adobe está publicando actualizaciones en el dominio y la barra de encabezado para unificar y mejorar su experiencia en todas las aplicaciones Experience Cloud. Esto incluye un nuevo menú Ayuda. El nuevo menú Ayuda incluye lo siguiente:
@@ -131,7 +138,7 @@ Una de las ventajas clave que ofrece Adobe Experience Platform es su capacidad d
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Para obtener información adicional sobre la arquitectura que potencia Adobe Experience Platform, vea el siguiente vídeo:
+Para obtener información adicional sobre la arquitectura que alimenta a Adobe Experience Platform, vea el siguiente vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -146,11 +153,6 @@ Los siguientes vídeos describen las funciones clave y los casos de uso de [!DNL
 **Casos de uso:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
