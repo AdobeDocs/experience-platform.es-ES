@@ -5,9 +5,9 @@ title: Segmentación multientidad
 topic: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos de Perfil con datos adicionales basados en productos, almacenes u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de Perfil.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -15,34 +15,48 @@ ht-degree: 0%
 
 # Segmentación multientidad
 
-La segmentación de varias entidades es la capacidad de ampliar [!DNL Profile] datos con datos adicionales basados en productos, almacenes u otras clases que no son de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del [!DNL Profile] esquema.
-
-Para obtener más información sobre la segmentación multientidad, siga leyendo la documentación y complementando su aprendizaje, vea el siguiente vídeo o explore la información general [de la](./home.md)segmentación.
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
+La segmentación multientidad es una función avanzada disponible como parte de Adobe Experience Platform [!DNL Segmentation Service]. Esta función le permite ampliar [!DNL Real-time Customer Profile] los datos con datos &quot;no personales&quot; adicionales (también conocidos como &quot;entidades de dimensión&quot;) que su organización puede definir, como datos relacionados con productos o almacenes. La segmentación multientidad proporciona flexibilidad al definir segmentos de audiencia en función de datos relevantes para sus necesidades comerciales únicas y se puede realizar sin tener experiencia en consultar bases de datos. Con la segmentación multientidad, puede agregar datos clave a los segmentos sin tener que realizar cambios costosos en los flujos de datos ni esperar a una combinación de datos back-end.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que intervienen en el uso de la segmentación. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+La segmentación de varias entidades requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform implicados en la segmentación. Antes de continuar con esta guía, consulte la siguiente documentación:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
-- [Servicio](./home.md)de segmentación de Adobe Experience Platform: Permite generar segmentos a partir del Perfil del cliente en tiempo real.
-- [[!Modelo de datos de experiencia DNL (XDM)]](../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [!DNL Real-time Customer Profile](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
+   * [Guardias](../profile/guardrails.md)de perfil: Prácticas recomendadas para crear modelos de datos compatibles con [!DNL Profile].
+* [!DNL Adobe Experience Platform Segmentation Service](./home.md):: Permite generar segmentos a partir de [!DNL Real-time Customer Profile] datos.
+* [!DNL Experience Data Model (XDM)](../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Conceptos básicos de la composición](../xdm/schema/composition.md#union)de esquemas: Conozca las prácticas recomendadas para la composición de esquemas que se utilizarán en Experience Platform.
 
-## Cómo definir relaciones XDM
+## Casos de uso
 
-La definición de relaciones con la estructura de sus esquemas [!DNL Experience Data Model] (XDM) es una parte importante e integral de la creación de segmentos.
+Para ilustrar el valor de la segmentación de varias entidades, considere tres casos de uso de mercadotecnia estándar que ilustran los desafíos presentes en la mayoría de las aplicaciones de mercadotecnia:
 
-Este proceso puede realizarse mediante la [!DNL Schema Registry] API o la [!DNL Schema Editor]. Para obtener una guía detallada sobre el uso de la API para definir una relación entre dos esquemas, lea [el tutorial sobre la definición de una relación entre dos esquemas mediante la API](../xdm/tutorials/relationship-api.md). Para obtener una guía detallada sobre el uso de [!DNL Schema Editor] para definir una relación entre dos esquemas, lea [el tutorial sobre la definición de una relación entre dos esquemas con el Editor](../xdm/tutorials/relationship-ui.md)de Esquemas.
+### Combinación de datos de compras en línea y sin conexión
 
-## Cómo crear segmentos que utilicen relaciones XDM
+Es posible que un especialista en mercadotecnia que crea una campaña de correo electrónico haya intentado crear un segmento para una audiencia de destinatario mediante el uso de compras recientes del almacén de clientes en los últimos tres meses. Lo ideal sería que este segmento requiriera tanto el nombre del artículo como el nombre del almacén donde se realizó la compra. Anteriormente, el desafío habría sido capturar el identificador de tienda del evento de compra y asignarlo a un perfil de cliente individual.
 
-Una vez definidas las relaciones XDM, puede utilizar la [!DNL Segmentation Service] API para crear un segmento.
+### Redireccionamiento por correo electrónico para abandono del carro de compras
 
-Este proceso se puede realizar mediante la [!DNL Segmentation] API o la interfaz [!DNL Segment Builder] de usuario. Para obtener una guía detallada sobre el uso de la API para crear un segmento, lea [el tutorial sobre la creación de un segmento mediante la API](./tutorials/create-a-segment.md)de segmentación. Para obtener una guía detallada sobre el uso del Generador de segmentos para generar un segmento, consulte [la guía](./ui/overview.md)de usuario del Generador de segmentos.
+A menudo es complejo crear y clasificar usuarios en segmentos que tengan como objetivo el abandono del carro de compras. El saber qué productos incluir en una campaña de redireccionamiento personalizada requiere datos sobre qué productos abandonó cada individuo. Estos datos están ligados a eventos comerciales que antes eran difíciles de monitorear y extraer datos.
 
-## Cómo evaluar y acceder a segmentos para segmentos de varias entidades
+## Creación de segmentos de varias entidades
 
-Después de crear un segmento, puede evaluar los resultados del mismo y acceder a ellos mediante la [!DNL Segmentation Service] API. Evaluar un segmento de varias entidades es muy similar a evaluar un segmento normal.
+La creación de un segmento de varias entidades primero requiere definir las relaciones entre esquemas antes de utilizar la interfaz de usuario de la API o del Generador de segmentos para generar la definición del segmento. [!DNL Segmentation]
 
-Este proceso solo se puede realizar mediante la [!DNL Segmentation Service] API. Para obtener una guía detallada sobre el uso de la API para evaluar y acceder a segmentos, lea el tutorial sobre [evaluación y acceso a segmentos](./tutorials/evaluate-a-segment.md).
+### Definir relaciones
+
+La definición de relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) es una parte integral de la creación de segmentos de varias entidades. Este proceso se puede realizar mediante la API del Registro de Esquemas o el Editor de Esquemas. Para ver los pasos detallados que muestran cómo definir una relación entre dos esquemas, elija uno de los siguientes tutoriales:
+
+* [Definición de una relación entre dos esquemas mediante la API](../xdm/tutorials/relationship-api.md)
+* [Definición de una relación entre dos esquemas mediante la interfaz de usuario del Editor de Esquemas](../xdm/tutorials/relationship-ui.md)
+
+### Crear un segmento de varias entidades
+
+Una vez definidas las relaciones XDM necesarias, puede empezar a crear un segmento de varias entidades. Este proceso se puede realizar mediante la API de segmentación o la interfaz de usuario del Generador de segmentos. Para obtener más información, elija una de las siguientes guías:
+
+* [Creación de un segmento mediante la API de segmentación](./tutorials/create-a-segment.md)
+* [Creación de un segmento mediante la interfaz de usuario del Generador de segmentos](./ui/overview.md)
+
+## Evaluar y acceder a segmentos de varias entidades
+
+Después de crear un segmento, puede evaluar los resultados del mismo y acceder a ellos mediante la API de segmentación. Evaluar un segmento de varias entidades es muy similar a evaluar un segmento estándar. Este proceso solo se puede realizar mediante la API de segmentación. Para obtener una guía detallada que muestre cómo utilizar la API para evaluar y acceder a segmentos, lea el tutorial de [evaluación y acceso a segmentos](./tutorials/evaluate-a-segment.md) .
