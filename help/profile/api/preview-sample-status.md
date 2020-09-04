@@ -5,9 +5,9 @@ title: 'Previsualización de perfiles: API de Perfil de clientes en tiempo real'
 description: Adobe Experience Platform le permite ingestar datos de clientes desde múltiples fuentes para crear perfiles unificados sólidos para clientes individuales. Como los datos habilitados para el Perfil del cliente en tiempo real se ingieren en la plataforma, se almacenan en el almacén de datos de Perfil. A medida que aumenta o disminuye el número de registros en el almacén de Perfiles, se ejecuta un trabajo de muestra que incluye información sobre cuántos fragmentos de perfil y perfiles combinados hay en el almacén de datos. Mediante la API de Perfil puede realizar previsualizaciones de la muestra más reciente de éxito, así como de la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,10 @@ La respuesta incluye los detalles del último trabajo de muestra exitoso que se 
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ La respuesta incluye los detalles del último trabajo de muestra exitoso que se 
 | Propiedad | Descripción |
 |---|---|
 | `numRowsToRead` | Número total de perfiles combinados en la muestra. |
+| `sampleJobRunning` | Valor booleano que se devuelve `true` cuando un trabajo de muestra está en curso. Proporciona transparencia en la latencia que se produce cuando se carga un archivo por lotes cuando se agrega al almacén de Perfiles. |
 | `cosmosDocCount` | Recuento total de documentos en Cosmos. |
 | `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de Perfiles. |
 | `lastSuccessfulBatchTimestamp` | Última marca de tiempo de ingestión por lotes correcta. |
@@ -206,7 +211,7 @@ La siguiente solicitud no especifica ningún `date` parámetro y, por lo tanto, 
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
