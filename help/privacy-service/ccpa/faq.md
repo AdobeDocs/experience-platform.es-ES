@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: Preguntas más frecuentes sobre CCPA
 topic: troubleshooting
+description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la Ley de Protección al Consumidor de California (CCPA) y su implementación en Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ La información personal también puede incluir información de actividad de Int
 - Historial de búsqueda
 - Información sobre la interacción de un consumidor con un sitio web, una aplicación o un anuncio
 
-Aunque la CCPA abarca un amplio conjunto de información personal, las condiciones contractuales estándar del Adobe estipulan que la información personal delicada (como la SSN, la información de licencia del conductor, la información de cuenta financiera y los datos biométricos) generalmente no se pueden importar ni utilizar en [!DNL Experience Cloud] las solicitudes.
+Aunque la CCPA abarca un amplio conjunto de información personal, las condiciones contractuales estándar del Adobe estipulan que la información personal delicada (como la SSN, la información de la licencia de conducir, la información de la cuenta financiera y los datos biométricos) está generalmente prohibida de importar y utilizar en [!DNL Experience Cloud] las solicitudes.
 
 ## ¿Cómo se aplican las diferentes funciones y responsabilidades del CCPA a [!DNL Experience Cloud]?
 
