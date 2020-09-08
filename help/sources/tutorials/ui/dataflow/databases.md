@@ -5,9 +5,9 @@ title: Configurar un flujo de datos para un conector de base de datos en la inte
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de base de datos.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,16 @@ Después de crear la cuenta de la base de datos, aparece el paso **[!UICONTROL S
 - La mitad izquierda de la interfaz es un explorador que muestra la lista de las bases de datos de su cuenta.
 - La mitad derecha de la interfaz permite la previsualización de hasta 100 filas de datos.
 
-Seleccione la base de datos que desee utilizar y haga clic en **[!UICONTROL Siguiente]**.
+Puede utilizar la opción **[!UICONTROL Buscar]** en la parte superior de la página para identificar rápidamente los datos de origen que desee utilizar.
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>La opción de datos de origen de búsqueda está disponible para todos los conectores de origen basados en tabulaciones, excluyendo los conectores de Analytics, Clasificaciones, Eventos y Kinesis.
+
+Una vez que encuentre los datos de origen, seleccione el directorio y haga clic en **[!UICONTROL Siguiente]**.
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## Asignación de campos de datos a un esquema XDM
 
