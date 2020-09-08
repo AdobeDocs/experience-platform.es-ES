@@ -5,9 +5,9 @@ title: Configuración de un flujo de datos para un conector de protocolo en la i
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Adobe Experience Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante la cuenta de protocolos.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ Después de crear la cuenta de protocolos, aparece el paso **[!UICONTROL Selecci
 - La mitad izquierda de la interfaz es un navegador de directorios, que muestra los archivos y directorios del servidor.
 - La mitad derecha de la interfaz permite la previsualización de hasta 100 filas de datos desde un archivo compatible.
 
-Seleccione el directorio que desee utilizar y haga clic en **[!UICONTROL Siguiente]**.
+Puede utilizar la opción **[!UICONTROL Buscar]** en la parte superior de la página para identificar rápidamente los datos de origen que desee utilizar.
 
-![add-data](../../../images/tutorials/dataflow/protocols/add-data.png)
+>[!NOTE]
+>
+>La opción de datos de origen de búsqueda está disponible para todos los conectores de origen basados en tabulaciones, excluyendo los conectores de Analytics, Clasificaciones, Eventos y Kinesis.
+
+Una vez que encuentre los datos de origen, seleccione el directorio y haga clic en **[!UICONTROL Siguiente]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Asignación de campos de datos a un esquema XDM
 
