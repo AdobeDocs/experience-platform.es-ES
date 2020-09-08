@@ -5,10 +5,10 @@ title: Extracción de color
 topic: Developer guide
 description: El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] está en versión beta. La documentación está sujeta a cambios.
 
 El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
-
-**Extracción de palabras clave sin supervisión**
-
-Para la extracción de palabras clave sin supervisión, se utiliza [[!DNL YAKE]](http://yake.inesctec.pt/) . [!DNL YAKE] es un método de extracción de palabras clave rápido y preciso, sin supervisión, que se utiliza para seleccionar las palabras clave más importantes de un documento. Las palabras clave [!DNL YAKE] extraídas se filtran para seleccionar solamente frases nuevas.
-
-**Reconocimiento de entidad con nombre**
-
-Para el reconocimiento de entidades con nombre, se utiliza el modelo OntoNotes de [[!DNL spaCy]](https://spacy.io/). Este modelo asigna vectores de token específicos de contexto, etiquetas de parte de voz (POS), análisis de dependencia y entidades con nombre. El modelo OntoNotes es uno de los [!DNL spaCy] modelos principales. Puede encontrar más información sobre el modelo OntoNotes [aquí](https://spacy.io/models/en).
 
 Las entidades con nombre reconocidas por [!DNL Content and Commerce AI] se enumeran en la siguiente tabla:
 
@@ -44,8 +36,6 @@ Las entidades con nombre reconocidas por [!DNL Content and Commerce AI] se enume
 | WORK_OF_ART | Títulos de libros, canciones, etc. |
 | LEY | Los documentos designados se convierten en leyes. |
 | IDIOMA | Cualquier idioma con nombre. |
-
-Los resultados de [!DNL OntoNotes] se combinan con las palabras clave de [!DNL YAKE], y luego se devuelven en orden de clasificación según su importancia.
 
 **Formato API**
 
