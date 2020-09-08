@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
@@ -25,34 +25,23 @@ Este documento proporciona pasos para suscribirse a eventos, registrar enlaces w
 
 ## Primeros pasos
 
-Este documento requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+En este tutorial se asume que ya ha creado al menos una conexión de origen cuyas ejecuciones de flujo desea supervisar. Si todavía no ha configurado una conexión de origen, consulte la información general [de](./home.md) fuentes para configurar el origen de su elección antes de volver a esta guía.
 
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] representa los múltiples métodos mediante los cuales [!DNL Platform] ingesta datos de estas fuentes, así como la forma en que dichos datos se conservan dentro del [!DNL Data Lake] para su uso por parte de los servicios [!DNL Platform] intermedios.
+Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obtener una introducción a los enlaces web.
 
-Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la siguiente [documentación](https://requestbin.com/blog/working-with-webhooks/) para obtener más información sobre los enlaces web.
+## Registro de un enlace web para notificaciones de ejecución de flujo
 
-## Registre su webgancho
+Para recibir notificaciones de ejecución de flujo, debe utilizar la consola de desarrollador de Adobe para registrar un enlace web en la [!DNL Experience Platform] integración.
 
-Para recibir notificaciones sobre el estado de la ejecución del flujo, debe registrar un webgancho especificando una URL de webgancho única como parte de los detalles del registro de evento. Para conectar un enlace web a su [!DNL I/O Events] suscripción, visite el servicio [de](https://webhook.site/) webgancho y copie la URL única proporcionada.
-
-![webock](./images/notifications/webhook-url.png)
-
-## Suscripción a eventos
-
-Una vez que haya adquirido una dirección URL de enlace web única, vaya a los Eventos [de E/S de](https://www.adobe.io/apis/experienceplatform/events.html) Adobe y siga los pasos descritos en el documento de notificaciones [de ingesta de](../ingestion/quality/subscribe-events.md) datos para suscribirse a eventos de inicio.
+Siga el tutorial sobre la [suscripción de [!DNL I/O Event] notificaciones](../observability/notifications/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
 
 >[!IMPORTANT]
 >
->Durante el proceso de suscripción, asegúrese de seleccionar [!DNL Platform] las notificaciones como proveedor de evento y seleccionar las siguientes suscripciones de evento:
+>Durante el proceso de suscripción, asegúrese de seleccionar las notificaciones **[!UICONTROL de]** plataforma como proveedor de evento y seleccionar las siguientes suscripciones de evento:
 >
 >* **[!UICONTROL Ejecución de flujo de origen de Experience Platform correcta]**
 >* **[!UICONTROL Error en la ejecución del flujo de la fuente de Experience Platform]**
 
->
->
-Cuando se le pregunte si desea proporcionar una dirección de enlace web, utilice la URL de enlace web que ha adquirido anteriormente.
 
 ## Recibir notificaciones de ejecución de flujo
 
