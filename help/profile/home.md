@@ -5,9 +5,9 @@ title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil de clientes en tiempo real es un almacén de entidades de búsqueda genérico que combina datos de diversos activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,7 @@ Para ofrecer a sus clientes experiencias coordinadas, coherentes y personalizada
 
 ### [!DNL Profile] métricas de ingestión
 
-Las perspectivas de visibilidad le permiten exponer métricas clave en Adobe Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registros ingestados y mucho más. Para obtener más información, lea la información general [de](../observability/home.md)Perspectivas de la capacidad de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/metrics.md)disponibles.
+Las perspectivas de visibilidad le permiten exponer métricas clave en Adobe Experience Platform. Además de [!DNL Platform] las estadísticas de uso y los indicadores de rendimiento para diversas [!DNL Platform] funcionalidades, existen métricas específicas [!DNL Profile]relacionadas que le permiten conocer mejor las tasas de solicitudes entrantes, las tasas de ingesta exitosas, los tamaños de registros ingestados y mucho más. Para obtener más información, lea la información general [de la API de](../observability/api/overview.md)perspectivas de observación y, para obtener una lista completa de [!DNL Profile] las métricas, consulte la documentación sobre las métricas [](../observability/api/metrics.md#available-metrics)disponibles.
 
 ## [!DNL Data governance] y [!DNL Privacy]
 
