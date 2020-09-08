@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
+source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -42,15 +42,25 @@ Seleccione el icono del canal en la parte superior izquierda para iniciar la ven
 
 El panel de ordenación permite acceder a las cuentas desde un origen específico. Seleccione el origen con el que desea trabajar y seleccione la cuenta en la lista de la derecha.
 
+>[!TIP]
+>
+> Utilice el botón de control ![del](../../images/tutorials/monitor/spectrum-control.png) espectro en la columna **[!UICONTROL Nombre]** para crear un nuevo flujo de datos de origen para la cuenta seleccionada.
+
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados a la cuenta a la que accedió.
+Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados a la cuenta a la que accedió. Seleccione el botón de elipses (`...`) para que aparezcan más opciones disponibles para el flujo de datos seleccionado. Estas opciones se describen a continuación:
+
+| Control | Descripción |
+| ------- | ----------- |
+| [!UICONTROL Editar programación] | Permite editar el programa de ingestión del flujo de datos. |
+| [!UICONTROL Deshabilitar flujo de datos] | Permite desactivar la ingestión de datos para el flujo de datos seleccionado. |
+| [!UICONTROL Eliminar] | Permite eliminar el flujo de datos seleccionado. |
 
 ![flujos de datos](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitoreo de flujos de datos
 
-Se puede acceder a los flujos de datos directamente desde la página **[!UICONTROL Catálogo]** sin ver **[!UICONTROL las cuentas]**. Seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior para vista de una lista de flujos de datos existentes.
+Se puede acceder a los flujos de datos directamente desde la página **[!UICONTROL Catálogo]** sin ver **[!UICONTROL las cuentas]**. Seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior para vista de una lista de flujos de datos.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Aparece una lista de flujos de datos existentes. En esta página hay una lista d
 
 ![lista de flujos de datos](../../images/tutorials/monitor/dataflows-list.png)
 
-Aparece el panel de ordenación. Seleccione el origen al que desea acceder desde el menú de desplazamiento y seleccione el flujo de datos desde la lista de la derecha.
+Aparece el panel de ordenación. Seleccione el origen al que desea acceder desde el menú de desplazamiento y seleccione el flujo de datos desde la lista de la derecha. También puede seleccionar el botón de elipses (`...`) para que aparezcan más opciones disponibles para el flujo de datos seleccionado.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -80,13 +90,12 @@ La **[!UICONTROL información general]** de ejecución de flujo de datos muestra
 
 ![dataflow run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-Consulte la siguiente tabla para ver los códigos de error que se pueden ver en el resumen **[!UICONTROL de]** errores.
+Consulte la siguiente tabla para ver los errores que se pueden ver en el resumen **[!UICONTROL de]** errores.
 
-| Código de error | Mensaje de error |
+| Error | Descripción |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Se produjo un problema con la actividad de copia.&quot; |
-| `CONNECTOR-2001-500` | &quot;Hubo un problema al copiar desde el origen del Experience Platform al conjunto de datos.&quot; |
-| `CONNECTOR-3001-500` | &quot;Se produjo un problema con el proveedor de flujo al crear un lote mediante la API de ingesta masiva.&quot; |
+| `CONNECTOR-1001-500` | Error al copiar datos de un origen. |
+| `CONNECTOR-2001-500` | Error al procesar los datos copiados en [!DNL Platform]. Este error puede deberse a analizar, validar o transformar. |
 
 La mitad inferior de la pantalla contiene información sobre los errores **[!UICONTROL de ejecución de]** Dataflow. Desde aquí, también puede realizar vistas de los archivos ingestados, realizar previsualizaciones y descargar diagnósticos de error o descargar el manifiesto de archivo.
 
