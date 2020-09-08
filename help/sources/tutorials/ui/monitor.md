@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
+source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -42,25 +42,15 @@ Seleccione el icono del canal en la parte superior izquierda para iniciar la ven
 
 El panel de ordenación permite acceder a las cuentas desde un origen específico. Seleccione el origen con el que desea trabajar y seleccione la cuenta en la lista de la derecha.
 
->[!TIP]
->
-> Utilice el botón de control ![del](../../images/tutorials/monitor/spectrum-control.png) espectro en la columna **[!UICONTROL Nombre]** para crear un nuevo flujo de datos de origen para la cuenta seleccionada.
-
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados con la cuenta a la que ha accedido.Seleccione el control secundario para mostrar más opciones disponibles para el flujo de datos seleccionado. Estas opciones se describen a continuación:
-
-| Control | Descripción |
-| ------- | ----------- |
-| [!UICONTROL Editar programa] | Permite editar el programa de ingestión del flujo de datos. |
-| [!UICONTROL Deshabilitar flujo de datos] | Permite desactivar la ingestión de datos para el flujo de datos seleccionado. |
-| [!UICONTROL Eliminar] | Permite eliminar el flujo de datos seleccionado. |
+Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados a la cuenta a la que accedió.
 
 ![flujos de datos](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitoreo de flujos de datos
 
-Se puede acceder a los flujos de datos directamente desde la página **[!UICONTROL Catálogo]** sin ver **[!UICONTROL las cuentas]**. Seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior para vista de una lista de flujos de datos.
+Se puede acceder a los flujos de datos directamente desde la página **[!UICONTROL Catálogo]** sin ver **[!UICONTROL las cuentas]**. Seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior para vista de una lista de flujos de datos existentes.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -68,7 +58,7 @@ Aparece una lista de flujos de datos existentes. En esta página hay una lista d
 
 ![lista de flujos de datos](../../images/tutorials/monitor/dataflows-list.png)
 
-Aparece el panel de ordenación. Seleccione el origen al que desea acceder desde el menú de desplazamiento y seleccione el flujo de datos desde la lista de la derecha. También puede seleccionar el control secundario para mostrar más opciones disponibles para el flujo de datos seleccionado.
+Aparece el panel de ordenación. Seleccione el origen al que desea acceder desde el menú de desplazamiento y seleccione el flujo de datos desde la lista de la derecha.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -92,10 +82,11 @@ La **[!UICONTROL información general]** de ejecución de flujo de datos muestra
 
 Consulte la siguiente tabla para ver los códigos de error que se pueden ver en el resumen **[!UICONTROL de]** errores.
 
-| Error | Descripción |
+| Código de error | Mensaje de error |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | Error al copiar datos de un origen. |
-| `CONNECTOR-2001-500` | Error al procesar los datos copiados en [!DNL Platform]. Este error puede deberse a analizar, validar o transformar. |
+| `CONNECTOR-1001-500` | &quot;Se produjo un problema con la actividad de copia.&quot; |
+| `CONNECTOR-2001-500` | &quot;Hubo un problema al copiar desde el origen del Experience Platform al conjunto de datos.&quot; |
+| `CONNECTOR-3001-500` | &quot;Se produjo un problema con el proveedor de flujo al crear un lote mediante la API de ingesta masiva.&quot; |
 
 La mitad inferior de la pantalla contiene información sobre los errores **[!UICONTROL de ejecución de]** Dataflow. Desde aquí, también puede realizar vistas de los archivos ingestados, realizar previsualizaciones y descargar diagnósticos de error o descargar el manifiesto de archivo.
 
