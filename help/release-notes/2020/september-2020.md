@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 64b6b59923d549cdcbf35d2e375529aec8cf81b8
+source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 6%
+source-wordcount: '507'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 * [[!Gobierno de datos DNL]](#governance)
 * [[!Destinos DNL]](#destinations)
+* [[!Privacy Service DNL]](#privacy)
 * [[!Fuentes DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
@@ -46,6 +47,18 @@ En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.m
 | Mejoras en los recursos | Los usuarios pueden acceder a las acciones de tabla en línea para acceder más fácilmente a las acciones principales, como agregar datos, editar la programación y agregar segmentos. Consulte el documento del espacio de trabajo [de](../../rtcdp/destinations/destinations-workspace.md) destinos para obtener más información. |
 
 Para obtener más información, visite la descripción general de [destinos](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Privacy Service] {#privacy}
+
+Varios reglamentos legales y organizativos otorgan a los usuarios el derecho de acceder a sus datos personales o eliminarlos de sus almacenes de datos si así lo solicitan. Adobe Experience Platform [!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar estas solicitudes de datos de sus clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder y eliminar datos personales o privados de clientes desde las aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las normativas legales y de privacidad de la organización.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Apoyo a LGPD (Brasil) | Ahora se pueden crear empleos de privacidad bajo la regulación de Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD, por sus siglas en inglés). Estos trabajos son rastreados bajo el código de regulación `lgpd_bra`. |
+
+Consulte la descripción general [del](../../privacy-service/home.md) Privacy Service para obtener más información sobre el servicio.
 
 ## Fuentes {#sources}
 
