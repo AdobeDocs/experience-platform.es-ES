@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Notas de la versión del Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
@@ -20,6 +20,14 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 >
 >Las últimas notas de la versión de otros [!DNL Experience Platform] servicios se pueden encontrar [aquí](../release-notes/latest/latest.md).
 
+## 9 de septiembre de 2020
+
+### Nuevas funciones
+
+| Función | Descripción |
+| --- | --- |
+| Apoyo a LGPD (Brasil) | Ahora se pueden crear empleos de privacidad bajo la regulación de Brasil [!DNL Lei Geral de Proteção de Dados] (LGPD, por sus siglas en inglés). Estos trabajos son rastreados bajo el código de regulación `lgpd_bra`. |
+
 ## 8 de abril de 2020
 
 ### Nuevas funciones
@@ -27,7 +35,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con PDPA | [!DNL Privacy] las solicitudes ahora pueden crearse y rastrearse bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la `regulation` matriz acepta el valor &quot;pdpa_tha&quot;. |
-| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Áreas de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](ui/user-guide.md) usuario para obtener más información. |
+| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Área de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](ui/user-guide.md) usuario para obtener más información. |
 | Desuso de punto final antiguo | El punto final (`data/privacy/gdpr`) de la API anterior ha quedado obsoleto. |
 
 ## 14 de enero de 2020
@@ -53,9 +61,9 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 | Función | Descripción |
 | --- | --- |
-| Panel de las métricas de solicitud | El nuevo panel de métricas en la interfaz de usuario [!DNL Privacy Service] proporciona visibilidad de las solicitudes de RGPD enviadas, erróneas y completadas. |
+| Panel de las métricas de solicitud | El nuevo panel de métricas en la [!DNL Privacy Service] interfaz de usuario proporciona visibilidad de las solicitudes de RGPD enviadas, erróneas y completadas. |
 | Generador de solicitudes | Para prestar servicios a organizaciones con usuarios técnicos y no técnicos que envían solicitudes de RGPD, se ha agregado la funcionalidad &quot;Crear solicitud&quot; a la interfaz de usuario. La capacidad de envío de archivos JSON aún está disponible en la interfaz de usuario para las organizaciones que prefieran seguir usándola. [!DNL Privacy Service] |
-| Notificaciones de Evento de trabajos de RGPD | Las notificaciones de Evento sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se enviaban anteriormente mediante avisos de correo electrónico individuales, las notificaciones de evento de RGPD son mensajes que aprovechan los eventos de E/S de Adobe, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. [!DNL Privacy Service] Los usuarios de la interfaz de usuario pueden suscribirse a eventos de RGPD de E/S de Adobe para recibir actualizaciones cuando se haya completado un producto o el trabajo de RGPD. |
+| Notificaciones de Evento de trabajos de RGPD | Las notificaciones de evento sobre los estados de trabajos del RGPD son un elemento crítico para muchos flujos de trabajo. Aunque las notificaciones se enviaban anteriormente mediante avisos de correo electrónico individuales, las notificaciones de evento de RGPD son mensajes que aprovechan los eventos de E/S de Adobe, que se envían a un enlace web configurado para facilitar la automatización de las solicitudes de trabajo. [!DNL Privacy Service] Los usuarios de la interfaz de usuario pueden suscribirse a eventos de RGPD de E/S de Adobe para recibir actualizaciones cuando se haya completado un producto o el trabajo de RGPD. |
 
 ## 18 de abril de 2019
 
@@ -67,7 +75,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 ### Correcciones de errores
 
-* Se Añadió la información de registro que faltaba para las consultas filtradas del `GET /` extremo en la [!DNL Privacy Service] API.
+* Se añadió la información de registro que faltaba para las consultas filtradas del `GET /` extremo en la [!DNL Privacy Service] API.
 
 ## 11 de abril de 2019
 
