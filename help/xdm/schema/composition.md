@@ -5,7 +5,7 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Un campo es el componente básico más básico de un esquema. Los campos proporc
 
 * Cadena
 * Número entero
-* Número
+* Duplicada
 * Booleano
 * Matriz
 * Objeto
