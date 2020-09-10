@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Trabajos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
+source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 2%
+source-wordcount: '1309'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 2%
 # Trabajos de privacidad
 
 Este documento explica cómo trabajar con trabajos de privacidad mediante llamadas de API. Específicamente, cubre el uso del `/job` punto final en la [!DNL Privacy Service] API. Antes de leer esta guía, consulte la sección [de](./getting-started.md#getting-started) introducción para obtener información importante que debe conocer para realizar llamadas a la API correctamente, incluidos los encabezados necesarios y cómo leer llamadas a la API de ejemplo.
+
+>[!NOTE]
+>
+>Si está intentando administrar solicitudes de consentimiento o de exclusión de clientes, consulte la guía [de extremo de](./consent.md)consentimiento.
 
 ## Lista de todos los trabajos {#list}
 
@@ -206,128 +210,6 @@ Una respuesta correcta devuelve los detalles de los trabajos recién creados.
 | `jobId` | Un ID exclusivo y de solo lectura generado por el sistema para un trabajo. Este valor se utiliza en el siguiente paso de buscar un trabajo específico. |
 
 Una vez que haya enviado correctamente la solicitud de trabajo, puede pasar al siguiente paso de [comprobar el estado](#check-status)del trabajo.
-
-### Creación de un trabajo de exclusión {#opt-out}
-
-En esta sección se muestra cómo realizar una solicitud de trabajo de exclusión mediante la API.
-
-**Formato API**
-
-```http
-POST /jobs
-```
-
-**Solicitud**
-
-La siguiente solicitud crea una nueva solicitud de trabajo, configurada por los atributos suministrados en la carga útil como se describe a continuación.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/privacy/gdpr/ \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -d '{
-    "companyContexts": [
-      {
-        "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
-      }
-    ],
-    "users": [
-      {
-        "key": "DavidSmith",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "dsmith@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "ECID",
-            "type": "standard",
-            "value":  "443636576799758681021090721276",
-            "isDeletedClientSide": false
-          }
-        ]
-      },
-      {
-        "key": "user12345",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "ajones@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "loyaltyAccount",
-            "value": "12AD45FE30R29",
-            "type": "integrationCode"
-          }
-        ]
-      }
-    ],
-    "include": ["Analytics", "AudienceManager"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
-    "regulation": "ccpa"
-}'
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `companyContexts` **(Requerido)** | Matriz que contiene información de autenticación para su organización. Cada identificador de la lista incluye los atributos siguientes: <ul><li>`namespace`:: Área de nombres de un identificador.</li><li>`value`:: El valor del identificador.</li></ul>Es **necesario** que uno de los identificadores utilice `imsOrgId` como su `namespace`, con `value` el identificador único de su organización de IMS. <br/><br/>Los identificadores adicionales pueden ser calificadores de compañía específicos del producto (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los valores potenciales incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
-| `users` **(Requerido)** | Matriz que contiene una colección de por lo menos un usuario cuya información desea obtener o eliminar. Se puede proporcionar un máximo de 1000 ID de usuario en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`:: Identificador de un usuario que se utiliza para calificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella fácilmente o buscarla más adelante.</li><li>`action`:: Una matriz que lista las acciones que se desean realizar en los datos. Para las solicitudes de exclusión de venta, la matriz solo debe contener el valor `opt-out-of-sale`.</li><li>`userIDs`:: Colección de identidades para el usuario. El número de identidades que un usuario puede tener está limitado a nueve. Cada identidad consta de un calificador `namespace`, un `value`y una Área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la guía de [solución de problemas](../troubleshooting-guide.md#user-ids). |
-| `include` **(Requerido)** | Una matriz de productos de Adobe que se incluirán en el procesamiento. Si falta este valor o si está vacío, se rechazará la solicitud. Incluya únicamente productos con los que su organización tenga una integración. Consulte la sección sobre los valores [del producto](appendix.md) aceptados en el apéndice para obtener más información. |
-| `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo admitida por [!DNL Analytics]). If omitted, this value defaults to `false`. |
-| `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si `priority` se omite, el comportamiento predeterminado es `normal`. |
-| `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo Adobe Analytics debe gestionar los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`:: Todos los datos a los que hace referencia la colección dada de ID de usuario se vuelven anónimos. Si `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`:: Todos los datos se eliminan por completo.</li></ul> |
-| `regulation` **(Requerido)** | Reglamento de la solicitud. Debe ser uno de los cuatro valores siguientes: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
-
-**Respuesta**
-
-Una respuesta correcta devuelve los detalles de los trabajos recién creados.
-
-```json
-{
-    "jobs": [
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
-            "customer": {
-                "user": {
-                    "key": "DavidSmith",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        },
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
-            "customer": {
-                "user": {
-                    "key": "user12345",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        }
-    ],
-    "requestStatus": 1,
-    "totalRecords": 2
-}
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `jobId` | Un ID exclusivo y de solo lectura generado por el sistema para un trabajo. Este valor se utiliza para buscar un trabajo específico en el paso siguiente. |
-
-Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar con el siguiente paso para comprobar el estado del trabajo.
 
 ## Comprobar el estado de un trabajo {#check-status}
 
