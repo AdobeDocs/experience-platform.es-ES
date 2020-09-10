@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Trabajos de segmentos
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 3%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentId` | ID de la definición de segmento para la que desea crear un trabajo de segmento. Encontrará más información sobre las definiciones de segmentos en la guía de punto final de definición de [segmento](./segment-definitions.md). |
+| `segmentId` | ID de la definición de segmento para la que desea crear un trabajo de segmento. Estas definiciones de segmentos pueden pertenecer a distintas directivas de combinación. Encontrará más información sobre las definiciones de segmentos en la guía de punto final de definición de [segmento](./segment-definitions.md). |
 
 **Respuesta**
 
