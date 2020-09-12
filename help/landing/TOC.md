@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform
+breadcrumb-title: Experience Platform Guide
 user-guide-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 45%
+ht-degree: 52%
 
 ---
 
@@ -21,13 +22,13 @@ ht-degree: 45%
    * [Control de acceso](https://docs.adobe.com/content/help/es-ES/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/es-ES/auditor/using/overview.html)
    * [Catálogo y conjuntos de datos](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
-   * [Acceso a datos](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
+   * [Acceso a los datos](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [Gobierno de datos](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
    * [Ingesta de datos](https://docs.adobe.com/content/help/es-ES/experience-platform/ingestion/home.html)
    * [Área de trabajo de ciencia de datos](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/es-ES/debugger/using/experience-cloud-debugger.html)
    * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/es-ES/debugger/using-v2/experience-cloud-debugger.html)
-   * [Servicio de decisiones](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
+   * [Offer Decisioning](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extraer, Transformar, Cargar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Servicio de identidad](https://docs.adobe.com/content/help/es-ES/experience-platform/identity/home.html)
@@ -37,11 +38,11 @@ ht-degree: 45%
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Perfil (Perfil del cliente en tiempo real)](https://docs.adobe.com/content/help/es-ES/experience-platform/profile/home.html)
    * [Servicio de consulta](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
-   * [Plataforma de datos de clientes en tiempo real](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)
+   * [Plataforma de datos de clientes en tiempo real de](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)
    * [Sandboxes](https://docs.adobe.com/content/help/es-ES/experience-platform/sandbox/home.html)
    * [Segmentación](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [Fuentes (Conectores)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [SDK web](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
+   * [SDK web de](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
    * [XDM (modelo de datos de experiencia)](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
 * [Tutoriales del Experience Platform](https://docs.adobe.com/content/help/es-ES/experience-platform/tutorials/home.html)
 * [Notas de la versión](https://docs.adobe.com/content/help/es-ES/experience-platform/release-notes/latest.translate.html)
