@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Directrices del Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -96,5 +96,5 @@ Las siguientes barreras hacen referencia al tamaño de los datos y se recomienda
 
 | Guardrade | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Tamaño total máximo por entidad dimensional | 1 GB   | Leve | **El tamaño total máximo recomendado para una entidad de dimensión es de 1 GB.** La ingesta de entidades de dimensiones grandes provocará una degradación del rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como una entidad de dimensión. |
+| Tamaño total máximo para todas las entidades dimensionales | 5 GB   | Leve | **El tamaño total máximo recomendado para todas las entidades dimensionales es de 5 GB.** La ingesta de entidades de dimensiones grandes provocará una degradación del rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como una entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Leve | **Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional.** Por ejemplo: si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos de contribución, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
