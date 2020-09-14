@@ -5,9 +5,9 @@ title: Personalización de detalles de perfil
 description: 'Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de Perfil de clientes en tiempo real en la interfaz de usuario de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Después de guardar, volverá a la ficha [!UICONTROL Detalle] , donde se verán 
 
 ## Restaurar tarjetas predeterminadas
 
-Si en cualquier momento decide que desea eliminar los cambios y volver a la vista predeterminada, puede restaurar rápida y fácilmente todas las tarjetas y atributos predeterminados. Para ello, seleccione **[!UICONTROL Modificar panel]** y, a continuación, **[!UICONTROL Restaurar tarjetas]** predeterminadas. Esto eliminará todas las personalizaciones (incluido el cambio de tamaño) que haya realizado. A continuación, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o, si no desea restaurar el valor predeterminado, seleccione **[!UICONTROL Cancelar]** para conservar los cambios realizados.
-
->[!NOTE]
->
->Tenga cuidado al restaurar las tarjetas y los atributos predeterminados. Una vez restaurado y guardado el valor predeterminado, la única manera de volver a las personalizaciones de vista es crearlas de nuevo siguiendo los pasos descritos en este documento.
+Si en cualquier momento decide que desea restaurar las tarjetas predeterminadas que se han eliminado, puede hacerlo de forma rápida y sencilla. En primer lugar, seleccione **[!UICONTROL Modificar panel]** y, a continuación, seleccione **[!UICONTROL Restaurar tarjetas]** predeterminadas. Una vez visibles las tarjetas predeterminadas, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o **[!UICONTROL Cancelar]** si no desea restaurar las tarjetas predeterminadas.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
