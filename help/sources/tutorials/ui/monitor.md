@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ El panel de ordenación permite acceder a las cuentas desde un origen específic
 > Utilice el botón de control ![del](../../images/tutorials/monitor/spectrum-control.png) espectro en la columna **[!UICONTROL Nombre]** para crear un nuevo flujo de datos de origen para la cuenta seleccionada.
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+Además, puede editar la información de cuenta existente y actualizar las credenciales de la cuenta. Seleccione el icono de lápiz para la información de cuenta que desee editar.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+Aparece el modo **[!UICONTROL Editar detalles]** de la cuenta. Desde esta página, puede actualizar los detalles de cuenta y las credenciales de autenticación existentes.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados a la cuenta a la que accedió. Seleccione el botón de elipses (`...`) para que aparezcan más opciones disponibles para el flujo de datos seleccionado. Estas opciones se describen a continuación:
 
