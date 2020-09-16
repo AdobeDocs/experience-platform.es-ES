@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1636'
 ht-degree: 1%
 
 ---
@@ -599,7 +599,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:: Utilice el flujo de datos obtenido en el paso anterior.
 * `{ETAG}`:: Utilice la etiqueta que obtuvo en el paso anterior.
-* `{SEGMENT_ID}`:: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ y busque la `GET /segment/jobs` operación.
+* `{SEGMENT_ID}`:: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione la API **[!UICONTROL de servicio]** de segmentación en el menú de navegación de la izquierda y busque la `GET /segment/definitions` operación en Definiciones **[!UICONTROL de segmentos]**.
 * `{PROFILE_ATTRIBUTE}`: Por ejemplo, `"person.lastName"`
 
 **Respuesta**
