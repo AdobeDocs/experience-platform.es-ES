@@ -5,9 +5,9 @@ title: Configurar un flujo de datos para un conector de publicidad en la interfa
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Adobe Experience Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de publicidad.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,15 @@ En función de sus necesidades, puede elegir asignar los campos directamente o u
 >
 >[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
-Una vez asignados los datos de origen, seleccione **[!UICONTROL Siguiente]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Seleccione los datos **[!UICONTROL de]** Previsualización para ver los resultados de asignación de hasta 100 filas de datos de muestra del conjunto de datos seleccionado.
+
+Durante la previsualización, se da prioridad a la columna de identidad como primer campo, ya que es la información clave necesaria para validar los resultados de la asignación.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Una vez asignados los datos de origen, seleccione **[!UICONTROL Cerrar]**.
 
 ## Programar ejecuciones de ingestión
 
