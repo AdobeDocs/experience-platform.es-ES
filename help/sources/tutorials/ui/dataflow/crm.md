@@ -5,9 +5,9 @@ title: Configurar un flujo de datos para un conector CRM en la interfaz de usuar
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta CRM.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ En función de sus necesidades, puede elegir asignar los campos directamente o u
 >
 >[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
-Una vez asignados los datos de origen, seleccione **[!UICONTROL Siguiente]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Seleccione los datos **[!UICONTROL de]** Previsualización para ver los resultados de asignación de hasta 100 filas de datos de muestra del conjunto de datos seleccionado.
+
+Durante la previsualización, se da prioridad a la columna de identidad como primer campo, ya que es la información clave necesaria para validar los resultados de la asignación.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Una vez asignados los datos de origen, seleccione **[!UICONTROL Cerrar]**.
 
 ## Programar ejecuciones de ingestión
 
@@ -92,7 +98,7 @@ Aparece el paso **[!UICONTROL Programación]** , que le permite configurar una p
 | Frecuencia | Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`y `Week`. |
 | Intervalo | Un entero que establece el intervalo para la frecuencia seleccionada. |
 | Tiempo de inicio | Marca de hora UTC que indica cuándo se produce la primera ingestión. |
-| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si **[!UICONTROL Rellenar ]*está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si*Rellenar *está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo*[!UICONTROL de ]*Inicio. Los archivos cargados antes de la hora*[!UICONTROL de]** Inicio no se ingieren. |
+| Rellenar | Un valor booleano que determina qué datos se ingieren inicialmente. Si **[!UICONTROL Rellenar]** está activado, todos los archivos actuales de la ruta especificada se ingerirán durante la primera ingestión programada. Si **[!UICONTROL Rellenar]** está desactivado, solo se ingerirán los archivos que se carguen entre la primera ejecución de la ingesta y el tiempo **[!UICONTROL de]** Inicio. Los archivos cargados antes de la hora **[!UICONTROL de]** Inicio no se ingieren. |
 | Columna delta | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se ingieren según la marca de tiempo de la columna seleccionada. |
 
 Los flujos de datos están diseñados para transferir datos automáticamente en forma programada. Inicio seleccionando la frecuencia de ingestión. A continuación, configure el intervalo para designar el período entre dos ejecuciones de flujo. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15.
