@@ -5,23 +5,24 @@ user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
 
 
-# Área de trabajo de ciencia de datos {#data-science-workspace}
+# Data Science Workspace {#data-science-workspace}
 
 * [Información general sobre el área de trabajo de ciencias de datos](home.md)
 * [Recorrido de Área de trabajo de ciencias de datos](walkthrough.md)
 * Equipos portátiles JupyterLab {#jupyterlab}
    * [Guía del usuario de JupyterLab](jupyterlab/overview.md)
-   * [Analizar los datos con portátiles](jupyterlab/analyze-your-data.md)
-   * [Servicio de consulta en el bloc de notas de Jupyter](jupyterlab/query-service.md)
-   * [Creación de una fórmula con blocs de notas Jupyter](jupyterlab/create-a-recipe.md)
+   * [Acceso a datos](jupyterlab/access-notebook-data.md)
+   * [Analizar los datos](jupyterlab/analyze-your-data.md)
+   * [Servicio de consulta](jupyterlab/query-service.md)
+   * [Crear una fórmula](jupyterlab/create-a-recipe.md)
    * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizaje automático de Sensei {#api}
    * [Primeros pasos](api/getting-started.md)
@@ -61,7 +62,6 @@ ht-degree: 5%
    * [Publicación de un modelo como servicio (UI)](models-recipes/publish-model-service-ui.md)
    * [Publicación de un modelo como servicio (API)](models-recipes/publish-model-service-api.md)
    * [Programar la formación automatizada y la puntuación en un servicio (IU)](models-recipes/schedule-models-ui.md)
-* [Guías de migración de fórmulas y portátiles](recipe-notebook-migration.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
