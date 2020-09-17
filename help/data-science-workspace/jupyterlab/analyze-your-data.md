@@ -5,7 +5,7 @@ title: Analizar los datos con portátiles
 topic: Tutorial
 description: Este tutorial se centra en cómo utilizar los blocs de notas Jupyter, creados en el espacio de trabajo de ciencias de la información, para acceder, explorar y visualizar sus datos.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ De forma predeterminada, la fórmula Tensorflow funciona en un clúster de GPU y
 
 En la interfaz de usuario, haga clic en la ficha Ciencias de datos del menú superior para ir al área de trabajo de ciencias de datos. [!DNL Adobe Experience Platform] Desde esta página, haga clic en la [!DNL JupyterLab] ficha que abrirá el [!DNL JupyterLab] iniciador. Debería ver una página similar a esta.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 En nuestro tutorial, utilizaremos [!DNL Python] 3 en el bloc de notas de Jupyter para mostrar cómo acceder y explorar los datos. En la página del iniciador, se proporcionan blocs de notas de ejemplo. Utilizaremos la fórmula Ventas al detalle para [!DNL Python] 3.
 
