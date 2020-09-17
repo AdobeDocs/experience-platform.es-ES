@@ -5,10 +5,10 @@ title: Guía del usuario de JupyterLab
 topic: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con portátiles Jupyter, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: d5e7679ac41fd476c77a98920d7f7aeaefacec6d
 workflow-type: tm+mt
-source-wordcount: '3702'
-ht-degree: 11%
+source-wordcount: '1940'
+ht-degree: 9%
 
 ---
 
@@ -60,10 +60,9 @@ En las secciones siguientes se proporciona información sobre las característic
 * [Celdas de código](#code-cells)
 * [Kernels](#kernels)
 * [Sesiones de núcleo](#kernel-sessions)
-* [Recurso de ejecución de PySpark/Spark](#execution-resource)
 * [Iniciador](#launcher)
 
-### Access [!DNL JupyterLab] {#access-jupyterlab}
+### Acceso [!DNL JupyterLab] {#access-jupyterlab}
 
 En [Adobe Experience Platform](https://platform.adobe.com), seleccione **Equipos portátiles** en la columna de navegación izquierda. Deje que transcurra algún tiempo para que se inicialice [!DNL JupyterLab] completamente.
 
@@ -242,375 +241,9 @@ En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior der
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-## Acceso a [!DNL Platform] datos mediante equipos portátiles
+## Pasos siguientes
 
-Cada núcleo soportado proporciona funcionalidades integradas que permiten leer [!DNL Platform] datos desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los blocs de notas [!DNL Python] y R.
-
-### Límites de datos de equipos portátiles
-
-La siguiente información define la cantidad máxima de datos que se pueden leer, qué tipo de datos se han utilizado y el intervalo de tiempo estimado que se tarda en leer los datos. Para [!DNL Python] y R, se utilizó un servidor portátil configurado con 40 GB de RAM para los análisis de rendimiento. Para PySpark y Scala, se utilizó un clúster de databricks configurado en 64 GB de RAM, 8 núcleos, 2 DBU con un máximo de 4 trabajadores para los puntos de referencia que se describen a continuación.
-
-Los datos de esquema de ExperienceEvent utilizados varían en tamaño desde mil (1K) filas hasta mil millones (1B). Tenga en cuenta que para PySpark y las [!DNL Spark] métricas, se utilizó un período de 10 días para los datos XDM.
-
-Los datos de esquemas específicos se preprocesaron mediante [!DNL Query Service] Crear tabla como selección (CTAS). Estos datos también variaron en el tamaño desde mil filas (1K) hasta mil millones (1B).
-
-#### [!DNL Python] límites de datos del bloc de notas
-
-**Esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 2 millones de filas (aproximadamente 6,1 GB de datos en disco) de datos XDM en menos de 22 minutos. Añadir filas adicionales puede provocar errores.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M |
-| ----------------------- | ------ | ------ | ----- | ----- | ----- |
-| Tamaño en disco (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
-| SDK (en segundos) | 20.3 | 86.8 | 63 | 659 | 1315 |
-
-**esquema ad-hoc:** Debería poder leer un máximo de 5 millones de filas (unos 5,6 GB de datos en disco) de datos no XDM (ad-hoc) en menos de 14 minutos. Añadir filas adicionales puede provocar errores.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| Tamaño en disco (en MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
-| SDK (en segundos) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
-
-#### Límites de datos del portátil R
-
-**Esquema de ExperienceEvent XDM:** Debería poder leer un máximo de 1 millón de filas de datos XDM (datos de 3 GB en disco) en menos de 13 minutos.
-
-| Número de filas | 1K | 10K | 100K | 1M |
-| ----------------------- | ------ | ------ | ----- | ----- |
-| Tamaño en disco (MB) | 18.73 | 187.5 | 308 | 3000 |
-| Núcleo R (en segundos) | 14.03 | 69.6 | 86.8 | 775 |
-
-**esquema ad-hoc:** Debería poder leer un máximo de 3 millones de filas de datos ad-hoc (datos de 293 MB en disco) en unos 10 minutos.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| Tamaño en disco (en MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
-| SDK R (en segundos) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
-
-#### Límites de datos de portátiles PySpark ([!DNL Python] núcleo):
-
-**Esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 20 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
-|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Tamaño en disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
-| SDK (modo interactivo) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
-| SDK (modo Lote) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
-
-**esquema ad-hoc:** En el modo interactivo, debe poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en menos de 3 minutos. En el modo Lote, debería poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en unos 18 minutos.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
-|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| Tamaño en disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
-| Modo interactivo de SDK (en segundos) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
-| Modo de lotes de SDK (en segundos) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
-
-#### [!DNL Spark] Límites de datos de portátiles (kernel Scala):
-
-**Esquema de ExperienceEvent XDM:** En el modo interactivo, debe poder leer un máximo de 5 millones de filas (unos 13,42 GB de datos en disco) de datos XDM en unos 18 minutos. El modo interactivo solo admite hasta 5 millones de filas. Si desea leer conjuntos de datos más grandes, se sugiere cambiar al modo Lote. En el modo Lote, debería poder leer un máximo de 500 millones de filas (unos 1,31 TB de datos en disco) de datos XDM en unas 14 horas.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
-|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Tamaño en disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
-| Modo interactivo de SDK (en segundos) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
-| Modo de lotes de SDK (en segundos) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
-
-**esquema ad-hoc:** En el modo interactivo, debe poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en menos de 3 minutos. En el modo Lote, debería poder leer un máximo de mil millones de filas (unos 1,05 TB de datos en disco) de datos que no sean XDM en unos 16 minutos.
-
-| Número de filas | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
-|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| Tamaño en disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
-| Modo interactivo de SDK (en segundos) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
-| Modo de lotes de SDK (en segundos) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
-
-### Leer desde un conjunto de datos en [!DNL Python]/R
-
-[!DNL Python] Los blocs de notas y R permiten paginar datos al acceder a conjuntos de datos. A continuación se muestra el código de muestra para leer datos con o sin paginación.
-
-[//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
-
-#### Leer desde un conjunto de datos en [!DNL Python]/R sin paginación
-
-Al ejecutar el siguiente código se leerá todo el conjunto de datos. Si la ejecución se realiza correctamente, los datos se guardarán como un nombre de datos de Pandas al que la variable hace referencia `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.read()
-df.head()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$read() 
-df
-```
-
-* `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
-
-#### Leer desde un conjunto de datos en [!DNL Python]/R con paginación
-
-Al ejecutar el siguiente código se leerán los datos del conjunto de datos especificado. La paginación se logra limitando y compensando los datos a través de las funciones `limit()` y `offset()` respectivamente. La limitación de datos se refiere al número máximo de puntos de datos que se van a leer, mientras que la compensación se refiere al número de puntos de datos que se deben omitir antes de leer los datos. Si la operación de lectura se ejecuta correctamente, los datos se guardarán como un juego de datos de Pandas al que hace referencia la variable `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.limit(100).offset(10).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$limit(100L)$offset(10L)$read() 
-```
-
-* `{DATASET_ID}`:: Identidad única del conjunto de datos al que se accede
-
-### Leer desde un conjunto de datos en PySpark/[!DNL Spark]/Scala
-
-Con un bloc de notas PySpark o Scala activo abierto, expanda la ficha de **Data Explorer** desde la barra lateral izquierda y haga clic en **Conjuntos** de datos para vista de una lista de conjuntos de datos disponibles. Haga clic con el botón derecho en la lista de conjuntos de datos a la que desea acceder y haga clic en **Explorar datos en el bloc de notas**. Se generan las siguientes celdas de código:
-
-#### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
-
-Con la introducción de Spark 2.4, se proporciona [`%dataset`](#magic) magia personalizada.
-
-```python
-# PySpark 3 (Spark 2.4)
-
-%dataset read --datasetId {DATASET_ID} --dataFrame pd0
-pd0.describe()
-pd0.show(10, False)
-```
-
-#### Scala ([!DNL Spark] 2.4) {#spark2.4}
-
-```scala
-// Scala (Spark 2.4)
-
-// initialize the session
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = SparkSession.builder().master("local").getOrCreate()
-
-val dataFrame = spark.read.format("com.adobe.platform.query")
-    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-    .option("ims-org", sys.env("IMS_ORG_ID"))
-    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
-    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
-    .option("mode", "batch")
-    .option("dataset-id", "{DATASET_ID}")
-    .load()
-dataFrame.printSchema()
-dataFrame.show()
-```
-
->[!TIP]
->
->En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`.
-
-### Uso de la magia de %dataset en los blocs de notas PySpark 3 ([!DNL Spark] 2.4) {#magic}
-
-Con la introducción de [!DNL Spark] 2.4, `%dataset` la magia personalizada se suministra para su uso en los nuevos portátiles PySpark 3 ([!DNL Spark] 2.4) ([!DNL Python] 3 kernel).
-
-**Uso**
-
-`%dataset {action} --datasetId {id} --dataFrame {df}`
-
-**Descripción**
-
-Un comando [!DNL Data Science Workspace] mágico personalizado para leer o escribir un conjunto de datos desde un [!DNL Python] portátil ([!DNL Python] núcleo 3).
-
-* **{action}**: Tipo de acción que se realizará en el conjunto de datos. Hay dos acciones disponibles: &quot;lectura&quot; o &quot;escritura&quot;.
-* **—datasetId {id}**: Se utiliza para proporcionar la identificación del conjunto de datos que se va a leer o escribir. Este es un argumento requerido.
-* **—dataFrame {df}**: El juego de datos pandas. Este es un argumento requerido.
-   * Cuando la acción es &quot;leída&quot;, {df} es la variable donde están disponibles los resultados de la operación de lectura del conjunto de datos.
-   * Cuando la acción es &quot;write&quot;, este dataframe {df} se escribe en el conjunto de datos.
-* **—mode (opcional)**: Los parámetros permitidos son &quot;batch&quot; e &quot;interactive&quot;. De forma predeterminada, el modo se establece en &quot;interactivo&quot;. Se recomienda utilizar el modo &quot;por lotes&quot; al leer grandes cantidades de datos.
-
-**Ejemplos**
-
-* **Leer ejemplo**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-* **Ejemplo** de escritura: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
-
-### Consulta de datos mediante [!DNL Query Service] la [!DNL Python]
-
-[!DNL JupyterLab] on [!DNL Platform] permite utilizar SQL en un [!DNL Python] bloc de notas para acceder a los datos a través del servicio [de Consulta de](https://www.adobe.com/go/query-service-home-en)Adobe Experience Platform. El acceso a los datos a través de [!DNL Query Service] puede ser útil para tratar con conjuntos de datos grandes debido a sus tiempos de ejecución superiores. Se debe tener en cuenta que la consulta de datos mediante [!DNL Query Service] el uso tiene un límite de tiempo de procesamiento de diez minutos.
-
-Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de comprender bien la sintaxis [[!DNL Query Service] ](https://www.adobe.com/go/query-service-sql-syntax-en)SQL.
-
-La consulta de datos mediante [!DNL Query Service] requiere que proporcione el nombre del conjunto de datos de destinatario. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el explorador **de datos**. Haga clic con el botón secundario en la lista de conjuntos de datos y haga clic en Datos de **Consulta en el bloc de notas** para generar las dos celdas de código siguientes en el bloc de notas:
-
-
-Para utilizar [!DNL Query Service] en [!DNL JupyterLab], primero debe crear una conexión entre su [!DNL Python] portátil de trabajo y [!DNL Query Service]. Esto se puede lograr ejecutando la primera celda generada.
-
-```python
-qs_connect()
-```
-
-En la segunda celda generada, la primera línea debe definirse antes de la consulta SQL. De forma predeterminada, la celda generada define una variable opcional (`df0`) que guarda los resultados de la consulta como un dataframe de Pandas. <br>El `-c QS_CONNECTION` argumento es obligatorio y le indica al núcleo que ejecute la consulta SQL contra [!DNL Query Service]. Consulte el [apéndice](#optional-sql-flags-for-query-service) para ver una lista de argumentos adicionales.
-
-```python
-%%read_sql df0 -c QS_CONNECTION
-SELECT *
-FROM name_of_the_dataset
-LIMIT 10
-/* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
-```
-
-Se puede hacer referencia a las variables Python directamente dentro de una consulta SQL utilizando sintaxis con formato de cadena y ajustando las variables entre llaves (`{}`), como se muestra en el siguiente ejemplo:
-
-```python
-table_name = 'name_of_the_dataset'
-table_columns = ','.join(['col_1','col_2','col_3'])
-```
-
-```python
-%%read_sql demo -c QS_CONNECTION
-SELECT {table_columns}
-FROM {table_name}
-```
-
-### Filtrar datos de ExperienceEvent en [!DNL Python]/R
-
-Para acceder y filtrar un conjunto de datos de ExperienceEvent en un bloc de notas [!DNL Python] o R, debe proporcionar el ID del conjunto de datos (`{DATASET_ID}`) junto con las reglas de filtro que definen un intervalo de tiempo específico mediante operadores lógicos. Cuando se define un intervalo de tiempo, se ignora cualquier paginación especificada y se considera todo el conjunto de datos.
-
-A continuación se describe una lista de los operadores de filtrado:
-
-* `eq()`: Equal to
-* `gt()`: Greater than
-* `ge()`: Greater than or equal to
-* `lt()`: Less than
-* `le()`: Less than or equal to
-* `And()`:: Operador AND lógico
-* `Or()`:: Operador lógico OR
-
-Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.\
-    where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
-    And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
-).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$
-    where(dataset_reader["timestamp"]$gt("2019-01-01 00:00:00")$
-    And(dataset_reader["timestamp"]$lt("2019-12-31 23:59:59"))
-)$read()
-```
-
-### Filtrar datos de ExperienceEvent en PySpark/[!DNL Spark]
-
-El acceso y filtrado de un conjunto de datos de ExperienceEvent en un bloc de notas de PySpark o Scala requiere que proporcione la identidad del conjunto de datos (`{DATASET_ID}`), la identidad IMS de su organización y las reglas de filtro que definen un intervalo de tiempo específico. Un intervalo de tiempo de filtrado se define mediante la función `spark.sql()`, donde el parámetro de función es una cadena de consulta SQL.
-
-Las siguientes celdas filtran un conjunto de datos de ExperienceEvent a datos que existen exclusivamente entre el 1 de enero de 2019 y el 31 de diciembre de 2019.
-
-#### PySpark 3 ([!DNL Spark] 2.4) {#pyspark3-spark2.4}
-
-```python
-# PySpark 3 (Spark 2.4)
-
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.getOrCreate()
-
-%dataset read --datasetId {DATASET_ID} --dataFrame df
-
-df.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timepd.show()
-```
-
-#### Scala ([!DNL Spark] 2.4) {#scala-spark}
-
-```scala
-// Spark (Spark 2.4)
-
-// Turn off extra logging
-import org.apache.log4j.{Level, Logger}
-Logger.getLogger("org").setLevel(Level.OFF)
-Logger.getLogger("com").setLevel(Level.OFF)
-
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
-  .master("local")
-  .getOrCreate()
-
-// Stage Exploratory
-val dataSetId: String = "{DATASET_ID}"
-val orgId: String = sys.env("IMS_ORG_ID")
-val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
-val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
-val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
-val mode: String = "batch"
-
-var df = spark.read.format("com.adobe.platform.query")
-  .option("user-token", userToken)
-  .option("ims-org", orgId)
-  .option("api-key", clientId)
-  .option("mode", mode)
-  .option("dataset-id", dataSetId)
-  .option("service-token", serviceToken)
-  .load()
-df.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timedf.show()
-```
-
->[!TIP]
->
->En Scala, puede utilizar `sys.env()` para declarar y devolver un valor desde dentro `option`. Esto elimina la necesidad de definir variables si sabe que sólo se van a usar una sola vez. El siguiente ejemplo toma `val userToken` del ejemplo anterior y lo declara en línea dentro de `option` como alternativa:
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+Para obtener más información sobre cada uno de los blocs de notas compatibles y cómo utilizarlos, visite la guía para desarrolladores de acceso [a datos de blocs de notas de](./access-notebook-data.md) Jupyterlab. Esta guía se centra en cómo utilizar los blocs de notas de JupyterLab para acceder a sus datos, incluida la lectura, escritura y consulta de datos. La guía de acceso a datos también contiene información sobre la cantidad máxima de datos que puede leer cada bloc de notas compatible.
 
 ## Bibliotecas admitidas {#supported-libraries}
 
@@ -619,7 +252,7 @@ timedf.show()
 | Biblioteca | Versión |
 | :------ | :------ |
 | portátil | 6.0.0 |
-| solicitudes | 2.22.0 |
+| genere | 2.22.0 |
 | tríptico | 4.0.0 |
 | folium | 0.10.0 |
 | ipywidgets | 7.5.1 |
@@ -682,7 +315,7 @@ timedf.show()
 | r-lubridate | 1.7.4 |
 | r-randomforest | 4.6_14 |
 | r-tidyverse | 1.2.1 |
-| r-tree | 1.0_39 |
+| wora | 1.0_39 |
 | pymongo | 3.8.0 |
 | pyarrow | 0.14.1 |
 | boto3 | 1.9.199 |
@@ -699,7 +332,7 @@ timedf.show()
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
 | nodejs | 12.3.0 |
-| mock | 3.0.5 |
+| snm | 3.0.5 |
 | ipympl | 0.3.3 |
 | fonts-anacond | 1.0 |
 | psycopg2 | 2.8.3 |
@@ -731,20 +364,8 @@ timedf.show()
 | elástico | 4.0.30.44 |
 | py-xgboox | 0.60 |
 | opencv | 3.1.0 |
-| moto | 0.8.0 |
+| pyarrow | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-almacenamiento-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
 | mkl-rt | 11.1 |
-
-## Indicadores SQL opcionales para [!DNL Query Service] {#optional-sql-flags-for-query-service}
-
-Esta tabla describe los indicadores SQL opcionales para los que se puede utilizar [!DNL Query Service].
-
-| **Indicador** | **Descripción** |
-| --- | --- |
-| `-h`, `--help` | Muestre el mensaje de ayuda y salga. |
-| `-n`, `--notify` | Alternar la opción para notificar los resultados de la consulta. |
-| `-a`, `--async` | El uso de este indicador ejecuta la consulta asincrónicamente y puede liberar el núcleo mientras la consulta se está ejecutando. Tenga cuidado al asignar resultados de consulta a variables, ya que podría no estar definida si la consulta no se ha completado. |
-| `-d`, `--display` | El uso de este indicador evita que se muestren los resultados. |
-
