@@ -5,9 +5,9 @@ title: Configuración de un flujo de datos para un conector por lotes de almacen
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [[!DNL Perfil del cliente en tiempo real de]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que tenga una cuenta de almacenamiento en la nube establecida. Encontrará una lista de tutoriales para crear distintas cuentas de almacenamiento en la nube en la interfaz de usuario en la descripción general [de los conectores](../../../../home.md)de origen.
 
@@ -88,6 +88,10 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccio
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 En función de sus necesidades, puede elegir asignar los campos directamente o utilizar funciones de asignador para transformar los datos de origen para derivar valores calculados o calculados. Para obtener más información sobre la asignación de datos y las funciones del asignador, consulte el tutorial sobre la [asignación de datos CSV a campos](../../../../../ingestion/tutorials/map-a-csv-file.md)de esquema XDM.
+
+>[!TIP]
+>
+>[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
 Una vez asignados los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 
