@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía del usuario del servicio de segmentación
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ Seleccione la ficha **[!UICONTROL Examinar]** para ver una lista de todas las de
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Esta vista lista información sobre la definición del segmento, incluido el método de evaluación, la fecha de creación y la fecha de la última modificación.
+Esta vista lista información sobre la definición del segmento, incluido el desglose, la reproducción, el recuento de perfiles, el método de evaluación, la fecha de creación y la fecha de la última modificación.
+
+El desglose muestra un gráfico de barras que describe el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Introducido], [!UICONTROL Realizado]y [!UICONTROL Saliente].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Estado | Descripción |
+| ------ | ----------- |
+| Introducido | Un nuevo perfil dentro del segmento. |
+| Realizado | Un perfil existente que se ha mantenido dentro del segmento. |
+| Saliendo | Un perfil existente que abandona el segmento. |
+
+La generación representa el porcentaje de perfiles que están cambiando dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo de segmento, mientras que el recuento de perfiles representa el número total de perfiles que califican para el segmento.
 
 El método de evaluación puede ser de flujo continuo o por lotes. Los segmentos de flujo se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan según una programación establecida.
 
