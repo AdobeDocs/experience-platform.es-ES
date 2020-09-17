@@ -5,7 +5,7 @@ title: Servicio de consulta en el bloc de notas de Jupyter
 topic: Tutorial
 description: Adobe Experience Platform le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencia de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de muestra para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
 1. En [[!Experience Platform DNL]](https://platform.adobe.com), desplácese a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Pasos siguientes <!-- omit in toc -->
+## Pasos siguientes
 
 En este tutorial se mostraron algunos casos de uso de muestra para utilizarlos [!DNL Query Service] en [!DNL Jupyter] portátiles. Siga el tutorial [Analizar los datos con Jupyter Notebooks](./analyze-your-data.md) para ver cómo se realizan operaciones similares con el SDK de acceso a datos.
