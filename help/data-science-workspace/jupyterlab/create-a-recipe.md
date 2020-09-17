@@ -5,9 +5,9 @@ title: Creación de una fórmula con blocs de notas Jupyter
 topic: Tutorial
 description: Este tutorial irá a dos secciones principales. En primer lugar, creará un modelo de aprendizaje automático con una plantilla dentro de JupyterLab Notebook. A continuación, ejercerá el flujo de trabajo del bloc de notas a la fórmula dentro de JupyterLab para crear una fórmula dentro de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,11 @@ El [!UICONTROL bloc de notas Generador] de fórmulas le permite ejecutar ejecuci
 >
 >El bloc de notas del Creador de fórmulas admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo es compatible [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Al hacer clic en el bloc de notas del Creador de fórmulas desde el iniciador, el bloc de notas se abrirá en la ficha. La plantilla utilizada en el bloc de notas es la fórmula Python Retail Sales Forecasting (Previsión de ventas minoristas de Python) que también se puede encontrar en [este repositorio público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+Al hacer clic en el bloc de notas del Creador de fórmulas desde el iniciador, el bloc de notas se abre en la ficha. La plantilla utilizada en el bloc de notas es la fórmula Python Retail Sales Forecasting (Previsión de ventas minoristas de Python) que también se puede encontrar en [este repositorio público](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Observará que en la barra de herramientas hay tres acciones adicionales: **[!UICONTROL Tren]**, **[!UICONTROL Puntuación]** y **[!UICONTROL Crear fórmula]**. Estos iconos solo aparecerán en el [!UICONTROL bloc de notas del Generador] de fórmulas. Se hablará de más información sobre estas acciones [en la sección](#training-and-scoring) Formación y puntuación después de crear la fórmula en el bloc de notas.
+Observará que en la barra de herramientas hay tres acciones adicionales: **[!UICONTROL Tren]**, **[!UICONTROL Puntuación]** y **[!UICONTROL Crear fórmula]**. Estos iconos solo aparecen en el [!UICONTROL bloc de notas del Generador] de fórmulas. Se hablará de más información sobre estas acciones [en la sección](#training-and-scoring) Formación y puntuación después de crear la fórmula en el bloc de notas.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
