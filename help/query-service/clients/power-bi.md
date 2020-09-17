@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar con Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Los usuarios de PC pueden realizar la instalación [!DNL Power BI] desde [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
 
-## Configurar [!DNL Power BI]
+## Set up [!DNL Power BI]
 
 Una vez [!DNL Power BI] instalado, debe configurar los componentes necesarios para admitir el conector PostgreSQL. Siga estos pasos:
 
@@ -54,7 +54,7 @@ Después de realizar estos pasos preparatorios, puede conectarse [!DNL Power BI]
 SELECT web.webPageDetails.name AS Page_Name, 
 SUM(web.webPageDetails.pageviews.value) AS Page_Views 
 FROM _TABLE_ 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=11 AND _ACP_DAY=20 
+WHERE TIMESTAMP >= to_timestamp('2018-11-20')
 GROUP BY web.webPageDetails.name 
 ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
 LIMIT 10
