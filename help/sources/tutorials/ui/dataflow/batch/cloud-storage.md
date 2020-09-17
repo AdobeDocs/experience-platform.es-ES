@@ -5,9 +5,9 @@ title: Configuración de un flujo de datos para un conector por lotes de almacen
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,15 @@ En función de sus necesidades, puede elegir asignar los campos directamente o u
 >
 >[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
-Una vez asignados los datos de origen, seleccione **[!UICONTROL Siguiente]**.
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Seleccione los datos **[!UICONTROL de]** Previsualización para ver los resultados de asignación de hasta 100 filas de datos de muestra del conjunto de datos seleccionado.
+
+Durante la previsualización, se da prioridad a la columna de identidad como primer campo, ya que es la información clave necesaria para validar los resultados de la asignación.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+Una vez asignados los datos de origen, seleccione **[!UICONTROL Cerrar]**.
 
 ## Programar ejecuciones de ingestión
 
