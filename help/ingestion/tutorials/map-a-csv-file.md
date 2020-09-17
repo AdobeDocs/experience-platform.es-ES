@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Asignación de un archivo CSV a un esquema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1350'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,10 @@ La sección Datos **[!UICONTROL de]** ejemplo aparece una vez cargado el archivo
 
 Aparece el paso **[!UICONTROL Asignación]** . Las columnas del archivo CSV se muestran en Campo **** de origen, con sus correspondientes campos de esquema XDM en Campo **[!UICONTROL de]** Destinatario. Los campos de destinatario no seleccionados están delineados en rojo. Puede utilizar la opción de campos de filtro para reducir la lista de los campos de origen disponibles.
 
+>[!TIP]
+>
+>[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+
 Para asignar una columna CSV a un campo XDM, seleccione el icono de esquema junto al campo de destinatario correspondiente de la columna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ Aparece la ventana **[!UICONTROL Seleccionar esquema]** . Aquí puede desplazars
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-La pantalla **[!UICONTROL Asignación]** vuelve a aparecer y el campo XDM seleccionado aparece ahora en Campo **** Destinatario.
+Después de completar los pasos para los campos de origen sin asignar restantes, la pantalla **[!UICONTROL Asignación]** vuelve a aparecer con el campo XDM seleccionado que aparece ahora en Campo **[!UICONTROL de]** Destinatario.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Si no desea asignar una columna CSV concreta, puede eliminar la asignación haciendo clic en el icono **** Eliminar situado junto al campo destinatario. También puede eliminar todas las asignaciones seleccionando el botón **** Borrar todas las asignaciones.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-Si desea agregar una nueva asignación, seleccione **[!UICONTROL Añadir nueva asignación]** en la parte superior de la lista Campo **[!UICONTROL de]** origen.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Al asignar campos, también puede incluir funciones para calcular valores en función de los campos de origen de entrada. Consulte la sección de funciones [de](#mapping-functions) asignación del apéndice para obtener más información.
 
@@ -89,7 +85,7 @@ Los campos calculados permiten crear valores en función de los atributos del es
 
 Seleccione el botón **[!UICONTROL Añadir campo]** calculado para continuar.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 Aparece el panel **[!UICONTROL Crear campo]** calculado. El cuadro de diálogo izquierdo contiene los campos, las funciones y los operadores admitidos en los campos calculados. Seleccione una de las fichas para agregar funciones, campos o operadores al editor de expresiones en inicio.
 
