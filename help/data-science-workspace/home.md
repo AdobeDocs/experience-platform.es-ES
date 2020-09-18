@@ -5,9 +5,9 @@ title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con el área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ A medida que navega, utilice R [!DNL Python]o Scala con el host integrado [!DNL 
 
 Como parte del flujo de trabajo de exploración de datos, también puede ingestar datos nuevos o utilizar funciones existentes para ayudar en la preparación de datos.
 
-### Creación  
+### Creación
 
 Con [!DNL Data Science Workspace], usted decide cómo desea crear las fórmulas.
 
@@ -196,7 +196,7 @@ A medida que imparte formación a sus modelos, se generan ejecuciones de formaci
 
 ![](./images/home/evaluation_metrics.png)
 
-Visite [esta sección](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) para ver tutoriales sobre cómo entrenar y evaluar modelos en [!DNL Data Science Workspace].
+Visite el tutorial de la [API](./models-recipes/train-evaluate-model-api.md) o la [interfaz de usuario](./models-recipes/train-evaluate-model-ui.md) sobre cómo entrenar y evaluar modelos en [!DNL Data Science Workspace].
 
 ### Operacionalizar el modelo
 
@@ -206,7 +206,7 @@ Un servicio inteligente publicado se puede configurar para formarse automáticam
 
 ## Pasos siguientes
 
-[!DNL Data Science Workspace] ayuda a optimizar y simplificar el flujo de trabajo de la ciencia de datos, desde la recopilación de datos hasta los algoritmos y los servicios inteligentes, para los científicos de datos de todos los niveles de habilidades. Con las herramientas sofisticadas [!DNL Data Science Workspace] que proporciona, puede acortar considerablemente el tiempo de los datos a las perspectivas.
+[!DNL Data Science Workspace] ayuda a optimizar y simplificar el flujo de trabajo de la ciencia de datos, desde la recopilación de datos hasta los algoritmos hasta los servicios inteligentes para los científicos de datos de todos los niveles de habilidades. Con las herramientas sofisticadas [!DNL Data Science Workspace] que proporciona, puede acortar considerablemente el tiempo de los datos a las perspectivas.
 
 Lo que es más importante, [!DNL Data Science Workspace] pone las capacidades de optimización algorítmica y ciencia de datos de la plataforma de marketing líder del Adobe en manos de los científicos de datos empresariales. Por primera vez, las empresas pueden incorporar algoritmos propios a la plataforma, aprovechando las potentes capacidades de aprendizaje automático y de IA del Adobe para ofrecer experiencias de cliente altamente personalizadas a gran escala.
 
