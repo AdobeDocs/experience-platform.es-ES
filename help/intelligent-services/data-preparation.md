@@ -5,9 +5,9 @@ title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 description: 'Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los datasets que se utilizan en Servicios inteligentes] deben cumplir con el esquema XDM de Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 1%
 
 ---
@@ -238,7 +238,7 @@ Este campo contiene información relacionada con actividades de marketing que es
 
 Para obtener información completa acerca de cada uno de los subcampos requeridos para `xdm:productListItems`, consulte la especificación de [chechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) de mercadotecnia.
 
-## Asignación e ingesta de datos (#mapping)
+## Asignación e ingesta de datos {#mapping}
 
 Una vez que haya determinado si los datos de los eventos de mercadotecnia se pueden asignar al esquema de CEE, el siguiente paso es determinar en qué datos se van a importar [!DNL Intelligent Services]. Todos los datos históricos utilizados en [!DNL Intelligent Services] deben estar dentro del período mínimo de cuatro meses de datos, más el número de días previsto como período retroactivo.
 
