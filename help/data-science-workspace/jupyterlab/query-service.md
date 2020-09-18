@@ -5,7 +5,7 @@ title: Servicio de consulta en el bloc de notas de Jupyter
 topic: Tutorial
 description: Adobe Experience Platform le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencia de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de muestra para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
+source-git-commit: f1af460ca139d6105e8e6bbbf62809d72ef730ee
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - [[!Modelo de datos de experiencia DNL (XDM) y sistema XDM]](../../xdm/home.md)
    - [[!Servicio de Consulta DNL]](../../query-service/home.md)
    - [[!Sintaxis SQL del servicio de Consulta DNL]](../../query-service/sql/overview.md)
-   - [Adobe Analytics]
+   - Adobe Analytics
 
 ## Acceso [!DNL JupyterLab] y [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
