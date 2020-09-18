@@ -5,9 +5,9 @@ title: Tutoriales de Área de trabajo de Data Science
 topic: tutorial
 description: Adobe Experience Platform Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de los datos. Integrado en Adobe Experience Platform, Área de trabajo de ciencia de datos le ayuda a realizar predicciones con sus recursos de contenido y datos en las soluciones de Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,18 @@ Para obtener más información y obtener los valores necesarios para realizar op
 - Obtenga acceso y comprenda la [!DNL JupyterLab] interfaz.
 - Comprender las celdas de código y los núcleos disponibles dentro de [!DNL JupyterLab].
 - Comprender la configuración de la GPU y del servidor de memoria en [!DNL Python]/R.
-- Leer y consulta [!DNL Platform] de datos con portátiles.
-- Comprender los límites de datos del bloc de notas.
 
 Para obtener más información, visite la guía [del usuario de](../data-science-workspace/jupyterlab/overview.md)JupyterLab.
+
+## Acceso a datos en equipos portátiles JupyterLab
+
+Actualmente, JupyterLab en Área de trabajo de ciencia de datos admite portátiles para [!DNL Python], R, PySpark y Scala. Cada núcleo soportado proporciona funcionalidades integradas que le permiten leer datos de la Plataforma desde un conjunto de datos dentro de un bloc de notas. Sin embargo, la compatibilidad con la paginación de datos está limitada a los blocs de notas [!DNL Python] y R. Esta guía se centra en cómo utilizar los portátiles JupyterLab para acceder a sus datos.
+
+**Esta guía le ayudará a:**
+- Leer, escribir y consulta de datos de la plataforma mediante portátiles Python, R, PySpark o Scala.
+- Comprenda las limitaciones de lectura de cada tipo de bloc de notas.
+
+Para obtener más información, visite la guía para desarrolladores de acceso a datos de [JupyterLab](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Empaquetar archivos de origen para la creación de [!DNL Docker] fórmulas
 
