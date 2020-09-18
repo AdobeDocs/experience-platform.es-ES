@@ -2,9 +2,9 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
-user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
+user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 11%
@@ -48,7 +48,7 @@ ht-degree: 11%
          * [Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
          * [Extensión Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-         * [Destino del cliente de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
+         * [Coincidencia de clientes de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extensión gtag de Google](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extensión de etiqueta de LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
@@ -111,8 +111,8 @@ ht-degree: 11%
          * [Visión general de los destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-         * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Destinos de encuesta {#survey-destinations}
+         * [Vídeo de Facebook](/help/rtcdp/destinations/facebook-destination.md)
+      * Costos de encuesta {#survey-destinations}
          * [Introducción a los destinos de encuesta](/help/rtcdp/destinations/survey-destinations.md)
          * [Extensión Foresee](/help/rtcdp/destinations/foresee-extension.md)
          * [Extensión InMoment](/help/rtcdp/destinations/inmoment-extension.md)
