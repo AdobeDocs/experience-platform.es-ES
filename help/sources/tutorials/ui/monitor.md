@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Supervisión de cuentas y flujos de datos
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 0%
+source-wordcount: '1097'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,18 @@ Se puede acceder a los flujos de datos directamente desde la página **[!UICONTR
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Aparece una lista de flujos de datos existentes. En esta página hay una lista de flujos de datos visualizables, incluida información sobre su origen, nombre de usuario, número de flujos de datos y estado. Seleccione el icono del canal en la parte superior izquierda para ordenar.
+Aparece una lista de flujos de datos existentes. En esta página hay una lista de flujos de datos visualizables, incluida información sobre su origen, nombre de usuario, número de flujos de datos y estado.
+
+Consulte la siguiente tabla para obtener más información sobre los estados:
+
+| Estado | Descripción |
+| ------ | ----------- |
+| Habilitado | El `Enabled` estado indica que un flujo de datos está activo y que está invirtiendo datos según la programación que se proporcionó. |
+| Desactivado | El estado `Disabled` indica que un flujo de datos está inactivo y no está invirtiendo ningún dato. |
+| Procesamiento | El estado `Processing` indica que un flujo de datos aún no está activo. Este estado suele encontrarse inmediatamente después de crear un nuevo flujo de datos. |
+| Error | El `Error` estado indica que se ha interrumpido el proceso de activación de un flujo de datos. |
+
+Seleccione el icono del canal en la parte superior izquierda para ordenar.
 
 ![lista de flujos de datos](../../images/tutorials/monitor/dataflows-list.png)
 
