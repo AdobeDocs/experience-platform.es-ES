@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Guía de solución de problemas de Perfiles de clientes en tiempo real
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 0%
@@ -26,15 +25,15 @@ La siguiente es una lista de respuestas a las preguntas más frecuentes sobre el
 
 Perfil acepta datos de **registros** y de series **** temporales, siempre que los datos en cuestión contengan al menos un valor de identidad que asocie los datos a una persona individual única.
 
-Al igual que todos los servicios de Platform, Perfil requiere que sus datos estén estructurados semánticamente bajo un esquema del Modelo de datos de experiencia (XDM). A su vez, este esquema debe tener una identidad **** principal definida y estar habilitado para su uso en Perfil.
+Al igual que todos los servicios de plataforma, Perfil requiere que sus datos estén estructurados semánticamente bajo un esquema de modelo de datos de experiencia (XDM). A su vez, este esquema debe tener una identidad **** principal definida y estar habilitado para su uso en Perfil.
 
 Si no está familiarizado con XDM, consulte el inicio de la descripción general [de](../xdm/home.md) XDM para obtener más información. A continuación, consulte la guía del usuario de XDM para ver los pasos sobre cómo [establecer campos](../xdm/tutorials/create-schema-ui.md#identity-field) de identidad y [habilitar un esquema para Perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### ¿Dónde se almacenan los datos de Perfil?
 
-Perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de Perfiles&quot;), independiente del Data Lake que contiene otros datos de Platform ingestados.
+Perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de Perfiles&quot;), independiente del Data Lake que contiene otros datos de la plataforma ingerida.
 
-### Si ya he ingerido datos en Platform, ¿puedo hacer que estén disponibles en la tienda de Perfiles?
+### Si ya he ingerido datos en Platform, ¿puedo hacerlos disponibles en la tienda de Perfiles?
 
 Si los datos se han ingerido en un conjunto de datos que no es de Perfil, debe volver a ingerirlos en un conjunto de datos habilitado para Perfil para que estén disponibles en el almacén de Perfiles. Es posible habilitar un conjunto de datos existente para el Perfil, pero los datos que se ingirieron antes de esa configuración aún no aparecerán en el almacén de Perfiles.
 
@@ -48,7 +47,7 @@ Existen varios métodos para ver los datos de Perfil, en función de si utiliza 
 
 Si conoce los ID de las entidades de Perfil a las que desea acceder, puede utilizar el extremo `/entities` (acceso de Perfil) de la API de Perfil para buscar dichas entidades. Consulte la sección sobre [entidades](./api/entities.md) en la guía para desarrolladores para obtener más información.
 
-También puede utilizar la API de servicio de segmentación por Adobe Experience Platform para acceder a los perfiles individuales de clientes que cumplen los requisitos para una suscripción a un segmento. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+También puede utilizar la API de servicio de segmentación de Adobe Experience Platform para acceder a los perfiles individuales de clientes que cumplen los requisitos para una suscripción a un segmento. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Uso de la interfaz de usuario
 
@@ -58,7 +57,7 @@ También puede realizar la vista de una lista de los segmentos en la ficha **[!U
 
 ## Códigos de error
 
-La siguiente es una lista de mensajes de error que puede encontrar al trabajar con la API de Perfil del cliente en tiempo real. Si el error que encuentra no aparece en la lista, puede encontrarlo en la guía [general de solución de problemas de](../landing/troubleshooting.md) Platform.
+La siguiente es una lista de mensajes de error que puede encontrar al trabajar con la API de Perfil del cliente en tiempo real. Si el error que está encontrando no aparece en esta lista, puede encontrarlo en la guía [general de solución de problemas de la](../landing/troubleshooting.md) plataforma.
 
 ### No se pudo buscar el esquema del atributo calculado para la ruta proporcionada
 
@@ -134,7 +133,7 @@ Este error se produce cuando no se encuentra un lote válido al intentar crear u
 }
 ```
 
-Este error se produce cuando el `destinationId` proporcionado en una `POST /config/projections` solicitud no es válido. Compruebe por Doble que ha proporcionado un ID de destino válido antes de intentarlo de nuevo. Para crear un nuevo destino, siga los pasos descritos en la guía para desarrolladores de [Perfil](./api/edge-projections.md#create-a-destination).
+Este error se produce cuando el `destinationId` proporcionado en una `POST /config/projections` solicitud no es válido. Compruebe por doble que ha proporcionado un ID de destino válido antes de intentarlo de nuevo. Para crear un nuevo destino, siga los pasos descritos en la guía para desarrolladores de [Perfil](./api/edge-projections.md#create-a-destination).
 
 ### Tipo de medio no admitido
 
@@ -146,7 +145,7 @@ Este error se produce cuando el `destinationId` proporcionado en una `POST /conf
 }
 ```
 
-Este error se produce al enviar una solicitud de POST o PUT con un encabezado Content-Type no válido. Compruebe por Doble que está proporcionando un valor de tipo de contenido válido para el punto final que está utilizando.
+Este error se produce al enviar una solicitud de POST o PUT con un encabezado Content-Type no válido. Compruebe por doble que está proporcionando un valor de tipo de contenido válido para el punto final que está utilizando.
 
 La mayoría de los extremos de Perfil aceptan &quot;application/json&quot; para el encabezado Content-Type, con las siguientes excepciones:
 
