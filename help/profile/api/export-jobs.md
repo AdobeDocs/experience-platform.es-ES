@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 'Trabajos de exportación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -22,7 +21,7 @@ Este documento proporciona instrucciones paso a paso para crear y administrar tr
 >
 >Esta guía cubre el uso de trabajos de exportación en el [!DNL Profile API]. Para obtener información sobre cómo administrar los trabajos de exportación para el servicio de segmentación de Adobe Experience Platform, consulte la guía sobre los trabajos de [exportación en la API](../../profile/api/export-jobs.md)de segmentación.
 
-Además de crear un trabajo de exportación, también puede acceder a [!DNL Profile] los datos mediante el `/entities` punto final, también conocido como &quot;[!DNL Profile Access]&quot;. Consulte la guía de extremo de [entidades](./entities.md) para obtener más información. Para ver los pasos sobre cómo acceder a [!DNL Profile] los datos mediante la interfaz de usuario, consulte la guía [del](../ui/user-guide.md)usuario.
+Además de crear un trabajo de exportación, también puede acceder a [!DNL Profile] los datos mediante el `/entities` punto final, también conocido como &quot;[!DNL Profile Access]&quot;. See the [entities endpoint guide](./entities.md) for more information. Para ver los pasos sobre cómo acceder a [!DNL Profile] los datos mediante la interfaz de usuario, consulte la guía [del](../ui/user-guide.md)usuario.
 
 ## Primeros pasos
 
