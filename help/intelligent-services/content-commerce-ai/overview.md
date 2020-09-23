@@ -1,17 +1,23 @@
 ---
 keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
-solution: Experience Cloud; Intelligent Services
+solution: Experience Cloud
 title: Información general sobre Content and Commerce AI
 topic: Content and Commerce AI
 description: Content and Commerce AI es un conjunto de servicios de AI que le permite extraer funciones inteligentes de su contenido, organizar, optimizar el flujo de contenido y ofrecer a sus clientes experiencias más impactantes y personalizadas.
 translation-type: tm+mt
-source-git-commit: fe887d19f936bcf38e5e639a23693f616af5204d
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
+
+<!--
+
+NOTE to writer: "Intelligent Services" is not a valid solution value. Log a UGP bug if you think it should be added.
+
+-->
 
 # Información general sobre Content and Commerce AI
 
