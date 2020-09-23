@@ -5,9 +5,9 @@ title: Configurar un flujo de datos para un conector de base de datos en la inte
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de base de datos.
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,11 @@ Para ingestar datos en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuev
 
 Puede adjuntar un campo de esquema introduciendo un nombre de esquema en la barra de búsqueda **[!UICONTROL Seleccionar esquema]** . También puede seleccionar el icono desplegable para ver una lista de esquemas existentes. También puede seleccionar Búsqueda **** avanzada para acceder a la pantalla de esquemas existentes, incluidos sus respectivos detalles.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+Durante este paso, puede habilitar el conjunto de datos [!DNL Real-time Customer Profile] y crear una vista holística de los atributos y comportamientos de una entidad. Se incluirán los datos de todos los conjuntos de datos habilitados [!DNL Profile] y se aplicarán los cambios al guardar el flujo de datos.
+
+Alterne el botón **[!UICONTROL Perfil dataset]** para habilitar el conjunto de datos de destinatario para [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
 Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccione el esquema que desee aplicar al nuevo conjunto de datos y haga clic en **[!UICONTROL Finalizado]**.
 
