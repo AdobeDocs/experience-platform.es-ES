@@ -5,9 +5,9 @@ title: Configuración de un flujo de datos para un conector por lotes de almacen
 topic: overview
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ Aparece el cuadro de diálogo **[!UICONTROL Seleccionar conjunto de datos]** . B
 
 Para ingestar datos en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto]** de datos e introduzca un nombre y una descripción para el conjunto de datos en los campos proporcionados. Para agregar un esquema, puede introducir un nombre de esquema existente en el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . También puede seleccionar la búsqueda **[!UICONTROL avanzada de]** Esquema para buscar un esquema adecuado.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+Durante este paso, puede habilitar el conjunto de datos [!DNL Real-time Customer Profile] y crear una vista holística de los atributos y comportamientos de una entidad. Se incluirán los datos de todos los conjuntos de datos habilitados [!DNL Profile] y se aplicarán los cambios al guardar el flujo de datos.
+
+Alterne el botón **[!UICONTROL Perfil dataset]** para habilitar el conjunto de datos de destinatario para [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccione el esquema que desea aplicar al nuevo conjunto de datos y, a continuación, seleccione **[!UICONTROL Listo]**.
 
