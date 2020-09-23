@@ -5,9 +5,9 @@ title: Segmentación multientidad
 topic: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos de Perfil con datos adicionales basados en productos, almacenes u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de Perfil.
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,16 @@ La creación de un segmento de varias entidades primero requiere definir las rel
 
 ### Definir relaciones
 
-La definición de relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) es una parte integral de la creación de segmentos de varias entidades. Este proceso se puede realizar mediante la API del Registro de Esquemas o el Editor de Esquemas. Para ver los pasos detallados que muestran cómo definir una relación entre dos esquemas, elija uno de los siguientes tutoriales:
+La definición de relaciones dentro de la estructura de los esquemas del Modelo de datos de experiencia (XDM) es una parte integral de la creación de segmentos de varias entidades. Para las relaciones, el campo del destino debe marcarse como la identidad principal de ese esquema. Una identidad solo se puede marcar en cadenas y no en matrices. Además, las relaciones no necesariamente tienen que ser una a una, ya que puede conectar perfiles y eventos de experiencia a varios destinos.
+
+La definición de relaciones se puede realizar mediante la API del Registro de Esquemas o el Editor de Esquemas. Para ver los pasos detallados que muestran cómo definir una relación entre dos esquemas, elija uno de los siguientes tutoriales:
 
 * [Definición de una relación entre dos esquemas mediante la API](../xdm/tutorials/relationship-api.md)
 * [Definición de una relación entre dos esquemas mediante la interfaz de usuario del Editor de Esquemas](../xdm/tutorials/relationship-ui.md)
 
 ### Crear un segmento de varias entidades
 
-Una vez definidas las relaciones XDM necesarias, puede empezar a crear un segmento de varias entidades. Este proceso se puede realizar mediante la API de segmentación o la interfaz de usuario del Generador de segmentos. Para obtener más información, elija una de las siguientes guías:
+Una vez definidas las relaciones XDM necesarias, puede empezar a crear un segmento de varias entidades. Esto se puede hacer mediante la API de segmentación o la interfaz de usuario del Generador de segmentos. Para obtener más información, elija una de las siguientes guías:
 
 * [Creación de un segmento mediante la API de segmentación](./tutorials/create-a-segment.md)
 * [Creación de un segmento mediante la interfaz de usuario del Generador de segmentos](./ui/overview.md)
