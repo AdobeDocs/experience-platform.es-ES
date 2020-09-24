@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: Trabajar con el tiempo de ejecución del servicio de decisiones mediante API
 topic: tutorial
+type: Tutorial
 description: 'Este documento proporciona un tutorial para trabajar con los servicios de tiempo de ejecución de Decisioning Service mediante las API de Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
