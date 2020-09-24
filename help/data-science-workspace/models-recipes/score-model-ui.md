@@ -2,10 +2,11 @@
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Puntuación de un modelo (IU)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 'La puntuación en Adobe Experience Platform Data Science Workspace se puede conseguir mediante la incorporación de datos de entrada a un modelo ya existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote. '
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
