@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriales sobre administración de datos y privacidad
 topic: tutorial
+type: Tutorial
 description: Este documento proporciona una visión general de los diferentes tutoriales disponibles relacionados con Adobe Experience Platform Data Governance y Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
