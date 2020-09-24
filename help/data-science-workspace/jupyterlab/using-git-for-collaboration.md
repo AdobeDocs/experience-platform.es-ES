@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;Git;Github
 solution: Experience Platform
 title: Colaborar en JupyterLab mediante Git
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Git es un sistema de control de versiones distribuido para rastrear los cambios en el código fuente durante el desarrollo de software. Git está preinstalado dentro del entorno de JupyterLab de Área de trabajo de ciencia de datos.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 1%
