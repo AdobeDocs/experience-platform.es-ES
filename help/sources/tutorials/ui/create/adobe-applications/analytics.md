@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Analytics source connector;Ana
 solution: Experience Platform
 title: Creación de un conector de origen de Adobe Analytics en la interfaz de usuario
 topic: overview
+type: Tutorial
 description: En este tutorial se proporcionan pasos para crear un conector de origen de Adobe Analytics en la interfaz de usuario con el fin de incorporar datos de consumo a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
