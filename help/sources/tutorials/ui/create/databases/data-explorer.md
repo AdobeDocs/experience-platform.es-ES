@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data
 solution: Experience Platform
 title: Creación de un conector de origen de Data Explorer de Azure en la interfaz de usuario
 topic: overview
+type: Tutorial
 description: Este tutorial proporciona los pasos para crear un conector de origen de Data Explorer de Azure (en adelante denominado "Data Explorer") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -39,7 +40,7 @@ Para acceder a su [!DNL Data Explorer] cuenta en [!DNL Platform], debe proporcio
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
-| `database` | The name of the [!DNL Data Explorer] database. |
+| `database` | Nombre de la [!DNL Data Explorer] base de datos. |
 | `tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
