@@ -2,10 +2,11 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Formación y evaluación de un modelo (IU)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, se capacita y evalúa al Modelo para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear y adaptar varios modelos a fines específicos con una sola fórmula.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 1%
