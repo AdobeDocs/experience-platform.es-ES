@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics; flow service; update connecti
 solution: Experience Platform
 title: Actualización de la información de conexión mediante la API de servicio de flujo
 topic: overview
+type: Tutorial
 description: En este tutorial se explican los pasos para actualizar la información de conexión, incluido su nombre, descripción y credenciales mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 2%
