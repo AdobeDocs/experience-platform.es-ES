@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Configuración de un flujo de datos para un conector de protocolo en la interfaz de usuario
 topic: overview
+type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Adobe Experience Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante la cuenta de protocolos.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1460'
 ht-degree: 0%
