@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;MariaDB;mariadb
 solution: Experience Platform
 title: Creación de un conector MariaDB mediante la API de servicio de flujo
 topic: overview
+type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar Experience Platform] a MariaDB.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 2%
