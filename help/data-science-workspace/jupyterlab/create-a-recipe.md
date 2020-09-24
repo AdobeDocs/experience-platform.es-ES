@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Creación de una fórmula con blocs de notas Jupyter
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Este tutorial irá a dos secciones principales. En primer lugar, creará un modelo de aprendizaje automático con una plantilla dentro de JupyterLab Notebook. A continuación, ejercerá el flujo de trabajo del bloc de notas a la fórmula dentro de JupyterLab para crear una fórmula dentro de Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
