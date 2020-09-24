@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;marketing automation system;Co
 solution: Experience Platform
 title: Recopilación de datos de automatización de mercadotecnia a través de las API y los conectores de origen
 topic: overview
+type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 1%
