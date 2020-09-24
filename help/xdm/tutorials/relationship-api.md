@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 description: Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante la API del Registro de Esquemas.
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 1%
