@@ -1,11 +1,12 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: Flujo de trabajo de destinos de redes sociales
+type: Tutorial
 seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
