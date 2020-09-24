@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;dataset connection flow servic
 solution: Experience Platform
 title: Creación de una conexión base de datos Experience Platform mediante la API de servicio de flujo
 topic: overview
+type: Tutorial
 description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '718'
 ht-degree: 1%
 
 ---
@@ -42,17 +43,17 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Buscar especificaciones de conexión
 
