@@ -2,10 +2,11 @@
 keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: Optimizar un modelo
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: El marco de perspectivas de modelo proporciona al científico de datos herramientas en el área de trabajo de ciencias de datos para realizar elecciones rápidas e informadas para modelos óptimos de aprendizaje automático basados en experimentos.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -166,6 +167,6 @@ La plantilla [!DNL Sensei Model Insights Framework] admitirá una plantilla pred
 | Clasificación de varias clases | -Matriz de confusión <br>- Para cada clase: <br>- precisión-recuperación <br>- F-score (específicamente F1, F2) | Curva ROC y matriz de confusión |
 | Agrupación (con la verdad del suelo) | - NMI (puntuación de información mutua normalizada), AMI (puntuación de información mutua ajustada)<br>- RI (índice Rand), ARI (índice Rand ajustado)<br>- puntuación de homogeneidad, puntuación de integridad y medida<br>V- FMI (índice Fowlkes-Mallow)<br>- Índice de pureza<br>- Jaccard | Diagrama de clústeres que muestra clústeres y centroides con tamaños de clúster relativos que reflejan los puntos de datos que se incluyen dentro del clúster |
 | Agrupación (sin la verdad del suelo) | - Inercia<br>- Coeficiente<br>de silueta- CHI (índice Calinski-Harabaz)<br>- DBI (índice Davies-Bouldin)<br>- Índice de Dunn | Diagrama de clústeres que muestra clústeres y centroides con tamaños de clúster relativos que reflejan los puntos de datos que se incluyen dentro del clúster |
-| Recomendación | -Precisión media promedio (MAP) <br>-Ganancia acumulativa <br>media descontada normalizada-Clasificación recíproca <br>métrica K | TBD |
+| Recomendación | -Precisión media promedio (MAP) <br>-Ganancia acumulativa <br>media descontada normalizada-Clasificación recíproca <br>métrica K | Por determinar |
 | Casos de uso de TensorFlow | Análisis del modelo TensorFlow (TFMA) | Comparación/visualización del modelo de red neural en profundidad |
 | Otro/mecanismo de captura de errores | Lógica de métrica personalizada (y los correspondientes gráficos de evaluación) definida por el autor del modelo. Gestión de errores correcta en caso de que la plantilla no coincida | Tabla con pares de valor clave para métricas de evaluación |
