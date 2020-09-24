@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;ATS;ats;Azure table storage
 solution: Experience Platform
 title: Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
 topic: overview
+type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar el Almacenamiento de tablas de Azure (en adelante denominado "ATS") al Experience Platform.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 2%
