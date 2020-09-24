@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Esquemas y descriptores XDM
 topic: tutorial
+type: Tutorial
 description: La estandarización y la interoperabilidad son conceptos clave para Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. Los esquemas son la manera estándar de describir los datos en Experience Platform, permitiendo que todos los datos que se ajustan a los esquemas se puedan reutilizar sin conflictos en una organización e incluso compartir entre varias organizaciones.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
