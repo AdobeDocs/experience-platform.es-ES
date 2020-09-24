@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;OData;odata;Generic Open Data 
 solution: Experience Platform
 title: Creación de un conector de origen OData genérico en la interfaz de usuario
 topic: overview
+type: Tutorial
 description: Este tutorial proporciona los pasos para crear un conector de origen genérico de Protocolo de datos abiertos (en lo sucesivo denominado "OData") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 1%
