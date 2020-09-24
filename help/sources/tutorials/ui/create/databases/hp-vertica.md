@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
 title: Creación de un conector de origen HP Vertica en la interfaz de usuario
 topic: overview
+type: Tutorial
 description: Este tutorial proporciona los pasos para crear un conector de origen HP Vertica mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 1%
