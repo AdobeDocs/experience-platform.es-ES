@@ -5,7 +5,7 @@ title: Guía para desarrolladores de SDK
 topic: Overview
 description: El SDK de creación de modelos le permite desarrollar fórmulas de aprendizaje automático personalizadas y tuberías de funciones que se pueden utilizar en Adobe Experience Platform Data Science Workspace, proporcionando plantillas implementables en PySpark y Spark (Scala).
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 1%
@@ -37,14 +37,14 @@ En la tabla siguiente se describen los métodos abstractos de una clase PySpark 
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Carga y devolución de datos de plataforma como un DataFrame de Pandas</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">spark</code>:: Sesión de encendido</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>spark</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -65,13 +65,13 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Sp
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>Carga y devolución de datos de plataforma como marco de datos</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">sparkSession</code>:: Sesión de encendido</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>sparkSession</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -211,14 +211,14 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Py
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataframe</code>:: Datos que se almacenarán en forma de marco de datos</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>dataframe</code>:: Datos que se almacenarán en forma de marco de datos</li>
                 </ul>
             </td>
         </tr>
@@ -239,13 +239,13 @@ En la tabla siguiente se describen los métodos abstractos de una clase [!DNL Sp
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>Recibir datos de salida como marco de datos y almacenarlos en un conjunto de datos de plataforma</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataFrame</code>:: Datos que se almacenarán en forma de marco de datos</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>dataFrame</code>:: Datos que se almacenarán en forma de marco de datos</li>
                 </ul>
             </td>
         </tr>
@@ -413,14 +413,14 @@ La siguiente tabla describe los métodos de clase de una clase de transformador 
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>Toma un conjunto de datos como entrada y genera un nuevo conjunto de datos derivado</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataset</code>:: El conjunto de datos de entrada para la transformación</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>dataset</code>:: El conjunto de datos de entrada para la transformación</li>
                 </ul>
             </td>
         </tr>
@@ -441,13 +441,13 @@ En la tabla siguiente se describen los métodos abstractos de una clase de trans
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>Toma un conjunto de datos como entrada y genera un nuevo conjunto de datos derivado</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataset</code>:: El conjunto de datos de entrada para la transformación</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>dataset</code>:: El conjunto de datos de entrada para la transformación</li>
                 </ul>
             </td>
         </tr>
@@ -472,26 +472,26 @@ En la tabla siguiente se describen los métodos de clase de PySpark FeaturePipel
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>Crear y devolver una tubería de spark que contenga una serie de transformadores de chispa</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Recuperar y devolver mapa de parámetros de las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">sparkSession</code>:: Sesión de encendido</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>sparkSession</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -512,24 +512,24 @@ En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] Feat
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>Crear y devolver una canalización que contenga una serie de transformadores</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Asignación de propiedades de configuración</li>
+                    <li><code>configProperties</code>:: Asignación de propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Recuperar y devolver mapa de parámetros de las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">sparkSession</code>:: Sesión de encendido</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>sparkSession</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -554,53 +554,53 @@ En la tabla siguiente se describen los métodos de clase de PySpark PipelineFact
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>Crear y devolver una tubería de spark que contiene la lógica y el algoritmo para la formación y la puntuación de modelos</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>Devolver una canalización personalizada que contenga la lógica y el algoritmo para entrenar un modelo. Este método no es necesario si se utiliza una canalización de Spark</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataframe</code>:: Conjunto de datos de funciones para entradas de formación</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>dataframe</code>:: Conjunto de datos de funciones para entradas de formación</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>Puntuación mediante el modelo entrenado y devolución de los resultados</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataframe</code>:: Conjunto de datos de entrada para la puntuación</li>
-                    <li><code class=" language-undefined">model</code>:: Un modelo entrenado utilizado para la puntuación</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>dataframe</code>:: Conjunto de datos de entrada para la puntuación</li>
+                    <li><code>model</code>:: Un modelo entrenado utilizado para la puntuación</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Recuperar y devolver mapa de parámetros de las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">sparkSession</code>:: Sesión de encendido</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>sparkSession</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -621,24 +621,24 @@ En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] Pipe
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>Crear y devolver una canalización que contenga la lógica y el algoritmo para la formación y la puntuación de modelos</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Recuperar y devolver mapa de parámetros de las propiedades de configuración</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">sparkSession</code>:: Sesión de encendido</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>sparkSession</code>:: Sesión de encendido</li>
                 </ul>
             </td>
         </tr>
@@ -663,28 +663,28 @@ En la tabla siguiente se describen los métodos de clase de PySpark MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y formación</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">dataframe</code>:: Conjunto de datos de entrada que se va a dividir</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>dataframe</code>:: Conjunto de datos de entrada que se va a dividir</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>Evalúa un modelo capacitado y devuelve los resultados de la evaluación</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:: Referencia automática</li>
-                    <li><code class=" language-undefined">dataframe</code>:: Un marco de datos que consta de datos de prueba y formación</li>
-                    <li><code class=" language-undefined">model</code>:: Un modelo entrenado</li>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>self</code>:: Referencia automática</li>
+                    <li><code>dataframe</code>:: Un marco de datos que consta de datos de prueba y formación</li>
+                    <li><code>model</code>:: Un modelo entrenado</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
                 </ul>
             </td>
         </tr>
@@ -705,26 +705,26 @@ En la tabla siguiente se describen los métodos de clase de un [!DNL Spark] valo
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>Divide el conjunto de datos de entrada en subconjuntos de prueba y formación</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">data</code>:: Conjunto de datos de entrada que se va a dividir</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>data</code>:: Conjunto de datos de entrada que se va a dividir</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Evalúa un modelo capacitado y devuelve los resultados de la evaluación</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:: Propiedades de configuración</li>
-                    <li><code class=" language-undefined">model</code>:: Un modelo entrenado</li>
-                    <li><code class=" language-undefined">data</code>:: Un marco de datos que consta de datos de prueba y formación</li>
+                    <li><code>configProperties</code>:: Propiedades de configuración</li>
+                    <li><code>model</code>:: Un modelo entrenado</li>
+                    <li><code>data</code>:: Un marco de datos que consta de datos de prueba y formación</li>
                 </ul>
             </td>
         </tr>
