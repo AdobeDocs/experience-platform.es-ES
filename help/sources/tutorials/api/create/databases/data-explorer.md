@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Explorer;data explo
 solution: Experience Platform
 title: Creación de un conector de Data Explorer de Azure mediante la API de servicio de flujo
 topic: overview
+type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar la Data Explorer de Azure (en adelante denominada "Data Explorer") a Experience Platform.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 1%
@@ -39,7 +40,7 @@ Para [!DNL Flow Service] conectarse con [!DNL Data Explorer], debe proporcionar 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
-| `database` | The name of the [!DNL Data Explorer] database. |
+| `database` | Nombre de la [!DNL Data Explorer] base de datos. |
 | `tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
@@ -112,7 +113,7 @@ curl -X POST \
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `auth.params.endpoint` | The endpoint of the [!DNL Data Explorer] server. |
-| `auth.params.database` | The name of the [!DNL Data Explorer] database. |
+| `auth.params.database` | Nombre de la [!DNL Data Explorer] base de datos. |
 | `auth.params.tenant` | ID de inquilino único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `auth.params.servicePrincipalId` | ID de principal de servicio único que se utiliza para conectarse a la [!DNL Data Explorer] base de datos. |
 | `auth.params.servicePrincipalKey` | Clave principal de servicio única utilizada para conectarse a la [!DNL Data Explorer] base de datos. |
