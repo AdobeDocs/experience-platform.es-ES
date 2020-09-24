@@ -5,9 +5,9 @@ title: Crear un esquema con el editor de esquemas.
 topic: tutorials
 description: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Para comenzar, seleccione el nombre de la mezcla en la sección **[!UICONTROL Me
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Seleccione **[!UICONTROL Añadir campo]** junto a &quot;[!DNL Loyalty Members]&quot; para crear un nuevo nodo en la estructura. Este nodo (denominado &quot;_inquilinoId&quot; en este ejemplo) representa el ID de inquilino de la organización de IMS, precedido de un guion bajo. La presencia de la ID de inquilino indica que los campos que está agregando están contenidos en la Área de nombres de su organización.
+Seleccione **[!UICONTROL Añadir campo]** junto a &quot;[!DNL Loyalty Members]&quot; para crear un nuevo nodo en la estructura. Este nodo (denominado `_tenantId` en este ejemplo) representa la ID de inquilino de la organización de IMS, precedida por un guion bajo. La presencia de la ID de inquilino indica que los campos que está agregando están contenidos en la Área de nombres de su organización.
 
 En otras palabras, los campos que está agregando son exclusivos de su organización y se van a guardar en el [!DNL Schema Registry] en un área específica a la que solo pueda acceder su organización. Los campos que defina siempre deben agregarse a la Área de nombres del inquilino para evitar conflictos con nombres de otras clases estándar, mezclas, tipos de datos y campos.
 
@@ -236,6 +236,10 @@ El esquema ahora contiene varias mezclas además de los campos proporcionados po
 Si busca un campo específico en el esquema, también puede utilizar la barra de búsqueda para filtrar los campos mostrados por nombre, independientemente de la mezcla en la que se proporcionen.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>La función de búsqueda tiene en cuenta cualquier filtros de mezcla seleccionado al mostrar los campos coincidentes. Si una consulta de búsqueda no muestra los resultados esperados, es posible que tenga que comprobar con doble que no está filtrando ninguna mezcla relevante.
 
 ## Definición de un campo de esquema como campo de identidad {#identity-field}
 
