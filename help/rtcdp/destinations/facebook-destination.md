@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Destino de Facebook
 seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,10 @@ ht-degree: 2%
 
 Active perfiles para sus [!DNL Facebook] campañas para la segmentación, personalización y supresión de audiencias en base a correos electrónicos con hash.
 
+Puede usar este destino para la segmentación de audiencias en [!DNL Facebook’s] varias familias de aplicaciones compatibles con [!DNL Custom Audiences], incluidas [!DNL Facebook], [!DNL Instagram][!DNL Audience Network] y [!DNL Messenger]. La selección de la aplicación con la que quiere ejecutar la campaña se indica en el nivel de colocación de [!DNL Facebook Ads Manager].
+
 ![Destino de Facebook en la interfaz de usuario de CDP en tiempo real](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## Casos de uso
 
@@ -35,7 +38,7 @@ Un minorista en línea quiere llegar a los clientes existentes a través de las 
 ### Caso de uso n.º 2
 
 
-Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y quiere ofrecer a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
+Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
 
 Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando las direcciones de correo electrónico como identificadores.
 
@@ -58,7 +61,7 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
 1. Su cuenta [!DNL Facebook] de usuario debe tener el **[!DNL Manage campaigns]** permiso habilitado para la cuenta de publicidad que planea usar.
-2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador](https://www.facebook.com/business/help/1717412048538897) comercial en la documentación de Facebook para obtener más información.
+2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador](https://www.facebook.com/business/help/1717412048538897) comercial en la documentación de Facebook para obtener más información.
    >[!IMPORTANT]
    >
    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. Es necesario para la integración de [!DNL Adobe Real-time CDP].
