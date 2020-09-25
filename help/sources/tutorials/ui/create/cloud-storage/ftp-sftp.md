@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial proporciona los pasos para crear un conector de origen FTP o SFTP mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -61,9 +61,24 @@ Aparece la página **[!UICONTROL Conectar a SFTP]** . En esta página, puede usa
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus credenciales de FTP o SFTP. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+El conector SFTP proporciona diferentes tipos de autenticación para el acceso. En Autenticación **[!UICONTROL de]** cuenta, seleccione **[!UICONTROL Contraseña]** para utilizar una credencial basada en contraseña.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+También puede seleccionar la clave **[pública]** SSH y conectar su cuenta SFTP mediante una combinación de contenido **[!UICONTROL de clave]** privada y **[!UICONTROL frase de contraseña]**.
+
+>[!IMPORTANT]
+>
+>El conector SFTP admite una clave RSA/DSA OpenSSH. Asegúrese de que el contenido del archivo clave esté en inicio con `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir del formato PPK al formato OpenSSH.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Credencial | Descripción |
+| ---------- | ----------- |
+| Contenido de clave privada | Contenido de clave privada SSH codificada en Base64. La clave privada SSH debe tener el formato OpenSSH. |
+| Frase de contraseña | Especifica la frase de contraseña o la contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido con contraseña, este parámetro debe usarse con la frase de contraseña de PrivateKeyContent como valor. |
 
 ### Cuenta existente
 
