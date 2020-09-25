@@ -6,9 +6,9 @@ title: Creación de un conector de datos de clasificaciones de Adobe Analytics e
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '661'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,8 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
 * [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!Sandboxes DNL]](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+
+El conector de datos de clasificaciones de Analytics requiere que los datos se hayan migrado a la nueva [!DNL Classifications] infraestructura de Adobe Analytics antes de su uso. Para confirmar el estado de migración de sus datos, póngase en contacto con el administrador de éxito de clientes de Adobe.
 
 ## Seleccione las clasificaciones
 
