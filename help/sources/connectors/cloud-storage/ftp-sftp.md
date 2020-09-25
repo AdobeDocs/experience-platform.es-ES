@@ -5,9 +5,9 @@ title: Conector FTP y SFTP
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar un FTP o un servidor STFP a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
+source-git-commit: 2aa6ef66444dbcd397e91e6f3075e020ba963579
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,8 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta a
 - No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
 
 ## Conectar FTP y SFTP a [!DNL Platform]
+
+> [!IMPORTANT]:: Los usuarios deben desactivar la autenticación interactiva por teclado en la configuración del servidor SFTP antes de conectarse. Al deshabilitar la configuración, las contraseñas se pueden introducir manualmente, en lugar de hacerlo a través de un servicio o un programa. Consulte el documento [](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) Componente Pro para obtener más información sobre la autenticación interactiva por teclado.
 
 La siguiente documentación proporciona información sobre cómo conectar un servidor FTP o SFTP a [!DNL Platform] través de las API o la interfaz de usuario:
 
