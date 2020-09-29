@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -111,8 +111,8 @@ ht-degree: 11%
          * [Visión general de los destinos de redes sociales](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flujo de autenticación de destinos de red social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre, extensión](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-         * [Vídeo de Facebook](/help/rtcdp/destinations/facebook-destination.md)
-      * Costos de encuesta {#survey-destinations}
+         * [Destino de Facebook](/help/rtcdp/destinations/facebook-destination.md)
+      * Destinos de encuesta {#survey-destinations}
          * [Introducción a los destinos de encuesta](/help/rtcdp/destinations/survey-destinations.md)
          * [Extensión Foresee](/help/rtcdp/destinations/foresee-extension.md)
          * [Extensión InMoment](/help/rtcdp/destinations/inmoment-extension.md)
