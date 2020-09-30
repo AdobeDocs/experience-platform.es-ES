@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Incorporación de conjuntos de datos
 topic: queries
 type: Tutorial
+description: La unión de conjuntos de datos permite incluir datos de otros conjuntos de datos en la consulta. En este ejemplo se utiliza un conjunto de datos del sistema operativo personalizado para asignar el identificador del sistema operativo al valor del sistema operativo.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 3%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
