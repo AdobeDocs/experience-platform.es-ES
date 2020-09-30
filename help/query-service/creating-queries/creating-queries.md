@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Creación de consultas
 topic: queries
 type: Tutorial
+description: Este documento se vincula a la documentación básica utilizada para crear y comprender consultas en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '131'
 ht-degree: 3%
 
 ---
