@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Aplicar la conformidad de uso de datos para segmentos de audiencia
 topic: tutorial
 type: Tutorial
+description: En este tutorial se explican los pasos para reforzar la compatibilidad del uso de datos con los segmentos de audiencia de Perfil del cliente en tiempo real mediante API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1351'
 ht-degree: 1%
 
 ---
