@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Consultas de muestra
 topic: queries
+description: Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en eventos de experiencia XDM y se ingeryen en Adobe Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el Servicio de Consulta de Adobe Experience Platform utiliza estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
