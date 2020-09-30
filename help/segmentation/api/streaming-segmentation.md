@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segmentación por flujo continuo
 topic: developer guide
+description: Este documento contiene ejemplos de cómo utilizar la segmentación de flujo con la API de segmentación de flujo.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
@@ -90,7 +91,7 @@ La siguiente sección lista ejemplos de definición de segmentos que **no se hab
 
 Además, se aplican algunas directrices al realizar la segmentación de flujo:
 
-| Tipo de consulta | Directrices |
+| Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | La ventana retroactiva está limitada a **siete días**. |
 | Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Solo se permiten pedidos de tiempo simples (antes y después) entre los eventos.</li><li>Los eventos individuales **no se pueden** negar. Sin embargo, toda la consulta **puede** ser anulada.</li></ul> |
