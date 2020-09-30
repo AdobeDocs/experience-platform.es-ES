@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Generar conjuntos de datos a partir de resultados de consulta
 topic: queries
 type: Tutorial
+description: 'El servicio de consulta permite crear conjuntos de datos desde la interfaz de usuario. Después de crear un conjunto de datos, se puede acceder a él como cualquier otro conjunto de datos en el lago de datos y utilizarlo para una variedad de casos de uso. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '305'
 ht-degree: 1%
 
 ---
