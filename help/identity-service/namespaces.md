@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
-description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name<span>@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
+description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '772'
 ht-degree: 4%
 
 ---
