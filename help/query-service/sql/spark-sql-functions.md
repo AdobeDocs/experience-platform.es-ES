@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sp
 solution: Experience Platform
 title: Spark SQL funciones
 topic: spark sql functions
+description: Esta documentación contiene información sobre los ayudantes de Spark SQL que proporcionan las funciones integradas de Spark SQL para ampliar la funcionalidad de SQL.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '4991'
+source-wordcount: '5009'
 ht-degree: 5%
 
 ---
