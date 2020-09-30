@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
 topic: overview
+description: Este documento proporciona información sobre la monitorización de la ingestión por lotes, la gestión de errores de ingestión parcial por lotes, así como una referencia para tipos de ingestión parcial por lotes.
 translation-type: tm+mt
-source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 2%
 
 ---
