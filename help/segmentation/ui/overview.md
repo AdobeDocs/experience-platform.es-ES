@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Segmentation Service;segmentat
 solution: Experience Platform
 title: Guía del usuario del servicio de segmentación
 topic: ui guide
+description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 translation-type: tm+mt
-source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -173,7 +174,7 @@ Encontrará más información sobre la segmentación de flujo en la guía [del u
 >
 >Las infracciones de directiva solo se aplican si está creando un segmento que se ha asignado a un destino.
 
-Una vez creado el segmento, el Gobierno de datos de Adobe Experience Platform analizará el segmento para asegurarse de que no haya infracciones de política dentro del segmento. Consulte la [[!DNL Data Governance] información general](../../data-governance/home.md) para obtener más información.
+Una vez creado el segmento, el Gobierno de datos de Adobe Experience Platform analizará el segmento para asegurarse de que no haya infracciones de política dentro del segmento. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
