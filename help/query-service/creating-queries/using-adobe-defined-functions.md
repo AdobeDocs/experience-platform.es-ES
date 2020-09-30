@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Funciones definidas por Adobe
 topic: queries
 type: Tutorial
+description: 'Este documento cubre las funciones definidas por el Adobe (ADF) para admitir tres funciones clave de actividades de Analytics: sesión, atribución y rutas.'
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 6%
+source-wordcount: '303'
+ht-degree: 5%
 
 ---
 
