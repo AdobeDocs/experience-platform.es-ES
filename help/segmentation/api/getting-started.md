@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Guía para desarrolladores del servicio de segmentación
 topic: developer guide
+description: La siguiente documentación proporciona información adicional que debe conocer para trabajar correctamente con la API de segmentación.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
