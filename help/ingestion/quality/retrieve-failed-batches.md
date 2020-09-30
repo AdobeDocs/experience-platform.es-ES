@@ -2,11 +2,13 @@
 keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Recuperar lotes con errores
-topic: overview
+topic: tutorial
+type: Tutorial
+description: En este tutorial se explican los pasos para recuperar información sobre un lote en el que se ha producido un error al utilizar las API de inserción de datos.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
