@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Definiciones de previsualizaciones y estimaciones
 topic: developer guide
+description: A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación de Adobe Experience Platform para obtener información de nivel de resumen de vista y así asegurarse de aislar la audiencia esperada.
 translation-type: tm+mt
-source-git-commit: 69d173e163720c962d910fa4c1e2491fb1262251
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '777'
 ht-degree: 2%
 
 ---
