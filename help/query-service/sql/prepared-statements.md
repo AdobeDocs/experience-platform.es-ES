@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;pr
 solution: Experience Platform
 title: Declaraciones preparadas
 topic: prepared statements
+description: En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. El servicio de Consulta de Adobe Experience Platform admite las declaraciones preparadas mediante una consulta parametrizada.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 8%
+source-wordcount: '365'
+ht-degree: 9%
 
 ---
 
@@ -85,11 +86,11 @@ La consulta SQL anterior devolverá la siguiente respuesta:
 | id | firstname | lastname | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | París |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
+| 10001 | antoína | dubois | 1967-03-14 | Tokio | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Kenia | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Estocolmo |
 
 Esta consulta SQL se puede parametrizar mediante la siguiente instrucción preparada:
 
@@ -108,10 +109,10 @@ Cuando se llame a esto, verá exactamente los mismos resultados que antes:
 | id | firstname | lastname | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
-| 10002 | kyoko | sakura | 1999-11-26 | botiquín | sexión | Japón |
+| 10001 | antoína | dubois | 1967-03-14 | Nairobi | París | Francia |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Kenia | Kenia |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | rios | duelo |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Una vez que haya terminado de utilizar la instrucción preparada, puede deslocalizarla mediante la siguiente llamada:
