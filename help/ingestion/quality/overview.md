@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: Calidad de la ingestión de datos
 topic: overview
+description: El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingesta por lotes y por flujo continuo en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 6%
+source-wordcount: '304'
+ht-degree: 5%
 
 ---
 
