@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Creación de una conexión de flujo autenticada
 topic: tutorial
 type: Tutorial
+description: La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como el Perfil de clientes en tiempo real y la identidad, diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 2%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 2%
 
 # Creación de una conexión de flujo autenticada
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y orígenes que no son de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokenes de acceso como parte de la solicitud del POST.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokenes de acceso como parte de la solicitud del POST.
 
 ## Primeros pasos
 
