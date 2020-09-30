@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Deduplicación de datos
 topic: queries
 type: Tutorial
+description: Este documento describe ejemplos de consulta de muestra completa y subselección para anular la duplicación de tres casos de uso comunes de ExperienceEvents, compras y métricas.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
