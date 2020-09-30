@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Query service;query service;po
 solution: Experience Platform
 title: Conectar con Postico
 topic: connect
+description: Este documento contiene el vínculo para instalar el cliente de copia de seguridad Postico para el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '22'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
