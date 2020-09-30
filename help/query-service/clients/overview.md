@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Query service;query service;co
 solution: Experience Platform
 title: Conectar clientes al servicio de Consulta
 topic: connect
+description: Este documento explica cómo conectarse al servicio de Consulta desde una variedad de aplicaciones cliente de escritorio y cómo comprobar dichas conexiones.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
