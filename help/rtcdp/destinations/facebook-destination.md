@@ -5,7 +5,7 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -38,7 +38,7 @@ Un minorista en línea quiere llegar a los clientes existentes a través de las 
 ### Caso de uso n.º 2
 
 
-Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
+Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y quiere ofrecer a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
 
 Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando las direcciones de correo electrónico como identificadores.
 
@@ -52,7 +52,7 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 >
 >Los datos enviados a no [!DNL Facebook] deben incluir identidades vinculadas. Usted es responsable de cumplir esta obligación y puede hacerlo asegurándose de que los segmentos seleccionados para la activación no utilicen una opción de vinculación en su política de combinación. Obtenga más información sobre las políticas [de](/help/profile/ui/merge-policies.md)combinación.
 
-### Tipo de activación {#activation-type}
+### Tipo de exportación {#export-type}
 
 **Exportación** de segmentos: está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono, etc.) se usa en el destino de Facebook.
 
