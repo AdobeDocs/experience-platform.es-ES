@@ -5,9 +5,9 @@ seo-title: Destino de publicidades de Google
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 seo-description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Ads] de
 >[!IMPORTANT]
 >
 >Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la funcionalidad [de sincronización de](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID en el servicio de ID de Experience Cloud en el pasado (con Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a CDP en tiempo real de Adobe.
+
+### Tipo de exportación {#export-type}
+
+**Exportación** de segmentos: está exportando todos los miembros de un segmento (audiencia) al destino de Google.
 
 ## Requisitos previos
 
