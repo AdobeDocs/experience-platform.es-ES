@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interact with Experience Cloud services through the Edge Network.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 18%
+source-wordcount: '116'
+ht-degree: 17%
 
 ---
 
@@ -41,6 +41,10 @@ ht-degree: 18%
       * [Envío de datos a Adobe Analytics](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Información general sobre Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
+   * Marco de transparencia y consentimiento de IAB 2.0 {#iab-tcf}
+      * [Información general](solution-specific/iab-tcf/overview.md)
+      * [Integrar con Launch](solution-specific/iab-tcf/with-launch.md)
+      * [Integrar sin Launch](solution-specific/iab-tcf/without-launch.md)
    * Target {#target}
       * [Información general de Target](solution-specific/target/target-overview.md)
       * [Administración de parpadeo](solution-specific/target/flicker-management.md)
