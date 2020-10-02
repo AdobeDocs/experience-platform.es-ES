@@ -5,7 +5,7 @@ seo-title: Destino de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Para promocionar la versión, cargan direcciones de correo electrónico de su ba
 
 Los destinos en Adobe Real-time CDP pueden tener ciertas reglas y obligaciones para los datos enviados o recibidos desde la plataforma de destino. Usted es el responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de administración de datos para ayudarle a administrar algunas de esas obligaciones de uso de datos. [Obtenga más](/help/data-governance/labels/overview.md) información sobre las herramientas y políticas de administración de datos.
 
-## Tipo de activación e identidades {#activation-type}
+## Tipo de exportación e identidades {#export-type}
 
 **Exportación** de segmentos: está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono, etc.) en el [!DNL Google Customer Match] destino.
 
