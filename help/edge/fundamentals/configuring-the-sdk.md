@@ -5,10 +5,10 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -36,7 +36,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | none |
+| Cadena | Sí | ninguna |
 
 El ID de configuración asignado, que vincula el SDK con las cuentas y la configuración correspondientes.  Al configurar varias instancias dentro de una sola página, debe configurar una diferente `edgeConfigId` para cada instancia.
 
@@ -73,7 +73,7 @@ Dominio utilizado para interactuar con servicios de Adobe. Solo se utiliza si ti
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | none |
+| Cadena | Sí | ninguna |
 
 Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias instancias dentro de una página, debe configurar una diferente `orgId` para cada instancia.
 
@@ -103,7 +103,7 @@ Configure esta opción para configurar una llamada de retorno que se llame para 
 
 ## Opciones de privacidad
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
@@ -117,7 +117,7 @@ Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | No | none |
+| Cadena | No | ninguna |
 
 Se utiliza para crear una definición de estilo CSS que oculta las áreas de contenido de la página web mientras se carga contenido personalizado desde el servidor. Si no se proporciona esta opción, el SDK no intenta ocultar ninguna área de contenido mientras se carga el contenido personalizado, lo que podría dar como resultado un &quot;parpadeo&quot;.
 
@@ -135,7 +135,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite la configuración de cookies en función de la calificación de segmentos.
+Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite la configuración de cookies según la calificación de segmentos.
 
 ### `urlDestinationsEnabled`
 
