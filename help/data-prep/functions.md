@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Funciones de asignación
+title: Funciones de preparación de datos
 topic: overview
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 5%
+source-wordcount: '3432'
+ht-degree: 3%
 
 ---
 
 
-# Funciones de asignación
+# Funciones de preparación de datos
 
-Las funciones de asignación se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen.
+Las funciones de preparación de datos se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen.
 
 ## Campos
 
@@ -37,6 +37,10 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Funciones de cadena
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatena las cadenas dadas. | <ul><li>CADENA: Cadenas que se concatenarán.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 | lower /<br>lcase | Convierte una cadena en minúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá a minúsculas.</li></ul> | lower (ENTRADA) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | superior /<br>ucase | Convierte una cadena en mayúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá en mayúscula.</li></ul> | superior(ENTRADA) | top(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HOLA&quot; |
 | split | Divide una cadena de entrada en un separador. | <ul><li>ENTRADA: **Requerido** La cadena de entrada que se va a dividir.</li><li>SEPARADOR: **Requerido** La cadena que se utiliza para dividir la entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Une una lista de objetos mediante el separador. | <ul><li>SEPARADOR: **Requerido** La cadena que se utilizará para unir los objetos.</li><li>OBJETOS: **Requerido** Matriz de cadenas que se unirán.</li></ul> | join(SEPARATOR, [OBJETOS]) | `join(" ", ["Hello", "world"])` | &quot;Hola mundo&quot; |
+| join | Une una lista de objetos mediante el separador. | <ul><li>SEPARADOR: **Requerido** La cadena que se utilizará para unir los objetos.</li><li>OBJETOS: **Requerido** Matriz de cadenas que se unirán.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hola mundo&quot; |
 | lpad | Pade el lado izquierdo de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a añadir.</li><li>AGREGAR: **Requerido** La cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | lpad(ENTRADA, RECUENTO, ADICIÓN) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Pade el lado derecho de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a añadir.</li><li>AGREGAR: **Requerido** La cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | rpad(ENTRADA, RECUENTO, ADICIÓN) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Obtiene los primeros caracteres &quot;n&quot; de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena para la que se obtienen los primeros caracteres &quot;n&quot;.</li><li>RECUENTO: **** RequeridoCaracteres &quot;n&quot; que desea obtener de la cadena.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Funciones de hash
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 1 (SHA-1). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha1(ENTRADA, JUEGO DE ENTRADAS) | sha1(&quot;mi texto&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 256 (SHA-256). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha256(ENTRADA, ENTRADA) | sha256(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 512 (SHA-512). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha512(ENTRADA, JUEGO DE ENTRADAS) | sha512(&quot;mi texto&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Toma una entrada y produce un valor hash mediante MD5. | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII. </li></ul> | md5(ENTRADA, JUEGO DE ENTRADAS) | md5(&quot;mi texto&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 1 (SHA-1). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha1(ENTRADA, JUEGO DE ENTRADAS) | sha1(&quot;mi texto&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 256 (SHA-256). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha256(ENTRADA, ENTRADA) | sha256(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 512 (SHA-512). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha512(ENTRADA, JUEGO DE ENTRADAS) | sha512(&quot;mi texto&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Toma una entrada y produce un valor hash mediante MD5. | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII. </li></ul> | md5(ENTRADA, JUEGO DE ENTRADAS) | md5(&quot;mi texto&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Toma una entrada utiliza un algoritmo de comprobación de redundancia cíclica (CRC) para producir un código cíclico de 32 bits. | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | crc32(ENTRADA, CONJUNTO DE ENTRADAS) | crc32(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### Funciones URL
+
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 | get_url_consulta_str | Devuelve la cadena de consulta de una dirección URL determinada. | <ul><li>URL: **Requerido** La URL desde la que intenta obtener la cadena de consulta.</li><li>ANCLAJE: **Requerido** Determina qué se hará con el anclaje en la cadena de consulta. Puede ser uno de los tres valores: &quot;retener&quot;, &quot;eliminar&quot; o &quot;anexar&quot;.<br><br>Si el valor es &quot;keep&quot;, el anclaje se adjuntará al valor devuelto.<br>Si el valor es &quot;remove&quot;, el anclaje se eliminará del valor devuelto.<br>Si el valor es &quot;append&quot;, el anclaje se devolverá como un valor independiente.</li></ul> | get_url_consulta_str(URL, ANCHOR) | get_url_consulta_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;keep&quot;)<br>get_url_consulta_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_consulta_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### Funciones de fecha y hora
+
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Jerarquías - Objetos
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerido** El objeto del que está intentando encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Jerarquías: matrices
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | fusionarse | Devuelve el primer objeto no nulo de una matriz determinada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea buscar el primer objeto no nulo.</li></ul> | combinación(ENTRADA) | coalesce(null, null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Operadores lógicos
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Dada una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra la clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave que se debe coincidir.</li><li>OPTIONS: **Requerido** Matriz acoplada de pares clave/valor. Opcionalmente, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/D&quot;) | Si el stateCode proporcionado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode proporcionado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode no coincide con lo siguiente, &quot;N/D&quot;. |
@@ -124,12 +152,20 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Agregación
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Devuelve el mínimo de los argumentos dados. Utiliza ordenación natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Devuelve el máximo de los argumentos dados. Utiliza ordenación natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Conversiones de tipo
+
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 ### Funciones JSON
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialice el contenido JSON de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena JSON que se va a deserializar.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Un objeto que representa el JSON. |
 
 ### Operaciones especiales
 
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID seudoaleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c2063333 |
 
 ### Funciones de agente de usuario
+
+>[!NOTE]
+>
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
