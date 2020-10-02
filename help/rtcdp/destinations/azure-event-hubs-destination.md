@@ -5,9 +5,9 @@ seo-title: (Beta) Destino de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,10 @@ Puede crear una conexión saliente en tiempo real con el [!DNL Azure Event Hubs]
 Al utilizar los destinos de flujo continuo, como [!DNL Azure Event Hubs]el, puede transmitir fácilmente eventos de segmentación de alto valor y atributos de perfil asociados a los sistemas que elija.
 
 Por ejemplo, un cliente potencial descargó un documento técnico que los califica en un segmento de &quot;alta propensión a convertir&quot;. Al asignar el segmento en el que se encuentra el cliente potencial al [!DNL Azure Event Hubs] destino, recibirá este evento en [!DNL Azure Event Hubs]. Allí puede emplear un enfoque de &quot;hágalo usted mismo&quot; y describir la lógica empresarial sobre el evento, como piensa que funcionaría mejor con sus sistemas de TI empresariales.
+
+## Tipo de exportación {#export-type}
+
+**Exportación** de perfil: está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo [de activación de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.\
 
 ## Destino de Connect {#connect-destination}
 
