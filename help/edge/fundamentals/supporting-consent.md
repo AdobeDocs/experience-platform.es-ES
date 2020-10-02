@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo admitir las preferencias de consen
 seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Cuando el consentimiento se establece de esta manera, el Perfil Unificado se actualiza con la información de consentimiento. Para que esto funcione, el esquema perfil XDM debe contener la mezcla de privacidad de [Perfil](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). Al enviar eventos, la información de consentimiento de IAB debe agregarse manualmente al objeto xdm de evento. El SDK no incluye automáticamente la información de consentimiento en los eventos. Para enviar la información de consentimiento en eventos, debe agregarse la mezcla [de privacidad de](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) Experience Evento al esquema de evento de experiencia.
+Cuando el consentimiento se establece de esta manera, el Perfil del cliente en tiempo real se actualiza con la información de consentimiento. Para que esto funcione, el esquema perfil XDM debe contener la mezcla de privacidad de [Perfil](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). Al enviar eventos, la información de consentimiento de IAB debe agregarse manualmente al objeto XDM de evento. El SDK no incluye automáticamente la información de consentimiento en los eventos. Para enviar la información de consentimiento en eventos, debe agregarse la mezcla [de privacidad de](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) Experience Evento al esquema de Experience Evento.
 
 ## Envío de ambos estándares en una solicitud
 
