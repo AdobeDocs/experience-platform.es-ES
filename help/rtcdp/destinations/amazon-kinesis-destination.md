@@ -5,9 +5,9 @@ seo-title: Destino de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 seo-description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Por ejemplo, un cliente potencial descargó un documento técnico que los califi
 
 ## Tipo de exportación {#export-type}
 
-**Exportación** de perfil: está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo [de activación de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
+**Basado** en perfiles: está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo [de activación de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
 
 ## Destino de Connect {#connect-destination}
 
