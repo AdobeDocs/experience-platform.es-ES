@@ -5,10 +5,10 @@ title: Extracción de color
 topic: Developer guide
 description: El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 4%
+source-wordcount: '1059'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +36,10 @@ Las entidades con nombre reconocidas por [!DNL Content and Commerce AI] se enume
 | WORK_OF_ART | Títulos de libros, canciones, etc. |
 | LEY | Los documentos designados se convierten en leyes. |
 | IDIOMA | Cualquier idioma con nombre. |
+
+>[!NOTE]
+>
+>Si planea procesar archivos PDF, vaya a las instrucciones para la extracción [de palabras clave](#pdf-extraction) PDF dentro de este documento. Además, la compatibilidad con tipos de archivo adicionales como docx, ppt, amd xml se establece para su lanzamiento en una fecha posterior.
 
 **Formato API**
 
@@ -223,6 +227,139 @@ Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extra
   "error": []
 }
 ```
+
+## EXTRACCIÓN de palabras clave PDF {#pdf-extraction}
+
+El servicio de extracción de palabras clave admite archivos PDF; sin embargo, debe utilizar un nuevo AnalyzerID para archivos PDF y cambiar el tipo de documento a PDF. Consulte el ejemplo siguiente para obtener más información.
+
+**Formato API**
+
+```http
+POST /services/v1/predict
+```
+
+**Solicitud**
+
+La siguiente solicitud extrae palabras clave de un documento PDF en función de los parámetros de entrada proporcionados en la carga útil.
+
+>[!CAUTION]
+>
+>`analyzer_id` determina qué [!DNL Sensei Content Framework] se utiliza. Verifique que dispone de la información adecuada `analyzer_id` antes de realizar su solicitud. Para la extracción de palabras clave PDF, el `analyzer_id` ID es:
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| Propiedad | Descripción | Obligatorio |
+| --- | --- | --- |
+| `analyzer_id` | ID del [!DNL Sensei] servicio en el que se implementa la solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de Content and Commerce AI para configurar un ID personalizado. | Sí |
+| `application-id` | ID de la aplicación creada. | Sí |
+| `data` | Matriz que contiene un objeto JSON con cada objeto de la matriz que representa un documento. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la `data` matriz. Cualquiera de las propiedades restantes que se describen a continuación en esta tabla se puede sobrescribir desde dentro `data`. | Sí |
+| `language` | Idioma de entrada. The default value is `en` (english). | No |
+| `content-type` | Se utiliza para indicar el tipo de contenido de entrada. Esto debe establecerse en `file`. | Sí |
+| `encoding` | Formato de codificación de la entrada. Esto debe establecerse en `pdf`. Más tipos de codificación se configuran para que se admitan en una fecha posterior. | Sí |
+| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
+| `top-N` | Número de resultados que se van a devolver (no puede ser un entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de cualquiera de los límites establecidos. El valor predeterminado de esta propiedad es `0`. | No |
+| `custom` | Parámetros personalizados que se van a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
+| `content-id` | ID única para el elemento de datos que se devuelve en la respuesta. Si no se pasa, se asigna un ID generado automáticamente. | No |
+| `content` | Esto debe establecerse en `file`. | Sí |
+
+**Respuesta**
+
+Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extraídas en la `response` matriz.
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+Para obtener más información y ver un ejemplo sobre el uso de la extracción PDF con instrucciones sobre cómo configurar, implementar e integrar con el servicio de nube de AEM. Visite el repositorio [de github del trabajador de extracción PDF](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI.
 
 ## Apéndice {#appendix}
 
