@@ -5,9 +5,9 @@ seo-title: Destino de Oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 seo-description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia y a las organizaciones B2B a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para enviar datos de segmentos a [!DNL Oracle Eloqua], primero debe [conectar el
 
 ## Tipo de exportación {#export-type}
 
-**Exportación** de perfil: está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo [de activación de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
+**Basado** en perfiles: está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo [de activación de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destino.
 
 ## Conectar al destino {#connect-destination}
 
