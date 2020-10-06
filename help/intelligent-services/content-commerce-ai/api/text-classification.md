@@ -5,9 +5,9 @@ title: Extremo de la API de clasificación de texto
 topic: Developer guide
 description: El servicio de clasificación de texto, cuando se le asigna un fragmento de texto, puede clasificarlo en una o varias etiquetas. La clasificación puede ser de una sola etiqueta, de varias etiquetas o jerárquica.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---
