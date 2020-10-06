@@ -5,7 +5,7 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Todos los esquemas XDM describen datos que pueden clasificarse como registros o 
 
 Tanto los esquemas de registro como de serie temporal contienen un mapa de identidades (`xdm:identityMap`). Este campo contiene la representación de identidad de un sujeto, extraída de campos marcados como &quot;Identidad&quot; como se describe en la siguiente sección.
 
-### [!UICONTROL Identidad]
+### [!UICONTROL Identidad] {#identity}
 
 Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre las identidades de los clientes y los campos que se pueden utilizar para identificar un asunto, independientemente de la procedencia de los datos.
 
