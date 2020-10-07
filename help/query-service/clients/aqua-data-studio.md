@@ -5,7 +5,7 @@ title: Conectar con Aqua Data Studio
 topic: connect
 description: Este documento recorre los pasos para conectar Aqua Data Studio con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Driver]** tab. En **[!UICONTROL Parámetros]**, estable
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-Después de introducir los detalles de la conexión, haga clic en **[!UICONTROL Probar conexión]** para asegurarse de que las credenciales funcionan correctamente. Si la conexión es correcta, haga clic en **[!UICONTROL Guardar]** para registrar el servidor. La conexión aparece en el *Panel* tras registrarse correctamente, lo que confirma que ahora puede conectarse al servidor y realizar la vista de los objetos de esquema.
+Después de introducir los detalles de la conexión, haga clic en **[!UICONTROL Probar conexión]** para asegurarse de que las credenciales funcionan correctamente. Si la conexión es correcta, haga clic en **[!UICONTROL Guardar]** para registrar el servidor. La conexión aparece en el **Panel** tras registrarse correctamente, lo que confirma que ahora puede conectarse al servidor y realizar la vista de los objetos de esquema.
 
 ## Pasos siguientes
 
