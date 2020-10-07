@@ -5,7 +5,7 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un de
 
 Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, las políticas de uso de datos deben definirse y habilitarse. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de CDP en tiempo real. Consulte la sección &quot;Políticas de uso de datos&quot; en la información general [!DNL Experience Platform] sobre el Gobierno [de](../../data-governance/home.md) datos para obtener más información.
 
-Adobe Experience Platform proporciona varias políticas **** principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver en la interfaz de usuario navegando al espacio de trabajo **[!UICONTROL Directivas]** y seleccionando la ficha **[!UICONTROL Examinar]** . Consulte la guía [del usuario de](../../data-governance/policies/user-guide.md) directivas en la [!DNL Experience Platform] documentación para ver los pasos más detallados para trabajar con políticas en la interfaz de usuario, incluida la forma de crear sus propias políticas personalizadas.
+Adobe Experience Platform proporciona varias políticas principales para casos de uso comunes de la experiencia del cliente. Estas directivas se pueden ver en la interfaz de usuario navegando al espacio de trabajo **[!UICONTROL Directivas]** y seleccionando la ficha **[!UICONTROL Examinar]** . Consulte la guía [del usuario de](../../data-governance/policies/user-guide.md) directivas en la [!DNL Experience Platform] documentación para ver los pasos más detallados para trabajar con políticas en la interfaz de usuario, incluida la forma de crear sus propias políticas personalizadas.
 
 ## Aplicar el cumplimiento de uso de datos {#enforce-data-usage-compliance}
 
