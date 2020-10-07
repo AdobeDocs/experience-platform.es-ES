@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía del usuario del Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Este documento proporciona los pasos para crear y administrar solicitudes de pri
 
 ## Examinar el panel de la [!DNL Privacy Service] IU
 
-El panel de la [!DNL Privacy Service] interfaz de usuario proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: **[!UICONTROL Informe]** de estado y solicitudes **[!UICONTROL de trabajo]**. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
+El panel de la [!DNL Privacy Service] interfaz de usuario proporciona dos utilidades que le permiten realizar vistas del estado de sus trabajos de privacidad: &quot;Informede estado&quot; y &quot;Solicitudes[!UICONTROL de]trabajo&quot;. El panel también muestra la regulación seleccionada actual para los trabajos mostrados.
 
 ![PANEL de la interfaz de usuario](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ Se abre el cuadro de diálogo **[!UICONTROL Crear solicitud]** , que muestra las
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Seleccione el tipo **[!UICONTROL de]** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más **[!UICONTROL productos]** disponibles de la lista.
+Seleccione el tipo **[!UICONTROL de]** trabajo de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más productos disponibles de la lista.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ En Tipo **[!UICONTROL de]**&#x200B;Área de nombres, seleccione el tipo de Área
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Cuando utilice el tipo de Área de nombres _estándar_ , seleccione una Área de nombres en el menú desplegable (correo electrónico, ECID o AAID), luego escriba los valores de ID en el cuadro de texto a la derecha y presione **\&lt;enter>** para cada ID para agregarlo a la lista.
+Cuando utilice el tipo de Área de nombres estándar, seleccione una Área de nombres en el menú desplegable (correo electrónico, ECID o AAID) y, a continuación, escriba los valores de ID en el cuadro de texto a la derecha; para agregar los valores a la lista, presione **\&lt;enter>** para cada ID.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Al utilizar el tipo de Área de nombres _personalizada_ , debe escribir manualmente la Área de nombres antes de proporcionar los valores de ID siguientes.
+Al utilizar el tipo de Área de nombres personalizada, debe escribir manualmente la Área de nombres antes de proporcionar los valores de ID siguientes.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ Si no tiene un archivo JSON para cargar, haga clic en **[!UICONTROL Descargar Ad
 
 Busque el archivo JSON en el equipo y arrástrelo a la ventana de diálogo. Si la carga se realiza correctamente, el nombre del archivo aparecerá en el cuadro de diálogo. Puede seguir agregando más archivos JSON según sea necesario arrastrándolos y soltándolos en el cuadro de diálogo.
 
-When finished, click **[!UICONTROL Create]**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes _de_ trabajo junto con su estado de procesamiento actual.
+When finished, click **[!UICONTROL Create]**. El cuadro de diálogo desaparece y el nuevo trabajo (o trabajos) aparece en la utilidad Solicitudes de trabajo junto con su estado de procesamiento actual.
 
 ### Pasos siguientes
 
