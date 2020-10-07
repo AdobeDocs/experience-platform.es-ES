@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una sola solicitud HTTP mediante la ingesta de flujo continuo.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Después de registrar una conexión de flujo continuo, usted, como productor de 
 
 El siguiente ejemplo muestra cómo enviar varios mensajes a un conjunto de datos específico dentro de una sola solicitud HTTP. Inserte la ID del conjunto de datos en el encabezado del mensaje para que ese mensaje se ingrese directamente en él.
 
-Puede obtener el ID de un conjunto de datos existente mediante la [!DNL Platform] interfaz de usuario o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en el [Experience Platform](https://platform.adobe.com) si ingresa a la ficha **[!UICONTROL Conjuntos]** de datos, hace clic en el conjunto de datos para el que desea la ID y copia la cadena desde el campo ID **[!UICONTROL del]** conjunto de datos en la ficha **[!UICONTROL Información]** . Consulte la descripción general [del servicio de](../../catalog/home.md) catálogo para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
+Puede obtener el ID de un conjunto de datos existente mediante la [!DNL Platform] interfaz de usuario o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en el [Experience Platform](https://platform.adobe.com) si ingresa a la ficha **[!UICONTROL Conjuntos]** de datos, hace clic en el conjunto de datos para el que desea la ID y copia la cadena desde el campo ID del conjunto de datos en la ficha **[!UICONTROL Información]** . Consulte la descripción general [del servicio de](../../catalog/home.md) catálogo para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
 
 En lugar de utilizar un conjunto de datos existente, puede crear un nuevo conjunto de datos. Lea el tutorial [Crear un conjunto de datos mediante API](../../catalog/api/create-dataset.md) para obtener más información sobre cómo crear un conjunto de datos mediante API.
 
