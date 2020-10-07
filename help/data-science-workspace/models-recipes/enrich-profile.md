@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático, los pasos se desglosan en las siguientes secciones, crear un esquema/conjunto de datos de salida, configurar un esquema/conjunto de datos de salida y crear segmentos mediante el Generador de segmentos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -43,10 +43,10 @@ El primer paso hacia el enriquecimiento [!DNL Real-time Customer Profile] con pe
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). En esta sección se proporcionan instrucciones básicas para crear un esquema con el generador de esquemas. Para ver un tutorial más detallado, consulte el tutorial sobre la [creación de un esquema con el Editor](../../xdm/tutorials/create-schema-ui.md)de Esquemas.
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Esquema]** para acceder al explorador de esquema. Haga clic en **[!UICONTROL Crear Esquema]** para acceder al Editor *de*Esquemas, donde puede crear esquemas de forma interactiva.
+1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Esquema]** para acceder al explorador de esquema. Haga clic en **[!UICONTROL Crear Esquema]** para acceder al Editor **de**Esquemas, donde puede crear esquemas de forma interactiva.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. En la ventana *Composición* , haga clic en **[!UICONTROL Asignar]** para examinar las clases disponibles.
+2. En la ventana **Composición** , haga clic en **[!UICONTROL Asignar]** para examinar las clases disponibles.
    * Para asignar una clase existente, haga clic en y resalte la clase deseada y, a continuación, haga clic en **[!UICONTROL Asignar clase]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ La composición de un esquema comienza asignando una clase. Las clases definen l
 
    En este punto, la estructura del esquema debe contener algunos campos de clase y está listo para asignar mezclas. Una mezcla es un grupo de uno o más campos que describen un concepto en particular.
 
-3. En la ventana *Composición* , haga clic en **[!UICONTROL Añadir]** en la subsección *Mezclas* .
+3. En la ventana **Composición** , haga clic en **[!UICONTROL Añadir]** en la subsección **Mezclas** .
    * Para asignar una mezcla existente, haga clic en y resalte la mezcla deseada y, a continuación, haga clic en **[!UICONTROL Añadir mezcla]**. A diferencia de las clases, se pueden asignar varias mezclas a un solo esquema siempre que sea apropiado.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
