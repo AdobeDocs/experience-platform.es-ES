@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
-title: Modelo de dominio de decisiones de oferta
+title: Modelo de dominio de Offer Decisioning
 topic: overview
 description: La toma de decisiones de ofertas es un caso de uso del servicio de decisiones en el que se formalizan y administran de forma centralizada las reglas y predicciones utilizadas para atraer clientes con ofertas.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
 ht-degree: 0%
@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# Visión general del modelo de dominio de decisiones de oferta
+# Información general del modelo de dominio de Offer Decisioning
 
-La toma de decisiones de oferta es un caso de uso en el [!DNL Decisioning Service] que se formalizan y administran de forma centralizada las reglas y predicciones utilizadas para atraer clientes con ofertas. La toma de decisiones de oferta se considera un tipo de decisiones _**de**_ contenido. En este caso de uso, las opciones _**de**_ decisión se denominan _**ofertas**_ y se caracterizan como tales por el contenido que se les adjunta. Para obtener una introducción al modelo de objetos utilizado por el [!DNL Decisioning Service], consulte el Modelo [de dominio del servicio de](experience-model.md)decisiones.
+La toma de decisiones de oferta es un caso de uso en el [!DNL Decisioning Service] que se formalizan y administran de forma centralizada las reglas y predicciones utilizadas para atraer clientes con ofertas. La toma de decisiones de oferta se considera un tipo de decisiones de contenido. En este caso de uso, las opciones de decisión se denominan ofertas y se caracterizan como tales por el contenido que se les adjunta. Para obtener una introducción al modelo de objetos utilizado por el [!DNL Decisioning Service], consulte el Modelo [de dominio del servicio de](experience-model.md)decisiones.
 
 El objetivo es presentar al usuario final una &quot;mejor Oferta&quot; en cualquier canal basado en criterios de objetivo, limitaciones de costo y frecuencia, así como en interacciones previas entre canales, incluidas Ofertas previas propuestas.
 
-Al igual que con todos los casos de uso de decisiones, las opciones de decisión (ofertas) se administran en un informe compartido por cualquier número de aplicaciones. Las ofertas pueden ser creadas por diferentes departamentos de la organización o por socios, y esas ofertas pueden agregarse y eliminarse diariamente.
+Al igual que con todos los casos de uso de decisiones, las opciones de decisión (ofertas) se administran en un repositorio compartido por cualquier número de aplicaciones. Las ofertas pueden ser creadas por diferentes departamentos de la organización o por socios, y esas ofertas pueden agregarse y eliminarse diariamente.
 
-Las ofertas se colocan visualmente en experiencias más grandes mediante la aplicación que ofrece la experiencia. _**Las colocaciones**_, a veces denominadas zonas o ranuras, son componentes importantes para diseñar una estrategia. El diseño de una estrategia de oferta suele ser un inicio con la definición de esas colocaciones. Una oferta suele tener varias representaciones _**de**_ contenido para que se pueda integrar correctamente en una variedad de experiencias, en las que cada una de ellas tiene diferentes limitaciones dimensionales o de otro tipo y requiere distintos formatos de medios.
+Las ofertas se colocan visualmente en experiencias más grandes mediante la aplicación que ofrece la experiencia. Las colocaciones, a veces denominadas zonas o ranuras, son componentes importantes para diseñar una estrategia. El diseño de una estrategia de oferta suele ser un inicio con la definición de esas colocaciones. Una oferta suele tener varias representaciones de contenido para que se pueda integrar correctamente en una variedad de experiencias, en las que cada una de ellas tiene diferentes limitaciones dimensionales o de otro tipo y requiere distintos formatos de medios.
 
-Las ofertas suelen estar vinculadas a bienes o servicios físicos y se trata de un cálculo de los costos. Una organización debe poder limitar los recursos que consumen las ofertas y, por lo tanto, debe poder _**limitar**_ el número total de veces que se puede proponer una oferta.
+Las ofertas suelen estar vinculadas a bienes o servicios físicos y se trata de un cálculo de los costos. Una organización debe poder limitar los recursos que consumen las ofertas y, por lo tanto, debe poder limitar el número total de veces que se puede proponer una oferta.
 
 El valor previsto de una oferta aceptada para la organización es el criterio de optimización y se compara con el costo de realizar una oferta. El costo, la probabilidad de aceptación y el valor previsto se utilizan para clasificar las ofertas. La mejor Oferta es la que tiene el mayor impacto positivo previsto en los objetivos de sus actividades de oferta.
 
-La toma de decisiones de oferta considera las interacciones que tuvo un usuario final _**en muchos canales**_ y aplicaciones, y aprovecha los datos de evento de perfil y experiencia de un usuario final. Por ejemplo, una aplicación de centro de llamadas puede utilizar la toma de decisiones de Oferta para habilitar o suprimir una oferta basada en las compras realizadas y las revisiones publicadas por el usuario final; o una aplicación de administración de correo electrónico puede depender de la decisión de Oferta para seleccionar la siguiente mejor Oferta en un boletín semanal basado en el historial de exploración de un sitio web.
+Offer Decisioning considera las interacciones que tuvo un usuario final en muchos canales y aplicaciones, y aprovecha los datos de evento de perfil y experiencia del usuario final. Por ejemplo, una aplicación de centro de llamadas puede utilizar Offer Decisioning para habilitar o suprimir una oferta en función de las compras realizadas y las revisiones publicadas por el usuario final; o una aplicación de administración de correo electrónico puede depender de Offer Decisioning para seleccionar la siguiente mejor Oferta en un boletín semanal basado en el historial de exploración de un sitio web.
 
-Las ofertas tienen otras propiedades interesantes. Con frecuencia, existe una _**programación**_ o un intervalo de fecha y hora definidos cuando la oferta es válida y cuando la oferta debe invalidarse.
+Las ofertas tienen otras propiedades interesantes. Con frecuencia, existe una programación o un intervalo de fecha y hora definidos cuando la oferta es válida y cuando la oferta debe invalidarse.
 
-Por último, el atractivo de una oferta se deteriora con la frecuencia con que se presenta. Una Oferta que no se acepta después de haber sido propuesta repetidamente es una oportunidad perdida porque se podría haber presentado una oferta diferente. Por este motivo, se debe gestionar la _**fatiga**_ del usuario final.
+Por último, el atractivo de una oferta se deteriora con la frecuencia con que se presenta. Una Oferta que no se acepta después de haber sido propuesta repetidamente es una oportunidad perdida porque se podría haber presentado una oferta diferente. Por este motivo, se debe gestionar la fatiga del usuario final.
 
 ## Estrategia de decisión de oferta con un vistazo
 
@@ -44,7 +44,7 @@ El enfoque general es reducir la selección de Ofertas hasta que se cumplan toda
 | Opciones de reserva | Oferta de reserva con representaciones de contenido |
 | Conjunto finito de opciones de decisión | Inventario de ofertas (también conocido como biblioteca de ofertas) |
 | Categorías temáticas | Filtro de oferta basado en etiquetas e identificadores de oferta |
-| Resultados de la decisión | Propuesta de una oferta por actividad, para varias actividades a la vez |
+| Resultados de la decisión | Propuesta de una oferta por actividad, para múltiples actividades a la vez |
 | Resultados de las decisiones | Evento de experiencia previsto en relación con la oferta, por ejemplo `eventType='opened'` |
 | Algoritmo de decisión | Lógica de servicio interna, parametrizada |
 | Restricciones | Restricciones de ubicación, restricciones de calendario, restricciones de límite globales y por usuario, restricciones de anulación de duplicación |
@@ -52,7 +52,7 @@ El enfoque general es reducir la selección de Ofertas hasta que se cumplan toda
 | Modelo para la utilidad *esperada* | Clasificación de oferta o prioridad |
 
 El número total de ofertas en el inventario de opciones suele ser bastante grande (en el orden de los 10.000) y cada actividad de oferta puede centrarse en ofertas que entran en una categoría diferente (tema). La estrategia de decisión de oferta permite adjuntar un filtro de oferta a una actividad de oferta. Se evaluarán las limitaciones adicionales en el momento en que se solicite la decisión.
-Las siguientes secciones explican los componentes del dominio de decisión de Oferta en detalle.
+Las siguientes secciones explican los componentes del dominio de Offer Decisioning en detalle.
 
 ## Ofertas generales
 
@@ -126,7 +126,7 @@ Cuando las opciones se colocan explícitamente en una colección, su conjunto de
 
 ## Actividades de oferta
 
-Actividades configuran y controlan el proceso de toma de decisiones. En la actualidad, la estrategia de decisión está predefinida, pero las futuras iteraciones del modelo de dominio de decisión de Oferta permitirán la selección de modelos, reglas adicionales y limitaciones.
+Actividades configuran y controlan el proceso de toma de decisiones. Actualmente, la estrategia de decisión está predefinida, pero las futuras iteraciones del modelo de dominio de Offer Decisioning permitirán la selección de modelos, reglas adicionales y restricciones.
 
 Una experiencia se puede montar usando muchas actividades simultáneamente. Actualmente, se pueden abordar hasta 30 actividades en una sola solicitud de decisión. Si se deben rellenar con contenido más de 30 actividades o ranuras en una experiencia, se pueden realizar varias solicitudes para el mismo perfil. Sin embargo, cuando se incluyan actividades en la misma solicitud de decisión, se eliminará la duplicación de propuestas de oferta entre esas actividades.
 
