@@ -5,7 +5,7 @@ topic: overview
 title: Control de acceso general
 description: Control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 3%
@@ -19,7 +19,7 @@ Control de acceso para [!DNL Experience Platform] se proporciona a través del [
 
 ## Jerarquía de controles de acceso y flujo de trabajo
 
-Para configurar control de acceso para [!DNL Experience Platform], debe tener privilegios de administrador para una organización que tenga una integración de [!DNL Experience Platform] producto. La función mínima que otorga o retira permisos es la de administrador **[!UICONTROL de perfil de]** productos. Otras funciones de administrador que pueden administrar permisos son los administradores **[!UICONTROL de]** productos (pueden administrar todos los perfiles de un producto) y los administradores **** del sistema (sin restricciones). Consulte el artículo de Adobe Help Center sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
+Para configurar control de acceso para [!DNL Experience Platform], debe tener privilegios de administrador para una organización que tenga una integración de [!DNL Experience Platform] producto. La función mínima que otorga o retira permisos es un administrador de perfil de productos. Otras funciones de administrador que pueden administrar permisos son los administradores de productos (pueden administrar todos los perfiles de un producto) y los administradores de sistemas (sin restricciones). Consulte el artículo de Adobe Help Center sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console proporciona una ubicación central para administrar las auto
 
 ### Perfiles del producto
 
-En el [!DNL Admin Console], los permisos se asignan a los usuarios mediante el uso de perfiles **[!UICONTROL de]** productos. Los perfiles de producto le permiten otorgar permisos a uno o varios usuarios, y también contienen su acceso al ámbito de los entornos limitados que se les asignan mediante perfiles de producto. Los usuarios pueden asignarse a uno o varios perfiles de productos pertenecientes a su organización.
+En la página [!DNL Admin Console], los permisos se asignan a los usuarios mediante el uso de perfiles de producto. Los perfiles de producto le permiten otorgar permisos a uno o varios usuarios, y también contienen su acceso al ámbito de los entornos limitados que se les asignan mediante perfiles de producto. Los usuarios pueden asignarse a uno o varios perfiles de productos pertenecientes a su organización.
 
 ### Perfiles de producto predeterminados
 
@@ -57,7 +57,7 @@ En el [!DNL Admin Console], los permisos se asignan a los usuarios mediante el u
 
 ## Simuladores y permisos
 
-Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar datos de otros entornos limitados y que generalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los **[!UICONTROL permisos]** de un perfil de productos proporcionan a los usuarios del perfil acceso a [!DNL Platform] las funciones de los entornos del simulador para pruebas a los que se les ha concedido acceso. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados sin producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con el administrador de la organización IMS o con el representante de ventas de Adobe para obtener más información.
+Los entornos limitados que no son de producción son una forma de virtualización de datos que le permite aislar datos de otros entornos limitados y que generalmente se utilizan para experimentos de desarrollo, pruebas o pruebas. Los permisos de un perfil de productos proporcionan a los usuarios del perfil acceso a [!DNL Platform] las funciones de los entornos de la zona de pruebas a los que se les ha concedido acceso. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados sin producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con el administrador de la organización IMS o con el representante de ventas de Adobe para obtener más información.
 
 Para obtener más información sobre los entornos limitados de [!DNL Experience Platform], consulte la información general [de los](../sandboxes/home.md)entornos limitados.
 
@@ -71,7 +71,7 @@ El permiso &quot;Administración de Simuladores para pruebas&quot; permite a los
 
 ### Permisos
 
-La ficha **Permisos** de un perfil de producto muestra los entornos limitados y los permisos que están activos para ese perfil:
+La ficha Permisos de un perfil de producto muestra los entornos limitados y los permisos que están activos para ese perfil:
 
 ![](./images/permissions-overview.png)
 
@@ -81,7 +81,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| [!DNL Data Modeling] | [!UICONTROL Administrar Esquemas] | Acceso para leer, crear, editar y eliminar esquemas y recursos relacionados. |
+| [!DNL Data Modeling] | [!UICONTROL Administrar esquemas] | Acceso para leer, crear, editar y eliminar esquemas y recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Esquemas de vistas] | Acceso de sólo lectura a esquemas y recursos relacionados. |
 | [!DNL Data Management] | [!UICONTROL Administrar conjuntos de datos] | Acceso para leer, crear, editar y eliminar conjuntos de datos. Acceso de solo lectura para esquemas. |
 | [!DNL Data Management] | [!UICONTROL Conjuntos de datos de vistas] | Acceso de sólo lectura para conjuntos de datos y esquemas. |
@@ -90,7 +90,7 @@ La siguiente tabla describe los permisos disponibles para [!DNL Experience Platf
 | [!DNL Profile Management] | [!UICONTROL Perfiles de vista] | Acceso de solo lectura a perfiles disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportar Audiencia para segmento] | Capacidad para exportar un segmento de audiencia evaluado a un conjunto de datos. |
 | [!DNL Identities] | [!UICONTROL Administrar áreas de nombres de identidad] | Acceso para leer, crear, editar y eliminar Áreas de nombres de identidad. |
-| [!DNL Identities] | [!UICONTROL Áreas de nombres de identidad de vista] | Acceso de sólo lectura para Áreas de nombres de identidad. |
+| [!DNL Identities] | [!UICONTROL Ver espacios de nombres de identidad] | Acceso de sólo lectura para Áreas de nombres de identidad. |
 | [!DNL Sandbox Administration] | [!UICONTROL Administrar Simuladores] | Acceso para leer, crear, editar y eliminar entornos limitados. |
 | [!DNL Sandbox Administration] | [!UICONTROL Entornos aislados de vistas] | Acceso de sólo lectura para entornos limitados pertenecientes a su organización. |
 | [!DNL Sandbox Administration] | [!UICONTROL Restablecer un Simulador para pruebas] | Capacidad para restablecer un entorno limitado. |
