@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace proporciona los medios para lograr su objetivo mediante la fórmula de Recommendations de producto prediseñada. Siga este tutorial para ver cómo puede acceder a los datos de minoristas y comprenderlos, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en Área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendiza
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Busque y abra la fórmula **[!UICONTROL de]** Recommendations proporcionada haciendo clic en su nombre.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. En el carril derecho, haga clic en **[!UICONTROL Recommendations Input Esquema]** para vista del esquema que alimenta la fórmula. Los campos de esquema **[!UICONTROL itemId]** y **[!UICONTROL userId]** corresponden a un producto comprado (**[!UICONTROL interactiveType]**) por ese cliente a una hora específica (**[!UICONTROL marca de hora]**). Siga los mismos pasos para revisar los campos del Esquema **[!UICONTROL de salida de]**Recommendations.
+3. En el carril derecho, haga clic en **[!UICONTROL Recommendations Input Esquema]** para vista del esquema que alimenta la fórmula. Los campos de esquema &quot;[!UICONTROL itemId]&quot; y &quot;[!UICONTROL userId]&quot; corresponden a un producto comprado ([!UICONTROL interactiveType]) por ese cliente a una hora específica ([!UICONTROL marca de hora]). Siga los mismos pasos para revisar los campos del Esquema **[!UICONTROL de salida de]**Recommendations.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Ahora ha revisado los esquemas de entrada y salida requeridos por la fórmula Recommendations del producto. Ahora puede continuar en la siguiente sección para averiguar cómo crear, entrenar y evaluar un modelo de producto Recommendations.
@@ -113,9 +113,9 @@ Puede optar por esperar a que finalice la ejecución de formación o continuar c
 
 ### Formación del modelo mediante hiperparámetros personalizados
 
-1. En la página Información general *del* modelo, haga clic en **[!UICONTROL Tren]** en la parte superior derecha para crear una nueva ejecución de formación. Seleccione el mismo conjunto de datos de entrada que utilizó al crear el modelo y haga clic en **[!UICONTROL Siguiente]**.
+1. En la página Información general **del** modelo, haga clic en **[!UICONTROL Tren]** en la parte superior derecha para crear una nueva ejecución de formación. Seleccione el mismo conjunto de datos de entrada que utilizó al crear el modelo y haga clic en **[!UICONTROL Siguiente]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. Aparece la página *Configuración* . Aquí puede configurar el valor **[!UICONTROL num_recommendations]** de la ejecución de formación, también conocido como Hyperparameter. Un modelo preparado y optimizado utilizará los hiperparámetros de mejor rendimiento según los resultados de la ejecución de la formación.
+2. Aparece la página **Configuración** . Aquí puede configurar el valor &quot;[!UICONTROL num_recommendations]&quot; de la ejecución de formación, también conocido como un parámetro Hyperparameter. Un modelo preparado y optimizado utilizará los hiperparámetros de mejor rendimiento según los resultados de la ejecución de la formación.
 
    No se pueden aprender los hiperparámetros, por lo tanto deben asignarse antes de que se produzcan las ejecuciones de formación. El ajuste de los hiperparámetros puede cambiar la precisión del modelo entrenado. Dado que la optimización de un modelo es un proceso iterativo, es posible que se requieran múltiples ejercicios de capacitación antes de lograr una evaluación satisfactoria.
 
@@ -159,7 +159,7 @@ Una vez finalizada la ejecución de la puntuación, podrá realizar la previsual
 
 1. En la página de ejecuciones de puntuación, haga clic en la ejecución de puntuación completada y, a continuación, haga clic en Conjunto de datos **[!UICONTROL de resultados de puntuación de]** Previsualización en el carril derecho.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. En la tabla de previsualizaciones, cada fila contiene recomendaciones de productos para un cliente en particular, etiquetadas como **[!UICONTROL recomendaciones]** y **[!UICONTROL userId]** respectivamente. Dado que el **[!UICONTROL valor de num_recommendations]** Hyperparameter se estableció en 10 en las capturas de pantalla de muestra, cada fila de recomendaciones puede contener hasta 10 identidades de producto delimitadas por un signo de número (#).
+2. En la tabla de previsualizaciones, cada fila contiene recomendaciones de productos para un cliente en particular, etiquetadas como [!UICONTROL recomendaciones] y [!UICONTROL userId] respectivamente. Dado que el [!UICONTROL valor de num_recommendations] Hyperparameter se estableció en 10 en las capturas de pantalla de muestra, cada fila de recomendaciones puede contener hasta 10 identidades de producto delimitadas por un signo de número (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Pasos siguientes {#next-steps}
