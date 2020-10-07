@@ -5,9 +5,9 @@ title: Información general sobre la ingestión parcial por lotes
 topic: overview
 description: Este documento proporciona un tutorial para administrar la ingestión parcial por lotes.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ La opción de **[!UICONTROL diagnóstico]** de errores solo aparece cuando la op
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-El umbral **[!UICONTROL de]** error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
+**[!UICONTROL El umbral]** de error permite establecer el porcentaje de errores aceptables antes de que se produzca un error en todo el lote. De forma predeterminada, este valor se establece en 5 %.
 
 ## Pasos siguientes {#next-steps}
 
