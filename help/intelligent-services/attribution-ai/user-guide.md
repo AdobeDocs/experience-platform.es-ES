@@ -5,7 +5,7 @@ title: Guía del usuario de Attribution AI
 topic: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Este documento sirve como guía para interactuar con Attribution AI en la interf
 
 ## Crear una instancia
 
-En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el explorador *Servicios* y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Servicios]** y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ A continuación, se abre la página de configuración para Attribution AI, donde
 
 ### Asigne un nombre a la instancia
 
-En Información ** básica, proporcione un nombre y una descripción opcional para la instancia de servicio.
+En Información **** básica, proporcione un nombre y una descripción opcional para la instancia de servicio.
 
 ![asignación de nombres a una instancia](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha.
 
 ![sin menú desplegable](./images/user-guide/conversion_event_1.png)
 
-Los botones *Añadir evento* y *Añadir grupo* se utilizan para definir aún más la conversión. Según la conversión que esté definiendo, es posible que tenga que utilizar los botones *Añadir evento* y *Añadir grupo* para proporcionar contexto adicional.
+Los botones **[!UICONTROL Añadir evento]** y **[!UICONTROL Añadir grupo]** se utilizan para definir aún más la conversión. Según la conversión que esté definiendo, es posible que tenga que utilizar los botones **[!UICONTROL Añadir evento]** y **[!UICONTROL Añadir grupo]** para proporcionar contexto adicional.
 
 ![agregar evento](./images/user-guide/add_event.png)
 
-Al hacer clic en **Añadir evento** , se crean campos adicionales que se pueden rellenar utilizando el mismo método descrito anteriormente. Al hacerlo, se agrega una instrucción *AND* a la definición de cadena debajo del nombre *de* conversión. Haga clic en la **x** para eliminar un evento que se haya agregado.
+Al hacer clic en **[!UICONTROL Añadir evento]** , se crean campos adicionales que se pueden rellenar utilizando el mismo método descrito anteriormente. Al hacerlo, se agrega una instrucción AND a la definición de cadena debajo del nombre de conversión. Haga clic en la **x** para eliminar un evento que se haya agregado.
 
 ![menú Agregar evento](./images/user-guide/add_event_result.png)
 
-Al hacer clic en **Añadir grupo** se ofrece la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *Y* . Al hacer clic en **Y** se ofrece una opción para cambiar el parámetro para que contenga &quot;O&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión exitosas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
+Al hacer clic en **[!UICONTROL Añadir grupo]** se ofrece la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *Y* . Al hacer clic en **Y** se ofrece una opción para cambiar el parámetro para que contenga &quot;O&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión exitosas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
 
 ![usar y](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Para cambiar la hora del día que desea que se produzca la puntuación, haga cli
 
 El comportamiento de los clientes puede variar significativamente según el país y la región geográfica. Para las empresas globales, el uso de modelos basados en países o regiones puede aumentar la precisión de la atribución. Cada región agregada crea un nuevo modelo con los datos de esa región.
 
-Para definir una nueva región, haga clic en **Añadir región** para realizar el inicio. En el contenedor que aparece, proporcione un nombre para la región. Sólo un valor (&quot;placeContext.geo.countryCode&quot;) se rellena desde la lista desplegable *Introducir nombre* de campo. Seleccione este valor.
+Para definir una nueva región, haga clic en **[!UICONTROL Añadir región]** para realizar el inicio. En el contenedor que aparece, proporcione un nombre para la región. Sólo un valor (&quot;placeContext.geo.countryCode&quot;) se rellena desde la lista desplegable **[!UICONTROL Introducir nombre]** de campo. Seleccione este valor.
 
 ![Seleccionar región en](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ A continuación, seleccione un operador.
 
 ![operador de región](./images/user-guide/region_operators.png)
 
-Por último, escriba el código de país en la lista desplegable *Introducir valor* de campo.
+Por último, escriba el código de país en la lista desplegable **[!UICONTROL Introducir valor]** de campo.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Para asegurarse de que obtiene el modelo más preciso posible, es importante cap
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **Finalizar** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **Aceptar** para que se le redirija a la página de instancias ** de servicio, donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finalizar]** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **[!UICONTROL Aceptar]** para que se le redirija a la página de instancias **** de servicio, donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
