@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'La puntuación en Adobe Experience Platform Data Science Workspace se puede conseguir mediante la incorporación de datos de entrada a un modelo ya existente. Los resultados de puntuación se almacenan y se pueden ver en un conjunto de datos de salida especificado como un nuevo lote. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Se crea una ejecución de puntuación mediante configuraciones optimizadas a par
 
 1. Encuentre la ejecución de capacitación más óptima para utilizar sus configuraciones para la puntuación. Abra la ejecución de formación deseada haciendo clic en su nombre.
 
-2. En la ficha **[!UICONTROL Evaluación]** de la ejecución de formación, haga clic en el botón **[!UICONTROL Puntuación]** en la parte superior derecha de la pantalla. Esto iniciará un nuevo flujo de trabajo de *Ejecutar puntuación* .
+2. En la ficha **[!UICONTROL Evaluación]** de la ejecución de formación, haga clic en el botón **[!UICONTROL Puntuación]** en la parte superior derecha de la pantalla. Esto iniciará un nuevo flujo de trabajo de **Ejecutar puntuación** .
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Seleccione el conjunto de datos de puntuación de entrada y haga clic en **[!UICONTROL Siguiente]**.
