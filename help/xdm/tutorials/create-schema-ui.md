@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorials
 description: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 0%
@@ -126,7 +126,7 @@ De forma similar al `name` campo, los campos que acaba de agregar representan co
 
 El esquema &quot;Miembros[!UICONTROL de la]lealtad&quot; pretende capturar datos relacionados con los miembros de un programa de lealtad, por lo que requerirá algunos campos específicos relacionados con la lealtad. No hay mezclas estándar disponibles que contengan los campos necesarios, por lo tanto deberá definir una nueva mezcla.
 
-Esta vez, cuando abra el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , seleccione **[!UICONTROL Crear nueva combinación]**. Luego se le pedirá que proporcione un **[!UICONTROL Nombre]** para mostrar y una **[!UICONTROL Descripción]** para la mezcla.
+Esta vez, cuando abra el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , seleccione **[!UICONTROL Crear nueva combinación]**. Luego se le pedirá que proporcione un nombre para mostrar y una descripción para la mezcla.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ Cada campo requiere la siguiente información:
 * **[!UICONTROL Tipo]:** Tipo de datos del campo. Esto incluye los tipos escalares básicos y cualquier tipo de datos definido en el [!DNL Schema Registry]. Ejemplos: [!UICONTROL Cadena], [!UICONTROL Entero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Dirección], Número de teléfono, etc.
 * **[!UICONTROL Descripción]:** Se debe incluir una descripción opcional del campo, escrita en caso de sentencia, con un máximo de 200 caracteres.
 
-El primer campo del `Loyalty` objeto será una cadena llamada `loyaltyId`. Al establecer el tipo del nuevo campo en &quot;[!UICONTROL String]&quot;, la sección Propiedades **[!UICONTROL del]** campo se llena con varias opciones para aplicar restricciones, como el valor **** predeterminado, el **[!UICONTROL formato]** y la longitud **** máxima.
+El primer campo del `Loyalty` objeto será una cadena llamada `loyaltyId`. Al establecer el tipo del nuevo campo en &quot;[!UICONTROL String]&quot;, la sección Propiedades **[!UICONTROL del]** campo se llena con varias opciones para aplicar restricciones, incluido el valor predeterminado, el formato y la longitud máxima.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ Ahora, cuando se observa en **[!UICONTROL Estructura]**, se puede ver que el `lo
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-En un esquema futuro, ahora se puede asignar un campo al **[!UICONTROL Tipo]** de &quot;[!DNL Loyalty]&quot; y se incluirán automáticamente campos para ID, nivel de lealtad, miembro desde y puntos.
+En un esquema futuro, ahora se puede asignar un campo como tipo &quot;[!DNL Loyalty]&quot; y se incluirán automáticamente campos para ID, nivel de lealtad, miembro desde y puntos.
 
 ## Buscar y filtrar campos de esquema
 
@@ -336,7 +336,7 @@ En el espacio de trabajo **[!UICONTROL Esquemas]** , seleccione **[!UICONTROL Cr
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Aparece un cuadro de diálogo que le permite seleccionar entre una lista de clases disponibles. En la parte superior del cuadro de diálogo, seleccione **[!UICONTROL Crear nueva clase]**. A continuación, puede asignar a la nueva clase un nombre **[!UICONTROL para]** mostrar (un nombre corto, descriptivo, único y práctico para la clase), una **[!UICONTROL descripción]** y un **[!UICONTROL comportamiento]** (&quot;[!UICONTROL registro]&quot; o &quot;serie[!UICONTROL temporal]&quot;) para los datos que el esquema definirá.
+Aparece un cuadro de diálogo que le permite seleccionar entre una lista de clases disponibles. En la parte superior del cuadro de diálogo, seleccione **[!UICONTROL Crear nueva clase]**. A continuación, puede asignar a la nueva clase un nombre para mostrar (un nombre corto, descriptivo, único y práctico para la clase), una descripción y un comportamiento (&quot;[!UICONTROL Registro]&quot; o &quot;Serietemporal&quot;) para los datos que el esquema definirá.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
