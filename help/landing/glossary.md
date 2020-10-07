@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Documentación del producto de Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
 
-## A  
+## A
 
 **control de acceso:** {#access-control} Control de acceso para [!DNL Experience Platform] vincular a los usuarios con permisos de acceso y entornos de simulación de pruebas mediante perfiles de productos en Adobe Admin Console.
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 [Volver al principio](#adobe-experience-platform-glossary)
 
-## C  
+## C
 
 **Límite:** En [!DNL Offer Decisioning], el límite se utiliza en las reglas de decisiones para definir cuántas veces se presenta una oferta. Existen dos tipos de mayúsculas: cuántas veces se puede proponer una oferta en la audiencia de destinatario combinada, también conocida como &quot;Cap global&quot;, y cuántas veces se puede proponer una oferta al mismo usuario final, también conocida como &quot;Cap de Perfil&quot;.
 
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **Catálogo de destino:** Un catálogo de destino es una lista de los destinos disponibles en el [!DNL Real-time Customer Data Platform].
 
-**Reglas de llamadas directas:** en [!DNL Experience Platform Launch], puede configurar una [!UICONTROL regla] de llamada  directa que se ejecute cuando se llame directamente desde la página. Si la carga de la página o la acción en el sitio es muy sencilla, o si es única y puede ejecutar un conjunto específico de instrucciones cada vez (configurado [!DNL eVar4] en X y activarse [!DNL event2] cada vez), puede utilizar una [!UICONTROL regla] de llamada directa. Consulte [!DNL Launch] la documentación relativa a la creación de [!UICONTROL reglas] de llamada directa.
+**Reglas de llamadas directas:** en [!DNL Experience Platform Launch], puede configurar una regla de llamada directa que se ejecute cuando se llame directamente desde la página. Si la carga de la página o la acción en el sitio es muy sencilla, o si es única y puede ejecutar un conjunto específico de instrucciones cada vez (establezca [!DNL eVar4] en X y active [!DNL event2] cada vez), puede utilizar una regla de llamada directa. Consulte [!DNL Launch] la documentación relativa a la creación de reglas de llamada directa.
 
 **Nombre para mostrar:** El nombre para mostrar es un nombre sencillo de usuario de un campo que se muestra en la interfaz de usuario.
 
@@ -370,7 +370,7 @@ ht-degree: 0%
 
 **Oferta:** Una oferta es un mensaje de marketing que puede tener reglas asociadas, especificando quién puede ver la oferta.
 
-**Decisión de oferta:** La toma de decisiones de oferta permite que un especialista en marketing administre reglas y modelos formados de propuestas de oferta cuando interactúa con un usuario final en función de los datos recopilados en canales y aplicaciones.
+**Offer Decisioning:** La toma de decisiones de oferta permite que un especialista en marketing administre reglas y modelos formados de propuestas de oferta cuando interactúa con un usuario final en función de los datos recopilados en canales y aplicaciones.
 
 **Biblioteca de ofertas:** La biblioteca de ofertas es una biblioteca central que se utiliza para administrar ofertas, reglas de decisión y actividades personalizadas y de reserva.
 
