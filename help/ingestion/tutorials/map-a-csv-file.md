@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -117,7 +117,7 @@ Una vez asignado y creado el archivo CSV, puede supervisar los datos que se est�
 
 Para utilizar una función, escríbala en Campo **** de origen con la sintaxis y las entradas adecuadas.
 
-Por ejemplo, para concatenar campos CSV de **ciudad** y **país** y asignarlos al campo XDM de **ciudad** , establezca el campo de origen como `concat(city, ", ", county)`.
+Por ejemplo, para concatenar campos CSV de ciudad y país y asignarlos al campo XDM de ciudad, establezca el campo de origen como `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
