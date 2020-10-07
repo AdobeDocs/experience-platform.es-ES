@@ -5,7 +5,7 @@ title: Conector del Audience Manager
 topic: overview
 description: El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a la plataforma.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 1%
@@ -67,7 +67,7 @@ Los conjuntos de datos de Audience Manager están deshabilitados para el Perfil 
 
 ### Conexiones
 
-Adobe Audience Manager crea una conexión en el catálogo: **Conexión** de Audience Manager. Catalog es el sistema de registros para la ubicación y linaje de datos dentro de Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
+Adobe Audience Manager crea una conexión en el catálogo: Conexión de Audience Manager. Catalog es el sistema de registros para la ubicación y linaje de datos dentro de Adobe Experience Platform. Una conexión es un objeto Catalog que es una instancia de Conectores específica del cliente. Consulte la información general [del servicio de](../../../catalog/home.md) catálogos para obtener más información sobre el catálogo, las conexiones y los conectores.
 
 ## ¿Cuál es la latencia esperada para los datos de Audience Manager en la plataforma?
 
