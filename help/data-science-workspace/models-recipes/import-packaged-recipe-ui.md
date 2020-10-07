@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: En este tutorial se explica cómo configurar e importar una fórmula empaquetada mediante el ejemplo de venta minorista proporcionado. Al final de este tutorial, estará listo para crear, entrenar y evaluar un modelo en Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Este tutorial requiere una fórmula empaquetada en forma de URL de imagen de Doc
 
 ## Flujo de trabajo de la interfaz de usuario
 
-La importación de una fórmula empaquetada en [!DNL Data Science Workspace] requiere configuraciones de fórmula específicas, compiladas en un solo archivo JSON (JavaScript Object Notation), esta compilación de configuraciones de fórmula se denomina archivo **de** configuración. Una fórmula empaquetada con un conjunto concreto de configuraciones se denomina instancia **de** fórmula. Se puede usar una fórmula para crear muchas instancias de fórmula en [!DNL Data Science Workspace].
+La importación de una fórmula empaquetada en [!DNL Data Science Workspace] requiere configuraciones de fórmula específicas, compiladas en un solo archivo JSON (JavaScript Object Notation), esta compilación de configuraciones de fórmula se denomina archivo de configuración. Una fórmula empaquetada con un conjunto concreto de configuraciones se denomina instancia de fórmula. Se puede usar una fórmula para crear muchas instancias de fórmula en [!DNL Data Science Workspace].
 
 El flujo de trabajo para importar una fórmula de paquete consta de los siguientes pasos:
 - [Configurar una fórmula](#configure)
@@ -124,11 +124,11 @@ A los efectos de este tutorial, puede dejar los archivos de configuración prede
 
 ### Fórmula basada en el acoplador de importación: [!DNL Python] {#python}
 
-Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione **Importar fórmula** y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha.
+Se abre la página **Configurar** para el flujo de trabajo de la fórmula **Importar** . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha.
 
 ![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -136,19 +136,19 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 >
 > En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la generación de la fórmula de venta minorista mediante archivos de origen Python.
 
-Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada generada mediante archivos [!DNL Python] de origen en el campo URL **** de origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Seleccione **[!UICONTROL Python]** en la lista desplegable *Tiempo de ejecución* y **[!UICONTROL Clasificación]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que se encuentre en la página **Seleccionar origen** , pegue la URL del Docker correspondiente a la fórmula empaquetada generada mediante archivos [!DNL Python] de origen en el campo URL **** de origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Seleccione **[!UICONTROL Python]** en la lista desplegable **Tiempo de ejecución** y **[!UICONTROL Clasificación]** en la lista desplegable **Tipo** . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la **administración de esquemas**.
 
 >[!NOTE]
 >
-> *El tipo* admite **[!UICONTROL Clasificación]** y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
+> El tipo admite **[!UICONTROL Clasificación]** y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
-A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. Para este tutorial, establezca **[!UICONTROL semanalmente Ventas]** como la función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
+En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. Para este tutorial, establezca **[!UICONTROL semanalmente Ventas]** como la función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
 
 Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **[!UICONTROL Finalizar]** para crear la fórmula.
 
@@ -158,11 +158,11 @@ Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un 
 
 ### Fórmula basada en el Docker de importación - R {#r}
 
-Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione **Importar fórmula** y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha.
+Se abre la página **Configurar** para el flujo de trabajo de la fórmula **Importar** . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha.
 
 ![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -170,7 +170,7 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 >
 > En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen R.
 
-Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen R en el campo URL **[!UICONTROL de]** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Seleccione **[!UICONTROL R]** en la lista desplegable *Tiempo de ejecución* y **[!UICONTROL Clasificación]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que se encuentre en la página **Seleccionar origen** , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen R en el campo URL **[!UICONTROL de]** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Seleccione **[!UICONTROL R]** en la lista desplegable **Tiempo de ejecución** y **[!UICONTROL Clasificación]** en la lista desplegable **Tipo** . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la **administración de esquemas**.
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del D
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
-A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
@@ -192,11 +192,11 @@ Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un 
 
 ### Importar fórmula basada en el acoplador: PySpark {#pyspark}
 
-Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione **Importar fórmula** y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
+Se abre la página **Configurar** para el flujo de trabajo de la fórmula **Importar** . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
 
 ![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -204,7 +204,7 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 >
 > En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen PySpark.
 
-Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen PySpark en el campo URL **[!UICONTROL de]** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Seleccione **[!UICONTROL PySpark]** en la lista desplegable *Tiempo de ejecución* . Una vez seleccionado el tiempo de ejecución de PySpark, el artefacto predeterminado se rellena automáticamente en **[!UICONTROL Docker]**. A continuación, seleccione **[!UICONTROL Clasificación]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que se encuentre en la página **Seleccionar origen** , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen PySpark en el campo URL **[!UICONTROL de]** origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Seleccione **[!UICONTROL PySpark]** en la lista desplegable **Tiempo de ejecución** . Una vez seleccionado el tiempo de ejecución de PySpark, el artefacto predeterminado se rellena automáticamente en **[!UICONTROL Docker]**. A continuación, seleccione **[!UICONTROL Clasificación]** en la lista desplegable **Tipo** . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la **administración de esquemas**.
 
 >[!NOTE]
 >
@@ -212,11 +212,11 @@ Una vez que se encuentre en la página *Seleccionar origen* , pegue la URL del D
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. Para este tutorial, establezca **[!UICONTROL semanalmente Ventas]** como la función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
+En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. Para este tutorial, establezca **[!UICONTROL semanalmente Ventas]** como la función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
 
 Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **[!UICONTROL Finalizar]** para crear la fórmula.
 
@@ -226,11 +226,11 @@ Continúe con los [siguientes pasos](#next-steps) para averiguar cómo crear un 
 
 ### Fórmula basada en el acoplador de importación: Scala {#scala}
 
-Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione *Importar fórmula* y haga clic en **[!UICONTROL Iniciar]**.
+Para inicio, navegue y seleccione **[!UICONTROL Flujos de trabajo]** ubicados en la parte superior izquierda de la [!DNL Platform] interfaz de usuario. A continuación, seleccione **Importar fórmula** y haga clic en **[!UICONTROL Iniciar]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importar* . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
+Se abre la página **Configurar** para el flujo de trabajo de la fórmula **Importar** . Introduzca un nombre y una descripción para la fórmula y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
 
 ![configurar flujo de trabajo](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -238,19 +238,19 @@ Se abre la página *Configurar* para el flujo de trabajo de la fórmula *Importa
 >
 > En el tutorial [Empaquetar archivos de origen en un tutorial de fórmula](./package-source-files-recipe.md) , se proporcionó una URL de Docker al final de la creación de la fórmula de venta minorista mediante archivos de origen de Scala ([!DNL Spark]).
 
-Una vez que esté en la página *Seleccionar origen* , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen Scala en el campo URL *de* origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el **explorador** del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Seleccione **[!UICONTROL Spark]** en la lista desplegable *Runtime* . Una vez seleccionado el motor de ejecución, el artefacto predeterminado se rellena automáticamente en [!DNL Spark] Docker ****. A continuación, seleccione **[!UICONTROL Regresión]** en la lista desplegable *Tipo* . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la *administración de esquemas*.
+Una vez que esté en la página **Seleccionar origen** , pegue la URL del Docker correspondiente a la fórmula empaquetada creada con archivos de origen Scala en el campo URL de origen. A continuación, importe el archivo de configuración proporcionado arrastrándolo y soltándolo o utilice el explorador del sistema de archivos. El archivo de configuración proporcionado se encuentra en `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Seleccione **[!UICONTROL Spark]** en la lista desplegable **Runtime** . Una vez seleccionado el motor de ejecución, el artefacto predeterminado se rellena automáticamente en [!DNL Spark] Docker ****. A continuación, seleccione **[!UICONTROL Regresión]** en la lista desplegable **Tipo** . Una vez que se haya completado todo, haga clic en **[!UICONTROL Siguiente]** en la esquina superior derecha para proceder a la **administración de esquemas**.
 
 >[!NOTE]
 >
-> *El tipo* admite **[!UICONTROL Clasificación]** y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
+> El tipo admite **[!UICONTROL Clasificación]** y **[!UICONTROL Regresión]**. Si el modelo no se encuentra dentro de uno de estos tipos, seleccione **[!UICONTROL Personalizado]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección *Administrar Esquemas*, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
+A continuación, seleccione los esquemas de entrada y salida de Retail Sales en la sección **Administrar Esquemas**, se crearon utilizando la secuencia de comandos de arranque proporcionada en el tutorial [crear el esquema de ventas minoristas y el conjunto de datos](../models-recipes/create-retails-sales-dataset.md) .
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-En la sección Administración *de* funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. Para este tutorial, establezca **[!UICONTROL semanalmente Ventas]** como la función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
+En la sección Administración **de** funciones, haga clic en la identificación del inquilino en el visor de esquemas para expandir el esquema de entrada de ventas minoristas. Seleccione las funciones de entrada y salida resaltando la función deseada y seleccionando Función **[!UICONTROL de]** entrada o Función de **[!UICONTROL Destinatario]** en la ventana Propiedades **[!UICONTROL del]** campo derecha. A los efectos de este tutorial, establezca &quot;Ventas[!UICONTROL semanales]&quot; como Función **[!UICONTROL de]** Destinatario y todo lo demás como Función **[!UICONTROL de]** entrada. Haga clic en **[!UICONTROL Siguiente]** para revisar la nueva fórmula configurada.
 
 Revise la fórmula, agregue, modifique o elimine configuraciones según sea necesario. Haga clic en **[!UICONTROL Finalizar]** para crear la fórmula.
 
