@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notas de la versión del Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 6%
@@ -53,7 +53,7 @@ Este documento contiene información sobre las nuevas funciones de Adobe Experie
 
 * [!DNL Privacy Service] Mejoras en la interfaz de usuario:
    * Páginas de seguimiento de trabajos independientes para las regulaciones de RGPD y CCPA.
-   * Nuevo menú desplegable _de tipo_ de reglamento para cambiar entre los datos de seguimiento del RGPD y del CCPA.
+   * Nuevo menú desplegable *de tipo* de reglamento para cambiar entre los datos de seguimiento del RGPD y del CCPA.
 
 ## 25 de julio de 2019
 
