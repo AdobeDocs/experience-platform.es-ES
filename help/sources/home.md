@@ -5,7 +5,7 @@ title: Información general sobre Adobe Experience Platform Source Connectors
 topic: overview
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -118,7 +118,7 @@ La tabla siguiente describe cómo se comporta la interfaz de usuario en función
 
 | Nivel de permiso | Descripción |
 | ---- | ----|
-| **[!UICONTROL Fuentes]** de vista activadas | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la ficha *Catálogo* , así como a las fichas *Examinar*, *Cuentas* y *FlujoDeDatos* . |
+| **[!UICONTROL Fuentes]** de vista activadas | Conceda acceso de solo lectura a los orígenes en cada tipo de origen en la ficha Catálogo, así como en las fichas Examinar, Cuentas y Flujo de datos. |
 | **[!UICONTROL Administrar fuentes]** en | Además de las funciones incluidas en las fuentes **[!UICONTROL de]** Vista, concede acceso a la opción Origen **[!UICONTROL de]** Connect en el **[!UICONTROL catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en la **[!UICONTROL exploración]**. **[!UICONTROL Administrar fuentes]** también permite habilitar o deshabilitar **[!UICONTROL flujos]** de datos y editar sus programaciones. |
 | **[!UICONTROL Fuentes]** de vista desactivadas y **[!UICONTROL administradas]** desactivadas | Revocar todo el acceso a las fuentes. |
 
