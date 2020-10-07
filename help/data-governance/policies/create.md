@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: La API de servicio de directivas le permite crear y administrar políticas de uso de datos para determinar qué acciones de marketing se pueden realizar con datos que contienen ciertas etiquetas de uso de datos. Este documento proporciona un tutorial paso a paso para crear una política mediante la API de servicio de directivas.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 2%
@@ -195,7 +195,7 @@ Registre el identificador URI de la acción de marketing recién creada, tal com
 
 La creación de una nueva directiva requiere que proporcione el identificador URI de una acción de marketing con una expresión de las etiquetas de uso que prohíben esa acción de marketing.
 
-Esta expresión se denomina expresión **de** directiva y es un objeto que contiene (A) una etiqueta o (B) un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas. Por ejemplo, una política relativa a la exportación de datos a un tercero podría estar prohibida si están presentes `C1 OR (C3 AND C7)` etiquetas. Esta expresión se especificaría como:
+Esta expresión se denomina expresión de directiva y es un objeto que contiene (A) una etiqueta o (B) un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas. Por ejemplo, una política relativa a la exportación de datos a un tercero podría estar prohibida si están presentes `C1 OR (C3 AND C7)` etiquetas. Esta expresión se especificaría como:
 
 ```json
 "deny": {
