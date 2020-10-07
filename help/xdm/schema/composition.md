@@ -5,7 +5,7 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Los datos destinados a utilizarse en [!DNL Experience Platform] se agrupan en do
 * **Registrar datos**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
 * **Datos** de series temporales: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirecta.
 
-Todos los esquemas XDM describen datos que pueden clasificarse como registros o series temporales. El comportamiento de los datos de un esquema lo define la **clase** del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM se describen en detalle más adelante en este documento.
+Todos los esquemas XDM describen datos que pueden clasificarse como registros o series temporales. El comportamiento de los datos de un esquema lo define la clase del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM se describen en detalle más adelante en este documento.
 
 Tanto los esquemas de registro como de serie temporal contienen un mapa de identidades (`xdm:identityMap`). Este campo contiene la representación de identidad de un sujeto, extraída de campos marcados como &quot;Identidad&quot; como se describe en la siguiente sección.
 
@@ -133,7 +133,7 @@ Los esquemas se componen con la fórmula siguiente:
 
 **Clase + Mixin&amp;ast; = Esquema XDM**
 
-&amp;ast;Un esquema está compuesto por una clase y _cero o más_ mezclas. Esto significa que puede componer un esquema de conjunto de datos sin usar mezclas.
+&amp;ast;Un esquema se compone de una clase y cero o más mezclas. Esto significa que puede componer un esquema de conjunto de datos sin usar mezclas.
 
 ### Clase
 
