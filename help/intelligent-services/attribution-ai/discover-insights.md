@@ -5,7 +5,7 @@ title: Descubrimiento de perspectivas en Attribution AI
 topic: Attribution AI insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Para utilizar perspectivas para Attribution AI, debe tener disponible una instan
 
 ## Información general sobre perspectivas de instancias de servicio
 
-En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **Servicios** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **Abrir**.
+En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el navegador **[!UICONTROL Servicios]** y muestra los servicios inteligentes de Adobe disponibles. En el contenedor de Attribution AI, haga clic en **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +43,7 @@ A continuación, se abre la página de perspectivas de esa instancia de servicio
 
 ### Detalles de instancia de servicio
 
-Para vista de detalles adicionales para una instancia de servicio, haga clic en **Mostrar más** en la parte superior derecha.
+Para vista de detalles adicionales para una instancia de servicio, haga clic en **[!UICONTROL Mostrar más]** en la parte superior derecha.
 
 ![mostrar más](./images/insights/show-more.png)
 
@@ -53,20 +53,20 @@ Aparece una lista detallada. Para obtener más información sobre cualquiera de 
 
 ### Editar una instancia
 
-Para editar una instancia, haga clic en *Editar* en la navegación superior derecha.
+Para editar una instancia, haga clic en **[!UICONTROL Editar]** en la navegación superior derecha.
 ![haga clic en el botón de edición](./images/insights/edit-button.png)
 
-Aparece el cuadro de diálogo de edición, que le permite editar la descripción y la frecuencia de puntuación de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, haga clic en *Editar* en la esquina inferior derecha.
+Aparece el cuadro de diálogo de edición, que le permite editar la descripción y la frecuencia de puntuación de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, haga clic en **[!UICONTROL Editar]** en la esquina inferior derecha.
 
 ![editar pover](./images/insights/edit-popover.png)
 
 ### Más acciones {#more-actions}
 
-El botón *Más acciones* se encuentra en la navegación superior derecha junto a *Editar*. Al hacer clic en **Más acciones** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
+El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a *Editar*. Al hacer clic en **[!UICONTROL Más acciones]** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
 
 - **Eliminar**: Elimina la instancia.
 - **Descargar datos** de resumen: Descarga un archivo CSV que contiene los datos de resumen.
-- **Puntuaciones** de acceso: Al hacer clic en *Access score* , se le redirige a las puntuaciones de [acceso para el tutorial](./download-scores.md)de Attribution AI.
+- **Puntuaciones** de acceso: Al hacer clic en **Access score** , se le redirige a las puntuaciones de [acceso para el tutorial](./download-scores.md)de Attribution AI.
 - **Historial** de ejecución de vistas: Aparece una ventana emergente que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](./images/insights/more-actions.png)
@@ -77,31 +77,31 @@ Las perspectivas de Attribution AI le permiten filtrar los datos y actualizar au
 
 >[!NOTE]
 >
->De forma predeterminada, cada filtro se establece en &quot;Todo&quot; excepto el filtro del modelo ** Atribución, que se establece en &quot;Conversiones atribuidas incrementales e influenciadas&quot;.
+>De forma predeterminada, cada filtro se establece en &quot;Todo&quot; excepto el filtro &quot;Modelo[!UICONTROL de]atribución&quot;, que se establece en &quot;Conversiones atribuidas incrementales e influenciadas&quot;.
 
 ### Evento de conversión
 
 Cuando se crea una nueva instancia en Attribution AI, uno de los campos obligatorios es &quot;eventos de conversión&quot;. Los eventos de conversión son objetivos comerciales que identifican el impacto de las actividades de mercadotecnia, como los pedidos de comercio electrónico, las compras en el almacén y las visitas al sitio web.
 
-Desde la instancia, la lista desplegable eventos *de* conversión permite seleccionar cualquiera de los eventos definidos para la instancia a fin de filtrar los datos. Al seleccionar eventos específicos, se cambian las visualizaciones de la interfaz de usuario para rellenar solo las conversiones que pertenecen a esos eventos.
+Desde la instancia, la lista desplegable eventos **[!UICONTROL de]** conversión permite seleccionar cualquiera de los eventos definidos para la instancia a fin de filtrar los datos. Al seleccionar eventos específicos, se cambian las visualizaciones de la interfaz de usuario para rellenar solo las conversiones que pertenecen a esos eventos.
 
 ![evento de conversión](./images/insights/conversion-event.png)
 
 ### Modelo de atribución
 
-Al hacer clic en el modelo ** Atribución se abre una lista desplegable con todos los modelos de atribución disponibles. Puede seleccionar varios modelos para comparar los resultados. Para obtener más información sobre los distintos modelos de atribución y cómo funcionan, visite la información general de [Attribution AI](./overview.md) que contiene una tabla con información sobre cada modelo.
+Al hacer clic en Modelo **[!UICONTROL de]** atribución se abre una lista desplegable con todos los modelos de atribución disponibles. Puede seleccionar varios modelos para comparar los resultados. Para obtener más información sobre los distintos modelos de atribución y cómo funcionan, visite la información general de [Attribution AI](./overview.md) que contiene una tabla con información sobre cada modelo.
 
 ![modelo de atribución](./images/insights/attribution-model.png)
 
 ### Producto
 
-El filtro *Producto* permite seleccionar entre los productos que se ingirieron inicialmente en la creación de la instancia. Haga clic en la lista desplegable y utilice la función de búsqueda para seleccionar rápidamente todos los productos que desee comparar.
+El filtro **[!UICONTROL Producto]** permite seleccionar entre los productos que se ingirieron inicialmente en la creación de la instancia. Haga clic en la lista desplegable y utilice la función de búsqueda para seleccionar rápidamente todos los productos que desee comparar.
 
 ![filtro de productos](./images/insights/product-filter.png)
 
 ### Geografía
 
-El filtro *Geografía* rellena los códigos de país en función de los modelos de región. Dependiendo de sus datos, este filtro puede o no estar presente.
+El filtro **[!UICONTROL Geografía]** rellena los códigos de país en función de los modelos de región. Dependiendo de sus datos, este filtro puede o no estar presente.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Este filtro le permite seleccionar cualquier región que configure en el proceso
 
 ### Channel
 
-Al hacer clic en el filtro de *Canal* se muestra una lista desplegable con todos los canales de mercadotecnia disponibles. Puede seleccionar varios canales para compararlos.
+Al hacer clic en el filtro de **[!UICONTROL Canal]** se muestra una lista desplegable con todos los canales de mercadotecnia disponibles. Puede seleccionar varios canales para compararlos.
 
 ![Channel](./images/insights/channel.png)
 
@@ -129,13 +129,13 @@ Haga clic en el icono de calendario para abrir la ventana emergente de intervalo
 
 ## Información general sobre sus datos
 
-La tarjeta *Información general* muestra las conversiones totales según el modelo de atribución. El número total cambia en función de la cantidad específica que realice la búsqueda mediante los filtros descritos anteriormente en este documento. Al seleccionar más modelos, se agregan círculos adicionales a la Información general, cada uno con su propio color correspondiente a la leyenda.
+La tarjeta **[!UICONTROL Información general]** muestra las conversiones totales según el modelo de atribución. El número total cambia en función de la cantidad específica que realice la búsqueda mediante los filtros descritos anteriormente en este documento. Al seleccionar más modelos, se agregan círculos adicionales a la Información general, cada uno con su propio color correspondiente a la leyenda.
 
 ![sobre validación](./images/insights/Overview.png)
 
 ## Tendencias semanales
 
-La tarjeta de tendencias ** semanales desglosa la conversión total según el intervalo de fechas definido durante el proceso de filtrado.
+La tarjeta de tendencias **** semanales desglosa la conversión total según el intervalo de fechas definido durante el proceso de filtrado.
 
 ![tendencias](./images/insights/weekly-trends.png)
 
@@ -147,17 +147,17 @@ Al pasar el ratón sobre la línea de datos de un modelo de atribución específ
 
 ## Desglose por canal
 
-El *desglose por tarjeta de canal* se utiliza para determinar el número total de conversiones en relación con cada canal. Esta tarjeta puede utilizarse para ayudar a tomar decisiones sobre la efectividad de cada canal y el rendimiento de la inversión.
+El **[!UICONTROL desglose por tarjeta de canal]** se utiliza para determinar el número total de conversiones en relación con cada canal. Esta tarjeta puede utilizarse para ayudar a tomar decisiones sobre la efectividad de cada canal y el rendimiento de la inversión.
 
 ![canal de desglose](./images/insights/channel-breakdown.png)
 
-Al hacer clic en las elipses en la parte superior derecha de la tarjeta *Desglosar por canal* , se abre una lista desplegable que permite rellenar datos en función de los puntos de contacto.
+Al hacer clic en las elipses en la parte superior derecha de la tarjeta **[!UICONTROL Desglosar por canal]** , se abre una lista desplegable que permite rellenar datos en función de los puntos de contacto.
 
 ![touchpoints](./images/insights/breakdown-by-touchpoints.png)
 
 ## Campañas principales
 
-La tarjeta campañas ** principales muestra información general sobre sus campañas y el rendimiento de la campaña en cada canal. Esta tarjeta puede ayudar a informar a su equipo de la efectividad de una campaña específica para un canal determinado y proporcionar una perspectiva de dónde realizar más inversiones.
+La tarjeta campañas **** principales muestra información general sobre sus campañas y el rendimiento de la campaña en cada canal. Esta tarjeta puede ayudar a informar a su equipo de la efectividad de una campaña específica para un canal determinado y proporcionar una perspectiva de dónde realizar más inversiones.
 
 ![campañas principales](./images/insights/top-campaigns.png)
 
