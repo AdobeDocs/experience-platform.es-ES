@@ -5,7 +5,7 @@ title: Guía del usuario del portátil de aprendizaje automático en tiempo real
 topic: Training and scoring a ML model
 description: La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real en Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ La siguiente guía describe los pasos necesarios para crear una aplicación de a
 
 ## Creación de un bloc de notas de aprendizaje automático en tiempo real
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Equipos portátiles]** dentro de *Data Science*. A continuación, seleccione **[!UICONTROL JupyterLab]** y espere un poco de tiempo para que se cargue el entorno.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Equipos portátiles]** dentro de **Data Science**. A continuación, seleccione **[!UICONTROL JupyterLab]** y espere un poco de tiempo para que se cargue el entorno.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ Con la plantilla ML **[!UICONTROL en tiempo]** real, debe analizar, preprocesar,
 
 **Transformaciones de datos**
 
-La celda Transformaciones **[!UICONTROL de]** datos de plantillas ML *en tiempo* real debe modificarse para que funcione con su propio conjunto de datos. Generalmente esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación de datos o la ingeniería de funciones.
+La celda Transformaciones **[!UICONTROL de]** datos de plantillas ML **en tiempo** real debe modificarse para que funcione con su propio conjunto de datos. Generalmente esto implica cambiar el nombre de las columnas, el resumen de datos y la preparación de datos o la ingeniería de funciones.
 
 >[!NOTE]
 >
