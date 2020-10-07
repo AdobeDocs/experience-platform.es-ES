@@ -5,7 +5,7 @@ title: Examinar el espacio de trabajo de control de acceso
 topic: user guide
 description: Este documento cubre los pasos necesarios para explorar el espacio de trabajo de control de acceso. Para configurar control de acceso para Experience Platform a través de Adobe Admin Console, debe ser administrador de una organización de IMS que tenga una suscripción para el Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Examinar el espacio de trabajo de control de acceso
 
-Para configurar controles de acceso para [!DNL Experience Platform] mediante Adobe Admin Console, debe ser administrador de una organización de IMS que tenga una suscripción a [!DNL Experience Platform]. Si bien Adobe admite jerarquías de administrador flexibles para organizaciones IMS, debe contar con privilegios de administrador **** del sistema, administrador **[!UICONTROL del]** producto o administrador **[!UICONTROL del perfil del]** producto para configurar control de acceso. Consulte el artículo de Adobe Help Center sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
+Para configurar controles de acceso para [!DNL Experience Platform] mediante Adobe Admin Console, debe ser administrador de una organización de IMS que tenga una suscripción a [!DNL Experience Platform]. Aunque Adobe admite jerarquías de administrador flexibles para organizaciones IMS, debe contar con privilegios de administrador del sistema, administrador del producto o administrador del perfil del producto para configurar control de acceso. Consulte el artículo de Adobe Help Center sobre funciones [](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
 
 Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
 
