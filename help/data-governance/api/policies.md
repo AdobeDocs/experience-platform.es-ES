@@ -5,7 +5,7 @@ title: Políticas
 topic: developer guide
 description: Las políticas de uso de datos son reglas que su organización adopta que describen los tipos de acciones de marketing que puede realizar o que tiene restringido el acceso a los datos dentro de Experience Platform. El extremo /policy se utiliza para todas las llamadas de API relacionadas con la visualización, creación, actualización o eliminación de directivas de uso de datos.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 2%
@@ -235,7 +235,7 @@ En la [!DNL Policy Service] API, una directiva se define de la siguiente manera:
 * Referencia a una acción de mercadotecnia específica
 * Una expresión que describe las etiquetas de uso de datos con las que la acción de mercadotecnia no se puede realizar
 
-Para satisfacer este último requisito, las definiciones de políticas deben incluir una expresión booleana con respecto a la presencia de etiquetas de uso de datos. Esta expresión se denomina expresión **de** políticas.
+Para satisfacer este último requisito, las definiciones de políticas deben incluir una expresión booleana con respecto a la presencia de etiquetas de uso de datos. Esta expresión se denomina expresión de políticas.
 
 Las expresiones de directiva se proporcionan en forma de `deny` propiedad dentro de cada definición de directiva. Un ejemplo de un `deny` objeto simple que solo comprueba la presencia de una única etiqueta tendría el siguiente aspecto:
 
@@ -245,7 +245,7 @@ Las expresiones de directiva se proporcionan en forma de `deny` propiedad dentro
 }
 ```
 
-Sin embargo, muchas políticas especifican condiciones más complejas con respecto a la presencia de etiquetas de uso de datos. Para admitir estos casos de uso, también puede incluir operaciones booleanas para describir sus expresiones de directiva. El objeto de expresión de directiva debe contener _una etiqueta_ o __ un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas.
+Sin embargo, muchas políticas especifican condiciones más complejas con respecto a la presencia de etiquetas de uso de datos. Para admitir estos casos de uso, también puede incluir operaciones booleanas para describir sus expresiones de directiva. El objeto de expresión de directiva debe contener una etiqueta o un operador y operandos, pero no ambos. A su vez, cada operando es también un objeto de expresión de políticas.
 
 Por ejemplo, para definir una directiva que prohíba que una acción de marketing se realice en los datos en los que hay `C1 OR (C3 AND C7)` `deny` etiquetas presentes, la propiedad de la política se especificaría de la siguiente manera:
 
@@ -375,7 +375,7 @@ Una respuesta exitosa devuelve los detalles de la política recién creada, incl
 >
 >Solo puede actualizar directivas personalizadas. Si desea habilitar o deshabilitar las directivas principales, consulte la sección sobre [actualización de la lista de las directivas](#update-enabled-core)principales habilitadas.
 
-Puede actualizar una directiva personalizada existente proporcionando su ID en la ruta de una solicitud de PUT con una carga útil que incluya el formulario actualizado de la directiva en su totalidad. En otras palabras, la solicitud del PUT esencialmente _reescribe_ la política.
+Puede actualizar una directiva personalizada existente proporcionando su ID en la ruta de una solicitud de PUT con una carga útil que incluya el formulario actualizado de la directiva en su totalidad. En otras palabras, la solicitud del PUT esencialmente reescribe la política.
 
 >[!NOTE]
 >
