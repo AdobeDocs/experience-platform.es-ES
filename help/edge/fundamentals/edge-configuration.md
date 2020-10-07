@@ -5,7 +5,7 @@ description: 'Obtenga información sobre cómo configurar la red perimetral Expe
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Los ID de configuración de Edge se pueden crear en Adobe [!DNL Launch] con la h
 
 >[!NOTE]
 >
->La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la documentación [!DNL Launch] para obtener más información.
+>La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la [!DNL Launch] documentación para obtener más información.
 
 Puede crear una configuración de borde haciendo clic en **[!UICONTROL Nueva configuración]** de borde en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno.
 
@@ -41,7 +41,7 @@ A continuación se muestran los ajustes disponibles para un entorno. La mayoría
 
 #### [!UICONTROL Identidad]
 
-La sección de identidad es la única sección que siempre está activada. Tiene dos configuraciones disponibles: [!UICONTROL Sincronizaciones de ID habilitadas] e ID de Contenedor de sincronización de [!UICONTROL ID].
+La sección de identidad es la única sección que siempre está activada. Tiene dos configuraciones disponibles: &quot;Sincronizaciones[!UICONTROL de ID habilitadas]&quot; e &quot;ID de Contenedor[!UICONTROL de sincronización de]ID&quot;.
 
 ![Sección Identidad de la interfaz de usuario de configuración](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ Los Simuladores para pruebas son ubicaciones del Adobe Experience Platform que p
 
 ##### [!UICONTROL Entrada de flujo continuo]
 
-Una entrada de flujo continuo es un origen HTTP en el Adobe Experience Platform. Se crean en la ficha [!UICONTROL Fuentes] de Adobe Experience Platform como una API HTTP.
+Una entrada de flujo continuo es un origen HTTP en el Adobe Experience Platform. Se crean en la ficha &quot;[!UICONTROL Fuentes]&quot; de Adobe Experience Platform como una API HTTP.
 
 ##### [!UICONTROL Conjunto de datos de evento]
 
@@ -95,7 +95,7 @@ El token de propiedad se encuentra en [!UICONTROL Adobe Target] > [!UICONTROL Co
 
 [Los entornos](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) de Adobe Target le ayudan a administrar su implementación en todas las etapas de desarrollo. Esta configuración especifica qué entorno se va a usar con cada entorno.
 
-Adobe recomienda que esto se establezca de forma diferente para cada uno de los entornos de configuración `dev`, `stage`y `prod` borde para que las cosas sean sencillas. Sin embargo, si ya tiene definidos entornos [!UICONTROL de] Adobe Target, puede utilizarlos.
+Adobe recomienda que esto se establezca de forma diferente para cada uno de los entornos de configuración `dev`, `stage`y `prod` borde para que las cosas sean sencillas. Sin embargo, si ya tiene definidos entornos de Adobe Target, puede utilizarlos.
 
 #### Adobe Audience Manager
 
