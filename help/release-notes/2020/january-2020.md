@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 | Nuevos extremos de API | La ruta de acceso base para la [!DNL Privacy Service] API se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
 | Nueva propiedad requerida `regulation` | Al crear nuevos trabajos en la [!DNL Privacy Service] API, se debe proporcionar una `regulation` propiedad en la carga útil de la solicitud para indicar en qué regulación se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. |
 | Compatibilidad con [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ahora acepta solicitudes de acceso o eliminación de Adobe [!DNL Primetime Authentication], utilizando `primetimeAuthentication` como valor de producto. |
-| Mejoras en la interfaz de usuario de Privacy Service | Páginas de seguimiento de trabajos independientes para las regulaciones de RGPD y CCPA. Nuevo menú desplegable _de tipo_ de reglamento para cambiar entre los datos de seguimiento del RGPD y del CCPA. |
+| Mejoras en la interfaz de usuario de Privacy Service | Páginas de seguimiento de trabajos independientes para las regulaciones de RGPD y CCPA. Nuevo **Tipo de Reglamento **menú desplegable para cambiar entre los datos de seguimiento del RGPD y del CCPA. |
 
 **Problemas conocidos**
 
@@ -105,11 +105,11 @@ En CDP [en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integ
 | Categoría | Permiso | Descripción |
 |--- | --- | ---|
 | Destinos | Administrar destinos | Acceso para leer, crear, editar y deshabilitar destinos. |
-| Destinos | Destinos de vista | Acceso de sólo lectura a los destinos disponibles en la ficha [!UICONTROL _Catálogo_] y a los destinos autenticados en la ficha _Examinar_ . |
+| Destinos | Destinos de vista | Acceso de sólo lectura a los destinos disponibles en la ficha **[!UICONTROL Catálogo]** y a los destinos autenticados en la ficha **Examinar** . |
 | Destinos | Activar destinos | Capacidad para activar datos en destinos. Este permiso requiere que se agregue &quot;Administrar destinos&quot; o &quot;Destinos de Vista&quot; al perfil del producto. |
 
 **Problemas conocidos**
 
 * None
 
-Consulte la información general [](../../rtcdp/destinations/destinations-overview.md) Destinos para obtener más información.
+See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
