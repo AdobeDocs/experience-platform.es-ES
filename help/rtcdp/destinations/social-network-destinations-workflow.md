@@ -6,7 +6,7 @@ seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de 
 
    ![Credenciales confirmadas](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. En el paso **[!UICONTROL Configuración]** , escriba un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación y rellene el ID **[!UICONTROL de]** cuenta de su cuenta de publicidad de red social. <br> También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br> Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+4. En el paso **[!UICONTROL Configuración]** , escriba un [!UICONTROL Nombre] y una [!UICONTROL Descripción] para el flujo de activación y rellene el ID [!UICONTROL de] cuenta de su cuenta de publicidad de red social. <br> También en este paso, puede seleccionar cualquier caso **[!UICONTROL de uso de]** Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br> Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
    >[!IMPORTANT]
    >
