@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de origen de muestra de ventas minoristas proporcionados en un archivo de archivo, que se puede utilizar para crear una fórmula en Adobe Experience Platform Data Science Workspace siguiendo el flujo de trabajo de importación de fórmulas en la interfaz de usuario o mediante la API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Para obtener las credenciales del Registro de Contenedor de Azure, inicie sesió
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Se abre la página *Configurar* . Proporcione un nombre *de* fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez completada, haga clic en **[!UICONTROL Siguiente]**.
+Se abre la página **[!UICONTROL Configurar]** . Proporcione un nombre **[!UICONTROL de]** fórmula adecuado, por ejemplo, &quot;Fórmula de ventas minoristas&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez completada, haga clic en **[!UICONTROL Siguiente]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Seleccione el *motor de ejecución* correspondiente y, a continuación, elija un
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Tenga en cuenta los valores de Host *de* Docker, *Nombre de usuario* y *Contraseña*. Se utilizan para generar e insertar la [!DNL Docker] imagen en los flujos de trabajo que se describen a continuación.
+Tenga en cuenta los valores del host, el nombre de usuario y la contraseña del Docker. Se utilizan para generar e insertar la [!DNL Docker] imagen en los flujos de trabajo que se describen a continuación.
 
 >[!NOTE]
 >
