@@ -5,7 +5,7 @@ title: Administración de datos de Adobe Experience Platform
 topic: overview
 description: La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluyendo catalogación, linaje de datos, etiquetado de uso de datos, políticas de uso de datos y control del uso de datos para acciones de mercadotecnia
 translation-type: tm+mt
-source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Data Governance] le permite administrar los dato
 
 ## Funciones de administración de datos
 
-Como concepto, la gobernanza de los datos no es automática ni se da en un vacío. Lo que comenzó como un papel para un individuo, generalmente reconocido como un supervisor **de** datos, ha crecido considerablemente a medida que se ha expandido el ecosistema de gobernanza de datos. En la actualidad, la gestión de los datos requiere una gestión y supervisión continuas para tener éxito y depende de que los administradores de datos cuenten con herramientas con las que se puedan etiquetar correctamente los datos, se puedan crear políticas de uso y se pueda hacer cumplir el cumplimiento de dichas políticas.
+Como concepto, la gobernanza de los datos no es automática ni se da en un vacío. Lo que comenzó como un papel para un individuo, generalmente reconocido como administrador de datos, ha crecido considerablemente a medida que se ha expandido el ecosistema de gobernanza de datos. En la actualidad, la gestión de los datos requiere una gestión y supervisión continuas para tener éxito y depende de que los administradores de datos cuenten con herramientas con las que se puedan etiquetar correctamente los datos, se puedan crear políticas de uso y se pueda hacer cumplir el cumplimiento de dichas políticas.
 
 Si bien la gobernanza de los datos debe ser responsabilidad de cada individuo en la organización, aquí hay algunas de las funciones esenciales dentro del ciclo de gobernanza de los datos:
 
