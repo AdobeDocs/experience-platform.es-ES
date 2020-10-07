@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de realizar llamadas a las API de Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%
@@ -89,17 +89,17 @@ Los pasos se describen en detalle a continuación.
 
 Vaya a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vacío en la documentación de Adobe Developer Console.
 
-Una vez creado un nuevo proyecto, haga clic en **[!UICONTROL Añadir API]** en la pantalla Información general _del_ proyecto.
+Una vez creado un nuevo proyecto, haga clic en **[!UICONTROL Añadir API]** en la pantalla Información general **del** proyecto.
 
 ![](images/authentication/add-api-button.png)
 
-Aparece la pantalla _Añadir una API_ . Haga clic en el icono de producto para Adobe Experience Platform y, a continuación, seleccione API **[!UICONTROL de]** Experience Platform antes de hacer clic en **[!UICONTROL Siguiente]**.
+Aparece la pantalla **Añadir una API** . Haga clic en el icono de producto para Adobe Experience Platform y, a continuación, seleccione API **[!UICONTROL de]** Experience Platform antes de hacer clic en **[!UICONTROL Siguiente]**.
 
 ![](images/authentication/add-platform-api.png)
 
 Una vez seleccionada [!DNL Experience Platform] como la API que se agregará al proyecto, siga los pasos descritos en el tutorial sobre la [adición de una API a un proyecto mediante una cuenta de servicio (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partir del paso &quot;Configurar API&quot;) para finalizar el proceso.
 
-Una vez que se ha agregado la API al proyecto, la página de información general _del_ proyecto muestra las siguientes credenciales que son necesarias en todas las llamadas a [!DNL Experience Platform] las API:
+Una vez que se ha agregado la API al proyecto, la página de información general **del** proyecto muestra las siguientes credenciales que son necesarias en todas las llamadas a [!DNL Experience Platform] las API:
 
 * `{API_KEY}` (ID de cliente)
 * `{IMS_ORG}` (ID de organización)
