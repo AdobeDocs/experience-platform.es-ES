@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 'Atributos calculados: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -31,7 +31,7 @@ El punto final de API utilizado en esta guía forma parte de la API [de Perfil d
 
 Adobe Experience Platform le permite importar y combinar fácilmente datos de múltiples fuentes para poder generarlos [!DNL Real-time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista de 360 grados del cliente.
 
-Parte de la información recopilada en el perfil se puede entender fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o basarse en otros campos y valores para generar la información (por ejemplo, &quot;total de compras de duración&quot;). Para facilitar la comprensión de estos datos de un vistazo, [!DNL Platform] permite crear atributos **** calculados que realizan automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
+Parte de la información recopilada en el perfil se puede entender fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o basarse en otros campos y valores para generar la información (por ejemplo, &quot;total de compras de duración&quot;). Para facilitar la comprensión de estos datos de un vistazo, [!DNL Platform] permite crear atributos calculados que realizan automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
 
 Los atributos calculados incluyen la creación de una expresión, o &quot;regla&quot;, que funciona con los datos entrantes y almacena el valor resultante en un atributo o evento de perfil. Las expresiones se pueden definir de varias formas diferentes, lo que le permite especificar que una regla evalúe únicamente los eventos entrantes, los datos de evento y perfil entrantes o los eventos de evento, perfil e historial entrantes.
 
@@ -69,7 +69,7 @@ Una vez localizado el esquema, haga clic en su nombre para abrir el [!DNL Schema
 
 ### Crear una mezcla
 
-Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** junto a *Mezclinas* en la sección **[!UICONTROL Composición]** en la parte izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
+Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** junto a **[!UICONTROL Mezclinas]** en la sección **[!UICONTROL Composición]** en la parte izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
 
 Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añadir mezcla]** cuando la haya completado.
 
@@ -77,7 +77,7 @@ Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añ
 
 ### Añadir un campo de atributo calculado en el esquema
 
-La nueva mezcla debe aparecer ahora en la sección **[!UICONTROL Mezclas]** en **[!UICONTROL Composición]**. Haga clic en el nombre de la mezcla y aparecerán varios botones de campo **** Añadir en la sección *[!UICONTROL Estructura]** del editor.
+Su nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mezclas]&quot; en &quot;[!UICONTROL Composición]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones de campo **** Añadir en la sección **[!UICONTROL Estructura]** del editor.
 
 Seleccione **[!UICONTROL Añadir campo]** junto al nombre del esquema para agregar un campo de nivel superior, o bien puede seleccionar agregar el campo en cualquier lugar dentro del esquema que prefiera.
 
