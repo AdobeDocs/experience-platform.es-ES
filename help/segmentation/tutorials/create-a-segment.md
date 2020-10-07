@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API de servicio de segmentación de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,9 +56,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Desarrollar una definición de segmento
 
-El primer paso en la segmentación es definir un segmento, representado en una construcción denominada definición **de** segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado **PQL**. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
+El primer paso en la segmentación es definir un segmento, representado en una construcción denominada definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
 
-Puede crear una nueva definición de segmento haciendo una solicitud de POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
+Puede crear una nueva definición de segmento realizando una solicitud de POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
 
 Para obtener una explicación detallada sobre cómo definir un segmento, lea la guía para desarrolladores de definiciones de [segmentos](../api/segment-definitions.md#create).
 
