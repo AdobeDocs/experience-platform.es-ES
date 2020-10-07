@@ -5,7 +5,7 @@ title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
 description: La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La API del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Resumen de puntuación muestra el número total de perfiles puntuados y los cate
 
 ## Distribución de puntuaciones
 
-La tarjeta *Distribución de Puntuaciones* le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta *Distribución de puntuaciones* representan el tipo de puntuación de tendencia generada.
+La tarjeta **[!UICONTROL Distribución de Puntuaciones]** le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta *Distribución de puntuaciones* representan el tipo de puntuación de tendencia generada.
 
 ![distribución de puntuaciones](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ El generador de segmentos se utiliza para definir un segmento. Al seleccionar **
 
 ![Rellenar segmento](../images/insights/segment-saving.png)
 
-Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página *Examinar* y muestra todos los segmentos disponibles.
+Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Examinar]** y muestra todos los segmentos disponibles.
 
 ![Todos los segmentos](../images/insights/Segments-dashboard.png)
 
