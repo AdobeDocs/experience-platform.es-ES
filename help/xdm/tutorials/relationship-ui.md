@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial para definir una relación e
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
-Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas que pertenecen a diferentes clases, se debe agregar un campo **de** relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
+Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen, que haga referencia a la identidad de un esquema de destino.
 
 Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de Esquemas en la interfaz de usuario [!DNL Experience Platform] . Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre la [definición de una relación mediante la API](relationship-api.md)del Registro de Esquema.
 
