@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un sistema de éxito de cliente e incorporarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Puede crear una conexión de origen realizando una solicitud de POST a la [!DNL 
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
-Utilice los siguientes valores de enumeración para los conectores **basados en** archivos:
+Utilice los siguientes valores de enumeración para los conectores basados en archivos:
 
 | Data.format | Valor de enumeración |
 | ----------- | ---------- |
@@ -69,7 +69,7 @@ Utilice los siguientes valores de enumeración para los conectores **basados en*
 | Archivos JSON | `json` |
 | Archivos de parquet | `parquet` |
 
-Para todos los conectores **basados en** tablas, utilice el valor enum: `tabular`.
+Para todos los conectores basados en tablas, utilice el valor enum: `tabular`.
 
 **Formato API**
 
