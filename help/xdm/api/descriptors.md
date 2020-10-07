@@ -5,7 +5,7 @@ title: Descriptores
 description: 'Los esquemas definen una vista estática de las entidades de datos, pero no proporcionan detalles específicos sobre cómo los datos basados en estos esquemas (conjuntos de datos, por ejemplo) pueden relacionarse entre sí. Adobe Experience Platform le permite describir estas relaciones y otros metadatos interpretativos sobre un esquema mediante descriptores. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Solicitud**
 
-En esencia, esta solicitud _vuelve a escribir_ el descriptor, por lo que el cuerpo de la solicitud debe incluir todos los campos necesarios para definir un descriptor de ese tipo. En otras palabras, la carga útil de solicitud para actualizar (PUT) un descriptor es la misma que la carga útil para crear (POST) un descriptor del mismo tipo.
+Esta solicitud esencialmente vuelve a escribir el descriptor, de modo que el cuerpo de la solicitud debe incluir todos los campos necesarios para definir un descriptor de ese tipo. En otras palabras, la carga útil de solicitud para actualizar (PUT) un descriptor es la misma que la carga útil para crear (POST) un descriptor del mismo tipo.
 
 En este ejemplo, el descriptor de identidad se está actualizando para hacer referencia a otro `xdm:sourceProperty` (&quot;teléfono móvil&quot;) y cambiar el `xdm:namespace` a &quot;Teléfono&quot;.
 
