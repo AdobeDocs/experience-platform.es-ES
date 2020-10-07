@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático Sensei.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -35,7 +35,7 @@ En el tutorial ahora debe tener los siguientes valores:
 
 ## Flujo de trabajo de API
 
-Usaremos las API para crear una ejecución de experimentos para formación. Para este tutorial, nos centraremos en los **motores**, instancias **MLI** y extremos de **experimentos** . El siguiente gráfico describe la relación entre los tres y también introduce la idea de una ejecución y un modelo.
+Usaremos las API para crear una ejecución de experimentos para formación. Para este tutorial, nos centraremos en los extremos de motores, instancias MLI y experimentos. El siguiente gráfico describe la relación entre los tres y también introduce la idea de una ejecución y un modelo.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
