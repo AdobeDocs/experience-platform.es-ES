@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: En este tutorial se proporcionan pasos para crear un conector de origen de Adobe Analytics en la interfaz de usuario con el fin de incorporar datos de consumo a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 
 ## Creación de una conexión de origen con Adobe Analytics
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo de orígenes. La pantalla *Catálogo* muestra los orígenes disponibles para crear conexiones de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo de orígenes. La pantalla **Catálogo** muestra los orígenes disponibles para crear conexiones de entrada y cada origen muestra el número de cuentas existentes y los flujos de conjuntos de datos asociados a ellas.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
@@ -73,7 +73,7 @@ Una vez creado el flujo del conjunto de datos, puede monitorear los datos que se
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-Aparece la pantalla Flujos *de* conjuntos de datos. En esta página hay un par de flujos de conjuntos de datos, incluida información sobre su nombre, datos de origen, tiempo de creación y estado.
+Aparece la pantalla Flujos **de** conjuntos de datos. En esta página hay un par de flujos de conjuntos de datos, incluida información sobre su nombre, datos de origen, tiempo de creación y estado.
 
 El conector crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para Perfil, pero se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
 
@@ -83,7 +83,7 @@ Seleccione el flujo del conjunto de datos que desee vista desde la lista.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-Se abre la página *actividad* del conjunto de datos. Esta página muestra la velocidad de los mensajes que se consumen en forma de gráfico. Seleccione Administración *de datos* en el encabezado superior para acceder a los campos de etiquetado.
+Se abre la página **actividad** del conjunto de datos. Esta página muestra la velocidad de los mensajes que se consumen en forma de gráfico. Seleccione Administración *de datos* en el encabezado superior para acceder a los campos de etiquetado.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ Las etiquetas heredadas de un flujo de datos se pueden vista desde la pantalla A
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-Aparece el panel *Editar etiquetas* de gobernanza. Esta pantalla le permite acceder y editar el contrato, la identidad y las etiquetas sensibles de un flujo de datos.
+Aparece el panel **Editar etiquetas** de gobernanza. Esta pantalla le permite acceder y editar el contrato, la identidad y las etiquetas sensibles de un flujo de datos.
 
 Para obtener más información sobre cómo etiquetar datos procedentes de Analytics, visite la guía [de etiquetas de uso de](../../../../../data-governance/labels/user-guide.md)datos.
 
