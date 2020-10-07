@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Métricas disponibles
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ae6f220cdec54851fb78b7ba8a8eb19f2d06b684
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '2007'
 ht-degree: 2%
 
 ---
@@ -22,11 +22,18 @@ El punto final de API utilizado en esta guía forma parte de la [[!DNL Observabi
 
 ## Recuperar métricas de observabilidad
 
-Puede recuperar métricas de observabilidad realizando una solicitud de GET al `/metrics` extremo en la [!DNL Observability Insights] API.
+Existen dos métodos admitidos para recuperar datos de métricas mediante la API:
+
+* [Versión 1](#v1): Especifique las métricas mediante parámetros de consulta.
+* [Versión 2](#v2): Especifique y aplique filtros a las métricas mediante una carga útil JSON.
+
+### Versión 1 {#v1}
+
+Puede recuperar datos de métricas realizando una solicitud de GET al extremo, especificando las métricas mediante el uso de parámetros de consulta. `/metrics`
 
 **Formato API**
 
-Cuando se utiliza el extremo, se debe proporcionar al menos un parámetro de solicitud de métrica. `/metrics` Otros parámetros de consulta son opcionales para filtrar los resultados.
+Se debe proporcionar al menos una métrica en el `metric` parámetro. Otros parámetros de consulta son opcionales para filtrar los resultados.
 
 ```http
 GET /metrics?metric={METRIC}
@@ -39,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parámetro | Descripción |
 | --- | --- |
 | `{METRIC}` | La métrica que desee exponer. Al combinar varias métricas en una sola llamada, debe utilizar un símbolo (`&`) para separar métricas individuales. Por ejemplo, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identificador de un recurso concreto [!DNL Platform] cuyas métricas desea exponer. Esta ID puede ser opcional, obligatoria o no aplicable en función de las métricas utilizadas. Consulte el [apéndice](#available-metrics) para ver una lista de las métricas disponibles, así como los ID admitidos (tanto obligatorios como opcionales) para cada métrica. |
+| `{ID}` | Identificador de un recurso concreto [!DNL Platform] cuyas métricas desea exponer. Esta ID puede ser opcional, obligatoria o no aplicable en función de las métricas utilizadas. Consulte el [apéndice](#available-metrics) para ver una lista de las métricas disponibles, incluidos los ID admitidos (tanto obligatorios como opcionales) para cada métrica. |
 | `{DATE_RANGE}` | El intervalo de fechas de las métricas que desea exponer, en formato ISO 8601 (por ejemplo, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Solicitud**
@@ -59,53 +66,208 @@ Una respuesta correcta devuelve una lista de objetos, cada uno de los cuales con
 
 ```json
 {
-    "id": "5cf8ab4ec48aba145214abeb",
-    "imsOrgId": "{IMS_ORG}",
-    "timeseries": {
-        "granularity": "MONTH",
-        "items": [
-            {
-                "timestamp": "2019-06-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-                    "timeseries.ingestion.dataset.size": 32320
-                }
-            },
-            {
-                "timestamp": "2019-05-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-                    "timeseries.ingestion.dataset.size": 31409
-                }
-            },
-            {
-                "timestamp": "2019-04-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-03-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-02-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 390,
-                    "timeseries.ingestion.dataset.size": 16801
-                }
-            }
-        ],
-        "_page": null,
-        "_links": null
-    },
-    "stats": {}
+  "id": "5cf8ab4ec48aba145214abeb",
+  "imsOrgId": "{IMS_ORG}",
+  "timeseries": {
+    "granularity": "MONTH",
+    "items": [
+      {
+        "timestamp": "2019-06-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
+          "timeseries.ingestion.dataset.size": 32320
+        }
+      },
+      {
+        "timestamp": "2019-05-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
+          "timeseries.ingestion.dataset.size": 31409
+        }
+      },
+      {
+        "timestamp": "2019-04-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-03-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-02-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 390,
+          "timeseries.ingestion.dataset.size": 16801
+        }
+      }
+    ],
+    "_page": null,
+    "_links": null
+  },
+  "stats": {}
 }
 ```
+
+### Versión 2 {#v2}
+
+Puede recuperar datos de métricas realizando una solicitud de POST al extremo, especificando las métricas que desee recuperar en la carga útil. `/metrics`
+
+**Formato API**
+
+```http
+POST /metrics
+```
+
+**Solicitud**
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "start": "2020-07-14T00:00:00.000Z",
+        "end": "2020-07-22T00:00:00.000Z",
+        "granularity": "day",
+        "metrics": [
+          {
+            "name": "timeseries.ingestion.dataset.recordsuccess.count",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+                "groupBy": true
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          },
+          {
+            "name": "timeseries.ingestion.dataset.dailysize",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5eddb21420f516191b7a8dad",
+                "groupBy": false
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          }
+        ]
+      }'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `start` | La fecha y hora más temprana desde la cual se recuperan los datos de métricas. |
+| `end` | Fecha y hora más recientes desde las cuales recuperar datos de métricas. |
+| `granularity` | Campo opcional que indica el intervalo de tiempo por el que dividir los datos de métricas. Por ejemplo, un valor de `DAY` devuelve métricas por cada día entre la fecha `start` y la `end` , mientras que un valor de `MONTH` lo hará por mes. Al utilizar este campo, también se debe proporcionar una `downsample` propiedad correspondiente para indicar la función de agregación mediante la cual se agrupan los datos. |
+| `metrics` | Matriz de objetos, una para cada métrica que desee recuperar. |
+| `name` | Nombre de una métrica reconocida por Perspectivas de la Observabilidad. Consulte el [apéndice](#available-metrics) para obtener una lista completa de los nombres de métricas aceptados. |
+| `filters` | Campo opcional que permite filtrar métricas por conjuntos de datos específicos. El campo es una matriz de objetos (uno para cada filtro), con cada objeto con las siguientes propiedades: <ul><li>`name`:: Tipo de entidad con la que se filtran las métricas. Actualmente, solo `dataSets` se admite.</li><li>`value`:: ID de uno o varios conjuntos de datos. Se pueden proporcionar varios ID de conjuntos de datos como una sola cadena, con cada ID separado por caracteres de barras verticales (`|`).</li><li>`groupBy`:: Cuando se establece en true, indica que el correspondiente `value` representa varios conjuntos de datos cuyos resultados de métricas deben devolverse por separado. Si se establece en false, los resultados de las métricas para esos conjuntos de datos se agrupan.</li></ul> |
+| `aggregator` | Especifica la función de agregación que debe utilizarse para agrupar varios registros de series temporales en resultados únicos. Para obtener información detallada sobre los agregadores disponibles, consulte la documentación [de](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)OpenTSDB. |
+| `downsample` | Campo opcional que permite especificar una función de agregación para reducir la tasa de muestreo de datos de métricas mediante la ordenación de campos en intervalos (o &quot;bloques&quot;). El intervalo para la disminución de resolución se determina mediante la `granularity` propiedad . Para obtener información detallada sobre la disminución de resolución, consulte la documentación de [OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+
+**Respuesta**
+
+Una respuesta correcta devuelve los puntos de datos resultantes para las métricas y filtros especificados en la solicitud.
+
+```json
+{
+  "metricResponses": [
+    {
+      "metric": "timeseries.ingestion.dataset.recordsuccess.count",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+          "groupBy": true
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {
+            "dataSetId": "5edcfb2fbb642119194c7d94"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        },
+        {
+          "groupBy": {
+            "dataSetId": "5eddb21420f516191b7a8dad"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    },
+    {
+      "metric": "timeseries.ingestion.dataset.dailysize",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5eddb21420f516191b7a8dad",
+          "groupBy": false
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {},
+          "dps": {
+            "2020-07-14T00:00:00Z": 38455.0,
+            "2020-07-15T00:00:00Z": 40213.0,
+            "2020-07-16T00:00:00Z": 31476.0,
+            "2020-07-17T00:00:00Z": 43705.0,
+            "2020-07-18T00:00:00Z": 33227.0,
+            "2020-07-19T00:00:00Z": 34977.0,
+            "2020-07-20T00:00:00Z": 36735.0,
+            "2020-07-21T00:00:00Z": 36737.0,
+            "2020-07-22T00:00:00Z": 43715.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    }
+  ]
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `metricResponses` | Matriz cuyos objetos representan cada una de las métricas especificadas en la solicitud. Cada objeto contiene información sobre la configuración del filtro y los datos de métricas devueltos. |
+| `metric` | Nombre de una de las métricas proporcionadas en la solicitud. |
+| `filters` | Configuración del filtro para la métrica especificada. |
+| `datapoints` | Una matriz cuyos objetos representan los resultados de la métrica y los filtros especificados. El número de objetos de la matriz depende de las opciones de filtro proporcionadas en la solicitud. Si no se proporcionaron filtros, la matriz sólo contendrá un único objeto que represente todos los conjuntos de datos. |
+| `groupBy` | Si se especificaron varios conjuntos de datos en la `filter` propiedad de una métrica y la `groupBy` opción se estableció en true en la solicitud, este objeto contendrá la ID del conjunto de datos al que se aplica la `dps` propiedad correspondiente.<br><br>Si este objeto aparece vacío en la respuesta, la `dps` propiedad correspondiente se aplica a todos los conjuntos de datos proporcionados en la `filters` matriz (o a todos los conjuntos de datos en [!DNL Platform] si no se proporcionaron filtros). |
+| `dps` | Los datos devueltos para la métrica, el filtro y el intervalo de tiempo determinados. Cada clave de este objeto representa una marca de tiempo con un valor correspondiente para la métrica especificada. El período de tiempo entre cada punto de datos depende del `granularity` valor especificado en la solicitud. |
 
 ## Apéndice
 
@@ -206,3 +368,46 @@ La siguiente tabla describe las métricas de [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Marca de hora para la última solicitud de registro de actualización de un conjunto de datos. | Id. de conjunto de datos (**requerido**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Tamaño promedio del registro. | Organización IMS (**obligatoria**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Tasa de solicitudes de actualización para registros ingestados para un conjunto de datos. | Id. de conjunto de datos (**requerido**) |
+
+### Mensajes de error
+
+Las respuestas del `/metrics` extremo pueden devolver mensajes de error bajo ciertas condiciones. Estos mensajes de error se devuelven en el siguiente formato:
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/INSGHT-1000-400",
+    "title": "Bad Request - Start date cannot be after end date.",
+    "status": 400,
+    "report": {
+        "tenantInfo": {
+            "sandboxName": "prod",
+            "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
+            "imsOrgId": "{IMS_ORG}"
+        },
+        "additionalContext": null
+    },
+    "error-chain": [
+        {
+            "serviceId": "INSGHT",
+            "errorCode": "INSGHT-1000-400",
+            "invokingServiceId": "INSGHT",
+            "unixTimeStampMs": 1602095177129
+        }
+    ]
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `title` | Una cadena que contiene el mensaje de error y el posible motivo por el que se ha producido. |
+| `report` | Contiene información contextual sobre el error, incluido el simulador de pruebas y la organización de IMS que se está utilizando en la operación que lo activó. |
+
+La siguiente tabla lista los distintos códigos de error que puede devolver la API:
+
+| Código de error | Título | Descripción |
+| --- | --- | --- |
+| `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Se produjo un error en la carga útil de la solicitud. Asegúrese de que el formato de carga útil coincide exactamente con el que se muestra [arriba](#v2). Cualquiera de las posibles razones puede desencadenar este error:<ul><li>Faltan campos obligatorios como `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un agregador no válido</li><li>Una fecha de inicio se produce después de una fecha de finalización</li></ul> |
+| `INSGHT-1001-400` | Error en la consulta de métricas | Se produjo un error al intentar realizar la consulta de la base de datos de métricas, debido a una solicitud incorrecta o a que la consulta misma no se puede analizar. Asegúrese de que la solicitud tiene el formato correcto antes de intentarlo de nuevo. |
+| `INSGHT-1001-500` | Error en la consulta de métricas | Se produjo un error al intentar consulta de la base de datos de métricas, debido a un error del servidor. Intente la solicitud de nuevo y, si el problema persiste, póngase en contacto con el servicio de soporte técnico de Adobe. |
+| `INSGHT-1002-500` | Error de servicio | No se pudo procesar la solicitud debido a un error interno. Intente la solicitud de nuevo y, si el problema persiste, póngase en contacto con el servicio de soporte técnico de Adobe. |
+| `INSGHT-1003-401` | Error de validación del Simulador para pruebas | No se pudo procesar la solicitud debido a un error de validación del simulador para pruebas. Asegúrese de que el nombre del simulador para pruebas que ha proporcionado en el encabezado `x-sandbox-name` representa un simulador para pruebas válido y habilitado para su organización de IMS antes de volver a intentar la solicitud. |
