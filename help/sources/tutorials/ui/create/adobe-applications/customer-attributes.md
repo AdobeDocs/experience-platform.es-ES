@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial proporciona los pasos para crear un conector de origen en la interfaz de usuario para recopilar datos de perfil de atributos del cliente en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -28,7 +28,7 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-La pantalla actividad ** de origen lista todas las conexiones establecidas anteriormente para los datos de perfil de atributos del cliente. Para crear una nueva conexión, haga clic en **Seleccionar datos**.
+La pantalla actividad **** de origen lista todas las conexiones establecidas anteriormente para los datos de perfil de atributos del cliente. Para crear una nueva conexión, haga clic en **Seleccionar datos**.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ En la lista de conjuntos de datos de perfiles de atributos del cliente disponibl
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-Aparece el paso *Revisar* , que le permite revisar la nueva conexión de entrada antes de crearla. Los detalles de la conexión se agrupan por categorías, entre ellas:
+Aparece el paso **Revisar** , que le permite revisar la nueva conexión de entrada antes de crearla. Los detalles de la conexión se agrupan por categorías, entre ellas:
 
-* *Detalles* de la fuente: Muestra el tipo de conexión de origen y los datos de origen seleccionados.
-* *Detalles* del destinatario: Al crear otros conectores de origen, este contenedor muestra en qué conjunto de datos se están invirtiendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos. Los datos de perfil de atributos del cliente se asignan automáticamente y se ingieren en Perfiles del cliente en tiempo real.
+* **Detalles** de la fuente: Muestra el tipo de conexión de origen y los datos de origen seleccionados.
+* **Detalles** del destinatario: Al crear otros conectores de origen, este contenedor muestra en qué conjunto de datos se están invirtiendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos. Los datos de perfil de atributos del cliente se asignan automáticamente y se ingieren en Perfiles del cliente en tiempo real.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
