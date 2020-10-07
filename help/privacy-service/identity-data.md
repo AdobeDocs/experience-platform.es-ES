@@ -5,7 +5,7 @@ title: Datos de identidad para solicitudes de privacidad
 topic: overview
 description: Este documento proporciona una guía general sobre cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Cuando un cliente puede interactuar con su marca a través de varios canales dif
 
 Por ejemplo, al administrar solicitudes de datos de clientes en [!DNL Privacy Service], una identidad puede representar un valor de cookie establecido en un dominio controlado por Adobes, un valor de cookie bajo un dominio de terceros y compartido con Adobe o un identificador personalizado que usted defina explícitamente en su organización de IMS.
 
-Por lo tanto, es necesario que cada identidad enviada a [!DNL Privacy Service] se acompañe de una **Área de nombres** que proporcione contexto al relacionar el valor de identidad con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Por lo tanto, es necesario que cada identidad enviada a [!DNL Privacy Service] se acompañe de una Área de nombres que establezca un contexto en el que se relacione el valor de identidad con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
 Adobe Experience Platform Identity Service mantiene un almacén de Áreas de nombres de identidad definidas globalmente y definidas por el usuario. Para obtener información más detallada sobre Áreas de nombres, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad. Para obtener una lista de Áreas de nombres estándar y calificadores de Área de nombres que se utilizan comúnmente en [!DNL Privacy Service], consulte la sección [del](api/appendix.md) apéndice en la guía para desarrolladores.
 
