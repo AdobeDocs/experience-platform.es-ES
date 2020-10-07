@@ -4,7 +4,7 @@ title: Guía del usuario de Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Seleccione la ficha **[!UICONTROL Examinar]** para examinar los perfiles por ide
 
 ### Métricas de perfil {#profile-metrics}
 
-A la derecha de la ficha [!UICONTROL Examinar] hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
+A la derecha de la ficha **[!UICONTROL Examinar]** hay varias métricas importantes relacionadas con los datos de perfil, incluido el recuento [total de](#profile-count) perfiles, así como una lista de [perfiles por Área de nombres](#profiles-by-namespace).
 
 Estas métricas de perfil se evalúan mediante la directiva de combinación predeterminada de su organización. Para obtener más información sobre cómo trabajar con políticas de combinación, incluida la definición de una directiva de combinación predeterminada, consulte la guía [de usuario Políticas de](merge-policies.md)combinación.
 
-Además de estas métricas, la sección Métricas de perfil también proporciona una fecha y hora de [!UICONTROL última actualización] , que muestra cuándo se evaluaron las métricas por última vez.
+Además de estas métricas, la sección Métricas de perfil también proporciona una fecha y hora de última actualización, que muestra cuándo se evaluaron las métricas por última vez.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ En el cuadro de diálogo **[!UICONTROL Seleccionar Área de nombres]** de identi
 
 ### Valor de identidad
 
-Después de seleccionar una Área de nombres de identidad, vuelva a la ficha [!UICONTROL Examinar] , donde puede introducir un valor **** de identidad. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para la Área de nombres proporcionada. Por ejemplo, si selecciona la Área de nombres [!UICONTROL de] identidad &quot;Correo electrónico&quot;, se requiere un valor [!UICONTROL de] identidad en forma de una dirección de correo electrónico válida.
+Después de seleccionar una Área de nombres de identidad, vuelva a la ficha **[!UICONTROL Examinar]** , donde puede introducir un valor **** de identidad. Este valor es específico de un perfil de cliente individual y debe ser una entrada válida para la Área de nombres proporcionada. Por ejemplo, la selección de la Área de nombres de identidad &quot;Correo electrónico&quot; requeriría un valor de identidad en forma de una dirección de correo electrónico válida.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Una vez introducido un valor, seleccione **[!UICONTROL Mostrar perfil]** y se de
 
 ### Detalles del perfil {#profile-detail}
 
-Al seleccionar el ID [!UICONTROL de]Perfil, se abre la ficha **[!UICONTROL Detalle]** . La información de perfil mostrada en la ficha [!UICONTROL Detalle] se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran también se pueden cambiar en el nivel de organización para mostrar los atributos de Perfil preferidos. Para obtener más información sobre la personalización de estos campos, incluidas las instrucciones paso a paso para agregar y quitar atributos y cambiar el tamaño de los paneles de panel, consulte la guía [de personalización de detalles de](profile-customization.md)perfil.
+Al seleccionar el ID **[!UICONTROL de]** Perfil, se abre la ficha **[!UICONTROL Detalle]** . La información de perfil mostrada en la ficha **[!UICONTROL Detalle]** se ha combinado desde varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran también se pueden cambiar en el nivel de organización para mostrar los atributos de Perfil preferidos. Para obtener más información sobre la personalización de estos campos, incluidas las instrucciones paso a paso para agregar y quitar atributos y cambiar el tamaño de los paneles de panel, consulte la guía [de personalización de detalles de](profile-customization.md)perfil.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puede vista de información adicional relacionada con el perfil individual seleccionando otra de las fichas disponibles. Estas fichas incluyen [!UICONTROL Atributos], [!UICONTROL Eventos]y pertenencia [!UICONTROL a]segmentos, que muestran los [!UICONTROL segmentos] para los que el perfil está cualificado actualmente.
+Puede vista de información adicional relacionada con el perfil individual seleccionando otra de las fichas disponibles. Estas fichas incluyen atributos, eventos y pertenencia a segmentos, que muestran los segmentos para los que el perfil está cualificado actualmente.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Combinar directivas
 
-En el menú [!UICONTROL Perfiles] principal, seleccione la ficha **[!UICONTROL Combinar políticas]** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
+En el menú **[!UICONTROL Perfiles]** principal, seleccione la ficha **[!UICONTROL Combinar políticas]** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
 
 Para obtener más información sobre las directivas de combinación, consulte la guía [del usuario de directivas de](merge-policies.md)combinación.
 
@@ -108,7 +108,7 @@ Para obtener más información sobre las directivas de combinación, consulte la
 
 ## Esquema de unión {#union-schema}
 
-En el menú [!UICONTROL Perfiles] principal, seleccione la ficha Esquema **[!UICONTROL de]** Unión para vista de los esquemas de unión de los datos de Perfil. Un esquema de unión es una combinación de todos los campos [!DNL Experience Data Model] (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en [!DNL Real-time Customer Profile]. Si selecciona una clase en la lista [!UICONTROL Clase] del lado izquierdo, puede realizar la vista de la estructura de su esquema en el lienzo. Por ejemplo, si selecciona &quot;[!DNL XDM Profile]&quot;, se muestra el esquema de unión de la [!DNL XDM Individual Profile] clase.
+En el menú **[!UICONTROL Perfiles]** principal, seleccione la ficha Esquema **[!UICONTROL de]** Unión para vista de los esquemas de unión de los datos de Perfil. Un esquema de unión es una combinación de todos los campos [!DNL Experience Data Model] (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en [!DNL Real-time Customer Profile]. Al seleccionar una clase en la lista &quot;[!UICONTROL Clase]&quot; del lado izquierdo, puede realizar la vista de la estructura de su esquema en el lienzo. Por ejemplo, si selecciona &quot;[!DNL XDM Profile]&quot;, se muestra el esquema de unión de la [!DNL XDM Individual Profile] clase.
 
 Para obtener más información sobre los esquemas de unión y su función en Adobe Experience Platform, consulte la sección sobre esquemas de unión en la guía [de composición de](../../xdm/schema/composition.md)esquemas.
 
