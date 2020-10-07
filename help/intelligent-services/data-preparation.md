@@ -5,7 +5,7 @@ title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 description: 'Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los datasets que se utilizan en Servicios inteligentes] deben cumplir con el esquema XDM de Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Preparación de datos para su uso en [!DNL Intelligent Services]
 
-Para [!DNL Intelligent Services] descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. [!DNL Intelligent Services] aproveche los esquemas [!DNL Experience Data Model] (XDM) para lograrlo. Específicamente, todos los conjuntos de datos utilizados en [!DNL Intelligent Services] deben cumplir el esquema XDM de **Consumer ExperienceEvent (CEE)** .
+Para [!DNL Intelligent Services] descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. [!DNL Intelligent Services] aproveche los esquemas [!DNL Experience Data Model] (XDM) para lograrlo. Específicamente, todos los conjuntos de datos utilizados en [!DNL Intelligent Services] deben cumplir el esquema XDM de Consumer ExperienceEvent (CEE).
 
 Este documento proporciona una guía general sobre cómo asignar los datos de eventos de marketing de varios canales a este esquema, esbozando información sobre los campos importantes dentro del esquema para ayudarle a determinar cómo asignar los datos de manera efectiva a su estructura.
 
