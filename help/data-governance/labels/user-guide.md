@@ -5,7 +5,7 @@ title: Guía del usuario de etiquetas de uso de datos
 topic: labels
 description: Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Esta guía del usuario cubre los pasos para trabajar con etiquetas de uso de dat
 
 ## Administración de etiquetas de uso de datos en el nivel de conjunto de datos
 
-Para administrar las etiquetas de uso de datos en el nivel de conjunto de datos, debe seleccionar un conjunto de datos existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para abrir el espacio de trabajo _Conjuntos_ de datos. Esta página lista todos los conjuntos de datos creados que pertenecen a su organización, junto con detalles útiles relacionados con cada conjunto de datos.
+Para administrar las etiquetas de uso de datos en el nivel de conjunto de datos, debe seleccionar un conjunto de datos existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para abrir el espacio de trabajo **[!UICONTROL Conjuntos]** de datos. Esta página lista todos los conjuntos de datos creados que pertenecen a su organización, junto con detalles útiles relacionados con cada conjunto de datos.
 
 ![Ficha Conjunto de datos dentro de Área de datos](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ Aparece la pantalla **[!UICONTROL Seleccionar Esquema]** , que lista todos los e
 
 ![Seleccionar Esquema de conjunto de datos](../images/labels/dataset_schema.png)
 
-Aparece la pantalla **[!UICONTROL Configurar conjunto de datos]** . Proporcione un **nombre** (obligatorio) y una **descripción** (opcional, pero recomendada) para el nuevo conjunto de datos y, a continuación, haga clic en **[!UICONTROL Finalizar]**.
+Aparece la pantalla **[!UICONTROL Configurar conjunto de datos]** . Proporcione un nombre (obligatorio) y una descripción (opcional, pero recomendada) para el nuevo conjunto de datos y, a continuación, haga clic en **[!UICONTROL Finalizar]**.
 
 ![Configurar conjunto de datos con nombre y descripción](../images/labels/dataset_configure.png)
 
