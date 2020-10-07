@@ -5,10 +5,10 @@ title: Entrada y salida de Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obl
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
-| Comercio | Conversión  |
+| Comercio | Conversión |
 
 Generalmente, la atribución se ejecuta en columnas de conversión como pedido, compras y cierres de compra en &quot;comercio&quot;. Las columnas &quot;canal&quot; y &quot;marketing&quot; son muy recomendadas para definir puntos de contacto para obtener buenas perspectivas. Sin embargo, puede incluir cualquier otra columna adicional junto con las columnas anteriores para configurarla como una definición de conversión o punto de contacto.
 
@@ -140,7 +140,7 @@ Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfa
 
 ![Elija su esquema](./images/input-output/schemas_browse.png)
 
-A continuación, seleccione un campo en la ventana **[!UICONTROL Estructura]** de la interfaz de usuario y se abre la ficha Propiedades **[!UICONTROL del]** campo. En las propiedades **** Campo es el campo **[!UICONTROL Ruta]** que se asigna a las puntuaciones sin procesar.
+A continuación, seleccione un campo en la ventana **[!UICONTROL Estructura]** de la interfaz de usuario y se abre la ficha Propiedades **[!UICONTROL del]** campo. En las propiedades **** Campo es el campo de ruta que se asigna a las puntuaciones sin procesar.
 
 ![Elegir un Esquema](./images/input-output/field_properties.png)
 
