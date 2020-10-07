@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -36,7 +36,7 @@ En la página **[!UICONTROL Fuentes]** , haga clic en API **** HTTP y, a continu
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Aparece la pantalla **[!UICONTROL Conectar a HTTP]** . En Detalles **** del servicio, proporcione el **[!UICONTROL nombre]** y una **[!UICONTROL descripción]** para la nueva conexión de flujo continuo.
+Aparece la pantalla **[!UICONTROL Conectar a HTTP]** . En Detalles **[!UICONTROL del]** servicio, especifique el nombre y una descripción de la nueva conexión de flujo continuo.
 
 En Autenticación **[!UICONTROL de cuenta]**, seleccione las siguientes propiedades de configuración para la conexión de flujo continuo:
 
@@ -59,7 +59,7 @@ Puede [crear un nuevo conjunto de datos](#create-a-new-dataset) o [utilizar uno 
 
 ### Crear un nuevo conjunto de datos
 
-Para crear un nuevo conjunto de datos, proporcione el **[!UICONTROL Nombre]**, la **[!UICONTROL Descripción]** y el **[!UICONTROL Esquema]** de destinatario para el conjunto de datos.
+Para crear un nuevo conjunto de datos, especifique el nombre, la descripción y el esquema de destinatario del conjunto de datos.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
