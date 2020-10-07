@@ -5,7 +5,7 @@ title: Configuración de una instancia de AI de cliente
 topic: Instance creation
 description: Los servicios inteligentes proporcionan una API de cliente como un servicio de Adobe Sensei sencillo de usar que se puede configurar para diferentes casos de uso. Las siguientes secciones proporcionan los pasos para configurar una instancia de AI del cliente.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 0%
@@ -35,7 +35,7 @@ A continuación encontrará información importante sobre los valores con los qu
 
 * El nombre de la instancia se utiliza en todos los lugares donde se muestra la puntuación de AI del cliente. Por lo tanto, los nombres deben describir lo que las puntuaciones de predicción representan, por ejemplo, &quot;Probabilidad de cancelar la suscripción de la revista&quot;.
 
-* El tipo de tendencia determina la intención de la puntuación y la polaridad de la métrica. Puede elegir entre **[!UICONTROL Corn]** o **[!UICONTROL Conversión]**. Consulte la nota en [resumen](./discover-insights.md#scoring-summary) de puntuación en el documento de perspectivas de descubrimiento para obtener más información sobre cómo afecta el tipo de tendencia a la instancia.
+* El tipo de tendencia determina la intención de la puntuación y la polaridad de la métrica. Puede elegir &quot;[!UICONTROL Enmarcar]&quot; o &quot;[!UICONTROL Conversión]&quot;. Consulte la nota en [resumen](./discover-insights.md#scoring-summary) de puntuación en el documento de perspectivas de descubrimiento para obtener más información sobre cómo afecta el tipo de tendencia a la instancia.
 
 * La fuente de datos es la ubicación de los datos. Dataset es el conjunto de datos de entrada que se utiliza para predecir puntuaciones. Según el diseño, la API del cliente utiliza los datos del Evento de experiencias de consumo para calcular las puntuaciones de tendencia. Al seleccionar un conjunto de datos en el selector desplegable, solo se muestran los que son compatibles con la API del cliente.
 
@@ -47,7 +47,7 @@ Proporcione los valores necesarios y haga clic en **[!UICONTROL Siguiente]**.
 
 ### Definir un objetivo {#define-a-goal}
 
-Aparece el paso *Definir objetivo* y proporciona un entorno interactivo para que usted pueda definir visualmente un objetivo. Un objetivo se compone de uno o más eventos, donde la incidencia de cada evento se basa en la condición que contiene. El objetivo de una instancia de AI de cliente es determinar la probabilidad de lograr su objetivo dentro de un intervalo de tiempo determinado.
+Aparece el paso **[!UICONTROL Definir objetivo]** y proporciona un entorno interactivo para que usted pueda definir visualmente un objetivo. Un objetivo se compone de uno o más eventos, donde la incidencia de cada evento se basa en la condición que contiene. El objetivo de una instancia de AI de cliente es determinar la probabilidad de lograr su objetivo dentro de un intervalo de tiempo determinado.
 
 Haga clic en **[!UICONTROL Especificar nombre]** de campo y seleccione un campo en la lista desplegable. Haga clic en la segunda entrada y seleccione una cláusula para la condición del evento, luego proporcione un valor de destinatario para completar el evento. Para configurar eventos adicionales, haga clic en **[!UICONTROL Añadir evento]**. Por último, complete el objetivo aplicando un intervalo de tiempo de predicción en número de días y, a continuación, haga clic en **[!UICONTROL Siguiente]**.
 
@@ -55,7 +55,7 @@ Haga clic en **[!UICONTROL Especificar nombre]** de campo y seleccione un campo 
 
 ### Configurar una programación *(opcional)* {#configure-a-schedule}
 
-Aparece el paso *avanzado* . Este paso opcional le permite configurar una programación para automatizar las ejecuciones de predicciones, definir exclusiones de predicciones para filtrar determinados eventos o hacer clic en **[!UICONTROL Finalizar]** si no se necesita nada.
+Aparece el paso **[!UICONTROL Avanzado]** . Este paso opcional le permite configurar una programación para automatizar las ejecuciones de predicciones, definir exclusiones de predicciones para filtrar determinados eventos o hacer clic en **[!UICONTROL Finalizar]** si no se necesita nada.
 
 Configure un programa de puntuación configurando la frecuencia *de* puntuación. Las ejecuciones de predicciones automatizadas se pueden programar para que se ejecuten de forma semanal o mensual.
 
