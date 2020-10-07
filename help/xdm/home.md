@@ -5,7 +5,7 @@ title: Sistema de modelo de datos de experiencia (XDM)
 topic: overview
 description: 'La estandarización y la interoperabilidad son conceptos clave para Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. '
 translation-type: tm+mt
-source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -19,7 +19,7 @@ La estandarización y la interoperabilidad son conceptos clave para Adobe Experi
 
 XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación que se utilice para comunicarse con [!DNL Platform] los servicios. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que puede ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas de las acciones de los clientes, definir audiencias de clientes a través de segmentos y expresar atributos de clientes para fines de personalización.
 
-XDM es el marco fundamental que permite a Adobe Experience Cloud, con [!DNL Experience Platform]tecnología, entregar el mensaje correcto a la persona correcta, en el canal correcto, en el momento preciso. La metodología en la que [!DNL Experience Platform] se basa, **XDM System**, hace funcionar [!DNL Experience Data Model] esquemas para uso de [!DNL Platform] los servicios.
+XDM es el marco fundamental que permite a Adobe Experience Cloud, con [!DNL Experience Platform]tecnología, entregar el mensaje correcto a la persona correcta, en el canal correcto, en el momento preciso. La metodología sobre la que [!DNL Experience Platform] se construye, Sistema XDM, hace funcionar [!DNL Experience Data Model] esquemas para su uso por [!DNL Platform] los servicios.
 
 Este documento proporciona una visión general de la función del sistema XDM dentro de [!DNL Experience Platform].
 
@@ -44,7 +44,7 @@ Los datos destinados a utilizarse en [!DNL Experience Platform] se agrupan en do
 * **Registrar datos**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
 * **Datos** de series temporales: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirecta.
 
-Todos los esquemas XDM describen datos que pueden clasificarse como registros o series temporales. El comportamiento de los datos de un esquema lo define la **clase** del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM describen el menor número de propiedades que debe contener un esquema para representar un comportamiento de datos concreto.
+Todos los esquemas XDM describen datos que pueden clasificarse como registros o series temporales. El comportamiento de los datos de un esquema lo define la clase del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM describen el menor número de propiedades que debe contener un esquema para representar un comportamiento de datos concreto.
 
 Aunque puede definir sus propias clases dentro del [!DNL Schema Registry], se recomienda utilizar las clases preferidas **[!DNL XDM Individual Profile]** y **[!DNL XDM ExperienceEvent]** para los datos de registros y series temporales, respectivamente. Estas clases se describen con más detalle a continuación.
 
