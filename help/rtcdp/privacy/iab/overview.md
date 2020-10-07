@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en tiempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Este cuadro de diálogo debe permitir que el cliente adhesión o salga de lo sig
 
 ### Cadenas de consentimiento {#consent-strings}
 
-Independientemente del método que utilice para recopilar los datos, el objetivo es generar un valor de cadena basado en las opciones de consentimiento elegidas por el cliente, llamadas cadena **de** consentimiento.
+Independientemente del método que utilice para recopilar los datos, el objetivo es generar un valor de cadena basado en las opciones de consentimiento elegidas por el cliente, denominadas cadena de consentimiento.
 
 En la especificación TCF, las cadenas de consentimiento se utilizan para codificar los detalles relevantes sobre la configuración de consentimiento del cliente, en términos de propósitos de mercadotecnia específicos, según se definen en las políticas y los proveedores. [!DNL Real-time CDP] utiliza estas cadenas para almacenar la configuración de consentimiento para cada cliente y, por lo tanto, debe generarse una nueva cadena de consentimiento cada vez que cambie dicha configuración.
 
