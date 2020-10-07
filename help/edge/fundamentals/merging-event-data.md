@@ -5,7 +5,7 @@ description: Aprenda a combinar datos de evento del SDK web Experience Platform
 seo-description: Aprenda a combinar datos de evento del SDK web Experience Platform
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Esta función aún está en desarrollo. No todas las soluciones podrán combinar datos de evento como se describe en esta página.
 
-A veces, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que _sí_ tiene para que no se pierda si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
+A veces, no todos los datos están disponibles cuando se produce un evento. Es posible que desee capturar los datos que tiene para que no se pierdan si, por ejemplo, el usuario cierra el explorador. Por otro lado, también puede incluir cualquier dato que esté disponible más adelante.
 
 En estos casos, puede combinar datos con eventos anteriores pasando `eventMergeId` como opción a los `event` comandos de la siguiente manera:
 
