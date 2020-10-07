@@ -5,7 +5,7 @@ title: Conectar con el buscador
 topic: connect
 description: Este documento recorre los pasos para conectar el buscador con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
