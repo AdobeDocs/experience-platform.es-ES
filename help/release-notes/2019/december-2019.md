@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -34,7 +34,7 @@ El servicio de segmentación de Adobe Experience Platform proporciona una interf
 
 | Función | Descripción |
 |--- | ---|
-| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL _Segmentos_] y [!UICONTROL _Audiencias_] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL _Audiencias_] . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
+| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL Segmentos] y [!UICONTROL Audiencias] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL Audiencias] . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
 | Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha **[!UICONTROL Campos]** y, a continuación, utilice el menú desplegable **[!UICONTROL Combinar directiva]** para seleccionar la directiva de combinación que desee utilizar. |
 
 **Problemas conocidos**
@@ -61,7 +61,7 @@ Consulte la información general [del servicio de](../../decisioning-service/hom
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamientos basados en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
