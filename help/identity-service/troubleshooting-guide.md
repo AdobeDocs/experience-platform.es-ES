@@ -5,7 +5,7 @@ title: Guía de solución de problemas de Adobe Experience Platform Identity Ser
 topic: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Identity Service, así como una guía de solución de problemas para errores comunes.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Mediante la API [de](https://www.adobe.io/apis/experienceplatform/home/api-refer
 
 ## ¿Qué son las identidades compuestas y los XID?
 
-En las llamadas de API se hace referencia a las identidades mediante su identidad compuesta o XID. Una identidad **** compuesta es una representación de una identidad que contiene un valor de ID y una Área de nombres. Un **XID** es un identificador de un solo valor que representa la misma construcción que una identidad compuesta (un ID y una Área de nombres) y se asigna automáticamente a nuevas identidades cuando lo mantiene Identity Service. Consulte la descripción general [de la API de servicio de](./home.md) identidad para obtener más información.
+En las llamadas de API se hace referencia a las identidades mediante su identidad compuesta o XID. Una identidad compuesta es una representación de una identidad que contiene un valor de ID y una Área de nombres. Un XID es un identificador de un solo valor que representa la misma construcción que una identidad compuesta (un ID y una Área de nombres) y se asigna automáticamente a nuevas identidades cuando lo mantiene Identity Service. Consulte la descripción general [de la API de servicio de](./home.md) identidad para obtener más información.
 
 ## ¿Cómo gestiona Identity Service la información de identificación personal (PII)?
 
