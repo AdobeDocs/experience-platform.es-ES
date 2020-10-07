@@ -5,7 +5,7 @@ title: Introducción a la ingestión de lotes
 topic: overview
 description: La API de inserción por lotes permite ingestar datos en Adobe Experience Platform como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parqué) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 2%
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Después de crear correctamente un nuevo lote para la carga, los archivos se pueden cargar a un conjunto de datos específico.
 
-Puede cargar archivos con la API **de carga de archivos** pequeños. Sin embargo, si los archivos son demasiado grandes y se supera el límite de la puerta de enlace (como tiempos de espera extendidos, solicitudes de tamaño de cuerpo excedidos y otras restricciones), puede cambiar a la API **de carga de archivos** grandes. Esta API carga el archivo en fragmentos y vincula los datos mediante la llamada a la API **de carga de archivos** grandes.
+Puede cargar archivos con la API de carga de archivos pequeños. Sin embargo, si los archivos son demasiado grandes y se supera el límite de la puerta de enlace (como tiempos de espera extendidos, solicitudes de tamaño de cuerpo excedidos y otras restricciones), puede cambiar a la API de carga de archivos grandes. Esta API carga el archivo en fragmentos y vincula los datos mediante la llamada API Large File Upload Complete.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Finalización del lote de señales
 
-Una vez cargados todos los archivos en el lote, se puede indicar la finalización del lote. Al hacer esto, las entradas [!DNL Catalog] DataSetFile **** se crean para los archivos completados y se asocian al lote generado anteriormente. A continuación, el [!DNL Catalog] lote se marca como correcto, lo que desencadena flujos descendentes para ingestar los datos disponibles.
+Una vez cargados todos los archivos en el lote, se puede indicar la finalización del lote. Al hacer esto, las entradas [!DNL Catalog] DataSetFile se crean para los archivos completados y se asocian al lote generado anteriormente. A continuación, el [!DNL Catalog] lote se marca como correcto, lo que desencadena flujos descendentes para ingestar los datos disponibles.
 
 **Solicitud**
 
@@ -389,10 +389,10 @@ El `"status"` campo muestra el estado actual del lote solicitado. Los lotes pued
 | Estado | Descripción |
 | ------ | ----------- |
 | Abandonado | El lote no se completó en el intervalo de tiempo esperado. |
-| Anulado | Se ha llamado **explícitamente** a una operación de anulación (mediante la API de Ingesta por lotes) para el lote especificado. Una vez que el lote está en estado **Cargado** , no se puede anular. |
-| Activo | El lote se ha promocionado correctamente y está disponible para el consumo de flujo descendente. Este estado se puede usar de forma intercambiable con **Éxito**. |
+| Anulado | Se ha llamado **explícitamente** a una operación de anulación (mediante la API de Ingesta por lotes) para el lote especificado. Una vez que el lote está en estado &quot;Cargado&quot;, no se puede anular. |
+| Activo | El lote se ha promocionado correctamente y está disponible para el consumo de flujo descendente. Este estado se puede utilizar de forma intercambiable con &quot;Éxito&quot;. |
 | Eliminado | Se han eliminado completamente los datos del lote. |
-| Fallido | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no se mostrarán** . Este estado se puede usar de forma intercambiable con **Error**. |
+| Fallido | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no se mostrarán** . Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
 | Inactivo | El lote se promocionó correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
 | Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
 | Cargando | Los datos de este lote se están cargando y el lote **no está** listo para promocionarse. |
