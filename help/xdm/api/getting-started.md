@@ -5,7 +5,7 @@ title: Guía para desarrolladores de API de registro de esquema
 description: El Registro de Esquemas se utiliza para acceder a la biblioteca de Esquemas de Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. Con la API de Registro de Esquema, puede realizar operaciones CRUD básicas para realizar vistas y administrar todos los esquemas y recursos relacionados disponibles en Adobe Experience Platform.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -162,7 +162,7 @@ Una respuesta correcta devuelve información sobre el uso de la [!DNL Schema Reg
 
 ## Comprender el `CONTAINER_ID` {#container}
 
-Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor **** global y el contenedor **de** inquilinos.
+Las llamadas a la [!DNL Schema Registry] API requieren el uso de un `CONTAINER_ID`. Existen dos contenedores para realizar llamadas de API: el contenedor global y el contenedor del inquilino.
 
 ### Contenedor global
 
