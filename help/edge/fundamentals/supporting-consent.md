@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo admitir las preferencias de consen
 seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-Dado que el usuario ya ha adhesión, el SDK ejecuta todos los comandos en cola anteriores. Los comandos futuros que dependan del usuario que adhesión _no se pondrán_ en cola y se ejecutarán sin demora.
+Dado que el usuario ya ha adhesión, el SDK ejecuta todos los comandos en cola anteriores. Los comandos futuros que dependan del usuario que adhesión no se pondrán en cola y se ejecutarán sin demora.
 
 Si el usuario decide exclusión, ejecute el `setConsent` comando con la `general` opción establecida en `out` :
 
