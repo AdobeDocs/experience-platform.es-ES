@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo obtener el Adobe Experience Cloud 
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 5%
@@ -89,15 +89,15 @@ alloy("sendEvent", {
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | none |
+| Cadena | Sí | ninguna |
 
-La clave para el objeto es el símbolo de Área de nombres [de](../../identity-service/namespaces.md) identidad. Puede encontrarlo en la interfaz de usuario de Adobe Experience Platform, en [!UICONTROL Identidades].
+La clave para el objeto es el símbolo de Área de nombres [de](../../identity-service/namespaces.md) identidad. Puede encontrarlo en la interfaz de usuario de Adobe Experience Platform en &quot;[!UICONTROL Identities]&quot; (Identidades).
 
 #### `id`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | none |
+| Cadena | Sí | ninguna |
 
 Es el ID que desea sincronizar para la Área de nombres dada.
 
