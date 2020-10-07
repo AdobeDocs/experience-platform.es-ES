@@ -5,7 +5,7 @@ title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en t
 topic: privacy events
 description: Este documento proporciona los pasos para configurar los dos conjuntos de datos necesarios para recopilar datos de consentimiento TCF 2.0 de IAB.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Aunque cada combinación de privacidad varía en la estructura y en los tipos de
 
 ## Crear esquemas de consentimiento del cliente {#create-schemas}
 
-En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo de *[!UICONTROL Esquemas]*. Desde aquí, siga los pasos de las secciones siguientes para crear cada esquema necesario.
+En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo de **[!UICONTROL Esquemas]** . Desde aquí, siga los pasos de las secciones siguientes para crear cada esquema necesario.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ En la interfaz de usuario de la plataforma, haga clic en **[!UICONTROL Esquemas]
 
 ### Crear un esquema de consentimiento basado en registros {#profile-schema}
 
-En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]**, cree un nuevo esquema basado en la **[!DNL XDM Individual Profile]clase**. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
+En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]**, cree un nuevo esquema basado en la [!DNL XDM Individual Profile] clase. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ Por último, haga clic en **[!UICONTROL Guardar]** para confirmar los cambios.
 
 ### Crear un esquema de consentimiento basado en series temporales {#event-schema}
 
-En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]**, cree un nuevo esquema basado en la **[!DNL XDM ExperienceEvent]clase**. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
+En la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Esquemas]** , cree un nuevo esquema basado en la [!DNL XDM ExperienceEvent] clase. Una vez abierto el esquema en el Editor de Esquemas, haga clic en **[!UICONTROL Añadir]** en la sección **[!UICONTROL Mezclas]** de la izquierda del lienzo.
 
 ![](../assets/iab/add-mixin-event.png)
 
