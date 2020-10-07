@@ -5,10 +5,10 @@ title: Introducción al lenguaje de Consulta de perfil (PQL)
 topic: developer guide
 description: Esta guía proporciona una descripción general de PQL, que abarca las directrices de formato y proporciona expresiones PQL de ejemplo.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Las consultas PQL tienen la siguiente firma:
 
 El parámetro de entrada puede ser un simple elemento primitivo, como un booleano o una cadena, o un tipo más complejo, como un objeto, una matriz o un mapa.
 
-Existen **tres** maneras diferentes de hacer referencia a los parámetros de entrada dentro del cuerpo de una expresión PQL:
+Existen tres maneras diferentes de hacer referencia a los parámetros de entrada dentro del cuerpo de una expresión PQL:
 
 ### Referencia implícita al primer parámetro
 
