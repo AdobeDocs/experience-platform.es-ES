@@ -6,7 +6,7 @@ title: Supervisión de cuentas y flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
@@ -96,7 +96,7 @@ La página **[!UICONTROL actividad]** de flujo de datos contiene detalles sobre 
 
 ![datflow-actividad](../../images/tutorials/monitor/dataflow-activity.png)
 
-El calendario permite la vista de los distintos intervalos de tiempo para los registros ingestados. Puede seleccionar una de las dos opciones predefinidas **[!UICONTROL Últimos 7 días]** o **[!UICONTROL Últimos 30 días]**. También puede establecer un intervalo de tiempo personalizado mediante el calendario. Seleccione el intervalo de tiempo que desee y seleccione **[!UICONTROL Aplicar]** para continuar.
+El calendario permite la vista de los distintos intervalos de tiempo para los registros ingestados. Puede elegir seleccionar una de las dos opciones predefinidas &quot;[!UICONTROL Últimos 7 días]&quot; o &quot;[!UICONTROL Últimos 30 días]&quot;. También puede establecer un intervalo de tiempo personalizado mediante el calendario. Seleccione el intervalo de tiempo que desee y seleccione **[!UICONTROL Aplicar]** para continuar.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Seleccione **[!UICONTROL inicio]** de ejecución de flujo de datos para acceder 
 
 ![corre](../../images/tutorials/monitor/run-metadata.png)
 
-La **[!UICONTROL información general]** de ejecución de flujo de datos muestra información sobre el flujo de datos, incluidos sus metadatos, el estado de ingestión **** parcial y el umbral **[!UICONTROL de]** error asignado. El encabezado superior también incluye un resumen **[!UICONTROL de errores]**. El resumen **[!UICONTROL de]** errores contiene el error específico de nivel superior que muestra en qué paso el proceso de ingestión encontró un error.
+La **[!UICONTROL información general]** de ejecución de flujo de datos muestra información sobre el flujo de datos, incluidos sus metadatos, el estado de ingestión parcial y el umbral de error asignado. El encabezado superior también incluye un resumen de errores. El resumen **[!UICONTROL de]** errores contiene el error específico de nivel superior que muestra en qué paso el proceso de ingestión encontró un error.
 
 ![dataflow run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Consulte la siguiente tabla para ver los errores que se pueden ver en el resumen
 
 La mitad inferior de la pantalla contiene información sobre los errores **[!UICONTROL de ejecución de]** Dataflow. Desde aquí, también puede realizar vistas de los archivos ingestados, realizar previsualizaciones y descargar diagnósticos de error o descargar el manifiesto de archivo.
 
-La sección Errores **[!UICONTROL de ejecución]** de flujo de datos muestra el código **[!UICONTROL de]** error, el número de registros en los que se ha producido un error y la información que describe el error.
+La sección Errores **[!UICONTROL de ejecución de flujo de]** datos muestra el código de error, el número de registros en los que se ha producido un error y la información que describe el error.
 
 Seleccione los diagnósticos **[!UICONTROL de error de]** Previsualización para ver más información sobre el error de inserción.
 
 ![Errores de ejecución de flujo de datos](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-Aparece el panel previsualización **[!UICONTROL de diagnóstico de]** errores. Esta pantalla muestra información específica sobre el error de inserción, incluido el nombre **[!UICONTROL del]** archivo, el código **[!UICONTROL de]** error, el nombre de la columna en la que se produjo el error y una descripción del error.
+Aparece el panel previsualización **[!UICONTROL de diagnóstico de]** errores. Esta pantalla muestra información específica sobre el error de inserción, incluido el nombre del archivo, el código de error, el nombre de la columna en la que se produjo el error y una descripción del error.
 
 Esta sección también incluye una previsualización de la columna que contiene el error.
 
