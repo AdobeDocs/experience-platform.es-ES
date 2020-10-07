@@ -5,9 +5,9 @@ title: Guía del usuario de conjuntos de datos
 topic: datasets
 description: Esta guía del usuario de conjuntos de datos proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Haga clic en el nombre de un conjunto de datos para acceder a la pantalla de act
 
 ## Previsualización de un conjunto de datos
 
-En la pantalla actividad **[!UICONTROL de]** conjuntos de datos, haga clic en Conjunto de datos **[!UICONTROL de]** Previsualización cerca de la esquina superior derecha de la pantalla para realizar una previsualización de hasta 100 filas de datos. Si el conjunto de datos está vacío, el vínculo de previsualización se desactivará y, en su lugar, dirá que la **[!UICONTROL Previsualización no está disponible]**.
+En la pantalla actividad **[!UICONTROL de]** conjuntos de datos, haga clic en Conjunto de datos **[!UICONTROL de]** Previsualización cerca de la esquina superior derecha de la pantalla para realizar una previsualización de hasta 100 filas de datos. Si el conjunto de datos está vacío, el vínculo de previsualización se desactivará y en su lugar dirá que la previsualización no está disponible.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
