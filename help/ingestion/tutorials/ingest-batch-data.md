@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform permite importar fácilmente datos como archivos por lotes en forma de archivos de parquet o datos que se ajustan a un esquema conocido del Modelo de datos de experiencia (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Si prefiere ingerir datos mediante las API de inserción de datos, lea la guía 
 
 El espacio de trabajo Conjuntos de datos de [!DNL Experience Platform] permite realizar vistas y administrar todos los conjuntos de datos que ha realizado su organización de IMS, así como crear otros nuevos.
 
-Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para vista del espacio de trabajo Conjuntos de datos. El espacio de trabajo Conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con **[!UICONTROL Nombre]**, **[!UICONTROL Creado]** (fecha y hora), **[!UICONTROL Origen]**, **[!UICONTROL Esquema]** y Estado ******** del último lote, así como la fecha y hora en que el conjunto de datos fue la Última actualización.
+Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para vista del espacio de trabajo Conjuntos de datos. El espacio de trabajo Conjuntos de datos contiene una lista de conjuntos de datos, que incluye columnas con el nombre, la fecha y la hora de creación, el origen, el esquema y el estado del último lote, así como la fecha y la hora de la última actualización del conjunto de datos.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Una vez que haya seleccionado el botón de radio junto al esquema que desea util
 
 ## Configurar el conjunto de datos
 
-En la pantalla **[!UICONTROL Configurar conjunto de datos]** , se le pedirá que asigne un **[!UICONTROL nombre]** al conjunto de datos y también puede proporcionar una **[!UICONTROL descripción]** del conjunto de datos.
+En la pantalla **[!UICONTROL Configurar conjunto de datos]** , se le pedirá que asigne un nombre al conjunto de datos y que también proporcione una descripción del conjunto de datos.
 
 **Notas sobre los nombres de conjuntos de datos:**
 
@@ -74,7 +74,7 @@ Una vez que el conjunto de datos tenga un nombre y una descripción, haga clic e
 
 Ahora se ha creado un conjunto de datos vacío y se le ha devuelto a la ficha Actividad **[!UICONTROL del]** conjunto de datos en el espacio de trabajo Conjunto de datos. Debe ver el nombre del conjunto de datos en la esquina superior izquierda del espacio de trabajo, junto con una notificación de que &quot;No se han agregado lotes&quot;. Esto es de esperar, ya que todavía no ha agregado ningún lote a este conjunto de datos.
 
-En la parte derecha del espacio de trabajo Conjunto de datos, verá la ficha **[!UICONTROL Información]** que contiene información relacionada con el nuevo conjunto de datos, como ID **[!UICONTROL de]** conjunto de datos, **[!UICONTROL Nombre]**, **[!UICONTROL Descripción]**, Nombre **[!UICONTROL de]************** tabla,de datos, Streaming, OrigenDeDatos y OrigenFuente. La ficha Información también incluye información sobre cuándo se **[!UICONTROL creó]** el conjunto de datos y su fecha de **[!UICONTROL última modificación]** .
+A la derecha del espacio de trabajo Conjunto de datos, verá la ficha **[!UICONTROL Información]** que contiene información relacionada con el nuevo conjunto de datos, como ID de conjunto de datos, nombre, descripción, nombre de tabla, esquema, flujo continuo y origen. La ficha Información también incluye información sobre cuándo se creó el conjunto de datos y su fecha de última modificación.
 
 También en la ficha Información hay una opción de **[!UICONTROL Perfil]** que se utiliza para habilitar el conjunto de datos para su uso con [!DNL Real-time Customer Profile]. El uso de esta opción, y [!DNL Real-time Customer Profile], se explicará con más detalle en la siguiente sección.
 
@@ -122,13 +122,13 @@ Una vez que arrastre y suelte (o examine y seleccione) un archivo de parqué o J
 
 Una vez que el archivo haya terminado de cargarse, la ficha **[!UICONTROL Actividad]** del conjunto de datos ya no muestra que &quot;No se han agregado lotes&quot;. En su lugar, la ficha Actividad **[!UICONTROL de]** conjuntos de datos ahora muestra las métricas de conjuntos de datos. Todas las métricas mostrarán &quot;0&quot; en esta etapa, ya que el lote aún no se ha cargado.
 
-En la parte inferior de la ficha hay una lista que muestra el ID **[!UICONTROL de]** lote de los datos que se acaban de ingerir mediante el proceso [&quot;Añadir datos en un conjunto de datos&quot;](#add-data-to-dataset) . También se incluye información relacionada con el lote, incluida la fecha de **[!UICONTROL ingesta]** , el número de **[!UICONTROL registros ingestados]** y el **[!UICONTROL estado]** del lote actual.
+En la parte inferior de la ficha hay una lista que muestra el ID **[!UICONTROL de]** lote de los datos que se acaban de ingerir mediante el proceso [&quot;Añadir datos en un conjunto de datos&quot;](#add-data-to-dataset) . También se incluye información relacionada con el lote, incluida la fecha de ingesta, el número de registros ingestados y el estado actual del lote.
 
 ![Métricas de conjunto de datos](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Detalles de lote
 
-Haga clic en el ID **[!UICONTROL de]** lote para vista de la información general **[!UICONTROL de un]** lote, mostrando detalles adicionales sobre el lote. Una vez que el lote haya terminado de cargarse, la información sobre el lote se actualizará para mostrar el número de **[!UICONTROL registros ingestados]** y el tamaño **[!UICONTROL de archivo]**. El **[!UICONTROL estado]** también cambiará a &quot;Éxito&quot; o &quot;Fallado&quot;. Si se produce un error en el lote, la sección Código **[!UICONTROL de]** error contendrá detalles sobre cualquier error durante la ingestión.
+Haga clic en el ID **[!UICONTROL de]** lote para vista de la información general **[!UICONTROL de un]** lote, mostrando detalles adicionales sobre el lote. Una vez que el lote haya terminado de cargarse, la información sobre el lote se actualizará para mostrar el número de registros ingeridos y el tamaño del archivo. El estado también cambiará a &quot;Correcto&quot; o &quot;Fallido&quot;. Si se produce un error en el lote, la sección Código **[!UICONTROL de]** error contendrá detalles sobre cualquier error durante la ingestión.
 
 Para obtener más información y las preguntas más frecuentes sobre la ingestión de lotes, consulte la guía de solución de problemas de la ingestión de [lotes](../batch-ingestion/troubleshooting.md).
 
