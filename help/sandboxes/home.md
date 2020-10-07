@@ -5,7 +5,7 @@ title: Descripción general de los Simuladores para pruebas
 topic: overview
 description: Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform, que permiten una integración sin fisuras con el proceso de desarrollo de las aplicaciones de experiencia digital.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las compañías suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, la prueba y la implementación de estas aplicaciones al mismo tiempo que garantizan el cumplimiento de normas operacionales.
 
-In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una instancia de plataforma única en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Este documento proporciona información general de alto nivel sobre los entornos limitados en Experience Platform.
 
