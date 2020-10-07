@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 5%
@@ -79,7 +79,7 @@ El [!DNL Data Governance] marco simplifica y racionaliza el proceso de categoriz
 
 | Función | Descripción |
 | -----------| ---------- |
-| Administrar directivas de uso de datos en la interfaz de usuario | Las directivas de uso de datos ahora se pueden administrar dentro del espacio de trabajo _Directivas_ de la [!DNL Experience Platform] IU. Consulte la guía del usuario de [directivas](../../data-governance/policies/user-guide.md) para obtener más información. |
+| Administrar directivas de uso de datos en la interfaz de usuario | Las directivas de uso de datos ahora se pueden administrar dentro del espacio de trabajo **Directivas** de la [!DNL Experience Platform] IU. Consulte la guía del usuario de [directivas](../../data-governance/policies/user-guide.md) para obtener más información. |
 
 **Problemas conocidos**
 
