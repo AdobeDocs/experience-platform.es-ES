@@ -5,7 +5,7 @@ title: Servicio de ID de Adobe Experience Platform
 topic: overview
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al enlazar identidades entre dispositivos y sistemas, permitiéndole ofrecer experiencias digitales personales y impactantes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -35,11 +35,11 @@ Las relaciones de identidad que [!DNL Identity Service] define y mantiene se apr
 
 ### Identidades
 
-Una identidad son datos que son exclusivos de una entidad, por lo general una persona individual. Una identidad como ID de inicio de sesión, ECID o ID de lealtad se denomina identidad **** conocida.
+Una identidad son datos que son exclusivos de una entidad, por lo general una persona individual. Una identidad como ID de inicio de sesión, ECID o ID de lealtad se denomina identidad conocida.
 
 La PII, como la dirección de correo electrónico y el número de teléfono, sirve para identificar directamente a un cliente. Como resultado, la PII se utiliza para hacer coincidir las identidades múltiples de un cliente en todos los sistemas.
 
-**Identidades** desconocidas o anónimas identifican un dispositivo sin identificar a la persona real que lo utiliza. Esta categoría incluye información como la dirección IP de un visitante y la ID de la cookie. Aunque los datos de comportamiento se pueden recopilar desde un dispositivo con identidades desconocidas, la asociación de estas identidades entre dispositivos o medios es limitada hasta que el cliente proporcione PII durante su viaje.
+Identidades desconocidas o anónimas identifican un dispositivo sin identificar a la persona real que lo utiliza. Esta categoría incluye información como la dirección IP de un visitante y la ID de la cookie. Aunque los datos de comportamiento se pueden recopilar desde un dispositivo con identidades desconocidas, la asociación de estas identidades entre dispositivos o medios es limitada hasta que el cliente proporcione PII durante su viaje.
 
 Como se muestra en la imagen siguiente, las identidades conocidas y anónimas son componentes importantes de los gráficos [de](#identity-graphs)identidad, que se analizan más adelante en este documento.
 
