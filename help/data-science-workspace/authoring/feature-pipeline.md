@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform le permite crear y crear tuberías de funciones personalizadas para realizar ingeniería de funciones a escala a través de Sensei Machine Learning Framework Runtime. Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizadas mediante el SDK de creación de modelos en PySpark.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -71,7 +71,7 @@ El archivo JSON de configuración consta de pares clave-valor y está diseñado 
 
 En el siguiente ejemplo se muestran los pares de clave-valor que se encuentran dentro de un archivo de configuración:
 
-**ejemplo de configuración JSON**
+**Ejemplo de JSON de configuración**
 
 ```json
 [
