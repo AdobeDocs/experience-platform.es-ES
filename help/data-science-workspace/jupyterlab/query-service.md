@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform le permite utilizar el lenguaje de Consulta estructurado (SQL) en el área de trabajo de ciencia de datos mediante la integración del servicio de Consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de muestra para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -104,7 +104,7 @@ Cuando un bloc de notas está inactivo durante un período de tiempo prolongado,
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **[!UICONTROL todas]** las celdas para continuar donde lo dejó.
+El núcleo del bloc de notas se restablecerá pero las celdas permanecerán, vuelva a ejecutar **todas** las celdas para continuar donde lo dejó.
 
 ### Recuento de visitantes por hora {#hourly-visitor-count}
 
