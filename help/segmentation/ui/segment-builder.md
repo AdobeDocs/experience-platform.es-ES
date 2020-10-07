@@ -5,7 +5,7 @@ title: Guía del usuario del Generador de segmentos del servicio de segmentació
 topic: ui guide
 description: 'El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## Componentes básicos de definición de segmentos
 
-Los componentes básicos de las definiciones de segmentos son **[!UICONTROL Atributos]** y **[!UICONTROL Eventos]**. Además, los atributos y eventos contenidos en **[!UICONTROL Audiencias]** existentes también pueden utilizarse como componentes para nuevas definiciones.
+Los componentes básicos de las definiciones de segmentos son atributos y eventos. Además, los atributos y eventos contenidos en las audiencias existentes también pueden utilizarse como componentes para nuevas definiciones.
 
-Puede ver estos bloques de creación en la sección **[!UICONTROL Campos]** del lado izquierdo del [!DNL Segment Builder] espacio de trabajo. **[!UICONTROL Campos]** contiene una ficha para cada uno de los componentes principales: **[!UICONTROL Atributos]**, **[!UICONTROL Eventos]** y **[!UICONTROL Audiencias]**.
+Puede ver estos bloques de creación en la sección **[!UICONTROL Campos]** del lado izquierdo del [!DNL Segment Builder] espacio de trabajo. **[!UICONTROL Campos]** contiene una ficha para cada uno de los componentes principales: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot; y &quot;[!UICONTROL Audiencias]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra d
 >
 >Los campos de esquema personalizados definidos por su organización pueden tardar hasta 24 horas en aparecer y estar disponibles para su uso en la creación de reglas.
 
-A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y [!UICONTROL Tipos de evento] en la definición del segmento.
+Luego puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y &quot;[!UICONTROL Tipos de evento]&quot; en la definición del segmento.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye [!UICONTROL Tipos de evento]. Si la lista de [!UICONTROL Tipos de evento] no está visible o sólo puede seleccionar &quot;[!UICONTROL Cualquiera]&quot; como [!UICONTROL Tipo de evento], seleccione el icono de engranaje situado junto a **[!UICONTROL Campos]** y, a continuación, seleccione **[!UICONTROL Mostrar esquema]** **** XDM completo en Campos disponibles. Seleccione de nuevo el icono de engranaje para volver a la ficha **[!UICONTROL Campos]** y ahora debe poder realizar la vista de varios campos de [!UICONTROL Tipos de evento] y esquemas, independientemente de si contienen datos o no.
+De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye los &quot;[!UICONTROL Tipos de evento]&quot;. Si la lista &quot;[!UICONTROL Tipos de evento]&quot; no está visible o sólo puede seleccionar &quot;[!UICONTROL Cualquiera]&quot; como &quot;[!UICONTROL Tipo de evento]&quot;, seleccione el icono **de** engranaje junto a **[!UICONTROL Campos]****** **** y, a continuación, seleccioneMostrar esquema XDM completo en Campos Disponibles. Seleccione de nuevo el icono **de** engranaje para volver a la ficha **[!UICONTROL Campos]** y ahora debería poder realizar la vista de varios campos de &quot;[!UICONTROL Tipos de evento]&quot; y de esquema, independientemente de si contienen datos o no.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ Puede pasar el ratón por encima del ⓘ junto a una audiencia para obtener info
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-También puede buscar [!UICONTROL Audiencias] mediante la barra de búsqueda, que utiliza la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. En la ficha **[!UICONTROL Audiencias]** , al seleccionar una carpeta de nivel superior, aparece la barra de búsqueda, lo que le permite buscar dentro de esa carpeta. Los resultados de la búsqueda sólo comienzan a completarse una vez ingresadas las palabras completas. Por ejemplo, para buscar una [!UICONTROL Audiencia] con el nombre `Online Shoppers`, escriba &quot;En línea&quot; en el inicio de búsqueda. Una vez que la palabra &quot;En línea&quot; se ha escrito en su totalidad, aparecen los resultados de búsqueda que contienen la palabra &quot;en línea&quot;.
+También puede buscar audiencias mediante la barra de búsqueda, que utiliza la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. En la ficha **[!UICONTROL Audiencias]** , al seleccionar una carpeta de nivel superior, aparece la barra de búsqueda, lo que le permite buscar dentro de esa carpeta. Los resultados de la búsqueda sólo comienzan a completarse una vez ingresadas las palabras completas. Por ejemplo, para buscar una audiencia con el nombre `Online Shoppers`, escriba &quot;En línea&quot; en el inicio de búsqueda. Una vez que la palabra &quot;En línea&quot; se ha escrito en su totalidad, aparecen los resultados de búsqueda que contienen la palabra &quot;en línea&quot;.
 
 ## Lienzo del generador de reglas {#rule-builder-canvas}
 
 Una definición de segmento es un conjunto de reglas que se utilizan para describir las características clave o el comportamiento de una audiencia de destinatario. Estas reglas se crean utilizando el lienzo del generador de reglas, ubicado en el centro de [!DNL Segment Builder].
 
-Para agregar una nueva regla a la definición del segmento, arrastre un mosaico desde la ficha **[!UICONTROL Campos]** y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agrega. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], [!UICONTROL Tipos de evento]y [!UICONTROL Audiencias].
+Para agregar una nueva regla a la definición del segmento, arrastre un mosaico desde la ficha **[!UICONTROL Campos]** y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agrega. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de evento]&quot; y audiencias.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ Para seleccionar una directiva de combinación para la definición del segmento,
 
 Al crear una definición de segmento, la sección Propiedades **[!UICONTROL del]** segmento en el lado derecho del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
-En la sección Propiedades **** del segmento también puede especificar información importante sobre la definición del segmento, incluidos su **[!UICONTROL nombre]** y **[!UICONTROL descripción]**. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
+En la sección Propiedades **[!UICONTROL del]** segmento también puede especificar información importante sobre la definición del segmento, incluido su nombre y descripción. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
 A medida que siga generando la definición del segmento, puede realizar la vista de una previsualización paginada de la audiencia seleccionando Perfiles **[!UICONTROL de]** Vista.
 
