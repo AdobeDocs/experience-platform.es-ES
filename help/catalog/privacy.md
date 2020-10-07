@@ -5,7 +5,7 @@ title: Procesamiento de solicitudes de privacidad en Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en Data Lake.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Antes de leer esta guía, se recomienda que conozca los siguientes [!DNL Experie
 
 ## Explicación de las Áreas de nombres de identidad {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] une los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza Áreas de nombres **[!UICONTROL de]** identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] une los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza Áreas de nombres de identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Una Área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;Correo electrónico&quot;) o asociar la identidad con una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantiene un almacén de Áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las Áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;Correo electrónico&quot; y &quot;ECID&quot;), mientras que la organización también puede crear Áreas de nombres personalizadas para satisfacer sus necesidades específicas.
 
@@ -38,7 +38,7 @@ Para obtener más información sobre las Áreas de nombres de identidad en [!DNL
 
 ## Añadir datos de identidad a conjuntos de datos
 
-Al crear solicitudes de privacidad para el cliente [!DNL Data Lake], se deben proporcionar valores de identidad válidos (y sus Áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos que están sujetos a solicitudes de privacidad deben contener un descriptor **[!UICONTROL de]** identidad en su esquema XDM asociado.
+Al crear solicitudes de privacidad para el cliente [!DNL Data Lake], se deben proporcionar valores de identidad válidos (y sus Áreas de nombres asociadas) para cada cliente individual a fin de localizar sus datos y procesarlos en consecuencia. Por lo tanto, todos los conjuntos de datos que están sujetos a solicitudes de privacidad deben contener un descriptor de identidad en su esquema XDM asociado.
 
 >[!NOTE]
 >
