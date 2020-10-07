@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial para definir una relación u
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
 
-Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas que pertenecen a diferentes clases, se debe agregar un campo **de** relación dedicado a un esquema de origen que haga referencia a la identidad de un esquema de destino.
+Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen, que haga referencia a la identidad de un esquema de destino.
 
 Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante la [[!DNL Esquema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
@@ -111,7 +111,7 @@ Registre los `$id` valores de los dos esquemas entre los que desea definir una r
 
 ## Definir un campo de referencia para el esquema de origen
 
-Dentro de la [!DNL Schema Registry], los descriptores de relación funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia al campo de identidad **** principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, puede que necesite crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;[!DNL string]&quot;.
+Dentro de la [!DNL Schema Registry], los descriptores de relación funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia al campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, puede que necesite crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
