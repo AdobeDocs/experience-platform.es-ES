@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -135,7 +135,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite la configuración de cookies según la calificación de segmentos.
+Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite configurar las cookies en función de la calificación del segmento.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite la conf
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!DNL Audience Manager] URL, lo que permite activar las direcciones URL en función de la calificación del segmento.
+Habilita los destinos [!DNL Audience Manager] de URL, lo que permite activar las URL en función de la calificación del segmento.
 
 ## Opciones de identidad
 
