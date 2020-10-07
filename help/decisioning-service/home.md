@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
-title: Servicio de decisiones
+title: Offer Decisioning
 topic: overview
 description: El servicio de toma de decisiones permite crear experiencias personalizadas, optimizadas y orquestadas en aplicaciones que se ejecutan en Adobe Experience Platform. Con el servicio de toma de decisiones, puede determinar la mejor opción a partir de un conjunto de opciones disponibles. Estas opciones, también denominadas alternativas, pueden ser ofertas, recomendaciones de productos, componentes de contenido para una experiencia web, secuencias de comandos de conversación y acciones que se deben realizar.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Visión general del servicio de decisiones
 
-[!DNL Decisioning Service] proporciona la capacidad de crear experiencias personalizadas, optimizadas y orquestadas en aplicaciones que se ejecutan en Adobe Experience Platform. Con [!DNL Decisioning Service], puede determinar la mejor *opción* a partir de un conjunto de opciones disponibles. Estas opciones, también denominadas alternativas, pueden ser ofertas, recomendaciones de productos, componentes de contenido para una experiencia web, secuencias de comandos de conversación y acciones que se deben realizar. Actualmente se admite el caso de uso y el dominio de la decisión *de* Oferta, donde las opciones de decisión se modelan específicamente como ofertas, con compatibilidad para más casos de uso por venir.
+[!DNL Decisioning Service] proporciona la capacidad de crear experiencias personalizadas, optimizadas y orquestadas en aplicaciones que se ejecutan en Adobe Experience Platform. Con [!DNL Decisioning Service], puede determinar la mejor *opción* a partir de un conjunto de opciones disponibles. Estas opciones, también denominadas alternativas, pueden ser ofertas, recomendaciones de productos, componentes de contenido para una experiencia web, secuencias de comandos de conversación y acciones que se deben realizar. Actualmente se admite el caso de uso y el dominio de *Offer Decisioning* , donde las opciones de decisión se modelan específicamente como ofertas, con compatibilidad para más casos de uso en el futuro.
 
 Con [!DNL Decisioning Service], los clientes pueden reutilizar la lógica empresarial y compartir un catálogo de opciones entre canales y aplicaciones. En lugar de administrar las opciones de decisión (y las estrategias para seleccionarlas) en profundidad dentro de una aplicación, ahora se pueden aprovechar independientemente de cuándo, cómo y en qué canal interactúa el usuario final de un cliente con una empresa u organización.
 
@@ -45,11 +45,11 @@ Las experiencias se pueden personalizar [!DNL Decisioning Service] en tiempo rea
 
 Las decisiones se pueden tomar de muchas maneras. Un método consiste en eliminar las opciones sucesivamente hasta que sólo quede una o hasta que se hayan reducido las opciones y haya algún subconjunto restante o hasta que se elija al azar un ganador del conjunto reducido. Una variante de este enfoque para elegir la opción ganadora según una fórmula calculada. La clasificación de las opciones elegibles se realiza mediante una función. Para la toma de decisiones de oferta, esa función podría calcular el coste, el valor de la oferta para la empresa y utilizar una opción predefinida de la probabilidad de que el usuario final acepte la oferta. La puntuación resultante podría utilizarse para ordenar las ofertas.
 
-Otra posibilidad es que una estrategia se base en los resultados obtenidos de interacciones anteriores con clientes similares a los que se han propuesto opciones similares. En esta estrategia, se aprende la función que calculó los valores de prioridad. El valor óptimo de los resultados está ligado a los objetivos de la actividad y el indicador de rendimiento de la predicción es la frecuencia con que se logró el resultado después de que se propuso la opción.
+Alternativamente o de manera adicional, una estrategia podría basarse en los resultados obtenidos de interacciones previas con clientes similares a los que se propusieron opciones similares. En esta estrategia, se aprende la función que calculó los valores de prioridad. El valor óptimo de los resultados está ligado a los objetivos de la actividad y el indicador de rendimiento de la predicción es la frecuencia con que se logró el resultado después de que se propuso la opción.
 
 ### Estrategia de decisión
 
-Las estrategias de decisión se configuran mediante objetos llamados _actividades_. Cada estrategia de decisión es esencialmente un algoritmo o una función que toma las opciones N {o1, o2, ...oN} como entrada y produce una lista ordenada de opciones (o1, o2,...oK) según la cual la primera opción de la lista se considera la mejor según un criterio de optimización, la segunda opción de la lista de resultados se considera entonces la segunda mejor opción y así sucesivamente.
+Las estrategias de decisión se configuran mediante objetos llamados actividades. Cada estrategia de decisión es esencialmente un algoritmo o una función que toma las opciones N {o1, o2, ...oN} como entrada y produce una lista ordenada de opciones (o1, o2,...oK) según la cual la primera opción de la lista se considera la mejor según un criterio de optimización, la segunda opción de la lista de resultados se considera entonces la segunda mejor opción y así sucesivamente.
 
 En cualquier momento dado durante el viaje de un cliente, la mejor opción para una actividad dada se vuelve a evaluar en función del conjunto más reciente de variables de contexto, reglas y restricciones. Las variables de contexto incluyen los registros almacenados en [!DNL Real Time Customer Profile]. Una entidad de registro central es el perfil de un cliente, pero otras entidades, como los datos comerciales operativos, están igualmente disponibles para la actividad.
 
@@ -102,6 +102,6 @@ La lógica de decisión está organizada por actividades, cada una de las cuales
 
 Cada decisión se toma aplicando primero restricciones para reducir el número de opciones y luego clasificando las opciones restantes. Aunque la mayor parte de la lógica se evalúa dentro [!DNL Decisioning Service], se utilizan varios servicios auxiliares para ayudar con estos dos aspectos. Por ejemplo, un servicio de límite administra los límites superiores para determinar con qué frecuencia se puede utilizar una opción en cualquier decisión, y otro servicio puede alojar un modelo de aprendizaje automático que se utiliza para calcular las puntuaciones de un perfil y una opción.
 
-Para obtener más información sobre el uso de las API de repositorio, consulte el tutorial sobre la [gestión de entidades de decisiones y reglas mediante API](./tutorials/entities.md)
+Para obtener más información sobre el uso de las API de repositorio, consulte el tutorial sobre [Administración de entidades de decisiones y reglas mediante API](./tutorials/entities.md)
 
 Para obtener más información sobre el uso del [!DNL Decisioning Service] motor de ejecución, consulte el tutorial sobre [Uso del tiempo de ejecución del servicio de decisiones mediante API](./tutorials/runtime.md)
