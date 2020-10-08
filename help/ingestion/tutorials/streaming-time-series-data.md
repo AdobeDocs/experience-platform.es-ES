@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 2%
@@ -217,11 +217,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->Códigos de Área de nombres **de identidad de &#x200B; &#x200B;**
+>Códigos **de Área de nombres de identidad &#x200B;**
 >
 > Asegúrese de que los códigos sean válidos; el ejemplo anterior utiliza &quot;correo electrónico&quot;, que es una Área de nombres de identidad estándar. Otras Áreas de nombres de identidad estándar de uso común se encuentran en las preguntas más frecuentes [de](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)Identity Service.
 >
 > Si desea crear una Área de nombres personalizada, siga los pasos descritos en la descripción general [de la Área de nombres de](../../identity-service/home.md)identidad.
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 201 con información sobre la Área de nombres de identidad principal recién creada para el esquema.
