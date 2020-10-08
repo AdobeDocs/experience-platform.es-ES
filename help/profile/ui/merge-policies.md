@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guía del usuario de directivas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Al seleccionar un valor de combinación **[!UICONTROL de]** atributos, puede sel
 
 Un caso de uso de ejemplo sería si su organización tuviera información presente en un conjunto de datos que sea preferible o de confianza sobre los datos de otro conjunto de datos.
 
-Al seleccionar **[!UICONTROL Prioridad]** del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos **** disponibles los conjuntos de datos que se incluirán (o utilice la casilla de verificación para seleccionar todos). A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel [***!UICONTROL Conjunto de datos]seleccionados** y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, al segundo más alto, y así sucesivamente.
+Al seleccionar **[!UICONTROL Prioridad]** del conjunto de datos, se abre un panel independiente que requiere que seleccione entre los conjuntos de datos **** disponibles los conjuntos de datos que se incluirán (o utilice la casilla de verificación para seleccionar todos). A continuación, puede arrastrar y soltar esos conjuntos de datos en el panel Conjuntos de datos **** seleccionados y arrastrarlos al orden de prioridad correcto. Al conjunto de datos superior se le dará la prioridad más alta, al segundo más alto, y así sucesivamente.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
