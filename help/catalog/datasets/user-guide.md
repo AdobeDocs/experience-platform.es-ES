@@ -5,7 +5,7 @@ title: Guía del usuario de conjuntos de datos
 topic: datasets
 description: Esta guía del usuario de conjuntos de datos proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -62,10 +62,10 @@ Para crear un nuevo conjunto de datos, haga inicio haciendo clic en **[!UICONTRO
 
 En la pantalla siguiente, se muestran las dos opciones siguientes para crear un nuevo conjunto de datos:
 
-* [Crear conjunto de datos a partir de esquema](#create-a-dataset-with-an-existing-schema)
-* [Crear conjunto de datos a partir de un archivo CSV](#create-a-dataset-with-a-csv-file)
+* [Crear conjunto de datos a partir de esquema](#schema)
+* [Crear conjunto de datos a partir de un archivo CSV](#csv)
 
-### Crear un conjunto de datos con un esquema existente
+### Crear un conjunto de datos con un esquema existente {#schema}
 
 En la pantalla **[!UICONTROL Crear conjunto de datos]** , haga clic en **[!UICONTROL Crear conjunto de datos desde esquema]** para crear un nuevo conjunto de datos vacío.
 
@@ -79,7 +79,7 @@ Aparece el paso **[!UICONTROL Configurar conjunto de datos]** . Proporcione un n
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Crear un conjunto de datos con un archivo CSV
+### Crear un conjunto de datos con un archivo CSV {#csv}
 
 Cuando se crea un conjunto de datos con un archivo CSV, se crea un esquema ad hoc para proporcionar al conjunto de datos una estructura que coincida con el archivo CSV proporcionado. En la pantalla **[!UICONTROL Crear conjunto de datos]** , haga clic en el cuadro que indica **[!UICONTROL Crear conjunto de datos a partir del archivo]** CSV.
 
