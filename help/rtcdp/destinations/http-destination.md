@@ -5,7 +5,7 @@ seo-title: El destino HTTP es un destino de la plataforma de datos del cliente e
 description: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 seo-description: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 El [!DNL HTTP] destino es un [!DNL Adobe Real-Time Customer Data Platform] destino de flujo continuo que le ayuda a enviar datos de perfil a puntos finales [!DNL HTTP] de terceros.
 
-Para enviar datos de perfil a los [!DNL HTTP] extremos, primero debe conectarse al destino en el [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+Para enviar datos de perfil a los [!DNL HTTP] extremos, primero debe conectarse al destino en el [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
@@ -33,14 +33,15 @@ El [!DNL HTTP] destino está dirigido a clientes que necesitan exportar datos de
 
 ## Conectar con destino {#connect-destination}
 
-1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL  HTTP API]y seleccione **[!UICONTROL Configurar]**.
+1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL HTTP API]y seleccione **[!UICONTROL Configurar]**.
 
    ![Activar destino HTTP](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-   ![Activar destino HTTP](assets/connect-http-destination.png)
+   >
+   >![Activar destino HTTP](assets/connect-http-destination.png)
 
 2. En el paso [!UICONTROL Cuenta] , debe definir los detalles de conexión del extremo HTTP. Seleccione **[!UICONTROL Nueva cuenta]** e introduzca los detalles de conexión del extremo HTTP al que desea conectarse.
    * **[!UICONTROL httpEndpoint]**: la finalización [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
