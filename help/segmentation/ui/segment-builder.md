@@ -5,9 +5,9 @@ title: Guía del usuario del Generador de segmentos del servicio de segmentació
 topic: ui guide
 description: 'El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Una definición de segmento es un conjunto de reglas que se utilizan para descri
 Para agregar una nueva regla a la definición del segmento, arrastre un mosaico desde la ficha **[!UICONTROL Campos]** y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agrega. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de evento]&quot; y audiencias.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Los últimos cambios en Adobe Experience Platform han actualizado el uso de los operadores `OR` y `AND` lógicos entre eventos. Estas actualizaciones no afectarán a los segmentos existentes. Sin embargo, todos los cambios afectarán a todas las actualizaciones subsiguientes de segmentos existentes y nuevas creaciones de segmentos. Lea las constantes de [tiempo actualizadas](./segment-refactoring.md) para obtener más información.
 
 ### Añadir audiencias
 
