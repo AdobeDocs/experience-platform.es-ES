@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 39668013723dcda332558b74cf72b5f93db04461
+source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 14%
+source-wordcount: '281'
+ht-degree: 7%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 14%
 **Fecha de versión: Octubre de 2020**
 
 - [Preparación de datos](#data-prep)
+- [Fuentes](#sources)
 
 ## Preparación de datos {#data-prep}
 
@@ -31,3 +32,19 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 | Función  de `get_values` | La `get_values` función le permite obtener los valores del mapa de entrada para cualquier clave determinada. |
 
 Para obtener más información, lea la descripción general [de](../../data-prep/home.md)la preparación de datos.
+
+## Fuentes {#sources}
+
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+[!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Asignación jerárquica | Durante el proceso de ingestión de datos, puede realizar la previsualización de un archivo de origen jerárquico, como JSON o Parquet. |
+| Compatibilidad con autenticación SSH para SFTP | Puede conectar su cuenta SFTP con [!DNL Platform] las claves RSA/DSA Open SSH. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| Mejoras en los recursos | Puede habilitar el conjunto de datos para [!DNL Profile] durante el proceso de ingesta de datos. Consulte el tutorial de flujo de trabajo [de flujo de datos de almacenamiento de](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) nube para obtener más información. |
+
+Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
