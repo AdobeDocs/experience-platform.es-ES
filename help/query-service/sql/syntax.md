@@ -5,9 +5,9 @@ title: Sintaxis SQL
 topic: syntax
 description: Este documento muestra la sintaxis SQL admitida por el servicio de Consulta.
 translation-type: tm+mt
-source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
+source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2067'
 ht-degree: 1%
 
 ---
@@ -482,3 +482,47 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >La ruta de salida completa será `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+
+
+### ALTER
+
+Este comando ayuda a agregar o soltar restricciones de clave principal o externa en la tabla.
+
+```sql
+Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+
+Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+
+Alter TABLE table_name DROP ( column_name Primary key)
+
+Alter TABLE table_name DROP ( column_name Foreign key)
+```
+
+>[!NOTE]
+>El esquema de tabla debe ser único y no compartirse entre varias tablas. Además, la Área de nombres es obligatoria.
+
+
+### MOSTRAR CLAVES PRINCIPALES
+
+Este comando lista todas las restricciones de clave principales de la base de datos dada.
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### MOSTRAR CLAVES EXTRANJERAS
+
+Este comando lista todas las restricciones de clave externa de la base de datos dada.
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
