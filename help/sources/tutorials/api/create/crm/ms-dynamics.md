@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: En este tutorial se utiliza la API de servicio de flujo para ayudarle a seguir los pasos necesarios para conectar la plataforma a una cuenta de Microsoft Dynamics (en adelante denominada "Dynamics") para recopilar datos de CRM.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -142,11 +142,9 @@ Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Dyn
 }
 ```
 
-## Creación de una conexión base
+## Creación de una conexión para la API
 
-Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión base por [!DNL Dynamics] cuenta, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
-
-Realice la siguiente solicitud de POST para crear una conexión base.
+Una conexión para la API especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión para la API por [!DNL Dynamics] cuenta, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -158,7 +156,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -202,4 +200,4 @@ Una respuesta correcta contiene el identificador único (`id`) de la conexión b
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión base para su [!DNL Dynamics] cuenta mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión base en el siguiente tutorial a medida que aprenda a [explorar sistemas CRM mediante la API](../../explore/crm.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión para su [!DNL Dynamics] cuenta mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Este ID de conexión se puede utilizar en el siguiente tutorial cuando aprenda a [explorar sistemas CRM mediante la API](../../explore/crm.md)de servicio de flujo.
