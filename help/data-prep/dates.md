@@ -5,9 +5,9 @@ title: Funciones de fecha
 topic: overview
 description: Este documento presenta las funciones de fecha utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 17%
 
 ---
@@ -80,4 +80,4 @@ La siguiente tabla muestra las letras de patrón definidas para las cadenas de f
 
 **Ejemplo**
 
-La expresión `date(orderDate, 'yyyy-MM-dd')` convertirá orderDate, si su valor era &quot;31 de diciembre de 2020&quot;, en una fecha y hora con el valor &quot;2020-12-31&quot;.
+La expresión `date(orderDate, 'yyyy-MM-dd')` convertirá un `orderDate` valor de &quot;31 de diciembre de 2020&quot; en un valor de fecha y hora de &quot;2020-12-31&quot;.
