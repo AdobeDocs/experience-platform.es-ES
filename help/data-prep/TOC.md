@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Guía de preparación de datos
-user-guide-description: Prepare your data for ingestion into Adobe Experience Platform.
+user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
 workflow-type: tm+mt
-source-wordcount: '20'
-ht-degree: 0%
+source-wordcount: '29'
+ht-degree: 48%
 
 ---
 
