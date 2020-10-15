@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
+source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
@@ -22,8 +22,8 @@ Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo co
 
 Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
-- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 - [Guía](../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye saber cuál es su `{TENANT_ID}`función, que aparece en las llamadas a lo largo de este tutorial, así como también saber cómo crear esquemas, que se utiliza para crear un conjunto de datos para la ingestión.
 
 Además, este tutorial requiere que ya haya creado una conexión de flujo. Para obtener más información sobre la creación de una conexión de flujo continuo, lea el tutorial [](./create-streaming-connection.md)Crear una conexión de flujo continuo.
@@ -101,7 +101,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | El nombre que desea usar para su esquema. Este nombre debe ser único. |
 | `description` | Una descripción significativa del esquema que está creando. |
-| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md). |
+| `meta:immutableTags` | En este ejemplo, la `union` etiqueta se utiliza para mantener los datos en [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Respuesta**
 
@@ -312,10 +312,13 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Solicitud**
 
+La ingesta de datos de series temporales en una conexión de flujo continuo puede realizarse con o sin el nombre del origen.
+
+La solicitud de ejemplo siguiente ingesta datos de series temporales con un nombre de origen que falta en Platform. Si a los datos le falta el nombre del origen, agregará el ID de origen de la definición de conexión de flujo continuo.
+
 >[!NOTE]
 >
 >Tendrá que generar sus propios `xdmEntity._id` y `xdmEntity.timestamp`. Una buena manera de generar un ID es utilizar un UUID. Además, la siguiente llamada de API **no requiere** encabezados de autenticación.
-
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -380,6 +383,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+Si desea incluir un nombre de origen, en el siguiente ejemplo se muestra cómo incluirlo.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la nueva transmisión [!DNL Profile].
@@ -404,7 +423,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la nueva tran
 
 ## Recuperar los datos de serie temporal recién ingestados
 
-Para validar los registros ingestados anteriormente, puede utilizar la [[!DNL API de acceso a Perfil]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud de GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
+Para validar los registros ingestados anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede realizar mediante una solicitud de GET al extremo y utilizando parámetros de consulta opcionales `/access/entities` . Se pueden utilizar varios parámetros, separados por signos ampersands (&amp;).&quot;
 
 >[!NOTE]
 >
