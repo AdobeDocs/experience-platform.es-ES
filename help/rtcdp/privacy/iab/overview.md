@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en la plataforma de datos del cliente en tiempo real
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -28,7 +28,7 @@ El [!DNL Transparency & Consent Framework] (TCF), tal como se describe en la [!D
 
 Este documento proporciona información general sobre cómo configurar las operaciones de datos y los esquemas de perfil para aceptar los datos de consentimiento del cliente generados por el CMP, y cómo [!DNL Real-time CDP] transmitir las opciones de consentimiento del usuario al exportar segmentos.
 
-## Requisitos previos
+## Requisitos previos 
 
 Para seguir esta guía, debe utilizar una Plataforma de Gestión de Consentimiento (CMP), ya sea comercial o propia, que esté integrada y sea compatible con el TCF de la IAB. Consulte la [lista de CMP](https://iabeurope.eu/cmp-list/) compatibles para obtener más información.
 
@@ -42,7 +42,7 @@ Esta guía también requiere una comprensión práctica de los siguientes servic
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 * [Perfil](../../../profile/home.md)del cliente en tiempo real: Aprovecha [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos del Data Lake y persiste en los perfiles de los clientes en su propio almacén de datos independiente.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): Biblioteca de JavaScript del lado del cliente que le permite integrar varios [!DNL Platform] servicios en el sitio web orientado al cliente.
-   * [Comandos](../../../edge/fundamentals/supporting-consent.md)de consentimiento del SDK: Información general sobre el caso de uso de los comandos del SDK relacionados con el consentimiento que se muestran en esta guía.
+   * [Comandos](../../../edge/consent/supporting-consent.md)de consentimiento del SDK: Información general sobre el caso de uso de los comandos del SDK relacionados con el consentimiento que se muestran en esta guía.
 * [Servicio](../../../segmentation/home.md)de segmentación de Adobe Experience Platform: Permite dividir [!DNL Real-time Customer Profile] los datos en grupos de individuos que comparten características similares y responderán de manera similar a las estrategias de mercadotecnia.
 
 Además de los [!DNL Platform] servicios mencionados anteriormente, también debe estar familiarizado con [los destinos](../../destinations/destinations-overview.md) y su uso en [!DNL Real-time CDP].
