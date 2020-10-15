@@ -6,9 +6,9 @@ title: Supervisión de cuentas y flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [[!Perfil del cliente en tiempo real de DNL]](../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Supervisión de cuentas
 
@@ -54,6 +54,10 @@ Además, puede editar la información de cuenta existente y actualizar las crede
 ![](../../images/tutorials/monitor/click-edit.png)
 
 Aparece el modo **[!UICONTROL Editar detalles]** de la cuenta. Desde esta página, puede actualizar los detalles de cuenta y las credenciales de autenticación existentes.
+
+>[!NOTE]
+>
+> La edición de los detalles de la cuenta está disponible en todos los conectores de origen por lotes.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
