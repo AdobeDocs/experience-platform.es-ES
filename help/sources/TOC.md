@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de Conectores de origen de Adobe Experience Platform
-breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
+breadcrumb-title: Guía de conectores de origen
+user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 4%
 
 ---
 
