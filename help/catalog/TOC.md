@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Guía de catálogos y conjuntos de datos
-user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-description: Explore el linaje de datos, los metadatos, las descripciones de los archivos, los directorios y los conjuntos de datos dentro del lago de datos.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 20%
 
 ---
 
