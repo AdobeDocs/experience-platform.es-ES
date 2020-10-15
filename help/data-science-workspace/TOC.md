@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
-breadcrumb-title: Data Science Workspace Guide
-user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
+breadcrumb-title: Guía de Data Science Workspace
+user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 translation-type: tm+mt
 source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 5%
+source-wordcount: '231'
+ht-degree: 16%
 
 ---
 
