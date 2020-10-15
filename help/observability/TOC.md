@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guía de perspectivas de capacidad de observación
-user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+user-guide-title: Guía de Observability Insights
+user-guide-description: Controle las actividades de la Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
 translation-type: tm+mt
 source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 18%
+source-wordcount: '55'
+ht-degree: 45%
 
 ---
 
