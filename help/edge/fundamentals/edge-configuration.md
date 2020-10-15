@@ -5,9 +5,9 @@ description: 'Obtenga información sobre cómo configurar la red perimetral Expe
 seo-description: 'Obtenga información sobre cómo configurar la red perimetral Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -17,25 +17,27 @@ ht-degree: 2%
 
 La configuración del Adobe Experience Platform [!DNL Web SDK] se divide entre dos lugares. El comando [](configuring-the-sdk.md) configure del SDK controla los elementos que deben gestionarse en el cliente, como el `edgeDomain`. La configuración de Edge gestiona el resto de la configuración del SDK. Cuando se envía una solicitud al Adobe Experience Platform [!DNL Edge Network], `edgeConfigId` se utiliza para hacer referencia a la configuración del lado del servidor. Esto le permite actualizar la configuración sin tener que realizar cambios de código en el sitio web.
 
+Se debe aprovisionar a su organización para esta función. Póngase en contacto con su administrador de software certificado (CSM) para ponerse en la lista de permitidos.
+
 ## Creación de un ID de configuración de Edge
 
-Los ID de configuración de Edge se pueden crear en Adobe [!DNL Launch] con la herramienta de configuración de Edge. Esta herramienta le permite crear tanto la configuración de borde como entornos dentro de esas configuraciones.
+Los ID de configuración de Edge se pueden crear en Adobe [!DNL Experience Platform Launch] con la herramienta de configuración de Edge. Esta herramienta le permite crear tanto la configuración de borde como entornos dentro de esas configuraciones.
 
 ![navegación de la herramienta de configuración de borde](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la [!DNL Launch] documentación para obtener más información.
+>La herramienta de configuración de Edge está disponible para los clientes de la lista de permitidos, independientemente de si utilizan [!DNL Experience Platform Launch] como administrador de etiquetas. Además, los usuarios necesitan permisos de desarrollo en [!DNL Experience Platform Launch]. Consulte el artículo Permisos [de](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) usuario en la [!DNL Experience Platform Launch] documentación para obtener más información.
 
 Puede crear una configuración de borde haciendo clic en **[!UICONTROL Nueva configuración]** de borde en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno.
 
-### Configuración de Entorno predeterminada
+### Configuración predeterminada de entorno
 
-Esta configuración predeterminada se utiliza para crear los tres primeros entornos con una configuración idéntica. Estos tres entornos son *dev*, *stage* y *prod*. Coinciden con los tres entornos predeterminados de [!DNL Launch]. Cuando crea una [!DNL Launch] biblioteca en un entorno dev, la biblioteca utiliza automáticamente el entorno dev de la configuración. Puede editar la configuración de entornos individuales tanto como desee.
+Esta configuración predeterminada se utiliza para crear los tres primeros entornos con una configuración idéntica. Estos tres entornos son *dev*, *stage* y *prod*. Coinciden con los tres entornos predeterminados de [!DNL Experience Platform Launch]. Cuando crea una [!DNL Experience Platform Launch] biblioteca en un entorno dev, la biblioteca utiliza automáticamente el entorno dev de la configuración. Puede editar la configuración de entornos individuales tanto como desee.
 
 El ID utilizado en el SDK `edgeConfigId` es un ID compuesto que especifica la configuración y el entorno. Si no hay entorno, se utiliza el entorno de producción.
 
-### Configuración de entorno
+### Ajustes de entorno
 
 A continuación se muestran los ajustes disponibles para un entorno. La mayoría de las secciones se pueden habilitar o deshabilitar. Cuando se deshabilita, la configuración se guarda pero no se activa.
 
@@ -113,7 +115,7 @@ Permite que el SDK comparta información de segmentos a través de destinos [URL
 
 #### Adobe Analytics
 
-Controla si los datos se envían a Adobe Analytics. Encontrará más información en Información general sobre [Analytics](../solution-specific/analytics/analytics-overview.md).
+Controla si los datos se envían a Adobe Analytics. Encontrará más información en Información general sobre [Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Bloque de configuración de Adobe Analytics](../../assets/edge_configuration_aa.png)
 
