@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Guía de Perfil del cliente en tiempo real
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 19%
+source-wordcount: '96'
+ht-degree: 35%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 19%
    * [Primeros pasos](api/getting-started.md)
    * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Proyecciones de Edge](api/edge-projections.md)
-   * [Entidades ([!DNL Perfil] acceso)](api/entities.md)
-   * [Exportar trabajos ([!Perfil DNL] exportar)](api/export-jobs.md)
+   * [Entidades ([!DNL Profile] acceso)](api/entities.md)
+   * [Trabajos de exportación ([!DNL Profile] exportación)](api/export-jobs.md)
    * [Combinar directivas](api/merge-policies.md)
-   * [Estado de muestra de previsualización ( previsualización [!DNL Perfil])](api/preview-sample-status.md)
+   * [Estado de muestra de previsualización ([!DNL Profile] previsualización)](api/preview-sample-status.md)
    * [[!DNL Profile] trabajos del sistema (eliminar solicitudes)](api/profile-system-jobs.md)
 * Guías de la interfaz de usuario {#ui}
    * [[!DNL Profile] guía del usuario](ui/user-guide.md)
