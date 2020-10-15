@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo rastrear los eventos del SDK web E
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Actualmente, no se admite el envío de datos que no coinciden con un esquema XDM
 
 ### Configuración `eventType`
 
-En un evento de experiencia XDM, hay un `eventType` campo opcional. Esto contiene el tipo de evento principal del registro. La configuración de un tipo de evento puede ayudarle a diferenciar entre los diferentes eventos que va a enviar. XDM proporciona varios tipos de evento predefinidos que puede utilizar o que siempre crea sus propios tipos de evento personalizados para los casos de uso. A continuación se presenta una lista de todos los tipos de evento predefinidos proporcionados por XDM.
+En un evento de experiencia XDM, hay un `eventType` campo opcional. Esto contiene el tipo de evento principal del registro. La configuración de un tipo de evento puede ayudarle a diferenciar entre los diferentes eventos que va a enviar. XDM proporciona varios tipos de evento predefinidos que puede utilizar o que siempre crea sus propios tipos de evento personalizados para los casos de uso. A continuación se presenta una lista de todos los tipos de evento predefinidos proporcionados por XDM. [Más información en la repo pública XDM](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **Tipo de evento:** | **Definición:** |
@@ -83,7 +83,7 @@ En un evento de experiencia XDM, hay un `eventType` campo opcional. Esto contien
 | delivery.feedback | Eventos de comentarios para un envío. Ejemplo de eventos de comentarios para un envío de correo electrónico |
 
 
-Estos tipos de evento se mostrarán en una lista desplegable si utiliza la extensión Launch o si siempre puede pasarlos sin Launch. Se pueden pasar como parte de la `xdm` opción.
+Estos tipos de evento se mostrarán en una lista desplegable si utiliza la extensión Adobe Experience Platform Launch o siempre puede pasarlos sin Experience Platform Launch. Se pueden pasar como parte de la `xdm` opción.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Añadir información de identidad
 
-La información de identidad personalizada también se puede agregar al evento. Consulte [Recuperación de ID de Experience Cloud](./identity.md)
+La información de identidad personalizada también se puede agregar al evento. Consulte [Recuperación de ID de Experience Cloud](../identity/overview.md)
 
 ## Uso de la API sendBeacon
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` los campos se definen en este orden:
 
 1. Valores pasados como opciones al comando evento `alloy("sendEvent", { xdm: ... });`
-2. Valores recopilados automáticamente.  (Consulte Información [](../reference/automatic-information.md)automática).
+2. Valores recopilados automáticamente.  (Consulte Información [](../data-collection/automatic-information.md)automática).
 3. Los cambios realizados en la `onBeforeEventSend` llamada de retorno.
 
 Si la `onBeforeEventSend` llamada de retorno emite una excepción, se seguirá enviando el evento; sin embargo, ninguno de los cambios realizados dentro de la llamada de retorno se aplica al evento final.
