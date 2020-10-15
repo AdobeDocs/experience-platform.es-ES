@@ -2,13 +2,13 @@
 keywords: metrics overview; rtcdp metrics overview
 title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
 seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en tiempo real
-description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
-seo-description: Paneles, Página de inicio y experiencia de usuario por primera vez de Adobe Experience Platform
+description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
+seo-description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
