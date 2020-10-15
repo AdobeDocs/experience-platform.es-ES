@@ -1,24 +1,38 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de Adobe Experience Platform
-breadcrumb-title: Experience Platform Guide
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
+user-guide-title: Descripción general de Adobe Experience Platform
+breadcrumb-title: Información general del Experience Platform
+user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 52%
+source-wordcount: '399'
+ht-degree: 44%
 
 ---
 
 
-# Adobe Experience Platform {#landing}
+# Adobe Experience Platform overview {#landing}
 
-* [Información general del Experience Platform](home.md)
-* [Primeros pasos](get-started.md)
-* [Guía del usuario de Experience Platform ](./ui-guide.md)
-* Documentación de Experience Platform {#documentation}
+* [Información general de la plataforma](home.md)
+* [Información general sobre la plataforma (vídeo)](video/platform-overview.md)
+* [Una experiencia del cliente con tecnología de plataforma (vídeo)](video/customer-experience.md)
+* [Entre bastidores de una experiencia de cliente con tecnología de plataforma (vídeo)](video/customer-experience-bts.md)
+* Primeros pasos {#getting-started}
+   * [Funciones principales (vídeo)](video/key-capabilities.md)
+   * [Casos de uso clave (vídeo)](video/platform-use-cases.md)
+   * [Arquitectura de plataforma (vídeo)](video/platform-architecture.md)
+   * [Funciones y fases del proyecto (vídeo)](video/roles-project-phases.md)
+* IU de Experience Platform {#platform-ui}
+   * [Guía de la interfaz de usuario de la plataforma](ui-guide.md)
+   * [Visita de la interfaz de usuario de la plataforma (vídeo)](video/platform-ui.md)
+   * [Compatibilidad con navegadores e idiomas](browser-language-support.md)
+* API de Experience Platform {#platform-apis}
+   * [Conceptos básicos de API](api-fundamentals.md)
+   * [Autenticar en API de Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
+   * [Documentos de referencia de API de plataforma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
+* Documentación de la plataforma {#documentation}
    * [Información general sobre la documentación](documentation/overview.md)
    * [Control de acceso](https://docs.adobe.com/content/help/es-ES/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/es-ES/auditor/using/overview.html)
@@ -30,7 +44,6 @@ ht-degree: 52%
    * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/es-ES/debugger/using/experience-cloud-debugger.html)
    * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/es-ES/debugger/using-v2/experience-cloud-debugger.html)
-   * [Offer Decisioning](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extraer, Transformar, Cargar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Servicio de identidad](https://docs.adobe.com/content/help/es-ES/experience-platform/identity/home.html)
@@ -39,17 +52,18 @@ ht-degree: 52%
    * [Perspectivas de la capacidad de observación](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Perfil (Perfil del cliente en tiempo real)](https://docs.adobe.com/content/help/es-ES/experience-platform/profile/home.html)
-   * [Servicio de consulta](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
+   * [Servicio de consultas](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
    * [Plataforma de datos de clientes en tiempo real](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)
    * [Sandboxes](https://docs.adobe.com/content/help/es-ES/experience-platform/sandbox/home.html)
-   * [Segmentación](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
+   * [Segmentación](https://docs.adobe.com/content/help/es-ES/experience-platform/segmentation/home.html)
+   * [Esquemas](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
    * [Fuentes (Conectores)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [SDK web ](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
-   * [XDM (modelo de datos de experiencia)](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
-* [Tutoriales de Experience Platform](https://docs.adobe.com/content/help/es-ES/experience-platform/tutorials/home.html)
-* [Notas de la versión](https://docs.adobe.com/content/help/es-ES/experience-platform/release-notes/latest.translate.html)
-* [Glosario](glossary.md)
+* Plataforma en el ecosistema del Adobe {#ecosystem}
+   * [Servicios de aplicaciones](application-services.md)
+   * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
+   * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración ADLS Gen2](adls2-gen2-migration.md)
-* [Conceptos básicos de API](api-fundamentals.md)
-* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
+* [Glosario](glossary.md)
+* [Notas de la versión](https://docs.adobe.com/content/help/es-ES/experience-platform/release-notes/latest.translate.html)
