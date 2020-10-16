@@ -5,7 +5,7 @@ user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general del Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
-source-git-commit: e36a6be43bffa90ce707933c5f9407fade0b6474
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 44%
@@ -26,13 +26,13 @@ ht-degree: 44%
    * [Funciones y fases del proyecto (vídeo)](video/roles-project-phases.md)
 * IU de Experience Platform {#platform-ui}
    * [Guía de la interfaz de usuario de la plataforma](ui-guide.md)
-   * [Guía de flujos de trabajo de plataforma](workflows.md)
    * [Visita de la interfaz de usuario de la plataforma (vídeo)](video/platform-ui.md)
+   * [Guía de IU de flujos de trabajo](workflows.md)
    * [Compatibilidad con navegadores e idiomas](browser-language-support.md)
 * API de Experience Platform {#platform-apis}
    * [Conceptos básicos de API](api-fundamentals.md)
+   * [DOCUMENTOS de referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
    * [Autenticar en API de Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
-   * [Documentos de referencia de API de plataforma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * Documentación de la plataforma {#documentation}
    * [Información general sobre la documentación](documentation/overview.md)
    * [Control de acceso](https://docs.adobe.com/content/help/es-ES/experience-platform/access-control/home.html)
@@ -56,8 +56,8 @@ ht-degree: 44%
    * [Servicio de consultas](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
    * [Plataforma de datos de clientes en tiempo real](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)
    * [Sandboxes](https://docs.adobe.com/content/help/es-ES/experience-platform/sandbox/home.html)
+   * [Esquemas (XDM)](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
    * [Segmentación](https://docs.adobe.com/content/help/es-ES/experience-platform/segmentation/home.html)
-   * [Esquemas](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
    * [Fuentes (Conectores)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [SDK web ](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
 * Plataforma en el ecosistema del Adobe {#ecosystem}
