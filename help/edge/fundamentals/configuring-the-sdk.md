@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -46,7 +46,7 @@ El ID de configuración asignado, que vincula el SDK con las cuentas y la config
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de cadenas | No | `["web", "device", "environment", "placeContext"]` |
 
-Indica qué categorías de contexto se recopilarán automáticamente, tal como se describe en Información [](../reference/automatic-information.md)automática.  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
+Indica qué categorías de contexto se recopilarán automáticamente, tal como se describe en Información [](../data-collection/automatic-information.md)automática.  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Configure esta opción para configurar una llamada de retorno que se llame para 
 | -------- | ------------ | ----------------- |
 | Objeto | No | `"in"` |
 
-Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `"pending"`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Compatibilidad con el consentimiento](supporting-consent.md) para obtener más información.
+Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `"pending"`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Compatibilidad con el consentimiento](../consent/supporting-consent.md) para obtener más información.
 
 ## Opciones de personalización
 
