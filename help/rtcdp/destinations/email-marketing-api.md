@@ -5,7 +5,7 @@ title: Creación de destinos de marketing por correo electrónico
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
+source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 1%
@@ -185,7 +185,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME} \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
             "name": "Base connection to Experience Platform",
@@ -359,7 +359,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{S3 or SFTP}`:: rellene el tipo de conexión deseado para este destino. En el catálogo [de](../../rtcdp/destinations/destinations-catalog.md)destino, desplácese hasta el destino que prefiera para ver si se admiten los tipos de conexión S3 o SFTP.
 * `{ACCESS_ID}`:: Su ID de acceso para la ubicación del almacenamiento [!DNL Amazon] S3.
 * `{SECRET_KEY}`:: La clave secreta para la ubicación del almacenamiento [!DNL Amazon] S3.
