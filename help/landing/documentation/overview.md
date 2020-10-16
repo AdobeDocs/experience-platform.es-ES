@@ -5,7 +5,7 @@ title: Información general sobre la documentación de Adobe Experience Platform
 topic: overview
 description: La documentación de Adobe Experience Platform se proporciona en varios formatos, como descripciones generales, tutoriales y guías tanto para la interfaz de usuario como para la API. A continuación se ofrece una breve descripción de los tipos de documentación más comunes disponibles para los servicios de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 3%
@@ -31,7 +31,7 @@ La documentación de Adobe Experience Platform se proporciona en varios formatos
 
 * **Tutorial:** Un tutorial es una guía paso a paso a través de la interfaz de usuario, la API o una combinación de ambos, que lleva a un resultado específico. A diferencia de una guía para desarrolladores, un tutorial de API solo puede centrarse en uno o dos extremos y no es un recurso API exhaustivo. Del mismo modo, los tutoriales de la interfaz de usuario pueden centrarse únicamente en pasos específicos, no en la interfaz de usuario completa disponible para ese servicio. Los Tutorials suelen formar parte de un flujo de trabajo más amplio y presentan los &quot;próximos pasos&quot; que describen los tutoriales que puede que desee probar a continuación.
 
-* **Guía del usuario:** Una guía del usuario describe las acciones disponibles en la interfaz del [!DNL Platform] usuario para un servicio específico. Estos documentos contienen capturas de pantalla y pasos centrados en la interacción con Platform a través de la interfaz de usuario. Al igual que una guía para desarrolladores, la guía del usuario describe todas las acciones y opciones disponibles, incluyendo las &quot;dificultades&quot; que se deben evitar. Se trata del recurso más detallado para trabajar con la interfaz de usuario.
+* **Guía de la interfaz de usuario:** Una guía de la interfaz de usuario describe las acciones disponibles en la interfaz [!DNL Platform] de usuario para un servicio específico. Estos documentos contienen capturas de pantalla y pasos centrados en la interacción con Platform a través de la interfaz de usuario. Al igual que una guía para desarrolladores, la guía de la interfaz de usuario describe todas las acciones y opciones disponibles, incluidas las &quot;dificultades&quot; que se deben evitar. Se trata del recurso más detallado para trabajar con la interfaz de usuario.
 
 ## Compatibilidad con el lenguaje de documentación
 
@@ -63,6 +63,6 @@ La documentación está disponible actualmente para los servicios y las funcione
 * **[!DNL Query Service]::** Utilice consultas SQL para recuperar datos de Adobe Experience Platform, como datos de soluciones de Adobe, datos de origen del cliente o cualquier otro dato de la plataforma.
 * **[!DNL Real-time Customer Data Platform]::** CDP en tiempo real combina múltiples fuentes de datos empresariales para crear perfiles unificados en tiempo real que se pueden utilizar para proporcionar experiencias personalizadas de uno a uno en todos los canales y dispositivos.
 * **[!DNL Sandboxes]::** Los Simuladores de pruebas dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* **Esquemas**: Impulsado por Adobes, el modelo de datos de experiencia (XDM) es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. Los esquemas XDM admiten la interoperabilidad de los datos entre [!DNL Experience Platform] componentes.
 * **[!DNL Segmentation]::** Cree segmentos basados en datos de Perfil del cliente en tiempo real para generar audiencias y potenciar las experiencias de los consumidores.
 * **[!DNL Sources](Conexiones):** {#sources} Introducir datos en Adobe Experience Platform desde una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos, etc.
-* **Esquemas**: Impulsado por Adobes, el modelo de datos de experiencia (XDM) es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. Los esquemas XDM admiten la interoperabilidad de los datos entre [!DNL Experience Platform] componentes.
