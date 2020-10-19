@@ -5,9 +5,9 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Tanto los esquemas de registro como de serie temporal contienen un mapa de ident
 
 Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre las identidades de los clientes y los campos que se pueden utilizar para identificar un asunto, independientemente de la procedencia de los datos.
 
-Para ayudarle con este proceso, los campos clave dentro de sus esquemas pueden marcarse como identidades. Tras la ingestión de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico]de identidad&quot; de esa persona. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-time Customer Perfil]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
+Para ayudarle con este proceso, los campos clave dentro de sus esquemas pueden marcarse como identidades. Tras la ingestión de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico]de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista conjunta de cada cliente individual.
 
-Los campos que se marcan comúnmente como &quot;[!UICONTROL Identidad]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL ID de Experience Cloud (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
+Los campos que se marcan comúnmente como &quot;[!UICONTROL Identidad]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
 
 Es importante pensar en las identidades de los clientes durante la fase de planificación de esquemas para ayudar a garantizar que los datos se reúnan a fin de generar el perfil más sólido posible. Consulte la descripción general de [Adobe Experience Platform Identity Service](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
@@ -123,7 +123,7 @@ Dado que el mantenimiento de la compatibilidad con versiones anteriores es cruci
 
 ### Esquemas e ingestión de datos
 
-Para poder ingerir datos en [!DNL Experience Platform], primero se debe crear un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos para [[!DNL Catalog Service]](../../catalog/home.md)y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Consulte la información general sobre la ingestión [de datos de](../../ingestion/home.md) Adobe Experience Platform para obtener más información.
+Para poder ingerir datos en [!DNL Experience Platform], primero se debe crear un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos [[!DNL Catalog Service]](../../catalog/home.md)y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Consulte la información general sobre la ingestión [de datos de](../../ingestion/home.md) Adobe Experience Platform para obtener más información.
 
 ## Componentes de un esquema
 
@@ -194,11 +194,11 @@ Los rangos válidos de estos tipos escalares se pueden restringir aún más a ci
 
 Algunas operaciones de datos utilizadas por los servicios y las aplicaciones posteriores imponen restricciones a tipos de campo específicos. Los servicios afectados incluyen, entre otros:
 
-* [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!Segmentación DNL]](../../segmentation/home.md)
-* [[!Servicio de Consulta DNL]](../../query-service/home.md)
-* [[!Espacio de trabajo de ciencias de datos DNL]](../../data-science-workspace/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Antes de crear un esquema para su uso en los servicios intermedios, revise la documentación apropiada para esos servicios a fin de comprender mejor los requisitos y las limitaciones sobre el terreno para las operaciones de datos a las que está destinado el esquema.
 
@@ -238,7 +238,12 @@ Todos los archivos de datos que se ingieran [!DNL Experience Platform] deben cum
 
 ## Pasos siguientes
 
-Ahora que comprendes los conceptos básicos de la composición de esquemas, estás listo para empezar a crear esquemas usando el [!DNL Schema Registry].
+Ahora que se entienden los conceptos básicos de la composición de esquemas, está listo para empezar a explorar y construir esquemas usando el [!DNL Schema Registry].
+
+Para revisar la estructura de las dos clases XDM principales y sus mezclas compatibles de uso común, consulte la siguiente documentación de referencia:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 El [!DNL Schema Registry] se utiliza para acceder a [!DNL Schema Library] dentro de Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobes, recursos del proveedor definidos por [!DNL Experience Platform] socios y clases, mezclas, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
 
