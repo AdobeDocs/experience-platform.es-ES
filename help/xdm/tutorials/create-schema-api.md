@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorials
 description: Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -24,10 +24,10 @@ Este tutorial utiliza la [!DNL Schema Registry] API para guiarle por los pasos p
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.md) desarrollador para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
@@ -956,9 +956,9 @@ Al realizar una solicitud de GET para buscar el esquema, ahora se muestra la ref
 
 ### Definir un descriptor de identidad
 
-Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A continuación, se puede acceder a los datos gráficos mediante [[!DNL Real-time Customer Perfil]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
+Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
 
-Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL ID de Experience Cloud (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
+Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
 
 Considere cualquier identificador único específico de su organización, ya que puede que también sean buenos campos de identidad.
 
@@ -997,7 +997,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Puede lista de los valores &quot;xdm:Área de nombres&quot; disponibles o crear otros nuevos mediante la [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, según la &quot;xdm:Área de nombres&quot; utilizada.
+>Puede realizar la lista de los valores &quot;xdm:Área de nombres&quot; disponibles o crear otros nuevos mediante el [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, según la &quot;xdm:Área de nombres&quot; utilizada.
 
 **Respuesta**
 
@@ -1614,7 +1614,7 @@ A continuación se muestra el esquema de miembros de lealtad completado en forma
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
