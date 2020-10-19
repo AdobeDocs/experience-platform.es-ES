@@ -5,7 +5,7 @@ title: Tipo de datos de interacción con puntos de interés
 topic: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de punto de interés.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `poiDetail` | [!UICONTROL Detalles del punto de interés](./poi-details.md) | Describe los detalles del punto de interés que provocó el evento. |
+| `poiDetail` | [[!UICONTROL Detalles del punto de interés]](./poi-details.md) | Describe los detalles del punto de interés que provocó el evento. |
 | `poiEntries` | Objeto | Describe el número de veces que una persona ha ingresado al punto de interés. Contiene dos propiedades: <ul><li>`id`:: Un identificador único para la medida.</li><li>`value`:: Valor cuantificable de la medida.</li></ul> |
 | `poiExits` | Objeto | Describe el número de veces que una persona ha salido del punto de interés. Contiene dos propiedades: <ul><li>`id`:: Un identificador único para la medida.</li><li>`value`:: Valor cuantificable de la medida.</li></ul> |
 
