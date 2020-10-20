@@ -8,7 +8,7 @@ description: Este tutorial trata los pasos para crear un esquema con el Editor d
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Si prefiere componer un esquema con la [!DNL Schema Registry] API en su lugar, c
 
 Este tutorial requiere un conocimiento práctico de los diversos aspectos de Adobe Experience Platform relacionados con la creación de esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
 
-* [[!Modelo de datos de experiencia DNL (XDM)]](../home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los esquemas XDM y sus componentes, incluidas clases, mezclas, tipos de datos y campos.
-* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Examinar esquemas existentes en el espacio de trabajo [!UICONTROL Esquemas] {#browse}
 
@@ -274,11 +274,11 @@ Después de aplicar el cambio, el icono para `loyaltyId` muestra un símbolo de 
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-Ahora, todos los datos ingestados en el `loyaltyId` campo se utilizarán para identificar a ese individuo y unir una sola vista de ese cliente. Para obtener más información sobre cómo trabajar con identidades en [!DNL Experience Platform], consulte la documentación de [[!DNL Identity Service]](../../identity-service/home.md) .
+Ahora, todos los datos ingestados en el `loyaltyId` campo se utilizarán para identificar a ese individuo y unir una sola vista de ese cliente. Para obtener más información sobre cómo trabajar con identidades en [!DNL Experience Platform], consulte la [[!DNL Identity Service]](../../identity-service/home.md) documentación.
 
 ## Habilitar el esquema para utilizarlo en [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL Perfil del cliente en tiempo real]](../../profile/home.md) aprovecha los datos de identidad en [!DNL Experience Platform] para proporcionar una vista holística de cada cliente individual. El servicio crea sólidos perfiles de 360° de atributos del cliente, así como cuentas con marca de hora de cada interacción que los clientes han tenido en cualquier sistema integrado con [!DNL Experience Platform].
+[[!DNL Real-time Customer Profile]](../../profile/home.md) aprovecha los datos de identidad en [!DNL Experience Platform] para proporcionar una vista holística de cada cliente individual. El servicio crea sólidos perfiles de 360° de atributos del cliente, así como cuentas con marca de hora de cada interacción que los clientes han tenido en cualquier sistema integrado con [!DNL Experience Platform].
 
 Para que un esquema se pueda utilizar con [!DNL Real-time Customer Profile], debe tener una identidad principal definida. Recibirá un mensaje de error si intenta habilitar un esquema sin definir primero una identidad principal.
 
