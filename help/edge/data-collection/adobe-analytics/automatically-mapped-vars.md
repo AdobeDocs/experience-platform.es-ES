@@ -5,7 +5,7 @@ description: Aprenda qué variables se asignan automáticamente en Adobe Analyti
 seo-description: Aprenda qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 A continuación se muestra una lista de variables a las que Adobe Experience Platform [!DNL Edge Network] asigna automáticamente [!DNL Analytics].
 
 | Ruta de campo XDM | [!DNL Analytics Query String] / Encabezado HTTP | Descripción |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | Asignación del parámetro de consulta de AppMeasurement PURCHASEID. |
 | `commerce.order.currencyCode` | `cc` | Asignación de CURRENCY, parámetro de consulta de AppMeasurement. |
 | `commerce.purchases.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_PURCHASE, mediante delimitador `,`. |
