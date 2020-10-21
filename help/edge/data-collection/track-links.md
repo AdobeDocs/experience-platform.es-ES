@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo enviar datos de vínculos a Adobe 
 seo-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -46,7 +46,7 @@ El tipo de vínculo puede ser uno de los tres valores:
 
 ## Seguimiento automático de vínculos {#automaticLinkTracking}
 
-De forma predeterminada, el SDK web captura, [etiqueta](#labelingLinks)y [registra](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) clics en etiquetas de vínculos [válidas](#qualifyingLinks) . Los clics se capturan con un detector de eventos de [captura](https://www.w3.org/TR/uievents/#capture-phase) que se adjunta al documento.
+De forma predeterminada, el SDK web captura, [etiqueta](#labelingLinks)y [registra](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) clics en etiquetas de vínculos [válidas](#qualifyingLinks) . Los clics se capturan con un detector de eventos de [captura](https://www.w3.org/TR/uievents/#capture-phase) que se adjunta al documento.
 
 Para desactivar el seguimiento automático de vínculos, [configure](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) el SDK web.
 
