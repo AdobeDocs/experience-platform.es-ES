@@ -5,7 +5,7 @@ description: Descubra qué es el SDK web de Adobe Experience Platform y cómo se
 seo-description: permitir a los clientes del Adobe Experience Cloud interactuar con los distintos servicios del Experience Cloud.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 2%
@@ -65,7 +65,7 @@ El siguiente vídeo muestra el Adobe Experience Platform [!DNL Web SDK] y [!DNL 
 
 ## Primeros pasos
 
-Es muy recomendable que [consulte la guía](consent/iab-tcf/with-launch.md) de introducción para ver un tutorial rápido sobre cómo empezar a usar Adobe Experience Platform Launch.
+Es muy recomendable que [consulte la guía](fundamentals/prerequisite.md) de introducción para ver un tutorial rápido sobre cómo empezar a usar Adobe Experience Platform Launch.
 
 Este producto evoluciona y crece constantemente para dar soporte a cada vez más casos de uso. Para mantenerse al día con las últimas novedades, eche un vistazo a nuestro panel de casos [de uso](https://github.com/adobe/alloy/projects/5)admitidos. Mantenemos esto al día con los casos de uso que actualmente apoyamos y con los que estamos trabajando para permitirle tomar las mejores decisiones posibles.
 
