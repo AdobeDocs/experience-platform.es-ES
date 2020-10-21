@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -85,7 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias ins
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Para los clics que se califican como clics en vínculos, se recopilan los siguientes datos de interacción [](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Web:
+Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Para los clics que se califican como clics en vínculos, se recopilan los siguientes datos de interacción [](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) Web:
 
 | **Propiedad** | **Descripción** |
 | ------------ | ----------------------------------- |
