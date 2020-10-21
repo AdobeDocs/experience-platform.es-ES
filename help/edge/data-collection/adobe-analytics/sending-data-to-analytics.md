@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo enviar datos de vínculos a Adobe 
 seo-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Envío de datos a Adobe Analytics
 
-Mientras que en el pasado había diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web hay sólo el `sendEvent` comando. Los datos que envía con un evento determinan si deben ser una vista de página o un vínculo. [Más información sobre los vínculos de seguimiento](../track-links.md)
+Mientras que en el pasado había diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web hay sólo el `sendEvent` comando. Los datos que envía con un evento determinan si deben ser una vista de página o un vínculo. [Obtenga más información sobre los vínculos](../track-links.md)de seguimiento.
 
 ## Envío de una vista de página
 
