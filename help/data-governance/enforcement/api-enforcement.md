@@ -6,9 +6,9 @@ topic: enforcement
 type: Tutorial
 description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con dichas etiquetas, puede utilizar la API de servicio de directivas para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Aplicar directivas de uso de datos mediante la [!DNL Policy Service] API
 
-Una vez que haya creado etiquetas de uso de datos para sus datos y haya creado políticas de uso para acciones de marketing con dichas etiquetas, puede utilizar la [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
+Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de marketing con esas etiquetas, puede usar el [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) para evaluar si una acción de marketing realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 
 >[!NOTE]
 >
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Cada elemento de la matriz de carga útil debe indicar el tipo de entidad que se está definiendo. En este caso de uso, el valor siempre será &quot;dataSet&quot;. |
 | `entityId` | Cada elemento de la matriz de carga útil debe proporcionar la ID única para un conjunto de datos. |
+| `entityMeta.fields` | (Opcional) Matriz de cadenas de puntero [](../../landing/api-fundamentals.md#json-pointer) JSON que hace referencia a campos específicos en el esquema del conjunto de datos. Si se incluye esta matriz, solo participarán en la evaluación los campos contenidos en ella. Los campos de esquema que no estén incluidos en la matriz no participarán en la evaluación.<br><br>Si no se incluye este campo, todos los campos dentro del esquema del conjunto de datos se incluirán en la evaluación. |
 
 **Respuesta**
 
@@ -304,13 +311,13 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
