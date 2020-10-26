@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 4%
 - [Perfil del cliente en tiempo real](#profile)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+- [Tiempo hasta el valor](#time-to-value)
 
 ## Preparación de datos {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
 
-## Tiempo hasta el valor
+## Tiempo hasta el valor {#time-to-value}
 
 Adobe Experience Platform permite a los equipos de operaciones de marketing crear una vista de 360 grados de sus clientes sin necesidad de contar con una amplia experiencia en ingeniería de datos. El objetivo es acelerar los equipos y el valor a través de la velocidad de los datos.
 
