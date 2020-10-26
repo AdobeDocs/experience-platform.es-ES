@@ -5,10 +5,10 @@ title: Trabajos de segmentos
 topic: developer guide
 description: Esta guía proporciona información para ayudarle a comprender mejor los trabajos de segmentos e incluye ejemplos de llamadas a API para realizar acciones básicas mediante la API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 3%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
@@ -96,9 +96,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
 | `segments.segment.id` | ID de la definición del segmento. |
 | `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 | `metrics` | Objeto que contiene información de diagnóstico sobre el trabajo del segmento. |
+| `metrics.totalTime` | Objeto que contiene información sobre las horas en que se inició y finalizó el trabajo de segmentación, así como el tiempo total que se ha tardado. |
+| `metrics.profileSegmentationTime` | Objeto que contiene información sobre los tiempos en que se inició y finalizó la evaluación de segmentación, así como el tiempo total que se ha tardado. |
+| `metrics.segmentProfileCounter` | Número de perfiles cualificados por segmento. |
+| `metrics.segmentedProfileByNamespaceCounter` | Número de perfiles cualificados para cada Área de nombres de identidad por segmento. |
+| `metrics.segmentProfileByStatusCounter` | Recuento de fragmentos **de** perfil para cada estado. Se admiten los tres estados siguientes: <ul><li>&quot;realizado&quot;: el número de nuevos perfiles que ingresaron al segmento.</li><li>&quot;existente&quot;: el número de perfiles que siguen existiendo en el segmento.</li><li>&quot;Salido&quot;: el número de segmentos de perfil que ya no existen en el segmento.</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | Número total de perfiles combinados por directiva de combinación. |
 
 ## Crear un nuevo trabajo de segmento {#create}
 
