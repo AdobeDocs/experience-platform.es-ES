@@ -5,9 +5,9 @@ title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
+source-wordcount: '3099'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Además de describir la estructura de los datos, los esquemas aplican restriccio
 
 Cuando se trabaja con bases de datos relacionales, las prácticas recomendadas implican normalizar datos o tomar una entidad y dividirla en partes discretas que luego se muestran en varias tablas. Para poder leer los datos en su conjunto o actualizar la entidad, las operaciones de lectura y escritura deben realizarse en muchas tablas individuales utilizando JOIN.
 
-Mediante el uso de objetos incrustados, los esquemas XDM pueden representar directamente datos complejos y almacenarlos en documentos independientes con estructura jerárquica. Uno de los principales beneficios de esta estructura es que le permite consulta de los datos sin tener que reconstruir la entidad mediante costosas combinaciones a múltiples tablas desnormalizadas.
+Mediante el uso de objetos incrustados, los esquemas XDM pueden representar directamente datos complejos y almacenarlos en documentos independientes con una estructura jerárquica. Uno de los principales beneficios de esta estructura es que le permite consulta de los datos sin tener que reconstruir la entidad mediante costosas combinaciones a múltiples tablas desnormalizadas. No hay restricciones estrictas para cuántos niveles puede ser la jerarquía de esquemas.
 
 ### Esquemas y grandes datos
 
@@ -42,6 +42,8 @@ Los esquemas solucionan este problema permitiendo que los datos se integren desd
 La estandarización es un concepto clave detrás [!DNL Experience Platform]. XDM, impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
 
 La infraestructura en la que [!DNL Experience Platform] se construye, conocida como [!DNL XDM System], facilita los flujos de trabajo basados en esquemas e incluye los patrones de consumo [!DNL Schema Registry], [!DNL Schema Editor], metadatos de esquema y servicios. See the [XDM System overview](../home.md) for more information.
+
+Existen varios beneficios clave para construir y utilizar esquemas en [!DNL Experience Platform]. En primer lugar, los esquemas permiten una mejor gobernanza de los datos y la minimización de los mismos, lo cual es especialmente importante con las regulaciones de privacidad. En segundo lugar, la creación de esquemas con los componentes estándar de Adobe permite obtener perspectivas integradas y utilizar servicios de AI/ML con personalizaciones mínimas. Por último, los esquemas proporcionan infraestructura para el uso compartido de datos y la orquestación eficiente.
 
 ## Planificación del esquema
 
@@ -135,19 +137,13 @@ Los esquemas se componen con la fórmula siguiente:
 
 &amp;ast;Un esquema se compone de una clase y cero o más mezclas. Esto significa que puede componer un esquema de conjunto de datos sin usar mezclas.
 
-### Clase
+### Class {#class}
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además de esto, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían incluir y proporcionar una manera de combinar varios conjuntos de datos compatibles.
 
-Una clase también determina qué mezclas serán elegibles para su uso en el esquema. Esto se analiza más detalladamente en la sección de [mezclas](#mixin) que sigue.
+Una clase de esquema determina qué mezclas serán elegibles para su uso en ese esquema. Esto se analiza más detalladamente en la [siguiente sección](#mixin).
 
-Existen clases estándar que se proporcionan con cada integración de [!DNL Experience Platform], conocidas como clases &quot;Industria&quot;. Las clases industriales son normas generalmente aceptadas que se aplican a un amplio conjunto de casos de uso. Algunos ejemplos de clases del sector incluyen las [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent] clases proporcionadas por Adobe.
-
-[!DNL Experience Platform] también permite clases de &quot;proveedor&quot;, que son clases definidas por [!DNL Experience Platform] socios y que se ponen a disposición de todos los clientes que utilizan ese servicio o aplicación de proveedor dentro de [!DNL Platform].
-
-También hay clases que se utilizan para describir casos de uso más específicos para organizaciones individuales dentro de [!DNL Platform], llamadas clases de &quot;cliente&quot;. Las clases de cliente son definidas por una organización cuando no hay clases del sector o del proveedor disponibles para describir un caso de uso único.
-
-Por ejemplo, un esquema que representa a los miembros de un programa de Lealtad describe los datos de registro de un individuo y, por lo tanto, se pueden basar en la [!DNL XDM Individual Profile] clase, una clase de sector estándar definida por el Adobe.
+Adobe proporciona dos clases XDM estándar (&quot;core&quot;): [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent]. Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización. Las clases personalizadas son definidas por una organización cuando no hay clases principales definidas por el Adobe disponibles para describir un caso de uso único.
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Una mezcla es un componente reutilizable que define uno o varios campos que impl
 
 Las mezclas definen con qué clase o clases son compatibles en función del comportamiento de los datos que representan (registro o serie temporal). Esto significa que no todas las mezclas están disponibles para su uso con todas las clases.
 
-Las mezclas tienen el mismo ámbito y definición que las clases: hay mezclas del sector, mezclas de proveedores y mezclas de clientes que las organizaciones individuales definen mediante [!DNL Platform]. [!DNL Experience Platform] incluye muchas mezclas estándar del sector, al tiempo que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
+[!DNL Experience Platform] incluye muchas mezclas de Adobe estándar, a la vez que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
 
 Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot;Direcciónprincipal&quot; para el esquema &quot;Miembros[!UICONTROL de la]lealtad&quot;, podría utilizar mezclas estándar que definen esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;Nivel[!UICONTROL de Programa de]lealtad&quot;) no suelen tener una mezcla predefinida. En este caso, debe definir su propia mezcla para capturar esta información.
 
 Recuerde que los esquemas están compuestos de mezclas &quot;cero o más&quot;, lo que significa que puede componer un esquema válido sin usar ninguna mezcla.
 
+Para obtener una lista de todas las mezclas estándar actuales, consulte el repositorio [XDM](https://github.com/adobe/xdm/tree/master/components/mixins)oficial.
+
 ### Data type {#data-type}
 
 Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que una mezcla, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que una mezcla, ya que se puede incluir un tipo de datos en cualquier parte de un esquema agregándolo como el &quot;tipo de datos&quot; de un campo.
+
+>[!NOTE]
+>
+>Consulte el [apéndice](#mixins-v-datatypes) para obtener más información sobre las diferencias entre las mezclas y los tipos de datos, y las ventajas y desventajas de utilizar una sobre la otra para casos de uso similares.
 
 [!DNL Experience Platform] proporciona una serie de tipos de datos comunes como parte del [!DNL Schema Registry] informe para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los [!DNL Schema Registry] tutoriales, donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
 
@@ -177,6 +179,10 @@ Un campo es el componente básico más básico de un esquema. Los campos proporc
 * Booleano
 * Matriz
 * Objeto
+
+>[!TIP]
+>
+>Consulte el [apéndice](#objects-v-freeform) para obtener información sobre los pros y los contras del uso de campos de formato libre en campos de tipo de objeto.
 
 Los rangos válidos de estos tipos escalares se pueden restringir aún más a ciertos patrones, formatos, mínimos/máximos o valores predefinidos. Con estas restricciones, se puede representar una amplia gama de tipos de campo más específicos, incluidos:
 
@@ -250,3 +256,44 @@ El [!DNL Schema Registry] se utiliza para acceder a [!DNL Schema Library] dentro
 Para empezar a componer esquemas mediante la interfaz de usuario, siga el tutorial [del Editor de](../tutorials/create-schema-ui.md) Esquemas para crear el esquema &quot;Miembros de lealtad&quot; mencionado a lo largo de este documento.
 
 Para empezar a utilizar la [!DNL Schema Registry] API, lea la guía [para desarrolladores de la API de registro de](../api/getting-started.md)Esquema para inicio. Después de leer la guía para desarrolladores, siga los pasos descritos en el tutorial sobre la [creación de un esquema con la API](../tutorials/create-schema-api.md)del Registro de Esquemas.
+
+## Apéndice
+
+La siguiente sección contiene información adicional sobre los principios de la composición del esquema.
+
+### Objetos frente a campos de formulario libre {#objects-v-freeform}
+
+Existen algunos factores clave que deben tenerse en cuenta al elegir objetos en lugar de campos de formulario libre al diseñar sus esquemas:
+
+| Objetos | Campos de forma libre |
+| --- | --- |
+| Aumenta la anidación | Menos o sin anidación |
+| Crea grupos de campos lógicos | Los campos se colocan en ubicaciones ad-hoc |
+
+#### Objetos
+
+Los pros y los contras del uso de objetos sobre campos de formulario libre se enumeran a continuación.
+
+**Ventajas**:
+
+* Los objetos se utilizan mejor cuando se desea crear una agrupación lógica de determinados campos.
+* Los objetos organizan el esquema de forma más estructurada.
+* Los objetos ayudan indirectamente a crear una buena estructura de menús en la interfaz de usuario del Generador de segmentos. Los campos agrupados dentro del esquema se reflejan directamente en la estructura de carpetas proporcionada en la interfaz de usuario del Generador de segmentos.
+
+**Contras**:
+
+* Los campos se anidan más.
+* Cuando se utiliza [Adobe Experience Platform Consulta Service](../../query-service/home.md), se deben proporcionar cadenas de referencia más largas a los campos de consulta anidados en objetos.
+
+#### Campos de forma libre
+
+Los pros y los contras del uso de campos de formulario libre sobre objetos se enumeran a continuación.
+
+**Ventajas**:
+
+* Los campos de formato libre se crean directamente bajo el objeto raíz del esquema (`_tenantId`), lo que aumenta la visibilidad.
+* Las cadenas de referencia de los campos de formato libre tienden a ser más cortas cuando se utiliza el servicio de Consulta.
+
+**Contras**:
+
+* La ubicación de los campos de forma libre dentro del esquema es ad-hoc, lo que significa que aparecen en orden alfabético en el Editor de Esquemas. Esto puede hacer que los esquemas estén menos estructurados y que los campos de forma libre similares terminen estando muy separados según sus nombres.
