@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en Perfil del cliente en tiempo real
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 Antes de leer esta guía, se recomienda que conozca los siguientes [!DNL Experience Platform] servicios:
 
-* [[!Privacy Service DNL]](home.md): Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en todas las aplicaciones de Adobe Experience Cloud.
-* [[!DNL Identity Service]](../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
-* [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Privacy Service]](home.md):: Gestiona las solicitudes de los clientes para acceder, exclusión la venta o eliminar sus datos personales en todas las aplicaciones de Adobe Experience Cloud.
+* [[!DNL Identity Service]](../identity-service/home.md):: Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
+* [[!DNL Real-time Customer Profile]](../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Explicación de las Áreas de nombres de identidad {#namespaces}
 
@@ -43,6 +43,8 @@ Las secciones siguientes describen cómo realizar solicitudes de privacidad para
 >El Privacy Service solo puede procesar [!DNL Profile] datos mediante una directiva de combinación que no realiza la vinculación de identidad. Si utiliza la interfaz de usuario para confirmar si las solicitudes de privacidad se están procesando, asegúrese de que está utilizando una directiva con &quot;[!DNL None]&quot; como tipo de [!UICONTROL identificación] . En otras palabras, no se puede usar una directiva de combinación en la que la vinculación [!UICONTROL de ID] esté configurada en &quot;Gráficoprivado&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>También es importante tener en cuenta que no se puede garantizar la cantidad de tiempo que una solicitud de privacidad puede tardar en completarse. Si se producen cambios en [!DNL Profile] los datos mientras se sigue procesando una solicitud, tampoco se puede garantizar si esos registros se procesan o no.
 
 ### Uso de la API
 
