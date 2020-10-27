@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de un esquema ad-hoc
 description: En circunstancias específicas, puede que sea necesario crear un esquema de modelo de datos de experiencia (XDM) con campos a los que solo un conjunto de datos debe asignar un nombre para su uso. Esto se denomina esquema "ad-hoc". Los esquemas específicos se utilizan en varios flujos de trabajo de ingestión de datos para Experience Platform, incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 2%
