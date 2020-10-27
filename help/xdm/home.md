@@ -5,9 +5,9 @@ title: Sistema de modelo de datos de experiencia (XDM)
 topic: overview
 description: 'La estandarización y la interoperabilidad son conceptos clave para Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. '
 translation-type: tm+mt
-source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1586'
 ht-degree: 2%
 
 ---
@@ -109,14 +109,6 @@ Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje a
 Con [!DNL Data Science Workspace], los científicos de datos pueden crear fácilmente API de servicios inteligentes con tecnología de aprendizaje automático. Estos servicios funcionan con otras soluciones de Adobe, incluidas Adobe Target y Adobe Analytics Cloud, para ayudarle a automatizar experiencias digitales personalizadas y dirigidas.
 
 Para obtener más información sobre el uso de [!DNL Experience Platform] datos para activar perspectivas, consulte la información general [de](../data-science-workspace/home.md)Data Science Workspace.
-
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] proporciona la capacidad de configurar decisiones de oferta personalizadas en aplicaciones [!DNL Platform]integradas. Las ofertas pueden ser recomendaciones de productos, componentes de contenido para una experiencia web, secuencias de comandos de conversación y acciones a realizar.
-
-[!DNL Decisioning Service] aprovecha [!DNL Real-time Customer Profile] los datos y, por lo tanto, solo es compatible con conjuntos de datos basados en esquemas que implementan la [!DNL XDM Individual Profile] clase o [!DNL XDM ExperienceEvent] .
-
-Consulte la información general [del servicio de](../decisioning-service/home.md) decisiones para obtener más información.
 
 ## Próximos pasos y recursos adicionales
 
