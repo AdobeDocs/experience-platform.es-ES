@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: Mezcla de ID de usuario final de ExperienceEvent
+title: Mezcla de detalles de ID de usuario final
 topic: overview
-description: Este documento proporciona información general sobre la combinación de ID de usuario final de ExperienceEvent.
+description: Este documento proporciona una visión general de la combinación de detalles del ID de usuario final.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mezcla de ID de usuario] final de ExperienceEvent
+# [!UICONTROL Mezcla de detalles] de ID de usuario final
 
-[!UICONTROL ExperienceEvent EndUserIDs] es una combinación estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/individual-profile.md), que se utiliza para describir la información de identidad de un individuo en varias aplicaciones Adobe. La mezcla proporciona un `endUserIDs` objeto de nivel raíz, que contiene un campo de solo lectura `_experience` cuyos valores se actualizan automáticamente a medida que se ingestan datos.
+>[!NOTE]
+>
+>Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+
+[!UICONTROL Detalles] de ID de usuario final es una combinación estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/individual-profile.md), que se utiliza para describir la información de identidad de una persona en varias aplicaciones de Adobe. La mezcla proporciona un `endUserIDs` objeto de nivel raíz, que contiene un campo de solo lectura `_experience` cuyos valores se actualizan automáticamente a medida que se ingestan datos.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
