@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
-title: Mezcla de detalles de trabajo de perfil
+title: Mezcla de detalles de contacto del trabajo
 topic: overview
-description: Este documento proporciona información general sobre la clase de Perfil individual XDM.
+description: Este documento proporciona una visión general de la combinación de detalles de contacto del trabajo.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '156'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] de trabajo de perfil
+# [!UICONTROL Mezcla de detalles] de contacto del trabajo
 
-[!UICONTROL Los detalles] de trabajo de perfil son una combinación estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona varios campos que capturan información ocupacional relacionada con una persona individual, como dirección de trabajo, correo electrónico laboral, número de teléfono del trabajo y organizaciones a las que pertenece la persona.
+>[!NOTE]
+>
+>Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+
+[!UICONTROL Detalles] de contacto de trabajo es una combinación estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona varios campos que capturan información ocupacional relacionada con una persona individual, como dirección de trabajo, correo electrónico laboral, número de teléfono del trabajo y organizaciones a las que pertenece la persona.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
