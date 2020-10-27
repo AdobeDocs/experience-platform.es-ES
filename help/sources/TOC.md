@@ -5,9 +5,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 4%
    - [Creación de una conexión de base de datos mediante la API de servicio de flujo](tutorials/api/create-dataset-base-connection.md)
    - [Monitorear flujos de datos mediante la API de servicio de flujo](tutorials/api/monitor.md)
    - [Actualización de la información de conexión mediante la API de servicio de flujo](tutorials/api/update.md)
+   - [Eliminación de conexiones mediante la API de servicio de flujo](tutorials/api/delete.md)
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Creación de un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 4%
       - [Configuración de un flujo de datos para un conector de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Activar datos de entrada para rellenar perfiles de cliente](tutorials/ui/profile.md)
    - [Supervisión de cuentas y flujos de datos](tutorials/ui/monitor.md)
+   - [Eliminar cuentas](tutorials/ui/delete-accounts.md)
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
