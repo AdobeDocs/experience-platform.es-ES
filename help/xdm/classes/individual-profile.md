@@ -5,9 +5,9 @@ title: Clase de Perfil individual XDM
 topic: overview
 description: Este documento proporciona información general sobre la clase de Perfil individual XDM.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,14 @@ La [!DNL XDM Individual Profile] clase misma proporciona varios valores generado
 
 ## Mezclas compatibles {#mixins}
 
+>[!NOTE]
+>
+>Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../mixins/name-updates.md) mezcla para obtener más información.
+
 Adobe proporciona varias mezclas estándar para su uso con la [!DNL XDM Individual Profile] clase. A continuación se presenta una lista de las mezclas más utilizadas para la clase:
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Detalles de la persona de perfil]](../mixins/profile/person-details.md)
-* [[!UICONTROL Datos personales del perfil]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Detalles de trabajo de perfil]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segmentación de perfiles]](../mixins/profile/segmentation.md)
+* [[!UICONTROL Detalles demográficos]](../mixins/profile/person-details.md)
+* [[!UICONTROL Detalles de contacto personal]](../mixins/profile/personal-details.md)
+* [[!UICONTROL Detalles de contacto de trabajo]](../mixins/profile/work-details.md)
+* [[!UICONTROL Detalles de pertenencia a segmentos]](../mixins/profile/segmentation.md)
