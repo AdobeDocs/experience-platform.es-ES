@@ -4,10 +4,10 @@ title: Documentación de Application Services
 topic: overview
 description: La documentación de Adobe Experience Platform se proporciona en varios formatos, como descripciones generales, tutoriales y guías tanto para la interfaz de usuario como para la API. A continuación se ofrece una breve descripción de los tipos de documentación más comunes disponibles para los servicios de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
+source-git-commit: 88c5c6d02ea66752b148307c4e43b2532f509839
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 21%
+source-wordcount: '93'
+ht-degree: 19%
 
 ---
 
@@ -18,4 +18,5 @@ Adobe ha creado varios servicios de aplicaciones sobre el Experience Platform. P
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/es-ES/analytics-platform/using/cja-landing.html)
 * [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/es-ES/journeys/using/journey-orchestration-home.html)
+* [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/en/offer-decisioning/using/offer-decisioning-home.html)
 * [[!DNL Real-time Customer Data Platform] (CDP en tiempo real)](../rtcdp/overview.md)
