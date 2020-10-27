@@ -6,17 +6,17 @@ title: Eliminar flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
 
 # Eliminar flujos de datos
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para eliminar flujos de datos del espacio de trabajo [!UICONTROL Fuentes] .
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para eliminar flujos de datos del espacio de trabajo **[!UICONTROL Fuentes]** .
 
 ## Primeros pasos
 
@@ -25,7 +25,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [[!Perfil del cliente en tiempo real de DNL]](../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Eliminar flujos de datos mediante la interfaz de usuario
 
@@ -64,7 +64,6 @@ Después de unos momentos, aparece un cuadro de confirmación verde en la parte 
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha accedido correctamente a las cuentas y flujos de datos existentes desde el espacio de trabajo **[!UICONTROL Fuentes]** . Los datos entrantes ahora pueden ser utilizados por servicios [!DNL Platform] descendentes como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL Fuentes]** para eliminar flujos de datos existentes.
 
-- [[!DNL Real-time Customer Profile] sobre validación](../../../profile/home.md)
-- [[!DNL Data Science Workspace] sobre validación](../../../data-science-workspace/home.md)
+Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la [!DNL Flow Service] API, consulte el tutorial sobre la [eliminación de conexiones mediante la API de servicio de flujo](../../tutorials/api/delete.md)
