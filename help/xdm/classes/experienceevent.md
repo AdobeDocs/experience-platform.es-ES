@@ -5,9 +5,9 @@ title: Clase XDM ExperienceEvent
 topic: overview
 description: Este documento proporciona información general sobre la clase ExperienceEvent XDM.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -33,10 +33,14 @@ La [!DNL XDM ExperienceEvent] clase misma proporciona varios campos relacionados
 
 ## Mezclas compatibles {#mixins}
 
+>[!NOTE]
+>
+>Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../mixins/name-updates.md) mezcla para obtener más información.
+
 Adobe proporciona varias mezclas estándar para su uso con la [!DNL XDM ExperienceEvent] clase. A continuación se presenta una lista de algunas mezclas utilizadas habitualmente para la clase:
 
-* [[!UICONTROL ID de usuario final de ExperienceEvent]](../mixins/event/enduserids.md)
-* [[!UICONTROL Detalles del entorno de ExperienceEvent]](../mixins/event/environment-details.md)
+* [[!UICONTROL Detalles del ID de usuario final]](../mixins/event/enduserids.md)
+* [[!UICONTROL Detalles del entorno]](../mixins/event/environment-details.md)
 
 ## Apéndice
 
