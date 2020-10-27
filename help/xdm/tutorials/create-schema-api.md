@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar.
 translation-type: tm+mt
-source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '2343'
 ht-degree: 1%
