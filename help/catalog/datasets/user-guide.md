@@ -5,9 +5,9 @@ title: Guía del usuario de conjuntos de datos
 topic: datasets
 description: Esta guía del usuario de conjuntos de datos proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Conjuntos](overview.md)de datos: La construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)de esquemas: Obtenga información sobre cómo crear sus propios esquemas XDM personalizados mediante la [!DNL Schema Editor] interfaz de [!DNL Platform] usuario.
-* [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):: Garantizar el cumplimiento de las regulaciones, restricciones y políticas relativas al uso de los datos del cliente.
 
 ## datasets de vista
 
@@ -122,7 +122,7 @@ Puede eliminar un conjunto de datos accediendo primero a su pantalla de activida
 
 >[!NOTE]
 >
->Los conjuntos de datos creados y utilizados por aplicaciones y servicios de Adobe (como Adobe Analytics, Adobe Audience Manager o [!DNL Decisioning Service]) no se pueden eliminar.
+>Los conjuntos de datos creados y utilizados por aplicaciones y servicios de Adobe (como Adobe Analytics, Adobe Audience Manager o [!DNL Offer Decisioning]) no se pueden eliminar.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
