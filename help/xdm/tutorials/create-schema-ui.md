@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: Crear un esquema con el editor de esquemas.
 topic: tutorial
-type: Tutorials
-description: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
+type: Tutorial
+description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '3819'
 ht-degree: 0%
