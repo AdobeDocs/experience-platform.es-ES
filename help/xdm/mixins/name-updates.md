@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Actualizaciones de nombres de mezcla
 topic: overview
 description: Una lista de cambios recientes en el nombre de la mezcla XDM.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ La siguiente tabla describe las mezclas existentes que se han actualizado, junto
 
 | Nombre anterior | Nombre actualizado |
 | --- | --- |
-| [!UICONTROL Mezcla de Consumer ExperienceEvent] | [!UICONTROL Detalles del consumo de contenido] |
 | [!UICONTROL Mezcla de privacidad de Experience evento] | [!UICONTROL Detalles de privacidad] |
 | [!UICONTROL Detalles de la aplicación ExperienceEvent] | [!UICONTROL Detalles de la aplicación] |
 | [!UICONTROL Detalles del canal de ExperienceEvent] | [!UICONTROL Detalles del canal] |
@@ -44,7 +43,7 @@ La siguiente tabla describe las mezclas existentes que se han actualizado, junto
 | [!UICONTROL Teléfonos perfil] | [!UICONTROL Detalles del número de teléfono] |
 | [!UICONTROL Detalles de preferencias de perfil] | [!UICONTROL Detalles de preferencias] |
 | [!UICONTROL Privacidad del perfil] | [!UICONTROL Detalles de privacidad] |
-| [!UICONTROL Detalles de inserción de perfil] | [!UICONTROL Detalles de notificaciones push] |
+| [!UICONTROL Detalles de inserción de perfil] | [!UICONTROL Detalles del autentificador de notificaciones push] |
 | [!UICONTROL Segmentación de perfiles] | [!UICONTROL Detalles de pertenencia a segmentos] |
 | [!UICONTROL Suscripciones perfil] | [!UICONTROL Detalles de suscripción] |
 | [!UICONTROL Detalles de trabajo de perfil] | [!UICONTROL Detalles de contacto de trabajo] |
