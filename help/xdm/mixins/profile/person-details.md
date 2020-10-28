@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: Mezcla de detalles de persona de perfil
+title: Mezcla de detalles demográficos
 topic: overview
-description: Este documento proporciona información general sobre la clase de Perfil individual XDM.
+description: Este documento ofrece una visión general de la combinación de Detalles Demográficos.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '241'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] de persona de perfil
+# [!UICONTROL Mezcla de detalles] demográficos
 
-[!UICONTROL Los detalles] de la persona de perfil son una mezcla estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona un `person` objeto de nivel raíz cuyos subcampos describen información sobre una persona individual.
+>[!NOTE]
+>
+>Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+
+[!UICONTROL Demographic Details] es una mezcla estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona un `person` objeto de nivel raíz cuyos subcampos describen información sobre una persona individual.
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -33,4 +37,4 @@ ht-degree: 3%
 Para obtener más información sobre la mezcla, consulte el repositorio público XDM:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Esquema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [Esquema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)å completo
