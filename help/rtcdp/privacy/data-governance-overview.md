@@ -5,9 +5,9 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1588'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,7 @@ Puede establecer restricciones de uso de datos en un destino definiendo casos de
 
 La definición de casos de uso de mercadotecnia en los destinos le permite asegurarse de que todos los perfiles o segmentos enviados a dichos destinos cumplen las políticas de uso de datos. Por lo tanto, debe agregar a los destinos los casos de uso de mercadotecnia adecuados en función de las necesidades de su organización para aplicar restricciones de directiva en la activación.
 
-Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar casos de uso de mercadotecnia aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la documentación [de](../destinations/destinations-overview.md) destino para ver los pasos para configurar un destino concreto.
-
+Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar casos de uso de mercadotecnia aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la documentación [de](../destinations/destinations-overview.md#data-governance) destinos para ver los pasos para configurar un destino concreto.
 
 ## Administrar directivas de uso de datos {#policies}
 
@@ -56,7 +55,7 @@ Una vez etiquetados los datos y definidas las políticas de uso, puede imponer e
 
 El diagrama siguiente ilustra cómo se integra la aplicación de políticas en el flujo de datos de la activación de segmentos:
 
-![](assets/enforcement-flow.png)
+<img src="assets/governance/enforcement-flow.png" width="650">
 
 Cuando se activa un segmento por primera vez, comprueba [!DNL Policy Service] si hay infracciones de directivas en función de los siguientes factores:
 
@@ -70,23 +69,57 @@ Cuando se activa un segmento por primera vez, comprueba [!DNL Policy Service] si
 >* Los campos se configuran como atributos proyectados para el destino de destinatario.
 
 
+### Línea de datos {#lineage}
+
+En CDP en tiempo real, el linaje de datos juega un papel clave en la manera en que se aplican las políticas. En términos generales, el linaje de datos se refiere al origen de un conjunto de datos y a lo que le sucede (o a dónde se mueve) con el tiempo.
+
+En el contexto de [!DNL Data Governance], lineage permite que las etiquetas de uso de datos se propaguen desde conjuntos de datos a servicios que consumen sus datos, como Perfiles y destinos de clientes en tiempo real. Esto permite que las políticas se evalúen y apliquen en varios puntos clave del viaje de los datos a través de la plataforma, y proporciona contexto a los consumidores de datos sobre el motivo por el que se produjo una infracción de las políticas.
+
+En el CDP en tiempo real, la aplicación de políticas se preocupa por el siguiente linaje:
+
+1. Los datos se ingieren en CDP en tiempo real y se almacenan en **datasets**.
+1. Los perfiles del cliente se identifican y construyen a partir de esos conjuntos de datos mediante la combinación de fragmentos de datos según la política **de** combinación.
+1. Los grupos de perfiles se dividen en **segmentos** en función de atributos comunes.
+1. Los segmentos se activan en **destinos** descendentes.
+
+Cada etapa del calendario anterior representa una entidad que puede contribuir a que se infrinja una política, como se indica en el cuadro siguiente:
+
+| Etapa del linaje de datos | Función en la aplicación de políticas |
+| --- | --- |
+| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas a nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o un campo que contenga ciertas etiquetas para un propósito que una política restrinja. |
+| Combinar directiva | Las políticas de combinación son las reglas que utiliza la plataforma para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las directivas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la guía sobre políticas [de](../../profile/ui/merge-policies.md) combinación para obtener más información. |
+| Segmento | Las reglas de segmentos definen qué atributos deben incluirse a partir de los perfiles del cliente. Según los campos que incluya una definición de segmento, el segmento heredará las etiquetas de uso aplicadas para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destinatario, según el caso de uso de la mercadotecnia. |
+| Destino | Al configurar un destino, se puede definir una acción de mercadotecnia (a veces denominada caso de uso de mercadotecnia). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva de uso de datos. En otras palabras, el caso de uso de mercadotecnia que defina para un destino determina qué políticas de uso de datos son aplicables a dicho destino. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas de uso están restringidas por las políticas aplicables del destino de destinatario. |
+
+Cuando se producen infracciones de política, los mensajes resultantes que aparecen en la interfaz de usuario proporcionan herramientas útiles para explorar el linaje de datos de contribución de la infracción para ayudar a resolver el problema. En la siguiente sección se proporcionan más detalles.
+
 ### Mensajes de infracción de directiva {#enforcement}
 
-Si se produce una infracción de directiva al intentar activar un segmento (o [realizar modificaciones en un segmento](#policy-enforcement-for-activated-segments)ya activado), se evita la acción y aparece una ventana emergente que indica que se han infringido una o varias directivas. Seleccione una infracción de directiva en la columna izquierda de la ventana emergente para mostrar los detalles de dicha infracción.
+Si se produce una infracción de directiva al intentar activar un segmento (o [realizar modificaciones en un segmento](#policy-enforcement-for-activated-segments)ya activado), se evita la acción y aparece una ventana emergente que indica que se han infringido una o varias directivas. Una vez que se ha activado una infracción, el botón **[!UICONTROL Guardar]** se desactiva para la entidad que se está modificando hasta que se actualizan los componentes correspondientes para cumplir con las políticas de uso de datos.
 
-![](assets/violation-popover.png)
+Seleccione una infracción de directiva en la columna izquierda de la ventana emergente para mostrar los detalles de dicha infracción.
 
-La ficha **[!UICONTROL Detalles]** de la ventana emergente indica la acción que activó la infracción y el motivo por el que se produjo la infracción, y proporciona sugerencias sobre cómo resolver el problema en forma potencial.
+![](assets/governance/violation-policy-select.png)
 
-Haga clic en Línea **[!UICONTROL de datos]** para rastrear los destinos, segmentos, políticas de combinación o conjuntos de datos cuyas etiquetas de datos activaron la infracción.
+El mensaje de infracción proporciona un resumen de la política violada, incluyendo las condiciones para las que se configura la política, la acción específica que activó la infracción y una lista de posibles resoluciones para el problema.
 
-![](assets/data-lineage.png)
+![](assets/governance/violation-summary.png)
 
-Una vez que se ha activado una infracción, el botón **[!UICONTROL Guardar]** se desactiva para la activación hasta que se actualizan los componentes correspondientes para cumplir con las políticas de uso de datos.
+Debajo del resumen de infracciones se muestra un gráfico del linaje de datos que le permite visualizar los conjuntos de datos, las políticas de combinación, los segmentos y los destinos que participaron en la infracción de la directiva. La entidad que está cambiando actualmente se resalta en el gráfico, indicando qué punto del flujo está causando que se produzca la infracción. Puede seleccionar un nombre de entidad dentro del gráfico para abrir la página de detalles de la entidad en cuestión.
+
+![](assets/governance/data-lineage.png)
+
+También puede utilizar el icono **[!UICONTROL Filtro]** (![](./assets/governance/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
+
+![](assets/governance/lineage-filter.png)
+
+Seleccione la vista **[!UICONTROL de]** Lista para mostrar el linaje de datos como una lista. Para volver al gráfico visual, seleccione **[!UICONTROL Ruta de vista]**.
+
+![](assets/governance/list-view.png)
 
 ### Aplicación de directivas para segmentos activados {#policy-enforcement-for-activated-segments}
 
-La aplicación de políticas sigue aplicándose a los segmentos después de activarlos, lo que restringe cualquier cambio en un segmento o en su destino que pueda provocar una infracción de la política. Debido a los numerosos componentes involucrados en la activación de segmentos a destinos, cualquiera de las siguientes acciones puede potencialmente desencadenar una infracción:
+La aplicación de políticas sigue aplicándose a los segmentos después de activarlos, lo que restringe cualquier cambio en un segmento o en su destino que pueda provocar una infracción de la política. Debido a cómo funciona [el linaje](#lineage) de datos en la aplicación de políticas, cualquiera de las siguientes acciones puede potencialmente desencadenar una infracción:
 
 * Actualización de etiquetas de uso de datos
 * Cambio de conjuntos de datos para un segmento
