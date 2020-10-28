@@ -5,9 +5,9 @@ title: Información general sobre la aplicación de políticas
 topic: enforcement
 description: Una vez que las etiquetas de uso de datos se han aplicado a los conjuntos de datos de Adobe Experience Platform y se han definido las políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades de administración de datos le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan violaciones de políticas. Existen dos métodos de aplicación de políticas proporcionados por las funciones de administración de datos en la plataforma, aplicación basada en API y aplicación automática.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ Consulte el tutorial sobre la aplicación de [políticas](api-enforcement.md) pa
 
 Algunas aplicaciones que se crean sobre [!DNL Experience Platform] (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionan una aplicación automática de las políticas de uso de datos. Cada aplicación mantiene su propio método de detectar violaciones de políticas y proporcionar pasos para resolver problemas.
 
-Consulte la documentación de la aplicación [!DNL Platform]basada que está utilizando para obtener más información sobre la aplicación automática de políticas de uso de datos. Para obtener información sobre la aplicación automática de políticas en tiempo real, consulte la información general [sobre la gobernanza de datos CDP en tiempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)real.
+La aplicación automática de políticas en el CDP en tiempo real aprovecha las capacidades de administración de políticas, clasificación de datos y linaje de datos para evaluar y detectar infracciones de políticas. Para obtener más información, consulte la información general [sobre la gobernanza de datos CDP en tiempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) real.
