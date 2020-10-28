@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Tipos y Categorías de destinos
 seo-title: Tipos y Categorías de destinos
-description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. '
-seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos.
+description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos. '
+seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ El siguiente vídeo le muestra las particularidades de los dos tipos de destinos
 
 ### Extensiones {#extensions}
 
-CDP en tiempo real de Adobe aprovecha la potencia y flexibilidad del Experience Platform Launch para incluir extensiones de Launch en la interfaz CDP en tiempo real de Adobe.
+CDP en tiempo real de Adobe aprovecha la potencia y flexibilidad de Adobe Experience Platform Launch para incluir extensiones de Launch de plataforma en la interfaz CDP en tiempo real de Adobe.
 
 >[!TIP]
 >
->Para obtener información detallada sobre las extensiones de Experience Platform Launch, incluidos los casos de uso y cómo encontrarlos en la interfaz, consulte la descripción general [de extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+>Para obtener información detallada sobre las extensiones de Adobe Experience Platform Launch, incluidos los casos de uso y cómo encontrarlos en la interfaz, consulte la descripción general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
-Las extensiones de inicio reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
+Las extensiones de Launch de plataforma reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
