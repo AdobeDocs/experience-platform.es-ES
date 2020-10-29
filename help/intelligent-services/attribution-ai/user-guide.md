@@ -5,17 +5,17 @@ title: Guía del usuario de Attribution AI
 topic: User guide
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 0%
+source-wordcount: '1746'
+ht-degree: 1%
 
 ---
 
 
 # Guía del usuario de Attribution AI
 
-Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con la Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de la interacción de cada cliente en cada fase de los viajes de los clientes.
+Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
 
 Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 
@@ -25,7 +25,29 @@ En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UIC
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
-Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización. Haga clic en **Crear instancia** para comenzar.
+Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
+
+Puede encontrar la métrica de puntuación **[!UICONTROL de eventos de conversión]** total en la parte inferior derecha del contenedor **[!UICONTROL Crear instancia]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluyendo todos los entornos de simulación de pruebas y todas las instancias de servicio eliminadas.
+
+![](./images/user-guide/total_conversions.png)
+
+Las instancias de servicio se pueden editar, clonar y eliminar mediante los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de las instancias **** de servicio existentes. Los controles contienen la siguiente información:
+
+- **[!UICONTROL Editar]**: Si selecciona **[!UICONTROL Editar]** , podrá modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clonar]**: Al seleccionar **[!UICONTROL Clonar]** , se copia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Fuente]** de datos: Vínculo al conjunto de datos que utiliza esta instancia.
+- **[!UICONTROL Detalles]** de la última ejecución: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué falló la ejecución, como códigos de error.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Eventos]** de conversión: Información general rápida sobre los eventos de conversión configurados para esta instancia.
+- **[!UICONTROL Ventana]** de búsqueda: Período de tiempo definido que indica cuántos días antes de incluir los puntos de contacto del evento de conversión.
+- **[!UICONTROL Puntos de contacto]**: Una lista de todos los puntos de contacto definidos durante la creación de esta instancia.
+
+![](./images/user-guide/side_panel_2.png)
+
+Seleccione **[!UICONTROL Crear instancia]** para comenzar.
 
 ![Crear instancia](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Una vez que haya terminado de definir todos los puntos de contacto necesarios, d
 
 ## Configuración avanzada de puntuación y formación
 
-La última página de Attribution AI es la página *Avanzadas* que se utiliza para configurar la formación y la puntuación.
+La última página de Attribution AI es la página **[!UICONTROL Avanzadas]** que se utiliza para configurar la formación y la puntuación.
 
 ![nueva página avanzada](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Para cambiar la hora del día que desea que se produzca la puntuación, haga cli
 >Cada proceso de puntuación puede tardar hasta 24 horas en completarse.
 
 ![icono del reloj](./images/user-guide/time_of_day.png)
+
+### Columnas adicionales del conjunto de datos de puntuación (opcional)
+
+De forma predeterminada, se crea un conjunto de datos de puntuación para cada instancia de servicio en un esquema estándar. Puede elegir agregar columnas adicionales basadas en las configuraciones de Evento de conversión y punto de contacto al resultado del conjunto de datos de puntuación. Para inicio, seleccione las columnas de su conjunto de datos de entrada y, a continuación, puede arrastrarlas y soltarlas para cambiar el orden pulsando el botón izquierdo del ratón sobre el icono de hamburguesa.
+
+![adición de columna de conjunto de datos de puntuación](./images/user-guide/Add-score-dataset.png)
 
 ### Modelado basado en regiones (opcional) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finali
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente una instancia de servicio en Attribution AI. Una vez que la instancia haya terminado de anotar (aproximadamente 24 horas), estará listo para [descubrir perspectivas](./discover-insights.md)de Attribution AI. Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md) sin procesar.
+Siguiendo este tutorial, ha creado correctamente una instancia de servicio en Attribution AI. Una vez que la instancia haya terminado de anotar (aproximadamente 24 horas), estará listo para [descubrir perspectivas](./discover-insights.md)de Attribution AI. Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md) .
 
 ## Recursos adicionales
 
