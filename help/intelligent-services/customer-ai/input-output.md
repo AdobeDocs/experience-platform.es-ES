@@ -5,9 +5,9 @@ title: Entrada y salida de AI del cliente
 topic: Getting started
 description: El siguiente documento describe las diferentes entradas y salidas utilizadas en la API del cliente.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ La API del cliente utiliza datos del Evento de experiencias de consumo para calc
 
 La API del cliente requiere datos históricos para la formación de modelos, pero la cantidad de datos requeridos se basa en dos elementos clave: ventana de resultados y población elegible.
 
-De forma predeterminada, la API del cliente busca que un usuario haya tenido actividades en los últimos 120 días si no se proporciona ninguna definición de población elegible durante la configuración de la aplicación. Además de la cantidad mínima de datos de Evento de experiencias de consumo que se requiere, la AI del cliente también necesita una cantidad mínima de eventos de éxito según una definición de objetivo predicha. Actualmente, la API del cliente necesita un mínimo de 500 eventos de éxito.
+De forma predeterminada, la API del cliente busca que un usuario haya tenido actividades en los últimos 120 días si no se proporciona ninguna definición de población elegible durante la configuración de la aplicación. Además, la API del cliente requiere un mínimo de 500 eventos cualificados y 500 no aptos (1000 en total) de datos históricos basados en una definición de objetivo predicha.
 
 Los siguientes ejemplos proporcionados utilizan una fórmula sencilla para ayudarle a determinar la cantidad mínima de datos necesaria. Si tiene más de lo mínimo, es probable que el modelo proporcione resultados más precisos. Si tiene menos de la cantidad mínima necesaria, el modelo fallará, ya que no hay una cantidad suficiente de datos para la formación de modelos.
 
