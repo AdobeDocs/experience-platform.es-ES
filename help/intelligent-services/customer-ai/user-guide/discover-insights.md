@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Descubrimiento de perspectivas con la API del cliente
 topic: Discovering insights
-description: La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La API del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
+description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 0%
+source-wordcount: '1389'
+ht-degree: 1%
 
 ---
 
 
 # Descubrimiento de perspectivas con la API del cliente
 
-La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La API del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
+La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
 
 Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 
@@ -48,15 +48,22 @@ A continuación, se abre la página de perspectivas de esa instancia de servicio
 
 ### Detalles de instancia de servicio
 
-Existen dos formas de vista de los detalles de instancias de servicio: la primera es desde el panel y la segunda desde la instancia de servicio.
+Existen dos formas de vista de los detalles de las instancias de servicio: desde el panel o dentro de la instancia de servicio.
 
-Para vista de detalles desde el panel, haga clic en un contenedor de instancia de servicio evitando el hipervínculo adjunto al nombre. Esto abre un carril derecho que proporciona detalles adicionales como la descripción, la frecuencia de puntuación, el objetivo de predicción y la población elegible. Además, puede elegir editar y eliminar la instancia haciendo clic en **[!UICONTROL Editar]** o **[!UICONTROL Eliminar]**.
+Para obtener una vista general de los detalles de la instancia de servicio dentro del panel, seleccione un contenedor de instancia de servicio y evite el hipervínculo que se adjunta al nombre. Se abre un carril derecho que proporciona detalles adicionales. Los controles contienen lo siguiente:
 
-![carril derecho](../images/insights/success-run.png)
+- **[!UICONTROL Editar]**: Si selecciona **[!UICONTROL Editar]** , podrá modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clonar]**: Al seleccionar **[!UICONTROL Clonar]** , se copia la configuración de la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Fuente]** de datos: Vínculo al conjunto de datos utilizado por esta instancia.
+- **[!UICONTROL Frecuencia]** de ejecución: La frecuencia con la que se produce un puntaje y el momento en que se produce.
+- **[!UICONTROL Definición]** de puntuación: Información general rápida sobre el objetivo configurado para esta instancia.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en *Última ejecución* en el carril derecho, que solo está visible para las ejecuciones fallidas.
+>En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en **Última ejecución** en el carril derecho, que solo está visible para las ejecuciones fallidas.
 
 ![error al ejecutar el mensaje](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ Para editar una instancia, haga clic en **[!UICONTROL Editar]** en la navegació
 
 ![haga clic en el botón de edición](../images/insights/edit-button.png)
 
-Aparece el cuadro de diálogo de edición, que le permite editar la *descripción* y la frecuencia *de puntuación* de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, haga clic en **[!UICONTROL Editar]** en la esquina inferior derecha.
+Aparece el cuadro de diálogo de edición, que le permite editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia. Para confirmar los cambios y cerrar el cuadro de diálogo, seleccione **[!UICONTROL Guardar]** en la esquina inferior derecha.
 
 ![editar pover](../images/insights/edit-instance.png)
 
@@ -80,15 +87,16 @@ Aparece el cuadro de diálogo de edición, que le permite editar la *descripció
 
 El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Al hacer clic en **[!UICONTROL Más acciones]** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
 
+- **[!UICONTROL Clonar]**: Al seleccionar **[!UICONTROL Clonar]** , se copia la configuración de la instancia de servicio. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
 - **[!UICONTROL Eliminar]**: Elimina la instancia.
-- **[!UICONTROL Puntuaciones]** de acceso: Al hacer clic en las puntuaciones *de* Access, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
+- **[!UICONTROL Puntuaciones]** de acceso: Al seleccionar puntuaciones **[!UICONTROL de]** acceso, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
 - **[!UICONTROL Historial]** de ejecución de vistas: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](../images/insights/more-actions.png)
 
 ## Resumen de puntuación {#scoring-summary}
 
-Resumen de puntuación muestra el número total de perfiles puntuados y los categoriza en bloques que contienen alta, media y baja tendencia. Los bloques de propensión se determinan en función del rango de puntuación, el bajo es menor que 24, el medio es de 25 a 74 y el alto es superior a 74. Cada cubo tiene un color correspondiente a la leyenda.
+El resumen de puntuación muestra el número total de perfiles puntuados y los categoriza en bloques que contienen alta, media y baja tendencia. Los bloques de propensión se determinan en función del rango de puntuación, el bajo es menor que 24, el medio es de 25 a 74 y el alto es superior a 74. Cada cubo tiene un color correspondiente a la leyenda.
 
 >[!NOTE]
 >
@@ -96,9 +104,13 @@ Resumen de puntuación muestra el número total de perfiles puntuados y los cate
 
 ![resumen de puntuación](../images/insights/scoring-summary.png)
 
+Puede pasar el ratón sobre cualquier color del anillo para vista información adicional, como un porcentaje y un número total de perfiles que pertenecen a un cubo.
+
+![](../images/insights/scoring-ring.png)
+
 ## Distribución de puntuaciones
 
-La tarjeta **[!UICONTROL Distribución de Puntuaciones]** le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta *Distribución de puntuaciones* representan el tipo de puntuación de tendencia generada.
+La tarjeta **[!UICONTROL Distribución de Puntuaciones]** le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta [!UICONTROL Distribución de puntuaciones] representan el tipo de puntuación de tendencia generada. Al pasar el ratón por encima de cualquiera de las distribuciones de puntuación, se obtiene el recuento exacto de esa distribución.
 
 ![distribución de puntuaciones](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ Para cada bloque de puntuación, se genera una tarjeta que muestra los 10 factor
 
 ![Factores influyentes](../images/insights/influential-factors.png)
 
+### Exploraciones influyentes de los factores
+
+Si pasa el ratón por encima de cualquiera de los factores de mayor influencia, los datos se desglosan aún más. Se le proporciona una descripción general de por qué ciertos perfiles pertenecen a un bloque de propensión. En función del factor, se le pueden dar valores numéricos, categóricos o booleanos. El ejemplo siguiente muestra valores categóricos por región.
+
+![captura de pantalla de desglose](../images/insights/drilldown.png)
+
+Además, con los desgloses, puede comparar un factor de distribución si se produce en dos o más bloques de propensión y crear segmentos más específicos con estos valores. El siguiente ejemplo ilustra el primer caso de uso:
+
+![](../images/insights/drilldown-compare.png)
+
+Puede ver que los perfiles con baja propensión a convertir tienen menos probabilidades de haber realizado una visita reciente a las páginas web de adobe.com. El factor &quot;Días desde la última visita web&quot; tiene sólo un 8% de cobertura, en comparación con el 26% en los perfiles de propensión media. Con estos números, puede comparar la distribución dentro de cada bloque del factor. Esta información puede utilizarse para deducir que la actualización en la visita por Internet no influye tanto en el bloque de baja propensión como en el bloque de propensión media.
+
 ### Crear un segmento
 
-Al hacer clic en el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques de baja, media y alta propensión se le redirige al generador de segmentos.
+Al seleccionar el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques para obtener una tendencia baja, media y alta, se le redirige al generador de segmentos.
 
 >[!NOTE]
 >
