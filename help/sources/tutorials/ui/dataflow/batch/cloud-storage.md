@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [[!Perfil del cliente en tiempo real de DNL]](../../../../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 Además, este tutorial requiere que tenga una cuenta de almacenamiento en la nube establecida. Encontrará una lista de tutoriales para crear distintas cuentas de almacenamiento en la nube en la interfaz de usuario en la descripción general [de los conectores](../../../../home.md)de origen.
 
@@ -54,17 +54,23 @@ Una vez que se complete la ventana de previsualización, puede seleccionar **[!U
 
 ### Ingesta de archivos de parqué o JSON
 
-Los formatos de archivo admitidos para una cuenta de almacenamiento en la nube también incluyen JSON y Parquet. Los archivos JSON y Parquet deben ser compatibles con XDM. Para ingestar archivos JSON o Parquet, seleccione el formato de archivo adecuado en el navegador de directorios y aplique un formato de datos compatible desde la interfaz correcta. Seleccione **[!UICONTROL Siguiente]** para continuar.
+Las cuentas de almacenamiento de nube también admiten archivos JSON y Parquet. Los archivos de parquet deben ser compatibles con XDM, mientras que los archivos JSON no necesitan ser compatibles con XDM. Para ingestar archivos JSON o Parquet, seleccione el formato de archivo adecuado en el navegador de directorios y aplique un formato de datos compatible desde la interfaz correcta.
+
+Si el formato de datos está en JSON, aparecerá una previsualización que mostrará información sobre los datos del archivo. En la pantalla previsualización, puede seleccionar si JSON es compatible con XDM mediante la lista desplegable compatible con **[!UICONTROL XDM]** .
+
+Seleccione **[!UICONTROL Siguiente]** para continuar.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->A diferencia de los tipos de archivo delimitados, los archivos con formato JSON y Parquet no están disponibles para la previsualización.
+>A diferencia de los tipos de archivos delimitados y JSON, los archivos con formato de parquet no están disponibles para la previsualización.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Asignación de campos de datos a un esquema XDM
 
-Aparece el paso **[!UICONTROL Asignación]** , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos. Los archivos de origen formateados en JSON o Parquet deben ser compatibles con XDM y no requieren la configuración manual de la asignación. Los archivos CSV, por el contrario, requieren que configure explícitamente la asignación, pero permiten elegir los campos de datos de origen que se asignarán.
+Aparece el paso **[!UICONTROL Asignación]** , que proporciona una interfaz interactiva para asignar los datos de origen a un [!DNL Platform] conjunto de datos. Los archivos de origen formateados en Parquet deben ser compatibles con XDM y no requieren que configure manualmente la asignación, mientras que los archivos CSV requieren que configure explícitamente la asignación, pero permiten elegir los campos de datos de origen que se asignarán. Los archivos JSON, si se marcan como una queja XDM, no requieren configuración manual. Sin embargo, si no está marcado como compatible con XDM, deberá configurar explícitamente la asignación.
 
 Elija un conjunto de datos para los datos de entrada en los que se van a ingerir. Puede usar un conjunto de datos existente o crear uno nuevo.
 
@@ -94,11 +100,19 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** . Seleccio
 
 En función de sus necesidades, puede elegir asignar los campos directamente o utilizar funciones de asignador para transformar los datos de origen para derivar valores calculados o calculados. Para obtener más información sobre la asignación de datos y las funciones del asignador, consulte el tutorial sobre la [asignación de datos CSV a campos](../../../../../ingestion/tutorials/map-a-csv-file.md)de esquema XDM.
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Para archivos JSON, además de asignar campos directamente a otros campos, puede asignar objetos directamente a otros objetos y matrices a otras matrices.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Tenga en cuenta que no puede asignar distintos tipos. Por ejemplo, no se puede asignar un objeto a una matriz ni un campo a un objeto.
+
 >[!TIP]
 >
 >[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Seleccione los datos **[!UICONTROL de]** Previsualización para ver los resultados de asignación de hasta 100 filas de datos de muestra del conjunto de datos seleccionado.
 
