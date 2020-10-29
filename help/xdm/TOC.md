@@ -5,9 +5,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM)
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 translation-type: tm+mt
-source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
+source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '203'
 ht-degree: 19%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 19%
 * [Descripción general del sistema XDM](home.md)
 * Esquemas {#schema}
    * [Conceptos básicos de la composición de esquemas](schema/composition.md)
+   * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
    * Casos de uso de esquema {#use-cases}
