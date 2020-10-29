@@ -5,10 +5,10 @@ title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 description: 'Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los datasets que se utilizan en Servicios inteligentes] deben cumplir con el esquema XDM de Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
-ht-degree: 1%
+source-wordcount: '1882'
+ht-degree: 0%
 
 ---
 
@@ -276,81 +276,15 @@ Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Añadir una etiqueta de Área de nombres de identidad principal en el conjunto de datos
+#### Añadir campos de identidad al conjunto de datos
 
 >[!NOTE]
 >
 >Las próximas versiones de [!DNL Intelligent Services] integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
 
-Si está trayendo datos desde [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, debe agregar una `primaryIdentityNameSpace` etiqueta al conjunto de datos. Esto se puede hacer haciendo una solicitud de PATCH a la API de servicio de catálogo.
+Si está trayendo datos de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, tiene la opción de establecer un campo de esquema como campo de identidad. Para definir un campo de esquema como un campo de identidad, vista la sección sobre la configuración de campos de identidad dentro del tutorial [de](../xdm/tutorials/create-schema-ui.md#identity-field) interfaz de usuario para crear un esquema con el Editor de Esquemas o, alternativamente, el tutorial [de](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
 
 Si va a ingerir datos de un archivo CSV local, puede pasar a la siguiente sección sobre [asignación e ingesta de datos](#ingest).
-
-Antes de seguir el ejemplo de llamada de API que se muestra a continuación, consulte la sección [](../catalog/api/getting-started.md) Introducción en la guía para desarrolladores de catálogos para obtener información importante sobre los encabezados necesarios.
-
-**Formato API**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parámetro | Descripción |
-| --- | --- |
-| `{DATASET_ID}` | ID del conjunto de datos creado anteriormente. |
-
-**Solicitud**
-
-En función de la fuente desde la que ingrese datos, debe proporcionar los valores apropiados `primaryIdentityNamespace` y `sourceConnectorId` de etiqueta en la carga útil de la solicitud.
-
-La siguiente solicitud agrega los valores de etiqueta adecuados para Audience Manager:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-La siguiente solicitud agrega los valores de etiqueta adecuados para Analytics:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->Para obtener más información sobre cómo trabajar con Áreas de nombres de identidad en la plataforma, consulte la descripción general [de la Área de nombres de](../identity-service/namespaces.md)identidad.
-
-**Respuesta**
-
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Asignar y transferir datos {#ingest}
 
