@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2458'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,17 @@ ht-degree: 1%
 
 # Combinar extremo de directivas
 
-Adobe Experience Platform le permite reunir datos de múltiples fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que [!DNL Platform] se utilizan para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía muestra los pasos para trabajar con políticas de combinación mediante la API. Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
+Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que [!DNL Platform] se utilizan para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada.
+
+Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se ingieren en la plataforma, se combinan para crear un solo perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento lista al cliente como &quot;soltero&quot; mientras que el otro lista al cliente como &quot;casado&quot;), la política de combinación determina qué información incluir en el perfil del individuo.
+
+Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía proporciona los pasos para trabajar con políticas de combinación mediante la API.
+
+Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte de la [[!DNL Real-time Customer Perfil API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+El punto final de API utilizado en esta guía forma parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
 
 ## Componentes de políticas de combinación {#components-of-merge-policies}
 
@@ -126,7 +132,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 * **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
    * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
 
-**Ejemplo de objeto attributeMerge con`dataSetPrecedence`type**
+**Ejemplo de objeto attributeMerge con `dataSetPrecedence` type**
 
 ```json
     "attributeMerge": {
@@ -140,7 +146,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
     }
 ```
 
-**Ejemplo de objeto attributeMerge con`timestampOrdered`type**
+**Ejemplo de objeto attributeMerge con `timestampOrdered` type**
 
 ```json
     "attributeMerge": {
@@ -737,7 +743,7 @@ Como los registros se ingieren en Experience Platform, se obtiene una marca de h
 
 Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
 
-Para utilizar una marca de tiempo personalizada, debe agregarse la [[!DNL External Source System Audit Details Mixin]](#mixin-details) a su esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
+Para utilizar una marca de tiempo personalizada, [[!DNL External Source System Audit Details Mixin]](#mixin-details) debe agregarla al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
 
 >[!NOTE]
 >
