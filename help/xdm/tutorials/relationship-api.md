@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial para definir una relación u
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -117,7 +117,7 @@ Dentro de la [!DNL Schema Registry], los descriptores de relación funcionan de 
 >
 >A diferencia del esquema de destino, el esquema de origen no puede utilizar su identidad principal como campo de referencia.
 
-En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `email` campo que sirve como identidad principal del esquema y, por lo tanto, también actuará como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarse como referencia y debe recibir una nueva mezcla que añada un nuevo campo al esquema: `favoriteHotel`.
+En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo que sirve como identidad principal del esquema y, por lo tanto, también actuará como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarse como referencia y debe recibir una nueva mezcla que añada un nuevo campo al esquema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 ## Creación de un descriptor de identidad de referencia {#reference-identity}
 
-Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el `favoriteHotel` campo de &quot;[!DNL Loyalty Members]&quot; hará referencia al `email` campo de &quot;[!DNL Hotels]&quot;, se debe dar un descriptor de identidad de referencia `email` .
+Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el `favoriteHotel` campo de &quot;[!DNL Loyalty Members]&quot; hará referencia al `hotelId` campo de &quot;[!DNL Hotels]&quot;, se debe dar un descriptor de identidad de referencia `favoriteHotel` .
 
 Cree un descriptor de referencia para el esquema de destino realizando una solicitud de POST al `/tenant/descriptors` extremo.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud crea un descriptor de referencia para el `email` campo en el esquema de destino &quot;[!DNL Hotels]&quot;.
+La siguiente solicitud crea un descriptor de referencia para el `hotelId` campo en el esquema de destino &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Una respuesta correcta devuelve los detalles del descriptor de referencia recié
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
