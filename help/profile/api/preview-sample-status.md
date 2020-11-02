@@ -4,9 +4,9 @@ title: 'Previsualización de perfiles: API de Perfil de clientes en tiempo real'
 description: Adobe Experience Platform le permite ingestar datos de clientes desde múltiples fuentes para crear perfiles unificados sólidos para clientes individuales. Como los datos habilitados para el Perfil del cliente en tiempo real se ingieren en la plataforma, se almacenan en el almacén de datos de Perfil. A medida que aumenta o disminuye el número de registros en el almacén de Perfiles, se ejecuta un trabajo de muestra que incluye información sobre cuántos fragmentos de perfil y perfiles combinados hay en el almacén de datos. Mediante la API de Perfil puede realizar previsualizaciones de la muestra más reciente de éxito, así como de la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1608'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,12 @@ Estas métricas también están disponibles en la sección de [!UICONTROL Perfil
 ## Primeros pasos
 
 El punto final de API utilizado en esta guía forma parte de la [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+
+## Fragmentos de perfil frente a perfiles combinados
+
+Esta guía hace referencia tanto a &quot;fragmentos de perfil&quot; como a &quot;perfiles combinados&quot;. Es importante comprender la diferencia entre estos términos antes de continuar.
+
+Cada perfil de cliente individual está compuesto por varios fragmentos de perfil que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se ingieren en la plataforma, se combinan (según la política de combinación) para crear un único perfil para ese cliente. Por lo tanto, es probable que el número total de fragmentos de perfil sea siempre mayor que el número total de perfiles combinados, ya que cada perfil está compuesto de varios fragmentos.
 
 ## Estado de la última muestra de vista {#view-last-sample-status}
 
