@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial para definir una relación u
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -339,7 +339,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 
 ## Creación de un descriptor de identidad de referencia {#reference-identity}
 
-Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el `favoriteHotel` campo de &quot;[!DNL Loyalty Members]&quot; hará referencia al `hotelId` campo de &quot;[!DNL Hotels]&quot;, se debe dar un descriptor de identidad de referencia `favoriteHotel` .
+Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el `favoriteHotel` campo de &quot;[!DNL Loyalty Members]&quot; hará referencia al `hotelId` campo de &quot;[!DNL Hotels]&quot;, se debe dar un descriptor de identidad de referencia `hotelId` .
 
 Cree un descriptor de referencia para el esquema de destino realizando una solicitud de POST al `/tenant/descriptors` extremo.
 
