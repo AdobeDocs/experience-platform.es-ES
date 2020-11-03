@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
+source-git-commit: d2f1255be48c1df04757f7e071221e0552a0b921
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 2%
+source-wordcount: '1360'
+ht-degree: 0%
 
 ---
 
@@ -41,16 +41,9 @@ En las secciones que figuran a continuación se proporciona orientación general
 
 Dependiendo de la naturaleza de su negocio y de las jurisdicciones bajo las que opera, sus operaciones de datos pueden estar sujetas a regulaciones legales de privacidad. Estas regulaciones a menudo otorgan a sus clientes el derecho de solicitar acceso a los datos que recopila de ellos, y el derecho de solicitar la eliminación de esos datos almacenados. Estas solicitudes de datos personales de los clientes se denominan &quot;solicitudes de privacidad&quot; en toda la documentación.
 
-La siguiente tabla describe las regulaciones legales de privacidad que [!DNL Privacy Service] administran las solicitudes, incluyendo vínculos a la documentación para obtener más información:
+Para obtener más información sobre las diferentes regulaciones legales de privacidad que [!DNL Privacy Service] administran las solicitudes, incluyendo términos clave y respuestas a las preguntas más frecuentes, consulte la documentación [de las regulaciones de](./regulations/overview.md)privacidad.
 
-| Reglamento | Descripción |
-| --- | --- |
-| CCPA (California) | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. La CCPA otorga nuevos derechos de privacidad de datos a los residentes de California, incluido el derecho a acceder y eliminar sus datos personales, a saber si sus datos personales se venden o revelan (y a quién) y a exclusión que sus datos se venden a terceros.<br/><br/>Vínculos para más documentación: <ul><li>[Visión general de la legislación](https://oag.ca.gov/privacy/ccpa)</li><li>[Preguntas más frecuentes sobre CCPA](ccpa/faq.md)</li></ul> |
-| RGPD (Unión Europea) | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. Esto implica que cualquier ciudadano de la UE cuyos datos personales hayan sido recopilados por su empresa puede solicitar el acceso o la supresión de sus datos en cualquier momento. <br/><br/>Vínculos para más documentación: <ul><li>[Visión general de la legislación](https://gdpr-info.eu/)</li><li>[Preguntas más frecuentes sobre el RGPD](gdpr/faq.md)</li><li>[Terminología del RGPD](gdpr/terminology.md)</li></ul> |
-| LGPD (Brasil) | El objetivo [!DNL Lei Geral de Proteção de Dados] (LGPD) es regular el tratamiento de los datos personales de todas las personas físicas o físicas en el Brasil. La LGPD otorga a los ciudadanos brasileños el derecho a acceder y eliminar sus datos personales, a saber si se venden o revelan sus datos personales (y a quién), y el derecho a exclusión que sus datos se vendan a terceros.<br/><br/>Vínculos para más documentación: <ul><li>[Visión general de la legislación](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
-| PDPA (Tailandia) | El [!DNL Personal Data Protection Act] de Tailandia (PDPA) se introdujo para proteger a los propietarios de datos tailandeses de la recopilación, el uso o la revelación ilegales de sus datos personales. Inspirado en el RGPD de la Unión Europea, el reglamento otorga a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.<br/><br/>Vínculos para más documentación: <ul><li>[Visión general de la legislación](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[Preguntas más frecuentes sobre PDPA](pdpa-tha/faq.md)</li><li>[Terminología de PDPA](pdpa-tha/terminology.md)</li></ul> |
-
-Si sus operaciones de datos son de la competencia de cualquiera de las regulaciones anteriores, revise su documentación para obtener información importante, como los derechos de privacidad específicos que otorgan a sus clientes y las ventanas de cumplimiento para cumplir con las solicitudes de privacidad. Esta información debe tenerse en cuenta a la hora de determinar cómo se integra [!DNL Privacy Service] en el sistema CRM y cómo los clientes deben interactuar con el sitio web para realizar solicitudes de privacidad.
+Si sus operaciones de datos son de la competencia de cualquiera de las regulaciones admitidas, revise su documentación para obtener información importante, como los derechos de privacidad específicos que otorgan a sus clientes y las ventanas de cumplimiento para cumplir con las solicitudes de privacidad. Esta información debe tenerse en cuenta a la hora de determinar cómo se integra [!DNL Privacy Service] en el sistema CRM y cómo los clientes deben interactuar con el sitio web para realizar solicitudes de privacidad.
 
 Además de las regulaciones legales, cualquier norma organizativa o industrial aplicable a su organización también debe ser considerada al tomar estas decisiones.
 
