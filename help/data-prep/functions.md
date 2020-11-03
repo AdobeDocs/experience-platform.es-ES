@@ -5,9 +5,9 @@ title: Funciones de preparación de datos
 topic: overview
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: 16c718c7c653a0cfe4c3dcefddfc5472525e1828
+source-git-commit: 6deb8f5e11b87550601679f06c8445d90fd22709
 workflow-type: tm+mt
-source-wordcount: '3432'
+source-wordcount: '3459'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | Concatena las cadenas dadas. | <ul><li>CADENA: Cadenas que se concatenarán.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explosionar | Divide la cadena según un regex y devuelve una matriz de partes. Opcionalmente, puede incluir regex para dividir la cadena. De forma predeterminada, la división se resuelve en &quot;,&quot;. | <ul><li>CADENA: **Requerido** La cadena que se debe dividir.</li><li>REGEX: *Opcional* La expresión normal que se puede utilizar para dividir la cadena.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Devuelve la ubicación/índice de una subcadena. | <ul><li>ENTRADA: **Requerido** La cadena que se está buscando.</li><li>SUBCADENA: **Requerido** La subcadena que se busca dentro de la cadena.</li><li>INICIO_POSITION: *Opcional* La ubicación de dónde se va a buscar en la cadena con el inicio.</li><li>OCURRENCIA: *Opcional* La enésima incidencia que se va a buscar desde la posición de inicio. De forma predeterminada, se establece en 1. </li></ul> | instr(ENTRADA, SUBCADENA, INICIO_POSICIÓN, OCURRENCIA) | instr(&quot;adobe`<span>`.com&quot;, &quot;com&quot;) | 6 |
@@ -51,7 +51,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 | lower /<br>lcase | Convierte una cadena en minúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá a minúsculas.</li></ul> | lower (ENTRADA) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | superior /<br>ucase | Convierte una cadena en mayúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá en mayúscula.</li></ul> | superior(ENTRADA) | top(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HOLA&quot; |
 | split | Divide una cadena de entrada en un separador. | <ul><li>ENTRADA: **Requerido** La cadena de entrada que se va a dividir.</li><li>SEPARADOR: **Requerido** La cadena que se utiliza para dividir la entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Une una lista de objetos mediante el separador. | <ul><li>SEPARADOR: **Requerido** La cadena que se utilizará para unir los objetos.</li><li>OBJETOS: **Requerido** Matriz de cadenas que se unirán.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hola mundo&quot; |
+| join | Une una lista de objetos mediante el separador. | <ul><li>SEPARADOR: **Requerido** La cadena que se utilizará para unir los objetos.</li><li>OBJETOS: **Requerido** Matriz de cadenas que se unirán.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hola mundo&quot; |
 | lpad | Pade el lado izquierdo de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a añadir.</li><li>AGREGAR: **Requerido** La cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | lpad(ENTRADA, RECUENTO, ADICIÓN) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Pade el lado derecho de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a añadir.</li><li>AGREGAR: **Requerido** La cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | rpad(ENTRADA, RECUENTO, ADICIÓN) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Obtiene los primeros caracteres &quot;n&quot; de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena para la que se obtienen los primeros caracteres &quot;n&quot;.</li><li>RECUENTO: **** RequeridoCaracteres &quot;n&quot; que desea obtener de la cadena.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -69,7 +69,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | sha1 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 1 (SHA-1). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha1(ENTRADA, JUEGO DE ENTRADAS) | sha1(&quot;mi texto&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 256 (SHA-256). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha256(ENTRADA, ENTRADA) | sha256(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | Toma una entrada y produce un valor hash mediante el algoritmo hash seguro 512 (SHA-512). | <ul><li>ENTRADA: **Requerido** El texto sin formato con hash.</li><li>CHARSET: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha512(ENTRADA, JUEGO DE ENTRADAS) | sha512(&quot;mi texto&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -83,7 +83,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | get_url_protocol | Devuelve el protocolo de la dirección URL dada. Si la entrada no es válida, devuelve null. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el protocolo.</li></ul> | get_url_protocol(URL) | get_url_protocol(&quot;https://platform.adobe.com/home&quot;) | https |
 | get_url_host | Devuelve el host de la dirección URL dada. Si la entrada no es válida, devuelve null. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el host.</li></ul> | get_url_host(URL) | get_url_host(&quot;https://platform.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Devuelve el puerto de la dirección URL dada. Si la entrada no es válida, devuelve null. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el puerto.</li></ul> | get_url_port(URL) | get_url_port(&quot;sftp://example.com//home/joe/employee.csv&quot;) | 22 |
@@ -97,7 +97,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | now | Recupera la hora actual. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera la hora Unix actual. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Da formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonianDateTime, a la que se desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -118,13 +118,14 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerido** El objeto del que está intentando encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Comprueba si un objeto está vacío o no. | <ul><li>ENTRADA: **Requerido** El objeto que está intentando comprobar está vacío.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crea una lista de objetos. | <ul><li>ENTRADA: **Requerido** Agrupación de pares de claves y matrices.</li></ul> | array_to_object(INPUT) | necesita muestra | necesita muestra |
 | to_object | Crea un objeto basado en los pares clave/valor planos dados. | <ul><li>ENTRADA: **Requerido** Una lista plana de pares clave/valor.</li></ul> | to_object(INPUT) | to_object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un objeto a partir de la cadena de entrada. | <ul><li>CADENA: **Requerido** La cadena que se está analizando para crear un objeto.</li><li>VALUE_DELIMITER: *Opcional* El delimitador que separa un campo del valor. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de valor de campo. The default delimiter is `,`.</li></ul> | str_to_object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | teléfono - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | Comprueba si el objeto existe dentro de los datos de origen. | <ul><li>ENTRADA: **Requerido** La ruta que se debe comprobar si existe dentro de los datos de origen.</li></ul> | is_set(INPUT) | is_set(&quot;evars.evar.field1&quot;) | true |
+| anular | Define el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destinatario. |  | nullify() | nullify() | `null` |
 
 ### Jerarquías: matrices
 
@@ -133,7 +134,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | fusionarse | Devuelve el primer objeto no nulo de una matriz determinada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea buscar el primer objeto no nulo.</li></ul> | combinación(ENTRADA) | coalesce(null, null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Recupera el primer elemento de la matriz dada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea encontrar el primer elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Recupera el último elemento de la matriz dada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea encontrar el último elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -146,7 +147,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | decode | Dada una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra la clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave que se debe coincidir.</li><li>OPTIONS: **Requerido** Matriz acoplada de pares clave/valor. Opcionalmente, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/D&quot;) | Si el stateCode proporcionado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode proporcionado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode no coincide con lo siguiente, &quot;N/D&quot;. |
 | iif | Evalúa una determinada expresión booleana y devuelve el valor especificado en función del resultado. | <ul><li>BOOLEAN_EXPRESIÓN: **Requerido** La expresión booleana que se está evaluando.</li><li>TRUE_VALUE: **Requerido** El valor que se devuelve si la expresión se evalúa como true.</li><li>FALSE_VALUE: **Requerido** El valor que se devuelve si la expresión se evalúa como false.</li></ul> | iif(BOOLEAN_EXPRESIÓN, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -157,7 +158,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | min | Devuelve el mínimo de los argumentos dados. Utiliza ordenación natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Devuelve el máximo de los argumentos dados. Utiliza ordenación natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -168,7 +169,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | to_bigint | Convierte una cadena en un BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint(&quot;1000000.34&quot;) | 1000000.34 |
 | to_decimal | Convierte una cadena en un Doble. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un Doble.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -181,7 +182,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Deserialice el contenido JSON de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena JSON que se va a deserializar.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Un objeto que representa el JSON. |
 
 ### Operaciones especiales
@@ -191,7 +192,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Genera un ID seudoaleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c2063333 |
 
 ### Funciones de agente de usuario
@@ -201,7 +202,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 >Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | ua_os_name | Extrae el nombre del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extrae la versión principal del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Extrae la versión del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
