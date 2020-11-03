@@ -5,10 +5,10 @@ title: Preparación de datos para su uso en Servicios inteligentes
 topic: Intelligent Services
 description: 'Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse y mantenerse semánticamente en una estructura estándar. Los servicios inteligentes aprovechan los esquemas del modelo de datos de experiencia (XDM) para lograr esto. Específicamente, todos los datasets que se utilizan en Servicios inteligentes] deben cumplir con el esquema XDM de Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 0%
+source-wordcount: '1851'
+ht-degree: 1%
 
 ---
 
@@ -278,11 +278,7 @@ Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario
 
 #### Añadir campos de identidad al conjunto de datos
 
->[!NOTE]
->
->Las próximas versiones de [!DNL Intelligent Services] integrarán [Adobe Experience Platform Identity Service](../identity-service/home.md) en sus capacidades de identificación de clientes. Como tal, los pasos que se describen a continuación están sujetos a cambios.
-
-Si está trayendo datos de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, tiene la opción de establecer un campo de esquema como campo de identidad. Para definir un campo de esquema como un campo de identidad, vista la sección sobre la configuración de campos de identidad dentro del tutorial [de](../xdm/tutorials/create-schema-ui.md#identity-field) interfaz de usuario para crear un esquema con el Editor de Esquemas o, alternativamente, el tutorial [de](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
+Si está trayendo datos de [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]u otra fuente externa, tiene la opción de establecer un campo de esquema como campo de identidad. Para definir un campo de esquema como un campo de identidad, vista la sección sobre la configuración de campos de identidad en el tutorial [de](../xdm/tutorials/create-schema-ui.md#identity-field) interfaz de usuario o en el tutorial [de](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) API para crear un esquema.
 
 Si va a ingerir datos de un archivo CSV local, puede pasar a la siguiente sección sobre [asignación e ingesta de datos](#ingest).
 
@@ -301,4 +297,4 @@ Este documento proporciona una guía general sobre cómo preparar sus datos para
 Una vez que haya rellenado correctamente un conjunto de datos con los datos de experiencia del cliente, puede utilizarlo [!DNL Intelligent Services] para generar perspectivas. Consulte los siguientes documentos para empezar:
 
 * [Descripción general de Attribution AI](./attribution-ai/overview.md)
-* [Información general sobre el AI del cliente](./customer-ai/overview.md)
+* [Información general sobre Customer AI ](./customer-ai/overview.md)
