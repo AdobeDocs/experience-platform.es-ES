@@ -5,9 +5,9 @@ description: Aprenda qué variables se asignan automáticamente en Adobe Analyti
 seo-description: Aprenda qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,8 @@ A continuación se muestra una lista de variables a las que Adobe Experience Pla
 | `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta de AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta de AppMeasurement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parámetro de consulta de AppMeasurement Productos Eventos de mercancías / Asignación de Evars. |
-| `productlistitems.[N].lineitemid` | `products` | Parámetro de consulta de AppMeasurement Asignación de Categoría de productos. |
 | `productlistitems.[N].name` | `products` | Parámetro de consulta de AppMeasurement Asignación de nombres de productos. |
-| `productlistitems.[N].pricetotal` | `products` | Parámetro de consulta de AppMeasurement Asignación de precios de productos. |
+| `productlistitems.[N].priceTotal` | `products` | Parámetro de consulta de AppMeasurement Asignación de precios de productos. |
 | `productlistitems.[N].quantity` | `products` | Parámetro de consulta de AppMeasurement Asignación de cantidad de productos. |
 | `web.webInteraction.URL` | `pev1` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR1. |
 | `web.webInteraction.name` | `pev2` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR2. |
