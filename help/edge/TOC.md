@@ -6,10 +6,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 translation-type: tm+mt
-source-git-commit: 7f3d4f0266b58b1327d2b8743538c7fc9b67669b
+source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 34%
 
 ---
 
@@ -43,6 +43,7 @@ ht-degree: 0%
    * [Administrar parpadeo](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Información general de Target](personalization/adobe-target/target-overview.md)
+      * [Implementación de aplicación de página única](personalization/adobe-target/spa-implementation.md)
 * Consentimiento {#consent}
    * [Apoyo al consentimiento](consent/supporting-consent.md)
    * Marco de transparencia y consentimiento de IAB 2.0 {#iab-tcf}
