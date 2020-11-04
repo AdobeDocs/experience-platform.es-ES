@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre la biblioteca JavaScript de privacidad de Adobe
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Como procesador de datos, Adobe procesa los datos personales de acuerdo con las instrucciones y los permisos de su compañía. Como responsable del tratamiento de datos, determinará qué datos personales Adobe trata y almacena en su nombre. En función de la información que elija enviar a través de las soluciones de Adobe Experience Cloud, Adobe puede almacenar información privada aplicable a las regulaciones de privacidad, tales como el [!DNL General Data Protection Regulation] (GDPR) y [!DNL California Consumer Privacy Act] (CCPA). Consulte el documento sobre [privacidad en Adobe Experience Cloud](https://www.adobe.com/es/privacy/marketing-cloud.html) para obtener más información sobre cómo las soluciones de Experience Cloud recopilan datos privados.
 
-La biblioteca **JavaScript de privacidad de** Adobe permite a los controladores de datos automatizar la recuperación de todas las identidades de sujeto de datos generadas por [!DNL Experience Cloud] soluciones para un dominio específico. Mediante la API proporcionada por [Adobe Experience Platform Privacy Service](home.md), estas identidades se pueden utilizar para crear solicitudes de acceso y eliminación de datos privados pertenecientes a esos temas de datos.
+La biblioteca **JavaScript de privacidad de** Adobe permite a los controladores de datos automatizar la recuperación de todas las identidades de sujeto de datos generadas por [!DNL Experience Cloud] soluciones para un dominio específico. Mediante la API proporcionada por [Adobe Experience Platform Privacy Service](home.md), estas identidades se pueden utilizar para crear y eliminar solicitudes de acceso a datos privados pertenecientes a esos temas de datos.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ La siguiente tabla describe las diferentes funciones proporcionadas por la bibli
 | Función | Descripción |
 | --- | --- |
 | `retrieveIdentities` | Devuelve una matriz de identidades coincidentes (`validIds`) que se recuperaron de [!DNL Privacy Service], así como una matriz de identidades que no se encontraron (`failedIds`). |
-| `removeIdentities` | Quita cada identidad coincidente (válida) del explorador. Devuelve una matriz de identidades coincidentes (`validIds`), con cada identidad que contiene un valor `isDeleteClientSide` booleano que indica si este ID se ha eliminado. |
+| `removeIdentities` | Quita cada identidad coincidente (válida) del explorador. Devuelve una matriz de identidades coincidentes (`validIds`), con cada identidad que contiene un valor `isDeletedClientSide` booleano que indica si este ID se ha eliminado. |
 | `retrieveThenRemoveIdentities` | Recupera una matriz de identidades coincidentes (`validIds`) y, a continuación, elimina dichas identidades del explorador. Aunque esta función es similar a `removeIdentities`, es mejor utilizarla cuando la solución de Adobe que está utilizando requiere una solicitud de acceso antes de poder eliminarla (por ejemplo, cuando se debe recuperar un identificador único antes de proporcionarlo en una solicitud de eliminación). |
 
 >[!NOTE]
@@ -47,7 +47,7 @@ Para realizar inicios con el [!DNL Privacy JS Library], debe instalarlo en el eq
 
 * Para realizar la instalación con npm, ejecute el siguiente comando: `npm install @adobe/adobe-privacy`
 * Utilice la extensión de inicio de Adobe con el nombre `AdobePrivacy`
-* Descargar de [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Descarga desde el repositorio [Experience Cloud de GitHub](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Cree una instancia de [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ Todas las aplicaciones que utilicen el [!DNL Privacy JS Library] objeto deben cr
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
@@ -204,8 +203,8 @@ A continuación se muestra una lista de los parámetros de configuración acepta
 | --- | --- |
 | `aamUUIDCookieName` | Nombre de la cookie de origen que contiene el ID de usuario único devuelto por Adobe Audience Manager. |
 
-**Servicio de Adobe ID (ECID)**
+**Servicio Adobe ID (ECID)**
 
 | Parámetro | Descripción |
 | --- | --- |
-| `imsOrgID` | Su identificador de organización de IMS. |
+| `imsOrgID` | Su ID de la organización IMS. |
