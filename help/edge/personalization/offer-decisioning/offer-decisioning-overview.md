@@ -5,9 +5,9 @@ description: El SDK web de Adobe Experience Platform puede entregar y procesar o
 seo-description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '839'
 ht-degree: 9%
 
 ---
@@ -56,9 +56,9 @@ Es importante comprender la siguiente terminología al trabajar con Offer Decisi
 
    ![](assets/decision-scope-copy.png)
 
-**Configuración de Edge:** Para obtener más información, lea la documentación de configuración [](../../fundamentals/edge-configuration.md) Edge.
+* **Configuración de Edge:** Para obtener más información, lea la documentación de configuración [](../../fundamentals/edge-configuration.md) Edge.
 
-**Identidad**: Para obtener más información, lea esta documentación en la que se describe cómo [Platform Web SDK aprovecha Identity Service](../../identity/overview.md).
+* **Identidad**: Para obtener más información, lea esta documentación en la que se describe cómo [Platform Web SDK aprovecha Identity Service](../../identity/overview.md).
 
 ## Activación de Offer Decisioning
 
@@ -66,7 +66,7 @@ Para habilitar Offer Decisioning, debe realizar los siguientes pasos:
 
 1. Se habilitó Adobe Experience Platform en la configuración [](../../fundamentals/edge-configuration.md) Edge y se marcó la casilla &quot;Offer Decisioning&quot;
    ![oferta-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (el SDK se puede instalar de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una guía de inicio [rápida para Launch](https://docs.adobe.com/content/help/es-ES/launch/using/intro/get-started/quick-start.html)).
+2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (el SDK se puede instalar de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una guía de inicio [rápida para el lanzamiento](https://docs.adobe.com/content/help/es-ES/launch/using/intro/get-started/quick-start.html)de plataformas).
 3. [Configure el SDK](../../fundamentals/configuring-the-sdk.md) para Offer Decisioning. A continuación se proporcionan pasos adicionales específicos de Offer Decisioning.
    * SDK instalado de forma independiente
       1. Configure la acción &quot;sendEvent&quot; con su `decisionScopes`
@@ -80,19 +80,19 @@ Para habilitar Offer Decisioning, debe realizar los siguientes pasos:
           ]
       })
       ```
-   * Iniciar SDK instalado
-      1. [Creación de una propiedad Launch](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/companies-and-properties.html)
-      2. [Añadir el código de incrustación de Launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Instale y configure la extensión AEP Web SDK con la configuración de Edge que acaba de crear seleccionando la configuración en la lista desplegable &quot;Configuración de Edge&quot;. Documentación útil sobre [extensiones](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+   * SDK instalado de inicio de plataforma
+      1. [Crear una propiedad de inicio de plataforma](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/companies-and-properties.html)
+      2. [Añadir el código incrustado de inicio de plataforma](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Instale y configure la extensión Adobe Experience Platform Web SDK con la configuración de Edge que acaba de crear seleccionando la configuración en la lista desplegable &quot;Configuración de Edge&quot;. Documentación útil sobre [extensiones](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Cree los elementos [de datos](https://docs.adobe.com/content/help/es-ES/launch/using/reference/manage-resources/data-elements.html)necesarios. Como mínimo, deberá crear un mapa de identidad del SDK web de AEP y un elemento de datos de objeto XDM del SDK web de AEP. (ojalá haya más documentación sobre los elementos de datos del SDK web de AEP que podemos vincular aquí)
+      4. Cree los elementos [de datos](https://docs.adobe.com/content/help/es-ES/launch/using/reference/manage-resources/data-elements.html)necesarios. Como mínimo, deberá crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Cree sus [reglas](https://docs.adobe.com/content/help/es-ES/launch/using/reference/manage-resources/rules.html).
-         * Añadir una acción de envío de Evento de AEP Web SDK y agregar lo relevante `decisionScopes` a la configuración de dicha acción
+         * Añadir una acción de Evento de envío de SDK web de plataforma y agregar lo relevante `decisionScopes` a la configuración de esa acción
             ![send-evento-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
       6. [Cree y publique una biblioteca](https://docs.adobe.com/content/help/es-ES/launch/using/reference/publish/libraries.html) que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
 
