@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo procesar contenido personalizado c
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 3%
 
 ---
@@ -20,10 +20,6 @@ El Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar experiencia
 ## Activación de Adobe Target
 
 Para habilitar [!DNL Target], debe hacer lo siguiente:
-
-1. Active los tokens de respuesta actividad.id y experience.id en la [!DNL Target] interfaz de usuario.
-
-![destinatario_reponse_token](./assets/target_response_token.png)
 
 1. Habilite el destinatario en la configuración [de](../../fundamentals/edge-configuration.md) Edge con el código de cliente adecuado.
 1. Añada la `renderDecisions` opción a sus eventos.
