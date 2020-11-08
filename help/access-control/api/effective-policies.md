@@ -5,7 +5,7 @@ title: Políticas eficaces de vista
 topic: developer guide
 description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Este documento sirve como guía para la vista de políticas eficaces mediante la API de control de acceso para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 481f093e52c8533d2919504051af9e63704a0f4a
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 1%
@@ -79,45 +79,79 @@ A continuación se muestra una lista de permisos y tipos de recursos que se pued
 **Permisos**
 
 ```plaintext
-"permissions/activate-destinations"
-"permissions/export-audience-for-segments"
-"permissions/manage-datasets"
-"permissions/manage-destinations"
-"permissions/manage-identity-namespaces"
-"permissions/manage-profiles"
-"permissions/manage-sandboxes"
-"permissions/manage-schemas"
-"permissions/reset-sandboxes"
-"permissions/view-datasets"
-"permissions/view-destinations"
-"permissions/view-identity-namespaces"
-"permissions/view-monitoring-dashboard"
-"permissions/view-profiles"
-"permissions/view-sandboxes"
-"permissions/view-schemas"
+permissions/activate-destinations
+permissions/evaluate-segments
+permissions/execute-decisioning-activities
+permissions/export-audience-for-segment
+permissions/manage-datasets
+permissions/manage-decisioning-activities
+permissions/manage-decisioning-options
+permissions/manage-destinations
+permissions/manage-dsw
+permissions/manage-dule-labels
+permissions/manage-dule-policies
+permissions/manage-identity-namespaces
+permissions/manage-privacy-workflows
+permissions/manage-profile-configs
+permissions/manage-profiles
+permissions/manage-queries
+permissions/manage-schema-identities
+permissions/manage-schema-relationships
+permissions/manage-schemas
+permissions/manage-segments
+permissions/manage-sources
+permissions/reset-sandboxes
+permissions/view-datasets
+permissions/view-destinations
+permissions/view-dule-labels
+permissions/view-dule-policies
+permissions/view-identity-namespaces
+permissions/view-monitoring-dashboard
+permissions/view-privacy-workflows
+permissions/view-profile-configs
+permissions/view-profiles
+permissions/view-sandboxes
+permissions/view-schemas
+permissions/view-segments
+permissions/view-sources
 ```
 
 **Tipos de recursos**
 
 ```plaintext
-"resource-types/classes"
-"resource-types/connections"
-"resource-types/data-types"
-"resource-types/dataset-data"
-"resource-types/datasets"
-"resource-types/destinations"
-"resource-types/dule-labels"
-"resource-types/identity-descriptors"
-"resource-types/identity-namespaces"
-"resource-types/mixins"
-"resource-types/monitoring"
-"resource-types/profile-configs
-"resource-types/profile-datasets"
-"resource-types/profiles"
-"resource-types/relationship-descriptors"
-"resource-types/reset-sandboxes"
-"resource-types/sandboxes"
-"resource-types/schemas"
-"resource-types/segment-jobs"
-"resource-types/segments"
+resource-types/activation-associations
+resource-types/activations
+resource-types/activities
+resource-types/analytics-source
+resource-types/audience-manager-source
+resource-types/bizible-source
+resource-types/connection
+resource-types/customer-attributes-source
+resource-types/data-science-workspace
+resource-types/dataset-preview
+resource-types/datasets
+resource-types/dule-label
+resource-types/dule-policy
+resource-types/enterprise-source
+resource-types/identity-descriptor
+resource-types/identity-namespaces
+resource-types/launch-source
+resource-types/marketing-action
+resource-types/marketo-source
+resource-types/monitoring
+resource-types/offers
+resource-types/placements
+resource-types/privacy-consent
+resource-types/privacy-content-delivery
+resource-types/privacy-job
+resource-types/profile-configs
+resource-types/profile-datasets
+resource-types/profiles
+resource-types/query
+resource-types/relationship-descriptor
+resource-types/sandboxes
+resource-types/schemas
+resource-types/segment-jobs
+resource-types/segments
+resource-types/streaming-source
 ```
