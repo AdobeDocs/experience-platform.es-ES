@@ -5,10 +5,10 @@ title: Lista de todos los entornos limitados
 topic: developer guide
 description: Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o no), realice una solicitud de GET al extremo /sandboxes.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 1%
+source-wordcount: '309'
+ht-degree: 2%
 
 ---
 
@@ -20,14 +20,18 @@ Para realizar la lista de todos los entornos limitados que pertenecen a su organ
 **Formato API**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
 
 **Solicitud**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -93,7 +97,25 @@ Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
@@ -105,3 +127,16 @@ Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a
 | `type` | El tipo de entorno limitado, ya sea &quot;desarrollo&quot; o &quot;producción&quot;. |
 | `isDefault` | Una propiedad booleana que indica si este entorno limitado es el entorno limitado predeterminado para la organización. Generalmente este es el entorno limitado de producción. |
 | `eTag` | Identificador de una versión específica del simulador para pruebas. Este valor se utiliza para el control de versiones y la eficacia del almacenamiento en caché y se actualiza cada vez que se realiza un cambio en el simulador para pruebas. |
+
+## Uso de parámetros de consulta {#query}
+
+La [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los entornos limitados.
+
+>[!NOTE]
+>
+>Los parámetros `limit` y `offset` consulta deben especificarse juntos. Si solo especifica uno, la API devolverá un error. Si especifica ninguno, el límite predeterminado es 50 y el desplazamiento es 0.
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `limit` | El número máximo de registros que se devolverá en la respuesta. |
+| `offset` | Número de entidades desde el primer registro hasta el inicio (desplazamiento) de la lista de respuesta. |
