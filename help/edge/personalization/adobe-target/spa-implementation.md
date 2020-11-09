@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo procesar contenido personalizado c
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 14%
 
 ---
@@ -223,7 +223,7 @@ Cuando haya terminado de definir sus Vistas XDM e implementado`sendEvent()` con 
 
 >[!NOTE]
 >
->Para utilizar el Compositor de experiencias visuales para su SPA, debe instalar [Adobe Target VEC Helper Chrome Extension](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
+>Para utilizar el VEC para su SPA, debe instalar y activar [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ### Panel de modificaciones
 
