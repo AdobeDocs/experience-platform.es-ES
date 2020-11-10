@@ -5,9 +5,9 @@ title: Guía para desarrolladores de inserción de lotes
 topic: developer guide
 description: Este documento proporciona una descripción general completa del uso de las API de ingestión por lotes.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 5%
 
 ---
@@ -28,8 +28,8 @@ Las siguientes secciones proporcionan información adicional que debe conocer o 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 - [Ingesta](./overview.md)por lotes: Permite ingerir datos en Adobe Experience Platform como archivos por lotes.
-- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [[!Sandboxes DNL]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Leer llamadas de API de muestra
 
