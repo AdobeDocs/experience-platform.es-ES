@@ -5,9 +5,9 @@ title: Información general sobre las etiquetas de uso de datos
 topic: labels
 description: La Administración de datos de Adobe Experience Platform le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, y categorizar cada una según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Además de las etiquetas proporcionadas por Adobe, también puede definir sus pr
 
 ## Herencia de etiquetas para segmentos de audiencia
 
-Todos los segmentos de audiencia creados por el servicio [de segmentación de](../../segmentation/home.md) Adobe Experience Platform heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite que las aplicaciones creadas sobre [!DNL Experience Platform] (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionen una aplicación automática de la directiva de uso de datos al activar segmentos en destinos.
+Todos los segmentos de audiencia creados por el servicio [de segmentación de](../../segmentation/home.md) Adobe Experience Platform heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite que las aplicaciones creadas sobre el Experience Platform (por ejemplo, [!DNL Real-time Customer Data Platform]) proporcionen la aplicación automática de la directiva de uso de datos al activar segmentos en destinos.
 
 Además de heredar etiquetas de nivel de conjunto de datos, los segmentos heredan todas las etiquetas de nivel de campo de sus conjuntos de datos asociados de forma predeterminada. Según el modo en que la aplicación [!DNL Platform]basada consuma segmentos, es posible especificar qué campos se utilizan, impidiendo así que el segmento herede etiquetas de campos excluidos.
 
