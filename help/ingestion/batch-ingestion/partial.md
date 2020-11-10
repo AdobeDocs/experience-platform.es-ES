@@ -5,9 +5,9 @@ title: Información general sobre la ingestión parcial por lotes
 topic: overview
 description: Este documento proporciona un tutorial para administrar la ingestión parcial por lotes.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Este documento proporciona un tutorial para administrar la ingestión parcial po
 Este tutorial requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que intervienen en la ingestión parcial de lotes. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [Ingesta](./overview.md)por lotes: Método que [!DNL Platform] ingiere y almacena datos de archivos de datos, como CSV y Parquet.
-- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a [!DNL Platform] las API de forma satisfactoria.
 
