@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario de Perfil del cliente en tiempo real
 topic: guide
 description: En la interfaz de usuario (IU) de Adobe Experience Platform, puede realizar fácilmente la vista de cualquier esquema de unión dentro de la organización y la previsualización de los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo realizar vistas y explorar esquemas de unión mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
-source-git-commit: e1fc20a5f791f7628a19c5440db3741c8be3743a
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Esta guía de la interfaz de usuario requiere conocer los distintos [!DNL Experi
 
 * [[!DNL Real-time Customer Profile]](../home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Identity Service]](../../identity-service/home.md):: Habilita [!DNL Real-time Customer Profile] mediante el puente de identidades de orígenes de datos dispares a medida que se ingieren en [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Explicación de los esquemas de unión
 
