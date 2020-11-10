@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario de Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Esta guía de la interfaz de usuario requiere conocer los distintos [!DNL Experi
 
 * [[!DNL Real-time Customer Profile]](../home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Identity Service]](../../identity-service/home.md):: Habilita [!DNL Real-time Customer Profile] mediante el puente de identidades de orígenes de datos dispares a medida que se ingieren en [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Información general
 
