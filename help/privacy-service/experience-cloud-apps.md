@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicaciones de Privacy Service y Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '555'
 ht-degree: 22%
 
 ---
@@ -27,12 +27,12 @@ Revise la documentación de sus [!DNL Experience Cloud] aplicaciones para aprend
 
 A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones que están integradas con [!DNL Privacy Service], incluidas las [!DNL Privacy Service] capacidades con las que son compatibles y los vínculos a la documentación para obtener más información.
 
-| Aplicación | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
+| de asistencia al cliente | Acceso/eliminación | Exclusión de la venta | Documentación y consideraciones |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] aprovecha las capacidades de exclusión global existentes que proporciona el Centro de privacidad de Adobe. Consulte la guía para [realizar solicitudes](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de privacidad de datos para obtener más información.</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Acceder/eliminar documentación del RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Acceder/eliminar documentación de CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentación de exclusión para CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] gestiona las solicitudes de exclusión mediante variables de sistema de informes de [privacidad](https://docs.adobe.com/content/help/es-ES/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.adobe.com/content/help/es-ES/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentación de exclusión](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentación de exclusión](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Acceder o eliminar documentación](https://helpx.adobe.com/es/campaign/kb/campaign-privacy.html)</li><li>[Documentación de exclusión](../segmentation/honoring-opt-outs.md)</li></ul> |
 | Atributos del cliente de Adobe (CRS) | ✓ | N/D | <ul><li>[Acceder/eliminar documentación del RGPD](https://docs.adobe.com/content/help/es-ES/core-services/interface/customer-attributes/gdpr.html)</li><li>[Acceder/eliminar documentación de CCPA](https://docs.adobe.com/content/help/es-ES/core-services/interface/customer-attributes/ccpa.html)</li><li>Los atributos del cliente no tienen la capacidad de transferir datos, por lo que las solicitudes de exclusión no se aplican.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Acceder/eliminar documentación para el lago de datos](../catalog/privacy.md)</li><li>[Acceso y eliminación de la documentación para el Perfil del cliente en tiempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] honra las solicitudes de [exclusión para los segmentos](../segmentation/honoring-opt-outs.md)de audiencia.</li></ul> |
 | Autenticación de Adobe Primetime | ✓ | N/D | <ul><li>[Acceder o eliminar documentación](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión no se aplican.</li></ul> |
@@ -43,7 +43,7 @@ A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones que
 
 A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones que no están integradas [!DNL Privacy Service] y deben gestionar internamente sus problemas de privacidad. Se proporcionan vínculos a la documentación de cada aplicación, junto con descripciones del contenido de la documentación.
 
-| Aplicación | Descripción de la documentación |
+| de asistencia al cliente | Descripción de la documentación |
 | ------- | ----------- |
 | [Adobe Campaign Classic](https://helpx.adobe.com/es/campaign/kb/campaign-privacy.html) | Información general sobre las funcionalidades del RGPD para Adobe Campaign Classic. |
 | [Administrador dinámico de etiquetas de Adobe](https://docs.adobe.com/content/help/es-ES/dtm/using/tools/opt-in.html) | Pasos para evitar que las etiquetas de Adobe se activen hasta que se obtenga el consentimiento. |
