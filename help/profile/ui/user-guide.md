@@ -4,9 +4,9 @@ title: Guía de la interfaz de usuario de Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ De forma similar a la métrica de recuento [de](#profile-count) perfiles, cuando
 
 ### Combinar directiva
 
-El selector de directivas **[!UICONTROL de]** combinación selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar la `X` que se encuentra junto a la directiva de combinación predeterminada para abrir el cuadro de diálogo **[!UICONTROL Seleccionar directiva]** de combinación, donde puede elegir otra directiva de combinación. Para obtener más información sobre las políticas de combinación y su función dentro de la plataforma, consulte la guía [del usuario de directivas de](merge-policies.md)combinación.
+El selector de directivas **[!UICONTROL de]** combinación selecciona automáticamente la directiva de combinación predeterminada para su organización. Si no desea utilizar esa política de combinación, puede seleccionar la `X` que se encuentra junto a la directiva de combinación predeterminada para abrir el cuadro de diálogo **[!UICONTROL Seleccionar directiva]** de combinación, donde puede elegir otra directiva de combinación. Para obtener más información sobre las directivas de combinación y su función en la plataforma, consulte la guía [de la interfaz de usuario de directivas de](merge-policies.md)combinación.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ Puede vista de información adicional relacionada con el perfil individual selec
 
 ## Combinar directivas
 
-En el menú **[!UICONTROL Perfiles]** principal, seleccione la ficha **[!UICONTROL Combinar políticas]** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, tanto si es la directiva de combinación predeterminada como si no, y el esquema al que se aplica.
+En el menú **[!UICONTROL Perfiles]** principal, seleccione la ficha **[!UICONTROL Combinar políticas]** para vista de una lista de directivas de combinación que pertenezcan a su organización. Cada directiva de la lista muestra su nombre, sea o no la directiva de combinación predeterminada, y la clase de esquema a la que se aplica.
 
 Para obtener más información sobre las directivas de combinación, consulte la guía [de la interfaz de usuario de directivas de](merge-policies.md)combinación.
 
