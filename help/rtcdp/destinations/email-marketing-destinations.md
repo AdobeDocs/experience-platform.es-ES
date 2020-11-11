@@ -6,9 +6,9 @@ type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '803'
 ht-degree: 1%
 
 ---
@@ -24,38 +24,39 @@ La conexión a destinos de marketing por correo electrónico es un proceso de tr
 
 En el flujo de destino de conexión, descrito en la sección siguiente, conéctese a Amazon S3 o SFTP. CDP en tiempo real exporta sus segmentos como `.csv` `.txt` o como archivos y los envía a su ubicación preferida. Programe la importación de datos en su plataforma de marketing por correo electrónico desde la ubicación de almacenamiento habilitada en CDP en tiempo real. El proceso de importación de datos varía según el socio. Consulte los artículos de destinos individuales para obtener más información.
 
-## Paso 1: Configuración del destino {#connect-destination}
+## Configurar destino {#connect-destination}
 
-1. En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de marketing por correo electrónico al que desea conectarse y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
-   ![Conectar al destino](/help/rtcdp/destinations/assets/connect-email-marketing.png)
+![Conectar al destino](./assets/connect-email-marketing.png)
 
-2. En el paso **[!UICONTROL Autenticación]** , si ya ha configurado una conexión con el destino de marketing por correo electrónico, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector de tipo **** de conexión, puede seleccionar entre Amazon S3, SFTP con contraseña o SFTP con clave SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
+En el paso **[!UICONTROL Autenticación]** , si ya ha configurado una conexión con el destino de marketing por correo electrónico, seleccione Cuenta **** existente y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector de tipo **** de conexión, puede seleccionar entre Amazon S3, SFTP con contraseña o SFTP con clave SSH. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
-   Para las conexiones **** S3, debe proporcionar el ID de clave de acceso de Amazon y la clave de acceso secreto.
+- Para las conexiones **** S3, debe proporcionar el ID de clave de acceso de Amazon y la clave de acceso secreto.
+- Para **SFTP con conexiones de contraseña** , debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
+- Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH para el servidor SFTP.
 
-   Para **SFTP con conexiones de contraseña** , debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
+En el paso **[!UICONTROL Configuración]** , introduzca un nombre y una descripción para el nuevo destino, así como el formato de archivo para los archivos exportados.
 
-   Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH para el servidor SFTP.
+Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre del bucket y la ruta de la carpeta en el destino de almacenamiento en la nube donde se enviarán los archivos. Para la opción almacenamiento SFTP, inserte la ruta de la carpeta en la que se enviarán los archivos.
 
-3. En el paso **[!UICONTROL Configuración]** , introduzca un [!UICONTROL Nombre] y una [!UICONTROL Descripción] para el nuevo destino, así como el formato  Archivo para los archivos exportados. <br>
-Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre [!UICONTROL del] depósito y la ruta [!UICONTROL de] carpeta en el destino de almacenamiento de nube donde se enviarán los archivos. Para la opción almacenamiento SFTP, inserte la ruta [!UICONTROL de] carpeta donde se enviarán los archivos. <br>
-También en este paso, puede seleccionar cualquier caso [!UICONTROL de uso de] Marketing que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos. <br>
-   ![Paso de configuración de correo electrónico](/help/rtcdp/destinations/assets/email-setup-step.png)
+También en este paso, puede seleccionar cualquier caso de uso de mercadotecnia que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](/help/data-governance/policies/overview.md#core-actions)datos.
 
-## Paso 2: seleccione qué miembros de segmento incluir en las exportaciones de destino {#select-segments}
+![Paso de configuración de correo electrónico](./assets/email-setup-step.png)
+
+## Seleccione qué miembros de segmento incluir en las exportaciones de destino {#select-segments}
 
 En la página **[!UICONTROL Seleccionar segmentos]** , seleccione qué segmentos enviar al destino. Encontrará más información sobre los campos en las secciones siguientes.
 
 ![Seleccionar segmentos](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Paso 3: Configuración de nombres de archivo
+## Configurar nombres de archivo
 
 Para obtener información sobre las opciones de edición de nombres de archivo, consulte el paso [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) en el tutorial de activación de destinos.
 
-## Paso 4: Seleccionar atributos: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
+## Seleccionar atributos: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
 
-En este paso, está seleccionando los campos que desea exportar a destinos de marketing por correo electrónico.
+En este paso, se seleccionan los campos que se van a exportar a destinos de marketing por correo electrónico y se marcan los campos obligatorios.
 
 ![Atributos de destino](/help/rtcdp/destinations/assets/recommended-attributes.png)
 
@@ -86,14 +87,14 @@ En el selector de campos de Esquema, elija qué otros campos desea exportar al d
 | Cumpleaños | `person.birthDayAndMonth` |
 | Membresía del segmento | `segmentMembership.status` |
 
-## Paso 5: Importar datos desde la ubicación del almacenamiento al destino
+## Importar datos desde la ubicación del almacenamiento al destino
 
 Consulte los artículos de destino de marketing por correo electrónico individuales para obtener información sobre cómo importar datos de la ubicación del almacenamiento a los destinos:
 
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Marketing Cloud de Salesforce](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
-* [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
-* [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
+- [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
+- [Marketing Cloud de Salesforce](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+- [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
+- [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
 ## Activar segmentos en destinos de mercadotecnia de correo electrónico
 
@@ -101,5 +102,5 @@ Para obtener instrucciones sobre cómo activar segmentos en destinos de marketin
 
 ## Recursos adicionales
 
-* [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md)
-* [Creación de destinos de marketing por correo electrónico y activación de datos mediante la API de servicio de flujo](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+- [Activar datos en destinos](/help/rtcdp/destinations/activate-destinations.md)
+- [Creación de destinos de marketing por correo electrónico y activación de datos mediante la API de servicio de flujo](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
