@@ -5,9 +5,9 @@ user-guide-title: 'Notas de la versión de Adobe Experience Platform '
 breadcrumb-title: Notas de la versión de Platform
 user-guide-description: Notas de la versión mensuales de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: cfa939f759e114be14da89070a491de9d71f8528
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '38'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 100%
 
 # Notas de la versión de Adobe Experience Platform {#release-notes}
 
-* [octubre de 2020](latest/latest.md)
+* [Noviembre de 2020](latest/latest.md)
+* [Octubre de 2020](2020/october-2020.md)
 * [Septiembre de 2020](2020/september-2020.md)
 * [Agosto de 2020](2020/august-2020.md)
 * [Julio de 2020](2020/july-2020.md)
