@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
+source-git-commit: e2b0048703816dc481eb9486310d86a8f2483af2
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 6%
+source-wordcount: '1028'
+ht-degree: 4%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 6%
 - [Perfil del cliente en tiempo real](#profile)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+- [Tiempo hasta el valor](#time-to-value)
 
 ## Preparación de datos {#data-prep}
 
@@ -75,3 +76,45 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 | Mejoras en los recursos | Puede habilitar el conjunto de datos para [!DNL Profile] durante el proceso de ingesta de datos. Consulte el tutorial de flujo de trabajo [de flujo de datos de almacenamiento de](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) nube para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
+
+## Tiempo hasta el valor {#time-to-value}
+
+Adobe Experience Platform permite a los equipos de operaciones de marketing crear una vista de 360 grados de sus clientes sin necesidad de contar con una amplia experiencia en ingeniería de datos. El objetivo es acelerar los equipos y el valor a través de la velocidad de los datos.
+
+&quot;Tiempo de respuesta al valor&quot; va de una persona a otra. Los ingenieros de datos pueden completar tareas de manera eficiente y acelerada con transparencia en la actividad de datos, de modo que antes se disponga de un perfil de clientes robusto y escalable en tiempo real. Los especialistas en marketing pueden utilizar el perfil completo y sólido del cliente para la segmentación y la activación.
+
+### Elementos destacados de las funciones
+
+#### Esquema
+
+Actualiza la facilidad de uso y el flujo de trabajo, y proporciona perspectivas integradas, estandarización y transparencia de los campos clave dentro de las composiciones de esquema. Expone el linaje de datos para la combinación de modelos de datos individuales representados como el &quot;esquema de unión&quot;, proporcionando una perspectiva de la estructura y los ingredientes para el Perfil del cliente en tiempo real.
+
+- Actualización del flujo de trabajo de esquema
+   - Utilice métodos abreviados para el tipo más común de esquemas XDM, con la configuración automatizada en el editor de esquemas y la combinación de recomendaciones en función de sus objetivos
+   - Aumente la eficacia del flujo de trabajo con selección y previsualización de varias mezclas
+   - Proporcionar transparencia en los atributos clave de la composición de esquemas, incluidos la identidad, la relación y los campos obligatorios y obsoletos
+- Transparencia de la línea de datos y los atributos clave del Esquema de unión
+
+#### Recopilación e inserción de datos
+
+La asignación automática, la previsualización de asignación y la actualización de uso aportan datos de cualquier plataforma o fuente para su uso en perfil, segmentación posterior y activación. El sistema cuenta con la eficiencia y la inteligencia necesarias para facilitar el uso de este proceso, incluso para personas ajenas a TI.
+
+- Acceso más fácil a las fuentes de datos con la tarjeta de página de catálogo y la actualización del patrón de acciones en línea de la tabla de datos
+- Campo/expresión calculada para la ingesta de datos
+- Las recomendaciones de asignación de datos aceleran el proceso de ingestión
+- Asignación de previsualizaciones y validaciones
+
+#### Configuración de perfil
+
+El visor de perfil compatible con el mercado y la personalización le ayuda a comprender la composición de un perfil para utilizarlo en casos de segmentación, planificación y activación. El flujo de trabajo consolidado hidrata el perfil de forma controlada y eficaz, proporcionando un flujo de trabajo paso a paso para la política de combinación.
+
+- Vista cada perfil individual en un visor de perfil mejorado que muestra un panel con personalización total, lo que permite agrupar los datos de canales cruzados en función de los objetivos comerciales de los especialistas en marketing.
+- Edite atributos estándar y personalizados en la utilidad Información básica, según las necesidades comerciales.
+- Personalice utilidades con atributos del perfil del cliente en tiempo real mediante el selector de esquemas de unión. El esquema de unión se deriva de los modelos de datos subyacentes utilizados en la ingestión de datos de perfil.
+
+
+#### Monitoreo
+
+Garantiza la transparencia del flujo de datos y proporciona una perspectiva sobre el estado del tráfico de datos en el sistema desde los conectores de origen, lo que proporciona un mayor autoservicio y una mayor capacidad de acción para solucionar problemas.
+
+- Supervisar todas las ejecuciones de flujo y ver una vista detallada de cada ejecución, incluido el estado de finalización, la duración de ejecución, la lista de archivos procesados, los errores y los diagnósticos procesables
