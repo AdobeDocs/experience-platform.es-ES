@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,13 @@ El punto final de API utilizado en esta guía forma parte del [[!DNL Real-time C
 
 ## Componentes de políticas de combinación {#components-of-merge-policies}
 
-Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesite. Cualquier API que acceda a [!DNL Profile] los datos requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona una directiva de combinación predeterminada o puede crear una directiva de combinación para un esquema específico y marcarla como predeterminada para su organización. Cada organización puede tener varias directivas de combinación por esquema, pero cada esquema solo puede tener una directiva de combinación predeterminada. Cualquier directiva de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre del esquema y se requiera una directiva de combinación pero no se proporcione. Cuando se establece una directiva de combinación como predeterminada, cualquier directiva de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
+Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesita. Cualquier API que acceda a [!DNL Profile] los datos requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una directiva de combinación predeterminada, o bien puede crear una directiva de combinación para una clase de esquema de modelo de datos de experiencia (XDM) específica y marcarla como predeterminada para su organización.
+
+Aunque cada organización puede tener varias directivas de combinación por clase de esquema, cada clase solo puede tener una directiva de combinación predeterminada. Cualquier directiva de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre de la clase de esquema y se requiera una directiva de combinación pero no se proporcione.
+
+>[!NOTE]
+>
+>Cuando se establece una nueva directiva de combinación como predeterminada, cualquier directiva de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
 
 ### Completar objeto de directiva de combinación
 
@@ -41,7 +47,7 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 | `imsOrgId` | ID de organización a la que pertenece esta directiva de combinación |
 | `identityGraph` | [Objeto gráfico](#identity-graph) de identidad que indica el gráfico de identidad desde el que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
 | `attributeMerge` | [Objeto de combinación](#attribute-merge) de atributos que indica la forma en que la directiva de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
-| `schema` | El objeto [esquema](#schema) en el que se puede utilizar la directiva de combinación. |
+| `schema.name` | Parte del [`schema`](#schema) objeto, el `name` campo contiene la clase de esquema XDM a la que se relaciona la política de combinación. Para más información sobre esquemas y clases, lea la documentación [de](../../xdm/home.md)XDM. |
 | `default` | Valor booleano que indica si esta directiva de combinación es la predeterminada para el esquema especificado. |
 | `version` | [!DNL Platform] versión mantenida de la directiva de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una directiva de combinación. |
 | `updateEpoch` | Fecha de la última actualización de la directiva de combinación. |
@@ -132,7 +138,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 * **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
    * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
 
-**Ejemplo de objeto attributeMerge con `dataSetPrecedence` type**
+#### Ejemplo `attributeMerge` de objeto con `dataSetPrecedence` tipo
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
     }
 ```
 
-**Ejemplo de objeto attributeMerge con `timestampOrdered` type**
+#### Ejemplo `attributeMerge` de objeto con `timestampOrdered` tipo
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
 ### Esquema {#schema}
 
-El objeto esquema especifica el esquema del modelo de datos de experiencia (XDM) para el que se crea esta directiva de combinación.
+El objeto esquema especifica la clase de esquema del Modelo de datos de experiencia (XDM) para la que se crea esta directiva de combinación.
 
 **`schema`object**
 
@@ -731,7 +737,7 @@ Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un c
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar directivas de combinación para su organización de IMS, puede utilizarlas para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la documentación [del servicio de segmentación de](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de cliente dentro de la plataforma y para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la documentación [del servicio de segmentación de](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
 
 ## Apéndice
 
