@@ -5,9 +5,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 3%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 3%
    - [Eliminar cuentas](tutorials/ui/delete-accounts.md)
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
+- [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
