@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 17%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 17%
          * [Extensión gtag de Google](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extensión de etiqueta de LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
          * [Extensión de seguimiento de conversión de Pinterest](destinations/pinterest-extension.md)
+         * [La Oficina de Comercio](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Extensión de etiqueta de sitio web universal de Twitter](destinations/twitter-uwt-extension.md)
       * Destinos de Analytics {#analytics-destinations}
          * [Descripción general de los destinos de Analytics](destinations/analytics-destinations.md)
