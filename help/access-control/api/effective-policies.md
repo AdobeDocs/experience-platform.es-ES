@@ -5,7 +5,7 @@ title: Políticas eficaces de vista
 topic: developer guide
 description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Este documento sirve como guía para la vista de políticas eficaces mediante la API de control de acceso para Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 481f093e52c8533d2919504051af9e63704a0f4a
+source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 1%
@@ -95,8 +95,6 @@ permissions/manage-privacy-workflows
 permissions/manage-profile-configs
 permissions/manage-profiles
 permissions/manage-queries
-permissions/manage-schema-identities
-permissions/manage-schema-relationships
 permissions/manage-schemas
 permissions/manage-segments
 permissions/manage-sources
