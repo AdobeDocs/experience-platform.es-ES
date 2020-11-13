@@ -5,9 +5,9 @@ seo-title: Destinos publicitarios
 description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 seo-description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '222'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Publicidades de Google](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Coincidencia de clientes de Google](/help/rtcdp/destinations/google-customer-match-destination.md)
+* [La Oficina de Comercio](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## Extensiones
