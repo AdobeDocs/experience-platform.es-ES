@@ -5,9 +5,9 @@ topic: overview
 title: Control de acceso general
 description: Control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 3%
 
 ---
@@ -52,8 +52,8 @@ En la página [!DNL Admin Console], los permisos se asignan a los usuarios media
 
 | Perfil del producto | Acceso a Simulador para pruebas | Permisos |
 | --- | --- | --- |
-| Producción predeterminada - Acceso total | Producción | Todos los permisos aplicables a [!DNL Experience Platform], excepto los permisos de administración de Simulador para pruebas. |
-| Administración predeterminada de Simulador para pruebas | N/D | Proporciona acceso solamente a los permisos de administración de Simuladores para pruebas. |
+| Acceso total a producción predeterminada | Producción | Todos los permisos aplicables a [!DNL Experience Platform], excepto los permisos de administración de Simulador para pruebas. |
+| Administradores de Simuladores para pruebas | N/D | Proporciona acceso solamente a los permisos de administración de Simuladores para pruebas. |
 
 ## Simuladores y permisos
 
