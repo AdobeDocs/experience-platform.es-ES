@@ -5,7 +5,7 @@ seo-title: El destino de Microsoft Bing le ayuda a enviar datos de perfil a Micr
 description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
 seo-description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Al configurar el destino, se le pedirá que proporcione la siguiente informació
    >[!NOTE]
    >
    >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-   >
-   >![Activar destino de Microsoft Bing](assets/bing-destination-activate.png)
+
+   ![Activar destino de Microsoft Bing](assets/bing-destination-activate.png)
 
 1. En el paso [!UICONTROL Autenticación] , debe introducir los detalles de conexión de destino:
 
@@ -68,7 +68,7 @@ Al configurar el destino, se le pedirá que proporcione la siguiente informació
 
 Consulte [Activar perfiles y segmentos en un destino](activate-destinations.md#select-attributes) para obtener información sobre el flujo de trabajo de activación de segmentos.
 
-Durante el paso de programación [de](activate-destinations.md#segment-schedule) segmentos, debe asignar manualmente los segmentos a su ID correspondiente o a su nombre descriptivo en el destino.
+En el paso de programación [de](activate-destinations.md#segment-schedule) segmentos, debe asignar manualmente los segmentos a su ID correspondiente o a su nombre descriptivo en el destino.
 
 Al asignar segmentos, le recomendamos que utilice el nombre del [!DNL Platform] segmento o una forma más corta de éste, para facilitar su uso. Sin embargo, el ID o nombre del segmento en el destino no necesita coincidir con el de su [!DNL Platform] cuenta. Cualquier valor que inserte en el campo de asignación se verá reflejado por el destino.
 
