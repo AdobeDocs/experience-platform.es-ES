@@ -5,9 +5,9 @@ seo-title: Destino de la mesa de operaciones
 description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario de dispositivos móviles, de vídeo y de visualización. '
 seo-description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
@@ -46,9 +46,9 @@ Como especialista en marketing, quiero poder usar segmentos creados a partir de 
    >[!NOTE]
    >
    >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../destinations/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
+   >
+   >![Activar El Destino Del Escritorio Comercial](assets/tradedesk-destination-activate.png)
 
-       ![Activar El Destino De La Oficina Comercial](assets/tradedesk-destination-activate.png)
-   
 2. En el paso [!UICONTROL Autenticación] , debe introducir los detalles [!DNL The Trade Desk] de conexión:
 
    * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
