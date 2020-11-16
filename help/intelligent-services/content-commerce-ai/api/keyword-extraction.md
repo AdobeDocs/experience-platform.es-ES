@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: Extracción de color
+title: Extracción de palabras clave
 topic: Developer guide
 description: El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
 translation-type: tm+mt
-source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
+source-git-commit: e397711baf31092402de83b826887ebef16321eb
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 3%
@@ -280,13 +280,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `application-id` | ID de la aplicación creada. | Sí |
 | `data` | Matriz que contiene un objeto JSON con cada objeto de la matriz que representa un documento. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la `data` matriz. Cualquiera de las propiedades restantes que se describen a continuación en esta tabla se puede sobrescribir desde dentro `data`. | Sí |
 | `language` | Idioma de entrada. The default value is `en` (english). | No |
-| `content-type` | Se utiliza para indicar el tipo de contenido de entrada. Esto debe establecerse en `file`. | Sí |
-| `encoding` | Formato de codificación de la entrada. Esto debe establecerse en `pdf`. Más tipos de codificación se configuran para que se admitan en una fecha posterior. | Sí |
+| `content-type` | Se utiliza para indicar el tipo de contenido de entrada. This should be set to `file`. | Sí |
+| `encoding` | Formato de codificación de la entrada. This should be set to `pdf`. Más tipos de codificación se configuran para que se admitan en una fecha posterior. | Sí |
 | `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
 | `top-N` | Número de resultados que se van a devolver (no puede ser un entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de cualquiera de los límites establecidos. El valor predeterminado de esta propiedad es `0`. | No |
 | `custom` | Parámetros personalizados que se van a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
 | `content-id` | ID única para el elemento de datos que se devuelve en la respuesta. Si no se pasa, se asigna un ID generado automáticamente. | No |
-| `content` | Esto debe establecerse en `file`. | Sí |
+| `content` | This should be set to `file`. | Sí |
 
 **Respuesta**
 
