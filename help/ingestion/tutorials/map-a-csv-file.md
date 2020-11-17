@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -24,8 +24,8 @@ Además, en el apéndice de este tutorial se proporciona más información sobre
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de [!DNL Platform]:
 
-- [[!Modelo de datos de experiencia DNL (sistema XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-- [[!DNL Ingesta por lotes]](../batch-ingestion/overview.md): El método mediante el cual [!DNL Platform] ingesta datos de archivos de datos proporcionados por el usuario.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md):: El método mediante el cual [!DNL Platform] ingesta datos de archivos de datos proporcionados por el usuario.
 
 Este tutorial también requiere que ya haya creado un conjunto de datos para ingestar los datos de CSV. Para ver los pasos para crear un conjunto de datos en la interfaz de usuario, consulte el tutorial [de ingesta de](./ingest-batch-data.md)datos.
 
@@ -61,25 +61,29 @@ La sección Datos **[!UICONTROL de]** ejemplo aparece una vez cargado el archivo
 
 ## Asignar campos CSV a campos de esquema XDM
 
-Aparece el paso **[!UICONTROL Asignación]** . Las columnas del archivo CSV se muestran en Campo **** de origen, con sus correspondientes campos de esquema XDM en Campo **[!UICONTROL de]** Destinatario. Los campos de destinatario no seleccionados están delineados en rojo. Puede utilizar la opción de campos de filtro para reducir la lista de los campos de origen disponibles.
+Aparece el paso **[!UICONTROL Asignación]** . Las columnas del archivo CSV se muestran en Campo **** de origen, con sus correspondientes campos de esquema XDM en Campo **[!UICONTROL de]** Destinatario.
 
->[!TIP]
->
->[!DNL Platform] proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+[!DNL Platform] automáticamente proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema de destinatario o del conjunto de datos que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
-Para asignar una columna CSV a un campo XDM, seleccione el icono de esquema junto al campo de destinatario correspondiente de la columna.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/mapping.png)
+Para aceptar todos los valores de asignación que se generan automáticamente, seleccione la casilla de verificación rotulada &quot;[!UICONTROL Aceptar todos los campos]de destinatario&quot;.
 
-Aparece la ventana **[!UICONTROL Seleccionar esquema]** . Aquí puede desplazarse por la estructura del esquema XDM y localizar el campo al que desea asignar la columna CSV. Haga clic en un campo XDM para seleccionarlo y, a continuación, haga clic en **[!UICONTROL Seleccionar]**.
+![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/select-schema-field.png)
+A veces, hay más de una recomendación disponible para el esquema de origen. Cuando esto sucede, la tarjeta de asignación muestra la recomendación más prominente, seguida de un círculo azul que contiene el número de recomendaciones adicionales disponibles. Al seleccionar el icono de la bombilla se mostrará una lista de las recomendaciones adicionales. Para elegir una de las recomendaciones alternativas, seleccione la casilla de verificación situada junto a la recomendación a la que desee asignar.
 
-Después de completar los pasos para los campos de origen sin asignar restantes, la pantalla **[!UICONTROL Asignación]** vuelve a aparecer con el campo XDM seleccionado que aparece ahora en Campo **[!UICONTROL de]** Destinatario.
+![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-![](../images/tutorials/map-a-csv-file/field-mapped.png)
+Como alternativa, puede elegir asignar manualmente el esquema de origen a su esquema de destinatario. Pase el ratón sobre el esquema de origen que desee asignar y, a continuación, seleccione el icono de signo más.
 
-Al asignar campos, también puede incluir funciones para calcular valores en función de los campos de origen de entrada. Consulte la sección de funciones [de](#mapping-functions) asignación del apéndice para obtener más información.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
+
+Aparece la ventana emergente **[!UICONTROL Asignar origen a campo]** destinatario. Desde aquí, puede seleccionar qué campo desea asignar, seguido de **[!UICONTROL Guardar]** para agregar la nueva asignación.
+
+![](../images/tutorials/map-a-csv-file/manual-mapping.png)
+
+Si desea eliminar una de las asignaciones, coloque el puntero sobre ella y, a continuación, seleccione el icono de menos.
 
 ### Añadir campo calculado
 
@@ -87,7 +91,7 @@ Los campos calculados permiten crear valores en función de los atributos del es
 
 Seleccione el botón **[!UICONTROL Añadir campo]** calculado para continuar.
 
-![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
 Aparece el panel **[!UICONTROL Crear campo]** calculado. El cuadro de diálogo izquierdo contiene los campos, las funciones y los operadores admitidos en los campos calculados. Seleccione una de las fichas para agregar funciones, campos o operadores al editor de expresiones en inicio.
 
@@ -96,33 +100,23 @@ Aparece el panel **[!UICONTROL Crear campo]** calculado. El cuadro de diálogo i
 | Tabulación | Descripción |
 | --------- | ----------- |
 | Campos | La ficha Campos lista campos y atributos disponibles en el esquema de origen. |
-| Funciones | La ficha Funciones lista las funciones disponibles para transformar los datos. |
+| Funciones | La ficha Funciones lista las funciones disponibles para transformar los datos. Para obtener más información sobre las funciones que puede utilizar en los campos calculados, lea la guía sobre el [uso de las funciones](../../data-prep/functions.md)de preparación de datos (Mapper). |
 | Operadores | La ficha Operadores lista los operadores disponibles para transformar los datos. |
 
 Puede agregar manualmente campos, funciones y operadores mediante el editor de expresiones del centro. Seleccione el editor para crear una expresión en inicio.
 
-![](../images/tutorials/map-a-csv-file/expression-editor.png)
+![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
 Seleccione **[!UICONTROL Guardar]** para continuar.
 
 La pantalla de asignación vuelve a aparecer con el campo de origen recién creado. Aplique el campo de destinatario correspondiente y seleccione **[!UICONTROL Finalizar]** para completar la asignación.
 
-![](../images/tutorials/map-a-csv-file/new-field.png)
+![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
 ## Monitorear el flujo de datos
 
 Una vez asignado y creado el archivo CSV, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
 
-## Uso de funciones de asignación
-
-Para utilizar una función, escríbala en Campo **** de origen con la sintaxis y las entradas adecuadas.
-
-Por ejemplo, para concatenar campos CSV de ciudad y país y asignarlos al campo XDM de ciudad, establezca el campo de origen como `concat(city, ", ", county)`.
-
-![](../images/tutorials/map-a-csv-file/mapping-function.png)
-
-Para obtener más información sobre la asignación de columnas a campos XDM, lea la guía sobre el [uso de funciones](../../data-prep/functions.md)de preparación de datos (Mapper).
-
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios [!DNL Platform] de flujo descendente como [!DNL Real-time Customer Profile]. Consulte la descripción general de [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md) para obtener más información.
+Siguiendo este tutorial, ha asignado correctamente un archivo CSV plano a un esquema XDM y lo ha ingerido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios [!DNL Platform] de flujo descendente como [!DNL Real-time Customer Profile]. See the overview for [[!DNL Real-time Customer Profile]](../../profile/home.md) for more information.
