@@ -6,9 +6,9 @@ type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ En la página **[!UICONTROL Seleccionar segmentos]** , seleccione qué segmentos
 
 ## Configurar nombres de archivo
 
-Para obtener información sobre las opciones de edición de nombres de archivo, consulte el paso [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) en el tutorial de activación de destinos.
+Para obtener información sobre la programación de segmentos y las opciones de edición de nombres de archivo, consulte el paso [Configurar](/help/rtcdp/destinations/activate-destinations.md#configure) del tutorial de activación de destinos.
 
 ## Seleccionar atributos: seleccione los campos de esquema que desea utilizar como atributos de destino en los archivos exportados {#destination-attributes}
 
