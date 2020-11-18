@@ -5,9 +5,9 @@ title: Conector Kafka
 topic: overview
 description: El conector de flujo para Adobe Experience Platform se basa en Apache Kafka Connect. Esta biblioteca se puede utilizar para transmitir eventos JSON de temas de Kafka en el centro de datos directamente al Experience Platform en tiempo real.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -22,4 +22,4 @@ El conector de flujo es un conector de receptor (unidireccional) que proporciona
 - Recopilación autenticada de datos
 - Agrupación de mensajes para reducir las llamadas de red y aumentar el rendimiento
 
-Para obtener más información sobre el [!DNL Kafka] conector, incluidas instrucciones sobre cómo configurar el conector, lea la guía de [introducción](https://github.com/adobe/experience-platform-streaming-connect). Para obtener un flujo de trabajo más detallado, consulte la guía para [desarrolladores](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
+Para obtener más información sobre el [!DNL Kafka] conector, incluidas instrucciones sobre cómo configurar el conector, lea la guía de [introducción](https://github.com/adobe/experience-platform-streaming-connect). Para obtener un flujo de trabajo más detallado, consulte la guía para [desarrolladores](https://www.adobe.com/go/kafka-connector-developer-guide).
