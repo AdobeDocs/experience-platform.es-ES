@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guía de la plataforma de datos del cliente en tiempo real
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '520'
 ht-degree: 17%
 
 ---
@@ -102,6 +102,9 @@ ht-degree: 17%
          * [Marketing Cloud de Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Descripción general de las extensiones de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * Destinos móviles {#mobile}
+         * [Introducción a los destinos móviles](destinations/mobile-destinations.md)
+         * [Destino de Brazo](destinations/braze-destination.md)
       * Destinos de personalización {#personalization-destinations}
          * [Descripción general de los destinos de personalización](/help/rtcdp/destinations/personalization-destinations.md)
          * [Extensión de Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)
