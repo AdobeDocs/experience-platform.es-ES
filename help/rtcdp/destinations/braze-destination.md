@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: Destino del sector
-seo-title: Destino del sector
+title: Destino de Brazo
+seo-title: Destino de Brazo
 description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 seo-description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 1%
@@ -57,6 +57,7 @@ Como especialista en mercadotecnia, deseo hacer un destinatario de los usuarios 
    >![Activar destino de carro](assets/braze-destination-activate.png)
 
 1. En el paso [!UICONTROL Cuenta] , debe proporcionar el token [!DNL Braze] de cuenta. Esta es tu [!DNL Braze][!DNL API] llave. Puede encontrar instrucciones detalladas sobre cómo obtener su [!DNL API] clave aquí: [Información general](https://www.braze.com/docs/api/api_key/)de la clave de API de REST. Introduzca el token y haga clic en **[!UICONTROL Conectar al destino]**.
+
    ![Paso de cuenta de destino de Brazo](assets/braze-destination-account.png)
 
 1. Haga clic en **[!UICONTROL Siguiente]**.
