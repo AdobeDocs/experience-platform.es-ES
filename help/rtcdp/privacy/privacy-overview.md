@@ -5,9 +5,9 @@ seo-title: Privacidad en el Perfil de datos del cliente en tiempo real
 description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 seo-description: El Perfil de datos de clientes en tiempo real le permite optimizar el proceso para mantener las operaciones de datos conformes con las normativas de privacidad.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Consulte el documento sobre el [cumplimiento de las solicitudes](../../segmentat
 
 ## Compatibilidad con IAB TCF 2.0
 
-[!DNL Real-time CDP] forma parte de la lista [de](https://iabeurope.eu/vendor-list-tcf-v2-0/) proveedor registrada para el [!DNL Transparency & Consent Framework (TCF)], tal como se describe en la [!DNL Interactive Advertising Bureau] (IAB). De conformidad con los requisitos de TCF 2.0, [!DNL Real-time CDP] le permite recopilar datos detallados de consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta si determinados perfiles se incluyen en segmentos de audiencia exportados, según el caso de uso.
+[!DNL Real-time CDP] forma parte de la lista [de](https://iabeurope.eu/vendor-list-tcf-v2-0/) proveedor registrada para el [!DNL Transparency & Consent Framework (TCF)], como lo describe el [!DNL Interactive Advertising Bureau (IAB)]. De conformidad con los requisitos de TCF 2.0, [!DNL Real-time CDP] le permite recopilar datos detallados de consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta si determinados perfiles se incluyen en segmentos de audiencia exportados, según el caso de uso.
 
 Consulte la información general sobre la compatibilidad con [IAB TCF 2.0 en [!DNL Real-time CDP]](./iab/overview.md) para obtener más información.
 
