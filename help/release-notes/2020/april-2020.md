@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 5%
+source-wordcount: '972'
+ht-degree: 8%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 5%
 **Fecha de publicación: 8 de abril de 2020**
 
 Nuevas funciones de Adobe Experience Platform:
-* [[!Servicios inteligentes DNL]](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 Actualizaciones de funciones existentes:
-* [[!Modelo de datos de experiencia DNL (XDM)]](#xdm)
-* [[!Gobierno de datos DNL]](#governance)
-* [[!Destinos DNL]](#destinations)
-* [[!Privacy Service DNL]](#privacy)
-* [[!Fuentes DNL]](#sources)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -37,7 +37,7 @@ Actualizaciones de funciones existentes:
 | Función | Descripción |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] proporciona a los especialistas en mercadotecnia la capacidad para generar predicciones de clientes a nivel individual con explicaciones. Con la ayuda de factores influyentes, [!DNL Customer AI] puede decirle qué es lo más probable que un cliente haga y por qué. Además, los especialistas en mercadotecnia pueden beneficiarse de [!DNL Customer AI] las predicciones y perspectivas para personalizar las experiencias de los clientes al proporcionar las ofertas y los mensajes más adecuados. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con respecto a los resultados especificados. Con [!DNL Attribution AI], los especialistas en mercadotecnia pueden medir y optimizar el gasto en mercadotecnia y publicidad al comprender el impacto de cada interacción individual de los clientes en cada fase de los viajes de los clientes. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con respecto a los resultados especificados. Con [!DNL Attribution AI], los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes. |
 
 **Problemas conocidos**
 
@@ -90,7 +90,7 @@ Para obtener más información, consulte la información general [sobre el Gobie
 
 ## Destinos {#destinations}
 
-En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
+En la plataforma [de datos del cliente en tiempo](../../rtcdp/overview.md)real, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de una manera transparente.
 
 **Nuevos destinos**
 
@@ -98,7 +98,7 @@ Adobe Real-time CDP ahora admite la activación de datos a más de cincuenta [!D
 
 | Documentación | Descripción |
 |--- | ---|
-| [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real de Adobe y recomienda cuándo usar cada uno de estos destinos. |
+| [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real de Adobe y recomienda cuándo utilizar cada uno de estos destinos. |
 | [Extensiones de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Esta página explica cuáles son las extensiones, las listas utilizan casos para utilizarlas y los vínculos a la documentación de cada [!DNL Launch] [!DNL Launch] extensión en Adobe Real-time CDP. |
 
 Para obtener más información, consulte la información general sobre [los destinos](/help/rtcdp/destinations/destinations-overview.md).
