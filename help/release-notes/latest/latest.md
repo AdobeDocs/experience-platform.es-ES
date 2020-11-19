@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2078'
 ht-degree: 3%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 | Eliminar conexiones | Las conexiones por lotes que contienen errores o que se han vuelto innecesarias ahora se pueden eliminar mediante la API y la interfaz [!DNL Flow Service] de usuario. Para obtener más información, consulte el tutorial sobre la [eliminación de conexiones mediante la API](../../sources/tutorials/api/delete.md) de servicio de flujo y la [eliminación de cuentas mediante la interfaz de usuario](../../sources/tutorials/ui/delete-accounts.md). |
 | Asignación jerárquica | Durante el proceso de ingestión de datos, puede realizar la previsualización de un archivo de origen jerárquico, como JSON o Parquet. Consulte el tutorial sobre la [configuración de un flujo de datos para conectores de almacenamiento en la nube en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información. |
 | Compatibilidad de API con la asignación en fuentes de flujo continuo | Ahora puede utilizar API para realizar funciones de asignación con fuentes de flujo continuo. |
-| Compatibilidad de API con delimitadores personalizados para orígenes de almacenamiento en la nube | Ahora puede recopilar archivos no delimitados por CSV mediante fuentes de almacenamiento en la nube. Puede utilizar cualquier delimitador de una sola columna, como una ficha, una coma, una barra vertical, un punto y coma o un hash, para recopilar archivos planos en cualquier formato. El valor predeterminado es una coma si no se proporciona. |
+| Compatibilidad de API con delimitadores personalizados para orígenes de almacenamiento en la nube | Ahora puede recopilar archivos no delimitados por CSV mediante fuentes de almacenamiento en la nube. Puede utilizar cualquier delimitador de una sola columna, como una ficha, una coma, una barra vertical, un punto y coma o un hash, para recopilar archivos planos en cualquier formato. |
 | Compatibilidad de Simulador para pruebas con el conector Adobe Audience Manager | El conector del Audience Manager ahora es compatible con el simulador de pruebas. Los usuarios pueden habilitar el conector para enrutar conjuntos de datos de Audience Manager al simulador para pruebas de su elección (incluidos los entornos limitados que no sean de producción). La configuración está limitada a un simulador para pruebas por organización IMS. |
 | Mejoras en los recursos | Ahora se puede acceder a la ingestión basada en archivos a través del catálogo de fuentes. |
 
