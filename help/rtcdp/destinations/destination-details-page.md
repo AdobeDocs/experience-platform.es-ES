@@ -5,9 +5,9 @@ seo-title: Página Detalles de Destinos
 description: 'La página de detalles de un destino individual proporciona una visión general de los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 seo-description: 'La página de detalles de un destino individual proporciona una visión general de los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ En la interfaz de usuario de Adobe Experience Platform, puede realizar vistas y 
 >
 >La página de detalles de destinos forma parte del espacio de trabajo [!UICONTROL Destinos] de la interfaz de usuario de la plataforma. Consulte la descripción general [[!UICONTROL del espacio de trabajo] Destinos](./destinations-workspace.md) para obtener más información.
 
-En el espacio de trabajo **[!UICONTROL Destinos]** de la interfaz de usuario de la plataforma, vaya a la ficha **[!UICONTROL Examinar]** y seleccione el nombre de un destino de lote que desee vista.
+En el espacio de trabajo **[!UICONTROL Destinos]** de la interfaz de usuario de la plataforma, vaya a la ficha **[!UICONTROL Examinar]** y seleccione el nombre de un destino al que desee realizar la vista.
 
 ![](./assets/details-page/select-destination.png)
 
