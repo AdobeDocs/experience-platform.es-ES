@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target y el SDK web de Adobe Experience Platform. '
+title: 'SDK web de Adobe Target y Adobe Experience Platform. '
 seo-title: Adobe Experience Platform Web SDK y uso de Adobe Target
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -63,20 +63,20 @@ El concepto de Vistas puede ampliarse mucho más que esto. Estos son sólo algun
 
 Las Vistas XDM se pueden aprovechar en Adobe Target para que los especialistas en marketing puedan ejecutar pruebas A/B y XT en SPA mediante el Compositor de experiencias visuales. Esto requiere realizar los siguientes pasos para completar una configuración de desarrollador única:
 
-1. Instalación del SDK web de [Adobe Experience Platform](../../fundamentals/installing-the-sdk.md)
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
 2. Determine todas las Vistas XDM de la aplicación de una sola página que desee personalizar.
 3. Después de definir las Vistas XDM, para ofrecer actividades AB o XT VEC, implemente la `sendEvent()` función con `renderDecisions` el valor `true` y la Vista XDM correspondiente en la aplicación de una sola página. Se debe pasar la Vista XDM `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar el Compositor de experiencias visuales para iniciar pruebas A/B y XT para esos XDM.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ El equipo de mercadotecnia desea ejecutar pruebas A/B en toda la página de inic
 
 Para ejecutar pruebas A/B en todo el sitio principal, `sendEvent()` debe invocarse con el XDM `viewName` configurado en `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ El equipo de mercadotecnia desea personalizar la segunda fila de productos cambi
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 Para personalizar el contenido del sitio en función de la preferencia de envío seleccionada, se puede crear una Vista para cada preferencia de envío. Cuando se selecciona Envío **** normal, la Vista se puede denominar &quot;cierre de compra normal&quot;. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## Uso del Compositor de experiencias visuales para un SPA
 
-Cuando haya terminado de definir sus Vistas XDM e implementado`sendEvent()` con esas Vistas XDM pasadas, el VEC podrá detectar estas Vistas y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
+Cuando haya terminado de definir sus Vistas XDM e implementado `sendEvent()` con esas Vistas XDM pasadas, el VEC podrá detectar estas Vistas y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
 
 >[!NOTE]
 >
