@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo admitir las preferencias de consen
 seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento TCF 2.0 de IAB con el SDK web de Experience Platform
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Para implementar el SDK web de AEP con IAB TCF 2.0, es necesario que tenga conoc
 
 ## Integración de la plataforma de datos del cliente en tiempo real
 
-La plataforma de datos del cliente en tiempo real (CDP en tiempo real) de Adobe, creada en Adobe Experience Platform, le ayuda a reunir datos conocidos y anónimos de varias fuentes empresariales. Esto le permite crear perfiles de clientes que se pueden utilizar para ofrecer experiencias de cliente personalizadas en todos los canales y dispositivos en tiempo real. Para enviar datos de consentimiento a CDP en tiempo real a través del SDK web de AEP, se requiere lo siguiente:
+Basada en Adobe Experience Platform, la plataforma de datos del cliente en tiempo real (CDP en tiempo real) le ayuda a reunir datos conocidos y anónimos de múltiples fuentes empresariales. Esto le permite crear perfiles de clientes que se pueden utilizar para ofrecer experiencias de cliente personalizadas en todos los canales y dispositivos en tiempo real. Para enviar datos de consentimiento a CDP en tiempo real a través del SDK web de AEP, se requiere lo siguiente:
 
 - Conjunto de datos basado en la [!DNL XDM Individual Profile] clase, habilitado para su uso en [!DNL Real-time Customer Profile], con la combinación de privacidad de Perfil.
 - Una configuración de Edge configurada con CDP en tiempo real y el conjunto de datos de perfil antes mencionado.
