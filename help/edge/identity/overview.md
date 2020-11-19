@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo obtener el Adobe Experience Cloud 
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 5%
+source-wordcount: '731'
+ht-degree: 3%
 
 ---
 
 
 # Identidad: recuperación del ID de Experience Cloud
 
-Adobe Experience Platform [!DNL Web SDK] aprovecha el servicio [de identidad de](../../identity-service/ecid.md)Adobe. Esto garantiza que cada dispositivo tenga un identificador único que se mantenga en el dispositivo, de modo que la actividad entre páginas se pueda relacionar.
+El SDK web de Adobe Experience Platform aprovecha [Adobe Identity Service](../../identity-service/ecid.md). Esto garantiza que cada dispositivo tenga un identificador único que se mantenga en el dispositivo, de modo que la actividad entre páginas se pueda relacionar.
 
 ## Identidad de origen
 
@@ -27,11 +27,11 @@ El [!DNL Identity Service] tiene la capacidad de sincronizar un ID con un domini
 
 ## Migración de ID
 
-Al migrar desde la API de Visitante, también puede migrar las cookies AMCV existentes. Para habilitar la migración ECID, establezca el `idMigrationEnabled` parámetro en la configuración. La migración de ID está configurada para habilitar algunos casos de uso:
+Al migrar desde la API de Visitante, también puede migrar las cookies AMCV existentes. Para habilitar la migración ECID, establezca el `idMigrationEnabled` parámetro en la configuración. La migración de ID habilita los siguientes casos de uso:
 
-* Cuando algunas páginas de un dominio utilizan la API de Visitante y otras páginas utilizan este SDK. Para admitir este caso, el SDK lee las cookies AMCV existentes y escribe una nueva cookie con el ECID existente. Además, el SDK escribe cookies AMCV de modo que si el ECID se obtiene primero en una página instrumentada con el SDK web de AEP, las páginas subsiguientes instrumentadas con la API de Visitante tengan el mismo ECID.
-* Cuando el SDK web de AEP está configurado en una página que también tiene API de Visitante. Para admitir este caso, si no se establece la cookie AMCV, el SDK busca la API de Visitante en la página y la llama para obtener el ECID.
-* Cuando todo el sitio utiliza el SDK web de AEP y no tiene la API de Visitante, resulta útil migrar los ECID para conservar la información de visitante de retorno. Una vez que el SDK se haya implementado `idMigrationEnabled` durante un período de tiempo para migrar la mayoría de las cookies de visitante, la configuración se puede desactivar.
+* Cuando algunas páginas de un dominio utilizan la API de Visitante y otras páginas utilizan este SDK. Para admitir este caso, el SDK lee las cookies AMCV existentes y escribe una nueva cookie con el ECID existente. Además, el SDK escribe cookies AMCV para que, si el ECID se obtiene primero en una página instrumentada con el SDK, las páginas subsiguientes instrumentadas con la API de Visitante tengan el mismo ECID.
+* Cuando Adobe Experience Platform Web SDK se configura en una página que también tiene API de Visitante. Para admitir este caso, si no se establece la cookie AMCV, el SDK busca la API de Visitante en la página y la llama para obtener el ECID.
+* Cuando todo el sitio utiliza Adobe Experience Platform Web SDK y no tiene API de Visitante, resulta útil migrar los ECID para que se mantenga la información de visitante de retorno. Una vez que el SDK se haya implementado `idMigrationEnabled` durante un período de tiempo para migrar la mayoría de las cookies de visitante, la configuración se puede desactivar.
 
 ## Recuperación del ID de Visitante
 
@@ -43,13 +43,14 @@ Si desea utilizar este ID único, utilice el `getIdentity` comando. `getIdentity
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## Sincronización de identidades
@@ -79,21 +80,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+Cada propiedad de `identityMap` representa identidades que pertenecen a una Área de nombres [de](../../identity-service/namespaces.md)identidad determinada. El nombre de la propiedad debe ser el símbolo de Área de nombres de identidad, que puede encontrar en la interfaz de usuario de Adobe Experience Platform en &quot;[!UICONTROL Identities]&quot;. El valor de propiedad debe ser una matriz de identidades pertenecientes a esa Área de nombres de identidad.
 
-### Opciones de sincronización de identidades
+Cada objeto de identidad de la matriz de identidades está estructurado de la siguiente manera:
 
-#### Símbolo de Área de nombres de identidad
-
-| **Tipo** | **Requerido** | **Valor predeterminado** |
-| -------- | ------------ | ----------------- |
-| Cadena | Sí | ninguna |
-
-La clave para el objeto es el símbolo de Área de nombres [de](../../identity-service/namespaces.md) identidad. Puede encontrarlo en la interfaz de usuario de Adobe Experience Platform en &quot;[!UICONTROL Identities]&quot; (Identidades).
-
-#### `id`
+### `id`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
@@ -101,7 +95,7 @@ La clave para el objeto es el símbolo de Área de nombres [de](../../identity-s
 
 Es el ID que desea sincronizar para la Área de nombres dada.
 
-#### `authenticationState`
+### `authenticationState`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** | **Valores posibles** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -109,18 +103,10 @@ Es el ID que desea sincronizar para la Área de nombres dada.
 
 El estado de autenticación del ID.
 
-#### `primary`
+### `primary`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
 | Booleano | opcional | false |
 
 Determina si esta identidad debe utilizarse como fragmento principal en el perfil unificado. De forma predeterminada, el ECID se establece como identificador principal del usuario.
-
-#### `hashEnabled`
-
-| **Tipo** | **Requerido** | **Valor predeterminado** |
-| -------- | ------------ | ----------------- |
-| Booleano | opcional | false |
-
-Si se habilita, se hash la identidad mediante hash SHA256.
