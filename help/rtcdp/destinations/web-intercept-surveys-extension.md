@@ -2,12 +2,12 @@
 keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
 title: Extensión de Encuestas de intercepción de QuestionPro
 seo-title: Extensión de Encuestas de intercepción de QuestionPro
-description: La extensión de Encuestas de Interceptación de PreguntaPro es un destino de encuesta en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL QuestionPro Intercept Surveys] es una plataforma para implementar encuestas y recopilar datos actitudinales en el punto de transacción o cuando los usuarios entran o salen del sitio web.
 
-[!DNL QuestionPro Intercept Surveys] es una extensión de encuesta en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
+[!DNL QuestionPro Intercept Surveys] es una extensión de encuesta en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
 Este destino es una extensión de Adobe Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch de plataforma en Adobe Real-time CDP, consulte Visión general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
