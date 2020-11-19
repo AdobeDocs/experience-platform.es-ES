@@ -2,12 +2,12 @@
 keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: Extensión DialogTech
 seo-title: Extensión DialogTech
-description: La extensión DialogTech es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión DialogTech es un destino de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión DialogTech es un destino de análisis en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión DialogTech es un destino de análisis en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '519'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Incluir el fragmento de [!DNL DialogTech SourceTrak] javascript en Inicio de Adobe
 
-[!DNL DialogTech] es una extensión de análisis en la plataforma de datos del cliente en tiempo real de Adobe. Para obtener más información sobre la funcionalidad de extensión, consulte el sitio web [Dialogtech](https://www.dialogtech.com/).
+[!DNL DialogTech] es una extensión de análisis en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de extensión, consulte el sitio web [Dialogtech](https://www.dialogtech.com/).
 
 Este destino es una extensión de Adobe Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch de plataforma en Adobe Real-time CDP, consulte Visión general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
