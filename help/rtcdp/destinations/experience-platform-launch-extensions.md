@@ -5,9 +5,9 @@ seo-title: Extensiones de Experience Platform Launch
 description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Para encontrar las extensiones de Launch de plataforma en la interfaz CDP en tie
 
 Las extensiones de Launch de plataforma reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino de reenvío de **Evento** . Se trata de un tipo más sencillo de integración con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la extensión [de personalización de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o [Confirmar voz de la extensión](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Cliente.
 
-**Los destinos de exportación** de perfiles y segmentos en Adobe La plataforma de datos del cliente en tiempo real capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [del almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+**Los destinos de exportación** de perfil/segmento en la plataforma de datos del cliente en tiempo real capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Algunos ejemplos son el destino [del almacenamiento en la nube](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o el destino [publicitario de](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
 
 ![Extensiones de Experience Platform Launch en comparación con otros destinos](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
