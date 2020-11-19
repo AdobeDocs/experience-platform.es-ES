@@ -5,17 +5,17 @@ description: Descripción de cada fragmento de información que el SDK de Adobe 
 seo-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 8%
+source-wordcount: '385'
+ht-degree: 9%
 
 ---
 
 
 # Información recopilada automáticamente
 
-El SDK de Adobe Experience Cloud recopila una serie de datos automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
+Adobe Experience Platform Web SDK recopila una serie de datos automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
 
 ## Dispositivo (`device`)
 
@@ -57,7 +57,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-El tipo de entorno por el que salió a la luz la experiencia. El SDK de Adobe Experience Platform para JavaScript siempre se establece `browser`.
+El tipo de entorno a través del cual surgió la experiencia. El SDK web de Adobe Experience Platform siempre lo establece en `browser`.
 
 ### Altura de la ventanilla
 
