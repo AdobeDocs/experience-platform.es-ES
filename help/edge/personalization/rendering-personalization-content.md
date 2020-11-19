@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo procesar contenido personalizado c
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Descripción general de las opciones de personalización
 
-El Adobe Experience Platform [!DNL Web SDK] admite la consulta de las soluciones de personalización en Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] permite consultar las soluciones de personalización en Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../personalization/manage-flicker.md).
 
 ## Representación automática del contenido
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 Esto devolverá una lista de decisiones como un objeto JSON para cada decisión.
 
-```javascript
+```json
 {
   "decisions": [
     {
