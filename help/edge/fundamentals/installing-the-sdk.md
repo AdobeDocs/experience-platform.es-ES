@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo instalar el SDK web de Experience 
 seo-description: Obtenga información sobre cómo instalar el SDK web de Experience Platform
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 # Instalación del SDK {#installing-the-sdk}
 
-La forma preferida de utilizar el SDK web de Adobe Experience Platform es a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Busque el `AEP Web SDK` en el catálogo de extensiones, instálelo y luego configure la extensión.
+La forma preferida de utilizar Adobe Experience Platform Web SDK es a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Busque `AEP Web SDK` en el catálogo de extensiones, instale y luego configure la extensión.
 
-El SDK web de AEP también está disponible en un CDN para su uso. Puede hacer referencia a este archivo o descargarlo y alojarlo en su propia infraestructura. Está disponible en una versión minimizada y no minimizada. La versión no minimizada resulta útil para la depuración.
+El SDK web de Adobe Experience Platform también está disponible en un CDN para su uso. Puede hacer referencia a este archivo o descargarlo y alojarlo en su propia infraestructura. Está disponible en una versión minimizada y no minimizada. La versión no minimizada resulta útil para la depuración.
 
 Estructura URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min.js O alloy.js para la versión sin miniatura.
 
@@ -28,7 +28,7 @@ Por ejemplo:
 
 ## Añadir el código {#adding-the-code}
 
-El primer paso en la implementación del Adobe Experience Platform [!DNL Web SDK] es copiar y pegar el siguiente &quot;código base&quot; lo más alto posible en la `<head>` etiqueta de su HTML:
+El primer paso en la implementación de Adobe Experience Platform [!DNL Web SDK] es copiar y pegar el siguiente &quot;código base&quot; lo más alto posible en la `<head>` etiqueta de su HTML:
 
 ```markup
 <script>
