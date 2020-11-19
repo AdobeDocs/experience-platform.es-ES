@@ -5,9 +5,9 @@ seo-title: Destino de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se muestran ejemplos de casos de uso que los clientes de la Plataforma de datos de clientes en tiempo real de Adobe pueden resolver mediante esta función. [!DNL Google Customer Match]
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se muestran ejemplos de casos de uso que los clientes de la Plataforma de datos del cliente en tiempo real pueden resolver mediante esta función. [!DNL Google Customer Match]
 
 
 ### Caso de uso n.º 1
@@ -124,7 +124,7 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
    >[!IMPORTANT]
    >
    > * El caso de uso de la mercadotecnia **[!UICONTROL Combinar con PII]** está seleccionado de forma predeterminada para el [!DNL Google Customer Match] destino y no se puede eliminar.
-   > * Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es el ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
+   > * Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es su ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
 
 
    ![Coincidencia de clientes de Connect Google: paso de autenticación](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
