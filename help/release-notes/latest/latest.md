@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2126'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ En la plataforma [de datos del cliente en tiempo](../../rtcdp/overview.md)real, 
 
 | Función | Descripción |
 | ------- | ----------- |
+| Detalles de destino Actualizaciones de UX | El flujo de trabajo de destino de CDP en tiempo real ahora incluye monitoreo en línea para que pueda ver qué activaciones por lotes fueron exitosas. Esta función permitirá a los usuarios resolver problemas directamente en el flujo de trabajo para los destinos por lotes mediante alertas y un panel de supervisión para rastrear errores en la canalización de procesamiento. |
 | Campos obligatorios | Los usuarios pueden marcar los campos como obligatorios, asegurándose de que solo se exporten los campos que contengan el campo obligatorio. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
