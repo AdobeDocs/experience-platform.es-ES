@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo rastrear los eventos del SDK web E
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Eventos de seguimiento
 
-Para enviar datos de evento al Adobe Experience Cloud, utilice el `sendEvent` comando . El `sendEvent` comando es la forma principal de enviar datos al [!DNL Experience Cloud]sitio y recuperar contenido personalizado, identidades y destinos de audiencia.
+Para enviar datos de evento a Adobe Experience Cloud, utilice el `sendEvent` comando . El `sendEvent` comando es la forma principal de enviar datos al [!DNL Experience Cloud]sitio y recuperar contenido personalizado, identidades y destinos de audiencia.
 
 Los datos enviados a Adobe Experience Cloud se dividen en dos categorías:
 
