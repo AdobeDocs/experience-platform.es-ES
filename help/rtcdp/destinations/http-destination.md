@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-seo-title: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-description: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-seo-description: El destino HTTP es un destino de la plataforma de datos del cliente en tiempo real de Adobe que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+title: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+seo-title: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+description: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+seo-description: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-El [!DNL HTTP] destino es un [!DNL Adobe Real-Time Customer Data Platform] destino de flujo continuo que le ayuda a enviar datos de perfil a puntos finales [!DNL HTTP] de terceros.
+El [!DNL HTTP] destino es un [!DNL Real-time Customer Data Platform] destino de flujo continuo que le ayuda a enviar datos de perfil a puntos finales [!DNL HTTP] de terceros.
 
-Para enviar datos de perfil a los [!DNL HTTP] extremos, primero debe conectarse al destino en el [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+Para enviar datos de perfil a los [!DNL HTTP] extremos, primero debe conectarse al destino en el [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
