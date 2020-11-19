@@ -2,12 +2,12 @@
 keywords: Medallia;medallia
 title: Extensión Medallia
 seo-title: Extensión Medallia
-description: La extensión Medallia es una voz del destino del cliente en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Medallia es una voz del destino del cliente en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión Medallia es una voz del destino del cliente en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+seo-description: La extensión Medallia es una voz del destino del cliente en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Implemente [!DNL Medallia] rápida y fácilmente sus propiedades web. La extensión también le permite detectar eventos de encuesta, capturar comentarios de clientes en tiempo real a través de elementos de datos, utilizarlos en reglas para personalizar la experiencia de su cliente y compartir datos con Adobe Analytics.
 
-[!DNL Medallia] es una voz de la extensión de cliente en Adobe Real-time Customer Data Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] es una voz de la extensión del cliente en la plataforma de datos del cliente en tiempo real. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Este destino es una extensión de Adobe Experience Platform Launch. Para obtener más información sobre cómo funcionan las extensiones de Launch de plataforma en Adobe Real-time CDP, consulte Visión general [de las extensiones de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
