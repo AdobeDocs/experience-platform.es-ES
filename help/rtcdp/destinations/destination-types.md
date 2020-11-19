@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Tipos y Categorías de destinos
 seo-title: Tipos y Categorías de destinos
-description: 'En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos. '
-seo-description: En la plataforma de datos del cliente en tiempo real de Adobe, los destinos de exportación de Perfiles/segmentos capturan datos de evento, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos.
+description: 'En la plataforma de datos del cliente en tiempo real, los destinos de exportación de Perfiles/segmentos capturan datos de eventos, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos. '
+seo-description: En la plataforma de datos del cliente en tiempo real, los destinos de exportación de Perfiles/segmentos capturan datos de eventos, los combinan con otras fuentes de datos, aplican segmentación y exportan segmentos y perfiles cualificados a los destinos. Las extensiones de Experience Platform Launch reenvían datos de evento sin procesar a varios tipos de destinos.
 translation-type: tm+mt
-source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Tipos y Categorías de destino
 
-Lea esta página para conocer los distintos tipos y categorías de destinos de la Plataforma de datos de clientes en tiempo real de Adobe.
+Lea esta página para conocer los distintos tipos y categorías de destinos de la plataforma de datos de clientes en tiempo real.
 
 ## Tipos de destino
 
-En la plataforma de datos del cliente en tiempo real de Adobe, distinguimos dos tipos de destino: conexiones y extensiones. Existen dos tipos de destinos de conexión: destinos de exportación de Perfil y destinos de exportación de segmentos.
+En la plataforma de datos del cliente en tiempo real, distinguimos dos tipos de destino: conexiones y extensiones. Existen dos tipos de destinos de conexión: destinos de exportación de Perfil y destinos de exportación de segmentos.
 
 ![Tipos de destinos](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -27,7 +27,7 @@ En la plataforma de datos del cliente en tiempo real de Adobe, distinguimos dos 
 
 ### Conexiones {#connections}
 
-**[!UICONTROL Los destinos de exportación]** y **[!UICONTROL segmento de perfil Exportar]** en Adobe Plataforma de datos del cliente en tiempo real capturan datos de evento, los combinan con otras fuentes de datos para formar el perfil [del cliente en tiempo](/help/profile/home.md)real, aplicar segmentación y exportar segmentos y perfiles cualificados a los destinos.
+**[!UICONTROL Los destinos de exportación]** y **[!UICONTROL segmento de perfil Exportar]** en la plataforma de datos del cliente en tiempo real capturan datos de evento, los combinan con otras fuentes de datos para formar el perfil [del cliente en tiempo](/help/profile/home.md)real, aplicar segmentación y exportar segmentos y perfiles cualificados a los destinos.
 
 <br> 
 
