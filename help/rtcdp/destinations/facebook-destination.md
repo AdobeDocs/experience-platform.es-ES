@@ -5,9 +5,9 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Puede usar este destino para la segmentación de audiencias en [!DNL Facebook’
 
 ## Casos de uso
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se presentan dos casos de uso de muestra que los clientes de la Plataforma de datos de clientes en tiempo real de Adobe pueden solucionar con esta función. [!DNL Facebook]
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino, a continuación se presentan dos casos de uso de muestra que los clientes de la Plataforma de datos del cliente en tiempo real pueden resolver con esta función. [!DNL Facebook]
 
 
 ### Caso de uso n.º 1
@@ -38,7 +38,7 @@ Un minorista en línea quiere llegar a los clientes existentes a través de las 
 ### Caso de uso n.º 2
 
 
-Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y quiere ofrecer a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
+Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
 
 Para destinatario en los medios sociales, pueden incorporar los datos del cliente desde su CRM al CDP en tiempo real de Adobe, utilizando las direcciones de correo electrónico como identificadores.
 
@@ -101,7 +101,7 @@ Para obtener instrucciones sobre cómo activar segmentos en [!DNL Facebook], con
 
 ## Datos exportados {#exported-data}
 
-Por [!DNL Facebook], una activación exitosa significa que se crearía una audiencia [!DNL Facebook] personalizada mediante programación en [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
+Por ejemplo, [!DNL Facebook]una activación exitosa significa que una audiencia [!DNL Facebook] personalizada se crearía mediante programación en [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría a medida que los usuarios estuvieran cualificados o descalificados para los segmentos activados.
 
 >[!TIP]
 >
