@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 5%
+source-wordcount: '840'
+ht-degree: 6%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [[!Gobierno de datos DNL]](#governance)
-* [[!Ingesta de datos DNL]](#ingestion)
-* [[!Destinos DNL]](#destinations)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
-* [[!Fuentes DNL]](#sources)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -69,7 +69,7 @@ Para obtener más información sobre la ingesta de datos en la plataforma, visit
 
 ## Destinos {#destinations}
 
-En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
+En la plataforma [de datos del cliente en tiempo](../../rtcdp/overview.md)real, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de una manera transparente.
 
 **Nuevos destinos**
 
