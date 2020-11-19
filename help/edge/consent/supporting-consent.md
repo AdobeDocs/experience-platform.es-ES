@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo admitir las preferencias de consen
 seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Dado que el usuario eligió exclusión, se rechazan las promesas que se devolvie
 
 >[!NOTE]
 >
->Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión total o nulo.  Esto solo se aplica a las bibliotecas JavaScript de Adobe Experience Platform [!DNL Web SDK] y NO de otros Adobes.
+>Actualmente, el SDK solo admite el `general` propósito. Aunque planeamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión total o nulo.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
 
 ## Comunicar las preferencias de consentimiento a través del estándar TCF de IAB
 
