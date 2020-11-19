@@ -1,13 +1,13 @@
 ---
 keywords: data quality;rtcdp data quality
 title: Calidad de los datos en la plataforma de datos del cliente en tiempo real
-seo-title: Calidad de los datos en la plataforma de datos del cliente en tiempo real de Adobe
+seo-title: Calidad de los datos en la plataforma de datos del cliente en tiempo real
 description: Un documento sobre la calidad de los datos en la plataforma de datos del cliente en tiempo real
-seo-description: Un documento que describe cómo funciona la calidad de los datos mediante la ingestión de datos y lotes en la plataforma de datos del cliente en tiempo real de Adobe
+seo-description: Un documento que describe cómo funciona la calidad de los datos mediante la ingestión de datos y lotes en la plataforma de datos del cliente en tiempo real
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
