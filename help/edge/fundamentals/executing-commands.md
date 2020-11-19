@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo ejecutar comandos del SDK web Expe
 seo-description: Obtenga información sobre cómo ejecutar comandos del SDK web Experience Platform
 keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # Ejecución de comandos
 
-Una vez que el código base se haya implementado en la página web, puede empezar a ejecutar comandos con el SDK. No es necesario esperar a que el archivo externo \(`alloy.js`\) se cargue desde el servidor antes de ejecutar los comandos. Si el SDK no ha terminado de cargar el SDK, los comandos se ponen en cola y el SDK los procesa lo antes posible.
+Una vez que el código base se haya implementado en la página web, puede empezar a ejecutar comandos con el SDK. No es necesario esperar a que el archivo externo (alloy.js) se cargue desde el servidor antes de ejecutar los comandos. Si el SDK no ha terminado de cargar el SDK, los comandos se ponen en cola y el SDK los procesa lo antes posible.
 
 Los comandos se ejecutan con la siguiente sintaxis.
 
@@ -42,7 +42,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Si saber cuándo se ejecuta correctamente el comando no es importante para usted, puede eliminar la `then` llamada.
@@ -52,7 +52,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Del mismo modo, si saber cuándo falla el comando no es importante para usted, puede eliminar la `catch` llamada.
@@ -62,7 +62,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### Objetos de respuesta
@@ -70,9 +70,10 @@ alloy("commandName", options)
 Todas las promesas devueltas por los comandos se resuelven con un `result` objeto. El objeto result contendrá datos según el comando y el consentimiento del usuario. Por ejemplo, la información de biblioteca se pasa como una propiedad del objeto results en el siguiente comando.
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### Consentimiento
