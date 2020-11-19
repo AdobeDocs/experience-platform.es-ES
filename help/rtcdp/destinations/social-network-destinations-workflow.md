@@ -6,9 +6,9 @@ seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Flujo de trabajo para crear destinos de redes sociales
 
-Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de la plataforma de datos del cliente en tiempo real de Adobe será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo en la plataforma de datos del cliente en tiempo real será el mismo para todos los destinos de redes sociales, una vez que se añadan más al producto.
 
 1. En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, desplácese hasta la categoría de **[!UICONTROL Social]** . Seleccione el destino preferido de la red social y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
