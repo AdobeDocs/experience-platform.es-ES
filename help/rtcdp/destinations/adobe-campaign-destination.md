@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 seo-description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y ofrecer campañas en todos sus canales en línea y sin conexión. Consulte [Acerca de Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) para obtener más información.
 
-Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en la plataforma de datos del cliente en tiempo real de Adobe y, a continuación, [configurar una importación](#import-data-into-campaign) de datos desde la ubicación del almacenamiento en Adobe Campaign.
+Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en la plataforma de datos del cliente en tiempo real y, a continuación, [configurar una importación](#import-data-into-campaign) de datos desde la ubicación del almacenamiento en Adobe Campaign.
 
 ## Tipo de exportación {#export-type}
 
