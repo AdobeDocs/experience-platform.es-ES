@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '582'
+ht-degree: 7%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [[!Espacio de trabajo de ciencias de datos DNL]](#dsw)
-- [[!Destinos DNL]](#destinations)
-- [[!DNL Plataforma de datos del cliente en tiempo real]](#rtcdp)
-- [[!Fuentes DNL]](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -34,11 +34,11 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | ------- | ----------- |
 | Mejoras de VM en [!DNL JupyterLab] | Se mejoró la estabilidad de las máquinas [!DNL JupyterLab notebook] virtuales de larga ejecución. |
 
-Para obtener más información sobre [!DNL JupyterLab], consulte la guía del [[!DNL JupyterLab] usuario](../../data-science-workspace/jupyterlab/overview.md).
+For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Destinos {#destinations}
 
-En la plataforma [de datos del cliente en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de forma transparente.
+En la plataforma [de datos del cliente en tiempo](../../rtcdp/overview.md)real, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de una manera transparente.
 
 **Nuevos destinos**
 
@@ -57,7 +57,7 @@ Hay nuevos destinos disponibles donde puede activar los datos de Adobe Experienc
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-La plataforma de datos del cliente ([!DNL Real-time CDP]) de Adobe, integrada por Experience Platform, ayuda a las compañías a reunir datos conocidos y desconocidos para activar los perfiles del cliente con decisiones inteligentes durante todo el viaje del cliente. [!DNL Real-time CDP] combina varias fuentes de datos empresariales para crear perfiles de clientes en tiempo real. Los segmentos creados a partir de estos perfiles se pueden enviar a los destinos de flujo descendente para proporcionar experiencias personalizadas individuales a los clientes en todos los canales y dispositivos.
+La plataforma de datos del cliente ([!DNL Real-time CDP]), integrada por Experience Platform, ayuda a las compañías a reunir datos conocidos y desconocidos para activar los perfiles del cliente con decisiones inteligentes durante todo el viaje del cliente. [!DNL Real-time CDP] combina varias fuentes de datos empresariales para crear perfiles de clientes en tiempo real. Los segmentos creados a partir de estos perfiles se pueden enviar a los destinos de flujo descendente para proporcionar experiencias personalizadas individuales a los clientes en todos los canales y dispositivos.
 
 **Nuevas funciones**
 
