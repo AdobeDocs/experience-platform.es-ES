@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Guía de IU de políticas de combinación
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Si prefiere trabajar con políticas de combinación mediante la [!DNL Real-time 
 
 ## Primeros pasos
 
-Esta guía requiere una comprensión práctica de varias [!DNL Experience Platform] características importantes. Antes de seguir esta guía, o usar API de Perfil, consulte la documentación de los siguientes servicios:
+Esta guía requiere una comprensión práctica de varias [!DNL Experience Platform] características importantes. Antes de seguir esta guía o usar API de Perfil, consulte la documentación de los siguientes servicios:
 
-* [[!DNL Real-time Customer Profile]](../home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [Perfil](../home.md)del cliente en tiempo real: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Permite el Perfil del cliente en tiempo real al enlazar identidades de fuentes de datos dispares que se están ingeriendo en [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Métodos de combinación {#merge-methods}
 
