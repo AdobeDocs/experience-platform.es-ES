@@ -5,9 +5,9 @@ description: El SDK web de Adobe Experience Platform puede entregar y procesar o
 seo-description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar ofertas personalizadas que se administran en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer Decisioning.
 
-## Requisitos previos
+## Requisitos previos 
 
 * La organización de IMS está habilitada para la toma de decisiones de Edge
 * Ofertas, Actividades creadas
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] puede ofrecer y procesar ofertas person
 
 ## Terminología
 
-Es importante comprender la siguiente terminología al trabajar con Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+Es importante comprender la siguiente terminología al trabajar con Offer Decisioning. Para obtener más información y vista de términos adicionales, visite el glosario [de](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)Offer Decisioning.
 
 * **Contenedor:** Un contenedor es un mecanismo de aislamiento para separar las diferentes preocupaciones. El ID de contenedor es el primer elemento de ruta para todas las API de repositorio. Todos los objetos de decisión residen en un contenedor.
 
