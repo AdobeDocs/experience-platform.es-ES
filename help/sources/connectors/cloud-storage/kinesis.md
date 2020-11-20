@@ -5,9 +5,9 @@ title: Conector Kinesis de Amazon
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar Amazon Kinesis a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,7 @@ La documentación siguiente proporciona información sobre cómo conectarse [!DN
 ### Uso de API
 
 - [Creación de un conector Kinesis de Amazon mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
-- [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
+- [Recopilación de datos de flujo mediante la API de servicio de flujo](../../tutorials/api/collect/streaming.md)
 
 ### Uso de la interfaz de usuario
 
