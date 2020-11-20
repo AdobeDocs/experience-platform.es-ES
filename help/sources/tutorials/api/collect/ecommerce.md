@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un sistema de comercio electrónico de terceros e incorporarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 1%
