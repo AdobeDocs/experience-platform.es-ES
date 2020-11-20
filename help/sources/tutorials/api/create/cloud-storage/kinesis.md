@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Amazon Kinesis.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Para [!DNL Flow Service] conectarse con su [!DNL Amazon Kinesis] cuenta, debe pr
 | ---------- | ----------- |
 | `accessKeyId` | ID de la clave de acceso de su [!DNL Kinesis] cuenta. |
 | `secretKey` | Clave de acceso secreta de su [!DNL Kinesis] cuenta. |
-| `region` |  | Región de su [!DNL Kinesis] cuenta. |
+| `region` | Región de su [!DNL Kinesis] cuenta. |
 | `connectionSpec.id` | ID de especificación de [!DNL Kinesis] conexión: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 Para obtener más información sobre estos valores, consulte [este documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)de Kinesis.
@@ -54,17 +54,17 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Crear una conexión
 
@@ -123,4 +123,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una [!DNL Amazon Kinesis] conexión mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API](../../explore/cloud-storage.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una [!DNL Amazon Kinesis] conexión mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [recopilar datos de flujo mediante la API](../../collect/streaming.md)de servicio de flujo.
