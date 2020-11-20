@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ Este tutorial trata los pasos para recuperar datos de un almacenamiento de nube 
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un almacenamiento de nube de terceros a través de una conexión válida e información sobre el archivo que desea introducir en la plataforma DNL, incluyendo la ruta y la estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar un almacenamiento de nube de terceros mediante [!DNL Flow Service] la API](../explore/cloud-storage.md) antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un almacenamiento de nube de terceros a través de una conexión válida e información sobre el archivo en el que desea introducir [!DNL Platform], incluida la ruta y la estructura del archivo. Si no dispone de esta información, consulte el tutorial sobre [explorar un almacenamiento de nube de terceros mediante [!DNL Flow Service] la API](../explore/cloud-storage.md) antes de intentar este tutorial.
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
-- [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    - [Conceptos básicos de la composición](../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Guía](../../../../xdm/api/getting-started.md)para desarrolladores de esquema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
-- [[!Servicio de catálogo DNL]](../../../../catalog/home.md): Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
-- [[!DNL Ingesta por lotes]](../../../../ingestion/batch-ingestion/overview.md): La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
+- [[!DNL Catalog Service]](../../../../catalog/home.md):: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de [!DNL Experience Platform].
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):: La API de inserción de lotes permite ingestar datos en [!DNL Experience Platform] archivos por lotes.
 - [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un almacenamiento de nube mediante la [!DNL Flow Service] API.
 
