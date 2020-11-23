@@ -5,9 +5,9 @@ title: Guía de solución de problemas del sistema del modelo de datos de experi
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el sistema del modelo de datos de experiencia (XDM), así como una guía de resolución de problemas para errores comunes.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ La siguiente es una lista de respuestas a las preguntas más frecuentes sobre el
 
 Puede agregar campos a un esquema mediante una mezcla. Cada mezcla es compatible con una o varias clases, lo que permite que la mezcla se utilice en cualquier esquema que implemente una de esas clases compatibles. Aunque Adobe Experience Platform proporciona varias mezclas del sector con sus propios campos predefinidos, puede agregar sus propios campos a un esquema creando nuevas mezclas mediante la API o la interfaz de usuario.
 
-Para obtener más información sobre la creación de nuevas mezclas en la API, consulte [Creación de un documento de mezcla](api/create-mixin.md) en la guía para desarrolladores de la [!DNL Schema Registry] API. Si utiliza la interfaz de usuario, consulte el tutorial [Editor de](./tutorials/create-schema-ui.md)Esquema.
+Para obtener más información sobre la creación de nuevas mezclas en la [!DNL Schema Registry] API, consulte la guía [del punto final de la](api/mixins.md#create)mezcla. Si utiliza la interfaz de usuario, consulte el tutorial [Editor de](./tutorials/create-schema-ui.md)Esquema.
 
 ### ¿Cuáles son los mejores usos para las mezclas en comparación con los tipos de datos?
 
@@ -39,21 +39,21 @@ Para obtener más información sobre la creación de nuevas mezclas en la API, c
 
 Todos [!DNL Schema Registry] los recursos (esquemas, mezclas, tipos de datos, clases) tienen un URI que actúa como un ID único con fines de referencia y búsqueda. Al ver un esquema en la API, se puede encontrar en el nivel superior `$id` y en los `meta:altId` atributos.
 
-Para obtener más información, consulte la sección de identificación [de](api/getting-started.md#schema-identification) esquemas en la guía para desarrolladores [!DNL Schema Registry] de API.
+Para obtener más información, consulte la sección de identificación [de](api/getting-started.md#resource-identification) recursos en la guía para desarrolladores [!DNL Schema Registry] de API.
 
 ### ¿Cuándo impide un inicio de esquema romper cambios?
 
-Los cambios de interrupción se pueden realizar en un esquema siempre que nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [[!DNL Perfil del cliente en tiempo real]](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución de [Esquemas](schema/composition.md#evolution) .
+Los cambios de interrupción se pueden realizar en un esquema siempre y cuando nunca se haya utilizado en la creación de un conjunto de datos o se haya habilitado para su uso en [[!DNL Real-time Customer Profile]](../profile/home.md). Una vez que un esquema se ha utilizado en la creación de conjuntos de datos o se ha habilitado para su uso con [!DNL Real-time Customer Profile], el sistema aplica estrictamente las reglas de Evolución de [Esquemas](schema/composition.md#evolution) .
 
 ### ¿Cuál es el tamaño máximo de un tipo de campo largo?
 
 Un tipo de campo largo es un entero con un tamaño máximo de 53(+1) bits, lo que le proporciona un rango potencial entre -9007199254740992 y 9007199254740992. Esto se debe a una limitación de cómo las implementaciones de JavaScript de JSON representan enteros largos.
 
-Para obtener más información sobre los tipos de campo, consulte la sección [Definición de tipos](api/appendix.md#field-types) de campo XDM en la guía para desarrolladores de [!DNL Schema Registry] API.
+Para obtener más información sobre los tipos de campo, consulte el documento sobre las restricciones [de tipo de campo](./schema/field-constraints.md)XDM.
 
 ### ¿Cómo defino las identidades de mi esquema?
 
-En [!DNL Experience Platform]realidad, las identidades se utilizan para identificar a un sujeto (generalmente una persona individual) independientemente de las fuentes de datos que se interpreten. Se definen en esquemas marcando los campos clave como &quot;Identidad&quot;. Los campos más utilizados para la identidad incluyen dirección de correo electrónico, número de teléfono, [[!DNL ID de Experience Cloud (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM y otros campos de ID únicos.
+En [!DNL Experience Platform]realidad, las identidades se utilizan para identificar a un sujeto (generalmente una persona individual) independientemente de las fuentes de datos que se interpreten. Se definen en esquemas marcando los campos clave como &quot;Identidad&quot;. Los campos de identidad que se utilizan habitualmente incluyen dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM y otros campos de ID únicos.
 
 Los campos se pueden marcar como identidades mediante la API o la interfaz de usuario.
 
@@ -77,7 +77,7 @@ Las identidades primarias son opcionales, ya que los esquemas pueden tener 0 o 1
 
 ### ¿Cómo habilito un esquema para su uso en [!DNL Real-time Customer Profile]?
 
-Los esquemas se habilitan para su uso en [[!DNL Perfil del cliente en tiempo real]](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot;, ubicada en el `meta:immutableTags` atributo del esquema. La activación de un esquema para su uso [!DNL Profile] puede realizarse mediante la API o la interfaz de usuario.
+Los esquemas se habilitan para su uso [[!DNL Real-time Customer Profile]](../profile/home.md) mediante la adición de una etiqueta &quot;unión&quot;, ubicada en el `meta:immutableTags` atributo del esquema. La activación de un esquema para su uso [!DNL Profile] puede realizarse mediante la API o la interfaz de usuario.
 
 #### Activación de un esquema existente para [!DNL Profile] usar la API
 
@@ -120,7 +120,7 @@ A continuación se muestra una lista de mensajes de error que puede encontrar al
 
 Este error se muestra cuando el sistema no pudo encontrar un recurso concreto. Es posible que el recurso se haya eliminado o que la ruta de acceso de la llamada de API no sea válida. Asegúrese de haber introducido una ruta válida para la llamada de API antes de intentarlo de nuevo. Es posible que desee comprobar que ha introducido el ID correcto para el recurso y que la ruta se ha adaptado correctamente al contenedor correspondiente (global o inquilino).
 
-Para obtener más información sobre la construcción de rutas de búsqueda en la API, consulte las secciones de identificación [de](./api/getting-started.md#container) contenedores [y](api/getting-started.md#schema-identification) esquemas en la guía para [!DNL Schema Registry] desarrolladores.
+Para obtener más información sobre la construcción de rutas de búsqueda en la API, consulte las secciones de identificación [de](./api/getting-started.md#container) contenedores [y](api/getting-started.md#resource-identification) recursos en la guía para [!DNL Schema Registry] desarrolladores.
 
 ### El título debe ser único
 
@@ -149,7 +149,7 @@ Este mensaje de error se muestra cuando intenta crear un recurso con un título 
 }
 ```
 
-Este mensaje de error se muestra cuando se intenta crear una nueva mezcla con campos con espacios de nombres incorrectos. Las mezclas definidas por la organización de IMS deben Área de nombres sus campos con un `TENANT_ID` fin de evitar conflictos con otros recursos del sector y del proveedor. Encontrará ejemplos detallados de estructuras de datos adecuadas para las mezclas en el documento sobre la [creación de una sección de mezclas](api/create-mixin.md) en la guía para desarrolladores de [!DNL Schema Registry] API.
+Este mensaje de error se muestra cuando se intenta crear una nueva mezcla con campos con espacios de nombres incorrectos. Las mezclas definidas por la organización de IMS deben Área de nombres sus campos con un `TENANT_ID` fin de evitar conflictos con otros recursos del sector y del proveedor. En la guía [del punto final de las](./api/mixins.md#create)mezclas se pueden encontrar ejemplos detallados de estructuras de datos adecuadas para las mezclas.
 
 
 ### [!DNL Real-time Customer Profile] errores
