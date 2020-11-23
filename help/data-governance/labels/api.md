@@ -5,9 +5,9 @@ title: 'Administrar etiquetas de uso de datos mediante API '
 topic: developer guide
 description: La API de servicio de dataset permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogos, que administra los metadatos del conjunto de datos.
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Este documento proporciona pasos sobre cómo administrar las etiquetas de uso de datos mediante la [!DNL Policy Service] API y la [!DNL Dataset Service] API.
 
-La [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
+El [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) proporciona varios extremos que le permiten crear y administrar etiquetas de uso de datos para su organización.
 
 La [!DNL Dataset Service] API permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero está separado de la [!DNL Catalog Service] API que administra los metadatos del conjunto de datos.
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `labels` | Lista de las etiquetas de uso de datos que desea agregar al conjunto de datos. |
-| `optionalLabels` | Lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/look-up-resource.md"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: Lista de las etiquetas de uso de datos que desea agregar al campo. |
+| `optionalLabels` | Lista de cualquier campo individual dentro del conjunto de datos al que desee agregar etiquetas. Cada elemento de esta matriz debe tener las siguientes propiedades: <br/><br/>`option`:: Objeto que contiene los atributos [!DNL Experience Data Model] (XDM) del campo. Se requieren las tres propiedades siguientes:<ul><li>id</code>: El valor de URI $id</code> del esquema asociado al campo.</li><li>contentType</code>: Tipo de contenido y número de versión del esquema. Esto debe tomar la forma de uno de los encabezados <a href="../../xdm/api/getting-started.md#accept"></a> Accept válidos para una solicitud de búsqueda XDM.</li><li>schemaPath</code>: Ruta al campo dentro del esquema del conjunto de datos.</li></ul>`labels`:: Lista de las etiquetas de uso de datos que desea agregar al campo. |
 
 **Respuesta**
 
