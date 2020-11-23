@@ -1,0 +1,557 @@
+---
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+solution: Experience Platform
+title: Crear un esquema
+description: El extremo /esquemas de la API del Registro de Esquema le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+workflow-type: tm+mt
+source-wordcount: '1386'
+ht-degree: 2%
+
+---
+
+
+# Extremo de esquemas
+
+Un esquema se puede considerar como el modelo para los datos que desea ingerir en Adobe Experience Platform. Cada esquema está compuesto por una clase y cero o más mezclas. El `/schemas` punto final de la [!DNL Schema Registry] API le permite administrar esquemas mediante programación dentro de la aplicación de experiencia.
+
+## Primeros pasos
+
+El punto final de API utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la guía [de](./getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+
+## Recuperar una lista de esquemas {#list}
+
+Puede realizar la lista de todos los esquemas bajo el `global` contenedor o `tenant` haciendo una solicitud de GET a `/global/schemas` o `/tenant/schemas`, respectivamente.
+
+>[!NOTE]
+>
+>Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros de paginación. También se recomienda utilizar parámetros de consulta adicionales para filtrar los resultados y reducir el número de recursos devueltos. Consulte la sección sobre parámetros [de](./appendix.md#query) consulta en el documento del apéndice para obtener más información.
+
+**Formato API**
+
+```http
+GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{CONTAINER_ID}` | El contenedor que aloja los esquemas que desea recuperar: `global` para esquemas creados por Adobes o `tenant` para esquemas propiedad de su organización. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte el documento [del](./appendix.md#query) apéndice para ver una lista de los parámetros disponibles. |
+
+**Solicitud**
+
+La siguiente solicitud recupera una lista de esquemas del `tenant` contenedor, utilizando un parámetro de `orderby` consulta para ordenar los resultados por su `title` atributo.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas?orderby=title \
+  -H 'Accept: application/vnd.adobe.xed-id+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+El formato de respuesta depende del encabezado `Accept` enviado en la solicitud. Los siguientes `Accept` encabezados están disponibles para los esquemas de listado:
+
+| `Accept` header | Descripción |
+| --- | --- |
+| `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Éste es el encabezado recomendado para enumerar los recursos. (Límite: 300) |
+| `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
+
+**Respuesta**
+
+La solicitud anterior utilizó el `application/vnd.adobe.xed-id+json` encabezado, por lo tanto la respuesta incluye solamente los atributos `Accept` , `title`, `$id`y `meta:altId``version` para cada esquema. El uso del otro `Accept` encabezado (`application/vnd.adobe.xed+json`) devuelve todos los atributos de cada esquema. Seleccione el `Accept` encabezado correspondiente en función de la información que necesite en la respuesta.
+
+```json
+{
+  "results": [
+    {
+      "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/0238be93d3e7a06aec5e0655955901ec",
+      "meta:altId": "_{TENANT_ID}.schemas.0238be93d3e7a06aec5e0655955901ec",
+      "version": "1.4",
+      "title": "Hotels"
+    },
+    {
+      "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/0ef4ce0d390f0809fad490802f53d30b",
+      "meta:altId": "_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b",
+      "version": "1.0",
+      "title": "Loyalty Members"
+    }
+  ],
+  "_page": {
+        "orderby": "title",
+        "next": null,
+        "count": 2
+    },
+    "_links": {
+        "next": null,
+        "global_schemas": {
+            "href": "https://platform.adobe.io/data/foundation/schemaregistry/global/schemas"
+        }
+    }
+}
+```
+
+## Buscar un esquema {#lookup}
+
+Puede buscar un esquema específico realizando una solicitud de GET que incluya el ID del esquema en la ruta.
+
+**Formato API**
+
+```http
+GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{CONTAINER_ID}` | El contenedor que aloja el esquema que desea recuperar: `global` para un esquema creado por un Adobe o `tenant` para un esquema propiedad de su organización. |
+| `{SCHEMA_ID}` | Codificación `meta:altId` o URL `$id` del esquema que desea buscar. |
+
+**Solicitud**
+
+La siguiente solicitud recupera un esquema especificado por su `meta:altId` valor en la ruta.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.f579a0b5f992c69458ea408ec36571f7da9de15901bab116 \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+El formato de respuesta depende del encabezado `Accept` enviado en la solicitud. Todas las solicitudes de búsqueda requieren que `version` se incluyan en el `Accept` encabezado. The following `Accept` headers are available:
+
+| `Accept` header | Descripción |
+| ------- | ------------ |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin formato `$ref` y `allOf`, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, incluidos los descriptores. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del esquema. Los campos devueltos dependen del encabezado `Accept` enviado en la solicitud. Experimente con diferentes `Accept` encabezados para comparar las respuestas y determinar qué encabezado es el mejor para su caso de uso.
+
+```json
+{
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
+  "meta:altId": "_{TENANT_ID}.schemas.20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
+  "meta:resourceType": "schemas",
+  "version": "1.1",
+  "title": "Example schema",
+  "type": "object",
+  "description": "An example schema created within the tenant container.",
+  "allOf": [
+      {
+          "$ref": "https://ns.adobe.com/xdm/context/profile",
+          "type": "object",
+          "meta:xdmType": "object"
+      },
+      {
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "type": "object",
+          "meta:xdmType": "object"
+      }
+  ],
+  "imsOrg": "{IMS_ORG}",
+  "meta:extensible": false,
+  "meta:abstract": false,
+  "meta:extends": [
+      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/xdm/common/auditable",
+      "https://ns.adobe.com/xdm/data/record",
+      "https://ns.adobe.com/xdm/context/profile"
+  ],
+  "meta:xdmType": "object",
+  "meta:registryMetadata": {
+      "repo:createdDate": 1602872911226,
+      "repo:lastModifiedDate": 1603381419889,
+      "xdm:createdClientId": "{CLIENT_ID}",
+      "xdm:lastModifiedClientId": "{CLIENT_ID}",
+      "xdm:createdUserId": "{USER_ID}",
+      "xdm:lastModifiedUserId": "{USER_ID}",
+      "eTag": "84b4da79b7445a4bf1c59269e718065effddb983c492f48e223d49c049c6d589",
+      "meta:globalLibVersion": "1.15.4"
+  },
+  "meta:class": "https://ns.adobe.com/xdm/context/profile",
+  "meta:containerId": "tenant",
+  "meta:sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+  "meta:sandboxType": "production",
+  "meta:tenantNamespace": "_{TENANT_ID}"
+}
+```
+
+## Crear un esquema {#create}
+
+El proceso de composición de esquema comienza asignando una clase. La clase define los aspectos de comportamiento clave de los datos (registro o serie temporal), así como los campos mínimos requeridos para describir los datos que se van a ingestar.
+
+>[!NOTE]
+>
+>La llamada de ejemplo siguiente es sólo un ejemplo básico de cómo crear un esquema en la API, con los requisitos de composición mínimos de una clase y sin mezclas. Para ver los pasos completos sobre cómo crear un esquema en la API, incluido cómo asignar campos mediante mezclas y tipos de datos, consulte el tutorial [de creación de](../tutorials/create-schema-api.md)esquemas.
+
+**Formato API**
+
+```http
+POST /tenant/schemas
+```
+
+**Solicitud**
+
+La solicitud debe incluir un `allOf` atributo que haga referencia al `$id` de una clase. Este atributo define la &quot;clase base&quot; que implementará el esquema. En este ejemplo, la clase base es una clase &quot;Información de propiedad&quot; que se creó anteriormente.
+
+```SHELL
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Authorization: Bearer {ACCESS_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "title":"Property Information",
+        "description": "Property-related information.",
+        "type": "object",
+        "allOf": [ 
+          { 
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590" 
+          } 
+        ]
+      }'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `allOf` | Matriz de objetos, con cada objeto haciendo referencia a una clase o mezcla cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa el `$id` de la clase o la mezcla que se implementará en el nuevo esquema. Se debe proporcionar una clase, con cero o más mezclas adicionales. En el ejemplo anterior, el objeto único de la `allOf` matriz es la clase del esquema. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos el `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
+
+```JSON
+{
+    "title": "Property Information",
+    "description": "Property-related information.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
+        }
+    ],
+    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+    "meta:abstract": false,
+    "meta:extensible": false,
+    "meta:extends": [
+        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+        "https://ns.adobe.com/xdm/data/record"
+    ],
+    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
+    "meta:xdmType": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
+    "version": "1.0",
+    "meta:resourceType": "schemas",
+    "meta:registryMetadata": {
+        "repo:createDate": 1552088461236,
+        "repo:lastModifiedDate": 1552088461236,
+        "xdm:createdClientId": "{CREATED_CLIENT}",
+        "xdm:repositoryCreatedBy": "{CREATED_BY}"
+    }
+}
+```
+
+Realizar una solicitud de GET para [lista de todos los esquemas](#list) en el contenedor del inquilino ahora incluiría el nuevo esquema. Puede realizar una solicitud [de](#lookup) búsqueda (GET) utilizando el `$id` URI con codificación URL para realizar la vista del nuevo esquema directamente.
+
+Para agregar campos adicionales a un esquema, puede realizar una operación [de](#patch) PATCH para agregar mezclas a las matrices `allOf` y `meta:extends` matrices del esquema.
+
+## Actualizar un esquema {#put}
+
+Puede reemplazar un esquema completo a través de una operación de PUT, básicamente reescribiendo el recurso. Al actualizar un esquema a través de una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al [crear un nuevo esquema](#create) en una solicitud de POST.
+
+>[!NOTE]
+>
+>Si solo desea actualizar parte de un esquema en lugar de reemplazarlo por completo, consulte la sección sobre la [actualización de una parte de un esquema](#patch).
+
+**Formato API**
+
+```http
+PUT /tenant/schemas/{SCHEMA_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{SCHEMA_ID}` | Codificación `meta:altId` o URL `$id` del esquema que desea volver a escribir. |
+
+**Solicitud**
+
+La siguiente solicitud reemplaza un esquema existente, cambiando sus `title`atributos, `description`y `allOf` .
+
+```SHELL
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "title":"Commercial Property Information",
+        "description": "Information related to commercial properties.",
+        "type": "object",
+        "allOf": [ 
+          { 
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/01b7b1745e8ac4ed1e8784ec91b6afa7" 
+          } 
+        ]
+      }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del esquema actualizado.
+
+```JSON
+{
+    "title":"Commercial Property Information",
+    "description": "Information related to commercial properties.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/01b7b1745e8ac4ed1e8784ec91b6afa7"
+        }
+    ],
+    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/01b7b1745e8ac4ed1e8784ec91b6afa7",
+    "meta:abstract": false,
+    "meta:extensible": false,
+    "meta:extends": [
+        "https://ns.adobe.com/{TENANT_ID}/classes/01b7b1745e8ac4ed1e8784ec91b6afa7",
+        "https://ns.adobe.com/xdm/data/record"
+    ],
+    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
+    "meta:xdmType": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
+    "version": "1.0",
+    "meta:resourceType": "schemas",
+    "meta:registryMetadata": {
+        "repo:createDate": 1552088461236,
+        "repo:lastModifiedDate": 1552088470592,
+        "xdm:createdClientId": "{CREATED_CLIENT}",
+        "xdm:repositoryCreatedBy": "{CREATED_BY}"
+    }
+}
+```
+
+## Actualizar una parte de un esquema {#patch}
+
+Puede actualizar una parte de un esquema mediante una solicitud de PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones estándar de Parche JSON, incluidas `add`, `remove`y `replace`. Para obtener más información sobre JSON Patch, consulte la guía [de aspectos fundamentales de la API](../../landing/api-fundamentals.md#json-patch).
+
+>[!NOTE]
+>
+>Si desea reemplazar un recurso completo con nuevos valores en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar un esquema con una operación](#put)de PUT.
+
+Una de las operaciones de PATCH más comunes consiste en añadir mezclas previamente definidas a un esquema, como se muestra en el ejemplo siguiente.
+
+**Formato API**
+
+```http
+PATCH /tenant/schema/{SCHEMA_ID} 
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{SCHEMA_ID}` | El `$id` URI con codificación URL o `meta:altId` del esquema que desea actualizar. |
+
+**Solicitud**
+
+La solicitud de ejemplo siguiente agrega una nueva mezcla a un esquema agregando el valor de esa mezcla a las `$id` matrices `meta:extends` y `allOf` .
+
+El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), el campo en el que se debe realizar la operación (`path`) y la información que debe incluirse en dicha operación (`value`).
+
+```SHELL
+curl -X PATCH\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'content-type: application/json' \
+  -d '[
+        { 
+          "op": "add",
+          "path": "/meta:extends/-",
+          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        },
+        {
+          "op": "add",
+          "path": "/allOf/-",
+          "value":  {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          }
+        }
+      ]'
+```
+
+**Respuesta**
+
+La respuesta muestra que ambas operaciones se realizaron correctamente. La mezcla `$id` se ha agregado a la `meta:extends` matriz y ahora aparece una referencia (`$ref`) a la mezcla `$id` en la `allOf` matriz.
+
+```JSON
+{
+    "title": "Property Information",
+    "description": "Property-related information.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
+        },
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        }
+    ],
+    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+    "meta:abstract": false,
+    "meta:extensible": false,
+    "meta:extends": [
+        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+    ],
+    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
+    "meta:xdmType": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
+    "version": "1.1",
+    "meta:resourceType": "schemas",
+    "meta:registryMetadata": {
+        "repo:createDate": 1552088461236,
+        "repo:lastModifiedDate": 1552088649634,
+        "xdm:createdClientId": "{CREATED_CLIENT}",
+        "xdm:repositoryCreatedBy": "{CREATED_BY}"
+    }
+}
+```
+
+## Habilitar un esquema para utilizarlo en el Perfil del cliente en tiempo real {#union}
+
+Para que un esquema pueda participar en el Perfil [del cliente en tiempo](../../profile/home.md)real, debe agregar una `union` etiqueta a la matriz del esquema `meta:immutableTags` . Esto se puede lograr haciendo una solicitud de PATCH para el esquema en cuestión.
+
+>[!IMPORTANT]
+>
+>Las etiquetas inmutables son etiquetas que se pretenden definir, pero que nunca se eliminan.
+
+**Formato API**
+
+```http
+PATCH /tenant/schema/{SCHEMA_ID} 
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{SCHEMA_ID}` | El `$id` URI con codificación URL o `meta:altId` del esquema que desea habilitar. |
+
+**Solicitud**
+
+La solicitud de ejemplo siguiente agrega una `meta:immutableTags` matriz a un esquema existente, dando a la matriz un valor de cadena único de `union` para habilitarla para su uso en Perfil.
+
+```SHELL
+curl -X PATCH\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'content-type: application/json' \
+  -d '[
+        {
+          "op": "add",
+          "path": "/meta:immutableTags",
+          "value": ["union"]
+        }
+      ]'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del esquema actualizado, mostrando que se ha agregado la `meta:immutableTags` matriz.
+
+```JSON
+{
+    "title": "Property Information",
+    "description": "Property-related information.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
+        },
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        }
+    ],
+    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+    "meta:abstract": false,
+    "meta:extensible": false,
+    "meta:extends": [
+        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+    ],
+    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
+    "meta:xdmType": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
+    "version": "1.1",
+    "meta:resourceType": "schemas",
+    "meta:registryMetadata": {
+        "repo:createDate": 1552088461236,
+        "repo:lastModifiedDate": 1552088649634,
+        "xdm:createdClientId": "{CREATED_CLIENT}",
+        "xdm:repositoryCreatedBy": "{CREATED_BY}"
+    },
+    "meta:immutableTags": [
+      "union"
+    ]
+}
+```
+
+Ahora puede realizar una vista de la unión de esta clase de esquema para confirmar que los campos del esquema están representados. See the [unions endpoint guide](./unions.md) for more information.
+
+## Eliminar un esquema {#delete}
+
+En ocasiones puede ser necesario retirar un esquema del Registro de Esquemas. Esto se realiza realizando una solicitud de DELETE con el ID de esquema proporcionado en la ruta.
+
+**Formato API**
+
+```http
+DELETE /tenant/schemas/{SCHEMA_ID}
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `{SCHEMA_ID}` | El `$id` URI con codificación URL o `meta:altId` del esquema que desea eliminar. |
+
+**Solicitud**
+
+```shell
+curl -X DELETE \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
+
+Puede confirmar la eliminación mediante una solicitud de búsqueda (GET) al esquema. Deberá incluir un `Accept` encabezado en la solicitud, pero recibirá un estado HTTP 404 (No encontrado) porque el esquema se ha eliminado del Registro de Esquemas.
