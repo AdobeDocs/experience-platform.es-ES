@@ -5,7 +5,7 @@ title: Restricciones de tipo de campo XDM
 topic: overview
 description: Referencia para restricciones de tipo de campo XDM, incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 6%
@@ -40,7 +40,7 @@ La tabla siguiente describe la asignación entre cada tipo (`meta:xdmType`) XDM 
 | date-time | type:<br>stringformat:date-time<br>(RFC 3339, sección 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Cadena | timestamp | Entero<br>(milis unix) | int64<br>(milisegundos unix) |
 | map | object | El grupo<br><br>anotado MAP&lt;<span>key_type</span>> DEBE ser STRING<br><br>&lt;<span>value_type</span>> tipo de valores de mapa | MapType<br><br>&quot;keyType&quot; DEBE ser StringType<br><br>&quot;valueType&quot; es el tipo de valores de asignación. | java.util.Map | Mapa | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
-## Definición de tipos de campo XDM en la API
+## Definición de tipos de campo XDM en la API {#define-fields}
 
 Los esquemas XDM se definen utilizando estándares de Esquema [](https://json-schema.org/) JSON y tipos de campo básicos, con restricciones adicionales para los nombres de campo que son impuestas por [!DNL Experience Platform]. La API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) Esquema permite definir tipos de campo adicionales mediante el uso de formatos y restricciones opcionales. Los tipos de campo XDM están expuestos por el atributo de nivel de campo, `meta:xdmType`.
 
@@ -50,7 +50,7 @@ Los esquemas XDM se definen utilizando estándares de Esquema [](https://json-sc
 
 En la tabla siguiente se describe el formato adecuado para definir tipos de campos escalares y tipos de campos más específicos mediante propiedades opcionales. Puede obtener más información sobre las propiedades opcionales y las palabras clave específicas del tipo a través de la documentación [del Esquema](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
 
-Para empezar, busque el tipo de campo deseado y utilice el código de muestra proporcionado para generar la solicitud de API para [crear una mezcla](../api/create-mixin.md) o [crear un tipo](../api/create-data-type.md)de datos.
+Para empezar, busque el tipo de campo deseado y utilice el código de muestra proporcionado para generar la solicitud de API para [crear una mezcla](../api/mixins.md#create) o [crear un tipo](../api/data-types.md#create)de datos.
 
 <table>
   <tr>
