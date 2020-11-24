@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 1%
+source-wordcount: '1583'
+ht-degree: 2%
 
 ---
 
 
 # Recopilación de datos de almacenamiento en la nube mediante las API y los conectores de origen
-
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial trata los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma a través de los conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -62,13 +60,17 @@ Para crear una conexión de origen, también debe definir un valor de enumeraci�
 
 Utilice los siguientes valores de enumeración para los conectores basados en archivos:
 
-| Data.format | Valor de enumeración |
+| Formato de datos | Valor de enumeración |
 | ----------- | ---------- |
-| Archivos delimitados | `delimited` |
-| Archivos JSON | `json` |
-| Archivos de parquet | `parquet` |
+| Delimitado | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-Para todos los conectores basados en tablas, utilice el valor enum: `tabular`.
+Para todos los conectores basados en tablas, establezca el valor en `tabular`.
+
+>[!NOTE]
+>
+>Puede ingestar archivos CSV y TSV con un conector de origen de almacenamiento de nube especificando un delimitador de columna como propiedad. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, se `(,)` utiliza una coma como valor predeterminado.
 
 **Formato API**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `baseConnectionId` | ID de conexión única del sistema de almacenamiento en la nube de terceros al que está accediendo. |
+| `connectionId` | ID de conexión única del sistema de almacenamiento en la nube de terceros al que está accediendo. |
+| `data.format` | Un valor enum que define el atributo de formato de datos. |
+| `data.columnDelimiter` | Puede utilizar cualquier delimitador de columna de un solo carácter para recopilar archivos planos. Esta propiedad solo es necesaria al ingerir archivos CSV o TSV. |
 | `params.path` | Ruta del archivo de origen al que está accediendo. |
 | `connectionSpec.id` | El ID de especificación de conexión asociado a su sistema de almacenamiento en la nube de terceros específico. Consulte el [apéndice](#appendix) para obtener una lista de los ID de especificaciones de conexión. |
 
@@ -126,8 +131,6 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 Para que los datos de origen se utilicen en [!DNL Platform], se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen.
 
 Se puede crear un esquema XDM de destinatario realizando una solicitud de POST a la API [del Registro de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Esquema.
-
-Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](../../../../xdm/tutorials/create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el Editor de Esquemas.
 
 **Formato API**
 
@@ -279,9 +282,9 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ## Creación de una conexión de destinatario {#target-connection}
 
-Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar la ID de especificación de conexión fija asociada al Data Lake. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Con estos identificadores, puede crear una conexión de destinatario utilizando la [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen de entrada.
+Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión al Data Lake. Con estos identificadores, puede crear una conexión de destinatario utilizando la [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen de entrada.
 
 **Formato API**
 
@@ -403,8 +406,8 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
