@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Eliminación de una conexión mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial trata los pasos para eliminar una conexión mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Este tutorial también requiere que tenga conocimientos prácticos sobre los sig
 * [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
 * [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para actualizar correctamente la información de la conexión mediante la API [!DNL Flow Service] .
+Las secciones siguientes proporcionan información adicional que deberá conocer para eliminar correctamente una conexión mediante la [!DNL Flow Service] API.
 
 ### Leer llamadas de API de muestra
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor único `id` de la conexión que desea actualizar. |
+| `{CONNECTION_ID}` | El valor único `id` de la conexión que desea eliminar. |
 
 **Solicitud**
 
