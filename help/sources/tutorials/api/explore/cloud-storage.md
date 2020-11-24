@@ -5,9 +5,9 @@ title: Explorar un sistema de almacenamiento en la nube mediante la API de servi
 topic: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '745'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,7 @@ ht-degree: 2%
 
 # Explorar un sistema de almacenamiento en la nube mediante la [!DNL Flow Service] API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
-
-Este tutorial utiliza la [!DNL Flow Service] API para explorar un sistema de almacenamiento en la nube de terceros.
+Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para explorar un sistema de almacenamiento en la nube de terceros.
 
 ## Primeros pasos
 
@@ -28,14 +26,16 @@ Esta guía requiere un conocimiento práctico de los siguientes componentes de A
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de almacenamiento en la nube mediante la [!DNL Flow Service] API.
 
-### Obtención de una conexión base
+### Obtención de un ID de conexión
 
-Para explorar un almacenamiento de nube de terceros mediante [!DNL Platform] API, debe tener un ID de conexión base válido. Si todavía no tiene una conexión base para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
+Para explorar un almacenamiento de nube de terceros mediante [!DNL Platform] API, debe disponer de un ID de conexión válido. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Almacenamiento Gen2](../create/cloud-storage/adls-gen2.md)
+* [Almacenamiento de archivos de Azure](../create/cloud-storage/azure-file-storage.md)
 * [Tienda de Google Cloud](../create/cloud-storage/google.md)
+* [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
 ### Leer llamadas de API de muestra
@@ -46,21 +46,21 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Explore su almacenamiento de nube
 
-Con la conexión base para el almacenamiento de nube, puede explorar archivos y directorios realizando solicitudes de GET. Al realizar solicitudes de GET para explorar el almacenamiento de nube, debe incluir los parámetros de consulta que se enumeran en la tabla siguiente:
+Con el ID de conexión del almacenamiento de nube, puede explorar archivos y directorios realizando solicitudes de GET. Al realizar solicitudes de GET para explorar el almacenamiento de nube, debe incluir los parámetros de consulta que se enumeran en la tabla siguiente:
 
 | Parámetro | Descripción |
 | --------- | ----------- |
@@ -72,20 +72,20 @@ Utilice la siguiente llamada para encontrar la ruta del archivo en el que desea 
 **Formato API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{CONNECTION_ID}/explore?objectType=root
+GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de una conexión base de almacenamiento de nube. |
+| `{CONNECTION_ID}` | ID de conexión del conector de origen del almacenamiento de nube. |
 | `{PATH}` | Ruta de un directorio. |
 
 **Solicitud**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -113,25 +113,30 @@ Una respuesta correcta devuelve una matriz de archivos y carpetas que se encuent
 
 ## Inspect: la estructura de un archivo
 
-Para inspeccionar la estructura del archivo de datos desde el almacenamiento de la nube, realice una solicitud de GET mientras proporciona la ruta del archivo como parámetro de consulta.
+Para inspeccionar la estructura del archivo de datos desde el almacenamiento de la nube, realice una solicitud de GET mientras proporciona la ruta del archivo y escriba como parámetro de consulta.
+
+Puede inspeccionar la estructura de un archivo CSV o TSV especificando un delimitador personalizado como perímetro de consulta. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, se `(,)` utiliza una coma como valor predeterminado.
 
 **Formato API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
 ```
 
 | Parámetro | Descripción |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de una conexión base de almacenamiento de nube. |
-| `{FILE_PATH}` | Ruta a un archivo. |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | ID de conexión del conector de origen del almacenamiento de nube. |
+| `{FILE_PATH}` | Ruta al archivo que desea inspeccionar. |
 | `{FILE_TYPE}` | Tipo del archivo. Los tipos de archivo admitidos son:<ul><li>DELIMITADO</code>: Valor separado por delimitador. Los archivos DSV deben estar separados por comas.</li><li>JSON</code>: Notación de objetos JavaScript. Los archivos JSON deben ser compatibles con XDM</li><li>PARQUET</code>: Apache Parquet. Los archivos de parquet deben ser compatibles con XDM.</li></ul> |
+| `columnDelimiter` | El valor de un solo carácter especificado como delimitador de columna para inspeccionar archivos CSV o TSV. Si no se proporciona el parámetro, el valor predeterminado es una coma `(,)`. |
 
 **Solicitud**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
