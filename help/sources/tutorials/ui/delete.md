@@ -6,7 +6,7 @@ title: Eliminar flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -66,4 +66,4 @@ Después de unos momentos, aparece un cuadro de confirmación verde en la parte 
 
 Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL Fuentes]** para eliminar flujos de datos existentes.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la [!DNL Flow Service] API, consulte el tutorial sobre la [eliminación de conexiones mediante la API de servicio de flujo](../../tutorials/api/delete.md)
+Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la [!DNL Flow Service] API, consulte el tutorial sobre la [eliminación de flujos de datos mediante la API de servicio de flujo](../../tutorials/api/delete-dataflows.md)
