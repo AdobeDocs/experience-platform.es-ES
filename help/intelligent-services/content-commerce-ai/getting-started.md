@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: Introducción a Content and Commerce AI]
+title: Introducción a Content and Commerce AI
 topic: Getting started
 description: Content and Commerce AI utiliza las API de E/S de Adobe. Para realizar llamadas a las API de E/S de Adobe y a la integración de la consola de E/S, primero debe completar el tutorial de autenticación.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# Introducción a Content and Commerce AI
 
 >[!NOTE]
 >
@@ -75,4 +75,4 @@ Una vez que tenga todas las credenciales, estará listo para configurar un progr
 
 Para obtener más información sobre el inicio de extensibilidad, lea la [introducción al documento de extensibilidad](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . Este documento describe los requisitos previos y los requisitos de aprovisionamiento.
 
-Para obtener más información sobre la configuración de un entorno para [!DNL Content and Commerce AI], lea la guía para [configurar un entorno](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)para desarrolladores. Este documento proporciona instrucciones de configuración que le permiten desarrollar el servicio de cómputo de recursos.
+Para obtener más información sobre la configuración de un entorno para [!DNL Content and Commerce AI], lea la guía para [configurar un entorno](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)para desarrolladores. Este documento proporciona instrucciones de configuración que le permiten desarrollar el servicio de Asset compute.
