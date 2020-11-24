@@ -5,10 +5,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 3%
+source-wordcount: '663'
+ht-degree: 4%
 
 ---
 
@@ -138,10 +138,11 @@ ht-degree: 3%
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
       - [Recopilación de datos de flujo continuo](tutorials/api/collect/streaming.md)
    - [Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
-   - [Creación de una conexión de base de datos mediante la API de servicio de flujo](tutorials/api/create-dataset-base-connection.md)
-   - [Monitorear flujos de datos mediante la API de servicio de flujo](tutorials/api/monitor.md)
-   - [Actualización de la información de conexión mediante la API de servicio de flujo](tutorials/api/update.md)
-   - [Eliminación de conexiones mediante la API de servicio de flujo](tutorials/api/delete.md)
+   - [Creación de una conexión de conjunto de datos](tutorials/api/create-dataset-base-connection.md)
+   - [Monitoreo de flujos de datos](tutorials/api/monitor.md)
+   - [Actualizar conexiones](tutorials/api/update.md)
+   - [Eliminar conexiones](tutorials/api/delete.md)
+   - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
 - Tutoriales de la interfaz de usuario {#ui-tutorials}
    - Creación de un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
