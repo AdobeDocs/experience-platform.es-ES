@@ -6,9 +6,9 @@ type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ En el paso **[!UICONTROL Autenticación]** , si ya ha configurado una conexión 
 - Para **SFTP con conexiones de contraseña** , debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
 - Para **SFTP con conexiones SSH Key** , debe proporcionar Dominio, Puerto, Nombre de usuario y Clave SSH para el servidor SFTP.
 
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar encriptación a sus archivos exportados en la sección **[!UICONTROL Clave]** . Tenga en cuenta que esta clave pública **debe** escribirse como una cadena con codificación Base64.
+Opcionalmente, en la sección **[!UICONTROL Cifrado de PGP/GPG]** , puede adjuntar su clave pública con formato RSA para agregar encriptación con PGP/GPG a sus archivos exportados en la sección **[!UICONTROL Clave]** . Tenga en cuenta que esta clave pública **debe** escribirse como una cadena con codificación Base64.
 
 En el paso **[!UICONTROL Configuración]** , introduzca un nombre y una descripción para el nuevo destino, así como el formato de archivo para los archivos exportados.
 
