@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ En la página de programación **[!UICONTROL de]** segmentos, puede establecer l
 >Para los destinos sociales, debe seleccionar el origen de la audiencia en este paso. Sólo puede continuar con el paso siguiente después de seleccionar una de las opciones de la siguiente imagen.
 
 ![elegir origen de datos](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Paso de programación]** {#scheduling}
-
-Se aplica a: destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
-
-![paso de programación de segmentos](./assets/scheduling-icon.png)
-
-En la página **[!UICONTROL Programación]** , puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia de envío de datos al destino. Estos valores no se pueden editar.
 
 ### **[!UICONTROL Paso Seleccionar atributos]** {#select-attributes}
 
