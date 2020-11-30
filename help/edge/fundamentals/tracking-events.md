@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo rastrear los eventos del SDK web E
 seo-description: Obtenga información sobre cómo rastrear los eventos del SDK web Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Puede pasar algún tiempo entre la ejecución del `sendEvent` comando y el envío de los datos al servidor (por ejemplo, si la biblioteca del SDK web no se ha cargado completamente o aún no se ha recibido el consentimiento). Si desea modificar cualquier parte del `xdm` objeto después de ejecutar el comando `sendEvent` , se recomienda clonar el `xdm` objeto _antes_ de ejecutar el `sendEvent` comando. Por ejemplo:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+En este ejemplo, la capa de datos se clona serializándola en JSON y, a continuación, deserializándola. A continuación, el resultado clonado se pasa al `sendEvent` comando. De este modo, se garantiza que el `sendEvent` comando tenga una instantánea de la capa de datos tal como existía cuando se ejecutó el `sendEvent` comando, de modo que las modificaciones posteriores del objeto de la capa de datos original no se reflejen en los datos enviados al servidor. Si utiliza una capa de datos basada en evento, es probable que la clonación de datos ya se gestione automáticamente. Por ejemplo, si utiliza la capa [de datos del cliente de](https://github.com/adobe/adobe-client-data-layer/wiki)Adobe, el `getState()` método proporciona una instantánea calculada y clonada de todos los cambios anteriores. Esto también se gestiona automáticamente si utiliza la extensión AEP Web SDK Launch.
 
 >[!NOTE]
 >
