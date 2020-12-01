@@ -5,9 +5,9 @@ title: Servicio de ID de Adobe Experience Platform
 topic: tutorial
 description: Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -98,6 +98,7 @@ El visor de gráficos devuelve un error si no se cumplen los siguientes requisit
 - El valor de identidad no existe en la Área de nombres seleccionada.
 - El gráfico tiene menos de dos identidades.
 - El gráfico supera el máximo de 400 identidades.
+- Está en un entorno de simulación de pruebas que no es de producción.
 
 ![clúster grande](../images/identity-graph-viewer/error-screen.png)
 
