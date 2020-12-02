@@ -5,10 +5,10 @@ title: Conector del Audience Manager
 topic: overview
 description: El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a la plataforma.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 1%
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a la plataforma:
 
 - **Datos en tiempo real:** Datos capturados en tiempo real en el servidor de recopilación de datos de Audience Manager. Estos datos se utilizan en Audience Manager para rellenar características basadas en reglas y aparecerán en la plataforma en el tiempo de latencia más corto.
-- **Datos de perfil:** Audience Manager utiliza datos en tiempo real y datos incorporados para derivar perfiles de clientes. Estos perfiles se utilizan para rellenar los gráficos de identidad y las características en la realización de segmentos.
+- **Datos de perfil:** Audience Manager utiliza datos en tiempo real y datos incorporados para obtener perfiles de clientes. Estos perfiles se utilizan para rellenar los gráficos de identidad y las características en la realización de segmentos.
 
 El conector del Audience Manager asigna estas categorías de datos al esquema del modelo de datos de experiencia (XDM) y las envía a la plataforma. Los datos en tiempo real se envían como datos de ExperienceEvent XDM, mientras que los datos de Perfil se envían como Perfiles individuales XDM.
 
@@ -36,7 +36,7 @@ Para obtener más información sobre cómo se utiliza XDM en Experience Platform
 
 A continuación se muestran ejemplos de la estructura de Audience Manager asignada a XDM ExperienceEvent y a XDM Individual Perfil en la plataforma.
 
-### ExperienceEvent: para datos en tiempo real y datos integrados
+### ExperienceEvent: para datos en tiempo real y datos incorporados
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
@@ -58,12 +58,12 @@ Los conjuntos de datos de Audience Manager están deshabilitados para el Perfil 
 
 | Nombre del conjunto de datos | Descripción |
 | ------------ | ----------- |
-| Tiempo real del Audience Manager | Este conjunto de datos contiene datos recopilados por visitas directas en los extremos de DCS Audience Manager y mapas de identidad para Perfiles Audience Manager. Mantenga este conjunto de datos habilitado para la ingestión de Perfiles. |
-| Actualizaciones de Perfil en tiempo real de Audience Manager | Este conjunto de datos permite la segmentación en tiempo real de características y segmentos de Audience Manager. Incluye información sobre el enrutamiento regional, la característica y la pertenencia a segmentos de Edge. Mantenga este conjunto de datos habilitado para la ingestión de Perfiles. |
-| Datos de dispositivos Audience Manager | Datos del dispositivo con ECID y realizaciones de segmentos correspondientes agregadas en Audience Manager. |
-| Datos de Perfil del dispositivo Audience Manager | Se utiliza para diagnósticos de conector de Audience Manager. |
-| perfiles autenticados por Audience Manager | Este conjunto de datos contiene perfiles autenticados por el Audience Manager. |
-| Metadatos de Perfiles autenticados por Audience Manager | Se utiliza para diagnósticos del conector de Audience Manager. |
+| Audience Manager en tiempo real | Este conjunto de datos contiene datos recopilados por visitas directas en los extremos de DCS Audience Manager y mapas de identidad para Perfiles Audience Manager. Mantenga este conjunto de datos habilitado para la ingestión de Perfiles. |
+| Actualizaciones de Perfiles en tiempo real de Audience Manager | Este conjunto de datos permite la segmentación en tiempo real de características y segmentos de Audience Manager. Incluye información sobre el enrutamiento regional, la característica y la pertenencia a segmentos de Edge. Mantenga este conjunto de datos habilitado para la ingestión de Perfiles. Los datos no están visibles como lotes en el conjunto de datos. Puede activar la opción de alternancia de Perfil para transferir directamente los datos al Perfil. |
+| Datos de dispositivos Audience Manager | Datos del dispositivo con ECID y realizaciones de segmentos correspondientes agregadas en Audience Manager. Los datos no están visibles como lotes en el conjunto de datos. Puede activar la opción de alternancia de Perfil para transferir directamente los datos al Perfil. |
+| Datos de Perfil del dispositivo Audience Manager | Se utiliza para diagnósticos de conector de Audience Manager. Los datos no están visibles como lotes en el conjunto de datos. Puede activar la opción de alternancia de Perfil para transferir directamente los datos al Perfil. |
+| perfiles autenticados por Audience Manager | Este conjunto de datos contiene perfiles autenticados por el Audience Manager. Los datos no están visibles como lotes en el conjunto de datos. Puede activar la opción de alternancia de Perfil para transferir directamente los datos al Perfil. |
+| Metadatos de Perfiles autenticados por Audience Manager | Se utiliza para diagnósticos del conector de Audience Manager. Los datos no están visibles como lotes en el conjunto de datos. Puede activar la opción de alternancia de Perfil para transferir directamente los datos al Perfil. |
 
 ### Conexiones
 
@@ -73,6 +73,5 @@ Adobe Audience Manager crea una conexión en el catálogo: Conexión de Audience
 
 | Datos del Audience Manager | Latencia | Notas |
 | --- | --- | --- |
-| Datos en tiempo real | &lt; 35 minutos. | Tiempo desde que se captura en el nodo Tiempo real hasta que aparece en el Lago de datos de plataforma. |
-| Datos de entrada | &lt; 13 horas | Tiempo desde que se captura en los bloques S3 hasta que aparece en el lago de datos de plataforma. |
-| Datos de perfil | &lt; 2 días | Tiempo desde la captura de datos en tiempo real/entrantes hasta la adición a un perfil de usuario y la aparición definitiva en Platform Data Lake. |
+| Datos en tiempo real | &lt; 35 minutos. | Tiempo que transcurre desde la captura en el nodo Audience Manager Edge hasta la aparición en Platform Data Lake. |
+| Datos de perfil | &lt; 2 días | Tiempo que transcurre desde la captura a través de datos perimetrales DCS/PCS y datos incorporados, hasta su procesamiento en un perfil del usuario y su posterior aparición en Perfil. Estos datos no aterrizan directamente en Platform Data Lake hoy. La alternancia de perfiles se puede habilitar en conjuntos de datos de Perfiles de Audience Manager para ingerir estos datos directamente en Perfil. |
