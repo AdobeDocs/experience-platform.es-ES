@@ -5,9 +5,9 @@ title: Conectar a destinos de flujo continuo y activar datos
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '2012'
 ht-degree: 2%
 
 ---
@@ -265,7 +265,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations)disponibles.
 * `{AUTHENTICATION_CREDENTIALS}`:: rellene el nombre del destino de flujo continuo: `Aws Kinesis authentication credentials` o `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`:: *Para [!DNL Amazon Kinesis] conexiones.* Su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
 * `{SECRET_KEY}`:: *Para [!DNL Amazon Kinesis] conexiones.* La clave secreta de la ubicación del almacenamiento de Amazon Kinesis.
@@ -592,6 +592,31 @@ La respuesta devuelta debe incluir en el `transformations` parámetro los segmen
   }
 }
 ```
+
+## Uso de colecciones Postman para conectarse a destinos de flujo continuo  {#collections}
+
+Para conectarse a los destinos de flujo descritos en este tutorial de forma más sencilla, puede utilizar [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] es una herramienta que puede utilizar para realizar llamadas a API y administrar bibliotecas de llamadas y entornos predefinidos.
+
+Para este tutorial específico, hemos incluido las siguientes [!DNL Postman] colecciones, adjuntas a este artículo:
+
+* [!DNL AWS Kinesis] [!DNL Postman] colección
+* [!DNL Azure Event Hubs] [!DNL Postman] colección
+
+Haga clic [aquí](assets/DestinationPostmanCollection.zip) para descargar el archivo de colecciones.
+
+Cada colección incluye las solicitudes y variables de entorno necesarias, para [!DNL AWS Kinesis]y [!DNL Azure Event Hub], respectivamente.
+
+### Cómo utilizar las colecciones Postman
+
+Para conectarse correctamente a los destinos mediante las [!DNL Postman] colecciones adjuntas, siga estos pasos:
+
+* Download and install [!DNL Postman];
+* [Descargue](assets/DestinationPostmanCollection.zip) y descomprima las colecciones adjuntas;
+* Importe las colecciones de sus carpetas correspondientes en Postman;
+* Rellene las variables de entorno según las instrucciones de este artículo;
+* Ejecute las [!DNL API] solicitudes de Postman, según las instrucciones de este artículo.
 
 ## Pasos siguientes
 
