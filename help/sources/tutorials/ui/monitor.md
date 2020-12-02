@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para ver las cuentas y flujos de datos existentes desde el espacio de trabajo Fuentes.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para ver flujos de datos existentes desde el espacio de trabajo Fuentes.
 solution: Experience Platform
-title: Supervisión de cuentas y flujos de datos
+title: Monitoreo de flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
 
 
-# Supervisión de cuentas y flujos de datos en la interfaz de usuario
+# Monitorear flujos de datos en la interfaz de usuario
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para ver las cuentas y flujos de datos existentes desde el espacio de trabajo [!UICONTROL Fuentes] .
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para ver flujos de datos existentes desde el espacio de trabajo [!UICONTROL Fuentes] .
 
 ## Primeros pasos
 
@@ -27,53 +27,9 @@ Este tutorial requiere un conocimiento práctico de los siguientes componentes d
    - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-## Supervisión de cuentas
-
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes para los que puede crear cuentas y flujos de datos. Cada origen muestra el número de cuentas existentes y flujos de datos asociados a ellas.
-
-Seleccione **[!UICONTROL Cuentas]** del encabezado superior para vista de cuentas existentes.
-
-![catálogo](../../images/tutorials/monitor/catalog-accounts.png)
-
-Se abre la página **[!UICONTROL Cuentas]** . En esta página hay una lista de cuentas visualizables, que incluye información sobre su origen, nombre de usuario, número de flujos de datos y fecha de creación.
-
-Seleccione el icono del canal en la parte superior izquierda para iniciar la ventana de ordenación.
-
-![cuentas](../../images/tutorials/monitor/accounts-list.png)
-
-El panel de ordenación permite acceder a las cuentas desde un origen específico. Seleccione el origen con el que desea trabajar y seleccione la cuenta en la lista de la derecha.
-
->[!TIP]
->
-> Utilice el botón de control ![del](../../images/tutorials/monitor/spectrum-control.png) espectro en la columna **[!UICONTROL Nombre]** para crear un nuevo flujo de datos de origen para la cuenta seleccionada.
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-Además, puede editar la información de cuenta existente y actualizar las credenciales de la cuenta. Seleccione el icono de lápiz para la información de cuenta que desee editar.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-Aparece el modo **[!UICONTROL Editar detalles]** de la cuenta. Desde esta página, puede actualizar los detalles de cuenta y las credenciales de autenticación existentes.
-
->[!NOTE]
->
-> La edición de los detalles de la cuenta está disponible en todos los conectores de origen por lotes.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Desde la página **[!UICONTROL Cuentas]** , puede realizar la vista de una lista de flujos de datos existentes o conjuntos de datos de destinatario asociados a la cuenta a la que accedió. Seleccione el botón de elipses (`...`) para que aparezcan más opciones disponibles para el flujo de datos seleccionado. Estas opciones se describen a continuación:
-
-| Control | Descripción |
-| ------- | ----------- |
-| [!UICONTROL Editar programación] | Permite editar el programa de ingestión del flujo de datos. |
-| [!UICONTROL Deshabilitar flujo de datos] | Permite desactivar la ingestión de datos para el flujo de datos seleccionado. |
-| [!UICONTROL Eliminar] | Permite eliminar el flujo de datos seleccionado. |
-
-![flujos de datos](../../images/tutorials/monitor/dataflows.png)
-
 ## Monitoreo de flujos de datos
 
-Se puede acceder a los flujos de datos directamente desde la página **[!UICONTROL Catálogo]** sin ver **[!UICONTROL las cuentas]**. Seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior para vista de una lista de flujos de datos.
+Inicie sesión en la interfaz de usuario [del](https://platform.adobe.com) Experience Platform y, a continuación, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al espacio de trabajo [!UICONTROL Fuentes] . Seleccione **[!UICONTROL Flujos]** de datos del encabezado superior para vista de flujos de datos existentes.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
