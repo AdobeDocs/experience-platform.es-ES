@@ -1,13 +1,13 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 10 de agosto de 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 7%
 
 ---
@@ -46,14 +46,14 @@ Hay nuevos destinos disponibles donde puede activar los datos de Adobe Experienc
 
 | Destino | Descripción |
 |--- | ---|
-| [!DNL Google Customer Match] | La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como: [!DNL Search], [!DNL Shopping], Gmail y YouTube. <br><br> Visite la [!DNL Google Customer Match] página [](/help/rtcdp/destinations/google-customer-match-destination.md) del catálogo de destinos para obtener más información sobre el destino y cómo configurarlo en Adobe Real-time CDP. |
+| [!DNL Google Customer Match] | La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como: [!DNL Search], [!DNL Shopping], Gmail y YouTube. <br><br> Visite la [!DNL Google Customer Match] página [](../../destinations/catalog/advertising/google-customer-match.md) del catálogo de destinos para obtener más información sobre el destino y cómo configurarlo en CDP en tiempo real. |
 
 **Nuevas funciones**
 
 | Función | Descripción |
 |------- | -----------|
-| Editor de nombres de archivo personalizado | Actualice el flujo de trabajo de activación de datos para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube que le permiten editar el nombre de los archivos exportados. Para obtener más información, consulte el paso [](/help/rtcdp/destinations/activate-destinations.md#configure) Configurar del flujo de trabajo de activación. |
-| Atributos recomendados | Actualice el flujo de trabajo de activación de datos para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube que muestran los atributos recomendados para agregarlos a los archivos exportados. Para obtener más información, consulte el paso [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Seleccionar atributos en el flujo de trabajo de activación. |
+| Editor de nombres de archivo personalizado | Actualice el flujo de trabajo de activación de datos para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube que le permiten editar el nombre de los archivos exportados. Para obtener más información, consulte el paso [](../../destinations/ui/activate-destinations.md#configure) Configurar del flujo de trabajo de activación. |
+| Atributos recomendados | Actualice el flujo de trabajo de activación de datos para los destinos de marketing por correo electrónico y los destinos de almacenamiento en la nube que muestran los atributos recomendados para agregarlos a los archivos exportados. Para obtener más información, consulte el paso [](../../destinations/ui/activate-destinations.md#select-attributes) Seleccionar atributos en el flujo de trabajo de activación. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
