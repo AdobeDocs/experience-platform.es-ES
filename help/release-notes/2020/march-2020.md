@@ -1,14 +1,14 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 11 de marzo de 2020
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Adobe Experience Platform [!DNL Data Governance] es una serie de estrategias y t
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre [!DNL Data Governance], consulte la información general [sobre el Gobierno](../../data-governance/home.md)de datos.
 
@@ -62,7 +62,7 @@ Adobe Experience Platform proporciona un completo conjunto de funciones para ing
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre la ingesta de datos en la plataforma, visite la documentación [de la ingestión de](../../ingestion/home.md)datos.
 
@@ -77,10 +77,10 @@ Hay nuevos destinos disponibles donde puede activar los datos de Adobe Experienc
 
 | Destino | Descripción |
 |--- | ---|
-| Destinos de almacenamiento de nube | Ahora, CDP en tiempo real de Adobe puede entregar sus segmentos como archivos de datos en sus ubicaciones de almacenamiento en la nube [!DNL Amazon S3] o SFTP. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores. |
-| Destinos publicitarios | La tarjeta de destino ahora se divide en tres tarjetas de destino para las tres diferentes [!DNL Google] [!DNL Google] plataformas admitidas actualmente en Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Destinos de almacenamiento de nube | CDP en tiempo real ahora puede entregar sus segmentos como archivos de datos en sus ubicaciones de almacenamiento en la nube [!DNL Amazon S3] o SFTP. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos, a través de archivos CSV o delimitados por tabuladores. |
+| Destinos publicitarios | La tarjeta de destino ahora se divide en tres tarjetas de destino para las tres diferentes [!DNL Google] [!DNL Google] plataformas admitidas actualmente en CDP en tiempo real: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-Para obtener más información, visite la descripción general de [destinos](../../rtcdp/destinations/destinations-overview.md)
+Para obtener más información, visite la descripción general de [destinos](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor v
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre [!DNL Identity Service], consulte la información general [del servicio](../../identity-service/home.md)de identidad.
 
@@ -119,6 +119,6 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
