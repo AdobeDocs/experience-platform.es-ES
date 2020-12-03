@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario de Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La sección **[!UICONTROL Perfiles]** muestra el número total de personas con p
 
 La sección **[!UICONTROL Segmentos]** muestra el número total de segmentos creados dentro de la organización de IMS. Este número se actualiza cuando se crea un nuevo segmento. Encontrará más información sobre los segmentos en la descripción general [del servicio](../segmentation/home.md)de segmentación.
 
-La sección **[!UICONTROL Destinos]** muestra el número total de destinos creados para la organización de IMS. Este número se actualiza cuando se crea un nuevo destino. Encontrará más información sobre los destinos en la descripción general [de](../rtcdp/destinations/destinations-overview.md)los destinos.
+La sección **[!UICONTROL Destinos]** muestra el número total de destinos creados para la organización de IMS. Este número se actualiza cuando se crea un nuevo destino. Encontrará más información sobre los destinos en la descripción general [de](../destinations/home.md)los destinos.
 
 ### Datos recientes
 
@@ -51,7 +51,7 @@ La sección Fuentes **** recientes lista los cinco conectores de origen creados 
 
 La sección Segmentos **** recientes lista las cinco definiciones de segmentos creadas más recientemente dentro de la organización de IMS. Esta lista se actualiza cada vez que se crea una nueva definición de segmento. Puede seleccionar una definición de segmento de la lista para obtener más información sobre la definición de segmento especificada o seleccionar **[!UICONTROL Vista total]** para ver una lista de todas las definiciones de segmento creadas. Encontrará más información sobre los segmentos en la descripción general [del servicio](../segmentation/home.md)de segmentación.
 
-La sección Destinos **** recientes lista los cinco destinos creados más recientemente en la organización de IMS. Esta lista se actualiza cada vez que se crea un nuevo destino. Puede seleccionar un destino de la lista a la vista para obtener más información sobre el destino especificado o seleccionar **[!UICONTROL Vista todo]** para ver una lista de todos los destinos creados. Encontrará más información sobre los destinos en la descripción general [de](../rtcdp/destinations/destinations-overview.md)los destinos.
+La sección Destinos **** recientes lista los cinco destinos creados más recientemente en la organización de IMS. Esta lista se actualiza cada vez que se crea un nuevo destino. Puede seleccionar un destino de la lista a la vista para obtener más información sobre el destino especificado o seleccionar **[!UICONTROL Vista todo]** para ver una lista de todos los destinos creados. Encontrará más información sobre los destinos en la descripción general [de](../destinations/home.md)los destinos.
 
 ### Aprendizaje recomendado
 
@@ -117,7 +117,7 @@ La sección **[!UICONTROL Flujos de trabajo]** muestra una lista de flujos de tr
 
 La sección **[!UICONTROL Fuentes]** le permite crear, actualizar y eliminar conexiones de origen, lo que le permite transferir datos de fuentes externas a la plataforma. Puede encontrar más información sobre las fuentes en la descripción general [de](../sources/home.md)las fuentes.
 
-La sección **[!UICONTROL Destinos]** le permite crear, actualizar y eliminar destinos, lo que le permite exportar datos desde la plataforma a muchos destinos externos. Encontrará más información sobre los destinos en la descripción general [de](../rtcdp/destinations/destinations-overview.md)los destinos.
+La sección **[!UICONTROL Destinos]** le permite crear, actualizar y eliminar destinos, lo que le permite exportar datos desde la plataforma a muchos destinos externos. Encontrará más información sobre los destinos en la descripción general [de](../destinations/home.md)los destinos.
 
 ### [!UICONTROL Cliente]
 
