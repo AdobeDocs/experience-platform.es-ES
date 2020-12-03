@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
-breadcrumb-title: Información general del Experience Platform
+breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 44%
+source-wordcount: '399'
+ht-degree: 47%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 44%
    * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/es-ES/debugger/using/experience-cloud-debugger.html)
    * [Depurador 2.0 (Beta)](https://docs.adobe.com/content/help/es-ES/debugger/using-v2/experience-cloud-debugger.html)
-   * [Destinos](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (Extraer, Transformar, Cargar)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Servicio de identidad](https://docs.adobe.com/content/help/es-ES/experience-platform/identity/home.html)
    * [Servicios inteligentes](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
@@ -53,7 +53,7 @@ ht-degree: 44%
    * [Perspectivas de la capacidad de observación](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Perfil (Perfil del cliente en tiempo real)](https://docs.adobe.com/content/help/es-ES/experience-platform/profile/home.html)
-   * [Servicio de consultas](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
+   * [Servicio de consultas](https://docs.adobe.com/content/help/es-ES/experience-platform/query/home.html)
    * [Plataforma de datos de clientes en tiempo real](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)
    * [Sandboxes](https://docs.adobe.com/content/help/es-ES/experience-platform/sandbox/home.html)
    * [Esquemas (XDM)](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html)
