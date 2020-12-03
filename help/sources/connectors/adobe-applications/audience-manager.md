@@ -5,7 +5,7 @@ title: Conector del Audience Manager
 topic: overview
 description: El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager transfiere tres categorías de datos a la plataforma.
 translation-type: tm+mt
-source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
+source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -74,4 +74,4 @@ Adobe Audience Manager crea una conexión en el catálogo: Conexión de Audience
 | Datos del Audience Manager | Latencia | Notas |
 | --- | --- | --- |
 | Datos en tiempo real | &lt; 35 minutos. | Tiempo que transcurre desde la captura en el nodo Audience Manager Edge hasta la aparición en Platform Data Lake. |
-| Datos de perfil | &lt; 2 días | Tiempo que transcurre desde la captura a través de datos perimetrales DCS/PCS y datos incorporados, hasta su procesamiento en un perfil del usuario y su posterior aparición en Perfil. Estos datos no aterrizan directamente en Platform Data Lake hoy. La alternancia de perfiles se puede habilitar en conjuntos de datos de Perfiles de Audience Manager para ingerir estos datos directamente en Perfil. |
+| Datos de perfil | &lt; 2 días | Tiempo que transcurre desde la captura a través de datos perimetrales DCS/PCS y datos incorporados, hasta su procesamiento en un perfil del usuario y su posterior aparición en Perfil. Estos datos no aterrizan directamente en Platform Data Lake hoy. Se puede habilitar la alternancia de perfiles para que los conjuntos de datos de Perfil de Audience Manager ingrese estos datos directamente en Perfil. |
