@@ -5,7 +5,7 @@ title: Guía del usuario del servicio de segmentación
 topic: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -102,7 +102,7 @@ La sección Destinos **** activados muestra los destinos para los que está acti
 
 >[!NOTE]
 >
-> Los destinos son una función disponible con [!DNL Real-time Customer Data Platform]y le permiten exportar datos a plataformas externas. Para obtener más información sobre los destinos, lea la información general sobre [los destinos](../../rtcdp/destinations/destinations-overview.md). Para obtener información sobre cómo activar un segmento en un destino, lea la [guía sobre cómo activar segmentos en un destino](../../rtcdp/destinations/activate-destinations.md).
+> Los destinos son una función disponible con [!DNL Real-time Customer Data Platform]y le permiten exportar datos a plataformas externas. Para obtener más información sobre los destinos, lea la información general sobre [los destinos](../../destinations/home.md). Para obtener información sobre cómo activar un segmento en un destino, lea la [guía sobre cómo activar segmentos en un destino](../../destinations/ui/activate-destinations.md).
 
 ### Muestras de perfil
 
