@@ -1,13 +1,13 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 15 de enero de 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '880'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](#xdm)
-* [[!Privacy Service DNL]](#privacy)
-* [[!Fuentes DNL]](#sources)
-* [[!Destinos DNL]](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
@@ -39,7 +39,7 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre cómo trabajar con XDM mediante la [!DNL Schema Registry] API y la interfaz de usuario, lea la documentación [!DNL Schema Editor] del sistema [](../../xdm/home.md)XDM.
 
@@ -59,7 +59,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre [!DNL Privacy Service], lea la descripción general [del](../../privacy-service/home.md)Privacy Service y inicio.
 
@@ -86,13 +86,13 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre las fuentes, consulte la descripción general de [las fuentes](../../sources/home.md)
 
 ## Destinos {#destinations}
 
-En CDP [en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integraciones prediseñadas con plataformas de destino que activan datos a dichos socios de una manera transparente.
+En CDP [en tiempo](../../rtcdp/overview.md)real, los destinos son integraciones prediseñadas con plataformas de destino que activan los datos a dichos socios de una manera transparente.
 
 **Nuevas funciones**
 
@@ -110,6 +110,6 @@ En CDP [en tiempo real de](../../rtcdp/overview.md)Adobe, los destinos son integ
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../../destinations/home.md) for more information.
