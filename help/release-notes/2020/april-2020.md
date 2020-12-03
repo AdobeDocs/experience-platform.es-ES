@@ -1,14 +1,14 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 8 de abril de 2020
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 8%
 
 ---
@@ -83,7 +83,7 @@ El [!DNL Data Governance] marco simplifica y racionaliza el proceso de categoriz
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 Para obtener más información, consulte la información general [sobre el Gobierno](../../data-governance/home.md)de datos.
 
@@ -94,14 +94,14 @@ En la plataforma [de datos del cliente en tiempo](../../rtcdp/overview.md)real, 
 
 **Nuevos destinos**
 
-Adobe Real-time CDP ahora admite la activación de datos a más de cincuenta [!DNL Experience Cloud Launch] extensiones, lo que permite análisis, personalización y otros casos de uso. Consulte a continuación los detalles:
+CDP en tiempo real ahora admite la activación de datos a más de cincuenta [!DNL Experience Cloud Launch] extensiones, lo que permite análisis, personalización y otros casos de uso. Consulte a continuación los detalles:
 
 | Documentación | Descripción |
 |--- | ---|
-| [Tipos y categorías de destino](/help/rtcdp/destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real de Adobe y recomienda cuándo utilizar cada uno de estos destinos. |
-| [Extensiones de Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Esta página explica cuáles son las extensiones, las listas utilizan casos para utilizarlas y los vínculos a la documentación de cada [!DNL Launch] [!DNL Launch] extensión en Adobe Real-time CDP. |
+| [Tipos y categorías de destino](../../destinations/destination-types.md) | Este artículo explica la diferencia entre las conexiones y las extensiones en la interfaz CDP en tiempo real y recomienda cuándo usar cada uno de estos destinos. |
+| [Extensiones de Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica cuáles son las extensiones, las listas utilizan casos para utilizarlas y los vínculos a la documentación de cada [!DNL Launch] [!DNL Launch] extensión en CDP en tiempo real. |
 
-Para obtener más información, consulte la información general sobre [los destinos](/help/rtcdp/destinations/destinations-overview.md).
+Para obtener más información, consulte la información general sobre [los destinos](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -117,7 +117,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 
 Problemas conocidos
 
-* None
+* Ninguna
 
 Para obtener más información sobre [!DNL Privacy Service], lea la descripción general [del](../../privacy-service/home.md)Privacy Service y inicio.
 
@@ -137,6 +137,6 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
