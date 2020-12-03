@@ -1,11 +1,11 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 18 de noviembre de 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Para obtener más información, consulte Información general sobre las métrica
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino admitidas por la plataforma de datos del cliente en tiempo real de Adobe que activan los datos a dichos socios de forma transparente. Para obtener más información, lea el artículo de información general sobre [Destinations](../../rtcdp/destinations/destinations-overview.md) .
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino admitidas por la plataforma de datos del cliente en tiempo real de Adobe que activan los datos a dichos socios de forma transparente. Para obtener más información, lea el artículo de información general sobre [Destinations](../../destinations/home.md) .
 
 **Destinos disponibles**
 
@@ -74,18 +74,18 @@ Con la versión de noviembre, la plataforma de datos del cliente en tiempo real 
 * Publicidad: [!DNL Google]
 * Mercadotecnia por correo electrónico: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Consulte el catálogo [de](../../rtcdp/destinations/destinations-catalog.md) destino para obtener información sobre cada uno de los destinos.
+Consulte el catálogo [de](../../destinations/catalog/overview.md) destino para obtener información sobre cada uno de los destinos.
 
 **Limitaciones conocidas**
 
-* El control para permitir programas de activación personalizados en el flujo [de](../../rtcdp/destinations/activate-destinations.md#activate-data) activación (paso de programación) no está disponible con la versión inicial.
-* Actualmente no hay forma de editar o eliminar una configuración de destino. Para solucionar esta limitación, puede habilitar o deshabilitar el destino en la esquina superior derecha de la página [de detalles del](../../rtcdp/destinations/destination-details-page.md)destino.
+* El control para permitir programas de activación personalizados en el flujo [de](../../destinations/ui/activate-destinations.md#activate-data) activación (paso de programación) no está disponible con la versión inicial.
+* Actualmente no hay forma de editar o eliminar una configuración de destino. Para solucionar esta limitación, puede habilitar o deshabilitar el destino en la esquina superior derecha de la página [de detalles del](../../destinations/ui/destination-details-page.md)destino.
 * Actualmente no hay ninguna validación para los detalles de la cuenta, la ruta o las credenciales al conectarse a la cuenta de almacenamiento o destino. Asegúrese de que está introduciendo las credenciales correctas y la comprobación de dobles para detectar errores o errores ortográficos.
 * No se han realizado renovaciones de credenciales con la versión inicial. Una vez que una cuenta ha caducado o necesita actualizarse, debe crear una nueva conexión de destino y reasignar los segmentos asignados anteriormente.
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamientos basados en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
@@ -135,7 +135,7 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 Para obtener más información sobre cómo trabajar con XDM mediante la [!DNL Schema Registry] API y la interfaz de usuario, lea la documentación [!DNL Schema Editor] del sistema [](../../xdm/home.md)XDM.
 
@@ -157,7 +157,7 @@ Adobe Experience Platform le permite dirigir experiencias coordinadas, coherente
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 Para obtener más información sobre [!DNL Real-time Customer Profile]los tutoriales y las prácticas recomendadas para trabajar con [!DNL Profile] datos, lea la Información general sobre el Perfil del cliente en tiempo [real](../../profile/home.md).
 
@@ -186,6 +186,6 @@ Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz d
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 Para obtener más información sobre [!DNL Segmentation Service], lea la información general [del servicio](../../segmentation/home.md)de segmentación.
