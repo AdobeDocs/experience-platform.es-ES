@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Aprenda a crear diferentes tipos de destinos y activar datos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 10%
@@ -20,8 +20,8 @@ Aprenda a crear diferentes tipos de destinos y activar datos. Esta funcionalidad
 
 ## Destinos de mercadotecnia de correo electrónico {#email-destinations}
 
-* [Crear un destino de marketing por correo electrónico y activar datos](/help/rtcdp/destinations/email-marketing-api.md)
+* [Crear un destino de marketing por correo electrónico y activar datos](../destinations/api/email-marketing.md)
 
 ## Destinos de flujo de almacenamiento en la nube {#streaming-destinations}
 
-* [Conectar a destinos de flujo continuo y activar datos](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+* [Conectar a destinos de flujo continuo y activar datos](../destinations/api/streaming-destinations.md)
