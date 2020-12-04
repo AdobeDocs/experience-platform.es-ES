@@ -7,7 +7,7 @@ description: La segmentación de varias entidades es la capacidad de ampliar los
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ La segmentación multientidad es una función avanzada disponible como parte de 
 
 La segmentación de varias entidades requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform implicados en la segmentación. Antes de continuar con esta guía, consulte la siguiente documentación:
 
-* [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
+* [[!DNL Real-time Customer Profile]](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
    * [Guardias](../profile/guardrails.md)de perfil: Prácticas recomendadas para crear modelos de datos compatibles con [!DNL Profile].
-* [[!Servicio de segmentación de Adobe Experience Platform DNL]](./home.md): Permite generar segmentos a partir de [!DNL Real-time Customer Profile] datos.
-* [[!Modelo de datos de experiencia DNL (XDM)]](../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):: Permite generar segmentos a partir de [!DNL Real-time Customer Profile] datos.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../xdm/schema/composition.md#union)de esquemas: Conozca las prácticas recomendadas para la composición de esquemas que se utilizarán en Experience Platform.
 
 ## Casos de uso
