@@ -5,7 +5,7 @@ seo-title: Destino de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 24c8dd0f01d7ea14b2fa5827722e797bd209f50c
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -174,19 +174,6 @@ En la página **[!UICONTROL Revisar]** , puede ver un resumen de su selección. 
 Si no se ha detectado ninguna infracción de directiva, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y el inicio al enviar datos al destino.
 
 ![confirmación-selección](../../assets/catalog/advertising/google-customer-match/review.png)
-
-
-<!--
-
-Insert in Step 6 when mobile device ID activation is available
-
-    >[!IMPORTANT]
-    >
-    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
-
-    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
-
--->
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
