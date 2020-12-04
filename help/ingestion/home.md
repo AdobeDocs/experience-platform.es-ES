@@ -39,7 +39,7 @@ Para obtener más información, consulte la descripción general [de la ingesta 
 
 Las conexiones de origen se pueden configurar para recopilar datos de otras aplicaciones de Adobe (como Adobe Analytics y Adobe Audience Manager), fuentes de almacenamiento en la nube de terceros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP y servidores SFTP) y sistemas CRM de terceros (como [!DNL Microsoft Dynamics] y [!DNL Salesforce]).
 
-Consulte la descripción general [de](../sources/home.md) Fuentes para obtener más información.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## Próximos pasos y recursos adicionales
 
