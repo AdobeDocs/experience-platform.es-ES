@@ -7,7 +7,7 @@ description: En esta guía para desarrolladores se proporcionan pasos para ayuda
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] guía para desarrolladores
 
-[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. Consulte la [[!DNL Catalog] información general](../home.md) para obtener más información.
+[!DNL Catalog Service] es el sistema de registro para la ubicación y linaje de datos dentro de Adobe Experience Platform. [!DNL Catalog] actúa como un almacén de metadatos o un &quot;catálogo&quot; donde puede encontrar información sobre sus datos dentro de [!DNL Experience Platform], sin necesidad de acceder a los datos mismos. See the [[!DNL Catalog] overview](../home.md) for more information.
 
 En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la [!DNL Catalog] API. A continuación, la guía proporciona ejemplos de llamadas de API para realizar operaciones clave mediante [!DNL Catalog].
 
-## Requisitos previos
+## Requisitos previos 
 
 [!DNL Catalog] rastrea metadatos para varios tipos de recursos y operaciones dentro de [!DNL Experience Platform]. Esta guía para desarrolladores requiere un conocimiento práctico de los distintos [!DNL Experience Platform] servicios que se utilizan para crear y administrar estos recursos:
 
-* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 * [Ingesta](../../ingestion/batch-ingestion/overview.md)por lotes: Cómo [!DNL Experience Platform] ingesta y almacena datos de archivos de datos, como CSV y Parquet.
 * [Transmisión por secuencias](../../ingestion/streaming-ingestion/overview.md): Cómo [!DNL Experience Platform] ingesta y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
 
