@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Requerido.** El nombre de la programación como una cadena. |
 | `type` | **Requerido.** Tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
 | `properties` | **Requerido.** Objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **Necesario cuando`type`es igual a &quot;batch_segmentation&quot;.** El uso `["*"]` garantiza la inclusión de todos los segmentos. |
+| `properties.segments` | **Necesario cuando `type` es igual a &quot;batch_segmentation&quot;.** El uso `["*"]` garantiza la inclusión de todos los segmentos. |
 | `schedule` | *Opcional.* Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los programas de cron, lea la documentación sobre el formato [de expresión](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
 | `state` | *Opcional.* Una cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
