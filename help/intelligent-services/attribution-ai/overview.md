@@ -3,12 +3,12 @@ keywords: Experience Platform;attribution ai overview;popular topics;attribution
 solution: Experience Platform
 title: Descripción general de Attribution AI
 topic: Attribution AI
-description: 'Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en mercadotecnia pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de mercadotecnia individual en los viajes de los clientes. Algunos ejemplos de puntos de contacto son: impresiones de anuncios en pantalla, envíos de correo electrónico, aperturas de correo electrónico y clics de búsqueda paga.'
+description: Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente. Algunos ejemplos de puntos de contacto son las impresiones de anuncios en pantalla, los envíos de correo electrónico, las aperturas de correo electrónico y los clics de búsqueda paga.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 6%
+ht-degree: 29%
 
 ---
 
@@ -19,7 +19,7 @@ Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribuci
 
 ## Explicación de la Attribution AI
 
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en mercadotecnia pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de mercadotecnia individual en los viajes de los clientes. Algunos ejemplos de puntos de contacto son: impresiones de anuncios en pantalla, envíos de correo electrónico, aperturas de correo electrónico y clics de búsqueda paga.
+Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente. Algunos ejemplos de puntos de contacto son las impresiones de anuncios en pantalla, los envíos de correo electrónico, las aperturas de correo electrónico y los clics de búsqueda paga.
 
 Las salidas de Attribution AI pueden segregarse en varias dimensiones y pueden utilizarse en diferentes etapas del viaje del cliente. Esto se logra sin necesidad de traducir las necesidades comerciales en problemas de aprendizaje automático, selección de algoritmos, capacitación o implementación de modelos.
 
