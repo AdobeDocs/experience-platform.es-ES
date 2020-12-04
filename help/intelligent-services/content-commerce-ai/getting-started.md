@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Introducción a Content and Commerce AI
 topic: Getting started
-description: Content and Commerce AI utiliza las API de E/S de Adobe. Para realizar llamadas a las API de E/S de Adobe y a la integración de la consola de E/S, primero debe completar el tutorial de autenticación.
+description: Content and Commerce AI utiliza las API de Adobe I/O. Para realizar llamadas a las API de Adobe I/O y a la integración de la consola de E/S, primero debe completar el tutorial de autenticación.
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >Content and Commerce AI está en versión beta. La documentación está sujeta a cambios.
 
-[!DNL Content and Commerce AI] utiliza API de E/S de Adobe. Para realizar llamadas a las API de E/S de Adobe y a la integración de la consola de E/S, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación.
+[!DNL Content and Commerce AI] utiliza las API de Adobe I/O. Para realizar llamadas a las API de Adobe I/O y a la integración de la consola de E/S, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación.
 
 Sin embargo, cuando llega al paso **Añadir API** , la API se encuentra en Experience Cloud en lugar de Adobe Experience Platform, como se muestra en la siguiente captura de pantalla:
 
 ![adición de contenido y comercio AI](./images/add-api.png)
 
-Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de E/S de Adobe, como se muestra a continuación:
+Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas de la API de Adobe I/O, como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Ahora puede seleccionar el entorno en el menú desplegable de la esquina superio
 
 ![ejemplo](./images/select-environment.png)
 
-Para obtener más información sobre el trabajo con las API de E/S de Adobe mediante Postman, consulte la publicación Media sobre el [uso de Postman para la autenticación JWT en E/S](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)de Adobe.
+Para obtener más información sobre cómo trabajar con las API de Adobe I/O mediante Postman, consulte la publicación Media sobre el [uso de Postman para la autenticación JWT en Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Leer llamadas de API de muestra
 
