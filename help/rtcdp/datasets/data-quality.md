@@ -19,4 +19,4 @@ ht-degree: 0%
 
 CDP en tiempo real está construido sobre Adobe Experience Platform y utiliza muchos de los [!DNL Experience Platform] servicios y funcionalidades. Por lo tanto, puede estar seguro de que sus datos se comprobarán y validarán a medida que se vayan ingeriendo.
 
-Para obtener información más detallada sobre la calidad de los datos, lea la documentación sobre la calidad de los [datos en E/S](../../ingestion/quality/overview.md)de Adobe.
+Para obtener información más detallada sobre la calidad de los datos, lea la documentación sobre la calidad de los [datos en Adobe I/O](../../ingestion/quality/overview.md).
