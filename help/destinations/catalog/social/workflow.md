@@ -6,7 +6,7 @@ seo-title: Flujo de trabajo de destinos de redes sociales
 description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 seo-description: Instrucciones para conectarse a las cuentas de publicidad de la red social
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -38,7 +38,7 @@ En el paso **Autenticación** , si previamente ha configurado una conexión con 
 
 Una vez confirmadas las credenciales y que Adobe Experience Cloud esté conectado a la red social, puede seleccionar **[!UICONTROL Siguiente]** para continuar con el paso de **[!UICONTROL configuración]** .
 
-![Credenciales confirmadas](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Credenciales confirmadas](../../assets/catalog/social/workflow/post-connect.png)
 
 En el paso **[!UICONTROL Configuración]** , escriba un [!UICONTROL Nombre] y una [!UICONTROL Descripción] para el flujo de activación y rellene el ID [!UICONTROL de] cuenta de su cuenta de publicidad de red social.
 
