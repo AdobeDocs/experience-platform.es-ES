@@ -39,7 +39,7 @@ La documentación del Experience Platform está disponible en varios idiomas. Pa
 
 ![imagen](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform] documentación
+## [!DNL Experience Platform]documentación
 
 La documentación está disponible actualmente para los servicios y las funciones de Adobe Experience Platform que se enumeran a continuación. Puede obtener más información sobre los servicios a través de las breves descripciones que se proporcionan aquí, y obtener una comprensión más profunda seleccionando la lista alfabética en la navegación izquierda.
 
