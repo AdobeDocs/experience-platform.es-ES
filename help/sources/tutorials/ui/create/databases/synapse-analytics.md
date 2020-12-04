@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Creación de un conector de origen de Azure Synapse Analytics en la interfaz de usuario
+title: Creación de un conector de origen de Azure synapse Analytics en la interfaz de usuario
 topic: overview
 type: Tutorial
-description: Este tutorial proporciona los pasos para crear un conector de origen de Azure Synapse Analytics (en lo sucesivo, "Synapse") mediante la interfaz de usuario de la plataforma.
+description: Este tutorial proporciona los pasos para crear un conector de origen de Azure synapse Analytics (en adelante denominado "Sinapsis") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y sele
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría **[!UICONTROL Bases de datos]** , seleccione Análisis de sinapsis de **[!UICONTROL Azure]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Synapse] conector.
+En la categoría **[!UICONTROL Bases de datos]** , seleccione **[!UICONTROL Azure synapse Analytics]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Synapse] conector.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-Aparece la página **[!UICONTROL Conectar con Azure Synapse Analytics]** . En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con Azure synapse Analytics]** . En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
