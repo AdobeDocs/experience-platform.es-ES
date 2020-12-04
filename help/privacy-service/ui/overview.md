@@ -28,7 +28,7 @@ Una vez que haya iniciado sesión, haga clic en IU **[!UICONTROL de privacidad]*
 
 ### Inicio de sesión desde [!DNL Experience Platform]
 
-Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a ella a través de la ficha [!DNL Privacy Service] Solicitudes **** de la navegación izquierda.
+Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a la [!DNL Privacy Service] a través de la ficha **[!UICONTROL Solicitudes]** en el panel de navegación izquierdo.
 
 ![](../images/ui-overview/platform.png)
 
