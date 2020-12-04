@@ -8,7 +8,7 @@ description: Este documento proporciona un tutorial para evaluar los segmentos y
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 # Evaluar y acceder a los resultados de los segmentos
 
-Este documento proporciona un tutorial para evaluar segmentos y acceder a los resultados de los mismos mediante la [[!DNL API de segmentación]](../api/getting-started.md).
+Este documento proporciona un tutorial para evaluar los segmentos y acceder a los resultados de los mismos mediante el uso del [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los distintos [!DNL Adobe Experience Platform] servicios que intervienen en la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [[!Servicio de segmentación de Adobe Experience Platform DNL]](../home.md): Permite generar segmentos de audiencia a partir de [!DNL Real-time Customer Profile] datos.
-- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):: Permite generar segmentos de audiencia a partir de [!DNL Real-time Customer Profile] datos.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 - [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Encabezados requeridos
@@ -230,10 +230,10 @@ Encontrará información más detallada sobre el uso de este extremo en la guía
 
 ## Pasos siguientes
 
-Una vez que la exportación se haya completado correctamente, los datos estarán disponibles dentro de la [!DNL Data Lake] en [!DNL Experience Platform]. A continuación, puede utilizar la [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acceder a los datos mediante el `batchId` asociado a la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
+Una vez que la exportación se haya completado correctamente, los datos estarán disponibles dentro de la [!DNL Data Lake] en [!DNL Experience Platform]. A continuación, puede utilizar el [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) para acceder a los datos mediante el `batchId` vínculo asociado con la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso sobre cómo utilizar la [!DNL Data Access] API para acceder y descargar archivos por lotes, siga el tutorial [Acceso a](../../data-access/tutorials/dataset-data.md)datos.
 
 También puede acceder a los datos de segmentos exportados correctamente mediante [!DNL Adobe Experience Platform Query Service]. Con la interfaz de usuario o la API RESTful, [!DNL Query Service] puede escribir, validar y ejecutar consultas en los datos dentro de la [!DNL Data Lake].
 
-Para obtener más información sobre cómo consulta de datos de audiencia, consulte la documentación sobre [[!DNL Consulta Service]](../../query-service/home.md).
+Para obtener más información sobre cómo consulta de datos de audiencia, consulte la documentación de [[!DNL Query Service]](../../query-service/home.md).
