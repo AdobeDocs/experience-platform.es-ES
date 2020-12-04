@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de Oracle mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar Oracle con Experience Platform.
+description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar Oracle al Experience Platform.
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
