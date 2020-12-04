@@ -7,7 +7,7 @@ description: 'Experience Platform permite a sus clientes enviar solicitudes de e
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Una vez que un cliente ha optado por la exclusión, es importante que su organiz
 
 El cumplimiento de las solicitudes de exclusión requiere comprender los distintos [!DNL Adobe Experience Platform] servicios involucrados. Antes de trabajar con solicitudes de exclusión, consulte la documentación de los siguientes servicios:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [[!Servicio de segmentación de Adobe Experience Platform DNL]](./home.md): Permite generar segmentos de audiencia a partir de [!DNL Real-time Customer Profile] datos.
-- [[!Modelo de datos de experiencia DNL (XDM)]](../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
-- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ayuda a las organizaciones a automatizar el cumplimiento de las regulaciones de privacidad de datos que involucran datos de clientes dentro de [!DNL Platform].
+- [[!DNL Real-time Customer Profile]](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):: Permite generar segmentos de audiencia a partir de [!DNL Real-time Customer Profile] datos.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):: Ayuda a las organizaciones a automatizar el cumplimiento de las regulaciones de privacidad de datos que involucran datos de clientes dentro de [!DNL Platform].
 
 ## Mezclas de exclusión
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Para obtener más información sobre la segmentación, incluido el trabajo con definiciones de segmentos y audiencias a través de la API y la interfaz de usuario, lea la información general [de](./home.md)segmentación.
 
-Para obtener más información sobre la privacidad de datos dentro de [!DNL Platform], incluido [!DNL Privacy Service] el modo de facilitar el cumplimiento automatizado de las normas legales y de privacidad de la organización, consulte la documentación de [[!DNL Privacy Service]](../privacy-service/home.md).
+Para obtener más información sobre la privacidad de los datos dentro de [!DNL Platform]la empresa, incluso cómo [!DNL Privacy Service] ayuda a facilitar el cumplimiento automatizado de las normas legales y de privacidad de la organización, consulte la documentación de [[!DNL Privacy Service]](../privacy-service/home.md).
