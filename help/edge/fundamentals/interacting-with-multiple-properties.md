@@ -8,14 +8,14 @@ translation-type: tm+mt
 source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '252'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Interactuar con varias propiedades
 
-Hay algunos casos en los que podría interesarle interactuar con dos propiedades diferentes en la misma página. Estos incluyen:
+Hay algunos casos en los que podría interesarle interactuar con dos propiedades diferentes en la misma página. Se incluyen:
 
 * Compañías que se han adquirido y que están trabajando en la integración de sus sitios web
 * Relaciones de uso compartido de datos entre varias compañías
@@ -63,7 +63,7 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Asegúrese de ejecutar el comando `configure` para cada instancia antes de ejecutar otros comandos en la misma instancia.
+Asegúrese de ejecutar el `configure` comando para cada instancia antes de ejecutar otros comandos en la misma instancia.
 
 ## Limitaciones
 
