@@ -18,7 +18,7 @@ ht-degree: 0%
 
 En este tutorial se explica cómo configurar e importar una fórmula empaquetada mediante el ejemplo de venta minorista proporcionado. Al final de este tutorial, estará listo para crear, entrenar y evaluar un modelo en Adobe Experience Platform [!DNL Data Science Workspace].
 
-## Requisitos previos
+## Requisitos previos 
 
 Este tutorial requiere una fórmula empaquetada en forma de URL de imagen de Docker. Consulte el tutorial sobre cómo [empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md) para obtener más información.
 
