@@ -8,7 +8,7 @@ description: Este tutorial le ayudará a empezar a utilizar las API de inserció
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '653'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,8 @@ Después de registrar una conexión de flujo continuo, usted, como productor de 
 
 Este tutorial también requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
-- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para realizar llamadas a las API de inserción de flujo continuo.
 
