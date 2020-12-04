@@ -27,7 +27,7 @@ En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UIC
 
 Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
 
-Puede encontrar la métrica de puntuación **[!UICONTROL de eventos de conversión]** total en la parte inferior derecha del contenedor **[!UICONTROL Crear instancia]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluyendo todos los entornos de simulación de pruebas y todas las instancias de servicio eliminadas.
+Puede encontrar la métrica de puntuación **[!UICONTROL de eventos de conversión]** total en la parte inferior derecha del contenedor **[!UICONTROL Crear instancia]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de simulación de pruebas y las instancias de servicio eliminadas.
 
 ![](./images/user-guide/total_conversions.png)
 
