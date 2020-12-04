@@ -8,7 +8,7 @@ description: Este tutorial le proporciona los requisitos previos y los recursos 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Una explicación práctica de los siguientes conceptos utilizados en este tutorial:
-   - [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Conceptos básicos de la composición de esquemas](../../xdm/schema/field-dictionary.md)
 
 ## Crear esquema y conjunto de datos de ventas minoristas
