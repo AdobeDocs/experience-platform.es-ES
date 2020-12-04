@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; notifications
-description: Con los Eventos de E/S de Adobe, puede suscribirse a eventos y utilizar enlaces web para recibir notificaciones sobre el estado de sus ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
+description: Con los Eventos de Adobe I/O, puede suscribirse a los eventos y utilizar los enlaces web para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
 solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Con los Eventos de E/S de Adobe, puede suscribirse a eventos y utilizar enlaces web para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
+Con los Eventos de Adobe I/O, puede suscribirse a eventos y utilizar enlaces web para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
 
 Este documento proporciona pasos para suscribirse a eventos, registrar enlaces web y recibir notificaciones que contengan información sobre el estado de las ejecuciones de flujo.
 
