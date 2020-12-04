@@ -1,5 +1,5 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 10 de septiembre de 2019
 doc-type: release notes
 last-update: September 13, 2019
@@ -7,21 +7,21 @@ author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 5%
+source-wordcount: '532'
+ht-degree: 6%
 
 ---
 
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de lanzamiento: 10 de septiembre de 2019**
+**Fecha de versión: 10 de septiembre de 2019**
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-* [[!Ingesta de datos DNL]](#ingestion)
-* [[!Espacio de trabajo de ciencias de datos DNL]](#dsw)
-* [[!Servicio de Consulta DNL]](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
