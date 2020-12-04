@@ -91,7 +91,7 @@ Una vez que haya realizado trabajos de privacidad, tiene varias opciones para su
 | --- | --- |
 | [!DNL Privacy Service] IU | La interfaz de usuario [!DNL Privacy Service] proporciona un panel de supervisión que le permite realizar una vista de una representación visual del estado de todas las solicitudes activas. Consulte la guía [del usuario del](ui/overview.md) Privacy Service para obtener más información. |
 | [!DNL Privacy Service] API | Puede supervisar mediante programación el estado de los trabajos de privacidad mediante los extremos de búsqueda proporcionados por la [!DNL Privacy Service] API. Consulte la guía [para desarrolladores de](./api/getting-started.md) Privacy Service para ver los pasos detallados sobre cómo utilizar la API. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] aproveche los Eventos de E/S de Adobe enviados a un enlace web configurado para facilitar la automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo. Consulte el tutorial sobre la [suscripción a Eventos](./privacy-events.md) de privacidad para obtener más información. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] aproveche los Eventos de Adobe I/O enviados a un enlace web configurado para facilitar una automatización eficaz de las solicitudes de trabajos. Reducen o eliminan la necesidad de sondear la [!DNL Privacy Service] API para comprobar si se ha completado un trabajo o si se ha alcanzado un determinado hito en un flujo de trabajo. Consulte el tutorial sobre la [suscripción a Eventos](./privacy-events.md) de privacidad para obtener más información. |
 
 ## Pasos siguientes
 
