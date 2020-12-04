@@ -7,7 +7,7 @@ description: A medida que desarrolla la definición del segmento, puede utilizar
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -172,7 +172,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `results` | Una lista de los ID de entidad, junto con sus identidades relacionadas. Los vínculos proporcionados se pueden utilizar para buscar las entidades especificadas mediante la [[!DNL API de acceso a Perfil]](../../profile/api/entities.md). |
+| `results` | Una lista de los ID de entidad, junto con sus identidades relacionadas. Los vínculos proporcionados se pueden utilizar para buscar las entidades especificadas mediante el [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
