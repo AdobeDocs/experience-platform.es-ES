@@ -8,7 +8,7 @@ description: Este documento proporciona un tutorial para enviar varios mensajes 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -510,7 +510,7 @@ El segundo mensaje falló porque no tenía cuerpo de mensaje. La solicitud de re
     },
 ```
 
-Error en el tercer mensaje debido a que se está utilizando un ID de organización de IMS no válido en el encabezado. La organización de IMS debe coincidir con el {CONNECTION_ID} al que intenta publicar. Para determinar qué ID de organización de IMS coincide con la conexión de flujo que está utilizando, puede realizar una `GET inlet` solicitud utilizando la [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [Recuperación de una conexión](./create-streaming-connection.md#get-data-collection-url) de flujo para ver un ejemplo de cómo recuperar las conexiones de flujo creadas anteriormente.
+Error en el tercer mensaje debido a que se está utilizando un ID de organización de IMS no válido en el encabezado. La organización de IMS debe coincidir con el {CONNECTION_ID} al que intenta publicar. Para determinar qué ID de organización de IMS coincide con la conexión de flujo que está utilizando, puede realizar una `GET inlet` solicitud con el [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consulte [Recuperación de una conexión](./create-streaming-connection.md#get-data-collection-url) de flujo para ver un ejemplo de cómo recuperar las conexiones de flujo creadas anteriormente.
 
 El cuarto mensaje falló porque no seguía el esquema XDM esperado. El `xdmSchema` contenido incluido en el encabezado y el cuerpo de la solicitud no coincide con el esquema XDM del `{DATASET_ID}`. La corrección del esquema en el encabezado y el cuerpo del mensaje le permite pasar la validación de DCCS y enviarse correctamente a [!DNL Platform]. El cuerpo del mensaje también debe actualizarse para que coincida con el esquema XDM de `{DATASET_ID}` para que pase la validación de flujo en [!DNL Platform]. Para obtener más información sobre lo que sucede con los mensajes que se transmiten correctamente a la plataforma, consulte la sección [confirmar mensajes ingestados](#confirm-messages-ingested) de este tutorial.
 
@@ -531,7 +531,7 @@ Los mensajes por lotes que pasan la validación de flujo continuo [!DNL Platform
 
 ## Pasos siguientes
 
-Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente en el conjunto de datos de destinatario, puede enviar por inicio sus propios datos a [!DNL Platform]. Para obtener información general sobre cómo consulta y recuperación de datos ingestados desde [!DNL Platform], consulte la guía [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
+Ahora que ya sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo se ingieren correctamente en el conjunto de datos de destinatario, puede enviar por inicio sus propios datos a [!DNL Platform]. Para obtener información general sobre cómo consulta y recuperación de datos ingestados desde [!DNL Platform], consulte la [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guía.
 
 ## Apéndice
 
