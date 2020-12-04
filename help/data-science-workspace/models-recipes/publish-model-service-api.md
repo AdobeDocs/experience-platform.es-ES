@@ -8,7 +8,7 @@ description: Este tutorial trata el proceso de publicación de un modelo como se
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1496'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Publicación de un modelo como servicio (API)
 
-Este tutorial trata el proceso de publicación de un modelo como servicio mediante la [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Este tutorial trata el proceso de publicación de un modelo como servicio mediante el uso del [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Primeros pasos
 
