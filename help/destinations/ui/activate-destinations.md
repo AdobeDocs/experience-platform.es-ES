@@ -6,7 +6,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en la plataforma de datos del cliente en tiempo real asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Si utiliza otro ID, como &quot;ID de recompensa&quot; o &quot;ID de lealtad&quot
 
 ![ID de fidelidad como identidad](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Seleccione `Email_LC_SHA256` como identidad de destinatario si ha marcado las direcciones de correo electrónico de los clientes al ingerir datos en Adobe Experience Platform, según los requisitos [!DNL Facebook] de hash de [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)correo electrónico.
+Seleccione `Email_LC_SHA256` como identidad de destinatario si ha marcado las direcciones de correo electrónico de los clientes al ingerir datos en Adobe Experience Platform, según los requisitos [!DNL Facebook] de hash de [](../catalog/social/facebook.md#email-hashing-requirements)correo electrónico.
 
 Seleccione `Email` como identidad de destinatario si las direcciones de correo electrónico que utiliza no están marcadas por hash. CDP en tiempo real realizará un hash de las direcciones de correo electrónico para cumplir con [!DNL Facebook] los requisitos.
 
@@ -158,7 +158,7 @@ Las exportaciones de archivos variarán de las siguientes maneras, según si `se
 
 Además, puede marcar diferentes atributos como obligatorios. Si se marca un atributo como obligatorio, el segmento exportado debe contener dicho atributo. Como resultado, puede utilizarse como una forma adicional de filtrado. Marcar un atributo como obligatorio **no es** necesario.
 
-Se recomienda que uno de los atributos sea un identificador [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) único del esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la documentación de destinos [de mercadotecnia de](/help/rtcdp/destinations/email-marketing-destinations.md#identity) correo electrónico.
+Se recomienda que uno de los atributos sea un identificador [](../../destinations/catalog/email-marketing/overview.md#identity) único del esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la documentación de destinos [de mercadotecnia de](../../destinations/catalog/email-marketing/overview.md#identity) correo electrónico.
 
 >[!NOTE]
 > 
