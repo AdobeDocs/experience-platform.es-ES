@@ -40,7 +40,7 @@ ht-degree: 22%
 * Tipos de datos {#data-types}
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
-   * [Device](./data-types/device.md)
+   * [Dispositivo](./data-types/device.md)
    * [Dirección de correo electrónico](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
    * [Ubicación geográfica](./data-types/geo.md)
