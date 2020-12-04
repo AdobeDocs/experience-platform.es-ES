@@ -8,7 +8,7 @@ description: Este tutorial se centra en cómo utilizar los blocs de notas Jupyte
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Se introducen los siguientes conceptos:
 
 - **[!DNL JupyterLab]::** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter, y está estrechamente integrada en [!DNL Adobe Experience Platform].
 - **Lotes:** Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad. Se crean nuevos lotes cuando se agregan datos a un conjunto de datos.
-- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la [[!DNL Platform SDK]](../authoring/platform-sdk.md) guía.
 
 ## Explorar blocs de notas en el área de trabajo de ciencias de datos
 
@@ -92,7 +92,7 @@ Ahora, podemos hacer clic con el botón derecho en el conjunto de datos y selecc
 
 >[!TIP]
 >
->Consulte la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
+>Consulte la [[!DNL Platform SDK]](../authoring/platform-sdk.md) guía para convertir el código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
