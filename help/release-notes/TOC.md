@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 'Notas de la versión de Adobe Experience Platform '
+user-guide-title: Notas de la versión de Adobe Experience Platform
 breadcrumb-title: Notas de la versión de Platform
 user-guide-description: Notas de la versión mensuales de Adobe Experience Platform.
 translation-type: tm+mt
