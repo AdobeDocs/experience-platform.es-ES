@@ -52,7 +52,7 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y sele
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría **[!UICONTROL Bases de Datos]** , seleccione **[!UICONTROL Oracle DB]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Oracle DB] conector.
+En la categoría **[!UICONTROL Bases de datos]** , seleccione Base de datos **[!UICONTROL Oracle]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo [!DNL Oracle DB] conector.
 
 ![catálogo](../../../../images/tutorials/create/oracle/catalog.png)
 
