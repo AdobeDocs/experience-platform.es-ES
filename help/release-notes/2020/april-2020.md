@@ -112,7 +112,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con PDPA | Las solicitudes de privacidad ahora se pueden crear y rastrear bajo la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la `regulation` matriz acepta el valor &quot;pdpa_tha&quot;. |
-| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Área de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](../../privacy-service/ui/user-guide.md) usuario para obtener más información. |
+| Tipos de Área de nombres en la interfaz de usuario | Ahora puede especificar diferentes tipos de Áreas de nombres en el Creador de solicitudes en la [!DNL Privacy Service] interfaz de usuario. Consulte la guía [del](../../privacy-service/ui/user-guide.md) usuario para obtener más información. |
 | Desuso de punto final antiguo | El punto final (`data/privacy/gdpr`) de la API anterior ha quedado obsoleto. |
 
 Problemas conocidos
