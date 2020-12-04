@@ -126,7 +126,7 @@ Seleccione **[!UICONTROL Crear destino]** después de completar los campos anter
 >[!IMPORTANT]
 >
 > * El caso de uso de la mercadotecnia **[!UICONTROL Combinar con PII]** está seleccionado de forma predeterminada para el [!DNL Google Customer Match] destino y no se puede eliminar.
-> * Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es su ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
+> * Para [!DNL Google Customer Match] destinos. **[!UICONTROL El ID]** de cuenta es el ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
 
 
 ![Coincidencia de clientes de Connect Google: paso de autenticación](../../assets/catalog/advertising/google-customer-match/authentication.png)
