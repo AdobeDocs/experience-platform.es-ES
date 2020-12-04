@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: overview
-description: 'Las áreas de nombres de identidad son un componente del servicio de identidad de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
+description: 'Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
 source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -21,9 +21,9 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 Trabajar con Áreas de nombres de identidad requiere comprender los distintos servicios de Adobe Experience Platform involucrados. Antes de comenzar a trabajar con Áreas de nombres, consulte la documentación de los siguientes servicios:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
-- [[!DNL Identity Service]](./home.md): Obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
-- [[!Privacy Service DNL]](../privacy-service/home.md): Las Áreas de nombres de identidad se utilizan para cumplir con el Reglamento General de Protección de Datos (RGPD), en el que las solicitudes del RGPD pueden hacerse en relación con una Área de nombres.
+- [[!DNL Real-time Customer Profile]](../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Identity Service]](./home.md):: Obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
+- [[!DNL Privacy Service]](../privacy-service/home.md):: Las Áreas de nombres de identidad se utilizan para cumplir con el Reglamento General de Protección de Datos (RGPD), en el que las solicitudes del RGPD pueden hacerse en relación con una Área de nombres.
 
 ## Explicación de las Áreas de nombres de identidad
 
@@ -43,7 +43,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | --- | --- |
 | Cookie | Estas identidades son fundamentales para la expansión y constituyen la mayoría del gráfico de identidad. Sin embargo, por naturaleza se descienden rápidamente y pierden su valor con el tiempo. La eliminación de cookies se gestiona especialmente en el gráfico de identidad. |
 | Dispositivo cruzado | Esto indica que [!DNL Identity Service] debería considerar esto como un identificador de personas fuerte y por lo tanto preservarlo para siempre. Algunos ejemplos son: ID de inicio de sesión, ID de CRM, ID de lealtad, etc. |
-| Device  | Incluye IDFA, GAID y otros ID de IOT. Pueden compartirlas las personas de los hogares. |
+| Device | Incluye IDFA, GAID y otros ID de IOT. Pueden compartirlas las personas de los hogares. |
 | Correo electrónico | Las identidades de este tipo incluyen información de identificación personal (PII). Es una indicación para [!DNL Identity Service] gestionar el valor con sensibilidad. |
 | Dispositivo móvil | Las identidades de este tipo incluyen PII. Es una indicación para [!DNL Identity Service] gestionar el valor con sensibilidad. |
 | No personas | Se utiliza para almacenar identificadores que necesitan Áreas de nombres, pero que no están vinculados a un clúster de personas. Estos identificadores se filtran desde el gráfico de identidad. Los casos de uso posibles incluyen datos relacionados con productos, organizaciones, tiendas, etc. (Por ejemplo, un SKU de producto). |
