@@ -4,28 +4,28 @@ solution: Experience Platform
 title: Autenticar y acceder a las API de Experience Platform
 topic: tutorial
 type: Tutorial
-description: 'Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de realizar llamadas a las API de Experience Platform. '
+description: 'Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform. '
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 1%
+source-wordcount: '875'
+ht-degree: 4%
 
 ---
 
 
-# Autenticar y acceder a [!DNL Experience Platform] las API
+# Authenticate and access [!DNL Experience Platform] APIs
 
-Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de realizar llamadas a [!DNL Experience Platform] las API.
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
 
 ## Autenticar para realizar llamadas de API
 
-Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes a las API de E/S de Adobe deben autenticarse y autorizarse mediante estándares como OAuth y JSON Web Tokens (JWT). El JWT se utiliza junto con la información específica del cliente para generar su token de acceso personal.
+Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes a las API de Adobe I/O deben autenticarse y autorizarse mediante estándares como OAuth y JSON Web Tokens (JWT). El JWT se utiliza junto con la información específica del cliente para generar su token de acceso personal.
 
 Este tutorial trata los pasos de la autenticación mediante la creación de un token de acceso que se describe en el siguiente diagrama de flujo:
 ![](images/authentication/authentication-flowchart.png)
 
-## Requisitos previos
+## Requisitos previos 
 
 Para realizar correctamente llamadas a [!DNL Experience Platform] API, necesita lo siguiente:
 
@@ -45,11 +45,11 @@ Si no tiene un Adobe ID, puede crearlo siguiendo los pasos siguientes:
 
 ## Convertirse en desarrollador y usuario de [!DNL Experience Platform] una organización
 
-Antes de crear integraciones en la E/S de Adobe, su cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Encontrará información detallada sobre las cuentas de desarrollador del Admin Console en el documento [de](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) asistencia para la administración de desarrolladores.
+Antes de crear integraciones en Adobe I/O, su cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Encontrará información detallada sobre las cuentas de desarrollador del Admin Console en el documento [de](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) asistencia para la administración de desarrolladores.
 
 **Obtener acceso de desarrollador**
 
-Póngase en contacto con un [!DNL Admin Console] administrador de su organización para agregarle como desarrollador para uno de los productos de su organización mediante el [[!Admin Console DNL]](https://adminconsole.adobe.com/).
+Póngase en contacto con un [!DNL Admin Console] administrador de su organización para agregarle como desarrollador para uno de los productos de su organización mediante el uso de [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -57,7 +57,7 @@ El administrador debe asignarle como desarrollador al menos un perfil de product
 
 ![](images/authentication/add-developer.png)
 
-Una vez que se le asigne como desarrollador, tendrá privilegios de acceso para crear integraciones en E/S [Adobe](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a la API de Adobe.
+Una vez que se le asigne como desarrollador, tendrá privilegios de acceso para crear integraciones en [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a la API de Adobe.
 
 **Obtener acceso de usuario**
 
