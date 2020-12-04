@@ -16,7 +16,7 @@ ht-degree: 1%
 
 La [!DNL Privacy/Marketing Preferences (Consent)] mezcla (denominada en lo sucesivo &quot;[!DNL Privacy Consent] mezcla&quot;) es una mezcla [!DNL Experience Data Model] (XDM) destinada a apoyar la recopilación de permisos y preferencias de usuario generados por los CMP y otras fuentes de los clientes. El presente documento abarca la estructura y el uso previsto de los diversos campos proporcionados por la mezcla.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos  {#prerequisites}
 
 Este documento requiere una comprensión práctica de [!DNL Experience Data Model] (XDM) y el uso de los esquemas en [!DNL Experience Platform]. Revise la siguiente documentación antes de continuar:
 
