@@ -17,7 +17,7 @@ ht-degree: 8%
 
 En este tutorial se explica cómo implementar las etiquetas del sitio web para enviar datos a Adobe Experience Platform mediante Adobe Launch.
 
-## Requisitos previos
+## Requisitos previos 
 
 * Se crean el esquema y el conjunto de datos necesarios en [!DNL Platform].
 * La configuración necesaria se ha implementado en Experience Edge y tiene el ID de configuración y el dominio de Edge coincidentes.
@@ -35,7 +35,7 @@ Este tutorial contiene los siguientes pasos:
 
 En primer lugar, instale la extensión de Adobe Experience Platform [!DNL Web SDK] .
 
-1. En [!DNL Launch], abra la ficha **[!UICONTROL Extensiones]** .
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![imagen](assets/launch-overview.png)
 
@@ -68,7 +68,7 @@ A continuación, cree una regla para [!DNL Launch] saber qué datos desea enviar
 
    ![imagen](assets/launch-add-aep-action.png)
 
-   El objeto de datos que envía debe ser XDM válido que pase la validación al esquema que utiliza el conjunto de datos conectado a su ID de configuración.
+   El objeto de datos que envía debe ser XDM válido que pase la validación con el esquema que utiliza el conjunto de datos conectado a su ID de configuración.
 
 1. Click **[!UICONTROL Keep Changes]**.
 
