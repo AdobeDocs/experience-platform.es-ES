@@ -5,7 +5,7 @@ seo-title: Información general sobre la plataforma de datos del cliente en tiem
 description: Información general sobre la plataforma de datos de clientes en tiempo real
 seo-description: Información general sobre la plataforma de datos de clientes en tiempo real
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ Se recomienda la siguiente documentación para ayudarle a empezar a utilizar la 
 * [Cómo transferir datos](sources/sources-overview.md)
 * [Cómo acceder a perfiles](profile/profile-overview.md)
 * [Cómo generar segmentos](segmentation/segmentation-overview.md)
-* [Cómo activar segmentos en destinos](destinations/activate-destinations.md)
+* [Cómo activar segmentos en destinos](destinations/overview.md)
 * [Cómo definir y aplicar políticas de administración de datos](privacy/data-governance-overview.md)
