@@ -7,23 +7,23 @@ description: La API de servicio de directivas le permite crear y administrar var
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 
-# Introducción a la [!DNL Policy Service] API
+# Getting started with the [!DNL Policy Service] API
 
 La [!DNL Policy Service] API le permite crear y administrar varios recursos relacionados con Adobe Experience Platform [!DNL Data Governance]. Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la [!DNL Policy Service] API.
 
-## Requisitos previos
+## Requisitos previos 
 
 El uso de la guía para desarrolladores requiere un conocimiento práctico de los distintos [!DNL Experience Platform] servicios que se utilizan para trabajar con las capacidades de administración de datos. Antes de comenzar a trabajar con el [!DNL Policy Service API], consulte la documentación de los siguientes servicios:
 
-* [[!DNL Administración de datos]](../home.md): Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
-* [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Perfil del cliente en tiempo real de]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Data Governance]](../home.md):: Marco mediante el cual [!DNL Experience Platform] se aplica el cumplimiento de la normativa de uso de datos.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Leer llamadas de API de muestra
