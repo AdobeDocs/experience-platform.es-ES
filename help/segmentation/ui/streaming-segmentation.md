@@ -5,9 +5,9 @@ title: Segmentación por flujo continuo
 topic: ui guide
 description: La segmentación por flujo continuo en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a la plataforma, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a la plataforma, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -42,20 +42,17 @@ Una consulta se evaluará automáticamente con segmentación de flujo continuo s
 | Visita entrante que hace referencia a un perfil dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o varios atributos de perfil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o varios atributos de perfil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-La siguiente sección lista ejemplos de definición de segmentos que **no se habilitarán** para la segmentación de flujo continuo.
+Una definición de segmento **no se habilitará** para la segmentación de flujo continuo en los siguientes escenarios:
 
-| Tipo de consulta | Detalles |
-| ---------- | ------- |
-| Visita entrante que hace referencia a un perfil dentro de una ventana relativa | Definición de segmento que incluye [!DNL Adobe Audience Manager (AAM)] segmentos o características. |
-| Varios eventos que hacen referencia a un perfil | Definición de segmento que incluye segmentos o características de Adobe Audience Manager (AAM). |
-| Consultas de varias entidades | Las consultas de varias entidades **no son** compatibles con la segmentación por flujo. |
+- La definición del segmento incluye segmentos o características de Adobe Audience Manager (AAM).
+- La definición de segmento incluye varias entidades (consultas de varias entidades).
 
 Además, se aplican algunas directrices al realizar la segmentación de flujo:
 
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Consulta de evento único | No hay límites para la ventana retroactiva. |
-| Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Solo se permiten pedidos de tiempo simples (antes y después) entre los eventos.</li><li>Los eventos individuales **no se pueden** negar. Sin embargo, toda la consulta **puede** ser anulada.</li></ul> |
+| Consulta con historial de eventos | <ul><li>La ventana retroactiva está limitada a **un día**.</li><li>Entre los eventos **debe** existir una condición estricta de ordenación de tiempo.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
 
 Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición de segmento cambiará automáticamente de &quot;Streaming&quot; a &quot;Batch&quot;.
 
