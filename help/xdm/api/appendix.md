@@ -48,7 +48,7 @@ Puede filtrar los resultados utilizando el `property` parámetro, que se utiliza
 | `<=` | Filtros por si la propiedad es menor o igual que el valor proporcionado. | `property=version<=5` |
 | `>=` | Filtros por si la propiedad es buena o igual al valor proporcionado. | `property=version>=5` |
 | `~` | Filtros según si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
-| (None) | Si se establece únicamente el nombre de la propiedad, solo se devuelven las entradas donde existe la propiedad. | `property=title` |
+| (Ninguna) | Si se establece únicamente el nombre de la propiedad, solo se devuelven las entradas donde existe la propiedad. | `property=title` |
 
 >[!TIP]
 >
