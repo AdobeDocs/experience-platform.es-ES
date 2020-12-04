@@ -7,7 +7,7 @@ description: La API de servicio de catálogo permite filtrar los datos de respue
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ Existen algunas limitaciones que hay que tener en cuenta al usar etiquetas:
 * Los nombres de las etiquetas son exclusivos de la organización de IMS.
 * Los procesos de Adobe pueden aprovechar las etiquetas para determinados comportamientos. Los nombres de estas etiquetas llevan el prefijo &quot;adobe&quot; como estándar. Por lo tanto, debe evitar esta convención al declarar nombres de etiquetas.
 * Los siguientes nombres de etiquetas están reservados para su uso en todas partes [!DNL Experience Platform]y, por lo tanto, no se pueden declarar como nombres de etiqueta para su organización:
-   * `unifiedProfile`:: Este nombre de etiqueta está reservado para que los conjuntos de datos sean ingestados por [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md).
-   * `unifiedIdentity`:: Este nombre de etiqueta está reservado para que los conjuntos de datos se ingesten por [[!DNL Identity Service]](../../identity-service/home.md).
+   * `unifiedProfile`:: Este nombre de etiqueta está reservado para los conjuntos de datos que [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`:: Este nombre de etiqueta está reservado para los conjuntos de datos que [[!DNL Identity Service]](../../identity-service/home.md).
 
 A continuación se muestra un ejemplo de un conjunto de datos que contiene una `tags` propiedad. Las etiquetas de esa propiedad adoptan la forma de pares clave-valor, y cada valor de etiqueta aparece como una matriz que contiene una sola cadena:
 
@@ -580,7 +580,7 @@ El valor del `property` parámetro admite varios tipos diferentes de expresiones
 
 | Símbolo(s) | Descripción | Ejemplo |
 | --- | --- | --- |
-| (None) | Al establecer el nombre de la propiedad sin operador, solo se devuelven los objetos donde existe la propiedad, independientemente de su valor. | `property=name` |
+| (Ninguna) | Al establecer el nombre de la propiedad sin operador, solo se devuelven los objetos donde existe la propiedad, independientemente de su valor. | `property=name` |
 | ! | Al prefijar un &quot;`!`&quot; en el valor de un `property` parámetro, sólo se devuelven objetos en los que la propiedad **no existe** . | `property=!name` |
 | ~ | Devuelve sólo objetos cuyos valores de propiedad (cadena) coinciden con una expresión normal proporcionada después del símbolo de virgulilla (`~`). | `property=name~^example` |
 | == | Devuelve sólo objetos cuyos valores de propiedad coinciden exactamente con la cadena proporcionada después del símbolo doble-es (`==`). | `property=name==exampleName` |
