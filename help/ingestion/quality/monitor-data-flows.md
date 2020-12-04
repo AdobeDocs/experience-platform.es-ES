@@ -7,7 +7,7 @@ description: Esta guía del usuario proporciona un paso sobre cómo supervisar l
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ En la interfaz de usuario [del](https://platform.adobe.com)Experience Platform, 
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Aparece la página de supervisión **[!UICONTROL de flujo completo]** . Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos transmitidos recibidos por [!DNL Platform], un gráfico que muestra la tasa de eventos transmitidos que se procesaron correctamente por [[!DNL Perfil del cliente en tiempo real]](../../profile/home.md), así como una lista detallada de los datos entrantes.
+Aparece la página de supervisión **[!UICONTROL de flujo completo]** . Este espacio de trabajo proporciona un gráfico que muestra la velocidad de eventos transmitidos que recibe [!DNL Platform], un gráfico que muestra la velocidad de eventos transmitidos que se procesaron correctamente por [[!DNL Real-time Customer Profile]](../../profile/home.md), así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Además, los registros con errores proporcionan detalles sobre los errores que s
 
 ## Monitorear la ingesta de datos de extremo a extremo por lotes
 
-En la [[!IU de Experience Platform DNL]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda.
+En el [[!DNL Experience Platform UI]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
