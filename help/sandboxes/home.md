@@ -7,7 +7,7 @@ description: Los Simuladores de pruebas son particiones virtuales dentro de una 
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ En la interfaz [de usuario del](https://platform.adobe.com)Experience Platform, 
 
 ## Simuladores de pruebas en API de Experience Platform
 
-Al realizar llamadas a API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a la [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para vista de todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del entorno limitado (&quot;prod&quot;) se proporciona como encabezado en la solicitud de API:
+Al realizar llamadas a API de Experience Platform, se debe proporcionar un nombre de simulador de pruebas en el encabezado `x-sandbox-name`. Por ejemplo, al realizar una llamada a la [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) para que vista todos los conjuntos de datos dentro del entorno limitado de producción, el nombre del entorno limitado (&quot;prod&quot;) se proporciona como encabezado en la solicitud de API:
 
 ```shell
 curl -X GET \
