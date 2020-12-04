@@ -5,7 +5,7 @@ seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en 
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 seo-description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 4%
@@ -68,7 +68,7 @@ Para obtener más información sobre los segmentos, consulte Visión general [de
 
 **[!UICONTROL Destinos]** muestra el número total de destinos creados para la organización. Este número se actualiza cuando se crean nuevos destinos.
 
-Para obtener más información sobre los destinos, consulte Información general sobre [los destinos](destinations/destinations-overview.md).
+Para obtener más información sobre los destinos, consulte Información general sobre [los destinos](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ La tarjeta de métrica Destinos **** recientes muestra los cinco destinos más r
 
 Haga clic en un destino para vista de los detalles de ese elemento o **[!UICONTROL Vista todo]** para ver información sobre más destinos.
 
-Para obtener más información sobre los destinos, consulte Información general sobre [los destinos](destinations/destinations-overview.md).
+Para obtener más información sobre los destinos, consulte Información general sobre [los destinos](destinations/overview.md).
