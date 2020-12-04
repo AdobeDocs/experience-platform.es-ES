@@ -27,7 +27,7 @@ Ejecutar [!DNL Tableau]y, en la pantalla de apertura, haga clic para abrir una [
 
 ![Imagen](../images/clients/tableau/open-connection.png)
 
-Copie `Host, Port, Database, Username, Password` de forma individual desde la página Herramientas [!DNL Platform] de **** Connect BI de la interfaz de usuario en los campos Tableau correspondientes.
+Copie `Host, Port, Database, Username, Password` de forma individual desde la página Herramientas [!DNL Platform] de **[!UICONTROL Connect BI de la]** interfaz de usuario en los campos Tableau correspondientes.
 
 Confirme que ha marcado la casilla **[!UICONTROL SSL obligatorio]** antes de intentar la conexión.
 
