@@ -8,7 +8,7 @@ description: Adobe Experience Platform le permite utilizar el lenguaje de Consul
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---
@@ -29,14 +29,14 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 - Un [!DNL Adobe Analytics] conjunto de datos
 
 - Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   - [[!Modelo de datos de experiencia DNL (XDM) y sistema XDM]](../../xdm/home.md)
-   - [[!Servicio de Consulta DNL]](../../query-service/home.md)
-   - [[!Sintaxis SQL del servicio de Consulta DNL]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Acceso [!DNL JupyterLab] y [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. En [[!Experience Platform DNL]](https://platform.adobe.com), desplácese a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
+1. En [[!DNL Experience Platform]](https://platform.adobe.com), vaya a **[!UICONTROL Equipos portátiles]** desde la columna de navegación izquierda. Deje un momento para que JupyterLab se cargue.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
