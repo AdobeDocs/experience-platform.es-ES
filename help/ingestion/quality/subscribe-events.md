@@ -73,7 +73,7 @@ Para vista del esquema completo de las notificaciones de evento, consulte el rep
 
 ## Pasos siguientes
 
-Una vez que haya registrado [!DNL Platform] las notificaciones al proyecto, puede realizar la vista de eventos recibidos desde la información general [!UICONTROL del]proyecto. Consulte la guía sobre [rastreo de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de E/S de Adobe para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
+Una vez que haya registrado [!DNL Platform] las notificaciones al proyecto, puede realizar la vista de eventos recibidos desde la información general [!UICONTROL del]proyecto. Consulte la guía de [rastreo de Eventos](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) de Adobe I/O para obtener instrucciones detalladas sobre cómo rastrear sus eventos.
 
 ## Apéndice
 
