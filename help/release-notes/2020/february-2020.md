@@ -1,5 +1,5 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 12 de febrero de 2020
 doc-type: release notes
 last-update: February 14, 2019
@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -39,6 +39,6 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
