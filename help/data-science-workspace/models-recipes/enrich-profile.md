@@ -8,7 +8,7 @@ description: Este documento proporciona un tutorial paso a paso para enriquecer 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Este documento proporciona un tutorial paso a paso para enriquecerse [!DNL Real-
 
 Este tutorial requiere un conocimiento práctico de los diversos aspectos de la [!DNL Adobe Experience Platform] ingesta [!DNL Profile] de datos y la creación de segmentos. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-* [[!Perfil del cliente en tiempo real de DNL]](../../rtcdp/overview.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-time Customer Profile] el enlace de identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
-* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Identity Service]](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el enlace de identidades de orígenes de datos dispares que se están ingeriendo en la plataforma.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
 
 Además de los documentos mencionados, se recomienda revisar también las siguientes guías sobre esquemas y el Editor de Esquemas:
 
