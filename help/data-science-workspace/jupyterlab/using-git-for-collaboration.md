@@ -8,7 +8,7 @@ description: Git es un sistema de control de versiones distribuido para rastrear
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Git] es un sistema de control de versiones distribuido para rastrear los cambios en el código fuente durante el desarrollo del software. Git está preinstalado dentro del [!DNL Data Science Workspace JupyterLab] entorno.
 
-## Requisitos previos
+## Requisitos previos 
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ El [!DNL Data Science Workspace JupyterLab] entorno es un entorno alojado y no s
 
 ## Conectar [!DNL Git] al [!DNL Data Science Workspace JupyterLab Notebooks] entorno
 
-Inicio iniciando [!DNL Adobe Experience Platform] y navegando al entorno [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) .
+Inicio iniciando [!DNL Adobe Experience Platform] y navegando al [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) entorno.
 
 En [!DNL JupyterLab], seleccione **[!UICONTROL Archivo]** y, a continuación, pase el ratón sobre **[!UICONTROL Nuevo]**. En el menú desplegable que aparece, seleccione **[!UICONTROL Terminal]**.
 
@@ -60,4 +60,4 @@ A continuación, clona el repositorio que desea utilizar con el `git clone` coma
 
 ## Pasos siguientes
 
-Una vez que haya terminado de clonar su repositorio, puede utilizar Git como lo haría normalmente en su equipo local para colaborar con otros usuarios en portátiles. Para obtener más información sobre lo que puede hacer en [!DNL JupyterLab], consulte la [[!DNL JupyterLab user guide]](./overview.md).
+Una vez que haya terminado de clonar su repositorio, puede utilizar Git como lo haría normalmente en su equipo local para colaborar con otros usuarios en portátiles. Para obtener más información sobre lo que puede hacer dentro de [!DNL JupyterLab], consulte la [[!DNL JupyterLab user guide]](./overview.md).
