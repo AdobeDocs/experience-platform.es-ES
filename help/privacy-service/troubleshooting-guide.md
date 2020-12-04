@@ -96,7 +96,7 @@ Para obtener más información, consulte la sección sobre la [búsqueda de un t
 
 En el panel de la [!DNL Privacy Service] interfaz de usuario, busque el trabajo que desea descargar desde la utilidad Solicitudes **de** trabajo. Haga clic en el ID del trabajo para abrir la página Detalles del trabajo. Desde aquí, haga clic en **Descargar** en la esquina superior derecha para descargar el archivo ZIP. Consulte la guía [del usuario del](ui/user-guide.md) Privacy Service para obtener más detalles.
 
-## Mensajes de error comunes
+## Mensajes de error frecuentes
 
 La siguiente tabla describe algunos errores comunes en [!DNL Privacy Service], con descripciones que ayudan a resolver sus respectivos problemas.
 
