@@ -16,7 +16,7 @@ ht-degree: 10%
 
 ## Áreas de nombres de identidad estándar {#standard-namespaces}
 
-Todas las identidades que se envían a [!DNL Privacy Service] deben proporcionarse con una Área de nombres de identidad específica. Las Áreas de nombres de identidad son un componente de [Adobe Experience Platform Identity Service](../../identity-service/home.md) que indica el contexto al que se relaciona una identidad.
+Todas las identidades que se envían a [!DNL Privacy Service] deben proporcionarse con una Área de nombres de identidad específica. Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
 
 La siguiente tabla describe varios tipos de identidad predefinidos y utilizados habitualmente disponibles por [!DNL Experience Platform], junto con sus `namespace` valores asociados:
 
@@ -25,9 +25,9 @@ La siguiente tabla describe varios tipos de identidad predefinidos y utilizados 
 | Correo electrónico | Correo electrónico | 6 |
 | Phone | Phone | 7 |
 | Adobe Advertising Cloud ID | Adcloud | 411 |
-| UUID de Adobe Audience Manager | CORE | 0 |
+| Adobe Audience Manager UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
-| ID de Adobe Target | TNTID | 9 |
+| Adobe Target ID | TNTID | 9 |
 | [!DNL Apple] ID para anunciantes | IDFA | 20915 |
 | [!DNL Google] ID de anuncio | GAID | 20914 |
 | [!DNL Windows] AYID | WAID | 8 |
