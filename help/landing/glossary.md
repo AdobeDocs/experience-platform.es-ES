@@ -44,7 +44,7 @@ ht-degree: 0%
 
 **Servicios inteligentes de Adobe:** Adobe Sensei es el marco de inteligencia que se impone [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
 
-**E/S Adobe:** La E/S de Adobe forma parte de [!DNL Experience Platform] y proporciona acceso a todo lo que los desarrolladores necesitan para integrar, ampliar y personalizar Adobe Experience Platform, incluidas las API, los eventos, la consola para desarrolladores y las útiles herramientas.
+**Adobe I/O:** Adobe I/O forma parte de [!DNL Experience Platform] y proporciona acceso a todo lo que los desarrolladores necesitan para integrar, ampliar y personalizar Adobe Experience Platform, incluidas las API, los eventos, la consola para desarrolladores y las útiles herramientas.
 
 **Adobe Sensei:** Adobe Sensei es el marco de inteligencia que se impone [!DNL Experience Platform]. También ofrece un conjunto de servicios de IA que empoderan a las marcas para mejorar su capacidad de ofrecer experiencias personalizadas y en tiempo real a los clientes.
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 **Etiqueta de contrato C9:** Una etiqueta de uso de datos de `C9` contrato especifica que los datos no se pueden usar en flujos de trabajo de ciencias de datos. Algunos contratos incluyen prohibiciones explícitas de los datos utilizados para la ciencia de datos.  A veces se expresan en términos que prohíben el uso de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado.
 
-**Etiqueta de contrato C10:** Una etiqueta de uso de datos de `C10` contrato especifica que los datos de datos no se pueden usar para la activación de identidad vinculada. Algunas directivas de uso de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+**Etiqueta de contrato C10:** Una etiqueta de uso de datos de `C10` contrato especifica que los datos de datos no se pueden usar para la activación de identidad vinculada. Algunas directivas de uso de datos restringen el uso de datos de identidad enlazados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
 
 **Columna Fecha de creación:** La selección de una `Created Date` columna es una opción al especificar datos de terceros mediante una conexión. Cuando se selecciona la estrategia de guardar datos anexados y el conjunto de datos contiene un esquema relacionado con varias fechas, el usuario debe elegir entre el esquema de fecha y hora disponible para especificar una columna `Created Date` clave. `Created Date` no está disponible cuando se selecciona la estrategia de sobrescritura para guardar.
 
