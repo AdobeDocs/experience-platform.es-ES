@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor vista de sus clientes y su comportamiento al unir identidades entre dispositivos y sistemas. Normalmente, los clientes interactúan con la marca en varios canales, como explorar el sitio web en línea, realizar una compra en la tienda, unirse a su programa de fidelidad o llamar a un servicio de asistencia para obtener ayuda, por citar algunos. En estos múltiples sistemas, existe una identidad creada para ese cliente y [!DNL Identity Service] permite unir esas identidades para ver el panorama completo.
 
-Ahora, en lugar de cinco clientes distintos que interactúan con su marca en cinco canales diferentes, puede ver que es el mismo cliente y puede asegurarse de que reciben una experiencia coherente, personalizada y relevante a través de cada interacción. A medida que se va conociendo más información sobre su cliente (por ejemplo, un navegador anónimo del sitio Web decide registrarse para una cuenta e iniciar sesión), la información se vincula y la imagen de su cliente se vuelve cada vez más clara.
+Ahora, en lugar de cinco clientes distintos que interactúan con su marca en cinco canales diferentes, puede ver que es el mismo cliente y puede asegurarse de que reciben una experiencia coherente, personalizada y relevante a través de cada interacción. A medida que se va conociendo más información acerca de su cliente (por ejemplo, un navegador anónimo de su sitio Web decide registrarse para una cuenta e iniciar sesión), la información se enlaza y la imagen de su cliente se vuelve cada vez más clara.
 
 ## Áreas de nombres de identidad
 
