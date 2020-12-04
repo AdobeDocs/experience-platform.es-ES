@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: Conector Oracle
+title: Conector oracle
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar Oracle a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
