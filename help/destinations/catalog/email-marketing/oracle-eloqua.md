@@ -5,7 +5,7 @@ seo-title: Oracle Eloqua, destino
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de la mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia B2B y a las organizaciones a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 seo-description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de la mercadotecnia ofrecida por Oracle que tiene como objetivo ayudar a los especialistas en mercadotecnia B2B y a las organizaciones a administrar las campañas de mercadotecnia y la generación de posibles clientes de ventas.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -59,22 +59,6 @@ Al [activar segmentos](../../ui/activate-destinations.md) en el [!DNL Oracle Elo
 ## Datos exportados {#exported-data}
 
 Para [!DNL Oracle Eloqua] los destinos, CDP en tiempo real crea un archivo delimitado por tabuladores `.txt` o `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte Destinos de [correo electrónico de Marketing y Destinos](../../ui/activate-destinations.md#esp-and-cloud-storage) de almacenamiento de Cloud en el tutorial de activación de segmentos.
-
-<!--
-
-Expect a new file to be created in your storage location every day. The file format is:
-
-`Oracle_Eloqua_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-```
-Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
-```
-
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
-
--->
 
 ## Configurar la importación de datos en [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
