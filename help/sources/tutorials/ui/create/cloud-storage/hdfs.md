@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector de origen HDFS de Apache en la interfaz de usuario
 topic: overview
 type: Tutorial
-description: Este tutorial proporciona los pasos para autenticar un conector de origen Apache Hadoop Distributed File System (en lo sucesivo, "HDFS") mediante la interfaz de usuario de la plataforma.
+description: Este tutorial proporciona los pasos para autenticar un conector de origen de Apache Hadoop Distributed File System (en lo sucesivo, "HDFS") mediante la interfaz de usuario de la plataforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
