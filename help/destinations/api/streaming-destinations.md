@@ -265,7 +265,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:: Utilice el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
+* `{CONNECTION_SPEC_ID}`:: Use el ID de especificación de conexión que obtuvo en el paso [Obtener la lista de los destinos](#get-the-list-of-available-destinations)disponibles.
 * `{AUTHENTICATION_CREDENTIALS}`:: rellene el nombre del destino de flujo continuo: `Aws Kinesis authentication credentials` o `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`:: *Para [!DNL Amazon Kinesis] conexiones.* Su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
 * `{SECRET_KEY}`:: *Para [!DNL Amazon Kinesis] conexiones.* La clave secreta de la ubicación del almacenamiento de Amazon Kinesis.
