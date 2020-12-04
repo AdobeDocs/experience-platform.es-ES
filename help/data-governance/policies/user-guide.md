@@ -7,7 +7,7 @@ description: El Gobierno de datos de Adobe Experience Platform proporciona una i
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Adobe Experience Platform [!DNL Data Governance] proporciona una interfaz de usu
 >
 >Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente. Consulte la sección sobre la [activación de políticas](#enable) para ver los pasos sobre cómo hacerlo en la interfaz de usuario.
 
-## Requisitos previos
+## Requisitos previos 
 
 Esta guía requiere una comprensión práctica de los siguientes [!DNL Experience Platform] conceptos:
 
-- [[!Gobierno de datos DNL]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Directivas de uso de datos](./overview.md)
 
 ## Directivas de uso de datos de vista {#view-policies}
