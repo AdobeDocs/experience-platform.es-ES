@@ -144,7 +144,7 @@ Una respuesta correcta devuelve las especificaciones de conexión para SSC, incl
 }
 ```
 
-## Creación de una conexión base
+## Create a base connection
 
 Una conexión base especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión de base por cuenta SSC, ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
