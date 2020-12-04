@@ -5,7 +5,7 @@ seo-title: Administración de datos en la plataforma de datos del cliente en tie
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Puede establecer restricciones de uso de datos en un destino definiendo casos de
 
 La definición de casos de uso de mercadotecnia en los destinos le permite asegurarse de que todos los perfiles o segmentos enviados a dichos destinos cumplen las políticas de uso de datos. Por lo tanto, debe agregar a los destinos los casos de uso de mercadotecnia adecuados en función de las necesidades de su organización para aplicar restricciones de directiva en la activación.
 
-Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar casos de uso de mercadotecnia aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la documentación [de](../destinations/destinations-overview.md#data-governance) destinos para ver los pasos para configurar un destino concreto.
+Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar casos de uso de mercadotecnia aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la documentación [de](../destinations/overview.md) destinos para ver los pasos para configurar un destino concreto.
 
 ## Administrar directivas de uso de datos {#policies}
 
@@ -87,7 +87,7 @@ Cada etapa del calendario anterior representa una entidad que puede contribuir a
 | Etapa del linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
 | Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas a nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o un campo que contenga ciertas etiquetas para un propósito que una política restrinja. |
-| Combinar directiva | Las políticas de combinación son las reglas que utiliza la plataforma para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las directivas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la guía sobre políticas [de](../../profile/ui/merge-policies.md) combinación para obtener más información. |
+| Combinar directiva | Las políticas de combinación son las reglas que utiliza la plataforma para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las directivas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse a partir de los perfiles del cliente. Según los campos que incluya una definición de segmento, el segmento heredará las etiquetas de uso aplicadas para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destinatario, según el caso de uso de la mercadotecnia. |
 | Destino | Al configurar un destino, se puede definir una acción de mercadotecnia (a veces denominada caso de uso de mercadotecnia). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva de uso de datos. En otras palabras, el caso de uso de mercadotecnia que defina para un destino determina qué políticas de uso de datos son aplicables a dicho destino. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas de uso están restringidas por las políticas aplicables del destino de destinatario. |
 
