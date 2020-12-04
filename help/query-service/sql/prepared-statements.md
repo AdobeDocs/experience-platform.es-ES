@@ -85,12 +85,12 @@ La consulta SQL anterior devolverá la siguiente respuesta:
 
 | id | firstname | lastname | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | París |
-| 10001 | antoína | dubois | 1967-03-14 | Tokio | París | Francia |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
+| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Estocolmo |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Esta consulta SQL se puede parametrizar mediante la siguiente instrucción preparada:
 
@@ -109,10 +109,10 @@ Cuando se llame a esto, verá exactamente los mismos resultados que antes:
 | id | firstname | lastname | fecha de nacimiento | email | city | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | Nairobi | París | Francia |
+| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | rios | duelo |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Una vez que haya terminado de utilizar la instrucción preparada, puede deslocalizarla mediante la siguiente llamada:
