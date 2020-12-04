@@ -7,8 +7,8 @@ description: Control de acceso en Adobe Experience Platform le permite administr
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 3%
+source-wordcount: '375'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!DNL Access control] for [!DNL Experience Platform] se administra a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../home.md) control de acceso para obtener más información.
 
-Esta guía para desarrolladores proporciona información sobre cómo dar formato a sus solicitudes a la [[!DNL Control de acceso API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)y abarca las siguientes operaciones:
+Esta guía para desarrolladores proporciona información sobre cómo dar formato a las solicitudes al [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)y abarca las siguientes operaciones:
 
 - [Nombres de lista de permisos y tipos de recursos](./permissions-and-resource-types.md)
 - [Directivas eficaces de vista para el usuario actual](./effective-policies.md)
