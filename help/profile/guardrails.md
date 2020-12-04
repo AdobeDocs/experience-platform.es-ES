@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform proporciona una serie de protecciones que le ayudan a 
 
 Se recomienda leer la siguiente documentación de servicios de Experience Platform antes de intentar crear modelos de datos para utilizarlos en [!DNL Real-time Customer Profile]. Trabajar con modelos de datos y las barreras descritas en este documento requiere comprender los diversos servicios de Experience Platform que intervienen en la gestión de [!DNL Real-time Customer Profile] las entidades:
 
-* [[!Perfil del cliente en tiempo real de DNL]](home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Real-time Customer Profile]](home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 * [Adobe Experience Platform Identity Service](../identity-service/home.md): Admite la creación de una &quot;vista única del cliente&quot; mediante el enlace de identidades de fuentes de datos dispares a medida que se van ingeriendo en [!DNL Platform].
-* [[!Modelo de datos de experiencia DNL (XDM)]](../xdm/home.md): El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):: El marco estandarizado por el cual Platform organiza los datos de experiencia del cliente.
    * [Conceptos básicos de la composición](../xdm/schema/composition.md)de esquemas: Introducción a los esquemas y a los modelos de datos en Experience Platform.
 * [Servicio](../segmentation/home.md)de segmentación de Adobe Experience Platform: Motor de segmentación dentro del [!DNL Platform] que se utiliza para crear segmentos de audiencia a partir de los perfiles del cliente en función de los comportamientos y atributos del cliente.
    * [Segmentación](../segmentation/multi-entity-segmentation.md)multientidad: Una guía para crear segmentos que integren entidades de dimensión con datos de perfil.
@@ -62,7 +62,7 @@ Al crear un modelo de datos para utilizarlo con [!DNL Real-time Customer Profile
 
 | Guardrade | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número de conjuntos de datos recomendados para contribuir al esquema de [!DNL Profile] unión | 20 | Leve | **Se recomienda un máximo de 20 conjuntos de datos[!DNL Profile]habilitados.** Para habilitar otro conjunto de datos para [!DNL Profile], primero se debe eliminar o deshabilitar un conjunto de datos existente. |
+| Número de conjuntos de datos recomendados para contribuir al esquema de [!DNL Profile] unión | 20 | Leve | **Se recomienda un máximo de 20 conjuntos de datos [!DNL Profile]habilitados.** Para habilitar otro conjunto de datos para [!DNL Profile], primero se debe eliminar o deshabilitar un conjunto de datos existente. |
 | Número de relaciones de varias entidades recomendadas | 5 | Leve | **Se recomienda un máximo de 5 relaciones de varias entidades definidas entre entidades principales y entidades de dimensión.** No se deben realizar asignaciones de relación adicionales hasta que se elimine o desactive una relación existente. |
 | Profundidad máxima de JSON para el campo de ID utilizado en la relación de varias entidades | 4 | Leve | **La profundidad máxima recomendada de JSON para un campo de ID utilizado en relaciones de varias entidades es 4.** Esto significa que en un esquema muy anidado, los campos anidados con más de 4 niveles de profundidad no deben utilizarse como campo de ID en una relación. |
 | Cardinalidad de matriz en un fragmento de perfil | &lt;=500 | Leve | **La cardinalidad óptima de la matriz en un fragmento de perfil (datos independientes del tiempo) es &lt;=500.** |
@@ -72,8 +72,8 @@ Al crear un modelo de datos para utilizarlo con [!DNL Real-time Customer Profile
 
 | Guardrade | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| No se permiten datos de series temporales para entidades que no son[!DNL XDM Individual Profile] entidades | 0 | Grave | **No se permiten datos de series temporales para entidades que no pertenecen a Perfil Service[!DNL XDM Individual Profile].** Si un conjunto de datos de series temporales está asociado con un no-[!DNL XDM Individual Profile] ID, el conjunto de datos no debe habilitarse para [!DNL Profile]. |
-| No hay relaciones anidadas | 0 | Leve | **No debe crear una relación entre dos no esquemas[!DNL XDM Individual Profile].** No se recomienda la capacidad de crear relaciones para ningún esquema que no forme parte del esquema de [!DNL Profile] unión. |
+| No se permiten datos de series temporales para entidades que no son[!DNL XDM Individual Profile] entidades | 0 | Grave | **No se permiten datos de series temporales para entidades que no pertenecen a Perfil Service[!DNL XDM Individual Profile] .** Si un conjunto de datos de series temporales está asociado con un no-[!DNL XDM Individual Profile] ID, el conjunto de datos no debe habilitarse para [!DNL Profile]. |
+| No hay relaciones anidadas | 0 | Leve | **No debe crear una relación entre dos no esquemas[!DNL XDM Individual Profile] .** No se recomienda la capacidad de crear relaciones para ningún esquema que no forme parte del esquema de [!DNL Profile] unión. |
 | Profundidad JSON máxima para el campo de ID principal | 4 | Leve | **La profundidad máxima recomendada de JSON para el campo de ID principal es 4.** Esto significa que en un esquema muy anidado, no debe seleccionar un campo como ID principal si está anidado con más de 4 niveles de profundidad. Un campo que se encuentra en el cuarto nivel anidado puede utilizarse como ID principal. |
 
 ## Guardias de tamaño de datos
