@@ -8,7 +8,7 @@ description: 'El flujo continuo de la ingestión le permite cargar sus datos en 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -22,8 +22,8 @@ El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experien
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [[!Ingesta de flujo DNL]](../streaming-ingestion/overview.md): Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):: Uno de los métodos mediante los cuales se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
