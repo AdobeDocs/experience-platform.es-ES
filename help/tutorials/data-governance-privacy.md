@@ -36,6 +36,6 @@ Una vez que haya agregado las etiquetas de uso para los datos y haya creado pol�
 
 Los segmentos que están habilitados para utilizarse en [!DNL Real-time Customer Profile] contienen un ID de directiva de combinación dentro de su definición de segmento. Esta directiva de combinación contiene información sobre los conjuntos de datos que se deben incluir en el segmento, que a su vez contienen las etiquetas de uso de datos aplicables. Para ver los pasos específicos que abarcan la aplicación de la conformidad con el uso de datos para un segmento de audiencia, siga el tutorial de cumplimiento de la normativa de uso de [datos para segmentos](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Introducción a [!DNL Privacy Service]
 
 [!DNL Privacy Service] proporciona una API de RESTful y una interfaz de usuario que le permiten administrar los datos personales de sus usuarios (clientes) en todas las aplicaciones de Adobe Experience Cloud. [!DNL Privacy Service] también proporciona un mecanismo central de auditoría y registro que le permite acceder al estado y los resultados de los trabajos que involucran [!DNL Experience Cloud] aplicaciones. Para obtener instrucciones sobre cómo crear y supervisar [!DNL Privacy Service] trabajos, siga los pasos que se indican en la guía [para desarrolladores de](../privacy-service/api/getting-started.md) Privacy Service o en la guía [de usuario de](../privacy-service/ui/overview.md)Privacy Service.
