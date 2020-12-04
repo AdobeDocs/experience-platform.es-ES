@@ -8,7 +8,7 @@ description: La API de servicio de directivas le permite crear y administrar pol
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -24,9 +24,9 @@ Este documento proporciona un tutorial paso a paso para crear una política medi
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave relacionados con la creación y evaluación de políticas:
 
-* [[!Administración de datos DNL]](../home.md): Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
+* [[!DNL Data Governance]](../home.md):: Marco mediante el cual [!DNL Platform] se aplica el cumplimiento de la normativa de uso de datos.
 * [Etiquetas](../labels/overview.md)de uso de datos: Las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones para acceder a los datos.
-* [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 * [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Antes de iniciar este tutorial, consulte la guía [para](../api/getting-started.md) desarrolladores para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Policy Service] API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
