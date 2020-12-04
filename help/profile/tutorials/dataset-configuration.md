@@ -6,7 +6,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ Este tutorial trata el proceso de habilitar un conjunto de datos para su uso en 
 
 Este tutorial requiere un conocimiento práctico de los distintos servicios de Adobe Experience Platform que participan en la administración de conjuntos de datos [!DNL Profile]habilitados. Antes de comenzar este tutorial, consulte la documentación de estos [!DNL Platform] servicios relacionados:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
-- [[!Servicio de catálogo DNL]](../../catalog/home.md): Una API RESTful que permite crear conjuntos de datos y configurarlos para [!DNL Real-time Customer Profile] y [!DNL Identity Service].
-- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Real-time Customer Profile]](../home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Identity Service]](../../identity-service/home.md):: Permite [!DNL Real-time Customer Profile] el puente de identidades de orígenes de datos dispares que se están ingeriendo en [!DNL Platform].
+- [[!DNL Catalog Service]](../../catalog/home.md):: Una API RESTful que permite crear conjuntos de datos y configurarlos para [!DNL Real-time Customer Profile] y [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas exitosas a las API de plataforma.
 
