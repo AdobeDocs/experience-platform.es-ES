@@ -323,7 +323,7 @@ A continuación se muestra una lista de mensajes de error relacionados con [!DNL
 }
 ```
 
-Este error se muestra cuando las primeras 100 filas de un lote no presentaron identidades. Sin embargo, este error no indica de manera concluyente que no se hayan encontrado identidades en registros posteriores.
+Este error se muestra cuando las primeras 100 filas de un lote no presentaban identidades. Sin embargo, este error no indica de manera concluyente que no se hayan encontrado identidades en registros posteriores.
 
 ### Se omitieron los registros porque sólo tenían una identidad por registro XDM
 
