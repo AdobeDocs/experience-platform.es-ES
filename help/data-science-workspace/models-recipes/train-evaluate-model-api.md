@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas de API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obtener una lista detallada de la documentación de API.
 
-## Requisitos previos
+## Requisitos previos 
 
 Siga la sección [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md) para crear un motor, que es necesario para entrenar y evaluar un modelo mediante la API.
 
