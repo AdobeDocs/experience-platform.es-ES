@@ -126,4 +126,4 @@ Algunos contratos incluyen prohibiciones explícitas del uso de datos para la ci
 
 #### C10 {#c10}
 
-Algunas directivas de uso de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+Algunas directivas de uso de datos restringen el uso de datos de identidad enlazados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
