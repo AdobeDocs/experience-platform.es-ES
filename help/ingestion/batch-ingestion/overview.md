@@ -7,7 +7,7 @@ description: La API de inserción por lotes permite ingestar datos en Adobe Expe
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ La [!DNL Data Ingestion] API le permite ingerir datos como lotes (una unidad de 
 ### [!DNL Data Ingestion] requisitos previos
 
 - Los datos que se van a cargar deben estar en los formatos Parquet o JSON.
-- Un conjunto de datos creado en los [[!DNL Catalog services]](../../catalog/home.md).
+- Un conjunto de datos creado en el [[!DNL Catalog services]](../../catalog/home.md).
 - El contenido del archivo de parqué debe coincidir con un subconjunto del esquema del conjunto de datos que se está cargando en.
 - Tenga su Token de acceso único después de la autenticación.
 
