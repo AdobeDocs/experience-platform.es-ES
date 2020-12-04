@@ -41,7 +41,7 @@ Para obtener información sobre cómo administrar las directivas en la API, cons
 
 Una vez que se han aplicado las etiquetas de uso de datos a los conjuntos de datos y se han definido las políticas de uso de datos para las acciones de marketing en relación con dichas etiquetas, las capacidades de administración de datos le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan violaciones de políticas. [!DNL Platform]
 
-La [!DNL Policy Service] API proporciona puntos finales que le permiten probar acciones de mercadotecnia con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se producen violaciones de políticas. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos. Para obtener más información, consulte la guía [de extremos de](./evaluation.md) evaluación.
+La [!DNL Policy Service] API proporciona puntos finales que le permiten probar acciones de mercadotecnia con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se producen violaciones de políticas. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos. See the [evaluation endpoints guide](./evaluation.md) for more information.
 
 ## Pasos siguientes
 
