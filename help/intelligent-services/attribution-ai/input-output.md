@@ -31,7 +31,7 @@ No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obl
 | --- | --- |
 | Campo de identidad principal | Touchpoint / Conversión |
 | Marca de tiempo | Touchpoint / Conversión |
-| Channel._type | Touchpoint |
+| Canal._type | Touchpoint |
 | Channel.mediaAction | Touchpoint |
 | Channel.mediaType | Touchpoint |
 | Marketing.trackingCode | Touchpoint |
