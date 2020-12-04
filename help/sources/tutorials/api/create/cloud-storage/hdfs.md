@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación de un conector HDFS de Apache mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar un sistema de archivos distribuido Apache Hadoop (en lo sucesivo, "HDFS") al Experience Platform.
+description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar un sistema de archivos distribuido de Apache Hadoop (en lo sucesivo, "HDFS") al Experience Platform.
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de distintas fuentes para incluirlos en Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectar un sistema de archivos distribuido Apache Hadoop (en adelante denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectar un sistema de archivos distribuido de Hadoop Apache (en adelante denominado &quot;HDFS&quot;) a [!DNL Experience Platform].
 
 ## Primeros pasos
 
