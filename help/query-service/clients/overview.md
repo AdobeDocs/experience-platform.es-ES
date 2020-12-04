@@ -7,7 +7,7 @@ description: Este documento explica cómo conectarse al servicio de Consulta des
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ En esta sección se explica cómo conectarse a [!DNL Query Service] desde una va
 Se proporcionan instrucciones para los siguientes clientes:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
-- [[!Valor de búsqueda de DNL]](./looker.md)
+- [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
-- [[!Power BI DNL (PC)]](./power-bi.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
