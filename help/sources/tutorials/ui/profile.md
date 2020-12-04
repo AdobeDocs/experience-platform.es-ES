@@ -69,4 +69,4 @@ Con el esquema y el conjunto de datos habilitados para [!DNL Profile], los datos
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha activado correctamente los datos de entrada para [!DNL Profile] la población. For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
+Siguiendo este tutorial, ha activado correctamente los datos de entrada para [!DNL Profile] la población. Para obtener más información, consulte la [[!DNL Real-time Customer Profile] información general](../../../profile/home.md).
