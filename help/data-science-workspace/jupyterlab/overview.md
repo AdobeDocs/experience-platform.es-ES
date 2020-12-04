@@ -252,7 +252,7 @@ Para obtener más información sobre cada uno de los blocs de notas compatibles 
 | Biblioteca | Versión |
 | :------ | :------ |
 | portátil | 6.0.0 |
-| genere | 2.22.0 |
+| solicitudes | 2.22.0 |
 | tríptico | 4.0.0 |
 | folium | 0.10.0 |
 | ipywidgets | 7.5.1 |
@@ -315,7 +315,7 @@ Para obtener más información sobre cada uno de los blocs de notas compatibles 
 | r-lubridate | 1.7.4 |
 | r-randomforest | 4.6_14 |
 | r-tidyverse | 1.2.1 |
-| wora | 1.0_39 |
+| r-tree | 1.0_39 |
 | pymongo | 3.8.0 |
 | pyarrow | 0.14.1 |
 | boto3 | 1.9.199 |
@@ -332,7 +332,7 @@ Para obtener más información sobre cada uno de los blocs de notas compatibles 
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
 | nodejs | 12.3.0 |
-| snm | 3.0.5 |
+| mock | 3.0.5 |
 | ipympl | 0.3.3 |
 | fonts-anacond | 1.0 |
 | psycopg2 | 2.8.3 |
