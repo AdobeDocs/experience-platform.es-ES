@@ -8,7 +8,7 @@ description: Este documento proporciona un tutorial para desarrollar, probar, pr
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Crear un segmento
 
-Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante el [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
 Para obtener información sobre cómo generar segmentos mediante la interfaz de usuario, consulte la guía [Generador de segmentos](../ui/overview.md).
 
@@ -24,9 +24,9 @@ Para obtener información sobre cómo generar segmentos mediante la interfaz de 
 
 Este tutorial requiere un conocimiento práctico de los distintos [!DNL Adobe Experience Platform] servicios que intervienen en la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!Perfil del cliente en tiempo real de DNL]](../../profile/home.md): Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-- [[!Servicio de segmentación de Adobe Experience Platform DNL]](../home.md): Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
-- [[!Modelo de datos de experiencia DNL (XDM)]](../../xdm/home.md): El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):: Le permite generar segmentos de audiencia a partir de datos de Perfil del cliente en tiempo real.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las siguientes secciones proporcionan información adicional que deberá conocer para realizar llamadas a las [!DNL Platform] API de forma satisfactoria.
 
@@ -58,7 +58,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 El primer paso en la segmentación es definir un segmento, representado en una construcción denominada definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para el segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-time Customer Profile]. Consulte la guía [](../pql/overview.md) PQL para obtener más información sobre cómo escribir consultas PQL.
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
+Puede crear una nueva definición de segmento haciendo una solicitud de POST al `/segment/definitions` extremo en la [!DNL Segmentation] API. El siguiente ejemplo describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
 
 Para obtener una explicación detallada sobre cómo definir un segmento, lea la guía para desarrolladores de definiciones de [segmentos](../api/segment-definitions.md#create).
 
