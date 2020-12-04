@@ -1,5 +1,5 @@
 ---
-title: 'Notas de la versión de Adobe Experience Platform '
+title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform 11 de diciembre de 2019
 doc-type: release notes
 last-update: December 12, 2019
@@ -39,7 +39,7 @@ El servicio de segmentación de Adobe Experience Platform proporciona una interf
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información, consulte la descripción general [del servicio](../../segmentation/home.md)de segmentación.
 
@@ -55,11 +55,11 @@ Adobe Experience Platform [!DNL Decisioning Service] ofrece la capacidad de sele
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamientos basados en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
@@ -72,7 +72,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 **Problemas conocidos**
 
-* None.
+* Ninguna.
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
 
@@ -95,6 +95,6 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 **Problemas conocidos**
 
-* None
+* Ninguna
 
 Para obtener más información sobre cómo trabajar con XDM mediante la [!DNL Schema Registry] API y la interfaz de usuario, lea la documentación [!DNL Schema Editor] del sistema [](../../xdm/home.md)XDM.
