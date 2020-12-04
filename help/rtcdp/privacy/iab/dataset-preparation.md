@@ -24,7 +24,7 @@ Específicamente, se requieren dos conjuntos de datos para capturar los datos de
 
 Este documento proporciona los pasos para configurar estos dos conjuntos de datos a fin de recopilar datos de consentimiento TCF 2.0 de IAB. Para obtener una descripción general del flujo de trabajo completo que se va a configurar [!DNL Real-time CDP] para TCF 2.0, consulte la información general [sobre la compatibilidad con TCF 2.0 de](./overview.md)IAB.
 
-## Requisitos previos
+## Requisitos previos 
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
