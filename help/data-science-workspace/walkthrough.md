@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Este documento proporciona un tutorial para Adobe Experience Platform [!DNL Data Science Workspace]. En este tutorial se describe un flujo de trabajo general de Data Science y cómo pueden abordar y resolver un problema mediante el aprendizaje automático.
 
-## Requisitos previos
+## Requisitos previos 
 
 - Una cuenta de Adobe ID registrada
    - La cuenta de Adobe ID debe haberse agregado a una organización con acceso a Adobe Experience Platform y [!DNL Data Science Workspace].
@@ -191,7 +191,7 @@ Ahora es el momento de crear algunos modelos de los datos y seleccionar qué mod
 
 #### Dividir conjuntos de datos en subconjuntos de prueba y capacitación
 
-Necesita una manera de saber cuán preciso será el modelo para poder predecir los valores. Esta evaluación se puede realizar asignando parte del conjunto de datos para utilizarlo como validación y el resto como datos de capacitación. Dado que `weeklySalesAhead` son los valores futuros reales de `weeklySales`, puede utilizarlos para evaluar la precisión del modelo al predecir el valor. La división se realiza a continuación:
+Necesita una manera de saber cuán preciso será el modelo para poder predecir los valores. Esta evaluación se puede realizar asignando parte del conjunto de datos para utilizarlo como validación y el resto como datos de capacitación. Como `weeklySalesAhead` son los valores futuros reales de `weeklySales`, puede utilizarlos para evaluar la precisión del modelo al predecir el valor. La división se realiza a continuación:
 
 ![](./images/walkthrough/split_data.png)
 
