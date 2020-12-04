@@ -8,7 +8,7 @@ description: 'Este tutorial utiliza la API de aprendizaje automático Sensei par
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Importación de una fórmula empaquetada (API)
 
-Este tutorial utiliza la [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para crear un [motor](../api/engines.md), también conocido como una fórmula en la interfaz de usuario.
+Este tutorial utiliza el [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para crear un [motor](../api/engines.md), también conocido como una fórmula en la interfaz de usuario.
 
 Antes de comenzar, es importante tener en cuenta que Adobe Experience Platform [!DNL Data Science Workspace] utiliza términos diferentes para hacer referencia a elementos similares dentro de la API y la interfaz de usuario. Los términos de API se utilizan en este tutorial y la siguiente tabla describe los términos correlativos:
 
