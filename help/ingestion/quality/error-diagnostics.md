@@ -7,7 +7,7 @@ description: Este documento proporciona información sobre la monitorización de
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ Este documento proporciona información sobre la monitorización de la ingestió
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [Sistema de modelo de datos de experiencia (XDM) [!DNL]](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [[!DNL Ingesta de datos de Adobe Experience Platform]](../home.md): Métodos por los que se pueden enviar datos [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):: Métodos por los que se pueden enviar datos [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
