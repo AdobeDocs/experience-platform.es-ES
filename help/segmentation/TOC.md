@@ -22,7 +22,7 @@ ht-degree: 27%
    - [Primeros pasos](api/getting-started.md)
    - [Trabajos de exportación](api/export-jobs.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)
-   - [Programaciones](api/schedules.md)
+   - [Planificador](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmentos](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
