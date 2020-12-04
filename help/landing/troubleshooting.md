@@ -25,7 +25,7 @@ La siguiente es una lista de respuestas a las preguntas más frecuentes sobre Ad
 
 ## ¿Qué son [!DNL Experience Platform] las API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta varias API de RESTful que utilizan solicitudes HTTP para acceder a [!DNL Platform] los recursos. Cada una de estas API de servicio expone varios extremos y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la documentación [de referencia de la](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API sobre la E/S de Adobe.
+[!DNL Experience Platform] oferta varias API de RESTful que utilizan solicitudes HTTP para acceder a [!DNL Platform] los recursos. Cada una de estas API de servicio expone varios extremos y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la documentación [de referencia de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API en Adobe I/O.
 
 ## ¿Cómo se formatea una solicitud de API? {#how-do-i-format-an-api-request}
 
@@ -175,7 +175,7 @@ Este mensaje de error se muestra cuando falta un `Authorization` encabezado de u
 }
 ```
 
-Este mensaje de error se muestra cuando el token de acceso proporcionado en el `Authorization` encabezado no es válido. Asegúrese de que el token se ha introducido correctamente o [genere un nuevo token](../tutorials/authentication.md) en la consola de E/S de Adobe.
+Este mensaje de error se muestra cuando el token de acceso proporcionado en el `Authorization` encabezado no es válido. Asegúrese de que el token se ha introducido correctamente o [genere un nuevo token](../tutorials/authentication.md) en la consola de Adobe I/O.
 
 ### Se requiere la clave de API
 
@@ -197,7 +197,7 @@ Este mensaje de error se muestra cuando falta un encabezado de clave de API (`x-
 }
 ```
 
-Este mensaje de error se muestra cuando el valor del encabezado de clave de API proporcionado (`x-api-key`) no es válido. Asegúrese de haber introducido la clave correctamente antes de intentarlo de nuevo. Si no conoce la clave de API, puede encontrarla en la consola [de E/S de](https://console.adobe.io)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para encontrar la clave de API en Credenciales **de cliente**.
+Este mensaje de error se muestra cuando el valor del encabezado de clave de API proporcionado (`x-api-key`) no es válido. Asegúrese de haber introducido la clave correctamente antes de intentarlo de nuevo. Si no conoce la clave de API, puede encontrarla en la consola [de](https://console.adobe.io)Adobe I/O: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para encontrar la clave de API en Credenciales **de cliente**.
 
 
 ### Falta el encabezado
@@ -220,7 +220,7 @@ Este mensaje de error se muestra cuando falta un encabezado de organización de 
 }
 ```
 
-Este mensaje de error se muestra cuando el usuario o la integración de E/S de Adobe (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` encabezado) no tiene derecho a realizar llamadas a [!DNL Experience Platform] API para la organización IMS proporcionada en el `x-gw-ims-org-id` encabezado. Asegúrese de que ha proporcionado el ID correcto para su organización de IMS en el encabezado antes de intentarlo de nuevo. Si no conoce el ID de organización, puede encontrarlo en la consola [de E/S de](https://console.adobe.io)Adobe: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para buscar el ID en Credenciales de **cliente**.
+Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/O (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el `Authorization` encabezado) no tiene derecho a realizar llamadas a [!DNL Experience Platform] las API para la organización IMS proporcionada en el `x-gw-ims-org-id` encabezado. Asegúrese de que ha proporcionado el ID correcto para su organización de IMS en el encabezado antes de intentarlo de nuevo. Si no conoce su ID de organización, puede encontrarlo en la consola [de](https://console.adobe.io)Adobe I/O: en la ficha **Integraciones** , vaya a la sección **Información general** de una integración específica para buscar el ID en Credenciales de **cliente**.
 
 ### No se especificó un tipo de contenido válido
 
