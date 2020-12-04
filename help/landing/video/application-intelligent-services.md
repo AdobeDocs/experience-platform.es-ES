@@ -23,7 +23,7 @@ En este vídeo se ofrece una descripción general de la aplicación y los servic
 
 * Attribution AI
 * AI del cliente
-* Customer Journey Analytics
+* Customer Journey Analytics 
 * Journey Orchestration
 * Plataforma de datos de clientes en tiempo real
 
