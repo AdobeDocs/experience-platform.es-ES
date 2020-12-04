@@ -8,7 +8,7 @@ description: Adobe Experience Platform Data Science Workspace proporciona los me
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 * Descargue los tres [!DNL Jupyter Notebook] archivos necesarios del [Adobe [!DNL Git] publicRepository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), que se utilizarán para mostrar el [!DNL JupyterLab] flujo de trabajo en [!DNL Data Science Workspace].
 
 * Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   * [[!Modelo de datos de experiencia DNL]](../../xdm/home.md): El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
+   * [[!DNL Experience Data Model]](../../xdm/home.md):: El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
    * Conjuntos de datos: Una construcción de almacenamiento y administración para los datos reales. Una instancia física de instancia de un Esquema [](../../xdm/schema/field-dictionary.md)XDM.
    * Lotes: Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
    * [!DNL JupyterLab]:: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project [!DNL Jupyter] y está estrechamente integrada en [!DNL Experience Platform].
