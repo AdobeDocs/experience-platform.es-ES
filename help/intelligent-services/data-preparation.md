@@ -108,7 +108,7 @@ Para obtener información completa sobre cada uno de los subcampos obligatorios 
 
 En la tabla siguiente se proporcionan algunos ejemplos de canales de marketing asignados al `xdm:channel` esquema:
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Búsqueda de pago | https:/<span>/ns.adobe.com/xdm/canal-types/search | pagado | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | ganado | clicks |
