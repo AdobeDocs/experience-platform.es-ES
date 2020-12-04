@@ -25,7 +25,7 @@ ht-degree: 2%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `device` | [Device](../../data-types/device.md) | Describe una instancia de dispositivo, aplicación o navegador de dispositivo identificada que se puede rastrear en varias sesiones, normalmente mediante cookies. |
+| `device` | [Dispositivo](../../data-types/device.md) | Describe una instancia de dispositivo, aplicación o navegador de dispositivo identificada que se puede rastrear en varias sesiones, normalmente mediante cookies. |
 | `environment` | [Entorno](../../data-types/environment.md) | Describe información sobre el contexto situacional de la observación de evento, detallando específicamente información transitoria como las versiones de red o software. |
 | `placeContext` | [Colocar contexto](../../data-types/place-context.md) | Describe las circunstancias transitorias relacionadas con la observación de evento. Algunos ejemplos son la información específica de la configuración regional, como el tiempo, la hora local, el tráfico, el día de la semana, el día laboral o el día festivo, y las horas de trabajo. |
 
