@@ -7,7 +7,7 @@ description: Adobe Experience Platform le permite crear y crear tuberías de fun
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -439,4 +439,4 @@ Una vez finalizada la puntuación, la canalización de funciones debería estar 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la [!DNL Sensei Machine Learning] API. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante la [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Al leer este documento, ha creado una canalización de funciones con el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de la imagen de Docker para crear un modelo de canalización de funciones mediante la [!DNL Sensei Machine Learning] API. Ya está listo para continuar transformando conjuntos de datos y extrayendo funciones de datos a escala mediante el uso del [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
