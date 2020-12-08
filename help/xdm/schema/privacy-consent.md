@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: Información general sobre la combinación de privacidad
+title: Tipo de datos de contenido y preferencias
 description: El tipo de datos Privacidad/Preferencias de marketing (Consentimiento) está diseñado para admitir la recopilación de permisos y preferencias del cliente generados por las plataformas de gestión de consentimiento (CMP) y otras fuentes de sus operaciones de datos.
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,6 @@ El tipo [!DNL Privacy/Marketing Preferences (Consent)] de datos (en lo sucesivo 
 
 El presente documento abarca la estructura y el uso previsto de los campos proporcionados por el tipo de [!DNL Consents & Preferences] datos.
 
->[!IMPORTANT]
->
->El tipo de datos está diseñado para abarcar una serie de casos de uso de consentimiento y gestión de preferencias. [!DNL Consents & Preferences] Como resultado, este documento describe el uso de los campos del tipo de datos en términos generales, y sólo hace sugerencias sobre cómo interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del tipo de datos con la forma en que su organización interpreta y presenta estas opciones de consentimiento y preferencias a sus clientes.
-
 ## Requisitos previos  {#prerequisites}
 
 Este documento requiere una comprensión práctica de XDM y el uso de los esquemas en [!DNL Experience Platform]. Revise la siguiente documentación antes de continuar:
@@ -30,6 +26,10 @@ Este documento requiere una comprensión práctica de XDM y el uso de los esquem
 * [Conceptos básicos de la composición de esquemas](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Estructura del tipo de datos {#structure}
+
+>[!IMPORTANT]
+>
+>El tipo de datos está diseñado para abarcar una serie de casos de uso de consentimiento y gestión de preferencias. [!DNL Consents & Preferences] Como resultado, este documento describe el uso de los campos del tipo de datos en términos generales, y sólo hace sugerencias sobre cómo interpretar el uso de estos campos. Consulte con su equipo legal de privacidad para alinear la estructura del tipo de datos con la forma en que su organización interpreta y presenta estas opciones de consentimiento y preferencias a sus clientes.
 
 El tipo de datos [!DNL Consents & Preferences] proporciona varios campos utilizados para capturar información de **consentimiento** y **preferencias** .
 
