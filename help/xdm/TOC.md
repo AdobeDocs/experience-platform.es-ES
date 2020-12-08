@@ -5,9 +5,9 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM)
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 translation-type: tm+mt
-source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '184'
 ht-degree: 22%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 22%
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
    * Casos de uso de esquema {#use-cases}
-      * [Mezcla de consentimiento de privacidad](schema/privacy-consent.md)
+      * [Tipo de datos de contenido y preferencias](schema/privacy-consent.md)
 * Clases {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -40,6 +40,7 @@ ht-degree: 22%
 * Tipos de datos {#data-types}
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
+   * [Contenido y preferencias](./data-types/consents.md)
    * [Dispositivo](./data-types/device.md)
    * [Dirección de correo electrónico](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
