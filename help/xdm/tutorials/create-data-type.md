@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial utiliza la interfaz de usuario del Experience Platform para guiarle por los pasos necesarios para componer un tipo de datos personalizado.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Este tutorial trata los pasos para crear y editar tipos de datos personalizados 
 
 Este tutorial requiere un conocimiento práctico del sistema XDM. Consulte la descripción general [de](../home.md) XDM para obtener una introducción a la función de XDM dentro del ecosistema del Experience Platform y los [conceptos básicos de la composición](../schema/composition.md) del esquema para saber cómo los tipos de datos contribuyen a los esquemas XDM.
 
-Aunque no es necesario para este tutorial, se recomienda que también siga el tutorial sobre la [composición de un esquema en la interfaz de usuario](./-schema-ui.md) para familiarizarse con las diversas funciones de la [!DNL Schema Editor].
+Aunque no es necesario para este tutorial, se recomienda que también siga el tutorial sobre la [composición de un esquema en la interfaz de usuario](./create-schema-ui.md) para familiarizarse con las diversas funciones de la [!DNL Schema Editor].
 
 ## Abrir el [!DNL Schema Editor] para un tipo de datos
 
