@@ -5,9 +5,9 @@ seo-title: Destino de Brazo
 description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 seo-description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,10 @@ Tenga en cuenta los siguientes detalles específicos del [!DNL Braze] destino:
 
 * Puede enviar cualquier [identidad](../../../identity-service/namespaces.md) al [!DNL Braze] destino, siempre y cuando lo asigne al [!DNL Braze] destino [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] los segmentos se exportan a [!DNL Braze] bajo el `AdobeExperiencePlatformSegments` atributo .
+
+>[!NOTE]
+>
+>Tenga en cuenta que el envío de atributos personalizados adicionales puede [!DNL Braze] provocar un aumento en el consumo de puntos [!DNL Braze] de datos. Consulte con el administrador [!DNL Braze] de cuentas antes de enviar atributos personalizados adicionales.
 
 ## Casos de uso {#use-cases}
 
