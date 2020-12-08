@@ -5,10 +5,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM)
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 465582e0d1503426104a048561b1c8c68e7f55ee
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 22%
+source-wordcount: '190'
+ht-degree: 21%
 
 ---
 
@@ -70,6 +70,7 @@ ht-degree: 22%
 * Tutoriales {#tutorials}
    * [Creación de un esquema (API)](tutorials/create-schema-api.md)
    * [Creación de un esquema (IU)](tutorials/create-schema-ui.md)
+   * [Creación y edición de tipos de datos (IU)](./tutorials/create-data-type.md)
    * [Definir una relación entre dos esquemas (API)](tutorials/relationship-api.md)
    * [Definir una relación entre dos esquemas (IU)](tutorials/relationship-ui.md)
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
