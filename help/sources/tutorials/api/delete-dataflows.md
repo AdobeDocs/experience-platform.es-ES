@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Eliminar un flujo de datos mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial trata los pasos para eliminar un flujo de datos mediante la API de servicio de flujo.
+description: En este tutorial se explican los pasos para eliminar flujos de datos de flujo y por lotes mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # Eliminar un flujo de datos mediante la API de servicio de flujo
 
-En este tutorial se explican los pasos para eliminar flujos de datos realizados con orígenes de flujo y por lotes mediante el uso del [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Puede eliminar flujos de datos por lotes y de flujo continuo que contengan errores o que se hayan vuelto obsoletos mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+En este tutorial se explican los pasos para eliminar flujos de datos realizados con orígenes de flujo y por lotes mediante [!DNL Flow Service].
 
 ## Primeros pasos
 
