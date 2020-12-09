@@ -5,9 +5,9 @@ title: Guía para desarrolladores de API de registro de esquema
 description: 'La API del Registro de Esquema le permite administrar mediante programación todos los esquemas y recursos XDM relacionados disponibles en Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,13 @@ Los esquemas XDM representan y validan la estructura y el formato de los datos i
 
 Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de Esquema, incluida la creación y adición de mezclas y tipos de datos, consulte el tutorial [de creación de esquemas de](../tutorials/create-schema-api.md)API.
 
+## Comportamientos
+
+Los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que empleen esa clase. Consulte la guía [del extremo de](./behaviors.md) comportamientos para obtener información sobre cómo vista de los comportamientos disponibles en la API.
+
 ## Clases
 
-Las clases definen los aspectos de comportamiento de los datos que contendrá un esquema (registro o serie temporal). Además, una clase determina la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase. Una clase de esquema determina qué mezclas son elegibles para su uso en ese esquema. Consulte la guía [de extremo de](./classes.md) clases para obtener más información sobre cómo trabajar con clases en la API.
+Una clase define la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase y determina qué mezclas son elegibles para su uso en esos esquemas. Cada clase debe estar asociada a un comportamiento existente. Consulte la guía [de extremo de](./classes.md) clases para obtener más información sobre cómo trabajar con clases en la API.
 
 ## Mezclas
 
@@ -47,7 +51,7 @@ Los tipos de datos se utilizan como campos de tipo de referencia en clases o mez
 
 ## Descriptores
 
-Los descriptores son conjuntos de metadatos a los que se asignan campos específicos dentro de un esquema, que proporcionan diversos detalles contextuales, incluido el modo en que dichos campos (y el propio esquema) están relacionados con otros esquemas. Cada esquema puede tener una o más entidades descriptoras aplicadas a él, y hay varios tipos de descriptores diferentes para diferentes fines. Consulte la guía [del extremo de](./descriptors.md) descriptores para obtener más información sobre cómo trabajar con descriptores en la API y una descripción general de los distintos tipos de descriptores y sus casos de uso.
+Los descriptores son conjuntos de metadatos asignados a campos específicos dentro de un esquema, que proporcionan diversos detalles contextuales, incluido el modo en que dichos campos (y el propio esquema) están relacionados con otros esquemas. Cada esquema puede tener una o más entidades descriptoras aplicadas a él, y hay varios tipos de descriptores diferentes para diferentes fines. Consulte la guía [del extremo de](./descriptors.md) descriptores para obtener más información sobre cómo trabajar con descriptores en la API y una descripción general de los distintos tipos de descriptores y sus casos de uso.
 
 ## Uniones
 
