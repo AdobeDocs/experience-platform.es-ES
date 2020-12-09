@@ -5,9 +5,9 @@ seo-title: Página Detalles de Destinos
 description: 'La página de detalles de un destino individual proporciona una visión general de los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 seo-description: 'La página de detalles de un destino individual proporciona una visión general de los detalles del destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,10 @@ Aparece la página de detalles del destino, que muestra los controles disponible
 
 ![](../assets/ui/details-page/details.png)
 
+Además, en la ficha Examinar, puede elegir eliminar el flujo de datos seleccionado seleccionando el icono de ![papelera](../assets/ui/details-page/trash-icon.png) . Todos los segmentos que se activen en un destino no se asignarán antes de que se elimine el flujo de datos.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Carril derecho
 
 El carril derecho muestra la información básica sobre el destino.
@@ -40,6 +44,7 @@ El cuadro siguiente abarca los controles y detalles facilitados por el carril de
 | Elemento del carril derecho | Descripción |
 | --- | --- |
 | [!UICONTROL Activar] | Seleccione este control para editar qué segmentos están asignados al destino. Consulte la guía sobre la [activación de segmentos en un destino](./activate-destinations.md) para obtener más información. |
+| [!UICONTROL Eliminar] | Permite eliminar este flujo de datos y desasignar los segmentos que se activaron anteriormente, si existe. |
 | [!UICONTROL Nombre de destino] | Este campo se puede editar para actualizar el nombre del destino. |
 | [!UICONTROL Descripción] | Este campo se puede editar para actualizar o agregar una descripción opcional al destino. |
 | [!UICONTROL Destino] | Representa la plataforma de destino a la que se envían las audiencias. Consulte el catálogo [de](../catalog/overview.md) destinos para obtener más información. |
@@ -75,11 +80,11 @@ Para vista de los detalles de una ejecución de flujo de datos concreta, selecci
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segmentos]
+## [!UICONTROL Datos de activación]
 
-La ficha [!UICONTROL Segmentos] muestra una lista de segmentos que se han asignado al destino, incluyendo la fecha de inicio y la fecha de finalización (si corresponde). Para vista de los detalles de un segmento en particular, seleccione su nombre en la lista.
+La ficha Datos [!UICONTROL de] Activación muestra una lista de segmentos que se han asignado al destino, incluyendo la fecha de inicio y la fecha de finalización (si corresponde). Para vista de los detalles de un segmento en particular, seleccione su nombre en la lista.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
