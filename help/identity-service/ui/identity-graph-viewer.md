@@ -5,7 +5,7 @@ title: Servicio de ID de Adobe Experience Platform
 topic: tutorial
 description: Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -55,7 +55,7 @@ Aparece el visor del gráfico de identidad. A la izquierda de la pantalla se enc
 
 >[!IMPORTANT]
 >
->Un gráfico de identidad requiere un mínimo de dos identidades vinculadas para generar, así como un par de Áreas de nombres e ID válido. El número máximo de identidades que puede mostrar el visor de gráficos es 400. See the [appendix](#appendix) section below for more information.
+>Un gráfico de identidad requiere un mínimo de dos identidades vinculadas para generar, así como un par de Áreas de nombres e ID válido. El número máximo de identidades que puede mostrar el visor de gráficos es 150. See the [appendix](#appendix) section below for more information.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ Pueden producirse errores al acceder al visor del gráfico de identidad. A conti
 
 - Debe existir un valor de identidad en la Área de nombres seleccionada.
 - El visor de gráficos de identidad requiere un mínimo de dos identidades vinculadas para generar.
-- El visor de gráficos de identidad no puede superar el máximo de 400 identidades.
+- El visor de gráficos de identidad no puede superar el máximo de 150 identidades.
 - Actualmente no se puede acceder al visor de gráficos de identidad en los entornos limitados que no son de producción.
 - Actualmente, el visor de gráficos de identidad solo admite datos ingestados por lotes y no muestra datos ingestados mediante fuentes de flujo continuo.
 
