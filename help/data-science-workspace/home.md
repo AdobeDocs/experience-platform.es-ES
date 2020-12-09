@@ -5,9 +5,9 @@ title: Información general sobre el área de trabajo de ciencias de datos
 topic: overview
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con el área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -120,35 +120,12 @@ Cuando estás satisfecho con tu fórmula, son sólo unos clics para crear un ser
 
 Los científicos de datos pueden aprovechar las nuevas tecnologías y conjuntos de datos en cuanto estén disponibles a través de los servicios de Adobe. A través de actualizaciones frecuentes, hacemos el trabajo de integrar datasets y tecnologías en la plataforma, para que no tenga que hacerlo.
 
-### Control de acceso en [!DNL Data Science Workspace]
-
-Control de acceso para [!DNL Experience Platform] se administra a través del [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la descripción general [del](../access-control/home.md) control de acceso para obtener más información.
-
->[!IMPORTANT]
->
->Para poder usar [!DNL Data Science Workspace], debe habilitarse el permiso [!UICONTROL &quot;Administrar área de trabajo de ciencia de datos&quot;] .
-
-La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso:
-
-| Permiso | Habilitado | Desactivado |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | Proporciona acceso a todos los servicios de [!DNL Data Science Workspace]. | El acceso a la API y a la interfaz de usuario para todos los servicios dentro de [!DNL Data Science Workspace] se desactiva. Mientras está deshabilitado, se evita el enrutamiento a las páginas [!DNL Data Science Workspace] Modelos **[!UICONTROL y]** Servicios **** . |
-
 ### Seguridad y paz mental
 
 La seguridad de los datos es una de las principales prioridades del Adobe. Adobe protege sus datos con los procesos y controles de seguridad desarrollados para ayudarle a cumplir con las normas, regulaciones y certificaciones aceptadas por el sector.
 
 La seguridad está integrada en el software y los servicios como parte del ciclo de vida seguro del producto de Adobe.
 Para obtener más información sobre la seguridad de los datos de Adobe y software, el cumplimiento de normas y más, visite la página de seguridad en https://www.adobe.com/security.html.
-
-### Compatibilidad con Simulador para pruebas
-
-Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de [!DNL Experience Platform]. Cada [!DNL Platform] instancia admite un entorno limitado de producción y varios entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de [!DNL Platform] recursos. Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Para obtener más información sobre los entornos limitados, consulte la descripción general [de los](../sandboxes/home.md)entornos limitados.
-
-Actualmente [!DNL Data Science Workspace] tiene un par de limitaciones de entorno limitado:
-
-- Los recursos de cómputo se comparten en el entorno limitado de producción y en los entornos limitados que no son de producción. El aislamiento de los entornos limitados de producción se establecerá en el futuro.
-- Actualmente, las cargas de trabajo de Scala/[!DNL Spark] y PySpark para portátiles y fórmulas solo se admiten en el entorno limitado de producción. La compatibilidad con los entornos limitados que no sean de producción se establecerá en el futuro.
 
 ## [!DNL Data Science Workspace] en acción
 
