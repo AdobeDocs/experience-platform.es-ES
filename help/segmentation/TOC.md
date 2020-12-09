@@ -5,10 +5,10 @@ user-guide-title: Ayuda del servicio de segmentación de Adobe Experience Platfo
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 27%
+source-wordcount: '139'
+ht-degree: 25%
 
 ---
 
@@ -22,13 +22,14 @@ ht-degree: 27%
    - [Primeros pasos](api/getting-started.md)
    - [Trabajos de exportación](api/export-jobs.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)
-   - [Planificador](api/schedules.md)
+   - [Programaciones](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmentos](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
    - [Segmentación por flujo continuo](api/streaming-segmentation.md)
 - Interfaz de usuario de segmentación {#ui}
-   - [Información general](ui/overview.md)
+   - [Guía de la IU de segmentación](ui/overview.md)
+   - [Panel de segmentos](ui/segment-dashboard.md)
    - [Generador de segmentos](ui/segment-builder.md)
    - [Segmentación por flujo continuo](ui/streaming-segmentation.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
