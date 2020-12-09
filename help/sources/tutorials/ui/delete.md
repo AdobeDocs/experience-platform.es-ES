@@ -1,69 +1,66 @@
 ---
 keywords: Experience Platform;home;popular topics; delete dataflows
-description: Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para eliminar flujos de datos del espacio de trabajo Fuentes.
+description: El espacio de trabajo de orígenes le permite eliminar flujos de datos de flujo y lote existentes que contengan errores o que se hayan vuelto obsoletos.
 solution: Experience Platform
 title: Eliminar flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
+source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 0%
+source-wordcount: '358'
+ht-degree: 1%
 
 ---
 
 
-# Eliminar flujos de datos
+# Eliminar flujos de datos en la interfaz de usuario
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para eliminar flujos de datos del espacio de trabajo **[!UICONTROL Fuentes]** .
+El espacio de trabajo [!UICONTROL Fuentes] le permite eliminar flujos de datos de flujo y lotes existentes que contengan errores o se hayan vuelto obsoletos.
+
+Este tutorial proporciona pasos para eliminar flujos de datos mediante el espacio de trabajo [!UICONTROL Fuentes] .
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   - [Conceptos básicos de la composición](../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Tutorial](../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+- [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-## Eliminar flujos de datos mediante la interfaz de usuario
+## Eliminar flujos de datos
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes para los que puede crear cuentas y flujos de datos. Cada origen muestra el número de cuentas existentes y flujos de datos asociados a ellas.
+En la interfaz de usuario [del](https://platform.adobe.com)Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al espacio de trabajo [!UICONTROL Fuentes] y, a continuación, seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior.
 
-Seleccione **[!UICONTROL Flujos]** de datos para acceder a la página **[!UICONTROL Flujos]** de datos.
+![catálogo](../../images/tutorials/delete/catalog.png)
 
-![dataset-flow-actividad](../../images/tutorials/delete/dataflows.png)
+Aparece la página **[!UICONTROL Flujos]** de datos. En esta página hay una lista de flujos de datos visualizables, incluida información sobre su conjunto de datos de destinatario, fuente, nombre de cuenta y fecha de creación.
 
-Aparece una lista de flujos de datos existentes. En esta página hay una lista de información que se puede ordenar para flujos de datos existentes como origen, nombre de usuario, estado de ejecución y fecha de la última ejecución. Seleccione el icono **del** canal en la parte superior izquierda para ordenar.
+Seleccione el icono de filtro (icono![de](../../images/tutorials/delete/filter.png)filtro) en la parte superior izquierda para iniciar el panel de ordenación.
 
-![lista de flujos de datos](../../images/tutorials/delete/dataflows-list.png)
+![flujos de datos](../../images/tutorials/delete/dataflows.png)
 
-El panel de ordenación aparece en el lado izquierdo de la pantalla, con una lista de los orígenes disponibles.
-Puede seleccionar más de un origen mediante la función de ordenación.
+El panel Ordenar proporciona una lista de todas las fuentes. Puede seleccionar más de un origen de la lista para acceder a una selección filtrada de flujos de datos asociados a los orígenes concretos que ha seleccionado.
 
-Seleccione el origen al que desea acceder y localice el flujo de datos que desea eliminar de la lista de flujos de datos en la interfaz principal. En el ejemplo, el origen seleccionado es **[!DNL Azure Blob Storage]** y el nombre del flujo de datos es el flujo de datos de perfiles **[!UICONTROL del cliente]**. Al seleccionar varios orígenes en el panel de ordenación, los flujos de datos creados más recientemente aparecen primero porque la lista se ordena por fecha de creación.
+Seleccione el origen con el que desea trabajar para ver una lista de sus flujos de datos existentes. Una vez identificado el flujo de datos que desea eliminar, seleccione las elipses (`...`) junto al nombre del flujo de datos.
 
-Seleccione el flujo de datos que desea eliminar.
+![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-![dataflows-sort](../../images/tutorials/delete/dataflows-sort.png)
+Aparece un menú desplegable con opciones para editar la programación del flujo de datos, deshabilitar el flujo de datos o eliminarlo por completo.
 
-El panel **[!UICONTROL Propiedades]** aparece en la parte derecha de la pantalla y contiene información sobre el flujo de datos seleccionado, así como una opción para **[!UICONTROL editar la programación]**.
-
-Para eliminar el flujo de datos, seleccione **[!UICONTROL Eliminar]**.
-
-![dataflows-sort](../../images/tutorials/delete/dataflows-properties.png)
-
-Aparecerá un cuadro de diálogo de confirmación final, seleccione **[!UICONTROL Eliminar]** para completar el proceso.
+Seleccione **[!UICONTROL Eliminar]** para eliminar el flujo de datos.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-Después de unos momentos, aparece un cuadro de confirmación verde en la parte inferior de la pantalla para confirmar que la eliminación se ha realizado correctamente.
+Aparecerá un cuadro de diálogo de confirmación final. Seleccione **[!UICONTROL Eliminar]** para completar el proceso.
+
+![confirm](../../images/tutorials/delete/confirm.png)
+
+Al cabo de unos minutos, aparece un cuadro de confirmación en la parte inferior de la pantalla para confirmar que la eliminación se ha realizado correctamente.
 
 ![confirmado](../../images/tutorials/delete/confirmed.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL Fuentes]** para eliminar flujos de datos existentes.
+Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Fuentes] para eliminar un flujo de datos existente.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la [!DNL Flow Service] API, consulte el tutorial sobre la [eliminación de flujos de datos mediante la API de servicio de flujo](../../tutorials/api/delete-dataflows.md)
+Consulte el tutorial sobre la [eliminación de flujos de datos mediante la API](../../tutorials/api/delete-dataflows.md) de servicio de flujo para ver los pasos para realizar estas operaciones mediante programación mediante llamadas a API.
