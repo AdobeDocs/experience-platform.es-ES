@@ -4,9 +4,9 @@ title: Información general sobre el Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil de clientes en tiempo real es un almacén de entidades de búsqueda genérico que combina datos de diversos activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ La relación entre el Perfil del cliente en tiempo real y otros servicios dentro
 
 ### Almacén de datos de perfil
 
-Aunque [!DNL Real-time Customer Profile] procesa datos ingestados y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar datos relacionados mediante asignación de identidad, mantiene sus propios datos en el [!DNL Profile] almacén. En otras palabras, el [!DNL Profile] almacén es independiente de [!DNL Catalog] los datos ([!DNL Data Lake]) y los [!DNL Identity Service] datos (gráfico de identidad).
+Aunque [!DNL Real-time Customer Profile] procesa datos ingestados y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar datos relacionados mediante asignación de identidad, mantiene sus propios datos en el [!DNL Profile] almacén. El [!DNL Profile] almacén es independiente de los [!DNL Catalog] datos del [!DNL Data Lake] y de los [!DNL Identity Service] datos del gráfico de identidad.
+
+El almacén de Perfiles utiliza una infraestructura de base de datos Cosmos de Microsoft Azure y Platform Data Lake utiliza el almacenamiento de Microsoft Azure Data Lake.
 
 ### Guardias de perfil
 
@@ -34,7 +36,7 @@ Experience Platform proporciona una serie de protecciones que le ayudan a evitar
 
 [!DNL Real-time Customer Profile] combina datos de varios sistemas empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de clientes con eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales. Las siguientes secciones resaltan algunos de los conceptos básicos que debe comprender para crear y mantener perfiles de forma eficaz dentro de la plataforma.
 
-### Fragmentos de perfil frente a perfiles combinados
+### Fragmentos de perfil frente a perfiles combinados {#profile-fragments-vs-merged-profiles}
 
 Cada perfil de cliente individual está compuesto por varios fragmentos de perfil que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se ingieren en la plataforma, se combinan para crear un solo perfil para ese cliente.
 
