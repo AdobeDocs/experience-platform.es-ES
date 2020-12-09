@@ -5,10 +5,10 @@ title: Guía de la interfaz de usuario de Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +143,25 @@ La sección **[!UICONTROL Servicios]** le permite administrar los modelos public
 
 ### [!UICONTROL Gestión de datos]
 
-La sección **[!UICONTROL Esquemas]** permite crear y administrar esquemas. Para obtener más información sobre cómo utilizar la sección Esquemas, lea el tutorial sobre la [creación de esquemas](../xdm/tutorials/create-schema-ui.md). Encontrará más información sobre el modelo de datos de experiencia (XDM) en la descripción general [de](../xdm/home.md)XDM.
+La sección **[!UICONTROL Esquemas]** permite crear y administrar esquemas del modelo de datos de experiencia (XDM). Para obtener más información sobre esquemas, lea el tutorial sobre la [creación de esquemas](../xdm/tutorials/create-schema-ui.md). Encontrará más información sobre XDM en la descripción general [del sistema](../xdm/home.md)XDM.
 
-La sección **[!UICONTROL Conjuntos]** de datos permite crear y administrar conjuntos de datos. Encontrará más información sobre la sección Conjuntos de datos en la guía [del usuario de](../catalog/datasets/user-guide.md)conjuntos de datos.
+La sección **[!UICONTROL Conjuntos]** de datos permite crear y administrar conjuntos de datos. Encontrará más información sobre los conjuntos de datos en la guía [del usuario de](../catalog/datasets/user-guide.md)conjuntos de datos.
 
-La sección **[!UICONTROL Consultas]** permite crear y administrar consultas, registrar consultas SQL realizadas por el servicio de Consulta y vista de las credenciales PostgreSQL. Encontrará más información sobre la sección Consultas en la guía [del usuario del servicio de](../query-service/ui/overview.md)Consulta.
+La sección **[!UICONTROL Consultas]** le permite crear y administrar consultas, registrar consultas SQL realizadas por el servicio de Consulta de Adobe Experience Platform y vista sus credenciales PostgreSQL. Puede encontrar más información sobre consultas en la guía [del usuario del servicio de](../query-service/ui/overview.md)Consulta.
 
-La sección **[!UICONTROL Monitoreo]** le permite monitorear la ingestión por lotes y flujo continuo. Encontrará más información sobre la sección Monitoreo en la guía [del usuario de](../ingestion/quality/monitor-data-flows.md)monitoreo de la ingesta de datos.
+La sección **[!UICONTROL Monitoreo]** le permite monitorear la ingestión por lotes y flujo continuo. Encontrará más información sobre la supervisión en la guía [del usuario de](../ingestion/quality/monitor-data-flows.md)supervisión de la ingestión de datos.
+
+### [!UICONTROL Decisión]
+
+Offer Decisioning es un servicio de aplicaciones integrado con Adobe Experience Platform. Le permite aprovechar al Experience Platform para ofrecer la mejor oferta y experiencia a sus clientes en todos los puntos de contacto en el momento adecuado. Para obtener más información sobre Offer Decisioning, incluido el trabajo con [!UICONTROL Ofertas] y [!UICONTROL Actividades] , visite la documentación [de](https://experienceleague.adobe.com/docs/offer-decisioning.html)Offer Decisioning.
+
+### [!UICONTROL Administration]
+
+La interfaz de usuario de la plataforma (IU) proporciona un panel mediante el cual puede realizar vistas de información importante sobre el uso de licencias de su organización, tal como se obtiene durante una instantánea diaria. Para acceder a esto, seleccione Uso **[!UICONTROL de]** licencia en la navegación. Para obtener más información sobre el panel de uso de la licencia, visite la guía del panel de uso de la [licencia](license-usage-dashboard.md).
+
+>[!IMPORTANT]
+>
+>La funcionalidad de panel de uso de licencias está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 ## Pasos siguientes
 
