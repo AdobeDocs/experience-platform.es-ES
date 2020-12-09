@@ -5,9 +5,9 @@ title: Descripción general del sistema XDM
 topic: overview
 description: 'La estandarización y la interoperabilidad son conceptos clave para Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente. '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Aunque no todos los eventos se clasifican fácilmente en todas las fuentes de da
 
 ## Esquemas y [!DNL Experience Platform] servicios XDM
 
-[!DNL Experience Platform] es un esquema agnóstico, lo que significa que cualquier esquema que se ajuste al estándar XDM está disponible para su uso por [!DNL Platform] los servicios. A continuación se detallan las formas en que los distintos [!DNL Platform] servicios utilizan esquemas.
+[!DNL Experience Platform] no depende del esquema, lo que significa que cualquier esquema que se ajuste al estándar XDM está disponible para su uso por [!DNL Platform] los servicios. A continuación se detallan las formas en que los distintos [!DNL Platform] servicios utilizan esquemas.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
