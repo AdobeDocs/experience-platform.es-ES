@@ -4,10 +4,10 @@ title: Guía de la interfaz de usuario de Perfil del cliente en tiempo real
 topic: guide
 description: El Perfil del cliente en tiempo real crea una vista holística de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el Perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 0%
+source-wordcount: '1304'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,19 @@ Esta guía de la interfaz de usuario requiere conocer los distintos [!DNL Experi
 
 ## Información general
 
-En la [[!DNL Experience Platform] interfaz de usuario](http://platform.adobe.com), seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la ficha **[!UICONTROL Información general]** . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
+En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la ficha **[!UICONTROL Información general]** . Esta ficha proporciona vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con perfiles.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alfa) panel de Perfil
+
+>[!IMPORTANT]
+>
+>La funcionalidad de panel está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+
+Para algunos usuarios, si seleccionan **[!UICONTROL Perfiles]** en la navegación izquierda y abren la ficha **[!UICONTROL Información general]** , se proporciona un panel que describe las métricas clave relacionadas con los datos de Perfil.
+
+Para obtener más información, visite la guía [Perfil panel](profile-dashboard.md).
 
 ## Examinar
 
