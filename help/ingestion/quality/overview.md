@@ -5,7 +5,7 @@ title: Calidad de la ingestión de datos
 topic: overview
 description: El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingesta por lotes y por flujo continuo en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 5%
@@ -56,4 +56,4 @@ Se realizan las siguientes validaciones para la transmisión por secuencias de i
 | Conjunto de datos | Garantiza que el conjunto de datos se especifique, habilite y no se elimine. |
 | Header | Garantiza que el encabezado se especifique y sea válido. |
 
-Encontrará más información sobre cómo [!DNL Platform] monitorear y validar los datos en la documentación [de flujos de datos de](./monitor-data-flows.md)monitoreo.
+Encontrará más información sobre cómo [!DNL Platform] monitorear y validar los datos en la documentación [de flujos de datos de](./monitor-data-ingestion.md)monitoreo.
