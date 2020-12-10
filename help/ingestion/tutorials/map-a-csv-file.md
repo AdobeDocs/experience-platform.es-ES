@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -113,9 +113,9 @@ La pantalla de asignación vuelve a aparecer con el campo de origen recién crea
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Monitorear el flujo de datos
+## Monitoreo de la ingesta de datos
 
-Una vez asignado y creado el archivo CSV, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../ingestion/quality/monitor-data-flows.md)de flujo continuo.
+Una vez asignado y creado el archivo CSV, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión de la ingestión de datos, consulte el tutorial sobre la [supervisión de la ingesta](../../ingestion/quality/monitor-data-ingestion.md)de datos.
 
 ## Pasos siguientes
 
