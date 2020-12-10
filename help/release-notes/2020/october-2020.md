@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 4%
@@ -71,7 +71,7 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con autenticación SSH para SFTP | Puede conectar su cuenta SFTP con [!DNL Platform] las claves RSA/DSA Open SSH. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| Compatibilidad con autenticación SSH para SFTP | Puede conectar su cuenta SFTP con [!DNL Platform] las claves RSA/DSA Open SSH. See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
 | Mejoras en los recursos | Puede habilitar el conjunto de datos para [!DNL Profile] durante el proceso de ingesta de datos. Consulte el tutorial de flujo de trabajo [de flujo de datos de almacenamiento de](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) nube para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
