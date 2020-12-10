@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
 translation-type: tm+mt
-source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
+source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -20,18 +20,14 @@ ht-degree: 2%
 >
 >El conector SFTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
-
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a un servidor SFTP (Protocolo seguro de transferencia de archivos).
-
-Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [de la](../../../ui/create/cloud-storage/ftp-sftp.md) interfaz de usuario proporciona instrucciones paso a paso para realizar acciones similares.
+Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
+* [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un servidor SFTP mediante la [!DNL Flow Service] API.
 
