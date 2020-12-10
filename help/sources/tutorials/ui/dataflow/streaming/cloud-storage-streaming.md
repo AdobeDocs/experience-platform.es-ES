@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector base del almacenamiento de nube.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ## Monitorear y eliminar el flujo de datos
 
-Una vez creado el flujo de datos del almacenamiento de nube, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión y eliminación de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../../ingestion/quality/monitor-data-flows.md).
+Una vez creado el flujo de datos del almacenamiento de nube, puede supervisar los datos que se están ingeriendo a través de él. Para obtener más información sobre la supervisión y eliminación de flujos de datos, consulte el tutorial sobre la [supervisión de flujos de datos](../../../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Pasos siguientes
 
