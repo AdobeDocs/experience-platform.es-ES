@@ -5,7 +5,7 @@ title: Guía de la interfaz de usuario de Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ La sección **[!UICONTROL Conjuntos]** de datos permite crear y administrar conj
 
 La sección **[!UICONTROL Consultas]** le permite crear y administrar consultas, registrar consultas SQL realizadas por el servicio de Consulta de Adobe Experience Platform y vista sus credenciales PostgreSQL. Puede encontrar más información sobre consultas en la guía [del usuario del servicio de](../query-service/ui/overview.md)Consulta.
 
-La sección **[!UICONTROL Monitoreo]** le permite monitorear la ingestión por lotes y flujo continuo. Encontrará más información sobre la supervisión en la guía [del usuario de](../ingestion/quality/monitor-data-flows.md)supervisión de la ingestión de datos.
+La sección **[!UICONTROL Monitoreo]** le permite monitorear la ingestión por lotes y flujo continuo. Encontrará más información sobre la supervisión en la guía [del usuario de](../ingestion/quality/monitor-data-ingestion.md)supervisión de la ingestión de datos.
 
 ### [!UICONTROL Decisión]
 
