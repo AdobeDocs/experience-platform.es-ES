@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1599'
 ht-degree: 2%
 
 ---
@@ -572,6 +572,10 @@ El último paso para recopilar datos de almacenamiento en la nube es crear un fl
 Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores anteriormente mencionados dentro de la carga útil.
 
 Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+
+>[!IMPORTANT]
+>
+>Se recomienda encarecidamente programar el flujo de datos para una ingestión única al utilizar el conector [](../../../connectors/cloud-storage/ftp.md)FTP.
 
 **Formato API**
 
