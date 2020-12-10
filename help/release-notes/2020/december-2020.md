@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 7%
+source-wordcount: '426'
+ht-degree: 6%
 
 ---
 
@@ -17,19 +17,35 @@ ht-degree: 7%
 
 **Fecha de versión: 9 de diciembre de 2020**
 
+Nuevas funciones de Adobe Experience Platform:
+
+- [[!DNL Dataflows]](#dataflows)
+
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de la plataforma. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a conjuntos de datos de destinatario, a Identity and Perfil Service y a los destinos.
+
+**Función clave**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Transparencia para flujos de datos | Puede controlar los flujos de datos para orígenes y destinos. Para obtener más información, lea el [tutorial sobre fuentes](../../dataflows/ui/monitor-sources.md) de monitoreo o el [tutorial sobre destinos](../../dataflows/ui/monitor-destinations.md)de monitoreo. |
+
+Para obtener más información sobre los flujos de datos, lea la información general [de los](../../dataflows/home.md)flujos de datos.
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de los datos. Integrado en Adobe Experience Platform, Área de trabajo de ciencia de datos le ayuda a realizar predicciones con sus recursos de contenido y datos en las soluciones de Adobe.
 
-### Funciones principales
+**Funciones principales**
 
 | Función | Descripción |
-|--- | ---|
+| --- | ---|
 | Addon del paquete de Adobe Experience Platform Intelligence | El complemento del paquete de Inteligencia de Adobe Experience Platform es una actualización de Área de trabajo de ciencia de datos que desbloquea funciones clave adicionales como: <li> Experimentación y evaluación de modelos impulsados por la interfaz de usuario.</li><li> Capacidad para implementar y operacionalizar modelos con trabajos de formación e inferencias programados.</li><li> Compatibilidad con aprendizaje profundo en modelos de Tensorflow (GPU Compute).</li><li> Computación distribuida basada en chispas para entrenar y marcar con grandes conjuntos de datos (10 MM + filas).</li><li>Y más</li> |
 
 Para obtener más información sobre el complemento del paquete de Inteligencia de Adobe Experience Platform, consulte la documentación sobre el acceso y las funciones [de Área de trabajo de](../../data-science-workspace/access-features-dsw.md)Data Science.
