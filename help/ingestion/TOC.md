@@ -5,7 +5,7 @@ user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Platform mediante la ingestión por lotes o de flujo continuo.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 21%
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [Transmisión de varios mensajes](tutorials/streaming-multiple-messages.md)
 - Calidad y control de la ingestión de datos{#quality}
    - [Información general](quality/overview.md)
-   - [Monitorear flujos de datos](quality/monitor-data-flows.md)
+   - [Monitoreo de la ingesta de datos](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
    - [Recuperar lotes con errores](quality/retrieve-failed-batches.md)
    - [Validación de la ingesta de flujo continuo](quality/streaming-validation.md)
