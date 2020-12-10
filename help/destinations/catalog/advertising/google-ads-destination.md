@@ -5,9 +5,9 @@ seo-title: Destino de publicidades de Google
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 seo-description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,19 @@ Tenga en cuenta los siguientes detalles específicos de los [!DNL Google Ads] de
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la funcionalidad [de sincronización de](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) ID en el servicio de ID de Experience Cloud en el pasado (con Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado continuarán con CDP en tiempo real.
+>Si desea crear su primer destino con [!DNL Google Ads] y no ha habilitado la funcionalidad [de sincronización de](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) ID en el servicio de ID de Experience Cloud en el pasado (con Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a CDP en tiempo real.
 
 ### Tipo de exportación {#export-type}
 
 **Exportación** de segmentos: está exportando todos los miembros de un segmento (audiencia) al destino de Google.
 
-## Requisitos previos 
+## Requisitos previos
 
 ### Cuenta [!DNL Google Ads] existente
 
-[!DNL Google] ha pausado [!DNL Google Ads] integraciones nuevas con proveedores de terceros. Debe tener una integración existente con [!DNL Google Ads] para poder realizar los pasos de lista de permitidos en la siguiente sección y crear un [!DNL Google Ads] destino en CDP en tiempo real.
+>[!IMPORTANT]
+>
+> [!DNL Google] ha desaprobado nuevas integraciones de [!DNL Google Ads] cookies con proveedores de terceros. Para realizar los pasos de lista de permitidos en la siguiente sección, debe tener una integración existente con [!DNL Google Ads]. Como resultado, el método recomendado para usar [!DNL Google Ads] es configurar una [!DNL Google Customer Match] integración. Para obtener más información sobre la creación de una [!DNL Google Customer Match] integración, lea el tutorial sobre la creación de una [[!DNL Google Customer Match]](./google-customer-match.md) conexión.
 
 ### Lista de permitidos
 
