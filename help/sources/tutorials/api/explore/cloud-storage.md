@@ -5,9 +5,9 @@ title: Explorar un sistema de almacenamiento en la nube mediante la API de servi
 topic: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -34,6 +34,7 @@ Para explorar un almacenamiento de nube de terceros mediante [!DNL Platform] API
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Almacenamiento Gen2](../create/cloud-storage/adls-gen2.md)
 * [Almacenamiento de archivos de Azure](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Tienda de Google Cloud](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
