@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32797.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Información general de Adobe Experience Platform
 
-Este vídeo proporciona una visión general rápida de lo que es el Experience Platform y los desafíos comerciales que soluciona.
+Este vídeo proporciona una visión general rápida de lo que es el Experience Platform y los desafíos comerciales que soluciona. Para obtener más información, visite la documentación [de información general del](../home.md)Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
