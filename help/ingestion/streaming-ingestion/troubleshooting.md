@@ -5,7 +5,7 @@ title: Solución de problemas de ingestión de flujo continuo
 topic: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre la transmisión de la ingesta por flujo continuo en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Para obtener más información sobre la validación sincrónica y asincrónica, 
 
 ### ¿Puedo validar una carga útil de solicitud antes de enviarla a [!DNL Platform]?
 
-Las cargas de solicitud solo se pueden evaluar una vez que se han enviado a [!DNL Platform]. Al realizar la validación sincrónica, las cargas válidas devuelven objetos JSON rellenados mientras que las cargas no válidas devuelven mensajes de error. Durante la validación asincrónica, el servicio detecta y envía los datos mal formados a la [!DNL Data Lake] ubicación donde posteriormente se pueden recuperar para su análisis. Consulte la descripción general [de validación de](../quality/streaming-validation.md) flujo para obtener más información.
+Las cargas de solicitud solo se pueden evaluar una vez que se han enviado a [!DNL Platform]. Al realizar la validación sincrónica, las cargas válidas devuelven objetos JSON rellenados mientras que las cargas no válidas devuelven mensajes de error. Durante la validación asincrónica, el servicio detecta y envía los datos mal formados a la [!DNL Data Lake] ubicación donde posteriormente se pueden recuperar para su análisis. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### ¿Qué sucede cuando se solicita la validación sincrónica en una arista que no la admite?
 
@@ -59,7 +59,7 @@ Puede agrupar varios mensajes en una única carga útil de solicitud y transmiti
 
 Todos los datos que se envían a [!DNL Platform] (de forma satisfactoria o no) se almacenan como archivos por lotes antes de persistir en los conjuntos de datos. El estado de procesamiento de los lotes aparece dentro del conjunto de datos al que se enviaron.
 
-Puede comprobar si los datos se han ingestado correctamente comprobando la actividad del conjunto de datos mediante la interfaz [de usuario del](https://platform.adobe.com)Experience Platform. Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para mostrar una lista de conjuntos de datos. Seleccione el conjunto de datos al que está transmitiendo desde la lista mostrada para abrir la página de actividad **[!UICONTROL del]** conjunto de datos, mostrando todos los lotes enviados durante un período de tiempo seleccionado. Para obtener más información sobre el uso [!DNL Experience Platform] para supervisar flujos de datos, consulte la guía sobre [supervisión de flujos](../quality/monitor-data-flows.md)de datos de flujo continuo.
+Puede comprobar si los datos se han ingestado correctamente comprobando la actividad del conjunto de datos mediante la interfaz [de usuario del](https://platform.adobe.com)Experience Platform. Haga clic en **[!UICONTROL Conjuntos]** de datos en el panel de navegación izquierdo para mostrar una lista de conjuntos de datos. Seleccione el conjunto de datos al que está transmitiendo desde la lista mostrada para abrir la página de actividad **[!UICONTROL del]** conjunto de datos, mostrando todos los lotes enviados durante un período de tiempo seleccionado. Para obtener más información sobre el uso [!DNL Experience Platform] para supervisar flujos de datos, consulte la guía sobre [supervisión de flujos](../quality/monitor-data-ingestion.md)de datos de flujo continuo.
 
 Si los datos no se han podido transferir y desea recuperarlos de [!DNL Platform], puede recuperar los lotes con errores enviando sus ID al [!DNL Data Access API]. Consulte la guía para [recuperar lotes](../quality/retrieve-failed-batches.md) con errores para obtener más información.
 
