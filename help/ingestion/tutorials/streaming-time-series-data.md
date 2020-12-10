@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 2%
@@ -525,6 +525,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de las entid
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede comprender cómo ingerir datos de registro en [!DNL Platform] conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la [!DNL Platform] interfaz de usuario. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-flows.md) de datos.
+Al leer este documento, ahora puede comprender cómo ingerir datos de registro en [!DNL Platform] conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede supervisar en inicio los datos que ingrese mediante la [!DNL Platform] interfaz de usuario. Para obtener más información, lea la guía de [monitorización de la ingestión](../quality/monitor-data-ingestion.md) de datos.
 
 Para obtener más información sobre la transmisión por secuencias de ingestión en general, lea la información general sobre la [transmisión por secuencias](../streaming-ingestion/overview.md).
