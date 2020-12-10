@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ Proporcione valores para la programación y seleccione **[!UICONTROL Siguiente]*
 
 ### Configurar un flujo de datos de ingestión único
 
-Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**. Puede seguir editando en un conjunto de flujos de datos para una ingestión de frecuencia única, siempre y cuando el tiempo de inicio permanezca en el futuro. Una vez transcurrido el tiempo de inicio, ya no se puede editar el valor de frecuencia de una sola vez.
+Para configurar la ingestión de una sola vez, seleccione la flecha desplegable de frecuencia y seleccione **[!UICONTROL Una vez]**. Puede seguir editando en un conjunto de flujos de datos para una ingestión de frecuencia única, siempre y cuando el tiempo de inicio permanezca en el futuro. Una vez transcurrido el tiempo de inicio, ya no se puede editar el valor de frecuencia de una sola vez. **[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no están visibles al configurar un flujo de datos de ingestión único.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL El intervalo]** y el **[!UICONTROL relleno]** no son visibles durante una ingestión única.
+>Se recomienda encarecidamente programar el flujo de datos para una ingestión única al utilizar el conector [](../../../../connectors/cloud-storage/ftp.md)FTP.
 
 Una vez que haya proporcionado los valores adecuados a la programación, seleccione **[!UICONTROL Siguiente]**.
 
