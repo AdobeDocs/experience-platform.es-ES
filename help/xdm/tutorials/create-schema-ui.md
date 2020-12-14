@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 26c3aa3b21c2d9850f29816d57ddf2da953d6b10
 workflow-type: tm+mt
-source-wordcount: '3819'
+source-wordcount: '3779'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,13 @@ Este tutorial requiere un conocimiento práctico de los diversos aspectos de Ado
    * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Información general sobre los esquemas XDM y sus componentes, incluidas clases, mezclas, tipos de datos y campos.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-## Examinar esquemas existentes en el espacio de trabajo [!UICONTROL Esquemas] {#browse}
+## Abrir el espacio de trabajo de [!UICONTROL Esquemas] {#browse}
 
 El espacio de trabajo [!UICONTROL Esquemas] de la [!DNL Platform] interfaz de usuario proporciona una visualización de la [!DNL Schema Library], lo que le permite administrar vistas de los esquemas disponibles para su organización. El espacio de trabajo también incluye el [!DNL Schema Editor], el lienzo en el que puede componer un esquema a lo largo de este tutorial.
 
 Después de iniciar sesión [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo de **[!UICONTROL Esquemas]** . La ficha **[!UICONTROL Examinar]** muestra una lista de esquemas (una representación del [!DNL Schema Library]) que se pueden vista y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
 
-Seleccione el icono de filtro situado junto a la barra de búsqueda para utilizar las capacidades de filtrado de todos los recursos del Registro, incluidos los tipos de datos, las clases y las mezclas. También puede filtrar en función de si los recursos son propiedad de Adobe o de su organización, y si se han habilitado para su uso en [!DNL Real-time Customer Profile].
-
-![](../images/tutorials/create-schema/schemas_filter.png)
+Consulte la guía para [explorar recursos XDM existentes en la interfaz de usuario](./explore.md) para obtener más información.
 
 ## Crear y asignar un nombre a un esquema {#create}
 
@@ -90,11 +88,11 @@ Al previsualizar una mezcla, se proporciona una descripción detallada del esque
 
 ![](../images/tutorials/create-schema/preview-mixin.png)
 
-Para este tutorial, seleccione la mezcla de detalles **[!UICONTROL de la persona de]** Perfil y, a continuación, seleccione **[!UICONTROL Añadir mezcla]**.
+Para este tutorial, seleccione la mezcla de detalles **** demográficos y, a continuación, seleccione **[!UICONTROL Añadir mezcla]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Mezclinas]** ahora lista &quot;detalles[!UICONTROL de la persona de]Perfil&quot; y la sección **[!UICONTROL Estructura]** incluye los campos que la mezcla aporta. Puede seleccionar el nombre de la mezcla en la sección **[!UICONTROL Mezclas]** para resaltar los campos específicos que proporciona dentro del lienzo.
+El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Mixins]** ahora lista &quot;Detalles[!UICONTROL demográficos]&quot; y la sección **[!UICONTROL Estructura]** incluye los campos que la mezcla aporta. Puede seleccionar el nombre de la mezcla en la sección **[!UICONTROL Mezclas]** para resaltar los campos específicos que proporciona dentro del lienzo.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
@@ -104,19 +102,19 @@ Esta combinación aporta varios campos bajo el nombre de nivel superior `person`
 >
 >Recuerde que los campos pueden utilizar tipos escalares (como cadena, entero, matriz o fecha), así como cualquier tipo de datos (un grupo de campos que representa un concepto común) definido dentro del [!DNL Schema Registry].
 
-Observe que el `name` campo tiene un tipo de datos de &quot;Nombrecompleto&quot;, lo que significa que también describe un concepto común y contiene subcampos relacionados con el nombre, como nombre, apellidos, título de cortesía y sufijo.
+Observe que el `name` campo tiene un tipo de datos de &quot;Nombre de la[!UICONTROL persona]&quot;, lo que significa que también describe un concepto común y contiene subcampos relacionados con el nombre, como nombre, apellidos, título de cortesía y sufijo.
 
 Seleccione los diferentes campos dentro del lienzo para mostrar los campos adicionales que contribuyen a la estructura de esquema.
 
 ## Añadir otra mezcla {#mixin-2}
 
-Ahora puede repetir los mismos pasos para agregar otra mezcla. Cuando vista el cuadro de diálogo **[!UICONTROL Añadir mezcla]** esta vez, observe que la combinación &quot;detalles[!UICONTROL de persona de]Perfil&quot; se ha atenuado y que la casilla de verificación situada junto a él no se puede seleccionar. Esto evita que usted duplique accidentalmente las mezclas que ya ha incluido en el esquema actual.
+Ahora puede repetir los mismos pasos para agregar otra mezcla. Cuando esta vez vista el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , observe que la combinación de &quot;Detalles[!UICONTROL demográficos]&quot; se ha atenuado y que la casilla de verificación situada junto a él no se puede seleccionar. Esto evita que usted duplique accidentalmente las mezclas que ya ha incluido en el esquema actual.
 
-Para este tutorial, seleccione la mezcla &quot;[!DNL Profile personal details]&quot; en el cuadro de diálogo y, a continuación, seleccione **[!UICONTROL Añadir mezcla]** para agregarla al esquema.
+Para este tutorial, seleccione la mezcla &quot;[!DNL Personal Contact Details]&quot; en el cuadro de diálogo y, a continuación, seleccione **[!UICONTROL Añadir mezcla]** para agregarla al esquema.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Una vez agregado, el lienzo vuelve a aparecer. &quot;Datos[!UICONTROL personales de]Perfil&quot; ahora aparece en **[!UICONTROL Mezclas]** en la sección **[!UICONTROL Composición]** , y los campos para la dirección doméstica, el teléfono móvil y más se han agregado en **[!UICONTROL Estructura]**.
+Una vez agregado, el lienzo vuelve a aparecer. &quot;Detalles[!UICONTROL de contacto]personal&quot; ahora aparece en **[!UICONTROL Mezclas]** en la sección **[!UICONTROL Composición]** , y los campos para la dirección doméstica, el teléfono móvil y más se han agregado en **[!UICONTROL Estructura]**.
 
 De forma similar al `name` campo, los campos que acaba de agregar representan conceptos de varios campos. Por ejemplo, `homeAddress` tiene un tipo de datos de &quot;direcciónpostal&quot; y `mobilePhone` tiene un tipo de datos de &quot;número[!UICONTROL de]teléfono&quot;. Puede seleccionar cada uno de estos campos para expandirlos y ver los campos adicionales incluidos en el tipo de datos.
 
@@ -132,19 +130,19 @@ Esta vez, cuando abra el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , se
 
 Al igual que con los nombres de clase, el nombre de la mezcla debe ser corto y simple, describiendo lo que la mezcla contribuirá al esquema. Estos también son únicos, por lo que no podrá reutilizar el nombre y, por lo tanto, debe asegurarse de que sea lo suficientemente específico.
 
-Para este tutorial, asigne a la nueva combinación el nombre &quot;Detalles[!UICONTROL de]lealtad&quot;.
+Para este tutorial, asigne un nombre a la nueva combinación &quot;Detalles de lealtad&quot;.
 
 Seleccione **[!UICONTROL Añadir mezcla]** para volver a la [!DNL Schema Editor]. &quot;Detalles[!UICONTROL de]lealtad&quot; debería aparecer ahora en **[!UICONTROL Mezclas]** en la parte izquierda del lienzo, pero todavía no hay campos asociados a él y por lo tanto no aparecen campos nuevos en **[!UICONTROL Estructura]**.
 
 ## Añadir campos a la mezcla {#mixin-fields}
 
-Ahora que ha creado la combinación de &quot;Detalles[!UICONTROL de]Lealtad&quot;, es hora de definir los campos en los que la mezcla contribuirá al esquema.
+Ahora que ha creado la mezcla &quot;Detalles de Lealtad&quot;, es hora de definir los campos que la mezcla contribuirá al esquema.
 
-Para comenzar, seleccione el nombre de la mezcla en la sección **[!UICONTROL Mezclas]** . Una vez realizado esto, las propiedades de la mezcla aparecen en la parte derecha del editor y aparece un botón de **[!UICONTROL Añadir campo]** junto al nombre del esquema en **[!UICONTROL Estructura]**.
+Para comenzar, seleccione el nombre de la mezcla en la sección **[!UICONTROL Mezclas]** . Una vez realizado esto, las propiedades de la mezcla aparecen en la parte derecha del editor y aparece un **signo más (+)** junto al nombre del esquema en **[!UICONTROL Estructura]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Seleccione **[!UICONTROL Añadir campo]** junto a &quot;[!DNL Loyalty Members]&quot; para crear un nuevo nodo en la estructura. Este nodo (denominado `_tenantId` en este ejemplo) representa la ID de inquilino de la organización de IMS, precedida por un guion bajo. La presencia de la ID de inquilino indica que los campos que está agregando están contenidos en la Área de nombres de su organización.
+Seleccione el icono **más (+)** junto a &quot;[!DNL Loyalty Members]&quot; para crear un nuevo nodo en la estructura. Este nodo (denominado `_tenantId` en este ejemplo) representa la ID de inquilino de la organización de IMS, precedida por un guion bajo. La presencia de la ID de inquilino indica que los campos que está agregando están contenidos en la Área de nombres de su organización.
 
 En otras palabras, los campos que está agregando son exclusivos de su organización y se van a guardar en el [!DNL Schema Registry] en un área específica a la que solo pueda acceder su organización. Los campos que defina siempre deben agregarse a la Área de nombres del inquilino para evitar conflictos con nombres de otras clases estándar, mezclas, tipos de datos y campos.
 
@@ -156,7 +154,7 @@ Con los controles del lado derecho del editor, cree un `loyalty` campo con el ti
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-Los cambios se aplican y aparece el `loyalty` objeto recién creado. Seleccione **[!UICONTROL Añadir campo]** junto al objeto para agregar campos adicionales relacionados con la lealtad. Aparece un &quot;[!UICONTROL Nuevo campo]&quot; y la sección de propiedades **[!UICONTROL de]** campo está visible en la parte derecha del lienzo.
+Los cambios se aplican y aparece el `loyalty` objeto recién creado. Seleccione el icono **más (+)** junto al objeto para agregar campos adicionales relacionados con la lealtad. Aparece un &quot;[!UICONTROL Nuevo campo]&quot; y la sección de propiedades **[!UICONTROL de]** campo está visible en la parte derecha del lienzo.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -182,7 +180,7 @@ Ahora que ha agregado el `loyaltyId` campo, puede agregar campos adicionales par
 * Puntos (entero)
 * Miembro desde (fecha)
 
-Cada campo se agrega seleccionando **[!UICONTROL Añadir campo]** en el `loyalty` objeto y rellenando la información requerida.
+Para agregar cada campo al esquema, seleccione el icono **más (+)** junto al `loyalty` objeto y rellene la información requerida.
 
 Una vez completado, el objeto Lealtad contendrá campos para ID de lealtad, puntos y elementos desde los que se obtuvo.
 
@@ -200,7 +198,7 @@ Al definir los campos en el [!DNL Schema Editor], hay algunas opciones adicional
 | [!UICONTROL Identidad] | Indica que este campo es un campo de identidad. Más información sobre los campos de identidad se proporciona [más adelante en este tutorial](#identity-field). |
 | [!UICONTROL Relación] | Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. La restricción [!UICONTROL Relación] indica que este campo hace referencia a la identidad principal de un esquema basado en una clase diferente, lo que implica una relación entre los dos esquemas. Consulte el tutorial sobre la [definición de una relación](./relationship-ui.md) para obtener más información. |
 
-Para este tutorial, el [!DNL "loyalty"] objeto del esquema requiere un nuevo campo de enumeración que describe el &quot;nivel de lealtad&quot; de un cliente, donde el valor sólo puede ser una de las cuatro opciones posibles. Para agregar este campo al esquema, seleccione **[!UICONTROL Añadir campo]** al lado del `loyalty` objeto y rellene los campos requeridos para el nombre **[!UICONTROL del]** campo y el nombre **** para mostrar. Para **[!UICONTROL Tipo]**, seleccione &quot;[!UICONTROL Cadena]&quot;.
+Para este tutorial, el [!DNL "loyalty"] objeto del esquema requiere un nuevo campo de enumeración que describe el &quot;nivel de lealtad&quot; de un cliente, donde el valor sólo puede ser una de las cuatro opciones posibles. Para agregar este campo al esquema, seleccione el icono **más (+)** junto al `loyalty` objeto y rellene los campos obligatorios para Nombre **[!UICONTROL de]** campo y **[!UICONTROL Nombre]** para mostrar. Para **[!UICONTROL Tipo]**, seleccione &quot;[!UICONTROL Cadena]&quot;.
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -227,6 +225,10 @@ Ahora, cuando se observa en **[!UICONTROL Estructura]**, se puede ver que el `lo
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
 En un esquema futuro, ahora se puede asignar un campo como tipo &quot;[!DNL Loyalty]&quot; y se incluirán automáticamente campos para ID, nivel de lealtad, miembro desde y puntos.
+
+>[!NOTE]
+>
+>También puede crear y editar tipos de datos personalizados independientemente de la edición de esquemas. Consulte el tutorial sobre la [creación y edición de tipos](./create-data-type.md) de datos para obtener más información.
 
 ## Buscar y filtrar campos de esquema
 
@@ -270,7 +272,7 @@ A continuación, debe proporcionar una Área de nombres **[!UICONTROL de]** iden
 >
 >Para obtener una lista de las Áreas de nombres estándar y sus definiciones, consulte la [[!DNL Identity Service] documentación](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
-Después de aplicar el cambio, el icono para `loyaltyId` muestra un símbolo de huella digital que indica que ahora es un campo de identidad. Además, la [!DNL Loyalty Details] mezcla en el carril izquierdo lista el campo de identidad que se encuentra debajo, lo que permite determinar fácilmente qué mezcla en un esquema proporciona los campos de identidad del esquema.
+Después de aplicar el cambio, el icono para `loyaltyId` muestra un símbolo de huella digital que indica que ahora es un campo de identidad.
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
