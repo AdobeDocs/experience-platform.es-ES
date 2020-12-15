@@ -1,11 +1,11 @@
 ---
 keywords: Visual similarity;visual similarity;ccai api
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Similitud visual
 topic: Developer guide
 description: El servicio de similitud visual, cuando se le proporciona una imagen, busca automáticamente imágenes visualmente similares de un catálogo.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 3%
