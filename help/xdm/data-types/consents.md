@@ -4,7 +4,7 @@ title: Tipo de datos de contenido y preferencias
 description: El tipo de datos Privacidad/Preferencias de marketing (Consentimiento) está diseñado para admitir la recopilación de permisos y preferencias del cliente generados por las plataformas de gestión de consentimiento (CMP) y otras fuentes de sus operaciones de datos.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -18,7 +18,7 @@ El tipo [!DNL Privacy/Marketing Preferences (Consent)] de datos (en lo sucesivo 
 
 El presente documento abarca la estructura y el uso previsto de los campos proporcionados por el tipo de [!DNL Consents & Preferences] datos.
 
-## Requisitos previos  {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Este documento requiere una comprensión práctica de XDM y el uso de los esquemas en [!DNL Experience Platform]. Revise la siguiente documentación antes de continuar:
 
@@ -285,7 +285,7 @@ Consulte el tutorial sobre la [creación de un esquema en la interfaz de usuario
 >
 >Si desea enviar datos de consentimiento a [!DNL Real-time Customer Profile], es necesario crear un esquema [!DNL Profile]habilitado en función de la [!DNL XDM Individual Profile] clase que contiene el tipo de [!DNL Consents & Preferences] datos. El conjunto de datos que cree en función de ese esquema también debe estar habilitado para [!DNL Profile]. Consulte los tutoriales relacionados anteriormente para ver los pasos específicos relacionados con [!DNL Real-time Customer Profile] los requisitos para esquemas y conjuntos de datos.
 >
->Además, debe asegurarse de que las políticas de combinación están configuradas para priorizar los conjuntos de datos que contienen los datos de preferencias y consentimiento más recientes, a fin de que los perfiles de los clientes se actualicen correctamente. Consulte la información general sobre las políticas [de](../../rtcdp/profile/merge-policies.md) combinación para obtener más información.
+>Además, debe asegurarse de que las políticas de combinación están configuradas para priorizar los conjuntos de datos que contienen los datos de preferencias y consentimiento más recientes, a fin de que los perfiles de los clientes se actualicen correctamente. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Gestión del consentimiento y los cambios de preferencias
 
@@ -333,4 +333,4 @@ La siguiente tabla describe los valores aceptados para `xdm:preferred`:
 
 ### Esquema [!DNL Consents & Preferences] completo {#full-schema}
 
-Para vista del esquema completo del tipo de [!DNL Consents & Preferences] datos, consulte el repositorio [](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)oficial XDM.
+Para vista del esquema completo del tipo de [!DNL Consents & Preferences] datos, consulte el repositorio [](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)oficial XDM.
