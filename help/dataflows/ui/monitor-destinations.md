@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
-description: Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona pasos para ver flujos de datos existentes desde el espacio de trabajo Fuentes.
+description: Los destinos le permiten activar sus datos desde Adobe Experience Platform a innumerables socios externos. Este tutorial proporciona instrucciones sobre cómo puede supervisar los flujos de datos de los destinos mediante la interfaz de usuario del Experience Platform.
 solution: Experience Platform
 title: Monitoreo de flujos de datos
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '426'
 ht-degree: 1%
 
 ---
