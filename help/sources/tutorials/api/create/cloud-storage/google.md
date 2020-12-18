@@ -6,63 +6,63 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Almacenamiento de Google Cloud.
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un [!DNL Google Cloud Storage] conector mediante la [!DNL Flow Service] API
+# Cree un conector [!DNL Google Cloud Storage] mediante la API [!DNL Flow Service]
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a una [!DNL Google Cloud Storage] cuenta.
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a una cuenta [!DNL Google Cloud Storage].
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una cuenta de Almacenamiento de Google Cloud mediante la [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una cuenta de Almacenamiento de Google Cloud mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] conectarse con su [!DNL Google Cloud Storage] cuenta, debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con su cuenta [!DNL Google Cloud Storage], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `accessKeyId` | ID de la clave de acceso de su [!DNL Google Cloud Storage] cuenta. |
-| `secretAccessKey` | Clave de acceso secreta de su [!DNL Google Cloud Storage] cuenta. |
+| `accessKeyId` | El ID de la clave de acceso de su cuenta [!DNL Google Cloud Storage]. |
+| `secretAccessKey` | La clave de acceso secreto de su cuenta [!DNL Google Cloud Storage]. |
 
-Para obtener información sobre cómo empezar, visite [este documento](https://cloud.google.com/docs/authentication)de Google Cloud.
+Para obtener información sobre cómo empezar, visite [este documento de Google Cloud](https://cloud.google.com/docs/authentication).
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por [!DNL Google Cloud Storage] cuenta, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta [!DNL Google Cloud Storage], ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -71,6 +71,8 @@ POST /connections
 ```
 
 **Solicitud**
+
+Para crear una conexión [!DNL Google Cloud Storage], se debe proporcionar su ID de especificación de conexión única como parte de la solicitud del POST. El identificador de especificación de conexión para [!DNL Google Cloud Storage] es `32e8f412-cdf7-464c-9885-78184cb113fd`.
 
 ```shell
 curl -X POST \
@@ -99,9 +101,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | ID de la clave de acceso asociada a su [!DNL Google Cloud Storage] cuenta. |
-| `auth.params.secretAccessKey` | Clave de acceso secreta asociada a su [!DNL Google Cloud Storage] cuenta. |
-| `connectionSpec.id` | ID de especificación de [!DNL Google Cloud Storage] conexión: `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | ID de clave de acceso asociado a su cuenta [!DNL Google Cloud Storage]. |
+| `auth.params.secretAccessKey` | La clave de acceso secreto asociada a su cuenta [!DNL Google Cloud Storage]. |
+| `connectionSpec.id` | El identificador de especificación de conexión [!DNL Google Cloud Storage]: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Respuesta**
 
@@ -116,4 +118,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una [!DNL Google Cloud Storage] conexión mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API](../../explore/cloud-storage.md) de servicio de flujo o [ingesta de datos de parqué mediante la API](../../cloud-storage-parquet.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión [!DNL Google Cloud Storage] mediante API y se obtuvo un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingesta de datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
