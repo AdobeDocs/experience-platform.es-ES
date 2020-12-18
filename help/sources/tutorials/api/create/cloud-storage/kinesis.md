@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Amazon Kinesis.
 translation-type: tm+mt
-source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 2%
@@ -14,51 +14,51 @@ ht-degree: 2%
 ---
 
 
-# Creación de un [!DNL Amazon Kinesis] conector mediante la API de servicio de flujo
+# Crear un conector [!DNL Amazon Kinesis] mediante la API de servicio de flujo
 
 >[!NOTE]
 >
->El [!DNL Amazon Kineses] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Amazon Kineses] está en versión beta. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Experience Platform] a una [!DNL Amazon Kinesis] cuenta.
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a una cuenta [!DNL Amazon Kinesis].
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a una [!DNL Amazon Kinesis] cuenta mediante la [!DNL Flow Service] API.
+Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a una cuenta [!DNL Amazon Kinesis] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] conectarse con su [!DNL Amazon Kinesis] cuenta, debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con su cuenta [!DNL Amazon Kinesis], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `accessKeyId` | ID de la clave de acceso de su [!DNL Kinesis] cuenta. |
-| `secretKey` | Clave de acceso secreta de su [!DNL Kinesis] cuenta. |
-| `region` | Región de su [!DNL Kinesis] cuenta. |
-| `connectionSpec.id` | ID de especificación de [!DNL Kinesis] conexión: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `accessKeyId` | El ID de la clave de acceso de su cuenta [!DNL Kinesis]. |
+| `secretKey` | La clave de acceso secreto de su cuenta [!DNL Kinesis]. |
+| `region` | Región de su cuenta [!DNL Kinesis]. |
+| `connectionSpec.id` | El identificador de especificación de conexión [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Para obtener más información sobre estos valores, consulte [este documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)de Kinesis.
+Para obtener más información sobre estos valores, consulte [este documento de Kinesis](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por [!DNL Amazon Kinesis] cuenta, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta [!DNL Amazon Kinesis], ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -105,10 +105,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | ID de la clave de acceso de su [!DNL Kinesis] cuenta. |
-| `auth.params.secretKey` | Clave de acceso secreta de su [!DNL Kinesis] cuenta. |
-| `auth.params.region` | Región de su [!DNL Kinesis] cuenta. |
-| `connectionSpec.id` | ID de especificación de [!DNL Kinesis] conexión: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | El ID de la clave de acceso de su cuenta [!DNL Kinesis]. |
+| `auth.params.secretKey` | La clave de acceso secreto de su cuenta [!DNL Kinesis]. |
+| `auth.params.region` | Región de su cuenta [!DNL Kinesis]. |
+| `connectionSpec.id` | El identificador de especificación de conexión [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Respuesta**
 
@@ -123,4 +123,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una [!DNL Amazon Kinesis] conexión mediante API y se ha obtenido un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [recopilar datos de flujo mediante la API](../../collect/streaming.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión [!DNL Amazon Kinesis] mediante API y se obtuvo un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [recopilar datos de flujo mediante la API de servicio de flujo](../../collect/streaming.md).
