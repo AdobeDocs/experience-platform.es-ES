@@ -6,69 +6,69 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar Apache Spark en Azure HDInsights (en lo sucesivo, "Spark") al Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '584'
 ht-degree: 2%
 
 ---
 
 
-# Crear un [!DNL Apache Spark] conector de [!DNL Azure] HDInsights mediante la [!DNL Flow Service] API
+# Cree un [!DNL Apache Spark] conector de [!DNL Azure] HDInsights mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
->El [!DNL Apache Spark] conector on [!DNL Azure HDInsights] está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Apache Spark] del [!DNL Azure HDInsights] está en versión beta. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectarse [!DNL Apache Spark] en [!DNL Azure HDInsights] (en adelante, &quot;[!DNL Spark]&quot;) a [!DNL Experience Platform].
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Apache Spark] en [!DNL Azure HDInsights] (en lo sucesivo denominada &quot;[!DNL Spark]&quot;) a [!DNL Experience Platform].
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Simuladores](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Spark] través de la [!DNL Flow Service] API.
+Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse con éxito a [!DNL Spark] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] conectarse con [!DNL Spark], debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con [!DNL Spark], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | La dirección IP o el nombre de host del [!DNL Spark] servidor. |
-| `username` | El nombre de usuario que utiliza para acceder a [!DNL Spark] Server. |
+| `host` | La dirección IP o el nombre de host del servidor [!DNL Spark]. |
+| `username` | El nombre de usuario que utiliza para acceder al servidor [!DNL Spark]. |
 | `password` | La contraseña correspondiente al usuario. |
-| `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL Spark] es: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| `connectionSpec.id` | Identificador único necesario para crear una conexión. El identificador de especificación de conexión para [!DNL Spark] es: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
-Para obtener más información sobre cómo empezar, consulte [este documento](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)de Spark.
+Para obtener más información sobre cómo empezar, consulte [este documento de Spark](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por [!DNL Spark] cuenta, ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta [!DNL Spark], ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
 
 **Formato API**
 
@@ -78,7 +78,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una [!DNL Spark] conexión, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Spark] es `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
+Para crear una conexión [!DNL Spark], se debe proporcionar su ID de especificación de conexión única como parte de la solicitud del POST. El identificador de especificación de conexión para [!DNL Spark] es `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`.
 
 ```shell
 curl -X POST \
@@ -108,10 +108,10 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `auth.params.host` | The host of the [!DNL Spark] server. |
-| `auth.params.username` | El nombre de usuario asociado a la [!DNL Spark] conexión. |
-| `auth.params.password` | La contraseña asociada a la [!DNL Spark] conexión. |
-| `connectionSpec.id` | ID de especificación de [!DNL Spark] conexión: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `auth.params.host` | El host del servidor [!DNL Spark]. |
+| `auth.params.username` | El nombre de usuario asociado a su conexión [!DNL Spark]. |
+| `auth.params.password` | La contraseña asociada a su conexión [!DNL Spark]. |
+| `connectionSpec.id` | El identificador de especificación de conexión [!DNL Spark]: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Respuesta**
 
@@ -126,4 +126,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una [!DNL Spark] conexión mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial cuando aprenda a [explorar bases de datos mediante la API](../../explore/database-nosql.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión [!DNL Spark] mediante la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial cuando aprenda a [explorar bases de datos mediante la API de servicio de flujo](../../explore/database-nosql.md).
