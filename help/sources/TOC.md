@@ -5,9 +5,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 4%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
 - Tutoriales de API {#api-tutorials}
-   - Creación de un conector de origen {#create}
+   - Crear un conector de origen {#create}
       - Publicidad {#advertising}
          - [Conector de Google AdWords](tutorials/api/create/advertising/ads.md)
       - Almacenamiento de nube {#cloud-storage}
@@ -87,7 +87,6 @@ ht-degree: 4%
          - [Conector de Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Conector SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Conector HubSpot](tutorials/api/create/crm/hubspot.md)
          - [Conector de Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Conector de Salesforce](tutorials/api/create/crm/salesforce.md)
       - Éxito del cliente {#customer-success}
@@ -145,8 +144,8 @@ ht-degree: 4%
    - [Actualizar conexiones](tutorials/api/update.md)
    - [Eliminar conexiones](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
-- Tutoriales de la interfaz de usuario {#ui-tutorials}
-   - Creación de un conector de origen {#create}
+- Tutoriales de interfaz de usuario {#ui-tutorials}
+   - Crear un conector de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
          - [Conector de datos de clasificaciones de Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Conector Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
