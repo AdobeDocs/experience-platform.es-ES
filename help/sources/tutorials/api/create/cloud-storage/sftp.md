@@ -6,21 +6,21 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '770'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un conector SFTP mediante la [!DNL Flow Service] API
+# Creación de un conector SFTP mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
->El conector SFTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector SFTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Este tutorial utiliza la [!DNL Flow Service] API para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
 
 ## Primeros pasos
 
@@ -29,11 +29,11 @@ Esta guía requiere un conocimiento práctico de los siguientes componentes de A
 * [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
 * [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un servidor SFTP mediante la [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un servidor SFTP mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Para [!DNL Flow Service] conectarse a SFTP, debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte a SFTP, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -45,23 +45,23 @@ Para [!DNL Flow Service] conectarse a SFTP, debe proporcionar valores para las s
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
-* Autorización: Portador `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medio adicional:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Crear una conexión
 
@@ -69,7 +69,7 @@ Una conexión especifica un origen y contiene sus credenciales para ese origen. 
 
 ### Creación de una conexión SFTP mediante autenticación básica
 
-Para crear una conexión SFTP mediante autenticación básica, realice una solicitud de POST a la [!DNL Flow Service] API mientras proporciona valores para los valores `host`, `userName`y `password`de la conexión.
+Para crear una conexión SFTP mediante autenticación básica, realice una solicitud de POST a la API [!DNL Flow Service] mientras proporciona valores para las `host`, `userName` y `password` de la conexión.
 
 **Formato API**
 
@@ -78,6 +78,8 @@ POST /connections
 ```
 
 **Solicitud**
+
+Para crear una conexión SFTP, debe proporcionarse su ID de especificación de conexión única como parte de la solicitud del POST. El ID de especificación de conexión para SFTP es `b7bf2577-4520-42c9-bae9-cad01560f7bc`.
 
 ```shell
 curl -X POST \
@@ -125,7 +127,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ### Creación de una conexión SFTP mediante autenticación de clave pública SSH
 
-Para crear una conexión SFTP mediante la autenticación de clave pública SSH, realice una solicitud de POST a la [!DNL Flow Service] API mientras proporciona valores para la conexión `host`, `userName`, `privateKeyContent`y `passPhrase`.
+Para crear una conexión SFTP mediante autenticación de clave pública SSH, realice una solicitud de POST a la API [!DNL Flow Service] mientras proporciona valores para las `host`, `userName`, `privateKeyContent` y `passPhrase` de la conexión.
 
 **Formato API**
 
@@ -183,4 +185,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión SFTP mediante la [!DNL Flow Service] API y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API](../../explore/cloud-storage.md) de servicio de flujo o [ingesta de datos de parqué mediante la API](../../cloud-storage-parquet.md)de servicio de flujo.
+Siguiendo este tutorial, ha creado una conexión SFTP mediante la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingesta de datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
