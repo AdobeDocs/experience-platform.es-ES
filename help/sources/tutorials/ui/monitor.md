@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada.
 
-Para obtener más información sobre la supervisión de flujos de datos para conectores de origen, lea el tutorial [Monitoreo de flujos de datos en fuentes](../../../dataflows/ui/monitor-sources.md) .
+Para obtener más información sobre la supervisión de flujos de datos para conectores de origen, lea el tutorial [monitorear flujos de datos en fuentes](../../../dataflows/ui/monitor-sources.md).
