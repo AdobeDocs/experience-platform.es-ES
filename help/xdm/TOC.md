@@ -2,18 +2,18 @@
 product: experience-platform
 audience: user
 user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
-breadcrumb-title: Guía del modelo de datos de experiencia (XDM)
+breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 18%
+source-wordcount: '216'
+ht-degree: 23%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# Sistema de modelo de datos de experiencia (XDM) {#xdm}
 
 * [Descripción general del sistema XDM](home.md)
 * Esquemas {#schema}
@@ -56,6 +56,22 @@ ht-degree: 18%
    * [Detalles de puntos de interés](./data-types/poi-details.md)
    * [Interacción con POI](./data-types/poi-interaction.md)
    * [Dirección postal](./data-types/postal-address.md)
+*  EsquemasUI  {#ui}
+   * [Información general](./ui/overview.md)
+   * [Explorar recursos XDM](./ui/explore.md)
+   * Crear y editar recursos {#resources}
+      * [Esquemas](./ui/resources/schemas.md)
+      * [Clases](./ui/resources/classes.md)
+      * [Mezclas](./ui/resources/mixins.md)
+      * [Tipos de datos](./ui/resources/data-types.md)
+   * Definir campos {#fields}
+      * [Información general](./ui/fields/overview.md)
+      * [Campos requeridos](./ui/fields/required.md)
+      * [Campos de objeto](./ui/fields/object.md)
+      * [Campos de matriz](./ui/fields/array.md)
+      * [Campos Enum](./ui/fields/enum.md)
+      * [Campos de identidad](./ui/fields/identity.md)
+      * [Campos de relación](./ui/fields/relationship.md)
 * API del Registro de esquemas {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 18%
    * [Esquemas específicos](api/ad-hoc.md)
    * [Apéndice](api/appendix.md)
 * Tutoriales {#tutorials}
-   * [Explorar recursos en la interfaz de usuario](./tutorials/explore.md)
    * [Creación de un esquema (API)](tutorials/create-schema-api.md)
    * [Creación de un esquema (IU)](tutorials/create-schema-ui.md)
-   * [Creación y edición de tipos de datos (IU)](./tutorials/create-data-type.md)
    * [Definir una relación entre dos esquemas (API)](tutorials/relationship-api.md)
    * [Definir una relación entre dos esquemas (IU)](tutorials/relationship-ui.md)
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
