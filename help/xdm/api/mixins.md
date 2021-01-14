@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Crear una mezcla
 description: El extremo /mixins de la API del Registro de Esquema le permite administrar mediante programación mezclas XDM dentro de la aplicación de experiencia.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 2%
@@ -15,19 +15,19 @@ ht-degree: 2%
 
 # Extremo de mezclas
 
-Las mezclas son componentes reutilizables que definen uno o más campos que representan un concepto particular, como una persona individual, una dirección de correo o un entorno de explorador Web. Las mezclas están pensadas para incluirse como parte de un esquema que implementa una clase compatible, en función del comportamiento de los datos que representan (registro o serie temporal). El `/mixins` punto final de la [!DNL Schema Registry] API le permite administrar mediante programación las mezclas dentro de la aplicación de experiencia.
+Las mezclas son componentes reutilizables que definen uno o más campos que representan un concepto particular, como una persona individual, una dirección de correo o un entorno de explorador Web. Las mezclas están pensadas para incluirse como parte de un esquema que implementa una clase compatible, en función del comportamiento de los datos que representan (registro o serie temporal). El extremo `/mixins` de la API [!DNL Schema Registry] le permite administrar mediante programación las mezclas dentro de la aplicación de experiencia.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, consulte la guía [de](./getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
 
 ## Recuperar una lista de mezclas {#list}
 
-Puede lista todas las mezclas debajo del `global` o `tenant` contenedor haciendo una solicitud de GET a `/global/mixins` o `/tenant/mixins`, respectivamente.
+Puede lista todas las mezclas bajo el contenedor `global` o `tenant` haciendo una solicitud de GET a `/global/mixins` o `/tenant/mixins`, respectivamente.
 
 >[!NOTE]
 >
->Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros de paginación. También se recomienda utilizar parámetros de consulta adicionales para filtrar los resultados y reducir el número de recursos devueltos. Consulte la sección sobre parámetros [de](./appendix.md#query) consulta en el documento del apéndice para obtener más información.
+>Al enumerar los recursos, el Registro de Esquemas limita los conjuntos de resultados a 300 elementos. Para devolver recursos más allá de este límite, debe utilizar parámetros de paginación. También se recomienda utilizar parámetros de consulta adicionales para filtrar los resultados y reducir el número de recursos devueltos. Consulte la sección sobre [parámetros de consulta](./appendix.md#query) en el documento del apéndice para obtener más información.
 
 **Formato API**
 
@@ -37,12 +37,12 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CONTAINER_ID}` | El contenedor del que desea recuperar las mezclas: `global` para mezclas creadas en Adobe o `tenant` para mezclas que pertenezcan a su organización. |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte el documento [del](./appendix.md#query) apéndice para ver una lista de los parámetros disponibles. |
+| `{CONTAINER_ID}` | El contenedor del que desea recuperar las mezclas: `global` para mezclas creadas en Adobe o `tenant` para mezclas que sean propiedad de su organización. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte el [documento del apéndice](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
 **Solicitud**
 
-La siguiente solicitud recupera una lista de mezclas del `tenant` contenedor, utilizando un parámetro de `orderby` consulta para ordenar las mezclas por su `title` atributo.
+La siguiente solicitud recupera una lista de mezclas del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar las mezclas por su atributo `title`.
 
 ```shell
 curl -X GET \
@@ -59,11 +59,11 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `Accept` header | Descripción |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Éste es el encabezado recomendado para enumerar los recursos. (Límite: 300) |
-| `application/vnd.adobe.xed+json` | Devuelve una mezcla JSON completa para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
+| `application/vnd.adobe.xed+json` | Devuelve una mezcla JSON completa para cada recurso, con `$ref` y `allOf` originales incluidos. (Límite: 300) |
 
 **Respuesta**
 
-La solicitud anterior utilizó el `application/vnd.adobe.xed-id+json` encabezado, por lo tanto la respuesta incluye solamente los atributos `Accept` , `title`, `$id`y `meta:altId``version` para cada mezcla. El uso del otro `Accept` encabezado (`application/vnd.adobe.xed+json`) devuelve todos los atributos de cada mezcla. Seleccione el `Accept` encabezado correspondiente en función de la información que necesite en la respuesta.
+En la solicitud anterior se utilizó el encabezado `application/vnd.adobe.xed-id+json` `Accept`, por lo que la respuesta sólo incluye los atributos `title`, `$id`, `meta:altId` y `version` para cada mezcla. El uso del otro encabezado `Accept` (`application/vnd.adobe.xed+json`) devuelve todos los atributos de cada mezcla. Seleccione el encabezado `Accept` correspondiente en función de la información que necesite en la respuesta.
 
 ```json
 {
@@ -120,11 +120,11 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{CONTAINER_ID}` | El contenedor que alberga la mezcla que desea recuperar: `global` para una mezcla creada por Adobe o `tenant` para una mezcla propiedad de su organización. |
-| `{MIXIN_ID}` | Codificación `meta:altId` o URL `$id` de la mezcla que desea buscar. |
+| `{MIXIN_ID}` | El `meta:altId` o el `$id` con codificación URL de la mezcla que desea buscar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera una mezcla por su `meta:altId` valor proporcionado en la ruta.
+La siguiente solicitud recupera una mezcla por su valor `meta:altId` proporcionado en la ruta.
 
 ```shell
 curl -X GET \
@@ -136,15 +136,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-El formato de respuesta depende del encabezado `Accept` enviado en la solicitud. Todas las solicitudes de búsqueda requieren que `version` se incluyan en el `Accept` encabezado. The following `Accept` headers are available:
+El formato de respuesta depende del encabezado `Accept` enviado en la solicitud. Todas las solicitudes de búsqueda requieren que se incluya `version` en el encabezado `Accept`. Los siguientes `Accept` encabezados están disponibles:
 
 | `Accept` header | Descripción |
 | ------- | ------------ |
 | `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin formato `$ref` y `allOf`, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y `allOf` resueltos, incluidos los descriptores. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin formato con `$ref` y `allOf`, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resueltos, se incluyen los descriptores. |
 
 **Respuesta**
 
@@ -211,7 +211,7 @@ Una respuesta correcta devuelve los detalles de la mezcla. Los campos devueltos 
 
 ## Crear una mezcla {#create}
 
-Puede definir una mezcla personalizada bajo el `tenant` contenedor haciendo una solicitud de POST.
+Puede definir una mezcla personalizada en el contenedor `tenant` haciendo una solicitud de POST.
 
 **Formato API**
 
@@ -221,11 +221,11 @@ POST /tenant/mixins
 
 **Solicitud**
 
-Al definir una nueva mezcla, debe incluir un `meta:intendedToExtend` atributo, enumerando el número `$id` de clases con las que la mezcla es compatible. En este ejemplo, la mezcla es compatible con una `Property` clase definida anteriormente. Los campos personalizados deben anidarse en `_{TENANT_ID}` (como se muestra en el ejemplo) para evitar conflictos con campos similares proporcionados por clases y otras mezclas.
+Al definir una nueva mezcla, debe incluir un atributo `meta:intendedToExtend`, enumerando las `$id` clases con las que la mezcla es compatible. En este ejemplo, la mezcla es compatible con una clase `Property` definida anteriormente. Los campos personalizados deben anidarse en `_{TENANT_ID}` (como se muestra en el ejemplo) para evitar conflictos con campos similares proporcionados por clases y otras mezclas.
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo definir los distintos tipos de campo que se incluirán en la mezcla, consulte la guía [de restricciones de](../schema/field-constraints.md#define-fields)campo.
+>Para obtener más información sobre cómo definir diferentes tipos de campos para incluir en la mezcla, consulte la [guía de restricciones de campo](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -294,7 +294,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altId`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altId` y `version`. Estos valores son de sólo lectura y son asignados por [!DNL Schema Registry].
 
 ```JSON
 {
@@ -378,15 +378,15 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Al realizar una solicitud de GET para [lista de todas las mezclas](#list) en el contenedor del inquilino, ahora se incluirá la combinación Detalles de propiedad, o bien se puede [realizar una solicitud](#lookup) de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa de la nueva mezcla.
+Al realizar una solicitud de GET a [lista de todas las mezclas](#list) en el contenedor del inquilino, ahora se incluirá la combinación Detalles de propiedad, o bien [se puede realizar una solicitud de búsqueda (GET)](#lookup) utilizando el URI `$id` codificado con URL para vista directa de la nueva mezcla.
 
 ## Actualizar una mezcla {#put}
 
-Puede reemplazar una mezcla completa mediante una operación de PUT, básicamente reescribiendo el recurso. Al actualizar una mezcla a través de una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al [crear una nueva mezcla](#create) en una solicitud de POST.
+Puede reemplazar una mezcla completa mediante una operación de PUT, básicamente reescribiendo el recurso. Al actualizar una mezcla mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios cuando [cree una nueva mezcla](#create) en una solicitud de POST.
 
 >[!NOTE]
 >
->Si sólo desea actualizar una parte de una mezcla en lugar de reemplazarla por completo, consulte la sección sobre la [actualización de una porción de una mezcla](#patch).
+>Si sólo desea actualizar parte de una mezcla en lugar de reemplazarla por completo, consulte la sección sobre [actualización de una porción de una mezcla](#patch).
 
 **Formato API**
 
@@ -396,11 +396,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MIXIN_ID}` | Codificación `meta:altId` o URL `$id` de la mezcla que desea volver a escribir. |
+| `{MIXIN_ID}` | El `meta:altId` o el `$id` codificado con URL de la mezcla que desea volver a escribir. |
 
 **Solicitud**
 
-La siguiente solicitud vuelve a escribir una mezcla existente, agregando un nuevo `propertyCountry` campo.
+La siguiente solicitud vuelve a escribir una mezcla existente, agregando un nuevo campo `propertyCountry`.
 
 ```SHELL
 curl -X PUT \
@@ -563,13 +563,13 @@ Una respuesta correcta devuelve los detalles de la mezcla actualizada.
 }
 ```
 
-## Actualizar una parte de una mezcla {#patch}
+## Actualizar una porción de una mezcla {#patch}
 
-Puede actualizar una parte de una mezcla mediante una solicitud de PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones estándar de Parche JSON, incluidas `add`, `remove`y `replace`. Para obtener más información sobre JSON Patch, consulte la guía [de aspectos fundamentales de la API](../../landing/api-fundamentals.md#json-patch).
+Puede actualizar una parte de una mezcla mediante una solicitud de PATCH. El [!DNL Schema Registry] soporta todas las operaciones estándar de parche JSON, incluyendo `add`, `remove` y `replace`. Para obtener más información sobre JSON Patch, consulte la [guía de principios de API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si desea reemplazar un recurso completo con nuevos valores en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar una mezcla con una operación](#put)de PUT.
+>Si desea reemplazar un recurso completo con nuevos valores en lugar de actualizar campos individuales, consulte la sección sobre [reemplazo de una mezcla mediante una operación de PUT](#put).
 
 **Formato API**
 
@@ -579,13 +579,13 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MIXIN_ID}` | El `$id` URI con codificación URL o `meta:altId` de la mezcla que desea actualizar. |
+| `{MIXIN_ID}` | El URI `$id` con codificación URL o `meta:altId` de la mezcla que desea actualizar. |
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente actualiza el `description` de una mezcla existente y agrega un nuevo `propertyCity` campo.
+La siguiente solicitud de ejemplo actualiza el `description` de una mezcla existente y agrega un nuevo campo `propertyCity`.
 
-El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), el campo en el que se debe realizar la operación (`path`) y la información que debe incluirse en dicha operación (`value`).
+El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), el campo en el que se debe realizar la operación (`path`) y la información que se debe incluir en esa operación (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -615,7 +615,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-La respuesta muestra que ambas operaciones se realizaron correctamente. El `description` se ha actualizado y `propertyCountry` se ha añadido en `definitions`.
+La respuesta muestra que ambas operaciones se realizaron correctamente. El `description` se ha actualizado y `propertyCountry` se ha agregado en `definitions`.
 
 ```JSON
 {
@@ -716,7 +716,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MIXIN_ID}` | El `$id` URI con codificación URL o `meta:altId` de la mezcla que desea eliminar. |
+| `{MIXIN_ID}` | El URI `$id` con codificación URL o `meta:altId` de la mezcla que desea eliminar. |
 
 **Solicitud**
 
@@ -733,4 +733,4 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Puede confirmar la eliminación mediante una solicitud [de](#lookup) búsqueda (GET) de la mezcla. Deberá incluir un `Accept` encabezado en la solicitud, pero recibirá un estado HTTP 404 (No encontrado) porque la mezcla se ha eliminado del Registro de Esquemas.
+Para confirmar la eliminación, intente una solicitud de [búsqueda (GET)](#lookup) a la mezcla. Deberá incluir un encabezado `Accept` en la solicitud, pero debe recibir un estado HTTP 404 (no encontrado) porque la mezcla se ha eliminado del Registro de Esquemas.
