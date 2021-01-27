@@ -5,10 +5,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar datos en el lago de datos de Platform.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 20%
+source-wordcount: '135'
+ht-degree: 19%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 20%
 - Interfaz de usuario del servicio de consulta {#ui}
    - [Información general de la interfaz de usuario](ui/overview.md)
    - [Guía del usuario del Editor de consultas](ui/user-guide.md)
-- Creación de consultas {#creating-queries}
-   - [Información general sobre la creación de consultas](creating-queries/creating-queries.md)
-   - [Conjuntos de datos vs. tablas y esquemas](creating-queries/datasets-and-tables.md)
-   - [Directrices generales para la ejecución de consultas](creating-queries/writing-queries.md)
-   - [Consultas de ExperienceEvent](creating-queries/experience-event-queries.md)
-   - [Incorporación de conjuntos de datos](creating-queries/joining-datasets.md)
-   - [Deduplicación de datos](creating-queries/deduplication.md)
-- [Generación de conjuntos de datos a partir de resultados de consulta](creating-queries/create-datasets.md)
+   - [Generación de conjuntos de datos a partir de resultados de consulta](ui/create-datasets.md)
+- Prácticas recomendadas {#best-practices}
+   - [Directrices generales para la ejecución de consultas](best-practices/writing-queries.md)
+   - [Deduplicación de datos](best-practices/deduplication.md)
+   - [Consultas de Evento de experiencias de muestra](best-practices/experience-event-queries.md)
+   - [Consultas de Adobe Analytics de muestra](best-practices/adobe-analytics.md)
+   - [Consultas de Adobe Target de muestra](best-practices/adobe-target.md)
 - Referencia SQL {#sql}
    - [Información general de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 20%
    - [Spark SQL funciones](sql/spark-sql-functions.md)
    - [Comandos de metadatos](sql/metadata.md)
    - [Declaraciones preparadas](sql/prepared-statements.md)
-- Consultas de muestra {#samples}
-   - [Información general sobre consultas de muestra](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - Conectar clientes al servicio de Consulta {#clients}
    - [Información general sobre las conexiones de cliente](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
