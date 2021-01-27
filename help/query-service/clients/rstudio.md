@@ -5,7 +5,7 @@ title: Conectar con RStudio
 topic: connect
 description: Este documento recorre los pasos para conectar R Studio con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Este documento recorre los pasos para conectar R Studio con Adobe Experience Platform [!DNL Query Service].
 
-Después de la instalación [!DNL RStudio], en la pantalla de la *consola* que aparece, primero deberá preparar la secuencia de comandos R para su uso [!DNL PostgreSQL].
+Después de instalar [!DNL RStudio], en la pantalla *Consola* que aparece, primero deberá preparar la secuencia de comandos R para utilizar [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -26,7 +26,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Una vez preparado el script R para su uso [!DNL PostgreSQL], ahora puede conectarse [!DNL RStudio] a [!DNL Query Service] cargando el [!DNL PostgreSQL] controlador.
+Una vez que haya preparado la secuencia de comandos R para utilizar [!DNL PostgreSQL], ahora puede conectar [!DNL RStudio] a [!DNL Query Service] cargando el controlador [!DNL PostgreSQL].
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -42,17 +42,17 @@ con <- dbConnect(drv,
 | -------- | ----------- |
 | `{DATABASE_NAME}` | Nombre de la base de datos que se va a utilizar. |
 | `{HOST_NUMBER` y `{PORT_NUMBER}` | El extremo del host y su puerto para el servicio de Consulta. |
-| `{USERNAME}` y `{PASSWORD}` | Las credenciales de inicio de sesión que se utilizarán. El nombre de usuario adopta la forma de `ORG_ID@AdobeOrg`. |
+| `{USERNAME}` y `{PASSWORD}` | Las credenciales de inicio de sesión que se utilizarán. El nombre de usuario toma la forma `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página de [credenciales de la plataforma](https://platform.adobe.com/query/configuration). Para buscar las credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y, a continuación, haga clic en **[!UICONTROL Credenciales]**.
+>Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la [página de credenciales en la plataforma](https://platform.adobe.com/query/configuration). Para encontrar sus credenciales, inicie sesión en [!DNL Platform], haga clic en **[!UICONTROL Consultas]** y luego haga clic en **[!UICONTROL Credenciales]**.
 
 ## Pasos siguientes
 
 Ahora que se ha conectado a [!DNL Query Service], puede escribir consultas para ejecutar y editar sentencias SQL. Por ejemplo, puede utilizar `dbGetQuery(con, sql)` para ejecutar consultas, donde `sql` es la consulta SQL que desea ejecutar.
 
-La siguiente consulta utiliza un conjunto de datos que contiene [ExperienceEvents](../creating-queries/experience-event-queries.md) y crea un histograma de vistas de página de un sitio web, dada la altura de pantalla del dispositivo.
+La siguiente consulta utiliza un conjunto de datos que contiene [ExperienceEvents](../best-practices/experience-event-queries.md) y crea un histograma de vistas de página de un sitio web, dada la altura de pantalla del dispositivo.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +87,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Para obtener más información sobre cómo escribir y ejecutar consultas, lea la guía de consultas [en ejecución](../creating-queries/creating-queries.md).
+Para obtener más información sobre cómo escribir y ejecutar consultas, lea la [guía de consultas en ejecución](../best-practices/writing-queries.md).
