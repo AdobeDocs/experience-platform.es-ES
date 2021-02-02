@@ -1,13 +1,13 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
-title: Conectar a un destino en la plataforma de datos del cliente en tiempo real
-seo-title: Conectar a un destino en la plataforma de datos del cliente en tiempo real
+keywords: conectar destino;destino conectar;cómo conectar destino
+title: Conectar a un destino en Adobe Experience Platform
+seo-title: Conectar a un destino en Adobe Experience Platform
 type: Tutorial
-description: Este tutorial lista los pasos para conectar un destino en la plataforma de datos del cliente en tiempo real
+description: Este tutorial lista los pasos para conectar un destino en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 # Cómo conectar un destino
 
-Siga los pasos a continuación para conectarse a un destino en la plataforma de datos del cliente en tiempo real:
+Siga los pasos a continuación para conectarse a un destino en Adobe Experience Platform:
 
-1. Vaya a **[!UICONTROL Destinos]** desde la barra de navegación izquierda.
-2. En la ficha [[!UICONTROL Catálogo]](./destinations-workspace.md#catalog) , seleccione el destino al que desea conectarse.
-3. Pulse **[!UICONTROL Connect destination]** para acceder al inicio del asistente de conexión de destino.
-4. Para obtener instrucciones paso a paso sobre cómo conectarse a destinos específicos, consulte las páginas de destino. Consulte Destinos [de almacenamiento de](../catalog/cloud-storage/workflow.md)nube, destinos [de marketing de](../catalog/email-marketing/overview.md)correo electrónico y destinos [de](../catalog/advertising/overview.md)publicidad.
+1. Vaya a **[!UICONTROL Destinations]** desde la barra de navegación izquierda.
+2. En la ficha [[!UICONTROL Catálogo]](./destinations-workspace.md#catalog), seleccione el destino al que desea conectarse.
+3. Pulse **[!UICONTROL Conectar destino]** para inicio del asistente de conexión de destino.
+4. Para obtener instrucciones paso a paso sobre cómo conectarse a destinos específicos, consulte las páginas de destino. Consulte [destinos de almacenamiento en la nube](../catalog/cloud-storage/workflow.md), [destinos de mercadotecnia de correo electrónico](../catalog/email-marketing/overview.md) y [destinos de publicidad](../catalog/advertising/overview.md).
 
 Consulte a continuación para ver un vídeo de descripción general de cómo conectar un destino y activar segmentos en él.
 
