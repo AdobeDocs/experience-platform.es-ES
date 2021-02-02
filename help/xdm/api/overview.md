@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;
 solution: Experience Platform
 title: Guía para desarrolladores de API de registro de esquema
 description: 'La API del Registro de Esquema le permite administrar mediante programación todos los esquemas y recursos XDM relacionados disponibles en Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Para obtener información sobre cómo vista de uniones en la API del Registro de
 
 La API del Registro de Esquema permite transferir y compartir recursos XDM entre entornos limitados y organizaciones de IMS. Para cualquier esquema, mezcla o tipo de datos, puede generar una carga útil de exportación que contenga la estructura del recurso y los recursos dependientes. Esta carga útil se puede utilizar para importar el recurso en un entorno limitado de destino y en una organización IMS.
 
-Consulte la [referencia de API del Registro de Esquema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obtener más información sobre el uso de este extremo.
+Consulte la [guía de extremos de exportación e importación](./export-import.md) para obtener más información sobre cómo utilizar estos extremos.
 
 ## Datos de muestra
 
 Puede generar datos de ejemplo para cualquier esquema especificado dentro de la biblioteca de Esquemas. El objeto de respuesta devuelto se puede utilizar como fuente de ingestión de datos.
 
-Consulte la [referencia de API del Registro de Esquema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obtener más información sobre el uso de este extremo.
+Consulte la [guía del extremo de datos de muestra](./sample-data.md) para obtener más información sobre el uso de este extremo.
 
 ## Registro de auditoría
 
 El Registro de Esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, mezcla, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso concreto proporcionando su `$id` o `meta:altId` en la ruta de una solicitud de GET a este extremo.
 
-Consulte la [referencia de API del Registro de Esquema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) para obtener más información sobre el uso de este extremo.
+Consulte la [guía de extremo del registro de auditoría](./audit-log.md) para obtener más información sobre el uso de este extremo.
 
 ## Pasos siguientes
 
