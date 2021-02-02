@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile details;details
-title: Personalización de detalles de perfil
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;interfaz de usuario;IU;personalización;detalles del perfil;detalles
+title: Personalización de la Vista de Perfiles en la interfaz de usuario
 description: 'Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de Perfil de clientes en tiempo real en la interfaz de usuario de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] personalización de detalles {#profile-detail-customization}
+# [!DNL Real-time Customer Profile] personalización de detalles  {#profile-detail-customization}
 
-En la interfaz de usuario de Adobe Experience Platform, puede realizar vistas e interactuar con [!DNL Real-time Customer Profile] los datos en forma de perfiles de clientes. La información de perfil mostrada en la interfaz de usuario se ha combinado desde varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar en el nivel de organización para mostrar [!DNL Profile] los atributos preferidos. Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran [!DNL Profile] los datos en la interfaz de usuario de la plataforma.
+En la interfaz de usuario de Adobe Experience Platform, puede realizar vistas e interactuar con datos [!DNL Real-time Customer Profile] en forma de perfiles de clientes. La información de perfil mostrada en la interfaz de usuario se ha combinado desde varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar a nivel de organización para mostrar los atributos preferidos [!DNL Profile]. Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos [!DNL Profile] dentro de la interfaz de usuario de la plataforma.
 
-Para obtener una guía completa de la interfaz de usuario de Perfiles, visite la guía de la interfaz de usuario de [Perfil](user-guide.md).
+Para obtener una guía completa de la interfaz de usuario de Perfiles, visite la [guía de IU de Perfil](user-guide.md).
 
 ## Reordenar y cambiar el tamaño de las tarjetas {#reorder-and-resize-cards}
 
@@ -24,11 +24,11 @@ En la ficha **[!UICONTROL Detalle]** del perfil del cliente, puede seleccionar *
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
-Después de modificar el panel, puede reordenar las tarjetas seleccionando el título de la tarjeta y arrastrando y colocando las tarjetas en el orden deseado. También puede cambiar el tamaño de una tarjeta seleccionando el símbolo de ángulo en la esquina inferior derecha de la tarjeta (`⌟`) y arrastrando la tarjeta al tamaño deseado. En este ejemplo, se está cambiando el tamaño de la tarjeta de atributos **** básicos.
+Después de modificar el panel, puede reordenar las tarjetas seleccionando el título de la tarjeta y arrastrando y colocando las tarjetas en el orden deseado. También puede cambiar el tamaño de una tarjeta seleccionando el símbolo de ángulo en la esquina inferior derecha de la tarjeta (`⌟`) y arrastrando la tarjeta al tamaño deseado. En este ejemplo, se está cambiando el tamaño de la tarjeta **[!UICONTROL Atributos básicos]**.
 
 ![](../images/profile-customization/profiles-resize-cards.png)
 
-La tarjeta seleccionada se ajusta al tamaño deseado y las tarjetas que la rodean se cambian de posición de forma dinámica. Esto puede hacer que algunas tarjetas se muevan a filas adicionales, lo que requiere que se desplace hacia abajo para ver todas las tarjetas. Por ejemplo, cuando se cambia el tamaño de la tarjeta &quot;Atributosbásicos&quot;, la tarjeta &quot;Identidadesvinculadas&quot; ya no está visible en la fila superior y ahora aparece en una segunda fila dentro del perfil (no se muestra). Para devolver la tarjeta &quot;Identidades[!UICONTROL vinculadas&quot; a la fila superior, puede arrastrarla y colocarla en la posición actual de la tarjeta &quot;Preferencias]deCanal&quot;.
+La tarjeta seleccionada se ajusta al tamaño deseado y las tarjetas que la rodean se cambian de posición de forma dinámica. Esto puede hacer que algunas tarjetas se muevan a filas adicionales, lo que requiere que se desplace hacia abajo para ver todas las tarjetas. Por ejemplo, cuando se cambia el tamaño de la tarjeta &quot;[!UICONTROL Atributos básicos]&quot;, la tarjeta &quot;[!UICONTROL Identidades vinculadas]&quot; ya no está visible en la fila superior y ahora aparece en una nueva segunda fila dentro del perfil (no se muestra). Para devolver la tarjeta &quot;[!UICONTROL Identidades vinculadas]&quot; a la fila superior, puede arrastrarla y colocarla en la posición actual de la tarjeta &quot;[!UICONTROL preferencias de Canal]&quot;.
 
 ![](../images/profile-customization/profiles-card-resized.png)
 
@@ -42,37 +42,37 @@ Además de cambiar el tamaño y reordenar las tarjetas, puede editar el contenid
 
 ![](../images/profile-customization/profiles-edit-remove-resized.png)
 
-Seleccione **[!UICONTROL Editar]** en la lista desplegable para abrir el espacio de trabajo de la utilidad **** Editar, donde puede actualizar el título de la tarjeta, reordenar o eliminar los atributos visibles o agregar atributos adicionales mediante el botón **[!UICONTROL Añadir atributos]** .
+Seleccione **[!UICONTROL Editar]** en la lista desplegable para abrir el espacio de trabajo **[!UICONTROL Editar utilidad]**, donde puede actualizar el título de la tarjeta, reordenar o eliminar los atributos visibles o agregar atributos adicionales mediante el botón **[!UICONTROL Añadir atributos]**.
 
 ![](../images/profile-customization/profiles-edit-widget-basic-attributes.png)
 
 ## Añadir atributos {#add-attributes}
 
-En la pantalla **[!UICONTROL Editar utilidad]** , seleccione **[!UICONTROL Añadir atributos]** en la esquina superior derecha de la tarjeta para empezar a agregar atributos a la tarjeta.
+En la pantalla **[!UICONTROL Editar utilidad]**, seleccione **[!UICONTROL Añadir atributos]** en la esquina superior derecha de la tarjeta para empezar a agregar atributos a esa tarjeta.
 
 ![](../images/profile-customization/profiles-edit-widget-basic-add-attributes.png)
 
-Cuando se abre el cuadro de diálogo **[!UICONTROL Seleccionar esquema]** de unión, el lado izquierdo del cuadro de diálogo muestra el esquema completo de unión de Perfil [!UICONTROL individual] XDM, con campos anidados debajo. Para obtener más información sobre los esquemas de unión, consulte la sección esquemas de [unión de la [!DNL Profile] guía](user-guide.md#union-schema)del usuario.
+Cuando se abre el cuadro de diálogo **[!UICONTROL Seleccionar esquema de unión]**, el lado izquierdo del cuadro de diálogo muestra el esquema de unión [!UICONTROL XDM Individual Perfil] completo, con campos anidados debajo. Para obtener más información sobre los esquemas de unión, consulte la sección [esquemas de unión de la [!DNL Profile] guía del usuario](user-guide.md#union-schema).
 
-La sección Atributos **** seleccionados, en la parte derecha del cuadro de diálogo, muestra los atributos que están actualmente incluidos en la tarjeta que está editando. Aquí también puede eliminar y reordenar atributos. Se muestra el número total de atributos seleccionados, así como el número máximo de atributos (20) que se pueden agregar a una sola tarjeta.
+La sección **[!UICONTROL Atributos seleccionados]** en la parte derecha del cuadro de diálogo muestra los atributos que están actualmente incluidos en la tarjeta que está editando. Aquí también puede eliminar y reordenar atributos. Se muestra el número total de atributos seleccionados, así como el número máximo de atributos (20) que se pueden agregar a una sola tarjeta.
 
 ![](../images/profile-customization/profiles-select-field-before.png)
 
-Puede seleccionar cualquiera de los campos de esquema de unión disponibles para personalizar los atributos de la tarjeta que está editando. Los campos seleccionados se muestran con una marca de verificación junto a ellos y se agregan automáticamente a la lista de los atributos seleccionados. Una vez que haya agregado todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la pantalla **[!UICONTROL Editar utilidad]** .
+Puede seleccionar cualquiera de los campos de esquema de unión disponibles para personalizar los atributos de la tarjeta que está editando. Los campos seleccionados se muestran con una marca de verificación junto a ellos y se agregan automáticamente a la lista de los atributos seleccionados. Una vez que haya agregado todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la pantalla **[!UICONTROL Editar utilidad]**.
 
 ![](../images/profile-customization/profiles-select-field-after.png)
 
-Cuando vuelva a la pantalla **[!UICONTROL Editar utilidad]** , la lista de atributos en la tarjeta debería actualizarse para reflejar sus opciones. Aún puede eliminar o reordenar los atributos de la tarjeta o editar el título de la tarjeta según sea necesario. Una vez finalizadas las ediciones, seleccione **[!UICONTROL Guardar]** para guardar los cambios.
+Cuando vuelva a la pantalla **[!UICONTROL Editar utilidad]**, la lista de atributos en la tarjeta debería actualizarse para reflejar sus opciones. Aún puede eliminar o reordenar los atributos de la tarjeta o editar el título de la tarjeta según sea necesario. Una vez finalizadas las ediciones, seleccione **[!UICONTROL Guardar]** para guardar los cambios.
 
 ![](../images/profile-customization/profiles-edit-widget-new-attributes.png)
 
-Después de guardar, volverá a la ficha **[!UICONTROL Detalle]** , donde se verán la tarjeta y los atributos actualizados.
+Después de guardar, volverá a la ficha **[!UICONTROL Detalle]**, donde se verán la tarjeta y los atributos actualizados.
 
 ![](../images/profile-customization/profiles-resized-card-new-attributes.png)
 
-## Add a new card {#add-a-new-card}
+## Añadir una tarjeta nueva {#add-a-new-card}
 
-Para personalizar aún más el aspecto de los perfiles dentro del Experience Platform, puede elegir agregar nuevas tarjetas al panel y seleccionar los atributos que desea mostrar en esas tarjetas. Para comenzar, seleccione **[!UICONTROL Modificar panel]** en la ficha **[!UICONTROL Detalle]** .
+Para personalizar aún más el aspecto de los perfiles dentro del Experience Platform, puede elegir agregar nuevas tarjetas al panel y seleccionar los atributos que desea mostrar en esas tarjetas. Para comenzar, seleccione **[!UICONTROL Modificar panel]** en la ficha **[!UICONTROL Detalle]**.
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
@@ -80,32 +80,32 @@ A continuación, seleccione **[!UICONTROL Añadir utilidad]** en la esquina supe
 
 ![](../images/profile-customization/profiles-add-widget.png)
 
-Si elige agregar una tarjeta nueva, se abre la pantalla **[!UICONTROL Editar utilidad]** , donde puede proporcionar un título para la tarjeta nueva y elegir los atributos que desea que se muestren en la tarjeta. Para empezar a agregar atributos a la tarjeta, seleccione **[!UICONTROL Añadir atributos]**.
+Si elige agregar una tarjeta nueva, se abre la pantalla **[!UICONTROL Editar utilidad]**, donde puede proporcionar un título para la tarjeta nueva y elegir los atributos que desea que muestre la tarjeta. Para empezar a agregar atributos a la tarjeta, seleccione **[!UICONTROL Añadir atributos]**.
 
 ![](../images/profile-customization/profiles-edit-new-widget.png)
 
-Cuando se abre el cuadro de diálogo **[!UICONTROL Seleccionar esquema de unión]** , el lado izquierdo del cuadro de diálogo muestra el esquema completo de unión de Perfil [!UICONTROL individual] XDM y la sección Atributos **** seleccionados del lado derecho del cuadro de diálogo muestra los atributos que se seleccionan para la tarjeta. Para obtener más información sobre cómo agregar atributos, consulte la [sección sobre cómo agregar atributos](#add-attributes) que aparece anteriormente en este documento.
+Cuando se abre el cuadro de diálogo **[!UICONTROL Seleccionar esquema de unión]**, la parte izquierda del cuadro de diálogo muestra el esquema de unión [!UICONTROL XDM Individual Perfil] y la sección **[!UICONTROL Atributos seleccionados]** de la parte derecha del cuadro de diálogo muestra los atributos que se seleccionan para la tarjeta. Para obtener más información sobre cómo agregar atributos, consulte la sección [sobre cómo agregar atributos](#add-attributes) que aparece más arriba en este documento.
 
-Se muestra el número total de atributos seleccionados, así como el número máximo de atributos (20) que se pueden agregar a una sola tarjeta. También puede eliminar y reordenar los atributos seleccionados desde esta pantalla. Una vez que haya agregado todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la pantalla **[!UICONTROL Editar utilidad]** .
+Se muestra el número total de atributos seleccionados, así como el número máximo de atributos (20) que se pueden agregar a una sola tarjeta. También puede eliminar y reordenar los atributos seleccionados desde esta pantalla. Una vez que haya agregado todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la pantalla **[!UICONTROL Editar utilidad]**.
 
 ![](../images/profile-customization/profiles-add-fields-new-widget.png)
 
-Cuando vuelva a la pantalla **[!UICONTROL Editar utilidad]** , la lista de atributos en la tarjeta deberá reflejar las opciones de la pantalla anterior. También puede reordenar y eliminar atributos de tarjeta según sea necesario.
+Cuando vuelva a la pantalla **[!UICONTROL Editar utilidad]**, la lista de atributos en la tarjeta debe reflejar las opciones de la pantalla anterior. También puede reordenar y eliminar atributos de tarjeta según sea necesario.
 
-Para guardar la nueva tarjeta, primero debe proporcionar un título **[!UICONTROL de]** tarjeta, luego podrá seleccionar **[!UICONTROL Guardar]** y completar el proceso de creación de la tarjeta.
+Para guardar la nueva tarjeta, primero debe proporcionar un **[!UICONTROL título de la tarjeta]**, luego podrá seleccionar **[!UICONTROL Guardar]** y completar el proceso de creación de la tarjeta.
 
 ![](../images/profile-customization/profiles-edit-new-widget-with-fields.png)
 
-Después de guardar, volverá a la ficha **[!UICONTROL Detalle]** , donde se verán la tarjeta y los atributos nuevos.
+Después de guardar, volverá a la ficha **[!UICONTROL Detalle]** donde se verán la tarjeta y los atributos nuevos.
 
 ![](../images/profile-customization/profiles-detail-new-widget.png)
 
 ## Restaurar tarjetas predeterminadas
 
-Si en cualquier momento decide que desea restaurar las tarjetas predeterminadas que se han eliminado, puede hacerlo de forma rápida y sencilla. En primer lugar, seleccione **[!UICONTROL Modificar panel]** y, a continuación, seleccione **[!UICONTROL Restaurar tarjetas]** predeterminadas. Una vez visibles las tarjetas predeterminadas, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o **[!UICONTROL Cancelar]** si no desea restaurar las tarjetas predeterminadas.
+Si en cualquier momento decide que desea restaurar las tarjetas predeterminadas que se han eliminado, puede hacerlo de forma rápida y sencilla. Primero, seleccione **[!UICONTROL Modificar panel]** y luego seleccione **[!UICONTROL Restaurar tarjetas predeterminadas]**. Una vez que las tarjetas predeterminadas estén visibles, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o seleccionar **[!UICONTROL Cancelar]** si no desea restaurar las tarjetas predeterminadas.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
 ## Pasos siguientes
 
-Al seguir este documento, debería poder actualizar la vista de perfil de su organización, incluida la adición y eliminación de tarjetas, la edición de los detalles y atributos de las tarjetas y la reordenación y el cambio de tamaño de las tarjetas. Para obtener más información sobre cómo trabajar con [!DNL Profile] datos en la interfaz de usuario del Experience Platform, consulte la guía [[!DNL Profile] del](user-guide.md)usuario.
+Al seguir este documento, debería poder actualizar la vista de perfil de su organización, incluida la adición y eliminación de tarjetas, la edición de los detalles y atributos de las tarjetas y la reordenación y el cambio de tamaño de las tarjetas. Para obtener más información sobre cómo trabajar con [!DNL Profile] datos en la interfaz de usuario del Experience Platform, consulte la [[!DNL Profile] guía del usuario](user-guide.md).
