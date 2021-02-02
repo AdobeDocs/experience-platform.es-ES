@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;audit;audit log;changelog;change log;rpc;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;auditoría;registro de auditoría;registro de cambios;rpc;
 solution: Experience Platform
 title: Guía de extremo del registro de auditoría
 description: El extremo /auditlog de la API del Registro de Esquema permite recuperar una lista cronológica de los cambios realizados en un recurso XDM existente.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
