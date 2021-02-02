@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;identity;field;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;identidad;campo;
 solution: Experience Platform
 title: Definición de un campo de identidad en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
