@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;Registro de esquemas;Registro de Esquemas;esquema;Esquema;esquemas;Esquemas;crear
 solution: Experience Platform
 title: Creación de un esquema mediante la API del Registro de Esquema
 topic: tutorial
 type: Tutorial
 description: Este tutorial utiliza la API del Registro de Esquema para guiarle por los pasos necesarios para componer un esquema mediante una clase estándar.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2373'
 ht-degree: 1%
 
 ---
 
 
-# Creación de un esquema mediante la [!DNL Schema Registry] API
+# Crear un esquema con la API [!DNL Schema Registry]
 
-El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] en Adobe Experience Platform. El [!DNL Schema Library] [!DNL Experience Platform] contiene los recursos que le ponen a su disposición el Adobe, los socios y los proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro de Adobe Experience Platform. El [!DNL Schema Library] contiene recursos que se ponen a su disposición por Adobe, [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
-Este tutorial utiliza la [!DNL Schema Registry] API para guiarle por los pasos para componer un esquema con una clase estándar. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el tutorial [Editor de](create-schema-ui.md) Esquemas proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
+Este tutorial utiliza la API [!DNL Schema Registry] para guiarle por los pasos necesarios para componer un esquema con una clase estándar. Si prefiere utilizar la interfaz de usuario en [!DNL Experience Platform], el [Tutorial del Editor de Esquema](create-schema-ui.md) proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquema.
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+* [[!DNL Experience Data Model (XDM) System]](../home.md):: Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+   * [Conceptos básicos de la composición](../schema/composition.md) de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md)::  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.md) desarrollador para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+Antes de iniciar este tutorial, consulte la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API [!DNL Schema Registry]. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 
-En este tutorial se explican los pasos para componer un esquema de miembros de lealtad que describe los datos relacionados con los miembros de un programa de lealtad minorista. Antes de comenzar, puede que desee realizar la previsualización del esquema [de miembros de la lealtad](#complete-schema) completo en el apéndice.
+En este tutorial se explican los pasos para componer un esquema de miembros de lealtad que describe los datos relacionados con los miembros de un programa de lealtad minorista. Antes de comenzar, puede que desee previsualización el [esquema completo de miembros de lealtad](#complete-schema) en el apéndice.
 
 ## Redactar un esquema con una clase estándar
 
-Un esquema se puede considerar como el modelo para los datos en los que desea realizar la ingesta [!DNL Experience Platform]. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utiliza al menos una mezcla.
+Un esquema se puede considerar como el modelo para los datos que desee ingerir en [!DNL Experience Platform]. Cada esquema está compuesto por una clase y cero o más mezclas. En otras palabras, no es necesario añadir una mezcla para definir un esquema, pero en la mayoría de los casos se utiliza al menos una mezcla.
 
 ### Asignar una clase
 
 El proceso de composición de esquema comienza con la selección de una clase. La clase define los aspectos de comportamiento clave de los datos (registros vs. series temporales), así como los campos mínimos requeridos para describir los datos que se van a ingestar.
 
-El esquema que está realizando en este tutorial utiliza la [!DNL XDM Individual Profile] clase. [!DNL XDM Individual Profile] es una clase estándar proporcionada por Adobe para definir el comportamiento del registro. Puede encontrar más información sobre el comportamiento en [conceptos básicos de la composición](../schema/composition.md)de esquemas.
+El esquema que está realizando en este tutorial utiliza la clase [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] es una clase estándar proporcionada por Adobe para definir el comportamiento del registro. Encontrará más información sobre el comportamiento en [conceptos básicos de la composición de esquema](../schema/composition.md).
 
 Para asignar una clase, se realiza una llamada de API para crear (POST) un nuevo esquema en el contenedor del inquilino. Esta llamada incluye la clase que el esquema implementará. Cada esquema solo puede implementar una clase.
 
@@ -53,7 +53,7 @@ POST /tenant/schemas
 
 **Solicitud**
 
-La solicitud debe incluir un `allOf` atributo que haga referencia al `$id` de una clase. Este atributo define la &quot;clase base&quot; que implementará el esquema. En este ejemplo, la clase base es la [!DNL XDM Individual Profile] clase. El `$id` de la [!DNL XDM Individual Profile] clase se utiliza como el valor del `$ref` campo en la `allOf` matriz siguiente.
+La solicitud debe incluir un atributo `allOf` que haga referencia al `$id` de una clase. Este atributo define la &quot;clase base&quot; que implementará el esquema. En este ejemplo, la clase base es la clase [!DNL XDM Individual Profile]. El `$id` de la clase [!DNL XDM Individual Profile] se utiliza como valor del campo `$ref` en la matriz `allOf` a continuación.
 
 ```SHELL
 curl -X POST \
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del esquema recién creado, incluidos el `$id`, `meta:altIt`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
+Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del esquema recién creado, incluidos `$id`, `meta:altIt` y `version`. Estos valores son de sólo lectura y son asignados por [!DNL Schema Registry].
 
 ```JSON
 {
@@ -117,7 +117,7 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 
 ### Buscar un esquema
 
-Para realizar la vista del esquema recién creado, realice una solicitud de búsqueda (GET) utilizando el URI `meta:altId` o el `$id` URI con codificación URL para el esquema.
+Para realizar la vista del esquema recién creado, realice una solicitud de búsqueda (GET) utilizando el URI `meta:altId` o la dirección URL codificada `$id` para el esquema.
 
 **Formato API**
 
@@ -181,7 +181,7 @@ El formato de respuesta depende del encabezado Accept enviado con la solicitud. 
 
 Ahora que se ha creado y confirmado el esquema de miembros de la lealtad, se pueden añadir mezclas a él.
 
-Hay diferentes mezclas estándar disponibles para su uso, dependiendo de la clase de esquema seleccionada. Cada mezcla contiene un `intendedToExtend` campo que define la clase o clases con las que es compatible esa mezcla.
+Hay diferentes mezclas estándar disponibles para su uso, dependiendo de la clase de esquema seleccionada. Cada mezcla contiene un campo `intendedToExtend` que define la clase o clases con las que esa mezcla es compatible.
 
 Las mezclas definen conceptos, como &quot;nombre&quot; o &quot;dirección&quot;, que pueden reutilizarse en cualquier esquema que necesite capturar la misma información.
 
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-La respuesta muestra la mezcla recién agregada en la `meta:extends` matriz y contiene un `$ref` a la mezcla en el `allOf` atributo.
+La respuesta muestra la mezcla recién agregada en la matriz `meta:extends` y contiene un `$ref` en la mezcla en el atributo `allOf`.
 
 ```JSON
 {
@@ -260,7 +260,7 @@ Ahora puede agregar otra mezcla estándar repitiendo los pasos usando otra mezcl
 
 >[!TIP]
 >
->Vale la pena revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede realizar la lista (GET) de todas las mezclas disponibles para su uso con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. En este caso, se trata de la [!DNL XDM Individual Profile] clase, por lo que se [!DNL XDM Individual Profile] utiliza `$id` :
+>Vale la pena revisar todas las mezclas disponibles para familiarizarse con los campos incluidos en cada una. Puede realizar la lista (GET) de todas las mezclas disponibles para su uso con una clase determinada realizando una solicitud con cada uno de los contenedores &quot;global&quot; y &quot;inquilino&quot;, devolviendo solo aquellas mezclas en las que el campo &quot;meta:didToExtend&quot; coincida con la clase que está utilizando. En este caso, es la clase [!DNL XDM Individual Profile], por lo que se utiliza la [!DNL XDM Individual Profile] `$id`:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -292,9 +292,9 @@ curl -X PATCH \
 
 **Respuesta**
 
-La respuesta muestra la mezcla recién agregada en la `meta:extends` matriz y contiene un `$ref` a la mezcla en el `allOf` atributo.
+La respuesta muestra la mezcla recién agregada en la matriz `meta:extends` y contiene un `$ref` en la mezcla en el atributo `allOf`.
 
-El esquema Miembros de lealtad ahora debe contener tres `$ref` valores en la `allOf` matriz: &quot;perfil&quot;, &quot;perfil-persona-detalles&quot; y &quot;perfil-detalles personales&quot;, como se muestra a continuación.
+El esquema Miembros de lealtad ahora debe contener tres valores `$ref` en la matriz `allOf`: &quot;perfil&quot;, &quot;perfil-persona-detalles&quot; y &quot;perfil-detalles personales&quot;, como se muestra a continuación.
 
 ```JSON
 {
@@ -344,11 +344,11 @@ El esquema Miembros de lealtad ahora debe contener tres `$ref` valores en la `al
 
 El esquema Miembros de lealtad necesita capturar información exclusiva del programa de lealtad. Esta información no se incluye en ninguna de las mezclas estándar.
 
-La [!DNL Schema Registry] cuenta de esto permitiéndole definir sus propias mezclas dentro del contenedor del inquilino. Estas mezclas son exclusivas de su organización y no son visibles ni editables por nadie fuera de su organización de IMS.
+La [!DNL Schema Registry] cuenta para esto permitiéndole definir sus propias mezclas dentro del contenedor del inquilino. Estas mezclas son exclusivas de su organización y no son visibles ni editables por nadie fuera de su organización de IMS.
 
-Para crear (POST) una nueva mezcla, su solicitud debe incluir un `meta:intendedToExtend` campo que contenga el `$id` de la clase o clases base con las que la mezcla es compatible, junto con las propiedades que la mezcla incluirá.
+Para crear (POST) una nueva mezcla, su solicitud debe incluir un campo `meta:intendedToExtend` que contenga el `$id` para la clase o clases base con las que la mezcla es compatible, junto con las propiedades que la mezcla incluirá.
 
-Todas las propiedades personalizadas deben anidarse en la sección `TENANT_ID` para evitar conflictos con otras mezclas o campos.
+Cualquier propiedad personalizada debe estar anidada bajo su `TENANT_ID` para evitar conflictos con otras mezclas o campos.
 
 **Formato API**
 
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altIt`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
+Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altIt` y `version`. Estos valores son de sólo lectura y son asignados por [!DNL Schema Registry].
 
 ```JSON
 {
@@ -498,7 +498,7 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 
 ### Añadir mezcla personalizada en esquema
 
-Ahora puede seguir los mismos pasos para [agregar una mezcla](#add-a-mixin) estándar para agregar esta mezcla recién creada a su esquema.
+Ahora puede seguir los mismos pasos para [agregar una mezcla estándar](#add-a-mixin) para agregar esta mezcla recién creada al esquema.
 
 **Formato API**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Se puede ver que la mezcla se ha agregado correctamente porque la respuesta ahora muestra la mezcla recién agregada en la `meta:extends` matriz y contiene un `$ref` a la mezcla en el `allOf` atributo.
+Puede ver que la mezcla se ha agregado correctamente porque la respuesta ahora muestra la mezcla recién agregada en la matriz `meta:extends` y contiene un `$ref` en la mezcla en el atributo `allOf`.
 
 ```JSON
 {
@@ -599,9 +599,9 @@ curl -X GET \
 
 **Respuesta**
 
-Mediante el encabezado `application/vnd.adobe.xed-full+json; version=1` Accept, puede ver el esquema completo que muestra todas las propiedades. Estas propiedades son los campos que aporta la clase y las mezclas que se han utilizado para componer el esquema. En esta respuesta de ejemplo, los atributos de propiedad individuales se han minimizado para el espacio. Puede realizar la vista del esquema completo, incluidas todas las propiedades y sus atributos, en el [apéndice](#appendix) al final de este documento.
+Al utilizar el encabezado `application/vnd.adobe.xed-full+json; version=1` Accept, puede ver el esquema completo que muestra todas las propiedades. Estas propiedades son los campos que aporta la clase y las mezclas que se han utilizado para componer el esquema. En esta respuesta de ejemplo, los atributos de propiedad individuales se han minimizado para el espacio. Puede realizar la vista del esquema completo, incluidas todas las propiedades y sus atributos, en el [apéndice](#appendix) al final de este documento.
 
-En `"properties"`, puede ver la `_{TENANT_ID}` Área de nombres que se creó al agregar la mezcla personalizada. Dentro de esa Área de nombres está el objeto &quot;loyalty&quot; y los campos que se definieron al crear la mezcla.
+En `"properties"`, puede ver la Área de nombres `_{TENANT_ID}` que se creó al agregar la mezcla personalizada. Dentro de esa Área de nombres está el objeto &quot;loyalty&quot; y los campos que se definieron al crear la mezcla.
 
 ```JSON
 {
@@ -705,7 +705,7 @@ POST /tenant/datatypes
 
 **Solicitud**
 
-La definición de un tipo de datos no requiere `meta:extends` `meta:intendedToExtend` ni campos, ni tampoco es necesario anidar campos para evitar conflictos.
+La definición de un tipo de datos no requiere campos `meta:extends` o `meta:intendedToExtend`, ni tampoco es necesario anidar campos para evitar conflictos.
 
 ```SHELL
 curl -X POST \
@@ -756,7 +756,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del tipo de datos recién creado, incluidos el `$id`, `meta:altIt`y `version`. Estos valores son de sólo lectura y los asigna el [!DNL Schema Registry].
+Una solicitud correcta devuelve Estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles del tipo de datos recién creado, incluidos los `$id`, `meta:altIt` y `version`. Estos valores son de sólo lectura y son asignados por [!DNL Schema Registry].
 
 ```JSON
 {
@@ -818,7 +818,7 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 }
 ```
 
-Puede realizar una solicitud de búsqueda (GET) utilizando el `$id` URI con codificación de URL para vista directa del nuevo tipo de datos. Asegúrese de incluir la solicitud de búsqueda `version` en el encabezado Accept.
+Puede realizar una solicitud de búsqueda (GET) utilizando el URI `$id` con codificación URL para realizar la vista del nuevo tipo de datos directamente. Asegúrese de incluir el `version` en el encabezado Accept para una solicitud de búsqueda.
 
 ### Usar tipo de datos en esquema
 
@@ -956,15 +956,15 @@ Al realizar una solicitud de GET para buscar el esquema, ahora se muestra la ref
 
 ### Definir un descriptor de identidad
 
-Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
+Los esquemas se utilizan para ingerir datos en [!DNL Experience Platform]. Estos datos se utilizan en última instancia en varios servicios para crear una sola vista unificada de un individuo. Para ayudar con este proceso, los campos clave pueden marcarse como &quot;Identidad&quot; y, tras la ingestión de datos, los datos de esos campos se insertan en el &quot;Gráfico de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista unida de cada cliente individual.
 
-Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
+Los campos que se marcan comúnmente como &quot;Identidad&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos.
 
 Considere cualquier identificador único específico de su organización, ya que puede que también sean buenos campos de identidad.
 
 Los descriptores de identidad indican que &quot;sourceProperty&quot; de &quot;sourceSchema&quot; es un identificador único que debe considerarse como &quot;Identity&quot;.
 
-Para obtener más información sobre cómo trabajar con descriptores, consulte la guía para desarrolladores de [Esquema Registry](../api/getting-started.md).
+Para obtener más información sobre cómo trabajar con descriptores, consulte la [guía para desarrolladores de Esquema Registry](../api/getting-started.md).
 
 **Formato API**
 
@@ -974,7 +974,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud define un descriptor de identidad en el campo &quot;loyaltyId&quot;. Esto indica [!DNL Experience Platform] que utilice el identificador único de miembro del programa de lealtad (en este caso, la dirección de correo electrónico del miembro) para ayudar a unir información sobre el individuo.
+La siguiente solicitud define un descriptor de identidad en el campo &quot;loyaltyId&quot;. Esto indica a [!DNL Experience Platform] que utilice el identificador único de miembro del programa de lealtad (en este caso, la dirección de correo electrónico del miembro) para ayudar a unir información sobre el individuo.
 
 ```SHELL
 curl -X POST \
@@ -997,11 +997,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Puede realizar la lista de los valores &quot;xdm:Área de nombres&quot; disponibles o crear otros nuevos mediante el [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, según la &quot;xdm:Área de nombres&quot; utilizada.
+>Puede realizar la lista de los valores &quot;xdm:Área de nombres&quot; disponibles o crear otros nuevos mediante [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). El valor de &quot;xdm:property&quot; puede ser &quot;xdm:code&quot; o &quot;xdm:id&quot;, según la &quot;xdm:Área de nombres&quot; utilizada.
 
 **Respuesta**
 
-Una respuesta correcta devuelve Estado HTTP 201 (creado) con un cuerpo de respuesta que contiene los detalles del descriptor recién creado, incluido su `@id`. El campo `@id` es de sólo lectura asignado por el [!DNL Schema Registry] y se utiliza para hacer referencia al descriptor en la API.
+Una respuesta correcta devuelve Estado HTTP 201 (creado) con un cuerpo de respuesta que contiene los detalles del descriptor recién creado, incluido su `@id`. El `@id` es un campo de sólo lectura asignado por el [!DNL Schema Registry] y se utiliza para hacer referencia al descriptor en la API.
 
 ```JSON
 {
@@ -1017,15 +1017,15 @@ Una respuesta correcta devuelve Estado HTTP 201 (creado) con un cuerpo de respue
 }
 ```
 
-## Habilitar esquema para usar en [!DNL Real-time Customer Profile] {#profile}
+## Habilitar esquema para su uso en [!DNL Real-time Customer Profile] {#profile}
 
-Al agregar la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo, puede habilitar el esquema Miembros de lealtad para que lo utilice [!DNL Real-time Customer Profile].
+Al agregar la etiqueta &quot;unión&quot; al atributo `meta:immutableTags`, puede habilitar el esquema Miembros de lealtad para su uso por [!DNL Real-time Customer Profile].
 
-Para obtener más información sobre cómo trabajar con vistas de unión, consulte la sección sobre [uniones](../api/unions.md) en la guía para [!DNL Schema Registry] desarrolladores.
+Para obtener más información sobre cómo trabajar con vistas de unión, consulte la sección sobre [uniones](../api/unions.md) en la guía para desarrolladores de [!DNL Schema Registry].
 
 ### Añadir la etiqueta &quot;unión&quot;
 
-Para que un esquema se incluya en la vista de unión combinada, se debe añadir la etiqueta &quot;unión&quot; al `meta:immutableTags` atributo del esquema. Esto se realiza mediante una solicitud de PATCH para actualizar el esquema y agregar la `meta:immutableTags` matriz con el valor &quot;unión&quot;.
+Para que un esquema se incluya en la vista de unión combinada, se debe agregar la etiqueta &quot;unión&quot; al atributo `meta:immutableTags` del esquema. Esto se realiza mediante una solicitud de PATCH para actualizar el esquema y agregar la matriz `meta:immutableTags` con un valor de &quot;unión&quot;.
 
 **Formato API**
 
@@ -1050,7 +1050,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-La respuesta muestra que la operación se realizó correctamente y que el esquema ahora contiene un atributo de nivel superior, `meta:immutableTags`que es una matriz que contiene el valor &quot;unión&quot;.
+La respuesta muestra que la operación se realizó correctamente y el esquema ahora contiene un atributo de nivel superior, `meta:immutableTags`, que es una matriz que contiene el valor &quot;unión&quot;.
 
 ```JSON
 {
@@ -1105,9 +1105,9 @@ La respuesta muestra que la operación se realizó correctamente y que el esquem
 
 ### Esquemas de lista en una unión
 
-Ahora ha agregado correctamente su esquema a la [!DNL XDM Individual Profile] unión. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud de GET utilizando parámetros de consulta para filtrar la respuesta.
+Ahora ha agregado correctamente su esquema a la unión [!DNL XDM Individual Profile]. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud de GET utilizando parámetros de consulta para filtrar la respuesta.
 
-Con el parámetro de `property` consulta, puede especificar que solo se devuelvan los esquemas que contengan un `meta:immutableTags` campo que tenga un `meta:class` valor igual al `$id` de la [!DNL XDM Individual Profile] clase.
+Con el parámetro de consulta `property`, puede especificar que solo se devuelvan los esquemas que contengan un campo `meta:immutableTags` que tenga un `meta:class` igual a `$id` de la clase [!DNL XDM Individual Profile].
 
 **Formato de API**
 
@@ -1117,7 +1117,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente devuelve todos los esquemas que forman parte de la [!DNL XDM Individual Profile] unión.
+La solicitud de ejemplo siguiente devuelve todos los esquemas que forman parte de la unión [!DNL XDM Individual Profile].
 
 ```SHELL
 curl -X GET \
@@ -1175,7 +1175,7 @@ Siguiendo este tutorial, ha compuesto correctamente un esquema utilizando tanto 
 
 El esquema completo de miembros de la lealtad, tal como se ha creado a lo largo de este tutorial, está disponible en el apéndice que se muestra a continuación. Al mirar el esquema, puede ver cómo las mezclas contribuyen a la estructura general y qué campos están disponibles para la ingestión de datos.
 
-Una vez creado más de un esquema, puede definir las relaciones entre ellos mediante el uso de descriptores de relación. Consulte el tutorial para [definir una relación entre dos esquemas](relationship-api.md) para obtener más información. Para obtener ejemplos detallados de cómo realizar todas las operaciones (GET, POST, PUT, PATCH y DELETE) en el Registro, consulte la guía [para desarrolladores de](../api/getting-started.md) Esquema Registry mientras trabaja con la API.
+Una vez creado más de un esquema, puede definir las relaciones entre ellos mediante el uso de descriptores de relación. Consulte el tutorial para [definir una relación entre dos esquemas](relationship-api.md) para obtener más información. Para obtener ejemplos detallados de cómo realizar todas las operaciones (GET, POST, PUT, PATCH y DELETE) en el Registro, consulte la [guía para desarrolladores del Registro de Esquemas](../api/getting-started.md) mientras trabaja con la API.
 
 ## Apéndice {#appendix}
 
@@ -1185,7 +1185,7 @@ La siguiente información complementa el tutorial de API.
 
 A lo largo de este tutorial, se compone un esquema para describir los miembros de un programa de lealtad de minorista.
 
-El esquema implementa la [!DNL XDM Individual Profile] clase y combina varias mezclas; traer información sobre los miembros de fidelidad usando las mezclas estándar &quot;Detalles de persona&quot; y &quot;Detalles personales&quot;, así como una combinación de &quot;Detalles de lealtad&quot; que se define durante el tutorial.
+El esquema implementa la clase [!DNL XDM Individual Profile] y combina varias mezclas; traer información sobre los miembros de fidelidad usando las mezclas estándar &quot;Detalles de persona&quot; y &quot;Detalles personales&quot;, así como una combinación de &quot;Detalles de lealtad&quot; que se define durante el tutorial.
 
 A continuación se muestra el esquema de miembros de lealtad completado en formato JSON:
 
