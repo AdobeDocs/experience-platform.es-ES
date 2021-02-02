@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;deduplicación de datos;deduplicación;
 solution: Experience Platform
 title: Deduplicación de datos
 topic: queries
@@ -8,7 +8,7 @@ description: Este documento describe ejemplos de consulta de muestra completa y 
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
