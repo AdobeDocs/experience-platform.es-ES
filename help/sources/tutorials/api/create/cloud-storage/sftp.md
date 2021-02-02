@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
+keywords: Experience Platform;inicio;temas populares;SFTP;sftp;Protocolo seguro de transferencia de archivos;protocolo seguro de transferencia de archivos
 solution: Experience Platform
 title: Creación de un conector SFTP mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos).
 translation-type: tm+mt
-source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -189,4 +189,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión SFTP mediante la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingesta de datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
+Siguiendo este tutorial, ha creado una conexión SFTP mediante la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingestar datos de parquet mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
