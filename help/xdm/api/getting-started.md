@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;
 solution: Experience Platform
 title: Introducción a la API del Registro de Esquema
 description: Este documento proporciona una introducción a los conceptos básicos que debe conocer antes de intentar realizar llamadas a la API del Registro de Esquema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ La documentación de la API [!DNL Schema Registry] proporciona ejemplos de llama
 
 ## Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -203,7 +203,7 @@ Al realizar operaciones de lista y búsqueda (GET) en la API [!DNL Schema Regist
 
 La siguiente tabla lista valores de encabezado compatibles `Accept`, incluidos los que tienen números de versión, junto con descripciones de lo que la API devolverá cuando se utilicen.
 
-| Aceptar | Descripción |
+| Accept | Descripción |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Devuelve una lista de ID solamente. Esto se utiliza generalmente para enumerar los recursos. |
 | `application/vnd.adobe.xed+json` | Devuelve una lista de esquema JSON completo con `$ref` y `allOf` originales incluidos. Se utiliza para devolver una lista de recursos completos. |
