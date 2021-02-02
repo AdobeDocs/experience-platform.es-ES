@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
+keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;Aplicación basada en API;control de datos;pruebas
 solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API de servicio de directivas
-topic: enforcement
+topic: guide
 type: Tutorial
 description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de mercadotecnia con dichas etiquetas, puede utilizar la API de servicio de directivas para evaluar si una acción de mercadotecnia realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para controlar las infracciones de política en función de la respuesta de la API.
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -53,11 +53,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 **Solicitud**
 
-La siguiente solicitud prueba la acción de mercadotecnia `exportToThirdParty` con las etiquetas `C1` y `C3`. Dado que la directiva de uso de datos que creó anteriormente en este tutorial define la etiqueta `C1` como una de las condiciones `deny` de su expresión de directiva, la acción de mercadotecnia debe desencadenar una infracción de directiva.
+La siguiente solicitud prueba la acción de mercadotecnia `exportToThirdParty` con las etiquetas `C1` y `C3`. Dado que la directiva de uso de datos que creó anteriormente en este tutorial define la etiqueta `C1` como una de las condiciones `deny` de su expresión de directiva, la acción de mercadotecnia debe déclencheur una infracción de directiva.
 
 >[!NOTE]
 >
->Las etiquetas de uso de datos distinguen entre mayúsculas y minúsculas. Las infracciones de directiva solo se producen cuando las etiquetas definidas en sus expresiones de directiva coinciden exactamente. En este ejemplo, una etiqueta `C1` activaría una infracción, mientras que una etiqueta `c1` no.
+>Las etiquetas de uso de datos distinguen entre mayúsculas y minúsculas. Las infracciones de directiva solo se producen cuando las etiquetas definidas en sus expresiones de directiva coinciden exactamente. En este ejemplo, una etiqueta `C1` déclencheur una infracción, mientras que una etiqueta `c1` no.
 
 ```shell
 curl -X GET \
