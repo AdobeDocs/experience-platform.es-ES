@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
 solution: Intelligent Services, Experience Platform
 title: Guía del inicio rápido del servicio de Consulta AAI
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: Este documento proporciona una guía y plantillas para utilizar el 
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
