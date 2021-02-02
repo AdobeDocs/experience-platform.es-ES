@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;esquema;esquemas;
 solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Conozca los conceptos básicos sobre cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -65,13 +65,21 @@ Una vez que haya abierto un esquema dentro del [!DNL Schema Editor], puede agreg
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-En el cuadro de diálogo que aparece, puede seleccionar las mezclas que desee en la lista. Puede seleccionar varias mezclas de la lista, y cada una de ellas aparecerá en el carril derecho.
+Aparece un cuadro de diálogo que muestra una lista de mezclas que puede seleccionar para el esquema. Dado que las mezclas solo son compatibles con una clase, sólo se enumerarán las mezclas asociadas con la clase seleccionada del esquema. De forma predeterminada, las mezclas enumeradas se ordenan en función de su popularidad de uso en su organización.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+Puede utilizar la barra de búsqueda para encontrar la mezcla deseada. Las mezclas cuyo nombre coincide con la consulta aparecen en la parte superior de la lista. En **[!UICONTROL Campos estándar]**, se muestran las mezclas que contienen campos que describen atributos de datos deseados.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Seleccione la casilla de verificación situada junto al nombre de la mezcla que desea agregar al esquema. Puede seleccionar varias mezclas de la lista, y cada una de ellas aparecerá en el carril derecho.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->Para cualquier mezcla de la lista, puede seleccionar el icono de previsualización (![](../../images/ui/resources/schemas/preview-icon.png)) para vista de la estructura de los campos que proporciona la mezcla antes de decidir agregarla al esquema.
+>Para cualquier mezcla de la lista, puede pasar el ratón por encima o centrarse en el icono de información (![](../../images/ui/resources/schemas/info-icon.png)) para vista de una breve descripción del tipo de datos que captura la mezcla. También puede seleccionar el icono de previsualización (![](../../images/ui/resources/schemas/preview-icon.png)) para vista de la estructura de los campos que proporciona la mezcla antes de decidir agregarla al esquema.
 
 Una vez que haya terminado de elegir la mezcla, seleccione **[!UICONTROL Añadir mezcla]** para agregarla al esquema.
 
