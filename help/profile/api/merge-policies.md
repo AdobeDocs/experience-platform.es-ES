@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: 'Políticas de combinación: API de Perfil del cliente en tiempo real'
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
+title: Extremo de API de políticas de combinación
 topic: guide
+type: Documentation
+description: 'Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que utiliza la Plataforma para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada. '
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2494'
+source-wordcount: '2560'
 ht-degree: 1%
 
 ---
@@ -13,21 +15,21 @@ ht-degree: 1%
 
 # Combinar extremo de directivas
 
-Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que [!DNL Platform] se utilizan para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada.
+Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al reunir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 
 Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se ingieren en la plataforma, se combinan para crear un solo perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento lista al cliente como &quot;soltero&quot; mientras que el otro lista al cliente como &quot;casado&quot;), la política de combinación determina qué información incluir en el perfil del individuo.
 
 Mediante las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía proporciona los pasos para trabajar con políticas de combinación mediante la API.
 
-Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
+Para trabajar con directivas de combinación mediante la interfaz de usuario, consulte la [guía de IU de directivas de combinación](../ui/merge-policies.md).
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas exitosas a cualquier API [!DNL Experience Platform].
 
-## Componentes de políticas de combinación {#components-of-merge-policies}
+## Componentes de directivas de combinación {#components-of-merge-policies}
 
-Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesita. Cualquier API que acceda a [!DNL Profile] los datos requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una directiva de combinación predeterminada, o bien puede crear una directiva de combinación para una clase de esquema de modelo de datos de experiencia (XDM) específica y marcarla como predeterminada para su organización.
+Las políticas de combinación son privadas para la organización de IMS, lo que le permite crear diferentes políticas para combinar esquemas de la manera específica que necesita. Cualquier API que acceda a datos [!DNL Profile] requiere una directiva de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una directiva de combinación predeterminada, o bien puede crear una directiva de combinación para una clase de esquema de modelo de datos de experiencia (XDM) específica y marcarla como predeterminada para su organización.
 
 Aunque cada organización puede tener varias directivas de combinación por clase de esquema, cada clase solo puede tener una directiva de combinación predeterminada. Cualquier directiva de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre de la clase de esquema y se requiera una directiva de combinación pero no se proporcione.
 
@@ -66,9 +68,9 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 | `id` | El sistema generó un identificador único asignado en el momento de la creación |
 | `name` | Nombre descriptivo por el cual se puede identificar la directiva de combinación en vistas de lista. |
 | `imsOrgId` | ID de organización a la que pertenece esta directiva de combinación |
-| `identityGraph` | [Objeto gráfico](#identity-graph) de identidad que indica el gráfico de identidad desde el que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
-| `attributeMerge` | [Objeto de combinación](#attribute-merge) de atributos que indica la forma en que la directiva de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
-| `schema.name` | Parte del [`schema`](#schema) objeto, el `name` campo contiene la clase de esquema XDM a la que se relaciona la política de combinación. Para más información sobre esquemas y clases, lea la documentación [de](../../xdm/home.md)XDM. |
+| `identityGraph` | [Objeto ](#identity-graph) gráfico de identidad que indica el gráfico de identidad del que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
+| `attributeMerge` | [Atributo ](#attribute-merge) mergeobject que indica la forma en que la directiva de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
+| `schema.name` | Parte del objeto [`schema`](#schema), el campo `name` contiene la clase de esquema XDM a la que se relaciona la directiva de combinación. Para obtener más información sobre esquemas y clases, lea la [documentación de XDM](../../xdm/home.md). |
 | `default` | Valor booleano que indica si esta directiva de combinación es la predeterminada para el esquema especificado. |
 | `version` | [!DNL Platform] versión mantenida de la directiva de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una directiva de combinación. |
 | `updateEpoch` | Fecha de la última actualización de la directiva de combinación. |
@@ -97,7 +99,7 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 
 ### Gráfico de identidad {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) administra los gráficos de identidad utilizados globalmente y para cada organización en [!DNL Experience Platform]. El `identityGraph` atributo de la directiva de combinación define cómo determinar las identidades relacionadas para un usuario.
+[Adobe Experience Platform Identity ](../../identity-service/home.md) Services administra los gráficos de identidad que se utilizan globalmente y para cada organización en  [!DNL Experience Platform]. El atributo `identityGraph` de la directiva de combinación define cómo determinar las identidades relacionadas para un usuario.
 
 **identityGraph, objeto**
 
@@ -109,8 +111,8 @@ El objeto de directiva de combinación completa representa un conjunto de prefer
 
 Donde `{IDENTITY_GRAPH_TYPE}` es uno de los siguientes:
 
-* **&quot;ninguno&quot;:** No realice ninguna vinculación de identidad.
-* **&quot;pdg&quot;:** Realice la vinculación de identidad en función del gráfico de identidad privado.
+* **&quot;none&quot;:** no se realiza ninguna vinculación de identidad.
+* **&quot;pdg&quot;:** realice una vinculación de identidad basada en el gráfico de identidad privado.
 
 **Ejemplo`identityGraph`**
 
@@ -122,7 +124,7 @@ Donde `{IDENTITY_GRAPH_TYPE}` es uno de los siguientes:
 
 ### Combinación de atributos {#attribute-merge}
 
-Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, es posible que haya atributos de perfil en conflicto y se debe especificar la prioridad. Con `attributeMerge`, puede especificar qué atributos de perfil se priorizarán en el evento de un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registro).
+Un fragmento de perfil es la información de perfil para una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado da como resultado más de una identidad, es posible que haya atributos de perfil en conflicto y se debe especificar la prioridad. Mediante `attributeMerge`, puede especificar qué atributos de perfil priorizar en el evento de un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registro).
 
 **attributeMerge, objeto**
 
@@ -134,11 +136,11 @@ Un fragmento de perfil es la información de perfil para una sola identidad de l
 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
-* **`timestampOrdered`**:: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, no es necesario el `data` atributo. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre conjuntos de datos. Para obtener más información, consulte la sección Apéndice sobre el [uso de marcas de hora](#custom-timestamps)personalizadas.
-* **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Cuando se utiliza este tipo de combinación, el `order` atributo es obligatorio, ya que lista los conjuntos de datos en el orden de prioridad.
-   * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La `order` matriz lista los ID de los conjuntos de datos en orden de prioridad.
+* **`timestampOrdered`**:: (predeterminado) Asigne prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, no se requiere el atributo `data`. `timestampOrdered` también admite marcas de hora personalizadas que tendrán prioridad al combinar fragmentos de perfil dentro de conjuntos de datos o entre conjuntos de datos. Para obtener más información, consulte la sección Apéndice sobre [uso de marcas de hora personalizadas](#custom-timestamps).
+* **`dataSetPrecedence`** :: Asigne prioridad a los fragmentos de perfil en función del conjunto de datos del que provienen. Esto se puede utilizar cuando la información presente en un conjunto de datos es preferible o de confianza sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, se requiere el atributo `order`, ya que lista los conjuntos de datos en el orden de prioridad.
+   * **`order`**:: Cuando se utiliza &quot;dataSetPrience&quot;, se debe proporcionar una  `order` matriz con una lista de conjuntos de datos. Los conjuntos de datos no incluidos en la lista no se combinarán. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La matriz `order` lista los ID de los conjuntos de datos en orden de prioridad.
 
-#### Ejemplo `attributeMerge` de objeto con `dataSetPrecedence` tipo
+#### Ejemplo de objeto `attributeMerge` con tipo `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -152,7 +154,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
     }
 ```
 
-#### Ejemplo `attributeMerge` de objeto con `timestampOrdered` tipo
+#### Ejemplo de objeto `attributeMerge` con tipo `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -172,7 +174,7 @@ El objeto esquema especifica la clase de esquema del Modelo de datos de experien
     }
 ```
 
-Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esquema asociado con la política de combinación.
+Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esquema asociado con la directiva de combinación.
 
 **Ejemplo`schema`**
 
@@ -182,15 +184,15 @@ Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esque
     }
 ```
 
-Para obtener más información sobre XDM y trabajar con esquemas en Experience Platform, lea la información general [del sistema](../../xdm/home.md)XDM.
+Para obtener más información sobre XDM y trabajar con esquemas en Experience Platform, lea la [información general del sistema XDM](../../xdm/home.md).
 
 ## Directivas de combinación de acceso {#access-merge-policies}
 
-Con la [!DNL Real-time Customer Profile] API, el `/config/mergePolicies` punto final permite realizar una solicitud de búsqueda para la vista de una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de la organización de IMS, filtradas por criterios específicos. También puede utilizar el extremo para recuperar varias directivas de combinación por sus ID. `/config/mergePolicies/bulk-get` Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
+Mediante la API [!DNL Real-time Customer Profile], el extremo `/config/mergePolicies` permite realizar una solicitud de búsqueda para la vista de una directiva de combinación específica por su ID o acceder a todas las directivas de combinación de la organización de IMS, filtradas por criterios específicos. También puede utilizar el extremo `/config/mergePolicies/bulk-get` para recuperar varias directivas de combinación por sus ID. Los pasos para realizar cada una de estas llamadas se describen en las siguientes secciones.
 
 ### Acceso a una única directiva de combinación por ID
 
-Puede acceder a una única directiva de combinación mediante su ID realizando una solicitud de GET al extremo e incluyendo la `/config/mergePolicies` `mergePolicyId` en la ruta de la solicitud.
+Puede acceder a una única directiva de combinación mediante su ID realizando una solicitud de GET al extremo `/config/mergePolicies` e incluyendo el `mergePolicyId` en la ruta de la solicitud.
 
 **Formato API**
 
@@ -236,11 +238,11 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación.
 }
 ```
 
-Consulte los [componentes de la sección de políticas](#components-of-merge-policies) de combinación al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una directiva de combinación.
 
 ### Recuperar varias directivas de combinación por sus ID
 
-Puede recuperar varias directivas de combinación haciendo una solicitud de POST al extremo e incluyendo los ID de las directivas de combinación que desee recuperar en el cuerpo de la solicitud. `/config/mergePolicies/bulk-get`
+Puede recuperar varias directivas de combinación realizando una solicitud de POST al extremo `/config/mergePolicies/bulk-get` e incluyendo los ID de las directivas de combinación que desee recuperar en el cuerpo de la solicitud.
 
 **Formato API**
 
@@ -333,11 +335,11 @@ Una respuesta correcta devuelve Estado HTTP 207 (Varios estados) y los detalles 
 }
 ```
 
-Consulte los [componentes de la sección de políticas](#components-of-merge-policies) de combinación al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una directiva de combinación.
 
 ### Lista de varias directivas de combinación por criterios
 
-Puede lista de varias directivas de combinación dentro de la organización de IMS enviando una solicitud de GET al extremo y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. `/config/mergePolicies` Se pueden incluir varios parámetros, separados por signos de &amp;. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las directivas de combinación disponibles para su organización.
+Puede lista de varias directivas de combinación dentro de la organización de IMS enviando una solicitud de GET al extremo `/config/mergePolicies` y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. Se pueden incluir varios parámetros, separados por signos de &amp;. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las directivas de combinación disponibles para su organización.
 
 **Formato API**
 
@@ -349,14 +351,14 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Valor booleano que filtros los resultados según si las directivas de combinación son o no el valor predeterminado para una clase de esquema. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. Valor predeterminado: 20 |
-| `orderBy` | Especifica el campo por el que se ordenan los resultados como `orderBy=name` o `orderBy=+name` se ordenan por nombre en orden ascendente o `orderBy=-name`en orden descendente. Si se omite este valor, se ordenará de forma predeterminada `name` en orden ascendente. |
+| `orderBy` | Especifica el campo por el que se ordenan los resultados como `orderBy=name` o `orderBy=+name` para ordenarlos por nombre en orden ascendente o `orderBy=-name` para ordenarlos en orden descendente. Si se omite este valor, se ordenará `name` en orden ascendente de forma predeterminada. |
 | `schema.name` | Nombre del esquema para el que se recuperan las directivas de combinación disponibles. |
 | `identityGraph.type` | Filtros los resultados según el tipo de gráfico de identidad. Los valores posibles incluyen &quot;none&quot; y &quot;pdg&quot; (gráfico privado). |
 | `attributeMerge.type` | Filtros los resultados según el tipo de combinación de atributos utilizado. Los valores posibles incluyen &quot;timestampOrdered&quot; y &quot;dataSetPrience&quot;. |
 | `start` | Desplazamiento de página: especifique el ID de inicio de los datos que se van a recuperar. Valor predeterminado: 0 |
 | `version` | Especifique esto si desea utilizar una versión específica de la directiva de combinación. De forma predeterminada, se utilizará la última versión. |
 
-Para obtener más información acerca de `schema.name`, `identityGraph.type`y `attributeMerge.type`, consulte la sección [Componentes de directivas](#components-of-merge-policies) de combinación que se proporcionó anteriormente en esta guía.
+Para obtener más información acerca de `schema.name`, `identityGraph.type` y `attributeMerge.type`, consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) que se proporcionó anteriormente en esta guía.
 
 
 **Solicitud**
@@ -448,7 +450,7 @@ Una respuesta correcta devuelve una lista paginada de directivas de combinación
 
 ## Crear una directiva de combinación
 
-Puede crear una nueva directiva de combinación para su organización haciendo una solicitud de POST al `/config/mergePolicies` extremo.
+Puede crear una nueva directiva de combinación para su organización haciendo una solicitud de POST al extremo `/config/mergePolicies`.
 
 **Formato API**
 
@@ -456,7 +458,8 @@ Puede crear una nueva directiva de combinación para su organización haciendo u
 POST /config/mergePolicies
 ```
 
-**Solicitud** La siguiente solicitud crea una nueva directiva de combinación, que se configura con los valores de atributo proporcionados en la carga útil:
+****
+SolicitudLa siguiente solicitud crea una nueva directiva de combinación, que se configura con los valores de atributo proporcionados en la carga útil:
 
 ```shell
 curl -X POST \
@@ -493,7 +496,7 @@ curl -X POST \
 | `schema` | Clase de esquema XDM asociada a la directiva de combinación. |
 | `default` | Especifica si esta directiva de combinación es la predeterminada para el esquema. |
 
-Consulte la sección [Componentes de políticas](#components-of-merge-policies) de combinación para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 **Respuesta**
 
@@ -529,7 +532,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación rec
 }
 ```
 
-Consulte los [componentes de la sección de políticas](#components-of-merge-policies) de combinación al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una directiva de combinación.
 
 ## Actualizar una directiva de combinación {#update}
 
@@ -537,7 +540,7 @@ Puede modificar una directiva de combinación existente editando atributos indiv
 
 ### Editar campos de directiva de combinación individuales
 
-Puede editar campos individuales para una directiva de combinación realizando una solicitud de PATCH al punto final `/config/mergePolicies/{mergePolicyId}` :
+Puede editar campos individuales para una directiva de combinación haciendo una solicitud de PATCH al extremo `/config/mergePolicies/{mergePolicyId}`:
 
 **Formato API**
 
@@ -551,7 +554,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Solicitud**
 
-La siguiente solicitud actualiza una directiva de combinación especificada cambiando el valor de su `default` propiedad a `true`:
+La siguiente solicitud actualiza una directiva de combinación especificada cambiando el valor de su propiedad `default` a `true`:
 
 ```shell
 curl -X PATCH \
@@ -570,11 +573,11 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 |---|---|
-| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones de PATCH en la documentación del parche [JSON](http://jsonpatch.com) |
+| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones de PATCH en la [documentación del parche JSON](http://jsonpatch.com) |
 | `path` | Ruta del campo que se va a actualizar. Los valores aceptados son: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | El valor en el que se va a establecer el campo especificado. |
 
-Consulte la sección [Componentes de políticas](#components-of-merge-policies) de combinación para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 
 **Respuesta**
@@ -667,7 +670,7 @@ curl -X PUT \
 | `schema` | Clase de esquema XDM asociada a la directiva de combinación. |
 | `default` | Especifica si esta directiva de combinación es la predeterminada para el esquema. |
 
-Consulte la sección [Componentes de políticas](#components-of-merge-policies) de combinación para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 
 **Respuesta**
@@ -706,7 +709,7 @@ Una respuesta correcta devuelve los detalles de la directiva de combinación act
 
 ## Eliminar una directiva de combinación
 
-Una directiva de combinación se puede eliminar realizando una solicitud de DELETE al extremo e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de la solicitud. `/config/mergePolicies`
+Una directiva de combinación se puede eliminar realizando una solicitud de DELETE al extremo `/config/mergePolicies` e incluyendo el ID de la directiva de combinación que desea eliminar en la ruta de solicitud.
 
 **Formato API**
 
@@ -737,7 +740,7 @@ Una solicitud de eliminación correcta devuelve Estado HTTP 200 (Aceptar) y un c
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de cliente dentro de la plataforma y para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la documentación [del servicio de segmentación de](../../segmentation/home.md) Adobe Experience Platform para empezar a definir y trabajar con segmentos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de cliente dentro de la plataforma y para crear segmentos de audiencia a partir de sus [!DNL Real-time Customer Profile] datos. Consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con segmentos.
 
 ## Apéndice
 
@@ -745,23 +748,23 @@ Esta sección proporciona información adicional relacionada con el trabajo con 
 
 ### Uso de marcas de hora personalizadas {#custom-timestamps}
 
-Como los registros se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando `timestampOrdered` se selecciona como `attributeMerge` tipo para una directiva de combinación, los perfiles se combinan en función de la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
+Como los registros se ingieren en Experience Platform, se obtiene una marca de hora del sistema en el momento de la ingestión y se agrega al registro. Cuando `timestampOrdered` está seleccionado como el tipo `attributeMerge` para una directiva de combinación, los perfiles se combinan según la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo para cuando el registro se ingesta en la plataforma.
 
 Ocasionalmente puede haber casos de uso, como rellenar datos o asegurar el orden correcto de eventos si los registros se ingieren por orden, donde es necesario proporcionar una marca de tiempo personalizada y que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
 
-Para utilizar una marca de tiempo personalizada, [[!DNL External Source System Audit Details Mixin]](#mixin-details) debe agregarla al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede rellenar mediante el `xdm:lastUpdatedDate` campo. Cuando se ingesta un registro con el `xdm:lastUpdatedDate` campo rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si no `xdm:lastUpdatedDate` está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
+Para utilizar una marca de tiempo personalizada, debe agregarse [[!DNL External Source System Audit Details Mixin]](#mixin-details) al esquema de Perfil. Una vez agregada, la marca de tiempo personalizada se puede completar mediante el campo `xdm:lastUpdatedDate`. Cuando se ingesta un registro con el campo `xdm:lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si `xdm:lastUpdatedDate` no está presente, o no se ha rellenado, Platform seguirá usando la marca de tiempo del sistema.
 
 >[!NOTE]
 >
->Debe asegurarse de que la `xdm:lastUpdatedDate` marca de tiempo se rellena al enviar un PATCH en el mismo registro.
+>Debe asegurarse de que la marca de tiempo `xdm:lastUpdatedDate` se rellena al enviar un PATCH en el mismo registro.
 
-Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de Esquemas, incluida la forma de agregar mezclas a esquemas, visite el [tutorial para crear un esquema mediante la API](../../xdm/tutorials/create-schema-api.md).
+Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de Esquemas, incluida la forma de agregar mezclas a esquemas, visite el [tutorial para crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
 
-Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección sobre el [uso de marcas de hora](../ui/merge-policies.md#custom-timestamps) personalizadas en la guía [del usuario de directivas de](../ui/merge-policies.md)combinación.
+Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección sobre [uso de marcas de hora personalizadas](../ui/merge-policies.md#custom-timestamps) en la [guía del usuario de directivas de combinación](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] detalles {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] detalles  {#mixin-details}
 
-En el siguiente ejemplo se muestran los campos rellenados correctamente en el [!DNL External Source System Audit Details Mixin]. La combinación completa JSON también se puede ver en la repo [pública del Modelo de datos de experiencia (XDM) en GitHub](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) .
+El siguiente ejemplo muestra campos rellenados correctamente en el [!DNL External Source System Audit Details Mixin]. La combinación completa JSON también se puede ver en la repo [pública del Modelo de datos de experiencia (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) en GitHub.
 
 ```json
 {
