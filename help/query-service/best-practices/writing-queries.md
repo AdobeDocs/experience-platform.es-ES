@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;escribir consultas;escribir consulta;
 solution: Experience Platform
 title: Escritura de consultas
 topic: queries
@@ -8,7 +8,7 @@ description: Este documento detalla detalles importantes que deben conocerse al 
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
