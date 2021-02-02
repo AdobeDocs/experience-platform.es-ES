@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
-title: Compatibilidad con el lenguaje de documentación de la plataforma
+title: Compatibilidad con el lenguaje de documentación de Experience Platform
 topic: getting started
-description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 27%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Compatibilidad con el lenguaje de documentación de la plataforma
+# Compatibilidad con el lenguaje de documentación de Experience Platform
 
-La documentación de Adobe Experience Platform está disponible en varios idiomas. Para cambiar el idioma, haga clic en la lista desplegable de idioma y seleccione el idioma que desee.
+La documentación de Adobe Experience Platform está disponible en varios idiomas.
 
-![imagen](../images/overview/lang.jpg)
+Para cambiar el idioma en el que se presenta la documentación, seleccione el icono de idioma en la navegación superior.
 
-## [!DNL Experience Platform]documentación
+![](../images/overview/documentation-language.png)
 
-Para obtener más información sobre los tipos de documentación disponibles, visite la información general [sobre los tipos de documentación de la](overview.md)Plataforma.
+Cuando se abra el menú desplegable de idioma, elija el idioma en el que desea realizar la vista.
 
-Para obtener más información sobre una función [!DNL Platform] o servicio específicos, seleccione una guía en la página de aterrizaje [de documentación del](https://experienceleague.adobe.com/docs/experience-platform.html)Experience Platform.
+![](../images/overview/documentation-language-select.png)
