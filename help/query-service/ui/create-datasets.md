@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;generar conjuntos de datos;generar conjunto de datos;crear conjunto de datos;
 solution: Experience Platform
 title: Generar conjuntos de datos a partir de resultados de consulta
 topic: queries
@@ -8,7 +8,7 @@ description: 'El servicio de consulta permite crear conjuntos de datos desde la 
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '320'
 ht-degree: 1%
 
 ---
