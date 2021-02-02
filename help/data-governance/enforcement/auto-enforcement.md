@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;Aplicación basada en API;control de datos
 solution: Experience Platform
-title: Información general sobre la aplicación de políticas
-topic: enforcement
+title: Aplicación automática de políticas
+topic: guide
 description: Este documento explica cómo se aplican automáticamente las directivas de uso de datos al activar segmentos en destinos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Cuando se activa un segmento por primera vez, [!DNL Policy Service] comprueba si
 
 El linaje de datos juega un papel clave en la forma en que se aplican las políticas en la plataforma. En términos generales, el linaje de datos se refiere al origen de un conjunto de datos y a lo que le sucede (o a dónde se mueve) con el tiempo.
 
-En el contexto de [!DNL Data Governance], el linaje permite que las etiquetas de uso de datos se propaguen de los conjuntos de datos a los servicios de flujo descendente que consumen sus datos, como Perfiles y destinos de clientes en tiempo real. Esto permite que las políticas se evalúen y apliquen en varios puntos clave del viaje de los datos a través de la plataforma, y proporciona contexto a los consumidores de datos sobre el motivo por el que se produjo una infracción de las políticas.
+En el contexto de [!DNL Data Governance], el linaje permite que las etiquetas de uso de datos se propaguen de los conjuntos de datos a los servicios de flujo descendente que consumen sus datos, como Perfiles y destinos de clientes en tiempo real. Esto permite que las políticas se evalúen y apliquen en varios puntos clave del recorrido de los datos a través de la plataforma, y proporciona contexto a los consumidores de datos para saber por qué se produjo una infracción de la política.
 
 En Experience Platform, la aplicación de las políticas tiene que ver con el siguiente linaje:
 
@@ -95,14 +95,14 @@ Seleccione **[!UICONTROL vista de Lista]** para mostrar el linaje de datos como 
 
 ## Aplicación de políticas para segmentos activados {#policy-enforcement-for-activated-segments}
 
-La aplicación de políticas sigue aplicándose a los segmentos después de activarlos, lo que restringe cualquier cambio en un segmento o en su destino que pueda provocar una infracción de la política. Debido a cómo [funciona el linaje de datos](#lineage) en la aplicación de políticas, cualquiera de las siguientes acciones puede potencialmente desencadenar una infracción:
+La aplicación de políticas sigue aplicándose a los segmentos después de activarlos, lo que restringe cualquier cambio en un segmento o en su destino que pueda provocar una infracción de la política. Debido a cómo [funciona el linaje de datos](#lineage) en la aplicación de políticas, cualquiera de las siguientes acciones puede potencialmente déclencheur una infracción:
 
 * Actualización de etiquetas de uso de datos
 * Cambio de conjuntos de datos para un segmento
 * Cambio de predicados de segmentos
 * Cambio de las configuraciones de destino
 
-Si alguna de las acciones anteriores desencadena una infracción, se evita que se guarde esa acción y se muestra un mensaje de infracción de directiva, lo que garantiza que los segmentos activados sigan cumpliendo con las directivas de uso de datos al modificarse.
+Si alguna de las acciones anteriores déclencheur una infracción, se evita que se guarde esa acción y se muestra un mensaje de infracción de política, lo que garantiza que los segmentos activados sigan cumpliendo con las directivas de uso de datos al modificarse.
 
 ## Pasos siguientes
 
