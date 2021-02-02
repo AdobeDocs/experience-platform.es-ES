@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
+keywords: Experience Platform;inicio;temas populares;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Creación de un conector PostgreSQL mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar Experience Platform a PostgreSQL (en adelante, "PSQL").
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '584'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
