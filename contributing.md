@@ -1,6 +1,9 @@
 ---
-source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '296'
+ht-degree: 95%
 
 ---
 # Contribución
@@ -11,11 +14,13 @@ A continuación se proporciona un conjunto de directrices que se deben seguir al
 
 ## Código de conducta
 
-Este proyecto se adhiere al [código de conducta](code-of-conduct.md) de Adobe. Al participar, se espera que respete este código. Informe de cualquier comportamiento inaceptable en la dirección [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Este proyecto se adhiere al [código de conducta](code-of-conduct.md) de Adobe. Al participar, se espera que respete este código.
+
+Informe de cualquier comportamiento inaceptable en la dirección [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Documentación de la Guía del colaborador
 
-See the [Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulte la [Guía del colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
 
 ## ¿Tiene alguna pregunta?
 
@@ -23,12 +28,15 @@ Comience por enviar un problema. Los supervisores de este proyecto trabajan para
 
 ## Acuerdo de licencia de colaborador
 
-Todas las contribuciones de terceros a este proyecto deben estar acompañadas por un contrato de licencia
-para colaboradores firmado, que da permiso a Adobe para redistribuir las contribuciones como parte del proyecto. [Firme nuestro Acuerdo de colaboración](http://opensource.adobe.com/cla.html). Un usuario necesita enviar un único acuerdo de colaboración de Adobe, por lo que, si lo ha enviado anteriormente, ¡ya puede empezar!
+Todas las contribuciones de terceros a este proyecto deben estar acompañadas por un contrato de licencia para colaboradores firmado, que da permiso a Adobe para redistribuir las contribuciones como parte del proyecto.
+
+[Firme nuestro Acuerdo de colaboración](http://opensource.adobe.com/cla.html).
+
+Un usuario necesita enviar un único acuerdo de colaboración de Adobe, por lo que, si lo ha enviado anteriormente, ¡ya puede empezar!
 
 ## Revisiones de código
 
-Todos los envíos deben ser solicitudes de extracción y deben revisarlos los supervisores del proyecto. Lea la [documentación de las solicitudes de extracción de GitHub](https://help.github.com/articles/about-pull-requests/) para obtener más información sobre el envío de solicitudes de extracción.
+Todas las solicitudes deben llegar en forma de solicitudes “pull” y el comité de proyectos deberá revisarlas. Consulte la [documentación de las solicitudes “pull”](https://help.github.com/es/github/collaborating-with-issues-and-pull-requests/about-pull-requests) para obtener más información sobre cómo enviar solicitudes “pull”.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
@@ -41,4 +49,4 @@ submitting a pull request!
 
 ## Problemas de seguridad
 
-Los problemas de seguridad no deben enviarse a este rastreador de problemas. [Envíe el problema a nuestros expertos en seguridad](https://helpx.adobe.com/security/alertus.html)
+Los problemas de seguridad no deben enviarse a este rastreador de problemas. Envíe [el problema a nuestros expertos en seguridad](https://helpx.adobe.com/es/security/alertus.html).
