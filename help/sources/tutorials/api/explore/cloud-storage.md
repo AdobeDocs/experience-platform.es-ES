@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
+keywords: Experience Platform;inicio;temas populares;almacenamiento de nube;almacenamiento de nube
 solution: Experience Platform
 title: Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo
 topic: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
-source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '759'
 ht-degree: 2%
 
 ---
 
 
-# Explorar un sistema de almacenamiento en la nube mediante la [!DNL Flow Service] API
+# Explorar un sistema de almacenamiento en la nube mediante la API [!DNL Flow Service]
 
 Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para explorar un sistema de almacenamiento en la nube de terceros.
 
@@ -21,14 +21,14 @@ Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/exp
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Simuladores](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores](../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de almacenamiento en la nube mediante la [!DNL Flow Service] API.
+Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de almacenamiento en la nube mediante la API [!DNL Flow Service].
 
 ### Obtención de un ID de conexión
 
-Para explorar un almacenamiento de nube de terceros mediante [!DNL Platform] API, debe disponer de un ID de conexión válido. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
+Para explorar un almacenamiento de nube de terceros mediante API [!DNL Platform], debe tener un ID de conexión válido. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
@@ -41,17 +41,17 @@ Para explorar un almacenamiento de nube de terceros mediante [!DNL Platform] API
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Con el ID de conexión del almacenamiento de nube, puede explorar archivos y dir
 | `objectType` | El tipo de objeto que desea explorar. Establezca este valor como: <ul><li>`folder`:: Explorar un directorio específico</li><li>`root`:: Explore el directorio raíz.</li></ul> |
 | `object` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. |
 
-Utilice la siguiente llamada para encontrar la ruta del archivo en el que desea [!DNL Platform]:
+Utilice la siguiente llamada para encontrar la ruta del archivo que desea traer a [!DNL Platform]:
 
 **Formato API**
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de archivos y carpetas que se encuentran en el directorio consultado. Tenga en cuenta la `path` propiedad del archivo que desea cargar, ya que debe proporcionarlo en el paso siguiente para inspeccionar su estructura.
+Una respuesta correcta devuelve una matriz de archivos y carpetas que se encuentran en el directorio consultado. Tenga en cuenta la propiedad `path` del archivo que desea cargar, ya que debe proporcionarlo en el siguiente paso para inspeccionar su estructura.
 
 ```json
 [
@@ -116,7 +116,7 @@ Una respuesta correcta devuelve una matriz de archivos y carpetas que se encuent
 
 Para inspeccionar la estructura del archivo de datos desde el almacenamiento de la nube, realice una solicitud de GET mientras proporciona la ruta del archivo y escriba como parámetro de consulta.
 
-Puede inspeccionar la estructura de un archivo CSV o TSV especificando un delimitador personalizado como perímetro de consulta. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, se `(,)` utiliza una coma como valor predeterminado.
+Puede inspeccionar la estructura de un archivo CSV o TSV especificando un delimitador personalizado como perímetro de consulta. Cualquier valor de carácter único es un delimitador de columna permitido. Si no se proporciona, se utiliza una coma `(,)` como valor predeterminado.
 
 **Formato API**
 
@@ -175,4 +175,4 @@ Una respuesta correcta devuelve la estructura del archivo consultado, incluidos 
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado su sistema de almacenamiento en la nube, ha encontrado la ruta del archivo al que desea acceder [!DNL Platform]y ha visto su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su almacenamiento en la nube y llevarlos a la plataforma](../collect/cloud-storage.md).
+Siguiendo este tutorial, ha explorado su sistema de almacenamiento en la nube, ha encontrado la ruta del archivo que desea traer a [!DNL Platform] y ha visto su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su almacenamiento en la nube y llevarlos a la plataforma](../collect/cloud-storage.md).
