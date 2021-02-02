@@ -1,13 +1,13 @@
 ---
-keywords: advertising; bing;
+keywords: 'publicidad; bing; '
 title: Destino de Microsoft Bing
 seo-title: El destino de Microsoft Bing le ayuda a enviar datos de perfil a Microsoft Display Advertising.
 description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
 seo-description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -17,33 +17,33 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-El [!DNL Microsoft Bing] destino le ayuda a enviar datos de perfil a [!DNL Microsoft Display Advertising].
+El destino [!DNL Microsoft Bing] le ayuda a enviar datos de perfil a [!DNL Microsoft Display Advertising].
 
 Para enviar datos de perfil a [!DNL Microsoft Bing], primero debe conectarse al destino.
 
 ## Especificaciones de destino {#destination-specs}
 
-Tenga en cuenta los siguientes detalles específicos del [!DNL Microsoft Bing] destino:
+Tenga en cuenta los siguientes detalles específicos del destino [!DNL Microsoft Bing]:
 
-* Puede enviar las siguientes [identidades](../../../identity-service/namespaces.md) a [!DNL Microsoft Bing] destinos: [!DNL Microsoft ID].
+* Puede enviar las [identidades](../../../identity-service/namespaces.md) siguientes a [!DNL Microsoft Bing] destinos: [!DNL Microsoft ID].
 
 ## Casos de uso {#use-cases}
 
-Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para usuarios de destinatario mediante anuncios en pantalla en todos los [!DNL Microsoft Advertising] canales.
+Como especialista en mercadotecnia, quiero poder usar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para destinatario de usuarios a través de la publicidad en pantalla en canales [!DNL Microsoft Advertising].
 
 ## Tipo de exportación {#export-type}
 
-**[!DNL Segment Export]** - está exportando todos los miembros de un segmento (audiencia) al [!DNL Microsoft Bing] destino.
+**[!DNL Segment Export]** - está exportando todos los miembros de un segmento (audiencia) al  [!DNL Microsoft Bing] destino.
 
-## Requisitos previos  {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Al configurar el destino, se le pedirá que proporcione la siguiente información:
 
-* [!UICONTROL ID]de cuenta: este es su [!DNL Bing Ads CID]formato entero.
+* [!UICONTROL ID] de cuenta: este es su  [!DNL Bing Ads CID]formato entero.
 
 ## Conectar al destino {#connect-destination}
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Microsoft Bing]y seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Microsoft Bing] y seleccione **[!UICONTROL Configurar]**.
 
 ![Configurar destino de Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
 
@@ -53,27 +53,27 @@ En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Mic
 >
 >![Activar destino de Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
 
-En el paso [!UICONTROL Autenticación] , debe introducir los detalles de conexión de destino:
+En el paso [!UICONTROL Autenticación], debe introducir los detalles de conexión de destino:
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID]** de cuenta: Tu [!DNL Bing Ads CID].
-* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página Gobierno [de datos en Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](../../../data-governance/policies/overview.md#core-actions)datos.
+* **[!UICONTROL ID]** de cuenta: Tu  [!DNL Bing Ads CID].
+* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre los casos de uso de mercadotecnia definidos por el Adobe, consulte la [información general sobre las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Autenticación de destino de Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
 
-Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar segmentos más adelante, o bien puede hacer clic en [!UICONTROL Siguiente] para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar segmentos más adelante, o puede hacer clic en [!UICONTROL Siguiente] para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
 
 ## Activar segmentos {#activate-segments}
 
 Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md#select-attributes) para obtener información sobre el flujo de trabajo de activación de segmentos.
 
-En el paso de programación [de](../../ui/activate-destinations.md#segment-schedule) segmentos, debe asignar manualmente los segmentos a su ID correspondiente o a su nombre descriptivo en el destino.
+En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre práctico en el destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre del [!DNL Platform] segmento o una forma más corta de éste, para facilitar su uso. Sin embargo, el ID o nombre del segmento en el destino no necesita coincidir con el de su [!DNL Platform] cuenta. Cualquier valor que inserte en el campo de asignación se verá reflejado por el destino.
+Al asignar segmentos, le recomendamos que utilice el nombre del segmento [!DNL Platform] o una forma más corta de éste, para facilitar su uso. Sin embargo, el ID o nombre del segmento en el destino no necesita coincidir con el de su cuenta [!DNL Platform]. Cualquier valor que inserte en el campo de asignación se verá reflejado por el destino.
 
 ![ID de asignación de segmentos](../../assets/common/segment-mapping-id.png)
 
 ## Datos exportados {#exported-data}
 
-Para verificar si los datos se han exportado correctamente al [!DNL Microsoft Bing] destino, compruebe su [!DNL Microsoft Bing Ads] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en su cuenta.
+Para verificar si los datos se han exportado correctamente al destino [!DNL Microsoft Bing], compruebe su cuenta [!DNL Microsoft Bing Ads]. Si la activación se ha realizado correctamente, las audiencias se rellenan en su cuenta.
