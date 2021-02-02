@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de muestra;consulta de muestra;destinatario de adobe;
 solution: Experience Platform
 title: Consultas de muestra
 topic: queries
@@ -7,7 +7,7 @@ description: Los datos de Adobe Target se transforman en esquema XDM de Experien
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
