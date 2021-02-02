@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
+keywords: Experience Platform;inicio;temas populares;base de datos;base de datos de terceros
 solution: Experience Platform
 title: Recopilación de datos de una base de datos mediante conectores de origen y API
 topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de una base de datos e incorporarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 326de658736387ab42cd2348a052c5c5217b6c2e
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1610'
-ht-degree: 1%
+source-wordcount: '1624'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](../../../../tutorials/authentication.md). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
