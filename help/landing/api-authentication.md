@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;inicio;temas populares;Autenticar;acceso
 solution: Experience Platform
 title: Autenticar y acceder a las API de Experience Platform
 topic: tutorial
@@ -8,7 +8,7 @@ description: 'Este documento proporciona un tutorial paso a paso para obtener ac
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '882'
 ht-degree: 4%
 
 ---
