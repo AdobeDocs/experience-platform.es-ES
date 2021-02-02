@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
+keywords: Experience Platform;resolución de problemas;Área de trabajo de ciencias de datos;temas populares
 solution: Experience Platform
 title: Guía de solución de problemas de Área de trabajo de Data Science
 topic: Troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 045ad186efac59317635439a05b9d24e703c9859
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] guía de solución de problemas
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Data Science Workspace]. Para preguntas y solución de problemas con [!DNL Platform] las API en general, consulte la guía [de solución de problemas de la API de](../landing/troubleshooting.md)Adobe Experience Platform.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Data Science Workspace]. Para preguntas y solución de problemas con las [!DNL Platform] API en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
 
-## [!DNL JupyterLab] entorno no se está cargando en [!DNL Google Chrome]
+## [!DNL JupyterLab] entorno no se está cargando en  [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
 >Este problema se ha resuelto, pero aún podría estar presente en el navegador Google Chrome 80.x. Asegúrese de que el navegador Chrome esté actualizado.
 
-Con la versión 80.x del [!DNL Google Chrome] explorador, todas las cookies de terceros están bloqueadas de forma predeterminada. Esta directiva puede evitar [!DNL JupyterLab] que se cargue en Adobe Experience Platform.
+Con la versión 80.x del explorador [!DNL Google Chrome], todas las cookies de terceros se bloquean de forma predeterminada. Esta directiva puede evitar que [!DNL JupyterLab] se cargue en Adobe Experience Platform.
 
 Para solucionar este problema, siga estos pasos:
 
-En su [!DNL Chrome] navegador, vaya a la parte superior derecha y seleccione **Configuración** (también puede copiar y pegar &quot;chrome://settings/&quot; en la barra de direcciones). A continuación, desplácese hasta la parte inferior de la página y haga clic en el menú desplegable **Avanzado** .
+En el explorador [!DNL Chrome], desplácese hasta la parte superior derecha y seleccione **Configuración** (también puede copiar y pegar &quot;chrome://settings/&quot; en la barra de direcciones). A continuación, desplácese hasta la parte inferior de la página y haga clic en la lista desplegable **Avanzado**.
 
 ![Chrome avanzado](./images/faq/chrome-advanced.png)
 
-Aparece la sección **Privacidad y seguridad** . A continuación, haga clic en Configuración **del** sitio seguido de **Cookies y datos** del sitio.
+Aparece la sección **Privacidad y seguridad**. A continuación, haga clic en **Configuración del sitio** seguida de **Cookies y datos del sitio**.
 
 ![Chrome avanzado](./images/faq/privacy-security.png)
 
@@ -45,55 +45,55 @@ Por último, cambie &quot;Bloquear cookies de terceros&quot; por &quot;Desactiva
 >
 >También puede deshabilitar las cookies de terceros y agregar [*.]ds.adobe.net a la lista de permitidos.
 
-Vaya a &quot;chrome://flags/&quot; en la barra de direcciones. Busque y deshabilite el indicador titulado *&quot;SameSite de forma predeterminada&quot;* mediante el menú desplegable de la derecha.
+Vaya a &quot;chrome://flags/&quot; en la barra de direcciones. Busque y deshabilite la marca titulada *&quot;SameSite by default cookies&quot;* mediante el menú desplegable de la derecha.
 
 ![deshabilitar indicador samesite](./images/faq/samesite-flag.png)
 
 Después del paso 2, se le pedirá que vuelva a iniciar el explorador. Después de reiniciar, [!DNL Jupyterlab] debe ser accesible.
 
-## ¿Por qué no puedo acceder [!DNL JupyterLab] en Safari?
+## ¿Por qué no puedo acceder a [!DNL JupyterLab] en Safari?
 
-Safari desactiva las cookies de terceros de forma predeterminada en Safari &lt; 12. Dado que la instancia de la máquina [!DNL Jupyter] virtual reside en un dominio diferente al del marco principal, Adobe Experience Platform requiere que las cookies de terceros estén habilitadas. Habilite las cookies de terceros o cambie a otro explorador como [!DNL Google Chrome].
+Safari desactiva las cookies de terceros de forma predeterminada en Safari &lt; 12. Dado que la instancia de la máquina virtual [!DNL Jupyter] reside en un dominio diferente al marco principal, Adobe Experience Platform requiere actualmente que las cookies de terceros estén habilitadas. Habilite las cookies de terceros o cambie a otro explorador como [!DNL Google Chrome].
 
-Para Safari 12, debe cambiar el agente de usuario a &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Para cambiar el agente de usuario, abra el menú *Safari* y seleccione **Preferencias**. Aparecerá la ventana de preferencias.
+Para Safari 12, debe cambiar el agente de usuario a &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Para cambiar el agente de usuario, abra el menú *Safari* y seleccione **Preferencias** para inicio. Aparecerá la ventana de preferencias.
 
 ![Preferencias de Safari](./images/faq/preferences.png)
 
-En la ventana de preferencias de Safari, seleccione **Avanzado**. A continuación, marque el menú *Mostrar desarrollo en la casilla de la barra* de menús. Puede cerrar la ventana de preferencias una vez completado este paso.
+En la ventana de preferencias de Safari, seleccione **Avanzado**. A continuación, marque la casilla *Mostrar menú Revelar en la barra de menús*. Puede cerrar la ventana de preferencias una vez completado este paso.
 
 ![Safari avanzado](./images/faq/advanced.png)
 
-A continuación, en la barra de navegación superior, seleccione el menú **Desarrollar** . En la lista desplegable **Desarrollar** , pase el ratón por encima del agente **de usuario**. Puede seleccionar la cadena **[!DNL Chrome]** o **[!DNL Firefox]** Agente de usuario que desee utilizar.
+A continuación, en la barra de navegación superior, seleccione el menú **Desarrollar**. En la lista desplegable **Desarrollar**, pase el ratón por encima de **Agente de usuario**. Puede seleccionar la cadena **[!DNL Chrome]** o **[!DNL Firefox]** Agente de usuario que desee utilizar.
 
 ![Menú Desarrollar](./images/faq/user-agent.png)
 
 ## ¿Por qué veo un mensaje &#39;403 prohibido&#39; al intentar cargar o eliminar un archivo en [!DNL JupyterLab]?
 
-Si el explorador está habilitado con software de bloqueo de anuncios como [!DNL Ghostery] o [!DNL AdBlock] Plus, se debe permitir el dominio &quot;\*.adobe.net&quot; en cada software de bloqueo de anuncios para que [!DNL JupyterLab] funcione con normalidad. Esto se debe a que [!DNL JupyterLab] las máquinas virtuales se ejecutan en un dominio diferente al [!DNL Experience Platform] dominio.
+Si el explorador está habilitado con software de bloqueo de anuncios como [!DNL Ghostery] o [!DNL AdBlock] Plus, se debe permitir el dominio &quot;\*.adobe.net&quot; en cada software de bloqueo de anuncios para que [!DNL JupyterLab] funcione con normalidad. Esto se debe a que las máquinas virtuales [!DNL JupyterLab] se ejecutan en un dominio diferente al dominio [!DNL Experience Platform].
 
-## ¿Por qué algunas partes de mi [!DNL Jupyter Notebook] aspecto parecen revueltas o no se representan como código?
+## ¿Por qué algunas partes de mi [!DNL Jupyter Notebook] parecen retorcidas o no se representan como código?
 
-Esto puede suceder si la celda en cuestión se cambia accidentalmente de &quot;Código&quot; a &quot;Código de barras&quot;. Mientras una celda de código está enfocada, al pulsar la combinación de teclas **ESC+M** se cambia el tipo de celda a Markdown. El tipo de celda se puede cambiar mediante el indicador desplegable en la parte superior del bloc de notas de las celdas seleccionadas. Para cambiar un tipo de celda a código, seleccione el inicio de la celda que desee cambiar. A continuación, haga clic en el menú desplegable que indica el tipo actual de celda y, a continuación, seleccione &quot;Código&quot;.
+Esto puede suceder si la celda en cuestión se cambia accidentalmente de &quot;Código&quot; a &quot;Código de barras&quot;. Mientras una celda de código está centrada, al pulsar la combinación de teclas **ESC+M** se cambia el tipo de celda a Markdown. El tipo de celda se puede cambiar mediante el indicador desplegable en la parte superior del bloc de notas de las celdas seleccionadas. Para cambiar un tipo de celda a código, seleccione el inicio de la celda que desee cambiar. A continuación, haga clic en el menú desplegable que indica el tipo actual de celda y, a continuación, seleccione &quot;Código&quot;.
 
 ![](./images/faq/code_type.png)
 
-## ¿Cómo instalo [!DNL Python] bibliotecas personalizadas?
+## ¿Cómo instalo bibliotecas [!DNL Python] personalizadas?
 
-El [!DNL Python] núcleo viene preinstalado con muchas bibliotecas populares de aprendizaje automático. Sin embargo, puede instalar bibliotecas personalizadas adicionales ejecutando el siguiente comando en una celda de código:
+El núcleo [!DNL Python] viene preinstalado con muchas bibliotecas populares de aprendizaje automático. Sin embargo, puede instalar bibliotecas personalizadas adicionales ejecutando el siguiente comando en una celda de código:
 
 ```shell
 !pip install {LIBRARY_NAME}
 ```
 
-Para obtener una lista completa de [!DNL Python] las bibliotecas preinstaladas, consulte la sección de [apéndice de la Guía](./jupyterlab/overview.md#supported-libraries)del usuario de JupyterLab.
+Para obtener una lista completa de las bibliotecas [!DNL Python] preinstaladas, consulte la sección [apéndice de la Guía del usuario de JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
 ## ¿Puedo instalar bibliotecas PySpark personalizadas?
 
 Desafortunadamente, no puede instalar bibliotecas adicionales para el núcleo PySpark. Sin embargo, puede ponerse en contacto con el representante de servicios al cliente de Adobe para que le instalen bibliotecas PySpark personalizadas.
 
-Para obtener una lista de las bibliotecas PySpark preinstaladas, consulte la sección de [apéndice de la Guía](./jupyterlab/overview.md#supported-libraries)del usuario de JupyterLab.
+Para obtener una lista de las bibliotecas PySpark preinstaladas, consulte la sección [apéndice de la Guía del usuario de JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
-## ¿Es posible configurar [!DNL Spark] los recursos del clúster para [!DNL JupyterLab] [!DNL Spark] o el kernel de PySpark?
+## ¿Es posible configurar [!DNL Spark] recursos de clúster para [!DNL JupyterLab] [!DNL Spark] o el núcleo PySpark?
 
 Puede configurar los recursos agregando el siguiente bloque a la primera celda del bloc de notas:
 
@@ -111,8 +111,16 @@ Puede configurar los recursos agregando el siguiente bloque a la primera celda d
 }
 ```
 
-Para obtener más información sobre la configuración [!DNL Spark] de recursos de clúster, incluida la lista completa de propiedades configurables, consulte la Guía del usuario de [JupyterLab](./jupyterlab/overview.md#kernels).
+Para obtener más información sobre la configuración de [!DNL Spark] recursos de clúster, incluida la lista completa de las propiedades configurables, consulte la [Guía del usuario de JupyterLab](./jupyterlab/overview.md#kernels).
 
 ## ¿Por qué se produce un error al intentar ejecutar determinadas tareas para conjuntos de datos más grandes?
 
-Si recibe un error por un motivo como `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` Esto significa que el controlador o un ejecutor se está quedando sin memoria. Consulte la documentación de acceso [a](./jupyterlab/access-notebook-data.md) datos de JupyterLab para obtener más información sobre los límites de datos y cómo ejecutar tareas en conjuntos de datos grandes. Normalmente, este error se puede resolver cambiando el `mode` de `interactive` a `batch`.
+Si recibe un error por un motivo como `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.`, esto suele significar que el controlador o un ejecutor se está quedando sin memoria. Consulte la documentación de JupyterLab Notebooks [acceso a datos](./jupyterlab/access-notebook-data.md) para obtener más información sobre los límites de datos y cómo ejecutar tareas en conjuntos de datos grandes. Normalmente, este error se puede resolver cambiando el `mode` de `interactive` a `batch`.
+
+## [!DNL Docker Hub] restricciones de límite en el área de trabajo de ciencias de datos
+
+El 20 de noviembre de 2020 entraron en vigor los límites de tasa para el uso anónimo y libre autenticado de Docker Hub. Los usuarios anónimos y gratuitos [!DNL Docker Hub] tienen un límite de 100 solicitudes de extracción de imágenes de contenedor cada seis horas. Si se ve afectado por estos cambios, recibirá este mensaje de error: `ERROR: toomanyrequests: Too Many Requests.` o `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
+
+Actualmente, este límite solo afectará a su organización si intenta crear 100 equipos portátiles en fórmulas en el lapso de seis horas o si utiliza equipos portátiles basados en Spark en el espacio de trabajo de ciencia de datos que con frecuencia aumentan y reducen el tamaño. Sin embargo, esto es improbable, ya que el clúster en el que se ejecutan permanece activo durante dos horas antes de apagarse. Esto reduce el número de extracciones necesarias cuando el clúster está activo. Si recibe cualquiera de los errores anteriores, tendrá que esperar hasta que se restablezca su límite [!DNL Docker].
+
+Para obtener más información sobre los límites de velocidad [!DNL Docker Hub], visite la [documentación de DockerHub](https://www.docker.com/increase-rate-limits). Se está trabajando en una solución para esto y se espera que se encuentre en una versión posterior.
