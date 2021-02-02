@@ -5,15 +5,15 @@ user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '161'
 ht-degree: 21%
 
 ---
 
 
-# Adobe Experience Platform overview {#landing}
+# Información general de Adobe Experience Platform {#landing}
 
 * [Información general de la plataforma](home.md)
 * [Información general sobre la plataforma (vídeo)](video/platform-overview.md)
@@ -32,13 +32,20 @@ ht-degree: 21%
 * API de Experience Platform {#platform-apis}
    * [Conceptos básicos de API](api-fundamentals.md)
    * [DOCUMENTOS de referencia de API](http://www.adobe.com/go/platform-api-reference-en)
-   * [Autenticar en API de Experience Platform](http://www.adobe.com/go/platform-api-authentication-en)
+   * [Tutorial sobre las API de autenticación y acceso a plataformas](api-authentication.md)
 * Documentación de la plataforma {#documentation}
    * [Información general sobre la documentación](documentation/overview.md)
+   * [Compatibilidad con el lenguaje de documentación](documentation/language-support.md)
 * Plataforma en el ecosistema del Adobe {#ecosystem}
    * [Servicios de aplicaciones](application-services.md)
    * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
    * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
+* Administración, privacidad y seguridad {#governance-privacy-security}
+   * [Información general](./governance-privacy-security/overview.md)
+   * Gestión de consentimiento {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [Información general](./governance-privacy-security/consent/iab/overview.md)
+         * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/iab/dataset.md)
 * [Panel de uso de licencias](license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración ADLS Gen2](adls2-gen2-migration.md)
