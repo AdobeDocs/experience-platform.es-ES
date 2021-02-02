@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
+keywords: Experience Platform;inicio;temas populares;Almacenamiento de Google Cloud;almacenamiento de Google Cloud
 solution: Experience Platform
 title: Conector de Almacenamiento de Google Cloud
 topic: overview
 description: La siguiente documentación proporciona información sobre cómo conectar Google Cloud Almacenamiento a la plataforma mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -15,31 +15,31 @@ ht-degree: 0%
 
 # Conector de Almacenamiento de Google Cloud
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS [!DNL Google Cloud Platform], y [!DNL Azure], lo que le permite traer sus datos de estos sistemas.
+Adobe Experience Platform proporciona conectividad nativa para proveedores de cloud como AWS, [!DNL Google Cloud Platform] y [!DNL Azure], lo que le permite traer sus datos de estos sistemas.
 
-Las fuentes de almacenamiento de nube pueden incorporar sus propios datos [!DNL Platform] sin necesidad de descargarlos, darles formato o cargarlos. Los datos introducidos se pueden formatear como JSON XDM, parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. [!DNL Platform] le permite traer datos desde [!DNL Google Cloud Storage] lotes.
+Las fuentes de almacenamiento de nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos se pueden formatear como JSON XDM, Parquet XDM o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. [!DNL Platform] permite traer datos de  [!DNL Google Cloud Storage] lotes.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes. Consulte la página de lista de permitidos [de direcciones](../../ip-address-allow-list.md) IP para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-## Configuración de requisitos previos para conectar su [!DNL Google Cloud Storage] cuenta
+## Configuración de requisitos previos para conectar su cuenta [!DNL Google Cloud Storage]
 
-Para conectarse a [!DNL Platform], primero debe habilitar la interoperabilidad para su [!DNL Google Cloud Storage] cuenta. Para acceder a la configuración de interoperabilidad, abra [!DNL Google Cloud Platform] y seleccione **[!UICONTROL Configuración]** en la opción **[!UICONTROL Almacenamiento]** del panel de navegación.
+Para conectarse a [!DNL Platform], primero debe habilitar la interoperabilidad para su cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, abra [!DNL Google Cloud Platform] y seleccione **[!UICONTROL Configuración]** en la opción **[!UICONTROL Almacenamiento]** del panel de navegación.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-Aparece la página **[!UICONTROL Configuración]** . Desde aquí puede ver información sobre su ID [!DNL Google] de proyecto y detalles sobre su [!DNL Google Cloud Storage] cuenta. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperabilidad]** en el encabezado superior.
+Aparece la página **[!UICONTROL Configuración]**. Desde aquí puede ver información relacionada con su [!DNL Google] ID de proyecto y detalles sobre su cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperabilidad]** en el encabezado superior.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-La página **[!UICONTROL Interoperabilidad]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de usuario. Si todavía no ha establecido un proyecto predeterminado para el acceso interoperable, puede configurarlo desde la sección Proyecto **[!UICONTROL predeterminado para el acceso]** interoperable. Si ya se ha establecido un proyecto predeterminado, la sección mostrará una confirmación de que se ha establecido un proyecto como predeterminado.
+La página **[!UICONTROL Interoperabilidad]** contiene información sobre autenticación, claves de acceso y el proyecto predeterminado asociado con su cuenta de usuario. Si aún no ha establecido un proyecto predeterminado para el acceso interoperable, puede configurarlo desde la sección **[!UICONTROL Proyecto predeterminado para el acceso interoperable]**. Si ya se ha establecido un proyecto predeterminado, la sección mostrará una confirmación de que se ha establecido un proyecto como predeterminado.
 
 Para generar un nuevo ID de clave de acceso y una clave de acceso secreta para su cuenta de usuario, seleccione **[!UICONTROL Crear una clave]**.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Puede utilizar el ID de clave de acceso y la clave de acceso secreto recién generados para conectar su [!DNL Google Cloud Storage] cuenta a [!DNL Platform].
+Puede utilizar el ID de clave de acceso y la clave de acceso secreto recién generados para conectar su cuenta [!DNL Google Cloud Storage] a [!DNL Platform].
 
 ## Restricciones de nombres para archivos y directorios
 
@@ -49,12 +49,12 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta a
 - Los nombres de directorio y archivo no pueden terminar con una barra diagonal (`/`). Si se proporciona, se eliminará automáticamente.
 - Los siguientes caracteres de URL reservados deben tener un escape correcto: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
 - No se permiten los siguientes caracteres: `" \ / : | < > * ?`.
-- No se permiten caracteres de ruta de URL no válidos. Los puntos de código como `\uE000`, aunque válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, Sección 2.2: Reglas](https://www.ietf.org/rfc/rfc2616.txt) básicas y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- No se permiten caracteres de ruta de URL no válidos. Los puntos de código como `\uE000`, aunque válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para ver las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, Sección 2.2: Reglas básicas](https://www.ietf.org/rfc/rfc2616.txt) y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
 
 ## Conectar [!DNL Google Cloud Storage] a [!DNL Platform]
 
-La documentación siguiente proporciona información sobre cómo conectarse [!DNL Google Cloud Storage] a [!DNL Platform] través de API o de la interfaz de usuario:
+La documentación siguiente proporciona información sobre cómo conectar [!DNL Google Cloud Storage] a [!DNL Platform] mediante API o la interfaz de usuario:
 
 ### Uso de API
 
