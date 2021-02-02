@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
+keywords: Experience Platform;inicio;temas populares;Sinapsis;sinapsis;Azure synapse Analytics
 solution: Experience Platform
 title: Creación de un conector de Azure synapse Analytics mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: En este tutorial se utiliza la API de servicio de flujo para ayudarle a seguir los pasos necesarios para conectar Azure synapse Analytics (en adelante, "Sinapse") con el Experience Platform.
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '593'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
