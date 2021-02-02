@@ -5,7 +5,7 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
@@ -138,11 +138,11 @@ ht-degree: 4%
       - [Recopilar datos de pago](tutorials/api/collect/payments.md)
       - [Recopilación de datos de protocolo](tutorials/api/collect/protocols.md)
       - [Recopilación de datos de flujo continuo](tutorials/api/collect/streaming.md)
-   - [Ingesta de datos de parqué desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
+   - [Ingesta de datos de parquet desde un sistema de almacenamiento en la nube de terceros](tutorials/api/cloud-storage-parquet.md)
    - [Creación de una conexión de conjunto de datos](tutorials/api/create-dataset-base-connection.md)
    - [Monitoreo de flujos de datos](tutorials/api/monitor.md)
    - [Actualizar conexiones](tutorials/api/update.md)
-   - [Eliminar conexiones](tutorials/api/delete.md)
+   - [Eliminación de conexiones](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
 - Tutoriales de interfaz de usuario {#ui-tutorials}
    - Crear un conector de origen {#create}
