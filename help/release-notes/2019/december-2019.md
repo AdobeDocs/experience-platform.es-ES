@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 801da8a705360688f230eae5772a8bed9a1e856e
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 7%
@@ -26,7 +26,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite generar segmentos y audiencias a partir de sus [!DNL Real-time Customer Profile] datos. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite generar segmentos y audiencias a partir de sus datos [!DNL Real-time Customer Profile]. Estos segmentos están configurados y mantenidos centralmente en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
 
 [!DNL Segmentation Service] define un subconjunto concreto de perfiles describiendo los criterios que distinguen a un grupo comercializable de personas dentro de la base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
@@ -34,18 +34,18 @@ El servicio de segmentación de Adobe Experience Platform proporciona una interf
 
 | Función | Descripción |
 |--- | ---|
-| Ficha Audiencias combinadas de [!DNL Segment Builder] | Las fichas [!UICONTROL Segmentos] y [!UICONTROL Audiencias] de la [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL Audiencias] . Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
-| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en el [!DNL Segment Builder] panel. Para seleccionar una directiva de combinación para una definición de segmento, haga clic en el icono de engranaje de la ficha **[!UICONTROL Campos]** y, a continuación, utilice el menú desplegable **[!UICONTROL Combinar directiva]** para seleccionar la directiva de combinación que desee utilizar. |
+| Ficha Audiencias combinadas en [!DNL Segment Builder] | Las fichas [!UICONTROL Segmentos] y [!UICONTROL Audiencias] de [!DNL Segment Builder] se han combinado en una sola ficha [!UICONTROL Audiencias]. Esta ficha le permite explorar y buscar audiencias existentes, que puede arrastrar y soltar en el lienzo del generador de reglas para crear una nueva definición de segmento. Al hacer referencia a una audiencia se puede agregar uno de los siguientes conjuntos de lógica de regla a la nueva definición de segmento: Pertenencia a la audiencia como regla, conjunto completo de lógica de regla que definió la audiencia a la que se hace referencia. |
+| Nueva ubicación para el selector de directivas de combinación | Se ha cambiado la ubicación del selector de directivas de combinación en [!DNL Segment Builder]. Para seleccionar una directiva de combinación para una definición de segmento, seleccione el icono de engranaje en la ficha **[!UICONTROL Campos]** y, a continuación, utilice el menú desplegable **[!UICONTROL Política de combinación]** para seleccionar la directiva de combinación que desee utilizar. |
 
 **Problemas conocidos**
 
 * Ninguna
 
-Para obtener más información, consulte la descripción general [del servicio](../../segmentation/home.md)de segmentación.
+Para obtener más información, consulte la [información general del servicio de segmentación](../../segmentation/home.md).
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-Adobe Experience Platform [!DNL Decisioning Service] ofrece la capacidad de seleccionar programática e inteligentemente la &quot;Mejor experiencia siguiente&quot; de un conjunto de opciones disponibles para un individuo determinado, entregarlas a cualquier canal o aplicación y realizar sistemas de informes y análisis.
+Adobe Experience Platform [!DNL Decisioning Service] permite seleccionar de forma programada e inteligente la &quot;Mejor experiencia siguiente&quot; de un conjunto de opciones disponibles para un individuo determinado, ofrecerla a cualquier canal o aplicación y realizar sistemas de informes y análisis.
 
 **Nuevas funciones**
 
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Decisioning Service] ofrece la capacidad de sele
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar fácilmente las conexiones de origen para varios proveedores de datos. Estas conexiones de origen le permiten autenticarse en sus sistemas almacenamiento y servicios CRM, establecer tiempos para ejecuciones de ingestión y administrar el rendimiento de la ingesta de datos.
 
@@ -67,16 +67,16 @@ Adobe Experience Platform puede ingerir datos de fuentes externas y, al mismo ti
 
 | Función | Descripción |
 | ---------- | ------------ |
-| Conexión de flujo continuo | La ingestión por flujo continuo le permite enviar datos desde dispositivos del lado del cliente y del servidor a [!DNL Experience Platform] en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
+| Conexión de flujo continuo | La ingestión por flujo continuo le permite enviar datos desde dispositivos del cliente y del servidor a [!DNL Experience Platform] en tiempo real. La versión incluye una nueva interfaz de usuario de conexión de flujo continuo. |
 | Compatibilidad con conectores para [!DNL Google Cloud Store] | Compatibilidad para recopilar datos de [!DNL Google Cloud Store]. |
 
 **Problemas conocidos**
 
 * Ninguna.
 
-Para obtener más información sobre las fuentes, consulte la descripción general [de](../../sources/home.md)las fuentes.
+Para obtener más información sobre las fuentes, consulte la [información general de las fuentes](../../sources/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM)  {#xdm}
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
@@ -91,10 +91,10 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 **Corrección de errores**
 
 * Mantenimiento y mejoras relacionadas con controles de acceso y entornos limitados.
-* Compatibilidad con `eTag` el `/descriptors` extremo en la [!DNL Schema Registry] API.
+* Compatibilidad con `eTag` para el extremo `/descriptors` en la API [!DNL Schema Registry].
 
 **Problemas conocidos**
 
 * Ninguna
 
-Para obtener más información sobre cómo trabajar con XDM mediante la [!DNL Schema Registry] API y la interfaz de usuario, lea la documentación [!DNL Schema Editor] del sistema [](../../xdm/home.md)XDM.
+Para obtener más información sobre cómo trabajar con XDM mediante la API [!DNL Schema Registry] y la interfaz de usuario [!DNL Schema Editor], lea la [documentación del sistema XDM](../../xdm/home.md).
