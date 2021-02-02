@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;campo;
 solution: Experience Platform
 title: Definición de campos XDM en la interfaz de usuario
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -86,10 +86,10 @@ Al definir un nuevo campo, pueden aparecer opciones de configuración adicionale
 | [!UICONTROL Format] | [!UICONTROL Cadena] | Seleccione entre una lista de formatos predefinidos para cadenas a las que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-puntero]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longitud mínima] | [!UICONTROL Cadena] | El número mínimo de caracteres que debe contener la cadena para que el valor se acepte durante la ingestión. |
 | [!UICONTROL Longitud máxima] | [!UICONTROL Cadena] | El número máximo de caracteres que debe contener la cadena para que el valor se acepte durante la ingestión. |
-| [!UICONTROL Valor mínimo] | [!UICONTROL Duplicada] | El valor mínimo del Doble que debe aceptarse durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se acepta el valor. |
-| [!UICONTROL Valor máximo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se acepta el valor. |
-| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se rechaza el valor. |
-| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se rechaza el valor. |
+| [!UICONTROL Valor mínimo] | [!UICONTROL Duplicada] | El valor mínimo del Doble que debe aceptarse durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se acepta el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL valor mínimo exclusivo]&quot; debe dejarse en blanco. |
+| [!UICONTROL Valor máximo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se acepta el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor máximo exclusivo]&quot; debe dejarse en blanco. |
+| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se rechaza el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor mínimo]&quot; (no exclusiva) debe dejarse en blanco. |
+| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Duplicada] | Valor máximo del Doble que se aceptará durante la ingestión. Si el valor ingestado coincide exactamente con el introducido aquí, se rechaza el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor máximo]&quot; (no exclusiva) debe dejarse en blanco. |
 
 ## Tipos de campos especiales {#special}
 
