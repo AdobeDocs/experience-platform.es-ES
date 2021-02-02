@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
+keywords: Experience Platform;inicio;temas populares;Almacenamiento de Google Cloud;almacenamiento de Google Cloud;Google;Google
 solution: Experience Platform
 title: Creación de un conector de Almacenamiento de Google Cloud mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Almacenamiento de Google Cloud.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -118,4 +118,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión [!DNL Google Cloud Storage] mediante API y se obtuvo un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingesta de datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
+Siguiendo este tutorial, ha creado una conexión [!DNL Google Cloud Storage] mediante API y se obtuvo un ID único como parte del cuerpo de respuesta. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingestar datos de parquet mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
