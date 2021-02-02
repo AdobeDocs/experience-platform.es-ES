@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
+keywords: Experience Platform;inicio;temas populares;ssc;SSC;Salesforce Service Cloud;nube de servicios de Salesforce
 solution: Experience Platform
 title: Creación de un conector de Salesforce Service Cloud mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a Experience Platform a Salesforce Service Cloud (en lo sucesivo, "SSC").
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 2%
+source-wordcount: '602'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
