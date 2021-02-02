@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
+keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingestión por lotes;ingestión por lotes;lotes fallidos;Obtener lotes fallidos;obtener lotes fallidos;Descargar lotes fallidos;descargar lotes fallidos;
 solution: Experience Platform
 title: Recuperar lotes con errores
 topic: tutorial
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar información sobre un lote en el que se ha producido un error al utilizar las API de inserción de datos.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 1%
+source-wordcount: '645'
+ht-degree: 2%
 
 ---
 
 
 # Recuperación de lotes con errores mediante la API
 
-Adobe Experience Platform proporciona dos métodos para cargar e ingestar datos. Puede utilizar la ingestión por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite insertar sus datos para [!DNL Platform] utilizar puntos finales de flujo en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e ingestar datos. Puede utilizar la ingestión por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de puntos finales de flujo en tiempo real.
 
-En este tutorial se explican los pasos para recuperar información sobre un lote con errores mediante [!DNL Data Ingestion] API.
+En este tutorial se explican los pasos para recuperar información sobre un lote con errores mediante API [!DNL Data Ingestion].
 
 ## Primeros pasos
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [[!DNL Data Ingestion]](../home.md):: Métodos por los que se pueden enviar datos [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Data Ingestion]](../home.md):: Métodos por los que se pueden enviar datos  [!DNL Experience Platform].
 
 ### Leer llamadas de API de muestra
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -186,7 +186,7 @@ Dado que el lote ingestado anterior tenía una fecha y hora no válida, se mostr
 
 ## Pasos siguientes
 
-Después de leer este tutorial, ha aprendido a recuperar errores de lotes con errores. Para obtener más información sobre la ingestión por lotes, lea la guía [para desarrolladores de la ingestión de](../batch-ingestion/overview.md)lotes. Para obtener más información acerca de la transmisión por secuencias de ingesta, lea el tutorial sobre la [creación de una conexión de transmisión por secuencias](../tutorials/create-streaming-connection.md).
+Después de leer este tutorial, ha aprendido a recuperar errores de lotes con errores. Para obtener más información sobre la ingestión por lotes, lea la [guía para desarrolladores de ingestión por lotes](../batch-ingestion/overview.md). Para obtener más información sobre la ingestión de flujo continuo, lea el [tutorial de creación de una conexión de flujo](../tutorials/create-streaming-connection.md).
 
 ## Apéndice
 
@@ -213,7 +213,7 @@ Este error se muestra si falta el identificador de organización de IMS en la ca
 
 ### Falta el esquema XDM
 
-Este error se muestra si falta el `schemaRef` de la `xdmMeta` .
+Este error se muestra si falta `schemaRef` para `xdmMeta`.
 
 ```json
 {
@@ -228,7 +228,7 @@ Este error se muestra si falta el `schemaRef` de la `xdmMeta` .
 
 ### Falta el nombre del origen
 
-Este error se muestra si el `source` encabezado no tiene su valor `name`.
+Este error se muestra si el `source` del encabezado no tiene su `name`.
 
 ```json
 {
@@ -244,7 +244,7 @@ Este error se muestra si el `source` encabezado no tiene su valor `name`.
 
 ### Falta la entidad XDM
 
-Este error se muestra si no hay `xdmEntity` presencia.
+Este error se muestra si no hay `xdmEntity` presente.
 
 ```json
 {
