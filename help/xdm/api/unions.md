@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;Registro de esquemas;Registro de Esquemas;unión;Unión;uniones;Uniones;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Uniones
 description: El extremo /uniones de la API del Registro de Esquema permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ Las solicitudes de búsqueda de uniones requieren que se incluya `version` en el
 
 Los siguientes encabezados Accept están disponibles para las búsquedas de esquemas de unión:
 
-| Aceptar | Descripción |
+| Accept | Descripción |
 | -------|------------ |
 | application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Sin procesar con `$ref` y `allOf`. Incluye títulos y descripciones. |
 | application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` atributos y  `allOf` resueltos. Incluye títulos y descripciones. |
