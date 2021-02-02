@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;mapa de identidad;mapa de identidad;mapa de identidad;mapa de Esquema;mapa;mapa;unión esquema;unión
 solution: Experience Platform
 title: Clase XDM ExperienceEvent
 topic: overview
 description: Este documento proporciona información general sobre la clase ExperienceEvent XDM.
 translation-type: tm+mt
-source-git-commit: 9e55e9ef6c619a952ca7519ca05dab59da2c573b
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 [!DNL XDM ExperienceEvent] es una clase XDM estándar que le permite crear una instantánea con marca de hora del sistema cuando se produce un evento específico o cuando se alcanza un conjunto determinado de condiciones.
 
-Un Evento de experiencias es un registro de hechos de lo que ha ocurrido, incluido el momento y la identidad del individuo involucrado. Los eventos pueden ser explícitos (acciones humanas directamente observables) o implícitos (se plantean sin una acción humana directa) y se registran sin agregación ni interpretación. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de la Plataforma, consulte la descripción general [de](../home.md#data-behaviors)XDM.
+Un Evento de experiencias es un registro de hechos de lo que ha ocurrido, incluido el momento y la identidad del individuo involucrado. Los eventos pueden ser explícitos (acciones humanas directamente observables) o implícitos (se plantean sin una acción humana directa) y se registran sin agregación ni interpretación. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de la Plataforma, consulte la [información general de XDM](../home.md#data-behaviors).
 
-La [!DNL XDM ExperienceEvent] clase misma proporciona varios campos relacionados con series temporales a un esquema. Los valores de algunos de estos campos se rellenan automáticamente al ingestar los datos:
+La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con la serie temporal a un esquema. Los valores de algunos de estos campos se rellenan automáticamente al ingestar los datos:
 
 <img src="../images/classes/experienceevent.png" width="650" /><br />
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_id` | Identificador de cadena único generado por el sistema para el evento. Este campo se utiliza para rastrear la singularidad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios posteriores. Dado que este campo es generado por el sistema, no debe proporcionarse un valor explícito durante la ingestión de datos.<br><br>Es importante distinguir que este campo **no** representa una identidad relacionada con una persona individual, sino más bien el propio registro de datos. Los datos de identidad relativos a una persona deben relegarse a campos [de](../schema/composition.md#identity) identidad. |
+| `_id` | Identificador de cadena único generado por el sistema para el evento. Este campo se utiliza para rastrear la singularidad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios posteriores. Dado que este campo es generado por el sistema, no debe proporcionarse un valor explícito durante la ingestión de datos.<br><br>Es importante distinguir que este campo  **no** representa una identidad relacionada con una persona individual, sino más bien el propio registro de datos. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) en su lugar. |
 | `eventMergeId` | ID del lote ingestado que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingestión de datos. |
-| `eventType` | Una cadena que indica el tipo de evento principal del registro. Los valores aceptados y sus definiciones se proporcionan en la sección [del](#eventType)apéndice. |
-| `identityMap` | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se ingestan datos de identidad. Para utilizar este campo correctamente para el Perfil [del cliente en tiempo](../../profile/home.md)real, no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los [conceptos básicos de la composición](../schema/composition.md#identityMap) de esquemas para obtener más información sobre su caso de uso. |
-| `timestamp` | Hora en la que se produjo el evento o la observación, con el formato [RFC 3339 (sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `eventType` | Una cadena que indica el tipo de evento principal del registro. Los valores aceptados y sus definiciones se proporcionan en la [sección del apéndice](#eventType). |
+| `identityMap` | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se ingestan datos de identidad. Para utilizar este campo correctamente para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los  [conceptos básicos de la ](../schema/composition.md#identityMap) composición de esquemas para obtener más información sobre su caso de uso. |
+| `timestamp` | Hora en la que se produjo el evento o la observación, con el formato [RFC 3339 Sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
 
 ## Mezclas compatibles {#mixins}
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../mixins/name-updates.md) mezcla para obtener más información.
+>Los nombres de varias mezclas han cambiado. Consulte el documento en [actualizaciones de nombres de mezcla](../mixins/name-updates.md) para obtener más información.
 
-Adobe proporciona varias mezclas estándar para su uso con la [!DNL XDM ExperienceEvent] clase. A continuación se presenta una lista de algunas mezclas utilizadas habitualmente para la clase:
+Adobe proporciona varias mezclas estándar para su uso con la clase [!DNL XDM ExperienceEvent]. A continuación se presenta una lista de algunas mezclas utilizadas habitualmente para la clase:
 
 * [[!UICONTROL Detalles del ID de usuario final]](../mixins/event/enduserids.md)
 * [[!UICONTROL Detalles del entorno]](../mixins/event/environment-details.md)
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre la clase [!UICONTROL XDM ExperienceEvent] .
+La siguiente sección contiene información adicional sobre la clase [!UICONTROL XDM ExperienceEvent].
 
 ### Valores aceptados para xdm:eventType {#eventType}
 
@@ -56,14 +56,14 @@ La siguiente tabla describe los valores aceptados para `xdm:eventType`, junto co
 | `advertising.timePlayed` | Describe la cantidad de tiempo que un usuario emplea en un recurso de medios temporizados específico. |
 | `advertising.federated` | Indica si se ha creado un Evento de experiencias mediante la federación de datos (uso compartido de datos entre clientes). |
 | `advertising.clicks` | Haga clic en las acciones de un anuncio. |
-| `advertising.conversions` | Acciones predefinidas realizadas por un cliente que activan un evento para la evaluación del rendimiento. |
+| `advertising.conversions` | Acciones predefinidas realizadas por un cliente que déclencheur un evento para la evaluación del rendimiento. |
 | `advertising.firstQuartiles` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 25 % de su duración. |
 | `advertising.impressions` | Impresión(s) de un anuncio a un cliente con el potencial de ser visto. |
 | `advertising.midpoints` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 50 % de su duración. |
 | `advertising.starts` | Se ha empezado a reproducir un anuncio de vídeo digital. |
 | `advertising.thirdQuartiles` | Un anuncio de vídeo digital se ha reproducido a una velocidad normal durante el 75 % de su duración. |
 | `web.webpagedetails.pageViews` | Una página web ha recibido una o más vistas. |
-| `web.webinteraction.linkClicks` | Un vínculo ha recibido uno o más clics. |
+| `web.webinteraction.linkClicks` | Se seleccionó un vínculo una o más veces. |
 | `commerce.checkouts` | Se ha producido un evento de cierre de compra para una lista de producto. Puede haber más de un evento de cierre de compra si hay varios pasos en un proceso de cierre de compra. Si hay varios pasos, la marca de tiempo y la página o experiencia a las que se hace referencia para cada evento se utilizan para identificar cada evento individual (paso), representado en orden. |
 | `commerce.productListAdds` | Se ha agregado un producto a la lista del producto o al carro de compras. |
 | `commerce.productListOpens` | Se ha inicializado o creado una nueva lista de productos (carro de compras). |
