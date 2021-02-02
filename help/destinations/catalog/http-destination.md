@@ -1,13 +1,13 @@
 ---
-keywords: streaming;
-title: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-seo-title: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-description: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
-seo-description: El destino HTTP es un destino de la Plataforma de datos del cliente en tiempo real que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+keywords: flujo continuo;
+title: El destino HTTP es un destino de Adobe Experience Platform que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+seo-title: El destino HTTP es un destino de Adobe Experience Platform que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+description: El destino HTTP es un destino de Adobe Experience Platform que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
+seo-description: El destino HTTP es un destino de Adobe Experience Platform que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -17,23 +17,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El [!DNL HTTP] destino de CDP en tiempo real se encuentra actualmente en alfa. La documentación y las funciones están sujetas a cambios.
+>El destino [!DNL HTTP] de Platform está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
 
 ## Información general {#overview}
 
-El [!DNL HTTP] destino es un [!DNL Real-time Customer Data Platform] destino de flujo continuo que le ayuda a enviar datos de perfil a puntos finales [!DNL HTTP] de terceros.
+El destino [!DNL HTTP] es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos [!DNL HTTP] de terceros.
 
-Para enviar datos de perfil a los [!DNL HTTP] extremos, primero debe conectarse al destino en el [[!DNL Real-time Customer Data Platform]](#connect-destination).
+Para enviar datos de perfil a [!DNL HTTP] extremos, primero debe conectarse al destino en [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
-El [!DNL HTTP] destino está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a extremos genéricos [!DNL HTTP] .
+El [!DNL HTTP] destino está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a extremos [!DNL HTTP] genéricos.
 
 [!DNL HTTP] los extremos pueden ser sistemas propios de los clientes o soluciones de terceros.
 
 ## Conectar con destino {#connect-destination}
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL HTTP API]y seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL HTTP API] y seleccione **[!UICONTROL Configurar]**.
 
 ![Activar destino HTTP](../assets/catalog/http/activate.png)
 
@@ -43,25 +43,25 @@ En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL HTT
 >
 >![Activar destino HTTP](../assets/catalog/http/connect.png)
 
-En el paso [!UICONTROL Cuenta] , debe definir los detalles de conexión del extremo HTTP. Seleccione **[!UICONTROL Nueva cuenta]** e introduzca los detalles de conexión del extremo HTTP al que desea conectarse.
-- **[!UICONTROL httpEndpoint]**: la finalización [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
+En el paso [!UICONTROL Cuenta], debe definir los detalles de conexión del extremo HTTP. Seleccione **[!UICONTROL Nueva cuenta]** e introduzca los detalles de conexión para el extremo HTTP al que desea conectarse.
+- **[!UICONTROL httpEndpoint]**: la finalización  [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
    - Opcionalmente, puede agregar parámetros de consulta a [!UICONTROL httpEndpoint] [!DNL URL].
-- **[!UICONTROL authEndpoint]**: la finalización [!DNL URL] del extremo HTTP utilizado para la [!DNL OAuth2] autenticación.
-- **[!UICONTROL ID]** del cliente: el [!DNL clientID] parámetro utilizado en las credenciales del [!DNL OAuth2] cliente.
-- **[!UICONTROL Secreto]** del cliente: el [!DNL clientSecret] parámetro utilizado en las credenciales del [!DNL OAuth2] cliente.
+- **[!UICONTROL authEndpoint]**: la finalización  [!DNL URL] del extremo HTTP utilizado para la  [!DNL OAuth2] autenticación.
+- **[!UICONTROL ID]** del cliente: el  [!DNL clientID] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
+- **[!UICONTROL Secreto]** del cliente: el  [!DNL clientSecret] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
 
 >[!NOTE]
 >
->Actualmente solo se admiten [!DNL OAuth2] las credenciales de cliente.
+>Actualmente solo se admiten [!DNL OAuth2] credenciales de cliente.
 
 ![Conexión de extremo HTTP](../assets/catalog/http/connect.png)
 
 Haga clic en **[!UICONTROL Conectar al destino]**. Una vez que la conexión se haya realizado correctamente, haga clic en **[!UICONTROL Siguiente]**.
 
-En el paso [!UICONTROL Autenticación] , introduzca las credenciales de autenticación de cuenta:
+En el paso [!UICONTROL Autenticación], introduzca las credenciales de autenticación de la cuenta:
 - **[!UICONTROL Nombre]**: escriba un nombre por el cual reconocerá este destino en el futuro.
 - **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
-- **[!UICONTROL Encabezados]** personalizados: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato: `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Encabezados]** personalizados: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ En el paso [!UICONTROL Autenticación] , introduzca las credenciales de autentic
 
 ![Autenticación HTTP](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](../../rtcdp/privacy/data-governance-overview.md#destinations) . Para obtener información sobre los casos individuales de uso de mercadotecnia definidos por el Adobe, consulte la descripción general [de las políticas de uso de](../../data-governance/policies/overview.md#core-actions)datos.
+**[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información acerca de los casos de uso de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../data-governance/policies/overview.md).
 
 Haga clic en **[!UICONTROL Crear destino]**.
 
@@ -79,11 +79,11 @@ Consulte [Activar perfiles y segmentos en un destino](../ui/activate-destination
 
 ## Atributos de destino
 
-Durante el paso [[!UICONTROL Seleccionar atributos]](../ui/activate-destinations.md#select-attributes) , al [activar segmentos](../ui/activate-destinations.md) en un [!DNL HTTP] destino, se recomienda seleccionar un identificador único en el esquema [de](../../profile/home.md#profile-fragments-and-union-schemas)unión. Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
+Durante el paso [[!UICONTROL Seleccionar atributos]](../ui/activate-destinations.md#select-attributes), cuando [active segmentos](../ui/activate-destinations.md) en un destino [!DNL HTTP], le recomendamos que seleccione un identificador único del esquema de [unión](../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
 
 ## Datos exportados {#exported-data}
 
-Los datos exportados [!DNL Experience Platform] llegan a su [!DNL HTTP] destino en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son [!DNL ECID] y correo electrónico.
+Los datos exportados [!DNL Experience Platform] llegan al destino [!DNL HTTP] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son [!DNL ECID] y email.
 
 ```json
 {
