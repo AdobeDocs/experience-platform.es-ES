@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: 'Atributos calculados: API de Perfil del cliente en tiempo real'
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
+title: Extremo de API de atributos calculados
 topic: guide
+type: Documentation
+description: 'Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan con datos de Perfil del cliente en tiempo real, lo que significa que puede obtener valores acumulados en todos los registros y eventos almacenados en Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2450'
 ht-degree: 1%
 
 ---
@@ -21,15 +23,15 @@ Los atributos calculados permiten calcular automáticamente el valor de los camp
 
 Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información.
 
-Esta guía le ayudará a comprender mejor los atributos calculados dentro de Adobe Experience Platform e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas mediante el `/config/computedAttributes` punto final.
+Esta guía le ayudará a comprender mejor los atributos calculados dentro de Adobe Experience Platform e incluye ejemplos de llamadas de API para realizar operaciones CRUD básicas mediante el extremo `/config/computedAttributes`.
 
 ## Primeros pasos
 
-El punto final de API utilizado en esta guía forma parte de la API [de Perfil del cliente en tiempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)real. Antes de continuar, consulte la guía [de](getting-started.md) introducción para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas con éxito a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la [API de Perfil del cliente en tiempo real](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas exitosas a cualquier API [!DNL Experience Platform].
 
 ## Explicación de los atributos calculados
 
-Adobe Experience Platform le permite importar y combinar fácilmente datos de múltiples fuentes para poder generarlos [!DNL Real-time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista de 360 grados del cliente.
+Adobe Experience Platform le permite importar y combinar fácilmente datos de múltiples fuentes para generar [!DNL Real-time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista de 360 grados del cliente.
 
 Parte de la información recopilada en el perfil se puede entender fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o basarse en otros campos y valores para generar la información (por ejemplo, &quot;total de compras de duración&quot;). Para facilitar la comprensión de estos datos de un vistazo, [!DNL Platform] permite crear atributos calculados que realizan automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
 
@@ -39,9 +41,9 @@ Los atributos calculados incluyen la creación de una expresión, o &quot;regla&
 
 Los casos de uso para atributos calculados pueden ir desde cálculos simples a referencias muy complejas. Estos son algunos ejemplos de casos de uso para atributos calculados:
 
-1. **[!UICONTROL Porcentajes]:** Un atributo simple calculado podría incluir tomar dos campos numéricos en un registro y dividirlos para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
-1. **[!UICONTROL Uso]de la aplicación:** Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° período de apertura, lo que estimula una mayor participación con su marca.
-1. **[!UICONTROL Valores]acumulados:** La recopilación de totales en curso, como un valor de compra de por vida para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
+1. **[!UICONTROL Porcentajes]:** un atributo simple calculado podría incluir la toma de dos campos numéricos en un registro y su división para crear un porcentaje. Por ejemplo, puede tomar el número total de correos electrónicos enviados a un individuo y dividirlos por el número de correos electrónicos que se abre el individuo. Al consultar el campo de atributo calculado resultante, se mostraría rápidamente el porcentaje de correos electrónicos totales abiertos por el individuo.
+1. **[!UICONTROL Uso] de la aplicación:** Otro ejemplo incluye la capacidad de acumulado del número de veces que un usuario abre la aplicación. Al rastrear el número total de aperturas de aplicaciones, en función de eventos abiertos individuales, puede enviar ofertas o mensajes especiales a los usuarios en su 100° período de apertura, lo que estimula una mayor participación con su marca.
+1. **[!UICONTROL Valores] de duración:** recopilar totales de ejecución, como un valor de compra de duración para un cliente, puede ser muy difícil. Esto requiere actualizar el total histórico cada vez que se produce un nuevo evento de compra. Un atributo calculado le permite hacerlo mucho más fácilmente manteniendo el valor de duración en un solo campo que se actualiza automáticamente después de cada evento de compra exitoso relacionado con el cliente.
 
 ## Configurar un atributo calculado
 
@@ -49,71 +51,71 @@ Para configurar un atributo calculado, primero debe identificar el campo que con
 
 >[!NOTE]
 >
->No se pueden agregar atributos calculados a los campos dentro de mezclas definidas por Adobe. El campo debe estar dentro de la `tenant` Área de nombres, lo que significa que debe ser un campo definido y agregado a un esquema.
+>No se pueden agregar atributos calculados a los campos dentro de mezclas definidas por Adobe. El campo debe estar dentro de la Área de nombres `tenant`, lo que significa que debe ser un campo que usted defina y agregue a un esquema.
 
-Para definir correctamente un campo de atributo calculado, el esquema debe estar activado [!DNL Profile] y aparecer como parte del esquema de unión de la clase en la que se basa el esquema. Para obtener más información sobre esquemas y uniones [!DNL Profile]habilitados, consulte la sección de la guía para [!DNL Schema Registry] desarrolladores sobre la [activación de un esquema para Perfil y visualización de esquemas](../../xdm/api/getting-started.md)de unión. También se recomienda examinar la [sección sobre uniones](../../xdm/schema/composition.md) en la documentación básica sobre la composición del esquema.
+Para definir correctamente un campo de atributo calculado, el esquema debe habilitarse para [!DNL Profile] y aparecer como parte del esquema de unión para la clase en la que se basa el esquema. Para obtener más información sobre esquemas y uniones habilitados para [!DNL Profile], consulte la sección de la [!DNL Schema Registry] guía para desarrolladores en [habilitación de un esquema para Perfil y visualización de esquemas de unión](../../xdm/api/getting-started.md). También se recomienda revisar la [sección sobre uniones](../../xdm/schema/composition.md) en la documentación básica de la composición de esquema.
 
-El flujo de trabajo de este tutorial utiliza un esquema [!DNL Profile]habilitado y sigue los pasos para definir una nueva combinación que contenga el campo de atributo calculado y garantizar que sea la Área de nombres correcta. Si ya tiene un campo que se encuentra en la Área de nombres correcta dentro de un esquema con Perfil habilitado, puede continuar directamente con el paso para [crear un atributo](#create-a-computed-attribute)calculado.
+El flujo de trabajo de este tutorial utiliza un esquema habilitado para [!DNL Profile] y sigue los pasos para definir una nueva combinación que contenga el campo de atributo calculado y garantizar que sea la Área de nombres correcta. Si ya tiene un campo que se encuentra en la Área de nombres correcta dentro de un esquema habilitado para Perfil, puede continuar directamente con el paso para [crear un atributo calculado](#create-a-computed-attribute).
 
 ### Vista de un esquema
 
-Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, agregar una mezcla y definir un campo. Si prefiere utilizar la [!DNL Schema Registry] API, consulte la guía [para desarrolladores de](../../xdm/api/getting-started.md) Esquema Registry para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para su uso con [!DNL Real-time Customer Profile].
+Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, agregar una mezcla y definir un campo. Si prefiere utilizar la API [!DNL Schema Registry], consulte la [guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md) para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para su uso con [!DNL Real-time Customer Profile].
 
 En la interfaz de usuario, haga clic en **[!UICONTROL Esquemas]** en el carril izquierdo y utilice la barra de búsqueda de la ficha **[!UICONTROL Examinar]** para encontrar rápidamente el esquema que desea actualizar.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Una vez localizado el esquema, haga clic en su nombre para abrir el [!DNL Schema Editor] lugar donde puede realizar modificaciones en el esquema.
+Una vez que haya localizado el esquema, haga clic en su nombre para abrir el [!DNL Schema Editor] donde puede realizar modificaciones en el esquema.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ### Crear una mezcla
 
-Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** junto a **[!UICONTROL Mezclinas]** en la sección **[!UICONTROL Composición]** en la parte izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** , donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
+Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** al lado de **[!UICONTROL Mezclas]** en la sección **[!UICONTROL Composición]** a la izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
 
-Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añadir mezcla]** cuando la haya completado.
+Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añadir mezcla]** cuando finalice.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ### Añadir un campo de atributo calculado en el esquema
 
-Su nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mezclas]&quot; en &quot;[!UICONTROL Composición]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones de campo **** Añadir en la sección **[!UICONTROL Estructura]** del editor.
+La nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mezclas]&quot; en &quot;[!UICONTROL Composición]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones **[!UICONTROL Añadir campo]** en la sección **[!UICONTROL Estructura]** del editor.
 
-Seleccione **[!UICONTROL Añadir campo]** junto al nombre del esquema para agregar un campo de nivel superior, o bien puede seleccionar agregar el campo en cualquier lugar dentro del esquema que prefiera.
+Seleccione **[!UICONTROL Añadir campo]** junto al nombre del esquema para agregar un campo de nivel superior, o puede seleccionar agregar el campo en cualquier lugar dentro del esquema que prefiera.
 
-Después de hacer clic en **[!UICONTROL Añadir campo]** , se abre un nuevo objeto, denominado por su ID de inquilino, que muestra que el campo está en la Área de nombres correcta. Dentro de ese objeto, aparece un campo **** Nuevo. Esto sucede si el campo en el que se va a definir el atributo calculado.
+Después de hacer clic en **[!UICONTROL Añadir campo]**, se abre un nuevo objeto, denominado para su ID de inquilino, que muestra que el campo está en la Área de nombres correcta. Dentro de ese objeto, aparece un **[!UICONTROL nuevo campo]**. Esto sucede si el campo en el que se va a definir el atributo calculado.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Configurar el campo
 
-Mediante la sección Propiedades **[!UICONTROL del]** campo a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
+Mediante la sección **[!UICONTROL Propiedades del campo]** a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
 
 >[!NOTE]
 >
 >El tipo del campo debe ser del mismo tipo que el valor del atributo calculado. Por ejemplo, si el valor del atributo calculado es una cadena, el campo que se está definiendo en el esquema debe ser una cadena.
 
-Cuando termine, haga clic en **[!UICONTROL Aplicar]** y aparecerá el nombre del campo, así como su tipo en la sección **[!UICONTROL Estructura]** del editor.
+Cuando termine, haga clic en **[!UICONTROL Aplicar]** y el nombre del campo, así como su tipo, aparecerán en la sección **[!UICONTROL Estructura]** del editor.
 
 ![](../images/computed-attributes/Apply.png)
 
 ### Habilitar esquema para [!DNL Profile]
 
-Antes de continuar, asegúrese de que el esquema esté habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección **[!UICONTROL Estructura]** del editor para que aparezca la ficha Propiedades **[!UICONTROL del]** Esquema. Si el control deslizante del **[!UICONTROL Perfil]** es azul, el esquema se ha activado para [!DNL Profile].
+Antes de continuar, asegúrese de que el esquema se haya habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección **[!UICONTROL Estructura]** del editor para que aparezca la ficha **[!UICONTROL Propiedades del Esquema]**. Si el deslizador **[!UICONTROL Perfil]** es azul, el esquema se ha habilitado para [!DNL Profile].
 
 >[!NOTE]
 >
->La activación de un esquema para [!DNL Profile] no se puede deshacer, por lo que si hace clic en el control deslizante una vez activado, no tendrá que correr el riesgo de deshabilitarlo.
+>No se puede deshacer la activación de un esquema para [!DNL Profile], por lo que si hace clic en el control deslizante una vez que se ha habilitado, no tendrá que correr el riesgo de deshabilitarlo.
 
 ![](../images/computed-attributes/Profile.png)
 
-Ahora puede hacer clic en **[!UICONTROL Guardar]** para guardar el esquema actualizado y continuar con el resto del tutorial con la API.
+Ahora puede hacer clic en **[!UICONTROL Guardar]** para guardar el esquema actualizado y continuar con el resto del tutorial usando la API.
 
 ### Crear un atributo calculado {#create-a-computed-attribute}
 
-Ahora, con el campo de atributo calculado identificado y la confirmación de que el esquema está habilitado para [!DNL Profile], puede configurar un atributo calculado.
+Con el campo de atributo calculado identificado y la confirmación de que el esquema está habilitado para [!DNL Profile], ahora puede configurar un atributo calculado.
 
-Comience por realizar una solicitud de POST al extremo con un cuerpo de solicitud que contenga los detalles del atributo calculado que desea crear. `/config/computedAttributes`
+Comience por realizar una solicitud de POST al extremo `/config/computedAttributes` con un cuerpo de solicitud que contenga los detalles del atributo calculado que desee crear.
 
 **Formato API**
 
@@ -151,15 +153,15 @@ curl -X POST \
 | Propiedad | Descripción |
 |---|---|
 | `name` | El nombre del campo de atributo calculado, como una cadena. |
-| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro del `properties` atributo del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los múltiples niveles de `properties` atributos. |
-| `{TENANT_ID}` | Si no está familiarizado con su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la guía para desarrolladores de [Esquema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `path` | Ruta al campo que contiene el atributo calculado. Esta ruta se encuentra dentro del atributo `properties` del esquema y NO debe incluir el nombre del campo en la ruta. Al escribir la ruta, omita los múltiples niveles de atributos `properties`. |
+| `{TENANT_ID}` | Si no está familiarizado con su ID de inquilino, consulte los pasos para encontrar su ID de inquilino en la [Guía del desarrollador del Registro de Esquema](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros miembros de la organización de IMS a determinar el atributo calculado correcto que se debe utilizar. |
-| `expression.value` | Una expresión válida [!DNL Profile Query Language] (PQL). Para obtener más información sobre PQL y vínculos a consultas compatibles, lea la descripción general [de](../../segmentation/pql/overview.md)PQL. |
-| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase ExperienceEvent XDM. |
+| `expression.value` | Una expresión [!DNL Profile Query Language] (PQL) válida. Para obtener más información sobre PQL y vínculos a consultas admitidas, lea la [información general de PQL](../../segmentation/pql/overview.md). |
+| `schema.name` | La clase en la que se basa el esquema que contiene el campo de atributo calculado. Ejemplo: `_xdm.context.experienceevent` para un esquema basado en la clase XDM ExperienceEvent. |
 
 **Respuesta**
 
-Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo computado recién creado. Estos detalles incluyen un único, de sólo lectura, generado por el sistema `id` que puede utilizarse para hacer referencia al atributo calculado durante otras operaciones de API.
+Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta que contiene los detalles del atributo computado recién creado. Estos detalles incluyen un `id` único, de sólo lectura y generado por el sistema que puede utilizarse para hacer referencia al atributo calculado durante otras operaciones de API.
 
 ```json
 {
@@ -209,8 +211,8 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 |---|---|
 | `id` | ID único, de sólo lectura, generado por el sistema que se puede utilizar para hacer referencia al atributo calculado durante otras operaciones de API. |
 | `imsOrgId` | La organización de IMS relacionada con el atributo calculado debe coincidir con el valor enviado en la solicitud. |
-| `sandbox` | El objeto sandbox contiene detalles del entorno limitado en el que se configuró el atributo calculado. Esta información se obtiene a partir del encabezado del simulador para pruebas enviado en la solicitud. Para obtener más información, consulte la descripción general [de los](../../sandboxes/home.md)entornos limitados. |
-| `positionPath` | Matriz que contiene el campo desconstruido `path` al que se envió la solicitud. |
+| `sandbox` | El objeto sandbox contiene detalles del entorno limitado en el que se configuró el atributo calculado. Esta información se obtiene a partir del encabezado del simulador para pruebas enviado en la solicitud. Para obtener más información, consulte la [información general de los entornos limitados](../../sandboxes/home.md). |
+| `positionPath` | Matriz que contiene el `path` desconstruido en el campo que se envió en la solicitud. |
 | `returnSchema.meta:xdmType` | Tipo del campo en el que se almacenará el atributo calculado. |
 | `definedOn` | Una matriz que muestra los esquemas de unión en los que se ha definido el atributo calculado. Contiene un objeto por esquema de unión, lo que significa que puede haber varios objetos dentro de la matriz si el atributo calculado se ha agregado a varios esquemas en función de diferentes clases. |
 | `active` | Un valor booleano que muestra si el atributo calculado está activo o no. De forma predeterminada, el valor es `true`. |
@@ -220,13 +222,13 @@ Un atributo calculado creado correctamente devuelve el estado HTTP 200 (OK) y un
 
 ## Acceso a atributos calculados
 
-Al trabajar con atributos calculados mediante la API, hay dos opciones para acceder a atributos calculados que han sido definidas por su organización. La primera es la lista de todos los atributos calculados; la segunda es la vista de un atributo calculado específico por su único `id`.
+Al trabajar con atributos calculados mediante la API, hay dos opciones para acceder a atributos calculados que han sido definidas por su organización. La primera es la lista de todos los atributos calculados; la segunda es la vista de un atributo calculado específico por su `id` único.
 
 Los pasos para enumerar todos los atributos calculados y para ver un atributo calculado específico se describen en las secciones siguientes.
 
 ### Atributos calculados de lista {#list-computed-attributes}
 
-La organización de IMS puede crear varios atributos calculados y realizar una solicitud de GET al extremo permite realizar la lista de todos los atributos calculados existentes para la organización. `/config/computedAttributes`
+La organización de IMS puede crear varios atributos calculados y realizar una solicitud de GET al extremo `/config/computedAttributes` le permite realizar la lista de todos los atributos calculados existentes para su organización.
 
 **Formato API**
 
@@ -247,9 +249,9 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta incluye un `_page` atributo que proporciona el número total de atributos calculados (`totalCount`) y el número de atributos calculados en la página (`pageSize`).
+Una respuesta correcta incluye un atributo `_page` que proporciona el número total de atributos calculados (`totalCount`) y el número de atributos calculados en la página (`pageSize`).
 
-La respuesta también incluye una `children` matriz compuesta por uno o más objetos, cada uno de los cuales contiene los detalles de un atributo calculado. Si su organización no tiene atributos calculados, la matriz `totalCount` y `pageSize` `children` será 0 (cero) y la matriz estará vacía.
+La respuesta también incluye una matriz `children` compuesta por uno o más objetos, cada uno de los cuales contiene los detalles de un atributo calculado. Si su organización no tiene atributos calculados, `totalCount` y `pageSize` serán 0 (cero) y la matriz `children` estará vacía.
 
 ```json
 {
@@ -357,14 +359,14 @@ La respuesta también incluye una `children` matriz compuesta por uno o más obj
 | Propiedad | Descripción |
 |---|---|
 | `_page.totalCount` | El número total de atributos calculados definidos por la organización de IMS. |
-| `_page.pageSize` | El número de atributos calculados devueltos en esta página de resultados. Si `pageSize` es igual a `totalCount`, significa que solo hay una página de resultados y se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
-| `children` | Matriz compuesta de uno o varios objetos, cada uno de los cuales contiene los detalles de un único atributo calculado. Si no se han definido atributos calculados, la `children` matriz está vacía. |
-| `id` | Un valor único, de sólo lectura, generado por el sistema y asignado automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección sobre la [creación de un atributo](#create-a-computed-attribute) calculado anteriormente en este tutorial. |
-| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET al `_links.next` valor. |
+| `_page.pageSize` | El número de atributos calculados devueltos en esta página de resultados. Si `pageSize` es igual a `totalCount`, significa que sólo hay una página de resultados y se han devuelto todos los atributos calculados. Si no son iguales, hay páginas adicionales de resultados a las que se puede acceder. Consulte `_links.next` para obtener más información. |
+| `children` | Matriz compuesta de uno o varios objetos, cada uno de los cuales contiene los detalles de un único atributo calculado. Si no se han definido atributos calculados, la matriz `children` está vacía. |
+| `id` | Un valor único, de sólo lectura, generado por el sistema y asignado automáticamente a un atributo calculado cuando se crea. Para obtener más información sobre los componentes de un objeto de atributo calculado, consulte la sección sobre [creación de un atributo calculado](#create-a-computed-attribute) anterior en este tutorial. |
+| `_links.next` | Si se devuelve una sola página de atributos calculados, `_links.next` es un objeto vacío, como se muestra en la respuesta de ejemplo anterior. Si su organización tiene muchos atributos calculados, se devolverán en varias páginas a las que puede acceder realizando una solicitud de GET al valor `_links.next`. |
 
 ### Vista de un atributo calculado {#view-a-computed-attribute}
 
-También puede realizar una vista de un atributo calculado específico mediante una solicitud de GET al extremo e incluyendo el ID de atributo calculado en la ruta de la solicitud. `/config/computedAttributes`
+También puede realizar una vista de un atributo calculado específico haciendo una solicitud de GET al extremo `/config/computedAttributes` e incluyendo el ID de atributo calculado en la ruta de la solicitud.
 
 **Formato API**
 
@@ -435,7 +437,7 @@ curl -X GET \
 
 ## Actualizar un atributo calculado
 
-En caso de que necesite actualizar un atributo calculado existente, esto se puede hacer haciendo una solicitud de PATCH al extremo e incluyendo el ID del atributo calculado que desea actualizar en la ruta de la solicitud. `/config/computedAttributes`
+En caso de que necesite actualizar un atributo calculado existente, esto se puede hacer haciendo una solicitud de PATCH al extremo `/config/computedAttributes` e incluyendo el ID del atributo calculado que desea actualizar en la ruta de solicitud.
 
 **Formato API**
 
@@ -449,7 +451,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Solicitud**
 
-Esta solicitud utiliza el formato [Parche](http://jsonpatch.com/) JSON para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
+Esta solicitud utiliza el formato [JSON Patch](http://jsonpatch.com/) para actualizar el &quot;valor&quot; del campo &quot;expresión&quot;.
 
 ```shell
 curl -X PATCH \
@@ -475,7 +477,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Una expresión válida [!DNL Profile Query Language] (PQL). Para obtener más información sobre PQL y vínculos a consultas compatibles, lea la descripción general [de](../../segmentation/pql/overview.md)PQL. |
+| `{NEW_EXPRESSION_VALUE}` | Una expresión [!DNL Profile Query Language] (PQL) válida. Para obtener más información sobre PQL y vínculos a consultas admitidas, lea la [información general de PQL](../../segmentation/pql/overview.md). |
 
 **Respuesta**
 
@@ -483,7 +485,7 @@ Una actualización correcta devuelve el estado HTTP 204 (sin contenido) y un cue
 
 ## Eliminar un atributo calculado
 
-También es posible eliminar un atributo calculado mediante la API. Esto se lleva a cabo realizando una solicitud de DELETE al extremo e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud. `/config/computedAttributes`
+También es posible eliminar un atributo calculado mediante la API. Esto se realiza realizando una solicitud de DELETE al extremo `/config/computedAttributes` e incluyendo el ID del atributo calculado que desea eliminar en la ruta de la solicitud.
 
 >[!NOTE]
 >
