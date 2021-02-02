@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
+keywords: Experience Platform;inicio;temas populares;Recopilar datos de protocolo;datos de protocolo
 solution: Experience Platform
 title: Recopilación de datos de protocolos mediante conectores de origen y API
 topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de una aplicación de protocolos e ingerirlos en la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](../../../../tutorials/authentication.md). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
