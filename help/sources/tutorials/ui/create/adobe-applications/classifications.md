@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics;classifications
+keywords: Experience Platform;inicio;temas populares; análisis;clasificaciones
 description: Este tutorial proporciona los pasos para crear un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario para incluir datos de clasificaciones en Adobe Experience Platform.
 solution: Experience Platform
 title: Creación de un conector de datos de clasificaciones de Adobe Analytics en la interfaz de usuario
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 2%
+source-wordcount: '659'
+ht-degree: 0%
 
 ---
 
@@ -34,27 +34,27 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría de aplicaciones **[!UICONTROL de]** Adobe, seleccione la tarjeta de **[!UICONTROL Adobe Analytics]** y, a continuación, seleccione **[!UICONTROL Añadir datos]** a inicio para trabajar con datos de clasificaciones de Analytics.
+En la categoría **[!UICONTROL aplicaciones de Adobe]**, seleccione la tarjeta **[!UICONTROL Adobe Analytics]** y, a continuación, seleccione **[!UICONTROL Añadir datos]** en inicio para trabajar con datos de clasificaciones de Analytics.
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-Aparece el paso de adición de datos **[!UICONTROL de origen de]** Analytics. Seleccione **[!UICONTROL Clasificaciones]** en el encabezado superior para ver una lista de [!DNL Classifications] conjuntos de datos, incluida la información sobre su ID de dimensión, el nombre del grupo de informes y la ID del grupo de informes.
+Aparece el paso **[!UICONTROL Agregar datos de origen de Analytics]**. Seleccione **[!UICONTROL Clasificaciones]** en el encabezado superior para ver una lista de [!DNL Classifications] conjuntos de datos, incluida la información sobre su ID de dimensión, el nombre del grupo de informes y la ID del grupo de informes.
 
-Cada página muestra hasta diez conjuntos de datos diferentes [!DNL Classifications] entre los que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de conjuntos de datos que ha seleccionado, así como sus nombres. [!DNL Classifications] Este panel también le permite eliminar cualquier conjunto de [!DNL Classifications] datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
+Cada página muestra hasta diez [!DNL Classifications] conjuntos de datos diferentes que puede elegir. Seleccione **[!UICONTROL Siguiente]** en la parte inferior de la página para buscar más opciones. El panel de la derecha muestra el número total de [!DNL Classifications] conjuntos de datos seleccionados, así como sus nombres. Este panel también le permite eliminar cualquier [!DNL Classifications] conjunto de datos que haya seleccionado por error o borrar todas las selecciones con una sola acción.
 
-Puede seleccionar hasta 30 conjuntos de datos diferentes [!DNL Classifications] para [!DNL Platform].
+Puede seleccionar hasta 30 conjuntos de datos [!DNL Classifications] diferentes para incluirlos en [!DNL Platform].
 
-Una vez que haya seleccionado sus [!DNL Classifications] conjuntos de datos, seleccione **[!UICONTROL Siguiente]** en la parte superior derecha de la página.
+Una vez que haya seleccionado los [!DNL Classifications] conjuntos de datos, seleccione **[!UICONTROL Siguiente]** en la parte superior derecha de la página.
 
 ![](../../../../images/tutorials/create/classifications/add-data.png)
 
 ## Revisar las clasificaciones
 
-Aparece el paso **[!UICONTROL Revisar]** , que le permite revisar los [!DNL Classifications] conjuntos de datos seleccionados antes de crearlos. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso **[!UICONTROL Revisar]**, que le permite revisar los [!DNL Classifications] conjuntos de datos seleccionados antes de crearlos. Los detalles se agrupan en las siguientes categorías:
 
 * **[!UICONTROL Conexión]**: Muestra la plataforma de origen y el estado de la conexión.
-* **[!UICONTROL Tipo]** de datos: Muestra el número de seleccionados [!DNL Classifications].
-* **[!UICONTROL Programación]**: Muestra la frecuencia de sincronización de [!DNL Classifications] los datos.
+* **[!UICONTROL Tipo]** de datos: Muestra el número de seleccionados  [!DNL Classifications].
+* **[!UICONTROL Programación]**: Muestra la frecuencia de sincronización para  [!DNL Classifications] los datos.
 
 Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finalizar]** y permita que se cree el flujo de datos.
 
@@ -62,17 +62,17 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ## Monitorear el flujo de datos de las clasificaciones
 
-Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. En la pantalla **[!UICONTROL Catálogo]** , seleccione **[!UICONTROL Flujos]** de datos para la vista de una lista de flujos establecidos asociados a su [!DNL Classifications] cuenta.
+Una vez creado el flujo de datos, puede monitorear los datos que se están ingeriendo a través de él. En la pantalla **[!UICONTROL Catálogo]**, seleccione **[!UICONTROL Flujos de datos]** para vista de una lista de flujos establecidos asociados con su cuenta [!DNL Classifications].
 
 ![](../../../../images/tutorials/create/classifications/dataflows.png)
 
-Aparece la pantalla **[!UICONTROL Flujos]** de datos. En esta página hay una lista de flujos de datos, que incluye información sobre su nombre, datos de origen y estado de ejecución de flujo de datos. A la derecha, se encuentra el panel **[!UICONTROL Propiedades]** que contiene metadatos sobre el flujo de datos [!DNL Classifications] .
+Aparece la pantalla **[!UICONTROL Flujos de datos]**. En esta página hay una lista de flujos de datos, que incluye información sobre su nombre, datos de origen y estado de ejecución de flujo de datos. A la derecha se encuentra el panel **[!UICONTROL Propiedades]** que contiene metadatos relativos al flujo de datos [!DNL Classifications].
 
-Seleccione el conjunto de datos de **[!UICONTROL Destinatario]** al que desee acceder.
+Seleccione el **[!UICONTROL conjunto de datos de Destinatario]** al que desee acceder.
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-La página **[!UICONTROL actividad]** de conjunto de datos muestra información sobre el conjunto de datos de destinatario seleccionado, incluidos detalles sobre el estado del lote, la ID del conjunto de datos y el esquema.
+La página **[!UICONTROL actividad del conjunto de datos]** muestra información sobre el conjunto de datos del destinatario seleccionado, incluidos detalles sobre el estado del lote, la ID del conjunto de datos y el esquema.
 
 >[!IMPORTANT]
 >
@@ -83,8 +83,8 @@ La página **[!UICONTROL actividad]** de conjunto de datos muestra información 
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de datos de clasificaciones de Analytics que incorpora [!DNL Classifications] datos a [!DNL Platform]. Consulte los siguientes documentos para obtener más información [!DNL Analytics] y [!DNL Classifications] datos:
+Siguiendo este tutorial, ha creado un conector de datos de clasificaciones de Analytics que lleva [!DNL Classifications] datos a [!DNL Platform]. Consulte los siguientes documentos para obtener más información sobre los datos [!DNL Analytics] y [!DNL Classifications]:
 
 * [Descripción general del conector de datos de Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Creación de un conector de datos de Analytics en la interfaz de usuario](./analytics.md)
-* [Acerca de las clasificaciones](https://docs.adobe.com/content/help/es-ES/analytics/components/classifications/c-classifications.html#)
+* [Acerca de las clasificaciones](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
