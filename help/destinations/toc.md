@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Guía de destinos
-user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+description: Este documento lista la tabla de contenido de los destinos de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '443'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 0%
 * Tutoriales de API {#api}
    * [Conéctese a los destinos de flujo continuo (AWS Kinesis y los centros de Evento de Azure) y active los datos](./api/streaming-destinations.md)
    * [Conectarse a destinos de marketing por correo electrónico y activar datos](./api/email-marketing.md)
-* Guías de la interfaz de usuario {#ui}
+* Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Página de detalles de destino](./ui/destination-details-page.md)
    * [Conectar a un destino](./ui/connect-destination.md)
@@ -27,10 +28,10 @@ ht-degree: 0%
 * Catálogo de destinos {#catalog}
    * [Descripción general del catálogo de destinos](./catalog/overview.md)
    * [ Destino HTTP (alfa)](./catalog/http-destination.md)
-   * Adobe destinations{#adobe}
+   * Destinos de Adobe{#adobe}
       * [Introducción a los destinos de Adobe](./catalog/adobe/overview.md)
-      * [Uso compartido de segmentos de Experience Platform](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Destinos publicitarios{#advertising}
+      * [Uso compartido de segmentos de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+   * Destinos de publicidad{#advertising}
       * [Descripción general de los destinos de publicidad](./catalog/advertising/overview.md)
       * [Destino de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Destino de la etiqueta de conversión de publicidad Awin](./catalog/advertising/awin-conversiontag.md)
@@ -77,6 +78,7 @@ ht-degree: 0%
       * [Flujo de trabajo para crear destinos de almacenamiento en la nube](./catalog/cloud-storage/workflow.md)
       * [Destino de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Destino de Amazon S3](./catalog/cloud-storage/amazon-s3.md)
+      * [Destino de blob de Azure](./catalog/cloud-storage/azure-blob.md)
       * [Destino de los centros de Evento de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Destino de SFTP](./catalog/cloud-storage/sftp.md)
    * Destinos de la plataforma de gestión de datos {#data-management}
@@ -87,13 +89,13 @@ ht-degree: 0%
       * [Destino de marketing](./catalog/email/marketo.md)
       * [Destino de Marketing to Munchkin](./catalog/email/marketo-munchkin.md)
       * [Destino de PebblePost](./catalog/email/pebblepost.md)
-   * Destinos de mercadotecnia de correo electrónico{#email-marketing}
+   * Destinos de mercadotecnia por correo electrónico{#email-marketing}
       * [Introducción a los destinos de mercadotecnia por correo electrónico](./catalog/email-marketing/overview.md)
       * [Destino de Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Oracle Eloqua, destino](./catalog/email-marketing/oracle-eloqua.md)
       * [Destino de oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Destino de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch extensions{#launch-extensions}
+   * Extensiones de Experience Platform Launch{#launch-extensions}
       * [Descripción general de las extensiones de Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre los destinos de participación móvil](./catalog/mobile-engagement/overview.md)
