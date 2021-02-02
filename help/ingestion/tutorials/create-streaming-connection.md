@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;inicio;temas populares;conexión de transmisión;crear conexión de transmisión;guía de API;tutorial;crear una conexión de transmisión;transmisión de flujo continuo;ingestión;
 solution: Experience Platform
 title: Creación de una conexión de flujo mediante la API
 topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Creación de una conexión de flujo mediante la API
 
-Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las [!DNL Ingestion Service] API de datos de Adobe Experience Platform.
+Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de datos [!DNL Ingestion Service] de Adobe Experience Platform.
 
 ## Primeros pasos
 
@@ -26,30 +26,30 @@ Después de registrar una conexión de flujo continuo, usted, como productor de 
 
 Este tutorial también requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: Marco normalizado por el cual [!DNL Platform] se organizan los datos de experiencia.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):: El marco normalizado por el cual se  [!DNL Platform] organizan los datos de experiencia.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 
 Las siguientes secciones proporcionan información adicional que debe conocer para realizar llamadas a las API de inserción de flujo continuo.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->Los valores de la lista `providerId` y de la lista `connectionSpec` deben **** utilizarse como se muestra en el ejemplo, ya que son lo que especifica a la API que está creando una conexión de flujo para la transmisión de flujo continuo de ingesta.
+>Los valores de los `providerId` y `connectionSpec` **enumerados deben** utilizarse como se muestra en el ejemplo, ya que son lo que especifica a la API que está creando una conexión de flujo para la ingestión de flujo continuo.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -125,7 +125,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El `id` valor de la conexión que creó anteriormente. |
+| `{CONNECTION_ID}` | El valor `id` de la conexión que creó anteriormente. |
 
 **Solicitud**
 
@@ -139,7 +139,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la conexión solicitada. La dirección URL de recopilación de datos se crea automáticamente con la conexión y se puede recuperar con el `inletUrl` valor.
+Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la conexión solicitada. La dirección URL de recopilación de datos se crea automáticamente con la conexión y se puede recuperar con el valor `inletUrl`.
 
 ```json
 {
@@ -178,7 +178,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Pasos siguientes
 
-Ahora que ha creado una conexión de flujo continuo, puede transmitir series temporales o datos de registro, lo que le permite ingestar datos en [!DNL Platform]. Para aprender a transmitir datos de series temporales a [!DNL Platform], vaya al tutorial [de datos de series temporales de](./streaming-time-series-data.md)flujo continuo. Para aprender a transmitir datos de registro a [!DNL Platform], vaya al tutorial [de datos de registro de](./streaming-record-data.md)flujo continuo.
+Ahora que ha creado una conexión de flujo continuo, puede transmitir series temporales o datos de registro, lo que le permite ingestar datos dentro de [!DNL Platform]. Para aprender a transmitir datos de series temporales a [!DNL Platform], vaya al [tutorial de datos de series temporales de flujo](./streaming-time-series-data.md). Para aprender a transmitir datos de registro a [!DNL Platform], vaya al [tutorial de datos de registro de flujo](./streaming-record-data.md).
 
 ## Apéndice
 
@@ -186,6 +186,6 @@ Esta sección proporciona información adicional sobre la creación de conexione
 
 ### Conexiones de flujo autenticadas
 
-La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso de IMS como parte de la solicitud de POST; si el token de IMS es válido, los registros se marcan como recopilados de fuentes de confianza.
+La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como [!DNL Real-time Customer Profile] y [!DNL Identity], diferenciar entre registros provenientes de fuentes de confianza y fuentes de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando Tokenes de acceso de IMS como parte de la solicitud de POST; si el token de IMS es válido, los registros se marcan como recopilados de fuentes de confianza.
 
-Encontrará más información sobre la creación de una conexión de flujo autenticada en el tutorial [](create-authenticated-streaming-connection.md)de creación de una conexión de flujo autenticada.
+Encontrará más información sobre la creación de una conexión de flujo autenticada en el [tutorial de creación de una conexión de flujo autenticada](create-authenticated-streaming-connection.md).
