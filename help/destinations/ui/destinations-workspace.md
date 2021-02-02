@@ -1,36 +1,36 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: plataforma;destinos;área de trabajo de destinos;espacio de trabajo;ui;destinos ui;catálogo;destinos de catálogo;
 title: Espacio de trabajo Destinos
 seo-title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema, que se describen en las secciones siguientes.
-seo-description: En la plataforma de datos del cliente en tiempo real, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
+seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '910'
 ht-degree: 2%
 
 ---
 
 
-# Espacio de trabajo Destinos {#destinations-workspace}
+# Espacio de trabajo Destinations {#destinations-workspace}
 
-En la plataforma de datos del cliente en tiempo real, seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Destinos] .
+En Adobe Experience Platform, seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Destinations].
 
-El espacio de trabajo [!UICONTROL Destinos] consta de cuatro secciones, [!UICONTROL Catálogo], [!UICONTROL Examinar], [!UICONTROL Cuentas]y Vista [!UICONTROL del sistema], que se describen en las secciones siguientes.
+El espacio de trabajo [!UICONTROL Destinations] consta de cuatro secciones, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts] y [!UICONTROL System Vista], que se describen en las secciones siguientes.
 
 ![Destinos-información general](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos disponibles en CDP en tiempo real a los que puede enviar datos.
+La ficha **[!UICONTROL Catalog]** muestra una lista de todos los destinos disponibles en Platform a los que puede enviar datos.
 
-La interfaz de usuario de CDP en tiempo real proporciona una serie de opciones de búsqueda y filtro en la página del catálogo de destinos:
+La interfaz de usuario de la plataforma proporciona una serie de opciones de búsqueda y filtro en la página del catálogo de destinos:
 
 * Utilice la funcionalidad de búsqueda de la página para localizar un destino específico.
-* Filtre los destinos mediante el control de [!UICONTROL Categorías] .
-* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Cuando se selecciona **[!UICONTROL Todos los destinos]** , se muestran todos los destinos CDP disponibles en tiempo real. Cuando se selecciona **[!UICONTROL Mis destinos]** , solo puede ver los destinos con los que ha establecido una conexión.
-* Seleccione para **[!UICONTROL Conexiones]** de vista y/o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte Tipos [de destino y Categorías](../destination-types.md).
+* Filtre los destinos mediante el control [!UICONTROL Categorías].
+* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Cuando se selecciona **[!UICONTROL Todos los destinos]**, se muestran todos los destinos de plataforma disponibles. Cuando **[!UICONTROL Mis destinos]** está seleccionado, solo puede ver los destinos con los que ha establecido una conexión.
+* Seleccione la vista **[!UICONTROL Conexiones]** y/o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, consulte [Tipos de destino y Categorías](../destination-types.md).
 
 ![filtros de destinos y demostración de búsqueda](../assets/ui/workspace/destinations-search-and-filter.gif)
 
@@ -50,15 +50,15 @@ Seleccione una tarjeta de destino en el catálogo para abrir el carril correcto.
 
 ![Opciones de catálogo de destino](../assets/ui/workspace/destination-right-rail.png)
 
-Para obtener más información sobre las categorías de destino e información sobre cada destino, consulte el Catálogo [de](../catalog/overview.md) destino y Tipos y Categorías [de](../destination-types.md)destino.
+Para obtener más información sobre categorías de destino e información sobre cada destino, consulte el [Catálogo de destino](../catalog/overview.md) y [Tipos y Categorías de destino](../destination-types.md).
 
 ## [!UICONTROL Cuentas] {#accounts}
 
-En la ficha **[!UICONTROL Cuentas]** , puede obtener más información sobre las conexiones que ha establecido con varios destinos. Consulte la tabla siguiente para obtener toda la información que puede obtener sobre cada destino:
+En la ficha **[!UICONTROL Cuentas]** puede obtener más información sobre las conexiones que ha establecido con varios destinos. Consulte la tabla siguiente para obtener toda la información que puede obtener sobre cada destino:
 
 >[!TIP]
 >
->Utilice el botón ![](../assets/ui/workspace/add-data-symbol.png) Añadir datos de la columna **[!UICONTROL Plataforma]** para crear una nueva conexión de destino para esa cuenta.
+>Utilice el botón ![Añadir datos](../assets/ui/workspace/add-data-symbol.png) de la columna **[!UICONTROL Plataforma]** para crear una nueva conexión de destino para esa cuenta.
 
 ![Ficha Cuentas](../assets/ui/workspace/edit-account-destinations.png)
 
@@ -66,17 +66,17 @@ En la ficha **[!UICONTROL Cuentas]** , puede obtener más información sobre las
 ---------|----------
 | [!UICONTROL Plataforma] | Destino para el que ha configurado la conexión. |
 | [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con el contenedor o destino de almacenamiento. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li><li>Para destinos de almacenamiento en la nube Amazon S3: Clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: Autenticación básica para SFTP</li></ul> |
-| [!UICONTROL Nombre de usuario] | Nombre de usuario seleccionado en el asistente [de](../catalog/email-marketing/overview.md#connect-destination)conexión de destino. |
+| [!UICONTROL Nombre de usuario] | El nombre de usuario seleccionado en el [asistente de destino de conexión](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinos] | Representa el número de flujos de destino exitosos únicos conectados con la información básica creada para un destino. |
 | [!UICONTROL Con autorización] | La fecha en que se autorizó la conexión a este destino. |
 
-Además, puede editar o actualizar la información de su cuenta. Seleccione el botón ![](../assets/ui/workspace/pencil-icon.png) Editar cuenta en la columna **[!UICONTROL Plataforma]** para editar la información de la cuenta.
+Además, puede editar o actualizar la información de su cuenta. Seleccione el ![botón Editar cuenta](../assets/ui/workspace/pencil-icon.png) en la columna **[!UICONTROL Plataforma]** para editar la información de la cuenta.
 
-Para las cuentas que utilizan un tipo de `OAuth2` conexión, puede seleccionar **[!UICONTROL Volver a conectar OAuth]** para renovar las credenciales de la cuenta.
+Para las cuentas que utilizan un tipo de conexión `OAuth2`, puede seleccionar **[!UICONTROL Volver a conectar OAuth]** para renovar sus credenciales de cuenta.
 
 ![Imagen de Oauth](../assets/ui/workspace/reconnect-oauth.png)
 
-En el caso de las cuentas que utilizan un tipo de conexión `Access Key` o `ConnectionString` , puede editar la información de autenticación de la cuenta, incluida información como el ID de acceso, las claves secretas o las cadenas de conexión.
+Para las cuentas que utilizan un tipo de conexión `Access Key` o `ConnectionString`, puede editar la información de autenticación de la cuenta, incluida información como ID de acceso, claves secretas o cadenas de conexión.
 
 ![Imagen de información de la cuenta](../assets/ui/workspace/edit-account-details.png)
 
@@ -84,11 +84,11 @@ Una vez que haya terminado de editar los detalles de la cuenta, seleccione **[!U
 
 ## [!UICONTROL Examinar] {#browse}
 
-La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **[!UICONTROL Habilitado]** activada establecen el destino en activo y viceversa. También puede realizar la vista de los destinos en los que fluyen los datos seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
+La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha establecido una conexión. Los destinos con la opción **[!UICONTROL Habilitado]** activada establecen el destino en activo y viceversa. También puede realizar la vista de los destinos en los que tiene flujos de datos seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y seleccionando un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada para cada destino en la ficha Examinar:
 
 >[!TIP]
 >
->Utilice el botón ![](../assets/ui/workspace/add-data-symbol.png) Añadir datos de la columna **[!UICONTROL Nombre]** para activar segmentos adicionales en ese destino.
+>Utilice el botón ![Añadir datos](../assets/ui/workspace/add-data-symbol.png) de la columna **[!UICONTROL Nombre]** para activar segmentos adicionales en ese destino.
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 
@@ -110,10 +110,10 @@ Seleccione el nombre del destino para ver la información sobre los segmentos ac
 
 ## [!UICONTROL Vista del sistema] {#system-view}
 
-La ficha Vista **** del sistema muestra una representación gráfica de los flujos de activación que ha configurado en la plataforma de datos del cliente en tiempo real.
+La ficha **[!UICONTROL Vista del sistema]** muestra una representación gráfica de los flujos de activación que ha configurado en el Adobe Experience Platform.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![Flujos de datos1](../assets/ui/workspace/data-flows1.png)
 
-Seleccione cualquiera de los destinos que se muestran en la página y pulse los flujos **[!UICONTROL de]** Vista para ver la información sobre todas las conexiones configuradas para cada destino.
+Seleccione cualquiera de los destinos que se muestran en la página y presione **[!UICONTROL Flujos de Vista]** para ver información sobre todas las conexiones que ha configurado para cada destino.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![Flujos de datos2](../assets/ui/workspace/data-flows2.png)
