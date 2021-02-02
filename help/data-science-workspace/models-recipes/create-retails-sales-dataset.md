@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform;fórmula de ventas minoristas;Área de trabajo de ciencia de datos;temas populares;fórmulas
 solution: Experience Platform
 title: Crear el esquema y conjunto de datos de ventas minoristas
 topic: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 # Crear el esquema y conjunto de datos de ventas minoristas
 
-Este tutorial le proporciona los requisitos previos y los recursos necesarios para el resto [!DNL Adobe Experience Platform] de tutoriales [!DNL Data Science Workspace] . Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en [!DNL Experience Platform].
+Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Al finalizar, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en [!DNL Experience Platform].
 
 ## Primeros pasos
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
-- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
-- Autorización para realizar llamadas [!DNL Experience Platform] de API. Complete el tutorial [Autenticar y acceder a las API](../../tutorials/authentication.md) de Adobe Experience Platform para obtener los siguientes valores y completar este tutorial con éxito:
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], comuníquese con el administrador del sistema antes de continuar.
+- Autorización para realizar [!DNL Experience Platform] llamadas de API. Complete el tutorial [Autentique y acceda a las API de Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para obtener los siguientes valores y completar este tutorial con éxito:
    - Autorización: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
-   - Client secret: `{CLIENT_SECRET}`
+   - Secreto del cliente: `{CLIENT_SECRET}`
    - Certificado de cliente: `{PRIVATE_KEY}`
-- Datos de muestra y archivos de origen para la fórmula de venta [minorista](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales del repositorio [Git público de](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
-- [Python >= 2.7](https://www.python.org/downloads/) y los siguientes [!DNL Python] paquetes:
+- Archivos de origen y datos de muestra para la [fórmula de ventas minoristas](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales del [repositorio público Git de Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2.7](https://www.python.org/downloads/) y los siguientes  [!DNL Python] paquetes:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
@@ -44,8 +44,8 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
 
 ### Configuración de archivos
 
-1. Dentro del paquete de recursos del [!DNL Experience Platform] tutorial, navegue hasta el directorio `bootstrap`y abra `config.yaml` con un editor de texto adecuado.
-2. En la `Enterprise` sección , introduzca los siguientes valores:
+1. Dentro del paquete de recursos del tutorial [!DNL Experience Platform], navegue al directorio `bootstrap` y abra `config.yaml` con un editor de texto adecuado.
+2. En la sección `Enterprise`, introduzca los siguientes valores:
 
    ```yaml
    Enterprise:
@@ -56,7 +56,7 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. Edite los valores que se encuentran en la sección `Platform` , Ejemplo que se muestra a continuación:
+3. Edite los valores que se encuentran en la sección `Platform`, Ejemplo que se muestra a continuación:
 
    ```yaml
    Platform:
@@ -68,12 +68,12 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
    ```
 
    - `platform_gateway` :: La ruta de acceso base para llamadas de API. No modifique este valor.
-   - `ims_token` :: Tu `{ACCESS_TOKEN}` va aquí.
-   - `ingest_data` :: Para este tutorial, establezca este valor como `"True"` para crear los esquemas y conjuntos de datos de ventas minoristas. Un valor de sólo `"False"` creará los esquemas.
-   - `build_recipe_artifacts` :: A los efectos de este tutorial, establezca este valor como `"False"` para evitar que la secuencia de comandos genere un artefacto de fórmula.
-   - `kernel_type` :: Tipo de ejecución del artefacto de fórmula. Deje este valor como `Python` si `build_recipe_artifacts` se configura como `"False"`; de lo contrario, especifique el tipo de ejecución correcto.
+   - `ims_token` :: Tu  `{ACCESS_TOKEN}` va aquí.
+   - `ingest_data` :: Para este tutorial, establezca este valor como  `"True"` para crear los esquemas y conjuntos de datos de ventas minoristas. Un valor de `"False"` sólo creará los esquemas.
+   - `build_recipe_artifacts` :: A los efectos de este tutorial, establezca este valor como  `"False"` para evitar que la secuencia de comandos genere un artefacto de fórmula.
+   - `kernel_type` :: Tipo de ejecución del artefacto de fórmula. Deje este valor como `Python` si `build_recipe_artifacts` está establecido como `"False"`, de lo contrario especifique el tipo de ejecución correcto.
 
-4. En la `Titles` sección, proporcione la siguiente información de manera adecuada para los datos de muestra de Ventas al por menor, guarde y cierre el archivo después de realizar las ediciones. Ejemplo que se muestra a continuación:
+4. En la sección `Titles`, proporcione la siguiente información de manera adecuada para los datos de muestra de ventas minoristas, guarde y cierre el archivo después de que se hayan realizado las ediciones. Ejemplo que se muestra a continuación:
 
    ```yaml
    Titles:
@@ -93,8 +93,8 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
 
 ### Ejecutar la secuencia de comandos de arranque
 
-1. Abra la aplicación terminal y vaya al directorio de recursos del [!DNL Experience Platform] tutorial.
-2. Defina el `bootstrap` directorio como la ruta de trabajo actual y ejecute la `bootstrap.py` secuencia de comandos [!DNL Python] introduciendo el siguiente comando:
+1. Abra la aplicación terminal y vaya al directorio de recursos del tutorial [!DNL Experience Platform].
+2. Configure el directorio `bootstrap` como la ruta de trabajo actual y ejecute la secuencia de comandos `bootstrap.py` [!DNL Python] introduciendo el siguiente comando:
 
    ```bash
    python bootstrap.py
@@ -106,12 +106,13 @@ El esquema de ventas minoristas y los conjuntos de datos se crean automáticamen
 
 ## Pasos siguientes
 
-Una vez finalizado correctamente el script de arranque, se pueden ver los esquemas y conjuntos de datos de entrada y salida de Retail Sales en [!DNL Experience Platform]. Consulte el tutorial [de datos de esquema de](./preview-schema-data.md)previsualización para obtener más información.
+Una vez finalizado correctamente el script de arranque, los esquemas de entrada y salida de Retail Sales y los conjuntos de datos se pueden ver en [!DNL Experience Platform]. Consulte el [tutorial de datos de esquema de previsualización](./preview-schema-data.md)
+para obtener más información.
 
-También ha ingerido correctamente los datos de muestra de ventas minoristas en [!DNL Experience Platform] el uso de la secuencia de comandos de arranque proporcionada.
+También ha ingerido correctamente datos de muestra de ventas minoristas en [!DNL Experience Platform] mediante la secuencia de comandos de arranque proporcionada.
 
 Para continuar trabajando con los datos ingestados:
 - [Analizar los datos con los blocs de notas de Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilice los blocs de notas Jupyter en el área de trabajo de ciencia de datos para acceder, explorar, visualizar y comprender sus datos.
 - [Empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md)
-   - Siga este tutorial para aprender a incorporar su propio modelo [!DNL Data Science Workspace] mediante el empaquetado de archivos de origen en un archivo de fórmula importable.
+   - Siga este tutorial para aprender a incorporar su propio modelo a [!DNL Data Science Workspace] mediante el empaquetado de archivos de origen en un archivo de fórmula importable.
