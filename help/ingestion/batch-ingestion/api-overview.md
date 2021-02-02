@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;inicio;temas populares;ingestión por lotes;ingestión por lotes;ingestión;guía para desarrolladores;guía de API;carga;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Guía para desarrolladores de inserción de lotes
 topic: developer guide
 description: Este documento proporciona una descripción general completa del uso de las API de ingestión por lotes.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2698'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # Guía para desarrolladores de ingestión por lotes
 
-Este documento proporciona una descripción general completa del uso de las API [de ingestión por](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)lotes.
+Este documento proporciona una descripción general completa del uso de [API de ingestión por lotes](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-El apéndice de este documento proporciona información para [dar formato a los datos que se van a utilizar para la ingestión](#data-transformation-for-batch-ingestion), incluidos los archivos de datos CSV y JSON de ejemplo.
+El apéndice de este documento proporciona información para [datos de formato que se utilizarán para la ingestión](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de ejemplo.
 
 ## Primeros pasos
 
@@ -27,39 +27,39 @@ Las siguientes secciones proporcionan información adicional que debe conocer o 
 
 Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [Ingesta](./overview.md)por lotes: Permite ingerir datos en Adobe Experience Platform como archivos por lotes.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):: [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Ingesta](./overview.md) por lotes: Permite ingerir datos en Adobe Experience Platform como archivos por lotes.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md)::  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ### Leer llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas](../../landing/troubleshooting.md#how-do-i-format-an-api-request) de API de ejemplo en la guía de solución de problemas [!DNL Experience Platform] .
+Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el tutorial [de](../../tutorials/authentication.md)autenticación. Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a [!DNL Platform] las API requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados de [!DNL Platform], consulte la documentación [general del](../../sandboxes/home.md)entorno limitado.
+>Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
-Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un `Content-Type` encabezado adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
+Las solicitudes que contienen una carga útil (POST, PUT, PATCH) pueden requerir un encabezado `Content-Type` adicional. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
 
 ## Tipos
 
-Al ingerir datos, es importante comprender cómo funcionan los esquemas [!DNL Experience Data Model] (XDM). Para obtener más información sobre cómo los tipos de campos XDM se asignan a diferentes formatos, lea la guía [para desarrolladores de](../../xdm/api/getting-started.md)Esquema Registry.
+Al ingerir datos, es importante comprender cómo funcionan los esquemas [!DNL Experience Data Model] (XDM). Para obtener más información sobre cómo los tipos de campos XDM se asignan a diferentes formatos, lea la [guía para desarrolladores de Esquema Registry](../../xdm/api/getting-started.md).
 
-Existe cierta flexibilidad al ingerir datos: si un tipo no coincide con lo que hay en el esquema de destinatario, los datos se convertirán al tipo de destinatario expresado. Si no puede, fallará el lote con un `TypeCompatibilityException`.
+Existe cierta flexibilidad al ingerir datos: si un tipo no coincide con lo que hay en el esquema de destinatario, los datos se convertirán al tipo de destinatario expresado. Si no puede hacerlo, fallará el lote con un `TypeCompatibilityException`.
 
-Por ejemplo, ni JSON ni CSV tienen un tipo de fecha ni de fecha y hora. Como resultado, estos valores se expresan con cadenas [formateadas](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) o con formato de hora Unix en milisegundos (1531263959999000 00) y se convierten en el momento de la ingestión al tipo XDM de destinatario.
+Por ejemplo, ni JSON ni CSV tienen un tipo de fecha ni de fecha y hora. Como resultado, estos valores se expresan con [cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o con formato Unix en milisegundos (15312639 59000) y se convierten en el momento de la ingestión al tipo XDM de destinatario.
 
 La siguiente tabla muestra las conversiones admitidas al ingestar datos.
 
@@ -100,7 +100,7 @@ En primer lugar, deberá crear un lote, con JSON como formato de entrada. Al cre
 
 >[!NOTE]
 >
->Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, será necesario establecer el `isMultiLineJson` indicador. Para obtener más información, lea la guía de solución de problemas de ingestión de [lotes](./troubleshooting.md).
+>Los ejemplos siguientes son para JSON de una sola línea. Para ingestar JSON multilínea, será necesario establecer el indicador `isMultiLineJson`. Para obtener más información, lea la [guía de solución de problemas de ingestión por lotes](./troubleshooting.md).
 
 **Formato API**
 
@@ -158,11 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carga de archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos JSON formateado correctamente.
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos JSON con formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -297,7 +297,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Carga de archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato API**
 
@@ -515,7 +515,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Completar archivo grande
 
-Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato API**
 
@@ -578,7 +578,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Ingestar archivos CSV
 
-Para poder ingestar archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones que se proporcionan en el tutorial [de creación de esquemas](../../xdm/api/ad-hoc.md)específicos.
+Para poder ingestar archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones que se proporcionan en el [tutorial de creación de esquemas específicos](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -646,10 +646,10 @@ A continuación se explica qué parte de la sección &quot;fileDescription&quot;
 | `delimiters` | Carácter que se va a utilizar como delimitador. |
 | `quotes` | Carácter que se va a utilizar para las comillas. |
 | `escapes` | Carácter que se va a utilizar como carácter de escape. |
-| `header` | El archivo cargado **debe** contener encabezados. Como la validación de esquema se realiza, esto debe establecerse en true. Además, los encabezados **no pueden** contener espacios. Si tiene espacios en el encabezado, reemplácelos por caracteres de subrayado. |
+| `header` | El archivo cargado **debe** contener encabezados. Como la validación de esquema se realiza, esto debe establecerse en true. Además, los encabezados pueden **no** contener espacios; si tiene espacios en el encabezado, reemplácelos por caracteres de subrayado. |
 | `charset` | Campo opcional. Otros conjuntos de caracteres admitidos son &quot;US-ASCII&quot; e &quot;ISO-8869-1&quot;. Si se deja vacío, UTF-8 se asume de forma predeterminada. |
 
-El conjunto de datos al que se hace referencia debe tener el bloque de descripción de archivo enumerado arriba y debe apuntar a un esquema válido en el Registro. De lo contrario, el archivo no se convertirá en parqué.
+El conjunto de datos al que se hace referencia debe tener el bloque de descripción de archivo enumerado arriba y debe apuntar a un esquema válido en el Registro. De lo contrario, el archivo no se masterizará en Parquet.
 
 ### Crear lote
 
@@ -716,11 +716,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carga de archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para ver un [ejemplo de un archivo](#data-transformation-for-batch-ingestion)de datos CSV con el formato adecuado.
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos CSV con formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -819,7 +819,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminar un lote {#delete-a-batch}
 
-Un lote puede eliminarse realizando la siguiente solicitud de POST con el parámetro de `action=REVERT` consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de elementos no utilizados. El lote se recopilará de forma asíncrona, y en ese momento se marcará como &quot;eliminado&quot;.
+Un lote puede eliminarse realizando la siguiente solicitud de POST con el parámetro de consulta `action=REVERT` al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, lo que lo hace apto para la recolección de elementos no utilizados. El lote se recopilará de forma asíncrona, y en ese momento se marcará como &quot;eliminado&quot;.
 
 **Formato API**
 
@@ -927,7 +927,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carga de archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` formulario de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede utilizar el `batchId` de antes para cargar archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato API**
 
@@ -1001,9 +1001,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Transformación de datos para la ingestión de lotes
 
-Para poder ingerir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el esquema del Modelo de datos de [experiencia (XDM)](../../xdm/home.md) asociado al conjunto de datos que se está cargando.
+Para poder ingerir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el esquema [Modelo de datos de experiencia (XDM)](../../xdm/home.md) asociado con el conjunto de datos que se está cargando.
 
-La información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM se encuentra en el documento de transformaciones [de](../../etl/transformations.md) ejemplo, junto con un ejemplo de archivo de datos JSON formateado correctamente. Los archivos de ejemplo proporcionados en el documento se pueden encontrar aquí:
+Encontrará información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM en el documento [transformaciones de ejemplo](../../etl/transformations.md), junto con un ejemplo de archivo de datos JSON formateado correctamente. Los archivos de ejemplo proporcionados en el documento se pueden encontrar aquí:
 
 - [CRM_perfiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_perfiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
