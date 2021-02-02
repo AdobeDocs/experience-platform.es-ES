@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;fecha;funciones de fecha;fechas; fechas;
 solution: Experience Platform
 title: Funciones de fecha
 topic: overview
 description: Este documento presenta las funciones de fecha utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 17%
+source-wordcount: '411'
+ht-degree: 16%
 
 ---
 
@@ -80,4 +80,4 @@ La siguiente tabla muestra las letras de patrón definidas para las cadenas de f
 
 **Ejemplo**
 
-La expresión `date(orderDate, 'yyyy-MM-dd')` convertirá un `orderDate` valor de &quot;31 de diciembre de 2020&quot; en un valor de fecha y hora de &quot;2020-12-31&quot;.
+La expresión `date(orderDate, "yyyy-MM-dd")` convertirá un valor `orderDate` de &quot;31 de diciembre de 2020&quot; en un valor datetime de &quot;2020-12-31&quot;.
