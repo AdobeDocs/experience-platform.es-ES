@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;sampledata;sample data;rpc;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;datos de muestra;rpc;
 solution: Experience Platform
 title: Ejemplo de guía de extremo de datos
 description: El extremo /sampledata de la API del Registro de Esquema permite generar datos de muestra asignados a la estructura de cualquier esquema XDM existente.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 2%
+source-wordcount: '319'
+ht-degree: 1%
 
 ---
 
