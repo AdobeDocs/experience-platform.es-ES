@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;inicio;temas populares;visor de gráficos de identidad;visor de gráficos de identidad;visor de gráficos;visor de gráficos;visor de gráficos;Área de nombres de identidad;Área de nombres de identidad;identidad;servicio de identidad;servicio de identidad
 solution: Experience Platform
 title: Servicio de ID de Adobe Experience Platform
 topic: tutorial
 description: Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -31,23 +31,23 @@ Trabajar con el visor de gráficos de identidad requiere comprender los distinto
 
 ### Terminología
 
-- **Identidad (nodo):** Una identidad o un nodo son datos exclusivos de una entidad, normalmente una persona. Una identidad está compuesta por un valor de Área de nombres e identidad.
-- **Vínculo (borde):** Un vínculo o un borde representa la conexión entre identidades.
+- **Identidad (nodo):** una identidad o un nodo son datos exclusivos de una entidad, normalmente una persona. Una identidad está compuesta por un valor de Área de nombres e identidad.
+- **Vínculo (borde):** un vínculo o un borde representa la conexión entre identidades.
 - **Gráfico (clúster):** Un gráfico o un clúster es un grupo de identidades y vínculos que representan a una persona.
 
 ## Acceso al visor del gráfico de identidad
 
-Para utilizar el visor de gráficos de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione la ficha Gráfico **[!UICONTROL de]** identidad. En la pantalla Área de nombres **[!UICONTROL de]** identidad, haga clic en el icono **[!UICONTROL Seleccionar Área de nombres]** de identidad para buscar la Área de nombres que desee utilizar.
+Para utilizar el visor de gráficos de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione la ficha **[!UICONTROL Gráfico de identidad]**. En la pantalla **[!UICONTROL Área de nombres de identidad]**, haga clic en el icono **[!UICONTROL Seleccionar Área de nombres de identidad]** para buscar la Área de nombres que desee utilizar.
 
 ![Pantalla de Área de nombres](../images/identity-graph-viewer/identity-namespace.png)
 
-Aparece el panel **[!UICONTROL Seleccionar Área de nombres]** de identidad. Esta pantalla contiene una lista de Áreas de nombres disponibles para su organización, incluida información sobre el nombre **** para mostrar de una Área de nombres, el símbolo **** de identidad, el **[!UICONTROL propietario]**, la fecha de **[!UICONTROL última actualización]** y la **[!UICONTROL descripción]**. Puede utilizar cualquiera de las Áreas de nombres proporcionadas siempre que tenga un valor de identidad válido conectado a ellas.
+Aparece el panel **[!UICONTROL Seleccionar Área de nombres de identidad]**. Esta pantalla contiene una lista de Áreas de nombres disponibles para su organización, incluida información sobre la **[!UICONTROL Nombre para mostrar]** de una Área de nombres, **[!UICONTROL Símbolo de identidad]**, **[!UICONTROL Propietario]**, **[!UICONTROL Última fecha actualizada]** y **[!UICONTROL Descripción]**. Puede utilizar cualquiera de las Áreas de nombres proporcionadas siempre que tenga un valor de identidad válido conectado a ellas.
 
 Seleccione la Área de nombres que desee utilizar y haga clic en **[!UICONTROL Seleccionar]** para continuar.
 
 ![select-identity-Área de nombres](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Una vez seleccionada una Área de nombres, introduzca su valor correspondiente para un cliente concreto en el cuadro de texto Valor **[!UICONTROL de]** identidad y seleccione **[!UICONTROL Vista]**.
+Una vez seleccionada una Área de nombres, introduzca su valor correspondiente para un cliente en particular en el cuadro de texto **[!UICONTROL Valor de identidad]** y seleccione **[!UICONTROL Vista]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
@@ -55,15 +55,15 @@ Aparece el visor del gráfico de identidad. A la izquierda de la pantalla se enc
 
 >[!IMPORTANT]
 >
->Un gráfico de identidad requiere un mínimo de dos identidades vinculadas para generar, así como un par de Áreas de nombres e ID válido. El número máximo de identidades que puede mostrar el visor de gráficos es 150. See the [appendix](#appendix) section below for more information.
+>Un gráfico de identidad requiere un mínimo de dos identidades vinculadas para generar, así como un par de Áreas de nombres e ID válido. El número máximo de identidades que puede mostrar el visor de gráficos es 150. Consulte la sección [apéndice](#appendix) para obtener más información.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
-Seleccione una identidad para actualizar la fila resaltada en la tabla **[!UICONTROL Identidades]** y para actualizar la información proporcionada en el carril derecho, que incluye un **[!UICONTROL valor]** de identidad, un ID **[!UICONTROL de]** lote y la fecha de **[!UICONTROL última actualización]** .
+Seleccione una identidad para actualizar la fila resaltada en la tabla **[!UICONTROL Identidades]** y para actualizar la información proporcionada en el carril derecho, que incluye el **[!UICONTROL Valor]** de una identidad, **[!UICONTROL Id. de lote]** y su **[!UICONTROL Última actualización]** fecha.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-Puede filtrar por un gráfico y aislar una Área de nombres específica mediante la opción de ordenación situada encima de la tabla **[!UICONTROL Identidades]** . En el menú desplegable, seleccione la Área de nombres que desee resaltar.
+Puede filtrar por un gráfico y aislar una Área de nombres específica mediante la opción de ordenación en la parte superior de la tabla **[!UICONTROL Identidades]**. En el menú desplegable, seleccione la Área de nombres que desee resaltar.
 
 ![filtro por Área de nombres](../images/identity-graph-viewer/filter-namespace.png)
 
@@ -75,7 +75,7 @@ La parte superior derecha del cuadro del visor de gráficos contiene opciones pa
 
 ![zoom](../images/identity-graph-viewer/zoom.png)
 
-Para obtener más información sobre los lotes, seleccione el origen **[!UICONTROL de]** datos en el encabezado. La tabla **[!UICONTROL Origen]** de datos muestra una lista de los ID de **[!UICONTROL lote]** asociados al gráfico, así como los ID **[!UICONTROL vinculados]**, el esquema de origen y la fecha de ingesta.
+Para obtener más información sobre los lotes, seleccione el **[!UICONTROL origen de datos]** en el encabezado para obtener una vista. La tabla **[!UICONTROL Data source]** muestra una lista de **[!UICONTROL Batch IDs]** asociados con el gráfico, así como sus **[!UICONTROL Linked IDs]**, el esquema de origen y la fecha de ingestión.
 
 ![data-source](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ Pueden producirse errores al acceder al visor del gráfico de identidad. A conti
 - Debe existir un valor de identidad en la Área de nombres seleccionada.
 - El visor de gráficos de identidad requiere un mínimo de dos identidades vinculadas para generar.
 - El visor de gráficos de identidad no puede superar el máximo de 150 identidades.
-- Actualmente no se puede acceder al visor de gráficos de identidad en los entornos limitados que no son de producción.
-- Actualmente, el visor de gráficos de identidad solo admite datos ingestados por lotes y no muestra datos ingestados mediante fuentes de flujo continuo.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## Pasos siguientes
 
-Al leer este documento, ha aprendido a explorar los gráficos de identidad de sus clientes en la interfaz de usuario de la plataforma. Para obtener más información sobre las identidades en la plataforma, consulte la información general del servicio de [identidad](../home.md)
+Al leer este documento, ha aprendido a explorar los gráficos de identidad de sus clientes en la interfaz de usuario de la plataforma. Para obtener más información sobre las identidades en la plataforma, consulte [Visión general del servicio de identidad](../home.md)
