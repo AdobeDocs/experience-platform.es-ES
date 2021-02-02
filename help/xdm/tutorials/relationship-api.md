@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;esquema;Esquema;esquemas;Esquemas;relación;descriptor de relación;descriptor de relación;identidad de referencia;identidad de referencia;
 solution: Experience Platform
 title: Definir una relación entre dos esquemas mediante la API de Registro de Esquema
 description: Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por su organización mediante la API del Registro de Esquemas.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1337'
 ht-degree: 1%
 
 ---
 
 
-# Definir una relación entre dos esquemas mediante la [!DNL Schema Registry] API
+# Definir una relación entre dos esquemas mediante la API [!DNL Schema Registry]
 
-La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas sobre los datos de sus clientes.
+La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en diversos canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de sus esquemas [!DNL Experience Data Model] (XDM) le permite obtener perspectivas complejas en los datos de sus clientes.
 
-Aunque las relaciones de esquema pueden inferirse mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto sólo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen, que haga referencia a la identidad de un esquema de destino.
+Aunque las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas pertenecientes a diferentes clases, se debe agregar un campo de relación dedicado a un esquema de origen, que haga referencia a la identidad de un esquema de destino.
 
-Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por la organización mediante el uso del [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Este documento proporciona un tutorial para definir una relación uno a uno entre dos esquemas definidos por la organización mediante el uso de [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de [!DNL Experience Data Model] (XDM) y [!DNL XDM System]. Antes de comenzar este tutorial, consulte la siguiente documentación:
 
-* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en [!DNL Experience Platform].
-   * [Conceptos básicos de la composición](../schema/composition.md)de esquemas: Introducción de los componentes básicos de los esquemas XDM.
+* [Sistema XDM en Experience Platform](../home.md): Información general sobre XDM y su implementación en  [!DNL Experience Platform].
+   * [Conceptos básicos de la composición](../schema/composition.md) de esquemas: Introducción de los componentes básicos de los esquemas XDM.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
-* [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Simuladores](../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Antes de iniciar este tutorial, consulte la guía [del](../api/getting-started.md) desarrollador para obtener información importante que necesita conocer a fin de realizar correctamente llamadas a la [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al [!DNL Accept] encabezado y sus posibles valores).
+Antes de iniciar este tutorial, consulte la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API [!DNL Schema Registry]. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado [!DNL Accept] y sus posibles valores).
 
 ## Definir un esquema de origen y destino {#define-schemas}
 
 Se espera que ya haya creado los dos esquemas que se definirán en la relación. Este tutorial crea una relación entre los miembros del programa de lealtad actual de una organización (definido en un esquema &quot;[!DNL Loyalty Members]&quot;) y sus hoteles favoritos (definidos en un esquema &quot;[!DNL Hotels]&quot;).
 
-Las relaciones de esquema están representadas por un esquema **de** origen que tiene un campo que hace referencia a otro campo dentro de un esquema **de** destino. En los pasos siguientes, &quot;[!DNL Loyalty Members]&quot; será el esquema de origen, mientras que &quot;[!DNL Hotels]&quot; actuará como el esquema de destino.
+Las relaciones de esquema están representadas por un **esquema de origen** que tiene un campo que hace referencia a otro campo dentro de un **esquema de destino**. En los pasos siguientes, &quot;[!DNL Loyalty Members]&quot; será el esquema de origen, mientras que &quot;[!DNL Hotels]&quot; actuará como el esquema de destino.
 
 >[!IMPORTANT]
 >
->Para establecer una relación, ambos esquemas deben tener identidades primarias definidas y estar habilitados para [!DNL Real-time Customer Profile]. Consulte la sección sobre la [activación de un esquema para su uso en Perfil](./create-schema-api.md#profile) en el tutorial de creación de esquema si necesita instrucciones sobre cómo configurar los esquemas en consecuencia.
+>Para establecer una relación, ambos esquemas deben tener identidades primarias definidas y habilitarse para [!DNL Real-time Customer Profile]. Consulte la sección sobre [habilitación de un esquema para su uso en Perfil](./create-schema-api.md#profile) en el tutorial de creación de esquema si necesita instrucciones sobre cómo configurar sus esquemas en consecuencia.
 
-Para definir una relación entre dos esquemas, primero debe adquirir los `$id` valores de ambos esquemas. Si conoce los nombres para mostrar (`title`) de los esquemas, puede encontrar sus `$id` valores realizando una solicitud de GET al `/tenant/schemas` extremo en la [!DNL Schema Registry] API.
+Para definir una relación entre dos esquemas, primero debe adquirir los valores `$id` para ambos esquemas. Si conoce los nombres para mostrar (`title`) de los esquemas, puede encontrar sus valores `$id` haciendo una solicitud de GET al extremo `/tenant/schemas` en la API [!DNL Schema Registry].
 
 **Formato API**
 
@@ -65,11 +65,11 @@ curl -X GET \
 
 >[!NOTE]
 >
->El [!DNL Accept] encabezado `application/vnd.adobe.xed-id+json` devuelve solo los títulos, ID y versiones de los esquemas resultantes.
+>El encabezado [!DNL Accept] `application/vnd.adobe.xed-id+json` devuelve sólo los títulos, ID y versiones de los esquemas resultantes.
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de esquemas definidos por su organización, incluidos sus `name`, `$id`, `meta:altId`y `version`.
+Una respuesta correcta devuelve una lista de esquemas definidos por su organización, incluidos sus `name`, `$id`, `meta:altId` y `version`.
 
 ```json
 {
@@ -107,25 +107,25 @@ Una respuesta correcta devuelve una lista de esquemas definidos por su organizac
 }
 ```
 
-Registre los `$id` valores de los dos esquemas entre los que desea definir una relación. Estos valores se utilizarán en pasos posteriores.
+Registre los valores `$id` de los dos esquemas entre los que desea definir una relación. Estos valores se utilizarán en pasos posteriores.
 
 ## Definir un campo de referencia para el esquema de origen
 
-Dentro de la [!DNL Schema Registry], los descriptores de relación funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia al campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, puede que necesite crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un `type` valor de &quot;[!DNL string]&quot;.
+Dentro de [!DNL Schema Registry], los descriptores de relación funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia al campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, puede que necesite crear una mezcla con el nuevo campo y agregarlo al esquema. Este nuevo campo debe tener un valor `type` de &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >A diferencia del esquema de destino, el esquema de origen no puede utilizar su identidad principal como campo de referencia.
 
-En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo que sirve como identidad principal del esquema y, por lo tanto, también actuará como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarse como referencia y debe recibir una nueva mezcla que añada un nuevo campo al esquema: `favoriteHotel`.
+En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un campo `hotelId` que sirve como identidad principal del esquema y, por lo tanto, también actuará como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarse como referencia y debe recibir una nueva mezcla que agregue un nuevo campo al esquema: `favoriteHotel`.
 
 >[!NOTE]
 >
->Si el esquema de origen ya tiene un campo dedicado que se va a utilizar como campo de referencia, puede avanzar en el paso para [crear un descriptor](#reference-identity)de referencia.
+>Si el esquema de origen ya tiene un campo dedicado que planea utilizar como campo de referencia, puede avanzar hacia el paso de [creación de un descriptor de referencia](#reference-identity).
 
 ### Crear una nueva mezcla
 
-Para agregar un nuevo campo a un esquema, primero debe definirse en una mezcla. Puede crear una nueva mezcla haciendo una solicitud de POST al `/tenant/mixins` punto final.
+Para agregar un nuevo campo a un esquema, primero debe definirse en una mezcla. Puede crear una nueva mezcla haciendo una solicitud de POST al extremo `/tenant/mixins`.
 
 **Formato API**
 
@@ -135,7 +135,7 @@ POST /tenant/mixins
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva mezcla que agrega un `favoriteHotel` campo bajo la `_{TENANT_ID}` Área de nombres de cualquier esquema al que se añada.
+La siguiente solicitud crea una nueva mezcla que agrega un campo `favoriteHotel` bajo la Área de nombres `_{TENANT_ID}` de cualquier esquema al que se agregue.
 
 ```shell
 curl -X POST\
@@ -231,11 +231,11 @@ Una respuesta correcta devuelve los detalles de la mezcla recién creada.
 | --- | --- |
 | `$id` | El identificador único de la nueva mezcla generado por el sistema y de sólo lectura. Toma la forma de un URI. |
 
-Registre el `$id` URI de la mezcla, que se utilizará en el siguiente paso de añadir la mezcla al esquema de origen.
+Registre el URI `$id` de la mezcla, que se utilizará en el siguiente paso de añadir la mezcla al esquema de origen.
 
 ### Añadir la mezcla en el esquema de origen
 
-Una vez que haya creado una mezcla, puede agregarla al esquema de origen haciendo una solicitud de PATCH al extremo del `/tenant/schemas/{SCHEMA_ID}` .
+Una vez creada una mezcla, puede agregarla al esquema de origen haciendo una solicitud de PATCH al extremo `/tenant/schemas/{SCHEMA_ID}`.
 
 **Formato API**
 
@@ -245,7 +245,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | El `$id` URI con codificación URL o `meta:altId` del esquema de origen. |
+| `{SCHEMA_ID}` | El URI con codificación URL `$id` o `meta:altId` del esquema de origen. |
 
 **Solicitud**
 
@@ -272,13 +272,13 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `op` | La operación de PATCH que se va a realizar. Esta solicitud utiliza la `add` operación. |
+| `op` | La operación de PATCH que se va a realizar. Esta solicitud utiliza la operación `add`. |
 | `path` | Ruta al campo esquema donde se agregará el nuevo recurso. Al agregar mezclas a esquemas, el valor debe ser &quot;/allOf/-&quot;. |
 | `value.$ref` | El `$id` de la mezcla que se va a añadir. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora incluye el `$ref` valor de la mezcla agregada en su `allOf` matriz.
+Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora incluye el valor `$ref` de la mezcla agregada en su matriz `allOf`.
 
 ```json
 {
@@ -337,11 +337,11 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
 }
 ```
 
-## Creación de un descriptor de identidad de referencia {#reference-identity}
+## Crear un descriptor de identidad de referencia {#reference-identity}
 
-Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el `favoriteHotel` campo de &quot;[!DNL Loyalty Members]&quot; hará referencia al `hotelId` campo de &quot;[!DNL Hotels]&quot;, se debe dar un descriptor de identidad de referencia `hotelId` .
+Los campos de esquema deben tener aplicado un descriptor de identidad de referencia si se utilizan como referencia de otros esquemas de una relación. Dado que el campo `favoriteHotel` de &quot;[!DNL Loyalty Members]&quot; hará referencia al campo `hotelId` en &quot;[!DNL Hotels]&quot;, `hotelId` debe tener un descriptor de identidad de referencia.
 
-Cree un descriptor de referencia para el esquema de destino realizando una solicitud de POST al `/tenant/descriptors` extremo.
+Cree un descriptor de referencia para el esquema de destino realizando una solicitud de POST al extremo `/tenant/descriptors`.
 
 **Formato API**
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud crea un descriptor de referencia para el `hotelId` campo en el esquema de destino &quot;[!DNL Hotels]&quot;.
+La siguiente solicitud crea un descriptor de referencia para el campo `hotelId` en el esquema de destino &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -373,10 +373,10 @@ curl -X POST \
 | Parámetro | Descripción |
 | --- | --- |
 | `@type` | Tipo de descriptor que se está definiendo. Para los descriptores de referencia, el valor debe ser &quot;xdm:descriptorReferenceIdentity&quot;. |
-| `xdm:sourceSchema` | La `$id` URL del esquema de destino. |
+| `xdm:sourceSchema` | La dirección URL `$id` del esquema de destino. |
 | `xdm:sourceVersion` | Número de versión del esquema de destino. |
 | `sourceProperty` | Ruta al campo de identidad principal del esquema de destino. |
-| `xdm:identityNamespace` | Área de nombres de identidad del campo de referencia. Debe ser la misma Área de nombres utilizada al definir el campo que la identidad principal del esquema. Consulte la descripción general [de la Área de nombres de](../../identity-service/home.md) identidad para obtener más información. |
+| `xdm:identityNamespace` | Área de nombres de identidad del campo de referencia. Debe ser la misma Área de nombres utilizada al definir el campo que la identidad principal del esquema. Consulte la [descripción general de la Área de nombres de identidad](../../identity-service/home.md) para obtener más información. |
 
 **Respuesta**
 
@@ -396,7 +396,7 @@ Una respuesta correcta devuelve los detalles del descriptor de referencia recié
 
 ## Crear un descriptor de relación {#create-descriptor}
 
-Los descriptores de relación establecen una relación uno a uno entre un esquema de origen y un esquema de destino. Una vez definido un descriptor de referencia para el esquema de destino, puede crear un nuevo descriptor de relación realizando una solicitud de POST al extremo `/tenant/descriptors` .
+Los descriptores de relación establecen una relación uno a uno entre un esquema de origen y un esquema de destino. Una vez definido un descriptor de referencia para el esquema de destino, puede crear un nuevo descriptor de relación realizando una solicitud de POST al extremo `/tenant/descriptors`.
 
 **Formato API**
 
@@ -429,11 +429,11 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- |
-| `@type` | Tipo de descriptor que se va a crear. El `@type` valor de los descriptores de relación es &quot;xdm:descriptorOneToOne&quot;. |
-| `xdm:sourceSchema` | La `$id` URL del esquema de origen. |
+| `@type` | Tipo de descriptor que se va a crear. El valor `@type` de los descriptores de relación es &quot;xdm:descriptorOneToOne&quot;. |
+| `xdm:sourceSchema` | La dirección URL `$id` del esquema de origen. |
 | `xdm:sourceVersion` | Número de versión del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo de referencia en el esquema de origen. |
-| `xdm:destinationSchema` | La `$id` URL del esquema de destino. |
+| `xdm:destinationSchema` | La dirección URL `$id` del esquema de destino. |
 | `xdm:destinationVersion` | Número de versión del esquema de destino. |
 | `xdm:destinationProperty` | Ruta al campo de referencia en el esquema de destino. |
 
@@ -457,4 +457,4 @@ Una respuesta correcta devuelve los detalles del descriptor de relación recién
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente una relación uno a uno entre dos esquemas. Para obtener más información sobre cómo trabajar con descriptores mediante la [!DNL Schema Registry] API, consulte la guía [para desarrolladores de](../api/descriptors.md)Esquema Registry. Para ver los pasos sobre cómo definir relaciones de esquema en la interfaz de usuario, consulte el tutorial sobre la [definición de relaciones de esquema mediante el Editor](relationship-ui.md)de Esquemas.
+Siguiendo este tutorial, ha creado correctamente una relación uno a uno entre dos esquemas. Para obtener más información sobre cómo trabajar con descriptores mediante la API [!DNL Schema Registry], consulte la [guía para desarrolladores de Esquema Registry](../api/descriptors.md). Para ver los pasos sobre cómo definir relaciones de esquema en la interfaz de usuario, consulte el tutorial sobre [definición de relaciones de esquema mediante el Editor de Esquemas](relationship-ui.md).
