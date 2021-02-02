@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
+keywords: Experience Platform;inicio;temas populares;conjunto de datos;Conjunto de datos;crear un conjunto de datos;crear conjunto de datos;habilitar conjunto de datos
 solution: Experience Platform
 title: Crear un conjunto de datos
 topic: developer guide
 description: Este documento explica cómo crear un objeto de conjunto de datos en el catálogo.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '223'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Crear un conjunto de datos
 
-Para crear un conjunto de datos mediante la [!DNL Catalog] API, debe conocer el `$id` valor del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud de POST al `/datasets` extremo en la [!DNL Catalog] API.
+Para crear un conjunto de datos mediante la API [!DNL Catalog], debe conocer el valor `$id` del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos haciendo una solicitud de POST al extremo `/datasets` en la API [!DNL Catalog].
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->En este ejemplo se utiliza el formato de archivo de [parqué](https://parquet.apache.org/documentation/latest/) para su `containerFormat` propiedad. Encontrará un ejemplo que utiliza el formato de archivo JSON en la guía para desarrolladores de [ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md).
+>Este ejemplo utiliza el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para su propiedad `containerFormat`. Encontrará un ejemplo que utiliza el formato de archivo JSON en la [guía para desarrolladores de ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md).
 
 **Respuesta**
 
-Una respuesta correcta devuelve Estado HTTP 201 (Creado) y un objeto de respuesta que consta de una matriz que contiene el ID del conjunto de datos recién creado en el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respuesta que consta de una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API.
 
 ```JSON
 [
