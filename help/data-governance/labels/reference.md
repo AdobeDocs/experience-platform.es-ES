@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
+keywords: Experience Platform;inicio;temas populares;administración de datos;etiqueta de uso de datos api;API de servicio de políticas;etiquetas de uso de datos admitidas;etiquetas de contrato;etiquetas de identidad;etiquetas confidenciales
 solution: Experience Platform
 title: Etiquetas de uso de datos principales
 topic: labels
 description: Este documento describe todas las etiquetas de uso de datos admitidas actualmente por Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1904'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. La Administración de datos de Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usar que puede utilizar para clasificar los datos en inicios.
 
-Este documento describe las etiquetas de uso de datos principales que proporciona actualmente [!DNL Experience Platform]. Puede [!DNL Data Governance] encontrar más información en la descripción general [de la gobernanza](../home.md)de datos.
+Este documento describe las etiquetas de uso de datos principales que proporciona [!DNL Experience Platform]. Encontrará más información acerca de [!DNL Data Governance] en la [información general sobre la administración de datos](../home.md).
 
 ## Etiquetas de contrato
 
@@ -70,7 +70,7 @@ Algunos datos solo se pueden exportar desde Adobe Experience Cloud en un formula
 
 #### C2 {#c2}
 
-Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de datos que recibe de ellos. La etiqueta C2 es más restrictiva que la [C1](#c1), que solo requiere agregación y datos anónimos.
+Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la exportación de datos desde donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de datos que recibe de ellos. La etiqueta C2 es más restrictiva que [C1](#c1), que sólo requiere agregación y datos anónimos.
 
 #### C3 {#c3}
 
@@ -78,7 +78,7 @@ Algunos proveedores de datos tienen cláusulas en sus contratos que prohíben la
 
 #### C4 {#c4}
 
-C4 es la etiqueta más restrictiva: incluye las etiquetas [C5](#c5), [C6](#c6)y [C7](#c7).
+C4 es la etiqueta más restrictiva: incluye etiquetas [C5](#c5), [C6](#c6) y [C7](#c7).
 
 #### C5 {#c5}
 
@@ -98,21 +98,21 @@ DAA: Publicidad conductual en línea. Recopilación de datos de un equipo o disp
 
 #### C6 {#c6}
 
-Los anuncios son mensajes o notificaciones, incluidos texto e imágenes, que aparecen en un sitio web o aplicación y que están destinados principalmente a promover la venta de bienes o servicios. Depende de usted determinar el propósito de dichos mensajes o notificaciones. Las publicidades son independientes del contenido en el sitio, cubierto por la etiqueta [C7](#c7). Los datos con una etiqueta C6 no se pueden utilizar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de su organización, ni para medir el envío y la eficacia de dichos anuncios. Esto incluye el uso de datos recopilados anteriormente en el sitio sobre los intereses de los usuarios para seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como hacer clic en una publicidad o realizar una compra. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de anuncios en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Consulte la etiqueta C5 para conocer estos requisitos.](#c5)*
+Los anuncios son mensajes o notificaciones, incluidos texto e imágenes, que aparecen en un sitio web o aplicación y que están destinados principalmente a promover la venta de bienes o servicios. Depende de usted determinar el propósito de dichos mensajes o notificaciones. Las publicidades son independientes del contenido en el sitio, y están cubiertas por la etiqueta [C7](#c7). Los datos con una etiqueta C6 no se pueden utilizar para dirigir anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de su organización, ni para medir el envío y la eficacia de dichos anuncios. Esto incluye el uso de datos recopilados anteriormente en el sitio sobre los intereses de los usuarios para seleccionar publicidades, procesar datos sobre qué publicidades se mostraron, cuándo y dónde se mostraron y si los usuarios realizaron alguna acción relacionada con la publicidad, como seleccionar una publicidad o realizar una compra. Normalmente, hacer inferencias sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de anuncios en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Consulte la etiqueta C5 para conocer estos requisitos.](#c5)*
 
 Finalmente, usted puede interpretar la etiqueta y saber cómo se aplican los datos con esa etiqueta. Como referencia, a continuación se proporcionan los marcos de la Junta de Auditores Internos y el DAA:
 
-IAB: 3. Selección de anuncios, envío, sistema de informes: La recopilación de información, y junto con la información recopilada anteriormente, para seleccionar y enviar anuncios para usted, y para medir el envío y la efectividad de dichos anuncios. Esto incluye el uso de la información recopilada anteriormente sobre sus intereses para seleccionar publicidades, el procesamiento de datos sobre qué publicidades se mostraron, la frecuencia con que se mostraron, cuándo y dónde se mostraron, y si realizó alguna acción relacionada con la publicidad, por ejemplo hacer clic en una publicidad o realizar una compra. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre el uso que hace de este servicio para personalizar posteriormente la publicidad o el contenido para usted en otros contextos, como sitios web o aplicaciones, con el paso del tiempo.
+IAB: 3. Selección de anuncios, envío, sistema de informes: La recopilación de información, y junto con la información recopilada anteriormente, para seleccionar y enviar anuncios para usted, y para medir el envío y la efectividad de dichos anuncios. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar publicidades, el procesamiento de datos sobre qué publicidades se mostraron, la frecuencia con que se mostraron, cuándo y dónde se mostraron, y si realizó alguna acción relacionada con el anuncio, incluso, por ejemplo, seleccionar una publicidad o realizar una compra. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre el uso que hace de este servicio para personalizar posteriormente la publicidad o el contenido para usted en otros contextos, como sitios web o aplicaciones, con el paso del tiempo.
 
 DAA: La Publicidad en línea de comportamiento no incluye las actividades de los usuarios individuales, el Envío de publicidad o el Sistema de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que se visita, la visita actual de un consumidor a una página web o una consulta de búsqueda).
 
 #### C7 {#c7}
 
-El contenido en el sitio es texto e imágenes que están diseñados para informar, educar o entretener, y que no se crean para promover la venta de bienes o servicios. Depende de usted determinar el propósito del contenido, incluyendo si el contenido se calificaría como publicidad nativa. La etiqueta C7 no está destinada a cubrir anuncios en el sitio, que están cubiertos por la etiqueta [C6](#c6). Los datos con una etiqueta C7 no se pueden utilizar para la segmentación de contenido en el sitio, incluida la selección y el envío de contenido en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dicho contenido. Esto incluye la información recopilada anteriormente sobre los intereses de los usuarios en el contenido seleccionado, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró, y si los usuarios realizaron alguna acción relacionada con el contenido, incluido por ejemplo hacer clic en el contenido. Normalmente, hacer inferencias sobre las preferencias de los usuarios en función de las actividades en el sitio de los usuarios y luego usar esas preferencias en la segmentación de contenido en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Consulte la etiqueta C5 para conocer estos requisitos.](#c5)*
+El contenido en el sitio es texto e imágenes que están diseñados para informar, educar o entretener, y que no se crean para promover la venta de bienes o servicios. Depende de usted determinar el propósito del contenido, incluyendo si el contenido se calificaría como publicidad nativa. La etiqueta C7 no está pensada para cubrir anuncios en el sitio, que están cubiertos por la etiqueta [C6](#c6). Los datos con una etiqueta C7 no se pueden utilizar para la segmentación de contenido en el sitio, incluida la selección y el envío de contenido en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dicho contenido. Esto incluye la información recopilada anteriormente sobre los intereses de los usuarios en el contenido seleccionado, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró, y si los usuarios realizaron alguna acción relacionada con el contenido, incluida, por ejemplo, la selección de contenido. Normalmente, hacer inferencias sobre las preferencias de los usuarios en función de las actividades en el sitio de los usuarios y luego usar esas preferencias en la segmentación de contenido en el sitio no se calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Consulte la etiqueta C5 para conocer estos requisitos.](#c5)*
 
 Finalmente, usted puede interpretar la etiqueta y saber cómo se aplican los datos con esa etiqueta. Como referencia, a continuación se proporcionan los marcos de la Junta de Auditores Internos y el DAA:
 
-IAB: 4. Selección de contenido, envío, sistema de informes: La recopilación de información, y la combinación con información recopilada anteriormente, para seleccionar y entregar contenido para usted, y para medir el envío y la efectividad de dicho contenido. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si realizó alguna acción relacionada con el contenido, incluido por ejemplo hacer clic en el contenido. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre el uso que hace de este servicio para personalizar posteriormente el contenido o la publicidad para usted en otros contextos, como sitios web o aplicaciones, con el paso del tiempo.
+IAB: 4. Selección de contenido, envío, sistema de informes: La recopilación de información, y la combinación con información recopilada anteriormente, para seleccionar y entregar contenido para usted, y para medir el envío y la efectividad de dicho contenido. Esto incluye el uso de la información recopilada anteriormente sobre sus intereses para seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, la frecuencia o el tiempo que se mostró, cuándo y dónde se mostró y si el usuario realizó alguna acción relacionada con el contenido, incluido por ejemplo seleccionar contenido. Esto no incluye la personalización, que es la recopilación y el procesamiento de información sobre el uso que hace de este servicio para personalizar posteriormente el contenido o la publicidad para usted en otros contextos, como sitios web o aplicaciones, con el paso del tiempo.
 
 DAA: La Publicidad de comportamiento en línea no incluye las actividades de los usuarios individuales, el Envío de publicidad o el Sistema de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que visita, la visita actual de un consumidor a una página web o una consulta de búsqueda).
 
