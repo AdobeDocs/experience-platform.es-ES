@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+keywords: Experience Platform;puntuaciones de descarga;ai del cliente;temas populares;Exportar;exportar;descarga de ai del cliente;puntuaciones de ai del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Descarga de puntuaciones en la API del cliente
 topic: Downloading scores
-description: La API del cliente le permite descargar puntuaciones en formato de archivo de parqué.
+description: La API del cliente le permite descargar puntuaciones en el formato de archivo Parquet.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -19,18 +19,18 @@ Este documento sirve como guía para descargar puntuaciones para la API del clie
 
 ## Primeros pasos
 
-La API del cliente le permite descargar puntuaciones en formato de archivo de parqué. Este tutorial requiere que haya leído y terminado la sección de descarga de puntuaciones de AI del cliente en la guía de [introducción](../getting-started.md) .
+La API del cliente le permite descargar puntuaciones en el formato de archivo Parquet. Este tutorial requiere que haya leído y terminado la sección de descarga de puntuaciones de AI del cliente en la guía [introducción](../getting-started.md).
 
-Además, para acceder a las puntuaciones de la API del cliente, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia](./configure.md)de AI de cliente. Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
+Además, para acceder a las puntuaciones de la API del cliente, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia de AI del cliente](./configure.md). Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
 
 Actualmente, existen dos formas de descargar puntuaciones de AI de cliente:
 
-1. Si desea descargar las puntuaciones en el nivel individual y/o no tiene activado el Perfil del cliente en tiempo real, vaya a [buscar el ID](#dataset-id)del conjunto de datos para realizar el inicio.
-2. Si tiene activado el Perfil y desea descargar segmentos que ha configurado mediante la API del cliente, navegue para [descargar un segmento configurado con la API](#segment)del cliente.
+1. Si desea descargar las puntuaciones en el nivel individual y/o no tiene habilitado el Perfil del cliente en tiempo real, inicio navegando [para encontrar su ID de conjunto de datos](#dataset-id).
+2. Si tiene el Perfil habilitado y desea descargar segmentos que ha configurado mediante la API del cliente, navegue hasta [descargar un segmento configurado con la API del cliente](#segment).
 
-## Find your dataset ID {#dataset-id}
+## Busque su ID de conjunto de datos {#dataset-id}
 
-Dentro de la instancia de servicio para obtener información sobre la API del cliente, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Acceso a puntuaciones]**.
+Dentro de la instancia de servicio para obtener información sobre AI del cliente, haga clic en la lista desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Puntuaciones de acceso]**.
 
 ![más acciones](../images/insights/more-actions.png)
 
@@ -38,9 +38,9 @@ Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación
 
 ![Id. de conjunto de datos](../images/download-scores/access-scores.png)
 
-## Recuperar el ID de lote {#retrieve-your-batch-id}
+## Recupere su ID de lote {#retrieve-your-batch-id}
 
-Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API a fin de devolver el último lote exitoso en lugar de una lista de lotes que pertenecen a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta de límite a la cantidad deseada que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre el [filtrado de datos del catálogo mediante parámetros](../../../catalog/api/filter-data.md)de consulta.
+Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API a fin de devolver el último lote exitoso en lugar de una lista de lotes que pertenecen a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta de límite a la cantidad deseada que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre [filtrado de datos del catálogo mediante parámetros de consulta](../../../catalog/api/filter-data.md).
 
 **Formato API**
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote. En este ejemplo, el valor clave del objeto devuelto es el ID de lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie el ID de lote para utilizarlo en la siguiente llamada de API.
+Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote. En este ejemplo, el valor clave del objeto devuelto es el identificador de lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie el ID de lote para utilizarlo en la siguiente llamada de API.
 
 ```json
 {
@@ -125,7 +125,7 @@ GET batches/{BATCH_ID}/files
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{BATCH_ID}` | El ID de lote que se recuperó en el paso anterior [recupera el ID](#retrieve-your-batch-id)de lote. |
+| `{BATCH_ID}` | El ID de lote que se recuperó en el paso anterior [recupere el ID de lote](#retrieve-your-batch-id). |
 
 **Solicitud**
 
@@ -141,7 +141,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un `_links` objeto. Dentro del `_links` objeto hay un valor `href` con una nueva llamada de API. Copie este valor para continuar con el paso siguiente.
+Una respuesta correcta devuelve una carga útil que contiene un objeto `_links`. Dentro del objeto `_links` hay un `href` con una nueva llamada de API como valor. Copie este valor para continuar con el paso siguiente.
 
 ```json
 {
@@ -167,9 +167,9 @@ Una respuesta correcta devuelve una carga útil que contiene un `_links` objeto.
 }
 ```
 
-## Recuperar los archivos {#retrieving-your-files}
+## Recupere los archivos {#retrieving-your-files}
 
-Utilizando el `href` valor obtenido en el paso anterior como una llamada de API, realice una nueva solicitud de GET para recuperar el directorio de archivos.
+Utilizando el valor `href` obtenido en el paso anterior como una llamada de API, realice una nueva solicitud de GET para recuperar el directorio de archivos.
 
 **Formato API**
 
@@ -179,7 +179,7 @@ GET files/{DATASETFILE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el `href` valor del paso [](#retrieve-the-next-api-call-with-your-batch-id)anterior. También se puede acceder a ella en la `data` matriz bajo el tipo de objeto `dataSetFileId`. |
+| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el valor `href` del [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). También se puede acceder a ella en la matriz `data`, bajo el tipo de objeto `dataSetFileId`. |
 
 **Solicitud**
 
@@ -238,11 +238,11 @@ La respuesta contiene una matriz de datos que puede tener una sola entrada o una
 | `_links.self.href` | Dirección URL de solicitud de GET utilizada para descargar un archivo en el directorio. |
 
 
-Copie el `href` valor de cualquier objeto de archivo de la `data` matriz y, a continuación, continúe con el paso siguiente.
+Copie el valor `href` para cualquier objeto de archivo de la matriz `data` y, a continuación, continúe con el paso siguiente.
 
 ## Descargar los datos del archivo
 
-Para descargar los datos del archivo, realice una solicitud de GET al `"href"` valor copiado en el paso anterior [para recuperar los archivos](#retrieving-your-files).
+Para descargar los datos del archivo, realice una solicitud de GET al valor `"href"` que copió en el paso anterior [para recuperar los archivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -256,7 +256,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el `href` valor de un paso [](#retrieve-the-next-api-call-with-your-batch-id)anterior. |
+| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el valor `href` de un [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | Nombre del archivo. |
 
 **Solicitud**
@@ -282,19 +282,19 @@ La respuesta descarga el archivo solicitado en el directorio actual. En este eje
 
 ## Descargar un segmento configurado con la API del cliente {#segment}
 
-Una forma alternativa de descargar los datos de puntuación es mediante la exportación de la audiencia a un conjunto de datos. Una vez completado correctamente un trabajo de segmentación (el valor del `status` atributo es &quot;SUCCEEDED&quot;), puede exportar la audiencia a un conjunto de datos en el que se pueda acceder a él y tomar medidas al respecto. Para obtener más información sobre la segmentación, visite la descripción general [de la](../../../segmentation/home.md)segmentación.
+Una forma alternativa de descargar los datos de puntuación es mediante la exportación de la audiencia a un conjunto de datos. Una vez completado correctamente un trabajo de segmentación (el valor del atributo `status` es &quot;SUCCEEDED&quot;), puede exportar la audiencia a un conjunto de datos en el que se pueda acceder a él y tomar medidas al respecto. Para obtener más información sobre la segmentación, visite la [información general de segmentación](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
 >Para utilizar este método de exportación, es necesario habilitar el Perfil del cliente en tiempo real para el conjunto de datos.
 
-La sección [Exportar un segmento](../../../segmentation/tutorials/evaluate-a-segment.md) de la guía de evaluación de segmentos abarca los pasos necesarios para exportar un conjunto de datos de audiencia. La guía describe y proporciona ejemplos de lo siguiente:
+La sección [exportar un segmento](../../../segmentation/tutorials/evaluate-a-segment.md) de la guía de evaluación de segmentos abarca los pasos necesarios para exportar un conjunto de datos de audiencia. La guía describe y proporciona ejemplos de lo siguiente:
 
-- **Crear un conjunto de datos de destinatario:** Cree el conjunto de datos para albergar miembros de la audiencia.
-- **Generar perfiles de audiencia en el conjunto de datos:** Rellene el conjunto de datos con Perfiles individuales XDM en función de los resultados de un trabajo de segmento.
-- **Monitorear el progreso de exportación:** Compruebe el progreso actual del proceso de exportación.
+- **Crear un conjunto de datos de destinatario:** Cree el conjunto de datos para incluir miembros de audiencia.
+- **Generar perfiles de audiencia en el conjunto de datos:** Rellene el conjunto de datos con Perfiles individuales XDM basados en los resultados de un trabajo de segmento.
+- **Monitorear el progreso de exportación:** compruebe el progreso actual del proceso de exportación.
 - **Leer datos de audiencia:** Recupere los Perfiles individuales XDM resultantes que representan a los miembros de la audiencia.
 
 ## Pasos siguientes
 
-Este documento describe los pasos necesarios para descargar puntuaciones de AI de cliente. Ahora puede seguir explorando los otros servicios [](../../home.md) inteligentes y las guías que se ofrecen.
+Este documento describe los pasos necesarios para descargar puntuaciones de AI de cliente. Ahora puede seguir explorando los otros [Servicios inteligentes](../../home.md) y las guías que se ofrecen.
