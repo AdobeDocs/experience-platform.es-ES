@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;ad-hoc;ad-hoc;ad-hoc;ad-hoc;
 solution: Experience Platform
 title: Esquemas específicos
 description: En circunstancias específicas, puede ser necesario crear un esquema XDM con campos a los que se les asigne un solo conjunto de datos para su uso. Esto se denomina esquema ad hoc.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
