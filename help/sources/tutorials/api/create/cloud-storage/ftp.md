@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
+keywords: Experience Platform;inicio;temas populares; Protocolo de transferencia de archivos; protocolo de transferencia de archivos
 solution: Experience Platform
 title: Creación de un conector FTP mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform a un servidor FTP (Protocolo de transferencia de archivos).
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar form
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](../../../../../tutorials/authentication.md). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -125,4 +125,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión FTP con la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingesta de datos de parqué mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
+Siguiendo este tutorial, ha creado una conexión FTP con la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID de conexión para [explorar almacenamientos en la nube mediante la API de servicio de flujo](../../explore/cloud-storage.md) o [ingestar datos de parquet mediante la API de servicio de flujo](../../cloud-storage-parquet.md).
