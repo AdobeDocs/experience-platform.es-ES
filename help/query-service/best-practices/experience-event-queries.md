@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de evento de experiencia;consulta de evento de experiencia;consulta de Evento de experiencias;
 solution: Experience Platform
 title: Consultas de Experience Evento
 topic: queries
@@ -8,7 +8,7 @@ description: El siguiente documento proporciona ejemplos de consultas que involu
 translation-type: tm+mt
 source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
