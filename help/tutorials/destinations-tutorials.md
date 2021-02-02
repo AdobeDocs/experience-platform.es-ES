@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;destinations tutorial
+keywords: Experience Platform;inicio;temas populares;tutorial de destinos
 solution: Experience Platform
 title: Crear un destino y activar datos mediante API
 topic: tutorial
 type: Tutorial
 description: Aprenda a crear diferentes tipos de destinos y activar datos.
 translation-type: tm+mt
-source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 10%
+source-wordcount: '77'
+ht-degree: 0%
 
 ---
 
 
 # Crear un destino y activar datos mediante API
 
-Aprenda a crear diferentes tipos de destinos y activar datos. Esta funcionalidad está disponible para los usuarios de la plataforma [de datos del cliente en tiempo real de](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/overview.html)Adobe.
+Aprenda a crear diferentes tipos de destinos y activar datos. Esta funcionalidad está disponible para los usuarios de la [Plataforma de datos del cliente en tiempo real](../rtcdp/overview.md) del Adobe.
 
 ## Destinos de mercadotecnia de correo electrónico {#email-destinations}
 
