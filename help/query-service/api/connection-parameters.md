@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de API;parámetros de conexión;servicio de Consulta;
 solution: Experience Platform
 title: Guía para desarrolladores de consulta Service
 topic: connection parameters
@@ -7,7 +7,7 @@ description: Puede recuperar los parámetros de conexión para utilizar el servi
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
