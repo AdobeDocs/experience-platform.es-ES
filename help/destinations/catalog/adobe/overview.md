@@ -1,21 +1,21 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: destinos;soluciones de Experience Cloud; destinatario;destino del destinatario; ad cloud; nube de publicidad; administrador de audiencias; adobe destinatario destination; destinatario; destino del administrador de audiencias;
 title: Destinos de Adobe
 seo-title: Destinos de Adobe
-description: Administre la experiencia de sus clientes conectando sus datos en tiempo real CDP a otras soluciones de Adobe Experience Cloud para direccionamiento publicitario, personalización, automatización de mercadotecnia y mucho más
-seo-description: Administre la experiencia de sus clientes conectando sus datos en tiempo real CDP a otras soluciones de Adobe Experience Cloud para direccionamiento publicitario, personalización, automatización de mercadotecnia y mucho más
+description: Administre la experiencia del cliente conectando sus datos en Platform con otras soluciones de Adobe Experience Cloud para direccionamiento de publicidad, personalización, automatización de mercadotecnia y mucho más
+seo-description: Administre la experiencia del cliente conectando sus datos en Platform con otras soluciones de Adobe Experience Cloud para direccionamiento de publicidad, personalización, automatización de mercadotecnia y mucho más
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '243'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+# Destinos de Adobe {#adobe-destinations}
 
-Administre su experiencia con el cliente conectando sus datos en tiempo real CDP con otras soluciones de Adobe Experience Cloud para direccionamiento de publicidad, personalización, automatización de mercadotecnia y mucho más.
+Administre la experiencia del cliente conectando sus datos en Adobe Experience Platform con otras soluciones de Adobe Experience Cloud para segmentación de anuncios, personalización, automatización de marketing y mucho más.
 
 ## Conexiones
 
@@ -25,7 +25,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 
 ## Extensiones
 
-Para comprender la diferencia entre las conexiones y las extensiones, consulte [Extensiones](../../destination-types.md#extensions) en la página Tipos y Categorías de destino.
+Para comprender la diferencia entre las conexiones y las extensiones, consulte [Extensiones](../../destination-types.md#extensions) en la página Tipos y Categorías de Destino.
 
 - [Extensión Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 - [Extensión de Adobe Analytics](../analytics/adobe-analytics.md)
