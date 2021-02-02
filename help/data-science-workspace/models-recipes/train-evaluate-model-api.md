@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform;entrenar y evaluar;Área de trabajo de ciencia de datos;temas populares;API de aprendizaje automático Sensei
 solution: Experience Platform
 title: Formación y evaluación de un modelo (API)
 topic: tutorial
 type: Tutorial
 description: Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático Sensei.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1230'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas de API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obtener una lista detallada de la documentación de API.
 
-## Requisitos previos 
+## Requisitos previos
 
-Siga la sección [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md) para crear un motor, que es necesario para entrenar y evaluar un modelo mediante la API.
+Siga la [Importación de una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md) para crear un motor, que es necesario para entrenar y evaluar un modelo mediante la API.
 
-Siga este [tutorial](../../tutorials/authentication.md) para obtener autorización para realizar llamadas de API a inicio.
+Siga el [tutorial de autenticación de API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas de API de inicio.
 
 En el tutorial ahora debe tener los siguientes valores:
 
@@ -54,7 +54,7 @@ Usaremos las API para crear una ejecución de experimentos para formación. Para
 
 ### Crear una instancia MLI
 
-La creación de una instancia MLI se puede realizar mediante la siguiente solicitud. Utilizará el `{ENGINE_ID}` que se devolvió al crear un motor a partir del tutorial de API [](./import-packaged-recipe-ui.md) Importar una fórmula empaquetada.
+La creación de una instancia MLI se puede realizar mediante la siguiente solicitud. Utilizará el `{ENGINE_ID}` que se devolvió al crear un motor a partir del tutorial [Importar una fórmula empaquetada mediante el tutorial API](./import-packaged-recipe-ui.md).
 
 **Solicitud**
 
@@ -126,9 +126,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->En la `{JSON_PAYLOAD}`, definimos los parámetros utilizados para la formación y la puntuación en la `tasks` matriz. El `{ENGINE_ID}` es el ID del motor que desea utilizar y el `tag` campo es un parámetro opcional utilizado para identificar la instancia.
+>En `{JSON_PAYLOAD}`, definimos los parámetros utilizados para la capacitación y la puntuación en la matriz `tasks`. El `{ENGINE_ID}` es el ID del motor que desea utilizar y el campo `tag` es un parámetro opcional utilizado para identificar la instancia.
 
-La respuesta contendrá la `{INSTANCE_ID}` cual representa la instancia MLI que se crea. Se pueden crear varias instancias MLI de modelo con diferentes configuraciones.
+La respuesta contendrá la `{INSTANCE_ID}` que representa la instancia MLI que se crea. Se pueden crear varias instancias MLI de modelo con diferentes configuraciones.
 
 **Respuesta**
 
@@ -222,7 +222,7 @@ La respuesta de la creación del experimento es así.
 
 Los experimentos programados se utilizan para que no sea necesario crear cada ejecución de experimento mediante una llamada de API. En su lugar, proporcionamos todos los parámetros necesarios durante la creación del experimento y cada ejecución se creará periódicamente.
 
-Para indicar la creación de un experimento programado, debemos agregar una `template` sección en el cuerpo de la solicitud. En `template`, se incluyen todos los parámetros necesarios para programar las ejecuciones, como `tasks`, que indican qué acción y `schedule`, que indica el tiempo de ejecución programada.
+Para indicar la creación de un experimento programado, debemos agregar una sección `template` en el cuerpo de la solicitud. En `template`, se incluyen todos los parámetros necesarios para programar las ejecuciones, como `tasks`, que indica qué acción y `schedule`, que indica la temporización de las ejecuciones programadas.
 
 **Solicitud**
 
@@ -269,7 +269,7 @@ curl -X POST \
 }
 ```
 
-Cuando creamos un experimento, el cuerpo, `{JSON_PAYLOAD}`, debe contener el `mlInstanceId` o el parámetro `mlInstanceQuery` . En este ejemplo, un experimento programado invocará una ejecución cada 20 minutos, definida en el `cron` parámetro, comenzando desde el `startTime` hasta el `endTime`.
+Cuando creamos un experimento, el cuerpo, `{JSON_PAYLOAD}`, debe contener el parámetro `mlInstanceId` o el parámetro `mlInstanceQuery`. En este ejemplo, un experimento programado invocará una ejecución cada 20 minutos, establecida en el parámetro `cron`, comenzando desde `startTime` hasta `endTime`.
 
 **Respuesta**
 
@@ -309,7 +309,7 @@ Cuando creamos un experimento, el cuerpo, `{JSON_PAYLOAD}`, debe contener el `ml
 
 ### Crear una ejecución de experimento para formación
 
-Con la creación de una entidad Experimento, se puede crear y ejecutar una ejecución de formación mediante la llamada siguiente. Necesitará el estado `{EXPERIMENT_ID}` y lo que `mode` desea activar en el cuerpo de la solicitud.
+Con la creación de una entidad Experimento, se puede crear y ejecutar una ejecución de formación mediante la llamada siguiente. Necesitará el `{EXPERIMENT_ID}` y indicará qué `mode` desea déclencheur en el cuerpo de la solicitud.
 
 **Solicitud**
 
@@ -335,7 +335,7 @@ curl -X POST \
 }
 ```
 
-También puede anular los parámetros de configuración incluyendo una `tasks` matriz:
+También puede anular los parámetros de configuración incluyendo una matriz `tasks`:
 
 ```JSON
 {
@@ -375,7 +375,7 @@ Recibirá la siguiente respuesta que le permitirá conocer el `{EXPERIMENT_RUN_I
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`::  ID que representa la ejecución del experimento.\
+`{EXPERIMENT_RUN_ID}`:: ID que representa la ejecución del experimento.\
 `{EXPERIMENT_ID}`:: ID que representa el experimento en el que se encuentra la ejecución del experimento.
 
 ### Recuperar el estado de ejecución de un experimento
@@ -400,7 +400,7 @@ curl -X GET \
 
 **Respuesta**
 
-La llamada de GET proporcionará el estado en el `state` parámetro como se muestra a continuación:
+La llamada de GET proporcionará el estado en el parámetro `state` como se muestra a continuación:
 
 ```JSON
 {
@@ -433,15 +433,15 @@ La llamada de GET proporcionará el estado en el `state` parámetro como se mues
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`::  ID que representa la ejecución del experimento.\
+`{EXPERIMENT_RUN_ID}`:: ID que representa la ejecución del experimento.\
 `{EXPERIMENT_ID}`:: ID que representa el experimento en el que se encuentra la ejecución del experimento.
 
-Además del `DONE` estado, otros estados incluyen:
+Además del estado `DONE`, otros estados incluyen:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Para obtener más información, los registros detallados se pueden encontrar bajo el `tasklogs` parámetro .
+Para obtener más información, los registros detallados se pueden encontrar en el parámetro `tasklogs`.
 
 ### Recuperar el modelo entrenado
 
@@ -487,12 +487,12 @@ La respuesta representa el modelo capacitado que se creó.
 ```
 
 `{MODEL_ID}`:: ID correspondiente al modelo.\
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento en el que se encuentra la ejecución del experimento.\
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento en el que se encuentra la ejecución del experimento.\
 `{EXPERIMENT_RUN_ID}`:: ID correspondiente a la ejecución del experimento.
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -503,7 +503,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento.\
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
 
@@ -525,4 +525,4 @@ A continuación se muestra la respuesta que notifica que el experimento se ha el
 
 ## Pasos siguientes
 
-En este tutorial se explica cómo utilizar las API para crear un motor, un experimento, ejecuciones de experimentos programadas y modelos formados. En el [próximo ejercicio](./score-model-api.md), realizará predicciones mediante la puntuación de un nuevo conjunto de datos con el modelo capacitado de mayor rendimiento.
+En este tutorial se explica cómo utilizar las API para crear un motor, un experimento, ejecuciones de experimentos programadas y modelos formados. En el [siguiente ejercicio](./score-model-api.md), realizará predicciones mediante la puntuación de un nuevo conjunto de datos con el modelo capacitado de mayor rendimiento.
