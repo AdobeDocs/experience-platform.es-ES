@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;funciones definidas por adobe;sql;
 solution: Experience Platform
 title: Funciones definidas por Adobe
 topic: functions
@@ -7,7 +7,7 @@ description: Este documento proporciona información sobre las funciones definid
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 2%
 
 ---
