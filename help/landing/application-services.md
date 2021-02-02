@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;flujo de trabajo
 title: Documentación de Application Services
 topic: overview
 description: La documentación de Adobe Experience Platform se proporciona en varios formatos, como descripciones generales, tutoriales y guías tanto para la interfaz de usuario como para la API. A continuación se ofrece una breve descripción de los tipos de documentación más comunes disponibles para los servicios de Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 26%
+source-wordcount: '100'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 
 Adobe ha creado varios servicios de aplicaciones sobre el Experience Platform. Puede encontrar la documentación de estos servicios mediante los vínculos siguientes:
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/es-ES/analytics-platform/using/cja-landing.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/es-ES/journeys/using/journey-orchestration-home.html)
-* [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/en/offer-decisioning/using/offer-decisioning-home.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
