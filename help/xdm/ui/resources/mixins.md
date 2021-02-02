@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;mixin;mixins;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;mezcla;mezclas;
 solution: Experience Platform
 title: Creación y edición de mezclas en la interfaz de usuario
 description: Aprenda a crear y editar mezclas en la interfaz de usuario del Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
