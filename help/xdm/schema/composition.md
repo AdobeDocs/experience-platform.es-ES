@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;enumeración;mezcla;Mezcla;Mezclas;mezclas;tipo de datos;tipos de datos;tipos de datos;tipo de datos;identidad primaria;identidad primaria;perfil individual XDM;campos XDM;tipo de datos enum;evento de experiencias;Evento de experiencias XDM;evento de experiencia XDM;evento de experiencia;diseño de esquema clase;Clase;clases;Clases;tipo de datos;Tipo de datos;tipo de datos;Tipo de datos;esquemas;Esquema;mapa de identidad;mapa de identidad;mapa de identidad;Esquema diseño de ;mapa;mapa;esquema de unión;unión
 solution: Experience Platform
 title: Conceptos básicos de la composición de esquemas
 topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '3099'
+source-wordcount: '3165'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Conceptos básicos de la composición de esquemas
 
-Este documento proporciona una introducción a [!DNL Experience Data Model] (XDM) esquemas y los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en Adobe Experience Platform. Para obtener información general sobre XDM y cómo se utiliza en [!DNL Platform], consulte la información general [del sistema](../home.md)XDM.
+Este documento proporciona una introducción a los [!DNL Experience Data Model] esquemas (XDM) y a los componentes, principios y optimizaciones para la composición de esquemas que se utilizarán en Adobe Experience Platform. Para obtener información general sobre XDM y cómo se utiliza en [!DNL Platform], consulte la [información general del sistema XDM](../home.md).
 
 ## Explicación de los esquemas
 
@@ -39,9 +39,9 @@ Los esquemas solucionan este problema permitiendo que los datos se integren desd
 
 ### Flujos de trabajo basados en esquemas en [!DNL Experience Platform]
 
-La estandarización es un concepto clave detrás [!DNL Experience Platform]. XDM, impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
+La estandarización es un concepto clave detrás de [!DNL Experience Platform]. XDM, impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas estándar para la administración de la experiencia del cliente.
 
-La infraestructura en la que [!DNL Experience Platform] se construye, conocida como [!DNL XDM System], facilita los flujos de trabajo basados en esquemas e incluye los patrones de consumo [!DNL Schema Registry], [!DNL Schema Editor], metadatos de esquema y servicios. See the [XDM System overview](../home.md) for more information.
+La infraestructura en la que [!DNL Experience Platform] se genera, conocida como [!DNL XDM System], facilita los flujos de trabajo basados en esquemas e incluye los [!DNL Schema Registry], [!DNL Schema Editor], los metadatos de esquema y los patrones de consumo de servicios. Consulte la [información general del sistema XDM](../home.md) para obtener más información.
 
 Existen varios beneficios clave para construir y utilizar esquemas en [!DNL Experience Platform]. En primer lugar, los esquemas permiten una mejor gobernanza de los datos y la minimización de los mismos, lo cual es especialmente importante con las regulaciones de privacidad. En segundo lugar, la creación de esquemas con los componentes estándar de Adobe permite obtener perspectivas integradas y utilizar servicios de AI/ML con personalizaciones mínimas. Por último, los esquemas proporcionan infraestructura para el uso compartido de datos y la orquestación eficiente.
 
@@ -62,13 +62,13 @@ Tanto los esquemas de registro como de serie temporal contienen un mapa de ident
 
 ### [!UICONTROL Identidad] {#identity}
 
-Los esquemas se utilizan para la ingesta de datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre las identidades de los clientes y los campos que se pueden utilizar para identificar un asunto, independientemente de la procedencia de los datos.
+Los esquemas se utilizan para ingerir datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una sola vista unificada de una entidad individual. Por lo tanto, es importante que, cuando se piensa en los esquemas, se reflexione sobre las identidades de los clientes y los campos que se pueden utilizar para identificar un asunto, independientemente de la procedencia de los datos.
 
-Para ayudarle con este proceso, los campos clave dentro de sus esquemas pueden marcarse como identidades. Tras la ingestión de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico]de identidad&quot; de esa persona. A los datos del gráfico se puede acceder a través de [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista conjunta de cada cliente individual.
+Para ayudarle con este proceso, los campos clave dentro de sus esquemas pueden marcarse como identidades. Tras la ingestión de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico de identidad]&quot; de ese individuo. A los datos del gráfico se puede acceder mediante [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros [!DNL Experience Platform] servicios para proporcionar una vista conjunta de cada cliente individual.
 
-Los campos que se marcan comúnmente como &quot;[!UICONTROL Identidad]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
+Los campos que se marcan comúnmente como &quot;[!UICONTROL Identidad]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que puede que también sean buenos campos de &quot;[!UICONTROL Identidad]&quot;.
 
-Es importante pensar en las identidades de los clientes durante la fase de planificación de esquemas para ayudar a garantizar que los datos se reúnan a fin de generar el perfil más sólido posible. Consulte la descripción general de [Adobe Experience Platform Identity Service](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
+Es importante pensar en las identidades de los clientes durante la fase de planificación de esquemas para ayudar a garantizar que los datos se reúnan a fin de generar el perfil más sólido posible. Consulte la información general en [Adobe Experience Platform Identity Service](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
 #### xdm:identityMap {#identityMap}
 
@@ -103,17 +103,17 @@ Un ejemplo de mapa de identidad simple sería el siguiente:
 }
 ```
 
-Como se muestra en el ejemplo anterior, cada clave del `identityMap` objeto representa una Área de nombres de identidad. El valor de cada clave es una matriz de objetos que representa los valores de identidad (`id`) de la Área de nombres correspondiente. Consulte la [!DNL Identity Service] documentación para obtener una [lista de Áreas de nombres](../../identity-service/troubleshooting-guide.md#standard-namespaces) de identidad estándar reconocidas por las aplicaciones de Adobe.
+Como se muestra en el ejemplo anterior, cada clave del objeto `identityMap` representa una Área de nombres de identidad. El valor de cada clave es una matriz de objetos que representa los valores de identidad (`id`) de la Área de nombres correspondiente. Consulte la [!DNL Identity Service] documentación para obtener una [lista de Áreas de nombres de identidad estándar](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconocidas por las aplicaciones de Adobe.
 
 >[!NOTE]
 >
->También se puede proporcionar un valor booleano para determinar si el valor es o no una identidad principal (`primary`) para cada valor de identidad. Las identidades primarias solo deben establecerse para esquemas destinados a utilizarse en [!DNL Real-time Customer Profile]. Consulte la sección sobre esquemas [de](#union) unión para obtener más información.
+>También se puede proporcionar un valor booleano para determinar si el valor es o no una identidad principal (`primary`) para cada valor de identidad. Las identidades primarias sólo deben configurarse para esquemas destinados a utilizarse en [!DNL Real-time Customer Profile]. Consulte la sección sobre [esquemas de unión](#union) para obtener más información.
 
 ### Principios de evolución del esquema {#evolution}
 
 A medida que la naturaleza de las experiencias digitales sigue evolucionando, también deben evolucionar los esquemas utilizados para representarlas. Por lo tanto, un esquema bien diseñado puede adaptarse y evolucionar según sea necesario, sin causar cambios destructivos en versiones anteriores del esquema.
 
-Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, [!DNL Experience Platform] aplica un principio de control de versiones puramente aditivo para garantizar que cualquier revisión del esquema sólo dé lugar a actualizaciones y cambios no destructivos. En otras palabras, no se admiten los cambios de **salto.**
+Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, [!DNL Experience Platform] aplica un principio de control de versiones puramente aditivo para garantizar que cualquier revisión del esquema sólo dé como resultado actualizaciones y cambios no destructivos. En otras palabras, **no se admiten cambios de salto.**
 
 | Cambios admitidos | Romper cambios (no compatible) |
 |------------------------------------|---------------------------------|
@@ -121,11 +121,11 @@ Dado que el mantenimiento de la compatibilidad con versiones anteriores es cruci
 
 >[!NOTE]
 >
->Si todavía no se ha utilizado un esquema para ingerir datos en [!DNL Experience Platform], puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se haya utilizado en [!DNL Platform]el, debe adherirse a la política de control de versiones de aditivos.
+>Si todavía no se ha utilizado un esquema para ingerir datos en [!DNL Experience Platform], puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en [!DNL Platform], debe cumplir la política de versiones aditivas.
 
 ### Esquemas e ingestión de datos
 
-Para poder ingerir datos en [!DNL Experience Platform], primero se debe crear un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos [[!DNL Catalog Service]](../../catalog/home.md)y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Consulte la información general sobre la ingestión [de datos de](../../ingestion/home.md) Adobe Experience Platform para obtener más información.
+Para poder ingerir datos en [!DNL Experience Platform], primero debe crearse un conjunto de datos. Los conjuntos de datos son los componentes básicos de la transformación y el seguimiento de datos para [[!DNL Catalog Service]](../../catalog/home.md) y generalmente representan tablas o archivos que contienen datos ingestados. Todos los conjuntos de datos se basan en esquemas XDM existentes, que establecen restricciones para lo que deben contener los datos ingestados y cómo deben estructurarse. Consulte la información general sobre [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) para obtener más información.
 
 ## Componentes de un esquema
 
@@ -137,7 +137,7 @@ Los esquemas se componen con la fórmula siguiente:
 
 &amp;ast;Un esquema se compone de una clase y cero o más mezclas. Esto significa que puede componer un esquema de conjunto de datos sin usar mezclas.
 
-### Class {#class}
+### Clase {#class}
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además de esto, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían incluir y proporcionar una manera de combinar varios conjuntos de datos compatibles.
 
@@ -153,13 +153,13 @@ Las mezclas definen con qué clase o clases son compatibles en función del comp
 
 [!DNL Experience Platform] incluye muchas mezclas de Adobe estándar, a la vez que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
 
-Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot;Direcciónprincipal&quot; para el esquema &quot;Miembros[!UICONTROL de la]lealtad&quot;, podría utilizar mezclas estándar que definen esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;Nivel[!UICONTROL de Programa de]lealtad&quot;) no suelen tener una mezcla predefinida. En este caso, debe definir su propia mezcla para capturar esta información.
+Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot;[!UICONTROL Dirección principal]&quot; para el esquema &quot;[!UICONTROL Miembros de lealtad]&quot;, podría utilizar mezclas estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Nivel de Programa de lealtad]&quot;) no suelen tener una mezcla predefinida. En este caso, debe definir su propia mezcla para capturar esta información.
 
 Recuerde que los esquemas están compuestos de mezclas &quot;cero o más&quot;, lo que significa que puede componer un esquema válido sin usar ninguna mezcla.
 
-Para obtener una lista de todas las mezclas estándar actuales, consulte el repositorio [XDM](https://github.com/adobe/xdm/tree/master/components/mixins)oficial.
+Para obtener una lista de todas las mezclas estándar actuales, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins).
 
-### Data type {#data-type}
+### Tipo de datos {#data-type}
 
 Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que una mezcla, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que una mezcla, ya que se puede incluir un tipo de datos en cualquier parte de un esquema agregándolo como el &quot;tipo de datos&quot; de un campo.
 
@@ -167,11 +167,11 @@ Los tipos de datos se utilizan como tipos de campos de referencia en clases o es
 >
 >Consulte el [apéndice](#mixins-v-datatypes) para obtener más información sobre las diferencias entre las mezclas y los tipos de datos, y las ventajas y desventajas de utilizar una sobre la otra para casos de uso similares.
 
-[!DNL Experience Platform] proporciona una serie de tipos de datos comunes como parte del [!DNL Schema Registry] informe para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los [!DNL Schema Registry] tutoriales, donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
+[!DNL Experience Platform] proporciona una serie de tipos de datos comunes como parte del informe  [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales [!DNL Schema Registry], donde se aclarará a medida que avance en los pasos para definir los tipos de datos.
 
 ### Campo
 
-Un campo es el componente básico más básico de un esquema. Los campos proporcionan restricciones con respecto al tipo de datos que pueden contener al definir un tipo de datos específico. Estos tipos de datos básicos definen un solo campo, mientras que los tipos [de](#data-type) datos mencionados anteriormente le permiten definir varios subcampos y reutilizar la misma estructura de varios campos en varios esquemas. Por lo tanto, además de definir el &quot;tipo de datos&quot; de un campo como uno de los tipos de datos definidos en el Registro, [!DNL Experience Platform] admite tipos escalares básicos como:
+Un campo es el componente básico más básico de un esquema. Los campos proporcionan restricciones con respecto al tipo de datos que pueden contener al definir un tipo de datos específico. Estos tipos de datos básicos definen un solo campo, mientras que los [tipos de datos](#data-type) antes mencionados le permiten definir varios subcampos y reutilizar la misma estructura de varios campos en varios esquemas. Por lo tanto, además de definir el &quot;tipo de datos&quot; de un campo como uno de los tipos de datos definidos en el Registro, [!DNL Experience Platform] admite tipos escalares básicos como:
 
 * Cadena
 * Número entero
@@ -196,7 +196,7 @@ Los rangos válidos de estos tipos escalares se pueden restringir aún más a ci
 
 >[!NOTE]
 >
->El tipo de campo &quot;map&quot; permite datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema definido por el sector o el proveedor, pero no está disponible para utilizarse en los campos definidos. La guía [para desarrolladores de la API de registro de](../api/getting-started.md) Esquema contiene más información sobre la definición de tipos de campo.
+>El tipo de campo &quot;map&quot; permite datos de pares de clave-valor, incluidos varios valores para una sola clave. Los mapas solo se pueden definir en el nivel del sistema, lo que significa que puede encontrar un mapa en un esquema definido por el sector o el proveedor, pero no está disponible para utilizarse en los campos definidos. La [guía para desarrolladores de la API de registro de Esquema](../api/getting-started.md) contiene más información sobre la definición de tipos de campo.
 
 Algunas operaciones de datos utilizadas por los servicios y las aplicaciones posteriores imponen restricciones a tipos de campo específicos. Los servicios afectados incluyen, entre otros:
 
@@ -210,58 +210,58 @@ Antes de crear un esquema para su uso en los servicios intermedios, revise la do
 
 ### Campos XDM
 
-Además de los campos básicos y la capacidad de definir sus propios tipos de datos, XDM proporciona un conjunto estándar de campos y tipos de datos que los servicios entienden implícitamente y proporcionan una buena coherencia cuando se utilizan en [!DNL Experience Platform] [!DNL Platform] los componentes.
+Además de los campos básicos y la capacidad de definir sus propios tipos de datos, XDM proporciona un conjunto estándar de campos y tipos de datos que los servicios [!DNL Experience Platform] entienden implícitamente y proporcionan buena consistencia cuando se utilizan en [!DNL Platform] componentes.
 
-Estos campos, como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;, contienen connotaciones agregadas más allá de los tipos de campo escalar básicos, lo [!DNL Platform] que indica que cualquier campo que comparta el mismo tipo de datos XDM se comportará de la misma manera. Se puede confiar en este comportamiento para que sea coherente independientemente de dónde procedan los datos o en qué servicio se utilicen los datos [!DNL Platform] .
+Estos campos, como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;, contienen connotaciones agregadas que van más allá de los tipos de campo escalar básicos, lo que indica a [!DNL Platform] que cualquier campo que comparta el mismo tipo de datos XDM se comportará de la misma manera. Se puede confiar en este comportamiento para que sea coherente independientemente de dónde provengan los datos o en qué [!DNL Platform] servicio se utilizan los datos.
 
-Consulte el diccionario [de campos](field-dictionary.md) XDM para obtener una lista completa de los campos XDM disponibles. Se recomienda utilizar campos XDM y tipos de datos siempre que sea posible para mantener la coherencia y la estandarización en todo [!DNL Experience Platform].
+Consulte el [diccionario de campo XDM](field-dictionary.md) para obtener una lista completa de los campos XDM disponibles. Se recomienda utilizar campos XDM y tipos de datos siempre que sea posible para admitir la consistencia y la estandarización en [!DNL Experience Platform].
 
 ## Ejemplo de composición
 
-Los esquemas representan el formato y la estructura de los datos que se van a ingerir [!DNL Platform]y se crean utilizando un modelo de composición. Como se mencionó anteriormente, estos esquemas están compuestos de una clase y cero o más mezclas compatibles con esa clase.
+Los esquemas representan el formato y la estructura de los datos que se van a ingerir en [!DNL Platform] y se crean utilizando un modelo de composición. Como se mencionó anteriormente, estos esquemas están compuestos de una clase y cero o más mezclas compatibles con esa clase.
 
-Por ejemplo, un esquema que describa las compras realizadas en una tienda minorista podría denominarse &quot;Transacciones[!UICONTROL de]almacenamiento&quot;. El esquema implementa la [!DNL XDM ExperienceEvent] clase combinada con la mezcla de [!UICONTROL comercio] estándar y una mezcla de información [!UICONTROL del] producto definida por el usuario.
+Por ejemplo, un esquema que describe las compras realizadas en una tienda minorista puede llamarse &quot;[!UICONTROL Transacciones de almacenamiento]&quot;. El esquema implementa la clase [!DNL XDM ExperienceEvent] combinada con la mezcla estándar [!UICONTROL Commerce] y una mezcla definida por el usuario [!UICONTROL Product Info].
 
-Otro esquema que rastrea el tráfico del sitio web puede llamarse &quot;Visitas[!UICONTROL web]&quot;. También implementa la [!DNL XDM ExperienceEvent] clase, pero esta vez combina la mezcla estándar de [!UICONTROL Web] .
+Otro esquema que rastrea el tráfico del sitio Web puede llamarse &quot;[!UICONTROL Visitas Web]&quot;. También implementa la clase [!DNL XDM ExperienceEvent], pero esta vez combina la mezcla estándar [!UICONTROL Web].
 
-El diagrama siguiente muestra estos esquemas y los campos que aporta cada mezcla. También contiene dos esquemas basados en la [!DNL XDM Individual Profile] clase, incluido el esquema &quot;Miembros[!UICONTROL de la]Lealtad&quot; mencionado anteriormente en esta guía.
+El diagrama siguiente muestra estos esquemas y los campos que aporta cada mezcla. También contiene dos esquemas basados en la clase [!DNL XDM Individual Profile], incluido el esquema &quot;[!UICONTROL Miembros de lealtad]&quot; mencionado anteriormente en esta guía.
 
 ![](../images/schema-composition/composition.png)
 
 ### Union {#union}
 
-Aunque [!DNL Experience Platform] le permite componer esquemas para casos de uso específicos, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase ExperienceEvent de XDM y dos esquemas basados en [!DNL XDM Individual Profile] la clase. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] y [!DNL XDM Individual Profile], respectivamente).
+Aunque [!DNL Experience Platform] le permite componer esquemas para casos de uso específicos, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase XDM ExperienceEvent y dos esquemas basados en la clase [!DNL XDM Individual Profile]. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] y [!DNL XDM Individual Profile], respectivamente).
 
 ![](../images/schema-composition/union.png)
 
-Al habilitar un esquema para utilizarlo con [!DNL Real-time Customer Profile], se incluirá en la unión para ese tipo de clase. [!DNL Profile] ofrece perfiles robustos y centralizados de atributos del cliente, así como una cuenta con marca de hora de cada evento que el cliente ha tenido en cualquier sistema integrado con [!DNL Platform]. [!DNL Profile] utiliza la vista de unión para representar estos datos y proporcionar una vista holística de cada cliente individual.
+Al habilitar un esquema para utilizarlo con [!DNL Real-time Customer Profile], se incluirá en la unión para ese tipo de clase. [!DNL Profile] ofrece perfiles robustos y centralizados de atributos del cliente, así como una cuenta con marca de hora de cada evento que el cliente ha tenido en cualquier sistema integrado con  [!DNL Platform]. [!DNL Profile] utiliza la vista de unión para representar estos datos y proporcionar una vista holística de cada cliente individual.
 
-Para obtener más información sobre cómo trabajar con [!DNL Profile], consulte la descripción general [del Perfil del cliente en tiempo](../../profile/home.md)real.
+Para obtener más información sobre cómo trabajar con [!DNL Profile], consulte la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Asignación de archivos de datos a esquemas XDM
 
-Todos los archivos de datos que se ingieran [!DNL Experience Platform] deben cumplir la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para cumplir con las jerarquías XDM (incluidos los archivos de ejemplo), consulte el documento sobre las transformaciones [ETL de](../../etl/transformations.md)ejemplo. Para obtener información general sobre la ingesta de archivos de datos en [!DNL Experience Platform], consulte la información general [sobre la ingestión de](../../ingestion/batch-ingestion/overview.md)lotes.
+Todos los archivos de datos que se ingieren en [!DNL Experience Platform] deben cumplir la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para cumplir con las jerarquías XDM (incluidos los archivos de ejemplo), consulte el documento sobre [transformaciones ETL de muestra](../../etl/transformations.md). Para obtener información general sobre la ingesta de archivos de datos en [!DNL Experience Platform], consulte la [información general sobre la ingestión por lotes](../../ingestion/batch-ingestion/overview.md).
 
 ## Pasos siguientes
 
-Ahora que se entienden los conceptos básicos de la composición de esquemas, está listo para empezar a explorar y construir esquemas usando el [!DNL Schema Registry].
+Ahora que comprende los conceptos básicos de la composición de esquemas, está listo para empezar a explorar y generar esquemas usando el [!DNL Schema Registry].
 
 Para revisar la estructura de las dos clases XDM principales y sus mezclas compatibles de uso común, consulte la siguiente documentación de referencia:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-El [!DNL Schema Registry] se utiliza para acceder a [!DNL Schema Library] dentro de Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobes, recursos del proveedor definidos por [!DNL Experience Platform] socios y clases, mezclas, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro de Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene los recursos del sector definidos por el Adobe, los recursos del proveedor definidos por [!DNL Experience Platform] socios y las clases, mezclas, tipos de datos y esquemas compuestos por miembros de su organización.
 
-Para empezar a componer esquemas mediante la interfaz de usuario, siga el tutorial [del Editor de](../tutorials/create-schema-ui.md) Esquemas para crear el esquema &quot;Miembros de lealtad&quot; mencionado a lo largo de este documento.
+Para empezar a componer esquemas mediante la interfaz de usuario, siga el tutorial [Editor de Esquemas](../tutorials/create-schema-ui.md) para crear el esquema &quot;Miembros de lealtad&quot; mencionado en este documento.
 
-Para empezar a utilizar la [!DNL Schema Registry] API, lea la guía [para desarrolladores de la API de registro de](../api/getting-started.md)Esquema para inicio. Después de leer la guía para desarrolladores, siga los pasos descritos en el tutorial sobre la [creación de un esquema con la API](../tutorials/create-schema-api.md)del Registro de Esquemas.
+Para empezar a utilizar la API [!DNL Schema Registry], lea la guía para desarrolladores de la API de registro de Esquema [inicio](../api/getting-started.md). Después de leer la guía para desarrolladores, siga los pasos descritos en el tutorial sobre [creación de un esquema con la API del Registro de Esquema](../tutorials/create-schema-api.md).
 
 ## Apéndice
 
 La siguiente sección contiene información adicional sobre los principios de la composición del esquema.
 
-### Objetos frente a campos de formulario libre {#objects-v-freeform}
+### Objetos frente a campos de formato libre {#objects-v-freeform}
 
 Existen algunos factores clave que deben tenerse en cuenta al elegir objetos en lugar de campos de formulario libre al diseñar sus esquemas:
 
@@ -283,7 +283,7 @@ Los pros y los contras del uso de objetos sobre campos de formulario libre se en
 **Contras**:
 
 * Los campos se anidan más.
-* Cuando se utiliza [Adobe Experience Platform Consulta Service](../../query-service/home.md), se deben proporcionar cadenas de referencia más largas a los campos de consulta anidados en objetos.
+* Al utilizar [Servicio de Consulta de Adobe Experience Platform](../../query-service/home.md), se deben proporcionar cadenas de referencia más largas a los campos de consulta anidados en objetos.
 
 #### Campos de forma libre
 
