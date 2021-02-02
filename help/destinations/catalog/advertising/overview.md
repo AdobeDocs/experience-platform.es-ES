@@ -1,13 +1,13 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Destinos publicitarios
 seo-title: Destinos publicitarios
-description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
-seo-description: Conecte la plataforma de datos del cliente en tiempo real a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
+description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
+seo-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Destinos publicitarios {#advertising-destinations}
 
-Conecte [!DNL Real-time Customer Data Platform] el programa a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
+Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 
 Al conectarse a un destino publicitario, las audiencias se envían como ID a la plataforma de destino, donde se asignan a un ID conocido por la plataforma de destino.
 
-Actualmente, CDP en tiempo real es compatible con los destinos publicitarios que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, Platform admite los destinos de publicidad que se indican a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 ## Conexiones
 
@@ -34,7 +34,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 
 ## Extensiones
 
-Para comprender la diferencia entre las conexiones y las extensiones, consulte [Extensiones](../../destination-types.md#extensions) en la página Tipos y Categorías de destino.
+Para comprender la diferencia entre las conexiones y las extensiones, consulte [Extensiones](../../destination-types.md#extensions) en la página Tipos y Categorías de Destino.
 
 - [Extensión Adobe Advertising Cloud](./adobe-advertising-cloud.md)
 - [Extensión de la etiqueta de conversión de publicidad de Awin](./awin-conversiontag.md)
