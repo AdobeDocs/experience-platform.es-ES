@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
+keywords: Experience Platform;inicio;temas populares;editor de Consultas;editor de consultas;servicio de Consulta;servicio de consulta;
 solution: Experience Platform
 title: Guía del usuario del Editor de consultas
 topic: query editor
@@ -7,13 +7,13 @@ description: El Editor de consultas es una herramienta interactiva proporcionada
 translation-type: tm+mt
 source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1081'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Editor] guía del usuario
+# [!DNL Query Editor] Guía del usuario
 
 [!DNL Query Editor] es una herramienta interactiva proporcionada por Adobe Experience Platform  [!DNL Query Service], que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de  [!DNL Experience Platform] usuario. [!DNL Query Editor] admite el desarrollo de consultas para la análisis y la exploración de datos, y le permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en  [!DNL Experience Platform].
 
