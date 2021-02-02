@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma de Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 translation-type: tm+mt
-source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 20%
+source-wordcount: '243'
+ht-degree: 18%
 
 ---
 
@@ -19,7 +19,7 @@ La interfaz de usuario (IU) de Adobe Experience Platform está diseñada para ad
 
 ## Compatibilidad con navegadores
 
-La interfaz de usuario de la plataforma está diseñada para funcionar de forma óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
+La interfaz de usuario de la plataforma está diseñada para funcionar de manera óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
 
 | Sistema operativo | Navegadores admitidos |
 |---|---|
@@ -48,8 +48,8 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 
 Para cambiar el idioma:
 
-1. Seleccione el idioma actual en el pie de página de la interfaz de [!DNL Experience Platform] usuario.
-2. En la configuración de perfil, haga clic en **[!UICONTROL Cambiar región]**.
+1. Seleccione el idioma actual en el pie de página de la interfaz de usuario [!DNL Experience Platform].
+2. En la configuración del perfil, seleccione **[!UICONTROL Cambiar región]**.
 3. Seleccione su región.
 
 >[!NOTE]
