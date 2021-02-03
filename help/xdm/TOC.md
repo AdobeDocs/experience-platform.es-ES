@@ -5,10 +5,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 translation-type: tm+mt
-source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
+source-git-commit: cbdeb7529d27cb8b1cacc4a64b90637bb80f514d
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 23%
+source-wordcount: '225'
+ht-degree: 24%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 23%
       * [Detalles del entorno](./mixins/event/environment-details.md)
    * [Actualizaciones de nombres de mezcla](./mixins/name-updates.md)
 * Tipos de datos {#data-types}
+   * [de asistencia al cliente](./data-types/application.md)
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Contenido y preferencias](./data-types/consents.md)
@@ -48,6 +49,7 @@ ht-degree: 23%
    * [Detalles de interacción geográfica](./data-types/geo-interaction-details.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Identidad](./data-types/identity.md)
+   * [Medida](./data-types/measure.md)
    * [Persona](./data-types/person.md)
    * [Nombre de la persona](./data-types/person-name.md)
    * [Número de teléfono](./data-types/phone-number.md)
@@ -55,7 +57,10 @@ ht-degree: 23%
    * [Detalles de puntos de interés](./data-types/poi-details.md)
    * [Interacción con POI](./data-types/poi-interaction.md)
    * [Dirección postal](./data-types/postal-address.md)
+   * [Buscar](./data-types/search.md)
    * [Suscripción](./data-types/subscription.md)
+   * [Interacción con Web](./data-types/web-interactions.md)
+   * [Detalles de la página Web](./data-types/webpage-details.md)
 *  EsquemasUI  {#ui}
    * [Información general](./ui/overview.md)
    * [Explorar recursos XDM](./ui/explore.md)
