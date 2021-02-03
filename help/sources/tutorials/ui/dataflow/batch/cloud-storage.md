@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ En función de sus necesidades, puede elegir asignar los campos directamente o u
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-Para archivos JSON, además de asignar campos directamente a otros campos, puede asignar objetos directamente a otros objetos y matrices a otras matrices.
+Para archivos JSON, además de asignar campos directamente a otros campos, puede asignar objetos directamente a otros objetos y matrices a otras matrices. También puede asignar y asignar tipos de datos complejos como matrices en archivos JSON mediante un conector de origen de almacenamiento de nube.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
