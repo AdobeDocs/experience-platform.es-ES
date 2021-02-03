@@ -5,7 +5,7 @@ title: Creación y edición de esquemas en la interfaz de usuario
 description: Conozca los conceptos básicos sobre cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Seleccione la casilla de verificación situada junto al nombre de la mezcla que 
 >
 >Para cualquier mezcla de la lista, puede pasar el ratón por encima o centrarse en el icono de información (![](../../images/ui/resources/schemas/info-icon.png)) para vista de una breve descripción del tipo de datos que captura la mezcla. También puede seleccionar el icono de previsualización (![](../../images/ui/resources/schemas/preview-icon.png)) para vista de la estructura de los campos que proporciona la mezcla antes de decidir agregarla al esquema.
 
-Una vez que haya terminado de elegir la mezcla, seleccione **[!UICONTROL Añadir mezcla]** para agregarla al esquema.
+Una vez que haya elegido sus mezclas, seleccione **[!UICONTROL Añadir mezcla]** para agregarlas al esquema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
