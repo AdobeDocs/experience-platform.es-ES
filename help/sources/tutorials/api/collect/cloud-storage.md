@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -341,6 +341,10 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 ## Crear una asignación {#mapping}
 
 Para que los datos de origen se puedan ingerir en un conjunto de datos de destinatario, primero deben asignarse al esquema de destinatario al que se adhiere el conjunto de datos de destinatario. Esto se logra realizando una solicitud de POST al servicio de conversión con asignaciones de datos definidas en la carga útil de la solicitud.
+
+>[!TIP]
+>
+>Puede asignar tipos de datos complejos como matrices en archivos JSON mediante un conector de origen de almacenamiento de nube.
 
 **Formato API**
 
