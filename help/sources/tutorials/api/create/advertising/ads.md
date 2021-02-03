@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar Experience Platform a Google AdWords.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -39,12 +39,12 @@ Para que [!DNL Flow Service] se conecte con AdWords, debe proporcionar valores p
 
 | **Credencial** | **Descripción** |
 | -------------- | --------------- |
-| ID del cliente | ID de cliente de la cuenta de AdWords. |
-| Token de desarrollador | El testigo del programador asociado a la cuenta del administrador. |
-| Actualizar token | El token de actualización obtenido de [!DNL Google] para autorizar el acceso a AdWords. |
-| ID de cliente | ID de cliente de la aplicación [!DNL Google] utilizada para adquirir el autentificador de actualización. |
-| Secreto del cliente | El secreto de cliente de la aplicación [!DNL Google] utilizada para adquirir el autentificador de actualización. |
-| ID de especificación de conexión | Identificador único necesario para crear una conexión. El identificador de especificación de conexión para [!DNL Google AdWords] es: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | ID de cliente de la cuenta de AdWords. |
+| `developerToken` | El testigo del programador asociado a la cuenta del administrador. |
+| `refreshToken` | El token de actualización obtenido de [!DNL Google] para autorizar el acceso a AdWords. |
+| `clientId` | ID de cliente de la aplicación [!DNL Google] utilizada para adquirir el autentificador de actualización. |
+| `clientSecret` | El secreto de cliente de la aplicación [!DNL Google] utilizada para adquirir el autentificador de actualización. |
+| `connectionSpec` | Identificador único necesario para crear una conexión. El identificador de especificación de conexión para [!DNL Google AdWords] es: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Para obtener más información sobre estos valores, consulte este [documento AdWords de Google](https://developers.google.com/adwords/api/docs/guides/authentication).
 
