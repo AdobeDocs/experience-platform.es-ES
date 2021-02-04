@@ -5,9 +5,9 @@ seo-title: Destino de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 3%
 # [!DNL Facebook] Destino
 
 ## Información general {#overview}
+
+>[!IMPORTANT]
+>
+>La migración de clientes a la nueva experiencia de configuración de destino está en curso. En este momento puede que tenga dificultades para acceder a la página de configuración de destino.
 
 Active perfiles para sus [!DNL Facebook] campañas de objetivo de audiencia, personalización y supresión en base a correos electrónicos con hash.
 
