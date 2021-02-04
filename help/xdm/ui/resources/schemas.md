@@ -5,9 +5,9 @@ title: Creación y edición de esquemas en la interfaz de usuario
 description: Conozca los conceptos básicos sobre cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Para editar un esquema existente, seleccione la ficha **[!UICONTROL Examinar]** 
 >
 >Puede utilizar las funciones de búsqueda y filtrado del espacio de trabajo para encontrar el esquema más fácilmente. Consulte la guía sobre [exploración de recursos XDM](../explore.md) para obtener más información.
 
-Una vez seleccionado un esquema, el [!DNL Schema Editor] aparece con la estructura del esquema que se muestra en el lienzo. Ahora puede [agregar mezclas](#add-mixins) al esquema o [editar mezclas personalizadas existentes](./mixins.md#edit) si el esquema emplea alguna.
+Una vez seleccionado un esquema, el [!DNL Schema Editor] aparece con la estructura del esquema que se muestra en el lienzo. Ahora puede [agregar mezclas](#add-mixins) al esquema, [editar nombres de visualización de campos](#display-names) o [editar mezclas personalizadas existentes](./mixins.md#edit) si el esquema emplea alguna.
 
 ## Añadir mezclas a un esquema {#add-mixins}
 
@@ -116,6 +116,22 @@ Para finalizar el proceso, seleccione **[!UICONTROL Guardar]** para guardar el e
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 El esquema ahora está habilitado para su uso en Perfil de clientes en tiempo real. Cuando Platform ingesta datos en conjuntos de datos basados en este esquema, esos datos se incorporarán a los datos de Perfil amalgamados.
+
+## Editar los nombres para mostrar de los campos de esquema {#display-names}
+
+Una vez que haya asignado una clase y agregado mezclas a un esquema, puede editar los nombres para mostrar de cualquiera de los campos del esquema, independientemente de si esos campos se han proporcionado con recursos XDM estándar o personalizados.
+
+>[!NOTE]
+>
+>Tenga en cuenta que los nombres para mostrar de los campos que pertenecen a clases o mezclas estándar solo se pueden editar en el contexto de un esquema específico. En otras palabras, cambiar el nombre para mostrar de un campo estándar en un esquema no afecta a otros esquemas que emplean la misma clase o mezcla asociada.
+
+Para editar el nombre para mostrar de un campo de esquema, seleccione el campo en el lienzo. En el carril derecho, proporcione el nuevo nombre en **[!UICONTROL Nombre para mostrar]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Seleccione **[!UICONTROL Aplicar]** en el carril derecho y el lienzo se actualiza para mostrar el nuevo nombre para mostrar del campo. Seleccione **[!UICONTROL Guardar]** para aplicar los cambios al esquema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Cambiar una clase de esquema {#change-class}
 
