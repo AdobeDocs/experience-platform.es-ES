@@ -5,9 +5,9 @@ title: Servicio de ID de Adobe Experience Platform
 topic: tutorial
 description: Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ La siguiente sección proporciona información adicional para trabajar con el vi
 Pueden producirse errores al acceder al visor del gráfico de identidad. A continuación se presenta una lista de requisitos previos y limitaciones que deben tenerse en cuenta al trabajar con el visor de gráficos de identidad.
 
 - Debe existir un valor de identidad en la Área de nombres seleccionada.
-- El visor de gráficos de identidad requiere un mínimo de dos identidades vinculadas para generar.
+- El visor de gráficos de identidad requiere un mínimo de dos identidades vinculadas para generar. Es posible que solo haya un valor de identidad y ninguna identidad vinculada, y en este caso, el valor solo existiría en el visor [!DNL Profile].
 - El visor de gráficos de identidad no puede superar el máximo de 150 identidades.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
