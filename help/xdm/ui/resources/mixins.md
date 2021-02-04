@@ -5,9 +5,9 @@ title: Creación y edición de mezclas en la interfaz de usuario
 description: Aprenda a crear y editar mezclas en la interfaz de usuario del Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ La [!DNL Schema Editor] reaparece, con la nueva mezcla enumerada en el carril iz
 
 >[!NOTE]
 >
->Solo se pueden editar las mezclas personalizadas definidas por la organización.
+>Solo las mezclas personalizadas definidas por su organización se pueden editar y personalizar completamente. Para las mezclas principales definidas por Adobe, solo se pueden editar los nombres para mostrar de sus campos en el contexto de esquemas individuales. Consulte la sección sobre [edición de nombres para mostrar para campos de esquema](./schemas.md#display-names) para obtener más información.
 >
->Además, una vez guardada y utilizada una mezcla en un esquema para la ingestión de datos, sólo se podrán realizar cambios aditivos en la mezcla posteriormente. Consulte las [reglas de la evolución del esquema](../../schema/composition.md#evolution) para obtener más información.
+>Una vez guardada y utilizada una mezcla personalizada en un esquema para la ingestión de datos, sólo se podrán realizar cambios aditivos en la mezcla posteriormente. Consulte las [reglas de la evolución del esquema](../../schema/composition.md#evolution) para obtener más información.
 
 Para editar una mezcla existente, primero debe abrir un esquema que utilice la mezcla dentro de [!DNL Schema Editor]. Puede [seleccionar un esquema existente para editarlo](./schemas.md#edit) o [crear un nuevo esquema](./schemas.md#create) y agregar la mezcla en cuestión.
 
