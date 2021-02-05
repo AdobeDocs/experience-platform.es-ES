@@ -4,7 +4,7 @@ title: Generar datos de ejemplo para un Esquema XDM en la interfaz de usuario
 description: Obtenga información sobre cómo generar datos JSON de muestra basados en un esquema existente en la interfaz de usuario de Adobe Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Para poder transferir datos a Adobe Experience Platform, el formato y la estruct
 
 Para cualquier esquema que defina en la interfaz de usuario del Experience Platform, puede generar un objeto JSON de muestra que se ajuste a la estructura del esquema. Este objeto puede servir de plantilla para cualquier dato que se ingrese en conjuntos de datos que empleen el esquema en cuestión.
 
-En la interfaz de usuario de la plataforma, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Examinar]**, busque el esquema para el que desea generar datos de ejemplo. Selecciónelo en la lista y actualice el carril correcto para mostrar detalles sobre el esquema. Desde aquí, seleccione **[!UICONTROL Descargar archivo de muestra].**
+En la interfaz de usuario de la plataforma, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Examinar]**, busque el esquema para el que desea generar datos de ejemplo. Selecciónelo en la lista y actualice el carril correcto para mostrar detalles sobre el esquema. Desde aquí, seleccione **[!UICONTROL Descargar archivo de muestra]**.
 
 ![](../images/ui/sample/sample-data.png)
 
