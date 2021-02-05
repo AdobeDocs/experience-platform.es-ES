@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo exportar un esquema existente a un
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Esto copia una carga útil JSON en el portapapeles, generada en función de la e
 
 La carga útil adopta la forma de una matriz, y cada elemento de la matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen la mezcla personalizada &quot;[!DNL Loyalty details]&quot; y el esquema &quot;[!DNL Loyalty Members]&quot;. Los recursos básicos empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todos los entornos limitados y en todas las organizaciones de IMS.
 
-Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se reemplazarán automáticamente con el valor de ID de inquilino correspondiente, según el lugar donde se exporte el esquema en el paso siguiente.
+Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se reemplazarán automáticamente con el valor de ID de inquilino correspondiente, según el lugar donde se importe el esquema en el paso siguiente.
 
 ## Importar el recurso mediante la API
 
-Una vez copiado el JSON de exportación para el esquema, puede utilizarlo como carga útil para una solicitud de POST al extremo `/import` de la API del Registro de Esquema. Consulte la sección sobre [importación de un recurso XDM en la API](../api/export-import.md#import) para obtener más información sobre cómo configurar la llamada para enviar el esquema a la organización y el entorno limitado de IMS correctos.
+Una vez copiado el JSON de exportación para el esquema, puede utilizarlo como carga útil para una solicitud de POST al extremo `/import` de la API del Registro de Esquema. Consulte la sección sobre [importación de un recurso XDM en la API](../api/export-import.md#import) para obtener más información sobre cómo configurar la llamada para enviar el esquema a la organización y el entorno limitado de IMS que desee.
 
 ## Pasos siguientes
 
