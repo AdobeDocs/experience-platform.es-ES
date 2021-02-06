@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
+keywords: Experience Platform;inicio;temas populares;filtrar;filtrar;filtrar datos;Filtrar datos
 solution: Experience Platform
-title: Objetos de lista
+title: Objetos del catálogo de listas
 topic: developer guide
 description: Puede recuperar una lista de todos los objetos disponibles de un tipo específico a través de una sola llamada de API, siendo recomendable incluir filtros que limiten el tamaño de la respuesta.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '242'
 ht-degree: 1%
 
 ---
 
 
-# Objetos de lista
+# Objetos del catálogo de listas
 
 Puede recuperar una lista de todos los objetos disponibles de un tipo específico a través de una sola llamada de API, siendo recomendable incluir filtros que limiten el tamaño de la respuesta.
 
@@ -26,12 +26,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a enumerar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con ampersands (`&`). Consulte la guía sobre [filtrado de datos](filter-data.md) del catálogo para obtener más información. |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a enumerar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con ampersands (`&`). Consulte la guía sobre [filtrado de datos del catálogo](filter-data.md) para obtener más información. |
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente recupera una lista de conjuntos de datos, con un `limit` filtro que reduce la respuesta a cinco resultados y un `properties` filtro que limita las propiedades mostradas para cada conjunto de datos.
+La solicitud de ejemplo siguiente recupera una lista de conjuntos de datos, con un filtro `limit` que reduce la respuesta a cinco resultados y un filtro `properties` que limita las propiedades mostradas para cada conjunto de datos.
 
 ```shell
 curl -X GET \
@@ -44,11 +44,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para el [!DNL Catalog] objeto en cuestión, que se puede utilizar en otra llamada a la [vista de ese objeto](look-up-object.md) específico para obtener más detalles.
+Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para el objeto [!DNL Catalog] en cuestión, que se puede utilizar en otra llamada a [vista de ese objeto específico](look-up-object.md) para obtener más detalles.
 
 >[!NOTE]
 >
->Si un objeto devuelto no contiene una o varias de las propiedades solicitadas indicadas por la `properties` consulta, la respuesta devuelve sólo las propiedades solicitadas que incluye, como se muestra en la ***`Sample Dataset 3`*** y en ***`Sample Dataset 4`*** .
+>Si un objeto devuelto no contiene una o más de las propiedades solicitadas indicadas por la consulta `properties`, la respuesta devuelve sólo las propiedades solicitadas que incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** a continuación.
 
 ```json
 {
