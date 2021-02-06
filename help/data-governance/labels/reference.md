@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;administración de datos;etiqueta de uso de datos api;API de servicio de políticas;etiquetas de uso de datos admitidas;etiquetas de contrato;etiquetas de identidad;etiquetas confidenciales
 solution: Experience Platform
-title: Etiquetas de uso de datos principales
+title: Glosario de etiquetas de uso de datos
 topic: labels
 description: Este documento describe todas las etiquetas de uso de datos admitidas actualmente por Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Etiquetas de uso de datos principales
+# glosario de etiquetas de uso de datos
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. La Administración de datos de Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usar que puede utilizar para clasificar los datos en inicios.
 
