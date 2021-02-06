@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;diseño de Esquema;mezcla;mezclas;detalles de trabajo;trabajo de perfil;
 solution: Experience Platform
-title: Mezcla de detalles de contacto del trabajo
+title: Mezcla de detalles de contacto de trabajo
 topic: overview
 description: Este documento proporciona una visión general de la combinación de detalles de contacto del trabajo.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '177'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] de contacto del trabajo
+# [!UICONTROL Work Contact ] Detailsmixin
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+>Los nombres de varias mezclas han cambiado. Consulte el documento en [actualizaciones de nombres de mezcla](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles] de contacto de trabajo es una combinación estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona varios campos que capturan información ocupacional relacionada con una persona individual, como dirección de trabajo, correo electrónico laboral, número de teléfono del trabajo y organizaciones a las que pertenece la persona.
+[!UICONTROL Work Contact ] Detailsis es una mezcla estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona varios campos que capturan información ocupacional relacionada con una persona individual, como dirección de trabajo, correo electrónico laboral, número de teléfono del trabajo y organizaciones a las que pertenece la persona.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
