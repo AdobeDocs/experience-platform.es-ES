@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
+keywords: Experience Platform;perspectivas;ai del cliente;temas populares;perspectivas de ai del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Descubrimiento de perspectivas con la API del cliente
+title: Discover Insights with Customer AI
 topic: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
 
 
-# Descubrimiento de perspectivas con la API del cliente
+# Descubra las perspectivas con la API del cliente
 
 La API del cliente, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de aprovechar Adobe Sensei para anticipar lo que serán las próximas acciones de sus clientes. La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se logra sin tener que transformar las necesidades comerciales en un problema de aprendizaje automático, eligiendo un algoritmo, capacitación o implementación.
 
@@ -21,11 +21,11 @@ Este documento sirve como guía para interactuar con perspectivas de instancias 
 
 ## Primeros pasos
 
-Para utilizar perspectivas para la API del cliente, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia](./configure.md)de AI de cliente. Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
+Para utilizar perspectivas para la API del cliente, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia de AI del cliente](./configure.md). Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
 
 ## Información general de la instancia de servicio
 
-En la [!DNL Adobe Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el navegador *Servicios* y muestra los servicios inteligentes disponibles. En el contenedor de AI del cliente, haga clic en **[!UICONTROL Abrir]**.
+En la interfaz de usuario [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el explorador *Services* y muestra los Servicios inteligentes disponibles. En el contenedor de la API del cliente, haga clic en **[!UICONTROL Abrir]**.
 
 ![Acceso a la instancia](../images/insights/navigate-to-service.png)
 
@@ -52,8 +52,8 @@ Existen dos formas de vista de los detalles de las instancias de servicio: desde
 
 Para obtener una vista general de los detalles de la instancia de servicio dentro del panel, seleccione un contenedor de instancia de servicio y evite el hipervínculo que se adjunta al nombre. Se abre un carril derecho que proporciona detalles adicionales. Los controles contienen lo siguiente:
 
-- **[!UICONTROL Editar]**: Si selecciona **[!UICONTROL Editar]** , podrá modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
-- **[!UICONTROL Clonar]**: Al seleccionar **[!UICONTROL Clonar]** , se copia la configuración de la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Editar]**: Si selecciona  **** Editar, podrá modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clonar]**: Al seleccionar  **** Clonecopia, se configura la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
 - **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
 - **[!UICONTROL Fuente]** de datos: Vínculo al conjunto de datos utilizado por esta instancia.
 - **[!UICONTROL Frecuencia]** de ejecución: La frecuencia con la que se produce un puntaje y el momento en que se produce.
@@ -63,11 +63,11 @@ Para obtener una vista general de los detalles de la instancia de servicio dentr
 
 >[!NOTE]
 >
->En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en **Última ejecución** en el carril derecho, que solo está visible para las ejecuciones fallidas.
+>En el evento de que una ejecución de puntuación falla, se proporciona un mensaje de error. El mensaje de error se muestra en **Detalles de la última ejecución** en el carril derecho, que solo está visible para las ejecuciones fallidas.
 
 ![error al ejecutar el mensaje](../images/insights/failed-run.png)
 
-La segunda forma de vista de detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Puede hacer clic en **[!UICONTROL Mostrar más]** en la parte superior derecha para completar una lista desplegable. Se muestran detalles como la definición de la puntuación, cuándo se creó y el tipo de tendencia. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia](./configure.md)de AI de cliente.
+La segunda forma de vista de detalles adicionales para una instancia de servicio se encuentra dentro de la página de perspectivas. Puede hacer clic en **[!UICONTROL Mostrar más]** en la parte superior derecha para completar una lista desplegable. Se muestran detalles como la definición de la puntuación, cuándo se creó y el tipo de tendencia. Para obtener más información sobre cualquiera de las propiedades enumeradas, visite [Configuración de una instancia de AI del cliente](./configure.md).
 
 ![mostrar más](../images/insights/landing-show-more.png)
 
@@ -87,9 +87,9 @@ Aparece el cuadro de diálogo de edición, que le permite editar el nombre, la d
 
 El botón **[!UICONTROL Más acciones]** se encuentra en la navegación superior derecha junto a **[!UICONTROL Editar]**. Al hacer clic en **[!UICONTROL Más acciones]** se abre una lista desplegable que le permite seleccionar una de las siguientes operaciones:
 
-- **[!UICONTROL Clonar]**: Al seleccionar **[!UICONTROL Clonar]** , se copia la configuración de la instancia de servicio. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Clonar]**: Al seleccionar  **** Clonecopia, se configura la instancia de servicio. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
 - **[!UICONTROL Eliminar]**: Elimina la instancia.
-- **[!UICONTROL Puntuaciones]** de acceso: Al seleccionar puntuaciones **[!UICONTROL de]** acceso, se abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de [descarga del tutorial de AI](./download-scores.md) del cliente. El cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
+- **[!UICONTROL Puntuaciones]** de acceso: Al seleccionar  **[!UICONTROL Access]** scoresse abre un cuadro de diálogo que proporciona un vínculo a las puntuaciones de  [descarga para el ](./download-scores.md) AItutorial del cliente, el cuadro de diálogo también proporciona la identificación del conjunto de datos necesaria para realizar llamadas de API.
 - **[!UICONTROL Historial]** de ejecución de vistas: Aparece un cuadro de diálogo que contiene una lista de todas las ejecuciones de puntuación asociadas con la instancia de servicio.
 
 ![más acciones](../images/insights/more-actions.png)
@@ -110,7 +110,7 @@ Puede pasar el ratón sobre cualquier color del anillo para vista información a
 
 ## Distribución de puntuaciones
 
-La tarjeta **[!UICONTROL Distribución de Puntuaciones]** le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta [!UICONTROL Distribución de puntuaciones] representan el tipo de puntuación de tendencia generada. Al pasar el ratón por encima de cualquiera de las distribuciones de puntuación, se obtiene el recuento exacto de esa distribución.
+La tarjeta **[!UICONTROL Distribución de puntuaciones]** le proporciona un resumen visual de la población en base a la puntuación. Los colores que se ven en la tarjeta [!UICONTROL Distribución de puntuaciones] representan el tipo de puntuación de tendencia generada. Al pasar el ratón por encima de cualquiera de las distribuciones de puntuación, se obtiene el recuento exacto de esa distribución.
 
 ![distribución de puntuaciones](../images/insights/distribution-of-scores.png)
 
@@ -134,17 +134,17 @@ Puede ver que los perfiles con baja propensión a convertir tienen menos probabi
 
 ### Crear un segmento
 
-Al seleccionar el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques para obtener una tendencia baja, media y alta, se le redirige al generador de segmentos.
+Al seleccionar el botón **[!UICONTROL Crear segmento]** en cualquiera de los bloques para baja, media y alta propensión, se le redirige al generador de segmentos.
 
 >[!NOTE]
 >
->El botón **[!UICONTROL Crear segmento]** solo está disponible si el Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el Perfil de clientes en tiempo real, visite la información general [sobre el Perfil de clientes en tiempo](../../../rtcdp/overview.md)real.
+>El botón **[!UICONTROL Crear segmento]** sólo está disponible si el Perfil del cliente en tiempo real está habilitado para el conjunto de datos. Para obtener más información sobre cómo habilitar el Perfil de clientes en tiempo real, visite [Información general sobre el Perfil de clientes en tiempo real](../../../rtcdp/overview.md).
 
 ![Haga clic en Crear segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Crear un segmento](../images/insights/create-segment.png)
 
-El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** en la página Perspectivas, la API del cliente agrega automáticamente la información de los bloques seleccionados al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Nombre* y *Descripción* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, haga clic en **[!UICONTROL Guardar]** en la parte superior derecha.
+El generador de segmentos se utiliza para definir un segmento. Al seleccionar **[!UICONTROL Crear segmento]** desde la página Perspectivas, la API del cliente agrega automáticamente la información de bloques seleccionada al segmento. Para terminar de crear el segmento, simplemente rellene los contenedores *Name* y *Description* ubicados en el carril derecho de la interfaz de usuario del generador de segmentos. Después de dar un nombre y una descripción al segmento, haga clic en **[!UICONTROL Guardar]** en la parte superior derecha.
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Para vista del nuevo segmento en la interfaz de usuario de la plataforma, haga c
 
 ## Pasos siguientes
 
-Este documento describía las perspectivas proporcionadas por una instancia de servicio de inteligencia artificial del cliente. Ahora puede continuar con el tutorial sobre la [descarga de puntuaciones en la API](./download-scores.md) del cliente o explorar las otras guías de servicios [inteligentes de](../../home.md) Adobe que se ofrecen.
+Este documento describía las perspectivas proporcionadas por una instancia de servicio de inteligencia artificial del cliente. Ahora puede continuar con el tutorial sobre [descarga de puntuaciones en la API del cliente](./download-scores.md) o explorar las otras [guías de servicios inteligentes de Adobe](../../home.md) que se ofrecen.
 
 ## Recursos adicionales
 
