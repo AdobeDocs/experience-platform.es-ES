@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;entrenar y evaluar;Área de trabajo de ciencia de datos;temas populares;API de aprendizaje automático Sensei
 solution: Experience Platform
-title: Formación y evaluación de un modelo (API)
+title: Formación y evaluación de un modelo mediante la API de aprendizaje automático Sensei
 topic: tutorial
 type: Tutorial
 description: Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático Sensei.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
 
 
-# Formación y evaluación de un modelo (API)
+# Formación y evaluación de un modelo mediante la API [!DNL Sensei Machine Learning]
 
 
 Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas de API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obtener una lista detallada de la documentación de API.
