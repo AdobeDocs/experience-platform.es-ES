@@ -1,21 +1,17 @@
 ---
 keywords: beemray, extensión de beemray
-title: Extensión de beemray
-seo-title: Extensión de beemray
+title: Destino de extensión de radiología
 description: La extensión Beemray es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Beemray es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Beemray] Extensión {#beemray-extension}
-
-## Información general {#overview}
 
 [!DNL Beemray] le ayuda a acelerar el producto con contexto situacional. Le permite obtener perspectivas, crear nuevas experiencias, impulsar interacciones y participar en momentos que realmente importan. Beemray automatiza la inteligencia contextual mediante el aprendizaje automático. Beemray se conecta al Adobe Experience Cloud y al resto de sus socios tecnológicos. Todo ocurre en tiempo real. Esta extensión instala [!DNL Beemray] SDK en el sitio.
 
