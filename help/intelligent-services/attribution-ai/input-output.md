@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: Experience Platform;introducción;Atribución ai;temas populares;Atribución ai input;Atribución ai output;
 solution: Experience Platform, Intelligent Services
-title: Entrada y salida de Attribution AI
+title: Entrada y salida en Attribution AI
 topic: Input and Output data for Attribution AI
 description: En el documento siguiente se esbozan los diferentes insumos y productos utilizados en la Attribution AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2075'
-ht-degree: 4%
+source-wordcount: '2091'
+ht-degree: 3%
 
 ---
 
 
-# [!DNL Attribution AI] entrada y salida
+# Entrada y salida en [!DNL Attribution AI]
 
 El documento siguiente describe los diferentes insumos y productos utilizados en [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] datos de entrada
 
-[!DNL Attribution AI] utiliza [!DNL Consumer Experience Event] datos para calcular puntuaciones algorítmicas. Para obtener más información sobre [!DNL Consumer Experience Event], consulte la documentación [](../data-preparation.md)Preparar datos para su uso en Servicios inteligentes.
+[!DNL Attribution AI] utiliza  [!DNL Consumer Experience Event] datos para calcular puntuaciones algorítmicas. Para obtener más información sobre [!DNL Consumer Experience Event], consulte la [Preparación de datos para su uso en la documentación de Servicios inteligentes](../data-preparation.md).
 
 No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obligatorias para la Attribution AI.
 
 >[!NOTE]
 >
-> Las 9 columnas siguientes son obligatorias, las columnas adicionales son opcionales pero se recomiendan/necesitan si desea utilizar los mismos datos para otras soluciones de Adobe como [!DNL Customer AI] y [!DNL Journey AI].
+> Las 9 columnas siguientes son obligatorias, las columnas adicionales son opcionales pero recomendadas/necesarias si desea utilizar los mismos datos para otras soluciones de Adobe como [!DNL Customer AI] y [!DNL Journey AI].
 
 | Columnas obligatorias | Necesario para |
 | --- | --- |
@@ -60,7 +60,7 @@ Las columnas siguientes no son obligatorias, pero se recomienda incluirlas en el
 
 Attribution AI requiere datos históricos como entrada para la formación de modelos. La duración de los datos requerida está determinada principalmente por dos factores clave: ventana de formación y ventana retroactiva. Las entradas con ventanas de capacitación más cortas son más sensibles a las tendencias recientes, mientras que las ventanas de capacitación más largas ayudan a producir modelos más estables y precisos. Es importante modelar el objetivo con datos históricos que representen mejor los objetivos comerciales.
 
-Los eventos de conversión de filtros de configuración [de la ventana de](./user-guide.md#training-window) formación se configuran para la formación de modelos según el tiempo de incidencia. Actualmente, la ventana de capacitación mínima es de 1 trimestre (90 días). La ventana [](./user-guide.md#lookback-window) retrospectiva proporciona un intervalo de tiempo que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión relacionados con este evento de conversión. Estos dos conceptos juntos determinan la cantidad de datos de entrada (medidos por días) que se requiere para una aplicación.
+Los eventos de conversión de filtros [configuración de la ventana de capacitación](./user-guide.md#training-window) se configuran para que se incluyan en la capacitación del modelo en función del tiempo de incidencia. Actualmente, la ventana de capacitación mínima es de 1 trimestre (90 días). La [ventana retrospectiva](./user-guide.md#lookback-window) proporciona un intervalo de tiempo que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión relacionados con este evento de conversión. Estos dos conceptos juntos determinan la cantidad de datos de entrada (medidos por días) que se requiere para una aplicación.
 
 De forma predeterminada, Attribution AI define la ventana de formación como los últimos 2 trimestres (6 meses) y la ventana retroactiva como 56 días. Dicho de otro modo, el modelo tendrá en cuenta todos los eventos de conversión definidos que se hayan producido en los dos últimos trimestres y buscará todos los puntos de contacto que se hayan producido en los 56 días anteriores a los eventos de conversión asociados.
 
@@ -87,9 +87,9 @@ La Attribution AI genera lo siguiente:
 
 ![](./images/input-output/schema_output.gif)
 
-### Puntuaciones granulares sin procesar {#raw-granular-scores}
+### Puntuaciones granulares sin formato {#raw-granular-scores}
 
-La Attribution AI genera puntuaciones de atribución en el nivel más granular posible para que pueda fraccionar y fraccionar las puntuaciones según cualquier columna de puntuación. Para vista de estas puntuaciones en la interfaz de usuario, lea la sección sobre la [visualización de las rutas](#raw-score-path)de puntuación sin procesar. Para descargar las puntuaciones con la API, visite las puntuaciones de [descarga en Attribution AI](./download-scores.md) documento.
+La Attribution AI genera puntuaciones de atribución en el nivel más granular posible para que pueda fraccionar y fraccionar las puntuaciones según cualquier columna de puntuación. Para vista de estas puntuaciones en la interfaz de usuario, lea la sección sobre [visualización de las rutas de puntuación sin procesar](#raw-score-path). Para descargar las puntuaciones con la API, visite el documento [de descarga en Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -105,18 +105,18 @@ La siguiente tabla describe los campos de esquema en la salida del ejemplo de pu
 | timestamp (DateTime) | False | Hora en la que se produjo un evento de conversión o una observación. <br> **Ejemplo:** 2020-06-09T00:01:51.000Z |
 | identityMap (Map) | True | identityMap del usuario similar al formato CEE XDM. |
 | eventType (String) | True | El tipo de evento principal para este registro de serie temporal. <br> **Ejemplo:** &quot;Pedido&quot;, &quot;Compra&quot;, &quot;Visita&quot; |
-| eventMergeId (String) | True | ID para correlacionar o combinar varios [!DNL Experience Events] que son esencialmente el mismo evento o que se deben combinar. El productor de datos debe rellenarlo antes de la ingestión. <br> **Ejemplo:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| eventMergeId (String) | True | Un ID para correlacionar o combinar varios [!DNL Experience Events] que son esencialmente el mismo evento o deben combinarse. El productor de datos debe rellenarlo antes de la ingestión. <br> **Ejemplo:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (Cadena) | False | Un identificador único para el evento de la serie temporal. <br> **Ejemplo:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _tenantId (objeto) | False | El contenedor del objeto de nivel superior correspondiente al ID de tentant. <br> **Ejemplo:** _atsdsnrmmsv2 |
-| your_esquema_name (objeto) | False | Fila de puntuación con evento de conversión todos los eventos de punto de contacto asociados a ella y sus metadatos. <br> **Ejemplo:** Puntuaciones de Attribution AI - Nombre del modelo__2020 |
+| your_esquema_name (objeto) | False | Fila de puntuación con evento de conversión todos los eventos de punto de contacto asociados a ella y sus metadatos. <br> **Ejemplo:Puntuaciones de** Attribution AI - Nombre del modelo__2020 |
 | segmentación (Cadena) | True | Segmento de conversión, como la segmentación geográfica, con la que se construye el modelo. En caso de ausencia de segmentos, el segmento es igual que conversionName. <br> **Ejemplo:** ORDER_US |
-| conversionName (String) | True | Nombre de la conversión configurada durante la configuración. <br> **Ejemplo:** Pedido, posible cliente, visita |
+| conversionName (String) | True | Nombre de la conversión configurada durante la configuración. <br> **Ejemplo:** Pedido, Posible cliente, Visita |
 | conversion (Objeto) | False | Columnas de metadatos de conversión. |
 | dataSource (String) | True | Identificación única global de una fuente de datos. <br> **Ejemplo:** Adobe Analytics |
 | eventSource (String) | True | La fuente cuando se produjo el evento real. <br> **Ejemplo:** Adobe.com |
-| eventType (String) | True | El tipo de evento principal para este registro de serie temporal. <br> **Ejemplo:** Pedido |
-| geo (cadena) | True | Ubicación geográfica en la que se entregó la conversión `placeContext.geo.countryCode`. <br> **Ejemplo:** EE.UU. |
-| priceTotal (Doble) | True | Ingresos obtenidos a través de la conversión <br> **Ejemplo:** 99,9 |
+| eventType (String) | True | El tipo de evento principal para este registro de serie temporal. <br> **Ejemplo:** Orden |
+| geo (cadena) | True | Ubicación geográfica donde se entregó la conversión `placeContext.geo.countryCode`. <br> **Ejemplo:** EE.UU. |
+| priceTotal (Doble) | True | Ingresos obtenidos mediante la conversión <br> **Ejemplo:** 99.9 |
 | product (String) | True | Identificador XDM del producto mismo. <br> **Ejemplo:** RX 1080 ti |
 | productType (String) | True | Nombre para mostrar del producto tal como se presenta al usuario para esta vista de producto. <br> **Ejemplo:** Gpus |
 | cantidad (entero) | True | Cantidad comprada durante la conversión. <br> **Ejemplo:** 1 1080 ti |
@@ -126,21 +126,21 @@ La siguiente tabla describe los campos de esquema en la salida del ejemplo de pu
 | passThrough (objeto) | True | Columnas adicionales del conjunto de datos de puntuación especificadas por el usuario durante la configuración del modelo. |
 | commerce_order_purchaseCity (String) | True | Columna adicional del conjunto de datos de puntuación. <br> **Ejemplo:** city: San José |
 | customerProfile (objeto) | False | Detalles de identidad del usuario utilizado para crear el modelo. |
-| identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo, como `id` y `namespace`. |
-| id (Cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 1734876272540865634468320891369597404 |
+| identity (objeto) | False | Contiene los detalles del usuario utilizado para crear el modelo como `id` y `namespace`. |
+| id (Cadena) | True | ID de identidad del usuario, como ID de cookie o AAID o MCID, etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
 | área de nombres (Cadena) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
 | touchpointsDetail (Matriz de objetos) | True | Lista de detalles de puntos de contacto que llevan a la conversión ordenada por incidencia de punto de contacto o marca de hora. |
 | touchpointName (String) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
-| score (objeto) | True | Contribución de touchpoint a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección Puntuaciones [de atribución](#aggregated-attribution-scores) agregadas. |
-| touchPoint (objeto) | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección puntuaciones [](#aggregated-scores) agregadas. |
+| score (objeto) | True | Contribución de touchpoint a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones de atribución agregadas](#aggregated-attribution-scores). |
+| touchPoint (objeto) | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones agregadas](#aggregated-scores). |
 
 ### Visualización de rutas de puntuación sin procesar (IU) {#raw-score-path}
 
-Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Para inicio, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma y, a continuación, busque y seleccione el esquema de puntuaciones AI de atribución desde la ficha **[!UICONTROL Examinar]** .
+Puede realizar la vista de la ruta a sus puntuaciones sin procesar en la interfaz de usuario. Inicio seleccionando **[!UICONTROL Esquemas]** en la interfaz de usuario de la plataforma, busque y seleccione el esquema de puntuaciones de AI de atribución desde la ficha **[!UICONTROL Examinar]**.
 
 ![Elija su esquema](./images/input-output/schemas_browse.png)
 
-A continuación, seleccione un campo en la ventana **[!UICONTROL Estructura]** de la interfaz de usuario y se abre la ficha Propiedades **[!UICONTROL del]** campo. En las propiedades **** Campo es el campo de ruta que se asigna a las puntuaciones sin procesar.
+A continuación, seleccione un campo en la ventana **[!UICONTROL Estructura]** de la interfaz de usuario y se abre la ficha **[!UICONTROL Propiedades del campo]**. Dentro de **[!UICONTROL Propiedades del campo]** es el campo de ruta que se asigna a sus puntuaciones sin procesar.
 
 ![Elegir un Esquema](./images/input-output/field_properties.png)
 
@@ -171,7 +171,7 @@ Consulte la tabla siguiente para obtener más detalles sobre cada una de estas p
 
 **Referencia de puntuación sin procesar (puntuaciones de atribución)**
 
-La siguiente tabla asigna las puntuaciones de atribución a las puntuaciones sin procesar. Si desea descargar sus puntuaciones sin procesar, visite las puntuaciones de [descarga en la documentación de Attribution AI](./download-scores.md) .
+La siguiente tabla asigna las puntuaciones de atribución a las puntuaciones sin procesar. Si desea descargar las puntuaciones sin procesar, consulte la [descarga de puntuaciones en la documentación de Attribution AI](./download-scores.md).
 
 | Puntuaciones de atribución | Columna de referencia de puntuación sin procesar |
 | --- | --- |
@@ -196,17 +196,17 @@ Las puntuaciones agregadas se pueden descargar en formato CSV desde la interfaz 
 | touchpoint_scope (Cadena) | Definido por el usuario | True | Nombre del touchpoint configurado por el usuario <br> **Ejemplo**: PAID_SEARCH_CLICK |
 | product (String) | Definido por el usuario | True | Identificador XDM del producto. <br> **Ejemplo**: CC |
 | product_type (String) | Definido por el usuario | True | Nombre para mostrar del producto tal como se presenta al usuario para esta vista de producto. <br> **Ejemplo**: gpus, portátiles |
-| geo (cadena) | Definido por el usuario | True | Ubicación geográfica en la que se entregó la conversión (placeContext.geo.countryCode) <br> **Ejemplo**: EE.UU. |
+| geo (cadena) | Definido por el usuario | True | Ubicación geográfica donde se entregó la conversión (placeContext.geo.countryCode) <br> **Ejemplo**: EE.UU. |
 | evento_type (String) | Definido por el usuario | True | El tipo de evento principal para este registro de serie temporal <br> **Ejemplo**: Conversión paga |
 | media_type (String) | ENUM | False | Describe si el tipo de medio es de pago, propiedad o ganado. <br> **Ejemplo**: PAGADO, PROPIEDAD |
-| canal (Cadena) | ENUM | False | La `channel._type` propiedad que se utiliza para proporcionar una clasificación aproximada de canales con propiedades similares en [!DNL Consumer Experience Event] XDM. <br> **Ejemplo**: BUSCAR |
-| action (String) | ENUM | False | La `mediaAction` propiedad se utiliza para proporcionar un tipo de acción de medios de evento de experiencias. <br> **Ejemplo**: HAGA CLIC EN |
+| canal (Cadena) | ENUM | False | La propiedad `channel._type` que se utiliza para proporcionar una clasificación aproximada de canales con propiedades similares en [!DNL Consumer Experience Event] XDM. <br> **Ejemplo**: BUSCAR |
+| action (String) | ENUM | False | La propiedad `mediaAction` se utiliza para proporcionar un tipo de acción de medios de evento de experiencia. <br> **Ejemplo**: HAGA CLIC EN |
 | campaña_group (String) | Definido por el usuario | True | Nombre del grupo de campañas donde varias campañas se agrupan como &#39;50%_DISCOUNT&#39;. <br> **Ejemplo**: COMERCIAL |
 | campaña_name (String) | Definido por el usuario | True | Nombre de la campaña utilizada para identificar la campaña de marketing como &#39;50%_DISCOUNT_USA&#39; o &#39;50%_DISCOUNT_ASIA&#39;. <br> **Ejemplo**: Venta de Acción de Gracias |
 
 **Referencia de puntuación sin procesar (agregado)**
 
-La siguiente tabla asigna las puntuaciones agregadas a las puntuaciones sin procesar. Si desea descargar sus puntuaciones sin procesar, visite las puntuaciones de [descarga en la documentación de Attribution AI](./download-scores.md) . Para vista de las rutas de puntuación sin procesar desde la interfaz de usuario, visite la sección sobre [visualización de las rutas](#raw-score-path) de puntuación sin procesar dentro de este documento.
+La siguiente tabla asigna las puntuaciones agregadas a las puntuaciones sin procesar. Si desea descargar las puntuaciones sin procesar, consulte la [descarga de puntuaciones en la documentación de Attribution AI](./download-scores.md). Para vista de las rutas de puntuación sin procesar desde la interfaz de usuario, visite la sección sobre [visualización de rutas de puntuación sin procesar](#raw-score-path) dentro de este documento.
 
 | Nombre de columna | Columna de referencia de puntuación sin procesar |
 | --- | --- |
@@ -228,4 +228,4 @@ La siguiente tabla asigna las puntuaciones agregadas a las puntuaciones sin proc
 
 ## Pasos siguientes {#next-steps}
 
-Una vez que haya preparado los datos y haya colocado todas las credenciales y esquemas, siga las instrucciones de inicio de la guía [del usuario de](./user-guide.md)Attribution AI. Esta guía lo acompaña durante la creación de una instancia para Attribution AI.
+Una vez que haya preparado los datos y haya colocado todas sus credenciales y esquemas, inicio siguiendo la [guía del usuario de Attribution AI](./user-guide.md). Esta guía lo acompaña durante la creación de una instancia para Attribution AI.
