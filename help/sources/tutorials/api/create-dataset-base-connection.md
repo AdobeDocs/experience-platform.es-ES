@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo de conexión de conjuntos de datos;servicio de flujo;Conexión de servicio de flujo de datos
 solution: Experience Platform
-title: Creación de una conexión base de datos Experience Platform mediante la API de servicio de flujo
+title: Creación de una conexión base de datos de Adobe Experience Platform mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+description: Aprenda a utilizar la API de servicio de flujo para crear una conexión de base de datos a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---
