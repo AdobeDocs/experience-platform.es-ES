@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Guía para desarrolladores de API de servicios de directivas
+title: Guía de API de servicio de directivas
 topic: developer guide
-description: Obtenga información sobre cómo utilizar la API de servicio de directivas para administrar las etiquetas y políticas de uso de datos en Experience Platform.
+description: La API de servicio de directivas permite a los desarrolladores administrar las etiquetas y políticas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL Policy Service] Guía para desarrolladores de API
+# [!DNL Policy Service] Guía de API
 
 Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en diversos niveles, incluso la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
 
