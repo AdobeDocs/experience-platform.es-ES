@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;inicio;temas populares;Simulador para pruebas;Simulador para pruebas
 solution: Experience Platform
-title: Creación de un simulador para pruebas
+title: Creación de un Simulador para pruebas en la API
 topic: developer guide
 description: Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al extremo "/sandboxes".
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un simulador para pruebas
+# Creación de un entorno limitado en la API
 
-Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al `/sandboxes` extremo.
+Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al extremo `/sandboxes`.
 
 **Formato API**
 
@@ -50,7 +50,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que `state` está &quot;creando&quot;.
+Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que su `state` es &quot;crear&quot;.
 
 ```json
 {
@@ -64,4 +64,4 @@ Una respuesta correcta devuelve los detalles del entorno limitado recién creado
 
 >[!NOTE]
 >
->El sistema tarda aproximadamente 15 minutos en aprovisionar los Simuladores para pruebas, después de lo cual `state` se activarán o &quot;fallarán&quot;.
+>El sistema tarda aproximadamente 15 minutos en aprovisionar los Simuladores para pruebas, después de lo cual su `state` será &quot;activo&quot; o &quot;fallido&quot;.
