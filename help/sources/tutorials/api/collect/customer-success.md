@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;recopilar el éxito del cliente;éxito del cliente
 solution: Experience Platform
-title: Recopilar datos de un sistema de éxito de cliente mediante conectores de origen y API
+title: Recopilación de datos de un sistema de éxito del cliente mediante conectores de origen y API
 topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de un sistema de éxito de cliente e incorporarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
