@@ -1,21 +1,17 @@
 ---
 keywords: Personalización web de marketing;personalización web de marketing;extensión de personalización web de marketing a marketing;extensión de personalización web de marketing a marketing;marketing a marketing;a marketing;a marketing
-title: Extensión de personalización web de marketing
-seo-title: Extensión de personalización web de marketing
+title: Destino de la extensión de personalización web de marketing
 description: La extensión Personalización web de marketing es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Personalización web de marketing es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '580'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL Marketo Web Personalization] {#marketo-web-personalization-extension}
-
-## Información general {#overview}
+# [!DNL Marketo Web Personalization] Extensión {#marketo-web-personalization-extension}
 
 Esta extensión implementa la secuencia de comandos para [!DNL Marketo’s] aplicaciones de Personalización Web y ContentAI. [!DNL Marketo] La Personalización web identifica y personaliza de forma exclusiva el contenido según las características del visitante web, como las firmografías para visitantes anónimos y una amplia variedad de atributos de comportamiento dentro de la Plataforma de  [!DNL Marketo] compromiso para visitantes conocidos. [!DNL Marketo] ContentAI contiene funciones para las recomendaciones y la personalización basadas en AI para campañas web y de correo electrónico que son únicas para los clientes de B2B.
 
