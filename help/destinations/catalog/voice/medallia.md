@@ -1,21 +1,17 @@
 ---
 keywords: Medallia;medallia
-title: Extensión Medallia
-seo-title: Extensión Medallia
+title: Destino de extensión de medallia
 description: La extensión Medallia es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Medallia es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '542'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL Medallia] {#medallia-extension}
-
-## Información general {#overview}
+# [!DNL Medallia] Extensión {#medallia-extension}
 
 Implemente [!DNL Medallia] de forma rápida y transparente en las propiedades web. La extensión también le permite detectar eventos de encuesta, capturar comentarios de clientes en tiempo real a través de elementos de datos, utilizarlos en reglas para personalizar la experiencia de su cliente y compartir datos con Adobe Analytics.
 
