@@ -1,25 +1,21 @@
 ---
 keywords: Destino del concentrador de evento de Azure;concentrador de evento de Azure;velero de azure
-title: (Beta) Destino de los centros de Evento de Azure
-seo-title: (Beta) Destino de los centros de Evento de Azure
+title: (Beta) Destino de conexión de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
-seo-description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) [!DNL Azure Event Hubs] destino
+# Conexión (Beta) [!DNL Azure Event Hubs]
 
 >[!IMPORTANT]
 >
 >El destino [!DNL Azure Event Hubs] de la plataforma está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
-
-## Información general {#overview}
 
 [!DNL Azure Event Hubs] es una plataforma de transmisión de datos importantes y un servicio de ingestión de evento. Puede recibir y procesar millones de eventos por segundo. Los datos enviados a un concentrador de evento se pueden transformar y almacenar mediante cualquier proveedor de análisis en tiempo real o adaptadores de almacenamiento o lotes.
 
