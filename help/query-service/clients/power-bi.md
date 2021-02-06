@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;Power BI;Power bi;conectar al servicio de consulta;
 solution: Experience Platform
-title: Conectar con Power BI
+title: Conectar Power BI al servicio de Consulta
 topic: connect
 description: Este documento recorre los pasos para conectar el Power BI con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Power BI]
+# Conectar [!DNL Power BI] al servicio de Consulta (PC)
 
 Este documento cubre los pasos para la conexión de Power BI con el servicio de Consulta de Adobe Experience Platform.
 
@@ -22,8 +22,6 @@ Este documento cubre los pasos para la conexión de Power BI con el servicio de 
 > En esta guía se asume que ya tiene acceso a [!DNL Power BI] y que está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Power BI] en la [documentación oficial [!DNL Power BI] ](https://docs.looker.com/).
 >
 > Además, Power BI **sólo** está disponible en dispositivos Windows.
-
-## Configurar [!DNL Power BI]
 
 Después de instalar Power BI, deberá instalar `Npgsql`, un paquete de controladores .NET para PostgreSQL. Puede encontrar más información sobre Npgsql en la [documentación de Npgsql](https://www.npgsql.org/doc/index.html).
 
