@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;administración de datos;guía del usuario de la directiva de uso de datos
 solution: Experience Platform
-title: Guía del usuario de directivas de uso de datos
+title: Administrar políticas de uso de datos en la interfaz de usuario
 topic: policies
 description: El Gobierno de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que puede realizar en el espacio de trabajo Directivas de la interfaz de usuario de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# Guía del usuario de directivas de uso de datos
+# Administrar directivas de uso de datos en la interfaz de usuario
 
 Adobe Experience Platform [!DNL Data Governance] proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona una visión general de las acciones que puede realizar en el área de trabajo **Directivas** de la interfaz de usuario [!DNL Experience Platform].
 
@@ -28,7 +28,7 @@ Esta guía requiere una comprensión práctica de los siguientes [!DNL Experienc
 - [[!DNL Data Governance]](../home.md)
 - [Directivas de uso de datos](./overview.md)
 
-## Directivas de uso de datos de vista {#view-policies}
+## Políticas existentes de vista {#view-policies}
 
 En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Directivas]** para abrir el espacio de trabajo **[!UICONTROL Directivas]**. En la ficha **[!UICONTROL Examinar]** puede ver una lista de las directivas disponibles, incluidas las etiquetas asociadas, las acciones de mercadotecnia y el estado.
 
@@ -38,7 +38,7 @@ Seleccione una directiva de la lista para vista de su descripción y tipo. Si se
 
 ![](../images/policies/policy-details.png)
 
-## Crear una directiva de uso de datos personalizada {#create-policy}
+## Crear una directiva personalizada {#create-policy}
 
 Para crear una nueva directiva de uso de datos personalizada, seleccione **[!UICONTROL Crear directiva]** en la esquina superior derecha de la ficha **[!UICONTROL Examinar]** en el área de trabajo **[!UICONTROL Directivas]**.
 
@@ -68,7 +68,7 @@ La ficha **[!UICONTROL Examinar]** vuelve a aparecer, que ahora lista la directi
 
 ![](../images/policies/created-policy.png)
 
-## Habilitar o deshabilitar una directiva de uso de datos {#enable}
+## Habilitar o deshabilitar una directiva {#enable}
 
 Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente a través de la API o la interfaz de usuario.
 
