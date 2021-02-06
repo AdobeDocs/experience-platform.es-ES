@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Vertica;vertica
 solution: Experience Platform
-title: Creación de un conector HP Vertica mediante la API de servicio de flujo
+title: Creación de una conexión de origen vertical HP mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar HP Vertica al Experience Platform.
+description: Obtenga información sobre cómo conectar HP Vertica a Adobe Experience Platform mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '597'
 ht-degree: 3%
 
 ---
 
 
-# Cree un conector HP [!DNL Vertica] mediante la API [!DNL Flow Service]
+# Cree una conexión de origen HP [!DNL Vertica] mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
