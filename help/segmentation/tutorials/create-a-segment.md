@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;segmento;Segmento;crear segmento;segmentación;crear un segmento;Servicio de segmentación;
 solution: Experience Platform
-title: Crear un segmento
+title: Crear un segmento con la API de servicio de segmentación
 topic: tutorial
 type: Tutorial
-description: Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API de servicio de segmentación de Adobe Experience Platform.
+description: Siga este tutorial para aprender a desarrollar, probar, previsualización y guardar una definición de segmento mediante la API de servicio de segmentación de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 
-# Crear un segmento
+# Creación de un segmento mediante la API de servicio de segmentación
 
 Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
