@@ -5,10 +5,10 @@ user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 16%
+source-wordcount: '233'
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 16%
 * [Acceso y características de Área de trabajo de Data Science](access-features-dsw.md)
 * [Recorrido de Área de trabajo de ciencias de datos](walkthrough.md)
 * Equipos portátiles JupyterLab {#jupyterlab}
-   * [Guía del usuario de JupyterLab](jupyterlab/overview.md)
+   * [Información general](jupyterlab/overview.md)
    * [Acceso a datos](jupyterlab/access-notebook-data.md)
    * [Analizar los datos](jupyterlab/analyze-your-data.md)
    * [Servicio de consulta](jupyterlab/query-service.md)
@@ -37,20 +37,20 @@ ht-degree: 16%
 * Aprendizaje automático en tiempo real (Alpha) {#real-time-machine-learning}
    * [Información general](real-time-machine-learning/home.md)
    * [Primeros pasos](real-time-machine-learning/getting-started.md)
-   * [Guía del usuario del bloc de notas de creación RTML](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Administrar portátiles](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guía de referencia de nodos](real-time-machine-learning/node-reference.md)
-* Fórmulas prediseñadas {#pre-built-recipes}
+* Fórmulas precompiladas {#pre-built-recipes}
    * [Fórmula de recomendación de producto](pre-built-recipes/product-recommendations.md)
    * [Predicción de compra de productos](pre-built-recipes/product-purchase-prediction.md)
    * [Fórmula de ventas minoristas](pre-built-recipes/retail-sales.md)
 * Creación de modelos {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
-   * [Guía del SDK de la plataforma (Python)](authoring/platform-sdk.md)
+   * [Creación de modelos con el SDK de plataforma (Python)](authoring/platform-sdk.md)
    * [Acceso a datos Python](authoring/python.md)
    * [Acceso a datos de Spark](authoring/spark.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
-   * [Creación y publicación de un tutorial del modelo de aprendizaje automático](models-recipes/create-publish-model.md)
+   * [Creación y publicación de un modelo de aprendizaje automático](models-recipes/create-publish-model.md)
    * [Crear el esquema y conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
    * [Esquemas y conjuntos de datos de previsualización](models-recipes/preview-schema-data.md)
    * [Empaquetar archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
