@@ -1,21 +1,19 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;fórmula de compra de producto;Área de trabajo de ciencia de datos;temas populares;fórmulas;fórmula de precompilación
 solution: Experience Platform
-title: Fórmula de compra del producto
+title: Fórmula de predicción de compra de productos
 topic: overview
 description: La fórmula Predicción de compra de productos permite predecir la probabilidad de un determinado tipo de evento de compra del cliente, por ejemplo, una compra de producto.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 6%
 
 ---
 
 
-# Fórmula de compra del producto
-
-## Información general
+# Fórmula de predicción de compra del producto
 
 La fórmula Predicción de compra de productos permite predecir la probabilidad de un determinado tipo de evento de compra del cliente, por ejemplo, una compra de producto.
 
@@ -35,7 +33,7 @@ La fórmula Predicción de compra de productos utiliza aprendizaje automático p
 
 ## Esquema de datos
 
-Esta fórmula utiliza esquemas [](../../xdm/home.md) XDM para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
+Esta fórmula utiliza [esquemas XDM](../../xdm/home.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
 --- | ---
@@ -50,16 +48,16 @@ Esta fórmula utiliza esquemas [](../../xdm/home.md) XDM para modelar los datos.
 | totalOrders | Número |
 | totalItems | Número |
 | orderDate1 | Número |
-| shippingDate1 | Número |
+| ShippingDate1 | Número |
 | totalPrice1 | Número |
 | tax1 | Número |
 | orderDate2 | Número |
-| shippingDate2 | Número |
+| ShippingDate2 | Número |
 | totalPrice2 | Número |
 
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de formación en el esquema *ProductPrediction* . Desde aquí, el modelo se entrena usando un clasificador [de bosque](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aleatorio. El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador forestal aleatorio construya varios árboles de decisión y los combine para crear una predicción más precisa y estable.
+En primer lugar, se carga el conjunto de datos de capacitación en el esquema *ProductPrediction*. Desde aquí, el modelo se entrena usando un [clasificador de bosque aleatorio](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador forestal aleatorio construya varios árboles de decisión y los combine para crear una predicción más precisa y estable.
 
 Este proceso tiene el inicio de crear un conjunto de árboles de decisiones que selecciona aleatoriamente subconjuntos de datos de capacitación. Después, se promedian los resultados de cada árbol de decisiones.
