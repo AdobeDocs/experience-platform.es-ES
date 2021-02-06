@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform;inicio;temas populares;acceso a datos;sdk python;api de acceso a datos;leer piton;escribir piton
 solution: Experience Platform
-title: Acceso a datos mediante Python
+title: Acceso a datos mediante Python en el área de trabajo de ciencias de datos
 topic: tutorial
 type: Tutorial
 description: El siguiente documento contiene ejemplos de cómo acceder a datos en Python para utilizarlos en Área de trabajo de ciencias de datos.
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 
-# Acceso a datos mediante Python
+# Acceso a los datos mediante Python en el área de trabajo de ciencia de datos
 
-El siguiente documento contiene ejemplos de cómo acceder a los datos mediante Python para utilizarlos en Área de trabajo de ciencias de datos. Para obtener información sobre el acceso a los datos mediante portátiles JupyterLab, visite la documentación de acceso [a los datos de los portátiles de](../jupyterlab/access-notebook-data.md) JupyterLab.
+El siguiente documento contiene ejemplos de cómo acceder a los datos mediante Python para utilizarlos en Área de trabajo de ciencias de datos. Para obtener información sobre el acceso a los datos mediante los blocs de notas de JupyterLab, visite la [documentación de acceso a datos de los blocs de notas de JupyterLab](../jupyterlab/access-notebook-data.md).
 
 ## Lectura de un conjunto de datos
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 La cláusula DISTINCT permite recuperar todos los valores distintos en un nivel de fila/columna, eliminando todos los valores de duplicado de la respuesta.
 
-A continuación se muestra un ejemplo del uso de la `distinct()` función:
+A continuación se muestra un ejemplo del uso de la función `distinct()`:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +87,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Cláusula ORDER BY
 
-La cláusula ORDER BY permite ordenar los resultados recibidos por una columna específica en un orden específico (ascendente o descendente). Esto se lleva a cabo mediante la `sort()` función .
+La cláusula ORDER BY permite ordenar los resultados recibidos por una columna específica en un orden específico (ascendente o descendente). Esto se realiza mediante la función `sort()`.
 
-A continuación se muestra un ejemplo del uso de la `sort()` función:
+A continuación se muestra un ejemplo del uso de la función `sort()`:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 La cláusula LIMIT permite limitar el número de registros recibidos del conjunto de datos.
 
-A continuación se muestra un ejemplo del uso de la `limit()` función:
+A continuación se muestra un ejemplo del uso de la función `limit()`:
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 La cláusula OFFSET permite omitir filas, desde el principio, hasta el inicio de devolver filas desde un punto posterior. En combinación con LIMIT, se puede utilizar para iterar filas en bloques.
 
-A continuación se muestra un ejemplo del uso de la `offset()` función:
+A continuación se muestra un ejemplo del uso de la función `offset()`:
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +138,7 @@ Para trabajos de ejecución más prolongada, es posible que tenga que almacenar 
 
 >[!NOTE]
 >
->Las rutas a los datos **no se almacenan** . Debe almacenar la ruta correspondiente a sus datos respectivos.
+>Las rutas a los datos **no** se almacenan. Debe almacenar la ruta correspondiente a sus datos respectivos.
 
 ### Escribir en espacio de usuario
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Pasos siguientes
 
-Adobe Experience Platform Data Science Workspace proporciona un ejemplo de fórmula que utiliza los ejemplos de código anteriores para leer y escribir datos. Si desea obtener más información sobre cómo utilizar Python para acceder a sus datos, consulte el repositorio [de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)Data Science Workspace Python GitHub.
+Adobe Experience Platform Data Science Workspace proporciona un ejemplo de fórmula que utiliza los ejemplos de código anteriores para leer y escribir datos. Si desea obtener más información sobre cómo utilizar Python para acceder a sus datos, consulte el [Repositorio de Data Science Workspace Python GitHub](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
