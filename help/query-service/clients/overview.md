@@ -5,7 +5,7 @@ title: Conectar clientes al servicio de Consulta
 topic: connect
 description: Este documento explica cómo conectarse al servicio de Consulta desde una variedad de aplicaciones cliente de escritorio y cómo comprobar dichas conexiones.
 translation-type: tm+mt
-source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
