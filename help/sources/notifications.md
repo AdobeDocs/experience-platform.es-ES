@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
-description: Con los Eventos de Adobe I/O, puede suscribirse a los eventos y utilizar los enlaces web para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
+keywords: Experience Platform;inicio;temas populares; notificaciones
+description: Al suscribirse a Eventos de Adobe I/O, puede utilizar los enlaces web para recibir notificaciones sobre los estados de ejecución de flujo de las conexiones de origen. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
 solution: Experience Platform
 title: Notificaciones de ejecución de flujo
 topic: overview
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '785'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 # Notificaciones de ejecución de flujo
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) se utiliza para recopilar y centralizar datos de clientes de distintas fuentes dentro de  [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
 Con los Eventos de Adobe I/O, puede suscribirse a eventos y utilizar enlaces web para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución del flujo o los errores que contribuyeron al error de una ejecución.
 
@@ -25,19 +25,19 @@ Este documento proporciona pasos para suscribirse a eventos, registrar enlaces w
 
 ## Primeros pasos
 
-En este tutorial se asume que ya ha creado al menos una conexión de origen cuyas ejecuciones de flujo desea supervisar. Si todavía no ha configurado una conexión de origen, consulte la información general [de](./home.md) fuentes para configurar el origen de su elección antes de volver a esta guía.
+En este tutorial se asume que ya ha creado al menos una conexión de origen cuyas ejecuciones de flujo desea supervisar. Si todavía no ha configurado una conexión de origen, haga un inicio visitando la [información general de fuentes](./home.md) para configurar el origen que desee antes de volver a esta guía.
 
-Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obtener una introducción a los enlaces web.
+Este documento también requiere una comprensión práctica de los enlaces web y de cómo conectar un enlace web de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para obtener una introducción a los enlaces Web.
 
 ## Registro de un enlace web para notificaciones de ejecución de flujo
 
-Para recibir notificaciones de ejecución de flujo, debe utilizar la consola de desarrollador de Adobe para registrar un enlace web en la [!DNL Experience Platform] integración.
+Para recibir las notificaciones de ejecución de flujo, debe utilizar Adobe Developer Console para registrar un enlace web en la integración [!DNL Experience Platform].
 
-Siga el tutorial sobre la [suscripción de [!DNL I/O Event] notificaciones](../observability/notifications/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
+Siga el tutorial sobre [suscripción a [!DNL I/O Event] notificaciones](../observability/notifications/subscribe.md) para ver los pasos detallados sobre cómo realizar esto.
 
 >[!IMPORTANT]
 >
->Durante el proceso de suscripción, asegúrese de seleccionar las notificaciones **[!UICONTROL de]** plataforma como proveedor de evento y seleccionar las siguientes suscripciones de evento:
+>Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Notificaciones de plataforma]** como proveedor de evento y seleccione las siguientes suscripciones de evento:
 >
 >* **[!UICONTROL Ejecución de flujo de origen de Experience Platform correcta]**
 >* **[!UICONTROL Error en la ejecución del flujo de la fuente de Experience Platform]**
@@ -51,7 +51,7 @@ Una notificación devuelve información como el número de trabajos de inserció
 
 >[!IMPORTANT]
 >
->Si la ingestión parcial está habilitada durante el proceso de creación de flujo, un flujo que contenga tanto las ingestaciones correctas como las fallidas se marcará como `sources_flow_run_success` solo si el número de errores está por debajo del porcentaje de umbral de error establecido durante el proceso de creación de flujo. Si una ejecución de flujo correcta contiene errores, estos se incluirán como parte de la carga útil de retorno.
+>Si la ingestión parcial está habilitada durante el proceso de creación de flujo, un flujo que contenga tanto las ingestaciones correctas como las fallidas se marcará como `sources_flow_run_success` sólo si el número de errores está por debajo del porcentaje de umbral de error establecido durante el proceso de creación de flujo. Si una ejecución de flujo correcta contiene errores, estos se incluirán como parte de la carga útil de retorno.
 
 ### Correcto
 
@@ -318,7 +318,7 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 
 ## Pasos siguientes
 
-Ahora puede suscribirse a eventos que le permiten recibir notificaciones en tiempo real sobre los estados de ejecución de flujo. Para obtener más información sobre las ejecuciones y fuentes de flujo, consulte la información general [sobre](./home.md)las fuentes.
+Ahora puede suscribirse a eventos que le permiten recibir notificaciones en tiempo real sobre los estados de ejecución de flujo. Para obtener más información sobre las ejecuciones y fuentes de flujo, consulte la [información general de fuentes](./home.md).
 
 ## Apéndice
 
@@ -326,7 +326,7 @@ Las secciones siguientes proporcionan información adicional para trabajar con n
 
 ### Explicación de los mensajes de error {#errors}
 
-Los errores de inserción pueden producirse cuando se copian datos del origen o cuando se procesan los datos copiados en [!DNL Platform]. Consulte la tabla siguiente para obtener más información sobre errores específicos.
+Los errores de inserción pueden producirse cuando se copian datos del origen o cuando los datos copiados se procesan en [!DNL Platform]. Consulte la tabla siguiente para obtener más información sobre errores específicos.
 
 | Error | Descripción |
 | ---------- | ----------- |
