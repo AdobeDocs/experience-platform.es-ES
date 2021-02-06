@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;acceso a datos;acceso a datos;acceso a datos;acceso a datos de consulta
 solution: Experience Platform
-title: Información general sobre el acceso a los datos
+title: Vista de datos de conjuntos de datos mediante la API de acceso a datos
 topic: tutorial
 type: Tutorial
-description: Este documento proporciona un tutorial paso a paso que explica cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. También se le presentarán algunas de las características únicas de la API de acceso a datos, como paginación y descargas parciales.
+description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos de Adobe Experience Platform. También se le presentarán algunas de las características únicas de la API de acceso a datos, como paginación y descargas parciales.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
 
 
-# Datos del conjunto de datos de consulta mediante la API [!DNL Data Access]
+# Datos del conjunto de datos de vista mediante la API [!DNL Data Access]
 
 Este documento proporciona un tutorial paso a paso que explica cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API [!DNL Data Access] de Adobe Experience Platform. También se le presentarán algunas de las características únicas de la API [!DNL Data Access], como paginación y descargas parciales.
 
