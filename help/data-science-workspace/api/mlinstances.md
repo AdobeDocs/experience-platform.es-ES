@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: Experience Platform;guía para desarrolladores;extremo;Área de trabajo de ciencias de datos;temas populares;instancias;api de aprendizaje automático sensei
 solution: Experience Platform
-title: Instancias MLI
+title: Extremo de API de MLInstances
 topic: Developer guide
 description: Una instancia MLI es un emparejamiento de un motor existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetros de puntuación o configuraciones de recursos de hardware.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
 
-# Instancias MLI
+# Extremo MLInstances
 
 Una instancia MLI es un emparejamiento de un [motor](./engines.md) existente con un conjunto apropiado de configuraciones que define cualquier parámetro de capacitación, parámetro de puntuación o configuración de recursos de hardware.
 
 ## Crear una instancia MLI {#create-an-mlinstance}
 
-Puede crear una instancia MLI realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consta de un identificador de motor (`{ENGINE_ID}`) válido y un conjunto apropiado de configuraciones predeterminadas.
+Puede crear una instancia MLI realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consta de un identificador de motor válido (`{ENGINE_ID}`) y un conjunto apropiado de configuraciones predeterminadas.
 
-Si la ID del motor hace referencia a un motor PySpark o Spark, podrá configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU para fines de capacitación y puntuación. Consulte las secciones del apéndice sobre las configuraciones [de recursos](./appendix.md#resource-config) PySpark y Spark y las configuraciones [de CPU y GPU](./appendix.md#cpu-gpu-config) Python para obtener más información.
+Si la ID del motor hace referencia a un motor PySpark o Spark, podrá configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU para fines de capacitación y puntuación. Consulte las secciones del apéndice sobre [Configuraciones de recursos PySpark y Spark](./appendix.md#resource-config) y [Configuraciones de CPU y GPU Python](./appendix.md#cpu-gpu-config) para obtener más información.
 
 **Formato de API**
 
@@ -131,7 +131,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de instancias MLI
 
-Puede recuperar una lista de instancias MLI realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de instancias MLI realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de activos](./appendix.md#query).
 
 **Formato de API**
 
@@ -143,7 +143,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los parámetros [de consulta](./appendix.md#query) disponibles para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) utilizados para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
