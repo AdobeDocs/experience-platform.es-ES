@@ -1,21 +1,17 @@
 ---
 keywords: publicidad; la oficina de comercio;
-title: Destino de la mesa de operaciones
-seo-title: Destino de la mesa de operaciones
+title: Destino de la conexión con el centro de operaciones
 description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario de dispositivos móviles, de vídeo y de visualización. '
-seo-description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] destino
-
-## Información general {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] destination le ayuda a enviar datos de perfil a  [!DNL The Trade Desk].
 
