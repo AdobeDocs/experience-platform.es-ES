@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform;inicio;temas populares;asignación de destino;Asignación de destino
 solution: Experience Platform
-title: Campo de asignación de destino
+title: Asignación de datos de Evento de Adobe Target a XDM
 topic: overview
-description: La siguiente tabla describe los campos de un esquema de Experience Evento (*campo ExperienceEvent XDM*) y los campos de Destinatario correspondientes a los que deben asignarse (campo Solicitud de Destinatario). También se proporcionan notas adicionales para algunas asignaciones.
+description: Obtenga información sobre cómo asignar campos de evento de Adobe Target a un esquema de modelo de datos de experiencia (XDM) para su uso en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Campos de asignación de destino
+# Asignaciones de campos de asignación de destino
 
-Adobe Experience Platform le permite ingestar datos de Adobe Target a través del conector de origen de Destinatario. Al utilizar el conector, todos los datos de los campos de Destinatario deben asignarse a los campos del Modelo de datos de [experiencia (XDM)](../../../../xdm/home.md) asociados a la clase ExperienceEvent de XDM.
+Adobe Experience Platform le permite ingestar datos de Adobe Target a través del conector de origen de Destinatario. Al utilizar el conector, todos los datos de los campos de Destinatario deben asignarse a los campos [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md) asociados a la clase XDM ExperienceEvent.
 
-La siguiente tabla describe los campos de un esquema de Experience Evento (campo *ExperienceEvent de* XDM) y los campos de Destinatario correspondientes a los que deben asignarse (campo *Solicitud de* Destinatario). También se proporcionan notas adicionales para algunas asignaciones.
+La siguiente tabla describe los campos de un esquema de Experience Evento (*campo XDM ExperienceEvent*) y los campos de Destinatario correspondientes a los que deben asignarse (*campo Solicitud de Destinatario*). También se proporcionan notas adicionales para algunas asignaciones.
 
 >[!NOTE]
 >
