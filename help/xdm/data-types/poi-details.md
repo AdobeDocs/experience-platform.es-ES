@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;poi;detalles del poi;punto de interés;detalles del punto de interés;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles del punto de interés
 topic: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de Detalles del punto de interés.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '200'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Tipo de datos de detalles] de puntos de interés
+# [!UICONTROL Tipo de datos de ] detalles del punto de interés
 
-[!UICONTROL Los detalles] del punto de interés son un tipo de datos XDM estándar que describe los datos geográficos en los que se observó un evento.
+[!UICONTROL Los ] detalles del punto de interés son un tipo de datos XDM estándar que describe los datos geográficos en los que se observó un evento.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
