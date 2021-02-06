@@ -6,19 +6,19 @@ topic: tutorial
 type: Tutorial
 description: La ingestión de datos incluye la ingestión por lotes, la ingestión por flujo continuo y la ingestión mediante conectores de origen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
 # Ingresar datos en [!DNL Experience Platform]
 
-Adobe Experience Platform reúne los datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. El Adobe [!DNL Experience Platform Data Ingestion] representa los múltiples métodos mediante los cuales [!DNL Platform] ingiere datos de estas fuentes, así como la forma en que se mantienen esos datos dentro del Data Lake para su uso por el flujo [!DNL Platform services]. [!DNL Data Ingestion] incluye la ingestión por lotes, la ingestión por flujo continuo y la ingestión mediante conectores de origen. Para obtener más información, lea la [información general sobre la ingestión de datos](../ingestion/home.md) o diríjase directamente a la [documentación de fuentes](../sources/home.md).
+Adobe Experience Platform reúne datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. El Adobe [!DNL Experience Platform Data Ingestion] representa los múltiples métodos mediante los cuales [!DNL Platform] ingiere datos de estas fuentes, así como la forma en que se mantienen esos datos dentro del Data Lake para su uso por el flujo [!DNL Platform services]. [!DNL Data Ingestion] incluye la ingestión por lotes, la ingestión por flujo continuo y la ingestión mediante conectores de origen. Para obtener más información, lea la [información general sobre la ingestión de datos](../ingestion/home.md) o diríjase directamente a la [documentación de fuentes](../sources/home.md).
 
-## Creación de un conector de origen en la interfaz de usuario y la API
+## Creación de una conexión de origen en la interfaz de usuario y la API
 
 Los conectores de origen le permiten ingestar datos de múltiples fuentes, donde luego se pueden etiquetar, estructurar y mejorar mediante [!DNL Platform services]. Para empezar a crear un conector de origen, consulte la información general de [orígenes](../sources/home.md).
 
