@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;sintaxis sql;sql;ctas;CTAS;Crear tabla como selección
 solution: Experience Platform
-title: Sintaxis SQL
+title: Sintaxis SQL en el servicio de Consulta
 topic: syntax
-description: Este documento muestra la sintaxis SQL admitida por el servicio de Consulta.
+description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Consulta Service.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2221'
 ht-degree: 0%
 
 ---
 
 
-# Sintaxis SQL
+# Sintaxis SQL en el servicio de Consulta
 
 [!DNL Query Service] proporciona la capacidad de utilizar ANSI SQL estándar para  `SELECT` sentencias y otros comandos limitados. Este documento muestra la sintaxis SQL admitida por [!DNL Query Service].
 
