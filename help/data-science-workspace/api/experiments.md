@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform;guía para desarrolladores;punto final;Área de trabajo de ciencia de datos;temas populares;experimentos;API de aprendizaje del equipo sensei
 solution: Experience Platform
-title: Experimentos
+title: Extremo de API de experimentos
 topic: Developer guide
 description: El desarrollo de modelos y la formación se realizan en el nivel Experimento, donde un Experimento consiste en una instancia MLI, ejecuciones de capacitación y carreras de puntuación.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '783'
 ht-degree: 4%
 
 ---
 
 
-# Experimentos
+# Extremo de experimentos
 
 El desarrollo de modelos y la formación se realizan en el nivel Experimento, donde un Experimento consiste en una instancia MLI, ejecuciones de capacitación y carreras de puntuación.
 
@@ -70,7 +70,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 }
 ```
 
-## Crear y ejecutar una ejecución de formación o puntuación {#experiment-training-scoring}
+## Crear y ejecutar una ejecución de entrenamiento o puntuación {#experiment-training-scoring}
 
 Puede crear ejecuciones de puntuación o formación realizando una solicitud de POST, proporcionando un ID de experimento válido y especificando la tarea de ejecución. Las ejecuciones de puntuación solo se pueden crear si el experimento tiene una ejecución de formación existente y correcta. Si se crea correctamente una ejecución de formación, se inicializará el procedimiento de formación del modelo y su finalización con éxito generará un modelo capacitado. La generación de modelos formados reemplazará a los ya existentes, de modo que un experimento solo puede utilizar un modelo entrenado en un momento dado.
 
@@ -101,11 +101,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `{TASK}` | Especifica la tarea de la ejecución. Establezca este valor como `train` para formación, `score` puntuación o `featurePipeline` para la canalización de funciones. |
+| `{TASK}` | Especifica la tarea de la ejecución. Establezca este valor como `train` para la formación, `score` para la puntuación o `featurePipeline` para la canalización de funciones. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles de la ejecución recién creada, incluidos los parámetros de puntuación o formación predeterminados heredados y el ID único (`{RUN_ID}`) de la ejecución.
+Una respuesta correcta devuelve una carga útil que contiene los detalles de la ejecución recién creada, incluidos los parámetros de puntuación o formación predeterminados heredados y el identificador único de la ejecución (`{RUN_ID}`).
 
 ```json
 {
@@ -134,7 +134,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperar una lista de experimentos
 
-Puede recuperar una lista de Experimentos que pertenezcan a una instancia MLI concreta realizando una sola solicitud de GET y proporcionando un ID de instancia MLI válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de Experimentos que pertenezcan a una instancia MLI concreta realizando una sola solicitud de GET y proporcionando un ID de instancia MLI válido como parámetro de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de activos](./appendix.md#query).
 
 
 **Formato de API**
@@ -243,7 +243,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ex
 
 ## Recuperar una lista de ejecuciones de experimentos
 
-Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un experimento determinado realizando una sola solicitud de GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de ejecuciones de formación o puntuación que pertenezcan a un experimento determinado realizando una sola solicitud de GET y proporcionando un ID de experimento válido. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista completa de los parámetros de consulta disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parámetro | Descripción |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un ID de experimento válido. |
-| `{QUERY_PARAMETER}` | Uno de los parámetros [de consulta](./appendix.md#query) disponibles para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) utilizados para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
