@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: Experience Platform;inicio;temas populares;RGPD;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;información general;normativa;normativa;normativa;normativa;normativa;privacidad;privacidad;privacidad;
 solution: Experience Platform
-title: Terminología de la normativa de privacidad
+title: Terminología de las normas de privacidad
 topic: troubleshooting
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1512'
 ht-degree: 3%
 
 ---
 
 
-# Terminología de la normativa de privacidad
+# Terminología de las normas de privacidad
 
 Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 
@@ -23,11 +23,11 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 **Enlace de reglas corporativas (BCR)**: Se ha establecido un conjunto de normas vinculantes que permiten a las compañías y organizaciones multinacionales transferir datos personales que controlan de la UE a sus filiales fuera de la UE (pero dentro de la organización).
 
-**Datos** biométricos Cualquier dato personal relacionado con las características físicas, fisiológicas o conductuales de una persona que permita su identificación única.
+**Datos biométricos** Cualquier dato personal relacionado con las características físicas, fisiológicas o conductuales de una persona que permita su identificación única.
 
 ## C
 
-**CCPA**: La [!DNL California Consumer Privacy Act] (CCPA) da a los residentes de California más control sobre la información personal que las empresas recopilan a partir de entonces. La ley establece varios derechos nuevos para los consumidores, entre ellos el derecho de acceso y la información personal que se les reúna, y el derecho a exclusión la venta de su información personal a terceros.
+**CCPA**: La  [!DNL California Consumer Privacy Act] (CCPA) da a los residentes de California más control sobre la información personal que las empresas recopilan a partir de entonces. La ley establece varios derechos nuevos para los consumidores, entre ellos el derecho de acceso y la información personal que se les reúna, y el derecho a exclusión la venta de su información personal a terceros.
 
 **Consentimiento**: Consentimiento libremente dado, específico, informado y explícito mediante declaración o acción que signifique un acuerdo para el tratamiento de sus datos personales.
 
@@ -69,7 +69,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## G
 
-**RGPD**: El [!DNL General Data Protection Regulation] RGPD es un marco jurídico que establece directrices para la recogida y el tratamiento de la información personal de las personas en la Unión Europea (UE). El RGPD establece los principios de gestión de datos y los derechos de la persona, al tiempo que impone multas que pueden basarse en los ingresos. El RGPD abarca todas las compañías que se ocupan de los datos de los ciudadanos de la UE, por lo que es una reglamentación decisiva para los funcionarios encargados del cumplimiento de las normas empresariales en los bancos, las aseguradoras y otras compañías financieras.
+**RGPD**: El  [!DNL General Data Protection Regulation] (RGPD) es un marco jurídico que establece directrices para la recogida y el tratamiento de la información personal de las personas en la Unión Europea (UE). El RGPD establece los principios de gestión de datos y los derechos de la persona, al tiempo que impone multas que pueden basarse en los ingresos. El RGPD abarca todas las compañías que se ocupan de los datos de los ciudadanos de la UE, por lo que es una reglamentación decisiva para los funcionarios encargados del cumplimiento de las normas empresariales en los bancos, las aseguradoras y otras compañías financieras.
 
 **Datos** genéticos: Datos relativos a las características de una persona hereditaria o adquirida que proporcionan información única sobre la salud o la fisiología de la persona.
 
@@ -79,7 +79,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## I
 
-**Servicios de Identity Management (IMS)**: Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+**Servicios de Identity Management (IMS)**: Implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y autorización de recursos de Adobe. Debe integrar los IMS en su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Los usuarios pueden iniciar sesión directamente con Renga (el proveedor de servicios de identidad de Adobe) o mediante un dominio de autenticación de terceros de confianza (como [!DNL Google], [!DNL Facebook] o un LDAP corporativo/de organización).
 
 **Consentimiento** implícito: También conocido como consentimiento inequívoco, se refiere al consentimiento que el interesado no dio explícitamente, pero que es de naturaleza inequívoca. Por ejemplo, durante el proceso de registro de un sitio web de compañía, se notifica que al proporcionar una dirección de correo electrónico, el sujeto de datos consiente en recibir correos electrónicos en ofertas especiales. Si el interesado lee el aviso, la acción afirmativa de introducir su correo electrónico es suficiente para que se considere un consentimiento implícito.
 
@@ -91,7 +91,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## L
 
-**LGPD**: El objetivo [!DNL Lei Geral de Proteção de Dados] (LGPD) es regular el tratamiento de los datos personales de todas las personas físicas o físicas en el Brasil. La LGPD otorga a los ciudadanos brasileños el derecho a acceder y eliminar sus datos personales, a saber si se venden o revelan sus datos personales (y a quién), y el derecho a exclusión que sus datos se vendan a terceros.
+**LGPD**: El objetivo  [!DNL Lei Geral de Proteção de Dados] (LGPD) es regular el tratamiento de los datos personales de todas las personas físicas o físicas en el Brasil. La LGPD otorga a los ciudadanos brasileños el derecho a acceder y eliminar sus datos personales, a saber si se venden o revelan sus datos personales (y a quién), y el derecho a exclusión que sus datos se vendan a terceros.
 
 ## M
 
@@ -103,7 +103,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## P
 
-**PDPA**: El [!DNL Personal Data Protection Act] de Tailandia (PDPA) se introdujo para proteger a los propietarios de datos tailandeses de la recopilación, el uso o la revelación ilegales de sus datos personales. Inspirado en el RGPD de la Unión Europea, el reglamento otorga a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.
+**PDPA**: El  [!DNL Personal Data Protection Act] de Tailandia (PDPA) se introdujo para proteger a los propietarios de datos tailandeses de la recogida, el uso o la revelación ilegales de sus datos personales. Inspirado en el RGPD de la Unión Europea, el reglamento otorga a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.
 
 **Datos** personales: Cualquier información relacionada con una persona física o con el &quot;sujeto de datos&quot;, que pueda utilizarse para identificar directa o indirectamente a la persona.
 
@@ -135,7 +135,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## S
 
-**Datos** confidenciales:  Cualquier dato personal relativo al origen racial o étnico, las opiniones políticas, las religiones o creencias filosóficas, el comportamiento sexual, los antecedentes penales, los datos de salud, la discapacidad, la información sobre la unión comercial, los datos genéticos, los datos biométricos o cualquier dato que pueda afectar al interesado.
+**Datos** confidenciales: Cualquier dato personal relativo al origen racial o étnico, las opiniones políticas, las religiones o creencias filosóficas, el comportamiento sexual, los antecedentes penales, los datos de salud, la discapacidad, la información sobre la unión comercial, los datos genéticos, los datos biométricos o cualquier dato que pueda afectar al interesado.
 
 **Derecho** de acceso al sujeto: También conocido como derecho de acceso, da derecho al interesado a tener acceso a los datos personales que le conciernen y a la información sobre ellos que tenga un responsable del tratamiento.
 
