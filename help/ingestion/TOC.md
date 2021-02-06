@@ -5,18 +5,18 @@ user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Platform mediante la ingestión por lotes o de flujo continuo.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 21%
+source-wordcount: '121'
+ht-degree: 25%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Ingesta de datos de Adobe Experience Platform {#ingestion}
 
 - [Información general sobre la inserción de datos](home.md)
-- Transmisión por flujo continuo {#streaming}
+- Ingesta de la transmisión {#streaming}
    - [Información general](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Resolución de problemas](streaming-ingestion/troubleshooting.md)
@@ -34,13 +34,13 @@ ht-degree: 21%
    - [Transmisión de datos de registros](tutorials/streaming-record-data.md)
    - [Transmisión de datos de series temporales](tutorials/streaming-time-series-data.md)
    - [Transmisión de varios mensajes](tutorials/streaming-multiple-messages.md)
-- Calidad y control de la ingestión de datos{#quality}
+- Calidad y supervisión de los datos{#quality}
    - [Información general](quality/overview.md)
    - [Monitoreo de la ingesta de datos](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
    - [Recuperar lotes con errores](quality/retrieve-failed-batches.md)
    - [Validación de la ingesta de flujo continuo](quality/streaming-validation.md)
-   - [Suscripción a eventos de ingesta de datos](quality/subscribe-events.md)
+   - [Notificaciones de ingestión de datos](quality/subscribe-events.md)
 - [Conectores de origen](source-connectors.md)
 - [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
