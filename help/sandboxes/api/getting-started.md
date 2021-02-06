@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de simuladores de pruebas
 solution: Experience Platform
-title: Guía para desarrolladores de la API de Simulador para pruebas
+title: Guía de la API de Simulador para pruebas
 topic: developer guide
-description: Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de Simulador para pruebas para administrar entornos limitados en Experience Platform, e incluye ejemplos de llamadas a la API para realizar diversas operaciones.
+description: La API de Simulador para pruebas permite a los desarrolladores administrar mediante programación los entornos limitados de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
 
-# Guía para desarrolladores de la API de Simulador para pruebas
+# Guía de la API de Simulador para pruebas
 
 Los Simuladores para pruebas de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción.
 
