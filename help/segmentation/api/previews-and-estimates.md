@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;previsualizaciones;estimaciones;previsualizaciones y estimaciones;estimaciones y previsualizaciones;api;API;
 solution: Experience Platform
-title: Definiciones de previsualizaciones y estimaciones
+title: Previsualizaciones y estimaciones de extremos de API
 topic: developer guide
-description: A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación de Adobe Experience Platform para obtener información de nivel de resumen de vista y así asegurarse de aislar la audiencia esperada.
+description: Los extremos de previsualizaciones y estimaciones de la API de servicio de segmentación de Adobe Experience Platform le permiten realizar vistas de información de nivel de resumen para asegurarse de que está aislando la audiencia esperada en sus segmentos.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Definiciones de previsualizaciones y estimaciones
 
-A medida que desarrolla la definición del segmento, puede utilizar las herramientas de previsualización y estimación dentro de [!DNL Adobe Experience Platform] la información de nivel de resumen de vista para asegurarse de aislar la audiencia esperada. **Las previsualizaciones** proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. **Las estimaciones** proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
+A medida que desarrolla la definición del segmento, puede utilizar las herramientas de estimación y previsualización dentro de [!DNL Adobe Experience Platform] para obtener información de nivel de resumen de vista que le ayudará a aislar la audiencia esperada. **Las** vistas previas proporcionan listas paginadas de perfiles de cualificación para una definición de segmento, lo que le permite comparar los resultados con lo que espera. **Las** estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Cómo se generan las estimaciones
 
@@ -41,9 +41,9 @@ El tamaño de muestra del análisis depende del número total de entidades del a
 >
 >Las estimaciones generalmente tardan entre 10 y 15 segundos en ejecutarse, comenzando con una estimación aproximada y refinándose a medida que se leen más registros.
 
-## Create a new preview {#create-preview}
+## Crear una nueva previsualización {#create-preview}
 
-Puede crear una nueva previsualización haciendo una solicitud de POST al `/preview` extremo.
+Puede crear una nueva previsualización haciendo una solicitud de POST al extremo `/preview`.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `predicateExpression` | Expresión de PQL para la consulta de los datos. |
-| `predicateType` | Tipo de predicado de la expresión de consulta en `predicateExpression`. Actualmente, el único valor aceptado para esta propiedad es `pql/text`. |
+| `predicateType` | El tipo de predicado para la expresión de consulta en `predicateExpression`. Actualmente, el único valor aceptado para esta propiedad es `pql/text`. |
 | `predicateModel` | Nombre del esquema [!DNL Experience Data Model] (XDM) en el que se basan los datos de perfil. |
 
 **Respuesta**
@@ -99,7 +99,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) con detalles de la p
 
 ## Recuperar los resultados de una previsualización específica {#get-preview}
 
-Puede recuperar información detallada sobre una previsualización específica realizando una solicitud de GET al extremo y proporcionando el ID de previsualización en la ruta de la solicitud. `/preview`
+Puede recuperar información detallada sobre una previsualización específica haciendo una solicitud de GET al extremo `/preview` y proporcionando el ID de previsualización en la ruta de la solicitud.
 
 **Formato API**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | El `previewId` valor de la previsualización que desea recuperar. |
+| `{PREVIEW_ID}` | El valor `previewId` de la previsualización que desea recuperar. |
 
 **Solicitud**
 
@@ -176,7 +176,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
-Una vez creado un trabajo de previsualización, puede utilizarlo `previewId` en la ruta de una solicitud de GET al `/estimate` extremo para vista de información estadística sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
+Una vez creado un trabajo de previsualización, puede utilizar su `previewId` en la ruta de una solicitud de GET al extremo `/estimate` para obtener información estadística de vista sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
 **Formato API**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Un trabajo de estimación solo se activa cuando se crea un trabajo de previsualización y los dos trabajos comparten el mismo valor de ID para fines de búsqueda. Concretamente, este es el `previewId` valor devuelto cuando se creó el trabajo de previsualización. |
+| `{PREVIEW_ID}` | Un trabajo de estimación solo se activa cuando se crea un trabajo de previsualización y los dos trabajos comparten el mismo valor de ID para fines de búsqueda. Específicamente, este es el valor `previewId` devuelto cuando se creó el trabajo de previsualización. |
 
 **Solicitud**
 
@@ -231,4 +231,4 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de e
 
 ## Pasos siguientes
 
-Después de leer esta guía ahora tiene una mejor comprensión de cómo trabajar con previsualizaciones y estimaciones. Para obtener más información sobre los otros extremos de la [!DNL Segmentation Service] API, lea la guía para desarrolladores del servicio de [segmentación](./overview.md).
+Después de leer esta guía ahora tiene una mejor comprensión de cómo trabajar con previsualizaciones y estimaciones. Para obtener más información acerca de los otros [!DNL Segmentation Service] extremos de API, lea la [guía para desarrolladores del servicio de segmentación general](./overview.md).
