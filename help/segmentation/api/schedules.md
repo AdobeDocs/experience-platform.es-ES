@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;programaciones;programación;api;API;
 solution: Experience Platform
-title: Programaciones
+title: Extremo de API de programaciones
 topic: developer guide
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1203'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 # Extremo de programación
 
-Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día. Puede utilizar el extremo para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica. `/config/schedules`
+Los programas son una herramienta que se puede utilizar para ejecutar automáticamente los trabajos de segmentación por lotes una vez al día. Puede utilizar el extremo `/config/schedules` para recuperar una lista de programaciones, crear una nueva programación, recuperar detalles de una programación específica, actualizar una programación específica o eliminar una programación específica.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Recuperar una lista de programaciones {#retrieve-list}
 
-Puede recuperar una lista de todas las programaciones de su organización de IMS realizando una solicitud de GET al `/config/schedules` extremo.
+Puede recuperar una lista de todas las programaciones de su organización de IMS haciendo una solicitud de GET al extremo `/config/schedules`.
 
 **Formato API**
 
-El extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. `/config/schedules` Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las programaciones disponibles para su organización. Se pueden incluir varios parámetros, separados por ampersands (`&`).
+El extremo `/config/schedules` admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las programaciones disponibles para su organización. Se pueden incluir varios parámetros, separados por ampersands (`&`).
 
 ```http
 GET /config/schedules
@@ -100,13 +100,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de programacion
 | `children.name` | El nombre de la programación como una cadena. |
 | `children.type` | Tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
 | `children.properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `children.properties.segments` | El uso `["*"]` garantiza la inclusión de todos los segmentos. |
-| `children.schedule` | Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los programas de cron, lea la documentación sobre el formato [de expresión](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. |
+| `children.properties.segments` | El uso de `["*"]` garantiza que se incluyan todos los segmentos. |
+| `children.schedule` | Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. |
 | `children.state` | Una cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
-## Create a new schedule {#create}
+## Crear una nueva programación {#create}
 
-Puede crear una nueva programación realizando una solicitud de POST al `/config/schedules` extremo.
+Puede crear una nueva programación realizando una solicitud de POST al extremo `/config/schedules`.
 
 **Formato API**
 
@@ -142,8 +142,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Requerido.** El nombre de la programación como una cadena. |
 | `type` | **Requerido.** Tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
 | `properties` | **Requerido.** Objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **Necesario cuando `type` es igual a &quot;batch_segmentation&quot;.** El uso `["*"]` garantiza la inclusión de todos los segmentos. |
-| `schedule` | *Opcional.* Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los programas de cron, lea la documentación sobre el formato [de expresión](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
+| `properties.segments` | **Necesario cuando  `type` es igual a &quot;batch_segmentation&quot;.** El uso  `["*"]` garantiza que se incluyan todos los segmentos. |
+| `schedule` | *Opcional.* Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
 | `state` | *Opcional.* Una cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
 **Respuesta**
@@ -176,7 +176,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la programaci
 
 ## Recuperar una programación específica {#get}
 
-Puede recuperar información detallada sobre una programación específica haciendo una solicitud de GET al extremo y proporcionando el ID de la programación que desea recuperar en la ruta de solicitud. `/config/schedules`
+Puede recuperar información detallada sobre una programación específica haciendo una solicitud de GET al extremo `/config/schedules` y proporcionando el ID de la programación que desee recuperar en la ruta de solicitud.
 
 **Formato API**
 
@@ -186,7 +186,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la programación que desea recuperar. |
+| `{SCHEDULE_ID}` | El valor `id` de la programación que desea recuperar. |
 
 **Solicitud**
 
@@ -231,19 +231,19 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `name` | El nombre de la programación como una cadena. |
 | `type` | Tipo de trabajo como cadena. Los dos tipos admitidos son `batch_segmentation` y `export`. |
 | `properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | El uso `["*"]` garantiza la inclusión de todos los segmentos. |
-| `schedule` | Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre los programas de cron, lea la documentación sobre el formato [de expresión](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. |
-| `state` | Una cadena que contiene el estado de programación. Los dos estados admitidos son `active` y `inactive`. By default, the state is set to `inactive`. |
+| `properties.segments` | El uso de `["*"]` garantiza que se incluyan todos los segmentos. |
+| `schedule` | Cadena que contiene la programación de trabajos. Los trabajos solo se pueden programar para ejecutarse una vez al día, lo que significa que no se puede programar que se ejecute más de una vez durante un período de 24 horas. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;0 0 1 *&quot; significa que esta programación se ejecutará a medianoche el primero de cada mes. |
+| `state` | Una cadena que contiene el estado de programación. Los dos estados admitidos son `active` y `inactive`. De forma predeterminada, el estado se establece en `inactive`. |
 
-## Actualizar detalles de una programación específica {#update}
+## Actualizar detalles para una programación específica {#update}
 
-Para actualizar una programación específica, realice una solicitud de PATCH al extremo y proporcione el ID de la programación que intenta actualizar en la ruta de la solicitud. `/config/schedules`
+Puede actualizar una programación específica realizando una solicitud de PATCH al extremo `/config/schedules` y proporcionando el ID de la programación que está intentando actualizar en la ruta de la solicitud.
 
-La solicitud de PATCH le permite actualizar el [estado](#update-state) o la programación [](#update-schedule) cron de una programación individual.
+La solicitud de PATCH le permite actualizar el [estado](#update-state) o el [cronograma cron](#update-schedule) para una programación individual.
 
 ### Actualizar estado de programación {#update-state}
 
-Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, se declara la `path` propiedad como `/state` y se establece el `value` como `active` o `inactive`. Para obtener más información sobre JSON Patch, lea la documentación de [JSON Patch](http://jsonpatch.com/) .
+Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, se declara la propiedad `path` como `/state` y se establece `value` como `active` o `inactive`. Para obtener más información sobre JSON Patch, lea la documentación de [JSON Patch](http://jsonpatch.com/).
 
 **Formato API**
 
@@ -253,7 +253,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la programación que desea actualizar. |
+| `{SCHEDULE_ID}` | El valor `id` de la programación que desea actualizar. |
 
 **Solicitud**
 
@@ -284,7 +284,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ### Actualizar programación de cron {#update-schedule}
 
-Puede utilizar una operación de parche JSON para actualizar la programación de cron. Para actualizar la programación, se declara la `path` propiedad como `/schedule` y se establece en una programación `value` cron válida. Para obtener más información sobre JSON Patch, lea la documentación de [JSON Patch](http://jsonpatch.com/) . Para obtener más información sobre los programas de cron, lea la documentación sobre el formato [de expresión](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron.
+Puede utilizar una operación de parche JSON para actualizar la programación de cron. Para actualizar la programación, declare la propiedad `path` como `/schedule` y establezca la `value` en una programación cron válida. Para obtener más información sobre JSON Patch, lea la documentación de [JSON Patch](http://jsonpatch.com/). Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Formato API**
 
@@ -294,7 +294,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la programación que desea actualizar. |
+| `{SCHEDULE_ID}` | El valor `id` de la programación que desea actualizar. |
 
 **Solicitud**
 
@@ -316,7 +316,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `path` | Ruta del valor que desea actualizar. En este caso, como está actualizando la programación de crones, debe establecer el valor de `path` en `/schedule`. |
+| `path` | Ruta del valor que desea actualizar. En este caso, como está actualizando la programación cron, debe establecer el valor de `path` en `/schedule`. |
 | `value` | Valor actualizado de la programación de crones. Este valor debe tener la forma de un cronograma de crones. En este ejemplo, la programación se ejecutará el segundo de cada mes. |
 
 **Respuesta**
@@ -325,7 +325,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ## Eliminar una programación específica
 
-Para solicitar la eliminación de una programación específica, realice una solicitud de DELETE al extremo y proporcione el ID de la programación que desea eliminar en la ruta de la solicitud. `/config/schedules`
+Puede solicitar la eliminación de una programación específica realizando una solicitud de DELETE al extremo `/config/schedules` y proporcionando el ID de la programación que desea eliminar en la ruta de solicitud.
 
 **Formato API**
 
@@ -335,7 +335,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la programación que desea eliminar. |
+| `{SCHEDULE_ID}` | El valor `id` de la programación que desea eliminar. |
 
 **Solicitud**
 
