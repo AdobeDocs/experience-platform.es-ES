@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ui;IU;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;editor de esquema;editor de Esquemas;esquema;Esquema;esquemas;Esquemas;crear
 solution: Experience Platform
-title: Crear un esquema con el editor de esquemas
+title: Creación de un Esquema con el Editor de Esquemas
 topic: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '3600'
 ht-degree: 0%
