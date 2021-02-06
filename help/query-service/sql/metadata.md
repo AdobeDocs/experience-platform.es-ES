@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform;inicio;temas populares;PSQL;psql;servicio de Consulta;servicio de consulta;metadatos;comandos;comandos de metadatos;
 solution: Experience Platform
-title: Comandos de metadatos
+title: Comandos PostgreSQL de metadatos en el servicio de Consulta
 topic: metadata
-description: Lista de comandos PSQL que se admiten actualmente para consultar metadatos.
+description: Lista de comandos PostgreSQL que actualmente se admiten para consultar metadatos en el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Comandos de metadatos
+# Comandos PostgreSQL de metadatos en el servicio de Consulta
 
-En el caso de los metadatos del conjunto de datos, los siguientes comandos PSQL se admiten actualmente para la consulta:
+En el caso de los metadatos del conjunto de datos, los siguientes comandos PostgreSQL se admiten actualmente para la consulta:
 
 >[!NOTE]
 >
@@ -39,10 +39,10 @@ En el caso de los metadatos del conjunto de datos, los siguientes comandos PSQL 
 | `\errverbose` | Repite el mensaje de error más reciente del servidor con la máxima amplitud. |
 | `\l or \list` | Muestra una lista de bases de datos en el servidor. |
 | `\set` | Muestra los nombres y valores de todas las variables psql actuales. |
-| `\showtables` | Muestra la siguiente información: <br>name: Nombre por el cual se hará referencia a la tabla.<br>datasetId: ID del conjunto de datos que se almacena.<br>conjunto de datos: Nombre del conjunto de datos que se almacena.<br>description: Descripción del conjunto de datos.<br>resuelto: Un valor booleano que indica si el conjunto de datos se resuelve o no en la sesión actual. |
+| `\showtables` | Muestra la siguiente información: <br>nombre: Nombre por el cual se hará referencia a la tabla.<br>datasetId: ID del conjunto de datos que se almacena.<br>conjunto de datos: Nombre del conjunto de datos que se almacena.<br>description: Descripción del conjunto de datos.<br>resuelto: Un valor booleano que indica si el conjunto de datos se resuelve o no en la sesión actual. |
 | `\timing` | Activa o desactiva la visualización. La pantalla se muestra en milisegundos. Los intervalos superiores a un segundo se muestran en formato de minutos:segundos, con campos de horas y días agregados cuando es necesario. |
 
-Se pueden combinar todos los comandos con los que `\d` se inicio. Por ejemplo, puede publicar `\dtsn` para mostrar una lista de todas las tablas, secuencias y esquemas. `\d` por sí mismo muestra todas las tablas, vistas, vistas materializadas y secuencias visibles.
+Se pueden combinar todos los comandos que inicio con `\d`. Por ejemplo, puede emitir `\dtsn` para mostrar una lista de todas las tablas, secuencias y esquemas. `\d` por sí mismo muestra todas las tablas, vistas, vistas materializadas y secuencias visibles.
 
-Para obtener más información sobre los comandos mencionados anteriormente, consulte la documentación de [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que no todas las opciones que se muestran en la documentación de PostgreSQL son compatibles con [!DNL Experience Platform].
+Para obtener información adicional sobre los comandos enumerados anteriormente, consulte la documentación en [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Sin embargo, tenga en cuenta que [!DNL Experience Platform] no todas las opciones que se muestran en la documentación de PostgreSQL son compatibles.
 
