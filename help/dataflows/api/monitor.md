@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;inicio;temas populares;controlar flujos de datos;API de servicio de flujo;Servicio de flujo
 solution: Experience Platform
-title: Monitorear flujos y ejecuciones
+title: Monitoreo de flujos de datos mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para supervisar los datos de ejecución del flujo para comprobar si están completos, los errores y las métricas que utilizan la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '722'
 ht-degree: 1%
 
 ---
