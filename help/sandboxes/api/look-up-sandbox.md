@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform;inicio;temas populares;buscar entorno limitado;buscar un entorno limitado
 solution: Experience Platform
-title: Buscar un simulador para pruebas
+title: Buscar un Simulador para pruebas en la API
 topic: developer guide
 description: Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad name del simulador para pruebas en la ruta de solicitud.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# Buscar un simulador para pruebas
+# Buscar un entorno limitado en la API
 
-Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad del `name` simulador para pruebas en la ruta de solicitud.
+Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad `name` del simulador para pruebas en la ruta de solicitud.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` propiedad del simulador para pruebas que desea buscar. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador para pruebas que desea buscar. |
 
 **Solicitud**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del simulador para pruebas, incluidos su `name`, `title`, `state`y `type`.
+Una respuesta correcta devuelve los detalles del entorno limitado, incluidos sus `name`, `title`, `state` y `type`.
 
 ```json
 {
