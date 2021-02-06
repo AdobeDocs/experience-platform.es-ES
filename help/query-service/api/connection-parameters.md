@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de API;parámetros de conexión;servicio de Consulta;
 solution: Experience Platform
-title: Guía para desarrolladores de consulta Service
+title: Extremo de API de parámetros de conexión
 topic: connection parameters
 description: Puede recuperar los parámetros de conexión para utilizar el servicio interactivo haciendo una solicitud de GET al extremo /connection_parameters.
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
 
-# Parámetros de conexión
+# Extremo de parámetros de conexión
 
 ## Ejemplos de llamadas a API
 
