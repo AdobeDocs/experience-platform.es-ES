@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;cuantificadores lógicos;cuantificador lógico;
 solution: Experience Platform
-title: Cuantificadores lógicos
+title: Cuantificadores lógicos de PQL
 topic: developer guide
 description: Los cuantificadores lógicos pueden utilizarse para afirmar condiciones con matrices en lenguaje de Consulta de Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '219'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 # Funciones de cuantificador lógico
 
-Los cuantificadores lógicos pueden utilizarse para afirmar condiciones con matrices en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Los cuantificadores lógicos pueden utilizarse para afirmar condiciones con matrices en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Existe
 
-La `exists` función determina la existencia de un elemento en una matriz, siempre que cumpla la condición proporcionada.
+La función `exists` determina la existencia de un elemento en una matriz, siempre que cumpla la condición proporcionada.
 
 **Format**
 
@@ -44,9 +44,9 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Para todos
 
-La `forall` función determina todos los elementos de una matriz que cumplen todas las condiciones determinadas.
+La función `forall` determina todos los elementos de una matriz que cumplen todas las condiciones especificadas.
 
-**Format**
+**Formato**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -69,4 +69,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre los cuantificadores lógicos, puede utilizarlos dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre los cuantificadores lógicos, puede utilizarlos dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
