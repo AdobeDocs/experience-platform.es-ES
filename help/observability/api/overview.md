@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform;inicio;temas populares;intervalo de fechas
 solution: Experience Platform
-title: Guía para desarrolladores de la API de perspectivas de observación
+title: Guía de API de perspectivas de capacidad de observación
 topic: developer guide
-description: Observability Insights es una API de RESTful que le permite exponer las métricas de observabilidad clave en Adobe Experience Platform. Estas métricas proporcionan perspectivas sobre las estadísticas de uso de la Plataforma, las comprobaciones de estado de los servicios de la Plataforma, las tendencias históricas y los indicadores de rendimiento de diversas funcionalidades de la Plataforma.
+description: Observability Insights es una API de RESTful que permite a los desarrolladores exponer las métricas de observabilidad clave en Adobe Experience Platform. Estas métricas proporcionan perspectivas sobre las estadísticas de uso de la Plataforma, las comprobaciones de estado de los servicios de la Plataforma, las tendencias históricas y los indicadores de rendimiento de diversas funcionalidades de la Plataforma.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Observability Insights] Guía para desarrolladores de API
+# [!DNL Observability Insights] Guía de API
 
-La [!DNL Observability Insights] API proporciona un punto final que le permite recuperar y monitorear mediante programación los datos de métricas de varias funciones de Adobe Experience Platform. Este extremo se describe a continuación. Visite la guía del punto final para obtener más detalles y consulte la guía [de](./getting-started.md) introducción para obtener información importante sobre los encabezados requeridos, la lectura de las llamadas a la API de muestra y mucho más.
+La API [!DNL Observability Insights] proporciona un punto final que le permite recuperar y monitorear mediante programación los datos de métricas de varias funciones de Adobe Experience Platform. Este extremo se describe a continuación. Visite la guía del extremo para obtener más detalles y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados requeridos, leer llamadas de API de muestra y mucho más.
 
-Para vista de todos los extremos disponibles y las operaciones de CRUD, visite el [[!DNL Observability Insights] intercambiador](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)de API.
+Para realizar la vista de todos los extremos y las operaciones de CRUD disponibles, visite el [[!DNL Observability Insights] swagger de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
 
 ## Métricas
 
-Las métricas de capacidad de observación proporcionan perspectivas sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento para diversas funciones de Adobe Experience Platform. Para obtener información sobre cómo recuperar métricas mediante la API, consulte la guía de punto final de [métricas](./metrics.md).
+Las métricas de capacidad de observación proporcionan perspectivas sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento para diversas funciones de Adobe Experience Platform. Para obtener información sobre cómo recuperar métricas mediante la API, consulte la [guía de extremo de métricas](./metrics.md).
