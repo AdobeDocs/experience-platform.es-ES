@@ -1,12 +1,12 @@
 ---
 keywords: activar destino;activar destinos;activar datos
-title: Activar perfiles y segmentos en un destino
+title: Activar Perfiles y segmentos en un destino
 type: Tutorial
 seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
