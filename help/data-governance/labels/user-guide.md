@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;administración de datos;etiqueta de uso de datos;servicio de políticas;guía del usuario de etiquetas de uso de datos
 solution: Experience Platform
-title: Guía del usuario de etiquetas de uso de datos
+title: Administrar etiquetas de uso de datos en la interfaz de usuario
 topic: labels
-description: Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
+description: En esta guía se explican los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
 
-# Guía del usuario de etiquetas de uso de datos
+# Administrar etiquetas de uso de datos en la interfaz de usuario
 
 Esta guía del usuario cubre los pasos para trabajar con etiquetas de uso de datos dentro de la interfaz de usuario [!DNL Experience Platform]. Antes de utilizar la guía, consulte la [[!DNL Data Governance] información general](../home.md) para obtener una introducción más sólida al [!DNL Data Governance] marco de trabajo.
 
-## Administración de etiquetas de uso de datos en el nivel de conjunto de datos
+## Administrar etiquetas en el nivel de conjunto de datos
 
 Para administrar las etiquetas de uso de datos en el nivel de conjunto de datos, debe seleccionar un conjunto de datos existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo para abrir el área de trabajo **[!UICONTROL Datasets]**. Esta página lista todos los conjuntos de datos creados que pertenecen a su organización, junto con detalles útiles relacionados con cada conjunto de datos.
 
@@ -75,7 +75,7 @@ La opción **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma 
 
 ![Ocultar etiquetas heredadas](../images/labels/hide_inherited_labels.png)
 
-## Administración de etiquetas de uso de datos en el nivel de campo de conjunto de datos
+## Administrar etiquetas en el nivel de campo
 
 Si continúa el flujo de trabajo para [agregar y editar etiquetas de uso de datos a nivel de conjunto de datos](#add-labels), también puede administrar etiquetas a nivel de campo dentro del área de trabajo **[!UICONTROL Administración de datos]** para ese conjunto de datos.
 
@@ -101,7 +101,7 @@ Puede repetir estos pasos para continuar agregando y editando etiquetas de campo
 
 Es importante recordar que la herencia se mueve sólo desde el nivel superior hacia abajo (conjunto de datos → campos), lo que significa que las etiquetas aplicadas en el nivel de campo no se propagan a otros campos o conjuntos de datos.
 
-## Administración de etiquetas personalizadas
+## Administrar etiquetas personalizadas
 
 Puede crear sus propias etiquetas de uso personalizadas dentro del espacio de trabajo **[!UICONTROL Directivas]** en la interfaz de usuario [!DNL Experience Platform]. Seleccione **[!UICONTROL Directivas]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Etiquetas]** para vista de una lista de las etiquetas existentes. Desde aquí, seleccione **[!UICONTROL Crear etiqueta]**.
 
