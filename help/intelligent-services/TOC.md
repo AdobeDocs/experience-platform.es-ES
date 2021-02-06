@@ -6,9 +6,9 @@ user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '119'
 ht-degree: 23%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 23%
    - [Introducción a Attribution AI](attribution-ai/getting-started.md)
    - [Entrada y salida](attribution-ai/input-output.md)
    - [Guía de interfaz de usuario](attribution-ai/user-guide.md)
-   - [Descubrimiento de perspectivas](attribution-ai/discover-insights.md)
-   - [Acceso a las puntuaciones](attribution-ai/download-scores.md)
-   - [Guía del inicio rápido del servicio de Consulta AAI](attribution-ai/aai-query-service.md)
+   - [Perspectivas de Discover](attribution-ai/discover-insights.md)
+   - [Descargar puntuaciones](attribution-ai/download-scores.md)
+   - [Analizar puntuaciones mediante el servicio de Consulta](attribution-ai/aai-query-service.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
    - [Información general](content-commerce-ai/overview.md)
    - [Primeros pasos](content-commerce-ai/getting-started.md)
@@ -41,7 +41,7 @@ ht-degree: 23%
    - [Entrada y salida](customer-ai/input-output.md)
    - Guías de IU{#user-guide}
       - [Configurar una instancia](customer-ai/user-guide/configure.md)
-      - [Descubrimiento de perspectivas](customer-ai/user-guide/discover-insights.md)
+      - [Perspectivas de Discover](customer-ai/user-guide/discover-insights.md)
       - [Crear segmentos con puntuaciones de AI del cliente](customer-ai/user-guide/create-segment.md)
-      - [Descarga de puntuaciones](customer-ai/user-guide/download-scores.md)
+      - [Descargar puntuaciones](customer-ai/user-guide/download-scores.md)
 - [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
