@@ -1,21 +1,17 @@
 ---
 keywords: Encuestas de Interceptación de PreguntaPro;encuestas de Interceptación de PreguntasPro;PreguntasPro;PreguntasPro
-title: Extensión de Encuestas de intercepción de QuestionPro
-seo-title: Extensión de Encuestas de intercepción de QuestionPro
+title: Destino de extensión de Encuestas de intercepción de QuestionPro
 description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '532'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL QuestionPro Intercept Surveys] {#questionpro-extension}
-
-## Información general {#overview}
+# [!DNL QuestionPro Intercept Surveys] Extensión {#questionpro-extension}
 
 [!DNL QuestionPro Intercept Surveys] es una plataforma para implementar encuestas y recopilar datos actitudinales en el punto de transacción o cuando los usuarios entran o salen del sitio web.
 
