@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;flujo de ingestión;ingestión;registrar datos;datos de registro de flujo;
 solution: Experience Platform
-title: Transmisión de datos de registros
+title: Datos de registro de flujo mediante API de inserción de flujo
 topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
 
 
-# Transmitir datos de registro a Adobe Experience Platform
+# Transmitir datos de registros mediante API de inserción de flujo
 
 Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de Adobe Experience Platform [!DNL Data Ingestion Service].
 
