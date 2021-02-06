@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; delete dataflows
+keywords: Experience Platform;inicio;temas populares; eliminar flujos de datos
 description: El espacio de trabajo de orígenes le permite eliminar flujos de datos de flujo y lote existentes que contengan errores o que se hayan vuelto obsoletos.
 solution: Experience Platform
-title: Eliminar flujos de datos
+title: Eliminar flujos de datos en la interfaz de usuario
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '368'
 ht-degree: 1%
 
 ---
@@ -16,26 +16,26 @@ ht-degree: 1%
 
 # Eliminar flujos de datos en la interfaz de usuario
 
-El espacio de trabajo [!UICONTROL Fuentes] le permite eliminar flujos de datos de flujo y lotes existentes que contengan errores o se hayan vuelto obsoletos.
+El espacio de trabajo [!UICONTROL Sources] le permite eliminar flujos de datos de flujo y lote existentes que contienen errores o se han vuelto obsoletos.
 
-Este tutorial proporciona pasos para eliminar flujos de datos mediante el espacio de trabajo [!UICONTROL Fuentes] .
+Este tutorial proporciona pasos para eliminar flujos de datos mediante el espacio de trabajo [!UICONTROL Fuentes].
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-- [Simuladores](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Fuentes](../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+- [Simuladores](../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Eliminar flujos de datos
 
-En la interfaz de usuario [del](https://platform.adobe.com)Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al espacio de trabajo [!UICONTROL Fuentes] y, a continuación, seleccione **[!UICONTROL Flujos]** de datos en el encabezado superior.
+En la [IU de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al espacio de trabajo [!UICONTROL Fuentes] y, a continuación, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
 
 ![catálogo](../../images/tutorials/delete/catalog.png)
 
-Aparece la página **[!UICONTROL Flujos]** de datos. En esta página hay una lista de flujos de datos visualizables, incluida información sobre su conjunto de datos de destinatario, fuente, nombre de cuenta y fecha de creación.
+Aparece la página **[!UICONTROL Flujos de datos]**. En esta página hay una lista de flujos de datos visualizables, incluida información sobre su conjunto de datos de destinatario, fuente, nombre de cuenta y fecha de creación.
 
-Seleccione el icono de filtro (icono![de](../../images/tutorials/delete/filter.png)filtro) en la parte superior izquierda para iniciar el panel de ordenación.
+Seleccione el icono de filtro (![filter-icon](../../images/tutorials/delete/filter.png)) en la parte superior izquierda para iniciar el panel de ordenación.
 
 ![flujos de datos](../../images/tutorials/delete/dataflows.png)
 
@@ -63,4 +63,4 @@ Al cabo de unos minutos, aparece un cuadro de confirmación en la parte inferior
 
 Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Fuentes] para eliminar un flujo de datos existente.
 
-Consulte el tutorial sobre la [eliminación de flujos de datos mediante la API](../../tutorials/api/delete-dataflows.md) de servicio de flujo para ver los pasos para realizar estas operaciones mediante programación mediante llamadas a API.
+Consulte el tutorial sobre [eliminación de flujos de datos mediante la API de servicio de flujo](../../tutorials/api/delete-dataflows.md) para ver los pasos para realizar estas operaciones mediante programación mediante llamadas de API.
