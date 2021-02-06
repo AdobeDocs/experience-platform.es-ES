@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares; Protocolo de transferencia de archivos; protocolo de transferencia de archivos
 solution: Experience Platform
-title: Creación de un conector FTP mediante la API de servicio de flujo
+title: Creación de una conexión de origen FTP mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform a un servidor FTP (Protocolo de transferencia de archivos).
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor FTP (Protocolo de transferencia de archivos) mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un conector FTP mediante la API [!DNL Flow Service]
+# Creación de una conexión de origen FTP mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
