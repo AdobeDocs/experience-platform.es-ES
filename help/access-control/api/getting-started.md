@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;API;introducción
 solution: Experience Platform
-title: Guía para desarrolladores de control de acceso
+title: Guía de API de control de acceso
 topic: developer guide
-description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Las siguientes secciones proporcionan información adicional que debe conocer para realizar llamadas correctamente a la API del Registro de Esquema.
+description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Las siguientes secciones proporcionan información adicional que los desarrolladores necesitarán conocer para realizar llamadas exitosas a la API del Registro de Esquema.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Access control] guía para desarrolladores
+# [!DNL Access Control] Guía de API
 
 [!DNL Access control] for  [!DNL Experience Platform] se administra a través del  [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la [información general del control de acceso](../home.md) para obtener más información.
 
