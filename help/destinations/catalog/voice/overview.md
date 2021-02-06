@@ -1,19 +1,17 @@
 ---
 keywords: destinos de voz;Destinos de voz
-title: Voz de los destinos del cliente
-seo-title: Voz de los destinos del cliente
+title: Visión General de la Voz de los Destinos del Cliente
 description: Las plataformas de voz recopilan y recopilan datos de diversas fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir que las compañías optimicen su sitio web a fin de satisfacer sus necesidades.
-seo-description: Las plataformas de voz recopilan y recopilan datos de diversas fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir que las compañías optimicen su sitio web a fin de satisfacer sus necesidades.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
 
-# Voz de los destinos del cliente {#voice-of-customer-destinations}
+# Visión general de la voz de los destinos del cliente {#voice-of-customer-destinations}
 
 Las plataformas de voz recopilan y recopilan datos de diversas fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir que las compañías optimicen su sitio web a fin de satisfacer sus necesidades.
 
