@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Aplicaciones de Privacy Service y Experience Cloud
+title: Aplicaciones Privacy Service y Experience Cloud
 topic: overview
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 21%
