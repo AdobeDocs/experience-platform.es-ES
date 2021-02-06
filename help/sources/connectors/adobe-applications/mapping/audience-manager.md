@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform;inicio;temas populares;asignación de Audience Manager;asignación de administrador de audiencias
 solution: Experience Platform
-title: Campo de asignación de Audience Manager
+title: Campos de asignación para el conector de origen de Adobe Audience Manager
 topic: overview
-description: Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (Tiempo real, En el tablero y Datos de Perfil) y sus correspondientes campos XDM.
+description: Obtenga información sobre cómo asignar datos de Adobe Audience Manager (en tiempo real, integrados y datos de Perfil) a los campos correspondientes del Modelo de datos de experiencia (XDM) para el conector de origen del Audience Manager.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
-# Campos de asignación de Audience Manager
+# Asignaciones de campos Audience Manager
 
 Las siguientes tablas contienen las asignaciones entre los campos de los datos de Adobe Audience Manager (Tiempo real, En el tablero y Datos de Perfil) y sus correspondientes campos XDM.
 
-Consulte el diccionario [de campo](../../../../xdm/schema/field-dictionary.md) XDM para obtener más información sobre cada campo XDM.
+Consulte el [diccionario de campo XDM](../../../../xdm/schema/field-dictionary.md) para obtener más información sobre cada campo XDM.
 
 ## Datos en tiempo real
 
@@ -26,9 +26,9 @@ Tipo: Datos en tiempo real
 | Campo de datos en tiempo real | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Solo para Áreas de nombres presentes en endUserIds y solo para el primer valor.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Solo para Áreas de nombres presentes en endUserIds y solo para el primer valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds: *solo para Áreas de nombres presentes en endUserIds y solo el primer valor.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Solo para Áreas de nombres presentes en endUserIds y solo el primer valor.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
