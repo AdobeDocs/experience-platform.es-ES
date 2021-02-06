@@ -5,15 +5,15 @@ seo-title: Paneles y Página de inicio de la plataforma de datos del cliente en 
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 seo-description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] información general sobre métricas
+# [!DNL Real-time Customer Data Platform] página de inicio y paneles
 
 La página de inicio de la Plataforma de datos del cliente en tiempo real (CDP en tiempo real), que incluye un panel de métricas, aparece cuando inicia sesión en CDP en tiempo real.
 
