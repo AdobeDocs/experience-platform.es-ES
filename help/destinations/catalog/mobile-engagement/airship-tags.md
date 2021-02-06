@@ -1,19 +1,17 @@
 ---
 keywords: etiquetas de envío por avión;destino de la aeronave
-title: Destino de las etiquetas de la aeronave
-seo-title: Destino de las etiquetas de la aeronave
+title: Destino de conexión de etiquetas de aerolíneas
 description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como etiquetas de Audiencia para objetivos dentro de la aeronave.
-seo-description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como etiquetas de Audiencia para objetivos dentro de la aeronave.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Airship Tags] destino {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] conexión {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
