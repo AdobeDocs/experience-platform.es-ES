@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recopilación de datos de protocolos mediante conectores de origen y API
 topic: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para recuperar datos de una aplicación de protocolos e ingerirlos en la plataforma mediante conectores de origen y API.
+description: En este tutorial se explican los pasos para recuperar datos de una aplicación de protocolos e incorporarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
