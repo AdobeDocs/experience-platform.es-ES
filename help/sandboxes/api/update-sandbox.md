@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform;inicio;temas populares;actualizar entorno limitado
 solution: Experience Platform
-title: Actualización de un simulador para pruebas
+title: Actualización de un Simulador para pruebas en la API
 topic: developer guide
 description: Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el nombre del simulador para pruebas en la ruta de la solicitud y la propiedad que desea actualizar en la carga útil de la solicitud.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '133'
 ht-degree: 3%
 
 ---
 
 
-# Actualización de un simulador para pruebas
+# Actualización de un entorno limitado en la API
 
-Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el simulador para pruebas `name` en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
+Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el `name` del simulador para pruebas en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 
 >[!NOTE]
 >
->Actualmente solo se puede actualizar la propiedad `title` de un simulador de pruebas.
+>Actualmente sólo se puede actualizar la propiedad `title` de un entorno limitado.
 
 **Formato API**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` propiedad del simulador para pruebas que desea actualizar. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador para pruebas que desea actualizar. |
 
 **Solicitud**
 
-La siguiente solicitud actualiza la `title` propiedad del simulador para pruebas denominado &quot;dev-2&quot;.
+La siguiente solicitud actualiza la propiedad `title` del simulador para pruebas denominado &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
