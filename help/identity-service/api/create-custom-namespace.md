@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;inicio;temas populares;Área de nombres;Área de nombres;Áreas de nombres;Áreas de nombres;Área de nombres de identidad;Área de nombres de identidad;identidad;identidad;identidad
 solution: Experience Platform
-title: Crear una Área de nombres personalizada
+title: Creación de una Área de nombres personalizada en la API de servicio de identidad
 topic: API guide
 description: Mediante la API de Área de nombres de identidad, puede crear una Área de nombres de identidad personalizada que solo estará disponible para su organización.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
 
-# Creación de una Área de nombres personalizada
+# Creación de una Área de nombres personalizada en la API de servicio de identidad
 
-Mediante la [!DNL Identity Namespace] API, puede crear una Área de nombres de identidad personalizada que solo estará disponible para su organización.
+Mediante la API [!DNL Identity Namespace], puede crear una Área de nombres de identidad personalizada que estará disponible solamente para su organización.
 
-Para obtener recomendaciones sobre la creación de Áreas de nombres personalizadas, consulte [la documentación](../troubleshooting-guide.md)de preguntas más frecuentes de Identity Service.
+Para obtener recomendaciones sobre la creación de Áreas de nombres personalizadas, consulte [la documentación de preguntas más frecuentes de Identity Service](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
