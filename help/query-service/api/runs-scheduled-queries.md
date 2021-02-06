@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;ejecutar consultas programadas;ejecutar consulta programada;servicio de Consulta;consultas programadas;consulta programada;
 solution: Experience Platform
-title: Guía para desarrolladores de consulta Service
+title: La Consulta programada ejecuta el extremo de la API
 topic: runs for scheduled queries
 description: Las siguientes secciones recorren las distintas llamadas de API que puede realizar para ejecutar consultas programadas con la API de servicio de Consulta.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
 
 
-# Ejecuta para consultas programadas
+# Extremo de ejecución de consulta programada
 
 ## Ejemplos de llamadas a API
 
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la [!DNL Query Service] API. Las siguientes secciones explican las distintas llamadas de API que puede realizar con la [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de todas las ejecuciones para una consulta programada especificada
 
-Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Esto se realiza realizando una solicitud de GET al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` es el `id` valor de la consulta programada cuyas ejecuciones desea recuperar.
+Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Esto se realiza realizando una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs`, donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuyas ejecuciones desea recuperar.
 
 **Formato API**
 
@@ -32,8 +32,8 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada que desea recuperar. |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea recuperar. |
+| `{QUERY_PARAMETERS}` | (*Opcional*) Se agregaron parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
 
 **Parámetros de consulta**
 
@@ -41,10 +41,10 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`), los elementos se ordenarán en orden descendente. |
-| `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Default value: 20*) |
-| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Default value: 0*) |
-| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state`y `externalTrigger`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que), y `==` (igual a), y `!=` (no igual a). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones que se hayan creado, realizado correctamente y creado manualmente después del 20 de abril de 2019. |
+| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por medio de la creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`) se ordenarán los elementos por orden descendente. |
+| `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
+| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista que comienza en la tercera consulta de la lista. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state` y `externalTrigger`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que), `==` (igual a) y `!=` (no igual a). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones que se hayan creado, realizado correctamente y creado manualmente después del 20 de abril de 2019. |
 
 **Solicitud**
 
@@ -150,11 +150,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones 
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.cancel` para [detener una ejecución para una consulta](#immediately-stop-a-run-for-a-specific-scheduled-query)programada específica.
+>Puede usar el valor de `_links.cancel` para [detener una ejecución para una consulta programada específica](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
-### Activar inmediatamente una ejecución para una consulta programada específica
+### Déclencheur inmediato de una ejecución para una consulta programada específica
 
-Puede activar inmediatamente una ejecución para una consulta programada especificada realizando una solicitud de POST al `/schedules/{SCHEDULE_ID}/runs` extremo, donde `{SCHEDULE_ID}` `id` es el valor de la consulta programada cuya ejecución desea activar.
+Puede realizar un déclencheur inmediato de una ejecución para una consulta programada especificada haciendo una solicitud de POST al extremo `/schedules/{SCHEDULE_ID}/runs`, donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuya ejecución desea déclencheur.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Recuperar detalles de una ejecución para una consulta programada específica
 
-Puede recuperar detalles sobre una ejecución para una consulta programada específica realizando una solicitud de GET al extremo y proporcionando el ID de la consulta programada y la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+Puede recuperar detalles sobre una ejecución para una consulta programada específica haciendo una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de solicitud.
 
 **Formato API**
 
@@ -195,8 +195,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada cuya ejecución desea recuperar los detalles. |
-| `{RUN_ID}` | El `id` valor de la ejecución que desea recuperar. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar los detalles. |
+| `{RUN_ID}` | El valor `id` de la ejecución que desea recuperar. |
 
 **Solicitud**
 
@@ -246,7 +246,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la ejecuc
 
 ### Detener inmediatamente una ejecución para una consulta programada específica
 
-Puede detener inmediatamente una ejecución para una consulta programada específica haciendo una solicitud de PATCH al extremo y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de la solicitud. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+Puede detener inmediatamente una ejecución para una consulta programada específica haciendo una solicitud de PATCH al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de solicitud.
 
 **Formato API**
 
@@ -256,8 +256,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada cuya ejecución desea recuperar los detalles. |
-| `{RUN_ID}` | El `id` valor de la ejecución que desea recuperar. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar los detalles. |
+| `{RUN_ID}` | El valor `id` de la ejecución que desea recuperar. |
 
 **Solicitud**
 
