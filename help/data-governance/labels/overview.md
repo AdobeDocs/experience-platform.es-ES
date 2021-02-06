@@ -5,7 +5,7 @@ title: Información general sobre las etiquetas de uso de datos
 topic: labels
 description: La Administración de datos de Adobe Experience Platform le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos, y categorizar cada una según las políticas de uso de datos relacionadas. Este documento proporciona información general sobre las etiquetas de uso de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
