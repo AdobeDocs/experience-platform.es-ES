@@ -1,21 +1,17 @@
 ---
 keywords: extensión adform;adform
-title: Adform extension
-seo-title: Adform extension
+title: Adform Extension Destination
 description: La extensión de Adobe es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de Adobe es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
 
 
 # Adform extension {#adform-extension}
-
-## Información general {#overview}
 
 La extensión Seguimiento de sitios web de Adobe permite a los anunciantes implementar puntos de seguimiento de formularios sin esfuerzo en sus sitios mediante la plataforma [!DNL Experience Platform Launch].
 
