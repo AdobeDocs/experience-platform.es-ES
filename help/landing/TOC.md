@@ -5,10 +5,10 @@ user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 21%
+source-wordcount: '159'
+ht-degree: 22%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 21%
    * [Guía de IU de flujos de trabajo](workflows.md)
    * [Compatibilidad con navegadores e idiomas](browser-language-support.md)
 * API de Experience Platform {#platform-apis}
+   * [Autenticar y acceder a las API de plataforma](api-authentication.md)
    * [Conceptos básicos de API](api-fundamentals.md)
    * [DOCUMENTOS de referencia de API](http://www.adobe.com/go/platform-api-reference-en)
-   * [Tutorial sobre las API de autenticación y acceso a plataformas](api-authentication.md)
 * Documentación de la plataforma {#documentation}
-   * [Información general sobre la documentación](documentation/overview.md)
-   * [Compatibilidad con el lenguaje de documentación](documentation/language-support.md)
+   * [Información general](documentation/overview.md)
+   * [Compatibilidad con idiomas](documentation/language-support.md)
 * Plataforma en el ecosistema del Adobe {#ecosystem}
    * [Servicios de aplicaciones](application-services.md)
    * [Aplicaciones y servicios inteligentes (vídeo)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 21%
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencias](./governance-privacy-security/consent/iab/dataset.md)
 * [Panel de uso de licencias](license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
-* [Migración ADLS Gen2](adls2-gen2-migration.md)
+* [Migración del lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)
 * [Notas de la versión](https://www.adobe.com/go/platform-release-notes-en)
