@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;diseño de Esquema;mezcla;mezcla;persona;detalles de la persona;detalles de la persona del perfil;persona;
 solution: Experience Platform
 title: Mezcla de detalles demográficos
 topic: overview
 description: Este documento ofrece una visión general de la combinación de Detalles Demográficos.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '265'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] demográficos
+# [!UICONTROL Demographic ] Detailsmixin
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+>Los nombres de varias mezclas han cambiado. Consulte el documento en [actualizaciones de nombres de mezcla](../name-updates.md) para obtener más información.
 
-[!UICONTROL Demographic Details] es una mezcla estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona un `person` objeto de nivel raíz cuyos subcampos describen información sobre una persona individual.
+[!UICONTROL Demographic ] Detailis es una mezcla estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La mezcla proporciona un objeto de nivel raíz `person`, cuyos subcampos describen información sobre una persona individual.
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -37,4 +37,5 @@ ht-degree: 3%
 Para obtener más información sobre la mezcla, consulte el repositorio público XDM:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Esquema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)å completo
+* [Esquemas ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+completos
