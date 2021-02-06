@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de muestra;consulta de muestra;destinatario de adobe;
 solution: Experience Platform
-title: Consultas de muestra
+title: Consultas de muestra para datos de Adobe Target
 topic: queries
 description: Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren en Experience Platform como conjuntos de datos para usted. Este documento contiene consultas de muestra para usar el servicio de Consulta con sus conjuntos de datos de Adobe Target.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '328'
 ht-degree: 1%
 
 ---
