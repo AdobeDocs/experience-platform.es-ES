@@ -1,21 +1,17 @@
 ---
 keywords: extensión de demandbase;base de demanda;destino de demandbase
-title: Extensión Demandbase
-seo-title: Extensión Demandbase
+title: Destino de extensión de Demandbase
 description: La extensión Demandbase es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Demandbase es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '539'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Demandbase] Extensión {#demandbase-extension}
-
-## Información general {#overview}
 
 Obtenga [!DNL Demandbase] perspectivas de cuenta B2B directamente en Adobe Analytics, donde puede segmentar el tráfico y el comportamiento por sector, ingresos y cuentas de destinatario. Esta vista basada en la cuenta ofrece perspectivas únicas sobre la participación, la conversión y la fuente de sus visitantes más valiosos.
 
