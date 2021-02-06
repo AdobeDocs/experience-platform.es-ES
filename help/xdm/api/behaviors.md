@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de Esquemas;comportamiento;comportamiento;comportamientos;comportamientos;
 solution: Experience Platform
-title: Guía del extremo de comportamientos
+title: Punto final de la API Behaviors
 description: El extremo /Behaviors de la API del Registro de Esquema permite recuperar todos los comportamientos disponibles en el contenedor global.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
