@@ -1,21 +1,17 @@
 ---
 keywords: Marketo;marketo;extensión de marketing;extensión de marketing
-title: Extensión de marketing
-seo-title: Extensión de marketing
+title: Destino de extensión de marketing
 description: La extensión de marketing es un destino de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de marketing es un destino de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '519'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL Marketo] {#marketo-extension}
-
-## Información general {#overview}
+# [!DNL Marketo] Extensión {#marketo-extension}
 
 [!DNL Marketo]El potente software de automatización de mercadotecnia ayuda a los especialistas en mercadotecnia a dominar el arte y la ciencia del marketing digital para atraer clientes y clientes potenciales.
 
