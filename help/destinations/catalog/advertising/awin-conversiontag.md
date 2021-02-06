@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser Conversión extensión de etiqueta;etiqueta de conversión;Awin;awin;AWIN
-title: Extensión de etiqueta de conversión de anunciante de Awin
-seo-title: Extensión de etiqueta de conversión de anunciante de Awin
+title: Destino de la extensión de etiquetas de conversión de anunciantes de Awin
 description: La extensión de la etiqueta de conversión de anunciante de Awin es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de la etiqueta de conversión de anunciante de Awin es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '529'
 ht-degree: 3%
 
 ---
 
 
 # Extensión de etiqueta de conversión de anunciante de Awin {#awin-conversiontag-extension}
-
-## Información general {#overview}
 
 La etiqueta de conversión es la declaración del objeto JavaScript AWIN.Tracking.Sale, que se realiza en la página de confirmación para indicar a la etiqueta maestra que se ha producido una conversión. Posteriormente realizará las solicitudes de seguimiento necesarias.
 
