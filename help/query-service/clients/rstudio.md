@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de Consulta;servicio de consulta;RStudio;rstudio;conectar al servicio de consulta;
 solution: Experience Platform
-title: Conectar con RStudio
+title: Connect RStudio al servicio de Consulta
 topic: connect
 description: Este documento recorre los pasos para conectar R Studio con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '282'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL RStudio]
+# Conectar [!DNL RStudio] al servicio de Consulta
 
 Este documento recorre los pasos para conectar [!DNL RStudio] con Adobe Experience Platform [!DNL Query Service].
 
@@ -21,7 +21,7 @@ Este documento recorre los pasos para conectar [!DNL RStudio] con Adobe Experien
 >
 > Esta guía asume que ya tiene acceso a [!DNL RStudio] y está familiarizado con cómo utilizarlo. Puede encontrar más información sobre [!DNL RStudio] en la [documentación oficial [!DNL RStudio] ](https://rstudio.com/products/rstudio/).
 
-## Conectando [!DNL RStudio] con [!DNL Query Service]
+## Cree una conexión [!DNL Query Service] en la interfaz [!DNL RStudio]
 
 Después de instalar [!DNL RStudio], en la pantalla **[!DNL Console]** que aparece, primero deberá preparar la secuencia de comandos de R para utilizar [!DNL PostgreSQL].
 
