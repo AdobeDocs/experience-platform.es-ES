@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform;inicio;temas populares;ETL;etl;flujo de trabajo de ETL;flujo de trabajo de ETL
 solution: Experience Platform
 title: Flujo de trabajo de ETL
 topic: overview
 description: Diversas herramientas de extracción, transformación y carga (ETL) pueden tener un formato diferente, pero la mayoría de ellas exponen una funcionalidad similar para ayudar a combinar varias fuentes de datos.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ Diversas herramientas de extracción, transformación y carga (ETL) pueden tener
 
 Los siguientes diagramas proporcionan maquetas de acciones de ETL comunes y una experiencia de usuario genérica basada en interacciones estándar. Estas imágenes podrían adaptarse fácilmente a una experiencia de usuario de ETL específica.
 
-Las acciones que se describen a continuación se describen en los pasos descritos en la Guía [de integración de](home.md)ETL. Algunos pasos hacen referencia a &quot;figuras&quot; específicas, mientras que otros describen acciones similares al flujo de trabajo que se muestra aquí.
+Las acciones que se describen a continuación se describen en los pasos descritos en la [Guía de integración de ETL](home.md). Algunos pasos hacen referencia a &quot;figuras&quot; específicas, mientras que otros describen acciones similares al flujo de trabajo que se muestra aquí.
 
 ### Figura 1: Configuración del nuevo conector de Adobe Experience Platform:
 
 ![](images/image2.png)
 
-### Figura 2 - [!DNL Experience Platform] Conector activado:
+### Figura 2 - Conector [!DNL Experience Platform] activado:
 
 ![](images/image3.png)
 
@@ -35,11 +35,11 @@ Las acciones que se describen a continuación se describen en los pasos descrito
 
 ![](images/image4.png)
 
-### Figura 4: Nueva interfaz de usuario de transformación, seleccione [!DNL Experience Platform] Conexión:
+### Figura 4: Nueva interfaz de usuario de transformación, seleccionando Conexión [!DNL Experience Platform]:
 
 ![](images/image5.png)
 
-### Figura 5: Búsqueda de [!DNL Experience Platform] conjuntos de datos de origen:
+### Figura 5: Búsqueda de conjuntos de datos [!DNL Experience Platform] de origen:
 
 ![](images/image6.png)
 
@@ -59,7 +59,7 @@ Las acciones que se describen a continuación se describen en los pasos descrito
 
 ![](images/image10.png)
 
-### Figura 10 - Definición del conjunto de datos de destinatario [!DNL Experience Data Model] (XDM):
+### Figura 10: Definición del conjunto de datos de destinatario [!DNL Experience Data Model] (XDM):
 
 ![](images/image11.png)
 
