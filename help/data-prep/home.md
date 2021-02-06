@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;preparación de datos;preparación de datos;preparar datos;
 solution: Experience Platform
-title: Funciones de asignación
+title: Información general sobre la preparación de datos
 topic: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# Preparación de datos
+# Información general sobre la preparación de datos
 
 La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el Modelo de datos de experiencia (XDM). La preparación de datos aparece como un paso de &quot;mapa&quot; en los procesos de inserción de datos, incluido el flujo de trabajo de ingestión de CSV. Los ingenieros de datos pueden utilizar la preparación de datos para realizar la siguiente manipulación de datos durante la ingestión:
 
@@ -29,7 +29,7 @@ La preparación de datos también aplica varias validaciones de datos intrínsec
 
 Una asignación es una asociación de un atributo de entrada o campo calculado a un atributo XDM. Un solo atributo se puede asignar a varios atributos XDM creando asignaciones individuales.
 
-Para obtener más información sobre las distintas funciones de asignación, lea la guía [de funciones de](./functions.md)asignación.
+Para obtener más información sobre las distintas funciones de asignación, lea la guía [funciones de asignación](./functions.md).
 
 ## Conjunto de asignaciones
 
@@ -37,4 +37,4 @@ Un conjunto de asignaciones que transforman un esquema a otro se conoce colectiv
 
 ## Pasos siguientes
 
-Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las distintas funciones de asignación, lea la guía [de funciones de](./functions.md)asignación. Para obtener más información sobre las diferentes cadenas de fecha y hora, lea la guía [de cadenas de](./dates.md)fecha.
+Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las distintas funciones de asignación, lea la guía [funciones de asignación](./functions.md). Para obtener más información sobre las diferentes cadenas de fecha y hora, lea la [guía de cadenas de fecha](./dates.md).
