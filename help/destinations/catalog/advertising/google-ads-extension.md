@@ -1,21 +1,17 @@
 ---
 keywords: Publicidades de Google;publicidades de Google;extensión de publicidades de Google;extensión de publicidades de Google
-title: Extensión Google Ads
-seo-title: Extensión Google Ads
+title: Destino de extensión de publicidades de Google
 description: La extensión Google Ads es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Google Ads es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Ads] Extensión
-
-## Información general {#overview}
 
 Esta extensión rastrea las conversiones de los usuarios que hacen clic en su [!DNL Google Ads]. También deberá instalar la extensión gtag.js y agregarla a su biblioteca, ya que [!DNL Google Ads] depende de ella.
 
