@@ -1,25 +1,21 @@
 ---
 keywords: atributos de la aeronave;destino de la aeronave
-title: Destino de atributos de aeronaves
-seo-title: Destino de atributos de aeronaves
+title: Destino de conexión de atributos de aeronaves
 description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como atributos de Audiencia para objetivos dentro de la aeronave.
-seo-description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como atributos de Audiencia para objetivos dentro de la aeronave.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 1%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] destino {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] conexión {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >El destino [!DNL Airship Attributes] de Adobe Experience Platform está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
-
-## Información general {#overview}
 
 [!DNL Airship] es la plataforma líder de compromiso con el cliente, que le ayuda a enviar mensajes de canal omnicho significativos y personalizados a sus usuarios en cada etapa del ciclo vital del cliente.
 
