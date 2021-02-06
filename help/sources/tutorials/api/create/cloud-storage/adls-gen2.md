@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Azure Data Lake Almacenamiento Gen2;almacenamiento del lago de datos azul;Azure
 solution: Experience Platform
-title: Creación de un conector Gen2 de Almacenamiento de Azure Data Lake mediante la API de servicio de flujo
+title: Creación de una conexión de origen de Azure Data Lake Almacenamiento Gen2 mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar al Experience Platform al Almacenamiento de Azure Data Lake Gen2 (en adelante, "ADLS Gen2").
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Azure Data Lake Almacenamiento Gen2 mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
 
 
-# Cree un conector Gen2 de [!DNL Azure] Almacenamiento de Data Lake mediante la API [!DNL Flow Service]
+# Cree una conexión de origen [!DNL Azure] Data Lake Almacenamiento Gen2 mediante la API [!DNL Flow Service]
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
@@ -27,7 +27,7 @@ Esta guía requiere un conocimiento práctico de los siguientes componentes de A
 * [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
 * [Simuladores](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para crear correctamente un conector de origen ADLS Gen2 mediante la API [!DNL Flow Service].
+Las siguientes secciones proporcionan información adicional que deberá conocer para crear correctamente una conexión de origen ADLS Gen2 mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
