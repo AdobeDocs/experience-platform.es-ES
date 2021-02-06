@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de Consulta;servicio de consulta;postico;Postico;conectar con servicio de consulta;
 solution: Experience Platform
-title: Conectar con Postico
+title: Conectar Postico al servicio de Consulta
 topic: connect
 description: Este documento contiene el vínculo para instalar el cliente de copia de seguridad Postico para el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Postico]
+# Conectar [!DNL Postico] al servicio de Consulta (Mac)
 
 Este documento cubre los pasos para conectar [!DNL Postico] con Adobe Experience Platform [!DNL Query Service].
 
@@ -22,8 +22,6 @@ Este documento cubre los pasos para conectar [!DNL Postico] con Adobe Experience
 > En esta guía se asume que ya tiene acceso a [!DNL Postico] y que está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Postico] en la [documentación oficial [!DNL Postico] ](https://eggerapps.at/postico/docs).
 > 
 > Además, [!DNL Postico] está **sólo** disponible en dispositivos macOS.
-
-## Conectar [!DNL Postico] al servicio de Consulta
 
 Para conectar [!DNL Postico] al servicio de Consulta, abra [!DNL Postico] y seleccione **[!DNL New Favorite]**.
 
