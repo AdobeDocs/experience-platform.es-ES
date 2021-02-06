@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ECID;ecid
+keywords: Experience Platform;inicio;temas populares;ECID;ecid
 solution: Experience Platform
-title: Adobe Experience Platform ECID
+title: Información general de ECID
 topic: overview
 description: El identificador de Experience Cloud (ECID) es el módulo del lado del cliente que proporciona acceso a la administración de identidades, y que cumple tres funciones principales.
 translation-type: tm+mt
-source-git-commit: 45f2423741ad993765408a9f60e2df6238671b9f
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '186'
 ht-degree: 8%
 
 ---
@@ -25,9 +25,9 @@ La identificación de los usuarios en línea requiere instrumentar su sitio o ap
 
 Si está trabajando con una implementación de sitio web, explore los recursos [aquí](https://docs.adobe.com/content/help/es-ES/id-service/using/home.html).
 
-Si está trabajando con una aplicación móvil, consulte cómo se utiliza ECID para [realizar el seguimiento de visitantes entre una aplicación y una web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html)móvil.
+Si está trabajando con una aplicación móvil, consulte cómo se utiliza ECID para [rastrear visitantes entre una aplicación y una web móvil](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
 
-La implementación de estas herramientas puede ser sencilla y fácil de administrar si utiliza [Adobe Launch](https://docs.adobe.com/content/help/es-ES/launch/using/overview.html).
+La implementación de estas herramientas puede ser sencilla y fácil de administrar si utiliza [Inicio de Adobe](https://docs.adobe.com/content/help/es-ES/launch/using/overview.html).
 
-Consulte también la documentación [del](../privacy-service/identity-data.md) Privacy Service para obtener información sobre el uso de ECID para la compatibilidad con RGPD.
+Consulte también la [documentación del Privacy Service](../privacy-service/identity-data.md) para obtener información sobre el uso de ECID para la compatibilidad con RGPD.
 
