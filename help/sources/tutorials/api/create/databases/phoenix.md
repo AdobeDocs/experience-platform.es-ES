@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;hogar;temas populares;Fénix;fénix
 solution: Experience Platform
-title: Creación de un conector Phoenix mediante la API de servicio de flujo
+title: Creación de una conexión de origen Phoenix mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar una base de datos Phoenix al Experience Platform.
+description: Obtenga información sobre cómo conectar una base de datos Phoenix a Adobe Experience Platform mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '648'
 ht-degree: 1%
 
 ---
 
 
-# Cree un conector [!DNL Phoenix] mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Phoenix] mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
