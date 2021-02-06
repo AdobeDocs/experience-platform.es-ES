@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de comparación;comparación;
 solution: Experience Platform
-title: Funciones de comparación
+title: Funciones de comparación de PQL
 topic: developer guide
 description: Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, devolviendo "true" o "false" en consecuencia.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 10%
+source-wordcount: '326'
+ht-degree: 9%
 
 ---
 
 
 # Funciones de comparación
 
-Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, regresando `true` o `false` en consecuencia. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Las funciones de comparación se utilizan para comparar diferentes expresiones y valores, devolviendo `true` o `false` en consecuencia. Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Es igual a
 
-La función `=` (es igual a) comprueba si un valor o expresión es igual a otro valor o expresión.
+La función `=` (igual a) comprueba si un valor o expresión es igual a otro valor o expresión.
 
 **Format**
 
@@ -37,9 +37,9 @@ homeAddress.countryISO = "CA"
 
 ## Distinto a
 
-La función `!=` (no igual) comprueba si un valor o expresión **no es** igual a otro valor o expresión.
+La función `!=` (no igual) comprueba si un valor o expresión es **no** igual a otro valor o expresión.
 
-**Format**
+**Formato**
 
 ```sql
 {EXPRESSION} != {VALUE}
@@ -57,7 +57,7 @@ homeAddress.countryISO != "CA"
 
 La función `>` (buena que) se utiliza para comprobar si el primer valor es bueno que el segundo.
 
-**Format**
+**Formato**
 
 ```sql
 {EXPRESSION} > {EXPRESSION} 
@@ -73,9 +73,9 @@ person.birthMonth > 2
 
 ## Greater than or equal to
 
-La función `>=` (buena o igual que) se utiliza para comprobar si el primer valor es bueno o igual al segundo valor.
+La función `>=` (buena o igual a) se utiliza para comprobar si el primer valor es bueno o igual al segundo valor.
 
-**Format**
+**Formato**
 
 ```sql
 {EXPRESSION} >= {EXPRESSION} 
@@ -93,7 +93,7 @@ person.birthMonth >= 3
 
 La función de comparación `<` (menor que) se utiliza para comprobar si el primer valor es menor que el segundo.
 
-**Format**
+**Formato**
 
 ```sql
 {EXPRESSION} < {EXPRESSION} 
@@ -111,7 +111,7 @@ person.birthMonth < 2
 
 La función de comparación `<=` (menor o igual que) se utiliza para comprobar si el primer valor es menor o igual que el segundo.
 
-**Format**
+**Formato**
 
 ```sql
 {EXPRESSION} <= {EXPRESSION} 
@@ -127,4 +127,4 @@ person.birthMonth <= 2
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de comparación, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones de comparación, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
