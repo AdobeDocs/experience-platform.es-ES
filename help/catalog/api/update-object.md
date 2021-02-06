@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;update an object
+keywords: Experience Platform;inicio;temas populares;catálogo;api;actualizar un objeto
 solution: Experience Platform
-title: Actualizar un objeto
+title: Actualizar un objeto de catálogo
 topic: developer guide
 description: 'Puede actualizar parte de un objeto Catalog incluyendo su ID en la ruta de una solicitud de PATCH. Este documento cubre el uso de campos y la notación JSON Patch para realizar operaciones de PATCH en objetos Catalog. '
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '361'
 ht-degree: 3%
 
 ---
 
 
-# Actualizar un objeto
+# Actualizar un objeto Catalog
 
-Puede actualizar parte de un [!DNL Catalog] objeto incluyendo su ID en la ruta de una solicitud de PATCH. Este documento cubre los dos métodos para realizar operaciones de PATCH en objetos Catalog:
+Puede actualizar parte de un objeto [!DNL Catalog] incluyendo su ID en la ruta de una solicitud de PATCH. Este documento cubre los dos métodos para realizar operaciones de PATCH en objetos Catalog:
 
 * Uso de campos
 * Uso de notación de parche JSON
@@ -36,7 +36,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a actualizar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a actualizar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -59,7 +59,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este conjunto de datos, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este conjunto de datos, ahora se muestra que sólo se han actualizado los valores `name` y `description` mientras que el resto de los valores permanecen sin cambios.
 
 ```json
 [
@@ -85,7 +85,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a actualizar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a actualizar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -108,7 +108,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del objeto actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este objeto, ahora se muestra que solo se han actualizado `name` `description` y mientras que todos los demás valores permanecen sin cambios.
+Una respuesta correcta devuelve una matriz que contiene el ID del objeto actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Al realizar una solicitud de GET para este objeto, ahora se muestra que sólo se han actualizado los valores `name` y `description` mientras que el resto de valores permanecen sin cambios.
 
 ```json
 [
