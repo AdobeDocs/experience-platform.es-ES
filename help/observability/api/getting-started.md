@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;intervalo de fechas
 solution: Experience Platform
-title: Introducción a la API de perspectivas de observación
+title: Introducción a la API de perspectivas de observabilidad
 topic: developer guide
 description: La API de perspectivas de observación le permite recuperar datos de métricas para varias funciones de Adobe Experience Platform. Este documento proporciona una introducción a los conceptos básicos que debe conocer antes de intentar realizar llamadas a la API de perspectivas de la capacidad de observación.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
