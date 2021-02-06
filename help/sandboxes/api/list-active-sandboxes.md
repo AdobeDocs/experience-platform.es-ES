@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;inicio;temas populares;lista de entornos limitados activos;entornos limitados de lista
 solution: Experience Platform
-title: Lista de entornos limitados activos para el usuario actual
+title: Lista de Simuladores para pruebas activos para el usuario actual en la API
 topic: developer guide
 description: Puede realizar una lista de los entornos limitados activos para el usuario actual mediante una solicitud de GET al extremo raíz.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
 
 
-# Lista de entornos limitados activos para el usuario actual
+# Lista de entornos limitados activos para el usuario actual en la API
 
 >[!NOTE]
 >
 >A diferencia de otros extremos proporcionados en la API de Simulador para pruebas, este extremo está disponible para todos los usuarios, incluidos los que no tienen permisos de acceso a Administración de Simuladores para pruebas.
 
-Puede realizar una lista de los entornos limitados que están activos para el usuario actual realizando una solicitud de GET en el extremo raíz (`/`).
+Puede realizar una lista de los entornos limitados activos para el usuario actual realizando una solicitud de GET en el extremo raíz (`/`).
 
 **Formato API**
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre [parámetros de consulta](#query) para obtener más información. |
 
 **Solicitud**
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de entornos limitados que están activos para el usuario actual, incluidos detalles como `name`, `title`, `state`y `type`.
+Una respuesta correcta devuelve una lista de entornos limitados que están activos para el usuario actual, incluidos detalles como `name`, `title`, `state` y `type`.
 
 ```json
 {
@@ -113,11 +113,11 @@ Una respuesta correcta devuelve una lista de entornos limitados que están activ
 
 ## Uso de parámetros de consulta {#query}
 
-La [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los entornos limitados.
+La API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los entornos limitados.
 
 >[!NOTE]
 >
->Los parámetros `limit` y `offset` consulta deben especificarse juntos. Si solo especifica uno, la API devolverá un error. Si especifica ninguno, el límite predeterminado es 50 y el desplazamiento es 0.
+>Los parámetros de consulta `limit` y `offset` deben especificarse juntos. Si solo especifica uno, la API devolverá un error. Si especifica ninguno, el límite predeterminado es 50 y el desplazamiento es 0.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
