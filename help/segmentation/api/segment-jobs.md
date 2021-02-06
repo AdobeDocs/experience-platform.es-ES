@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;trabajos de segmentos;trabajo de segmentos;API;api;
 solution: Experience Platform
-title: Trabajos de segmentos
+title: Extremo de la API de trabajos de segmento
 topic: developer guide
-description: Esta guía proporciona información para ayudarle a comprender mejor los trabajos de segmentos e incluye ejemplos de llamadas a API para realizar acciones básicas mediante la API.
+description: El extremo de trabajos de segmentos de la API de servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmentos de su organización.
 translation-type: tm+mt
-source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 # Extremo de trabajos de segmento
 
-Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición [de](./segment-definitions.md)segmento, así como a cualquier directiva [de](../../profile/api/merge-policies.md) combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
+Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una [definición de segmento](./segment-definitions.md), así como a cualquier [directiva de combinación](../../profile/api/merge-policies.md) que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información diversa sobre el segmento, como los errores que se hayan producido durante el procesamiento y el tamaño final de la audiencia.
 
 Esta guía proporciona información para ayudarle a comprender mejor los trabajos de segmentos e incluye ejemplos de llamadas a API para realizar acciones básicas mediante la API.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Recuperar una lista de trabajos de segmentos {#retrieve-list}
 
-Puede recuperar una lista de todos los trabajos de segmentos para su organización de IMS realizando una solicitud de GET al `/segment/jobs` extremo.
+Puede recuperar una lista de todos los trabajos de segmentos para su organización de IMS realizando una solicitud de GET al extremo `/segment/jobs`.
 
 **Formato API**
 
-El extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. `/segment/jobs` Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todos los trabajos de exportación disponibles para su organización. Se pueden incluir varios parámetros, separados por ampersands (`&`).
+El extremo `/segment/jobs` admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todos los trabajos de exportación disponibles para su organización. Se pueden incluir varios parámetros, separados por ampersands (`&`).
 
 ```http
 GET /segment/jobs
@@ -182,7 +182,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
 
 ## Crear un nuevo trabajo de segmento {#create}
 
-Puede crear un nuevo trabajo de segmento haciendo una solicitud de POST al extremo e incluyendo en el cuerpo el ID de la definición del segmento desde el cual desea crear una nueva audiencia. `/segment/jobs`
+Puede crear un nuevo trabajo de segmento haciendo una solicitud de POST al extremo `/segment/jobs` e incluyendo en el cuerpo el ID de la definición del segmento desde el cual desea crear una nueva audiencia.
 
 **Formato API**
 
@@ -209,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentId` | ID de la definición de segmento para la que desea crear un trabajo de segmento. Estas definiciones de segmentos pueden pertenecer a distintas directivas de combinación. Encontrará más información sobre las definiciones de segmentos en la guía de punto final de definición de [segmento](./segment-definitions.md). |
+| `segmentId` | ID de la definición de segmento para la que desea crear un trabajo de segmento. Estas definiciones de segmentos pueden pertenecer a distintas directivas de combinación. Encontrará más información sobre las definiciones de segmentos en la [guía de extremo de definición de segmentos](./segment-definitions.md). |
 
 **Respuesta**
 
@@ -276,7 +276,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de s
 
 ## Recuperar un trabajo de segmento específico {#get}
 
-Puede recuperar información detallada sobre un trabajo de segmento específico realizando una solicitud de GET al extremo y proporcionando el ID del trabajo de segmento que desea recuperar en la ruta de solicitud. `/segment/jobs`
+Puede recuperar información detallada sobre un trabajo de segmento específico realizando una solicitud de GET al extremo `/segment/jobs` y proporcionando el ID del trabajo de segmento que desea recuperar en la ruta de solicitud.
 
 **Formato API**
 
@@ -286,7 +286,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | El `id` valor del trabajo de segmento que desea recuperar. |
+| `{SEGMENT_JOB_ID}` | El valor `id` del trabajo de segmento que desea recuperar. |
 
 **Solicitud**
 
@@ -371,9 +371,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `segments.segment.expression` | Objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 | `metrics` | Objeto que contiene información de diagnóstico sobre el trabajo del segmento. |
 
-## Trabajos de recuperación masiva de segmentos {#bulk-get}
+## Trabajos de segmentos de recuperación masiva {#bulk-get}
 
-Puede recuperar información detallada sobre varios trabajos de segmentos haciendo una solicitud de POST al extremo y proporcionando los `/segment/jobs/bulk-get` valores `id` de los trabajos de segmentos en el cuerpo de la solicitud.
+Puede recuperar información detallada sobre varios trabajos de segmentos haciendo una solicitud de POST al extremo `/segment/jobs/bulk-get` y proporcionando los valores `id` de los trabajos de segmentos en el cuerpo de la solicitud.
 
 **Formato API**
 
@@ -479,7 +479,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 
 ## Cancelar o eliminar un trabajo de segmento específico {#delete}
 
-Puede eliminar un trabajo de segmento específico realizando una solicitud de DELETE al extremo y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de la solicitud. `/segment/jobs`
+Puede eliminar un trabajo de segmento específico realizando una solicitud de DELETE al extremo `/segment/jobs` y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de la solicitud.
 
 >[!NOTE]
 >
@@ -493,7 +493,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | El `id` valor del trabajo de segmento que desea eliminar. |
+| `{SEGMENT_JOB_ID}` | El valor `id` del trabajo de segmento que desea eliminar. |
 
 **Solicitud**
 
