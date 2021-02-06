@@ -1,19 +1,17 @@
 ---
 keywords: destinos de análisis;destino de análisis
-title: Destinos de Analytics
-seo-title: Destinos de Analytics
+title: Información general sobre los destinos de Analytics
 description: Los destinos de Analytics realizan un seguimiento del modo en que los visitantes interactúan con el contenido del sitio y recopilan datos para comprender el comportamiento de la audiencia. Estas plataformas ofrecen una perspectiva única sobre la participación y la conversión de sus visitantes más valiosos.
-seo-description: Los destinos de Analytics realizan un seguimiento del modo en que los visitantes interactúan con el contenido del sitio y recopilan datos para comprender el comportamiento de la audiencia. Estas plataformas ofrecen una perspectiva única sobre la participación y la conversión de sus visitantes más valiosos.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 5%
+source-wordcount: '169'
+ht-degree: 6%
 
 ---
 
 
-# Destinos de Analytics {#analytics-destinations}
+# Descripción general de destinos de Analytics {#analytics-destinations}
 
 Los destinos de Analytics realizan un seguimiento del modo en que los visitantes interactúan con el contenido del sitio y recopilan datos para comprender el comportamiento de la audiencia. Estas plataformas ofrecen una perspectiva única sobre la participación y la conversión de sus visitantes más valiosos.
 
