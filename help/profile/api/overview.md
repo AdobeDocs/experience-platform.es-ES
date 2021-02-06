@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;habilitar perfil;Habilitar perfil
-title: Guía para desarrolladores de API de Perfil para clientes en tiempo real
+title: Guía de la API de Perfil del cliente en tiempo real
 topic: guide
-description: La API de Perfil de cliente en tiempo real incluye varios extremos para explorar y trabajar con datos de Perfil, como ver perfiles, crear y actualizar políticas de combinación, exportar o muestrear datos de Perfil y eliminar datos de Perfil que ya no necesite o que se agregaron por error.
+description: La API de Perfil de cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de Perfil, incluidos perfiles de vista, crear y actualizar políticas de combinación, exportar o tomar muestras de datos de Perfil y eliminar datos de Perfil que ya no son necesarios o que se agregaron por error. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] Guía para desarrolladores de API
+# [!DNL Real-time Customer Profile] Guía de API
 
 [!DNL Real-time Customer Profile] le permite ver una vista holística de cada uno de sus clientes individuales dentro de Adobe Experience Platform. [!DNL Profile] le permite consolidar datos de clientes dispares de varios canales, como datos en línea, sin conexión, CRM y de terceros, en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con el cliente.
 
