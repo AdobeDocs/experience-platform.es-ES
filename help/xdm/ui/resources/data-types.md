@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ui;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;Registro de esquemas;Registro de Esquemas;esquema;Esquema;esquemas;Esquemas;crear;tipo de datos;tipos de datos;
 solution: Experience Platform
-title: Creación y edición de tipos de datos mediante la interfaz de usuario
+title: Crear y editar tipos de datos con la interfaz de usuario
 topic: tutorial
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario del Experience Platform.
 translation-type: tm+mt
-source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%
