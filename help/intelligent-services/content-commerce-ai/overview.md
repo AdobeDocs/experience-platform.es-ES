@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud;introducción;contenido y comercio ai;temas populares;Servicios inteligentes;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Información general sobre Content and Commerce AI
+title: Información general de Content and Commerce AI
 topic: Content and Commerce AI
 description: Content and Commerce AI es un conjunto de servicios de AI que le permite extraer funciones inteligentes de su contenido, organizar, optimizar el flujo de contenido y ofrecer a sus clientes experiencias más impactantes y personalizadas.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ El contenido es un componente esencial de estas experiencias. Para responder mej
 
 | Tipo de contenido | Funcionalidades | Información general sobre la funcionalidad |
 | --- | --- | --- |
-| Texto | - extracción de palabras clave y entidades <br>- Clasificadores personalizados | - Extraer automáticamente palabras clave y etiquetas de documentos de empresa y páginas web mediante un servicio de AI incorporado. <br> - Etiquetar automáticamente los documentos o páginas web de una empresa por taxonomía corporativa mediante un servicio creado a partir de modelos de AI personalizados. |
+| Texto | - extracción de palabra clave y entidad <br>- Clasificadores personalizados | - Extraer automáticamente palabras clave y etiquetas de documentos de empresa y páginas web mediante un servicio de AI incorporado. <br> - Etiquetar automáticamente los documentos o páginas web de una empresa por taxonomía corporativa mediante un servicio creado a partir de modelos de AI personalizados. |
 | Imágenes | - Recomendaciones visuales <br> - extracción de color | - Ofrezca recomendaciones de productos visualmente similares a los consumidores, con tecnología de un modelo de IA desarrollado sobre características intuitivas del producto (diseño, color, forma). <br> - Extraer con precisión los colores dominantes (etiquetas y valores hexadecimales) y su ponderación de una imagen de producto. |
 
 ## Explicación del contenido y el comercio AI
@@ -38,7 +38,7 @@ La visión general de Content and Commerce AI se desglosa en tres pasos para log
 
 >[!NOTE]
 >
->En el caso de Beta, Content and Commerce AI se centra en probar el paso base del viaje (paso 1). Se espera que los pasos 2 y 3 se documenten en una versión posterior y no se amplíen en la documentación actual.
+>Para Beta, Content and Commerce AI se centra en probar el paso de base en el recorrido (paso 1). Se espera que los pasos 2 y 3 se documenten en una versión posterior y no se amplíen en la documentación actual.
 
 **Paso 1: Explicación del contenido**
 - Extraiga funciones inteligentes y metadatos.
