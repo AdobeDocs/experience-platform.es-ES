@@ -1,21 +1,17 @@
 ---
 keywords: Extensión de métrica cuántica;Métrica cuántica;métrica cuántica;Métrica cuántica
-title: Extensión de métrica cuántica
-seo-title: Extensión de métrica cuántica
+title: Destino de extensión de métrica cuántica
 description: La extensión de métrica cuántica es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de métrica cuántica es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL Quantum Metric] {#quantum-metric-extension}
-
-## Información general {#overview}
+# [!DNL Quantum Metric] Extensión {#quantum-metric-extension}
 
 [!DNL Quantum Metric's] la integración con Adobe Launch facilita la implementación sin código de la etiqueta de recopilación de  [!DNL Quantum Metric's] datos. Además, esta extensión oferta la capacidad de capturar elementos de datos de inicio que contengan información útil de la API [!DNL Quantum Metric].
 
