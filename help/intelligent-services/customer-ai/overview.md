@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform;descripción general;ayuda al cliente;temas populares;descripción general de la ayuda al cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 'Información general sobre Customer AI '
-topic: Customer AI overview
+topic: Customer AI Overview
 description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 16%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -38,7 +38,7 @@ El cliente no está diseñado para:
 - La API del cliente no debe utilizarse para predecir precios dinámicos ni el punto de precio en el que el cliente va a realizar una compra.
 - La AI del cliente no puede determinar si la oferta aumentará la probabilidad de que el cliente compre un artículo. Aunque puede decidir enviar ofertas de descuento en función de las puntuaciones de tendencia, no es necesariamente la mejor forma de convertir a esos clientes.
 - La API del cliente no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no utilice la API del cliente como proxy para una solución de recomendaciones de productos real como [!DNL Adobe Target].
-- La AI del cliente no puede predecir en qué etapa del viaje de compra se encuentra el cliente, por ejemplo, si se encuentra en etapas de &quot;concienciación&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
+- La AI del cliente no puede predecir en qué etapa del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en las fases de &quot;concienciación&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
 - No utilice la API del cliente para determinar los clientes que probablemente comprarán un producto en el futuro. Esto requiere que algunos eventos de éxito estén presentes en el pasado para que la API del cliente pueda entrenar correctamente el algoritmo de aprendizaje automático en los datos.
 
 El siguiente vídeo está diseñado para ayudarle a comprender la información sobre la información de los clientes.
@@ -51,4 +51,4 @@ La API del cliente funciona analizando los datos existentes del Evento de la exp
 
 ## Pasos siguientes
 
-Puede empezar por seguir la guía de [introducción](./getting-started.md) . Esta guía lo acompaña durante la configuración de todos los requisitos previos necesarios para la API del cliente. Si ya tiene todas las credenciales y los datos listos, visite [Configuración de una instancia](./user-guide/configure.md)de AI de cliente. Proporciona los pasos para utilizar la API del cliente.
+Puede empezar por seguir la guía [introducción](./getting-started.md). Esta guía lo acompaña durante la configuración de todos los requisitos previos necesarios para la API del cliente. Si ya tiene todas las credenciales y los datos listos, visite [configuración de una instancia de AI del cliente](./user-guide/configure.md). Proporciona los pasos para utilizar la API del cliente.
