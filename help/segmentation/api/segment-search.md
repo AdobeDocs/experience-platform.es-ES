@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
-title: Extremo de búsqueda de segmentos
+keywords: Experience Platform;segmentación;servicio de segmentación;solución de problemas;API;seg;segmento;Segmento;buscar;búsqueda de segmentos;
+title: Extremo de la API de búsqueda de segmentos
 topic: guide
-description: La búsqueda de segmentos se utiliza para buscar los campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas de API para realizar acciones básicas mediante la API.
+description: En la API de servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar los campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye ejemplos de llamadas de API para realizar acciones básicas mediante la API.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Esta guía proporciona información para ayudarle a comprender mejor la búsqued
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la guía [de](./getting-started.md) introducción para obtener información importante que debe conocer a fin de realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer a fin de realizar llamadas exitosas a la API, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 Además de los encabezados requeridos descritos en la sección de introducción, todas las solicitudes al extremo de búsqueda de segmentos requieren el siguiente encabezado adicional:
 
@@ -39,8 +39,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} representa el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
-| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} representa el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de la sintaxis [ de búsqueda de ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name`. En el [apéndice](#appendix) de este documento figura una explicación más detallada. |
 
 **Solicitud**
 
@@ -99,9 +99,9 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
-| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de la sintaxis [de búsqueda de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name` . En el [apéndice](#appendix) del presente documento figura una explicación más detallada. |
+| `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de la sintaxis [ de búsqueda de ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name`. En el [apéndice](#appendix) de este documento figura una explicación más detallada. |
 | `entityId={ENTITY_ID}` | *(Opcional)* Limita la búsqueda dentro de la carpeta designada, especificada con {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Opcional)* Donde {LIMIT} representa el número de resultados de búsqueda que se van a devolver. El valor predeterminado es 50. |
 | `page={PAGE}` | *(Opcional)* Donde {PAGE} representa el número de página utilizado para paginar los resultados de la consulta buscada. Tenga en cuenta que el número de página inicio en **0**. |
@@ -170,7 +170,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` se admite. |
+| `schema.name={SCHEMA}` | **(Requerido)** Donde {ESQUEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Requerido)** Donde {ÁREA DE NOMBRES} contiene la Área de nombres en la que desea realizar la búsqueda. |
 | `entityId={ENTITY_ID}` | **(Requerido)** El ID del objeto de búsqueda sobre el que desea obtener la información estructural, especificado con {ENTITY_ID}. |
 
@@ -242,7 +242,7 @@ La siguiente tabla lista los campos que se pueden buscar dentro del parámetro d
 | segmentName | El segmento coincide con el nombre del segmento de la búsqueda especificada. |
 | segmentDescription | El segmento coincide con la descripción del segmento de la búsqueda especificada. |
 
-### Expresión de búsqueda {#search-expression}
+### Buscar expresión {#search-expression}
 
 La siguiente tabla lista los detalles específicos de cómo funcionan las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
 
@@ -251,15 +251,15 @@ La siguiente tabla lista los detalles específicos de cómo funcionan las consul
 | Ejemplo de expresión de búsqueda | Descripción |
 | ------------------------- | ----------- |
 | foo | Busque cualquier palabra. Esto devolverá resultados si se encuentra la palabra &quot;foo&quot; en cualquiera de los campos en los que se puede buscar. |
-| barra de PUBLICACIÓN Y | Una búsqueda booleana. Esto devolverá resultados si **ambas** palabras, &quot;foo&quot; y &quot;bar&quot;, se encuentran en cualquiera de los campos en los que se puede buscar. |
-| barra de foo OR | Una búsqueda booleana. Esto devolverá resultados si **se encuentra** la palabra &quot;foo&quot; o la palabra &quot;bar&quot; en cualquiera de los campos en los que se puede buscar. |
+| barra de PUBLICACIÓN Y | Una búsqueda booleana. Esto devolverá resultados si **tanto** las palabras &quot;foo&quot; como &quot;bar&quot; se encuentran en cualquiera de los campos en los que se puede buscar. |
+| barra de foo OR | Una búsqueda booleana. Esto devolverá resultados si **o** la palabra &quot;foo&quot; o la palabra &quot;bar&quot; se encuentran en cualquiera de los campos en los que se puede buscar. |
 | Barra de foo NOT | Una búsqueda booleana. Esto devolverá resultados si se encuentra la palabra &quot;foo&quot; pero no se encuentra la palabra &quot;bar&quot; en ninguno de los campos en los que se puede buscar. |
-| name: barra de PUBLICACIÓN Y | Una búsqueda booleana. Esto devolverá resultados si **ambas** palabras, &quot;foo&quot; y &quot;bar&quot;, se encuentran en el campo &quot;nombre&quot;. |
+| name: barra de PUBLICACIÓN Y | Una búsqueda booleana. Esto devolverá resultados si **tanto** las palabras &quot;foo&quot; como &quot;bar&quot; se encuentran en el campo &quot;name&quot;. |
 | run* | Búsqueda comodín. El uso de un asterisco (*) coincide con 0 o más caracteres, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se puede realizar la búsqueda contiene una palabra que inicio con &quot;ejecutar&quot;. Por ejemplo, esto devolverá resultados si aparecen las palabras &quot;se ejecuta&quot;, &quot;se ejecuta&quot;, &quot;se ejecuta&quot; o &quot;se ejecuta&quot;. |
 | cam? | Búsqueda comodín. Uso de un signo de interrogación (?) coincide exactamente con un carácter, lo que significa que devolverá resultados si el contenido de cualquiera de los campos en los que se pueden realizar búsquedas inicio con &quot;cam&quot; y una letra adicional. Por ejemplo, esto devolverá resultados si aparecen las palabras &quot;camp&quot; o &quot;cams&quot;, pero no devolverá resultados si aparecen las palabras &quot;cámara&quot; o &quot;fogata&quot;. |
 | &quot;paraguas azul&quot; | Búsqueda de frase. Esto devolverá resultados si el contenido de cualquiera de los campos en los que se puede buscar contiene la frase completa &quot;paraguas azul&quot;. |
-| blue\~ | Una búsqueda difusa. Si lo desea, puede colocar un número entre 0 y 2 después de la virgulilla (~) para especificar la distancia de edición. Por ejemplo, &quot;blue\~1&quot; devolverá &quot;blue&quot;, &quot;blues&quot; o &quot;glue&quot;. La búsqueda difusa **sólo** se puede aplicar a términos, no frases. Sin embargo, puede anexar tildes al final de cada palabra de una frase. Por lo tanto, &quot;acampar\~ en\~ el\~ verano\~&quot; coincidirá con &quot;acampar en verano&quot;. |
+| blue\~ | Una búsqueda difusa. Si lo desea, puede colocar un número entre 0 y 2 después de la virgulilla (~) para especificar la distancia de edición. Por ejemplo, &quot;blue\~1&quot; devolverá &quot;blue&quot;, &quot;blues&quot; o &quot;glue&quot;. La búsqueda difusa puede **sólo** aplicarse a términos, no frases. Sin embargo, puede anexar tildes al final de cada palabra de una frase. Por lo tanto, &quot;acampar\~ en\~ el\~ verano\~&quot; coincidirá con &quot;acampar en verano&quot;. |
 | &quot;aeropuerto del hotel&quot;\~5 | Búsqueda de proximidad. Este tipo de búsqueda se utiliza para encontrar términos que están próximos entre sí en un documento. Por ejemplo, la frase `"hotel airport"~5` encontrará los términos &quot;hotel&quot; y &quot;aeropuerto&quot; dentro de 5 palabras entre sí en un documento. |
 | `/a[0-9]+b$/` | Una búsqueda de expresión normal. Este tipo de búsqueda encuentra una coincidencia basada en el contenido entre las barras diagonales &quot;/&quot;, como se documenta en la clase RegExp. Por ejemplo, para buscar documentos que contengan &quot;motel&quot; o &quot;hotel&quot;, especifique `/[mh]otel/`. Las búsquedas de expresiones regulares se comparan con las palabras únicas. |
 
-Para obtener documentación más detallada sobre la sintaxis de la consulta, consulte la documentación sobre la sintaxis de la consulta de [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Para obtener documentación más detallada sobre la sintaxis de la consulta, lea la [documentación sobre la sintaxis de la consulta de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
