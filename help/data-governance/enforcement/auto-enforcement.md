@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;Aplicación basada en API;control de datos
 solution: Experience Platform
-title: Aplicación automática de políticas
+title: Aplicación automática de directivas
 topic: guide
 description: Este documento explica cómo se aplican automáticamente las directivas de uso de datos al activar segmentos en destinos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 0%
