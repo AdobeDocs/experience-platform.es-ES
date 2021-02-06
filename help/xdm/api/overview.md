@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;
 solution: Experience Platform
-title: Guía para desarrolladores de API de registro de esquema
-description: 'La API del Registro de Esquema le permite administrar mediante programación todos los esquemas y recursos XDM relacionados disponibles en Experience Platform. '
+title: Guía de API de registro de esquema
+description: La API del Registro de Esquema permite a los desarrolladores administrar mediante programación todos los esquemas y recursos relacionados del Modelo de datos de experiencia (XDM) dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] Guía para desarrolladores de API
+# [!DNL Schema Registry] Guía de API
 
 El [!DNL Schema Registry] se utiliza para acceder a la biblioteca de Esquemas dentro de Adobe Experience Platform, proporcionando una interfaz de usuario y una API RESTful desde la que se puede acceder a todos los recursos de biblioteca disponibles.
 
