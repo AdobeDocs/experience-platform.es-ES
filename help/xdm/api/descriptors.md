@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;Registro de Esquemas;descriptor;descriptor;descriptores;descriptores;descriptores;identidad;identidad;nombre práctico;nombre práctico;alternatedisplayinfo;referencia;relación;relación
 solution: Experience Platform
-title: Descriptores
+title: Extremo de API de descriptores
 description: El extremo /descriptors de la API del Registro de Esquema le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1613'
 ht-degree: 1%
 
 ---
