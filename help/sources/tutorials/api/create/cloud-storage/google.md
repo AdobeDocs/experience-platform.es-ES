@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Almacenamiento de Google Cloud;almacenamiento de Google Cloud;Google;Google
 solution: Experience Platform
-title: Creación de un conector de Almacenamiento de Google Cloud mediante la API de servicio de flujo
+title: Creación de una conexión de origen de Almacenamiento de Google Cloud mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a una cuenta de Almacenamiento de Google Cloud.
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Almacenamiento de Google Cloud mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
 
 
-# Cree un conector [!DNL Google Cloud Storage] mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Google Cloud Storage] mediante la API [!DNL Flow Service]
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
