@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;flujo continuo de ingestión;ingestión;transmisión de varios mensajes;varios mensajes;
 solution: Experience Platform
-title: Transmisión de varios mensajes en una sola solicitud HTTP
+title: Enviar varios mensajes en una sola solicitud HTTP
 topic: tutorial
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una sola solicitud HTTP mediante la ingesta de flujo continuo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Envío de varios mensajes en una sola solicitud HTTP
+# Enviar varios mensajes en una sola solicitud HTTP
 
 Al transmitir datos a Adobe Experience Platform, realizar numerosas llamadas HTTP puede resultar costoso. Por ejemplo, en lugar de crear 200 solicitudes HTTP con cargas de 1 KB, es mucho más eficaz crear una solicitud HTTP con 200 mensajes de 1 KB cada uno, con una única carga útil de 200 KB. Cuando se utiliza correctamente, agrupar varios mensajes dentro de una sola solicitud es una manera excelente de optimizar los datos que se envían a [!DNL Experience Platform].
 
