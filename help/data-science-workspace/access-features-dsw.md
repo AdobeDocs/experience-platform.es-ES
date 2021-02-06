@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package
+keywords: Experience Platform;inicio;Área de trabajo de ciencias de datos;temas populares;control de acceso;zona de pruebas;paquete de inteligencia;características de dsw;acceso dsw;Adobe Experience Platform Intelligence;inteligencia;paquete de inteligencia de aplicaciones
 solution: Experience Platform
-title: Acceso y características de Área de trabajo de Data Science
+title: Acceso y características del área de trabajo de Data Science
 topic: Access and features for data science workspace
 description: 'El siguiente documento describe los permisos y el acceso a las funciones de Área de trabajo de ciencia de datos. '
 translation-type: tm+mt
-source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '644'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,14 @@ El siguiente documento describe los permisos y el acceso a las funciones de Áre
 ![Fichas DSW](./images/access/platform-tabs.png)
 
 - **Equipos portátiles:** Proporciona un entorno de desarrollo interactivo ([JupyterLab](./jupyterlab/overview.md)) para explorar, analizar y modelar sus datos en Experience Platform.
-- **Modelos:** Proporciona herramientas que se utilizan para crear, publicar y almacenar fórmulas y modelos avanzados de aprendizaje automático. Para obtener más información, visite el tutorial [Crear y publicar un modelo](./models-recipes/create-publish-model.md) de aprendizaje automático.
-- **Servicios:** Contiene servicios proporcionados por el Adobe, como [Intelligent Services](../intelligent-services/home.md) , y cualquier servicio personalizado que haya creado con Data Science Workspace.
+- **Modelos:** Proporciona herramientas utilizadas para crear, publicar y almacenar fórmulas y modelos avanzados de aprendizaje automático. Para obtener más información, visite el tutorial [crear y publicar un modelo de aprendizaje automático](./models-recipes/create-publish-model.md).
+- **Servicios:** Contiene servicios proporcionados por Adobes como  [Intelligent ](../intelligent-services/home.md) Services y cualquier servicio personalizado que haya creado con Data Science Workspace.
 
 ¿Por qué solo veo la ficha Servicios?
 
 - Es posible que su organización solo tenga derecho a la plataforma de datos del cliente en tiempo real (RTCDP), que incluye la API del cliente de servicio inteligente.
 
-Si no puede ver ninguna de las fichas de **Data Science** y desea utilizar las funciones de Data Science Workspace, póngase en contacto con el administrador de compañías para comprobar si dispone de una licencia de Adobe Experience Platform Intelligence.
+Si no puede ver ninguna de las fichas **Data Science** y desea utilizar las funciones de Data Science Workspace, póngase en contacto con el administrador de compañías para comprobar si dispone de una licencia de Adobe Experience Platform Intelligence.
 
 ## Addon del paquete de Adobe Experience Platform Intelligence
 
@@ -52,17 +52,17 @@ La siguiente tabla describe algunas de las diferencias clave para el espacio de 
 
 ## Control de acceso
 
-Control de acceso para Experience Platform se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. See the [access control overview](../access-control/home.md) for more information.
+Control de acceso para Experience Platform se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles del producto en el Admin Console, que vinculan a los usuarios con permisos y entornos limitados. Consulte la [información general del control de acceso](../access-control/home.md) para obtener más información.
 
 Para utilizar el área de trabajo de ciencias de datos, debe habilitarse el permiso &quot;Administrar área de trabajo de ciencias de datos&quot;. La siguiente tabla describe los efectos de habilitar o deshabilitar este permiso:
 
 | Permiso | Habilitado | Desactivado |
 |---|---|---|
-| Administrar área de trabajo de ciencias de datos | Proporciona acceso a todos los servicios de Data Science Workspace. | El acceso a la API y a la interfaz de usuario para todos los servicios dentro de Área de trabajo de ciencias de datos está deshabilitado. Al deshabilitarse, se evita la selección de las páginas **Equipos portátiles**, **Modelos** y **Servicios** . <li>Es posible que aún esté disponible el acceso a **Servicios** a través de la Plataforma de datos del cliente en tiempo real (RTCDP).</li> |
+| Administrar área de trabajo de ciencias de datos | Proporciona acceso a todos los servicios de Data Science Workspace. | El acceso a la API y a la interfaz de usuario para todos los servicios dentro de Área de trabajo de ciencias de datos está deshabilitado. Mientras está deshabilitado, se evita la selección de las páginas **Equipos portátiles**, **Modelos** y **Servicios**. <li>Es posible que el acceso a **Servicios** siga estando disponible a través de la Plataforma de datos del cliente en tiempo real (RTCDP).</li> |
 
 ## Compatibilidad con Simulador para pruebas
 
-Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Plataforma admite un entorno limitado de producción y varios entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de recursos de la Plataforma. Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Para obtener más información sobre los entornos limitados, consulte la descripción general [de los](../sandboxes/home.md)entornos limitados.
+Los Simuladores de pruebas son particiones virtuales dentro de una sola instancia de Experience Platform. Cada instancia de Plataforma admite un entorno limitado de producción y varios entornos limitados que no sean de producción, cada uno de los cuales mantiene su propia biblioteca de recursos de la Plataforma. Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno limitado de producción. Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../sandboxes/home.md).
 
 Actualmente, el espacio de trabajo de ciencias de datos tiene la siguiente limitación de simulación de pruebas:
 
@@ -72,4 +72,4 @@ Actualmente, el espacio de trabajo de ciencias de datos tiene la siguiente limit
 
 Este documento describía los diferentes tipos de acceso y características disponibles en el área de trabajo de ciencias de datos.
 
-Para obtener más información sobre el área de trabajo de ciencias de datos, como un flujo de trabajo diario completo, lea la documentación del tutorial [de](./walkthrough.md) Data Science Workspace. Para obtener más información general, visite la información general [de](./home.md)Data Science Workspace.
+Para obtener más información sobre el área de trabajo de ciencias de datos, como un flujo de trabajo diario completo, lea la [documentación del área de trabajo de ciencias de datos](./walkthrough.md). Para obtener más información general, visite la [información general de Área de trabajo de ciencia de datos](./home.md).
