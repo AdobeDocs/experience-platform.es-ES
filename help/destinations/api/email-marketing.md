@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Creación de destinos de marketing por correo electrónico
+title: Creación de destinos de mercadotecnia de correo electrónico mediante llamadas de API
 description: Este documento cubre la creación de destinos de marketing por correo electrónico mediante la API de Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1644'
 ht-degree: 1%
 
 ---
 
 
-# Creación de destinos de marketing por correo electrónico y activación de datos mediante llamadas de API en Adobe Experience Platform
+# Creación de destinos de marketing por correo electrónico y activación de datos mediante llamadas de API
 
 Este tutorial muestra cómo utilizar llamadas de API para conectarse a sus datos de Adobe Experience Platform, crear un [destino de marketing por correo electrónico](../catalog/email-marketing/overview.md), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
