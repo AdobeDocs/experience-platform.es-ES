@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;sftp
-title: Destino de SFTP
-seo-title: Destino de SFTP
+title: Destino de conexión SFTP
 description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
-seo-description: Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
 
-# Destino de SFTP
-
-## Información general
+# Conexión SFTP
 
 Cree una conexión directa de salida al servidor SFTP para exportar periódicamente archivos de datos delimitados desde Experience Platform.
 
