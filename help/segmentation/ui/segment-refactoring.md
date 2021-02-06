@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Generador de segmentos;Generador de segmentos
 solution: Experience Platform
-title: Guía de cambios del Generador de segmentos del servicio de segmentación
+title: Guía de la interfaz de usuario de restricciones de tiempo de segmentación refactorizada
 topic: ui guide
 description: 'El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Anteriormente, un evento individual podía tener varias reglas de restricción d
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Como puede ver, este segmento tiene dos restricciones en el nivel de regla: Uno para &quot;[!UICONTROL Hoy]&quot; y otro para &quot;[!UICONTROL Ayer]&quot;.
+Como puede ver, este segmento tiene dos restricciones en el nivel de regla: Uno para &quot;[!UICONTROL Hoy]&quot; y el otro para &quot;[!UICONTROL Ayer]&quot;.
 
 El segmento anterior es equivalente al siguiente — ambas restricciones de tiempo de nivel de evento se han conectado mediante un operador Y. La primera restricción de tiempo de nivel de evento hace referencia a un evento de clics cuyo nombre es igual a &quot;Formación&quot; y se está produciendo hoy, mientras que la segunda restricción de tiempo de nivel de evento hace referencia a un evento de clics cuyo nombre es igual a &quot;Mascotas&quot; y se produjo ayer.
 
