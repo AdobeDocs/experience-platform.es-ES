@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;transmisión;transmisión;transmisión de la ingestión;validación de la ingestión de flujo;validación;validación de la ingestión de flujo;validación;validación sincrónica;validación sincrónica;validación asincrónica;validación asincrónica;validación asincrónica;
 solution: Experience Platform
-title: Validación de la ingesta de flujo continuo
+title: Validación de inserción de flujo continuo
 topic: tutorial
 type: Tutorial
 description: 'El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
