@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;fórmula de ventas minoristas;Área de trabajo de ciencia de datos;temas populares;fórmulas
 solution: Experience Platform
-title: Crear el esquema y conjunto de datos de ventas minoristas
+title: Crear el Esquema de ventas minoristas y el conjunto de datos
 topic: tutorial
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizado, el esquema de ventas minoristas y los conjuntos de datos estarán disponibles para usted y los miembros de su organización de IMS en Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -112,7 +112,7 @@ para obtener más información.
 También ha ingerido correctamente datos de muestra de ventas minoristas en [!DNL Experience Platform] mediante la secuencia de comandos de arranque proporcionada.
 
 Para continuar trabajando con los datos ingestados:
-- [Analizar los datos con los blocs de notas de Jupyter](../jupyterlab/analyze-your-data.md)
+- [Analizar los datos con los equipos portátiles Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilice los blocs de notas Jupyter en el área de trabajo de ciencia de datos para acceder, explorar, visualizar y comprender sus datos.
 - [Empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md)
    - Siga este tutorial para aprender a incorporar su propio modelo a [!DNL Data Science Workspace] mediante el empaquetado de archivos de origen en un archivo de fórmula importable.
