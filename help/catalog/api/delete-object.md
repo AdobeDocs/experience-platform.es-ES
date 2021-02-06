@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform;inicio;temas populares;eliminar un objeto;servicio de catálogo;api
 solution: Experience Platform
-title: Eliminar un objeto
+title: Eliminar un objeto en la API
 topic: developer guide
 description: Puede eliminar un objeto Catalog proporcionando su ID en la ruta de una solicitud de DELETE.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
 
-# Eliminar un objeto
+# Eliminación de un objeto en la API
 
-Puede eliminar un [!DNL Catalog] objeto proporcionando su ID en la ruta de una solicitud de DELETE.
+Puede eliminar un objeto [!DNL Catalog] proporcionando su ID en la ruta de una solicitud de DELETE.
 
 >[!WARNING]
 >
@@ -29,11 +29,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->El extremo se ha desaprobado `DELETE /batches/{ID}` . Para eliminar un lote, debe utilizar la API [de ingestión de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lotes.
+>El extremo `DELETE /batches/{ID}` se ha desaprobado. Para eliminar un lote, debe utilizar la [API de ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a eliminar. Los objetos válidos son: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -61,4 +61,4 @@ Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) y una matriz que co
 
 >[!NOTE]
 >
->Si no hay ningún [!DNL Catalog] objeto que coincida con el ID proporcionado en la solicitud, puede recibir un código de estado HTTP 200, pero la matriz de respuesta estará vacía.
+>Si ningún objeto [!DNL Catalog] coincide con el ID proporcionado en la solicitud, puede recibir un código de estado HTTP 200, pero la matriz de respuesta estará vacía.
