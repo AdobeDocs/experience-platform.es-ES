@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Microsoft Dynamics;microsoft ddynamic;Dynamics;dinámica
 solution: Experience Platform
-title: Creación de un conector de origen de Microsoft Dynamics en la interfaz de usuario
+title: Creación de una conexión de Microsoft Dynamics Source en la interfaz de usuario
 topic: overview
 type: Tutorial
-description: Este tutorial proporciona los pasos para crear un conector de origen de Microsoft Dynamics (en adelante denominado "Dynamics") mediante la interfaz de usuario de la plataforma.
+description: Obtenga información sobre cómo crear una conexión de origen de Microsoft Dynamics mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4241e00fd444969e5a40c8b34dd7786b1a3c6dcb
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 1%
 
 ---
 
 
-# Crear un conector de origen [!DNL Microsoft Dynamics] en la interfaz de usuario
+# Crear una conexión de origen [!DNL Microsoft Dynamics] en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear un conector de origen [!DNL Microsoft Dynamics] (en adelante denominado &quot;[!DNL Dynamics]&quot;) mediante la interfaz de usuario de la plataforma.
+Este tutorial proporciona pasos para crear una conexión de origen [!DNL Microsoft Dynamics] (en adelante denominada &quot;[!DNL Dynamics]&quot;) mediante la interfaz de usuario de Adobe Experience Platform.
 
 ## Primeros pasos
 
