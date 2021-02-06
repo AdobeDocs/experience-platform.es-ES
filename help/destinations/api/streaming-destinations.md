@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;inicio;temas populares; tutoriales de API; API de destinos de flujo continuo; Plataforma
 solution: Experience Platform
-title: Conectar a destinos de flujo continuo y activar datos
+title: Conectar a destinos de flujo continuo y activar datos mediante llamadas de API
 description: Este documento cubre la creación de destinos de flujo mediante la API de Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '2018'
+source-wordcount: '2021'
 ht-degree: 1%
 
 ---
