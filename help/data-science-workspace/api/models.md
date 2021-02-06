@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
+keywords: Experience Platform;guía para desarrolladores;punto final;Área de trabajo de ciencias de datos;temas populares;modelos;API de aprendizaje automático sensei
 solution: Experience Platform
-title: Modelos
+title: Extremo de la API de modelos
 topic: Developer guide
 description: Un modelo es una instancia de una fórmula de aprendizaje automático que se capacita mediante datos históricos y configuraciones para resolver un caso de uso comercial.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
 
 
-# Modelos
+# Extremo de modelos
 
 Un modelo es una instancia de una fórmula de aprendizaje automático que se capacita mediante datos históricos y configuraciones para resolver un caso de uso comercial.
 
 ## Recuperar una lista de modelos
 
-Puede recuperar una lista de detalles del modelo que pertenezca a todos los modelos realizando una sola solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a sí misma del modelo creado más antiguo y limitará los resultados a 25. Puede elegir filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de detalles del modelo que pertenezca a todos los modelos realizando una sola solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a sí misma del modelo creado más antiguo y limitará los resultados a 25. Puede elegir filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de activos](./appendix.md#query).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles de los modelos, incluido el identificador único (`id`) de cada modelo.
+Una respuesta correcta devuelve una carga útil que contiene los detalles de los modelos, incluido el identificador único de cada modelo (`id`).
 
 ```json
 {
@@ -95,13 +95,13 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el `name` valor del modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el valor `name` del modelo. |
 | `experimentId` | Un ID de experimento válido. |
 | `experimentRunId` | Un ID de ejecución de experimento válido. |
 
 ## Recuperar un modelo específico
 
-Puede recuperar una lista de los detalles del modelo que pertenezcan a un modelo concreto realizando una sola solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de los detalles del modelo que pertenezcan a un modelo concreto realizando una sola solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de activos](./appendix.md#query).
 
 **Formato de API**
 
@@ -130,7 +130,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único (`id`) Modelos.
+Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único de modelos (`id`).
 
 ```json
 {
@@ -159,13 +159,13 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el `name` valor del modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el valor `name` del modelo. |
 | `experimentId` | Un ID de experimento válido. |
 | `experimentRunId` | Un ID de ejecución de experimento válido. |
 
-## Registro de un modelo pregenerado {#register-a-model}
+## Registrar un modelo pregenerado {#register-a-model}
 
-Puede registrar un modelo pregenerado realizando una solicitud de POST al `/models` extremo. Para registrar el modelo, es necesario incluir los valores del `modelArtifact` archivo y de la `model` propiedad en el cuerpo de la solicitud.
+Puede registrar un modelo pregenerado realizando una solicitud de POST al extremo `/models`. Para registrar el modelo, es necesario incluir el archivo `modelArtifact` y los valores de propiedad `model` en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -175,7 +175,7 @@ POST /models
 
 **Solicitud**
 
-El siguiente POST contiene los valores `modelArtifact` de archivo y `model` propiedad que son necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
+El siguiente POST contiene los valores de propiedades `modelArtifact` y `model` que son necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
 
 ```shell
 curl -X POST \
@@ -198,7 +198,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único (`id`) Modelos.
+Una respuesta correcta devuelve una carga útil que contiene los detalles del modelo, incluido el identificador único de modelos (`id`).
 
 ```json
 {
@@ -215,7 +215,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el `id` valor del modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con el valor `id` del modelo. |
 
 ## Actualizar un modelo por ID
 
@@ -319,7 +319,7 @@ Una respuesta correcta devuelve una carga útil que contiene un estado de 200 qu
 
 ## Crear una nueva transcodificación para un modelo {#create-transcoded-model}
 
-La transcodificación es la conversión directa de digital a digital de una codificación a otra. Para crear una nueva transcodificación para un modelo, proporcione el valor `{MODEL_ID}` y el valor `targetFormat` que desea que aparezca el nuevo resultado.
+La transcodificación es la conversión directa de digital a digital de una codificación a otra. Puede crear una nueva transcodificación para un modelo proporcionando el `{MODEL_ID}` y un `targetFormat` en el que desea que se muestre el nuevo resultado.
 
 **Formato de API**
 
@@ -356,7 +356,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único (`id`) de transcodificaciones utilizado para [recuperar un modelo](#retrieve-transcoded-model)transcodificado específico.
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único de transcodificaciones (`id`) utilizado en [recuperación de un modelo transcodificado específico](#retrieve-transcoded-model).
 
 ```json
 {
@@ -374,7 +374,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con 
 
 ## Recuperar una lista de transcodificaciones para un modelo {#retrieve-transcoded-model-list}
 
-Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud de GET con el `{MODEL_ID}`.
+Puede recuperar una lista de transcodificaciones que se han realizado en un modelo realizando una solicitud de GET con su `{MODEL_ID}`.
 
 **Formato de API**
 
@@ -434,7 +434,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto json con 
 
 ## Recuperar un modelo transcodificado específico {#retrieve-transcoded-model}
 
-Para recuperar un modelo transcodificado específico, realice una solicitud de GET con el ID `{MODEL_ID}` de un modelo transcodificado.
+Puede recuperar un modelo transcodificado específico realizando una solicitud de GET con su `{MODEL_ID}` y la identificación de un modelo transcodificado.
 
 **Formato de API**
 
