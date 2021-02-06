@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;introducción;ayuda al cliente;temas populares;entrada de ayuda al cliente;salida de ayuda al cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Entrada y salida de AI del cliente
+title: Entrada y salida en AI del cliente
 topic: Getting started
 description: El siguiente documento describe las diferentes entradas y salidas utilizadas en la API del cliente.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
 
 
-# Entrada y salida de AI del cliente
+# Entrada y salida en Customer AI
 
 El siguiente documento describe las diferentes entradas y salidas utilizadas en la API del cliente.
 
 ## Datos de entrada de AI del cliente
 
-La API del cliente utiliza datos del Evento de experiencias de consumo para calcular las puntuaciones de tendencia. Para obtener más información sobre el Evento de la experiencia del consumidor, consulte la documentación de [Preparar datos para su uso en Servicios inteligentes](../data-preparation.md).
+La API del cliente utiliza datos del Evento de experiencias de consumo para calcular las puntuaciones de tendencia. Para obtener más información sobre el Evento de experiencias de consumo, consulte [Preparar datos para su uso en la documentación de servicios inteligentes](../data-preparation.md).
 
 ### Datos históricos
 
@@ -68,4 +68,4 @@ En la tabla siguiente se describen los distintos atributos encontrados en la sal
 
 ## Pasos siguientes {#next-steps}
 
-Una vez que haya preparado los datos y haya colocado todas las credenciales y esquemas, siga las instrucciones de inicio de la guía [Configurar una instancia](./user-guide/configure.md) de AI de cliente. Esta guía lo acompaña durante la creación de una instancia para la API del cliente.
+Una vez que haya preparado los datos y haya colocado todas las credenciales y esquemas, siga las instrucciones de inicio de [Configurar una instancia de AI del cliente](./user-guide/configure.md). Esta guía lo acompaña durante la creación de una instancia para la API del cliente.
