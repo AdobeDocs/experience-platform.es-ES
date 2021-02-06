@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;crm;CRM
 solution: Experience Platform
-title: Recopilación de datos CRM mediante conectores de origen y API
+title: Recopilar datos de CRM mediante las API y los conectores de origen
 topic: overview
 type: Tutorial
-description: Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a la plataforma a través de conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 1%
