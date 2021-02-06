@@ -5,9 +5,9 @@ title: Información general sobre la aplicación de políticas
 topic: guide
 description: Una vez que las etiquetas de uso de datos se han aplicado a los conjuntos de datos de Adobe Experience Platform y se han definido las políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades de administración de datos le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan violaciones de políticas. Existen dos métodos de aplicación de políticas proporcionados por las funciones de administración de datos en la plataforma, aplicación basada en API y aplicación automática.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Información general sobre la aplicación de políticas
 
-Una vez que las etiquetas de uso de datos se han aplicado a [!DNL Platform] datasets y se han definido políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades [!DNL Data Governance] le permiten aplicar esas políticas y evitar operaciones de datos que constituyan violaciones de políticas.
+Una vez que se han aplicado las etiquetas de uso de datos a los conjuntos de datos y se han definido las políticas de uso de datos para las acciones de marketing en relación con dichas etiquetas, las capacidades de administración de datos de Adobe Experience Platform le permiten aplicar dichas directivas y evitar operaciones de datos que constituyan infracciones de políticas.
 
 Existen dos métodos de cumplimiento de políticas proporcionados por las características [!DNL Data Governance] en [!DNL Platform]: Aplicación basada en API y aplicación automática.
 
