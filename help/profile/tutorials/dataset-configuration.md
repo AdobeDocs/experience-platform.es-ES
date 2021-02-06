@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;habilitar conjunto de datos
-title: Configurar un conjunto de datos para Perfil y servicio de identidad mediante API
+title: Configuración de un conjunto de datos para Perfil y servicio de identidad mediante API
 topic: tutorial
 type: Tutorial
 description: Este tutorial muestra cómo habilitar un conjunto de datos para su uso con el servicio de Perfil e identidad de clientes en tiempo real mediante las API de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 1%
