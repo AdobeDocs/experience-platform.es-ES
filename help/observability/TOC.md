@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guía de Observability Insights
 user-guide-description: Controle las actividades de la Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 45%
+source-wordcount: '53'
+ht-degree: 47%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 # Perspectivas de la capacidad de observación {#observability}
 
 * [Información general sobre perspectivas de la capacidad de observación](home.md)
-* Guía para desarrolladores de la API de perspectivas de observación {#api}
+* API de perspectivas de observación {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Métricas](api/metrics.md)
