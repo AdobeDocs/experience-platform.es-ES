@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;publicidad;adwords de Google;publicidad
 solution: Experience Platform
-title: Recopilación de datos de publicidad a través de las API y los conectores de origen
+title: Recopilación de datos de publicidad mediante Conectores de origen y API
 topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar datos de una aplicación de publicidad de terceros e incorporarlos a la plataforma mediante conectores de origen y la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Recopilación de datos de publicidad a través de las API y los conectores de origen
+# Recopilación de datos de publicidad mediante conectores de origen y API
 
 En este tutorial se explican los pasos para recuperar datos de una aplicación de publicidad de terceros e ingerirlos en Adobe Experience Platform mediante conectores de origen y la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
