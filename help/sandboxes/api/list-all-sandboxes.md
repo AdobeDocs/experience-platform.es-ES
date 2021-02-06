@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;inicio;temas populares;entornos limitados de lista
 solution: Experience Platform
-title: Lista de todos los entornos limitados
+title: Entornos aislados de lista en la API
 topic: developer guide
 description: Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o no), realice una solicitud de GET al extremo /sandboxes.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
 
 
-# Lista de todos los entornos limitados
+# Entornos limitados de lista en la API
 
-Para realizar la lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o de otro tipo), realice una solicitud de GET al `/sandboxes` punto final.
+Para lista de todos los entornos limitados que pertenecen a su organización de IMS (activa o de otro modo), realice una solicitud de GET al extremo `/sandboxes`.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre parámetros [de](#query) consulta para obtener más información. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados. Consulte la sección sobre [parámetros de consulta](#query) para obtener más información. |
 
 **Solicitud**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a su organización, incluidos detalles como `name`, `title`, `state`y `type`.
+Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a su organización, incluidos detalles como `name`, `title`, `state` y `type`.
 
 ```json
 {
@@ -130,11 +130,11 @@ Una respuesta correcta devuelve una lista de entornos limitados que pertenecen a
 
 ## Uso de parámetros de consulta {#query}
 
-La [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los entornos limitados.
+La API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) admite el uso de parámetros de consulta para filtrar los resultados de la página al enumerar los entornos limitados.
 
 >[!NOTE]
 >
->Los parámetros `limit` y `offset` consulta deben especificarse juntos. Si solo especifica uno, la API devolverá un error. Si especifica ninguno, el límite predeterminado es 50 y el desplazamiento es 0.
+>Los parámetros de consulta `limit` y `offset` deben especificarse juntos. Si solo especifica uno, la API devolverá un error. Si especifica ninguno, el límite predeterminado es 50 y el desplazamiento es 0.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
