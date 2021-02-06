@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;instrucciones preparadas;preparado;sql;
 solution: Experience Platform
-title: Declaraciones preparadas
+title: Sentencias preparadas en el servicio de Consulta
 topic: prepared statements
 description: En SQL, las instrucciones preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. El servicio de Consulta de Adobe Experience Platform admite las declaraciones preparadas mediante una consulta parametrizada.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '381'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 # Declaraciones preparadas
 
-En SQL, las sentencias preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. Adobe Experience Platform [!DNL Query Service] admite las declaraciones preparadas mediante una consulta parametrizada. Esto se puede utilizar para optimizar el rendimiento, ya que ya no tendrá que volver a analizar una consulta una y otra vez.
+En SQL, las sentencias preparadas se utilizan para crear plantillas de consultas o actualizaciones similares. Adobe Experience Platform [!DNL Query Service] admite instrucciones preparadas mediante una consulta parametrizada. Esto se puede utilizar para optimizar el rendimiento, ya que ya no tendrá que volver a analizar una consulta una y otra vez.
 
 ## Uso de declaraciones preparadas
 
@@ -27,7 +27,7 @@ Al utilizar instrucciones preparadas, se admiten las siguientes sintaxis:
 
 ### Preparar una declaración preparada {#prepare}
 
-Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede utilizar variables, como `$1` en lugar de valores reales. Esta declaración preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de los planes **no distinguen** entre mayúsculas y minúsculas.
+Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede utilizar variables como `$1` en lugar de valores reales. Esta declaración preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de los planes **no distinguen entre mayúsculas y minúsculas**.
 
 #### Formato SQL
 
@@ -57,7 +57,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Desasignar una declaración preparada {#deallocate}
+### Desasignar una instrucción preparada {#deallocate}
 
 Esta consulta SQL se utiliza para eliminar la instrucción preparada con nombre.
 
@@ -106,7 +106,7 @@ EXECUTE getIdRange(10000, 10005);
 
 Cuando se llame a esto, verá exactamente los mismos resultados que antes:
 
-| id | firstname | lastname | fecha de nacimiento | email | city | país |
+| id | firstname | lastname | fecha de nacimiento | correo electrónico | ciudad | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
 | 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
