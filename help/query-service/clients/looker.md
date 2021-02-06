@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de Consulta;servicio de consulta;buscador;buscador;conexión al servicio de consulta;
 solution: Experience Platform
-title: Conectar con el buscador
+title: Connect Looker to Consulta Service
 topic: connect
 description: Este documento recorre los pasos para conectar el buscador con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]
+# Conectar [!DNL Looker] al servicio de Consulta
 
 Este documento cubre los pasos para conectar [!DNL Looker] con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > En esta guía se asume que ya tiene acceso a [!DNL Looker] y que está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Looker] en la [documentación oficial [!DNL Looker] ](https://docs.looker.com/).
-
-## Conectar [!DNL Looker] con plataforma
 
 Después de iniciar sesión en [!DNL Looker], seleccione **[!DNL Admin]**, seguido de **[!DNL Connections]**.
 
