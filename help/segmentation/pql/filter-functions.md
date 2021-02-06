@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de filtro;filtro;
 solution: Experience Platform
-title: Funciones de filtro
+title: Funciones de filtro PQL
 topic: developer guide
 description: Las funciones de filtro se utilizan para filtrar datos dentro de matrices en el lenguaje de Consulta de Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '220'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Funciones de filtro
 
-Las funciones de filtro se utilizan para filtrar datos dentro de matrices en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Las funciones de filtro se utilizan para filtrar datos dentro de matrices en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Filtro
 
@@ -37,9 +37,9 @@ xEvent[productListItems[SKU="PS"]]
 
 ## Operador de arriba
 
-El operador `^` (arriba) permite hacer referencia a las propiedades de los niveles superiores de filtros.
+El operador `^` (arriba) permite hacer referencia a las propiedades en los niveles superiores de filtros.
 
-**Format**
+**Formato**
 
 ```sql
 {ARRAY}[{FILTER_1}[{FILTER_2} or ^{PROPERTY}]]
@@ -54,7 +54,7 @@ El operador `^` (arriba) permite hacer referencia a las propiedades de los nivel
 
 **Ejemplo**
 
-La siguiente consulta de PQL obtiene todos los eventos que tienen al menos un elemento de producto con una SKU igual a &quot;PS&quot; **o que** tienen una persona de sexo femenino.
+La siguiente consulta de PQL obtiene todos los eventos que tienen al menos un elemento de producto con un SKU igual a &quot;PS&quot; **o** tienen una persona cuyo sexo es femenino.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -62,4 +62,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de filtro, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones de filtro, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
