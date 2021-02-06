@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Blob;blob;blob de Azure;blob de azure
 solution: Experience Platform
-title: Conector Blob de Azure
+title: Información general del conector de origen de blob de Azure
 topic: overview
-description: La documentación siguiente proporciona información sobre cómo conectar el blob de Azure a la plataforma mediante API o la interfaz de usuario.
+description: Obtenga información sobre cómo conectar Azure Blob a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -36,15 +36,15 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta a
 
 ## Conectar [!DNL Azure Blob] a [!DNL Platform]
 
-La documentación siguiente proporciona información sobre cómo conectar el blob de Azure a la plataforma mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar el blob de Azure a Adobe Experience Platform mediante API o la interfaz de usuario:
 
 ### Uso de API
 
-- [Creación de un conector Blob de Azure mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/blob.md)
+- [Creación de una conexión de origen de blob de Azure mediante la API de servicio de flujo](../../tutorials/api/create/cloud-storage/blob.md)
 - [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
 - [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la interfaz de usuario
 
-- [Creación de un conector de origen de blob de Azure en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configuración de un flujo de datos para un conector de almacenamiento de nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creación de una conexión de origen de blob de Azure en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Configuración de un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
