@@ -5,7 +5,7 @@ title: Explorar un sistema de publicidad mediante la API de servicio de flujo
 topic: overview
 description: El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas. Este tutorial utiliza la API de servicio de flujo para explorar los sistemas de publicidad.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
