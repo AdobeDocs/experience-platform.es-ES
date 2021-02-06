@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;diseño de Esquema;mezcla;mezcla;combinación;enduserids;usuario final;id;
 solution: Experience Platform
 title: Mezcla de detalles de ID de usuario final
 topic: overview
 description: Este documento proporciona una visión general de la combinación de detalles del ID de usuario final.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] de ID de usuario final
+# [!UICONTROL Detalles del ID de usuario final ] mixin
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+>Los nombres de varias mezclas han cambiado. Consulte el documento en [actualizaciones de nombres de mezcla](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles] de ID de usuario final es una combinación estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/individual-profile.md), que se utiliza para describir la información de identidad de una persona en varias aplicaciones de Adobe. La mezcla proporciona un `endUserIDs` objeto de nivel raíz, que contiene un campo de solo lectura `_experience` cuyos valores se actualizan automáticamente a medida que se ingestan datos.
+[!UICONTROL ID de usuario final ] Detalla una combinación estándar para la  [[!DNL XDM ExperienceEvent] clase](../../classes/individual-profile.md), utilizada para describir la información de identidad de un individuo en varias aplicaciones de Adobe. La mezcla proporciona un objeto de nivel raíz `endUserIDs`, que contiene un campo de sólo lectura `_experience` cuyos valores se actualizan automáticamente a medida que se ingestan los datos.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
