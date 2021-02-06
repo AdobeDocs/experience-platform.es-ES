@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;browser;browser details;datatype;data-type;data type;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;explorador;detalles del explorador;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles del explorador
 topic: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del explorador.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '262'
 ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Tipo de datos de detalles] del explorador
+# [!UICONTROL Tipo de datos de ] detalles del explorador
 
-[!UICONTROL Los detalles] del explorador son un tipo de datos XDM estándar que describe los detalles relacionados con un explorador o una aplicación.
+[!UICONTROL Los ] detalles del explorador son un tipo de datos XDM estándar que describe los detalles relacionados con un explorador o una aplicación.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
