@@ -1,21 +1,17 @@
 ---
 keywords: extensiones de Facebook;extensión de Facebook;destinos de Facebook;facebook;instagram;messenger;mensajero de Facebook;mensajero de Facebook
-title: Destino de Facebook
-seo-title: Destino de Facebook
+title: Destino de extensión de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
-seo-description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '952'
+ht-degree: 3%
 
 ---
 
 
-# [!DNL Facebook] Destino
-
-## Información general {#overview}
+# [!DNL Facebook] Extensión
 
 >[!IMPORTANT]
 >
