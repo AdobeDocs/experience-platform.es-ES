@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de tipos de datos;Registro de Esquemas;tipo de datos;tipos de datos;tipos de datos;crear
 solution: Experience Platform
-title: Crear un tipo de datos
+title: Extremo de la API de tipos de datos
 description: El extremo /datatypes de la API del Registro de Esquema permite administrar mediante programación los tipos de datos XDM dentro de la aplicación de experiencia.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
