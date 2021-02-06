@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de mezcla;Registro de Esquemas;mezcla;mezclas;mezclas;crear
 solution: Experience Platform
-title: Crear una mezcla
+title: Extremo de la API de mezclas
 description: El extremo /mixins de la API del Registro de Esquema le permite administrar mediante programación mezclas XDM dentro de la aplicación de experiencia.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 2%
