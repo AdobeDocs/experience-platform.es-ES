@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de evento de experiencia;consulta de evento de experiencia;consulta de Evento de experiencias;
 solution: Experience Platform
-title: Consultas de Experience Evento
+title: Consultas de muestra para Eventos de experiencias
 topic: queries
 type: Tutorial
-description: El siguiente documento proporciona ejemplos de consultas que involucran a Eventos de experiencias.
+description: El siguiente documento proporciona ejemplos de consultas que involucran a Eventos de experiencia en el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Event] consultas
+# Consultas de muestra para [!DNL Experience Events]
 
 Además de las consultas SQL estándar, Adobe Experience Platform [!DNL Query Service] admite la escritura de consultas mediante [!DNL Experience Events]. Los Eventos de experiencia están representados por la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea inmutable y no agregada del sistema cuando un usuario interactúa con un sitio web o servicio y, por lo tanto, se puede utilizar para la análisis del dominio de tiempo.
 
