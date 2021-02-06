@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform;guía para desarrolladores;extremo;Área de trabajo de ciencias de datos;temas populares;mlservices;API de aprendizaje automático sensei
 solution: Experience Platform
-title: Servicios
+title: Extremo de API de MLServices
 topic: Developer guide
 description: Un MLService es un modelo publicado y capacitado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad para automatizar la capacitación y la puntuación de manera programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficacia y la precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que se generen nuevas perspectivas de forma coherente.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
 
 
-# MLServices
+# Extremo de MLServices
 
 Un MLService es un modelo publicado y capacitado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad para automatizar la capacitación y la puntuación de manera programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficacia y la precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que se generen nuevas perspectivas de forma coherente.
 
-Las programaciones automatizadas de capacitación y puntuación se definen con una marca de tiempo inicial, una marca de tiempo final y una frecuencia representada como una expresión [](https://en.wikipedia.org/wiki/Cron)cron. Las programaciones se pueden definir al [crear un MLService](#create-an-mlservice) o al [actualizar un MLService](#update-an-mlservice)existente.
+Las programaciones automatizadas de capacitación y puntuación se definen con una marca de fecha y hora de inicio, una marca de hora de finalización y una frecuencia representada como una [expresión cron](https://en.wikipedia.org/wiki/Cron). Las programaciones se pueden definir cuando [cree un MLService](#create-an-mlservice) o cuando se apliquen [actualizando un MLService](#update-an-mlservice) existente.
 
 ## Crear un MLService {#create-an-mlservice}
 
@@ -78,7 +78,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del nuevo servicio MLService, incluido su identificador único (`id`), ID del experimento para la formación (`trainingExperimentId`), ID del experimento para la puntuación (`scoringExperimentId`) y el ID del conjunto de datos de formación de entrada (`trainingDataSetId`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del nuevo servicio MLService, incluido su identificador único (`id`), el ID del experimento para la formación (`trainingExperimentId`), el ID del experimento para la puntuación (`scoringExperimentId`) y el ID del conjunto de datos de formación de entrada (`trainingDataSetId`).
 
 ```json
 {
@@ -109,7 +109,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del nu
 
 ## Recuperar una lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Puede recuperar una lista de MLServices realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre los parámetros de [consulta para la recuperación](./appendix.md#query)de recursos.
+Puede recuperar una lista de MLServices realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de activos](./appendix.md#query).
 
 **Formato de API**
 
@@ -121,7 +121,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los parámetros [de consulta](./appendix.md#query) disponibles para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) utilizados para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de MLServices y sus detalles, incluyendo su ID de MLService (`{MLSERVICE_ID}`), ID de experimento para formación (`{TRAINING_ID}`), ID de experimento para la puntuación (`{SCORING_ID}`) y el ID de conjunto de datos de formación de entrada (`{DATASET_ID}`).
+Una respuesta correcta devuelve una lista de MLServices y sus detalles, incluyendo su ID de MLService (`{MLSERVICE_ID}`), ID de experimento para formación (`{TRAINING_ID}`), ID de experimento para la puntuación (`{SCORING_ID}`) y el ID de conjunto de datos de capacitación de entrada (`{DATASET_ID}`).
 
 ```json
 {
