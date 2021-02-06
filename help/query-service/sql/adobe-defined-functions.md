@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;funciones definidas por adobe;sql;
 solution: Experience Platform
-title: Funciones definidas por Adobe
+title: Funciones SQL definidas por Adobe en el servicio de Consulta
 topic: functions
-description: Este documento proporciona información sobre las funciones definidas por Adobes disponibles en el servicio de Consulta.
+description: Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en Adobe Experience Platform Consulta Service.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2913'
 ht-degree: 2%
 
 ---
 
 
-# Funciones definidas por Adobe
+# Funciones SQL definidas por Adobe en el servicio de Consulta
 
 Las funciones definidas por Adobes, en este caso denominadas ADF, son funciones precompiladas en el Servicio de Consulta de Adobe Experience Platform que ayudan a realizar tareas comunes relacionadas con el negocio en datos [!DNL Experience Event]. Entre ellas se incluyen funciones para [sesionización](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [atribución](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como las que se encuentran en Adobe Analytics.
 
