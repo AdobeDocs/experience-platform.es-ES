@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Recopilar datos de pago;datos de pago
 solution: Experience Platform
-title: Recopilación de datos de pago mediante conectores de origen y API
+title: Recopilación de datos de pago mediante Conectores de origen y API
 topic: overview
 type: Tutorial
-description: Este tutorial trata los pasos para recuperar datos de una aplicación de pago e ingerirlos en la plataforma a través de conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar datos de una aplicación de pago e ingerirlos en la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Recopilar datos de pagos a través de las API y los conectores de origen
+# Recopilación de datos de pago mediante conectores de origen y API
 
 Este tutorial trata los pasos para recuperar datos de una aplicación de pagos de terceros e ingerirlos en la plataforma mediante conectores de origen y la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
