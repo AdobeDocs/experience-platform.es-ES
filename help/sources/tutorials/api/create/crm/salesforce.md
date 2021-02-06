@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Salesforce;Salesforce
 solution: Experience Platform
-title: Creación de un conector de Salesforce mediante la API de servicio de flujo
+title: Creación de una conexión de origen de Salesforce mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar la plataforma a una cuenta de Salesforce para recopilar datos de CRM.
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '565'
 ht-degree: 2%
 
 ---
 
 
-# Cree un conector [!DNL Salesforce] mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Salesforce] mediante la API [!DNL Flow Service]
 
 El servicio de flujo se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
 
-Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Platform] a una cuenta [!DNL Salesforce] para recopilar datos CRM.
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Platform] a una cuenta [!DNL Salesforce] mediante la API de servicio de flujo.
 
 ## Primeros pasos
 
