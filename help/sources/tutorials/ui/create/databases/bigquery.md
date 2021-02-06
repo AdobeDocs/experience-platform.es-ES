@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
+keywords: Experience Platform;hogar;temas populares;Google Gran Consulta;Google gran consulta;GBQ;gbq
 solution: Experience Platform
-title: Creación de un conector de origen de Google Big Consulta en la interfaz de usuario
+title: Creación de una conexión de origen de Consulta grande de Google en la interfaz de usuario
 topic: overview
 type: Tutorial
-description: Este tutorial proporciona los pasos para crear un conector de origen de Google Big Consulta (en adelante, "GBQ") mediante la interfaz de usuario de la plataforma.
+description: Obtenga información sobre cómo crear una conexión de origen Google Big Consulta mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 
-# Crear un conector de origen [!DNL Google Big Query] en la interfaz de usuario
+# Crear una conexión de origen [!DNL Google Big Query] en la interfaz de usuario
 
 >[!NOTE]
 >
@@ -74,4 +74,4 @@ Para conectar una cuenta existente, seleccione la cuenta de BigQuery con la que 
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta GBQ. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos a [!DNL Platform]](../../dataflow/databases.md).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta GBQ. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos a [!DNL Platform]](../../dataflow/databases.md).
