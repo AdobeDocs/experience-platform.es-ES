@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;señalización;detalles de interacción;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de señalización
 topic: overview
 description: Este documento proporciona información general sobre la clase de Perfil individual XDM.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '248'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Tipo de datos de señalización]
+# [!UICONTROL Tipo ] Beacondata
 
-[!UICONTROL La señalización] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del rango.
+ Beaconis es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del alcance.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -33,7 +33,7 @@ Para obtener más información sobre el tipo de datos, consulte el repositorio p
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre el tipo de datos de [!UICONTROL señalización] .
+La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Señalización].
 
 ## Valores aceptados para proximidad {#proximity}
 
