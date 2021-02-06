@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;flujo de datos;Flujo de datos
 solution: Experience Platform
-title: Configuración de un flujo de datos para un conector por lotes de almacenamiento de nube en la interfaz de usuario
+title: Configuración de un flujo de datos para un conector de lote de Almacenamiento de nube en la interfaz de usuario
 topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de la Plataforma. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Configuración de un flujo de datos para un conector por lotes de almacenamiento de nube en la interfaz de usuario
+# Configuración de un flujo de datos para una conexión por lotes de almacenamiento en la nube en la interfaz de usuario
 
 Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos [!DNL Platform]. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 
