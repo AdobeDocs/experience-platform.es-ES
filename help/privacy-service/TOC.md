@@ -5,10 +5,10 @@ user-guide-title: Ayuda de Adobe Experience Platform Privacy Service
 breadcrumb-title: Guía de Privacy Service
 user-guide-description: Administre las solicitudes de datos de los clientes para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
 translation-type: tm+mt
-source-git-commit: 37f07e11abe3c6757edc635153454339118fc45c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 35%
+source-wordcount: '86'
+ht-degree: 41%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 35%
 * [Aplicaciones de Privacy Service y Experience Cloud](experience-cloud-apps.md)
 * [Datos de identidad para solicitudes de privacidad](identity-data.md)
 * [Información general de la biblioteca JS de privacidad](js-library.md)
-* Privacy Service API {#api}
+* API de Privacy Service {#api}
    * [Primeros pasos](api/getting-started.md)
    * [Trabajos de privacidad](api/privacy-jobs.md)
    * [Consentimiento](api/consent.md)
    * [Apéndice](api/appendix.md)
 * IU de Privacy Service {#ui}
-   * [Información general sobre la interfaz de usuario de Privacy Service](ui/overview.md)
-   * [Guía del usuario del Privacy Service](ui/user-guide.md)
+   * [Información general](ui/overview.md)
+   * [Administrar trabajos de privacidad](ui/user-guide.md)
 * [Suscripción a Eventos de privacidad](privacy-events.md)
-* Guías de regulación de la privacidad {#regulations}
+* Normas de privacidad {#regulations}
    * [Información general](regulations/overview.md)
    * [Preguntas más frecuentes](regulations/faq.md)
    * [Terminología](regulations/terminology.md)
