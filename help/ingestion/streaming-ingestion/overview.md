@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ingestión de datos;datos ingestados;transmisión;información general;transmisión de flujo continuo;latencia;transmisión de latencia;
 solution: Experience Platform
-title: Introducción a la ingestión de flujo continuo de Adobe Experience Platform
+title: Introducción a la ingestión de flujo
 topic: overview
 description: La ingestión de flujo continuo para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos cliente y servidor al Experience Platform en tiempo real.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 3%
 
 ---
