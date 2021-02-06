@@ -1,21 +1,17 @@
 ---
 keywords: correo electrónico;correo electrónico;correo electrónico;destinos de correo electrónico;destino de responsys de oracle
-title: Destino de oracle Responsys
-seo-title: Destino de oracle Responsys
+title: Destino de conexión de oracle Responsys
 description: Responsys es una herramienta empresarial de marketing por correo electrónico para campañas de marketing entre canales ofrecidas por Oracle con el fin de personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
-seo-description: Responsys es una herramienta empresarial de marketing por correo electrónico para campañas de marketing entre canales ofrecidas por Oracle con el fin de personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Responsys]
-
-## Información general
+# [!DNL Oracle Responsys] connection
 
 [](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) Responsysis es una herramienta de marketing por correo electrónico para campañas de marketing en varios canales ofrecida por  [!DNL Oracle] para personalizar las interacciones en correo electrónico, dispositivos móviles, pantallas y redes sociales.
 
