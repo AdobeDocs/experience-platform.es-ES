@@ -5,10 +5,10 @@ user-guide-title: Ayuda de Administración de datos de Adobe Experience Platform
 breadcrumb-title: Guía de administración de datos
 user-guide-description: Aplique restricciones al uso de datos utilizando etiquetas, acciones de marketing y políticas.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 25%
+source-wordcount: '98'
+ht-degree: 33%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 25%
 
 * [Información general sobre la administración de datos](home.md)
 * Etiquetas de uso de datos {#labels}
-   * [Información general sobre las etiquetas de uso de datos](labels/overview.md)
-   * [Etiquetas de uso de datos principales](labels/reference.md)
-   * [Administrar etiquetas de uso de datos en la interfaz de usuario](labels/user-guide.md)
-   * [Administrar etiquetas para conjuntos de datos y campos mediante API](labels/dataset-api.md)
+   * [Información general](labels/overview.md)
+   * [Glosario de etiquetas](labels/reference.md)
+   * [Administrar etiquetas en la interfaz de usuario](labels/user-guide.md)
+   * [Administrar etiquetas para conjuntos de datos mediante API](labels/dataset-api.md)
 * Políticas de uso de datos {#policies}
-   * [Información general sobre las directivas de uso de datos](policies/overview.md)
-   * [Guía del usuario de directivas de uso de datos](policies/user-guide.md)
-   * [Crear una directiva de uso de datos mediante la API de servicio de directivas](policies/create.md)
+   * [Información general](policies/overview.md)
+   * [Administrar directivas en la interfaz de usuario](policies/user-guide.md)
+   * [Crear una directiva en la API](policies/create.md)
 * Aplicación de políticas {#enforcement}
-   * [Información general sobre la aplicación de políticas](enforcement/overview.md)
+   * [Información general](enforcement/overview.md)
    * [Aplicación automática](enforcement/auto-enforcement.md)
    * [Aplicación basada en API](enforcement/api-enforcement.md)
-* Guía para desarrolladores de API de servicios de políticas {#api}
+* API de servicio de directivas {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Etiquetas](api/labels.md)
