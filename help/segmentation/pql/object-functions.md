@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;object functions;object;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de objeto;objeto;
 solution: Experience Platform
-title: Funciones de objeto
+title: Funciones de objeto PQL
 topic: developer guide
 description: El lenguaje de Consulta de perfil (PQL) oferta funciones para simplificar la interacción con los objetos.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 5%
+source-wordcount: '138'
+ht-degree: 4%
 
 ---
 
 
 # Funciones de objeto
 
-[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con objetos. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con objetos. Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Es nulo
 
-La `isNull` función determina si no existe una referencia de objeto.
+La función `isNull` determina si no existe una referencia de objeto.
 
 **Format**
 
@@ -37,9 +37,9 @@ person.homeAddress.isNull()
 
 ## No es nulo
 
-La `isNotNull` función determina si existe una referencia de objeto.
+La función `isNotNull` determina si existe una referencia de objeto.
 
-**Format**
+**Formato**
 
 ```sql
 {OBJECT}.isNotNull()
@@ -55,4 +55,4 @@ person.homeAddress.isNotNull()
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de objeto, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones de objeto, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
