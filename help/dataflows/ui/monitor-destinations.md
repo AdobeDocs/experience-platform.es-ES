@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+keywords: Experience Platform;inicio;temas populares;supervisar cuentas;supervisar flujos de datos;flujos de datos;destinos
 description: Los destinos le permiten activar sus datos desde Adobe Experience Platform a innumerables socios externos. Este tutorial proporciona instrucciones sobre cómo puede supervisar los flujos de datos de los destinos mediante la interfaz de usuario del Experience Platform.
 solution: Experience Platform
-title: Monitoreo de flujos de datos
+title: Monitorear flujos de datos para destinos en la interfaz de usuario
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ Los destinos le permiten activar sus datos desde Adobe Experience Platform a inn
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 - [Destinos](../../destinations/home.md): Los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación sin fisuras de datos de la Plataforma para campañas de marketing en canal cruzado, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
-- [Simuladores](../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [Simuladores](../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 ## Monitoreo de flujos de datos
 
-En el espacio de trabajo **[!UICONTROL Destinos]** de la interfaz de usuario de la plataforma, vaya a la ficha **[!UICONTROL Examinar]** y seleccione el nombre de un destino al que desee realizar la vista.
+En el espacio de trabajo **[!UICONTROL Destinations]** dentro de la interfaz de usuario de la plataforma, navegue a la ficha **[!UICONTROL Browse]** y seleccione el nombre de un destino al que desee realizar la vista.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -37,17 +37,17 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Habilitado | El `Enabled` estado indica que un flujo de datos está activo y que está invirtiendo datos según la programación que se proporcionó. |
-| Desactivado | El estado `Disabled` indica que un flujo de datos está inactivo y no está invirtiendo ningún dato. |
+| Habilitado | El estado `Enabled` indica que un flujo de datos está activo y que está invirtiendo datos según la programación que se proporcionó. |
+| Desactivado | El estado `Disabled` indica que un flujo de datos está inactivo y no está ingeriendo ningún dato. |
 | Procesamiento | El estado `Processing` indica que un flujo de datos aún no está activo. Este estado suele encontrarse inmediatamente después de crear un nuevo flujo de datos. |
-| Error | El `Error` estado indica que se ha interrumpido el proceso de activación de un flujo de datos. |
+| Error | El estado `Error` indica que se ha interrumpido el proceso de activación de un flujo de datos. |
 
 ## [!UICONTROL Ejecuciones de flujo de datos]
 
-La ficha Ejecuciones [!UICONTROL de flujo de] datos proporciona datos de métricas sobre las ejecuciones de flujo de datos a destinos por lotes. Se muestra una lista de ejecuciones individuales y sus métricas específicas, junto con los siguientes totales para los registros de perfiles:
+La ficha [!UICONTROL Dataflow ejecuta] proporciona datos de métricas en las ejecuciones de flujo de datos a destinos por lotes. Se muestra una lista de ejecuciones individuales y sus métricas específicas, junto con los siguientes totales para los registros de perfiles:
 
 - **[!UICONTROL Registros de perfil activados]**: Recuento total de registros de perfiles que se crearon o actualizaron para la activación.
-- **[!UICONTROL Se omitieron]** los registros de perfil:  Recuento total de registros de perfiles que se omiten para la activación en función de las salidas de perfiles o los atributos que faltan.
+- **[!UICONTROL Se omitieron]** los registros de perfil: Recuento total de registros de perfiles que se omiten para la activación en función de las salidas de perfiles o los atributos que faltan.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
