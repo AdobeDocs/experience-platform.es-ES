@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;datatype;data-type;data type;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;geo;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos geográficos
 topic: overview
 description: Este documento proporciona información general sobre el tipo de datos Geo XDM.
 translation-type: tm+mt
-source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 5%
+source-wordcount: '196'
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Tipo de datos geográficos]
+# [!UICONTROL Tipo ] de datos geográficos
 
-[!UICONTROL Geo] es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
+ Geografía es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -24,11 +24,11 @@ ht-degree: 5%
 | `_schema` | [[!UICONTROL Coordenadas geográficas]](./geo-coordinates.md) | Describe las coordenadas geográficas de un lugar. |
 | `_id` | Cadena | ID única generada por el sistema para las coordenadas. |
 | `city` | Cadena | El nombre de la ciudad. |
-| `countryCode` | Cadena | Código alfa-2 <a href="https://datahub.io/core/country-list">de dos caracteres</a> ISO 3166-1 para el país. |
+| `countryCode` | Cadena | Código de dos caracteres <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> para el país. |
 | `dmaID` | Número entero | La investigación de medios Nielsen designó área de mercado. |
 | `msaID` | Número entero | Área estadística metropolitana en los Estados Unidos donde se produjo la observación. |
 | `postalCode` | Cadena | Código postal de la ubicación. Los códigos postales no están disponibles para todos los países. En algunos países, esto solo contendrá parte del código postal. |
-| `stateProvince` | Cadena | El estado o la parte provincial de la observación. El formato sigue la norma [ISO 3166-2 (país y subdivisión)](http://www.unece.org/cefact/locode/subdivisions.html) . |
+| `stateProvince` | Cadena | El estado o la parte provincial de la observación. El formato sigue el estándar [ISO 3166-2 (país y subdivisión)](http://www.unece.org/cefact/locode/subdivisions.html). |
 
 Para obtener más información sobre la mezcla, consulte el repositorio público XDM:
 
