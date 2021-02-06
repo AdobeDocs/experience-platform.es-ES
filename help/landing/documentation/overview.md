@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;flujo de trabajo
 solution: Experience Platform
-title: Información general sobre la documentación de Adobe Experience Platform
+title: Información general sobre la documentación del Experience Platform
 topic: overview
 description: La documentación de Adobe Experience Platform se proporciona en varios formatos, como descripciones generales, tutoriales y guías tanto para la interfaz de usuario como para la API. A continuación se ofrece una breve descripción de los tipos de documentación más comunes disponibles para los servicios de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
