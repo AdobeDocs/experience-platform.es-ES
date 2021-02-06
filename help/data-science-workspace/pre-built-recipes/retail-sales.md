@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;fórmula de ventas minoristas;Área de trabajo de ciencia de datos;temas populares;fórmulas;fórmula de precompilación
 solution: Experience Platform
 title: Fórmula de ventas minoristas
 topic: overview
 description: La fórmula Ventas al por menor le permite predecir la previsión de ventas de todas las tiendas que se hayan iniciado durante un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -32,13 +32,13 @@ La fórmula de previsión de ventas minoristas utiliza el aprendizaje automátic
 
 ## ¿Cómo empiezo?
 
-Para empezar, siga este [tutorial](../jupyterlab/create-a-recipe.md).
+Puede comenzar siguiendo este [tutorial](../jupyterlab/create-a-recipe.md).
 
-En este tutorial se analizará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas para el flujo de trabajo de la fórmula a fin de crear la fórmula en Adobe Experience Platform.
+En este tutorial se analizará la creación de la fórmula de ventas minoristas en un bloc de notas de Jupyter y el uso del bloc de notas para crear el flujo de trabajo de fórmulas para crear la fórmula en Adobe Experience Platform.
 
 ## Esquema de datos
 
-Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
+Esta fórmula utiliza [esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
 --- | ---
@@ -57,7 +57,7 @@ Esta fórmula utiliza esquemas [](../../xdm/schema/field-dictionary.md) XDM para
 
 ## Algoritmo
 
-En primer lugar, se carga el conjunto de datos de capacitación en el esquema *DSWRetailSales* . Desde aquí, el modelo se entrena usando un algoritmo [de regresión de aumento de](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)degradado. La mejora de degradado utiliza la idea de que los alumnos débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, pueden utilizarse para crear un poderoso modelo predictivo.
+En primer lugar, se carga el conjunto de datos de capacitación en el esquema *DSWRetailSales*. A partir de aquí, el modelo se entrena usando un [algoritmo de regresión de aumento de degradado](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). La mejora de degradado utiliza la idea de que los alumnos débiles (uno que sea al menos ligeramente mejor que una oportunidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, pueden utilizarse para crear un poderoso modelo predictivo.
 
 El proceso incluye tres elementos: una función de pérdida, un alumno débil y un modelo aditivo.
 
