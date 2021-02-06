@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform;inicio;temas populares;etl;ETL;transformaciones de ETL;transformaciones de ETL
 solution: Experience Platform
-title: Transformaciones ETL de muestra
+title: Transformaciones de ETL de muestra
 topic: overview
 description: En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación y carga (ETL).
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '493'
 ht-degree: 2%
 
 ---
 
 
-# Transformaciones de ETL de muestra
+# Transformaciones ETL de muestra
 
 En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación y carga (ETL).
 
@@ -21,7 +21,7 @@ En este artículo se muestran las siguientes transformaciones de ejemplo que pue
 
 ### Archivos de ejemplo
 
-Los archivos CSV y JSON de muestra están disponibles en la repo pública de referencia de ETL [!DNL GitHub] que mantiene Adobe:
+Los archivos CSV y JSON de muestra están disponibles en la repo de referencia ETL pública [!DNL GitHub] mantenida por Adobe:
 
 - [CRM_perfiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_perfiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -44,7 +44,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Asignación
 
 Los requisitos de asignación para los datos CRM se describen en la siguiente tabla e incluyen las siguientes transformaciones:
-- Columnas de identidad para `identityMap` propiedades
+- Columnas de identidad con propiedades `identityMap`
 - Fecha de nacimiento (DOB) al año y al mes
 - Cadenas a Dobles o integradores cortos.
 
@@ -54,7 +54,7 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | F_NAME | person.name.firstName | Copiar como cadena |
 | L_NAME | person.name.lastName | Copiar como cadena |
 | SEXO | person.gender | Transformar el sexo como persona correspondiente.valor de enumeración de género |
-| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transformar el valor de bornDayAndMonth como<br/>stringTransform donde el valor de bornDate es<br/>stringTransform donde el valor de bornYear es corto |
+| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transforme el valor de bornDayAndMonth como cadena<br/>Transformar el valor de bornDate como cadena<br/>Transformar el valor de bornYear como int corto |
 | CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, principal:false}] | Copiar como cadena a la matriz CRMID en identityMap y establecer Principal como falso |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copiar como cadena a la primera entrada en la matriz ECID en identityMap y establecer Principal como falso |
@@ -72,7 +72,7 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 
 ### XDM de salida
 
-El siguiente ejemplo muestra las dos primeras filas del CSV transformado en XDM, como se muestra en la `CRM_profiles.json`:
+El siguiente ejemplo muestra las dos primeras filas del CSV transformado en XDM, como se muestra en `CRM_profiles.json`:
 
 ```json
 {
@@ -178,7 +178,7 @@ La jerarquía de un dataframe (como un archivo de parquet) debe coincidir con la
 
 ### Ejemplo de dataframe
 
-La estructura del siguiente ejemplo de dataframe se ha asignado a un esquema que implementa la [!DNL XDM Individual Profile] clase y contiene los campos más comunes asociados con esquemas de ese tipo.
+La estructura del siguiente dataframe de ejemplo se ha asignado a un esquema que implementa la clase [!DNL XDM Individual Profile] y contiene los campos más comunes asociados con esquemas de ese tipo.
 
 ```python
 [
@@ -286,9 +286,9 @@ Los requisitos de asignación para la matriz de identidades se describen en la s
 
 | Campo de identidad | Campo IdentityMap | Tipo de datos |
 | -------------- | ----------------- | --------- |
-| identities[0].id | [identityMapEmail][{"id"}] | copiar como cadena |
-| identities[1].id | [identityMapCRMID][{"id"}] | copiar como cadena |
-| identities[2].id | [identityMapLOYALTYID][{"id"}] | copiar como cadena |
+| identidades[0].id | identityMap[Correo electrónico][{"id"}] | copiar como cadena |
+| identidades[1].id | identityMap[CRMID][{"id"}] | copiar como cadena |
+| identidades[2].id | identityMap[LOYALTYID][{"id"}] | copiar como cadena |
 
 ### XDM de salida
 
