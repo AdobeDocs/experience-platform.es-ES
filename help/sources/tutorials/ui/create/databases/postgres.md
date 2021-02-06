@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
+keywords: Experience Platform;inicio;temas populares;PSQL;psql;PostgreSQL
 solution: Experience Platform
-title: Creación de un conector de origen PostgreSQL en la interfaz de usuario
+title: Creación de una conexión de origen PostgreSQL en la interfaz de usuario
 topic: overview
 type: Tutorial
-description: Este tutorial proporciona los pasos para crear un conector de origen PostgreSQL (en adelante denominado "PSQL") mediante la interfaz de usuario de la plataforma.
+description: Obtenga información sobre cómo crear una conexión de origen PostgreSQL mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
 
 
-# Creación de un conector [!DNL PostgreSQL] de origen en la interfaz de usuario
+# Crear una conexión de origen [!DNL PostgreSQL] en la interfaz de usuario
 
 >[!NOTE]
 >
-> El [!DNL PostgreSQL] conector está en versión beta. Consulte la descripción general [de](../../../../home.md#terms-and-conditions) Fuentes para obtener más información sobre el uso de conectores con etiquetas beta.
+> El conector [!DNL PostgreSQL] está en versión beta. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
 
-Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL PostgreSQL] (en adelante denominado &quot;PSQL&quot;) mediante la interfaz [!DNL Platform] de usuario.
+Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos externos de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL PostgreSQL] (en adelante denominado &quot;PSQL&quot;) mediante la interfaz de usuario [!DNL Platform].
 
 ## Primeros pasos
 
 Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco normalizado por el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md)de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md)del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+   * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md) de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-Si ya tiene una conexión PSQL válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/databases.md).
+Si ya tiene una conexión PSQL válida, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/databases.md).
 
 ### Recopilar las credenciales necesarias
 
@@ -41,25 +41,25 @@ Para acceder a su cuenta PSQL en [!DNL Platform], debe proporcionar el siguiente
 | ---------- | ----------- |
 | `connectionString` | La cadena de conexión asociada a su cuenta PSQL. El patrón de cadena de conexión PSQL es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
-Para obtener más información sobre cómo empezar, consulte este documento [de PSQL](https://www.postgresql.org/docs/9.2/app-psql.html).
+Para obtener más información sobre cómo empezar, consulte este [documento de PSQL](https://www.postgresql.org/docs/9.2/app-psql.html).
 
 ## Conectar la cuenta de PSQL
 
-Una vez recopiladas las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de PSQL a [!DNL Platform].
+Una vez recopiladas las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta PSQL a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]** . La pantalla **[!UICONTROL Catálogo]** muestra una serie de orígenes con los que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
 
-En la categoría **[!UICONTROL Bases de datos]** , seleccione Base de datos **[!UICONTROL PostgreSQL]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo conector PSQL.
+En la categoría **[!UICONTROL Bases de datos]**, seleccione **[!UICONTROL Base de datos PostgreSQL]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear un nuevo conector PSQL.
 
 ![](../../../../images/tutorials/create/psql/catalog.png)
 
-Aparece la página **[!UICONTROL Conectar con PSQL]** . En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Conectar con PSQL]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y las credenciales de PSQL. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco de tiempo para que se establezca la nueva conexión.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y las credenciales de PSQL. Cuando termine, seleccione **[!UICONTROL Conectar]** y, a continuación, deje transcurrir algún tiempo para que se establezca la nueva conexión.
 
 ![](../../../../images/tutorials/create/psql/connect.png)
 
@@ -71,4 +71,4 @@ Para conectar una cuenta existente, seleccione la cuenta PSQL con la que desea c
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta PSQL. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incluir [!DNL Platform]](../../dataflow/databases.md)datos.
+Siguiendo este tutorial, ha establecido una conexión con su cuenta PSQL. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos a [!DNL Platform]](../../dataflow/databases.md).
