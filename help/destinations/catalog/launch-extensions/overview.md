@@ -1,19 +1,17 @@
 ---
 keywords: extensiones de inicio;extensión de inicio;destinos de inicio; extensiones de inicio de plataforma;extensión de inicio de plataforma;destinos de inicio de plataforma
-title: Extensiones de Experience Platform Launch
-seo-title: Extensiones de Experience Platform Launch
-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
-seo-description: Launch es la función de administración de etiquetas de próxima generación de Adobe. Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
+title: Destinos de Adobe Experience Platform Launch Extension
+description: Adobe Experience Platform Launch es la próxima generación de funciones de administración de etiquetas de Adobe. Platform Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 19%
+source-wordcount: '617'
+ht-degree: 12%
 
 ---
 
 
-# Extensiones de Adobe Experience Platform Launch {#overview.md}
+# Extensiones de Adobe Experience Platform Launch
 
 Adobe Experience Platform Launch es la próxima generación de funciones de administración de etiquetas de Adobe. Platform Launch ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes. Platform Launch se ofrece a los clientes de Adobe Experience Cloud como una función de valor añadido incluida.
 
