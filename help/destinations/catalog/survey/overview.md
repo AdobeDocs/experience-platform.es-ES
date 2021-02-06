@@ -1,19 +1,17 @@
 ---
 keywords: Destinos de encuesta;encuesta;previsualizar;inmomento;encuestas de intercepción web;calitrics
-title: Destinos de encuesta
-seo-title: Destinos de encuesta
-description: Las plataformas de encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con Platform.
-seo-description: Las plataformas de encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con Platform.
+title: Información general sobre los destinos de encuesta
+description: Las plataformas de encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# Destinos de encuesta {#survey-destinations}
+# Información general sobre los destinos de encuesta {#survey-destinations}
 
 Las plataformas de encuestas detectan eventos de encuesta, capturan los comentarios de los clientes en tiempo real mediante elementos de datos y comparten datos con Adobe Experience Platform.
 
