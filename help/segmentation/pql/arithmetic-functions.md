@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones aritméticas;aritmética;
 solution: Experience Platform
-title: Funciones aritméticas
+title: Funciones aritméticas PAL
 topic: developer guide
 description: Las funciones aritméticas se utilizan para realizar cálculos básicos sobre los valores en el lenguaje de Consulta de Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '260'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 # Funciones aritméticas
 
-Las funciones aritméticas se utilizan para realizar cálculos básicos en valores en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Las funciones aritméticas se utilizan para realizar cálculos básicos en valores en [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Add
 
@@ -39,7 +39,7 @@ product1.price + product2.price
 
 La función `*` (multiplicación) se utiliza para encontrar el producto de dos expresiones de argumentos.
 
-**Format**
+**Formato**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -57,7 +57,7 @@ product.inventory * product.price
 
 La función `-` (resta) se utiliza para encontrar la diferencia de dos expresiones de argumento.
 
-**Format**
+**Formato**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -75,7 +75,7 @@ product1.price - product2.price
 
 La función `/` (división) se utiliza para encontrar el cociente de dos expresiones de argumento.
 
-**Format**
+**Formato**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -91,9 +91,9 @@ totalProduct.price / totalProduct.sold
 
 ## Resto
 
-La función `%` (modulo/resto) se utiliza para encontrar el resto después de dividir las dos expresiones de argumento.
+La función `%` (módulo/resto) se utiliza para encontrar el resto después de dividir las dos expresiones de argumentos.
 
-**Format**
+**Formato**
 
 ```sql
 {NUMBER} % {NUMBER}
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones aritméticas, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones aritméticas, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
