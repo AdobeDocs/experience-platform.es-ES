@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: La recopilación de datos autenticada permite a los servicios de Adobe Experience Platform, como el Perfil de clientes en tiempo real y la identidad, diferenciar entre registros procedentes de fuentes de confianza y fuentes de confianza.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%
