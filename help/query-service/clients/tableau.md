@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;inicio;temas populares;tableau;Tableau;servicio de consulta;servicio de Consulta;conectar con el servicio de consulta;
 solution: Experience Platform
-title: Conectar con Tableau
+title: Conectar Tableau al servicio de Consulta
 topic: connect
 description: Este documento recorre los pasos para conectar Tableau con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Tableau]
+# Conectar [!DNL Tableau] al servicio de Consulta
 
 Este documento cubre los pasos para conectar Tableau con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > En esta guía se asume que ya tiene acceso a [!DNL Tableau] y que está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Tableau] en la [documentación oficial [!DNL Tableau] ](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
-
-## Conectar [!DNL Tableau] con plataforma
 
 Para conectar [!DNL Tableau] con [!DNL Query Service], abra [!DNL Tableau] y, en la sección **[!DNL To a Server]**, seleccione **[!DNL More]** seguido de **[!DNL PostgreSQL]**
 
