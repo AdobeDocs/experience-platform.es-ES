@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;inicio;temas populares;entornos limitados de lista
 solution: Experience Platform
-title: Tipos de entorno limitado compatibles con la lista
+title: Tipos de Simulador para pruebas compatibles con la lista en la API
 topic: developer guide
 description: Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización haciendo una solicitud de GET al extremo /sandboxTypes.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
 
 
-# Tipos de entorno limitado compatibles con la lista
+# Tipos de entorno limitado admitidos en la lista en la API
 
-Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización realizando una solicitud de GET al `/sandboxTypes` extremo.
+Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización haciendo una solicitud de GET al extremo `/sandboxTypes`.
 
 **Formato API**
 
