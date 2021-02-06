@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingestión por lotes;ingestión por lotes;lotes fallidos;Obtener lotes fallidos;obtener lotes fallidos;Descargar lotes fallidos;descargar lotes fallidos;
 solution: Experience Platform
-title: Recuperar lotes con errores
+title: Recuperación de lotes fallidos mediante la API de acceso a datos
 topic: tutorial
 type: Tutorial
 description: En este tutorial se explican los pasos para recuperar información sobre un lote en el que se ha producido un error al utilizar las API de inserción de datos.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '652'
 ht-degree: 2%
 
 ---
 
 
-# Recuperación de lotes con errores mediante la API
+# Recuperación de lotes con errores mediante la API de acceso a datos
 
 Adobe Experience Platform proporciona dos métodos para cargar e ingestar datos. Puede utilizar la ingestión por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de puntos finales de flujo en tiempo real.
 
