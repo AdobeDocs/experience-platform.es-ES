@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;guía para desarrolladores;punto final;Área de trabajo de ciencia de datos;temas populares;área de trabajo de ciencia de datos;ciencia de datos
 solution: Experience Platform
-title: Guía para desarrolladores de la API de aprendizaje automático de Sensei
+title: Guía de API de aprendizaje automático de Sensei
 topic: Developer guide
-description: En esta guía para desarrolladores se proporcionan pasos para ayudarle en el inicio del uso de la API de aprendizaje automático Sensei y se muestran las llamadas de API para realizar operaciones de CRUD en varios recursos del área de trabajo de ciencias de datos.
+description: La API de aprendizaje automático de Sensei permite a los desarrolladores realizar operaciones de CRUD en varios recursos del área de trabajo de ciencias de datos. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] Guía para desarrolladores de API
+# [!DNL Sensei Machine Learning] Guía de API
 
 La API [!DNL Sensei Machine Learning] proporciona un mecanismo para que los científicos de datos organicen y administren servicios de aprendizaje automático, desde la incorporación de algoritmos hasta la experimentación y la implementación de servicios.
 
