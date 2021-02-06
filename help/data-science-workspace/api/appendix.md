@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
+keywords: Experience Platform;guía para desarrolladores;extremo;Área de trabajo de ciencias de datos;temas populares;
 solution: Experience Platform
-title: Apéndice
+title: Guía de API de aprendizaje automático de Sensei Apéndice
 topic: Developer guide
 description: Las siguientes secciones proporcionan información de referencia para diversas funciones de la API de aprendizaje automático Sensei.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 4%
+source-wordcount: '330'
+ht-degree: 3%
 
 ---
 
 
-# Apéndice
+# [!DNL Sensei Machine Learning] Apéndice de la guía de API
 
-Las siguientes secciones proporcionan información de referencia para varias funciones de la [!DNL Sensei Machine Learning] API.
+Las siguientes secciones proporcionan información de referencia para diversas funciones de la API [!DNL Sensei Machine Learning].
 
-## Parámetros de consulta para la recuperación de recursos {#query}
+## Parámetros de consulta para recuperación de recursos {#query}
 
-La [!DNL Sensei Machine Learning] API admite parámetros de consulta al recuperar recursos. Los parámetros de consulta disponibles y sus usos se describen en la tabla siguiente:
+La API [!DNL Sensei Machine Learning] proporciona compatibilidad con parámetros de consulta al recuperar recursos. Los parámetros de consulta disponibles y sus usos se describen en la tabla siguiente:
 
 | Parámetro de consulta | Descripción | Valor predeterminado |
 | --------------- | ----------- | ------- |
@@ -34,7 +34,7 @@ La [!DNL Sensei Machine Learning] API admite parámetros de consulta al recupera
 
 ## Configuraciones de CPU y GPU Python {#cpu-gpu-config}
 
-Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para fines de entrenamiento o puntuación, y se define en una instancia [MLI](./mlinstances.md) como una especificación de tarea (`tasks.specification`).
+Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para fines de entrenamiento o puntuación, y se define en una [instancia MLI](./mlinstances.md) como una especificación de tarea (`tasks.specification`).
 
 A continuación se muestra un ejemplo de configuración que especifica el uso de una CPU para la formación y una GPU para la puntuación:
 
@@ -71,7 +71,7 @@ A continuación se muestra un ejemplo de configuración que especifica el uso de
 
 >[!NOTE]
 >
->Los valores de `cpus` y `gpus` no significan el número de CPU o GPU, sino el número de máquinas físicas. Estos valores son permisibles `"1"` y, de lo contrario, generarán una excepción.
+>Los valores de `cpus` y `gpus` no significan el número de CPU o GPU, sino el número de máquinas físicas. Estos valores son permisibles `"1"` y generarán una excepción en caso contrario.
 
 ## Configuraciones de recursos PySpark y Spark {#resource-config}
 
@@ -85,7 +85,7 @@ Los motores de chispa tienen la capacidad de modificar los recursos computaciona
 | ejecutorCores | Número de núcleos utilizados por el ejecutor | int |
 | numEjecutors | Número de ejecutores | int |
 
-Los recursos pueden especificarse en una instancia [MLInance](./mlinstances.md) como (A) parámetros individuales de entrenamiento o puntuación, o (B) dentro de un objeto de especificaciones adicionales (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
+Los recursos se pueden especificar en una [instancia MLI](./mlinstances.md) como (A) parámetros individuales de capacitación o puntuación, o (B) dentro de un objeto de especificaciones adicionales (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
 
 ```json
 [
