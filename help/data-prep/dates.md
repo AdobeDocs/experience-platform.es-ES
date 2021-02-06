@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;fecha;funciones de fecha;fechas; fechas;
 solution: Experience Platform
-title: Funciones de fecha
+title: Funciones de fecha de preparación de datos
 topic: overview
 description: Este documento presenta las funciones de fecha utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 16%
 
 ---
 
 
-# Funciones de fecha
+# Funciones de fecha de preparación de datos
 
 La preparación de datos admite funciones de fecha, tanto como cadenas como como objetos de fecha y hora.
 
