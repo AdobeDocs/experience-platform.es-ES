@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;sistema de automatización de mercadotecnia;Recopilación de datos de automatización de mercadotecnia
 solution: Experience Platform
-title: Recopilación de datos de automatización de mercadotecnia a través de las API y los conectores de origen
+title: Recopilación de datos de automatización de mercadotecnia mediante conectores de origen y API
 topic: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a la plataforma mediante conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing y llevarlos a Adobe Experience Platform mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
 
 
-# Recopilación de datos de automatización de mercadotecnia a través de las API y los conectores de origen
+# Recopilar datos de automatización de mercadotecnia mediante conectores de origen y API
 
 Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing de terceros e ingerirlos en la plataforma mediante conectores de origen y la API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
