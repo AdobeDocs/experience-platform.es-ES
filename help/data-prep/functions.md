@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;campos de asignación;funciones de asignación;
 solution: Experience Platform
-title: Funciones de preparación de datos
+title: Funciones de asignación de la preparación de datos
 topic: overview
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 3%
 
 ---
 
 
-# Funciones de preparación de datos
+# Funciones de asignación de Prep de datos
 
 Las funciones de preparación de datos se pueden utilizar para calcular y calcular valores en función de lo que se introduzca en los campos de origen.
 
