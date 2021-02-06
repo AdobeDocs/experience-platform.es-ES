@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube
 solution: Experience Platform
-title: Recopilación de datos de almacenamiento en la nube mediante las API y los conectores de origen
+title: Recopilación de datos de Almacenamiento en la nube mediante Conectores de origen y API
 topic: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar datos de un almacenamiento de nube de terceros y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 2%
