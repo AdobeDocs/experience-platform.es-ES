@@ -1,21 +1,17 @@
 ---
 keywords: 'publicidad; bing; '
-title: Destino de Microsoft Bing
-seo-title: El destino de Microsoft Bing le ayuda a enviar datos de perfil a Microsoft Display Advertising.
-description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
-seo-description: Con el destino de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
+title: Destino de la conexión de Microsoft Bing
+description: Con el destino de conexión de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Microsoft Bing] destino
-
-## Información general {#overview}
+# [!DNL Microsoft Bing] connection
 
 El destino [!DNL Microsoft Bing] le ayuda a enviar datos de perfil a [!DNL Microsoft Display Advertising].
 
