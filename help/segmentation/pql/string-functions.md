@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de cadena;cadena;
 solution: Experience Platform
-title: Funciones de cadena
+title: Funciones de cadena PQL
 topic: developer guide
 description: Perfil Consulta Language (PQL) oferta funciones para simplificar la interacción con cadenas.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 7%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 7%
 
 # Funciones de cadena
 
-[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con cadenas. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+[!DNL Profile Query Language] (PQL) oferta funciones para simplificar la interacción con cadenas. Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Como
 
-La `like` función se utiliza para determinar si una cadena coincide con un patrón especificado.
+La función `like` se utiliza para determinar si una cadena coincide con un patrón especificado.
 
 **Format**
 
@@ -42,9 +42,9 @@ city like "%es%"
 
 ## Comienza con
 
-La `startsWith` función se utiliza para determinar si una cadena inicio con una subcadena especificada.
+La función `startsWith` se utiliza para determinar si una cadena inicio con una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -66,9 +66,9 @@ person.name.startsWith("Joe")
 
 ## Does not start with
 
-La `doesNotStartWith` función se utiliza para determinar si una cadena no está en inicio con una subcadena especificada.
+La función `doesNotStartWith` se utiliza para determinar si una cadena no está en inicio con una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -90,9 +90,9 @@ person.name.doesNotStartWith("Joe")
 
 ## Finaliza con
 
-La `endsWith` función se utiliza para determinar si una cadena termina con una subcadena especificada.
+La función `endsWith` se utiliza para determinar si una cadena termina con una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -114,9 +114,9 @@ person.emailAddress.endsWith(".com")
 
 ## No termina con
 
-La `doesNotEndWith` función se utiliza para determinar si una cadena no termina con una subcadena especificada.
+La función `doesNotEndWith` se utiliza para determinar si una cadena no termina con una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -138,9 +138,9 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La `contains` función se utiliza para determinar si una cadena contiene una subcadena especificada.
+La función `contains` se utiliza para determinar si una cadena contiene una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -162,9 +162,9 @@ person.emailAddress.contains("2010@gm")
 
 ## No contiene
 
-La `doesNotContain` función se utiliza para determinar si una cadena no contiene una subcadena especificada.
+La función `doesNotContain` se utiliza para determinar si una cadena no contiene una subcadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -186,9 +186,9 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Es igual a
 
-La `equals` función se utiliza para determinar si una cadena es igual a la cadena especificada.
+La función `equals` se utiliza para determinar si una cadena es igual a la cadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -209,9 +209,9 @@ person.name.equals("John")
 
 ## Not equal to
 
-La `notEqualTo` función se utiliza para determinar si una cadena no es igual a la cadena especificada.
+La función `notEqualTo` se utiliza para determinar si una cadena no es igual a la cadena especificada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -232,9 +232,9 @@ person.name.notEqualTo("John")
 
 ## Coincide
 
-La `matches` función se utiliza para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre patrones coincidentes en expresiones regulares.
+La función `matches` se utiliza para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre patrones coincidentes en expresiones regulares.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -250,9 +250,9 @@ person.name.matches("(?i)^John")
 
 ## Grupo de expresión regular
 
-La `regexGroup` función se utiliza para extraer información específica, basándose en la expresión habitual proporcionada.
+La función `regexGroup` se utiliza para extraer información específica, según la expresión habitual proporcionada.
 
-**Format**
+**Formato**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
@@ -268,5 +268,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de cadena, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones de cadena, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
 
