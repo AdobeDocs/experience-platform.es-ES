@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conector del Audience Manager;administrador de Audiencias;administrador de audiencias
 solution: Experience Platform
-title: Conector del Audience Manager
+title: Información general del conector de origen de Audience Manager
 topic: overview
-description: El conector de datos de Adobe Audience Manager transmite datos de origen recopilados en Adobe Audience Manager a Adobe Experience Platform. El conector del Audience Manager ingesta dos categorías de datos en la plataforma.
+description: El conector de origen de Adobe Audience Manager transmite datos de origen recopilados en Audience Manager a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
