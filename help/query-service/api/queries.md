@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de API;consultas;consulta;servicio de Consulta;
 solution: Experience Platform
-title: Guía para desarrolladores de consulta Service
+title: Extremo de la API de consultas
 topic: queries
 description: Las siguientes secciones explican las llamadas que puede realizar mediante el extremo /consultas de la API del servicio de Consulta.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '676'
 ht-degree: 3%
 
 ---
 
 
-# Consultas
+# Extremo de consultas
 
 ## Ejemplos de llamadas a API
 
-Las siguientes secciones explican las llamadas que puede realizar mediante el `/queries` punto final de la [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las siguientes secciones explican las llamadas que puede realizar mediante el extremo `/queries` de la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de consultas
 
-Puede recuperar una lista de todas las consultas para su organización de IMS realizando una solicitud de GET al `/queries` extremo.
+Puede recuperar una lista de todas las consultas para su organización de IMS haciendo una solicitud de GET al extremo `/queries`.
 
 **Formato API**
 
@@ -38,12 +38,12 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`), los elementos se ordenarán en orden descendente. |
-| `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Default value: 20*) |
-| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Default value: 0*) |
-| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`y `id`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que), `>=` (buena o igual a), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
-| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado en forma suave. Por ejemplo, `excludeSoftDeleted=false` se **incluirán** consultas suaves eliminadas. (*Boolean, valor predeterminado: true*) |
-| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por usuarios. Si este valor se establece en false, se **incluirán** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Boolean, valor predeterminado: true*) |
+| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por medio de la creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`) se ordenarán los elementos por orden descendente. |
+| `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
+| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista que comienza en la tercera consulta de la lista. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state` y `id`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que), `>=` (buena o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
+| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado en forma suave. Por ejemplo, `excludeSoftDeleted=false` incluirá **consultas eliminadas en pantalla**. (*Valor predeterminado booleano: true*) |
+| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por usuarios. Si este valor se establece en false, **incluirá** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Valor predeterminado booleano: true*) |
 
 **Solicitud**
 
@@ -120,7 +120,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pa
 
 ### Cree una consulta
 
-Puede crear una nueva consulta haciendo una solicitud de POST al `/queries` extremo.
+Puede crear una nueva consulta haciendo una solicitud de POST al extremo `/queries`.
 
 **Formato API**
 
@@ -199,11 +199,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
+>Puede utilizar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
 
 ### Recuperar una consulta por ID
 
-Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al extremo y proporcionando el valor de la consulta `/queries` `id` en la ruta de la solicitud.
+Puede recuperar información detallada sobre una consulta específica haciendo una solicitud de GET al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de la solicitud.
 
 **Formato API**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El `id` valor de la consulta que desea recuperar. |
+| `{QUERY_ID}` | El valor `id` de la consulta que desea recuperar. |
 
 **Solicitud**
 
@@ -270,11 +270,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.cancel` para [cancelar la consulta](#cancel-a-query)creada.
+>Puede utilizar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
 
 ### Cancelar una consulta
 
-Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al extremo y proporcionando el valor de la consulta `/queries` `id` en la ruta de la solicitud.
+Puede solicitar la eliminación de una consulta especificada realizando una solicitud de PATCH al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de la solicitud.
 
 **Formato API**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El `id` valor de la consulta que desea cancelar. |
+| `{QUERY_ID}` | El valor `id` de la consulta que desea cancelar. |
 
 
 **Solicitud**
