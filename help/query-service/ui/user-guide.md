@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;editor de Consultas;editor de consultas;servicio de Consulta;servicio de consulta;
 solution: Experience Platform
-title: Guía del usuario del Editor de consultas
+title: Guía de IU del Editor de consultas
 topic: query editor
-description: El Editor de consultas es una herramienta interactiva proporcionada por el servicio de Consulta de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para la análisis y la exploración de datos, y permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
+description: El Editor de Consultas es una herramienta interactiva proporcionada por el servicio de Consulta de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para la análisis y la exploración de datos, y permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 translation-type: tm+mt
-source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1082'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Editor] Guía del usuario
+# [!DNL Query Editor] Guía de la interfaz de usuario
 
 [!DNL Query Editor] es una herramienta interactiva proporcionada por Adobe Experience Platform  [!DNL Query Service], que le permite escribir, validar y ejecutar consultas para los datos de experiencia del cliente en la interfaz de  [!DNL Experience Platform] usuario. [!DNL Query Editor] admite el desarrollo de consultas para la análisis y la exploración de datos, y le permite ejecutar consultas interactivas para fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en  [!DNL Experience Platform].
 
