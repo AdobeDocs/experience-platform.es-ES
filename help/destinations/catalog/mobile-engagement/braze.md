@@ -1,25 +1,21 @@
 ---
 keywords: mobile; brasil; mensajería;
-title: Destino de Brazo
-seo-title: Destino de Brazo
+title: Destino de conexión de Brazo
 description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
-seo-description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Braze] destino
+# Conexión (Beta) [!DNL Braze]
 
 >[!IMPORTANT]
 >
 >El destino Braze de Adobe Experience Platform está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
-
-## Información general {#overview}
 
 El destino [!DNL Braze] le ayuda a enviar datos de perfil a [!DNL Braze].
 
