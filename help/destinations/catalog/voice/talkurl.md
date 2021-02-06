@@ -1,21 +1,17 @@
 ---
 keywords: Bandeja de entrada de URL de charla;bandeja de entrada de URL de charla;bandeja de entrada de URL de charla;buzón de entrada de URL de charla;url de la charla;URL de la charla;url de la charla
-title: Extensión de bandeja de entrada de URL de Talk
-seo-title: Bandeja de entrada de URL de Talk
+title: Destino de la extensión de la bandeja de entrada de URL de Talk
 description: La extensión Talk URL Inbox es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Talk URL Inbox es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '550'
 ht-degree: 4%
 
 ---
 
 
-# Extensión de [!DNL Talk URL Inbox] {#talk-url-extension}
-
-## Información general {#overview}
+# [!DNL Talk URL Inbox] Extensión {#talk-url-extension}
 
 Reciba mensajes de voz de los visitantes de su página web. Incluye la interfaz de usuario alojada y aprendizaje automático basado en la nube para transcribir los mensajes de voz en perspectivas de texto instantáneamente.
 
