@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
-title: Creación de una chispa Apache en el conector HDInsights de Azure mediante la API de servicio de flujo
+title: Creación de una chispa de Apache en la conexión de origen de Azure HDInsights mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar Apache Spark en Azure HDInsights (en lo sucesivo, "Spark") al Experience Platform.
+description: Obtenga información sobre cómo conectar Apache Spark en Azure HDInsights a Adobe Experience Platform mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
 
 
-# Cree un [!DNL Apache Spark] conector de [!DNL Azure] HDInsights mediante la API [!DNL Flow Service]
+# Cree una [!DNL Apache Spark] en la [!DNL Azure] conexión de origen de HDInsights mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
