@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;clase;clases;
 solution: Experience Platform
-title: Creación y edición de clases en la interfaz de usuario
+title: Crear y editar clases en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
