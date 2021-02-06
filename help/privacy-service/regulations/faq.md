@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulación;regulación;regulaciones;regulaciones;privacidad;privacidad;privacidad;
 solution: Experience Platform
-title: Preguntas más frecuentes sobre la regulación de la privacidad
+title: Preguntas más frecuentes sobre las normas de privacidad
 topic: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre las normativas de privacidad legales admitidas y su implementación en Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# Preguntas más frecuentes sobre la regulación de la privacidad
+# Preguntas más frecuentes sobre las regulaciones de privacidad
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre las normativas de privacidad legales admitidas y su implementación en Adobe Experience Cloud.
 
