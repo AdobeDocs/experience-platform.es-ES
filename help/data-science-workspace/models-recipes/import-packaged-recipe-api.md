@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;importar fórmula empaquetada;Área de trabajo de ciencias de datos;temas populares;fórmulas;api;sensei aprendizaje automático;crear motor
 solution: Experience Platform
-title: Importación de una fórmula empaquetada (API)
+title: Importación de una fórmula empaquetada mediante la API de aprendizaje automático de Sensei
 topic: tutorial
 type: Tutorial
 description: 'Este tutorial utiliza la API de aprendizaje automático Sensei para crear un motor, también conocido como una fórmula en la interfaz de usuario. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
 
-# Importación de una fórmula empaquetada (API)
+# Importar una fórmula empaquetada mediante la API de aprendizaje automático Sensei
 
 Este tutorial utiliza [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para crear un [Motor](../api/engines.md), también conocido como una fórmula en la interfaz de usuario.
 
