@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Eliminar un flujo de datos mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para eliminar flujos de datos de flujo y por lotes mediante la API de servicio de flujo.
+description: Obtenga información sobre cómo eliminar flujos de datos por lotes y de flujo mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
