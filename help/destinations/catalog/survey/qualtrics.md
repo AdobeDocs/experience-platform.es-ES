@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Comentarios;Qualtrics website Comentarios;comentarios de sitios web;Qualtricks comentarios de sitios web
-title: Qualtrics Website, extensión de comentarios
-seo-title: Qualtrics Website, extensión de comentarios
+title: Destino de la extensión de comentarios del sitio web Qualtrics
 description: La extensión Qualtrics Website Feedback es un destino de encuestas en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Qualtrics Website Feedback es un destino de encuestas en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '590'
 ht-degree: 3%
 
 ---
 
 
-# Extensión de [!DNL Qualtrics Website Feedback] {#qualtrics-extension}
-
-## Información general {#overview}
+# [!DNL Qualtrics Website Feedback] Extensión {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] le permite interactuar con los visitantes del sitio web con el mensaje correcto, en el momento adecuado. Ya sea que desee mejorar la experiencia de visitante con encuestas de comentarios del sitio web o aumentar la conversión, [!DNL Qualtrics Website Feedback] le ha dado cobertura.
 
