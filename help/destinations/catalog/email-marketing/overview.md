@@ -1,20 +1,18 @@
 ---
 keywords: correo electrónico;correo electrónico;correo electrónico;destinos de correo electrónico
-title: Destinos de mercadotecnia de correo electrónico
-seo-title: Destinos de mercadotecnia de correo electrónico
+title: Información general sobre los destinos de mercadotecnia de correo electrónico
 type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
-seo-description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
 
 
-# Destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
+# Información general sobre los destinos de mercadotecnia de correo electrónico {#email-marketing-destinations}
 
 Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Adobe Experience Platform se integra con ESP permitiéndole activar segmentos en destinos de marketing por correo electrónico.
 
