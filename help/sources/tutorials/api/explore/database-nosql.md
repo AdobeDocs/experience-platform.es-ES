@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;base de datos de terceros;servicio de flujo de base de datos
 solution: Experience Platform
-title: Explorar una base de datos mediante la API de servicio de flujo
+title: Explorar una base de datos con la API de servicio de flujo
 topic: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar el contenido y la estructura de archivos de una base de datos de terceros.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
