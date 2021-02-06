@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;reset sandbox
+keywords: Experience Platform;inicio;temas populares;restablecer entorno limitado
 solution: Experience Platform
-title: Restablecer un entorno limitado
+title: Restablecer un Simulador para pruebas en la API
 topic: developer guide
 description: Los entornos limitados de desarrollo tienen una función de "restablecimiento de fábrica" que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el nombre del simulador para pruebas en la ruta de solicitud.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
 
 
-# Restablecer un entorno limitado
+# Restablecer un entorno limitado en la API
 
-Los entornos limitados de desarrollo tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el simulador para pruebas `name` en la ruta de solicitud.
+Los entornos limitados de desarrollo tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el `name` del simulador para pruebas en la ruta de solicitud.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` propiedad del simulador para pruebas que desea restablecer. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador para pruebas que desea restablecer. |
 
 **Solicitud**
 
@@ -50,7 +50,7 @@ curl -X PUT \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del simulador para pruebas actualizado, mostrando que `state` se está &quot;restableciendo&quot;.
+Una respuesta correcta devuelve los detalles del simulador para pruebas actualizado, mostrando que su `state` está &quot;restableciendo&quot;.
 
 ```json
 {
@@ -65,4 +65,4 @@ Una respuesta correcta devuelve los detalles del simulador para pruebas actualiz
 
 >[!NOTE]
 >
->Una vez restablecido el entorno limitado, el sistema tarda unos 15 minutos en aprovisionarlo. Una vez aprovisionado, el simulador de pruebas `state` se convierte en &quot;activo&quot; o &quot;fallido&quot;.
+>Una vez restablecido el entorno limitado, el sistema tarda unos 15 minutos en aprovisionarlo. Una vez aprovisionado, el `state` del simulador para pruebas se convierte en &quot;activo&quot; o &quot;fallido&quot;.
