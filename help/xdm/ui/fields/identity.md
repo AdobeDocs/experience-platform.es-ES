@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;identidad;campo;
 solution: Experience Platform
-title: Definición de un campo de identidad en la interfaz de usuario
+title: Definición de campos de identidad en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# Definición de un campo de identidad en la interfaz de usuario
+# Definición de campos de identidad en la interfaz de usuario
 
 En el Modelo de datos de experiencia (XDM), un campo de identidad representa un campo que puede utilizarse para identificar a una persona individual relacionada con un registro o evento de series temporales. Este documento explica cómo definir un campo de identidad en la interfaz de usuario de Adobe Experience Platform.
 
