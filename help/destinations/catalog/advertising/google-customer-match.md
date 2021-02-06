@@ -1,21 +1,17 @@
 ---
 keywords: coincidencia de cliente de Google;Coincidencia de cliente de Google;Coincidencia de cliente de Google
-title: Destino de coincidencia de clientes de Google
-seo-title: Destino de coincidencia de clientes de Google
+title: Destino de conexión de coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
-seo-description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
 
 
-# Destino de coincidencia de clientes de Google
-
-## Información general {#overview}
+# Conexión de Coincidencia de clientes de Google
 
 >[!IMPORTANT]
 >
