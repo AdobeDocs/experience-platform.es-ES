@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de clases;Registro de Esquemas;clase;clase;clases;clases;crear
 solution: Experience Platform
-title: Crear una clase
+title: Extremo de API de clases
 description: El extremo /classes de la API del Registro de Esquema permite administrar mediante programación clases XDM dentro de la aplicación de experiencia.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 1%
