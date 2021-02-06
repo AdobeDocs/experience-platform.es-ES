@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
+keywords: Experience Platform;atribución ai información general;temas populares;atribución ai;Atribución ai
 solution: Experience Platform, Intelligent Services
-title: Descripción general de Attribution AI
+title: Información general de Attribution AI
 topic: Attribution AI
 description: Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente. Algunos ejemplos de puntos de contacto son las impresiones de anuncios en pantalla, los envíos de correo electrónico, las aperturas de correo electrónico y los clics de búsqueda paga.
-landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+landing-page-description: Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 29%
+source-wordcount: '499'
+ht-degree: 32%
 
 ---
 
@@ -22,7 +22,7 @@ Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribuci
 
 Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente. Algunos ejemplos de puntos de contacto son las impresiones de anuncios en pantalla, los envíos de correo electrónico, las aperturas de correo electrónico y los clics de búsqueda paga.
 
-Las salidas de Attribution AI pueden segregarse en varias dimensiones y pueden utilizarse en diferentes etapas del viaje del cliente. Esto se logra sin necesidad de traducir las necesidades comerciales en problemas de aprendizaje automático, selección de algoritmos, capacitación o implementación de modelos.
+Las salidas de Attribution AI pueden segregarse en varias dimensiones y pueden utilizarse en diferentes etapas del recorrido del cliente. Esto se logra sin necesidad de traducir las necesidades comerciales en problemas de aprendizaje automático, selección de algoritmos, capacitación o implementación de modelos.
 
 Los datos de Attribution AI pueden provenir del Adobe (p. ej. [!DNL Analytics]) o fuentes de datos que no sean de Adobe.
 
@@ -39,7 +39,7 @@ Se puede utilizar Attribution AI para ayudar con los siguientes casos de uso de 
 - **Sistema de informes** Ejecutivo: Permita que los ejecutivos entiendan el verdadero impacto incremental de la mercadotecnia, tanto en su conjunto como por canal, región, SKU, etc.
 - **Asignación** presupuestaria: Informe las decisiones de asignación presupuestaria en todos los canales de marketing.
 - **Optimización** de campaña: En cada canal, comprenda qué campañas, elementos creativos y palabras clave funcionan mejor para qué SKU o términos. Esto le permite mirar cada canal para que el equipo de mercadotecnia pueda optimizar sus tácticas.
-- **Atribución** de canal completo: Comprender el impacto de la mercadotecnia en todo el viaje del cliente. Por ejemplo, el inicio de sesión con cuenta gratuita en la conversión paga y más allá.
+- **Atribución** de canal completo: Comprender el impacto de la mercadotecnia en todo el recorrido del cliente. Por ejemplo, el inicio de sesión con cuenta gratuita en la conversión paga y más allá.
 - **Evaluaciones** de socios: Evaluar la eficacia de los organismos y asociados sobre la base de los resultados de la atribución.
 
 ### Funciones adicionales
@@ -48,4 +48,4 @@ Attribution AI también oferta la integración con otras soluciones de Adobe com
 
 ## Pasos siguientes
 
-Puede empezar por seguir la guía de [introducción](./getting-started.md) . Esta guía lo acompaña durante la configuración de todas las solicitudes previas necesarias para la Attribution AI. Si ya tiene las credenciales y los datos listos, visite la guía [del usuario de](./user-guide.md)Attribution AI. Esta guía lo acompaña durante la creación de una instancia y enviarla para capacitación y puntuación.
+Puede empezar por seguir la guía [introducción](./getting-started.md). Esta guía lo acompaña durante la configuración de todas las solicitudes previas necesarias para la Attribution AI. Si ya tiene las credenciales y los datos listos, visite la [guía del usuario de Attribution AI](./user-guide.md). Esta guía lo acompaña durante la creación de una instancia y enviarla para capacitación y puntuación.
