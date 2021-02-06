@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Área de nombres de identidad;Área de nombres de identidad
 solution: Experience Platform
-title: Guía de solución de problemas de Adobe Experience Platform Identity Service
+title: Guía de resolución de problemas del servicio de identidad
 topic: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Identity Service, así como una guía de solución de problemas para errores comunes.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
@@ -310,7 +310,7 @@ La siguiente es una lista de mensajes de error relacionados con [!DNL Identity S
 }
 ```
 
-Este error se muestra cuando las primeras 100 filas de un lote no presentaban identidades. Sin embargo, este error no indica de manera concluyente que no se hayan encontrado identidades en registros posteriores.
+Este error se muestra cuando las primeras 100 filas de un lote no presentaron identidades. Sin embargo, este error no indica de manera concluyente que no se hayan encontrado identidades en registros posteriores.
 
 ### Se omitieron los registros porque sólo tenían una identidad por registro XDM
 
