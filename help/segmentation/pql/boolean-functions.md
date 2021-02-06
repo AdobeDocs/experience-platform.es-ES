@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones booleanas;booleano;
 solution: Experience Platform
-title: Funciones booleanas
+title: Funciones booleanas de PQL
 topic: developer guide
 description: Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos en el lenguaje de Consulta de Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 6%
+source-wordcount: '254'
+ht-degree: 5%
 
 ---
 
 
 # Funciones booleanas
 
-Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos en [!DNL Profile Query Language] (PQL).  Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos en [!DNL Profile Query Language] (PQL).  Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Y
 
-La `and` función se utiliza para crear una conjunción lógica.
+La función `and` se utiliza para crear una conjunción lógica.
 
 **Format**
 
@@ -37,9 +37,9 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## O
 
-La `or` función se utiliza para crear una disyunción lógica.
+La función `or` se utiliza para crear una disyunción lógica.
 
-**Format**
+**Formato**
 
 ```sql
 {QUERY} or {QUERY}
@@ -55,9 +55,9 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## No
 
-La `not` (o `!`) función se utiliza para crear una negación lógica.
+La función `not` (o `!`) se utiliza para crear una negación lógica.
 
-**Format**
+**Formato**
 
 ```sql
 not ({QUERY})
@@ -74,9 +74,9 @@ not (homeAddress.countryISO = "CA")
 
 ## Si
 
-La `if` función se utiliza para resolver una expresión en función de si una condición especificada es verdadera.
+La función `if` se utiliza para resolver una expresión en función de si una condición especificada es verdadera.
 
-**Format**
+**Formato**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
@@ -90,7 +90,7 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 
 **Ejemplo**
 
-La siguiente consulta de PQL establecerá el valor como `1` si el país de origen fuera Canadá y `2` si el país de origen no fuera Canadá.
+La siguiente consulta de PQL establecerá el valor como `1` si el país de origen es Canadá y `2` si el país de origen no es Canadá.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -98,4 +98,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones booleanas, puede usarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones booleanas, puede usarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
