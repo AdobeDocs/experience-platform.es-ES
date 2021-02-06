@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;matriz;campo;
 solution: Experience Platform
-title: Definición de un campo de matriz en la interfaz de usuario
+title: Definición de campos de matriz en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de matriz en la interfaz de usuario del Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 
-# Definición de un campo de matriz en la interfaz de usuario
+# Definición de campos de matriz en la interfaz de usuario
 
 Al definir un campo Modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform, puede designar ese campo como una matriz.
 
