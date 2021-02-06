@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
+keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;segmento;pertenencia a segmentos;pertenencia a segmentos;diseño de Esquemas;mapa;mapa;
 solution: Experience Platform
 title: Mezcla de detalles de pertenencia a segmentos
 topic: overview
 description: Este documento proporciona una visión general de la combinación de Detalles de pertenencia a segmentos.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mezcla de detalles] de pertenencia a segmentos
+# [!UICONTROL Detalles ] de pertenencia a segmentosMezcla
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre las actualizaciones [de nombres de](../name-updates.md) mezcla para obtener más información.
+>Los nombres de varias mezclas han cambiado. Consulte el documento en [actualizaciones de nombres de mezcla](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles] de pertenencia a segmentos es una combinación estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona un campo de mapa único que captura información relativa a la pertenencia a segmentos, incluidos los segmentos a los que pertenece el individuo, el último tiempo de calificación y el momento en que la pertenencia es válida hasta entonces.
+[!UICONTROL Pertenencia a segmentos ] Detalla una combinación estándar para la  [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). La combinación proporciona un campo de mapa único que captura información relativa a la pertenencia a segmentos, incluidos los segmentos a los que pertenece el individuo, el último tiempo de calificación y el momento en que la pertenencia es válida hasta entonces.
 
 >[!WARNING]
 >
->Aunque el `segmentMembership` campo debe agregarse manualmente al esquema de perfil mediante esta combinación, no debe intentar rellenar o actualizar manualmente este campo. El sistema actualiza automáticamente la asignación de cada `segmentMembership` perfil a medida que se realizan trabajos de segmentación.
+>Aunque el campo `segmentMembership` debe agregarse manualmente al esquema de perfil mediante esta combinación, no debe intentar rellenar o actualizar este campo manualmente. El sistema actualiza automáticamente el mapa `segmentMembership` para cada perfil a medida que se realizan trabajos de segmentación.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `segmentMembership` | Mapa | Un objeto map que describe las pertenencias a segmentos del individuo. La estructura de este objeto se describe en detalle a continuación. |
 
-El siguiente es un mapa de ejemplo `segmentMembership` que el sistema ha rellenado para un perfil en particular. Las pertenencias a los segmentos se ordenan por Área de nombres, como indican las claves de nivel raíz del objeto. A su vez, las claves individuales de cada Área de nombres representan los ID de los segmentos de los que es miembro el perfil. Cada objeto de segmento contiene varios subcampos que proporcionan más detalles sobre la pertenencia:
+A continuación se muestra un ejemplo de `segmentMembership` mapa que el sistema ha rellenado para un perfil determinado. Las pertenencias a los segmentos se ordenan por Área de nombres, como indican las claves de nivel raíz del objeto. A su vez, las claves individuales de cada Área de nombres representan los ID de los segmentos de los que es miembro el perfil. Cada objeto de segmento contiene varios subcampos que proporcionan más detalles sobre la pertenencia:
 
 ```json
 {
@@ -76,7 +76,7 @@ El siguiente es un mapa de ejemplo `segmentMembership` que el sistema ha rellena
 | `xdm:lastQualificationTime` | Marca de hora de la última vez que este perfil se calificó para el segmento. |
 | `xdm:validUntil` | Marca de hora del momento en el que se debe dejar de suponer que la pertenencia al segmento es válida. |
 | `xdm:status` | Indica si la pertenencia al segmento se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`existing`:: El perfil ya formaba parte de la serie de sesiones antes de la solicitud y sigue siendo miembro.</li><li>`realized`:: El perfil está ingresando el segmento como parte de la solicitud actual.</li><li>`exited`:: El perfil está saliendo del segmento como parte de la solicitud actual.</li></ul> |
-| `xdm:payload` | Algunas pertenencias a segmentos incluyen una carga útil que describe valores adicionales directamente relacionados con la pertenencia. Sólo se puede proporcionar una carga útil de un tipo determinado para cada abono. `xdm:payloadType` indica el tipo de carga útil (`boolean`, `number`, `propensity`o `string`), mientras que su propiedad secundaria proporciona el valor para el tipo de carga útil. |
+| `xdm:payload` | Algunas pertenencias a segmentos incluyen una carga útil que describe valores adicionales directamente relacionados con la pertenencia. Sólo se puede proporcionar una carga útil de un tipo determinado para cada abono. `xdm:payloadType` indica el tipo de carga útil (`boolean`,  `number`,  `propensity` o  `string`), mientras que su propiedad secundaria proporciona el valor para el tipo de carga útil. |
 
 Para obtener más información sobre la mezcla, consulte el repositorio público XDM:
 
