@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;previsualización;muestra
-title: 'Previsualización de perfiles: API de Perfil de clientes en tiempo real'
+title: Extremo de la API de estado de muestra de perfil
 description: Al utilizar los extremos de la API de Perfil del cliente en tiempo real, puede realizar la previsualización de la muestra de éxito más reciente de los datos de Perfil, así como la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad dentro de Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
