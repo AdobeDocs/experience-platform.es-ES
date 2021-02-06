@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ingestión por lotes;ingestión por lotes;ingestión parcial;Ingesta parcial;Error de recuperación;error de recuperación;ingestión parcial por lotes;ingestión parcial por lotes;ingestión parcial;ingesta;Ingesta;diagnóstico de errores;recuperación de diagnósticos de errores;obtención de diagnósticos de errores;error;obtención de errores;recuperación de errores;
 solution: Experience Platform
-title: Información general sobre la ingesta parcial de lotes de Adobe Experience Platform
+title: Recuperación de diagnósticos de error de inserción de datos
 topic: overview
 description: Este documento proporciona información sobre la monitorización de la ingestión por lotes, la gestión de errores de ingestión parcial por lotes, así como una referencia para tipos de ingestión parcial por lotes.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Recuperación de diagnósticos de error
+# Recuperación de diagnósticos de error de inserción de datos
 
 Adobe Experience Platform proporciona dos métodos para cargar e ingestar datos. Puede utilizar la ingestión por lotes, que le permite insertar datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de puntos finales de flujo en tiempo real.
 
