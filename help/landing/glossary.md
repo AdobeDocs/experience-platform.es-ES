@@ -5,7 +5,7 @@ title: Glosario de Adobe Experience Platform
 topic: getting started
 description: Un glosario de terminología importante en Experience Platform.
 translation-type: tm+mt
-source-git-commit: a7ddba7c060e809478427ef3950360ccd67e6c60
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '7137'
 ht-degree: 0%
