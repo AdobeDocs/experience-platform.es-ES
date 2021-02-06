@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;puntuaciones de descarga;ai del cliente;temas populares;Exportar;exportar;descarga de ai del cliente;puntuaciones de ai del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Descarga de puntuaciones en la API del cliente
+title: Descargar puntuaciones en la API del cliente
 topic: Downloading scores
 description: La API del cliente le permite descargar puntuaciones en el formato de archivo Parquet.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Descarga de puntuaciones en la API del cliente
+# Descargar puntuaciones en la API del cliente
 
 Este documento sirve como guía para descargar puntuaciones para la API del cliente.
 
