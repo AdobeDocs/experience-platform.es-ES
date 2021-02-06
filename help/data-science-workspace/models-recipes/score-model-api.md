@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform;Puntee un modelo;Área de trabajo de ciencias de datos;temas populares;API de aprendizaje del equipo sensei
 solution: Experience Platform
-title: Puntuación de un modelo (API)
+title: Puntuación de un modelo con la API de aprendizaje automático Sensei
 topic: tutorial
 type: Tutorial
 description: Este tutorial le mostrará cómo aprovechar las API de aprendizaje automático de Sensei para crear un experimento y una ejecución de experimentos.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
 
 
-# Puntuación de un modelo (API)
+# Puntee un modelo con el [!DNL Sensei Machine Learning API]
 
-Este tutorial le mostrará cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista detallada de la documentación de la API, consulte [este documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Este tutorial le mostrará cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista detallada de la documentación de API, consulte [este documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
 ## Crear un experimento programado para la puntuación
 
-De forma similar a los experimentos programados para la formación, la creación de un experimento programado para la puntuación también se realiza mediante la inclusión de una `template` sección en el parámetro body. Además, el `name` campo debajo `tasks` del cuerpo se establece como `score`.
+De forma similar a los experimentos programados para la formación, la creación de un experimento programado para la puntuación también se realiza mediante la inclusión de una sección `template` en el parámetro body. Además, el campo `name` en `tasks` del cuerpo se establece como `score`.
 
 El siguiente es un ejemplo de creación de un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
 
@@ -110,7 +110,7 @@ La siguiente es la respuesta después de crear el experimento programado.
 
 ### Crear una ejecución de experimento para la puntuación
 
-Ahora con el modelo entrenado, podemos crear una Carrera de Experimentos para la puntuación. El valor del `modelId` parámetro es el `id` parámetro devuelto en la solicitud del modelo de GET anterior.
+Ahora con el modelo entrenado, podemos crear una Carrera de Experimentos para la puntuación. El valor del parámetro `modelId` es el parámetro `id` devuelto en la solicitud del modelo de GET anterior.
 
 **Solicitud**
 
@@ -170,7 +170,7 @@ La respuesta de la creación de la ejecución de experimentos se muestra a conti
 }
 ```
 
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento en el que se encuentra la ejecución.\
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento en el que se encuentra la ejecución.\
 `{EXPERIMENT_RUN_ID}`:: ID correspondiente a la ejecución del experimento que acaba de crear.
 
 
@@ -187,7 +187,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento en el que se encuentra la ejecución.\
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento en el que se encuentra la ejecución.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
 
@@ -215,11 +215,11 @@ Dado que existen varias ejecuciones de experimento para un experimento específi
 ```
 
 `{EXPERIMENT_RUN_ID}`:: ID correspondiente a la ejecución del experimento.\
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento en el que se encuentra la ejecución.
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento en el que se encuentra la ejecución.
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su ejecución `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud de DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -230,7 +230,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`::  ID correspondiente al experimento.\
+`{EXPERIMENT_ID}`:: ID correspondiente al experimento.\
 `{ACCESS_TOKEN}`:: Su valor de token de portador específico proporcionado después de la autenticación.\
 `{IMS_ORG}`:: Sus credenciales de organización de IMS se encuentran en su integración única de Adobe Experience Platform.
 
