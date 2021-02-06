@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 topic: tutorial
 type: Tutorial
-description: Este documento proporciona una guía sobre cómo enriquecer el Perfil del cliente en tiempo real con perspectivas aprendidas por el equipo.
+description: Este documento proporciona una guía sobre cómo enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace] proporciona las herramientas y los recursos para crear, evaluar y utilizar modelos de aprendizaje automático para generar predicciones y perspectivas de datos. Cuando las perspectivas de aprendizaje automático se ingieren en un conjunto de datos habilitado para [!DNL Profile], esos mismos datos también se ingieren como [!DNL Profile] registros que luego se pueden segmentar mediante [!DNL Adobe Experience Platform Segmentation Service]. A medida que se ingieren datos de series temporales y de perfiles, el Perfil del cliente en tiempo real decide automáticamente incluir o excluir esos datos de los segmentos a través de un proceso continuo denominado segmentación por flujo, antes de combinarlos con datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos instantáneamente y tomar decisiones para ofrecer experiencias mejoradas e individualizadas a los clientes a medida que interactúan con su marca.
 
-Este documento proporciona vínculos a tutoriales que le permiten enriquecer [!DNL Real-time Customer Profile] con sus perspectivas aprendidas por el equipo.
+Este documento proporciona vínculos a tutoriales que le permiten enriquecer [!DNL Real-time Customer Profile] con sus perspectivas de aprendizaje automático.
 
 ## Primeros pasos
 
