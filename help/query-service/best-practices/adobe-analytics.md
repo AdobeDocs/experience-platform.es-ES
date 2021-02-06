@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de muestra;consulta de muestra;adobe analytics;
 solution: Experience Platform
-title: Consultas de muestra
+title: Consultas de muestra para datos de Adobe Analytics
 topic: queries
 description: Los datos de los grupos de informes de Adobe Analytics seleccionados se transforman en eventos de experiencia XDM y se ingeryen en Adobe Experience Platform como conjuntos de datos para usted. Este documento describe una serie de casos de uso en los que el Servicio de Consulta de Adobe Experience Platform utiliza estos datos, y las consultas de muestra incluidas deberían funcionar con sus conjuntos de datos de Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1021'
 ht-degree: 1%
 
 ---
@@ -215,7 +215,7 @@ En sistema de informes, los pedidos, los ingresos, las vistas de productos y las
 
 | eVar6 (método de búsqueda de productos) | ingresos | pedidos | vistas del producto | adiciones al carro de compras |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| búsqueda interna:camisa de verano | 19,99 | 1 | 3 | 1 |
+| búsqueda interna:camisa de verano | 19,99 | 1 | 1 | 1 |
 | búsqueda interna:sombrero de invierno | 12,99 | 1 | 1 | 1 |
 
 Para obtener más información sobre el uso de la sintaxis de conversión, lea la documentación de Adobe Analytics sobre [implementación de eVars con sintaxis de conversión](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
