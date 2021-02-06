@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inMomento;Ininstante;inicio de la integración
-title: Extensión InMoment
-seo-title: Extensión InMoment
+title: Destino de extensión de InMoment
 description: La extensión de InMoment es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión de InMoment es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '538'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL InMoment] Extensión {#inmoment-extension}
-
-## Información general {#overview}
 
 La integración de [!DNL InMoment] Launch le permite habilitar rápida y fácilmente los comentarios en línea a través del producto Digital Intercept. En la aplicación, las interceptaciones se pueden configurar y administrar a través del administrador de CXI Cloud, lo que permite a los administradores de CX controlar mejor su programa.
 
