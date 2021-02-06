@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de fecha y hora;funciones de fecha y hora;datetime;datetime;date;time;
 solution: Experience Platform
-title: Funciones de fecha y hora
+title: Funciones de fecha y hora de PQL
 topic: developer guide
 description: Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro del lenguaje de Consulta de Perfil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 4%
+source-wordcount: '508'
+ht-degree: 3%
 
 ---
 
 
 # Funciones de fecha y hora
 
-Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro de [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro de [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Mes actual
 
-La `currentMonth` función devuelve el mes actual como un entero.
+La función `currentMonth` devuelve el mes actual como un entero.
 
 **Format**
 
@@ -37,9 +37,9 @@ person.birthMonth = currentMonth()
 
 ## Obtener mes
 
-La `getMonth` función devuelve el mes, como un entero, en función de una marca de tiempo determinada.
+La función `getMonth` devuelve el mes, como un entero, en función de una marca de tiempo determinada.
 
-**Format**
+**Formato**
 
 ```sql
 {TIMESTAMP}.getMonth()
@@ -55,9 +55,9 @@ person.birthdate.getMonth() = 6
 
 ## Año actual
 
-La `currentYear` función devuelve el año actual como un entero.
+La función `currentYear` devuelve el año actual como un entero.
 
-**Format**
+**Formato**
 
 ```sql
 currentYear()
@@ -73,9 +73,9 @@ product.saleYear = currentYear()
 
 ## Obtener año
 
-La `getYear` función devuelve el año, como un entero, en función de una marca de tiempo determinada.
+La función `getYear` devuelve el año, como un entero, en función de una marca de tiempo determinada.
 
-**Format**
+**Formato**
 
 ```sql
 {TIMESTAMP}.getYear()
@@ -91,9 +91,9 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Día actual del mes
 
-La `currentDayOfMonth` función devuelve el día actual del mes como un entero.
+La función `currentDayOfMonth` devuelve el día actual del mes como un entero.
 
-**Format**
+**Formato**
 
 ```sql
 currentDayOfMonth()
@@ -109,9 +109,9 @@ person.birthDay = currentDayOfMonth()
 
 ## Obtener día del mes
 
-La `getDayOfMonth` función devuelve el día, como un entero, en función de una marca de tiempo determinada.
+La función `getDayOfMonth` devuelve el día, como un entero, en función de una marca de tiempo determinada.
 
-**Format**
+**Formato**
 
 ```sql
 {TIMESTAMP}.getDayOfMonth()
@@ -127,11 +127,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Ocurre
 
-La `occurs` función compara la función de marca de tiempo dada con un período de tiempo fijo.
+La función `occurs` compara la función de marca de tiempo dada con un período de tiempo fijo.
 
-**Format**
+**Formato**
 
-La `occurs` función se puede escribir con cualquiera de los siguientes formatos:
+La función `occurs` se puede escribir con cualquiera de los siguientes formatos:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -142,11 +142,11 @@ La `occurs` función se puede escribir con cualquiera de los siguientes formatos
 
 | Argumento | Descripción |
 | --------- | ----------- |
-| `{COMPARISON}` | Operador de comparación. Puede ser cualquiera de los siguientes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`. Encontrará más información sobre las funciones de comparación en el documento [de funciones de](./comparison-functions.md)comparación. |
+| `{COMPARISON}` | Operador de comparación. Puede ser cualquiera de los siguientes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`, . Encontrará más información sobre las funciones de comparación en el documento [funciones de comparación](./comparison-functions.md). |
 | `{INTEGER}` | Un entero no negativo. |
-| `{TIME_UNIT}` | Una unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`,. |
+| `{TIME_UNIT}` | Una unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
 | `{DIRECTION}` | Preposición que describe cuándo comparar la fecha. Puede ser cualquiera de las siguientes palabras: `before`, `after`, `from`. |
-| `{TIME}` | Puede ser un literal de marca de hora (`today`, `now`, `yesterday`, `tomorrow`), una unidad de tiempo relativa (una de `this`, `last`o `next` seguida de una unidad de tiempo) o un atributo de marca de hora. |
+| `{TIME}` | Puede ser un literal de marca de hora (`today`, `now`, `yesterday`, `tomorrow`), una unidad de tiempo relativa (una de `this`, `last` o `next` seguida de una unidad de tiempo) o un atributo de marca de hora. |
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ person.birthday occurs = 3 days before today
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de fecha y hora, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la descripción general [del lenguaje de Consulta de](./overview.md)Perfil.
+Ahora que ha aprendido sobre las funciones de fecha y hora, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
