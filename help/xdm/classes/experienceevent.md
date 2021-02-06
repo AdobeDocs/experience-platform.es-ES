@@ -5,7 +5,7 @@ title: Clase XDM ExperienceEvent
 topic: overview
 description: Este documento proporciona información general sobre la clase ExperienceEvent XDM.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 1%
