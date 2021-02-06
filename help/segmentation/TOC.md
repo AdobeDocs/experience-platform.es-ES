@@ -1,23 +1,23 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda del servicio de segmentación de Adobe Experience Platform
+user-guide-title: Servicio de segmentación de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 translation-type: tm+mt
-source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 25%
+source-wordcount: '135'
+ht-degree: 17%
 
 ---
 
 
-# Ayuda del servicio de segmentación de Adobe Experience Platform {#segmentation}
+# Servicio de segmentación de Adobe Experience Platform {#segmentation}
 
-- [Información general](home.md)
+- [Descripción general del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- Guía para desarrolladores de API de segmentación {#api}
+- API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
    - [Trabajos de exportación](api/export-jobs.md)
@@ -28,14 +28,14 @@ ht-degree: 25%
    - [Búsqueda de segmentos](api/segment-search.md)
    - [Segmentación por flujo continuo](api/streaming-segmentation.md)
 - Interfaz de usuario de segmentación {#ui}
-   - [Guía de la IU de segmentación](ui/overview.md)
+   - [Información general](ui/overview.md)
    - [Panel de segmentos](ui/segment-dashboard.md)
    - [Generador de segmentos](ui/segment-builder.md)
    - [Segmentación por flujo continuo](ui/streaming-segmentation.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
 - [Cumplimiento de las opciones de exclusión](honoring-opt-outs.md)
 - [Segmentación multientidad](multi-entity-segmentation.md)
-- Idioma de Consulta de perfil {#pql}
+- Lenguaje de Consulta de perfil {#pql}
    - [Información general](pql/overview.md)
    - [Funciones booleanas](pql/boolean-functions.md)
    - [Funciones de comparación](pql/comparison-functions.md)
