@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conexión de origen de datos
 solution: Experience Platform
-title: Ingesta de datos de parquet desde un sistema de almacenamiento en la nube de terceros mediante la API de servicio de flujo
+title: Ingesta de datos de parqué desde un sistema de Almacenamiento de nube de terceros mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para ingestar datos de parquet desde un sistema de almacenamiento en la nube de terceros.
+description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para transferir datos de Apache Parquet desde un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
