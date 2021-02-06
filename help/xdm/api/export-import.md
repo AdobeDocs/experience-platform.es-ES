@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;exportar;importar;rpc;
 solution: Experience Platform
-title: Guía de extremo de exportación e importación
+title: Exportar/importar extremos de API
 description: Los extremos /export y /import de la API del Registro de Esquema permiten compartir recursos XDM entre organizaciones de IMS y entornos limitados.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
