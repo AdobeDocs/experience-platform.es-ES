@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;ATS;ats;almacenamiento de tabla de Azure
 solution: Experience Platform
-title: Creación de un conector de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
+title: Creación de una conexión de origen de Almacenamiento de tabla de Azure mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos necesarios para conectar el Almacenamiento de tablas de Azure (en adelante denominado "ATS") al Experience Platform.
+description: Obtenga información sobre cómo conectar el Almacenamiento de tablas de Azure a Adobe Experience Platform mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
 
 
-# Cree un conector [!DNL Azure Table Storage] mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Azure Table Storage] mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
