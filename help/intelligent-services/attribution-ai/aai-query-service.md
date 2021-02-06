@@ -1,19 +1,19 @@
 ---
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
 solution: Intelligent Services, Experience Platform
-title: Guía del inicio rápido del servicio de Consulta AAI
+title: Análisis de las puntuaciones de atribución mediante el servicio de Consulta
 topic: Attribution AI queries
-description: Este documento proporciona una guía y plantillas para utilizar el servicio de Consulta para analizar las puntuaciones de atribución.
+description: Obtenga información sobre cómo utilizar el servicio de Consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Guía de inicio rápido del servicio de Consulta de Adobe Experience Platform para analizar puntuaciones de atribución
+# Análisis de puntuaciones de atribución mediante el servicio de Consulta
 
 Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras debajo de la columna `touchpointsDetail`.
 
@@ -21,7 +21,7 @@ Cada fila de los datos representa una conversión, en la que la información de 
 | ---------------------- | ------ |
 | Nombre del punto de contacto | `touchpointsDetail. touchpointName` |
 | Canal de Touchpoint | `touchpointsDetail.touchPoint.mediaChannel` |
-| Puntuaciones algorítmicas de Touchpoint AAI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Puntuaciones algorítmicas del Attribution AI de Touchpoint | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Búsqueda de rutas de datos
 
