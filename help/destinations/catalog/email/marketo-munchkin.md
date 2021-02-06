@@ -1,21 +1,17 @@
 ---
 keywords: Marketo Munchkin;marketing a munchkin;extensión de marketing a munchkin;extensión de marketing a munchkin;marketing;comercial;comercial;comercial;comercial
-title: Extensión de Marketo Munchkin
-seo-title: Extensión de Marketo Munchkin
+title: Destino de extensión de Marketing Cloud
 description: La extensión Marketo Munchkin es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Marketo Munchkin es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '552'
 ht-degree: 7%
 
 ---
 
 
-# Extensión de [!DNL Marketo Munchkin] {#marketo-munchkin-extension}
-
-## Información general {#overview}
+# [!DNL Marketo Munchkin] Extensión {#marketo-munchkin-extension}
 
 Desde la administración de posibles clientes hasta la mercadotecnia basada en cuentas, [!DNL Marketo Engagement Platform] simplifica la manera en que planifica, organiza y mide la participación con los clientes y clientes potenciales en cada etapa de su experiencia.
 
