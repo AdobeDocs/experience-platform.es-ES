@@ -5,7 +5,7 @@ title: Crear conjuntos de datos para capturar datos de consentimiento TCF 2.0 de
 topic: privacy events
 description: Este documento proporciona los pasos para configurar los dos conjuntos de datos necesarios para recopilar datos de consentimiento TCF 2.0 de IAB.
 translation-type: tm+mt
-source-git-commit: 58bafd206e42caba9879594ca95fe17376be327b
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 0%
