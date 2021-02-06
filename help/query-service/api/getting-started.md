@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consulta
 solution: Experience Platform
-title: Guía para desarrolladores de consulta Service
+title: Guía de API de servicio de consulta
 topic: query templates
-description: Esta guía para desarrolladores proporciona pasos para realizar varias operaciones en la API de servicio de Consulta de Adobe Experience Platform.
+description: La API de servicio de Consulta permite a los desarrolladores realizar consultas de sus datos de Adobe Experience Platform mediante SQL estándar. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Service] guía para desarrolladores
+# [!DNL Query Service] Guía de API
 
 Esta guía para desarrolladores proporciona pasos para realizar diversas operaciones en la API de Adobe Experience Platform [!DNL Query Service].
 
