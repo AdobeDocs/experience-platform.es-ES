@@ -1,21 +1,17 @@
 ---
 keywords: Controlador del reproductor Nielsen VideoJS;reproductor nielsen video js;reproductor nielsen videojs;Nielsen;nielsen;reproductor Nielsen videojs;SDK digital Nielsen;SDK digital nielsen
-title: Extensión del controlador de reproductor Nielsen VideoJS
-seo-title: Extensión del controlador de reproductor Nielsen VideoJS
+title: Destino de la extensión del controlador del reproductor Nielsen VideoJS
 description: La extensión del controlador de reproductor de VideoJS de Nielsen es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión del controlador de reproductor de VideoJS de Nielsen es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '614'
 ht-degree: 2%
 
 ---
 
 
-# Extensión de [!DNL Nielsen VideoJS Player Handler] {#nielsen-vjs-extension}
-
-## Información general {#overview}
+# [!DNL Nielsen VideoJS Player Handler] Extensión {#nielsen-vjs-extension}
 
 [!DNL Nielsen Digital SDK] ofertas de extensión de lanzamiento: medición de audiencia mediante los siguientes productos de medición digital:
 
