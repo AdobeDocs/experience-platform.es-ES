@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación de flujo;Segmentación de flujo;Segmentación de flujo;Evaluación continua;
 solution: Experience Platform
-title: Segmentación por flujo continuo
+title: 'Evaluar Eventos en tiempo real cercano con segmentación por flujo continuo '
 topic: developer guide
-description: Este documento contiene ejemplos de cómo utilizar la segmentación de flujo con la API de segmentación de flujo.
+description: Este documento contiene ejemplos de cómo utilizar la segmentación de flujo con la API de servicio de segmentación de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
