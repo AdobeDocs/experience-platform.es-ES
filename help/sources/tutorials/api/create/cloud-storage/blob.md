@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Azure;blob;blob;Blob
 solution: Experience Platform
-title: Creación de un conector Blob de Azure mediante la API de servicio de flujo
+title: Creación de una conexión de origen de blob de Azure mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a un almacenamiento de blob de Azure (en lo sucesivo denominado "Blob").
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Azure Blob mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '761'
 ht-degree: 2%
 
 ---
 
 
-# Cree un conector [!DNL Azure Blob] mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Azure Blob] mediante la API [!DNL Flow Service]
 
-Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para guiarle por los pasos para conectar [!DNL Azure Blob] (en adelante, &quot;Blob&quot;) con el Experience Platform.
+Este tutorial utiliza la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) para guiarle por los pasos para conectar [!DNL Azure Blob] (en adelante, &quot;Blob&quot;) a Adobe Experience Platform.
 
 ## Primeros pasos
 
@@ -25,7 +25,7 @@ Esta guía requiere un conocimiento práctico de los siguientes componentes de A
 * [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
 * [Simuladores](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para crear correctamente un conector de origen [!DNL Blob] mediante la API [!DNL Flow Service].
+Las siguientes secciones proporcionan información adicional que deberá conocer para crear correctamente una conexión de origen [!DNL Blob] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
