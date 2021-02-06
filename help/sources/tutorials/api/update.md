@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: En algunas circunstancias, puede ser necesario actualizar los detalles de una conexión de origen existente. La API de servicio de flujo le permite agregar, editar y eliminar detalles de una conexión de flujo o lote existente, incluido su nombre, descripción y credenciales.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 2%
