@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Microsoft SQL;microsoft sql;sql server;SQL Server
 solution: Experience Platform
-title: Creación de un conector de SQL Server mediante la API de servicio de flujo
+title: Creación de una conexión de origen de SQL Server mediante la API de servicio de flujo
 topic: overview
 type: Tutorial
-description: Este tutorial utiliza la API de servicio de flujo para guiarle por los pasos para conectar a un Experience Platform a Microsoft SQL Server (en adelante, "SQL Server").
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Microsoft SQL Server mediante la API de servicio de flujo.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
 
 
-# Crear un conector [!DNL Microsoft] de SQL Server mediante la API [!DNL Flow Service]
+# Crear una conexión de origen [!DNL Microsoft] de SQL Server mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
