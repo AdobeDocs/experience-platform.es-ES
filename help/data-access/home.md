@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
+keywords: Experience Platform;inicio;temas populares;acceso a datos;sdk python;spark sdk;api de acceso a datos
 solution: Experience Platform
-title: Información general sobre el acceso a los datos
+title: Información general de acceso a datos
 topic: overview
-description: Data Access admite Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la capacidad de descubrimiento y accesibilidad de conjuntos de datos ingestados dentro del Experience Platform.
+description: Data Access admite Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la capacidad de descubrimiento y accesibilidad de conjuntos de datos de la plataforma ingerida.
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '185'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Data Access]sobre validación
+# Información general del [!DNL Data Access]
 
-[!DNL Data Access] admite Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la capacidad de detección y accesibilidad de conjuntos de datos ingestados dentro de [!DNL Experience Platform].
+[!DNL Data Access] admite Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la capacidad de detección y accesibilidad de conjuntos de datos ingestados dentro de  [!DNL Experience Platform].
 
 ![Acceso a datos en el Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## [!DNL Data Access] API
 
-Encontrará información detallada sobre el uso de la [!DNL Data Access] API con la que conectarse [!DNL Platform] en la guía [para desarrolladores de](api.md)Data Access.
+Encontrará información detallada sobre el uso de la [!DNL Data Access] API para conectarse con [!DNL Platform] en la [Guía para desarrolladores de Data Access](api.md).
 
 ## Acceso a los datos en el área de trabajo de ciencias de datos
 
-Puede leer y escribir en conjuntos de datos usando [!DNL Python] y [!DNL Spark] para el desarrollo de fórmulas y modelos en Área de trabajo de ciencias de datos. Para obtener más información sobre el acceso a los datos, visite la documentación de acceso [a los datos de](../data-science-workspace/authoring/python.md) Python o [Spark](../data-science-workspace/authoring/spark.md) .
+Puede leer y escribir en conjuntos de datos mediante [!DNL Python] y [!DNL Spark] para el desarrollo de fórmulas y modelos en Área de trabajo de ciencias de datos. Para obtener más información sobre el acceso a sus datos, visite la documentación de [acceso a datos Python](../data-science-workspace/authoring/python.md) o [acceso a datos de Spark](../data-science-workspace/authoring/spark.md).
 
-Para obtener más información sobre [!DNL Data Science Workspace], lea la información general [de](../data-science-workspace/home.md)Data Science Workspace sobre inicio.
+Para obtener más información acerca de [!DNL Data Science Workspace], lea el inicio de [Información general de Área de trabajo de ciencia de datos](../data-science-workspace/home.md).
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] pone a disposición de la suscripción eventos específicos de alto valor mediante la consola [de desarrollo de](https://www.adobe.com/go/devs_console_ui)Adobe. Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre la [suscripción a notificaciones](../ingestion/quality/subscribe-events.md) de ingesta de datos para obtener más información.
+[!DNL Platform] pone a disposición de la suscripción eventos específicos de alto valor mediante la consola [ de desarrollo de ](https://www.adobe.com/go/devs_console_ui)Adobe. Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.
