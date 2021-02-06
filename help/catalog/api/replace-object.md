@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform;inicio;temas populares;catálogo;api;reemplazar un objeto
 solution: Experience Platform
-title: Reemplazar un objeto
+title: Reemplazar un objeto de catálogo
 topic: developer guide
 description: Puede sobrescribir el contenido de un objeto Catalog mediante una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
 
-# Reemplazar un objeto
+# Reemplazar un objeto Catalog
 
-Puede sobrescribir el contenido de un [!DNL Catalog] objeto mediante una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
+Puede sobrescribir el contenido de un objeto [!DNL Catalog] mediante una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
 
 >[!NOTE]
 >
->Si solo necesita actualizar algunos campos específicos dentro de un [!DNL Catalog] objeto, el uso de una solicitud de PATCH puede resultar más eficaz.
+>Si sólo necesita actualizar algunos campos específicos dentro de un objeto [!DNL Catalog], el uso de una solicitud de PATCH puede ser más eficaz.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de [!DNL Catalog] objeto que se va a reemplazar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a reemplazar. Los objetos válidos son: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
