@@ -1,19 +1,17 @@
 ---
 keywords: Blob de Azure;destino de Blob;s3;destino de blob de Azure
-title: Destino de blob de Azure
-seo-title: Destino de blob de Azure
+title: Destino de conexión de blob de Azure
 description: Cree una conexión directa de salida a su almacenamiento de blob de Azure para exportar periódicamente archivos de datos CSV o delimitados por tabuladores desde Adobe Experience Platform.
-seo-description: Cree una conexión directa de salida a su almacenamiento de blob de Azure para exportar periódicamente archivos de datos CSV o delimitados por tabuladores desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 739c7cb55f943675d5ee63d81bba58a2b250c814
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 1%
+source-wordcount: '477'
+ht-degree: 2%
 
 ---
 
 
-# Crear un destino [!DNL Azure Blob] en la interfaz de usuario
+# [!DNL Azure Blob] connection
 
 [!DNL Azure Blob] (en lo sucesivo, &quot;[!DNL Blob]&quot;) es la solución de almacenamiento de objetos de Microsoft para la nube. Este tutorial proporciona los pasos para crear un destino [!DNL Blob] mediante la interfaz de usuario [!DNL Platform].
 
