@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;inicio;temas populares;lista de Área de nombres;Área de nombres de lista
 solution: Experience Platform
-title: Áreas de nombres disponibles de lista
+title: Áreas de nombres de identidad disponibles de lista
 topic: API guide
 description: Lista de todas las Áreas de nombres disponibles.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 4%
 
 ---
 
 
-# Áreas de nombres disponibles de lista
+# Áreas de nombres de identidad disponibles de lista
 
 **Formato API**
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa una Área de nombres disponible. Las Áreas de nombres con un valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL false]&quot; son Áreas de nombres estándar, mientras que las que tienen un valor &quot;[!UICONTROL personalizado]&quot; de &quot;[!UICONTROL true]&quot; son Áreas de nombres que su organización ha creado.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa una Área de nombres disponible. Las Áreas de nombres con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; son Áreas de nombres estándar, mientras que aquellas con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; son Áreas de nombres que su organización ha creado.
 
 >[!NOTE]
 >
