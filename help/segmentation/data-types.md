@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
+keywords: Experience Platform;inicio;temas populares;tipo de datos;tipos de datos;tipos de datos;Tipo de datos;Tipos de datos de segmentación;Segmentación;segmentación;Servicio de segmentación;Tipos de datos del servicio de segmentación;
 solution: Experience Platform
-title: Tipos de datos del servicio de segmentación de Adobe Experience Platform
+title: Tipos de datos admitidos en el servicio de segmentación
 topic: overview
-description: Todos los tipos de datos XDM son compatibles con el servicio de segmentación. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
+description: Todos los tipos de datos del Modelo de datos de experiencia (XDM) son compatibles con el servicio de segmentación por Adobe. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
 
 
-# Tipos de datos admitidos por Adobe Experience Platform [!DNL Segmentation Service]
+# Tipos de datos admitidos en el servicio de segmentación
 
-Todos los tipos de datos XDM son compatibles en [!DNL Segmentation Service]. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
+Todos los tipos de datos del Modelo de datos de experiencia (XDM) son compatibles con el servicio de segmentación de Adobe Experience Platform. Las reglas que constituyen una definición de segmento están contextualizadas por los siguientes tipos de datos.
 
 ## Datos de cadena
 
@@ -31,16 +31,16 @@ Los datos de cadena se incluyen en las definiciones de segmentos mediante senten
 
 ## Datos de fecha
 
-Los datos de fecha le permiten asignar un contexto basado en la hora a las definiciones de segmentos, ya sea mediante el uso de fechas de inicio/finalización específicas o mediante declaraciones de fecha relevantes, como se muestra en la tabla siguiente. Una implementación podría estar creando una audiencia de clientes que han interactuado con su marca en cualquier momento *este año* y que también han estado activos *en los* últimos días.
+Los datos de fecha le permiten asignar un contexto basado en la hora a las definiciones de segmentos, ya sea mediante el uso de fechas de inicio/finalización específicas o mediante declaraciones de fecha relevantes, como se muestra en la tabla siguiente. Una implementación podría estar creando una audiencia de clientes que han interactuado con su marca en cualquier momento *este año* y que también han estado activos *en* los últimos días.
 
 | Campo de ejemplo | Declaraciones pertinentes a la fecha | Escala de tiempo |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevante para el día en que se creó el segmento. |
+| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | Relevante para el día en que se creó el segmento. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevante en cualquier semana/mes. |
 
 ## Eventos de experiencias
 
-Como esquema de Adobe Experience Platform, [!DNL XDM ExperienceEvents] registre las interacciones explícitas e implícitas de los clientes con aplicaciones [!DNL Platform]integradas, incluida una instantánea del sistema en el momento en que se produjo la interacción. [!DNL ExperienceEvents] son registros de hechos. Por lo tanto, son una fuente de datos disponible durante la definición del segmento.
+Como esquema de Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra las interacciones explícitas e implícitas de los clientes con las aplicaciones [!DNL Platform] integradas, incluida una instantánea del sistema en el momento en que se produjo la interacción. [!DNL ExperienceEvents] son registros de hechos. Por lo tanto, son una fuente de datos disponible durante la definición del segmento.
 
 Como se muestra en la tabla siguiente, los datos de evento se representan utilizando palabras clave que ayudan a reducir el comportamiento de evento y a especificar atributos de evento.
 
@@ -55,11 +55,11 @@ Como se muestra en la tabla siguiente, los datos de evento se representan utiliz
 
 Las audiencias externas también se pueden usar como componentes de una nueva definición de segmento, agregando sus reglas de atributos al nuevo segmento.
 
-Actualmente, solo se admite Adobe Audience Manager como audiencia externa, y en el futuro se habilitarán fuentes adicionales. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con plataforma en la guía de uso compartido de [audiencias de la documentación](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)de Adobe Audience Manager.
+Actualmente, solo se admite Adobe Audience Manager como audiencia externa, y en el futuro se habilitarán fuentes adicionales. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con plataforma en la [guía de uso compartido de audiencias dentro de la documentación de Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Uso compartido de segmentos
 
-Los segmentos creados en la plataforma se pueden usar en otros servicios [principales de](https://docs.adobe.com/content/help/es-ES/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Para habilitar esta función, deberá ponerse en contacto con su arquitecto de soluciones o con su asesor.
+Los segmentos creados en la plataforma se pueden usar dentro de otros [servicios principales de Adobe Experience Cloud](https://docs.adobe.com/content/help/es-ES/core-services/interface/experience-cloud.html). Para habilitar esta función, deberá ponerse en contacto con su arquitecto de soluciones o con su asesor.
 
 ## Otros tipos de datos
 
