@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;esquema;esquemas;
 solution: Experience Platform
-title: Creación y edición de esquemas en la interfaz de usuario
+title: Creación y edición de Esquemas en la interfaz de usuario
 description: Conozca los conceptos básicos sobre cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
