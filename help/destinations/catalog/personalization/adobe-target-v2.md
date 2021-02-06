@@ -1,21 +1,17 @@
 ---
 keywords: extensión de grupo de destinatarios;destinatario;destinatario v2;destinatario v2 extensión
-title: Extensión de Adobe Target 2.0
-seo-title: Extensión de Adobe Target 2.0
+title: Adobe Target v2 Extension Destination
 description: La extensión Adobe Target v2 es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
-seo-description: La extensión Adobe Target v2 es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 12%
+source-wordcount: '531'
+ht-degree: 11%
 
 ---
 
 
-# Extensión de la versión 2.0 de Adobe Target{#adobe-target-v2-extension}
-
-## Información general {#overview}
+# Extensión de Adobe Target 2.0 {#adobe-target-v2-extension}
 
 Adobe Target es la solución de Adobe Experience Cloud que proporciona todo lo necesario para adaptar y personalizar la experiencia de sus clientes con el objetivo de maximizar los ingresos en sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
 
