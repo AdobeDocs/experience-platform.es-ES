@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 description: 'El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ Otra opción es la vista de una versión basada en código de una regla creada e
 La vista de código proporciona un botón que le permite copiar el valor del segmento que se va a utilizar en las llamadas de API. Para obtener la versión más reciente del segmento, asegúrese de haber guardado los cambios más recientes en el segmento.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Funciones de agregación
+
+Una agregación en [!DNL Segment Builder] es un cálculo en un grupo de atributos XDM cuyo tipo de datos es un número (un doble o un entero). Las cuatro funciones de agregación admitidas en el Generador de segmentos son SUM, PROMEDIO, MIN y MAX.
+
+Para crear una función de agregación, seleccione un evento del carril izquierdo e insértelo en el contenedor [!UICONTROL Eventos].
+
+![](../images/ui/segment-builder/select-event.png)
+
+Después de colocar el evento dentro del contenedor de Eventos, seleccione el icono de elipses (...), seguido de **[!UICONTROL Acumulada]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+Ahora se agrega la agregación. Ahora puede seleccionar la función de agregación, elegir qué atributo se va a acumulado, la función de igualdad y el valor. Para el ejemplo siguiente, este segmento calificaría cualquier perfil que tenga una suma de valores comprados buena a más de $100, incluso si cada compra individual es menor a $100.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Contenedores
 
