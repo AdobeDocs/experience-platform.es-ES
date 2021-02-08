@@ -3,12 +3,12 @@ title: 'SDK web de Adobe Target y Adobe Experience Platform. '
 seo-title: Adobe Experience Platform Web SDK y uso de Adobe Target
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
 seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
-keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
+keywords: destinatario;adobe destinatario;vistas xdm; vistas;aplicaciones de una sola página;SPA;SPA ciclo de vida;cliente;prueba AB;AB;Segmentación de experiencias;XT;VEC
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '1669'
-ht-degree: 14%
+source-wordcount: '1688'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +33,7 @@ A continuación se indican algunas ventajas del uso del SDK web de Adobe Experie
 
 ## Vistas XDM y aplicaciones de una sola página
 
-El VEC de Adobe Target para SPA aprovecha un nuevo concepto llamado Vistas: un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición a través de Vistas, en lugar de direcciones URL, en función de las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
+El Adobe Target VEC para SPA aprovecha un concepto llamado Vistas: un grupo lógico de elementos visuales que juntos componen una experiencia SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición a través de Vistas, en lugar de direcciones URL, en función de las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
 
 Para explicar mejor cuáles son las Vistas, el siguiente ejemplo utiliza un hipotético sitio de comercio electrónico en línea implementado en React para explorar Vistas de ejemplo.
 
@@ -41,7 +41,7 @@ Después de navegar al sitio principal, una imagen primordial promociona una ven
 
 ![](assets/example-views.png)
 
-As the customer becomes more interested in the products that the business is selling, they decide to click the **Products** link. De manera similar a la página de inicio, se puede definir todo el sitio del producto como una vista. Esta Vista podría denominarse &quot;products-all&quot;.
+A medida que el cliente se interesa más por los productos que vende el negocio, decide hacer clic en el vínculo **Productos**. De manera similar a la página de inicio, se puede definir todo el sitio del producto como una vista. Esta Vista podría denominarse &quot;products-all&quot;.
 
 ![](assets/example-products-all.png)
 
@@ -49,7 +49,7 @@ Dado que una Vista puede definirse como un sitio completo o un grupo de elemento
 
 ![](assets/example-products.png)
 
-Cuando el cliente decide hacer clic en el botón **Cargar más** para explorar más productos del sitio, la dirección URL del sitio web no cambia en este caso, pero se puede crear una Vista aquí para representar solo la segunda fila de productos que se muestran. El nombre de la Vista podría ser &quot;products-page-2&quot;.
+Cuando el cliente decide hacer clic en el botón **Cargar más** para explorar más productos en el sitio, la dirección URL del sitio web no cambia en este caso, pero se puede crear una Vista aquí para representar sólo la segunda fila de productos que se muestran. El nombre de la Vista podría ser &quot;products-page-2&quot;.
 
 ![](assets/example-load-more.png)
 
@@ -63,9 +63,9 @@ El concepto de Vistas puede ampliarse mucho más que esto. Estos son sólo algun
 
 Las Vistas XDM se pueden aprovechar en Adobe Target para que los especialistas en marketing puedan ejecutar pruebas A/B y XT en SPA mediante el Compositor de experiencias visuales. Esto requiere realizar los siguientes pasos para completar una configuración de desarrollador única:
 
-1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
+1. Instalar [SDK web de Adobe Experience Platform](../../fundamentals/installing-the-sdk.md)
 2. Determine todas las Vistas XDM de la aplicación de una sola página que desee personalizar.
-3. Después de definir las Vistas XDM, para ofrecer actividades AB o XT VEC, implemente la `sendEvent()` función con `renderDecisions` el valor `true` y la Vista XDM correspondiente en la aplicación de una sola página. Se debe pasar la Vista XDM `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar el Compositor de experiencias visuales para iniciar pruebas A/B y XT para esos XDM.
+3. Después de definir las Vistas XDM, para ofrecer actividades AB o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecida en `true` y la Vista XDM correspondiente en la aplicación de una sola página. La Vista XDM debe pasarse en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar el Compositor de experiencias visuales para iniciar pruebas A/B y XT para esos XDM.
 
    ```javascript
    alloy("sendEvent", { 
@@ -82,11 +82,11 @@ Las Vistas XDM se pueden aprovechar en Adobe Target para que los especialistas e
 
 >[!NOTE]
 >
->En la primera `sendEvent()` llamada, todas las Vistas XDM que se deben procesar para el usuario final se recuperarán y almacenarán en caché. Las llamadas posteriores `sendEvent()` con Vistas XDM pasadas se leerán desde la caché y se procesarán sin una llamada al servidor.
+>En la primera llamada `sendEvent()`, se buscarán y almacenarán en caché todas las Vistas XDM que se deban procesar para el usuario final. Las llamadas subsiguientes `sendEvent()` con Vistas XDM pasadas se leerán desde la caché y se procesarán sin una llamada al servidor.
 
 ## `sendEvent()` ejemplos de funciones
 
-Esta sección describe tres ejemplos que muestran cómo invocar la `sendEvent()` función en React para un hipotético SPA de comercio electrónico.
+Esta sección describe tres ejemplos que muestran cómo invocar la función `sendEvent()` en React para un hipotético SPA de comercio electrónico.
 
 ### Ejemplo 1: Página de inicio de prueba A/B
 
@@ -94,7 +94,7 @@ El equipo de mercadotecnia desea ejecutar pruebas A/B en toda la página de inic
 
 ![](assets/use-case-1.png)
 
-Para ejecutar pruebas A/B en todo el sitio principal, `sendEvent()` debe invocarse con el XDM `viewName` configurado en `home`:
+Para ejecutar pruebas A/B en todo el sitio principal, `sendEvent()` debe invocarse con el XDM `viewName` establecido en `home`:
 
 ```jsx
 function onViewChange() { 
@@ -172,11 +172,11 @@ class Products extends Component {
 
 ### Ejemplo 3: Preferencias de envío de prueba A/B
 
-The marketing team want to run an A/B test to see whether changing the color of the button from blue to red when **Express Delivery** is selected can boost conversions (as opposed to keeping the button color blue for both delivery options).
+El equipo de mercadotecnia desea ejecutar una prueba A/B para ver si el cambio del color del botón de azul a rojo cuando se selecciona **Envío expreso** puede aumentar las conversiones (en lugar de mantener el color del botón en azul para ambas opciones de envío).
 
 ![](assets/use-case-3.png)
 
-Para personalizar el contenido del sitio en función de la preferencia de envío seleccionada, se puede crear una Vista para cada preferencia de envío. Cuando se selecciona Envío **** normal, la Vista se puede denominar &quot;cierre de compra normal&quot;. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
+Para personalizar el contenido del sitio en función de la preferencia de envío seleccionada, se puede crear una Vista para cada preferencia de envío. Cuando **Envío normal** está seleccionado, la Vista se puede denominar &quot;cierre de compra normal&quot;. Si selecciona **Envío expreso**, la Vista se puede denominar &quot;cierre de compra-express&quot;.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -219,11 +219,11 @@ class Checkout extends Component {
 
 ## Uso del Compositor de experiencias visuales para un SPA
 
-Cuando haya terminado de definir sus Vistas XDM e implementado `sendEvent()` con esas Vistas XDM pasadas, el VEC podrá detectar estas Vistas y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
+Cuando haya terminado de definir sus Vistas XDM e implementado `sendEvent()` con las Vistas XDM pasadas, el VEC podrá detectar estas Vistas y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
 
 >[!NOTE]
 >
->Para utilizar el VEC para su SPA, debe instalar y activar [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+>Para utilizar el VEC para su SPA, debe instalar y activar la extensión del asistente de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
 
 ### Panel de modificaciones
 
@@ -233,7 +233,7 @@ El panel Modificaciones captura las acciones creadas para una Vista en particula
 
 ### Acciones
 
-Al hacer clic en una acción se resalta el elemento del sitio donde se aplicará esta acción. Each VEC action created under a View has the following icons: **Information**, **Edit**, **Clone**, **Move**, and **Delete**. Estos iconos se explican con más detalle en la tabla siguiente.
+Al hacer clic en una acción se resalta el elemento del sitio donde se aplicará esta acción. Cada acción de VEC creada en una Vista tiene los iconos siguientes: **Información**, **Editar**, **Clonar**, **Mover** y **Eliminar**. Estos iconos se explican con más detalle en la tabla siguiente.
 
 ![](assets/action-icons.png)
 
@@ -241,8 +241,8 @@ Al hacer clic en una acción se resalta el elemento del sitio donde se aplicará
 |---|---|
 | Información | Muestra los detalles de esta acción. |
 | Edit | Permite editar las propiedades de esta acción directamente. |
-| Clonar | Clona la acción a una o varias vistas del panel Modificaciones o a una o varias vistas a las que ha llegado a través del VEC. La acción no tiene que incluirse necesariamente en el panel Modificaciones.<br/><br/>**Nota:** Después de realizar una operación de clonación, debe desplazarse a la Vista del VEC mediante Examinar para ver si la acción clonada era una operación válida. Si la acción no se puede aplicar a la vista, aparecerá un error. |
-| Mover | Mueve la acción a un Evento de carga de página o a cualquier otra Vista que ya se encuentre en el panel Modificaciones.<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican a la carga de página inicial de la aplicación web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe desplazarse a la Vista en el VEC mediante Examinar para ver si el movimiento fue una operación válida. Si la acción no se puede aplicar a la vista, aparecerá un error. |
+| Clonar | Clona la acción a una o varias vistas del panel Modificaciones o a una o varias vistas a las que ha llegado a través del VEC. La acción no tiene que incluirse necesariamente en el panel Modificaciones.<br/><br/>**Nota:** Después de realizar una operación de clonación, debe desplazarse a la Vista en el VEC mediante Examinar para ver si la acción clonada fue una operación válida. Si la acción no se puede aplicar a la vista, aparecerá un error. |
+| Mover | Mueve la acción a un Evento de carga de página o a cualquier otra Vista que ya se encuentre en el panel Modificaciones.<br/><br/>**Evento de carga de página:** Cualquier acción que corresponda al evento de carga de página se aplica a la carga de página inicial de la aplicación web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe desplazarse a la Vista en el VEC mediante Examinar para ver si el movimiento fue una operación válida. Si la acción no se puede aplicar a la vista, aparecerá un error. |
 | Eliminar | Elimina la acción. |
 
 ## Uso del VEC para SPA ejemplos
@@ -253,24 +253,24 @@ Esta sección describe tres ejemplos para usar el Compositor de experiencias vis
 
 Anteriormente, en este documento se definía una Vista denominada &quot;home&quot; para todo el sitio de inicio. Ahora el equipo de mercadotecnia desea actualizar la vista &quot;principal&quot; de las siguientes maneras:
 
-* Cambie los botones **Añadir al carro** y **&quot;Me gusta** &quot; a una parte más clara de azul. Esto debería suceder durante la carga de la página porque implica cambiar los componentes del encabezado.
-* Change the **Latest Products for 2019** label to **Hottest Products for 2019** and change the text color to purple.
+* Cambie los botones **Añadir al carro** y **Me gusta** a una parte más clara de azul. Esto debería suceder durante la carga de la página porque implica cambiar los componentes del encabezado.
+* Cambie la etiqueta **Productos más recientes para 2019** a **Productos más calientes para 2019** y cambie el color del texto a morado.
 
-To make these updates in the VEC, select **Compose** and apply those changes to the &quot;home&quot; view.
+Para realizar estas actualizaciones en el VEC, seleccione **Componer** y aplique esos cambios a la vista &quot;principal&quot;.
 
 ![](assets/vec-home.png)
 
 ### Ejemplo 2: Cambio de las etiquetas de producto
 
-Para la Vista &quot;products-page-2&quot;, el equipo de mercadotecnia desea cambiar la etiqueta **Precio** a Precio **de** venta y cambiar el color de la etiqueta a rojo.
+Para la Vista &quot;products-page-2&quot;, el equipo de mercadotecnia desea cambiar la etiqueta **Price** a **Precio de venta** y cambiar el color de la etiqueta a rojo.
 
 Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos:
 
 1. Seleccione **Examinar** en el VEC.
 2. Seleccione **Productos** en la navegación superior del sitio.
-3. Select **Load More** once to view the second row of products.
+3. Seleccione **Cargar más** una vez para vista de la segunda fila de productos.
 4. Seleccione **Componer** en el VEC.
-5. Apply actions to change the text label to **Sale Price** and the color to red.
+5. Aplique acciones para cambiar la etiqueta de texto a **Precio de venta** y el color a rojo.
 
 ![](assets/vec-products-page-2.png)
 
@@ -283,13 +283,13 @@ Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos
 1. Seleccione **Examinar** en el VEC.
 2. Añada productos al carro de compras del sitio.
 3. Seleccione el icono del carro en la esquina superior derecha del sitio.
-4. Seleccione **Cerrar su pedido**.
-5. Seleccione el botón de radio Envío **** Express en Preferencias **de** Envío.
+4. Seleccione **Cierre la compra del pedido**.
+5. Seleccione el botón de radio **Envío Express** en **Preferencias de Envío**.
 6. Seleccione **Componer** en el VEC.
 7. Cambie el color del botón **Pagar** a rojo.
 
 >[!NOTE]
 >
->La Vista &quot;checkout-express&quot; no aparece en el panel Modificaciones hasta que se selecciona el botón de radio **Express Envío** . Esto se debe a que la`sendEvent()` función se ejecuta cuando se selecciona el botón de radio Envío **** Express, por lo que el VEC no conoce la Vista &quot;checkout-express&quot; hasta que se selecciona el botón de radio.
+>La Vista &quot;checkout-express&quot; no aparece en el panel Modificaciones hasta que se selecciona el botón de opción **Express Envío**. Esto se debe a que la función `sendEvent()` se ejecuta cuando se selecciona el botón de radio **Express Envío**, por lo que el VEC no conoce la Vista &quot;checkout-express&quot; hasta que se selecciona el botón de radio.
 
 ![](assets/vec-delivery-preference.png)
