@@ -3,23 +3,23 @@ title: Configuración del SDK
 seo-title: Configuración del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configuración;configuración;SDK;edge;Web SDK;configuración;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 11%
+source-wordcount: '740'
+ht-degree: 10%
 
 ---
 
 
 # Configuración del SDK
 
-La configuración del SDK se realiza con el `configure` comando .
+La configuración del SDK se realiza con el comando `configure`.
 
 >[!IMPORTANT]
 >
->`configure` debe ser *siempre* el primer comando llamado.
+>`configure` debe  ** ser siempre el primer comando llamado.
 
 ```javascript
 alloy("configure", {
@@ -38,7 +38,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 | -------- | ------------ | ----------------- |
 | Cadena | Sí | ninguna |
 
-El ID de configuración asignado, que vincula el SDK con las cuentas y la configuración correspondientes.  Al configurar varias instancias dentro de una sola página, debe configurar una diferente `edgeConfigId` para cada instancia.
+El ID de configuración asignado, que vincula el SDK con las cuentas y la configuración correspondientes.  Al configurar varias instancias dentro de una sola página, debe configurar un `edgeConfigId` diferente para cada instancia.
 
 ### `context`
 
@@ -46,7 +46,7 @@ El ID de configuración asignado, que vincula el SDK con las cuentas y la config
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de cadenas | No | `["web", "device", "environment", "placeContext"]` |
 
-Indica qué categorías de contexto se recopilarán automáticamente, tal como se describe en Información [](../data-collection/automatic-information.md)automática.  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
+Indica qué categorías de contexto se recopilarán automáticamente, tal como se describe en [Información automática](../data-collection/automatic-information.md).  Si no se especifica esta configuración, se utilizan todas las categorías de forma predeterminada.
 
 ### `debugEnabled`
 
@@ -54,7 +54,7 @@ Indica qué categorías de contexto se recopilarán automáticamente, tal como s
 | -------- | ------------ | ----------------- |
 | Booleano | No | `false` |
 
-Indica si se debe habilitar la depuración. Al configurar esta configuración para que `true` habilite las siguientes funciones:
+Indica si se debe habilitar la depuración. Al establecer esta configuración en `true` se habilitan las siguientes características:
 
 | **Función** | **Función** |
 | ---------------------- | ------------------ |
@@ -66,6 +66,7 @@ Indica si se debe habilitar la depuración. Al configurar esta configuración pa
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ------------------ |
 | Cadena | No | `beta.adobedc.net` |
+| Cadena | No | `omtrdc.net` |
 
 Dominio utilizado para interactuar con servicios de Adobe. Solo se utiliza si tiene un dominio de origen (CNAME) que proxies solicitudes a la infraestructura perimetral de Adobe.
 
@@ -75,7 +76,7 @@ Dominio utilizado para interactuar con servicios de Adobe. Solo se utiliza si ti
 | -------- | ------------ | ----------------- |
 | Cadena | Sí | ninguna |
 
-Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias instancias dentro de una página, debe configurar una diferente `orgId` para cada instancia.
+Su identificador de organización [!DNL Experience Cloud] asignado.  Al configurar varias instancias dentro de una página, debe configurar un `orgId` diferente para cada instancia.
 
 ## Recopilación de datos
 
@@ -85,7 +86,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Al configurar varias ins
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Consulte Seguimiento [automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información.
+Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Consulte [Seguimiento automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información.
 
 ### `onBeforeEventSend`
 
@@ -93,7 +94,7 @@ Indica si los datos asociados con los clics en vínculos se deben recopilar auto
 | -------- | ------------ | ----------------- |
 | Función | No | () => undefined |
 
-Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se `xdm` envía un objeto con el campo a la llamada de retorno.  Modifique el `xdm` objeto para cambiar lo que se envía.  Dentro de la llamada de retorno, el `xdm` objeto ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
+Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se envía un objeto con el campo `xdm` a la llamada de retorno.  Modifique el objeto `xdm` para cambiar lo que se envía.  Dentro de la llamada de retorno, el objeto `xdm` ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
@@ -103,7 +104,7 @@ Configure esta opción para configurar una llamada de retorno que se llame para 
 | -------- | ------------ | ----------------- |
 | Objeto | No | `"in"` |
 
-Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `"pending"`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Compatibilidad con el consentimiento](../consent/supporting-consent.md) para obtener más información.
+Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para el usuario. El otro valor válido es `"pending"`. Cuando se establece, el trabajo se pone en cola hasta que el usuario proporciona las preferencias de consentimiento. Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se anula según sus preferencias. Consulte [Consentimiento de soporte](../consent/supporting-consent.md) para obtener más información.
 
 ## Opciones de personalización
 
@@ -115,7 +116,7 @@ Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay
 
 Se utiliza para crear una definición de estilo CSS que oculta las áreas de contenido de la página web mientras se carga contenido personalizado desde el servidor. Si no se proporciona esta opción, el SDK no intenta ocultar ninguna área de contenido mientras se carga el contenido personalizado, lo que podría dar como resultado un &quot;parpadeo&quot;.
 
-Por ejemplo, si tuviera un elemento en la página web con un ID del `container` contenido predeterminado que desee ocultar mientras se carga contenido personalizado desde el servidor, un ejemplo de estilo de ocultación previa sería el siguiente:
+Por ejemplo, si tiene un elemento en la página web con un ID de `container` cuyo contenido predeterminado desea ocultar mientras se carga contenido personalizado desde el servidor, un ejemplo de un estilo de ocultamiento previo sería el siguiente:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -129,7 +130,7 @@ Por ejemplo, si tuviera un elemento en la página web con un ID del `container` 
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite configurar las cookies en función de la calificación del segmento.
+Habilita [!DNL Audience Manager] destinos de cookies, lo que permite la configuración de cookies según la calificación del segmento.
 
 ### `urlDestinationsEnabled`
 
@@ -137,7 +138,7 @@ Habilita los destinos [!DNL Audience Manager] de cookies, lo que permite configu
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Habilita los destinos [!DNL Audience Manager] de URL, lo que permite activar las URL en función de la calificación del segmento.
+Habilita [!DNL Audience Manager] destinos de URL, lo que permite activar direcciones URL en función de la calificación del segmento.
 
 ## Opciones de identidad
 
