@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo obtener el Adobe Experience Cloud 
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de Visitante;identidad de terceros;tercerosCookiesEnabled;idMigrationEnabled;getIdentity;Identidad de sincronización;syncIdentity;sendEvent;identityMap;principal;ecid;Área de nombres de identidad;ID de Área de nombres;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ El [!DNL Identity Service] almacena la identidad en una cookie en un dominio de 
 
 ## Identidad de terceros
 
-El [!DNL Identity Service] tiene la capacidad de sincronizar un ID con un dominio de terceros (demdex.net) para habilitar el seguimiento entre sitios. Cuando se habilita, la primera solicitud de un visitante (por ejemplo, alguien sin ECID) se realiza en demdex.net. Esto solo se realizará en exploradores que lo permitan (por ejemplo, Chrome) y se controla mediante el parámetro `thirdPartyCookiesEnabled` en la configuración. Si desea deshabilitar esta característica en conjunto, establezca `thirdPartyCookiesEnabled` en false.
+El [!DNL Identity Service] tiene la capacidad de sincronizar un ID con un dominio de terceros (demdex.net) para habilitar el seguimiento entre sitios. Cuando se habilita, la primera solicitud de un visitante (por ejemplo, alguien sin ECID) se realiza en demdex.net. Esto solo se realizará en exploradores que lo permitan (como Chrome) y se controla mediante el parámetro `thirdPartyCookiesEnabled` en la configuración. Si desea deshabilitar esta característica en conjunto, establezca `thirdPartyCookiesEnabled` en false.
 
 ## Migración de ID
 
