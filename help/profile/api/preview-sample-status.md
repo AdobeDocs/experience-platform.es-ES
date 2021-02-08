@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;previsualización;muestra
-title: Extremo de la API de estado de muestra de perfil
-description: Al utilizar los extremos de la API de Perfil del cliente en tiempo real, puede realizar la previsualización de la muestra de éxito más reciente de los datos de Perfil, así como la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad dentro de Adobe Experience Platform.
+title: Extremo de API de estado de muestra de previsualización (Previsualización de Perfil)
+description: Mediante el uso del extremo de estado de muestra de previsualización, que forma parte de la API de Perfil del cliente en tiempo real, puede realizar la previsualización de la muestra más reciente de los datos de Perfil, así como la distribución del perfil de lista por conjunto de datos y por Área de nombres de identidad dentro de Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,20 @@ ht-degree: 1%
 
 Adobe Experience Platform le permite ingestar datos de clientes desde múltiples fuentes para crear perfiles unificados sólidos para clientes individuales. Como los datos habilitados para el Perfil del cliente en tiempo real se ingieren en [!DNL Platform], se almacenan en el almacén de datos de Perfil.
 
-Cuando la ingestión de registros en el almacén de Perfiles aumenta o disminuye el recuento total de perfiles en más de un 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o reducción del 5 %. Si lo ha hecho, se activa automáticamente un trabajo para actualizar el recuento. Para la ingestión por lotes, dentro de los 15 minutos siguientes a la correcta ingestión de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Mediante la API de Perfil puede realizar la previsualización del último trabajo de muestra exitoso, así como la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad.
+Cuando la ingestión de registros en el almacén de Perfiles aumenta o disminuye el recuento total de perfiles en más de un 5 %, se activa un trabajo de muestra para actualizar el recuento. La manera en que se activa la muestra depende del tipo de ingestión que se utilice:
+
+* Para **flujos de trabajo de datos de flujo**, se realiza una comprobación por hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si lo ha hecho, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+* Para **ingestión por lotes**, dentro de los 15 minutos posteriores a la ingestión satisfactoria de un lote en el almacén de Perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Mediante la API de Perfil puede realizar la previsualización del último trabajo de muestra exitoso, así como la distribución de perfiles de lista por conjunto de datos y por Área de nombres de identidad.
 
 Estas métricas también están disponibles en la sección [!UICONTROL Perfiles] de la interfaz de usuario del Experience Platform. Para obtener información sobre cómo acceder a los datos de Perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía del usuario](../ui/user-guide.md).
 
+>[!NOTE]
+>
+>Existen extremos de estimación y previsualización disponibles como parte de la API de servicio de segmentación de Adobe Experience Platform que le permiten realizar vistas de información de nivel de resumen sobre las definiciones de segmentos para asegurarse de que está aislando la audiencia esperada. Para encontrar pasos detallados para trabajar con los extremos de previsualización y estimación de segmentos, visite la [guía de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de la guía para desarrolladores de la [!DNL Segmentation] API.
+
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de la [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas exitosas a cualquier API [!DNL Experience Platform].
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas exitosas a cualquier API [!DNL Experience Platform].
 
 ## Fragmentos de perfil frente a perfiles combinados
 
@@ -89,7 +96,7 @@ La respuesta incluye los detalles del último trabajo de muestra exitoso que se 
 | `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de Perfiles. |
 | `lastSuccessfulBatchTimestamp` | Última marca de tiempo de ingestión por lotes correcta. |
 | `streamingDriven` | *Este campo ha quedado obsoleto y no tiene relevancia para la respuesta.* |
-| `totalRows` | Número total de perfiles combinados en la plataforma de Experience, también conocida como &#39;recuento de perfiles&#39;. |
+| `totalRows` | Número total de perfiles combinados en Experience Platform, también conocido como &#39;recuento de perfiles&#39;. |
 | `lastBatchId` | Id. de la última ingesta por lotes. |
 | `status` | Estado de la última muestra. |
 | `samplingRatio` | Proporción de perfiles fusionados muestreados (`numRowsToRead`) con el total de perfiles fusionados (`totalRows`), expresado como porcentaje en formato decimal. |
@@ -189,8 +196,6 @@ La respuesta incluye una matriz `data`, que contiene una lista de objetos de con
 | `createdUser` | ID de usuario del usuario que creó el conjunto de datos. |
 | `reportTimestamp` | Marca de hora del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
-
-
 ## Distribución de perfiles de lista por Área de nombres
 
 Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para vista del desglose por Área de nombres de identidad en todos los perfiles combinados de su almacén de Perfiles. Las Áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service que sirve como indicadores del contexto con el que se relacionan los datos del cliente. Para obtener más información, visite la [información general de la Área de nombres de identidad](../../identity-service/namespaces.md).
@@ -288,5 +293,4 @@ La respuesta incluye una matriz `data`, con objetos individuales que contienen l
 
 ## Pasos siguientes
 
-También puede utilizar estimaciones y previsualizaciones similares para la información de nivel de resumen de la vista con respecto a las definiciones de los segmentos a fin de asegurarse de aislar la audiencia esperada. Para encontrar pasos detallados para trabajar con previsualizaciones de segmentos y estimaciones usando la API [!DNL Adobe Experience Platform Segmentation Service], visite la [guía de extremos de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de la guía para desarrolladores de la API [!DNL Segmentation].
-
+Ahora que sabe cómo previsualización datos de muestra en el almacén de Perfiles, también puede utilizar los extremos de estimación y previsualización de la API de servicio de segmentación para vista información de nivel de resumen sobre las definiciones de segmentos. Esta información le ayuda a asegurarse de que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con previsualizaciones y estimaciones de segmentos mediante la API de segmentación, visite la [guía de extremos de previsualización y estimación](../../segmentation/api/previews-and-estimates.md).
