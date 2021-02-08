@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo configurar el SDK web de Experienc
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configuración;configuración;SDK;edge;Web SDK;configuración;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 10%
@@ -94,7 +94,7 @@ Indica si los datos asociados con los clics en vínculos se deben recopilar auto
 | -------- | ------------ | ----------------- |
 | Función | No | () => undefined |
 
-Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se envía un objeto con el campo `xdm` a la llamada de retorno.  Modifique el objeto `xdm` para cambiar lo que se envía.  Dentro de la llamada de retorno, el objeto `xdm` ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente.  Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
+Configure esta opción para configurar una llamada de retorno que se llame para cada evento justo antes de que se envíe.  Se envía un objeto con el campo `xdm` a la llamada de retorno.  Modifique el objeto `xdm` para cambiar lo que se envía.  Dentro de la llamada de retorno, el objeto `xdm` ya tendrá los datos pasados en el comando evento y la información recopilada automáticamente. Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de Eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
