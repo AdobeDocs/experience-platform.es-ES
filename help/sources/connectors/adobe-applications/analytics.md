@@ -5,7 +5,7 @@ title: Conector de origen de Adobe Analytics para datos de grupos de informes
 topic: overview
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 3%
@@ -49,7 +49,7 @@ Para obtener información detallada sobre la asignación de campos que se produc
 | -------------- | ---------------- |
 | Nuevos datos en [!DNL Real-time Customer Profile] (A4T **no** habilitado) | &lt; 2 minutos |
 | Nuevos datos a [!DNL Real-time Customer Profile] (A4T **está** habilitado) | &lt; 15 minutos |
-| Nuevos datos en Data Lake | &lt; 45 minutos |
+| Nuevos datos en Data Lake | &lt; 90 minutos |
 | Rellenar datos (13 meses de datos o 10 mil millones de eventos, lo que sea menor) | &lt; 4 semanas |
 
 >[!NOTE]
