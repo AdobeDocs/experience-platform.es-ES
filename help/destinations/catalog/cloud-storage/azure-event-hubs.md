@@ -1,11 +1,11 @@
 ---
 keywords: Destino del concentrador de evento de Azure;concentrador de evento de Azure;velero de azure
-title: (Beta) Destino de conexión de los centros de Evento de Azure
+title: (Beta) Conexión de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '486'
 ht-degree: 2%
 
 ---
