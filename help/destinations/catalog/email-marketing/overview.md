@@ -1,10 +1,10 @@
 ---
 keywords: correo electrónico;correo electrónico;correo electrónico;destinos de correo electrónico
-title: Información general sobre los destinos de mercadotecnia de correo electrónico
+title: Introducción a los destinos de mercadotecnia por correo electrónico
 type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 1%
