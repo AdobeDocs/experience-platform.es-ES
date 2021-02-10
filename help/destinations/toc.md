@@ -5,7 +5,7 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento lista la tabla de contenido de los destinos de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 11%
@@ -116,7 +116,7 @@ ht-degree: 11%
       * [Visión general de los destinos de redes sociales](./catalog/social/overview.md)
       * [Crear un destino de red social](./catalog/social/workflow.md)
       * [Adobe Livefyre, extensión](./catalog/social/adobe-livefyre.md)
-      * [Extensión de Facebook](./catalog/social/facebook.md)
+      * [Conexión de Facebook](./catalog/social/facebook.md)
    * Destinos de encuesta {#survey}
       * [Introducción a los destinos de encuesta](./catalog/survey/overview.md)
       * [Destino de extensión forestal](./catalog/survey/foresee.md)
