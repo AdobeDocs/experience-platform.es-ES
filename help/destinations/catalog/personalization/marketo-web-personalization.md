@@ -1,11 +1,11 @@
 ---
 keywords: Personalización web de marketing;personalización web de marketing;extensión de personalización web de marketing a marketing;extensión de personalización web de marketing a marketing;marketing a marketing;a marketing;a marketing
-title: Destino de la extensión de personalización web de marketing
+title: Extensión de personalización web de marketing
 description: La extensión Personalización web de marketing es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 3%
 
 ---
