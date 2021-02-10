@@ -1,14 +1,14 @@
 ---
 keywords: destinos de publicidad;destinos;destinos de plataforma
-title: Destinos publicitarios
+title: Descripción general de los destinos de publicidad
 seo-title: Descripción general de los destinos de publicidad
 description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 seo-description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas a estas plataformas.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -25,12 +25,12 @@ Actualmente, Platform admite los destinos de publicidad que se indican a continu
 
 Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y Categorías.
 
-- [Google Display &amp; Video 360](./google-dv360.md)
-- [Publicidades de Google](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Coincidencia de clientes de Google](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [Destino de la mesa de comercio](./tradedesk.md)
+- [Conexión de Google Display y Video 360](./google-dv360.md)
+- [Conexión de Google Ads](./google-ads-destination.md)
+- [Conexión con Google Ad Manager](./google-ad-manager.md)
+- [Conexión de Coincidencia de clientes de Google](./google-customer-match.md)
+- [Conexión de Microsoft Bing](./bing.md)
+- [La conexión con el mostrador de comercio](./tradedesk.md)
 
 ## Extensiones
 
