@@ -1,11 +1,11 @@
 ---
 keywords: correo electrónico;correo electrónico;correo electrónico;destinos de correo electrónico;destino de responsys de oracle
-title: Destino de conexión de oracle Responsys
+title: Conexión oracle Responsys
 description: Responsys es una herramienta empresarial de marketing por correo electrónico para campañas de marketing entre canales ofrecidas por Oracle con el fin de personalizar las interacciones entre correo electrónico, dispositivos móviles, visualización y redes sociales.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
