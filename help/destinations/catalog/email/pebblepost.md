@@ -1,11 +1,11 @@
 ---
 keywords: PebblePost;pebblepost;Correo postal programático de PebblePost;pebblepost-correo directo programático
-title: Destino de extensión PebblePost
+title: Extensión PebblePost
 description: La extensión PebblePost es un destino de correo electrónico en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
