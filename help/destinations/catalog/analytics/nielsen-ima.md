@@ -1,11 +1,11 @@
 ---
 keywords: Controlador Nielsen IMA;controlador nielsen ima;nielsen ima;Nielsen ima;Nielsen ima;Nielsen IMA
-title: Destino de la extensión del controlador IMA Nielsen
+title: Extensión del controlador IMA Nielsen
 description: La extensión Nielsen IMA Handler es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '472'
 ht-degree: 3%
 
 ---
