@@ -5,7 +5,7 @@ seo-title: Información general sobre los destinos
 description: Obtenga información sobre cómo activar datos de Adobe Experience Platform en destinos para campañas de marketing entre canales, correos electrónicos, publicidad de destino y mucho más.
 seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Adobe Experience Platform. Puede utilizar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Los controles del [espacio de trabajo Destinations](./ui/destinations-workspace.
 
 Para obtener información detallada, consulte la [información general sobre tipos de destino y categorías](./destination-types.md).
 
-## Destinos y Controles de acceso {#access-controls}
+## Destinos y controles de acceso {#access-controls}
 
 La funcionalidad de destinos de Platform funciona con los permisos de Adobe Experience Platform control de acceso. Según el nivel de permiso del usuario, puede realizar vistas, administrar y activar destinos. Para obtener información sobre los permisos individuales, consulte [Control de acceso en Adobe Experience Platform](../access-control/home.md) y desplácese hacia abajo hasta la parte inferior de la página.
 
