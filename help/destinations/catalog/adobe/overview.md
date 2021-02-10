@@ -1,9 +1,9 @@
 ---
 keywords: destinos;soluciones de Experience Cloud; destinatario;destino del destinatario; ad cloud; nube de publicidad; administrador de audiencias; adobe destinatario destination; destinatario; destino del administrador de audiencias;
-title: Información general sobre los destinos de Adobe
+title: Introducción a los destinos de Adobe
 description: Administre la experiencia del cliente conectando sus datos en Platform con otras soluciones de Adobe Experience Cloud para direccionamiento de publicidad, personalización, automatización de mercadotecnia y mucho más
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 13%
