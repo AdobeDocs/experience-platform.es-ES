@@ -1,9 +1,9 @@
 ---
 keywords: red social;destinos de redes sociales;Livefyre;facebook;Facebook
-title: Visión General de Destinos de Redes Sociales
+title: Visión general de los destinos de redes sociales
 description: Con los destinos de las redes sociales, puede activar perfiles para sus campañas para direccionamiento de audiencias, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
