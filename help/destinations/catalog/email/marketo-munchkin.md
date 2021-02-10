@@ -1,11 +1,11 @@
 ---
 keywords: Marketo Munchkin;marketing a munchkin;extensión de marketing a munchkin;extensión de marketing a munchkin;marketing;comercial;comercial;comercial;comercial
-title: Destino de extensión de Marketing Cloud
+title: Extensión de Marketo Munchkin
 description: La extensión Marketo Munchkin es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '551'
 ht-degree: 7%
 
 ---
