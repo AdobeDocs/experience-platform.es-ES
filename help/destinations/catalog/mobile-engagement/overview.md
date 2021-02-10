@@ -3,9 +3,9 @@ keywords: mensajería móvil;destinos de mensajería móvil;Brasil; Aeronave
 title: Información general sobre los destinos de participación móvil
 description: Obtenga información sobre los distintos destinos de participación móvil admitidos por Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,6 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] actualmente admite los siguientes destinos de compromiso móvil:
 
-* [Atributos de aeronaves](./airship-attributes.md)
-* [Etiquetas de aerolíneas](./airship-tags.md)
-* [Brazo](./braze.md)
+* [Conexión de atributos de aeronaves](./airship-attributes.md)
+* [Conexión de etiquetas de aerolíneas](./airship-tags.md)
+* [Conexión de Brazo](./braze.md)
