@@ -1,11 +1,11 @@
 ---
 keywords: JW player;jw player;JW Player;jw extension;JW extension
-title: Destino de extensión de JW Player Analytics (Beta)
+title: Extensión de JW Player Analytics (Beta)
 description: La extensión JW Player Analytics (Beta) es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 3%
 
 ---
