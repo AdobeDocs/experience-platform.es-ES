@@ -1,11 +1,11 @@
 ---
 keywords: Amazon Kinesis;destino de kinesis;kinesis
-title: Amazon Kinesis Connection Destination
+title: Conexión con Amazon Kinesis
 description: Cree una conexión saliente en tiempo real con el almacenamiento Kinesis de Amazon para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '450'
 ht-degree: 2%
 
 ---
