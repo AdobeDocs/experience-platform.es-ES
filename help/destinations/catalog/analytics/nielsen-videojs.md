@@ -1,11 +1,11 @@
 ---
 keywords: Controlador del reproductor Nielsen VideoJS;reproductor nielsen video js;reproductor nielsen videojs;Nielsen;nielsen;reproductor Nielsen videojs;SDK digital Nielsen;SDK digital nielsen
-title: Destino de la extensión del controlador del reproductor Nielsen VideoJS
+title: Extensión del controlador de reproductor Nielsen VideoJS
 description: La extensión del controlador de reproductor de VideoJS de Nielsen es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
