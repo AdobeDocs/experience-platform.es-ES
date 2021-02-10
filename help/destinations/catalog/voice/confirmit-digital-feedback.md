@@ -1,11 +1,11 @@
 ---
 keywords: Confirmar comentarios digitales;confirmar extensión;confirmar
-title: Confirmar destino de extensión de comentarios digitales
+title: Confirmar extensión de comentarios digitales
 description: La extensión Confirmar comentarios digitales es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '562'
 ht-degree: 3%
 
 ---
