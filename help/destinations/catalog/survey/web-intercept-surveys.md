@@ -1,11 +1,11 @@
 ---
 keywords: Encuestas de Interceptación de PreguntaPro;encuestas de Interceptación de PreguntasPro;PreguntasPro;PreguntasPro
-title: Destino de extensión de Encuestas de intercepción de QuestionPro
+title: Extensión de Encuestas de intercepción de QuestionPro
 description: La extensión de Encuestas de Intercept de QuestionPro es un destino de encuesta en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 3%
 
 ---
