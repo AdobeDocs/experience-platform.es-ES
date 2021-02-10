@@ -1,11 +1,11 @@
 ---
 keywords: mobile; brasil; mensajería;
-title: Destino de conexión de Brazo
+title: Conexión de Brazo
 description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
