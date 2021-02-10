@@ -1,11 +1,11 @@
 ---
 keywords: extensión contentsquare;destino contentsquare;contentsquare
-title: Destino de la extensión Contentsquare
+title: Extensión Contentsquare
 description: La extensión Contentsquare es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '541'
 ht-degree: 4%
 
 ---
