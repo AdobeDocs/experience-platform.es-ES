@@ -1,11 +1,11 @@
 ---
 keywords: Bandeja de entrada de URL de charla;bandeja de entrada de URL de charla;bandeja de entrada de URL de charla;buzón de entrada de URL de charla;url de la charla;URL de la charla;url de la charla
-title: Destino de la extensión de la bandeja de entrada de URL de Talk
+title: Extensión de bandeja de entrada de URL de Talk
 description: La extensión Talk URL Inbox es una voz del destino del cliente en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 4%
 
 ---
