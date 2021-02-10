@@ -1,11 +1,11 @@
 ---
 keywords: Blob de Azure;destino de Blob;s3;destino de blob de Azure
-title: Destino de conexión de blob de Azure
+title: Conexión de blob de Azure
 description: Cree una conexión directa de salida a su almacenamiento de blob de Azure para exportar periódicamente archivos de datos CSV o delimitados por tabuladores desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 2%
 
 ---
