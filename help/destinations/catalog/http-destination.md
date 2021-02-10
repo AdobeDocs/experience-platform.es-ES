@@ -1,11 +1,11 @@
 ---
 keywords: flujo continuo;
-title: Destino de conexión HTTP
+title: Conexión HTTP
 description: El destino HTTP de Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
