@@ -3,7 +3,7 @@ keywords: destino de almacenamiento de nube;almacenamiento de nube
 title: Descripción general de los destinos de Almacenamiento de nube
 description: Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de Amazon S3, AWS Kinesis, Azure Evento Hubs o SFTP cloud almacenamiento.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Para obtener información sobre cómo conectarse a destinos de almacenamiento en
 
 ## Destinos de almacenamiento en la nube disponibles
 
-- [Destino de Amazon S3](./amazon-s3.md)
-- [Destino de blob de Azure](./azure-blob.md)
-- [Destino de SFTP](./sftp.md)
+- [Conexión Amazon S3](./amazon-s3.md)
+- [Conexión de blob de Azure](./azure-blob.md)
+- [Conexión SFTP](./sftp.md)
 
 ## Destinos de flujo de almacenamiento en la nube disponibles
 
-- [Destino de Amazon Kinesis](./amazon-kinesis.md)
-- [Destino de los centros de Evento de Azure](./azure-event-hubs.md)
+- [Conexión con Amazon Kinesis](./amazon-kinesis.md)
+- [Conexión de los centros de Evento de Azure](./azure-event-hubs.md)
