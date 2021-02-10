@@ -1,11 +1,11 @@
 ---
 keywords: twitter;Twitter;etiqueta del sitio web universal de Twitter;etiqueta del sitio web universal de Twitter;etiqueta de Twitter UWT;Twitter uwt;twitter uwt
-title: Destino de la extensión de etiquetas de sitios web universales de Twitter
+title: Extensión de etiqueta de sitio web universal de Twitter
 description: La extensión de etiqueta universal de Twitter para sitios web es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '507'
 ht-degree: 3%
 
 ---
