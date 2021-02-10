@@ -1,9 +1,9 @@
 ---
 keywords: destino de almacenamiento de nube;almacenamiento de nube
-title: Información general sobre los destinos del Almacenamiento de nube
+title: Descripción general de los destinos de Almacenamiento de nube
 description: Adobe Experience Platform puede entregar sus segmentos como archivos de datos a sus ubicaciones de Amazon S3, AWS Kinesis, Azure Evento Hubs o SFTP cloud almacenamiento.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
