@@ -1,11 +1,11 @@
 ---
 keywords: etiquetas de envío por avión;destino de la aeronave
-title: Destino de conexión de etiquetas de aerolíneas
+title: Conexión de etiquetas de aerolíneas
 description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como etiquetas de Audiencia para objetivos dentro de la aeronave.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1196'
 ht-degree: 1%
 
 ---
