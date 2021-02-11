@@ -6,10 +6,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 38%
+source-wordcount: '144'
+ht-degree: 37%
 
 ---
 
@@ -48,10 +48,14 @@ ht-degree: 38%
       * [Información general de Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimiento {#consent}
    * [Apoyo al consentimiento](consent/supporting-consent.md)
-   * Marco de transparencia y consentimiento de IAB 2.0 {#iab-tcf}
+   * IAB Transparencia y Consentimiento Framework 2.0 {#iab-tcf}
       * [Información general](consent/iab-tcf/overview.md)
       * [Integración con Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Integrar sin Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Extensión de SDK web para Adobe Experience Platform Launch {#extension}
+   * [Extensión de SDK web](extension/web-sdk-extension.md)
+   * [Tipos de acción](extension/action-types.md)
+   * [Tipos de elementos de datos](extension/data-element-types.md)
 * [Notas de la versión](release-notes.md)
 * [Preguntas frecuentes](web-sdk-faq.md)
 * [Anuncios de blog](blog-posts.md)
