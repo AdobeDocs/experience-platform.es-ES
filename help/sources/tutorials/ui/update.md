@@ -6,10 +6,10 @@ title: Actualizar los detalles de la cuenta de conexión de origen en la interfa
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 0%
+source-wordcount: '681'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 En algunas circunstancias, puede ser necesario actualizar los detalles de una cuenta de fuentes existente. El espacio de trabajo [!UICONTROL Sources] le permite agregar, editar y eliminar detalles de un lote o conexión de flujo existente, incluso su nombre, descripción y credenciales.
 
-Este tutorial proporciona pasos para actualizar los detalles y las credenciales de una cuenta existente desde el espacio de trabajo [!UICONTROL Fuentes].
+El espacio de trabajo [!UICONTROL Sources] también le permite editar la programación de flujos de datos por lotes, lo que le permite actualizar la frecuencia de ingestión y la velocidad de intervalo.
+
+Este tutorial proporciona pasos para actualizar los detalles y las credenciales de una cuenta existente desde el espacio de trabajo [!UICONTROL Fuentes], como así también para actualizar la programación de ingestión de un flujo de datos.
 
 ## Primeros pasos
 
@@ -53,12 +55,39 @@ El cuadro de diálogo **[!UICONTROL Editar detalles de la cuenta]** permite actu
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
-Al cabo de unos minutos, aparece un cuadro de confirmación verde en la parte inferior de la pantalla para confirmar que la actualización se ha realizado correctamente.
+Al cabo de unos minutos, aparece un cuadro de confirmación en la parte inferior de la pantalla para confirmar que la actualización se ha realizado correctamente.
 
 ![actualización confirmada](../../images/tutorials/update/update-confirmed.png)
 
+## Editar programación
+
+Puede editar la programación de ingestión de un flujo de datos desde la página **[!UICONTROL Cuentas]**. En la lista de cuentas, seleccione la cuenta que contiene el flujo de datos que desea reprogramar.
+
+![select-account](../../images/tutorials/update/select-account.png)
+
+Aparece la página de flujos de datos. Esta página contiene una lista de flujos de datos existentes asociados con la cuenta seleccionada. Seleccione las elipses (`...`) junto al flujo de datos que desea reprogramar.
+
+![reprogramar](../../images/tutorials/update/reschedule.png)
+
+Aparece un menú desplegable que le proporciona opciones para **[!UICONTROL Editar programación]**, **[!UICONTROL Habilitar flujo de datos]**, **[!UICONTROL Vista en la supervisión]** y **[!UICONTROL Eliminar]**. Seleccione **[!UICONTROL Editar programación]** en el menú.
+
+![edit-schedule](../../images/tutorials/update/edit-schedule.png)
+
+El cuadro de diálogo **[!UICONTROL Editar programación]** le ofrece opciones para actualizar la frecuencia de ingestión y la velocidad de intervalo del flujo de datos. Una vez configurados los valores de frecuencia e intervalo actualizados, seleccione **[!UICONTROL Guardar]**.
+
+![schedule-dialog-box](../../images/tutorials/update/schedule-dialog-box.png)
+
+| Programación | Descripción |
+| ---------- | ----------- |
+| Frecuencia | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables para la programación de frecuencia de edición para un flujo de datos existente incluyen: `minute`, `hour`, `day` o `week`. |
+| Intervalo | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero y debe ser bueno o igual a `15`. |
+
+Al cabo de unos minutos, aparece un cuadro de confirmación en la parte inferior de la pantalla para confirmar que la actualización se ha realizado correctamente.
+
+![schedule-confirm](../../images/tutorials/update/schedule-confirm.png)
+
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Fuentes] para actualizar la información de la cuenta.
+Siguiendo este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Fuentes] para actualizar la información de la cuenta y editar la programación de flujo de datos.
 
 Para ver los pasos sobre cómo realizar estas operaciones mediante programación mediante la API [!DNL Flow Service], consulte el tutorial sobre [actualización de la información de conexión mediante la API de servicio de flujo](../../tutorials/api/update.md).
