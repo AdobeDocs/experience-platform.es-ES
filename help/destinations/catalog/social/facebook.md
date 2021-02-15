@@ -3,9 +3,9 @@ keywords: conexión de Facebook;conexión de Facebook;destinos de Facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para objetivos de audiencia, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->La migración de clientes a las nuevas versiones de destino está en curso. Hasta que se complete la migración, solo verá las identidades [!UICONTROL EMAIL] y [!UICONTROL EMAIL_LC_SHA_256] disponibles para este destino.
+>Actualmente estamos migrando clientes a la nueva versión de este destino, [!DNL Facebook Custom Audience].
+>
+> Las instrucciones de este artículo se aplican a ambas versiones, con la siguiente nota: mientras esta migración está en curso, solo verá la versión actual del destino [!DNL Facebook] en la interfaz de usuario, donde solo puede utilizar las identidades [!UICONTROL EMAIL] y [!UICONTROL EMAIL_LC_SHA_256] para la activación.
 
 Active perfiles para sus [!DNL Facebook] campañas de objetivo de audiencia, personalización y supresión en base a correos electrónicos con hash.
 
@@ -33,7 +35,7 @@ Un minorista en línea quiere llegar a los clientes existentes a través de las 
 
 ### Caso de uso n.º 2
 
-Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
+Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro), y quiere ofrecer a cada uno de los niveles ofertas personalizadas a través de las plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que tiene la compañía sobre estos clientes son los ID de pertenencia y las direcciones de correo electrónico.
 
 Para destinatario en los medios sociales, pueden incorporar los datos de cliente desde su CRM a Adobe Experience Platform, utilizando las direcciones de correo electrónico como identificadores.
 
@@ -95,14 +97,17 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
    - Ejemplo: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, no `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - No escriba la cadena.
 
-Los datos de las Áreas de nombres sin hash se hash automáticamente mediante [!DNL Platform] en el momento de la activación.
+>[!NOTE]
+>
+>Los datos de las Áreas de nombres sin hash se hash automáticamente mediante [!DNL Platform] en el momento de la activación.
+> Los datos de origen de atributos no se hash automáticamente. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+> La opción **[!UICONTROL Aplicar transformación]** solo se muestra cuando se seleccionan atributos como campos de origen. No se muestra al elegir Áreas de nombres.
 
-Los datos de origen de atributos no se hash automáticamente. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] hash automáticamente los datos en la activación.
 ![Transformación de asignación de identidades](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Uso de Áreas de nombres personalizadas {#custom-namespaces}
 
-Antes de utilizar la Área de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
+Antes de poder utilizar la Área de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
 
 ## Conectar al destino {#connect-destination}
 
