@@ -6,7 +6,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Se aplica a: destinos sociales y destino publicitario de Coincidencia de cliente
 
 Para los destinos sociales, debe seleccionar atributos de origen o Áreas de nombres de identidad para asignarlos como identidades de destinatario en el destino.
 
-#### Ejemplo: activación de datos de audiencia en [!DNL Facebook] {#example-facebook}
+#### Ejemplo: activación de datos de audiencia en [!DNL Facebook Custom Audience] {#example-facebook}
 
 Este es un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Facebook].
 
@@ -258,7 +258,7 @@ Si no se ha detectado ninguna infracción de directiva, seleccione **[!UICONTROL
 
 Siga los pasos a continuación para editar los flujos de activación existentes en Adobe Experience Platform:
 
-1. Seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda, haga clic en la ficha **[!UICONTROL Examinar]** y haga clic en el nombre del destino.
+1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la ficha **[!UICONTROL Browse]** y haga clic en el nombre del destino.
 2. Seleccione **[!UICONTROL Editar activación]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
@@ -296,6 +296,6 @@ Para [!DNL Facebook], una activación exitosa significa que se crearía una audi
 
 Para deshabilitar un flujo de activación existente, siga los pasos a continuación:
 
-1. Seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda, haga clic en la ficha **[!UICONTROL Examinar]** y haga clic en el nombre del destino.
+1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la ficha **[!UICONTROL Browse]** y haga clic en el nombre del destino.
 2. Haga clic en el control **[!UICONTROL Enabled]** en el carril derecho para cambiar el estado del flujo de activación.
 3. En la ventana **Actualizar estado de flujo de datos**, seleccione **Confirmar** para deshabilitar el flujo de activación.
