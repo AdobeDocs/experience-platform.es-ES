@@ -6,10 +6,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 translation-type: tm+mt
-source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
+source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 37%
+source-wordcount: '149'
+ht-degree: 36%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 37%
    * [Extensión de SDK web](extension/web-sdk-extension.md)
    * [Tipos de acción](extension/action-types.md)
    * [Tipos de elementos de datos](extension/data-element-types.md)
+   * [Notas de la versión de la extensión de SDK web](extension/web-sdk-ext-release-notes.md)
 * [Notas de la versión](release-notes.md)
 * [Preguntas frecuentes](web-sdk-faq.md)
 * [Anuncios de blog](blog-posts.md)
