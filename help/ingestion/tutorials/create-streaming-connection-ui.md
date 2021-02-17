@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
@@ -16,67 +16,8 @@ ht-degree: 0%
 
 # Creación de una conexión de flujo continuo mediante la interfaz de usuario
 
-Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
-
-## Primeros pasos
-
 Para inicio de datos de flujo continuo a [!DNL Experience Platform], primero debe crear una conexión HTTP de flujo. Al crear una conexión de flujo continuo, debe proporcionar detalles clave como, por ejemplo, el origen de los datos de flujo continuo y si desea o no enviar datos desde un origen de confianza (autenticado) o no de confianza (no autenticado).
 
 Después de registrar una conexión de flujo, tendrá una dirección URL única que puede utilizarse para transmitir datos a [!DNL Platform].
 
-Tenga en cuenta que para completar esta guía, necesitará tener acceso a Adobe Experience Platform. Si no tiene acceso a [!DNL Platform], póngase en contacto con el administrador del sistema antes de continuar.
-
-## Creación de una conexión de flujo continuo
-
-Después de iniciar sesión en la [!DNL Experience Platform] interfaz de usuario, haga clic en **[!UICONTROL Fuentes]** para abrir la ficha **[!UICONTROL Catálogo]**. Esta página muestra los tipos de origen disponibles como tarjetas individuales, y cada tarjeta contiene una burbuja que muestra el número de flujos de datos que se han creado desde conexiones de flujo a conjuntos de datos.
-
-![](../images/streaming-ingestion/ui/click-sources.png)
-
-En la página **[!UICONTROL Fuentes]**, haga clic en **[!UICONTROL API HTTP]** y, a continuación, **[!UICONTROL Origen de Connect]**.
-
-![](../images/streaming-ingestion/ui/click-connect-source.png)
-
-Aparece la pantalla **[!UICONTROL Conectar con HTTP]**. En **[!UICONTROL Detalles del servicio]**, proporcione el nombre y una descripción para la nueva conexión de flujo continuo.
-
-En **[!UICONTROL Autenticación de cuenta]**, seleccione las siguientes propiedades de configuración para la conexión de flujo continuo:
-
-- **[!UICONTROL Autenticación]:** Indica si la conexión de flujo requiere autenticación. La autenticación garantiza que los datos se recopilen a partir de fuentes de confianza. Se recomienda activarlo si se trata de información personal identificable (PII).
-- **[!UICONTROL Compatibilidad] de Esquema XDM:** Indica si esta conexión de transmisión enviará o no eventos compatibles con esquemas XDM. De forma predeterminada, esta propiedad está activada **en**.
-
-Una vez que haya terminado de seleccionar las propiedades de configuración, haga clic en **[!UICONTROL Conectar]**. La conexión HTTP de flujo continuo ahora se ha creado y se puede ver en la ficha **[!UICONTROL Examinar]** del espacio de trabajo **[!UICONTROL Fuentes]**.
-
-![](../images/streaming-ingestion/ui/http-sources-details.png)
-
-En la ficha **[!UICONTROL Examinar]**, puede hacer clic en la conexión HTTP de flujo recién creada y vista los detalles de esa conexión.
-
-![](../images/streaming-ingestion/ui/browse-sources.png)
-
-Al hacer clic en el hipervínculo del nombre de la conexión, puede seleccionar los datos que se mostrarán configurando qué conjunto de datos está conectado, haciendo clic en **[!UICONTROL Seleccionar datos]**.
-
-![](../images/streaming-ingestion/ui/select-data.png)
-
-Puede [crear un nuevo conjunto de datos](#create-a-new-dataset) o [usar un conjunto de datos existente](#use-an-existing-dataset).
-
-### Crear un nuevo conjunto de datos
-
-Para crear un nuevo conjunto de datos, especifique el nombre, la descripción y el esquema de destinatario del conjunto de datos.
-
-![](../images/streaming-ingestion/ui/create-new-dataset.png)
-
-Después de insertar todos los detalles y hacer clic en **[!UICONTROL Siguiente]**, puede revisar los detalles proporcionados antes de hacer clic en **[!UICONTROL Finalizar]** para conectar el conjunto de datos a su conexión HTTP de flujo.
-
-![](../images/streaming-ingestion/ui/review-create-new-dataset.png)
-
-### Usar un conjunto de datos existente
-
-Para utilizar un conjunto de datos existente, seleccione el **[!UICONTROL nombre del conjunto de datos de salida]**.
-
-![](../images/streaming-ingestion/ui/use-existing-dataset.png)
-
-Después de hacer clic en **[!UICONTROL Siguiente]**, puede revisar los detalles antes de hacer clic en **[!UICONTROL Finalizar]** para conectar el conjunto de datos seleccionado a su conexión HTTP de flujo.
-
-![](../images/streaming-ingestion/ui/review-existing-dataset.png)
-
-## Pasos siguientes
-
-Siguiendo este tutorial, ha creado una conexión HTTP de flujo que le permite utilizar el extremo de flujo para acceder a una variedad de API [!DNL Data Ingestion]. Para obtener instrucciones sobre cómo crear una conexión de flujo en la API, lea el [tutorial de creación de una conexión de flujo](../tutorials/create-streaming-connection.md).
+Para aprender a crear una conexión de flujo continuo, lea la [guía de la interfaz de usuario de origen de la API HTTP](../../sources/tutorials/ui/create/streaming/http.md).
