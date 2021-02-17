@@ -5,9 +5,9 @@ title: Guía de la IU de segmentación por flujo continuo
 topic: ui guide
 description: La segmentación por flujo continuo en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a la plataforma, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a la plataforma, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,9 @@ La segmentación por flujo continuo en [!DNL Adobe Experience Platform] permite 
 
 >[!NOTE]
 >
->La segmentación por flujo continuo solo se puede utilizar para evaluar los datos que se transmiten a la plataforma. En otras palabras, los datos ingeridos mediante la ingestión por lotes no se evaluarán mediante la segmentación de flujo continuo y se evaluarán junto con el trabajo segmentado programado por la noche.
+>La segmentación por flujo continuo solo se puede utilizar para evaluar los datos que se transmiten a la plataforma. En otras palabras, los datos ingestados mediante la ingestión por lotes no se evaluarán mediante la segmentación por flujo continuo y se evaluarán junto con el trabajo de segmento programado por la noche.
+>
+>Además, los segmentos evaluados con la segmentación de flujo pueden variar entre la pertenencia ideal y la real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo: si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará aún más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
 ## Tipos de consulta de segmentación por flujo continuo
 
