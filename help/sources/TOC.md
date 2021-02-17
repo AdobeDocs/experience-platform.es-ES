@@ -5,10 +5,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 13%
+source-wordcount: '557'
+ht-degree: 12%
 
 ---
 
@@ -117,6 +117,8 @@ ht-degree: 13%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
+      - Flujo {#streaming}
+         - [API HTTP](tutorials/api/create/streaming/http.md)
    - Explorar datos {#explore}
       - [Explorar datos de publicidad](tutorials/api/explore/advertising.md)
       - [Explorar datos de almacenamiento en la nube](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 13%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
+      - Flujo {#streaming}
+         - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurar un flujo de datos {#dataflow}
       - [Flujo de datos de conexión de publicidad](tutorials/ui/dataflow/advertising.md)
       - [Flujo de datos de conexión de almacenamiento de nube por lotes](tutorials/ui/dataflow/batch/cloud-storage.md)
