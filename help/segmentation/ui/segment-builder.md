@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic: ui guide
 description: 'El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de Perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar propiedades de datos. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Un contenedor secundario también se puede extraer y agregar en línea al conten
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
-Una vez seleccionado **[!UICONTROL Desajustar contenedor]**, se elimina el contenedor secundario y los criterios aparecen en línea.
+Una vez que selecciona **[!UICONTROL Desajustar contenedor]**, se elimina el contenedor secundario y los criterios aparecen en línea.
 
 >[!NOTE]
 >
@@ -163,7 +163,7 @@ A medida que siga generando la definición del segmento, puede realizar la vista
 >
 >Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de un millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades se utilizan 1 millón de entidades; y para más de 20 millones de entidades se utiliza el 5% del total. Encontrará más información sobre la generación de estimaciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de segmentos.
 
-## Próximos pasos y recursos adicionales {#next-steps}
+## Pasos siguientes {#next-steps}
 
 El Generador de segmentos proporciona un flujo de trabajo enriquecido que le permite aislar audiencias comercializables de datos [!DNL Real-time Customer Profile]. Después de leer esta guía, debería poder:
 
@@ -173,16 +173,4 @@ El Generador de segmentos proporciona un flujo de trabajo enriquecido que le per
 - Habilite todas las definiciones de segmentos para la segmentación programada.
 - Active las definiciones de segmentos especificadas para la segmentación de flujo continuo.
 
-Para obtener más información acerca de [!DNL Segmentation Service], siga leyendo la documentación y complementando su aprendizaje, vea los videos a continuación. Para obtener más información sobre las otras partes de la [!DNL Segmentation Service] interfaz de usuario, lea la [[!DNL Segmentation Service] guía del usuario](./overview.md)
-
->[!WARNING]
->
-> La [!DNL Platform] IU que se muestra en los siguientes vídeos no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
-
-**Crear un segmento:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Crear un segmento dinámico:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Para obtener más información acerca de [!DNL Segmentation Service], siga leyendo la documentación y complementando su aprendizaje viendo los vídeos relacionados. Para obtener más información sobre las otras partes de la [!DNL Segmentation Service] interfaz de usuario, lea la [[!DNL Segmentation Service] guía del usuario](./overview.md)
