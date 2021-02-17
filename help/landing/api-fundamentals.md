@@ -5,7 +5,7 @@ title: Conceptos básicos de la API de Experience Platform
 topic: getting started
 description: Este documento ofrece una breve descripción general de algunas de las tecnologías subyacentes y sintaxis relacionadas con las API de Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -120,7 +120,7 @@ Existen muchas operaciones de PATCH para las API [!DNL Platform] que aceptan obj
 
 Según el tipo de operación indicado en `op`, el objeto JSON Patch puede requerir propiedades adicionales. Para obtener más información sobre las distintas operaciones de JSON Patch y su sintaxis requerida, consulte la [documentación de JSON Patch](http://jsonpatch.com/).
 
-## Esquema JSON
+## Esquema JSON {#json-schema}
 
 Esquema JSON es un formato que se utiliza para describir y validar la estructura de los datos JSON. [El modelo de datos de experiencia (XDM)](../xdm/home.md) aprovecha las capacidades de Esquema JSON para imponer restricciones en la estructura y el formato de los datos de experiencia del cliente ingestados. Para obtener más información sobre el Esquema JSON, consulte la [documentación oficial](https://json-schema.org/).
 
