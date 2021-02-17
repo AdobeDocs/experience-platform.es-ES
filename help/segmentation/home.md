@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y el papel que desempeña en el ecosistema de la plataforma.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >En el evento que se amplía un esquema, todas las cargas futuras deben actualizar los campos recién agregados en consecuencia. Para obtener más información sobre la personalización de [!DNL Experience Data Model] (XDM), visite el [tutorial del Editor de Esquema](../xdm/tutorials/create-schema-ui.md).
 
 ## Evaluar segmentos
+
+La plataforma admite actualmente dos métodos de evaluación de segmentos: segmentación de flujo continuo y segmentación por lotes.
 
 ### Segmentación por flujo continuo
 
