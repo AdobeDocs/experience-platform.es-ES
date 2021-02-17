@@ -3,10 +3,10 @@ keywords: Blob de Azure;destino de Blob;s3;destino de blob de Azure
 title: Conexión de blob de Azure
 description: Cree una conexión directa de salida a su almacenamiento de blob de Azure para exportar periódicamente archivos de datos CSV o delimitados por tabuladores desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 2%
+source-wordcount: '602'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ Si ya tiene un destino de Blob válido, puede omitir el resto de este documento 
 
 [!DNL Experience Platform] admite el siguiente formato de archivo para exportar a  [!DNL Blob]:
 
-- Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por comas. En el futuro se proporcionará compatibilidad con archivos DSV generales. Para obtener más información sobre los archivos admitidos, lea la sección de almacenamiento de nube en el tutorial sobre [activación de destinos](../../ui/activate-destinations.md#esp-and-cloud-storage)
+- Valores separados por delimitadores (DSV): Actualmente, la compatibilidad con archivos de datos con formato DSV está limitada a valores separados por comas. En el futuro se proporcionará compatibilidad con archivos DSV generales. Para obtener más información sobre los archivos admitidos, lea la sección de almacenamiento de nube en el tutorial sobre [activación de destinos](../../ui/activate-destinations.md#esp-and-cloud-storage).
 
 ## Conectar la cuenta de Blob {#connect-destination}
 
@@ -38,15 +38,21 @@ Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a c
 
 Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar el destino específico con el que desea trabajar mediante la opción de búsqueda.
 
-En la categoría **[!UICONTROL Cloud Almacenamiento]**, seleccione **[!UICONTROL Azure Blob Almacenamiento]**, seguido de **[!UICONTROL Activate]**.
+En la categoría **[!UICONTROL Cloud Almacenamiento]**, seleccione **[!UICONTROL Azure Blob Almacenamiento]**, seguido de **[!UICONTROL Configurar]**.
 
 ![Catalog](../../assets/catalog/cloud-storage/blob/catalog.png)
+
+>[!NOTE]
+>
+>Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
 Aparece la página **[!UICONTROL Conectar con el Almacenamiento de blob de Azure]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta {#new-account}
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la cadena de conexión. La cadena de conexión necesaria para acceder a los datos del almacenamiento Blob. El patrón de cadena de conexión [!DNL Blob] inicio con: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione la cadena de conexión. La cadena de conexión es necesaria para acceder a los datos del almacenamiento Blob. El patrón de cadena de conexión [!DNL Blob] inicio con: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+
+Para obtener más información sobre la configuración de la cadena de conexión [!DNL Blob], consulte [Configuración de una cadena de conexión para una cuenta de almacenamiento de Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
 
 Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar encriptación a sus archivos exportados. Tenga en cuenta que esta clave pública **debe** escribirse como una cadena con codificación Base64.
 
@@ -60,7 +66,11 @@ Para conectar una cuenta existente, seleccione la cuenta [!DNL Blob] con la que 
 
 ## Autenticación {#authentication}
 
-Aparece la página **Autenticación**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional, la ruta de acceso a la carpeta y el contenedor de los archivos. Cuando termine, seleccione **[!UICONTROL Crear destino]**.
+Aparece la página **Autenticación**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional, la ruta de acceso a la carpeta y el contenedor de los archivos.
+
+En este paso, también puede seleccionar cualquier **[!UICONTROL acción de mercadotecnia]** que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+
+Cuando termine, seleccione **[!UICONTROL Crear destino]**.
 
 ![Autenticación](../../assets/catalog/cloud-storage/blob/authentication.png)
 
