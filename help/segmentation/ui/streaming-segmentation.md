@@ -5,9 +5,9 @@ title: Guía de la IU de segmentación por flujo continuo
 topic: ui guide
 description: La segmentación por flujo continuo en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a la plataforma, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a la plataforma, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -75,12 +75,6 @@ Para obtener información adicional sobre la última evaluación de segmentos, s
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 Para obtener más información sobre las definiciones de segmentos, lea la sección anterior sobre [detalles de definición de segmentos](#segment-details).
-
-## Demostración en vídeo de segmentación por flujo continuo
-
-El siguiente vídeo está diseñado para admitir su comprensión de la segmentación de flujo continuo. Muestra un ejemplo de la experiencia del cliente seguido de una visita rápida de las funciones clave en la interfaz [!DNL Platform].
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Pasos siguientes
 
