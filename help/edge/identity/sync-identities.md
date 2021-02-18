@@ -1,26 +1,25 @@
 ---
-title: Sincronización de identidades con Audience Manager y Adobe Experience Platform
-seo-title: Sincronización de identidades con Audience Manager y Adobe Experience Platform con Adobe Experience Platform Web SDK
-description: Obtenga información sobre cómo sincronizar identidades con Adobe Audience Manager con el SDK web Experience Platform
+title: Sincronización de identidades entre Audience Manager y Adobe Experience Platform mediante el SDK web de plataforma
+description: Obtenga información sobre cómo sincronizar identidades entre Audience Manager y Adobe Experience Platform mediante el SDK web de plataforma
 seo-description: Obtenga información sobre cómo sincronizar identidades con Adobe Audience Manager con el SDK web Experience Platform
-keywords: audience manager;aam;identities;sync identities;namespace;
+keywords: administrador de audiencias;aam;identities;sync identities;Área de nombres;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
 
-# Sincronización de identidades
+# Sincronización de identidades entre Audience Manager y Experience Platform
 
-El SDK web de Adobe Experience Platform permite declarar los ID de cliente y sus estados de autenticación mediante el comando [sendEvent](./overview.md#syncing-identities) .
+El SDK web de Adobe Experience Platform admite la capacidad de declarar ID de cliente y sus estados de autenticación mediante el comando [sendEvent](./overview.md#syncing-identities).
 
-Elija sus Áreas de nombres en las Áreas de nombres [de servicio de](../../identity/../identity-service/namespaces.md) identidad para indicar el contexto con el que se relaciona una identidad, utilizando los valores de la columna Símbolo de identidad:
+Elija sus Áreas de nombres en las [Áreas de nombres de servicio de identidad](../../identity/../identity-service/namespaces.md) para indicar el contexto al que se relaciona una identidad, utilizando los valores de la columna Símbolo de identidad:
 
 ![Vista de la IU de Áreas de nombres](../../assets/edge_namespaceUI_identity-symbol.png)
 
 Como cliente Audience Manager, todas las fuentes de datos existentes que utilicen el tipo de ID: Los dispositivos cruzados tienen automáticamente una Área de nombres de identidad correspondiente. Para encontrar la Área de nombres de identidad correspondiente para la fuente de datos de Audience Manager, inicie sesión en Adobe Experience Platform y vaya a la sección Identidades.
 
-Cualquier nueva fuente [!DNL Audience Manager] de datos que utilice el tipo de ID: Cross-Device generará una Área de nombres de identidad correspondiente. Actualmente no se admiten la cookie de tipos de ID de fuentes de datos ni el ID de publicidad del dispositivo. Además, cualquier Área de nombres de identidad creada en Adobe Experience Platform generará una fuente [!DNL Audience Manager] de datos correspondiente, pero tenga en cuenta que el método syncIdentity solo admite símbolos de identidad de Área de nombres.
+Cualquier nueva fuente de datos [!DNL Audience Manager] que utilice el tipo de ID: Cross-Device generará una Área de nombres de identidad correspondiente. Actualmente no se admiten la cookie de tipos de ID de fuentes de datos ni el ID de publicidad del dispositivo. Además, cualquier Área de nombres de identidad creada en Adobe Experience Platform generará una fuente de datos [!DNL Audience Manager] correspondiente, pero tenga en cuenta que el método syncIdentity solo admite símbolos de identidad de Área de nombres.
