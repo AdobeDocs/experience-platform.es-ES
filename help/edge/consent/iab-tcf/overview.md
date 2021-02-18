@@ -1,19 +1,17 @@
 ---
-title: Información general sobre Transparencia y Consentimiento de IAB 2.0
-seo-title: Compatibilidad con las preferencias de consentimiento del SDK web de Adobe Experience Platform de Interactive Advertising Bureau Transparency & Consent Framework 2.0
-description: Obtenga información sobre cómo admitir las preferencias de consentimiento TCF 2.0 de IAB con el SDK web de Experience Platform
-seo-description: Obtenga información sobre cómo admitir las preferencias de consentimiento TCF 2.0 de IAB con el SDK web de Experience Platform
+title: Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo admitir las preferencias de consentimiento TCF 2.0 de IAB mediante el SDK web de Adobe Experience Platform
 keywords: consentimiento;setConsent;Perfil Privacy Mixin;Experience Evento Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Perfil
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# Información general sobre Transparencia y Consentimiento de IAB 2.0
+# Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
 
 El SDK web de Adobe Experience Platform es compatible con la versión 2.0 de Transparencia y Consentimiento de la agencia de publicidad interactiva (IAB TCF 2.0). En esta guía se muestran los requisitos para la compatibilidad con IAB TCF 2.0 a través del SDK web de Adobe Experience Platform que se integra con la plataforma de datos del cliente en tiempo real, el Audience Manager, los Eventos de experiencias, Adobe Analytics y Experience Edge.
 
@@ -87,7 +85,7 @@ Para obtener más información sobre el comando `setConsent`, lea la documentaci
 
 ### Añadir el consentimiento a Eventos de experiencias
 
-Adobe Experience Platform Web SDK tiene un comando `sendEvent` que recopila un Evento de experiencias. Si está realizando la integración con Eventos de experiencias o Adobe Analytics y desea obtener las preferencias de consentimiento en cada Evento de experiencias, debe agregar la información de consentimiento a cada comando `sendEvent`.
+Adobe Experience Platform Web SDK tiene un comando `sendEvent` que recopila un Evento de experiencias. Si está realizando la integración con Eventos de experiencias o Adobe Analytics y desea las preferencias de consentimiento en cada Evento de experiencias, debe agregar la información de consentimiento a cada comando `sendEvent`.
 
 Para obtener más información sobre el comando `sendEvent`, lea la documentación sobre [eventos de seguimiento](../../fundamentals/tracking-events.md).
 
