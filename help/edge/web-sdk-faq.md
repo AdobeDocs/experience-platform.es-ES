@@ -1,12 +1,10 @@
 ---
-title: Preguntas más frecuentes sobre el SDK web
-seo-title: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
-description: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
-seo-description: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
+title: Preguntas más frecuentes sobre el SDK web de Adobe Experience Platform
+description: Obtenga respuestas a las preguntas más frecuentes sobre el SDK web de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 2%
 
 # Preguntas frecuentes
 
-Esta pregunta frecuente incluye preguntas que se plantean a menudo sobre el SDK web de Adobe.
+Esta guía proporciona respuestas a preguntas que se plantean a menudo sobre el SDK web de Adobe Experience Platform.
 
 ## ¿Qué es Adobe Experience Platform Web SDK?
 
