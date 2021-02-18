@@ -1,13 +1,11 @@
 ---
-title: Requisitos previos para utilizar el SDK web de Adobe Experience Platform
-seo-title: Requisitos previos para utilizar el SDK web de Adobe Experience Platform
-description: Requisitos previos para utilizar el SDK web de Adobe Experience Platform
-seo-description: Requisitos previos para utilizar el SDK web de Adobe Experience Platform
+title: Requisitos previos para el uso del SDK web de Adobe Experience Platform
+description: Obtenga información sobre los requisitos previos para utilizar el SDK web de Adobe Experience Platform.
 keywords: Dominio de origen;CNAME;esquema;crear esquema;inicio;aep web sdk extension;extensión;id de configuración;herramienta de configuración;elemento de datos;crear elemento de datos;objeto XDM;enviar evento;enviar Evento;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
