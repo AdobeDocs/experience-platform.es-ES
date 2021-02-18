@@ -1,18 +1,16 @@
 ---
-title: Extensión de SDK web de Adobe Experience Platform
-seo-title: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
-seo-description: Extensión SDK para web de Adobe Experience Platform en Adobe Experience Platform Launch
+title: Extensión de SDK web de Adobe Experience Platform Información general
+description: Obtenga información sobre Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 58%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
 
-# Extensión de Adobe Experience Platform Web SDK para Launch de plataforma
+# Información general sobre la extensión del SDK web de Adobe Experience Platform
 
 Adobe Experience Platform Web SDK Extension envía datos al Adobe Experience Cloud desde las propiedades web, a través de Adobe Experience Platform Edge Network. La extensión SDK para web de Adobe Experience Platform permite la transmisión de datos a la plataforma, la sincronización de identidades, la inclusión y la recopilación automática de datos de contexto.
 
