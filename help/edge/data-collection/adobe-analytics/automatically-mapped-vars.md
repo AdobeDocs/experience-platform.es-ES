@@ -1,13 +1,12 @@
 ---
-title: Variables asignadas automáticamente en Adobe Analytics
-seo-title: Variables asignadas automáticamente en Adobe Analytics con Adobe Experience Platform Web SDK
+title: Variables de Adobe Analytics asignadas automáticamente en el SDK web de Adobe Experience Platform
 description: Aprenda qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
-seo-description: Aprenda qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
-keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+seo-description: Descubra qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Adobe Experience Platform
+keywords: adobe analytics;variables;analytics;asignación automática;asignación automática;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -15,27 +14,27 @@ ht-degree: 0%
 
 # Variables asignadas automáticamente en [!DNL Analytics]
 
-A continuación se muestra una lista de variables a las que Adobe Experience Platform Edge Network asigna automáticamente [!DNL Analytics].
+A continuación se muestra una lista de variables que Adobe Experience Platform Edge Network asigna automáticamente a Adobe Analytics.
 
 | Ruta de campo XDM | [!DNL Analytics Query String] / Encabezado HTTP | Descripción |
 | ---------- | ------------------------- | ----------------------------------------- |
-| `application.id` | `c.a.appid` | Asignación `c.a.appid` de datos de contexto de AppMeasurement. |
-| `application.launches.value` | `c.a.launches` | Asignación `c.a.launches` de datos de contexto de AppMeasurement. |
+| `application.id` | `c.a.appid` | Asignación de datos de contexto de AppMeasurement `c.a.appid`. |
+| `application.launches.value` | `c.a.launches` | Asignación de datos de contexto de AppMeasurement `c.a.launches`. |
 | `commerce.checkouts.id` | `events` | `scCheckout` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.checkouts.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_CHECKOUT, mediante delimitador `,`. |
+| `commerce.checkouts.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_CHECKOUT, utilizando el delimitador `,`. |
 | `commerce.order.currencyCode` | `cc` | Asignación de CURRENCY, parámetro de consulta de AppMeasurement. |
 | `commerce.order.purchaseID` | `pi` | Asignación del parámetro de consulta de AppMeasurement PURCHASEID. |
 | `commerce.productListAdds.id` | `events` | `scAdd` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListAdds.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_AÑADA, mediante delimitador `,`. |
+| `commerce.productListAdds.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_AÑADA, utilizando el delimitador `,`. |
 | `commerce.productListOpens.id` | `events` | `scOpen` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListOpens.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_OPEN, mediante delimitador `,`. |
+| `commerce.productListOpens.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_OPEN, utilizando el delimitador `,`. |
 | `commerce.productListRemovals.id` | `events` | `scRemove` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListRemovals.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_REMOVE, mediante delimitador `,`. |
+| `commerce.productListRemovals.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_REMOVE, utilizando el delimitador `,`. |
 | `commerce.productListViews.id` | `events` | `scView` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_SC_mediante delimitador `,`. |
+| `commerce.productListViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_SC_, utilizando el delimitador `,`. |
 | `commerce.productViews.id` | `events` | `prodView` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_PROD_, mediante delimitador `,`. |
-| `commerce.purchases.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_PURCHASE, mediante delimitador `,`. |
+| `commerce.productViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_PROD_, mediante el uso del delimitador `,`. |
+| `commerce.purchases.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_PURCHASE, utilizando el delimitador `,`. |
 | `device.colorDepth` | `c` | Asignación del parámetro de consulta de AppMeasurement C_COLOR. |
 | `device.screenHeight` | `s` | Parámetro de consulta de AppMeasurement Asignación de resolución de pantalla. |
 | `device.screenWidth` | `s` | Parámetro de consulta de AppMeasurement Asignación de resolución de pantalla. |
@@ -52,40 +51,40 @@ A continuación se muestra una lista de variables a las que Adobe Experience Pla
 | `marketing.trackingCode` | `v0` | Asignación de CAMPAÑA de parámetros de consulta de AppMeasurement. |
 | `media.mediaTimed.completes.value` | `c.a.media.complete` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.dropBeforeStart.value` | `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.federated.value` | `c.a.media.federated` | Asignación `c.a.media.federated` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.federated.value` | `c.a.media.federated` | Asignación de datos de contexto de AppMeasurement `c.a.media.federated`. |
 | `media.mediaTimed.firstQuartiles.value` | `c.a.media.progress25` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.mediaSegmentView.value` | `c.a.media.segmentView` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.midpoints.value` | `c.a.media.progress50` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.pauseTime.value` | `c.a.media.pauseTime` | Asignación `c.a.media.pauseTime` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.pauses.value` | `c.a.media.pauseCount` | Asignación `c.a.media.pauseCount` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.pauseTime.value` | `c.a.media.pauseTime` | Asignación de datos de contexto de AppMeasurement `c.a.media.pauseTime`. |
+| `media.mediaTimed.pauses.value` | `c.a.media.pauseCount` | Asignación de datos de contexto de AppMeasurement `c.a.media.pauseCount`. |
 | `media.mediaTimed.primaryAssetReference.@id` | `c.a.media.asset` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.dc:title` | `c.a.media.friendlyName` | Asignación `c.a.media.friendlyName` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.primaryAssetReference.dc:title` | `c.a.media.friendlyName` | Asignación de datos de contexto de AppMeasurement `c.a.media.friendlyName`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name` | `c.a.media.originator` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number` | `c.a.media.episode` | Asignación `c.a.media.episode` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number` | `c.a.media.episode` | Asignación de datos de contexto de AppMeasurement `c.a.media.episode`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre` | `c.a.media.genre` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue` | `c.a.media.rating` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number` | `c.a.media.season` | Asignación `c.a.media.season` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Asignación `a.media.name` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | Asignación `c.a.media.show` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación `c.a.media.type` de datos de contexto de AppMeasurement con conversión VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación `c.a.media.type` de datos de contexto de AppMeasurement con conversión VIDEO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Asignación `c.a.media.length` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number` | `c.a.media.season` | Asignación de datos de contexto de AppMeasurement `c.a.media.season`. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Asignación de datos de contexto de AppMeasurement `a.media.name`. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | Asignación de datos de contexto de AppMeasurement `c.a.media.show`. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto de AppMeasurement `c.a.media.type` con la conversión VEDIO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto de AppMeasurement `c.a.media.type` con conversión VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Asignación de datos de contexto de AppMeasurement `c.a.media.length`. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | Asignación `c.a.media.channel` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.broadcastContentType` | `c.a.contentType` | Asignación `c.a.contentType` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.broadcastNetwork` | `c.a.media.network` | Asignación `c.a.media.network` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.mediaSegmentView.value` | `c.a.media.segment` | Asignación `c.a.media.segment` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.playerName` | `c.a.media.playerName` | Asignación `c.a.media.playerName` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.playerSDKVersion.version` | `c.a.media.sdkVersion` | Asignación `c.a.media.sdkVersion` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.sourceFeed` | `c.a.media.feed` | Asignación `c.a.media.feed` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.primaryAssetViewDetails.streamFormat` | `c.a.media.format` | Asignación `c.a.media.format` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | Asignación de datos de contexto de AppMeasurement `c.a.media.channel`. |
+| `media.mediaTimed.primaryAssetViewDetails.broadcastContentType` | `c.a.contentType` | Asignación de datos de contexto de AppMeasurement `c.a.contentType`. |
+| `media.mediaTimed.primaryAssetViewDetails.broadcastNetwork` | `c.a.media.network` | Asignación de datos de contexto de AppMeasurement `c.a.media.network`. |
+| `media.mediaTimed.primaryAssetViewDetails.mediaSegmentView.value` | `c.a.media.segment` | Asignación de datos de contexto de AppMeasurement `c.a.media.segment`. |
+| `media.mediaTimed.primaryAssetViewDetails.playerName` | `c.a.media.playerName` | Asignación de datos de contexto de AppMeasurement `c.a.media.playerName`. |
+| `media.mediaTimed.primaryAssetViewDetails.playerSDKVersion.version` | `c.a.media.sdkVersion` | Asignación de datos de contexto de AppMeasurement `c.a.media.sdkVersion`. |
+| `media.mediaTimed.primaryAssetViewDetails.sourceFeed` | `c.a.media.feed` | Asignación de datos de contexto de AppMeasurement `c.a.media.feed`. |
+| `media.mediaTimed.primaryAssetViewDetails.streamFormat` | `c.a.media.format` | Asignación de datos de contexto de AppMeasurement `c.a.media.format`. |
 | `media.mediaTimed.progress10.value` | `c.a.media.progress10` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.progress95.value` | `c.a.media.progress95` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.resumes.value` | `c.a.media.resume` | Asignación `c.a.media.resume` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.resumes.value` | `c.a.media.resume` | Asignación de datos de contexto de AppMeasurement `c.a.media.resume`. |
 | `media.mediaTimed.starts.value` | `c.a.media.view` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.thirdQuartiles.value` | `c.a.media.progress75` | Datos de contexto de AppMeasurement. |
-| `media.mediaTimed.timePlayed.value` | `c.a.media.timePlayed` | Asignación `c.a.media.timePlayed` de datos de contexto de AppMeasurement. |
-| `media.mediaTimed.totalTimePlayed.value` | `c.a.media.totalTimePlayed` | Asignación `c.a.media.totalTimePlayed` de datos de contexto de AppMeasurement. |
+| `media.mediaTimed.timePlayed.value` | `c.a.media.timePlayed` | Asignación de datos de contexto de AppMeasurement `c.a.media.timePlayed`. |
+| `media.mediaTimed.totalTimePlayed.value` | `c.a.media.totalTimePlayed` | Asignación de datos de contexto de AppMeasurement `c.a.media.totalTimePlayed`. |
 | `placeContext.geo.latitude` | `lat` | Asignación LATITUDE del parámetro de consulta de AppMeasurement. |
 | `placeContext.geo.longitude` | `lon` | Asignación del parámetro de consulta AppMeasurement en LONGITUDE. |
 | `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta de AppMeasurement. |
@@ -96,7 +95,7 @@ A continuación se muestra una lista de variables a las que Adobe Experience Pla
 | `productlistitems.[N].quantity` | `products` | Parámetro de consulta de AppMeasurement Asignación de cantidad de productos. |
 | `web.webInteraction.URL` | `pev1` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR1. |
 | `web.webInteraction.name` | `pev2` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR2. |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` a `pe=lnk_o`; `web.webInteraction.type=download` a `pe=lnk_d`; `web.webInteraction.type=exit` to `pe=lnk_e` |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` a  `pe=lnk_o`;  `web.webInteraction.type=download` a  `pe=lnk_d`;  `web.webInteraction.type=exit` to  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | Asignación del parámetro de consulta de AppMeasurement PAGE_URL. |
 | `web.webPageDetails.errorPage` | `pageType` | El parámetro de consulta de AppMeasurement PAGE_TYPE_FULL se asigna con la conversión ERROR_PAGE_TYPE. |
 | `web.webPageDetails.homePage` | `hp` | Parámetro de consulta de AppMeasurement Asignación HOMEPAGE con conversión BOOLEAN_TO_YN. |
