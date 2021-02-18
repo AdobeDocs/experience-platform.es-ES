@@ -1,19 +1,18 @@
 ---
-title: Recuperando ID de Experience Cloud
-seo-title: Adobe Experience Platform Web SDK Recuperación de ID de Experience Cloud
-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
+title: Recuperar ID de Experience Cloud mediante el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo recuperar ID de Adobe Experience Cloud (ECID) mediante el SDK web de Adobe Experience Platform.
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de Visitante;identidad de terceros;tercerosCookiesEnabled;idMigrationEnabled;getIdentity;Identidad de sincronización;syncIdentity;sendEvent;identityMap;principal;ecid;Área de nombres de identidad;ID de Área de nombres;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
 
 
-# Identidad: recuperación del ID de Experience Cloud
+# Recuperar ID de Adobe Experience Cloud
 
 El SDK web de Adobe Experience Platform aprovecha [Servicio de identidad de Adobe](../../identity-service/ecid.md). Esto garantiza que cada dispositivo tenga un identificador único que se mantenga en el dispositivo, de modo que la actividad entre páginas se pueda relacionar.
 
