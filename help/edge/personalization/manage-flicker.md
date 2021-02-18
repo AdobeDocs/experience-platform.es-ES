@@ -1,13 +1,11 @@
 ---
-title: Administrar parpadeo para experiencias personalizadas
-seo-title: Adobe Experience Platform Web SDK administrar parpadeo
-description: Obtenga información sobre cómo gestionar el parpadeo en las experiencias de los usuarios
-seo-description: Obtenga información sobre cómo administrar el parpadeo con las propiedades del SDK web Experience Platform
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+title: Administrar parpadeo para experiencias personalizadas mediante el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo utilizar el SDK web de Adobe Experience Platform para administrar el parpadeo en las experiencias de los usuarios.
+keywords: destinatario;parpadeo;anteocultamientoEstilo;asincrónico;asincrónico;
 translation-type: tm+mt
-source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,9 +23,9 @@ La funcionalidad de administración de parpadeo tiene algunas fases:
 
 ## Preocultado
 
-Durante la fase de ocultación previa, el SDK utiliza la opción de configuración para crear una etiqueta de estilo HTML y anexarla al DOM para asegurarse de que grandes partes de la página están ocultas. `prehidingStyle` Si no está seguro de qué partes de la página se personalizarán, se recomienda establecer `prehidingStyle` en `body { opacity: 0 !important }`. Esto garantiza que toda la página esté oculta. Sin embargo, esto tiene el inconveniente de llevar a un peor rendimiento de procesamiento de página informado por herramientas como Lighthouse, Pruebas de página Web, etc. Para obtener el mejor rendimiento de representación de página, se recomienda establecer `prehidingStyle` en una lista de elementos de contenedor que contengan las partes de la página que se van a personalizar.
+Durante la fase de ocultación previa, el SDK utiliza la opción de configuración `prehidingStyle` para crear una etiqueta de estilo HTML y anexarla al DOM para asegurarse de que grandes partes de la página están ocultas. Si no está seguro de qué partes de la página se personalizarán, se recomienda establecer `prehidingStyle` en `body { opacity: 0 !important }`. Esto garantiza que toda la página esté oculta. Sin embargo, esto tiene el inconveniente de llevar a un peor rendimiento de procesamiento de página informado por herramientas como Lighthouse, Pruebas de página Web, etc. Para obtener el mejor rendimiento de representación de página, se recomienda establecer `prehidingStyle` en una lista de elementos de contenedor que contengan las partes de la página que se personalizarán.
 
-Suponiendo que tiene una página HTML como la de abajo y sabe que solo se personalizarán los elementos `bar` y `bazz` contenedor:
+Suponiendo que tiene una página HTML como la de abajo y sabe que sólo se personalizarán los elementos de contenedor `bar` y `bazz`:
 
 ```html
 <html>
@@ -49,11 +47,11 @@ Suponiendo que tiene una página HTML como la de abajo y sabe que solo se person
 </html>
 ```
 
-Entonces el `prehidingStyle` debe ser ajustado a algo como `#bar, #bazz { opacity: 0 !important }`.
+Luego el `prehidingStyle` debe configurarse en algo como `#bar, #bazz { opacity: 0 !important }`.
 
 ## Preprocesamiento
 
-La fase de preprocesamiento se inicia una vez que el SDK ha recibido el contenido personalizado del servidor. Durante esta fase, la respuesta se preprocesa, asegurándose de que los elementos que deben contener contenido personalizado estén ocultos. Una vez ocultos estos elementos, se elimina la etiqueta de estilo HTML que se ha creado en función de la opción de configuración y se muestra el cuerpo HTML o los elementos de contenedor ocultos. `prehidingStyle`
+La fase de preprocesamiento se inicia una vez que el SDK ha recibido el contenido personalizado del servidor. Durante esta fase, la respuesta se preprocesa, asegurándose de que los elementos que deben contener contenido personalizado estén ocultos. Una vez ocultos estos elementos, se elimina la etiqueta de estilo HTML que se ha creado en función de la opción de configuración `prehidingStyle` y se muestra el cuerpo HTML o los elementos de contenedor ocultos.
 
 ## Renderización
 
@@ -75,4 +73,4 @@ La recomendación es cargar siempre el SDK de forma asíncrona para obtener el m
 </script>
 ```
 
-Para asegurarse de que el cuerpo HTML o los elementos contenedor no están ocultos durante un período de tiempo prolongado, el fragmento de ocultación previa utiliza un temporizador que, de forma predeterminada, elimina el fragmento después de `3000` milisegundos. Los `3000` milisegundos son el tiempo de espera máximo. Si la respuesta del servidor se ha recibido y procesado antes, la etiqueta de estilo HTML oculta previamente se eliminará lo antes posible.
+Para asegurarse de que el cuerpo HTML o los elementos de contenedor no están ocultos durante un período de tiempo prolongado, el fragmento de ocultamiento previo utiliza un temporizador que, de forma predeterminada, elimina el fragmento después de `3000` milisegundos. El `3000` milisegundos es el tiempo de espera máximo. Si la respuesta del servidor se ha recibido y procesado antes, la etiqueta de estilo HTML oculta previamente se eliminará lo antes posible.
