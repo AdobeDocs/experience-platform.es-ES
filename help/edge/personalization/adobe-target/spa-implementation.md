@@ -1,21 +1,19 @@
 ---
-title: 'SDK web de Adobe Target y Adobe Experience Platform. '
-seo-title: Adobe Experience Platform Web SDK y uso de Adobe Target
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
-seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
+title: Implementación de aplicación de una sola página para el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo crear una implementación de aplicación de una sola página (SPA) del SDK web de Adobe Experience Platform mediante Adobe Target.
 keywords: destinatario;adobe destinatario;vistas xdm; vistas;aplicaciones de una sola página;SPA;SPA ciclo de vida;cliente;prueba AB;AB;Segmentación de experiencias;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# Implementación de aplicación de página única
+# Implementación de aplicación de una sola página
 
-El SDK web de Adobe Experience Platform proporciona funciones enriquecidas que equipan a su empresa para ejecutar la personalización en tecnologías de cliente de próxima generación, como las aplicaciones de página única (SPA).
+El SDK web de Adobe Experience Platform proporciona funciones enriquecidas que equipan a su empresa para ejecutar la personalización en tecnologías de cliente de próxima generación, como aplicaciones de una sola página (SPA).
 
 Los sitios web tradicionales funcionaban en modelos de navegación “página a página”, conocidos como aplicaciones de varias páginas, en las que los diseños de sitios web estaban perfectamente asociados a las direcciones URL y las transiciones de una página web a otra requerían la carga de páginas.
 
@@ -33,7 +31,7 @@ A continuación se indican algunas ventajas del uso del SDK web de Adobe Experie
 
 ## Vistas XDM y aplicaciones de una sola página
 
-El Adobe Target VEC para SPA aprovecha un concepto llamado Vistas: un grupo lógico de elementos visuales que juntos componen una experiencia SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición a través de Vistas, en lugar de direcciones URL, en función de las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
+El Adobe Target VEC para SPA aprovecha un concepto llamado Vistas: un grupo lógico de elementos visuales que juntos componen una experiencia SPA. Por lo tanto, una aplicación de una sola página puede considerarse una transición a través de Vistas, en lugar de direcciones URL, en función de las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
 
 Para explicar mejor cuáles son las Vistas, el siguiente ejemplo utiliza un hipotético sitio de comercio electrónico en línea implementado en React para explorar Vistas de ejemplo.
 
