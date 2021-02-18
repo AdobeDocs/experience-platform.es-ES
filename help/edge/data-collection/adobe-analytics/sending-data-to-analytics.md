@@ -1,13 +1,11 @@
 ---
-title: Seguimiento de vínculos y páginas con Adobe Analytics
-seo-title: Seguimiento de vínculos a Adobe Analytics con Adobe Experience Platform Web SDK
-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
-seo-description: Obtenga información sobre cómo enviar datos de vínculos a Adobe Analytics con el SDK web de Experience Platform
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+title: Envío de datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo enviar datos a Adobe Analytics mediante el SDK web de Adobe Experience Platform.
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;vistas de página;seguimiento de vínculos;vínculos;seguimiento de vínculos;clickCollection;colección de clics;
 translation-type: tm+mt
-source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -15,11 +13,11 @@ ht-degree: 0%
 
 # Envío de datos a Adobe Analytics
 
-Mientras que en el pasado había diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web hay sólo el `sendEvent` comando. Los datos que envía con un evento determinan si deben ser una vista de página o un vínculo. [Obtenga más información sobre los vínculos](../track-links.md)de seguimiento.
+Mientras que en el pasado había diferentes funciones para distinguir entre una vista de página y un vínculo (por ejemplo, `s.t(), s.tl()`), en el SDK web sólo hay el comando `sendEvent`. Los datos que envía con un evento determinan si deben ser una vista de página o un vínculo. [Obtenga más información sobre los vínculos](../track-links.md) de seguimiento.
 
 ## Envío de una vista de página
 
-Puede especificar una vista de página configurando la `web.webPageDetails.pageViews.value=1` variable.
+Puede especificar una vista de página estableciendo la variable `web.webPageDetails.pageViews.value=1`.
 
 ```javascript
 alloy("sendEvent", {
