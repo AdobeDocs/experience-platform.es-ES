@@ -1,21 +1,19 @@
 ---
-title: Información recopilada automáticamente
-seo-title: Información recopilada automáticamente por Adobe Experience Platform Web SDK
-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
-seo-description: Descripción de cada fragmento de información que el SDK de Adobe Experience Cloud recopila automáticamente
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+title: Recopilación automática de información en el SDK web de Adobe Experience Platform
+description: Información general sobre cada fragmento de información que el SDK de Adobe Experience Platform recopila automáticamente.
+keywords: recopilar información;contexto;configurar;dispositivo;pantallaAlto;pantalla Alto;pantallaOrientación;pantalla Orientación;pantallaAncho;pantalla Ancho;entorno;ventanillaAltura;ventanillaAltura;ventanillaAnchura;ventanilla;cortadorDetalles;detalles del explorador;implementaciónDetalles;implementación Detalles;nombre;versión;contextoContexto;hora local;horaLocalZonaTemporal;desplazamiento local;timestamp;web;url;webPageDetails;webPage Details;webReferrer;web Remitente del reenvío;horizontal;vertical;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 9%
+source-wordcount: '422'
+ht-degree: 8%
 
 ---
 
 
 # Información recopilada automáticamente
 
-Adobe Experience Platform Web SDK recopila una serie de datos automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la `context` opción del `configure` comando. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
+El SDK web de Adobe Experience Platform recopila una serie de datos automáticamente sin ninguna configuración especial. Sin embargo, esta información puede deshabilitarse si es necesario mediante la opción `context` del comando `configure`. [Consulte Configuración del SDK](../fundamentals/configuring-the-sdk.md). A continuación una lista de esos datos. El nombre entre paréntesis indica la cadena que se utilizará al configurar el contexto.
 
 ## Dispositivo (`device`)
 
@@ -51,7 +49,7 @@ Detalles sobre el entorno del explorador.
 
 ### Tipo de entorno
 
-Browser
+Explorador
 
 | **Ruta en carga útil:** | **Ejemplo:** |
 | ------------------------------- | ------------ |
