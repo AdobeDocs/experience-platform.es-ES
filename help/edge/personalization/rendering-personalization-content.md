@@ -1,25 +1,23 @@
 ---
-title: Representación de contenido personalizado
-seo-title: Adobe Experience Platform Web SDK Representación de contenido personalizado
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
-seo-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform
-keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+title: Representar contenido personalizado con el SDK web de Adobe Experience Platform
+description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Adobe Experience Platform.
+keywords: personalización;decisionesDeProcesamiento;enviarEvento;ámbitosDeDecisión;resultados.decisiones;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# Descripción general de las opciones de personalización
+# Representar contenido personalizado
 
-Adobe Experience Platform [!DNL Web SDK] permite consultar las soluciones de personalización en Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también ofrece funciones para [administrar el parpadeo](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] permite consultar las soluciones de personalización en Adobe, incluido Adobe Target. Existen dos modos de personalización: recuperar contenido que se puede procesar automáticamente y contenido que el desarrollador debe procesar. El SDK también proporciona funciones para [administrar el parpadeo](../personalization/manage-flicker.md).
 
 ## Representación automática del contenido
 
-El SDK procesa automáticamente el contenido personalizado cuando envía un evento al servidor y lo establece `renderDecisions` como `true` opción en el evento.
+El SDK procesa automáticamente el contenido personalizado cuando envía un evento al servidor y establece `renderDecisions` en `true` como una opción en el evento.
 
 ```javascript
 alloy("sendEvent", {
@@ -41,7 +39,7 @@ El procesamiento de contenido personalizado es asíncrono, por lo que no debe da
 
 ## Representación manual del contenido
 
-Puede solicitar la lista de las decisiones que se devolverán como una promesa en el `sendEvent` comando especificando la `decisionScopes` opción. Un ámbito es una cadena que permite a la solución de personalización saber qué decisión desea.
+Puede solicitar la lista de decisiones que se devolverán como una promesa en el comando `sendEvent` especificando la opción `decisionScopes`. Un ámbito es una cadena que permite a la solución de personalización saber qué decisión desea.
 
 ```javascript
 alloy("sendEvent",{
@@ -93,8 +91,8 @@ Esto devolverá una lista de decisiones como un objeto JSON para cada decisión.
 
 >[!TIP]
 >
-> Si utiliza [!DNL Target], los ámbitos se convierten en mBoxes en el servidor, solo se solicitan de forma simultánea en lugar de individualmente. El mbox global siempre se envía.
+> Si utiliza [!DNL Target], los ámbitos se convierten en mBoxes en el servidor, solo se solicitan a la vez en lugar de individualmente. El mbox global siempre se envía.
 
 ### Recuperar contenido automático
 
-Si desea `result.decisions` incluir las decisiones de procesamiento automático y NO tener a Alloy procesarlas automáticamente, puede establecer `renderDecisions` en `false`e incluir el ámbito especial `__view__`.
+Si desea que `result.decisions` incluya las decisiones que se pueden procesar automáticamente y NO que Alloy las procese automáticamente, puede establecer `renderDecisions` en `false` e incluir el ámbito especial `__view__`.
