@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: paneles Experience Platform
+title: Introducción a los Paneles del Experience Platform
 topic: overview
 type: Documentation
-description: 'Adobe Experience Platform proporciona varios paneles a través de los cuales puede realizar vistas de información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias. '
+description: 'Explore varios paneles en Adobe Experience Platform para vista de información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias. '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
