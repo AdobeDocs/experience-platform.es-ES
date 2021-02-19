@@ -3,9 +3,9 @@ keywords: flujo continuo;
 title: Conexión HTTP
 description: El destino HTTP de Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '542'
 ht-degree: 2%
 
 ---
@@ -58,6 +58,7 @@ En el paso [!UICONTROL Autenticación], introduzca las credenciales de autentica
 - **[!UICONTROL Nombre]**: escriba un nombre por el cual reconocerá este destino en el futuro.
 - **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
 - **[!UICONTROL Encabezados]** personalizados: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](/help/data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ En el paso [!UICONTROL Autenticación], introduzca las credenciales de autentica
 
 ![Autenticación HTTP](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información acerca de los casos de uso de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../data-governance/policies/overview.md).
+**[!UICONTROL Acción]** de mercadotecnia: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../data-governance/policies/overview.md).
 
 Haga clic en **[!UICONTROL Crear destino]**.
 
