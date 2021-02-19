@@ -3,9 +3,9 @@ keywords: Publicidades de Google;publicidades de Google;adwords de Google;Google
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas pagar por publicidad a través de búsquedas de texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles dentro de la aplicación.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ En el paso **Configuración** del flujo de trabajo de creación de destino, rell
 * **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
 * **[!UICONTROL Tipo]** de cuenta: AdWords es la única opción disponible.
 * **[!UICONTROL ID]** de cuenta: Rellene su ID de cuenta con  [!DNL Google Ads]. El formato de ID suele ser 123-456-7890.
-* **[!UICONTROL Caso]** de uso de marketing: Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información acerca de los casos de uso de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Acción]** de mercadotecnia: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ## Activar segmentos a [!DNL Google Ads]
 
