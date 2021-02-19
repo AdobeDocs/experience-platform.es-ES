@@ -3,9 +3,9 @@ keywords: Destino del concentrador de evento de Azure;concentrador de evento de 
 title: (Beta) Conexión de los centros de Evento de Azure
 description: Cree una conexión saliente en tiempo real con el almacenamiento de los centros de Evento de Azure para transmitir datos desde el Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ Para destinos [!DNL Azure Event Hubs], introduzca la siguiente información en e
 * **[!UICONTROL Nombre]**: Rellene un nombre para la conexión a  [!DNL Azure Event Hubs].
 * **[!UICONTROL Descripción]**: Proporcione una descripción de la conexión.  Ejemplos: &quot;Clientes Premium&quot;, &quot;Hombres interesados en el kitesurf&quot;.
 * **[!UICONTROL eventHubName]**: Proporcione un nombre para el flujo al  [!DNL Azure Event Hubs] destino.
+* **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Datos requeridos en el paso de configuración](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
