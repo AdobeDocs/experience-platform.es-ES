@@ -5,9 +5,9 @@ seo-title: Información general sobre los destinos
 description: Obtenga información sobre cómo activar datos de Adobe Experience Platform en destinos para campañas de marketing entre canales, correos electrónicos, publicidad de destino y mucho más.
 seo-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Adobe Experience Platform. Puede utilizar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Los controles del [espacio de trabajo Destinations](./ui/destinations-workspace.
 * Examinar el catálogo de plataformas de destino en el que puede activar los datos;
 * Crear, editar, activar y desactivar flujos de datos a los destinos del catálogo;
 * Cree una cuenta en una ubicación de almacenamiento o vincule Plataforma a la cuenta en la plataforma de destino;
-* Seleccione qué segmentos deben activarse en los destinos;
+* Seleccione los segmentos que se deben activar en los destinos;
 * Seleccione los campos [Modelo de datos de experiencia (XDM)](../xdm/home.md) que desea exportar al activar segmentos en destinos de marketing por correo electrónico.
 
 ## Tipos y categorías de destino {#types-and-categories}
@@ -53,12 +53,12 @@ Para obtener más información sobre controles de acceso, consulte la [guía del
 
 La gobernanza de los datos se aplica a los destinos de plataforma mediante:
 
-* *Casos* de uso de marketing que puede seleccionar en el flujo de trabajo de creación de destinos;
-* *Las* directivas de uso de datos que restringen la activación de datos que contienen determinadas etiquetas de uso en destinos con determinados casos de uso de mercadotecnia.
+* *Acciones de marketing* que puede seleccionar en el flujo de trabajo de creación de destinos;
+* *Las* directivas de uso de datos que restringen la activación de datos que contienen determinadas etiquetas de uso en destinos con determinadas acciones de marketing.
 
-Consulte [!DNL Data Governance] en la documentación de la Plataforma para obtener más información sobre [casos de uso de mercadotecnia](../data-governance/policies/overview.md) y [resolución de violaciones de políticas de datos](../data-governance/enforcement/auto-enforcement.md).
+Consulte [!DNL Data Governance] en la documentación de la Plataforma para obtener más información sobre [acciones de mercadotecnia](../data-governance/policies/overview.md) y [resolución de violaciones de directivas de datos](../data-governance/enforcement/auto-enforcement.md).
 
-Para obtener más información sobre la selección de casos de uso de mercadotecnia en el flujo de trabajo de creación de destino, consulte las páginas siguientes para los distintos tipos de destino en Plataforma:
+Para obtener más información sobre la selección de acciones de marketing en el flujo de trabajo de creación de destino, consulte las páginas siguientes para los distintos tipos de destino en Plataforma:
 
 * [Destinos publicitarios - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Destinos publicitarios - Publicidades de Google](./catalog/advertising/google-ads-destination.md)
