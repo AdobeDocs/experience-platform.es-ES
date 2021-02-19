@@ -1,13 +1,13 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: administración de datos rtcdp;administración de datos rtcdp;administración de datos del perfil de datos del cliente en tiempo real
 title: Información general sobre la administración de datos
 seo-title: Administración de datos en la plataforma de datos del cliente en tiempo real
 description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 seo-description: 'La Administración de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ CDP en tiempo real se basa en Adobe Experience Platform y, por lo tanto, la mayo
 
 Para obtener información detallada sobre cómo trabajar con etiquetas de uso de datos, consulte la [guía del usuario de etiquetas de uso de datos](../../data-governance/labels/overview.md) para Adobe Experience Platform.
 
-## Configurar casos de uso de mercadotecnia para destinos {#destinations}
+## Configurar acciones de mercadotecnia para destinos {#destinations}
 
-Puede establecer restricciones de uso de datos en un destino definiendo casos de uso de mercadotecnia (también llamados acciones de mercadotecnia) para ese destino. Un caso de uso de marketing para un destino indica la intención de los datos que se exportarán a ese destino.
+Puede establecer restricciones de uso de datos en un destino definiendo acciones de marketing (también denominadas casos de uso de marketing) para ese destino. Una acción de marketing para un destino indica la intención de los datos que se exportarán a ese destino.
 
 >[!NOTE]
 >
 >Para obtener más información sobre las acciones de mercadotecnia y su uso en las políticas de uso de datos, consulte la [información general de las directivas de uso de datos](../../data-governance/policies/overview.md) en la documentación de [!DNL Experience Platform].
 
-La definición de casos de uso de mercadotecnia en los destinos le permite asegurarse de que todos los perfiles o segmentos enviados a dichos destinos cumplen las políticas de uso de datos. Por lo tanto, debe agregar a los destinos los casos de uso de mercadotecnia adecuados en función de las necesidades de su organización para aplicar restricciones de directiva en la activación.
+La definición de acciones de marketing en los destinos le permite asegurarse de que todos los perfiles o segmentos enviados a dichos destinos cumplen las directivas de uso de datos. Por lo tanto, debe agregar las acciones de mercadotecnia apropiadas a los destinos en función de las necesidades de su organización para aplicar restricciones de directiva en la activación.
 
-Los casos de uso de mercadotecnia solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar casos de uso de mercadotecnia aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la [documentación de destinos](../destinations/overview.md) para ver los pasos para configurar el destino en particular.
+Las acciones de marketing solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que esté trabajando, la oportunidad de configurar acciones de marketing aparecerá en diferentes puntos del flujo de trabajo de configuración. Consulte la [documentación de destinos](../destinations/overview.md) para ver los pasos para configurar el destino en particular.
 
 ## Administrar directivas de uso de datos {#policies}
 
