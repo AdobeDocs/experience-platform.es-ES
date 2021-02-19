@@ -3,9 +3,9 @@ keywords: mobile; brasil; mensajería;
 title: Conexión de Brazo
 description: Braze es una amplia plataforma de compromiso con el cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les gustan.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Haga clic en **[!UICONTROL Siguiente]**. En el paso [!UICONTROL Autenticación],
 * **[!UICONTROL Nombre]**: escriba un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Instancia]** de extremo: pregunte a su  [!DNL Braze] representante qué instancia de extremo debe utilizar.
-* **[!UICONTROL Caso]** de uso de marketing: los casos de uso de mercadotecnia indican la intención de exportar los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre los casos de uso de mercadotecnia definidos por el Adobe, consulte la [información general sobre las directivas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Acción]** de mercadotecnia: las acciones de mercadotecnia indican la intención de exportar los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Paso de autenticación de Brazo](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
