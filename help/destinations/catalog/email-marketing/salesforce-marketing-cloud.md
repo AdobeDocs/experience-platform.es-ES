@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;correo electrónico;destinos d
 title: Conexión de Marketing Cloud de Salesforce
 seo-description: Salesforce Marketing Cloud es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes puedan personalizar su experiencia.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,10 @@ Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar dominio, 
 En el paso **[!UICONTROL Configuración]**, rellene la información relevante para su destino como se muestra a continuación:
 - **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
 - **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
+- **[!UICONTROL Nombre]** del contenedor: Su depósito Amazon S3, donde Platform depositará la exportación de datos. La entrada debe tener entre 3 y 63 caracteres. Debe comenzar y finalizar con una letra o un número. Sólo debe contener letras minúsculas, números o guiones ( - ). No se debe dar formato a una dirección IP (por ejemplo, 192.100.1.1).
 - **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en la ubicación del almacenamiento donde Platform depositará los datos de exportación como archivos CSV o separados por tabuladores.
-- **[!UICONTROL Formato]** de archivo:  **** CSVo  **[!UICONTROL TAB_DELIMITED]**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
+- **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a la ubicación de almacenamiento.
+- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Información básica de Salesforce](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
