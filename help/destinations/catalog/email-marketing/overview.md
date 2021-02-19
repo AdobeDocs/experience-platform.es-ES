@@ -4,9 +4,9 @@ title: Introducción a los destinos de mercadotecnia por correo electrónico
 type: Tutorial
 description: Los Proveedores de servicio de correo electrónico (ESP) le permiten administrar sus actividades de mercadotecnia por correo electrónico, por ejemplo, para enviar campañas de correo electrónico promocionales.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ En el paso **[!UICONTROL Configuración]**, escriba un nombre y una descripción
 
 Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre del bucket y la ruta de la carpeta en el destino de almacenamiento en la nube donde se enviarán los archivos. Para la opción almacenamiento SFTP, inserte la ruta de la carpeta en la que se enviarán los archivos.
 
-También en este paso puede seleccionar cualquier caso de uso de mercadotecnia que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información acerca de los casos de uso de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+También en este paso puede seleccionar cualquier acción de marketing que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Paso de configuración de correo electrónico](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
