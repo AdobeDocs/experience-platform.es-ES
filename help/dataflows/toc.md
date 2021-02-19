@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guía de flujos de datos
 user-guide-description: Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform.
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
 workflow-type: tm+mt
-source-wordcount: '31'
-ht-degree: 48%
+source-wordcount: '43'
+ht-degree: 34%
 
 ---
 
@@ -20,3 +20,4 @@ ht-degree: 48%
 - Guías de IU {#ui}
    - [Monitorear flujos de datos en destinos](./ui/monitor-destinations.md)
    - [Monitorear flujos de datos en orígenes](./ui/monitor-sources.md)
+- [API de servicio de flujo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
