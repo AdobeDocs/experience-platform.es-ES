@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -234,7 +234,7 @@ Se recomienda que uno de los atributos sea un [identificador único](../../desti
 
 >
 > 
-Por ejemplo: si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con el caso de uso de mercadotecnia del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+Por ejemplo: si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de mercadotecnia del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **** Reviewstep  {#review}
 
