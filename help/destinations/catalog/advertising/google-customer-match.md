@@ -3,9 +3,9 @@ keywords: coincidencia de cliente de Google;Coincidencia de cliente de Google;Co
 title: Conexión de Coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -129,13 +129,13 @@ Una vez confirmadas las credenciales y que Adobe Experience Cloud esté conectad
 
 En el paso **[!UICONTROL Autenticación]**, escriba un [!UICONTROL Nombre] y una [!UICONTROL Descripción] para el flujo de activación y rellene su Google con el [!UICONTROL ID de cuenta].
 
-También en este paso, puede seleccionar cualquier **[!UICONTROL caso de uso de mercadotecnia]** que deba aplicarse a este destino. Los casos de uso de mercadotecnia indican la intención para la cual se exportarán los datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear su propio caso de uso de mercadotecnia. Para obtener más información sobre los casos de uso de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations). Para obtener información sobre los casos de uso de mercadotecnia definidos por el Adobe, consulte la [información general sobre las directivas de uso de datos](../../../data-governance/policies/overview.md#core-actions).
+También en este paso, puede seleccionar cualquier **[!UICONTROL acción de mercadotecnia]** que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en tiempo real de CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md#core-actions).
 
 Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
 >[!IMPORTANT]
 >
-> * El caso de uso de mercadotecnia **[!UICONTROL Combinar con PII]** está seleccionado de forma predeterminada para el destino [!DNL Google Customer Match] y no se puede eliminar.
+> * La acción de mercadotecnia **[!UICONTROL Combinar con PII]** está seleccionada de forma predeterminada para el destino [!DNL Google Customer Match] y no se puede eliminar.
 > * Para destinos [!DNL Google Customer Match]. **[!UICONTROL ID de cuenta]** es su ID de cliente con Google. El formato del ID es xxx-xxx-xxxx.
 
 
