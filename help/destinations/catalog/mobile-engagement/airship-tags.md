@@ -3,9 +3,9 @@ keywords: etiquetas de envío por avión;destino de la aeronave
 title: Conexión de etiquetas de aerolíneas
 description: Pasar sin problemas los datos de Audiencia de Adobe a la aeronave como etiquetas de Audiencia para objetivos dentro de la aeronave.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Una vez confirmadas las credenciales y que Adobe Experience Platform esté conec
 
 En el paso **[!UICONTROL Autenticación]**, escriba un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación.
 
-También en este paso, puede seleccionar un centro de datos de EE. UU. o de la UE, según el [!DNL Airship] centro de datos que se aplique a este destino. Finalmente, seleccione uno o varios casos de uso de mercadotecnia para los que se exportarán datos al destino. Puede seleccionar entre los casos de uso de mercadotecnia definidos por el Adobe o puede crear los suyos propios. Para obtener más información acerca de los casos de uso de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+También en este paso, puede seleccionar un centro de datos de EE. UU. o de la UE, según el [!DNL Airship] centro de datos que se aplique a este destino. Finalmente, seleccione una o más **[!UICONTROL Acciones de mercadotecnia]** para las que se exportarán datos al destino. Puede seleccionar entre acciones de marketing definidas por Adobe o puede crear las suyas propias. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
 Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
