@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;almacenamiento de nube;almacenamiento de nube
 solution: Experience Platform
 title: Explorar un sistema de Almacenamiento en voz alta mediante la API de servicio de flujo
-topic: overview
+topic: sobre validación
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -30,14 +30,15 @@ Las siguientes secciones proporcionan información adicional que deberá conocer
 
 Para explorar un almacenamiento de nube de terceros mediante API [!DNL Platform], debe tener un ID de conexión válido. Si todavía no tiene una conexión para el almacenamiento con el que desea trabajar, puede crear una mediante los siguientes tutoriales:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azure Data Lake Almacenamiento Gen2](../create/cloud-storage/adls-gen2.md)
-* [Almacenamiento de archivos de Azure](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Tienda de Google Cloud](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Leer llamadas de API de muestra
 
