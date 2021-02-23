@@ -5,10 +5,10 @@ title: Connect RStudio al servicio de Consulta
 topic: connect
 description: Este documento recorre los pasos para conectar R Studio con el servicio de Consulta de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 2%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ Este documento recorre los pasos para conectar [!DNL RStudio] con Adobe Experien
 >[!NOTE]
 >
 > Esta guía asume que ya tiene acceso a [!DNL RStudio] y está familiarizado con cómo utilizarlo. Puede encontrar más información sobre [!DNL RStudio] en la [documentación oficial [!DNL RStudio] ](https://rstudio.com/products/rstudio/).
+> 
+> Además, para utilizar RStudio con el servicio de Consulta, debe instalar el controlador PostgreSQL JDBC 4.2. Puede descargar el controlador JDBC desde el [sitio oficial PostgreSQL](https://jdbc.postgresql.org/download.html).
 
 ## Cree una conexión [!DNL Query Service] en la interfaz [!DNL RStudio]
 
-Después de instalar [!DNL RStudio], en la pantalla **[!DNL Console]** que aparece, primero deberá preparar la secuencia de comandos de R para utilizar [!DNL PostgreSQL].
+Después de instalar [!DNL RStudio], debe instalar el paquete RJDBC. Vaya al panel **[!DNL Packages]** y seleccione **[!DNL Install]**.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+Aparece una ventana emergente que muestra la pantalla **[!DNL Install Packages]**. Asegúrese de que **[!DNL Repository (CRAN)]** esté seleccionado para la sección **[!DNL Install from]**. El valor de **[!DNL Packages]** debe ser `RJDBC`. Asegúrese de que **[!DNL Install dependencies]** está seleccionado. Después de confirmar que todos los valores son correctos, seleccione **[!DNL Install]** para instalar los paquetes.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Ahora que se ha instalado el paquete RJDBC, reinicie RStudio para completar el proceso de instalación.
+
+Después de reiniciar RStudio, ahora puede conectarse al servicio de Consulta. Seleccione el paquete **[!DNL RJDBC]** en el panel **[!DNL Packages]** e introduzca el siguiente comando en la consola:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Una vez que haya preparado la secuencia de comandos R para utilizar [!DNL PostgreSQL], ahora puede conectar [!DNL RStudio] a [!DNL Query Service] cargando el controlador [!DNL PostgreSQL].
+Donde {PATH TO AL JAR JDBC POSTGRESQL} representa la ruta al JAR JDBC PostgreSQL que se instaló en el equipo.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+Ahora, puede crear la conexión al servicio de Consulta introduciendo el siguiente comando en la consola:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | Nombre de la base de datos que se va a utilizar. |
-| `{HOST_NUMBER` y `{PORT_NUMBER}` | El extremo del host y su puerto para el servicio de Consulta. |
-| `{USERNAME}` y `{PASSWORD}` | Las credenciales de inicio de sesión que se utilizarán. El nombre de usuario toma la forma `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 >Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la [página de credenciales en la plataforma](https://platform.adobe.com/query/configuration). Para encontrar sus credenciales, inicie sesión en [!DNL Platform] y luego seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Escritura de consultas
 
