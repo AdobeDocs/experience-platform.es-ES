@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube;datos de flujo;flujo continuo
 solution: Experience Platform
 title: Recopilación de datos de flujo mediante Conectores de origen y API
-topic: overview
+topic: sobre validación
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a la plataforma mediante conectores de origen y API.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ Este tutorial requiere que tenga un ID de conexión válido para un conector de 
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
 
@@ -237,7 +238,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 Se puede crear un conjunto de datos de destinatario realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /catalog/dataSets
@@ -275,11 +276,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `schemaRef.id` | ID del esquema XDM de destinatario. |
+| `schemaRef.id` | El ID del esquema XDM de destino. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API. El ID del conjunto de datos de destinatario es necesario en pasos posteriores para crear una conexión de destinatario y un flujo de datos.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID de conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API. El ID del conjunto de datos de destino se requiere en pasos posteriores para crear una conexión de destino y un flujo de datos.
 
 ```json
 [
@@ -287,13 +288,13 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Crear una conexión de destinatario {#target-connection}
+## Crear una conexión de destino {#target-connection}
 
-Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar el ID de especificación de conexión fijo asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino en el que aterrizan los datos ingestados. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado con el lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Con estos identificadores, puede crear una conexión de destinatario mediante la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen de entrada.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión en el lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /targetConnections
@@ -328,11 +329,11 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | El ID de especificación de conexión utilizado para conectarse al Data Lake. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único de la nueva conexión de destinatario (`id`). Este ID se requiere en pasos posteriores.
+Una respuesta correcta devuelve el identificador único de la nueva conexión de destino (`id`). Este ID se requiere en pasos posteriores.
 
 ```json
 {
@@ -343,9 +344,9 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 
 ## Crear una asignación {#mapping}
 
-Para que los datos de origen se puedan ingerir en un conjunto de datos de destinatario, primero deben asignarse al esquema de destinatario al que se adhiere el conjunto de datos de destinatario. Esto se logra realizando una solicitud de POST al servicio de conversión con asignaciones de datos definidas en la carga útil de la solicitud.
+Para que los datos de origen se ingesten en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se consigue realizando una solicitud de POST al servicio de conversión con asignaciones de datos definidas en la carga útil de la solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /conversion/mappingSets
@@ -384,7 +385,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `xdmSchema` | El `$id` del esquema XDM de destinatario. |
+| `xdmSchema` | El `$id` del esquema XDM de destino. |
 
 **Respuesta**
 
@@ -403,8 +404,8 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Buscar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de un conector de flujo continuo.
-**Formato API**
+Un flujo de datos es responsable de recopilar datos de orígenes y de llevarlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de un conector de transmisión.
+**Formato de API**
 
 ```http
 GET /flowSpecs?property=name=="Steam data with transformation"
@@ -422,7 +423,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de traer datos del conector de flujo continuo a [!DNL Platform]. Este ID es necesario en el paso siguiente para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos que es responsable de traer datos desde el conector de transmisión a [!DNL Platform]. Este ID es necesario en el siguiente paso para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -492,18 +493,18 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 }
 ```
 
-## Crear un flujo de datos
+## Creación de un flujo de datos
 
-El último paso para recopilar datos de flujo continuo es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores necesarios:
+El último paso para recopilar datos de transmisión es crear un flujo de datos. Ya tiene preparados los siguientes valores obligatorios:
 
-- [ID de conexión de origen](#source)
-- [ID de conexión de destinatario](#target)
-- [ID de asignación](#mapping)
+- [Id. de conexión de origen](#source)
+- [ID de conexión de destino](#target)
+- [Id. de asignación](#mapping)
 - [Id. de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores anteriormente mencionados dentro de la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST al proporcionar los valores anteriormente mencionados en la carga útil.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /flows
@@ -546,8 +547,8 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `flowSpec.id` | El [Id. de especificación de flujo](#specs) recuperado en el paso anterior. |
-| `sourceConnectionIds` | El [ID de conexión de origen](#source) recuperado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destinatario](#target-connection) recuperado en un paso anterior. |
+| `sourceConnectionIds` | El [id. de conexión de origen](#source) recuperado en un paso anterior. |
+| `targetConnectionIds` | El [id. de conexión de destino](#target-connection) recuperado en un paso anterior. |
 | `transformations.params.mappingId` | El [id. de asignación](#mapping) recuperado en un paso anterior. |
 
 **Respuesta**
@@ -563,7 +564,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un flujo de datos para recopilar datos de flujo continuo de su conector de flujo continuo. Los datos entrantes ahora se pueden utilizar en servicios de flujo descendente [!DNL Platform] como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un flujo de datos para recopilar datos de transmisión desde su conector de transmisión. Los datos entrantes ahora se pueden utilizar en servicios descendentes [!DNL Platform] como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 - [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
 - [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
