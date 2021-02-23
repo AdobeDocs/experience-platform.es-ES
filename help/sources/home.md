@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;conectores de origen;conector de origen;orígenes;fuentes de datos;fuente de datos;conexión de origen de datos
 solution: Experience Platform
 title: Información general de los conectores de origen
-topic: overview
+topic: sobre validación
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Las fuentes de almacenamiento de nube pueden llevar sus propios datos a la plata
 - [[!DNL Azure File Storage] conector](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] conector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] conector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] conector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] conector](connectors/cloud-storage/sftp.md)
 
 ### Administración de la relación con los clientes (CRM)
@@ -113,30 +114,30 @@ Experience Platform proporciona asistencia para la ingesta de datos desde un sis
 
 ### Protocolos
 
-Experience Platform proporciona soporte para la ingesta de datos desde un sistema de protocolos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre los conectores de origen específicos:
+Experience Platform proporciona compatibilidad para la ingesta de datos desde un sistema de protocolos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL Generic OData] conector](connectors/protocols/odata.md)
 
-## Control de acceso para fuentes en la ingestión de datos
+## Control de acceso para orígenes en la ingesta de datos
 
-Los permisos para fuentes en la ingestión de datos se pueden administrar dentro de Adobe Admin Console. Puede acceder a los permisos a través de la ficha **[!UICONTROL Permisos]** en un perfil de producto determinado. Desde el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos correspondientes a los orígenes a través de la entrada de menú **[!UICONTROL ingestión de datos]**. El permiso **[!UICONTROL Fuentes de Vista]** otorga acceso de sólo lectura a los orígenes disponibles en la ficha **[!UICONTROL Catálogo]** y a los orígenes autenticados en la ficha **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar fuentes]** otorga acceso total a las fuentes de lectura, creación, edición y desactivación.
+Los permisos de los orígenes en la ingesta de datos se pueden administrar en Adobe Admin Console. Puede acceder a los permisos a través de la ficha **[!UICONTROL Permisos]** de un perfil de producto determinado. En el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos correspondientes a los orígenes mediante la entrada de menú **[!UICONTROL ingesta de datos]**. El permiso **[!UICONTROL Ver orígenes]** concede acceso de solo lectura a los orígenes disponibles en la ficha **[!UICONTROL Catálogo]** y a los orígenes autenticados en la ficha **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar orígenes]** concede acceso completo a fuentes de lectura, creación, edición y desactivación.
 
 La tabla siguiente describe cómo se comporta la interfaz de usuario en función de las distintas combinaciones de estos permisos:
 
 | Nivel de permiso | Descripción |
 | ---- | ----|
-| **[!UICONTROL Vista]** de fuentesActivada | Conceda acceso de solo lectura a los orígenes en cada tipo de origen en la ficha Catálogo, así como en las fichas Examinar, Cuentas y Flujo de datos. |
-| **[!UICONTROL Administrar]** fuentesActivado | Además de las funciones incluidas en **[!UICONTROL Fuentes de Vista]**, concede acceso a la opción **[!UICONTROL Origen de conexión]** en **[!UICONTROL Catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar]** fuentes también le permite habilitar o deshabilitar  **** FlujosDeDatos y editar sus programaciones. |
-| **[!UICONTROL Vista]** de fuentesDesactivar y  **[!UICONTROL administrar]** fuentesDesactivar | Revocar todo el acceso a las fuentes. |
+| **[!UICONTROL Ver]** orígenes activado | Conceda acceso de solo lectura a los orígenes de cada tipo de origen en la ficha Catálogo, así como en las fichas Examinar, Cuentas y Flujo de datos. |
+| **[!UICONTROL Administrar]** orígenes | Además de las funciones incluidas en **[!UICONTROL Ver orígenes]**, concede acceso a la opción **[!UICONTROL Conectar origen]** en **[!UICONTROL Catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar]** orígenes también le permite activar o desactivar  **** DataFlow y editar sus programaciones. |
+| **[!UICONTROL Ver]** orígenes desactivados y  **[!UICONTROL Administrar]** orígenes desactivados | Revocar todo el acceso a los orígenes. |
 
-Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidas las cuatro fuentes, consulte la [información general del control de acceso](../access-control/home.md).
+Para obtener más información sobre los permisos disponibles otorgados a través del Admin Console, incluidos esos cuatro orígenes, vea la [información general sobre el control de acceso](../access-control/home.md).
 
 ## Términos y condiciones {#terms-and-conditions}
 
-Al utilizar cualquiera de las fuentes etiquetadas como beta (&quot;Beta&quot;), reconoce que la versión beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
+Al utilizar cualquiera de las fuentes etiquetadas como beta (&quot;Beta&quot;), reconoce que la versión beta se proporciona ***&quot;tal y como está&quot; sin garantía de ningún tipo***.
 
-El Adobe no estará obligado a mantener, corregir, actualizar, cambiar, modificar o apoyar de otro modo la versión beta. Se le aconseja que tenga precaución y no dependa en modo alguno del funcionamiento o el rendimiento correctos de dicha versión beta o de los materiales que la acompañen. La versión beta se considera información confidencial del Adobe.
+El Adobe no estará obligado a mantener, corregir, actualizar, cambiar, modificar ni apoyar de otro modo la versión beta. Se le aconseja que tenga precaución y no dependa en modo alguno del correcto funcionamiento o rendimiento de dicha Beta y/o de los materiales que la acompañen. La versión beta se considera Información confidencial del Adobe.
 
-Cualquier &quot;Comentario&quot; (información relacionada con la versión beta, incluso, entre otros, los problemas o defectos que se produzcan al usar la versión beta, sugerencias, mejoras y recomendaciones) que proporcione el Cliente a Adobe, se asigna al Adobe, incluidos todos los derechos, títulos e intereses en y a dichos Comentarios.
+Cualquier &quot;Comentarios&quot; (información relativa a la versión beta que incluya, entre otros, los problemas o defectos que se produzcan al utilizar la versión beta, sugerencias, mejoras y recomendaciones) proporcionados por el usuario al Adobe se asigna al Adobe, incluidos todos los derechos, el título y el interés en dichos Comentarios.
 
-Envíe comentarios abiertos o cree un ticket de asistencia técnica para compartir sus sugerencias o informe de un error, busque una mejora de la función.
+Envíe comentarios abiertos o cree un ticket de asistencia técnica para compartir sus sugerencias o informar de un error, busque una mejora en la función.
