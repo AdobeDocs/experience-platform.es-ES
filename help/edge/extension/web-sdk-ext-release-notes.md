@@ -3,10 +3,10 @@ title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
 seo-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 #### Correcciones de errores
 
-* Cuando los clientes intentaban crear un objeto XDM a partir de esquemas de simulación de pruebas, se topaban con problemas de autenticación. La API que llama a AEP ahora conoce los entornos, por lo que los usuarios solo reciben los esquemas a los que tienen acceso para editar.
+* Cuando los clientes intentaban crear un objeto XDM a partir de esquemas de simulación de pruebas, se topaban con problemas de autenticación. La API que llama a Platform ahora conoce los entornos, por lo que los usuarios solo reciben los esquemas que tienen acceso a editar.
 
 #### Funcionalidades
 
@@ -62,7 +62,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 * Compatibilidad con la anulación del ID del conjunto de datos en la acción `sendEvent`.
 * Añada un nuevo elemento de datos del tipo `IdentityMap` que se pueda utilizar para rellenar la entrada de `identityMap` en el elemento de datos de objeto XDM que ahora está activado y en la acción `setConsent`.
 * Compatibilidad para pasar un mapa de identidad en la acción `setConsent`.
-* Compatibilidad con la selección de un entorno sandbox AEP en el elemento de datos del objeto XDM.
+* Compatibilidad con la selección de un entorno limitado de plataforma en el elemento de datos de objeto XDM.
 
 
 ## 26 de mayo de 2020
@@ -92,7 +92,7 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * Se ha corregido un problema en el ID de combinación de eventos que se restablecía cada vez que se hacía referencia al elemento de datos.
 * Se ha cambiado el nombre de la acción de `setCustomerIds` a `syncIdentity`.
 * Se ha añadido un comando `getIdentity`. Esto se puede consumir mediante Custom Code, solo por ahora.
-* Al habilitar la depuración mediante `_satellite`, ahora se habilita la depuración en el SDK web de AEP.
+* Al habilitar la depuración mediante `_satellite` ahora se habilita la depuración en el SDK web de Adobe Experience Platform.
 * Mayor compatibilidad con valores ingresados en el objeto XDM: booleanos, números y decimales.
 
 ## 16 de marzo de 2020
@@ -169,7 +169,7 @@ Estas decisiones se arrojan desde el comando `sendEvent` solo si `renderDecision
 * Creación de la extensión
 * Compatibilidad con ECID sin bibliotecas ni llamadas de red adicionales
 * Compatibilidad con el servicio de inclusión
-* Compatibilidad con el envío de XDM a AEP
+* Compatibilidad con el envío de XDM a la plataforma
 * Compatibilidad con dominios propios
 * Recopilar automáticamente el contexto del navegador
 * Código fuente totalmente abierto ([extensión](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
