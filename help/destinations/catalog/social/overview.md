@@ -3,9 +3,9 @@ keywords: red social;destinos de redes sociales;Livefyre;facebook;Facebook
 title: Visión general de los destinos de redes sociales
 description: Con los destinos de las redes sociales, puede activar perfiles para sus campañas para direccionamiento de audiencias, personalización y supresión basados en correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '76'
 ht-degree: 1%
 
 ---
@@ -19,3 +19,4 @@ Actualmente, Adobe Experience Platform admite los siguientes destinos de red soc
 
 - [Adobe Livefyre, extensión](./adobe-livefyre.md)
 - [[!DNL Facebook]  Extensión](./facebook.md)
+- [Conexión de Audiencia coincidente de LinkedIn](./linkedin.md)
