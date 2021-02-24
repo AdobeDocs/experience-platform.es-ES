@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Validación de inserción de flujo continuo
 topic: tutorial
 type: Tutorial
-description: 'El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
+description: 'El flujo continuo de la ingestión le permite cargar los datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.'
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 # Validación de la ingesta de flujo continuo
 
-El flujo continuo de la ingestión le permite cargar sus datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.
+El flujo continuo de la ingestión le permite cargar los datos en Adobe Experience Platform mediante puntos finales de flujo en tiempo real. Las API de inserción de flujo continuo admiten dos modos de validación: sincrónico y asincrónico.
 
 ## Primeros pasos
 
@@ -66,6 +66,10 @@ La validación sincrónica es un método de validación que proporciona informac
 De forma predeterminada, la validación sincrónica no está activada. Para habilitarlo, debe pasar el parámetro de consulta opcional `synchronousValidation=true` al realizar llamadas de API. Además, la validación sincrónica actualmente solo está disponible si el extremo de flujo está en el centro de datos VA7.
 
 Si un mensaje falla durante la validación sincrónica, el mensaje no se escribirá en la cola de salida, lo que proporciona información inmediata para los usuarios.
+
+>[!NOTE]
+>
+>Es posible que los cambios en el esquema no estén disponibles de forma inmediata, ya que los cambios se almacenan en la caché. Se tardan hasta quince minutos en actualizar la caché.
 
 **Formato API**
 
