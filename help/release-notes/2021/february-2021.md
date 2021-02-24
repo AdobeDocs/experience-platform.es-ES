@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
+source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,25 @@ ht-degree: 8%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
-- [Flujos de datos](#dataflows)
-- [Sistema de modelo de datos de experiencia (XDM)](#xdm)
-- [Servicio de identidad](#identity)
-- [Fuentes](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## Flujos de datos {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de los datos. Integrado en Adobe Experience Platform, Área de trabajo de ciencia de datos le ayuda a realizar predicciones con sus recursos de contenido y datos en las soluciones de Adobe.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Portátil JupyterLab EDA | El portátil Python de análisis de datos exploratoria (EDA) ya está disponible en Jupyterlab. Este bloc de notas está diseñado para ayudarle a descubrir patrones en los datos, comprobar la integridad de los datos y resumir los datos relevantes para modelos predictivos. Consulte el tutorial sobre [exploración de datos basados en Web para modelos predictivos](../../data-science-workspace/jupyterlab/eda-notebook.md) para obtener más información. |
+
+Para obtener información más general sobre el área de trabajo de ciencias de datos, consulte la [información general del área de trabajo de ciencias de datos](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
 
 En Adobe Experience Platform, los datos se ingieren desde una amplia variedad de fuentes, se analizan en el Experience Platform y se activan en una amplia variedad de destinos. La plataforma facilita el proceso de seguimiento de este flujo potencialmente no lineal de datos al proporcionar transparencia con flujos de datos.
 
@@ -38,7 +51,7 @@ Los flujos de datos son una representación de los trabajos de datos que mueven 
 
 Para obtener información más general sobre flujos de datos, consulte la [información general de flujos de datos](../../dataflows/home.md).
 
-## Sistema de modelo de datos de experiencia (XDM) {#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 La estandarización y la interoperabilidad son conceptos clave que sustentan [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de la experiencia del cliente.
 
@@ -52,7 +65,7 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 Para obtener información más general sobre XDM, consulte la [información general del sistema XDM](../../xdm/home.md).
 
-## Servicio de identidad {#identity}
+## [!DNL Identity Service] {#identity}
 
 La entrega de experiencias digitales relevantes requiere una comprensión completa de su cliente. Esto se hace más difícil cuando los datos de los clientes se fragmentan en distintos sistemas, lo que hace que cada cliente individual parezca tener múltiples &quot;identidades&quot;.
 
@@ -66,7 +79,7 @@ Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor v
 
 Para obtener más información general sobre [!DNL Identity Service], consulte la [información general del servicio de identidad](../../identity-service/home.md).
 
-## Fuentes {#sources}
+## [!DNL Sources] {#sources}
 
 Adobe Experience Platform puede ingestar datos de fuentes externas y, al mismo tiempo, puede estructurarlos, etiquetarlos y mejorarlos mediante los servicios de plataforma. Puede ingestar datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
