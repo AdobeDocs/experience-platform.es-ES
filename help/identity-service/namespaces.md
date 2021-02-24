@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;Área de nombres;Área de nombres;Áreas de nombres;Áreas de nombres;Área de nombres de identidad;Área de nombres de identidad;identidad;identidad;servicio de identidad;servicio de identidad
 solution: Experience Platform
 title: Información general de Área de nombres de identidad
-topic: overview
+topic: sobre validación
 description: 'Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ Seleccione una Área de nombres para ver información más específica sobre el 
 
 ![](./images/browse-namespaces.png)
 
-## Administración de Áreas de nombres personalizadas
+## Administración de Áreas de nombres personalizadas {#manage-namespaces}
 
 Según los datos de la organización y los casos de uso, es posible que necesite Áreas de nombres personalizadas. Las Áreas de nombres personalizadas se pueden crear mediante la API [[!DNL Identity Service]](./api/create-custom-namespace.md) o a través de la interfaz de usuario.
 
