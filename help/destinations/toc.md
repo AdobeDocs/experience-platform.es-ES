@@ -5,10 +5,10 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento lista la tabla de contenido de los destinos de Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 11%
+source-wordcount: '455'
+ht-degree: 10%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 11%
       * [Extensión Mastertag de Awin Advertiser](./catalog/advertising/awin-mastertag.md)
       * [Extensión de seguimiento de Evento universal (UET) de Bing Ads](./catalog/advertising/bing-ads.md)
       * [Extensión de rama](./catalog/advertising/branch.md)
-      * [Extensión DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
+      * [Extensión de DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extensión de píxeles de Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extensión Flashtalk OneTag](./catalog/advertising/flashtalking.md)
       * [Conexión de Google Ads](./catalog/advertising/google-ads-destination.md)
@@ -92,7 +92,7 @@ ht-degree: 11%
    * Destinos de mercadotecnia de correo electrónico {#email-marketing}
       * [Introducción a los destinos de mercadotecnia por correo electrónico](./catalog/email-marketing/overview.md)
       * [Conexión Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Conexión oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Conexión Eloqua oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [Conexión oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
       * [Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Extensiones de Experience Platform Launch {#launch-extensions}
@@ -117,6 +117,7 @@ ht-degree: 11%
       * [Crear un destino de red social](./catalog/social/workflow.md)
       * [Adobe Livefyre, extensión](./catalog/social/adobe-livefyre.md)
       * [Conexión de Facebook](./catalog/social/facebook.md)
+      * [Conexión de Audiencia coincidente de LinkedIn](./catalog/social/linkedin.md)
    * Destinos de encuesta {#survey}
       * [Introducción a los destinos de encuesta](./catalog/survey/overview.md)
       * [Destino de extensión forestal](./catalog/survey/foresee.md)
