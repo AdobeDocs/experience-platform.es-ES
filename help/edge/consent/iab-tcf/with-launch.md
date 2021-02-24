@@ -1,24 +1,24 @@
 ---
-title: Integración de la compatibilidad con IAB TCF 2.0 mediante Platform Launch y Platform Web SDK Extension
+title: Integración de la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de plataforma
 description: Obtenga información sobre cómo configurar el consentimiento TCF 2.0 de IAB con Adobe Experience Platform Launch y la extensión Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# Integrar la compatibilidad con IAB TCF 2.0 mediante Platform Launch y la extensión de Platform Web SDK
+# Integrar la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de plataforma
 
-Adobe Experience Platform Web SDK es compatible con Interactive Advertising Bureau Transparency &amp; Consent Framework, versión 2.0 (IAB TCF 2.0). Esta guía muestra cómo configurar una propiedad de Adobe Experience Platform Launch para enviar información de consentimiento TCF 2.0 de IAB a Adobe mediante la extensión AEP Web SDK para Experience Platform Launch.
+Adobe Experience Platform Web SDK es compatible con Interactive Advertising Bureau Transparency &amp; Consent Framework, versión 2.0 (IAB TCF 2.0). Esta guía muestra cómo configurar una propiedad de Adobe Experience Platform Launch para enviar información de consentimiento TCF 2.0 de IAB a Adobe mediante la extensión de Adobe Experience Platform Web SDK para Experience Platform Launch.
 
 Si no desea utilizar Experience Platform Launch, consulte la guía sobre [uso de IAB TCF 2.0 sin Experience Platform Launch](./without-launch.md).
 
 ## Primeros pasos
 
-Para utilizar IAB TCF 2.0 con Experience Platform Launch y la extensión AEP Web SDK, debe tener un esquema XDM y un conjunto de datos disponibles.
+Para utilizar IAB TCF 2.0 con Experience Platform Launch y la extensión Platform Web SDK, debe tener un esquema XDM y un conjunto de datos disponibles.
 
 Además, en esta guía es necesario que tenga conocimientos prácticos sobre el SDK web de Adobe Experience Platform. Para obtener un repaso rápido, lea la [información general del SDK web de Adobe Experience Platform](../../home.md) y la [documentación de las preguntas más frecuentes](../../web-sdk-faq.md).
 
@@ -120,7 +120,7 @@ addEventListener();
 
 Este código es idéntico al código personalizado anterior, excepto que se gestionan tanto los eventos `useractioncomplete` como `tcloaded`. El [código personalizado anterior](#consent-code-1) solo déclencheur cuando el cliente elige sus preferencias por primera vez. Este código también déclencheur cuando el cliente ya ha elegido sus preferencias. Por ejemplo, en la segunda carga de página.
 
-Añada una acción &quot;Enviar Evento&quot; desde la extensión AEP Web SDK. En el campo XDM, elija el elemento de datos XDM que creó en la sección anterior.
+Añada una acción &quot;Enviar Evento&quot; desde la extensión del SDK web de plataforma. En el campo XDM, elija el elemento de datos XDM que creó en la sección anterior.
 
 ## Envío de otros eventos con información de consentimiento TCF 2.0 de IAB
 
@@ -128,4 +128,4 @@ Cuando se activan eventos después del Evento de experiencias inicial, los dos e
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión AEP Web SDK, también puede optar por integrarse con otras soluciones de Adobe como Adobe Analytics o la plataforma de datos de clientes en tiempo real. Consulte la [información general de IAB Transparency &amp; Consent Framework 2.0](./overview.md) para obtener más información.
+Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión Platform Web SDK, también puede optar por integrarse con otras soluciones de Adobe como Adobe Analytics o la plataforma de datos de clientes en tiempo real. Consulte la [información general de IAB Transparency &amp; Consent Framework 2.0](./overview.md) para obtener más información.
