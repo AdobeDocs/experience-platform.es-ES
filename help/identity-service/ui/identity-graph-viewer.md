@@ -5,23 +5,25 @@ title: Información general del visor de gráficos de identidad
 topic: tutorial
 description: Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
 
-# (Beta) Visión general del visor de gráficos de identidad
-
->[!NOTE]
->
->El visor de gráficos de identidad se encuentra actualmente en fase beta. Sus características están sujetas a cambios.
+# Información general sobre el visor de gráficos de identidad
 
 Un gráfico de identidad es un mapa de las relaciones entre las distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales. Todos los gráficos de identidad del cliente son administrados y actualizados colectivamente por Adobe Experience Platform Identity Service en tiempo casi real, en respuesta a la actividad del cliente.
 
 El visor de gráficos de identidad de la interfaz de usuario de la plataforma le permite visualizar y comprender mejor qué identidades de cliente se unen y de qué manera. El visor le permite arrastrar e interactuar con diferentes partes del gráfico, lo que le permite examinar relaciones de identidad complejas, depurar de forma más eficaz y beneficiarse de una mayor transparencia con la forma en que se utiliza la información.
+
+## Vídeo tutorial
+
+El siguiente vídeo está diseñado para admitir su comprensión del visor de gráficos de identidad.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Primeros pasos
 
@@ -50,6 +52,20 @@ Seleccione la Área de nombres que desee utilizar y haga clic en **[!UICONTROL S
 Una vez seleccionada una Área de nombres, introduzca su valor correspondiente para un cliente en particular en el cuadro de texto **[!UICONTROL Valor de identidad]** y seleccione **[!UICONTROL Vista]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Acceso al visor de gráficos de identidad desde conjuntos de datos
+
+También puede acceder al visor de gráficos de identidad mediante la interfaz de conjuntos de datos. En la página datasets [!UICONTROL Examinar], seleccione un conjunto de datos con el que desee interactuar y, a continuación, seleccione **[!UICONTROL conjunto de datos de Previsualización]**
+
+![previsualización-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+En la ventana previsualización, seleccione un icono de huella digital para ver las identidades representadas a través del visor de gráficos de identidad.
+
+>[!TIP]
+>
+>El icono de huella digital solo aparece si el conjunto de datos tiene dos o más identidades.
+
+![huella digital](../images/identity-graph-viewer/fingerprint.png)
 
 Aparece el visor del gráfico de identidad. A la izquierda de la pantalla se encuentra el gráfico de identidad que muestra todas las identidades vinculadas a la Área de nombres seleccionada y el valor de identidad introducido. Cada nodo de identidad consta de una Área de nombres y su correspondiente valor de ID. Puede seleccionar y mantener cualquier identidad para arrastrar el gráfico e interactuar con él. Como alternativa, puede pasar el ratón sobre una identidad para ver información sobre su valor de ID. La salida del gráfico también se muestra como una lista tabulada en el centro de la pantalla.
 
@@ -109,8 +125,9 @@ Pueden producirse errores al acceder al visor del gráfico de identidad. A conti
 
 Al leer este documento, ha aprendido a explorar los gráficos de identidad de sus clientes en la interfaz de usuario de la plataforma. Para obtener más información sobre las identidades en la plataforma, consulte [Visión general del servicio de identidad](../home.md)
 
-## Recursos adicionales
+## Changelog
 
-El siguiente vídeo está diseñado para admitir su comprensión del visor de gráficos de identidad.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Fecha | Acción |
+| ---- | ------ |
+| 2021-2001 | <ul><li>Se añadió la compatibilidad con la transmisión de datos ingestados y el entorno limitado que no es de producción.</li><li>Se han corregido errores menores.</li></ul> |
+| 2021-2002 | <ul><li>El visor de gráficos de identidad se hace accesible mediante la previsualización de conjuntos de datos.</li><li>Se han corregido errores menores.</li><li>El visor de gráficos de identidad está disponible en general.</li></ul> |
