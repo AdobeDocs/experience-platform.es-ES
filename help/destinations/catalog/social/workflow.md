@@ -4,9 +4,9 @@ title: Crear un destino de red social
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a sus cuentas de publicidad de red social en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Crear un destino de red social {#social-network-destinations-workflow}
 
-Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo en Adobe Experience Platform será el mismo para todos los destinos de redes sociales, una vez que se agreguen más al producto.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de Adobe Experience Platform es el mismo para todos los destinos de redes sociales.
 
 En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, desplácese a la categoría **[!UICONTROL Social]**. Seleccione el destino preferido de la red social y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
@@ -38,16 +38,19 @@ Una vez confirmadas las credenciales y Adobe Experience Cloud conectado a la red
 
 En el paso **[!UICONTROL Configuración]**, escriba un [!UICONTROL Nombre] y una [!UICONTROL Descripción] para el flujo de activación y rellene el [!UICONTROL ID de cuenta] de la cuenta de publicidad de red social.
 
-También en este paso, puede seleccionar cualquier **[!UICONTROL acción de mercadotecnia]** que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+>[!IMPORTANT]
+>
+> Para destinos [!DNL Facebook], **[!UICONTROL ID de cuenta]** es su [!DNL Facebook Ad Account ID]. Puede encontrar este ID en [!DNL Facebook Ads Manager]. Agregue el prefijo `act_` como se muestra a continuación:
 
-Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+![Conectar con destino de red social: paso de configuración](../../assets/catalog/social/workflow/setup.png)
 
 >[!IMPORTANT]
 >
-> * Para destinos [!DNL Facebook]. **[!UICONTROL La]** ID de cuenta es su  [!DNL Facebook Ad Account ID]. Puede encontrar este ID en [!DNL Facebook Ads Manager]. Agregue el prefijo `act_` como se muestra a continuación:
+> Para destinos [!DNL LinkedIn], **[!UICONTROL ID de cuenta]** es su [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en [!DNL LinkedIn Campaign Manager].
 
+También en este paso, puede seleccionar cualquier **[!UICONTROL acción de mercadotecnia]** que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Conectar con destino de red social: paso de configuración](../../assets/catalog/social/workflow/setup.png)
+Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
 
 Se ha creado el destino. Puede seleccionar **[!UICONTROL Guardar y salir]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Siguiente]** para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos en redes sociales](#activate-segments), para el resto del flujo de trabajo.
 
