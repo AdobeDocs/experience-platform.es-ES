@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;habilitar conjunto de datos;Conjunto de datos;conjunto de datos
 solution: Experience Platform
 title: Guía de la interfaz de usuario de conjuntos de datos
-topic: datasets
+topic: conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Aparece el paso **[!UICONTROL Añadir datos]**. Cargue el archivo CSV arrastrán
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Habilitar un conjunto de datos para el Perfil del cliente en tiempo real
+## Habilitar un conjunto de datos para el Perfil del cliente en tiempo real {#enable-profile}
 
 Cada conjunto de datos tiene la capacidad de enriquecer los perfiles de los clientes con sus datos ingestados. Para ello, el esquema al que se adhiere el conjunto de datos debe ser compatible para su uso en [!DNL Real-time Customer Profile]. Un esquema compatible cumple los siguientes requisitos:
 
