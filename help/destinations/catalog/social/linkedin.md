@@ -3,7 +3,7 @@ keywords: linkedin connection;linkedin connection;linkedin destinos;linkedin;
 title: Conexión de Audiencias coincidentes de Linkedin
 description: Active perfiles para las campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL LinkedIn Matched Audience] connection
+# [!DNL LinkedIn Matched Audiences] connection
 
 Active perfiles para sus [!DNL LinkedIn] campañas de segmentación, personalización y supresión de audiencias, en base a correos electrónicos con hash e ID móviles.
 
