@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Redactar un esquema basado en la clase [!DNL XDM Individual Profile]
 
-Para crear un conjunto de datos, primero deberá crear un nuevo esquema que implemente la clase [!DNL XDM Individual Profile]. Para obtener más información acerca de cómo crear esquemas, lea la [guía para desarrolladores de la API del Registro de Esquema](../../xdm/api/getting-started.md).
+Para crear un conjunto de datos, primero deberá crear un nuevo esquema que implemente la clase [!DNL XDM Individual Profile]. Para obtener más información sobre cómo crear esquemas, lea la [guía para desarrolladores de la API de registro de Esquema](../../xdm/api/getting-started.md).
 
 **Formato API**
 
@@ -264,7 +264,7 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 ]
 ```
 
-## Ingesta de datos de registro en la conexión de flujo continuo
+## Ingesta de datos de registro en la conexión de flujo {#ingest-data}
 
 Con el conjunto de datos y la conexión de transmisión en su lugar, puede ingestar registros JSON con formato XDM para ingestar datos de registro en [!DNL Platform].
 
