@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;habilitar perfil;Habilitar perfil
 title: Guía de la API de Perfil del cliente en tiempo real
-topic: guide
+topic: guía
 description: La API de Perfil de cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de Perfil, incluidos perfiles de vista, crear y actualizar políticas de combinación, exportar o tomar muestras de datos de Perfil y eliminar datos de Perfil que ya no son necesarios o que se agregaron por error. Siga esta guía para aprender a realizar operaciones clave mediante la API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,11 @@ Para obtener una guía sobre cómo trabajar con [!DNL Real-time Customer Profile
 >
 >La funcionalidad de atributo calculada está en alfa y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
 
-Los atributos calculados permiten calcular automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil, lo que significa que se pueden acumulados valores en todos los registros y eventos. Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil o en un evento. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información. Puede crear, vista, editar y eliminar atributos calculados mediante el extremo `config/computedAttributes`. Para aprender a usar este extremo, visite la [guía de extremo de atributos calculados](computed-attributes.md).
+Los atributos calculados son funciones que se utilizan para acumulados datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
+
+Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin necesidad de realizar cálculos complejos manualmente cada vez que se necesita la información. Estos valores de atributos calculados se pueden ver en un perfil, utilizar para crear un segmento o acceder a ellos a través de una serie de patrones de acceso diferentes.
+
+Puede crear, vista, editar y eliminar atributos calculados mediante el extremo `config/computedAttributes`. Para aprender a utilizar atributos calculados, consulte la [descripción general de atributos calculados](../computed-attributes/overview.md). Para las operaciones de API, visite la [guía de extremo de API de atributos calculados](../computed-attributes/ca-api.md).
 
 ## Proyecciones de Edge {#edge-projections}
 
