@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guía de Perfil del cliente en tiempo real
 user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '122'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 20%
 * [!DNL Profile] API {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
-   * [(Alfa) Atributos calculados](api/computed-attributes.md)
    * [Proyecciones de Edge](api/edge-projections.md)
    * [Entidades ([!DNL Profile] acceso)](api/entities.md)
    * [Trabajos de exportación ([!DNL Profile] exportación)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 20%
    * [Creación de políticas de combinación (vídeo)](video/create-merge-policies.md)
    * [Guía de IU de esquema de unión](ui/union-schema.md)
    * [Información general sobre el esquema de unión (vídeo)](video/union-schemas-overview.md)
+* (Alfa) Atributos calculados {#computed-attributes}
+   * [Información general](computed-attributes/overview.md)
+   * [API de atributos calculados](computed-attributes/ca-api.md)
+   * [Configuración de un campo de atributo calculado](computed-attributes/configure-api.md)
+   * [Expresiones de muestra](computed-attributes/expressions.md)
 * Tutoriales {#tutorials}
    * [Añadir datos a [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configurar un conjunto de datos  [!DNL Profile] & [!DNL Identity] para servicio](tutorials/dataset-configuration.md)
