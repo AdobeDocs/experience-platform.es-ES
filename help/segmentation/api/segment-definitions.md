@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;definición de segmentos;definiciones de segmentos;api;API;
 solution: Experience Platform
 title: Extremo de la API de definiciones de segmentos
-topic: developer guide
+topic: guía para desarrolladores
 description: El extremo de definiciones de segmentos de la API de servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -197,6 +197,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Indica la estructura de la expresión en valor. Actualmente, se admite el siguiente formato: <ul><li>`pql/text`:: Representación textual de una definición de segmento, según la gramática PQL publicada.  Por ejemplo, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Una expresión que se ajusta al tipo indicado en `expression.format`. |
 | `description` | Una descripción de la definición legible por el usuario. |
+
+>[!NOTE]
+>
+>Una expresión de definición de segmento también puede hacer referencia a un atributo calculado. Para obtener más información, consulte la [guía de extremo de API de atributos calculados](../../profile/computed-attributes/ca-api.md)
+>
+>La funcionalidad de atributo calculada está en alfa y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
 
 **Respuesta**
 
