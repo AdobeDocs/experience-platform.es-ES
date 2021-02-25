@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 6%
+source-wordcount: '1069'
+ht-degree: 7%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 6%
 
 **Fecha de publicación: 24 de febrero de 2021**
 
+Nuevas funciones de Adobe Experience Platform:
+
+- [paneles (Beta)](#dashboards)
+
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (Beta) Paneles {#dashboards}
+
+Adobe Experience Platform proporciona varios paneles a través de los cuales puede realizar vistas de información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Perfiles, segmentos, destinos y Paneles de uso de licencias (Beta) | **Nota: La funcionalidad de panel está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.**<br/><br/> Los paneles proporcionan un sistema de informes incorporado de los datos de su organización y están integrados directamente en el flujo de trabajo del especialista en marketing dentro de la plataforma. Estos paneles están disponibles sin la necesidad de contar con más asistencia de TI ni el tiempo y esfuerzo que de otro modo se necesitarían para exportar y procesar datos con diseño e implementación adicionales de almacenamiento de datos. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor v
 | Visor de gráficos de identidad | El visor de gráficos de identidad le permite validar y visualizar identidades que se unen en la interfaz de usuario, lo que permite mejorar la depuración y la transparencia. Consulte el [documento del visor de gráficos de identidad](../../identity-service/ui/identity-graph-viewer.md) para obtener más información. |
 
 Para obtener más información general sobre [!DNL Identity Service], consulte la [información general del servicio de identidad](../../identity-service/home.md).
+
+## Perfil del cliente en tiempo real {#profile}
+
+Adobe Experience Platform le permite dirigir experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada que ofrece una cuenta procesable con marca de hora de cada interacción con los clientes.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Atributos calculados (alfa) | ***Nota: Esta funcionalidad se encuentra actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.*** <br/><br/>Los atributos calculados son funciones que se utilizan para acumulados datos de nivel de evento en atributos de nivel de perfil. A continuación, puede utilizar los agregados en segmentación, activación y personalización. Algunos ejemplos de estas funciones incluyen count, sum, average, min, max, true/false. Actualmente, los atributos calculados solo están disponibles mediante API. Para obtener más información, consulte la [descripción general de atributos calculados](../../profile/computed-attributes/overview.md). |
+
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
