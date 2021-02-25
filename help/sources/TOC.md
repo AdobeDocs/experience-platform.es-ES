@@ -5,9 +5,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 13%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 13%
       - [Conector FTP](connectors/cloud-storage/ftp.md)
       - [Conector de Almacenamiento de Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Almacenamiento de objetos Oracle](connectors/cloud-storage/oracle-object-storage.md)
+      - [Almacenamiento de objetos oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Conector SFTP](connectors/cloud-storage/sftp.md)
       - [Conector Amazon S3 y Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -53,7 +53,7 @@ ht-degree: 13%
       - [Apache Hive en el conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark en el conector HDInsights de Azure](connectors/databases/spark.md)
       - [Conector de Data Explorer de Azure](connectors/databases/data-explorer.md)
-      - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Conector de azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Almacenamiento de tabla de Azure](connectors/databases/ats.md)
       - [Conector de la base de acoplamiento](connectors/databases/couchbase.md)
       - [Conector Google BigQuery](connectors/databases/bigquery.md)
@@ -62,7 +62,7 @@ ht-degree: 13%
       - [Conector IBM DB2](connectors/databases/ibm-db2.md)
       - [Conector de Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
-      - [Conector del Oracle](connectors/databases/oracle.md)
+      - [Conector del oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -88,7 +88,7 @@ ht-degree: 13%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Almacenamiento de Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Almacenamiento de objetos Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Almacenamiento de objetos oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -148,6 +148,7 @@ ht-degree: 13%
    - [Creación de una conexión de conjunto de datos](tutorials/api/create-dataset-base-connection.md)
    - [Monitoreo de flujos de datos](tutorials/api/monitor.md)
    - [Actualizar conexiones](tutorials/api/update.md)
+   - [Actualizar flujos de datos](tutorials/api/update-dataflows.md)
    - [Eliminación de conexiones](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
 - Tutoriales de interfaz de usuario {#ui-tutorials}
@@ -170,7 +171,7 @@ ht-degree: 13%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Almacenamiento de Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Almacenamiento de objetos Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Almacenamiento de objetos oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 y Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -184,7 +185,7 @@ ht-degree: 13%
          - [Apache Hive en Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark en Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer de Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Análisis de azure synapse](tutorials/ui/create/databases/synapse-analytics.md)
          - [Almacenamiento de tabla de Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Consulta](tutorials/ui/create/databases/bigquery.md)
