@@ -3,21 +3,15 @@ keywords: coincidencia de cliente de Google;Coincidencia de cliente de Google;Co
 title: Conexión de Coincidencia de clientes de Google
 description: La coincidencia de clientes de Google le permite utilizar sus datos en línea y sin conexión para comunicarse con sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como Search, Shopping, Gmail y YouTube.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Customer Match] connection
-
->[!IMPORTANT]
->
->Actualmente estamos migrando clientes a la nueva versión de este destino.
->
-> Las instrucciones de este artículo se aplican a ambas versiones, con la siguiente nota: mientras esta migración está en curso, solo verá la versión actual del destino [!DNL Google Customer Match] en la interfaz de usuario, donde solo puede utilizar las identidades [!UICONTROL EMAIL] y [!UICONTROL EMAIL_LC_SHA_256] para la activación.
 
 [Las ](https://support.google.com/google-ads/answer/6379332?hl=en) coincidencias de clientes de Google le permiten utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades que posee y opera Google, como:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], y  [!DNL YouTube].
 
