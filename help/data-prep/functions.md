@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;campos de asignación;funciones de asignación;
 solution: Experience Platform
 title: Funciones de asignación de la preparación de datos
-topic: overview
+topic: sobre validación
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Un nombre de campo puede ser cualquier identificador legal: una secuencia de let
 
 Si un nombre de campo no sigue esta convención, el nombre del campo debe ajustarse con `${}`. Por ejemplo, si el nombre del campo es &quot;Nombre&quot; o &quot;Nombre.Nombre&quot;, el nombre debe ajustarse como `${First Name}` o `${First.Name}` respectivamente.
 
-Además, los nombres de campo son **cualquiera** de las siguientes palabras clave reservadas, debe estar ajustado con `${}`:
+Además, si el nombre de un campo es **cualquiera** de las siguientes palabras clave reservadas, se debe ajustar con `${}`:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ Las siguientes tablas lista todas las funciones de asignación admitidas, inclui
 
 >[!NOTE]
 >
->Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla.
+>Desplácese hacia la izquierda/derecha para vista del contenido completo de la tabla. Encontrará más información sobre la función `date` en la [guía de funciones de fecha](./dates.md).
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de muestra |
 -------- | ----------- | ---------- | -------| ---------- | -------------
