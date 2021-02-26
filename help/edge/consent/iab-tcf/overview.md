@@ -3,7 +3,7 @@ title: Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento TCF 2.0 de IAB mediante el SDK web de Adobe Experience Platform
 keywords: consentimiento;setConsent;Perfil Privacy Mixin;Experience Evento Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Perfil
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Las secciones siguientes describen los principales puntos de integración entre 
 
 El consentimiento predeterminado se utiliza cuando no hay ninguna preferencia de consentimiento ya guardada para un cliente. Esto significa que las opciones de consentimiento predeterminadas pueden controlar el comportamiento del SDK web de Adobe Experience Platform y cambiar según la región del cliente.
 
-Por ejemplo: si tiene un cliente que no está dentro de la jurisdicción del Reglamento General de Protección de Datos (RGPD), el consentimiento predeterminado podría establecerse en `in`, pero dentro de la jurisdicción del RGPD, el consentimiento predeterminado podría establecerse en `pending`. Su plataforma de administración en la nube (CMP) podría detectar la región del cliente y proporcionar el indicador `gdprApplies` a IAB TCF 2.0. Este indicador se puede utilizar para establecer el consentimiento predeterminado.
+Por ejemplo: si tiene un cliente que no está dentro de la jurisdicción del Reglamento General de Protección de Datos (RGPD), el consentimiento predeterminado podría establecerse en `in`, pero dentro de la jurisdicción del RGPD, el consentimiento predeterminado podría establecerse en `pending`. La Plataforma de administración de consentimiento (CMP) podría detectar la región del cliente y proporcionar el indicador `gdprApplies` a IAB TCF 2.0. Este indicador se puede utilizar para establecer el consentimiento predeterminado.
 
 Para obtener más información sobre el consentimiento predeterminado, consulte la [sección de consentimiento predeterminado](../../fundamentals/configuring-the-sdk.md#default-consent) en la documentación de configuración del SDK.
 
