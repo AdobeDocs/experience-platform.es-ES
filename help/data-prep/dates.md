@@ -1,21 +1,39 @@
 ---
-keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;fecha;funciones de fecha;fechas; fechas;
+keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;fecha;funciones de fecha;fechas;función de fecha;fecha
 solution: Experience Platform
 title: Funciones de fecha de preparación de datos
-topic: overview
-description: Este documento presenta las funciones de fecha utilizadas con la preparación de datos.
+topic: sobre validación
+description: Este documento presenta la función de fecha utilizada con la Prep de datos.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# Funciones de fecha de preparación de datos
+# Date, función
 
 La preparación de datos admite funciones de fecha, tanto como cadenas como como objetos de fecha y hora.
+
+## Formato de función de fecha
+
+La función date convierte cadenas y objetos datetime para que se conviertan en un objeto ZonianDateTime con formato ISO 8601.
+
+**Format**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{DATE}` | Requerido. La cadena que representa la fecha. |
+| `{FORMAT}` | Opcional. La cadena que representa el formato de la fecha. Encontrará más información sobre el formato de cadena en la sección [cadena de formato de fecha y hora](#format). |
+| `{DEFAULT_DATE}` | Opcional. La fecha predeterminada que se devolverá si la fecha proporcionada es nula. |
+
+Por ejemplo, la expresión `date(orderDate, "yyyy-MM-dd")` convertirá un valor `orderDate` de &quot;31 de diciembre de 2020&quot; en un valor datetime de &quot;2020-12-31&quot;.
 
 ## Conversiones de funciones de fecha
 
@@ -46,7 +64,7 @@ Cuando los campos de cadena de datos entrantes se asignan a campos de fecha en e
 >
 > La preparación de datos intentará convertir las cadenas a fechas lo mejor posible. Sin embargo, estas conversiones pueden dar lugar a resultados no deseados. Por ejemplo, el valor de cadena &quot;12112020&quot; coincide con el patrón &quot;Dindyyyy&quot;, pero es posible que el usuario haya pensado que la fecha se lea con el patrón &quot;ddMMyyyy&quot;. Como resultado, los usuarios deben mencionar explícitamente el formato de fecha para las cadenas.
 
-## Cadenas de formato de fecha y hora
+## Cadenas de formato de fecha y hora {#format}
 
 La siguiente tabla muestra las letras de patrón definidas para las cadenas de formato. Tenga en cuenta que las letras distinguen entre mayúsculas y minúsculas.
 
@@ -77,7 +95,3 @@ La siguiente tabla muestra las letras de patrón definidas para las cadenas de f
 | V | ID de zona horaria | Texto | América/Los Ángeles |
 | O | Desplazamiento de zona horaria | Texto | GMT+8 |
 | Q/q | Trimestre del año | Número/Texto | 3; 03; T3; Tercer trimestre |
-
-**Ejemplo**
-
-La expresión `date(orderDate, "yyyy-MM-dd")` convertirá un valor `orderDate` de &quot;31 de diciembre de 2020&quot; en un valor datetime de &quot;2020-12-31&quot;.
