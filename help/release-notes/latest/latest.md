@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: c1fed1ff4be5f32a93b41a74bb4c541813907354
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 7%
 
 ---
@@ -65,6 +65,16 @@ Los flujos de datos son una representación de los trabajos de datos que mueven 
 | Nuevo panel de supervisión | Ahora puede utilizar el panel de supervisión para la transparencia entre servicios y perspectivas procesables para las ingestas de datos de origen. El nuevo panel de monitoreo proporciona una vista integral de los datos procesados de [!DNL Data Lake] a [!DNL Identity Service] y a [!DNL Profile], a la vez que le permite monitorear las tasas de ingestión, los éxitos y los errores. Consulte el tutorial sobre [monitoreo de flujos de datos de origen en la interfaz de usuario](../../dataflows/ui/monitor-sources.md) para obtener más información. |
 
 Para obtener información más general sobre flujos de datos, consulte la [información general de flujos de datos](../../dataflows/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación sin fisuras de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing en varios canales, campañas por correo electrónico, publicidad de destino y muchos otros casos de uso.
+
+**Nuevos destinos**
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | La conexión [!DNL LinkedIn Matched Audiences] le permite activar audiencias en la plataforma social [!DNL LinkedIn]. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
