@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -316,9 +316,11 @@ La ingesta de datos de series temporales en una conexión de flujo continuo pued
 
 La solicitud de ejemplo siguiente ingesta datos de series temporales con un nombre de origen que falta en Platform. Si a los datos le falta el nombre del origen, agregará el ID de origen de la definición de conexión de flujo continuo.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Tendrá que generar sus propios `xdmEntity._id` y `xdmEntity.timestamp`. Una buena manera de generar un ID es utilizar un UUID. Además, la siguiente llamada de API **no** requiere encabezados de autenticación.
+>Tendrá que generar sus propios `xdmEntity._id` y `xdmEntity.timestamp`. Una buena manera de generar un ID es utilizar la función UUID en la preparación de datos. Encontrará más información sobre la función UUID en la [Guía de funciones de preparación de datos](../../data-prep/functions.md). El atributo `xdmEntity._id` representa un identificador único para el registro mismo, **no** un identificador único de la persona o dispositivo cuyo registro es. La ID de la persona o del dispositivo será específica en cualquier atributo que se asigne como persona o identificador del dispositivo del esquema.
+>
+>Tanto `xdmEntity._id` como `xdmEntity.timestamp` son los únicos campos requeridos para los datos de series temporales. Además, la siguiente llamada de API **no** requiere encabezados de autenticación.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
