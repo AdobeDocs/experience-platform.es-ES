@@ -72,7 +72,7 @@ Muchos visitantes al sitio web son probablemente clientes repetidos que han comp
 
 ### Primera visita del nuevo cliente
 
-Por ejemplo, un visitante sin identificar navega a la sección de hombres del sitio de Luma y vista a una pareja que lleva camisas sudaderas.
+Por ejemplo, un visitante no identificado navega a la sección de hombres del sitio de Luma y vista a una pareja que lleva camisas sudaderas.
 
 ![imagen](assets/luma-sweatshirts.png)
 
