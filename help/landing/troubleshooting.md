@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Guía de solución de problemas y preguntas más frecuentes de Adobe Experience Platform
 description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 landing-page-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
-topic: getting started
-type: Documentation
+topic: introducción
+type: Documentación
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 3%
 
 ---
@@ -253,5 +253,5 @@ La siguiente es una lista de guías de solución de problemas y documentación d
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Preguntas más frecuentes y guía de solución de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] y [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guía de solución de problemas](../profile/troubleshooting.md) |
-| Sandboxes | [API de Simulador para pruebas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
+| Entornos aislados | [API de Simulador para pruebas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
 
