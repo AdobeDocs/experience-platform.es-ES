@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Ayuda de Adobe Experience Platform Paneles
+user-guide-title: Ayuda de paneles de Adobe Experience Platform
 breadcrumb-title: Guía de paneles
-user-guide-description: Visualizar datos de Experience Platform en paneles personalizables.
+user-guide-description: Visualice datos de Experience Platform en paneles personalizables.
 translation-type: tm+mt
 source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
 workflow-type: tm+mt
 source-wordcount: '34'
-ht-degree: 8%
+ht-degree: 50%
 
 ---
 
