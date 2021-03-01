@@ -26,7 +26,7 @@ ht-degree: 31%
    - [Áreas de nombres disponibles de lista](api/list-namespaces.md)
    - [Crear una Área de nombres personalizada](api/create-custom-namespace.md)
    - [Lista del ID nativo de una identidad](api/list-native-id.md)
-- Interfaz de usuario del servicio de identidad {#ui}
+- Interfaz de usuario de servicio de identidad {#ui}
    - [Visor de gráficos de identidad](ui/identity-graph-viewer.md)
 - [Descripción general de ECID](ecid.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
