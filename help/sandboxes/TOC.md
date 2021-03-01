@@ -13,10 +13,10 @@ ht-degree: 30%
 ---
 
 
-# Sandboxes {#sandbox}
+# Entornos aislados {#sandbox}
 
 * [Descripción general de los Simuladores para pruebas](home.md)
-* IU de Simulador para pruebas {#ui}
+* Interfaz de usuario de Simulador para pruebas {#ui}
    * [Información general sobre la interfaz de usuario del Simulador para pruebas](ui/overview.md)
    * [Guía del usuario del Simulador para pruebas](ui/user-guide.md)
 * API de Simulador para pruebas {#api}
