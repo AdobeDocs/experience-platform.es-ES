@@ -8,7 +8,7 @@ description: Este tutorial trata los pasos para crear un esquema con el Editor d
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Este tutorial requiere un conocimiento práctico de los diversos aspectos de Ado
 
 El espacio de trabajo [!UICONTROL Esquemas] de la [!DNL Platform] interfaz de usuario proporciona una visualización del [!DNL Schema Library], lo que le permite administrar en vista los esquemas disponibles para su organización. El espacio de trabajo también incluye el [!DNL Schema Editor] lienzo en el que puede componer un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión en [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir el espacio de trabajo **[!UICONTROL Esquemas]**. La ficha **[!UICONTROL Examinar]** muestra una lista de esquemas (una representación de [!DNL Schema Library]) que puede vista y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora en que se modificó el esquema por última vez.
+Después de iniciar sesión en [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir el espacio de trabajo **[!UICONTROL Esquemas]**. La ficha **[!UICONTROL Examinar]** muestra una lista de esquemas (una representación de [!DNL Schema Library]) que puede vista y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
 
 Consulte la guía sobre [exploración de recursos XDM existentes en la interfaz de usuario](../ui/explore.md) para obtener más información.
 
