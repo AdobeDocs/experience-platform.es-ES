@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Glosario de Adobe Experience Platform
-topic: getting started
+topic: introducción
 description: Un glosario de terminología importante en Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7137'
-ht-degree: 0%
+source-wordcount: '7139'
+ht-degree: 1%
 
 ---
 
@@ -197,7 +197,7 @@ ht-degree: 0%
 
 **Reglas** de llamada directa: En  [!DNL Platform Launch]realidad, una regla de llamada directa es una regla que se ejecuta cuando se llama directamente desde la página, omitiendo los sistemas de búsqueda y detección de eventos.
 
-**Nombre** para mostrar: En el Modelo de datos de experiencia (XDM), un nombre para mostrar es un nombre sencillo de usuario para un campo que se muestra en la interfaz de usuario.
+**Nombre** para mostrar: En el Modelo de datos de experiencia (XDM), un nombre para mostrar es un nombre práctico para un campo que se muestra en la interfaz de usuario.
 
 ## E
 
@@ -355,7 +355,7 @@ ht-degree: 0%
 
 **Ofertas** personalizadas: Una oferta personalizada es un mensaje de marketing personalizable basado en reglas de elegibilidad y restricciones.
 
-**Colocaciones**: Una colocación es la ubicación o el contexto en el que aparece una oferta para un usuario final.
+**Ubicaciones**: una ubicación es la ubicación o el contexto en el que aparece una oferta para un usuario final.
 
 **Área de trabajo** Directivas: Espacio de trabajo en la interfaz de usuario de la plataforma que permite a los administradores de datos vista y administrar las directivas y etiquetas de uso de datos de su organización.
 
