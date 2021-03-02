@@ -1,7 +1,8 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
-solution-title: Información general de la plataforma
+feature-set: Platform
+solution-title: Información general de plataforma
 solution-hub-url: https://docs.adobe.com/content/help/es-ES/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Documentación
@@ -10,12 +11,12 @@ tutorials-title: Tutoriales
 tutorials-url: https://docs.adobe.com/content/help/es-ES/experience-platform/tutorials/home.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.es-ES
 solution: Experience Platform
-type: Documentation
+type: Documentación
 index: true
 translation-type: tm+mt
-source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
+source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '146'
 ht-degree: 86%
 
 ---
