@@ -4,11 +4,12 @@ audience: user
 user-guide-title: Guía de Adobe Experience Platform ETL
 breadcrumb-title: Guía de ETL
 user-guide-description: Descubra los pasos generales para crear conectores seguros y de alto rendimiento para la ingesta de datos en Platform.
+feature: Gestión de datos, ingesta de datos
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 48%
+source-wordcount: '47'
+ht-degree: 44%
 
 ---
 
@@ -18,4 +19,4 @@ ht-degree: 48%
 - [Desarrollo de integraciones de ETL](home.md)
 - [Transformación de ETL](transformations.md)
 - [Flujo de trabajo de ETL](workflow.md)
-- [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
