@@ -5,18 +5,19 @@ audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
+feature: Gestión de datos
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 33%
+source-wordcount: '147'
+ht-degree: 34%
 
 ---
 
 
 # SDK web de Adobe Experience Platform {#edge}
 
-* [Introducción al SDK web de plataforma](home.md)
+* [Información general del SDK web de plataforma](home.md)
 * Aspectos básicos {#fundamentals}
    * [Requisitos previos](fundamentals/prerequisite.md)
    * [Crear una configuración de Edge](fundamentals/edge-configuration.md)
@@ -26,14 +27,14 @@ ht-degree: 33%
    * [Seguimiento de eventos](fundamentals/tracking-events.md)
    * [Depuración](fundamentals/debugging.md)
    * [Combinar datos de evento](fundamentals/merging-event-data.md)
-   * [Configurar un CSP](fundamentals/configuring-a-csp.md)
-   * [Interactuar con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
+   * [Configuración de un CSP](fundamentals/configuring-a-csp.md)
+   * [Interaccione con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
 * Identidad {#identity}
    * [Información general](identity/overview.md)
 * Recopilación de datos {#data-collection}
    * [Información recopilada automáticamente](data-collection/automatic-information.md)
    * [Seguimiento de vínculos](data-collection/track-links.md)
-   * [Recopilar datos de productos y comercio](data-collection/collect-commerce-data.md)
+   * [Recopilar datos de comercio y productos](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Información general](data-collection/adobe-analytics/analytics-overview.md)
       * [Asignación de variables de Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -49,15 +50,15 @@ ht-degree: 33%
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentimiento {#consent}
    * [Apoyo al consentimiento](consent/supporting-consent.md)
-   * IAB Transparencia y Consentimiento Framework 2.0 {#iab-tcf}
+   * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}
       * [Información general](consent/iab-tcf/overview.md)
       * [Integración con Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Integrar sin Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+      * [Integración sin Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Extensión de SDK web para Adobe Experience Platform Launch {#extension}
    * [Extensión de SDK web](extension/web-sdk-extension.md)
    * [Tipos de acción](extension/action-types.md)
    * [Tipos de elementos de datos](extension/data-element-types.md)
-   * [Notas de la versión de la extensión de SDK web](extension/web-sdk-ext-release-notes.md)
+   * [Notas de la versión de la extensión del SDK web](extension/web-sdk-ext-release-notes.md)
 * [Notas de la versión](release-notes.md)
 * [Preguntas frecuentes](web-sdk-faq.md)
-* [Anuncios de blog](blog-posts.md)
+* [Publicaciones de blog](blog-posts.md)
