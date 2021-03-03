@@ -1,28 +1,29 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
+feature: Data Science Workspace
+solution: Experience Platform, Intelligent Services
 translation-type: tm+mt
-source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
+source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 17%
+source-wordcount: '240'
+ht-degree: 18%
 
 ---
 
 
 # Data Science Workspace {#data-science-workspace}
 
-* [Información general sobre el área de trabajo de ciencias de datos](home.md)
-* [Acceso y características de Área de trabajo de Data Science](access-features-dsw.md)
-* [Recorrido de Área de trabajo de ciencias de datos](walkthrough.md)
-* Equipos portátiles JupyterLab {#jupyterlab}
+* [Información general de Data Science Workspace](home.md)
+* [Acceso y funciones de Data Science Workspace](access-features-dsw.md)
+* [Recorrido por Data Science Workspace](walkthrough.md)
+* Portátiles JupyterLab {#jupyterlab}
    * [Información general](jupyterlab/overview.md)
    * [Acceso a datos](jupyterlab/access-notebook-data.md)
    * [Analizar los datos](jupyterlab/analyze-your-data.md)
-   * [Servicio de consulta](jupyterlab/query-service.md)
+   * [Servicio de consultas](jupyterlab/query-service.md)
    * [Análisis de datos exploratorios (EDA)](jupyterlab/eda-notebook.md)
    * [Crear una fórmula](jupyterlab/create-a-recipe.md)
    * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
@@ -40,32 +41,32 @@ ht-degree: 17%
    * [Primeros pasos](real-time-machine-learning/getting-started.md)
    * [Administrar portátiles](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guía de referencia de nodos](real-time-machine-learning/node-reference.md)
-* Fórmulas precompiladas {#pre-built-recipes}
+* Fórmulas creadas previamente {#pre-built-recipes}
    * [Fórmula de recomendación de producto](pre-built-recipes/product-recommendations.md)
    * [Predicción de compra de productos](pre-built-recipes/product-purchase-prediction.md)
-   * [Fórmula de ventas minoristas](pre-built-recipes/retail-sales.md)
+   * [Receta de ventas minoristas](pre-built-recipes/retail-sales.md)
 * Creación de modelos {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
-   * [Creación de modelos con el SDK de plataforma (Python)](authoring/platform-sdk.md)
-   * [Acceso a datos Python](authoring/python.md)
+   * [Creación de modelos mediante el SDK de plataforma (Python)](authoring/platform-sdk.md)
+   * [Acceso a datos de Python](authoring/python.md)
    * [Acceso a datos de Spark](authoring/spark.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
    * [Creación y publicación de un modelo de aprendizaje automático](models-recipes/create-publish-model.md)
-   * [Crear el esquema y conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
-   * [Esquemas y conjuntos de datos de previsualización](models-recipes/preview-schema-data.md)
-   * [Empaquetar archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
-   * [Importación de una fórmula empaquetada (IU)](models-recipes/import-packaged-recipe-ui.md)
-   * [Importación de una fórmula empaquetada (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Formación y evaluación de un modelo (IU)](models-recipes/train-evaluate-model-ui.md)
+   * [Crear el esquema y el conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
+   * [Vista previa de esquemas y conjuntos de datos](models-recipes/preview-schema-data.md)
+   * [Empaquete archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
+   * [Importar una fórmula empaquetada (IU)](models-recipes/import-packaged-recipe-ui.md)
+   * [Importar una fórmula empaquetada (API)](models-recipes/import-packaged-recipe-api.md)
+   * [Capacitar y evaluar un modelo (IU)](models-recipes/train-evaluate-model-ui.md)
    * [Formación y evaluación de un modelo (API)](models-recipes/train-evaluate-model-api.md)
    * [Puntuación de un modelo (IU)](models-recipes/score-model-ui.md)
    * [Puntuación de un modelo (API)](models-recipes/score-model-api.md)
-   * [Optimizar un modelo](models-recipes/optimize-model.md)
-   * [Enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático](models-recipes/enrich-profile.md)
-   * [Publicación de un modelo como servicio (UI)](models-recipes/publish-model-service-ui.md)
+   * [Optimización de un modelo](models-recipes/optimize-model.md)
+   * [Enriquecer el perfil del cliente en tiempo real con perspectivas de aprendizaje automático](models-recipes/enrich-profile.md)
+   * [Publicación de un modelo como servicio (IU)](models-recipes/publish-model-service-ui.md)
    * [Publicación de un modelo como servicio (API)](models-recipes/publish-model-service-api.md)
    * [Programar la formación automatizada y la puntuación en un servicio (IU)](models-recipes/schedule-models-ui.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
