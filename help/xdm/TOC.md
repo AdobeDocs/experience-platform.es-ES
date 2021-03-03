@@ -4,20 +4,21 @@ audience: user
 user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
+feature: Esquemas
 translation-type: tm+mt
-source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 23%
+source-wordcount: '237'
+ht-degree: 24%
 
 ---
 
 
-# Sistema de modelo de datos de experiencia (XDM) {#xdm}
+# Sistema del Modelo de datos de experiencia (XDM) {#xdm}
 
-* [Descripción general del sistema XDM](home.md)
+* [Información general del sistema XDM](home.md)
 * Esquemas {#schema}
-   * [Conceptos básicos de la composición de esquemas](schema/composition.md)
+   * [Aspectos básicos de la composición del esquema](schema/composition.md)
    * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
@@ -25,22 +26,22 @@ ht-degree: 23%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
 * Mezclas {#mixins}
-   * Mezclas de perfil {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
+   * Mezclas de perfiles {#profile}
+      * [Mapa de identidades](./mixins/profile/identitymap.md)
       * [Detalles demográficos](./mixins/profile/person-details.md)
       * [Detalles de contacto personal](./mixins/profile/personal-details.md)
       * [Detalles de pertenencia a segmentos](./mixins/profile/segmentation.md)
       * [Detalles de contacto de trabajo](./mixins/profile/work-details.md)
-   * Mezclas de evento {#event}
+   * Mezclas de eventos {#event}
       * [Detalles del ID de usuario final](./mixins/event/enduserids.md)
       * [Detalles del entorno](./mixins/event/environment-details.md)
-   * [Actualizaciones de nombres de mezcla](./mixins/name-updates.md)
+   * [Mezclar actualizaciones de nombres](./mixins/name-updates.md)
 * Tipos de datos {#data-types}
    * [de asistencia al cliente](./data-types/application.md)
    * [Señalización](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Comercio](./data-types/commerce.md)
-   * [Contenido y preferencias](./data-types/consents.md)
+   * [Consentimientos y preferencias](./data-types/consents.md)
    * [Dispositivo](./data-types/device.md)
    * [Dirección de correo electrónico](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
@@ -56,15 +57,15 @@ ht-degree: 23%
    * [Persona](./data-types/person.md)
    * [Nombre de la persona](./data-types/person-name.md)
    * [Número de teléfono](./data-types/phone-number.md)
-   * [Colocar contexto](./data-types/place-context.md)
-   * [Detalles de puntos de interés](./data-types/poi-details.md)
+   * [Contexto del lugar](./data-types/place-context.md)
+   * [Detalles del POI](./data-types/poi-details.md)
    * [Interacción con POI](./data-types/poi-interaction.md)
    * [Dirección postal](./data-types/postal-address.md)
    * [Buscar](./data-types/search.md)
    * [Suscripción](./data-types/subscription.md)
-   * [Interacción con Web](./data-types/web-interactions.md)
-   * [Detalles de la página Web](./data-types/webpage-details.md)
-*  EsquemasUI  {#ui}
+   * [Interacción web](./data-types/web-interactions.md)
+   * [Detalles de la página web](./data-types/webpage-details.md)
+*  EsquemasIU  {#ui}
    * [Información general](./ui/overview.md)
    * [Explorar recursos XDM](./ui/explore.md)
    * Crear y editar recursos {#resources}
@@ -82,7 +83,7 @@ ht-degree: 23%
       * [Campos de relación](./ui/fields/relationship.md)
    * [Generar datos XDM de muestra](./ui/sample.md)
    * [Exportar esquemas XDM](./ui/export.md)
-* API del Registro de esquemas {#api}
+* API del Registro de Esquemas {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Esquemas](api/schemas.md)
@@ -105,4 +106,4 @@ ht-degree: 23%
    * [Creación de un esquema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [Notas de la versión de la plataforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
