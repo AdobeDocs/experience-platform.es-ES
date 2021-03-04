@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingestión por lotes;ingestión por lotes;lotes fallidos;Obtener lotes fallidos;obtener lotes fallidos;Descargar lotes fallidos;descargar lotes fallidos;
+keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingesta por lotes;ingesta por lotes;lotes fallidos;obtener lotes fallidos;obtener lotes fallidos;Descargar lotes fallidos;descargar lotes fallidos;
 solution: Experience Platform
-title: Recuperación de lotes fallidos mediante la API de acceso a datos
+title: Recuperación de lotes en los que se han producido errores al usar la API de acceso a datos
 topic: tutorial
 type: Tutorial
-description: En este tutorial se explican los pasos para recuperar información sobre un lote en el que se ha producido un error al utilizar las API de inserción de datos.
+description: Este tutorial trata los pasos para recuperar información sobre un lote con errores mediante las API de ingesta de datos.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '655'
 ht-degree: 2%
 
 ---
@@ -16,30 +16,30 @@ ht-degree: 2%
 
 # Recuperación de lotes con errores mediante la API de acceso a datos
 
-Adobe Experience Platform proporciona dos métodos para cargar e ingestar datos. Puede utilizar la ingestión por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de puntos finales de flujo en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e introducir datos. Puede utilizar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta de flujo, que le permite insertar sus datos en [!DNL Platform] mediante el uso de extremos de flujo en tiempo real.
 
-En este tutorial se explican los pasos para recuperar información sobre un lote con errores mediante API [!DNL Data Ingestion].
+Este tutorial trata los pasos para recuperar información sobre un lote con errores mediante API [!DNL Data Ingestion].
 
 ## Primeros pasos
 
-Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-- [[!DNL Data Ingestion]](../home.md):: Métodos por los que se pueden enviar datos  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Data Ingestion]](../home.md): Métodos por los cuales se pueden enviar datos a  [!DNL Experience Platform].
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -53,7 +53,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Muestra de lote fallido
 
-Este tutorial utilizará datos de ejemplo con una marca de tiempo con formato incorrecto que establece el valor del mes en **00**, como se muestra a continuación:
+Este tutorial utilizará datos de ejemplo con una marca de tiempo con formato incorrecto que establece el valor del mes en **00**, como se ve a continuación:
 
 ```json
 {
@@ -78,11 +78,11 @@ Este tutorial utilizará datos de ejemplo con una marca de tiempo con formato in
 }
 ```
 
-La carga útil anterior no se validará correctamente con el esquema XDM debido a la marca de tiempo mal formada.
+La carga útil anterior no se validará correctamente con el esquema XDM debido a una marca de tiempo mal formada.
 
 ## Recuperar el lote fallido
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /batches/{BATCH_ID}/failed
@@ -90,7 +90,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote que está buscando. |
+| `{BATCH_ID}` | El ID del lote que está buscando. |
 
 **Solicitud**
 
@@ -135,13 +135,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Con la respuesta anterior, puede ver qué partes del lote se ejecutaron correctamente y fallaron. A partir de esta respuesta, puede ver que el archivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene el lote dañado.
+Con la respuesta anterior, puede ver qué partes del lote se completaron correctamente y fallaron. A partir de esta respuesta, puede ver que el archivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene el lote fallido.
 
-## Descargar el lote dañado
+## Descargar el lote fallido
 
-Una vez que sepa qué archivo del lote ha fallado, puede descargar el archivo con error y ver cuál es el mensaje de error.
+Una vez que sepa qué archivo del lote ha fallado, puede descargar el archivo fallido y ver cuál es el mensaje de error.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
@@ -149,12 +149,12 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote que contiene el archivo con error. |
+| `{BATCH_ID}` | El ID del lote que contiene el archivo con error. |
 | `{FAILED_FILE}` | Nombre del archivo que tiene el formato con errores. |
 
 **Solicitud**
 
-La siguiente solicitud le permite descargar el archivo con errores de ingestión.
+La siguiente solicitud le permite descargar el archivo que tenía errores de ingesta.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -186,19 +186,19 @@ Dado que el lote ingestado anterior tenía una fecha y hora no válida, se mostr
 
 ## Pasos siguientes
 
-Después de leer este tutorial, ha aprendido a recuperar errores de lotes con errores. Para obtener más información sobre la ingestión por lotes, lea la [guía para desarrolladores de ingestión por lotes](../batch-ingestion/overview.md). Para obtener más información sobre la ingestión de flujo continuo, lea el [tutorial de creación de una conexión de flujo](../tutorials/create-streaming-connection.md).
+Después de leer este tutorial, ha aprendido a recuperar errores de lotes con errores. Para obtener más información sobre la ingesta por lotes, lea la [guía para desarrolladores sobre ingesta por lotes](../batch-ingestion/overview.md). Para obtener más información sobre la ingesta de transmisión, lea el [tutorial de creación de una conexión de flujo continuo](../tutorials/create-streaming-connection.md).
 
 ## Apéndice
 
-Esta sección contiene información sobre otros tipos de error de ingestión que pueden producirse.
+Esta sección contiene información sobre otros tipos de error de ingesta que pueden producirse.
 
 ### XDM con formato incorrecto
 
-Al igual que el error de marca de hora en el flujo de ejemplo anterior, estos errores se deben a un XDM con formato incorrecto. Estos mensajes de error variarán según la naturaleza del problema. Como resultado, no se puede mostrar ningún ejemplo de error específico.
+Al igual que el error de marca de tiempo en el flujo del ejemplo anterior, estos errores se deben a un XDM con formato incorrecto. Estos mensajes de error variarán según la naturaleza del problema. Como resultado, no se puede mostrar ningún ejemplo de error específico.
 
-### Falta el identificador de organización de IMS o no es válido
+### Falta o no es válido el ID de organización de IMS
 
-Este error se muestra si falta el identificador de organización de IMS en la carga no es válido.
+Este error se muestra si el ID de organización de IMS que falta en la carga no es válido.
 
 ```json
 {
@@ -226,7 +226,7 @@ Este error se muestra si falta `schemaRef` para `xdmMeta`.
 }
 ```
 
-### Falta el nombre del origen
+### Falta el nombre de origen
 
 Este error se muestra si el `source` del encabezado no tiene su `name`.
 
