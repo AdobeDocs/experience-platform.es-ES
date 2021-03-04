@@ -6,9 +6,9 @@ description: Este documento cubre la creación de destinos de marketing por corr
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1701'
 ht-degree: 1%
 
 ---
@@ -366,6 +366,8 @@ Una respuesta correcta contiene el identificador único de la conexión base (`i
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] divide automáticamente los archivos de exportación en 5 millones de registros (filas) por archivo. Cada fila representa un perfil.
+>
+>Los nombres de archivos divididos se añaden con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **Formato de API**
 
