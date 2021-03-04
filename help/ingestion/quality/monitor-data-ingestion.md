@@ -1,84 +1,84 @@
 ---
-keywords: Experience Platform;inicio;temas populares;supervisión;monitorear;flujos de datos;supervisar la ingestión;ingestión de datos;ingestión de datos;ingesta de datos;registros de vista;lotes de vista;
+keywords: Experience Platform;inicio;temas populares;monitorización;monitorización;flujos de datos;monitorización de la ingesta;consumo de datos;ingesta de datos;ver registros;ver lotes;
 solution: Experience Platform
 title: Supervisión de la ingesta de datos
-topic: overview
-description: Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
+topic: sobre validación
+description: En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# Monitoreo de la ingesta de datos
+# Monitorización de la ingesta de datos
 
-La ingestión de datos le permite ingerir sus datos en Adobe Experience Platform. Puede utilizar la ingestión por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingestión por flujo continuo, que le permite ingerir los datos a [!DNL Platform] mediante el uso de puntos finales de flujo en tiempo real.
+La ingesta de datos le permite introducir sus datos en Adobe Experience Platform. Puede utilizar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta de flujo, que le permite introducir sus datos en [!DNL Platform] mediante el uso de extremos de flujo en tiempo real.
 
-Esta guía del usuario proporciona un paso sobre cómo supervisar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
+En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 
-## Monitoreo de la transmisión de datos end-to-end
+## Monitorización de la transmisión de datos de extremo a extremo
 
-En la [IU del Experience Platform](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda y, a continuación, haga clic en **[!UICONTROL Flujo de extremo a extremo]**.
+En la [interfaz de usuario de Experience Platform](https://platform.adobe.com), haga clic en **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda y, a continuación, haga clic en **[!UICONTROL Transmisión de extremo a extremo]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Aparece la página de monitoreo de **[!UICONTROL flujo de extremo a extremo]**. Este espacio de trabajo proporciona un gráfico que muestra la tasa de eventos transmitidos recibidos por [!DNL Platform], un gráfico que muestra la tasa de eventos transmitidos que [[!DNL Real-time Customer Profile]](../../profile/home.md) procesó correctamente, así como una lista detallada de los datos entrantes.
+Aparece la página de monitorización **[!UICONTROL Streaming end-to-end]**. Este espacio de trabajo proporciona un gráfico que muestra la tasa de recepción de eventos transmitidos por [!DNL Platform], un gráfico que muestra la tasa de eventos transmitidos que [[!DNL Real-time Customer Profile]](../../profile/home.md) procesaron correctamente, así como una lista detallada de datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-De forma predeterminada, el gráfico superior muestra la tasa de ingestión durante los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
+De forma predeterminada, el gráfico superior muestra la tasa de ingesta durante los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-El gráfico inferior muestra la tasa de eventos de flujo procesados correctamente [!DNL Profile] en los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
+El gráfico inferior muestra la tasa de eventos de flujo procesados correctamente en [!DNL Profile] durante los últimos siete días. Este intervalo de fechas se puede ajustar para mostrar varios períodos de tiempo haciendo clic en el botón resaltado.
 
 >[!NOTE]
 >
->Para que los datos se muestren en este gráfico, los datos deben estar **explícitamente** habilitados para [!DNL Profile]. Para aprender a habilitar datos de flujo continuo para [!DNL Profile], lea la [guía del usuario de datasets](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Para que los datos aparezcan en este gráfico, los datos deben estar **explícitamente** habilitados para [!DNL Profile]. Para aprender a habilitar la transmisión de datos para [!DNL Profile], lea la [guía del usuario de conjuntos de datos](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
-Debajo de los gráficos hay una lista de todos los registros de ingestión de flujo que corresponden al intervalo de fechas mostrado arriba. Cada lote de la lista muestra su ID, el nombre del conjunto de datos, cuándo se actualizó por última vez, el número de registros en el lote, así como el número de errores (si existe). Puede hacer clic en cualquiera de los registros para obtener información más detallada sobre ese registro.
+Debajo de los gráficos hay una lista de todos los registros de ingesta de transmisión que se corresponden con el intervalo de fechas mostrado arriba. Cada lote enumerado muestra su ID, nombre del conjunto de datos, la última vez que se actualizó, el número de registros en el lote, así como el número de errores (si existe). Puede hacer clic en cualquiera de los registros para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
 ### Visualización de registros de flujo continuo
 
-Al ver los detalles de un registro transmitido correctamente, se muestra información como el número de registros ingestados, el tamaño del archivo, el inicio de ingestión y las horas de finalización.
+Al ver los detalles de un registro transmitido correctamente, se muestra información como el número de registros ingeridos, el tamaño del archivo y las horas de inicio y finalización de ingesta.
 
 ![](../images/quality/monitor-data-flows/successful-streaming-record.png)
 
-Los detalles de un registro de flujo fallido muestran la misma información que un registro exitoso.
+Los detalles de un registro de flujo continuo con errores muestran la misma información que un registro con éxito.
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-Además, los registros con errores proporcionan detalles sobre los errores que se produjeron durante el procesamiento del lote. En el ejemplo siguiente, se produjo un error del sistema al validar el datasetId del catálogo.
+Además, los registros fallidos proporcionan detalles sobre los errores que se produjeron al procesar el lote. En el siguiente ejemplo, se produjo un error del sistema al validar el conjunto de datos del catálogo.
 
 ![](../images/quality/monitor-data-flows/failed-batch-details.png)
 
-## Monitorear la ingesta de datos de extremo a extremo por lotes
+## Monitorización de la ingesta de datos de extremo a extremo por lotes
 
-En [[!DNL Experience Platform UI]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoreo]** en el menú de navegación de la izquierda.
+En [[!DNL Experience Platform UI]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-Aparece la página de monitoreo **[!UICONTROL Lote end-to-end]**, que muestra una lista de los lotes ingestados anteriormente. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
+Aparece la página de monitorización **[!UICONTROL Batch end-to-end]**, que muestra una lista de los lotes ingestados anteriormente. Puede hacer clic en cualquiera de los lotes para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
 ### Visualización de lotes
 
-Al ver los detalles de un lote exitoso, se muestra información como el número de registros ingestados, el tamaño del archivo, el inicio de ingestión y las horas de finalización.
+Al ver los detalles de un lote exitoso, se muestra información como el número de registros ingeridos, el tamaño del archivo y las horas de inicio y finalización de ingesta.
 
 ![](../images/quality/monitor-data-flows/successful-batch.png)
 
-Los detalles de un lote dañado muestran la misma información que un lote exitoso, con la adición del número de registros fallidos.
+Los detalles de un lote con errores muestran la misma información que un lote con éxito, con la adición del número de registros con errores.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record.png)
 
-Además, los lotes con errores proporcionan detalles sobre los errores que se produjeron durante el procesamiento del lote. En el ejemplo siguiente, se produjo un error con el lote ingestado porque se utilizó un campo desconocido de `_experience`.
+Además, los lotes con errores proporcionan detalles sobre los errores que se produjeron al procesar el lote. En el ejemplo siguiente, se produjo un error con el lote ingerido porque utilizaba un campo desconocido de `_experience`.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record-details.png)
