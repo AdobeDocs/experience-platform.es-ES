@@ -1,111 +1,55 @@
 ---
 keywords: Experience Platform;inicio;temas populares;códigos de error de API;código de error de API;API de código de error;API de códigos de error;error de solicitud de API;solución de problemas de API;error de API
 solution: Experience Platform
-title: Guía de solución de problemas y preguntas más frecuentes de Adobe Experience Platform
+title: Guía de preguntas frecuentes y solución de problemas de Adobe Experience Platform
 description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 landing-page-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 topic: introducción
 type: Documentación
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 3%
+source-wordcount: '1718'
+ht-degree: 4%
 
 ---
 
 
-# [!DNL Platform] Preguntas más frecuentes y guía de solución de problemas
+# [!DNL Platform] Guía de preguntas frecuentes y solución de problemas
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform, así como una guía de solución de problemas de alto nivel para los errores comunes que se pueden encontrar en cualquier API [!DNL Experience Platform]. Para obtener guías de solución de problemas sobre servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform, así como una guía de solución de problemas de alto nivel para detectar errores comunes que se puedan encontrar en cualquier API [!DNL Experience Platform]. Para obtener guías de solución de problemas sobre los servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
 
 ## Preguntas más frecuentes {#faq}
 
-La siguiente es una lista de respuestas a las preguntas más frecuentes sobre Adobe Experience Platform.
+A continuación encontrará una lista de las respuestas a las preguntas más frecuentes sobre Adobe Experience Platform.
 
 ## ¿Qué son las [!DNL Experience Platform] API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] oferta varias API de RESTful que utilizan solicitudes HTTP para acceder a  [!DNL Platform] los recursos. Cada una de estas API de servicio expone varios extremos y le permite realizar operaciones de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (DELETE) de recursos. Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de API](http://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
+[!DNL Experience Platform] ofrece varias API de RESTful que utilizan solicitudes HTTP para acceder a los  [!DNL Platform] recursos. Cada una de estas API de servicio expone varios puntos finales y le permite realizar operaciones en los recursos de lista (GET), búsqueda (GET), edición (PUT y/o PATCH) y eliminación (ELIMINACIÓN). Para obtener más información sobre los extremos específicos y las operaciones disponibles para cada servicio, consulte la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
 
-## ¿Cómo se formatea una solicitud de API? {#how-do-i-format-an-api-request}
+## ¿Cómo se da formato a una solicitud de API? {#how-do-i-format-an-api-request}
 
-Los formatos de solicitud varían según la API [!DNL Platform] que se esté utilizando. La mejor manera de aprender a estructurar las llamadas de API es siguiendo los ejemplos que se proporcionan en la documentación del servicio [!DNL Platform] concreto que está utilizando.
+Los formatos de solicitud varían según la API [!DNL Platform] que se esté utilizando. La mejor manera de estructurar las llamadas de API es seguir los ejemplos que se proporcionan en la documentación del servicio [!DNL Platform] que está utilizando.
 
-### Leer llamadas de API de ejemplo
+Para obtener más información sobre cómo dar formato a las solicitudes de API, visite la sección Guía de introducción a la API de plataforma [leer llamadas de API de ejemplo](./api-guide.md#sample-api) .
 
-La documentación de [!DNL Experience Platform] muestra las llamadas de API de ejemplo de dos maneras diferentes. En primer lugar, la llamada se presenta en su **formato de API**, una representación de plantilla que muestra únicamente la operación (GET, POST, PUT, PATCH, DELETE) y el punto final que se utiliza (por ejemplo, `/global/classes`). Algunas plantillas también muestran la ubicación de las variables para ilustrar cómo se debe formular una llamada, como `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+## ¿Qué es mi organización IMS? {#what-is-my-ims-organization}
 
-Las llamadas se muestran luego como comandos cURL en una **Solicitud**, que incluye los encabezados necesarios y la &quot;ruta de acceso base&quot; completa necesaria para interactuar correctamente con la API. La ruta de acceso base se debe anteponer a todos los extremos. Por ejemplo, el punto final `/global/classes` antes mencionado pasa a ser `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Verá el formato de API / patrón de solicitud en toda la documentación y se espera que utilice la ruta completa que se muestra en la solicitud de ejemplo al realizar sus propias llamadas a las API de plataforma.
-
-### Ejemplo de solicitud de API
-
-A continuación se muestra un ejemplo de solicitud de API que muestra el formato que encontrará en la documentación.
-
-**Formato API**
-
-El formato de la API muestra la operación (GET) y el punto final que se está utilizando. Las variables se indican mediante llaves (en este caso, `{CONTAINER_ID}`).
-
-```http
-GET /{CONTAINER_ID}/classes
-```
-
-**Solicitud**
-
-En esta solicitud de ejemplo, las variables del formato de API reciben valores reales en la ruta de solicitud. También se muestran todos los encabezados requeridos, ya sea valores de encabezado de ejemplo o variables en las que se debe incluir información confidencial (como tokens de seguridad e ID de acceso).
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-La respuesta ilustra lo que esperaría recibir tras una llamada correcta a la API, según la solicitud que se envió. Ocasionalmente, la respuesta se trunca en el espacio, lo que significa que puede ver más información o información adicional a la que se muestra en la muestra.
-
-```json
-{
-    "results": [
-        {
-            "title": "XDM ExperienceEvent",
-            "$id": "https://ns.adobe.com/xdm/context/experienceevent",
-            "meta:altId": "_xdm.context.experienceevent",
-            "version": "1"
-        },
-        {
-            "title": "XDM Individual Profile",
-            "$id": "https://ns.adobe.com/xdm/context/profile",
-            "meta:altId": "_xdm.context.profile",
-            "version": "1"
-        }
-    ],
-    "_links": {}
-}
-```
-
-Para obtener más información sobre los extremos específicos en las API de plataforma, incluidos los encabezados y los cuerpos de solicitud requeridos, consulte la [documentación de referencia de API](http://www.adobe.com/go/platform-api-reference-en).
-
-## ¿Cuál es mi organización IMS? {#what-is-my-ims-organization}
-
-Una organización de IMS es una representación Adobe de un cliente. Cualquier solución de Adobe con licencia se integra con esta organización de clientes. Cuando una organización de IMS tiene derecho a [!DNL Experience Platform], puede asignar acceso a los programadores. El identificador de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar a través de la [Consola de programadores de Adobe](https://www.adobe.com/go/devs_console_ui): en la ficha **Integraciones**, navegue a la sección **Información general** para cualquier integración en particular a fin de encontrar el ID en **Credenciales de cliente**. Para obtener un tutorial paso a paso sobre cómo autenticarse en [!DNL Platform], consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
+Una organización IMS es una representación de Adobe de un cliente. Las soluciones de Adobe con licencia se integran con esta organización de clientes. Cuando una organización de IMS tiene derecho a [!DNL Experience Platform], puede asignar acceso a los desarrolladores. El ID de organización de IMS (`x-gw-ims-org-id`) representa la organización para la que se debe ejecutar una llamada de API y, por lo tanto, se requiere como encabezado en todas las solicitudes de API. Este ID se puede encontrar a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): en la pestaña **Integrations**, vaya a la sección **Overview** para cualquier integración en particular para encontrar el ID en **Client Credentials**. Para obtener un tutorial paso a paso sobre cómo autenticarse en [!DNL Platform], consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## ¿Dónde puedo encontrar mi clave de API? {#where-can-i-find-my-api-key}
 
-Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de la [Consola de programadores de Adobe](https://www.adobe.com/go/devs_console_ui). Dentro de la consola, en la ficha **Integrations**, navegue a la sección **Overview** para obtener una integración específica y encontrará la clave en **Client Credentials**. Para obtener un tutorial paso a paso sobre cómo autenticarse en [!DNL Platform], consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
+Se requiere una clave de API como encabezado en todas las solicitudes de API. Se puede encontrar a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Dentro de la consola, en la pestaña **Integrations**, vaya a la sección **Overview** para obtener una integración específica y encontrará la clave en **Client Credentials**. Para obtener un tutorial paso a paso sobre cómo autenticarse en [!DNL Platform], consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
 
-## ¿Cómo consigo un token de acceso? {#how-do-i-get-an-access-token}
+## ¿Cómo obtengo un token de acceso? {#how-do-i-get-an-access-token}
 
-Se requieren tokenes de acceso en el encabezado Autorización de todas las llamadas de API. Se pueden generar mediante un comando `curl`, siempre que tenga acceso a una integración para una organización de IMS. Las tokenes de acceso solo son válidas durante 24 horas, tras las cuales se debe generar un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokenes de acceso, consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
+Los tokens de acceso son necesarios en el encabezado Autorización de todas las llamadas a la API. Pueden generarse mediante un comando `curl`, siempre que tenga acceso a una integración para una organización de IMS. Los tokens de acceso solo son válidos durante 24 horas, tras lo cual debe generarse un nuevo token para continuar usando la API. Para obtener más información sobre la generación de tokens de acceso, consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en).
 
-## ¿Cómo se utilizan los parámetros de consulta? {#how-do-i-user-query-parameters}
+## ¿Cómo utilizo los parámetros de consulta? {#how-do-i-user-query-parameters}
 
-Algunos extremos de API [!DNL Platform] aceptan parámetros de consulta para localizar información específica y filtrar los resultados devueltos en la respuesta. Los parámetros de consulta se anexan a las rutas de solicitud con un signo de interrogación (`?`), seguido de uno o más parámetros de consulta con el formato `paramName=paramValue`. Al combinar varios parámetros en una sola llamada, debe utilizar un símbolo de unión (`&`) para separar parámetros individuales. En el siguiente ejemplo se muestra cómo se representa en la documentación una solicitud que utiliza varios parámetros de consulta.
+Algunos [!DNL Platform] extremos de API aceptan parámetros de consulta para localizar información específica y filtrar los resultados devueltos en la respuesta. Los parámetros de consulta se agregan a las rutas de solicitud con un símbolo de interrogación (`?`) seguido de uno o más parámetros de consulta utilizando el formato `paramName=paramValue`. Al combinar varios parámetros en una sola llamada, debe utilizar un símbolo &amp; (`&`) para separar los parámetros individuales. El siguiente ejemplo muestra cómo se representa una solicitud que utiliza varios parámetros de consulta en la documentación.
 
-Algunos ejemplos de parámetros de consulta que se utilizan con frecuencia son:
+Algunos ejemplos de parámetros de consulta usados comúnmente son:
 
 ```http
 GET /tenant/schemas?orderby=title
@@ -113,49 +57,49 @@ GET /datasets?limit=36&start=10
 GET /batches?createdAfter=1559775880000&orderBy=desc:created
 ```
 
-Para obtener información detallada sobre los parámetros de consulta disponibles para un servicio o extremo específico, consulte la documentación específica del servicio.
+Para obtener información detallada sobre qué parámetros de consulta están disponibles para un servicio o extremo específico, consulte la documentación específica del servicio.
 
-## ¿Cómo se indica un campo JSON para actualizar en una solicitud de PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## ¿Cómo puedo indicar un campo JSON para actualizar en una solicitud PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Muchas operaciones de PATCH en [!DNL Platform] API utilizan cadenas [JSON Pointer](https://tools.ietf.org/html/rfc6901) para indicar las propiedades de JSON que se van a actualizar. Normalmente, se incluyen en las cargas de solicitud con el formato [JSON Patch](https://tools.ietf.org/html/rfc6902). Consulte la [guía de principios de API](api-fundamentals.md) para obtener información detallada sobre la sintaxis requerida para estas tecnologías.
+Muchas operaciones PATCH en las API [!DNL Platform] utilizan cadenas [JSON Pointer](https://tools.ietf.org/html/rfc6901) para indicar las propiedades JSON que se deben actualizar. Estos suelen incluirse en las cargas de solicitud que utilizan el formato [JSON Patch](https://tools.ietf.org/html/rfc6902). Consulte la [guía de fundamentos de API](api-fundamentals.md) para obtener información detallada sobre la sintaxis necesaria para estas tecnologías.
 
-## ¿Puedo usar Postman para realizar llamadas a [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## ¿Puedo usar Postman para realizar llamadas a las API [!DNL Platform]? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[](https://www.postman.com/) Postmanis es una herramienta útil para visualizar llamadas a las API de RESTful. Esta [publicación media](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describe cómo configurar Postman para que realice automáticamente la autenticación y la utilice para consumir [!DNL Experience Platform] API.
+[](https://www.postman.com/) Postmanes una herramienta útil para visualizar llamadas a las API de RESTful. La [guía de introducción a la API de plataforma](api-guide.md) contiene un vídeo e instrucciones para importar colecciones Postman. Además, se proporciona una lista de colecciones Postman para cada servicio.
 
 ## ¿Cuáles son los requisitos del sistema para [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
-Según si utiliza la interfaz de usuario o la API, se aplican los siguientes requisitos del sistema:
+Dependiendo de si utiliza la interfaz de usuario o la API, se aplican los siguientes requisitos del sistema:
 
 **Para operaciones basadas en la interfaz de usuario:**
-- Un navegador web moderno y estándar. Aunque se recomienda la versión más reciente de [!DNL Chrome], también se admiten las versiones principales actuales y anteriores de [!DNL Firefox], [!DNL Internet Explorer] y Safari.
-   - Cada vez que se lanza una nueva versión principal, se eliminan los inicios [!DNL Platform] que admiten la versión más reciente y la compatibilidad con la tercera versión más reciente.
+- Un navegador web estándar y moderno. Aunque se recomienda la versión más reciente de [!DNL Chrome] , también se admiten las versiones principales actual y anterior de [!DNL Firefox], [!DNL Internet Explorer] y Safari.
+   - Cada vez que se lanza una nueva versión principal, [!DNL Platform] comienza a admitir la versión más reciente, mientras que se abandona la compatibilidad con la tercera versión más reciente.
 - Todos los exploradores deben tener habilitadas las cookies y JavaScript.
 
-**Para interacciones entre API y desarrollador:**
-- Un entorno de desarrollo para desarrollar integraciones de REST, flujo continuo y Weblink.
+**Para interacciones de API y desarrollador:**
+- Un entorno de desarrollo para desarrollar integraciones de REST, transmisión por secuencias y Weblock.
 
 ## Errores y solución de problemas {#errors-and-troubleshooting}
 
-La siguiente es una lista de errores que puede encontrar al utilizar cualquier servicio [!DNL Experience Platform]. Para obtener guías de solución de problemas sobre servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
+La siguiente es una lista de errores que puede encontrar al utilizar cualquier servicio [!DNL Experience Platform]. Para obtener guías de solución de problemas sobre los servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
 
 ## Códigos de estado de API {#api-status-codes}
 
-Los siguientes códigos de estado pueden encontrarse en cualquier API [!DNL Experience Platform]. Cada uno de ellos tiene una variedad de causas, por lo que las explicaciones dadas en esta sección son de carácter general. Para obtener más información acerca de los errores específicos en los servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
+Los siguientes códigos de estado se pueden encontrar en cualquier API [!DNL Experience Platform]. Cada uno tiene una variedad de causas, por lo que las explicaciones dadas en esta sección son de naturaleza general. Para obtener más información sobre errores específicos en servicios [!DNL Platform] individuales, consulte el [directorio de solución de problemas del servicio](#service-troubleshooting-directory) a continuación.
 
-| Código de estado | Descripción | Causas posibles |
+| Código de estado | Descripción | Posibles causas |
 --- | --- | ---
-| 400 | Solicitud incorrecta | La solicitud se construyó incorrectamente, falta información de clave o contenía sintaxis incorrecta. |
-| 401 | Error de autenticación | La solicitud no pasó una comprobación de autenticación. Es posible que falte el token de acceso o que no sea válido. Consulte la sección [Errores de token de OAuth](#oauth-token-is-missing) para obtener más información. |
-| 403 | Prohibido | Se encontró el recurso, pero no tiene las credenciales correctas para vista. |
+| 400 | Solicitud incorrecta | La solicitud se ha construido incorrectamente, falta información de clave o contiene sintaxis incorrecta. |
+| 401 | Error de autenticación | La solicitud no pasó una comprobación de autenticación. Puede que falte el token de acceso o que no sea válido. Consulte la sección [OAuth token errors](#oauth-token-is-missing) a continuación para obtener más información. |
+| 403 | Prohibido | Se encontró el recurso, pero no tiene las credenciales adecuadas para verlo. |
 | 404 | No encontrado | No se encontró el recurso solicitado en el servidor. Es posible que el recurso se haya eliminado o que la ruta solicitada se haya introducido incorrectamente. |
-| 500 | Error interno del servidor | Se trata de un error del lado del servidor. Si realiza muchas llamadas simultáneas, puede que esté llegando al límite de la API y necesite filtrar los resultados. (Para obtener más información, consulte la [!DNL Catalog Service] guía para desarrolladores de API sobre [filtrado de datos](../catalog/api/filter-data.md).) Espere un momento antes de volver a intentar la solicitud y póngase en contacto con el administrador si el problema persiste. |
+| 500 | Error interno del servidor | Este es un error del lado del servidor. Si realiza muchas llamadas simultáneas, es posible que esté alcanzando el límite de la API y tenga que filtrar los resultados. (Consulte la [!DNL Catalog Service] guía para desarrolladores de API en la subguía [filtrado de datos](../catalog/api/filter-data.md) para obtener más información). Espere un momento antes de volver a probar la solicitud y póngase en contacto con el administrador si el problema persiste. |
 
-## Errores de encabezado de solicitud {#request-header-errors}
+## Solicitar errores de encabezado {#request-header-errors}
 
-Todas las llamadas de API de [!DNL Platform] requieren encabezados de solicitud específicos. Para ver qué encabezados son necesarios para servicios individuales, consulte la [documentación de referencia de API](http://www.adobe.com/go/platform-api-reference-en). Para buscar los valores de los encabezados de autenticación requeridos, consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Si alguno de estos encabezados falta o no es válido al realizar una llamada de API, pueden producirse los siguientes errores.
+Todas las llamadas de API en [!DNL Platform] requieren encabezados de solicitud específicos. Para ver qué encabezados son necesarios para servicios individuales, consulte la [documentación de referencia de API](http://www.adobe.com/go/platform-api-reference-en). Para encontrar los valores de los encabezados de autenticación necesarios, consulte el [Tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Si falta alguno de estos encabezados o no es válido al realizar una llamada a la API, pueden producirse los siguientes errores.
 
-### Falta el token de OAuth {#oauth-token-is-missing}
+### Falta el token OAuth {#oauth-token-is-missing}
 
 ```json
 {
@@ -164,7 +108,7 @@ Todas las llamadas de API de [!DNL Platform] requieren encabezados de solicitud 
 }
 ```
 
-Este mensaje de error se muestra cuando falta un encabezado `Authorization` en una solicitud de API. Asegúrese de que el encabezado Autorización se incluye con un token de acceso válido antes de intentarlo de nuevo.
+Este mensaje de error aparece cuando falta un encabezado `Authorization` en una solicitud de API. Asegúrese de que el encabezado Autorización esté incluido con un token de acceso válido antes de intentarlo de nuevo.
 
 ### El token de OAuth no es válido
 
@@ -186,7 +130,7 @@ Este mensaje de error se muestra cuando el token de acceso proporcionado en el e
 }
 ```
 
-Este mensaje de error se muestra cuando falta un encabezado de clave de API (`x-api-key`) en una solicitud de API. Asegúrese de que el encabezado se incluye con una clave de API válida antes de intentarlo de nuevo.
+Este mensaje de error aparece cuando falta un encabezado de clave de API (`x-api-key`) en una solicitud de API. Asegúrese de que el encabezado esté incluido con una clave de API válida antes de volver a intentarlo.
 
 ### La clave de API no es válida
 
@@ -197,7 +141,7 @@ Este mensaje de error se muestra cuando falta un encabezado de clave de API (`x-
 }
 ```
 
-Este mensaje de error se muestra cuando el valor del encabezado de clave de API proporcionado (`x-api-key`) no es válido. Asegúrese de haber introducido la clave correctamente antes de intentarlo de nuevo. Si no conoce la clave de API, puede encontrarla en la [Consola de Adobe I/O](https://console.adobe.io): en la ficha **Integraciones**, vaya a la sección **Información general** para obtener una integración específica para encontrar la clave de API en **Credenciales de cliente**.
+Este mensaje de error se muestra cuando el valor del encabezado de clave de API proporcionado (`x-api-key`) no es válido. Asegúrese de haber introducido la clave correctamente antes de volver a intentarlo. Si no conoce su clave de API, puede encontrarla en la [Consola de Adobe I/O](https://console.adobe.io): en la pestaña **Integrations**, vaya a la sección **Overview** para obtener una integración específica para encontrar la clave de API en **Client Credentials**.
 
 
 ### Falta el encabezado
@@ -209,9 +153,9 @@ Este mensaje de error se muestra cuando el valor del encabezado de clave de API 
 }
 ```
 
-Este mensaje de error se muestra cuando falta un encabezado de organización de IMS (`x-gw-ims-org-id`) en una solicitud de API. Asegúrese de que el encabezado se incluye con el ID de su organización de IMS antes de intentarlo de nuevo.
+Este mensaje de error aparece cuando falta un encabezado de organización de IMS (`x-gw-ims-org-id`) en una solicitud de API. Asegúrese de que el encabezado esté incluido con el ID de su organización IMS antes de intentarlo de nuevo.
 
-### Perfil no válido
+### El perfil no es válido
 
 ```json
 {
@@ -220,9 +164,9 @@ Este mensaje de error se muestra cuando falta un encabezado de organización de 
 }
 ```
 
-Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/O (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el encabezado `Authorization`) no tiene derecho a realizar llamadas a [!DNL Experience Platform] API para la organización IMS proporcionada en el encabezado `x-gw-ims-org-id`. Asegúrese de que ha proporcionado el ID correcto para su organización de IMS en el encabezado antes de intentarlo de nuevo. Si no conoce su ID de organización, puede encontrarlo en la [Consola de Adobe I/O](https://console.adobe.io): en la ficha **Integraciones**, vaya a la sección **Información general** para obtener una integración específica y busque el ID en **Credenciales de cliente**.
+Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/O (identificada por el [token de acceso](#how-do-i-get-an-access-token) en el encabezado `Authorization`) no están autorizados a realizar llamadas a las [!DNL Experience Platform] API para la organización IMS proporcionada en el encabezado `x-gw-ims-org-id`. Asegúrese de proporcionar el ID correcto para su organización IMS en el encabezado antes de volver a intentarlo. Si no conoce su ID de organización, puede encontrarlo en la [Consola de Adobe I/O](https://console.adobe.io): en la pestaña **Integrations**, vaya a la sección **Overview** para obtener una integración específica para encontrar el ID en **Client Credentials**.
 
-### No se especificó un tipo de contenido válido
+### No se ha especificado un tipo de contenido válido
 
 ```json
 {
@@ -233,25 +177,25 @@ Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/
 }
 ```
 
-Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH tiene un encabezado no válido o falta `Content-Type`. Asegúrese de que el encabezado esté incluido en la solicitud y de que su valor sea `application/json`.
+Este mensaje de error se muestra cuando una solicitud POST, PUT o PATCH tiene un encabezado `Content-Type` no válido o que falta. Asegúrese de que el encabezado esté incluido en la solicitud y de que su valor sea `application/json`.
 
 
 ## Directorio de solución de problemas del servicio {#service-troubleshooting-directory}
 
-La siguiente es una lista de guías de solución de problemas y documentación de referencia de API para las API [!DNL Experience Platform]. Cada guía de solución de problemas proporciona respuestas a las preguntas más frecuentes y soluciones a problemas específicos de los servicios individuales [!DNL Platform]. Los documentos de referencia de API proporcionan una guía completa de todos los extremos disponibles para cada servicio y muestran los cuerpos de solicitud de muestra, las respuestas y los códigos de error que puede recibir.
+A continuación se muestra una lista de guías de solución de problemas y documentación de referencia de API para las API [!DNL Experience Platform]. Cada guía de solución de problemas proporciona respuestas a las preguntas más frecuentes y soluciones a problemas específicos de los servicios individuales [!DNL Platform]. Los documentos de referencia de la API proporcionan una guía completa de todos los extremos disponibles para cada servicio y muestran los cuerpos de solicitud de muestra, las respuestas y los códigos de error que puede recibir.
 
 | Service | Referencia de API | Resolución de problemas |
 | --- | --- | --- |
-| Control de acceso | [API de control de acceso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guía de solución de problemas de control de acceso](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guía de resolución de problemas de ingestión por lotes ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guía de solución de problemas de ingestión por flujo continuo](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Control de acceso | [API de control de acceso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guía de solución de problemas del control de acceso](../access-control/troubleshooting-guide.md) |
+| Incorporación de datos de Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guía de solución de problemas de ingesta por lotes ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guía de solución de problemas de ingesta por transmisión](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guía de solución de problemas](../data-science-workspace/troubleshooting-guide.md) |
 | Administración de datos de Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
 | Servicio de ID de Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guía de solución de problemas](../identity-service/troubleshooting-guide.md) |
-| Servicio de Consulta de Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guía de solución de problemas](../query-service/troubleshooting-guide.md) |
+| Servicio de consultas de Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guía de solución de problemas](../query-service/troubleshooting-guide.md) |
 | Segmentación de Adobe Experience Platform | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Preguntas más frecuentes y guía de solución de problemas](../xdm/troubleshooting-guide.md) |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Guía de preguntas frecuentes y solución de problemas](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] y [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guía de solución de problemas](../profile/troubleshooting.md) |
-| Entornos aislados | [API de Simulador para pruebas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
+| Entornos aislados | [API de Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guía de solución de problemas de los Simuladores para pruebas](../sandboxes/troubleshooting-guide.md) |
 
