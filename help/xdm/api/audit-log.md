@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;auditoría;registro de auditoría;registro de cambios;rpc;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;auditoría;registro de auditoría;registro de cambios;registro de cambios;rpc
 solution: Experience Platform
-title: Extremo de API de registro de auditoría
-description: El extremo /auditlog de la API del Registro de Esquema permite recuperar una lista cronológica de los cambios realizados en un recurso XDM existente.
-topic: developer guide
+title: Punto final de API de registro de auditoría
+description: El extremo /auditlog en la API del Registro de esquemas permite recuperar una lista cronológica de los cambios realizados en un recurso XDM existente.
+topic: guía para desarrolladores
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 2%
 
 # Extremo del registro de auditoría
 
-Para cada recurso del Modelo de datos de experiencia (XDM), el [!DNL Schema Registry] mantiene un registro de todos los cambios que se han producido entre distintas actualizaciones. El extremo `/auditlog` de la API [!DNL Schema Registry] permite recuperar un registro de auditoría para cualquier clase, mezcla, tipo de datos o esquema especificado por el ID.
+Para cada recurso del Modelo de datos de experiencia (XDM), el [!DNL Schema Registry] mantiene un registro de todos los cambios que se han producido entre diferentes actualizaciones. El extremo `/auditlog` de la API [!DNL Schema Registry] permite recuperar un registro de auditoría para cualquier clase, mezcla, tipo de datos o esquema especificado por el ID.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
-El extremo `/auditlog` forma parte de las llamadas a procedimientos remotos (RPC) que admite [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos de RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan un `CONTAINER_ID`. En su lugar, deben utilizar la Área de nombres `/rpc`, como se muestra en la llamada de API que se muestra a continuación.
+El extremo `/auditlog` forma parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan `CONTAINER_ID`. En su lugar, deben utilizar el espacio de nombres `/rpc` , como se muestra en la llamada de API que aparece a continuación.
 
 ## Recuperar un registro de auditoría para un recurso
 
-Puede recuperar un registro de auditoría para cualquier clase, mezcla, tipo de datos o esquema dentro de la biblioteca de Esquemas especificando el ID del recurso en la ruta de una solicitud de GET al extremo `/auditlog`.
+Puede recuperar un registro de auditoría para cualquier clase, combinación, tipo de datos o esquema dentro de la Biblioteca de esquemas especificando el ID del recurso en la ruta de una solicitud GET al extremo `/auditlog` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /rpc/auditlog/{RESOURCE_ID}
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_ID}` | El `meta:altId` o `$id` con codificación URL del recurso cuyo registro de auditoría desea recuperar. |
+| `{RESOURCE_ID}` | El `meta:altId` o la `$id` con codificación de URL del recurso cuyo registro de auditoría desea recuperar. |
 
 **Solicitud**
 
@@ -92,7 +92,7 @@ Una respuesta correcta devuelve una lista cronológica de los cambios realizados
 | Propiedad | Descripción |
 | --- | --- |
 | `auditTrails` | Matriz de objetos, con cada objeto que representa un cambio realizado en el recurso especificado o en uno de sus recursos dependientes. |
-| `id` | El `$id` del recurso que se cambió. Normalmente, este valor representa el recurso especificado en la ruta de solicitud, pero puede representar un recurso dependiente si ese es el origen del cambio. |
-| `action` | El tipo de cambio que se realizó. |
-| `path` | Una cadena [puntero JSON](../../landing/api-fundamentals.md#json-pointer) que indica la ruta al campo específico que se cambió o agregó. |
-| `value` | Valor asignado al campo nuevo o actualizado. |
+| `id` | El `$id` del recurso que se cambió. Este valor suele representar el recurso especificado en la ruta de solicitud, pero puede representar un recurso dependiente si ese es el origen del cambio. |
+| `action` | Tipo de cambio que se ha realizado. |
+| `path` | Una cadena [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) que indica la ruta al campo específico que se cambió o agregó. |
+| `value` | El valor que se asignó al campo nuevo o actualizado. |
