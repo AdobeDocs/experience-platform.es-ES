@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;exportar;importar;rpc;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;exportación;importación;rpc
 solution: Experience Platform
-title: Exportar/importar extremos de API
-description: Los extremos /export y /import de la API del Registro de Esquema permiten compartir recursos XDM entre organizaciones de IMS y entornos limitados.
-topic: developer guide
+title: Exportación/importación de extremos de API
+description: Los extremos /export y /import de la API del Registro de esquemas permiten compartir recursos XDM entre organizaciones IMS y entornos limitados.
+topic: guía para desarrolladores
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
 
-# Exportar/importar extremos
+# Exportación/importación de extremos
 
-Todos los recursos dentro de [!DNL Schema Library] están contenidos en un entorno limitado específico dentro de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS. La API [!DNL Schema Registry] proporciona dos extremos que le permiten generar una carga útil de exportación para cualquier tipo de esquema, mezcla o datos en la[!DNL  Schema Library] y, a continuación, utilizar esa carga útil para importar ese recurso (y todos los recursos dependientes) en un entorno limitado de destinatario y en una organización IMS.
+Todos los recursos dentro de [!DNL Schema Library] están contenidos en un entorno limitado específico de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS. La API [!DNL Schema Registry] proporciona dos extremos que permiten generar una carga útil de exportación para cualquier esquema, combinación o tipo de datos en el [!DNL  Schema Library] y, a continuación, utilizar esa carga útil para importar ese recurso (y todos los recursos dependientes) en un entorno limitado de destino y en una organización de IMS.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
+Los extremos utilizados en esta guía forman parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
 
-Los extremos de exportación e importación forman parte de las llamadas a procedimientos remotos (RPC) que admite [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos de RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan un `CONTAINER_ID`. En su lugar, deben utilizar la Área de nombres `/rpc`, como se muestra en las llamadas de API que se muestran a continuación.
+Los extremos de exportación e importación forman parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan `CONTAINER_ID`. En su lugar, deben utilizar el espacio de nombres `/rpc` , como se muestra en las llamadas de API que aparecen a continuación.
 
 ## Recuperar una carga útil de exportación para un recurso {#export}
 
-Para cualquier esquema, mezcla o tipo de datos existente en [!DNL Schema Library], puede generar una carga útil de exportación haciendo una solicitud de GET al extremo `/export`, proporcionando el ID del recurso en la ruta.
+Para cualquier esquema, mezcla o tipo de datos existente en [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud GET al extremo `/export` , proporcionando el ID del recurso en la ruta de acceso.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /rpc/export/{RESOURCE_ID}
@@ -35,7 +35,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{RESOURCE_ID}` | El `meta:altId` o el `$id` del recurso XDM que desea exportar. |
+| `{RESOURCE_ID}` | El `meta:altId` o el `$id` con codificación de URL del recurso XDM que desea exportar. |
 
 **Solicitud**
 
@@ -53,9 +53,9 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destinatario y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un tipo de datos `Property` creado por el inquilino que emplea la mezcla `Restaurant`, mientras que el segundo objeto es la mezcla `Restaurant` misma. Esta carga útil se puede utilizar para [importar el recurso](#import) en un entorno limitado diferente o en una organización IMS.
+Una respuesta correcta devuelve una matriz de objetos, que representan el recurso XDM de destino y todos sus recursos dependientes. En este ejemplo, el primer objeto de la matriz es un tipo de datos `Property` creado por el inquilino que emplea la mezcla `Restaurant`, mientras que el segundo objeto es la propia mezcla `Restaurant`. Esta carga útil se puede utilizar para [importar el recurso](#import) en un entorno limitado diferente o en una organización de IMS.
 
-Tenga en cuenta que todas las instancias del ID de inquilino del recurso se reemplazan por `<XDM_TENANTID_PLACEHOLDER>`. Esto permite que el Registro de Esquemas aplique automáticamente el ID de inquilino correcto a los recursos en función de dónde se envíen en la llamada de importación posterior.
+Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sustituyen por `<XDM_TENANTID_PLACEHOLDER>`. Esto permite que el Registro de esquemas aplique automáticamente el ID de inquilino correcto a los recursos en función de dónde se envíen en la llamada de importación posterior.
 
 ```json
 [
@@ -197,9 +197,9 @@ Tenga en cuenta que todas las instancias del ID de inquilino del recurso se reem
 
 ## Importar un recurso {#import}
 
-Una vez [generó una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga útil en una solicitud de POST al extremo `/import` para importar ese recurso en una organización IMS de destinatario y un simulador de pruebas.
+Una vez que haya [generado una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga en una solicitud POST al extremo `/import` para importar ese recurso en una organización IMS y un simulador de pruebas de destino.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /rpc/import
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Solicitud**
 
-La siguiente solicitud toma la carga útil devuelta en el ejemplo de exportación anterior [](#export) para importar la mezcla `Restaurant` en una nueva organización IMS y entorno limitado, según lo determinado por los encabezados `x-gw-ims-org-id` y `x-sandbox-name`, respectivamente.
+La siguiente solicitud toma la carga útil devuelta en el ejemplo de exportación anterior [](#export) para importar la mezcla `Restaurant` en una nueva organización IMS y simulador de pruebas, tal como determinan los encabezados `x-gw-ims-org-id` y `x-sandbox-name`, respectivamente.
 
 ```shell
 curl -X POST \
@@ -358,7 +358,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de los recursos importados, con el ID de inquilino y los valores de organización de IMS adecuados aplicados.
+Una respuesta correcta devuelve una lista de los recursos importados, con el ID de inquilino apropiado y los valores de organización de IMS aplicados.
 
 ```json
 [
