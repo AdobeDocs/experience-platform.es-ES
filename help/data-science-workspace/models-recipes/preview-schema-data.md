@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform;datos de esquema de previsualización;Área de trabajo de ciencia de datos;temas populares
+keywords: Experience Platform;vista previa de datos de esquema;Data Science Workspace;temas populares
 solution: Experience Platform
-title: Previsualización del Esquema de ventas minoristas y del conjunto de datos
+title: Vista previa del esquema de ventas minoristas y el conjunto de datos
 topic: tutorial
 type: Tutorial
 description: El siguiente documento describe la vista previa de esquemas y conjuntos de datos en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 1%
 
 ---
 
 
-# Previsualización del esquema y conjunto de datos de ventas minoristas
+# Vista previa del esquema de ventas minoristas y el conjunto de datos
 
-Tras completar correctamente la secuencia de comandos de bootstrap desde el tutorial [Crear el esquema de ventas minoristas y el conjunto de datos](./create-retails-sales-dataset.md). Los esquemas y conjuntos de datos de salida se pueden ver en [!DNL Experience Platform]. Para realizar la vista de los esquemas y conjuntos de datos, siga los pasos a continuación:
+Una vez completada correctamente la secuencia de comandos de arranque desde el tutorial [retail sales schema and dataset](./create-retails-sales-dataset.md). Los esquemas de salida y los conjuntos de datos se pueden ver en [!DNL Experience Platform]. Para ver los esquemas y conjuntos de datos, siga los pasos a continuación:
 
-1. Haga clic en el vínculo **[!UICONTROL Esquemas]** ubicado en la columna de navegación izquierda y busque el esquema de entrada creado por la secuencia de comandos de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` del paso anterior. Vista los detalles del esquema y su composición haciendo clic en él.
+Seleccione la pestaña **[!UICONTROL schemas]** ubicada en la navegación izquierda y busque el esquema de entrada creado por el script de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` desde el paso anterior. Para ver los detalles del esquema y su composición, haga clic en él.
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. Haga clic en el vínculo **[!UICONTROL Datasets]** ubicado en la columna de navegación izquierda y abra el conjunto de datos de entrada que se creó haciendo clic en el nombre del listado. El nombre del conjunto de datos corresponderá a lo que se definió en `config.yaml` del paso anterior.
+Seleccione la pestaña **[!UICONTROL Datasets]** ubicada en la navegación izquierda y abra el conjunto de datos de entrada creado seleccionando el nombre del conjunto de datos. El nombre del conjunto de datos corresponde a lo que se definió en `config.yaml` desde el paso anterior.
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. Haga clic en **[!UICONTROL Conjunto de datos de Previsualización]** ubicado en la previsualización superior derecha de un subconjunto del conjunto de datos.
+Seleccione **[!UICONTROL Vista previa del conjunto de datos]** situado en la parte superior derecha para obtener una vista previa de un subconjunto del conjunto de datos.
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## Pasos siguientes
 
-Ahora ha ingerido correctamente datos de muestra de ventas minoristas en [!DNL Experience Platform] mediante la secuencia de comandos de arranque proporcionada.
+Ahora ha introducido correctamente los datos de muestra de ventas minoristas en [!DNL Experience Platform] utilizando el script de arranque proporcionado.
 
-Para continuar trabajando con los datos ingestados:
-- [Analizar los datos con los equipos portátiles Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilice los portátiles Jupyter de [!DNL Data Science Workspace] para acceder, explorar, visualizar y comprender sus datos.
+Para continuar trabajando con los datos introducidos:
+- [Analizar los datos con Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
+   - Utilice portátiles Jupyter en [!DNL Data Science Workspace] para acceder, explorar, visualizar y comprender sus datos.
 - [Empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md)
-   - Siga este tutorial para aprender a incorporar su propio modelo a [!DNL Data Science Workspace] mediante el empaquetado de archivos de origen en un archivo de fórmula importable.
+   - Siga este tutorial para aprender a introducir su propio modelo en [!DNL Data Science Workspace] empaquetando archivos de origen en un archivo de fórmula importable.
