@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Conectarse a destinos de marketing por correo electrónico y activar datos mediante llamadas a API
+title: Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo
 description: Este documento cubre la creación de destinos de marketing por correo electrónico mediante la API de Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
 
 
-# Conectarse a destinos de marketing por correo electrónico y activar datos mediante llamadas a API
+# Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo
 
 Este tutorial muestra cómo utilizar las llamadas de API para conectarse a los datos de Adobe Experience Platform, crear un [destino de marketing por correo electrónico](../catalog/email-marketing/overview.md), crear un flujo de datos para el nuevo destino creado y activar los datos en el nuevo destino creado.
 
@@ -67,7 +67,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Documentación de Swagger
 
-Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las llamadas a la API en este tutorial en Swagger. Consulte la [documentación de la API del servicio de flujo en Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le recomendamos que utilice este tutorial y la página de documentación de Swagger en paralelo.
 
 ## Obtener la lista de destinos disponibles {#get-the-list-of-available-destinations}
 
