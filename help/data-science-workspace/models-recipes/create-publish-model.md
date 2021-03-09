@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;modelo de aprendizaje automático;Área de trabajo de ciencia de datos;temas populares;crear y publicar un modelo
+keywords: Experience Platform;modelo de aprendizaje automático;Data Science Workspace;temas populares;crear y publicar un modelo
 solution: Experience Platform
 title: Creación y publicación de un modelo de aprendizaje automático
 topic: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace proporciona los medios para lograr su objetivo mediante la fórmula de Recommendations de producto prediseñada. Siga este tutorial para ver cómo puede acceder a los datos de minoristas y comprenderlos, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en Área de trabajo de ciencias de datos.
+description: Adobe Experience Platform Data Science Workspace proporciona los medios para lograr su objetivo mediante la fórmula de recomendaciones de producto prediseñada. Siga este tutorial para ver cómo puede acceder y comprender los datos de venta minorista, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -18,152 +18,189 @@ ht-degree: 0%
 
 ![](../images/models-recipes/model-walkthrough/objective.png)
 
-Imagine que posee un sitio web de venta en línea. Cuando los clientes compran en su sitio web comercial, usted desea presentarles recomendaciones personalizadas de productos para exponer una variedad de otros productos de sus ofertas comerciales. A lo largo de la existencia de su sitio web, ha recopilado continuamente datos de clientes y desea utilizar de alguna manera estos datos para generar recomendaciones de productos personalizadas.
+Supongamos que es propietario de un sitio web de venta minorista en línea. Cuando los clientes compran en su sitio web de venta minorista, desea presentarles recomendaciones de productos personalizadas para exponer una variedad de otros productos que su empresa ofrece. A lo largo de la existencia de su sitio web, ha recopilado continuamente datos de clientes y desea utilizar de alguna manera estos datos para generar recomendaciones de productos personalizadas.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] proporciona los medios para lograr su objetivo mediante la fórmula  [de Recommendations del producto prediseñada](../pre-built-recipes/product-recommendations.md). Siga este tutorial para ver cómo puede acceder y comprender los datos de minoristas, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] proporciona los medios para lograr su objetivo utilizando la fórmula prediseñada  [de recomendaciones de productos](../pre-built-recipes/product-recommendations.md). Siga este tutorial para ver cómo puede acceder y comprender los datos de venta minorista, crear y optimizar un modelo de aprendizaje automático y generar perspectivas en [!DNL Data Science Workspace].
 
 Este tutorial refleja el flujo de trabajo de [!DNL Data Science Workspace] y abarca los siguientes pasos para crear un modelo de aprendizaje automático:
 
-1. [Preparación de los datos](#prepare-your-data)
+1. [Preparar los datos](#prepare-your-data)
 2. [Crear el modelo](#author-your-model)
-3. [Formación y evaluación de su modelo](#train-and-evaluate-your-model)
+3. [Capacite y evalúe su modelo](#train-and-evaluate-your-model)
 4. [Operacionalizar el modelo](#operationalize-your-model)
 
 ## Primeros pasos
 
 Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
-* Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], comuníquese con el administrador del sistema antes de continuar.
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
-* Recursos de habilitación. Póngase en contacto con el representante de cuentas para que le proporcione los siguientes elementos.
-   * Recommendations Recipe
-   * Recommendations Input Dataset
-   * Esquema de entrada Recommendations
-   * Recommendations Output Dataset
-   * Recommendations Output Esquema
-   * Valores posteriores del conjunto de datos dorados
-   * Esquema Conjunto de datos dorado
+- Recursos de habilitación. Póngase en contacto con el representante de su cuenta para que le proporcionen los siguientes artículos.
+   - Fórmula Recommendations
+   - Conjunto de datos de entrada de Recommendations
+   - Esquema de entrada de Recommendations
+   - Conjunto de datos de salida de Recommendations
+   - Esquema de salida de Recommendations
+   - Conjunto de datos dorados postValues
+   - Esquema de conjunto de datos dorado
 
-* Descargue los tres archivos [!DNL Jupyter Notebook] requeridos del [repositorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs) público [!DNL Git] de Adobe, se utilizarán para mostrar el flujo de trabajo [!DNL JupyterLab] en [!DNL Data Science Workspace].
+- Descargue los tres archivos [!DNL Jupyter Notebook] requeridos del [repositorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs) público [!DNL Git] de Adobe, se utilizarán para demostrar el flujo de trabajo [!DNL JupyterLab] en [!DNL Data Science Workspace].
 
-* Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
-   * [[!DNL Experience Data Model]](../../xdm/home.md):: El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como  [!DNL Profile] y ExperienceEvent para la administración de la experiencia del cliente.
-   * Conjuntos de datos: Una construcción de almacenamiento y administración para los datos reales. Instancia física creada con una instancia de un [Esquema XDM](../../xdm/schema/field-dictionary.md).
-   * Lotes: Los conjuntos de datos están compuestos por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
-   * [!DNL JupyterLab]::  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project  [!DNL Jupyter] y está estrechamente integrada en  [!DNL Experience Platform].
+Una explicación práctica de los siguientes conceptos clave utilizados en este tutorial:
+- [[!DNL Experience Data Model]](../../xdm/home.md): El esfuerzo de estandarización liderado por Adobe para definir esquemas estándar como  [!DNL Profile] y ExperienceEvent para la gestión de la experiencia del cliente.
+- Conjuntos de datos: Construcción de almacenamiento y administración para datos reales. Instancia de instancia física de un [Esquema XDM](../../xdm/schema/field-dictionary.md).
+- Lotes: Los conjuntos de datos están formados por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad.
+- [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es una interfaz basada en web de código abierto para Project  [!DNL Jupyter] y está estrechamente integrada en  [!DNL Experience Platform].
 
 ## Prepare sus datos {#prepare-your-data}
 
-Para crear un modelo de aprendizaje automático que haga recomendaciones de productos personalizadas a sus clientes, se deben analizar las compras anteriores realizadas en el sitio web. Esta sección explora cómo se ingieren estos datos en [!DNL Platform] a [!DNL Adobe Analytics] y cómo se transforman esos datos en un conjunto de datos de características que utilizará el modelo de aprendizaje automático.
+Para crear un modelo de aprendizaje automático que realice recomendaciones de productos personalizadas a los clientes, se deben analizar las compras anteriores de los clientes en el sitio web. En esta sección se explica cómo se incorporan estos datos en [!DNL Platform] a [!DNL Adobe Analytics] y cómo se transforman esos datos en un conjunto de datos de funciones que utilizará el modelo de aprendizaje automático.
 
-### Explore los datos y comprenda los esquemas
+### Explorar los datos y comprender los esquemas
 
-1. Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com/) y haga clic en **[!UICONTROL Datasets]** para lista de todos los datasets existentes y seleccione el conjunto de datos que desee explorar. En este caso, el conjunto de datos [!DNL Analytics] **Golden Data Set postValues**.
-   ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Seleccione **[!UICONTROL Conjunto de datos de Previsualización]** cerca de la parte superior derecha para examinar los registros de muestra y haga clic en **[!UICONTROL Cerrar]**.
-   ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
-3. Seleccione el vínculo debajo del Esquema en el carril derecho para la vista del esquema para el conjunto de datos y, a continuación, vuelva a la página de detalles del conjunto de datos&quot;.
-   ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Datasets]** para enumerar todos los conjuntos de datos existentes y seleccione el conjunto de datos que desea explorar. En este caso, el conjunto de datos [!DNL Analytics] **Golden Data Set postValues**.
 
-Los demás conjuntos de datos se han rellenado previamente con lotes para obtener una vista previa. Puede realizar la vista de estos conjuntos de datos repitiendo los pasos anteriores.
+![](../images/models-recipes/model-walkthrough/dataset-browse.png)
+
+Se abre la página de actividad del conjunto de datos, que enumera información relacionada con su conjunto de datos. Puede seleccionar **[!UICONTROL Vista previa del conjunto de datos]** cerca de la esquina superior derecha para examinar los registros de muestra. También puede ver el esquema del conjunto de datos seleccionado. Seleccione el vínculo de esquema en el carril derecho. Aparece una ventana emergente, al seleccionar el vínculo en **[!UICONTROL schema name]** se abre el esquema en una nueva pestaña.
+
+![](../images/models-recipes/model-walkthrough/dataset-activity.png)
+
+
+![](../images/models-recipes/model-walkthrough/schema-view.png)
+
+Los demás conjuntos de datos se han rellenado previamente con lotes para obtener una vista previa. Puede ver estos conjuntos de datos repitiendo los pasos anteriores.
 
 | Nombre del conjunto de datos | Esquema | Descripción |
 | ----- | ----- | ----- |
-| Valores posteriores del conjunto de datos dorados | Esquema Conjunto de datos dorado | [!DNL Analytics] datos de origen del sitio web |
-| Recommendations Input Dataset | Esquema de entrada Recommendations | Los datos [!DNL Analytics] se transforman en un conjunto de datos de capacitación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Product Recommendations. `itemid` y  `userid` corresponden a un producto comprado por ese cliente. |
-| Recommendations Output Dataset | Recommendations Output Esquema | El conjunto de datos para el que se almacenan los resultados de puntuación contendrá la lista de los productos recomendados para cada cliente. |
+| Conjunto de datos dorados postValues | Esquema de conjunto de datos dorado | [!DNL Analytics] datos de origen de su sitio web |
+| Conjunto de datos de entrada de Recommendations | Esquema de entrada de Recommendations | Los datos [!DNL Analytics] se transforman en un conjunto de datos de capacitación mediante una canalización de funciones. Estos datos se utilizan para entrenar el modelo de aprendizaje automático de Recomendaciones de productos. `itemid` y  `userid` corresponden a un producto comprado por ese cliente. |
+| Conjunto de datos de salida de Recommendations | Esquema de salida de Recommendations | El conjunto de datos para el que se almacenan los resultados de puntuación, contendrá la lista de productos recomendados para cada cliente. |
 
-## Crear el modelo {#author-your-model}
+## Cree el modelo {#author-your-model}
 
-El segundo componente del ciclo de vida [!DNL Data Science Workspace] implica la creación de fórmulas y modelos. La fórmula Product Recommendations está diseñada para generar recomendaciones de productos a escala mediante el uso de datos de compras anteriores y aprendizaje automático.
+El segundo componente del ciclo de vida [!DNL Data Science Workspace] implica la creación de fórmulas y modelos. La fórmula de recomendaciones de productos está diseñada para generar recomendaciones de productos a escala mediante la utilización de datos de compras anteriores y aprendizaje automático.
 
-Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendizaje automático y lógica diseñados para resolver problemas específicos. Lo que es más importante, las fórmulas le permiten democratizar el aprendizaje automático en toda la organización, lo que permite a otros usuarios acceder a un modelo para casos de uso dispares sin necesidad de escribir ningún código.
+Las fórmulas son la base de un modelo, ya que contienen algoritmos de aprendizaje automático y lógica diseñada para resolver problemas específicos. Lo que es más importante, las fórmulas le permiten democratizar el aprendizaje automático en su organización, lo que permite a otros usuarios acceder a un modelo para casos de uso diferentes sin necesidad de escribir ningún código.
 
-### Explorar la fórmula de Recommendations del producto
+### Explorar la fórmula de recomendaciones de producto
 
-1. En [!DNL Adobe Experience Platform], navegue a **[!UICONTROL Modelos]** desde la columna de navegación izquierda y haga clic en **[!UICONTROL Fórmulas]** en la parte superior para vista una lista de Fórmulas disponibles para su organización.
-   ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Busque y abra la **[!UICONTROL fórmula de Recommendations]** proporcionada haciendo clic en su nombre.
-   ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. En el carril derecho, haga clic en **[!UICONTROL Esquema de entrada de Recommendations]** para vista del esquema que alimenta la fórmula. Los campos de esquema &quot;[!UICONTROL itemId]&quot; y &quot;[!UICONTROL userId]&quot; corresponden a un producto comprado ([!UICONTROL interactiveType]) por ese cliente en un momento específico ([!UICONTROL timestamp]). Siga los mismos pasos para revisar los campos del **[!UICONTROL Esquema de salida de Recommendations]**.
-   ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
+En Experience Platform, vaya a **[!UICONTROL Modelos]** desde la columna de navegación izquierda y, a continuación, seleccione **[!UICONTROL Fórmulas]** en la barra de navegación superior para ver una lista de las fórmulas disponibles para su organización.
 
-Ahora ha revisado los esquemas de entrada y salida requeridos por la fórmula Recommendations del producto. Ahora puede continuar en la siguiente sección para averiguar cómo crear, entrenar y evaluar un modelo de producto Recommendations.
+![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-## Entrene y evalúe su modelo {#train-and-evaluate-your-model}
+A continuación, localice y abra la **[!UICONTROL Recommendations Recipe]** proporcionada seleccionando su nombre. Aparecerá la página de información general de la fórmula.
 
-Ahora que los datos están preparados y la fórmula está lista para ser utilizada, puede crear, entrenar y evaluar el modelo de aprendizaje automático.
+![](../images/models-recipes/model-walkthrough/Recipe-view.png)
+
+A continuación, en el carril derecho, seleccione **[!UICONTROL Recommendations Input Schema]** para ver el esquema que alimenta la fórmula. Los campos de esquema &quot;[!UICONTROL itemId]&quot; y &quot;[!UICONTROL userId]&quot; corresponden a un producto comprado ([!UICONTROL interactionType]) por ese cliente en un momento específico ([!UICONTROL timestamp]). Siga los mismos pasos para revisar los campos del **[!UICONTROL Esquema de salida de Recommendations]**.
+
+![](../images/models-recipes/model-walkthrough/input-output.png)
+
+Ahora ha revisado los esquemas de entrada y salida requeridos por la fórmula de recomendaciones de productos. Continúe con la siguiente sección para aprender a crear, entrenar y evaluar un Modelo de recomendaciones de productos.
+
+## Capacite y evalúe su modelo {#train-and-evaluate-your-model}
+
+Ahora que los datos están preparados y la fórmula está lista, puede crear, entrenar y evaluar su modelo de aprendizaje automático.
 
 ### Crear un modelo
 
-Un modelo es una instancia de una fórmula, que le permite entrenar y puntuar con datos a escala.
+Un modelo es una instancia de una fórmula, que permite entrenar y puntuar con datos a escala.
 
-1. En [!DNL Adobe Experience Platform], navegue a **[!UICONTROL Modelos]** desde la columna de navegación izquierda y haga clic en **[!UICONTROL Fórmulas]** en la parte superior de la página para mostrar una lista de todas las Fórmulas disponibles para su organización.
-   ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Busque y abra la **[!UICONTROL fórmula de Recommendations]** proporcionada haciendo clic en su nombre y en la página de información general de la fórmula. Haga clic en **[!UICONTROL Crear un modelo]** desde el centro (si no hay modelos existentes) o desde la parte superior derecha de la página Información general de fórmula.
-   ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Se muestra una lista de conjuntos de datos de entrada disponibles para capacitación, seleccione **[!UICONTROL Recommendations Input Dataset]** y haga clic en **[!UICONTROL Siguiente]**.
-   ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Proporcione un nombre para el modelo, por ejemplo, &quot;Modelo Recommendations de producto&quot;. Se enumeran las configuraciones disponibles para el modelo, que contienen los ajustes de los comportamientos de puntuación y formación predeterminados del modelo. No se necesitan cambios, ya que estas configuraciones son específicas de su organización. Revise las configuraciones y haga clic en **[!UICONTROL Finalizar]**.
-   ![](../images/models-recipes/model-walkthrough/configure_model.png)
-5. Ahora se ha creado el modelo y la página *Información general* del modelo aparece en una nueva ejecución de formación generada. Una ejecución de formación se genera de forma predeterminada cuando se crea un modelo.
-   ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
+En Experience Platform, vaya a **[!UICONTROL Modelos]** desde la columna de navegación izquierda y, a continuación, seleccione **[!UICONTROL Fórmulas]** en la barra de navegación superior. Muestra una lista de las fórmulas disponibles para su organización. Seleccione la fórmula de recomendación de producto.
 
-Puede optar por esperar a que finalice la ejecución de formación o continuar creando una nueva ejecución de formación en la sección siguiente.
+![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-### Formación del modelo mediante hiperparámetros personalizados
+En la página de fórmula, seleccione **[!UICONTROL Crear modelo]**.
 
-1. En la página **Información general del modelo**, haga clic en **[!UICONTROL Tren]** cerca de la parte superior derecha para crear una nueva ejecución de formación. Seleccione el mismo conjunto de datos de entrada que utilizó al crear el modelo y haga clic en **[!UICONTROL Siguiente]**.
-   ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. Aparece la página **Configuración**. Aquí puede configurar el valor &quot;[!UICONTROL num_recommendations]&quot; de la ejecución de formación, también conocido como un parámetro Hyperparameter. Un modelo preparado y optimizado utilizará los hiperparámetros de mejor rendimiento según los resultados de la ejecución de la formación.
+![crear modelo](../images/models-recipes/model-walkthrough/create-model-recipe.png)
 
-   No se pueden aprender los hiperparámetros, por lo tanto deben asignarse antes de que se produzcan las ejecuciones de formación. El ajuste de los hiperparámetros puede cambiar la precisión del modelo entrenado. Dado que la optimización de un modelo es un proceso iterativo, es posible que se requieran múltiples ejercicios de capacitación antes de lograr una evaluación satisfactoria.
+El flujo de trabajo crear modelo comienza por seleccionar una fórmula. Seleccione la fórmula de **[!UICONTROL Recommendations]** y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha.
 
-   >[!TIP]
-   >
-   >Establezca **[!UICONTROL num_recommendations]** en 10.
+![](../images/models-recipes/model-walkthrough/create-model.png)
 
-   ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
-3. Una vez finalizada la nueva ejecución de formación, aparecerá un punto de datos adicional en el gráfico de evaluación del modelo, lo que puede tardar varios minutos.
-   ![](../images/models-recipes/model-walkthrough/post_training_run.png)
+A continuación, proporcione un nombre de modelo. Las configuraciones disponibles para el modelo se enumeran que contienen configuraciones para los comportamientos de capacitación y puntuación predeterminados del modelo. Revise las configuraciones y seleccione **[!UICONTROL Finish]**.
+
+![](../images/models-recipes/model-walkthrough/configure-model.png)
+
+Se le redirige la página de información general de sus modelos con una nueva ejecución de formación generada. Una ejecución de formación se genera de forma predeterminada cuando se crea un modelo.
+
+![](../images/models-recipes/model-walkthrough/model-overview.png)
+
+Puede optar por esperar a que finalice la ejecución de formación o continuar creando una nueva ejecución de formación en la siguiente sección.
+
+### Capacitar el modelo mediante hiperparámetros personalizados
+
+En la página **Model Overview**, seleccione **[!UICONTROL Train]** cerca de la parte superior derecha para crear una nueva ejecución de formación. Seleccione el mismo conjunto de datos de entrada que utilizó al crear el modelo y seleccione **[!UICONTROL Next]**.
+
+![](../images/models-recipes/model-walkthrough/select-train.png)
+
+Aparece la página **[!UICONTROL Configuration]**. Aquí puede configurar el valor de las ejecuciones de formación `num_recommendations`, también conocido como hiperparámetro. Un modelo preparado y optimizado utilizará los hiperparámetros de mejor rendimiento según los resultados de la ejecución de la formación.
+
+Los hiperparámetros no se pueden aprender, por lo que deben asignarse antes de que se ejecuten las formaciones. El ajuste de hiperparámetros puede cambiar la precisión del modelo entrenado. Dado que la optimización de un modelo es un proceso iterativo, puede ser necesario realizar múltiples ejercicios de capacitación antes de que se logre una evaluación satisfactoria.
+
+>[!TIP]
+>
+>Establezca `num_recommendations` en 10.
+
+![](../images/models-recipes/model-walkthrough/training-configuration.png)
+
+Aparecen puntos de datos adicionales en el gráfico de evaluación del modelo. Esto puede tardar hasta varios minutos en aparecer una vez finalizada la ejecución.
+
+![](../images/models-recipes/model-walkthrough/training-graphs.png)
 
 ### Evaluar el modelo
 
-Cada vez que se completa una ejecución de formación, puede realizar una vista de las métricas de evaluación resultantes para determinar el rendimiento del modelo.
+Cada vez que se completa una ejecución de formación, puede ver las métricas de evaluación resultantes para determinar el rendimiento del modelo.
 
-1. Revise las métricas de evaluación (Precisión y recuperación) de cada formación completada haciendo clic en la ejecución de formación.
-2. Explore la información proporcionada para cada métrica de evaluación. Cuanto más altas sean estas métricas, mejor será el rendimiento del modelo.
-   ![](../images/models-recipes/model-walkthrough/evaluation_metrics.png)
-3. Puede ver los parámetros de conjunto de datos, esquema y configuración utilizados para cada formación ejecutada en el carril correcto.
-4. Vuelva a la página Modelo e identifique la formación de mayor rendimiento mediante la observación de sus métricas de evaluación.
+Para revisar las métricas de evaluación (Precisión y Reclamación) para cada ejecución de capacitación completada, seleccione la ejecución de capacitación.
 
-## Operacionalizar el modelo {#operationalize-your-model}
+![](../images/models-recipes/model-walkthrough/select-training-run.png)
 
-El paso final en el flujo de trabajo de Data Science es poner en marcha el modelo para obtener una puntuación y consumir perspectivas del almacén de datos.
+Puede explorar la información proporcionada para cada métrica de evaluación. Cuanto más altas sean estas métricas, mejor será el rendimiento del modelo.
+
+![](../images/models-recipes/model-walkthrough/metrics.png)
+
+Puede ver el conjunto de datos, el esquema y los parámetros de configuración utilizados para cada formación ejecutada en el carril correcto. Vuelva a la página Modelo e identifique la formación de mayor rendimiento ejecutada observando sus métricas de evaluación.
+
+## Operacionalice el modelo {#operationalize-your-model}
+
+El último paso del flujo de trabajo de ciencia de datos es poner en marcha el modelo para obtener una puntuación y consumir perspectivas del almacén de datos.
 
 ### Puntuación y generación de perspectivas
 
-1. En la página Modelo de recomendaciones de productos *Información general*, haga clic en el nombre de la ejecución de capacitación de mejor rendimiento, con los valores de precisión y recuperación más altos.
-2. En la parte superior derecha de la página de detalles de la ejecución de formación, haga clic en **[!UICONTROL Puntuación]**.
-3. Seleccione el **[!UICONTROL conjunto de datos de entrada de Recommendations]** como conjunto de datos de entrada de puntuación, que es el mismo conjunto de datos que utilizó al crear el modelo y ejecutar sus ejecuciones de formación. A continuación, haga clic en **[!UICONTROL Siguiente]**.
-   ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Seleccione el **[!UICONTROL conjunto de datos de salida de Recommendations]** como conjunto de datos de resultados de puntuación. Los resultados de puntuación se almacenarán en este conjunto de datos como un lote.
-   ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Revise las configuraciones de puntuación. Estos parámetros contienen los conjuntos de datos de entrada y salida seleccionados anteriormente, junto con los esquemas correspondientes. Haga clic en **[!UICONTROL Finalizar]** para comenzar la ejecución de la puntuación. La ejecución puede tardar varios minutos en completarse.
-   ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
+En la página de información general del modelo de recomendaciones de productos, seleccione el nombre de la ejecución de formación de mejor rendimiento, con los valores de precisión y recuperación más altos.
 
+![puntuación de la mejor ejecución](../images/models-recipes/model-walkthrough/select-training-run.png)
 
-### Perspectivas puntuadas de vista
+A continuación, en la parte superior derecha de la página de detalles de la ejecución de la formación, seleccione **[!UICONTROL Puntuación]**.
 
-Una vez finalizada la ejecución de la puntuación, podrá realizar la previsualización de los resultados y la vista de las perspectivas generadas.
+![seleccionar puntuación](../images/models-recipes/model-walkthrough/select-score.png)
 
-1. En la página de ejecuciones de puntuación, haga clic en la ejecución de puntuación completada y, a continuación, haga clic en **[!UICONTROL Conjunto de datos de resultados de puntuación de Previsualización]** en el carril derecho.
-   ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. En la tabla de previsualizaciones, cada fila contiene recomendaciones de productos para un cliente en particular, etiquetadas como [!UICONTROL recommendations] y [!UICONTROL userId] respectivamente. Dado que el [!UICONTROL num_recommendations] Hiperparámetro se estableció en 10 en las capturas de pantalla de muestra, cada fila de recomendaciones puede contener hasta 10 identidades de producto delimitadas por un signo de número (#).
-   ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+A continuación, seleccione el **[!UICONTROL Conjunto de datos de entrada de Recommendations]** como conjunto de datos de entrada de puntuación, que es el mismo conjunto de datos que utilizó al crear el modelo y ejecutar sus ejecuciones de formación. A continuación, seleccione **[!UICONTROL Siguiente]**.
+
+![](../images/models-recipes/model-walkthrough/score-input.png)
+
+Una vez que tenga el conjunto de datos de entrada, seleccione **[!UICONTROL Recommendations Output Dataset]** como conjunto de datos de salida de puntuación. Los resultados de puntuación se almacenan en este conjunto de datos como un lote.
+
+![](../images/models-recipes/model-walkthrough/score-output.png)
+
+Finalmente, revise las configuraciones de puntuación. Estos parámetros contienen los conjuntos de datos de entrada y salida seleccionados anteriormente, junto con los esquemas adecuados. Seleccione **[!UICONTROL Finish]** para comenzar la ejecución de la puntuación. La ejecución puede tardar varios minutos en completarse.
+
+![](../images/models-recipes/model-walkthrough/score-finish.png)
+
+### Ver perspectivas puntuadas
+
+Una vez finalizada correctamente la ejecución de puntuación, puede obtener una vista previa de los resultados y ver las perspectivas generadas.
+
+En la página ejecuciones de puntuación , seleccione la ejecución de puntuación completada y, a continuación, seleccione **[!UICONTROL Vista previa del conjunto de datos de resultados de puntuación]** en el carril derecho.
+
+![](../images/models-recipes/model-walkthrough/preview-scores.png)
+
+En la tabla de vista previa, cada fila contiene recomendaciones de producto para un cliente en particular, etiquetadas como [!UICONTROL recommendations] y [!UICONTROL userId] respectivamente. Dado que el hiperparámetro [!UICONTROL num_recommendations] se estableció en 10 en las capturas de pantalla de muestra, cada fila de recomendaciones puede contener hasta 10 identidades de producto delimitadas por un signo de número (#).
+
+![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Pasos siguientes {#next-steps}
 
-¡Bien hecho, ha generado con éxito recomendaciones de productos!
-
-Este tutorial le presentó el flujo de trabajo de [!DNL Data Science Workspace], demostrando cómo los datos sin procesar pueden convertirse en información útil a través del aprendizaje automático. Para obtener más información sobre el uso de [!DNL Data Science Workspace], continúe con la siguiente guía sobre [creación del esquema de ventas minoristas y del conjunto de datos](./create-retails-sales-dataset.md).
+Este tutorial le introdujo en el flujo de trabajo de [!DNL Data Science Workspace], demostrando cómo los datos sin procesar se pueden convertir en información útil a través del aprendizaje automático. Para obtener más información sobre el uso de [!DNL Data Science Workspace], continúe con la siguiente guía sobre la [creación del esquema de ventas minoristas y el conjunto de datos](./create-retails-sales-dataset.md).
