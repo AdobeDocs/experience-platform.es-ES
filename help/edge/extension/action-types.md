@@ -2,10 +2,10 @@
 title: Tipos de acción en la extensión del SDK web de Adobe Experience Platform
 description: Obtenga información sobre los distintos tipos de acción proporcionados por la extensión web SDK de Adobe Experience Platform en Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ Los datos que desee enviar se pueden enviar en el campo **[!UICONTROL XDM Data]*
 
 ## Definir consentimiento
 
-Una vez que haya recibido el consentimiento del usuario, este consentimiento debe comunicarse al SDK web de Adobe Experience Platform mediante el tipo de acción &quot;Definir consentimiento&quot;. Actualmente se admiten dos tipos de estándares: Adobe y IAB TCF. Si utiliza el estándar de Adobe, actualmente puede establecer el consentimiento como Entrada o Salida, o puede proporcionarlo mediante un elemento de datos. Si utiliza el estándar TCF de IAB, proporcione la versión y el valor que desea utilizar, así como información adicional sobre el RGPD.
+Una vez que haya recibido el consentimiento del usuario, este consentimiento debe comunicarse al SDK web de Adobe Experience Platform mediante el tipo de acción &quot;Definir consentimiento&quot;. Actualmente se admiten dos tipos de estándares: Adobe y IAB TCF. Consulte [Compatibilidad con las preferencias de consentimiento del cliente](../consent/supporting-consent.md). Al utilizar Adobe versión 2.0, solo se admite un valor de elemento de datos. Deberá crear un elemento de datos que se resuelva en el objeto de consentimiento.
 
-En esta acción, también se le proporcionará un campo opcional para incluir un mapa de identidad de modo que las identidades se puedan sincronizar una vez recibido el consentimiento. La sincronización es útil cuando el consentimiento está configurado como &quot;Pendiente&quot; porque es probable que la llamada de consentimiento sea la primera llamada a activarse.
+En esta acción, también se le proporcionará un campo opcional para incluir un mapa de identidad de modo que las identidades se puedan sincronizar una vez recibido el consentimiento. La sincronización es útil cuando el consentimiento está configurado como &quot;Pendiente&quot; o &quot;Fuera&quot; porque es probable que la llamada de consentimiento sea la primera llamada a activar.
 
 ## Restablecer ID de combinación de eventos
 
