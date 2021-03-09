@@ -2,10 +2,10 @@
 title: Extensión de SDK web de Adobe Experience Platform Información general
 description: Obtenga información sobre la extensión del SDK web de Adobe Experience Platform para Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Consulte la guía de [edge settings](../fundamentals/edge-configuration.md) para
 
 ## [!UICONTROL Privacidad]
 
-La sección [!UICONTROL Privacidad] le permite configurar el modo en que el SDK gestiona las señales de consentimiento del cliente desde el sitio web. Específicamente, le permite seleccionar el nivel predeterminado de consentimiento que se presupone de un cliente si no se ha proporcionado ninguna otra preferencia de consentimiento explícito. La tabla siguiente desglosa lo que implica cada opción:
+La sección [!UICONTROL Privacidad] le permite configurar el modo en que el SDK gestiona las señales de consentimiento del usuario desde el sitio web. Específicamente, le permite seleccionar el nivel predeterminado de consentimiento que se asume de un usuario si no se ha proporcionado ninguna otra preferencia de consentimiento explícito. El nivel de consentimiento predeterminado no se guarda en el perfil del usuario. La tabla siguiente desglosa lo que implica cada opción:
 
 | [!UICONTROL Nivel de consentimiento predeterminado] | Descripción |
 | --- | --- |
-| [!UICONTROL En] | Inclusión. Utilice esta opción si asume el consentimiento del cliente de forma predeterminada y solo respeta las señales de exclusión. |
-| [!UICONTROL Pendiente] | Los clientes con consentimiento &quot;pendiente&quot; se excluyen hasta que se envía una señal de inclusión. Utilice esta opción si necesita consentimiento explícito del cliente para sus operaciones comerciales. |
+| [!UICONTROL En] | Recopile eventos que se producen antes de que el usuario proporcione preferencias de consentimiento. |
+| [!UICONTROL Salida] | Descartar los eventos que se producen antes de que el usuario proporcione las preferencias de consentimiento. |
+| [!UICONTROL Pendiente] | Eventos de cola que se producen antes de que el usuario proporcione las preferencias de consentimiento. Cuando se proporcionan las preferencias de consentimiento, los eventos se recopilan o descartan en función de las preferencias proporcionadas. |
 | [!UICONTROL Proporcionado por un elemento de datos] | El nivel de consentimiento predeterminado está determinado por un elemento de datos independiente que usted defina. Al utilizar esta opción, debe especificar el elemento de datos mediante el menú desplegable proporcionado. |
+
+Utilice Out o Pending si necesita consentimiento explícito del usuario para sus operaciones comerciales.
