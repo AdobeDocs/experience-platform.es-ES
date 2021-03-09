@@ -3,7 +3,7 @@ title: Instalación del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform.
 keywords: instalación de sdk web;instalar sdk web;explorador de Internet;promesa;paquete npm
 translation-type: tm+mt
-source-git-commit: 29272856d766e5adeb4b00ea62b28ea77abe338e
+source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 4%
@@ -31,8 +31,10 @@ Estructura de la URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min
 
 Por ejemplo:
 
-* Minificado: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
-* No minificado: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
+
+* Minificado: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js)
+* No minificado: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
+
 
 ### Adición del código {#adding-the-code}
 
@@ -45,7 +47,7 @@ La versión independiente prediseñada requiere un &quot;código base&quot; aña
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 El &quot;código base&quot; crea una función global denominada `alloy`. Utilice esta función para interactuar con el SDK. Si desea nombrar la función global como otra cosa, cambie el nombre `alloy` como se indica a continuación:
@@ -57,7 +59,7 @@ El &quot;código base&quot; crea una función global denominada `alloy`. Utilice
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 En este ejemplo, se ha cambiado el nombre de la función global `mycustomname` en lugar de `alloy`.
@@ -78,7 +80,7 @@ Para determinar si ya tiene `window.Promise` polirelleno:
 1. Abra la consola de depuración del explorador.
 1. Escriba `window.Promise` en la consola y pulse Intro.
 
-Si aparece algo que no sea `undefined`, es probable que ya haya rellenado `window.Promise`. Otra manera de determinar si `window.Promise` está polirelleno es cargando su sitio web después de haber completado las instrucciones de instalación anteriores. Si el SDK genera un error mencionando algo sobre una promesa, es probable que no haya rellenado el `window.Promise`.
+Si aparece algo que no sea `undefined`, es probable que ya haya rellenado `window.Promise`. Otra manera de determinar si `window.Promise` está polirelleno es cargando su sitio web después de haber completado las instrucciones de instalación anteriores. Si el SDK genera un error que menciona algo sobre una promesa, es probable que no haya rellenado el `window.Promise`.
 
 Si ha determinado que debe rellenar `window.Promise`, incluya la siguiente etiqueta de script encima del código base proporcionado anteriormente:
 
@@ -107,7 +109,7 @@ Para cargar el archivo sincrónicamente en lugar de asincrónicamente, elimine e
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js"></script>
 ```
 
 ## Opción 3: Uso del paquete NPM
