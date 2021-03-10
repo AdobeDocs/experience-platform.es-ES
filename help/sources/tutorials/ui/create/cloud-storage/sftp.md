@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;inicio;temas populares;SFTP;sftp
 solution: Experience Platform
-title: Creación de una conexión de origen SFTP en la interfaz de usuario
-topic: overview
+title: Crear una conexión de origen SFTP en la interfaz de usuario
+topic: sobre validación
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
+source-wordcount: '718'
+ht-degree: 1%
 
 ---
 
@@ -18,24 +18,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El conector SFTP está en versión beta. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector SFTP está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Este tutorial proporciona los pasos para crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 
 ## Primeros pasos
 
-Este tutorial requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md) de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) del Editor de esquemas: Obtenga información sobre cómo crear esquemas personalizados mediante la interfaz de usuario del Editor de Esquemas.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):: Proporciona un perfil de consumo unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Aspectos básicos de la composición](../../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 >[!IMPORTANT]
 >
->Se recomienda evitar nuevas líneas o retornos de carro al ingerir objetos JSON con una conexión de origen SFTP. Para evitar la limitación, utilice un único objeto JSON por línea y varias líneas para los archivos posteriores.
+>Se recomienda evitar nuevas líneas o retornos de carro al introducir objetos JSON con una conexión de origen SFTP. Para solucionar la limitación, utilice un único objeto JSON por línea y utilice líneas múltiples para los archivos posteriores.
 
-Si ya tiene una conexión SFTP válida, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
+Si ya tiene una conexión SFTP válida, puede omitir el resto de este documento y continuar con el tutorial sobre la [configuración de un flujo de datos](../../dataflow/batch/cloud-storage.md).
 
 ### Recopilar las credenciales necesarias
 
@@ -43,53 +43,53 @@ Para conectarse a SFTP, debe proporcionar valores para las siguientes propiedade
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | El nombre o la dirección IP asociados con el servidor SFTP. |
-| `username` | El nombre de usuario con acceso al servidor SFTP. |
+| `host` | El nombre o la dirección IP asociados con su servidor SFTP. |
+| `username` | El nombre de usuario con acceso a su servidor SFTP. |
 | `password` | La contraseña del servidor SFTP. |
-| `privateKeyContent` | Contenido de clave privada SSH codificada en Base64. Formato SSH de clave privada OpenSSH (RSA/DSA). |
-| `passPhrase` | La frase de contraseña o la contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido con contraseña, este parámetro debe usarse con la frase de contraseña de PrivateKeyContent como valor. |
+| `privateKeyContent` | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| `passPhrase` | La frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido por contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 
-Una vez recopiladas las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta SFTP para conectarse a Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para crear una nueva cuenta SFTP que se conecte a Platform.
 
 ## Conectarse al servidor SFTP
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes para los que puede crear una cuenta de entrada.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Orígenes]. La pantalla [!UICONTROL Catalog] muestra una variedad de fuentes con las que puede crear una cuenta entrante.
 
-Puede seleccionar la categoría adecuada en el catálogo a la izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar mediante la opción de búsqueda.
+Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría [!UICONTROL Cloud almacenamiento], seleccione **[!UICONTROL SFTP]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear una nueva conexión SFTP.
+En la categoría [!UICONTROL Cloud storage], seleccione **[!UICONTROL SFTP]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear una nueva conexión SFTP.
 
 ![catálogo](../../../../images/tutorials/create/sftp/catalog.png)
 
-Aparece la página **[!UICONTROL Conectar con SFTP]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparece la página **[!UICONTROL Connect to SFTP]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Nueva cuenta
 
-Si está utilizando nuevas credenciales, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, especifique un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectar]** y, a continuación, deje transcurrir algún tiempo para que se establezca la nueva conexión.
+Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, deje que se establezca la nueva conexión.
 
 El conector SFTP proporciona diferentes tipos de autenticación para el acceso. En **[!UICONTROL Autenticación de cuenta]** seleccione **[!UICONTROL Contraseña]** para utilizar una credencial basada en contraseña.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-También puede seleccionar **[clave pública SSH]** y conectar su cuenta SFTP mediante una combinación de [!UICONTROL contenido de clave privada] y [!UICONTROL frase de contraseña].
+Como alternativa, puede seleccionar **[Clave pública SSH]** y conectar su cuenta SFTP mediante una combinación de [!UICONTROL Contenido de clave privada] y [!UICONTROL Frase de contraseña].
 
 >[!IMPORTANT]
 >
->El conector SFTP admite una clave RSA/DSA OpenSSH. Asegúrese de que el contenido del archivo clave inicio con `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir del formato PPK al formato OpenSSH.
+>El conector SFTP admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo clave comienza por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termina por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir del formato PPK al formato OpenSSH.
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| Contenido de clave privada | Contenido de clave privada SSH codificada en Base64. La clave privada SSH debe tener el formato OpenSSH. |
-| Frase de contraseña | Especifica la frase de contraseña o la contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido con contraseña, este parámetro debe usarse con la frase de contraseña de PrivateKeyContent como valor. |
+| Contenido de clave privada | El contenido de clave privada SSH codificada Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| Frase de contraseña | Especifica la frase de contraseña o contraseña para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de contraseña. Si PrivateKeyContent está protegido por contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta de FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos del almacenamiento de nube a la plataforma](../../dataflow/batch/cloud-storage.md).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de FTP o SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para importar los datos del almacenamiento en la nube a Platform](../../dataflow/batch/cloud-storage.md).
