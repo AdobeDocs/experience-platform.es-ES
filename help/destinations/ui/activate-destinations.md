@@ -6,7 +6,7 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Los pasos del flujo de trabajo de activación varían ligeramente entre los tipo
 
 Se aplica a: Todos los destinos
 
-En la interfaz de usuario de Adobe Experience Platform, vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** y pulse el botón **[!UICONTROL Activate]** correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
+En la interfaz de usuario de Adobe Experience Platform, vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** y haga clic en el botón **[!UICONTROL Activate]** correspondiente al destino en el que desea activar los segmentos, como se muestra en la imagen siguiente.
 
 ![activar en destino](../assets/ui/activate-destinations/browse-tab-activate.png)
 
