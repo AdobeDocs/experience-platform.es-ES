@@ -4,9 +4,9 @@ title: Información general del espacio de trabajo Destinations
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema, que se describen en las secciones siguientes.
 seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ En la pestaña **[!UICONTROL Accounts]**, puede obtener más información sobre 
 | Elemento | Descripción |
 ---------|----------
 | [!UICONTROL Plataforma] | Destino para el que ha configurado la conexión. |
-| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li><li>Para destinos de almacenamiento en la nube de Amazon S3: Clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: Autenticación básica para SFTP</li></ul> |
+| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li><li>Para destinos de almacenamiento en la nube Amazon S3: Clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: Autenticación básica para SFTP</li></ul> |
 | [!UICONTROL Nombre de usuario] | El nombre de usuario seleccionado en el asistente de [conexión de destino](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinos] | Representa el número de flujos de destino correctos únicos conectados con la información básica creada para un destino. |
 | [!UICONTROL Con autorización] | La fecha en la que se autorizó la conexión a este destino. |
@@ -87,15 +87,19 @@ La pestaña **[!UICONTROL Browse]** muestra los destinos con los que ha establec
 
 >[!TIP]
 >
->Utilice el botón ![Add data button](../assets/ui/workspace/add-data-symbol.png) de la columna **[!UICONTROL Name]** para activar segmentos adicionales en ese destino.
+> * Utilice el botón ![Add segments button](../assets/ui/workspace/add-data-symbol.png) de la columna **[!UICONTROL Name]** para activar segmentos adicionales en ese destino.
+> * Utilice el botón ![Delete Destinations button](../assets/ui/workspace/delete-destination-symbol.png) de la columna **[!UICONTROL Name]** para eliminar una conexión existente a un destino.
+
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descripción |
 ---------|----------
-| Nombre | Nombre que ha proporcionado para el flujo de activación a este destino. |
+| Nombre | Nombre que ha proporcionado para el flujo de activación a este destino. La misma columna incluye dos controles: [!UICONTROL Activar ] y [!UICONTROL Eliminar destino]. |
+| Estado de ejecución del último flujo | Estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
+| Fecha de ejecución del último flujo | Hora y fecha en que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Destino] | La plataforma de destino que seleccionó para el flujo de activación. |
-| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3 o FTP.</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor</li></ul> |
+| [!UICONTROL Tipo de conexión] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor.</li><li>Para destinos de flujo continuo: Puede ser [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nombre de usuario] | Credenciales de cuenta que ha seleccionado para el flujo de destino. |
 | [!UICONTROL Datos de activación] | Indica el número de segmentos que se están activando en este destino. Seleccione este control para obtener más información sobre los segmentos activados. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre los segmentos activados. |
 | [!UICONTROL Creado] | La fecha y la hora UTC en que se creó el flujo de activación al destino. |
@@ -109,7 +113,7 @@ Seleccione el nombre del destino para ver información sobre los segmentos activ
 
 ## [!UICONTROL Vista del sistema] {#system-view}
 
-La pestaña **[!UICONTROL Vista del sistema]** muestra una representación gráfica de los flujos de activación que ha configurado en Adobe Experience Platform.
+La pestaña **[!UICONTROL System View]** muestra una representación gráfica de los flujos de activación que ha configurado en Adobe Experience Platform.
 
 ![Flujos de datos1](../assets/ui/workspace/data-flows1.png)
 
