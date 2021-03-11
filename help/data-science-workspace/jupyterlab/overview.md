@@ -5,9 +5,9 @@ title: Información general sobre la interfaz de usuario de JupyterLab
 topic: Información general
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
 translation-type: tm+mt
-source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1820'
 ht-degree: 3%
 
 ---
@@ -118,9 +118,9 @@ En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior der
 
 ### Finalizar y reiniciar [!DNL JupyterLab]
 
-En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** y, a continuación, seleccione **[!UICONTROL Apagar]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
+En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Apagar]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
 
-Para reiniciar [!DNL JupyterLab], seleccione el **icono de reinicio** situado directamente a la izquierda del icono de energía y, a continuación, seleccione **[!UICONTROL Restart]** en la ventana emergente que aparece.
+Para reiniciar [!DNL JupyterLab], seleccione el **icono de reinicio** ![icono de reinicio](../images/jupyterlab/user-guide/restart_button.png) situado directamente a la izquierda del icono de energía y, a continuación, seleccione **[!UICONTROL Restart]** en la ventana emergente que aparece.
 
 ![terminar jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
