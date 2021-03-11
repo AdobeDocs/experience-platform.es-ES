@@ -4,7 +4,7 @@ title: Información general del espacio de trabajo Destinations
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema, que se describen en las secciones siguientes.
 seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 2%
@@ -117,6 +117,6 @@ La pestaña **[!UICONTROL System View]** muestra una representación gráfica de
 
 ![Flujos de datos1](../assets/ui/workspace/data-flows1.png)
 
-Seleccione cualquiera de los destinos mostrados en la página y pulse **[!UICONTROL View flows]** para ver información sobre todas las conexiones configuradas para cada destino.
+Seleccione cualquiera de los destinos mostrados en la página y haga clic en **[!UICONTROL View flows]** para ver información sobre todas las conexiones configuradas para cada destino.
 
 ![Flujos de datos2](../assets/ui/workspace/data-flows2.png)
