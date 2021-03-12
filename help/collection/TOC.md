@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Recopilación de datos de Adobe Experience Platform
 breadcrumb-title: Guía de recopilación de datos
-user-guide-description: Recopilar datos en Platform.
+user-guide-description: Habilite la recopilación de datos del lado del cliente para Adobe Experience Platform Edge Network.
 feature: Recopilación de datos, Launch
 translation-type: tm+mt
-source-git-commit: 6490b45037f22fb4ab12bcddb4bfea65b678959e
+source-git-commit: 3a64ca8e89612f0121c055ed9a7f97eb4f2cb265
 workflow-type: tm+mt
-source-wordcount: '22'
+source-wordcount: '28'
 ht-degree: 0%
 
 ---
