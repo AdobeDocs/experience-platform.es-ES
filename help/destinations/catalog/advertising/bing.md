@@ -1,11 +1,11 @@
 ---
 keywords: 'publicidad; bing; '
 title: Conexión de Microsoft Bing
-description: Con el destino de conexión de Microsoft Bing, puede ejecutar campañas digitales de objetivo de redireccionamiento y audiencia en toda la publicidad de presentación de Microsoft.
+description: Con el destino de la conexión de Microsoft Bing, puede ejecutar campañas digitales con objetivo de audiencia y redireccionamiento en toda la publicidad de presentación de Microsoft.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -19,57 +19,61 @@ Para enviar datos de perfil a [!DNL Microsoft Bing], primero debe conectarse al 
 
 ## Especificaciones de destino {#destination-specs}
 
-Tenga en cuenta los siguientes detalles específicos del destino [!DNL Microsoft Bing]:
+Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL Microsoft Bing]:
 
-* Puede enviar las [identidades](../../../identity-service/namespaces.md) siguientes a [!DNL Microsoft Bing] destinos: [!DNL Microsoft ID].
+* Puede enviar las siguientes [identities](../../../identity-service/namespaces.md) a destinos [!DNL Microsoft Bing]: [!DNL Microsoft ID].
+
+>[!IMPORTANT]
+>
+>Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en mercadotecnia, quiero poder usar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para destinatario de usuarios a través de la publicidad en pantalla en canales [!DNL Microsoft Advertising].
+Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para dirigirme a los usuarios a través de la publicidad de display en los canales [!DNL Microsoft Advertising].
 
 ## Tipo de exportación {#export-type}
 
-**[!DNL Segment Export]** - está exportando todos los miembros de un segmento (audiencia) al  [!DNL Microsoft Bing] destino.
+**[!DNL Segment Export]** : exporta todos los miembros de un segmento (audiencia) al  [!DNL Microsoft Bing] destino.
 
 ## Requisitos previos {#prerequisites}
 
-Al configurar el destino, se le pedirá que proporcione la siguiente información:
+Al configurar el destino, debe proporcionar la siguiente información:
 
-* [!UICONTROL ID] de cuenta: este es su  [!DNL Bing Ads CID]formato entero.
+* [!UICONTROL ID de cuenta]: este es su  [!DNL Bing Ads CID], en formato entero.
 
-## Conectar al destino {#connect-destination}
+## Conectarse al destino {#connect-destination}
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL Microsoft Bing] y seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL Microsoft Bing] y seleccione **[!UICONTROL Configure]**.
 
-![Configurar destino de Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
+![Configuración del destino de Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
 
 >[!NOTE]
 >
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
+>Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 >
 >![Activar destino de Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
 
-En el paso [!UICONTROL Autenticación], debe introducir los detalles de conexión de destino:
+En el paso [!UICONTROL Authentication] debe introducir los detalles de conexión de destino:
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID]** de cuenta: Tu  [!DNL Bing Ads CID].
-* **[!UICONTROL Acción]** de mercadotecnia: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL ID de cuenta]**: Su  [!DNL Bing Ads CID].
+* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Autenticación de destino de Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
 
-Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar los segmentos más adelante, o puede hacer clic en [!UICONTROL Siguiente] para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar los segmentos más adelante, o puede hacer clic en [!UICONTROL Siguiente] para continuar con el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
 
 ## Activar segmentos {#activate-segments}
 
 Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md#select-attributes) para obtener información sobre el flujo de trabajo de activación de segmentos.
 
-En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre práctico en el destino.
+En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en el destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre del segmento [!DNL Platform] o una forma más corta de éste, para facilitar su uso. Sin embargo, el ID o nombre del segmento en el destino no necesita coincidir con el de su cuenta [!DNL Platform]. Cualquier valor que inserte en el campo de asignación se verá reflejado por el destino.
+Al asignar segmentos, le recomendamos que utilice el nombre del segmento [!DNL Platform] o una forma más corta de él, para facilitar su uso. Sin embargo, el ID de segmento o el nombre de su destino no necesitan coincidir con el de su cuenta [!DNL Platform]. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
 ![ID de asignación de segmentos](../../assets/common/segment-mapping-id.png)
 
 ## Datos exportados {#exported-data}
 
-Para verificar si los datos se han exportado correctamente al destino [!DNL Microsoft Bing], compruebe su cuenta [!DNL Microsoft Bing Ads]. Si la activación se ha realizado correctamente, las audiencias se rellenan en su cuenta.
+Para verificar si los datos se han exportado correctamente al destino [!DNL Microsoft Bing] , compruebe su cuenta [!DNL Microsoft Bing Ads]. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
