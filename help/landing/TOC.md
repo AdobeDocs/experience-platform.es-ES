@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
-user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
+user-guide-description: Descubra cómo el Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
 translation-type: tm+mt
 source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
 workflow-type: tm+mt
@@ -24,7 +24,7 @@ ht-degree: 14%
    * [Casos de uso clave (vídeo)](video/platform-use-cases.md)
    * [Arquitectura de plataforma (vídeo)](video/platform-architecture.md)
    * [Funciones y fases del proyecto (vídeo)](video/roles-project-phases.md)
-* Interfaz de usuario de Experience Platform {#platform-ui}
+* IU de Experience Platform {#platform-ui}
    * [Guía de la interfaz de usuario de Platform](ui-guide.md)
    * [Visita a la interfaz de usuario de Platform (vídeo)](video/platform-ui.md)
    * [Guía de la interfaz de usuario de flujos de trabajo](workflows.md)
