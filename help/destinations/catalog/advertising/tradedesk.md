@@ -1,11 +1,11 @@
 ---
 keywords: publicidad; la oficina de comercio;
 title: La conexión con el mostrador de comercio
-description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario de dispositivos móviles, de vídeo y de visualización. '
+description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización. '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -15,68 +15,72 @@ ht-degree: 0%
 
 [!DNL The Trade Desk] destination le ayuda a enviar datos de perfil a  [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de objetivo de redireccionamiento y audiencia en distintas fuentes de inventario móviles, de vídeo y de visualización.
+[!DNL The Trade Desk] es una plataforma de autoservicio para que los compradores de publicidades ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos móviles, vídeo y visualización.
 
-Para enviar datos de perfil a [!DNL The Trade Desk], primero debe conectarse al destino.
+Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al destino.
 
 ## Especificaciones de destino {#destination-specs}
 
-Tenga en cuenta los siguientes detalles específicos del destino [!DNL The Trade Desk]:
+Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL Trade Desk]:
 
-* Puede enviar las [identidades](../../../identity-service/namespaces.md) siguientes a [!DNL The Trade Desk] destinos: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+* Puede enviar las siguientes [identities](../../../identity-service/namespaces.md) a destinos [!DNL The Trade Desk]: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+
+>[!IMPORTANT]
+>
+>Si desea crear su primer destino con [!DNL The Trade Desk] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en mercadotecnia, quiero poder usar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales con objetivo de resegmentación o audiencia.
+Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales con objetivo de audiencia o retargeting.
 
 ## Tipo de exportación {#export-type}
 
-**[!DNL Segment export]** - está exportando todos los miembros de un segmento (audiencia) al destino.
+**[!DNL Segment export]** : exporta todos los miembros de un segmento (audiencia) al destino.
 
-## Conectar al destino {#connect-destination}
+## Conectarse al destino {#connect-destination}
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL The Trade Desk] y seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL The Trade Desk] y seleccione **[!UICONTROL Configure]**.
 
-![Configurar El Destino De Escritorio Comercial](../../assets/catalog/advertising/tradedesk/configure.png)
+![Configuración Del Destino Del Escritorio Comercial](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
+>Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 >
->![Activar El Destino Del Escritorio Comercial](../../assets/catalog/advertising/tradedesk/activate.png)
+>![Activar El Destino De La Mesa De Comercio](../../assets/catalog/advertising/tradedesk/activate.png)
 
-En el paso [!UICONTROL Autenticación], debe introducir los detalles de conexión [!DNL The Trade Desk]:
+En el paso [!UICONTROL Authentication] , debe introducir los detalles de conexión [!DNL The Trade Desk]:
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID]** de cuenta: Su ID  [!DNL Trade Desk] [!UICONTROL de cuenta].
-* **[!UICONTROL Ubicación]** del servidor: Pregunte a su  [!DNL The Trade Desk] representante qué servidor regional debe utilizar. Estos son los servidores regionales disponibles que puede elegir:
+* **[!UICONTROL ID de cuenta]**: Su  [!DNL Trade Desk] [!UICONTROL ID de cuenta].
+* **[!UICONTROL Ubicación]** del servidor: Pregunte a su  [!DNL Trade Desk] representante qué servidor regional debe utilizar. Estos son los servidores regionales disponibles entre los que puede elegir:
 
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapur]**
    * **[!UICONTROL Tokio]**
    * **[!UICONTROL Norteamérica Oriental]**
-   * **[!UICONTROL Norteamérica Occidental]**
+   * **[!UICONTROL Norteamérica oeste]**
    * **[!UICONTROL América Latina]**
 
-* **[!UICONTROL Acción]** de mercadotecnia: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Acción de marketing]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Paso de autenticación de asistencia técnica](../../assets/catalog/advertising/tradedesk/authenticate.png)
+![La etapa de autenticación de los servicios de asistencia técnica](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar segmentos más adelante, o bien puede seleccionar [!UICONTROL Siguiente] para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
+Haga clic en **[!UICONTROL Crear destino]**. Se ha creado el destino. Puede hacer clic en [!UICONTROL Guardar y salir] si desea activar los segmentos más adelante, o puede seleccionar [!UICONTROL Siguiente] para continuar con el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para el resto del flujo de trabajo.
 
 ## Activar segmentos {#activate-segments}
 
 Consulte [Activar perfiles y segmentos en un destino](../../ui/activate-destinations.md#select-attributes) para obtener información sobre el flujo de trabajo de activación de segmentos.
 
-En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre práctico en el destino.
+En el paso [Programación de segmentos](../../ui/activate-destinations.md#segment-schedule), debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en el destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre del segmento [!DNL Platform] o una forma más corta de éste, para facilitar su uso. Sin embargo, el ID o nombre del segmento en el destino no necesita coincidir con el de su cuenta [!DNL Platform]. Cualquier valor que inserte en el campo de asignación se verá reflejado por el destino.
+Al asignar segmentos, le recomendamos que utilice el nombre del segmento [!DNL Platform] o una forma más corta de él, para facilitar su uso. Sin embargo, el ID de segmento o el nombre de su destino no necesitan coincidir con el de su cuenta [!DNL Platform]. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
-Si está utilizando asignaciones de varios dispositivos (ID de cookies, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] todos ellos se acumulados en un solo segmento, con un desglose a nivel de dispositivo.
+Si utiliza varias asignaciones de dispositivo (ID de cookie, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] agregarán todos ellos en un solo segmento, con un desglose a nivel de dispositivo.
 
 ![ID de asignación de segmentos](../../assets/common/segment-mapping-id.png)
 
 ## Datos exportados {#exported-data}
 
-Para verificar si los datos se han exportado correctamente al [!DNL The Trade Desk] destino, compruebe su cuenta [!DNL The Trade Desk]. Si la activación se ha realizado correctamente, las audiencias se rellenan en su cuenta.
+Para verificar si los datos se han exportado correctamente al destino [!DNL The Trade Desk] , compruebe su cuenta [!DNL Trade Desk]. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
