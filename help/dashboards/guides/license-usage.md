@@ -1,78 +1,87 @@
 ---
-keywords: Experience Platform;interfaz de usuario;IU;personalización;panel de uso de licencia;panel;uso de licencia;asignación;consumo
-title: Panel de uso de licencias
-description: Adobe Experience Platform proporciona un panel mediante el cual puede vista información importante sobre el uso de licencias de su organización.
-topic: guide
-type: Documentation
+keywords: Experience Platform;interfaz de usuario;IU;personalización;panel de uso de licencias;panel;uso de licencias;derecho;consumo
+title: Tablero de uso de licencias
+description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización.
+topic: guía
+type: Documentación
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 3%
 
 ---
 
 
-# (Beta) [!UICONTROL Uso de licencias] panel {#license-usage-dashboard}
+# (Beta) Panel de uso de licencias {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
->La funcionalidad de panel descrita en este documento está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad de tablero descrita en este documento está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-La interfaz de usuario (UI) de Adobe Experience Platform proporciona un panel a través del cual puede realizar vistas de información importante sobre el uso de licencias de su organización, tal como se obtiene durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
 
-Para obtener una descripción general de la interfaz de usuario de la plataforma, visite la [guía de la interfaz de usuario del Experience Platform](../../landing/ui-guide.md).
+Para obtener una descripción general de la interfaz de usuario de Platform, visite la [guía de la interfaz de usuario del Experience Platform](../../landing/ui-guide.md).
 
 ## Datos del panel de uso de licencias
 
-El panel de uso de licencias muestra una instantánea de los datos relacionados con las licencias de su organización para el Experience Platform. Los datos del panel se muestran exactamente como aparecen en el momento concreto en que se realizó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel no se actualiza en tiempo real.
+El panel de uso de licencias muestra una instantánea de los datos de su organización relacionados con las licencias para el Experience Platform. Los datos del tablero se muestran exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel no se actualiza en tiempo real.
 
 >[!NOTE]
 >
->Los cambios o actualizaciones realizados en los datos desde que se realizó la instantánea no se reflejarán en el panel hasta que se realice la siguiente instantánea.
+>Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
 
-## Explorar el panel de uso de licencias
+## Exploración del panel de uso de licencias
 
-Para navegar hasta el panel de uso de licencias dentro de la interfaz de usuario de la plataforma, seleccione **[!UICONTROL Uso de licencias]** en el carril izquierdo. Se abre con la ficha **[!UICONTROL Información general]** que muestra el panel.
+Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Licencia de uso]** en el carril izquierdo. Se abre con la pestaña **[!UICONTROL Overview]** que muestra el tablero.
 
 ![](../images/license-usage/dashboard-overview.png)
 
-### Seleccionar un entorno limitado
+### Seleccionar un simulador de pruebas
 
-Para elegir un entorno limitado para la vista en el panel, seleccione [!UICONTROL Producción] o [!UICONTROL Desarrollo]. El simulador para pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador para pruebas.
+Para elegir un simulador para pruebas para ver en el tablero, seleccione [!UICONTROL Producción] o [!UICONTROL Desarrollo]. El simulador de pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador de pruebas.
 
 >[!NOTE]
 >
->El sistema de informes de consumo para los entornos limitados es acumulativo para todos los entornos limitados del mismo tipo. En otras palabras, si selecciona [!UICONTROL Producción] o [!UICONTROL Desarrollo] se informará sobre todos los entornos limitados de producción o desarrollo, respectivamente.
+>Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### Seleccionar un intervalo de fechas
 
-Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el panel. Hay tres opciones disponibles: [!UICONTROL Últimos 30 días], [!UICONTROL Últimos 90 días] y [!UICONTROL Últimos 12 meses]. Los últimos 30 días están seleccionados de forma predeterminada.
+Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay tres opciones disponibles: [!UICONTROL Últimos 30 días], [!UICONTROL Últimos 90 días] y [!UICONTROL Últimos 12 meses]. Los últimos 30 días están seleccionados de forma predeterminada.
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widgets y métricas
+## Widgets
 
-El panel de uso de licencias está compuesto de utilidades, que muestran métricas de solo lectura que proporcionan información importante sobre el uso de licencias de su organización. Para obtener más información sobre estas utilidades, consulte la sección de utilidades disponibles en esta guía.
+El panel de uso de licencias está compuesto por utilidades, que muestran métricas de solo lectura que proporcionan información importante sobre el uso de licencias de su organización. Las métricas visibles dependen de las licencias específicas de su organización (consulte la sección [métricas disponibles](#available-metrics) para obtener más información).
 
-## Widgets disponibles {#available-widgets}
+Cada utilidad muestra gráficos de líneas en los que se comparan los números reales de su organización con el total disponible con las licencias de su organización y se proporciona un porcentaje del uso total.
 
-Actualmente, Experience Platform proporciona una utilidad que puede utilizar para visualizar el uso de la licencia, y pronto se lanzarán más utilidades.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Audiencias direccionables] {#addressable-audiences}
+## Métricas disponibles
 
-La utilidad **[!UICONTROL audiencias direccionables]** muestra el número total de perfiles combinados dentro del almacén de datos de Perfil, después de aplicar una directiva de combinación generada por el sistema para combinar fragmentos de perfil de todos los conjuntos de datos actuales mediante un algoritmo de gráficos determinísticos (privados).
+Actualmente hay cuatro métricas disponibles en el panel de uso de licencias:
 
-Para obtener más información sobre fragmentos y perfiles combinados, lea la sección *fragmentos de Perfil vs. perfiles combinados* de la [información general de Perfil](../../profile/home.md).
+* [!UICONTROL Audiencia a la que se puede dirigir]  (medida por el número de perfiles)
+* [!UICONTROL Promedio de riqueza del perfil]
+* [!UICONTROL Almacenamiento consumido total]
+* [!UICONTROL Datos analizados por proporción de segmentación]
 
->[!NOTE]
->
->La directiva de combinación utilizada para calcular esta métrica la genera el Experience Platform y no se puede editar, ni se puede seleccionar una directiva de combinación diferente. Esta directiva de combinación generada por el sistema no es la misma que la directiva de combinación predeterminada utilizada para calcular [!UICONTROL tamaño de Audiencia] en el panel [!DNL Profile], por lo tanto es poco probable que el recuento de audiencias de los paneles [!UICONTROL Uso de licencias] y [!DNL Profile] sea exactamente el mismo.
+La definición de cada una de estas métricas varía según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación apropiada sobre la Descripción del producto:
 
-![](../images/license-usage/addressable-audiences.png)
+| Licencia | Descripción del producto |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 50M</li></ul> | [Plataforma de datos de clientes en tiempo real](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL A 10M</li><li>AEP:OD ACTIVATION PRFL HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Inteligencia de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Pasos siguientes
 
-Siguiendo este documento, debería poder localizar el panel de uso de la licencia y seleccionar un simulador para la vista. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre la interfaz de usuario del Experience Platform, consulte la [guía de la interfaz de usuario de la plataforma](../../landing/ui-guide.md).
+Después de leer este documento, puede localizar el panel de uso de licencias y seleccionar un simulador para pruebas que ver. También puede encontrar más información sobre las métricas disponibles para su organización, en función de las licencias adquiridas por su organización.
+
+Para obtener más información sobre otras funciones disponibles en la interfaz de usuario del Experience Platform, consulte la [Guía de la interfaz de usuario de la plataforma](../../landing/ui-guide.md).
