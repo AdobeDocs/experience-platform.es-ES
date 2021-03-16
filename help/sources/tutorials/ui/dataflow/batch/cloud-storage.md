@@ -6,9 +6,9 @@ topic: sobre validación
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -41,38 +41,52 @@ Además, este tutorial requiere que tenga una cuenta de almacenamiento en la nub
 
 Después de crear su cuenta de almacenamiento en la nube, aparece el paso **[!UICONTROL Select data]**, que proporciona una interfaz para explorar la jerarquía de archivos de almacenamiento en la nube.
 
-* La mitad izquierda de la interfaz es un navegador de directorios, que muestra los archivos y directorios del servidor.
-* La mitad derecha de la interfaz permite previsualizar hasta 100 filas de datos de un archivo compatible.
+* La parte izquierda de la interfaz es un explorador de directorios, que muestra sus archivos y directorios de almacenamiento en la nube.
+* La parte derecha de la interfaz permite previsualizar hasta 100 filas de datos de un archivo compatible.
 
-La selección de una carpeta de la lista permite recorrer la jerarquía de carpetas en carpetas más profundas. Una vez que haya seleccionado un archivo o carpeta compatible, aparecerá la lista desplegable **[!UICONTROL Select data format]**, donde puede elegir un formato para mostrar los datos en la ventana de vista previa.
+![interfaz](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+La selección de una carpeta de la lista permite recorrer la jerarquía de carpetas en carpetas más profundas. Puede seleccionar una sola carpeta para introducir todos los archivos de la carpeta de forma recursiva. Al ingerir una carpeta completa, debe asegurarse de que todos los archivos de la carpeta compartan el mismo esquema.
 
-Seleccione el formato de datos adecuado para el archivo que desee ingerir y permita que se complete la ventana de vista previa durante unos segundos.
+Una vez que haya seleccionado un archivo o carpeta compatible, seleccione el formato de datos correspondiente en el menú desplegable [!UICONTROL Select data format].
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+La tabla siguiente muestra el formato de datos adecuado para los tipos de archivo admitidos:
 
-Puede establecer un delimitador personalizado al introducir archivos delimitados. Seleccione la opción **[!UICONTROL Delimiter]** y, a continuación, seleccione un delimitador en el menú desplegable. El menú muestra las opciones más utilizadas para los delimitadores, como una coma (`,`), una pestaña (`\t`) y una barra vertical (`|`). También puede seleccionar **[!UICONTROL Personalizado]** e introducir un delimitador personalizado de su elección en la barra de entrada emergente.
+| Tipo de archivo | Formato de datos |
+| --- | --- |
+| CSV | [!UICONTROL Delimitado] |
+| JSON | [!UICONTROL JSON] |
+| Parqué | [!UICONTROL Parqué XDM] |
+
+Seleccione **[!UICONTROL JSON]** y espere unos segundos para que se complete la interfaz de vista previa.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>A diferencia de los tipos de archivo delimitados y JSON, los archivos con formato de parquet no están disponibles para la vista previa.
+
+La interfaz de vista previa permite inspeccionar el contenido y la estructura de un archivo. De forma predeterminada, la interfaz de vista previa muestra el primer archivo de la carpeta seleccionada.
+
+Para obtener una vista previa de un archivo diferente, seleccione el icono de vista previa junto al nombre del archivo que desea inspeccionar.
+
+![default-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+Una vez que haya inspeccionado el contenido y la estructura de los archivos de la carpeta, seleccione **[!UICONTROL Next]** para introducir todos los archivos de la carpeta de forma recursiva.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+Si prefiere seleccionar un archivo específico, seleccione el archivo que desea ingerir y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### Definir un delimitador personalizado para archivos delimitados
+
+Puede establecer un delimitador personalizado al introducir archivos delimitados. Seleccione la opción **[!UICONTROL Delimiter]** y, a continuación, seleccione un delimitador en el menú desplegable. El menú muestra las opciones más utilizadas para los delimitadores, como una coma (`,`), una pestaña (`\t`) y una barra vertical (`|`). Si prefiere usar un delimitador personalizado, seleccione **[!UICONTROL Personalizado]** e introduzca un delimitador de un solo carácter de su elección en la barra de entrada emergente.
 
 Una vez que haya seleccionado el formato de los datos y establecido el delimitador, seleccione **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Ingesta de archivos Parquet o JSON
-
-Las cuentas de almacenamiento en la nube también admiten archivos JSON y Parquet. Los archivos de parqué deben ser compatibles con XDM, mientras que los archivos JSON no tienen por qué ser de XDM. Para ingerir archivos JSON o Parquet, seleccione el formato de archivo adecuado en el navegador de directorios y aplique el formato de datos compatible desde la interfaz correcta.
-
-Si el formato de datos está en JSON, aparecerá una vista previa con información sobre los datos del archivo. En la pantalla de vista previa, puede seleccionar si el JSON es compatible con XDM mediante la lista desplegable **[!UICONTROL compatible con XDM]**.
-
-Seleccione **[!UICONTROL Siguiente]** para continuar.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->A diferencia de los tipos de archivo delimitados y JSON, los archivos con formato de parquet no están disponibles para la vista previa.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Asignación de campos de datos a un esquema XDM
 
