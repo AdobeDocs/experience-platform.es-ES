@@ -1,35 +1,45 @@
 ---
-title: Uso de Adobe Target con el SDK web de plataforma
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web Experience Platform mediante Adobe Target
-keywords: destinatario;destinatario de adobe;actividad.id;experiencia.id;decisionesDeprocesamiento;ámbitosDeDecisión;fragmento de código de ocultación previa;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
+title: Uso de Adobe Target con el SDK web de Platform
+description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
 
 
-# Uso de Adobe Target con el SDK web de plataforma
+# Uso de Adobe Target con el SDK web de Platform
 
-Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en Adobe Target en el canal web. Puede utilizar un editor WYSIWYG, denominado [Compositor de experiencias visuales](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, el [Compositor de experiencias basadas en formularios](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), para crear, activar y entregar sus actividades y experiencias de personalización.
+Adobe Experience Platform [!DNL Web SDK] puede entregar y renderizar experiencias personalizadas administradas en Adobe Target al canal web. Puede utilizar un editor WYSIWYG, denominado [Compositor de experiencias visuales](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, el [Compositor de experiencias basadas en formularios](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), para crear, activar y ofrecer sus actividades y experiencias de personalización.
 
-## Activación de Adobe Target
+Las siguientes funciones se han probado y actualmente son compatibles con Target:
 
-Para habilitar [!DNL Target], debe hacer lo siguiente:
+* Pruebas A/B
+* Creación de informes de conversión e impresión de A4T
+* Personalización automatizada
+* Segmentación de experiencias
+* Pruebas multivariable
+* Creación de informes de conversión e impresión de objetivos nativos
+* Compatibilidad con VEC
 
-1. Habilite el destinatario en la [configuración de Edge](../../fundamentals/edge-configuration.md) con el código de cliente apropiado.
-1. Añada la opción `renderDecisions` a sus eventos.
+## Habilitación de Adobe Target
 
-A continuación, opcionalmente, también puede:
+Para habilitar [!DNL Target], haga lo siguiente:
 
-* Añada `decisionScopes` a sus eventos para recuperar actividades específicas (útil para actividades creadas con el compositor basado en formularios).
-* Añada el [fragmento de ocultamiento previo](../manage-flicker.md) para ocultar solo ciertas partes de la página.
+1. Habilite target en su [configuración de edge](../../fundamentals/edge-configuration.md) con el código de cliente apropiado.
+1. Agregue la opción `renderDecisions` a los eventos.
+
+A continuación, opcionalmente, también puede añadir las siguientes opciones:
+
+* `decisionScopes`: Recupere actividades específicas (útil para actividades creadas con el compositor basado en formularios) añadiendo esta opción a los eventos.
+* [Ocultamiento previo del fragmento](../manage-flicker.md): Oculte solo ciertas partes de la página.
 
 ## Uso del VEC de Adobe Target
 
-Para utilizar el VEC con una implementación de SDK web de plataforma, debe instalar y activar la extensión de ayuda de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
+Para utilizar el VEC con una implementación del SDK web de Platform, instale y active la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
 
 ## Actividades de VEC de procesamiento automático
 
@@ -56,7 +66,7 @@ alloy
 
 ## Uso del Compositor basado en formularios
 
-El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, [!DNL Experience Targeting], Automated Personalization y actividades de Recommendations con diferentes tipos de respuesta, como JSON, HTML, Image, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Target, se puede ejecutar la lógica principal de su negocio. Para recuperar las decisiones de las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;temas de decisión&quot; para los que desee recuperar una decisión.
+El Compositor de experiencias basadas en formularios es una interfaz no visual que resulta útil para configurar pruebas A/B, [!DNL Experience Targeting], Automated Personalization y actividades de Recommendations con diferentes tipos de respuestas, como JSON, HTML, Image, etc. Según el tipo de respuesta o la decisión devuelta por Adobe Target, se puede ejecutar la lógica empresarial principal. Para recuperar decisiones para las actividades del Compositor basado en formularios, envíe un evento con todos los &quot;decisionScopes&quot; para los que desee recuperar una decisión.
 
 ```javascript
 alloy
@@ -79,11 +89,11 @@ alloy
 
 ## Ámbitos de decisión
 
-`decisionScopes` define las secciones, ubicaciones o partes de las páginas en las que desea representar una experiencia personalizada. Estos `decisionScopes` son personalizables y definidos por el usuario. Para los clientes actuales [!DNL Target], `decisionScopes` también se conocen como &quot;mboxes&quot;. En la interfaz de usuario [!DNL Target], `decisionScopes` aparece como &quot;ubicaciones&quot;.
+`decisionScopes` define secciones, ubicaciones o partes de las páginas en las que desea procesar una experiencia personalizada. Estos `decisionScopes` son personalizables y están definidos por el usuario. Para los clientes actuales de [!DNL Target] , `decisionScopes` también se conocen como &quot;mboxes&quot;. En la interfaz de usuario de [!DNL Target], `decisionScopes` aparece como &quot;ubicaciones&quot;.
 
 ## El ámbito `__view__`
 
-El SDK web de Adobe Experience Platform proporciona funciones que permiten recuperar acciones de VEC sin necesidad de depender del SDK para procesar las acciones de VEC por usted. Envíe un evento con `__view__` definido como `decisionScopes`.
+El SDK web de Adobe Experience Platform proporciona una funcionalidad en la que puede recuperar acciones del VEC sin depender del SDK para representar las acciones del VEC por usted. Envíe un evento con `__view__` definido como `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
@@ -107,9 +117,9 @@ alloy("sendEvent", {
 
 ## Audiencias en XDM
 
-Al definir Audiencias para las actividades de Destinatario que se enviarán mediante Adobe Experience Platform Web SDK, se debe definir y utilizar [XDM](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html). Después de definir esquemas, clases y mezclas XDM, puede crear una regla de audiencia de Destinatario definida por los datos XDM para la segmentación. En Destinatario, los datos XDM se muestran en el Generador de Audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
+Al definir Audiencias para las actividades de Target que se entregan mediante el SDK web de Adobe Experience Platform, [XDM](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html) debe definirse y utilizarse. Después de definir esquemas XDM, clases y mezclas, puede crear una regla de audiencia de Target definida por los datos XDM para la segmentación. En Target, los datos XDM se muestran en el Generador de audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
 
-Si tiene actividades de Destinatario con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, tenga en cuenta que no se enviarán correctamente a través del SDK. En lugar de utilizar parámetros personalizados o el perfil del usuario, debe utilizar XDM en su lugar. Sin embargo, hay campos de objetivo de audiencia predeterminados que se admiten mediante el SDK web de Adobe Experience Platform y que no requieren XDM. Estos son los campos disponibles en la interfaz de usuario de Destinatario que no requieren XDM:
+Si tiene actividades de Target con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, no se entregan correctamente mediante el SDK. En lugar de usar parámetros personalizados o el perfil de usuario, debe utilizar XDM en su lugar. Sin embargo, hay campos de objetivo de audiencia integrados compatibles con el SDK web de Adobe Experience Platform que no requieren XDM. Estos campos están disponibles en la interfaz de usuario de Target y no requieren XDM:
 
 * Biblioteca de segmentos
 * Geografía 
@@ -122,10 +132,10 @@ Si tiene actividades de Destinatario con audiencias predefinidas que utilizan pa
 
 ## Terminología
 
-__Decisiones:__ En  [!DNL Target], se correlacionan con la experiencia seleccionada de una Actividad.
+__Decisiones:__ en  [!DNL Target], las decisiones se correlacionan con la experiencia seleccionada en una actividad.
 
-__Esquema:__ El esquema de una decisión es el tipo de oferta en  [!DNL Target].
+__Esquema:__ el esquema de una decisión es el tipo de oferta en  [!DNL Target].
 
-__Ámbito de aplicación:__ El ámbito de aplicación de la decisión. En [!DNL Target], este es el mBox. El mBox global es el ámbito `__view__`.
+__Ámbito de aplicación:__ el ámbito de aplicación de la decisión. En [!DNL Target], el ámbito es el mBox. El mBox global es el ámbito `__view__`.
 
-__XDM:__ El XDM se serializa en notación de puntos y luego se coloca  [!DNL Target] como parámetros de mBox.
+__XDM:__ el XDM se serializa en notación de puntos y luego se coloca en  [!DNL Target] como parámetros mBox.
