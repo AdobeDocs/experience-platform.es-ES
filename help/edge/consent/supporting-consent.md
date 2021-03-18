@@ -3,9 +3,9 @@ title: Compatibilidad con las preferencias de consentimiento del cliente mediant
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento con el SDK web de Adobe Experience Platform.
 keywords: consentimiento;defaultConsent;consentimiento predeterminado;setConsent;combinación de privacidad de perfil;combinación de privacidad de eventos de experiencia;combinación de privacidad de privacidad de privacidad
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Compatibilidad con las preferencias de consentimiento del cliente
 
-Para respetar la privacidad del usuario, es posible que desee solicitar el consentimiento del usuario antes de permitir que el SDK utilice datos específicos del usuario para determinados fines. Actualmente, el SDK solo permite a los usuarios activar o desactivar todas las opciones, pero en el futuro Adobe espera proporcionar un control más granular de determinadas finalidades.
+Para respetar la privacidad del usuario, es posible que desee solicitar el consentimiento del usuario antes de permitir que el SDK utilice datos específicos del usuario para determinados fines. Actualmente, el SDK solo permite a los usuarios activar o desactivar todas las opciones, pero en el Adobe futuro espera proporcionar un control más granular sobre determinadas finalidades.
 
 Si el usuario opta por cualquier opción, el SDK puede realizar las siguientes tareas:
 
-* Envíe datos desde y hacia los servidores de Adobe.
+* Envíe datos a y desde los servidores de Adobe.
 * Leer y escribir cookies o elementos de almacenamiento web.
 
 Si el usuario decide excluirse de todos los aspectos, el SDK no realiza ninguna de estas tareas.
@@ -44,17 +44,17 @@ Si no desea recopilar eventos que se produjeron antes de que se establezcan las 
 
 >[!NOTE]
 >
->Actualmente, el SDK solo admite un único propósito, o ninguno. Aunque planificamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades y ofertas de productos de Adobe, la implementación actual es un enfoque de inclusión de todo o nada.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
+>Actualmente, el SDK solo admite un único propósito, o ninguno. Aunque planificamos crear un conjunto más sólido de propósitos o categorías que se correspondan con las diferentes capacidades de Adobe y ofertas de productos, la implementación actual es un enfoque de inclusión de todo o nada.  Esto solo se aplica a Adobe Experience Platform [!DNL Web SDK] y NO a otras bibliotecas JavaScript de Adobe.
 
 En este punto, es posible que prefiera pedir al usuario que se una en alguna parte de la interfaz de usuario. Una vez recopiladas las preferencias del usuario, comunique estas preferencias al SDK.
 
-## Comunicación de las preferencias de consentimiento mediante el estándar de Adobe Experience Platform
+## Comunicación de las preferencias de consentimiento a través del estándar Adobe Experience Platform
 
 El SDK admite las versiones 1.0 y 2.0 del estándar de consentimiento de Adobe Experience Platform. Actualmente, las normas 1.0 y 2.0 solo admiten la aplicación automática de una preferencia de consentimiento total o nulo. El estándar 1.0 se está eliminando progresivamente en favor del estándar 2.0. El estándar 2.0 le permite agregar preferencias de consentimiento adicionales que se pueden utilizar para aplicar manualmente las preferencias de consentimiento.
 
 ### Uso de la versión 2.0 estándar de Adobe
 
-Si utiliza Adobe Experience Platform, deberá incluir una combinación de privacidad en el esquema de perfil. Consulte [Control, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 estándar de Adobe. Puede agregar datos dentro del objeto value que aparece a continuación y que corresponde al esquema del campo `consents` de la mezcla de perfiles Consentimientos y preferencias.
+Si utiliza Adobe Experience Platform, deberá incluir una combinación de privacidad en el esquema de perfil. Consulte [Control, privacidad y seguridad en Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) para obtener más información sobre la versión 2.0 estándar de Adobe. Puede agregar datos dentro del objeto de valor que se encuentra debajo y que corresponde al esquema del campo `consents` de la mezcla de perfiles Consentimientos y preferencias.
 
 Si el usuario decide participar, ejecute el comando `setConsent` con la preferencia recopilada establecida en `y` de la siguiente manera:
 
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-Si el usuario decide excluirse, ejecute el comando `setConsent` con la preferencia recopilada establecida en `n` de la siguiente manera:
+El campo de hora debe especificar cuándo el usuario actualizó por última vez sus preferencias de consentimiento. Si el usuario decide excluirse, ejecute el comando `setConsent` con la preferencia recopilada establecida en `n` de la siguiente manera:
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
@@ -168,11 +177,11 @@ alloy("setConsent", {
 
 ## Persistencia de las preferencias de consentimiento
 
-Después de haber comunicado las preferencias de usuario al SDK mediante el comando `setConsent`, el SDK mantiene las preferencias del usuario en una cookie. La próxima vez que el usuario cargue el sitio web en el explorador, el SDK recuperará y utilizará estas preferencias persistentes para determinar si se pueden enviar eventos a Adobe o no.
+Después de haber comunicado las preferencias de usuario al SDK mediante el comando `setConsent`, el SDK mantiene las preferencias del usuario en una cookie. La próxima vez que el usuario cargue el sitio web en el explorador, el SDK recuperará y utilizará estas preferencias persistentes para determinar si los eventos se pueden enviar o no a Adobe.
 
 Deberá almacenar las preferencias de usuario de forma independiente para poder mostrar el cuadro de diálogo de consentimiento con las preferencias actuales. No hay forma de recuperar las preferencias de usuario del SDK. Para asegurarse de que las preferencias de usuario permanecen sincronizadas con el SDK, puede llamar al comando `setConsent` en cada carga de página. El SDK solo realizará una llamada al servidor si las preferencias han cambiado.
 
 ## Sincronización de identidades al configurar el consentimiento
 
-Cuando el consentimiento predeterminado está pendiente o agotado, `setConsent` puede ser la primera solicitud que se emite y establece la identidad. Debido a esto, puede ser importante sincronizar identidades en la primera solicitud. El mapa de identidad se puede agregar al comando `setConsent` como en el comando `sendEvent`. Consulte [Recuperación del Experience Cloud ID](../identity/overview.md)
+Cuando el consentimiento predeterminado está pendiente o agotado, `setConsent` puede ser la primera solicitud que se emite y establece la identidad. Debido a esto, puede ser importante sincronizar identidades en la primera solicitud. El mapa de identidad se puede agregar al comando `setConsent` como en el comando `sendEvent`. Consulte [Recuperación del ID de Experience Cloud](../identity/overview.md)
 
