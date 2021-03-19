@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;asignación de csv;asignación de archivo csv;asignación de archivo csv a xdm;asignación de csv a xdm;guía de interfaz de usuario;asignador;asignación;campos de asignación;funciones de asignación
+keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía de ui;mapper;asignación;campos de asignación;funciones de asignación
 solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 topic: sobre validación
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 3%
@@ -35,7 +35,7 @@ Se puede acceder a los datos de los subcampos mediante la notación de puntos. P
 
 En las tablas siguientes se enumeran todas las funciones de asignación admitidas, incluidas las expresiones de ejemplo y sus resultados.
 
-### Funciones de cadena
+### Funciones de cadena {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | extract_regex | Extrae grupos de la cadena de entrada, según una expresión regular. | <ul><li>CADENA: **Requerido** La cadena de la que está extrayendo los grupos.</li><li>REGEX: **Requerido** La expresión regular con la que desea que coincida el grupo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Comprueba si la cadena coincide con la expresión regular introducida. | <ul><li>CADENA: **Requerido** La cadena que está comprobando coincide con la expresión regular.</li><li>REGEX: **Requerido** La expresión regular con la que se compara.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-### Funciones hash
+### Funciones hash {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | md5 | Toma una entrada y produce un valor hash usando MD5. | <ul><li>ENTRADA: **Requerido** El texto sin formato que se va a hash.</li><li>CONJUNTO DE CARÁCTER: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII. </li></ul> | md5(ENTRADA, JUEGO) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Toma una entrada utiliza un algoritmo de comprobación de redundancia cíclica (CRC) para producir un código cíclico de 32 bits. | <ul><li>ENTRADA: **Requerido** El texto sin formato que se va a hash.</li><li>CONJUNTO DE CARÁCTER: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | crc32(ENTRADA, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### Funciones URL
+### Funciones URL {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | get_url_path | Devuelve la ruta de la dirección URL dada. De forma predeterminada, se devuelve la ruta completa. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer la ruta.</li><li>FULL_PATH: *Opcional* Un valor booleano que determina si se devuelve la ruta completa. Si se establece en false, solo se devuelve el final de la ruta.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_query_str | Devuelve la cadena de consulta de una dirección URL determinada. | <ul><li>URL: **Requerido** La URL desde la que intenta obtener la cadena de consulta.</li><li>ANCLAJE: **Requerido** Determina qué se hará con el anclaje en la cadena de consulta. Puede ser uno de los tres valores: &quot;conservar&quot;, &quot;eliminar&quot; o &quot;anexar&quot;.<br><br>Si el valor es &quot;keep&quot;, el anclaje se adjuntará al valor devuelto.<br>Si el valor es &quot;remove&quot;, el anclaje se eliminará del valor devuelto.<br>Si el valor es &quot;append&quot;, el anclaje se devolverá como un valor independiente.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/There?name= &#x200B; ferret#nariz&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/There?name= &#x200B; ferret#note&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com ›:8042/over/here?name ferret#nariz&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Funciones de fecha y hora
+### Funciones de fecha y hora {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 &#x200B;
 
-### Jerarquías - Objetos
+### Jerarquías - Objetos {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | is_set | Comprueba si el objeto existe dentro de los datos de origen. | <ul><li>ENTRADA: **Requerido** La ruta que se debe comprobar si existe dentro de los datos de origen.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
 | anulación | Establece el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. |  | nullify() | nullify() | `null` |
 
-### Jerarquías: matrices
+### Jerarquías: matrices {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | join_array | Combina las matrices entre sí. | <ul><li>MATRIZ: **Requerido** La matriz a la que está agregando elementos.</li><li>VALORES: Las matrices que desee anexar a la matriz principal.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] |
 | to_array | Toma una lista de entradas y la convierte en una matriz. | <ul><li>INCLUDE_NULLS: **Requerido** Un valor booleano para indicar si se deben incluir o no números en la matriz de respuestas.</li><li>VALORES: **Requerido** Los elementos que se van a convertir en una matriz.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Operadores lógicos
+### Operadores lógicos {#logical-operators}
 
 >[!NOTE]
 >
@@ -161,10 +161,10 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| decode | Si se da una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra una clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave a buscar coincidencias.</li><li>OPCIONES: **Requerido** Una matriz plana de pares clave/valor. Opcionalmente, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si el stateCode dado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode dado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode no coincide con lo siguiente, &quot;N/D&quot;. |
+| decode | Si se da una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra una clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave a buscar coincidencias.</li><li>OPTIONS: **Requerido** Una matriz plana de pares clave/valor. Opcionalmente, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si el stateCode dado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode dado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode no coincide con lo siguiente, &quot;N/D&quot;. |
 | iif | Evalúa una expresión booleana determinada y devuelve el valor especificado en función del resultado. | <ul><li>EXPRESIÓN: **Requerido** La expresión booleana que se está evaluando.</li><li>TRUE_VALUE: **Required** El valor que se devuelve si la expresión se evalúa como verdadera.</li><li>FALSE_VALUE: **Required** El valor que se devuelve si la expresión se evalúa como falsa.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### Agregación
+### Agregación {#aggregation}
 
 >[!NOTE]
 >
@@ -172,10 +172,10 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| min | Devuelve el mínimo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPCIONES: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
-| max | Devuelve el máximo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPCIONES: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+| min | Devuelve el mínimo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | Devuelve el máximo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Conversiones de tipo
+### Conversiones de tipo {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Convierte una cadena en un entero. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un entero.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### Funciones JSON
+### Funciones JSON {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Deserialice el contenido JSON de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena JSON que se va a deserializar.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Un objeto que representa el JSON. |
 
-### Operaciones especiales
+### Operaciones especiales {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Genera un ID pseudo-aleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### Funciones de agente de usuario
+### Funciones de agente de usuario {#user-agent}
 
 >[!NOTE]
 >
