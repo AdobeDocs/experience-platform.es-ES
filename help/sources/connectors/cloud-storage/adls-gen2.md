@@ -5,7 +5,7 @@ title: Descripción general del conector de origen de Azure Data Lake Storage Ge
 topic: sobre validación
 description: Obtenga información sobre cómo conectar Azure Data Lake Storage Gen2 a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -19,9 +19,9 @@ Adobe Experience Platform proporciona conectividad nativa para proveedores de nu
 
 Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo Orígenes . [!DNL Platform] permite introducir datos de  [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) mediante lotes.
 
-## Lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [IP address allow list](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 - [Explorar un sistema de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/explore/cloud-storage.md)
 - [Recopilación de datos de almacenamiento en la nube mediante la API de servicio de flujo](../../tutorials/api/collect/cloud-storage.md)
 
-## Uso de la interfaz de usuario
+### Uso de la interfaz de usuario
 
 - [Creación de una conexión de origen ADLS-Gen2 en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Configurar un flujo de datos para una conexión de almacenamiento en la nube en la interfaz de usuario](../../tutorials/ui/dataflow/batch/cloud-storage.md)
