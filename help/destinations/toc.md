@@ -3,13 +3,13 @@ product: experience-platform
 audience: user
 user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-description: Este documento enumera la tabla de contenido para los destinos de Adobe Experience Platform
+description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 11%
+source-wordcount: '464'
+ht-degree: 10%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 11%
    * [ Conexión HTTP (Alpha)](./catalog/http-destination.md)
    * Destinos de Adobe{#adobe}
       * [Información general sobre los destinos de Adobe](./catalog/adobe/overview.md)
-      * [Uso compartido de segmentos de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [uso compartido de segmentos del Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos publicitarios{#advertising}
       * [Información general sobre los destinos publicitarios](./catalog/advertising/overview.md)
       * [Extensión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
@@ -78,13 +78,14 @@ ht-degree: 11%
       * [Resumen de destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
       * [Crear un destino de almacenamiento en la nube](./catalog/cloud-storage/workflow.md)
       * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
-      * [Conexión de Amazon S3](./catalog/cloud-storage/amazon-s3.md)
+      * [Conexión Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexión de Azure Blob](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
+      * [LISTA DE PERMITIDOS de direcciones IP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos {#data-management} de la plataforma de gestión de datos
       * [Información general sobre los destinos de la plataforma de gestión de datos (DMP)](./catalog/data-management/overview.md)
-      * [Extensión DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
+      * [extensión del DIL del Audience Manager](./catalog/data-management/aam-dil-extension.md)
    * Destinos de correo electrónico {#email}
       * [Extensión Bizible](./catalog/email/bizible.md)
       * [Extensión de Marketo](./catalog/email/marketo.md)
@@ -92,10 +93,10 @@ ht-degree: 11%
       * [Extensión PebblePost](./catalog/email/pebblepost.md)
    * Destinos de marketing por correo electrónico {#email-marketing}
       * [Información general sobre los destinos de marketing por correo electrónico](./catalog/email-marketing/overview.md)
-      * [Conexión de Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Conexión de Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
-      * [Conexión de Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [Conexión de Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Conexión Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
+      * [Conexión oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Conexión de Responsys de oracle](./catalog/email-marketing/oracle-responsys.md)
+      * [Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Extensiones de Experience Platform Launch {#launch-extensions}
       * [Información general sobre la extensión de Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de participación móvil {#mobile-engagement}
