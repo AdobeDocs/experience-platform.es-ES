@@ -6,9 +6,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Ingesta de datos, fuentes
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '582'
 ht-degree: 13%
 
 ---
@@ -227,4 +227,5 @@ ht-degree: 13%
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
 - [Notificaciones de ejecución de flujo](notifications.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
+- [Preguntas frecuentes](./troubleshooting.md)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
