@@ -1,61 +1,67 @@
 ---
-keywords: destino de almacenamiento de nube;almacenamiento de nube
-title: Crear un destino de almacenamiento de nube
+keywords: destino de almacenamiento en la nube;almacenamiento en la nube
+title: Crear un destino de almacenamiento en la nube
 type: Tutorial
-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
-seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento de la nube
+description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
+seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
 
 
-# Crear un destino de almacenamiento de nube
+# Crear un destino de almacenamiento en la nube
+
+## Información general {#overview}
 
 En esta página se explica cómo puede conectarse a ubicaciones de almacenamiento en la nube en Adobe Experience Platform.
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione el destino de almacenamiento en la nube que prefiera y, a continuación, seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione su destino preferido de almacenamiento en la nube y, a continuación, seleccione **[!UICONTROL Configure]**.
 
-![Conectar con destino de almacenamiento de nube](../../assets/catalog/cloud-storage/workflow/connect.png)
-
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
-
-En el paso **[!UICONTROL Autenticación]**, si anteriormente había configurado una conexión con el destino del almacenamiento de nube, seleccione **[!UICONTROL Cuenta existente]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de almacenamiento de nube. Rellene las credenciales de autenticación de cuenta y seleccione **[!UICONTROL Conectar con destino]**. Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar encriptación a sus archivos exportados. Tenga en cuenta que esta clave pública **debe** escribirse como una cadena con codificación Base64.
-
-Consulte [Destino de Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-kinesis.md) destino, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) destino y [destino de SFTP](./sftp.md) para obtener detalles sobre las credenciales introducidas en el paso **Autenticación**.
+![Conectarse al destino de almacenamiento en la nube](../../assets/catalog/cloud-storage/workflow/connect.png)
 
 >[!NOTE]
 >
->La plataforma admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si introduce credenciales incorrectas en la ubicación del almacenamiento de nube. Esto garantiza que no se complete el flujo de trabajo con credenciales incorrectas.
+>Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-![Conectar con destino de almacenamiento en la nube: paso de autenticación](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+## Paso de autenticación {#authentication}
 
-En el paso **[!UICONTROL Configuración]**, escriba un **[!UICONTROL Nombre]** y una **[!UICONTROL Descripción]** para el flujo de activación.
+En el paso **[!UICONTROL Authentication]**, si ha configurado anteriormente una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino de almacenamiento en la nube. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. Tenga en cuenta que esta clave pública **debe** escribirse como una cadena codificada Base64.
 
-También en este paso, puede seleccionar cualquier **[!UICONTROL acción de mercadotecnia]** que deba aplicarse a este destino. Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+Consulte [Destino de Amazon S3](./amazon-s3.md), destino [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destino [[!DNL Azure Event Hubs]](./azure-event-hubs.md) y destino [SFTP](./sftp.md) para obtener información específica sobre las credenciales introducidas en el paso **Autenticación**.
 
-Para los destinos de Amazon S3, inserte el **[!UICONTROL nombre del contenedor]** y la **[!UICONTROL ruta de carpeta]** en el destino de almacenamiento en la nube donde se enviarán los archivos. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+>[!NOTE]
+>
+>Platform admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si introduce credenciales incorrectas en la ubicación de almacenamiento en la nube. Esto garantiza que no complete el flujo de trabajo con credenciales incorrectas.
 
-![Conectar con destino de almacenamiento en la nube Amazon S3: paso de autenticación](../../assets/catalog/cloud-storage/workflow/amazon-s3-setup.png)
+![Conectarse al destino de almacenamiento en la nube: paso de autenticación](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-Para los destinos SFTP, inserte la **[!UICONTROL ruta de carpeta]** donde se enviarán los archivos. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+## Paso de configuración {#setup}
 
-![Conectar con destino de almacenamiento de nube SFTP: paso de autenticación](../../assets/catalog/cloud-storage/workflow/sftp-setup.png)
+En el paso **[!UICONTROL Setup]**, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación.
 
-Para destinos [!DNL Amazon Kinesis], proporcione el nombre del flujo de datos existente en su cuenta [!DNL Amazon Kinesis]. La plataforma exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+Además, en este paso, puede seleccionar cualquier **[!UICONTROL Marketing action]** que deba aplicarse a este destino. Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Conectar con destino de almacenamiento de nube de Kinesis: paso de autenticación](../../assets/catalog/cloud-storage/workflow/kinesis-setup.png)
+Para destinos de Amazon S3, inserte **[!UICONTROL Bucket name]** y **[!UICONTROL Folder path]** en el destino de almacenamiento en la nube donde se enviarán los archivos. Seleccione **[!UICONTROL Create Destination]** después de rellenar los campos anteriores.
 
-Para destinos [!DNL Azure Event Hubs], proporcione el nombre del flujo de datos existente en su cuenta [!DNL Amazon Event Hubs]. La plataforma exportará datos a este flujo. Seleccione **[!UICONTROL Crear destino]** después de completar los campos anteriores.
+![Conectarse al destino de almacenamiento en la nube Amazon S3: paso de autenticación](../../assets/catalog/cloud-storage/workflow/amazon-s3-setup.png)
 
-![Conectar con destino de almacenamiento de nube de centros de Evento: paso de autenticación](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
+Para los destinos SFTP, inserte el **[!UICONTROL Folder path]** donde se enviarán los archivos. Seleccione **[!UICONTROL Create Destination]** después de rellenar los campos anteriores.
 
-Se ha creado el destino. Puede seleccionar **[!UICONTROL Guardar y salir]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Siguiente]** para continuar el flujo de trabajo y seleccionar los segmentos que desea activar. En cualquier caso, consulte la siguiente sección, [Activar segmentos](#activate-segments), para que el resto del flujo de trabajo exporte datos.
+![Conectarse al destino de almacenamiento en la nube SFTP: paso de autenticación](../../assets/catalog/cloud-storage/workflow/sftp-setup.png)
+
+Para destinos [!DNL Amazon Kinesis], proporcione el nombre del flujo de datos existente en su cuenta [!DNL Amazon Kinesis]. Platform exportará datos a este flujo. Seleccione **[!UICONTROL Create Destination]** después de rellenar los campos anteriores.
+
+![Conectarse al destino de almacenamiento en la nube de Kinesis: paso de autenticación](../../assets/catalog/cloud-storage/workflow/kinesis-setup.png)
+
+Para destinos [!DNL Azure Event Hubs], proporcione el nombre del flujo de datos existente en su cuenta [!DNL Amazon Event Hubs]. Platform exportará datos a este flujo. Seleccione **[!UICONTROL Create Destination]** después de rellenar los campos anteriores.
+
+![Conectarse al destino de almacenamiento en la nube de los centros de eventos: paso de autenticación](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
+
+Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activate segments](#activate-segments), para que el resto del flujo de trabajo exporte datos.
 
 ## Activar segmentos {#activate-segments}
 
