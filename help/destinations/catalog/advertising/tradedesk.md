@@ -3,10 +3,10 @@ keywords: publicidad; la oficina de comercio;
 title: La conexión con el mostrador de comercio
 description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 0%
+source-wordcount: '592'
+ht-degree: 1%
 
 ---
 
@@ -21,23 +21,27 @@ ht-degree: 0%
 
 Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al destino.
 
-## Especificaciones de destino {#destination-specs}
-
-Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL Trade Desk]:
-
-* Puede enviar las siguientes [identities](../../../identity-service/namespaces.md) a destinos [!DNL The Trade Desk]: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
-
->[!IMPORTANT]
->
->Si desea crear su primer destino con [!DNL The Trade Desk] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
-
 ## Casos de uso {#use-cases}
 
 Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales con objetivo de audiencia o retargeting.
 
+## Identidades admitidas {#supported-identities}
+
+[!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
+
+| Identidad de Target | Descripción |
+|---|---|
+| GAID | [!DNL Google Advertising ID] |
+| IDFA | [!DNL Apple ID for Advertisers] |
+| El identificador del servicio de asistencia al cliente | ID del anunciante en la plataforma de asistencia técnica |
+
 ## Tipo de exportación {#export-type}
 
 **[!DNL Segment export]** : exporta todos los miembros de un segmento (audiencia) al destino.
+
+## Requisitos previos {#prerequisites}
+
+Si desea crear su primer destino con [!DNL The Trade Desk] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
 ## Conectarse al destino {#connect-destination}
 
@@ -45,13 +49,13 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 
 ![Configuración Del Destino Del Escritorio Comercial](../../assets/catalog/advertising/tradedesk/configure.png)
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
->
->![Activar El Destino De La Mesa De Comercio](../../assets/catalog/advertising/tradedesk/activate.png)
+Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-En el paso [!UICONTROL Authentication], debe introducir los detalles de conexión [!DNL The Trade Desk]:
+![Activar El Destino De La Mesa De Comercio](../../assets/catalog/advertising/tradedesk/activate.png)
+
+## Paso de autenticación {#authentication}
+
+En el paso **[!UICONTROL Authentication]**, debe introducir los detalles de conexión [!DNL The Trade Desk]:
 
 * **[!UICONTROL Name]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: Descripción que le ayudará a identificar este destino en el futuro.
