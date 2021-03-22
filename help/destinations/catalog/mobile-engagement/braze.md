@@ -3,9 +3,9 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >El destino Braze en Adobe Experience Platform está actualmente en versión beta. La documentación y las funciones están sujetas a cambios.
+
+## Información general {#overview}
 
 El destino [!DNL Braze] le ayuda a enviar datos de perfil a [!DNL Braze].
 
