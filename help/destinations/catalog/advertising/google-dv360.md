@@ -3,7 +3,7 @@ keywords: DoubleClick Gestor de ofertas;DoubleClick Gestor de ofertas;DoubleClic
 title: Conexión de Google Display y Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos de visualización, vídeo y móviles.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Display & Video 360], anteriormente conocido como  [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en las fuentes de inventario de dispositivos móviles, de vídeo y de visualización.
 
-## Especificaciones de destino
+## Detalles de destino {#specifics}
 
 Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL Google Display & Video 360]:
 
@@ -26,7 +26,7 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 >
 >Si desea crear su primer destino con Google Display &amp; Video 360 y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el Servicio de atención al cliente para habilitar la sincronización de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
-### Identidades admitidas {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
 [!DNL Google Ad Manager] admite la activación de identidades descritas en la tabla siguiente.
 
@@ -40,7 +40,7 @@ Tenga en cuenta los siguientes detalles que son específicos de destinos [!DNL G
 | MAID | Microsoft Advertising ID. Este ID identifica de forma exclusiva los dispositivos que ejecutan Windows 10. |  |
 | ID de Amazon Fire TV | Este ID identifica de forma exclusiva los Amazon Fire TV. |  |
 
-### Tipo de exportación {#export-type}
+## Tipo de exportación {#export-type}
 
 **Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) al destino de Google.
 
