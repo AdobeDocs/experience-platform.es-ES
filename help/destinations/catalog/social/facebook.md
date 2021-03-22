@@ -3,15 +3,17 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para segmentación, personalización y supresión de audiencias en función de correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1119'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Facebook] connection
+
+## Información general {#overview}
 
 Active perfiles para sus campañas [!DNL Facebook] para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 
