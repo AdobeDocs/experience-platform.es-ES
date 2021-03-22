@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Para activar los datos en los destinos, debe haber [conectado correctamente a un
 
 Los pasos del flujo de trabajo de activación varían ligeramente entre los tipos de destino. A continuación se describe el flujo de trabajo completo para todos los tipos de destino.
 
-### Seleccione qué destino activar los datos en {#select-destination}
+## Seleccione qué destino activar los datos en {#select-destination}
 
 Se aplica a: Todos los destinos
 
@@ -36,17 +36,17 @@ En la interfaz de usuario de Adobe Experience Platform, vaya a **[!UICONTROL Des
 
 Siga los pasos de la siguiente sección para seleccionar los segmentos que desea activar.
 
-### [!UICONTROL Seleccionar paso ] de segmentos  {#select-segments}
+## [!UICONTROL Select Segments] step  {#select-segments}
 
 Se aplica a: Todos los destinos
 
 ![Paso Seleccionar segmentos](../assets/ui/activate-destinations/select-segments-icon.png)
 
-En el flujo de trabajo **[!UICONTROL Activate destination]** , en la página **[!UICONTROL Select Segments]**, seleccione uno o varios segmentos para activarlos en el destino. Seleccione **[!UICONTROL Siguiente]** para continuar con el paso siguiente.
+En el flujo de trabajo **[!UICONTROL Activate destination]** , en la página **[!UICONTROL Select Segments]** , seleccione uno o varios segmentos para activarlos en el destino. Seleccione **[!UICONTROL Next]** para continuar con el paso siguiente.
 
 ![segmentos a destino](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL Paso de ] asignación de identidades  {#identity-mapping}
+## [!UICONTROL Identity mapping] step  {#identity-mapping}
 
 Se aplica a: destinos sociales y destino publicitario de Google Customer Match
 
@@ -54,7 +54,7 @@ Se aplica a: destinos sociales y destino publicitario de Google Customer Match
 
 Para destinos sociales, debe seleccionar atributos de origen o áreas de nombres de identidad para asignarlos como identidades de destino en el destino.
 
-#### Ejemplo: activación de datos de audiencia en [!DNL Facebook Custom Audience] {#example-facebook}
+## Ejemplo: activación de datos de audiencia en [!DNL Facebook Custom Audience] {#example-facebook}
 
 A continuación se muestra un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Facebook].
 
@@ -79,12 +79,12 @@ Selección de campos de destino:
 
 Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
 
-Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos.
 ![Transformación de asignación de identidad](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
 
-#### Ejemplo: activación de datos de audiencia en [!DNL Google Customer Match] {#example-gcm}
+## Ejemplo: activación de datos de audiencia en [!DNL Google Customer Match] {#example-gcm}
 
 Este es un ejemplo de asignación de identidad correcta al activar datos de audiencia en [!DNL Google Customer Match].
 
@@ -109,32 +109,16 @@ Selección de campos de destino:
 
 Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
 
-Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos.
 ![Transformación de asignación de identidad](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **** Configuración  {#configure}
+## **[!UICONTROL Configure]** step  {#configure}
 
 Se aplica a: Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
 
 ![Configurar paso](../assets/ui/activate-destinations/configure-icon.png)
 
-[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de  [!DNL CSV] archivos. En el paso **[!UICONTROL Configurar]**, puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
+[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de  [!DNL CSV] archivos. En el paso **[!UICONTROL Configure]**, puede configurar la programación y los nombres de archivo para cada segmento que exporte. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
 >[!IMPORTANT]
 > 
@@ -143,15 +127,15 @@ Se aplica a: Destinos de marketing por correo electrónico y destinos de almacen
 >Los nombres de archivos divididos se añaden con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 
-Para agregar una programación para el segmento, seleccione **[!UICONTROL Crear programación]**.
+Para agregar una programación para el segmento, seleccione **[!UICONTROL Create schedule]**.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
 Aparece un cuadro de diálogo que muestra las opciones para crear la programación de segmentos.
 
 * **Exportación** de archivos: Tiene la opción de exportar archivos completos o incrementales. Exportar un archivo completo publica una instantánea completa de todos los perfiles que cumplen los requisitos para ese segmento. Exportar un archivo incremental publica el delta de perfiles que cumplen los requisitos para ese segmento desde la última exportación.
-* **Frecuencia**: Si  **[!UICONTROL Exportar]** archivos completos está seleccionado, tiene la opción de exportar  **** Una vez o  **[!UICONTROL Diariamente]**. Si la opción **[!UICONTROL Exportar archivos incrementales]** está seleccionada, solo tiene la opción de exportar **[!UICONTROL Daily]**. Exportar un archivo **[!UICONTROL Once]** exporta el archivo una vez. Exportar un archivo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST) si se seleccionan archivos completos y 12:00 PM UTC (7:00 AM EST) si se seleccionan archivos incrementales.
-* **Fecha**: Si  **** se selecciona, puede seleccionar la fecha para la exportación única. Si **[!UICONTROL Daily]** está seleccionado, puede seleccionar las fechas de inicio y finalización de las exportaciones.
+* **Frecuencia**: Si  **[!UICONTROL Export full files]** está seleccionado, tiene la opción de exportar  **[!UICONTROL Once]** o  **[!UICONTROL Daily]**. Si **[!UICONTROL Export incremental files]** está seleccionado, solo tiene la opción de exportar **[!UICONTROL Daily]**. Exportar un archivo **[!UICONTROL Once]** lo exporta una vez. Exportar un archivo **[!UICONTROL Daily]** exporta el archivo todos los días desde la fecha de inicio hasta la fecha de finalización a las 12:00 AM UTC (7:00 PM EST) si se seleccionan archivos completos y a las 23:00 PM UTC (7:00 AM EST) si se seleccionan archivos incrementales.
+* **Fecha**: Si  **[!UICONTROL Once]** está seleccionada, puede seleccionar la fecha para la exportación única. Si **[!UICONTROL Daily]** está seleccionado, puede seleccionar las fechas de inicio y finalización de las exportaciones.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -163,27 +147,27 @@ Seleccione el icono de lápiz para abrir una ventana modal y editar los nombres 
 
 En el editor de nombres de archivo, puede seleccionar diferentes componentes para agregarlos al nombre del archivo. El nombre de destino y el ID de segmento no se pueden eliminar de los nombres de archivo. Además de esto, puede agregar lo siguiente:
 
-* **[!UICONTROL Nombre]** del segmento: Puede anexar el nombre del segmento al nombre del archivo.
-* **[!UICONTROL Fecha y hora]**: Seleccione entre añadir un  `MMDDYYYY_HHMMSS` formato o una marca de tiempo de 10 dígitos Unix del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental.
-* **[!UICONTROL Texto]** personalizado: Agregue texto personalizado a los nombres de archivo.
+* **[!UICONTROL Segment name]**: Puede anexar el nombre del segmento al nombre del archivo.
+* **[!UICONTROL Date and time]**: Seleccione entre añadir un  `MMDDYYYY_HHMMSS` formato o una marca de tiempo de 10 dígitos Unix del momento en que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental.
+* **[!UICONTROL Custom text]**: Agregue texto personalizado a los nombres de archivo.
 
-Seleccione **[!UICONTROL Aplicar cambios]** para confirmar la selección.
+Seleccione **[!UICONTROL Apply changes]** para confirmar la selección.
 
 >[!IMPORTANT]
 > 
->Si no selecciona el componente **[!UICONTROL Fecha y hora]**, los nombres de archivo serán estáticos y el nuevo archivo exportado sobrescribirá el archivo anterior en su ubicación de almacenamiento con cada exportación. Cuando se ejecuta un trabajo de importación recurrente desde una ubicación de almacenamiento a una plataforma de marketing por correo electrónico, esta es la opción recomendada.
+>Si no selecciona el componente **[!UICONTROL Date and Time]** , los nombres de archivo serán estáticos y el nuevo archivo exportado sobrescribirá el archivo anterior en su ubicación de almacenamiento con cada exportación. Cuando se ejecuta un trabajo de importación recurrente desde una ubicación de almacenamiento a una plataforma de marketing por correo electrónico, esta es la opción recomendada.
 
 ![editar opciones de nombre de archivo](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UICONTROL Siguiente]** para continuar.
+Una vez que haya terminado de configurar todos los segmentos, seleccione **[!UICONTROL Next]** para continuar.
 
-### **[!UICONTROL Paso de]** programación de segmentos  {#segment-schedule}
+## **[!UICONTROL Segment schedule]** step  {#segment-schedule}
 
 Se aplica a: destinos publicitarios, destinos sociales
 
 ![paso de programación de segmentos](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-En la página **[!UICONTROL Programación del segmento]** puede establecer la fecha de inicio para enviar datos al destino y la frecuencia de envío de datos al destino.
+En la página **[!UICONTROL Segment schedule]** puede establecer la fecha de inicio para enviar datos al destino y la frecuencia de envío de datos al destino.
 
 >[!IMPORTANT]
 >
@@ -193,11 +177,11 @@ En la página **[!UICONTROL Programación del segmento]** puede establecer la fe
 
 >[!IMPORTANT]
 >
->Para Google Customer Match, debe proporcionar el [!UICONTROL ID de la aplicación] en este paso, al activar los segmentos [!DNL IDFA] o [!DNL GAID].
+>Para Google Customer Match, debe proporcionar el [!UICONTROL App ID] en este paso, al activar los segmentos [!DNL IDFA] o [!DNL GAID].
 
 ![introducir id de aplicación](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **** Paso de programación  {#scheduling}
+## **[!UICONTROL Scheduling]** step  {#scheduling}
 
 Se aplica a: destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
 
@@ -205,21 +189,21 @@ Se aplica a: destinos de marketing por correo electrónico y destinos de almacen
 
 En la página **[!UICONTROL Scheduling]** puede ver la fecha de inicio para enviar datos al destino, así como la frecuencia de envío de datos al destino. Estos valores no se pueden editar.
 
-### **[!UICONTROL Seleccionar paso de]** atributos  {#select-attributes}
+## **[!UICONTROL Select attributes]** step  {#select-attributes}
 
 Se aplica a: destinos de marketing por correo electrónico y destinos de almacenamiento en la nube
 
 ![paso seleccionar atributos](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-En la página **[!UICONTROL Select attributes]**, seleccione **[!UICONTROL Add new field]** y elija los atributos que desea enviar al destino.
+En la página **[!UICONTROL Select attributes]** , seleccione **[!UICONTROL Add new field]** y elija los atributos que desea enviar al destino.
 
 >[!NOTE]
 >
 > Adobe Experience Platform prefiere la selección con cuatro atributos recomendados y utilizados comúnmente del esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 Las exportaciones de archivos variarán de las siguientes maneras, en función de si se selecciona `segmentMembership.status`:
-* Si se selecciona el campo `segmentMembership.status`, los archivos exportados incluyen **[!UICONTROL miembros activos]** en la instantánea completa inicial y miembros **[!UICONTROL activos]** y **[!UICONTROL caducados]** en las exportaciones incrementales posteriores.
-* Si el campo `segmentMembership.status` no está seleccionado, los archivos exportados incluyen solo miembros **[!UICONTROL activos]** en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+* Si se selecciona el campo `segmentMembership.status` , los archivos exportados incluyen miembros **[!UICONTROL Active]** en la instantánea completa inicial y miembros **[!UICONTROL Active]** y **[!UICONTROL Expired]** en las exportaciones incrementales posteriores.
+* Si el campo `segmentMembership.status` no está seleccionado, los archivos exportados incluyen únicamente **[!UICONTROL Active]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
 ![atributos recomendados](../assets/ui/activate-destinations/mark-mandatory.png)
 
@@ -237,13 +221,13 @@ Se recomienda que uno de los atributos sea un [identificador único](../../desti
 > 
 Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, en el paso de revisión se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Control de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### **** Reviewstep  {#review}
+## **[!UICONTROL Review]** step  {#review}
 
 Se aplica a: todos los destinos
 
 ![paso de revisión](../assets/ui/activate-destinations/review-icon.png)
 
-En la página **[!UICONTROL Revisar]**, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancelar]** para desglosar el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar la selección y empezar a enviar datos al destino.
+En la página **[!UICONTROL Review]** puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancel]** para desglosar el flujo, **[!UICONTROL Back]** para modificar la configuración o **[!UICONTROL Finish]** para confirmar la selección y empezar a enviar datos al destino.
 
 >[!IMPORTANT]
 >
@@ -251,7 +235,7 @@ En la página **[!UICONTROL Revisar]**, puede ver un resumen de su selección. S
 
 ![violación de la política de datos](../assets/common/data-policy-violation.png)
 
-Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finish]** para confirmar la selección y empezar a enviar datos al destino.
+Si no se ha detectado ninguna infracción de directiva, seleccione **[!UICONTROL Finish]** para confirmar la selección y empezar a enviar datos al destino.
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
@@ -259,8 +243,8 @@ Si no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finis
 
 Siga los pasos a continuación para editar los flujos de activación existentes en Adobe Experience Platform:
 
-1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la pestaña **[!UICONTROL Browse]** y haga clic en el nombre de destino.
-2. Seleccione **[!UICONTROL Editar activación]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
+1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la pestaña **[!UICONTROL Browse]** y, a continuación, haga clic en el nombre de destino.
+2. Seleccione **[!UICONTROL Edit activation]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
@@ -281,13 +265,13 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 La presencia de estos archivos en su ubicación de almacenamiento es la confirmación de que la activación se ha realizado correctamente. Para comprender cómo se estructuran los archivos exportados, puede [descargar un archivo .csv de muestra](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Este archivo de ejemplo incluye los atributos de perfil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` y `personalEmail.address`.
 
-### Destinos publicitarios
+## Destinos publicitarios
 
 Compruebe su cuenta en el destino publicitario correspondiente al que está activando sus datos. Si la activación se ha realizado correctamente, las audiencias se rellenan en la plataforma de publicidad.
 
-### Destinos de redes sociales
+## Destinos de redes sociales
 
-Para [!DNL Facebook], una activación correcta significa que se crearía una audiencia personalizada [!DNL Facebook] mediante programación en [[!UICONTROL Administrador de anuncios de Facebook]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
+Para [!DNL Facebook], una activación correcta significa que se crearía una audiencia personalizada [!DNL Facebook] mediante programación en [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
 
 >[!TIP]
 >
@@ -297,6 +281,6 @@ Para [!DNL Facebook], una activación correcta significa que se crearía una aud
 
 Para desactivar un flujo de activación existente, siga los pasos a continuación:
 
-1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la pestaña **[!UICONTROL Browse]** y haga clic en el nombre de destino.
+1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la pestaña **[!UICONTROL Browse]** y, a continuación, haga clic en el nombre de destino.
 2. Haga clic en el control **[!UICONTROL Enabled]** en el carril derecho para cambiar el estado del flujo de activación.
 3. En la ventana **Update data flow state**, seleccione **Confirm** para desactivar el flujo de activación.
