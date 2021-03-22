@@ -1,50 +1,50 @@
 ---
 keywords: flujo continuo;
 title: Conexión HTTP
-description: El destino HTTP de Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
+description: El destino HTTP en Adobe Experience Platform le permite enviar datos de perfil a extremos HTTP de terceros.
 translation-type: tm+mt
-source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
 
 
-# Conexión (Alpha) [!DNL HTTP]
+# (Alpha) Conexión [!DNL HTTP]
 
 >[!IMPORTANT]
 >
->El destino [!DNL HTTP] de Platform está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
+>El destino [!DNL HTTP] en Platform está actualmente en alfa. La documentación y las funciones están sujetas a cambios.
 
-El destino [!DNL HTTP] es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos [!DNL HTTP] de terceros.
+## Información general {#overview}
+
+El destino [!DNL HTTP] es un destino de flujo continuo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a [!DNL HTTP] extremos de terceros.
 
 Para enviar datos de perfil a [!DNL HTTP] extremos, primero debe conectarse al destino en [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Casos de uso {#use-cases}
 
-El [!DNL HTTP] destino está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a extremos [!DNL HTTP] genéricos.
+El destino [!DNL HTTP] está dirigido a clientes que necesitan exportar datos de perfil XDM y segmentos de audiencia a [!DNL HTTP] extremos genéricos.
 
-[!DNL HTTP] los extremos pueden ser sistemas propios de los clientes o soluciones de terceros.
+[!DNL HTTP] los endpoints pueden ser sistemas propios de los clientes o soluciones de terceros.
 
-## Conectar con destino {#connect-destination}
+## Conectarse al destino {#connect-destination}
 
-En **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]**, seleccione [!DNL HTTP API] y seleccione **[!UICONTROL Configurar]**.
+En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DNL HTTP API] y seleccione **[!UICONTROL Configure]**.
 
 ![Activar destino HTTP](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activar]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activar]** y **[!UICONTROL Configurar]**, consulte la sección [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
->
->![Activar destino HTTP](../assets/catalog/http/connect.png)
+Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-En el paso [!UICONTROL Cuenta], debe definir los detalles de conexión del extremo HTTP. Seleccione **[!UICONTROL Nueva cuenta]** e introduzca los detalles de conexión para el extremo HTTP al que desea conectarse.
+![Activar destino HTTP](../assets/catalog/http/connect.png)
+
+En el paso [!UICONTROL Account], debe definir los detalles de conexión del extremo HTTP. Seleccione **[!UICONTROL New account]** e introduzca los detalles de conexión del extremo HTTP al que desea conectarse.
 - **[!UICONTROL httpEndpoint]**: la finalización  [!DNL URL] del extremo HTTP al que desea enviar los datos de perfil.
-   - Opcionalmente, puede agregar parámetros de consulta a [!UICONTROL httpEndpoint] [!DNL URL].
+   - De forma opcional, puede agregar parámetros de consulta a [!UICONTROL httpEndpoint] [!DNL URL].
 - **[!UICONTROL authEndpoint]**: la finalización  [!DNL URL] del extremo HTTP utilizado para la  [!DNL OAuth2] autenticación.
-- **[!UICONTROL ID]** del cliente: el  [!DNL clientID] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
-- **[!UICONTROL Secreto]** del cliente: el  [!DNL clientSecret] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
+- **[!UICONTROL Client ID]**: el  [!DNL clientID] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
+- **[!UICONTROL Client Secret]**: el  [!DNL clientSecret] parámetro utilizado en las credenciales del  [!DNL OAuth2] cliente.
 
 >[!NOTE]
 >
@@ -52,13 +52,13 @@ En el paso [!UICONTROL Cuenta], debe definir los detalles de conexión del extre
 
 ![Conexión de extremo HTTP](../assets/catalog/http/connect.png)
 
-Haga clic en **[!UICONTROL Conectar al destino]**. Una vez que la conexión se haya realizado correctamente, haga clic en **[!UICONTROL Siguiente]**.
+Haga clic en **[!UICONTROL Connect to destination]**. Una vez que la conexión se haya realizado correctamente, haga clic en **[!UICONTROL Next]**.
 
-En el paso [!UICONTROL Autenticación], introduzca las credenciales de autenticación de la cuenta:
-- **[!UICONTROL Nombre]**: escriba un nombre por el cual reconocerá este destino en el futuro.
-- **[!UICONTROL Descripción]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
-- **[!UICONTROL Encabezados]** personalizados: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información sobre las acciones de mercadotecnia, consulte la página [Administración de datos en Adobe Experience Platform](/help/data-governance/policies/overview.md). Para obtener información sobre las acciones de mercadotecnia definidas por el Adobe, consulte la [información general de las directivas de uso de datos](/help/data-governance/policies/overview.md).
+En el paso [!UICONTROL Authentication], introduzca las credenciales de autenticación de la cuenta:
+- **[!UICONTROL Name]**: introduzca un nombre por el que reconozca este destino en el futuro.
+- **[!UICONTROL Description]**: escriba una descripción que le ayudará a identificar este destino en el futuro.
+- **[!UICONTROL Custom Headers]**: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, siguiendo este formato:  `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Marketing actions]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](/help/data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -66,9 +66,9 @@ En el paso [!UICONTROL Autenticación], introduzca las credenciales de autentica
 
 ![Autenticación HTTP](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Acción]** de mercadotecnia: Las acciones de marketing indican la intención de los datos que se exportarán al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o puede crear su propia acción de marketing. Para obtener más información acerca de las acciones de mercadotecnia, consulte la [información general de las directivas de uso de datos](../../data-governance/policies/overview.md).
+**[!UICONTROL Marketing action]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../data-governance/policies/overview.md).
 
-Haga clic en **[!UICONTROL Crear destino]**.
+Haga clic en **[!UICONTROL Create destination]**.
 
 ## Activar segmentos
 
@@ -76,11 +76,11 @@ Consulte [Activar perfiles y segmentos en un destino](../ui/activate-destination
 
 ## Atributos de destino
 
-Durante el paso [[!UICONTROL Seleccionar atributos]](../ui/activate-destinations.md#select-attributes), cuando [active segmentos](../ui/activate-destinations.md) en un destino [!DNL HTTP], le recomendamos que seleccione un identificador único del esquema de [unión](../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
+Durante el paso [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes), al [activar segmentos](../ui/activate-destinations.md) en un destino [!DNL HTTP], se recomienda seleccionar un identificador único de su [esquema de unión](../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
 
 ## Datos exportados {#exported-data}
 
-Los datos exportados [!DNL Experience Platform] llegan al destino [!DNL HTTP] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha cualificado para un segmento determinado y ha salido de otro. Las identidades de este cliente potencial son [!DNL ECID] y email.
+Los datos [!DNL Experience Platform] exportados llegan al destino [!DNL HTTP] en formato JSON. Por ejemplo, el evento siguiente contiene el atributo de perfil de dirección de correo electrónico de una audiencia que se ha clasificado para un segmento determinado y ha salido de otro segmento. Las identidades de este posible cliente son [!DNL ECID] y correo electrónico.
 
 ```json
 {
