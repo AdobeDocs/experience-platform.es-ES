@@ -3,9 +3,9 @@ keywords: conexión linkedin;conexión linkedin;destinos linkedin;linkedin;
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Linke
 
 Una empresa de software organiza una conferencia y quiere mantenerse en contacto con los participantes, y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede ingerir direcciones de correo electrónico o ID de dispositivos móviles desde su propio [!DNL CRM] en Adobe Experience Platform. A continuación, pueden generar segmentos a partir de sus propios datos sin conexión y enviarlos a la plataforma social [!DNL LinkedIn], lo que optimiza su gasto en publicidad.
 
-## Detalles de destino {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] admite la activación de las siguientes identidades: correos electrónicos con hash,  [!DNL GAID] y  [!DNL IDFA].
-
-### Identidades admitidas {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
 
@@ -38,23 +34,23 @@ Una empresa de software organiza una conferencia y quiere mantenerse en contacto
 | email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para los correos electrónicos de texto sin formato y con hash, respectivamente. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos. |
 
 
-### Tipo de exportación {#export-type}
+## Tipo de exportación {#export-type}
 
 **Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en el  [!DNL LinkedIn Matched Audiences] destino.
 
-### Requisitos previos de cuenta de LinkedIn {#LinkedIn-account-prerequisites}
+## Requisitos previos de cuenta de LinkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar el destino [!UICONTROL LinkedIn Matched Audience] , asegúrese de que su cuenta [!DNL LinkedIn Campaign Manager] tenga el nivel de permiso [!DNL Creative Manager] o superior.
 
 Para obtener información sobre cómo editar los permisos de usuario de [!DNL LinkedIn Campaign Manager], consulte [Agregar, editar y eliminar permisos de usuario en cuentas publicitarias](https://www.linkedin.com/help/lms/answer/5753) en la documentación de LinkedIn.
 
-### Requisitos de coincidencia de ID {#id-matching-requirements}
+## Requisitos de coincidencia de ID {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] exige que no se envíe con claridad ninguna información de identificación personal (PII). Por lo tanto, las audiencias activadas en [!DNL LinkedIn Matched Audiences] pueden desactivarse mediante identificadores *hash*, como direcciones de correo electrónico o ID de dispositivos móviles.
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
-#### Requisitos de hash de correo electrónico {#email-hashing-requirements}
+## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
 Puede hash sobre las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o usar las direcciones de correo electrónico claramente en el Experience Platform, y tener [!DNL Platform] hash sobre ellas cuando se activen.
 
