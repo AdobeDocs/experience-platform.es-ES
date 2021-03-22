@@ -3,7 +3,7 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 1%
@@ -25,7 +25,7 @@ El destino [!DNL Braze] le ayuda a enviar datos de perfil a [!DNL Braze].
 
 Para enviar datos de perfil a [!DNL Braze], primero debe conectarse al destino.
 
-## Especificaciones de destino {#destination-specs}
+## Detalles de destino {#specifics}
 
 Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL Braze]:
 
