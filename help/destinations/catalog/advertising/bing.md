@@ -3,10 +3,10 @@ keywords: 'publicidad; bing; '
 title: Conexión de Microsoft Bing
 description: Con el destino de la conexión de Microsoft Bing, puede ejecutar campañas digitales con objetivo de audiencia y redireccionamiento en toda la publicidad de presentación de Microsoft.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 0%
+source-wordcount: '513'
+ht-degree: 1%
 
 ---
 
@@ -19,25 +19,25 @@ El destino [!DNL Microsoft Bing] le ayuda a enviar datos de perfil a [!DNL Micro
 
 Para enviar datos de perfil a [!DNL Microsoft Bing], primero debe conectarse al destino.
 
-## Especificaciones de destino {#destination-specs}
-
-Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL Microsoft Bing]:
-
-* Puede enviar las siguientes [identities](../../../identity-service/namespaces.md) a destinos [!DNL Microsoft Bing]: [!DNL Microsoft ID].
-
->[!IMPORTANT]
->
->Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
-
 ## Casos de uso {#use-cases}
 
 Como especialista en marketing, quiero poder usar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para dirigirme a los usuarios a través de la publicidad de display en los canales [!DNL Microsoft Advertising].
+
+## Identidades admitidas {#supported-identities}
+
+[!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Obtenga más información sobre [identities](/help/identity-service/namespaces.md).
+
+| Identidad de Target | Descripción |
+|---|---|
+| MAID | Microsoft Advertising ID |
 
 ## Tipo de exportación {#export-type}
 
 **[!DNL Segment Export]** : exporta todos los miembros de un segmento (audiencia) al  [!DNL Microsoft Bing] destino.
 
 ## Requisitos previos {#prerequisites}
+
+Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o con el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
@@ -49,13 +49,13 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 
 ![Configuración del destino de Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
->
->![Activar destino de Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
+Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-En el paso [!UICONTROL Authentication] debe introducir los detalles de conexión de destino:
+![Activar destino de Microsoft Bing](../../assets/catalog/advertising/bing/activate.png)
+
+## Paso de autenticación {#authentication}
+
+En el paso **[!UICONTROL Authentication]** debe introducir los detalles de conexión de destino:
 
 * **[!UICONTROL Name]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: Descripción que le ayudará a identificar este destino en el futuro.
