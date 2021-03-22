@@ -6,10 +6,10 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 10%
+source-wordcount: '463'
+ht-degree: 11%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 10%
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo](./api/email-marketing.md)
 * Guías de la interfaz de usuario {#ui}
-   * [Información general del espacio de trabajo Destinations](./ui/destinations-workspace.md)
+   * [Espacio de trabajo de destinos](./ui/destinations-workspace.md)
    * [Ver detalles de destino](./ui/destination-details-page.md)
    * [Conectarse a un destino](./ui/connect-destination.md)
    * [Activar perfiles y segmentos en un destino](./ui/activate-destinations.md)
