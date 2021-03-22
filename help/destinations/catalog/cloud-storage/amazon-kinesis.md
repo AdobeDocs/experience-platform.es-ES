@@ -1,11 +1,11 @@
 ---
-keywords: Amazon Kinesis;destino de cinesis;kinesis
+keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: Conexión de Amazon Kinesis
-description: Cree una conexión saliente en tiempo real con el almacenamiento de Amazon Kinesis para transmitir datos de Adobe Experience Platform.
+description: Cree una conexión saliente en tiempo real al almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 El servicio [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] le permite recopilar y procesar grandes flujos de registros de datos en tiempo real.
 
-Puede crear una conexión saliente en tiempo real al almacenamiento [!DNL Amazon Kinesis] para transmitir datos desde Adobe Experience Platform.
+Puede crear una conexión saliente en tiempo real con su almacenamiento [!DNL Amazon Kinesis] para transmitir datos desde Adobe Experience Platform.
 
 * Para obtener más información sobre [!DNL Amazon Kinesis], consulte la [documentación de Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Para conectarse a [!DNL Amazon Kinesis] mediante programación, consulte el [tutorial de API de destinos de transmisión](../../api/streaming-destinations.md).
@@ -43,19 +43,19 @@ Consulte [Flujo de trabajo de destinos de almacenamiento en la nube ](./workflow
 
 Para destinos [!DNL Amazon Kinesis] , introduzca la siguiente información en el flujo de trabajo de creación de destino:
 
-### En el paso Autenticación {#authentication-step}
+## Paso de autenticación {#authentication-step}
 
-* **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En  [!DNL Amazon Web Services], genere un  `access key - secret access key` par para conceder a Platform acceso a su  [!DNL Amazon Kinesis] cuenta. Obtenga más información en la [documentación de Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]clave de acceso y clave** secreta: En  [!DNL Amazon Web Services], genere un  `access key - secret access key` par para conceder a Platform acceso a su  [!DNL Amazon Kinesis] cuenta. Obtenga más información en la [documentación de los servicios web de Amazon](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **región**: Indique a qué  [!DNL Amazon Web Services] región se retransmitirán los datos.
 
 ![Campos de entrada en el paso de cuenta](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### En el paso Configuración {#setup-step}
+## Paso de configuración {#setup-step}
 
 * **Nombre**: Proporcione un nombre a la conexión para  [!DNL Amazon Kinesis]
 * **Descripción**: Proporcione una descripción para la conexión a  [!DNL Amazon Kinesis].
 * **flujo**: Proporcione el nombre de un flujo de datos existente en su  [!DNL Amazon Kinesis] cuenta. Platform exportará datos a este flujo.
-* **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketing actions]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 ![Campos de entrada en el paso de autenticación](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
