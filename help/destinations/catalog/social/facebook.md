@@ -3,7 +3,7 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para segmentación, personalización y supresión de audiencias en función de correos electrónicos con hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cump
 
 En función del tipo de ID que ingrese en Adobe Experience Platform, debe cumplir sus requisitos correspondientes.
 
-### Requisitos de hash de números de teléfono {#phone-number-hashing-requirements}
+## Requisitos de hash de números de teléfono {#phone-number-hashing-requirements}
 
 Existen dos métodos para activar los números de teléfono en [!DNL Facebook]:
 
@@ -86,7 +86,7 @@ Existen dos métodos para activar los números de teléfono en [!DNL Facebook]:
 >Los números de teléfono introducidos en el espacio de nombres `Phone` no se pueden activar en [!DNL Facebook].
 
 
-### Requisitos de hash de correo electrónico {#email-hashing-requirements}
+## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
 Puede hash sobre las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o usar las direcciones de correo electrónico claramente en el Experience Platform, y tener [!DNL Platform] hash sobre ellas cuando se activen.
 
@@ -109,7 +109,7 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Uso de áreas de nombres personalizadas {#custom-namespaces}
+## Uso de áreas de nombres personalizadas {#custom-namespaces}
 
 Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
 
