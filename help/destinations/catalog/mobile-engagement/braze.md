@@ -3,10 +3,10 @@ keywords: móvil; brasil; mensajería;
 title: Conexión con el Brazo
 description: Braze es una completa plataforma de participación del cliente que ofrece experiencias relevantes e inolvidables entre los clientes y las marcas que les encantan.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 2%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Tenga en cuenta los siguientes detalles que son específicos del destino [!DNL B
 
 Como especialista en marketing, quiero segmentar usuarios en un destino de participación móvil, con segmentos incorporados en [!DNL Adobe Experience Platform]. Además, quiero ofrecerles experiencias personalizadas basadas en atributos de sus perfiles [!DNL Adobe Experience Platform] en cuanto los segmentos y perfiles se actualicen en [!DNL Adobe Experience Platform].
 
-### Identidades admitidas {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
 [!DNL Google Ad Manager] admite la activación de identidades descritas en la tabla siguiente.
 
@@ -49,7 +49,6 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 
 **[!DNL Profile-based]** - está exportando todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos) o identidades, según la asignación de campos.
 [!DNL Adobe Experience Platform] los segmentos se exportan a  [!DNL Braze] en el  `AdobeExperiencePlatformSegments` atributo .
-
 
 ## Conectarse al destino {#connect-destination}
 
@@ -128,7 +127,7 @@ Ahora debería ver la asignación de campos en la lista .
 
 Para agregar más asignaciones, repita los pasos anteriores.
 
-### Ejemplo {#mapping-example}
+## Ejemplo de asignación {#mapping-example}
 
 Supongamos que el esquema de perfil XDM y la instancia [!DNL Braze] contienen los siguientes atributos e identidades:
 
