@@ -1,11 +1,11 @@
 ---
 keywords: extensión de beemray
 title: Extensión de Beemray
-description: La extensión de Adobe es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión de Beemray es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de la extensión en Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 3%
 
 # [!DNL Beemray] Extensión {#beemray-extension}
 
-[!DNL Beemray] le ayuda a acelerar su producto con contexto de situación. Le permite obtener perspectivas, crear nuevas experiencias, impulsar interacciones y participar en momentos que realmente importan. Beemray automatiza la inteligencia contextual mediante el aprendizaje automático. Beemray se conecta a Adobe Experience Cloud y al resto de sus socios técnicos. Todo ocurre en tiempo real. Esta extensión instala el SDK [!DNL Beemray] en su sitio.
+## Información general {#overview}
 
-Adobe Experience Platform es una extensión de personalización. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+[!DNL Beemray] le ayuda a acelerar su producto con contexto de situación. Le permite obtener perspectivas, crear nuevas experiencias, impulsar interacciones y participar en momentos que realmente importan. Beemray automatiza la inteligencia contextual mediante el aprendizaje automático. Beemray se conecta a Adobe Experience Cloud y al resto de sus socios tecnológicos. Todo ocurre en tiempo real. Esta extensión instala el SDK [!DNL Beemray] en su sitio.
 
-Este destino es una extensión [!DNL Adobe Experience Platform Launch]. Para obtener más información sobre cómo funcionan las [!DNL Platform Launch] extensiones en Platform, consulte [Información general sobre las extensiones de Experience Platform Launch](../launch-extensions/overview.md).
+Beemray es una extensión de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+
+Este destino es una extensión [!DNL Adobe Experience Platform Launch]. Para obtener más información sobre cómo funcionan las [!DNL Platform Launch] extensiones en Platform, consulte [información general sobre las extensiones de Experience Platform Launch](../launch-extensions/overview.md).
 
 ![Extensión de Beemray](../../assets/catalog/personalization/beemray/catalog.png)
 
@@ -35,13 +37,13 @@ En la [Platform interface](http://platform.adobe.com/), vaya a **[!UICONTROL Des
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
-Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configurar]** en el carril derecho. Si el control **[!UICONTROL Configure]** aparece atenuado, le falta el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
+Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configure]** en el carril derecho. Si el control **[!UICONTROL Configure]** está atenuado, le falta el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
 
 En la ventana **[!UICONTROL Select available Platform Launch property]**, seleccione la propiedad [!DNL Platform Launch] en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad en [!DNL Platform Launch]. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información sobre las propiedades en la sección [Properties page](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentación [!DNL Launch].
 
 El flujo de trabajo le lleva a [!DNL Platform Launch] para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la página [Beemray en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 También puede instalar la extensión directamente en la [interfaz de Adobe Experience Platform Launch](https://launch.adobe.com/). Consulte [Añadir una nueva extensión](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) en la documentación de [!DNL Platform Launch].
 
