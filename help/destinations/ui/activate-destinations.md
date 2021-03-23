@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2069'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Selección de campos de origen:
 
 Selección de campos de destino:
 
-* Seleccione el área de nombres `Email_LC_SHA256` como identidad de destino cuando las áreas de nombres de origen sean `Email` o `Email_LC_SHA256`.
+* Seleccione el espacio de nombres `Email_LC_SHA256` como identidad de destino cuando los espacios de nombres de origen sean `Email` o `Email_LC_SHA256`.
 * Seleccione el espacio de nombres `Phone_SHA256_E.164` como identidad de destino cuando los espacios de nombres de origen sean `PHONE_E.164` o `Phone_SHA256_E.164`.
 * Seleccione los espacios de nombres `IDFA` o `GAID` como identidad de destino cuando los espacios de nombres de origen sean `IDFA` o `GAID`.
 * Seleccione el espacio de nombres `User_ID` como identidad de destino cuando el espacio de nombres de origen sea personalizado.
@@ -143,7 +143,7 @@ Aparece un cuadro de diálogo que muestra las opciones para crear la programaci�
 
 Los nombres de archivo predeterminados constan del nombre de destino, el ID de segmento y un indicador de fecha y hora. Por ejemplo, puede editar los nombres de archivo exportados para distinguir entre diferentes campañas o para que se añada el tiempo de exportación de datos a los archivos.
 
-Seleccione el icono de lápiz para abrir una ventana modal y editar los nombres de archivo. Tenga en cuenta que los nombres de archivo están limitados a 255 caracteres.
+Seleccione el icono de lápiz para abrir una ventana modal y editar los nombres de archivo. Los nombres de archivo están limitados a 255 caracteres.
 
 ![configurar nombre de archivo](../assets/ui/activate-destinations/configure-name.png)
 
