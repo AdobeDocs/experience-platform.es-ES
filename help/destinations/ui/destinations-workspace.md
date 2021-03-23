@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema, que se describen en las secciones siguientes.
 seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ La interfaz de usuario de Platform proporciona varias opciones de búsqueda y fi
 
 ![filtrado de destinos y demostración de búsqueda](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Las tarjetas de destino contienen un control **[!UICONTROL Configure]** o **[!UICONTROL Activate]** y un control secundario que muestra más opciones. A continuación se describen todas estas situaciones:
+Las tarjetas de destino contienen un control **[!UICONTROL Configure]** o **[!UICONTROL Activate]** y un control secundario que muestra más opciones. Estos controles se describen a continuación:
 
 | Control | Descripción |
 ---------|----------
@@ -47,7 +47,7 @@ Las tarjetas de destino contienen un control **[!UICONTROL Configure]** o **[!UI
 
 ![Controles en la tarjeta de destino](../assets/ui/workspace/destination-card-options.png)
 
-Seleccione una tarjeta de destino en el catálogo para abrir el carril derecho.  Aquí puede ver una descripción del destino. El carril derecho proporciona los mismos controles descritos en la tabla anterior, así como una descripción del destino y una indicación de la categoría y el tipo de destino.
+Seleccione una tarjeta de destino en el catálogo para abrir el carril derecho. Aquí puede ver una descripción del destino. El carril derecho proporciona los mismos controles descritos en la tabla anterior, así como una descripción del destino y una indicación de la categoría y el tipo de destino.
 
 ![Opciones de catálogo de destino](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,8 +98,8 @@ La pestaña **[!UICONTROL Browse]** muestra los destinos con los que ha establec
 | Elemento | Descripción |
 ---------|----------
 | Nombre | Nombre que ha proporcionado para el flujo de activación a este destino. La misma columna incluye dos controles: [!UICONTROL Activate ] y [!UICONTROL Delete destination]. |
-| Estado de ejecución del último flujo | Estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
-| Fecha de ejecución del último flujo | Hora y fecha en que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
+| [!UICONTROL Last Flow Run Status] | Estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
+| [!UICONTROL Last Flow Run Date] | Hora y fecha en que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Destination] | La plataforma de destino que seleccionó para el flujo de activación. |
 | [!UICONTROL Connection Type] | Representa el tipo de conexión con su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: Puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: Servidor a servidor.</li><li>Para destinos de flujo continuo: Puede ser [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | Credenciales de cuenta que ha seleccionado para el flujo de destino. |
