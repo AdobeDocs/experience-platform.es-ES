@@ -1,12 +1,12 @@
 ---
 keywords: destinos;destino;página de detalles de destinos;página de detalles de destinos
 title: Ver detalles de destino
-description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
-seo-description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino, como el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
+description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
+seo-description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Aparecerá la página de detalles del destino, que muestra sus controles disponi
 
 ![](../assets/ui/details-page/details.png)
 
-Además, en la ficha Examinar, puede elegir eliminar el flujo de datos seleccionado seleccionando el icono ![papelera](../assets/ui/details-page/trash-icon.png). Los segmentos que se activen en un destino no se asignarán antes de que se elimine el flujo de datos.
+Además, en la ficha Examinar, puede elegir eliminar el flujo de datos seleccionado seleccionando el icono ![papelera](../assets/ui/details-page/trash-icon.png). Cualquier segmento activado en destinos se desasignará antes de que se elimine el flujo de datos.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -45,7 +45,7 @@ La tabla siguiente abarca los controles y detalles proporcionados por el carril 
 | Elemento del carril derecho | Descripción |
 | --- | --- |
 | [!UICONTROL Activate] | Seleccione este control para editar qué segmentos están asignados al destino. Consulte la guía sobre [activación de segmentos en un destino](./activate-destinations.md) para obtener más información. |
-| [!UICONTROL Delete] | Permite eliminar este flujo de datos y desasignar los segmentos que se activaron anteriormente, si existen. |
+| [!UICONTROL Delete] | Permite eliminar este flujo de datos y desasigna los segmentos que se activaron anteriormente, si existen. |
 | [!UICONTROL Destination name] | Este campo se puede editar para actualizar el nombre del destino. |
 | [!UICONTROL Description] | Este campo se puede editar para actualizar o añadir una descripción opcional al destino. |
 | [!UICONTROL Destination] | Representa la plataforma de destino a la que se envían las audiencias. Consulte el [catálogo de destinos](../catalog/overview.md) para obtener más información. |
