@@ -1,13 +1,13 @@
 ---
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
 solution: Intelligent Services, Experience Platform
-title: Análisis de las puntuaciones de atribución mediante el servicio de Consulta
-topic: Attribution AI queries
-description: Obtenga información sobre cómo utilizar el servicio de Consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
+title: Análisis de puntuaciones de atribución mediante el servicio de consulta
+topic: consultas de Attribution AI
+description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # Análisis de puntuaciones de atribución mediante el servicio de Consulta
 
-Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras debajo de la columna `touchpointsDetail`.
+Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras en la columna `touchpointsDetail`.
 
 | Información de Touchpoint | Columna |
 | ---------------------- | ------ |
 | Nombre del punto de contacto | `touchpointsDetail. touchpointName` |
-| Canal de Touchpoint | `touchpointsDetail.touchPoint.mediaChannel` |
-| Puntuaciones algorítmicas del Attribution AI de Touchpoint | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Canal de punto de contacto | `touchpointsDetail.touchPoint.mediaChannel` |
+| Puntuaciones algorítmicas de Attribution AI de Touchpoint | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Búsqueda de rutas de datos
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Datasets]**. A continuación, seleccione la ficha **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para las puntuaciones de Attribution AI.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo. Aparece la página **[!UICONTROL Datasets]**. A continuación, seleccione la pestaña **[!UICONTROL Browse]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
 
 ![Acceso a la instancia](./images/aai-query/datasets_browse.png)
 
@@ -33,37 +33,37 @@ Seleccione el conjunto de datos de salida. Aparece la página de actividad del c
 
 ![página de actividad del conjunto de datos](./images/aai-query/select_preview.png)
 
-Dentro de la página de actividad del conjunto de datos, seleccione **[!UICONTROL conjunto de datos de Previsualización]** en la esquina superior derecha para realizar la previsualización de los datos y asegurarse de que se ingirió según lo esperado.
+En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Preview dataset]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se incorporaron según lo esperado.
 
-![Conjunto de datos de previsualización](./images/aai-query/preview_dataset.JPG)
+![vista previa del conjunto de datos](./images/aai-query/preview_dataset.JPG)
 
-Después de obtener una vista previa de los datos, seleccione el esquema en el carril derecho. Aparece una ventana emergente con el nombre y la descripción del esquema. Seleccione el hipervínculo del nombre del esquema para redireccionar al esquema de puntuación.
+Después de obtener una vista previa de los datos, seleccione el esquema en el carril derecho. Aparece una ventana emergente con el nombre y la descripción del esquema. Seleccione el hipervínculo del nombre del esquema para redirigir al esquema de puntuación.
 
-![seleccionar el esquema](./images/aai-query/select_schema.png)
+![seleccione el esquema](./images/aai-query/select_schema.png)
 
-Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionada, se abre la barra lateral **[!UICONTROL Propiedades del campo]**, lo que le permite copiar la ruta para utilizarla en la creación de consultas.
+Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionado, el carril lateral **[!UICONTROL Field properties]** se abre y le permite copiar la ruta para utilizarla en la creación de consultas.
 
 ![copiar la ruta](./images/aai-query/copy_path.png)
 
-## Acceso al servicio de Consulta
+## Acceso al servicio de consultas
 
-Para acceder al servicio de Consulta desde la interfaz de usuario de la plataforma, seleccione el inicio **[!UICONTROL Consultas]** en el menú de navegación izquierdo y, a continuación, seleccione la ficha **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
+Para acceder al servicio de consulta desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Queries]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]** . Se carga una lista de las consultas guardadas anteriormente.
 
-![Exploración del servicio de consulta](./images/aai-query/query_tab.png)
+![examinar el servicio de consultas](./images/aai-query/query_tab.png)
 
-A continuación, seleccione **[!UICONTROL Crear consulta]** en la esquina superior derecha. Se carga el Editor de Consultas. Con el Editor de Consultas puede empezar a crear consultas utilizando los datos de puntuación.
+A continuación, seleccione **[!UICONTROL Create query]** en la esquina superior derecha. Se carga el Editor de consultas. Con el Editor de consultas puede empezar a crear consultas utilizando los datos de puntuación.
 
-![Editor de consultas](./images/aai-query/query_example.png)
+![editor de consultas](./images/aai-query/query_example.png)
 
-Para obtener más información sobre el Editor de Consultas, visite la [guía del usuario del Editor de Consultas](../../query-service/ui/user-guide.md).
+Para obtener más información sobre el Editor de consultas, visite la [guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md).
 
 ## Plantillas de consulta para análisis de puntuación de atribución
 
-Las consultas siguientes pueden utilizarse como plantilla para distintos escenarios de análisis de puntuaciones. Debe reemplazar los valores `_tenantId` y `your_score_output_dataset` por los valores adecuados que se encuentran en el esquema de resultados de puntuación.
+Las consultas siguientes pueden utilizarse como plantilla para distintos escenarios de análisis de puntuación. Debe reemplazar `_tenantId` y `your_score_output_dataset` con los valores adecuados que se encuentran en el esquema de salida de puntuación.
 
 >[!NOTE]
 >
-> Según cómo se hayan ingerido los datos, los valores que se utilizan a continuación, como `timestamp`, pueden tener un formato diferente.
+> Dependiendo de cómo se introduzcan los datos, los valores utilizados a continuación, como `timestamp`, podrían tener un formato diferente.
 
 ### Ejemplos de validación
 
@@ -106,7 +106,7 @@ Las consultas siguientes pueden utilizarse como plantilla para distintos escenar
         conversionName
 ```
 
-### Ejemplos de análisis de tendencias
+### Ejemplo de análisis de tendencias
 
 **Número de conversiones por día**
 
@@ -129,7 +129,7 @@ Las consultas siguientes pueden utilizarse como plantilla para distintos escenar
     LIMIT 20
 ```
 
-### Ejemplos de análisis de distribución
+### Ejemplo de análisis de distribución
 
 **Cantidad de puntos de contacto en rutas de conversión por tipo definido (dentro de una ventana de conversión)**
 
@@ -155,7 +155,7 @@ Las consultas siguientes pueden utilizarse como plantilla para distintos escenar
         conversionName, tp_count DESC
 ```
 
-### Ejemplos de generación de perspectivas
+### Ejemplos de generación de perspectiva
 
 **Desglose de unidades incrementales por punto de contacto y fecha de conversión (dentro de una ventana de conversión)**
 
@@ -241,7 +241,7 @@ Las consultas siguientes pueden utilizarse como plantilla para distintos escenar
 
 **Avanzado: análisis de longitud de ruta**
 
-Obtenga una distribución de la longitud de ruta para cada tipo de evento de conversión:
+Obtenga una distribución de longitud de ruta para cada tipo de evento de conversión:
 
 ```sql
     WITH agg_path AS (
@@ -270,9 +270,9 @@ Obtenga una distribución de la longitud de ruta para cada tipo de evento de con
         conversionName, path_length
 ```
 
-**Avanzado: número distinto de puntos de contacto en la análisis de rutas de conversión**
+**Avanzado : número distinto de puntos de contacto en el análisis de rutas de conversión**
 
-Obtenga la distribución del número de puntos de contacto distintos en una ruta de conversión para cada tipo de evento de conversión:
+Obtenga la distribución del número de puntos de contacto diferentes en una ruta de conversión para cada tipo de evento de conversión:
 
 ```sql
     WITH agg_path AS (
@@ -299,4 +299,58 @@ Obtenga la distribución del número de puntos de contacto distintos en una ruta
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Ejemplo de aplanamiento y explosión de esquema
+
+Esta consulta aplana la columna de estructura en varias columnas singulares y explota las matrices en varias filas. Esto ayuda a transformar las puntuaciones de atribución en un formato CSV. El resultado de esta consulta tiene una conversión y uno de los puntos de contacto correspondientes a esa conversión en cada fila.
+
+>[!TIP]
+>
+> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede tomar los valores de los nombres de columna opcionales (columnas de informes) que se añadieron durante la configuración de la instancia de Attribution AI. Revise el esquema de salida de puntuación para encontrar los `{COLUMN_NAME}` valores necesarios para completar esta consulta.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
