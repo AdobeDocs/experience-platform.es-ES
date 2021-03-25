@@ -5,7 +5,7 @@ type: Tutorial
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -27,9 +27,9 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione su d
 >
 >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-## Paso de autenticación {#authentication}
+## Paso de cuenta {#account}
 
-En el paso **[!UICONTROL Authentication]**, si ha configurado anteriormente una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino de almacenamiento en la nube. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+En el paso **[!UICONTROL Account]**, si ha configurado anteriormente una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino de almacenamiento en la nube. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
 
 Consulte [Destino de Amazon S3](./amazon-s3.md), destino [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destino [[!DNL Azure Event Hubs]](./azure-event-hubs.md) y destino [SFTP](./sftp.md) para obtener información específica sobre las credenciales introducidas en el paso **Autenticación**.
 
@@ -39,9 +39,9 @@ Consulte [Destino de Amazon S3](./amazon-s3.md), destino [[!DNL Amazon Kinesis]]
 
 ![Conectarse al destino de almacenamiento en la nube: paso de autenticación](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Paso de configuración {#setup}
+## Paso de autenticación {#authentication}
 
-En el paso **[!UICONTROL Setup]**, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación.
+En el paso **[!UICONTROL Authentication]**, introduzca un **[!UICONTROL Name]** y un **[!UICONTROL Description]** para el flujo de activación.
 
 En este paso, también puede seleccionar cualquier **[!UICONTROL Marketing action]** que deba aplicarse a este destino. Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
