@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Aplicar el cumplimiento de uso de datos en los segmentos de audiencia
+title: Importación y uso de audiencias externas
+description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -14,15 +15,15 @@ ht-degree: 0%
 
 # Importación y uso de audiencias externas
 
-Adobe Experience Platform admite la capacidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva definición de segmento. Este documento proporciona un tutorial para configurar Experience Platform para importar y utilizar audiencias externas.
+Adobe Experience Platform admite la posibilidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva definición de segmento. Este documento proporciona un tutorial para configurar un Experience Platform para importar y utilizar audiencias externas.
 
 ## Primeros pasos
 
 - [Servicio](../home.md) de segmentación: Permite generar segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
 - [Perfil](../../profile/home.md) del cliente en tiempo real: Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
-- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en Experience Platform.
-- [ingesta](../../ingestion/streaming-ingestion/overview.md) de transmisión: Cómo Experience Platform incorpora y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
+- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en el Experience Platform.
+- [ingesta](../../ingestion/streaming-ingestion/overview.md) de transmisión: El modo en que el Experience Platform ingesta y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
 
 ## Creación de un área de nombres de identidad para la audiencia externa
 
@@ -36,11 +37,11 @@ Para crear un área de nombres de identidad, siga las instrucciones de la [guía
 
 Después de crear un área de nombres de identidad, debe crear un nuevo esquema para el segmento que va a crear.
 
-Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Browse]** para ver una selección completa de los tipos de esquema disponibles.
+Para empezar a componer un esquema, seleccione primero **[!UICONTROL Schemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Create schema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Browse]** para ver una selección completa de los tipos de esquema disponibles.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Dado que está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Usar clase existente]**. Ahora, seleccione la clase **[!UICONTROL Segment definition]** seguida de **[!UICONTROL Assign class]**.
+Dado que está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Use existing class]**. Ahora, seleccione la clase **[!UICONTROL Segment definition]**, seguida de **[!UICONTROL Assign class]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -48,7 +49,7 @@ Ahora que se ha creado el esquema, debe especificar qué campo contendrá el ID 
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Después de marcar el campo `_id` como identidad principal, seleccione el título del esquema, seguido del botón denominado **[!UICONTROL Perfil]**. Seleccione **[!UICONTROL Enable]** para habilitar el esquema para [!DNL Real-time Customer Profile].
+Después de marcar el campo `_id` como identidad principal, seleccione el título del esquema, seguido del botón denominado **[!UICONTROL Profile]**. Seleccione **[!UICONTROL Enable]** para habilitar el esquema para [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -58,7 +59,7 @@ Ahora, este esquema está habilitado para Perfil, con la identificación princip
 
 Después de configurar el esquema, deberá crear un conjunto de datos para los metadatos del segmento.
 
-Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir la opción **[!UICONTROL Create dataset from schema]** utilizando el esquema que ha creado anteriormente.
+Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir la opción **[!UICONTROL Create dataset from schema]** , utilizando el esquema creado anteriormente.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -78,7 +79,7 @@ Una vez que haya creado la conexión de flujo continuo, tendrá acceso a su punt
 
 ## Generación de segmentos con audiencias importadas
 
-Una vez configuradas las audiencias importadas, se pueden utilizar como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Campos]**.
+Una vez configuradas las audiencias importadas, se pueden utilizar como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione la pestaña **[!UICONTROL Audiences]** en la sección **[!UICONTROL Fields]**.
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
