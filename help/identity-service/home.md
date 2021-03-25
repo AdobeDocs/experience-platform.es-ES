@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;identidad;identidad;gráfic
 solution: Experience Platform
 title: Información general del servicio de identidad
 topic: sobre validación
-description: El servicio de ID de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales e impactantes en tiempo real.
+description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Información general del [!DNL Identity Service]
 
-La entrega de experiencias digitales relevantes requiere una comprensión completa de su cliente. Esto se hace más difícil cuando los datos de sus clientes están fragmentados en distintos sistemas, lo que hace que cada cliente individual parezca tener múltiples &quot;identidades&quot;. Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales e impactantes en tiempo real.
+La entrega de experiencias digitales relevantes requiere una comprensión completa de su cliente. Esto se hace más difícil cuando los datos de sus clientes están fragmentados en distintos sistemas, lo que hace que cada cliente individual parezca tener múltiples &quot;identidades&quot;. Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 
 ## Explicación [!DNL Identity Service]
 
@@ -62,11 +62,7 @@ Los clientes pueden interactuar con su marca mediante una combinación de canale
 
 [!DNL Experience Platform] aborda este desafío mediante dos conceptos:  [áreas de ](#identity-namespaces) nombres de identidad y gráficos de  [identidad](#identity-graphs).
 
-El siguiente vídeo está diseñado para ayudar a comprender las identidades y los gráficos de identidad. El siguiente vídeo cubre las tres capacidades de la recopilación de identidades, los gráficos de identidad y las API. También describe cómo se utilizan los algoritmos determinísticos y probabilísticos para construir gráficos de identidad privados y analiza el papel de los gráficos de identidad privados, el gráfico de cooperación del servicio de identidad de Adobe Experience Platform y los gráficos de terceros.
-
->[!IMPORTANT]
->
-> Los gráficos privados probabilísticos aún se están desarrollando y se van a publicar en una fecha posterior.
+El siguiente vídeo está diseñado para ayudar a comprender las identidades y los gráficos de identidad. El siguiente vídeo cubre las tres capacidades de la recopilación de identidades, los gráficos de identidad y las API. También describe cómo se utilizan los algoritmos determinísticos y probabilísticos para construir gráficos de identidad privados, y analiza el papel de los gráficos de identidad privados, Adobe Experience Platform Identity Service Co-Op Graph y gráficos de terceros.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
@@ -74,7 +70,7 @@ El siguiente vídeo está diseñado para ayudar a comprender las identidades y l
 
 Cuando el cliente interactúa con la marca en varios canales, incluidos la web, la aplicación móvil, el centro de llamadas o una tienda, puede resultar difícil entenderlas y servirlas si no puede observar y rastrear su actividad en varios canales.
 
-Comprender al cliente en varios dispositivos y canales comienza reconociéndolos en cada canal. Adobe Experience Platform logra esto utilizando áreas de nombres de identidad.
+Comprender al cliente en varios dispositivos y canales comienza reconociéndolos en cada canal. Adobe Experience Platform lo consigue utilizando áreas de nombres de identidad.
 Un área de nombres de identidad es un identificador como el ID del dispositivo o el ID de correo electrónico que se utiliza para proporcionar el contexto desde el que se originan los datos. Las áreas de nombres de identidad se utilizan para buscar o vincular identidades individuales y proporcionan contexto para los valores de identidad a fin de evitar conflictos de datos. Por ejemplo, el ID &quot;123456&quot; puede referirse a una persona del sistema de comercio electrónico y a otra del sistema de asistencia técnica. Para obtener más información, consulte la [descripción general del área de nombres de identidad](./namespaces.md).
 
 ### Gráficos de identidad
@@ -144,7 +140,7 @@ El siguiente vídeo está diseñado para admitir su comprensión del servicio de
 
 ## Administración de datos
 
-Adobe Experience Platform se ha creado teniendo en cuenta la privacidad e incluye un marco de control de datos para proteger los datos PII de sus clientes. Los datos de identidad en el espacio de nombres &quot;correo electrónico&quot; o &quot;teléfono&quot; se cifran de forma predeterminada, pero para garantizar que los datos confidenciales se cifran antes de que persistan, las etiquetas de uso de datos se pueden aplicar a los datos a medida que se incorporan o una vez que llegan a [!DNL Platform]. Para obtener más información, lea la [Información general sobre el control de datos](../data-governance/home.md).
+Adobe Experience Platform se creó teniendo en cuenta la privacidad e incluye un marco de control de datos para proteger los datos PII de sus clientes. Los datos de identidad en el espacio de nombres &quot;correo electrónico&quot; o &quot;teléfono&quot; se cifran de forma predeterminada, pero para garantizar que los datos confidenciales se cifran antes de que persistan, las etiquetas de uso de datos se pueden aplicar a los datos a medida que se incorporan o una vez que llegan a [!DNL Platform]. Para obtener más información, lea la [Información general sobre el control de datos](../data-governance/home.md).
 
 ## Pasos siguientes
 
