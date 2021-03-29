@@ -4,9 +4,9 @@ title: Ver detalles de destino
 description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 seo-description: 'La página de detalles de un destino individual proporciona una descripción general de los detalles de destino. Los detalles de destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y habilitar y deshabilitar el flujo de datos. '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ La tabla siguiente abarca los controles y detalles proporcionados por el carril 
 | [!UICONTROL Identity] | Representa el área de nombres de identidad aceptada por el destino, como `GAID`, `IDFA` o `email`. Para obtener más información sobre los espacios de nombres de identidad aceptados, consulte la [descripción general del área de nombres de identidad](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indica el usuario que ha creado este destino. |
 | [!UICONTROL Created] | Indica la fecha y hora UTC en la que se creó este destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] alternar
 
