@@ -4,9 +4,9 @@ title: Espacio de trabajo de destinos
 description: El espacio de trabajo Destinos consta de cuatro secciones, Catálogo, Examinar, Cuentas y Vista del sistema, que se describen en las secciones siguientes.
 seo-description: En Adobe Experience Platform, seleccione Destinos en la barra de navegación izquierda para acceder al espacio de trabajo de destinos.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ Las tarjetas de destino contienen un control **[!UICONTROL Configure]** o **[!UI
 | [!UICONTROL View dataflows] | Ver los flujos de activación de datos que existen para un destino. |
 | [!UICONTROL View documentation] | Abre un vínculo a la página de documentación para ese destino específico, para obtener más información y para ayudarle a configurarla. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Controles en la tarjeta de destino](../assets/ui/workspace/destination-card-options.png)
 
 Seleccione una tarjeta de destino en el catálogo para abrir el carril derecho. Aquí puede ver una descripción del destino. El carril derecho proporciona los mismos controles descritos en la tabla anterior, así como una descripción del destino y una indicación de la categoría y el tipo de destino.
@@ -70,6 +72,8 @@ En la pestaña **[!UICONTROL Accounts]**, puede obtener más información sobre 
 | [!UICONTROL Username] | El nombre de usuario seleccionado en el asistente de [conexión de destino](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinations] | Representa el número de flujos de destino correctos únicos conectados con la información básica creada para un destino. |
 | [!UICONTROL Authorized] | La fecha en la que se autorizó la conexión a este destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Además, puede editar o actualizar la información de su cuenta. Seleccione el ![Edit account button](../assets/ui/workspace/pencil-icon.png) en la columna **[!UICONTROL Platform]** para editar la información de la cuenta.
 
