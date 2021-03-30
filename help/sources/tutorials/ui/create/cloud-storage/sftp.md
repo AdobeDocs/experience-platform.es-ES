@@ -6,19 +6,15 @@ topic: sobre validación
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
 # Creación de una conexión de origen SFTP en la interfaz de usuario
-
->[!NOTE]
->
->El conector SFTP está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Este tutorial proporciona los pasos para crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -53,11 +49,11 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 ## Conectarse al servidor SFTP
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Orígenes]. La pantalla [!UICONTROL Catalog] muestra una variedad de fuentes con las que puede crear una cuenta entrante.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de fuentes para las que puede crear una cuenta de entrada.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría [!UICONTROL Cloud storage], seleccione **[!UICONTROL SFTP]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear una nueva conexión SFTP.
+En la categoría [!UICONTROL Cloud storage], seleccione **[!UICONTROL SFTP]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear una nueva conexión SFTP.
 
 ![catálogo](../../../../images/tutorials/create/sftp/catalog.png)
 
@@ -67,11 +63,11 @@ Aparece la página **[!UICONTROL Connect to SFTP]**. En esta página, puede usar
 
 Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**. En el formulario de entrada que aparece, indique un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, deje que se establezca la nueva conexión.
 
-El conector SFTP proporciona diferentes tipos de autenticación para el acceso. En **[!UICONTROL Autenticación de cuenta]** seleccione **[!UICONTROL Contraseña]** para utilizar una credencial basada en contraseña.
+El conector SFTP proporciona diferentes tipos de autenticación para el acceso. En **[!UICONTROL Account authentication]** seleccione **[!UICONTROL Password]** para utilizar una credencial basada en contraseña.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-Como alternativa, puede seleccionar **[Clave pública SSH]** y conectar su cuenta SFTP mediante una combinación de [!UICONTROL Contenido de clave privada] y [!UICONTROL Frase de contraseña].
+Como alternativa, puede seleccionar **[Clave pública SSH]** y conectar su cuenta SFTP mediante una combinación de [!UICONTROL Private key content] y [!UICONTROL Passphrase].
 
 >[!IMPORTANT]
 >
@@ -86,7 +82,7 @@ Como alternativa, puede seleccionar **[Clave pública SSH]** y conectar su cuent
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta de FTP o SFTP con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
 
 ![existente](../../../../images/tutorials/create/sftp/existing.png)
 
