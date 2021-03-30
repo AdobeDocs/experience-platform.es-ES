@@ -5,19 +5,15 @@ title: Información general del conector de origen SFTP
 topic: sobre validación
 description: Obtenga información sobre cómo conectar un servidor SFTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
 
 
-# Conector SFTP (Beta)
-
->[!NOTE]
->
->El conector SFTP está en versión beta. Consulte la [información general sobre fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# Conector SFTP
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure], lo que le permite obtener sus datos de estos sistemas.
 
