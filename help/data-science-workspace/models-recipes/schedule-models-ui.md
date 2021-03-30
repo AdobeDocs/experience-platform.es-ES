@@ -1,69 +1,76 @@
 ---
-keywords: Experience Platform;programar un modelo;Área de trabajo de ciencia de datos;temas populares;programar puntuación;programar formación
+keywords: Experience Platform;programar un modelo;Data Science Workspace;temas populares;programar puntuación;programar formación
 solution: Experience Platform
-title: Programar un modelo en la interfaz de usuario de Área de trabajo de ciencia de datos
+title: Programar un modelo en la interfaz de usuario de Data Science Workspace
 topic: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace le permite configurar las ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de calificación y capacitación puede ayudar a mantener y mejorar la eficiencia de un servicio a través del tiempo, al mantenerse al día con los patrones dentro de sus datos.
+description: Adobe Experience Platform Data Science Workspace permite configurar ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de capacitación y puntuación puede ayudar a mantener y mejorar la eficacia de un Servicio a lo largo del tiempo, al mantenerse al día con los patrones dentro de sus datos.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
 
 
-# Programar un modelo en la interfaz de usuario de Área de trabajo de ciencia de datos
+# Programar un modelo en la interfaz de usuario de Data Science Workspace
 
-Adobe Experience Platform [!DNL Data Science Workspace] le permite configurar las ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de calificación y capacitación puede ayudar a mantener y mejorar la eficiencia de un servicio a través del tiempo, al mantenerse al día con los patrones dentro de sus datos.
+Adobe Experience Platform [!DNL Data Science Workspace] le permite configurar ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de capacitación y puntuación puede ayudar a mantener y mejorar la eficacia de un servicio a lo largo del tiempo al mantenerse al día con los patrones dentro de los datos.
 
-En este tutorial se explican los pasos para configurar las programaciones de capacitación y puntuación en un servicio existente a través de la [!UICONTROL Galería de servicios]. Se divide en las siguientes secciones principales:
+Este tutorial explica los pasos para configurar las programaciones de capacitación y puntuación en un servicio existente a través de [!UICONTROL Service Gallery]. Se divide en las siguientes secciones principales:
 
-- [Configurar puntuación programada](#configure-scheduled-scoring)
-- [Configurar la formación programada](#configure-scheduled-training)
+- [Configurar la puntuación programada](#configure-scheduled-scoring)
+- [Configuración de la formación programada](#configure-scheduled-training)
 
 ## Primeros pasos
 
-Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], comuníquese con el administrador del sistema antes de continuar.
+Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización de IMS en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
-Este tutorial requiere un servicio existente. Si no tiene un servicio accesible con el que trabajar, puede crear uno siguiendo el tutorial [Publicar el modelo como servicio en la IU](./publish-model-service-ui.md).
+Este tutorial requiere un servicio existente. Si no tiene un servicio accesible con el que trabajar, puede crearlo siguiendo el tutorial para [publicar un modelo como servicio](./publish-model-service-ui.md).
 
 ## Configurar la puntuación programada {#configure-scheduled-scoring}
 
-La puntuación de modelo se puede configurar para que sea un proceso automatizado y programado. Una vez creado el servicio, puede seguir los pasos a continuación para configurar y aplicar un programa de puntuación:
+La puntuación del modelo se puede configurar para que sea un proceso automatizado de forma programada. Una vez creado un servicio, puede seguir los pasos a continuación para configurar y aplicar una programación de puntuación:
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** ubicada en la columna de navegación izquierda para acceder a **[!DNL Service Gallery]**. Busque el servicio en el que desea programar las ejecuciones de puntuación y haga clic en **[!UICONTROL Abrir]** para vista de su página **Información general**.
-   ![](../images/models-recipes/schedule/click_to_open.png)
+En Adobe Experience Platform, seleccione la pestaña **[!UICONTROL Services]** situada en la columna de navegación izquierda para acceder a **[!DNL Service Gallery]**. Busque el servicio en el que desea programar las ejecuciones de puntuación y seleccione **[!UICONTROL Open]** para ver su página **[!UICONTROL Overview]**.
 
-2. La página Información general muestra la información de puntuación del servicio. Haga clic en el vínculo **[!UICONTROL Actualizar programa]** para configurar una programación de puntuación.
-   ![](../images/models-recipes/schedule/service_overview_score.png)
+![](../images/models-recipes/schedule/select_service.png)
 
-3. Configure la frecuencia, la fecha de inicio, la fecha de finalización, el conjunto de datos de entrada y el conjunto de datos de salida para la programación de puntuación. Una vez que esté satisfecho con las configuraciones, haga clic en **[!UICONTROL Crear]** para actualizar el programa de puntuación del Servicio.
-   ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
+La página Información general muestra la información de puntuación del servicio. Seleccione el enlace **[!UICONTROL Update Schedule]** para configurar un programa de puntuación.
 
-4. El programa de puntuación actualizado se muestra en la página **Información general** del Servicio.
-   ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
+![](../images/models-recipes/schedule/update_scoring.png)
 
+Configure la frecuencia, la fecha de inicio, la fecha de finalización, el conjunto de datos de entrada y el conjunto de datos de salida para la programación de puntuación. Una vez que esté satisfecho con las configuraciones, seleccione **[!UICONTROL Create]** para actualizar la programación de puntuación del servicio.
 
-## Configurar la capacitación programada {#configure-scheduled-training}
+![](../images/models-recipes/schedule/set_scoring_schedule.png)
 
-La configuración de las ejecuciones de formación programadas en un servicio garantiza que el modelo de aprendizaje automático se actualice a los patrones de datos más recientes. Siempre que se completa una ejecución de formación programada, se utiliza el modelo capacitado resultante para activar el servicio hasta la siguiente ejecución de formación programada.
+La programación de puntuación actualizada se muestra en la página **[!UICONTROL Overview]** del servicio.
 
-Una vez creado el servicio, puede seguir los pasos que se indican a continuación para configurar y aplicar una programación de formación:
+![](../images/models-recipes/schedule/scoring_set.png)
 
-1. En Adobe Experience Platform, haga clic en la ficha **[!UICONTROL Servicios]** ubicada en la columna de navegación izquierda para acceder a la **[!UICONTROL Galería de servicios]**. Busque el servicio en el que desea programar las ejecuciones de capacitación y haga clic en **[!UICONTROL Abrir]** para vista de su página **Información general**.
-   ![](../images/models-recipes/schedule/click_to_open.png)
+## Configurar la formación programada {#configure-scheduled-training}
 
-2. La página Información general muestra la información de capacitación del servicio. Haga clic en el vínculo **[!UICONTROL Actualizar programa]** para configurar una programación de capacitación.
-   ![](../images/models-recipes/schedule/service_overview_train.png)
+La configuración de las ejecuciones de capacitación programadas en un servicio garantiza que el modelo de aprendizaje automático se actualice a los patrones de datos más recientes. Cada vez que se completa una ejecución de capacitación programada, el modelo entrenado resultante se utiliza para impulsar el servicio hasta la siguiente ejecución de capacitación programada.
 
-3. Configure la frecuencia, la fecha de inicio, la fecha de finalización y el conjunto de datos de entrada utilizados para la programación de formación. Una vez que esté satisfecho con las configuraciones, haga clic en **[!UICONTROL Crear]** para actualizar la programación de capacitación del Servicio.
-   ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
+Una vez creado un servicio, puede seguir los pasos a continuación para configurar y aplicar una programación de capacitación:
 
-4. La programación de capacitación actualizada se muestra en la página **Información general** del Servicio.
-   ![](../images/models-recipes/schedule/service_with_training_schedule.png)
+En Adobe Experience Platform, seleccione la pestaña **[!UICONTROL Services]** situada en la columna de navegación izquierda para acceder a **[!UICONTROL Service Gallery]**. Busque el servicio en el que desea programar la ejecución de la formación y seleccione **[!UICONTROL Open]** para ver su página **[!UICONTROL Overview]**.
+
+![](../images/models-recipes/schedule/select_service.png)
+
+La página Información general muestra la información de formación del servicio. Seleccione el enlace **[!UICONTROL Update Schedule]** para configurar una programación de formación.
+
+![](../images/models-recipes/schedule/update_training.png)
+
+Configure la frecuencia, la fecha de inicio, la fecha de finalización y el conjunto de datos de entrada utilizados para la programación de capacitación. Una vez que esté satisfecho con las configuraciones, seleccione **[!UICONTROL Create]** para actualizar la programación de capacitación del servicio.
+
+![](../images/models-recipes/schedule/set_training_schedule.png)
+
+La programación de capacitación actualizada se muestra en la página **[!UICONTROL Overview]** del servicio.
+
+![](../images/models-recipes/schedule/training_set.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha programado correctamente las ejecuciones de puntuación y formación automatizada en un servicio y ha completado el flujo de trabajo de la [!DNL Data Science Workspace] IU del tutorial. Si aún no lo ha hecho, considere [reiniciar el tutorial](./create-retails-sales-dataset.md) y siga el flujo de trabajo de API para crear, entrenar, marcar y publicar un modelo.
+Al seguir este tutorial, ha programado correctamente la formación automatizada y las ejecuciones de puntuación en un servicio y ha completado el flujo de trabajo de la interfaz de usuario del tutorial [!DNL Data Science Workspace]. Si aún no lo ha hecho, considere la posibilidad de [reiniciar el tutorial](./create-retails-sales-dataset.md) y siga el flujo de trabajo de la API para crear, entrenar, puntuar y publicar un modelo.
