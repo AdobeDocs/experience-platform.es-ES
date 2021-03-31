@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
+source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 7%
+source-wordcount: '554'
+ht-degree: 6%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -33,6 +34,18 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | Función  de `to_array` | Se ha actualizado la funcionalidad para admitir objetos como parámetro. |
 
 Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales.
+
+Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+
+| Función | Descripción |
+| ------- | ----------- |
+| (Beta) Múltiples entornos limitados de producción | Ahora puede crear y administrar varios entornos limitados de producción en su organización de IMS y dedicar entornos limitados de producción específicos a distintas líneas de negocios, marcas, proyectos o regiones. Para obtener más información, consulte los tutoriales sobre la creación de un entorno limitado de producción [en la interfaz de usuario](../../sandboxes/ui/user-guide.md) o [con la API](../../sandboxes/api/create-sandbox.md) para obtener más información. |
+
+Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../../sandboxes/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
@@ -54,8 +67,6 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [i
 Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
-
-Las siguientes actualizaciones de las fuentes se incluyen en la versión de Experience Platform de marzo de 2021:
 
 | Función | Descripción |
 | ------- | ----------- |
