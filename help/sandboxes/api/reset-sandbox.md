@@ -5,7 +5,7 @@ title: Restablecer un Simulador para pruebas en la API
 topic: guía para desarrolladores
 description: Los entornos limitados de desarrollo tienen una función de "restablecimiento de fábrica" que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el nombre del simulador para pruebas en la ruta de solicitud.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 3%
@@ -37,6 +37,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "action": "reset"
