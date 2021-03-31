@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic: Guía del usuario
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -45,67 +45,65 @@ Puede navegar por la lista de entornos limitados disponibles mediante la funció
 
 ## Crear un nuevo simulador de pruebas
 
->[!NOTE]
->
->La función Entornos aislados de producción múltiple está en fase beta.
-
 Utilice el siguiente vídeo para obtener información general rápida sobre cómo utilizar entornos limitados en Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Para crear un nuevo simulador de pruebas, seleccione el botón **[!UICONTROL Create Sandbox]** en la parte superior derecha de la pantalla.
+Para crear un nuevo simulador de pruebas en la interfaz de usuario, seleccione el botón **[!UICONTROL Create Sandbox]** en la parte superior derecha de la pantalla.
 
 ![](../images/ui/create-sandbox.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Create Sandbox]**, que le solicita que proporcione un tipo, un título y un nombre para el simulador de pruebas. Si está creando un entorno limitado de desarrollo, seleccione **[!UICONTROL Development]** en el panel desplegable que aparece. Si está creando un entorno limitado de producción, seleccione **[!UICONTROL Production]**.
-
-El título debe ser legible por el ser humano y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El nombre del simulador para pruebas es un identificador en minúsculas que se utiliza en las llamadas a la API y, por lo tanto, debe ser único y conciso. El nombre del simulador para pruebas solo debe contener caracteres alfanuméricos y guiones (`-`), debe comenzar con una letra y tener un máximo de 256 caracteres.
+Aparece el cuadro de diálogo **[!UICONTROL Create Sandbox]**, que le solicita que proporcione un título y un nombre para mostrar para el simulador de pruebas. El **título de visualización** está diseñado para ser legible por el usuario y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El simulador de pruebas **[!UICONTROL Name]** es un identificador en minúsculas que se utiliza en las llamadas a la API y, por lo tanto, debe ser único y conciso. El simulador de pruebas **[!UICONTROL Name]** solo debe contener caracteres alfanuméricos y guiones **(-)**, debe comenzar con una letra y tener un máximo de 256 caracteres.
 
 Cuando termine, seleccione **[!UICONTROL Create]**.
 
 ![](../images/ui/create-dialog.png)
 
+>[!NOTE]
+>
+>Como está restringido a la creación de tipos de entornos limitados que no sean de producción solamente, la opción **[!UICONTROL type]** está bloqueada en &quot;No de producción&quot; y no se puede manipular.
+
 Una vez que haya terminado de crear el entorno limitado, actualice la página y aparecerá el nuevo entorno limitado en el panel **[!UICONTROL Sandboxes]** con el estado &quot;[!UICONTROL Creating]&quot;. El sistema tarda aproximadamente 15 minutos en aprovisionar nuevos entornos limitados, tras lo cual su estado cambia a &quot;[!UICONTROL Active]&quot;.
+
+![](../images/ui/creating.png)
 
 ## Restablecer un simulador para pruebas
 
 >[!NOTE]
 >
->Puede restablecer cualquier entorno limitado de producción o desarrollo de su organización, excepto el entorno limitado de producción predeterminado.
+>Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden restablecer los entornos limitados de producción.
 
-Al restablecer un entorno limitado de producción o desarrollo, se eliminan todos los recursos asociados a dicho entorno limitado (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del entorno limitado y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
+Al restablecer un simulador para pruebas que no sean de producción, se eliminan todos los recursos asociados a ese simulador para pruebas (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del simulador para pruebas y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
 
-Seleccione el simulador de pruebas que desea restablecer de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Sandbox reset]**.
+Para restablecer un simulador para pruebas en la interfaz de usuario, seleccione **[!UICONTROL Sandboxes]** en la barra de navegación izquierda y, a continuación, seleccione el simulador para pruebas que desea restablecer. En el cuadro de diálogo que aparece en el lado derecho de la pantalla, seleccione **[!UICONTROL Reset Sandbox]**.
 
 ![](../images/ui/reset-sandbox.png)
 
-Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Continue]** para continuar.
+Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Reset]** para continuar.
 
 ![](../images/ui/reset-confirm.png)
 
-En la ventana de confirmación final, introduzca el nombre del simulador de pruebas en el cuadro de diálogo y seleccione **[!UICONTROL Reset]**
+Aparece un mensaje de confirmación y el estado del entorno limitado cambia a &quot;**[!UICONTROL Resetting]&quot;**. Una vez que el sistema lo haya aprovisionado, su estado se actualizará a **&quot;[!UICONTROL Active]&quot;** o **&quot;[!UICONTROL Failed]&quot;**.
 
-![](../images/ui/reset-final-confirm.png)
+![](../images/ui/resetting.png)
 
 ## Eliminación de un simulador para pruebas
 
 >[!NOTE]
 >
->Puede eliminar cualquier entorno limitado de producción o desarrollo de su organización, excepto el entorno limitado de producción predeterminado.
+>Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. Los entornos limitados de producción no se pueden eliminar.
 
-Al eliminar un entorno limitado de producción o desarrollo, se eliminan permanentemente todos los recursos asociados a dicho entorno limitado, incluidos los permisos.
+Al eliminar permanentemente un simulador para pruebas que no sean de producción, se eliminan todos los recursos asociados con ese simulador para pruebas, incluidos los permisos.
 
-Seleccione el simulador de pruebas que desee eliminar de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Delete]**.
+Para eliminar un simulador para pruebas en la interfaz de usuario, seleccione **[!UICONTROL Sandboxes]** en la barra de navegación izquierda y, a continuación, seleccione el simulador para pruebas que desea eliminar. En el cuadro de diálogo que aparece en el lado derecho de la pantalla, seleccione **[!UICONTROL Delete Sandbox]**.
 
 ![](../images/ui/delete-sandbox.png)
 
-Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Continue]** para continuar.
+Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Delete]** para continuar.
 
 ![](../images/ui/delete-confirm.png)
 
-En la ventana de confirmación final, introduzca el nombre del simulador de pruebas en el cuadro de diálogo y seleccione **[!UICONTROL Delete]**
-
-![](../images/ui/delete-final-confirm.png)
+Aparece un mensaje de confirmación y el simulador de pruebas se elimina del espacio de trabajo **[!UICONTROL Sandboxes]**.
 
 ## Pasos siguientes
 
