@@ -1,13 +1,13 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión de Experience Platform para el 24 de febrero de 2021.
+description: Notas de la versión del Experience Platform para el 24 de febrero de 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1136'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 ## (Beta) Tableros {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios tableros a través de los cuales puede ver información importante sobre los datos de su organización, tal como se captura durante las instantáneas diarias.
 
 **Nuevas funciones**
 
@@ -43,7 +43,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones con sus recursos de contenido y datos en las soluciones de Adobe.
+Data Science Workspace utiliza el aprendizaje automático y la inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en las soluciones de Adobe.
 
 **Nuevas funciones**
 
@@ -55,7 +55,7 @@ Para obtener información más general sobre Data Science Workspace, consulte [I
 
 ## [!DNL Dataflows] {#dataflows}
 
-En Adobe Experience Platform, los datos se incorporan desde una amplia variedad de fuentes, se analizan en Experience Platform y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
+En Adobe Experience Platform, los datos se incorporan a partir de una amplia variedad de fuentes, se analizan en el Experience Platform y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia con flujos de datos.
 
 Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Estos flujos de datos se configuran en distintos servicios, lo que ayuda a mover datos de conectores de origen a conjuntos de datos de destino, donde se utilizan en [!DNL Identity Service] y [!DNL Real-time Customer Profile] antes de activarse en [!DNL Destinations].
 
@@ -75,13 +75,13 @@ Para obtener información más general sobre los flujos de datos, consulte la [d
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | La conexión [!DNL LinkedIn Matched Audiences] permite activar audiencias en la plataforma social [!DNL LinkedIn]. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | La conexión [!DNL LinkedIn Matched Audiences] permite activar audiencias en la plataforma social [!DNL LinkedIn]. |
 
 Para obtener información más general sobre los destinos, consulte [información general sobre destinos](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo por estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
+La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
 XDM es una especificación públicamente documentada diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común que ofrezca perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
 
@@ -89,7 +89,7 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 | Función | Descripción |
 | --- | --- |
-| Interfaz de usuario de búsqueda actualizada | Ahora hay disponibles funciones de búsqueda mejoradas en la pestaña [!UICONTROL Browse] del espacio de trabajo [!UICONTROL schemas] y en el cuadro de diálogo de selección de mezclas de [!DNL Schema Editor].<br><br>Al buscar un término anteriormente, los resultados solo incluirían recursos XDM cuyo nombre coincida con la consulta de búsqueda. Ahora, además de los recursos cuyo nombre coincide con la consulta, también se incluyen los recursos que contienen atributos individuales que coinciden con el término. Esto le permite buscar recursos XDM en función de los atributos que contienen en lugar de por el nombre del recurso.<br><br>Consulte los documentos sobre la  [exploración de los ](../../xdm/ui/explore.md) recursos XDM y la  [administración de ](../../xdm/ui/resources/schemas.md) esquemas en la interfaz de usuario para obtener más información. |
+| Interfaz de usuario de búsqueda actualizada | Las funciones de búsqueda mejoradas ahora están disponibles en la pestaña [!UICONTROL Browse] del espacio de trabajo [!UICONTROL Schemas] y en el cuadro de diálogo de selección de mezclas en [!DNL Schema Editor].<br><br>Al buscar un término anteriormente, los resultados solo incluirían recursos XDM cuyo nombre coincida con la consulta de búsqueda. Ahora, además de los recursos cuyo nombre coincide con la consulta, también se incluyen los recursos que contienen atributos individuales que coinciden con el término. Esto le permite buscar recursos XDM en función de los atributos que contienen en lugar de por el nombre del recurso.<br><br>Consulte los documentos sobre la  [exploración de los ](../../xdm/ui/explore.md) recursos XDM y la  [administración de ](../../xdm/ui/resources/schemas.md) esquemas en la interfaz de usuario para obtener más información. |
 
 Para obtener información más general sobre XDM, consulte [Información general del sistema XDM](../../xdm/home.md).
 
@@ -97,7 +97,7 @@ Para obtener información más general sobre XDM, consulte [Información general
 
 La entrega de experiencias digitales relevantes requiere una comprensión completa de su cliente. Esto se hace más difícil cuando los datos de sus clientes están fragmentados en distintos sistemas, lo que hace que cada cliente individual parezca tener múltiples &quot;identidades&quot;.
 
-Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales e impactantes en tiempo real.
+Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales y impactantes en tiempo real.
 
 **Nuevas funciones**
 
@@ -109,7 +109,7 @@ Para obtener información más general sobre [!DNL Identity Service], consulte l
 
 ## Perfil del cliente en tiempo real {#profile}
 
-Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
 **Nuevas funciones**
 
@@ -121,9 +121,9 @@ Para obtener más información sobre el Perfil del cliente en tiempo real, inclu
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingerir datos de fuentes externas, a la vez que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
 
 **Nuevas fuentes**
 
