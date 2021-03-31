@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;actualizar entorno limitado
 solution: Experience Platform
-title: Actualización de un Simulador para pruebas en la API
-topic: developer guide
-description: Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el nombre del simulador para pruebas en la ruta de la solicitud y la propiedad que desea actualizar en la carga útil de la solicitud.
+title: Actualizar un Simulador para pruebas en la API
+topic: guía para desarrolladores
+description: Puede actualizar uno o varios campos de un simulador de pruebas realizando una solicitud de PATCH que incluya el nombre del simulador de pruebas en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 2%
 
 ---
 
 
-# Actualización de un entorno limitado en la API
+# Actualizar un simulador para pruebas en la API
 
-Puede actualizar uno o varios campos de un simulador para pruebas realizando una solicitud de PATCH que incluya el `name` del simulador para pruebas en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
+Puede actualizar uno o más campos de un simulador de pruebas realizando una solicitud de PATCH que incluya el `name` del simulador de pruebas en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 
 >[!NOTE]
 >
->Actualmente sólo se puede actualizar la propiedad `title` de un entorno limitado.
+>Actualmente solo se puede actualizar la propiedad `title` de un entorno limitado.
 
-**Formato API**
+**Formato de API**
 
 ```http
 PATCH /sandboxes/{SANDBOX_NAME}
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propiedad `name` del simulador para pruebas que desea actualizar. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador de pruebas que desea actualizar. |
 
 **Solicitud**
 
-La siguiente solicitud actualiza la propiedad `title` del simulador para pruebas denominado &quot;dev-2&quot;.
+La siguiente solicitud actualiza la propiedad `title` del simulador para pruebas llamado &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
@@ -41,7 +41,6 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"
@@ -50,7 +49,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 (Aceptar) con los detalles del entorno limitado recién actualizado.
+Una respuesta correcta devuelve el estado HTTP 200 (OK) con los detalles del entorno limitado recién actualizado.
 
 ```json
 {
