@@ -1,23 +1,27 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Simulador para pruebas;Simulador para pruebas
+keywords: Experience Platform;inicio;temas populares;Sandbox;Sandbox
 solution: Experience Platform
 title: Creación de un Simulador para pruebas en la API
-topic: developer guide
-description: Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al extremo "/sandboxes".
+topic: guía para desarrolladores
+description: Puede crear un nuevo simulador de pruebas realizando una solicitud de POST al extremo "/sandboxes".
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '306'
 ht-degree: 2%
 
 ---
 
 
-# Creación de un entorno limitado en la API
+# Creación de un simulador para pruebas en la API
 
-Puede crear un nuevo simulador para pruebas realizando una solicitud de POST al extremo `/sandboxes`.
+Puede crear un entorno limitado de desarrollo o producción realizando una solicitud de POST al extremo `/sandboxes` .
 
-**Formato API**
+## Creación de un entorno limitado de desarrollo
+
+Para crear un entorno limitado de desarrollo, realice una solicitud de POST al extremo `/sandboxes` y proporcione el valor `development` para la propiedad `type`.
+
+**Formato de API**
 
 ```http
 POST /sandboxes
@@ -33,7 +37,6 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "dev-3",
@@ -44,13 +47,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Identificador que se utilizará para acceder al simulador para pruebas en solicitudes futuras. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. No puede contener espacios ni mayúsculas. |
-| `title` | Nombre legible en lenguaje natural que se utiliza para la visualización en la interfaz de usuario de la plataforma. |
-| `type` | Tipo de entorno limitado que se va a crear. Actualmente, una organización solo puede crear entornos limitados de tipo &quot;desarrollo&quot;. |
+| `name` | Identificador que se utilizará para acceder al simulador para pruebas en futuras solicitudes. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
+| `title` | Un nombre legible que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
+| `type` | Tipo de simulador de pruebas que se va a crear. El valor de la propiedad `type` puede ser de desarrollo o producción. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que su `state` es &quot;crear&quot;.
+Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que su `state` está &quot;creando&quot;.
 
 ```json
 {
@@ -62,6 +65,54 @@ Una respuesta correcta devuelve los detalles del entorno limitado recién creado
 }
 ```
 
+## Creación de un simulador para pruebas de producción
+
 >[!NOTE]
 >
->El sistema tarda aproximadamente 15 minutos en aprovisionar los Simuladores para pruebas, después de lo cual su `state` será &quot;activo&quot; o &quot;fallido&quot;.
+>La función Entornos aislados de producción múltiple está en fase beta.
+
+Para crear un entorno limitado de producción, realice una solicitud de POST al extremo `/sandboxes` y proporcione el valor `production` para la propiedad `type`.
+
+**Formato de API**
+
+```http
+POST /sandboxes
+```
+
+**Solicitud**
+
+La siguiente solicitud crea un nuevo entorno limitado de producción denominado &quot;test-prod-sandbox&quot;.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "test-prod-sandbox",
+    "title": "Test Production Sandbox",
+    "type": "production"
+}'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `name` | Identificador que se utilizará para acceder al simulador para pruebas en futuras solicitudes. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
+| `title` | Un nombre legible que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
+| `type` | Tipo de simulador de pruebas que se va a crear. El valor de la propiedad `type` puede ser de desarrollo o producción. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que su `state` está &quot;creando&quot;.
+
+```json
+{
+    "name": "test-production-sandbox",
+    "title": "Test Production Sandbox",
+    "state": "creating",
+    "type": "production",
+    "region": "VA7"
+}
+```
