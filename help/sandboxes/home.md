@@ -5,9 +5,9 @@ title: Información general de entornos limitados
 topic: sobre validación
 description: Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,9 @@ Este documento proporciona información general de alto nivel sobre los entornos
 
 ## Aspectos básicos de los entornos limitados
 
->[!NOTE]
->
->La función Entornos aislados de producción múltiple está en fase beta.
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite un simulador para pruebas de producción y varios entornos limitados que no sean de producción. Cada simulador para pruebas mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.).  Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas.
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite varios entornos limitados de producción y sin producción, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas.
-
-Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno limitado de producción. Además, tanto los entornos limitados de producción como los que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no sean de producción no se pueden convertir en entornos limitados de producción. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados hasta un máximo de 75 entornos limitados en total. Estos entornos limitados adicionales se pueden usar para crear entornos limitados de producción y sin producción. Póngase en contacto con su administrador de organización de IMS o con su representante de ventas de Adobe para obtener más información.
+Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno limitado de producción. Además, los entornos limitados que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no sean de producción no se pueden convertir en entornos limitados de producción. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados que no sean de producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con su administrador de organización de IMS o con su representante de ventas de Adobe para obtener más información.
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ En resumen, los entornos limitados ofrecen las siguientes ventajas:
 
 De forma predeterminada, todos los usuarios de una organización tienen acceso a un simulador para pruebas de producción. El acceso a los entornos limitados que no sean de producción debe ser otorgado por un administrador del sistema, un administrador de productos o un administrador de perfiles de productos a través de [Adobe Admin Console](https://adminconsole.adobe.com).
 
-Para ver, crear, actualizar o eliminar entornos limitados de producción y que no sean de producción, también se deben otorgar permisos de administración de entornos limitados a los usuarios.
+Para ver, crear, actualizar o eliminar entornos limitados que no sean de producción, también se deben otorgar permisos de administración de entornos limitados a los usuarios.
 
 Para obtener más información sobre la administración de funciones y permisos para entornos limitados, consulte la [información general del control de acceso](../access-control/home.md).
 
