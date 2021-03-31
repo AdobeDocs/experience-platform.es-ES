@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic: sobre validación
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,9 @@ Un esquema es un conjunto de reglas que representan y validan la estructura y el
 
 Además de describir la estructura de los datos, los esquemas aplican restricciones y expectativas a los datos para que se puedan validar a medida que se desplaza de un sistema a otro. Estas definiciones estándar permiten interpretar los datos de forma coherente, independientemente del origen, y eliminan la necesidad de realizar traducciones entre aplicaciones.
 
-[!DNL Experience Platform] mantiene esta normalización semántica mediante el uso de esquemas. Los esquemas son la forma estándar de describir los datos en [!DNL Experience Platform], lo que permite reutilizar todos los datos que se ajustan a los esquemas sin conflictos en una organización e incluso compartirlos entre varias organizaciones.
+[!DNL Experience Platform] mantiene esta normalización semántica utilizando esquemas. Los esquemas son la forma estándar de describir los datos en [!DNL Experience Platform], lo que permite que todos los datos que se ajustan a los esquemas se reutilicen en una organización sin conflictos, o incluso se compartan entre varias organizaciones.
 
-### Tablas relacionales frente a objetos incrustados
-
-Cuando se trabaja con bases de datos relacionales, las prácticas recomendadas implican normalizar datos o tomar una entidad y dividirla en partes discretas que luego se muestran en varias tablas. Para leer los datos en su conjunto o actualizar la entidad, las operaciones de lectura y escritura deben realizarse en muchas tablas individuales utilizando JOIN.
-
-Mediante el uso de objetos incrustados, los esquemas XDM pueden representar directamente datos complejos y almacenarlos en documentos independientes con una estructura jerárquica. Una de las principales ventajas de esta estructura es que le permite consultar los datos sin tener que reconstruir la entidad mediante costosas uniones a varias tablas no normalizadas. No existen restricciones estrictas para cuántos niveles puede ser la jerarquía de esquema.
-
-### Esquemas y big data
-
-Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que se puedan procesar de manera consistente y eficiente.
-
-Los esquemas solucionan este problema al permitir que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
+Los esquemas XDM son ideales para almacenar grandes cantidades de datos complejos en un formato independiente. Consulte las secciones sobre [objetos incrustados](#embedded) y [big data](#big-data) en el apéndice de este documento para obtener más información sobre cómo XDM logra esto.
 
 ### Flujos de trabajo basados en esquemas en [!DNL Experience Platform]
 
@@ -68,9 +58,9 @@ Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden 
 
 Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe considerar cualquier identificador único específico de su organización, ya que también pueden ser buenos campos &quot;[!UICONTROL Identity]&quot;.
 
-Es importante tener en cuenta las identidades de los clientes durante la fase de planificación del esquema para garantizar que los datos se agrupen y así crear el perfil más sólido posible. Consulte la descripción general de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
+Es importante tener en cuenta las identidades de los clientes durante la fase de planificación del esquema para garantizar que los datos se recopilen y creen el perfil más sólido posible. Consulte la descripción general de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
 
@@ -107,7 +97,7 @@ Como se muestra en el ejemplo anterior, cada clave del objeto `identityMap` repr
 
 >[!NOTE]
 >
->También se puede proporcionar un valor booleano para si el valor es o no una identidad principal (`primary`) para cada valor de identidad. Solo es necesario configurar las identidades primarias para los esquemas que se van a utilizar en [!DNL Real-time Customer Profile]. Consulte la sección sobre [esquemas de unión](#union) para obtener más información.
+>También se puede proporcionar un valor booleano para si el valor es una identidad principal (`primary`) para cada valor de identidad. Solo es necesario configurar las identidades primarias para los esquemas que se van a utilizar en [!DNL Real-time Customer Profile]. Consulte la sección sobre [esquemas de unión](#union) para obtener más información.
 
 ### Principios de evolución del esquema {#evolution}
 
@@ -143,7 +133,13 @@ La composición de un esquema comienza asignando una clase. Las clases definen l
 
 La clase de un esquema determina qué mezclas pueden utilizarse en ese esquema. Esto se analiza con más detalle en la [siguiente sección](#mixin).
 
-Adobe proporciona dos clases XDM estándar (&quot;core&quot;): [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent]. Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización. Las clases personalizadas las define una organización cuando no hay clases principales definidas por el Adobe disponibles para describir un caso de uso único.
+Adobe proporciona varias clases XDM estándar (&quot;core&quot;). Se requieren dos de estas clases, [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent], para casi todos los procesos de Platform descendentes. Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización. Las clases personalizadas las define una organización cuando no hay clases principales definidas por el Adobe disponibles para describir un caso de uso único.
+
+La siguiente captura de pantalla muestra cómo se representan las clases en la interfaz de usuario de Platform. Dado que el esquema de ejemplo mostrado no contiene ninguna mezcla, la clase del esquema ([!UICONTROL XDM Individual Profile]) proporciona todos los campos mostrados.
+
+![](../images/schema-composition/class.png)
+
+Para obtener la lista más actualizada de las clases XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
 ### Mixin {#mixin}
 
@@ -157,17 +153,23 @@ Por ejemplo, para capturar detalles como &quot;[!UICONTROL First Name]&quot; y &
 
 Recuerde que los esquemas están compuestos de &quot;cero o más&quot; mezclas, lo que significa que puede componer un esquema válido sin usar ninguna mezcla.
 
-Para obtener una lista de todas las mezclas estándar actuales, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins).
+La siguiente captura de pantalla muestra cómo se representan las mezclas en la interfaz de usuario de Platform. En este ejemplo se agrega una sola mezcla ([!UICONTROL Demographic Details]) a un esquema, que proporciona una agrupación de campos a la estructura del esquema.
+
+![](../images/schema-composition/mixin.png)
+
+Para obtener la lista más actualizada de mezclas XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
 ### Tipo de datos {#data-type}
 
 Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que una mezcla, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que una mezcla, ya que un tipo de datos se puede incluir en cualquier parte de un esquema al agregarlo como el &quot;tipo de datos&quot; de un campo.
 
->[!NOTE]
->
->Consulte el [apéndice](#mixins-v-datatypes) para obtener más información sobre las diferencias entre las mezclas y los tipos de datos, y las ventajas y desventajas de utilizar una sobre la otra para casos de uso similares.
+[!DNL Experience Platform] proporciona varios tipos de datos comunes como parte de  [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales de [!DNL Schema Registry], donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
 
-[!DNL Experience Platform] proporciona varios tipos de datos comunes como parte de  [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales de [!DNL Schema Registry], donde se aclara a medida que avance por los pasos para definir los tipos de datos.
+La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por la mezcla ([!UICONTROL Demographic Details]) utiliza el tipo de datos &quot;[!UICONTROL Person name]&quot;, como se indica con el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
+
+![](../images/schema-composition/data-type.png)
+
+Para obtener la lista más actualizada de los tipos de datos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/datatypes). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
 ### Campo
 
@@ -242,6 +244,13 @@ Para obtener más información sobre cómo trabajar con [!DNL Profile], consulte
 
 Todos los archivos de datos que se incorporan en [!DNL Experience Platform] deben ajustarse a la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para que cumplan con las jerarquías XDM (incluidos los archivos de muestra), consulte el documento sobre [transformaciones ETL de muestra](../../etl/transformations.md). Para obtener información general sobre la ingesta de archivos de datos en [!DNL Experience Platform], consulte la [información general sobre la ingesta por lotes](../../ingestion/batch-ingestion/overview.md).
 
+## Esquemas para segmentos externos
+
+Si va a introducir segmentos de sistemas externos en Platform, debe utilizar los siguientes componentes para capturarlos en los esquemas:
+
+* [[!UICONTROL Segment definition] Clase](../classes/segment-definition.md): Utilice esta clase estándar para capturar los atributos clave de una definición de segmento externa.
+* [[!UICONTROL Segment Membership Details] mezcla](../mixins/profile/segmentation.md): Añada esta mezcla al  [!UICONTROL XDM Individual Profile] esquema para asociar perfiles de cliente con segmentos específicos.
+
 ## Pasos siguientes
 
 Ahora que comprende los conceptos básicos de la composición del esquema, está listo para empezar a explorar y crear esquemas con [!DNL Schema Registry].
@@ -259,41 +268,53 @@ Para empezar a utilizar la API [!DNL Schema Registry], lea la [guía para desarr
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre los principios de la composición del esquema.
+Las secciones siguientes contienen información adicional sobre los principios de la composición del esquema.
+
+### Tablas relacionales frente a objetos {#embedded} incrustados
+
+Cuando se trabaja con bases de datos relacionales, las prácticas recomendadas implican normalizar datos o tomar una entidad y dividirla en partes discretas que luego se muestran en varias tablas. Para leer los datos en su conjunto o actualizar la entidad, las operaciones de lectura y escritura deben realizarse en muchas tablas individuales utilizando JOIN.
+
+Mediante el uso de objetos incrustados, los esquemas XDM pueden representar directamente datos complejos y almacenarlos en documentos independientes con una estructura jerárquica. Una de las principales ventajas de esta estructura es que le permite consultar los datos sin tener que reconstruir la entidad mediante costosas uniones a varias tablas no normalizadas. No existen restricciones estrictas para cuántos niveles puede ser la jerarquía de esquema.
+
+### Esquemas y big data {#big-data}
+
+Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que se puedan procesar de manera consistente y eficiente.
+
+Los esquemas solucionan este problema al permitir que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
 
 ### Objetos frente a campos de formulario libre {#objects-v-freeform}
 
 A la hora de diseñar los esquemas, deben tenerse en cuenta algunos factores clave a la hora de elegir objetos en lugar de campos de formulario libre:
 
-| Objetos | Campos de formato libre |
+| Objetos | Campos de forma libre |
 | --- | --- |
-| Aumenta la anidación | Menos o ninguna anidación |
-| Crea grupos de campos lógicos | Los campos se colocan en ubicaciones ad hoc |
+| Aumenta la anidación | Menos o no anidar |
+| Crea agrupaciones de campos lógicos | Los campos se colocan en ubicaciones específicas |
 
 #### Objetos
 
-A continuación se enumeran las ventajas y desventajas del uso de objetos en campos de formato libre.
+A continuación se enumeran las ventajas y desventajas de utilizar objetos sobre campos de formulario libre.
 
-**Pro**:
+**Ventajas**:
 
-* Los objetos se utilizan mejor cuando se desea crear una agrupación lógica de determinados campos.
+* La mejor forma de utilizar los objetos es crear una agrupación lógica de determinados campos.
 * Los objetos organizan el esquema de forma más estructurada.
-* Los objetos ayudan indirectamente a crear una buena estructura de menús en la interfaz de usuario del Generador de segmentos. Los campos agrupados dentro del esquema se reflejan directamente en la estructura de carpetas proporcionada en la interfaz de usuario del Generador de segmentos.
+* Los objetos ayudan indirectamente a crear una buena estructura de menú en la interfaz de usuario del Generador de segmentos. Los campos agrupados dentro del esquema se reflejan directamente en la estructura de carpetas proporcionada en la interfaz de usuario del Generador de segmentos.
 
 **Desventajas**:
 
 * Los campos se anidan más.
-* Cuando se utiliza [Adobe Experience Platform Query Service](../../query-service/home.md), se deben proporcionar cadenas de referencia más largas para los campos de consulta anidados en objetos.
+* Al utilizar [Adobe Experience Platform Query Service](../../query-service/home.md), se deben proporcionar cadenas de referencia más largas a los campos de consulta anidados en objetos.
 
-#### Campos de formato libre
+#### Campos de forma libre
 
-A continuación se enumeran los pros y los contras del uso de campos de formato libre sobre objetos.
+A continuación se enumeran las ventajas y desventajas de utilizar campos de formulario libre sobre objetos.
 
-**Pro**:
+**Ventajas**:
 
-* Los campos de formato libre se crean directamente bajo el objeto raíz del esquema (`_tenantId`), lo que aumenta la visibilidad.
-* Las cadenas de referencia de los campos de formulario libre suelen ser más cortas cuando se utiliza el servicio de consulta.
+* Los campos de formulario libre se crean directamente en el objeto raíz del esquema (`_tenantId`), lo que aumenta la visibilidad.
+* Las cadenas de referencia para los campos de forma libre tienden a ser más cortas al utilizar el servicio de consulta.
 
 **Desventajas**:
 
-* La ubicación de los campos de formato libre dentro del esquema es ad hoc, lo que significa que aparecen en orden alfabético en el Editor de esquemas. Esto puede hacer que los esquemas sean menos estructurados y que los campos de formato libre similares terminen estando muy separados en función de sus nombres.
+* La ubicación de los campos de forma libre dentro del esquema es ad hoc, lo que significa que aparecen en orden alfabético dentro del Editor de esquemas. Esto puede hacer que los esquemas sean menos estructurados y que campos de forma libre similares puedan terminar estando muy separados según sus nombres.
