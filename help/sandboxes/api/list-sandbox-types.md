@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;inicio;temas populares;entornos limitados de lista
 solution: Experience Platform
-title: Tipos de Simulador para pruebas compatibles con la lista en la API
-topic: developer guide
-description: Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización haciendo una solicitud de GET al extremo /sandboxTypes.
+title: Lista de tipos de Simulador para pruebas admitidos en la API
+topic: guía para desarrolladores
+description: Puede recuperar una lista de tipos de entornos limitados admitidos para su organización realizando una solicitud de GET al extremo /sandboxTypes .
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '83'
 ht-degree: 2%
 
 ---
 
 
-# Tipos de entorno limitado admitidos en la lista en la API
+# Lista de tipos de entornos limitados admitidos en la API
 
-Puede recuperar una lista de tipos de simulación de pruebas admitidos para su organización haciendo una solicitud de GET al extremo `/sandboxTypes`.
+Puede recuperar una lista de tipos de entornos limitados admitidos para su organización realizando una solicitud de GET al extremo `/sandboxTypes` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /sandboxTypes
@@ -31,12 +31,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de tipos de simulación de pruebas admitidos por su organización.
+Una respuesta correcta devuelve una lista de tipos de entornos limitados compatibles con su organización.
 
 ```json
 {
