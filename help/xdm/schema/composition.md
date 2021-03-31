@@ -5,7 +5,7 @@ title: Aspectos básicos de la composición del esquema
 topic: sobre validación
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Los tipos de datos se utilizan como tipos de campos de referencia en clases o es
 
 [!DNL Experience Platform] proporciona varios tipos de datos comunes como parte de  [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales de [!DNL Schema Registry], donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
 
-La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por la mezcla ([!UICONTROL Demographic Details]) utiliza el tipo de datos &quot;[!UICONTROL Person name]&quot;, como se indica con el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
+La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por la mezcla [!UICONTROL Demographic Details] utiliza el tipo de datos &quot;[!UICONTROL Person name]&quot;, como se indica con el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
 
 ![](../images/schema-composition/data-type.png)
 
