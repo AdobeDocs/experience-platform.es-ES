@@ -5,9 +5,9 @@ title: Creación de un Simulador para pruebas en la API
 topic: guía para desarrolladores
 description: Puede crear un nuevo simulador de pruebas realizando una solicitud de POST al extremo "/sandboxes".
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '166'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,7 @@ ht-degree: 2%
 
 # Creación de un simulador para pruebas en la API
 
-Puede crear un entorno limitado de desarrollo o producción realizando una solicitud de POST al extremo `/sandboxes` .
-
-## Creación de un entorno limitado de desarrollo
-
-Para crear un entorno limitado de desarrollo, realice una solicitud de POST al extremo `/sandboxes` y proporcione el valor `development` para la propiedad `type`.
+Puede crear un nuevo entorno limitado realizando una solicitud de POST al extremo `/sandboxes` .
 
 **Formato de API**
 
@@ -37,6 +33,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "dev-3",
@@ -47,9 +44,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Identificador que se utilizará para acceder al simulador para pruebas en futuras solicitudes. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
+| `name` | Identificador que se utilizará para acceder al simulador para pruebas en futuras solicitudes. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. No puede contener espacios ni mayúsculas. |
 | `title` | Un nombre legible que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
-| `type` | Tipo de simulador de pruebas que se va a crear. El valor de la propiedad `type` puede ser de desarrollo o producción. |
+| `type` | Tipo de simulador de pruebas que se va a crear. Actualmente, una organización solo puede crear entornos limitados de tipo &quot;desarrollo&quot;. |
 
 **Respuesta**
 
@@ -65,54 +62,6 @@ Una respuesta correcta devuelve los detalles del entorno limitado recién creado
 }
 ```
 
-## Creación de un simulador para pruebas de producción
-
 >[!NOTE]
 >
->La función Entornos aislados de producción múltiple está en fase beta.
-
-Para crear un entorno limitado de producción, realice una solicitud de POST al extremo `/sandboxes` y proporcione el valor `production` para la propiedad `type`.
-
-**Formato de API**
-
-```http
-POST /sandboxes
-```
-
-**Solicitud**
-
-La siguiente solicitud crea un nuevo entorno limitado de producción denominado &quot;test-prod-sandbox&quot;.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "name": "test-prod-sandbox",
-    "title": "Test Production Sandbox",
-    "type": "production"
-}'
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `name` | Identificador que se utilizará para acceder al simulador para pruebas en futuras solicitudes. Este valor debe ser único y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
-| `title` | Un nombre legible que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
-| `type` | Tipo de simulador de pruebas que se va a crear. El valor de la propiedad `type` puede ser de desarrollo o producción. |
-
-**Respuesta**
-
-Una respuesta correcta devuelve los detalles del entorno limitado recién creado, mostrando que su `state` está &quot;creando&quot;.
-
-```json
-{
-    "name": "test-production-sandbox",
-    "title": "Test Production Sandbox",
-    "state": "creating",
-    "type": "production",
-    "region": "VA7"
-}
-```
+>Los entornos limitados tardan aproximadamente 15 minutos en ser aprovisionados por el sistema, después de lo cual su `state` se convertirá en &quot;activo&quot; o &quot;fallido&quot;.
