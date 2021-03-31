@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía ui;mapper;asignación;preparación de datos;preparación de datos;preparar datos;
+keywords: Experience Platform;inicio;temas populares;asignación de csv;asignación de archivo csv;asignación de archivo csv a xdm;asignación de csv a xdm;guía de ui;asignador;asignación;preparación de datos;preparación de datos;preparación de datos;
 solution: Experience Platform
 title: Información general sobre la preparación de datos
-topic: overview
+topic: sobre validación
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
 
-# Información general sobre la preparación de datos
+# Resumen de la preparación de datos
 
-La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el Modelo de datos de experiencia (XDM). La preparación de datos aparece como un paso de &quot;mapa&quot; en los procesos de inserción de datos, incluido el flujo de trabajo de ingestión de CSV. Los ingenieros de datos pueden utilizar la preparación de datos para realizar la siguiente manipulación de datos durante la ingestión:
+La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el Modelo de datos de experiencia (XDM). La preparación de datos aparece como un paso de &quot;mapa&quot; en los procesos de ingesta de datos, incluido el flujo de trabajo de ingesta de CSV. Los ingenieros de datos pueden utilizar la preparación de datos para realizar la siguiente manipulación de datos durante la ingesta:
 
-- Definir asignaciones de paso simples para asignar atributos de entrada a atributos XDM
-- Crear campos calculados para realizar cálculos en fila que se pueden asignar a atributos XDM
+- Defina asignaciones de paso simples para asignar atributos de entrada a atributos XDM
+- Crear campos calculados para realizar cálculos en fila que se puedan asignar a atributos XDM
 - Transformar los datos aplicando funciones de manipulación de cadenas, números o fechas
-- Construir jerarquías XDM mediante funciones jerárquicas
-- Previsualización de los datos tal como se manipulan dentro de la vista previa de datos
+- Construir jerarquías XDM utilizando funciones jerárquicas
+- Obtener una vista previa de los datos tal y como están manipulados en la preparación de datos
 
-La preparación de datos también aplica varias validaciones de datos intrínsecas para garantizar que la integridad de los datos se mantenga durante la ingesta. Siempre que sea posible, la preparación de datos asigna automáticamente los esquemas de datos entrantes a XDM. Los ingenieros de datos pueden cambiar, corregir y eliminar las asignaciones sugeridas y sustituirlas por las asignaciones según corresponda.
+La preparación de datos también aplica varias validaciones de datos intrínsecas para garantizar que la integridad de los datos se mantenga a medida que se incorporan. Siempre que sea posible, Data Prep asigna automáticamente los esquemas de datos entrantes a XDM. Los ingenieros de datos pueden cambiar, corregir y eliminar las asignaciones sugeridas y sustituirlas por las asignaciones según corresponda.
 
 ## Asignación
 
-Una asignación es una asociación de un atributo de entrada o campo calculado a un atributo XDM. Un solo atributo se puede asignar a varios atributos XDM creando asignaciones individuales.
+Una asignación es una asociación de un atributo de entrada o campo calculado a un atributo XDM. Un único atributo se puede asignar a varios atributos XDM creando asignaciones individuales.
 
-Para obtener más información sobre las distintas funciones de asignación, lea la guía [funciones de asignación](./functions.md).
+Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md).
 
 ## Conjunto de asignaciones
 
-Un conjunto de asignaciones que transforman un esquema a otro se conoce colectivamente como conjunto de asignaciones. Se crea un único conjunto de asignaciones como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y monitorea como parte de los flujos de datos.
+Un conjunto de asignaciones que transforman un esquema en otro se conocen colectivamente como conjunto de asignaciones. Se crea un conjunto de asignaciones único como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y monitoriza como parte de los flujos de datos.
 
 ## Pasos siguientes
 
-Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las distintas funciones de asignación, lea la guía [funciones de asignación](./functions.md). Para obtener más información sobre las diferentes cadenas de fecha y hora, lea la [guía de cadenas de fecha](./dates.md).
+Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre las diferentes cadenas de fecha y hora, lea la [guía de cadenas de fecha](./dates.md). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
