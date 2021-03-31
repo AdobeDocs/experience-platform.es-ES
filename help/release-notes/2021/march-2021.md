@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 6%
+source-wordcount: '422'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 6%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | Función  de `to_array` | Se ha actualizado la funcionalidad para admitir objetos como parámetro. |
 
 Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales.
-
-Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
-
-| Función | Descripción |
-| ------- | ----------- |
-| (Beta) Múltiples entornos limitados de producción | Ahora puede crear y administrar varios entornos limitados de producción en su organización de IMS y dedicar entornos limitados de producción específicos a distintas líneas de negocios, marcas, proyectos o regiones. Consulte los tutoriales sobre la creación de un entorno limitado de producción [en la interfaz de usuario](../../sandboxes/ui/user-guide.md) o [con la API](../../sandboxes/api/create-sandbox.md) para obtener más información. |
-
-Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../../sandboxes/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
