@@ -5,9 +5,9 @@ title: Información general del servicio de segmentación
 topic: sobre validación
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,8 @@ Para obtener más información sobre la segmentación de flujo continuo, lea la 
 ### Segmentación por lotes
 
 Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, este segmento se guarda y se almacena para que pueda exportarlo para utilizarlo.
+
+Los segmentos evaluados mediante la segmentación por lotes se evalúan cada 24 horas. Sin embargo, para los segmentos existentes, la segmentación incremental mantiene los segmentos evaluados mediante la segmentación por lotes actualizada durante un máximo de una hora. Los segmentos nuevos o modificados recientemente deberán esperar hasta que se haya ejecutado el siguiente trabajo de segmentación por lotes completo para aprovechar la segmentación incremental.
 
 Para obtener información sobre cómo evaluar segmentos, consulte el [tutorial de evaluación de segmentos](./tutorials/evaluate-a-segment.md).
 
@@ -111,7 +113,7 @@ Estas funciones avanzadas se describen con más detalle en las secciones siguien
 
 ## Segmentación secuencial {#sequential}
 
-Un recorrido de usuario estándar es secuencial. Adobe Experience Platform le permite definir una serie ordenada de segmentos para reflejar este recorrido, capturando así secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado utilizando la cronología del evento visual en [!DNL Segment Builder].
+Un recorrido de usuario estándar es secuencial. Adobe Experience Platform le permite definir una serie ordenada de segmentos para que reflejen este recorrido y, por lo tanto, capturar secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden deseado utilizando la cronología del evento visual en [!DNL Segment Builder].
 
 Un ejemplo de recorrido de un cliente que requeriría una segmentación secuencial sería vista de producto > adición de producto > cierre de compra > Sin compra.
 
@@ -137,7 +139,7 @@ Al asignar una variable al atributo de estado de compra, el segmento dinámico s
 
 ## Segmentación de varias entidades {#multi-entity}
 
-Con la característica avanzada de segmentación multientidad, puede ampliar los [!DNL Real-time Customer Profile] datos con datos adicionales basados en productos, tiendas u otras entidades que no sean personas, también conocidas como entidades de &quot;dimensión&quot;. Como resultado, [!DNL Segmentation Service] puede acceder a campos adicionales durante la definición del segmento como si fueran nativos del almacén de datos [!DNL Profile]. La segmentación multientidad proporciona flexibilidad a la hora de identificar audiencias basándose en datos relevantes para sus necesidades comerciales únicas. Para obtener más información, incluidos los casos de uso y los flujos de trabajo, consulte la [guía de segmentación de varias entidades](multi-entity-segmentation.md).
+Con la característica avanzada de segmentación multientidad, puede ampliar los datos [!DNL Real-time Customer Profile] con datos adicionales basados en productos, tiendas u otras personas no físicas, también conocidas como entidades de &quot;dimensión&quot;. Como resultado, [!DNL Segmentation Service] puede acceder a campos adicionales durante la definición del segmento como si fueran nativos del almacén de datos [!DNL Profile]. La segmentación multientidad proporciona flexibilidad a la hora de identificar audiencias basándose en datos relevantes para sus necesidades comerciales únicas. Para obtener más información, incluidos los casos de uso y los flujos de trabajo, consulte la [guía de segmentación de varias entidades](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipos de datos
 
