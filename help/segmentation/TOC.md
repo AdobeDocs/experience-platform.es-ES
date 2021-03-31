@@ -6,10 +6,10 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree segmentos y genere audiencias a partir de los datos del perfil del cliente en tiempo real.
 feature: Segmentos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 22%
+source-wordcount: '162'
+ht-degree: 21%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 22%
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
+   - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsión y estimaciones](api/previews-and-estimates.md)
    - [Programaciones](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 22%
    - [Información general](ui/overview.md)
    - [Panel de segmentos](ui/segment-dashboard.md)
    - [Generador de segmentos](ui/segment-builder.md)
+   - [Segmentación de Edge](ui/edge-segmentation.md)
    - [Segmentación por transmisión](ui/streaming-segmentation.md)
    - [Segmentación por transmisión (vídeo)](video/streaming-segmentation-overview.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
