@@ -6,9 +6,9 @@ breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 feature: Esquemas
 translation-type: tm+mt
-source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
+source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '238'
 ht-degree: 24%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 24%
 * Clases {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Definición del segmento](./classes/segment-definition.md)
 * Mezclas {#mixins}
    * Mezclas de perfiles {#profile}
       * [Mapa de identidades](./mixins/profile/identitymap.md)
