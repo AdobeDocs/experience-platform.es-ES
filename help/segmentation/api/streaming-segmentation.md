@@ -5,9 +5,9 @@ title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic: guía para desarrolladores
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ Además, se aplican algunas directrices al realizar segmentación de flujo conti
 
 ## Recuperar todos los segmentos habilitados para la segmentación de flujo continuo
 
-Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud GET al extremo `/segment/definitions` .
+Puede recuperar una lista de todos los segmentos que están habilitados para la segmentación de flujo continuo dentro de su organización IMS realizando una solicitud de GET al extremo `/segment/definitions` .
 
 **Formato de API**
 
@@ -296,7 +296,7 @@ Una vez habilitada la evaluación de flujo continuo, se debe crear una línea de
 
 ### Crear una programación
 
-Al realizar una solicitud POST al extremo `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
+Al realizar una solicitud de POST al extremo `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
 
 **Formato de API**
 
@@ -366,7 +366,7 @@ Una respuesta correcta devuelve los detalles de la programación recién creada.
 
 ### Activación de una programación
 
-De forma predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` esté establecida en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establezca `state` en `active`) realizando una solicitud PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
+De forma predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` esté establecida en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establezca `state` en `active`) realizando una solicitud de PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
 
 **Formato de API**
 
@@ -403,6 +403,6 @@ Se puede utilizar la misma operación para deshabilitar una programación reempl
 
 ## Pasos siguientes
 
-Ahora que ha habilitado los segmentos nuevos y existentes para la segmentación de flujo continuo y la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos para su organización.
+Ahora que ha habilitado los segmentos nuevos y existentes para la segmentación de flujo continuo y la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos con transmisión habilitada para su organización.
 
 Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite la [guía del usuario del Generador de segmentos](../ui/segment-builder.md).
