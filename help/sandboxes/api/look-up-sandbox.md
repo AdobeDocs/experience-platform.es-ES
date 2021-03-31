@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;inicio;temas populares;buscar entorno limitado;buscar un entorno limitado
+keywords: Experience Platform;inicio;temas populares;buscar entorno limitado;buscar un simulador de pruebas
 solution: Experience Platform
 title: Buscar un Simulador para pruebas en la API
-topic: developer guide
-description: Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad name del simulador para pruebas en la ruta de solicitud.
+topic: guía para desarrolladores
+description: Puede buscar un entorno limitado individual realizando una solicitud de GET que incluya la propiedad name del entorno limitado en la ruta de solicitud.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
 
 
-# Buscar un entorno limitado en la API
+# Buscar un simulador para pruebas en la API
 
-Puede buscar un simulador para pruebas individual realizando una solicitud de GET que incluya la propiedad `name` del simulador para pruebas en la ruta de solicitud.
+Puede buscar un entorno limitado individual realizando una solicitud de GET que incluya la propiedad `name` del entorno limitado en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /sandboxes/{SANDBOX_NAME}
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propiedad `name` del simulador para pruebas que desea buscar. |
+| `{SANDBOX_NAME}` | La propiedad `name` del simulador de pruebas que desea buscar. |
 
 **Solicitud**
 
@@ -37,12 +37,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del entorno limitado, incluidos sus `name`, `title`, `state` y `type`.
+Una respuesta correcta devolverá los detalles del entorno limitado, incluidos `name`, `title`, `state` y `type`.
 
 ```json
 {
@@ -62,9 +61,9 @@ Una respuesta correcta devuelve los detalles del entorno limitado, incluidos sus
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | Nombre del simulador para pruebas. Se utiliza con fines de búsqueda en llamadas de API. |
+| `name` | Nombre del simulador de pruebas. Se utiliza con fines de búsqueda en llamadas a la API. |
 | `title` | Nombre para mostrar del simulador para pruebas. |
-| `state` | Estado de procesamiento actual del simulador para pruebas. El estado de un simulador para pruebas puede ser cualquiera de los siguientes: <ul><li>**creación**: Se ha creado el simulador para pruebas, pero el sistema sigue aprovisionándolo.</li><li>**activo**: El simulador para pruebas se crea y se activa.</li><li>**error**: Debido a un error, el sistema no pudo aprovisionar el simulador para pruebas y está deshabilitado.</li><li>**eliminado**: El simulador para pruebas se ha deshabilitado manualmente.</li></ul> |
+| `state` | Estado de procesamiento actual del simulador de pruebas. El estado de un simulador para pruebas puede ser cualquiera de los siguientes: <ul><li>**crear**: Se ha creado el simulador para pruebas, pero el sistema sigue aprovisionándolo.</li><li>**activo**: El simulador para pruebas se crea y se activa.</li><li>**error**: Debido a un error, el simulador de pruebas no pudo ser aprovisionado por el sistema y está deshabilitado.</li><li>**eliminado**: El simulador para pruebas se ha desactivado manualmente.</li></ul> |
 | `type` | El tipo de entorno limitado, ya sea &quot;desarrollo&quot; o &quot;producción&quot;. |
-| `isDefault` | Una propiedad booleana que indica si este entorno limitado es el entorno limitado predeterminado para la organización. Generalmente este es el entorno limitado de producción. |
-| `eTag` | Identificador de una versión específica del simulador para pruebas. Este valor se utiliza para el control de versiones y la eficacia del almacenamiento en caché y se actualiza cada vez que se realiza un cambio en el simulador para pruebas. |
+| `isDefault` | Una propiedad booleana que indica si este entorno limitado es el entorno limitado predeterminado para la organización. Normalmente, este es el simulador para pruebas de producción. |
+| `eTag` | Identificador de una versión específica del simulador de pruebas. Este valor, que se utiliza para el control de versiones y la eficacia del almacenamiento en caché, se actualiza cada vez que se realiza un cambio en el simulador para pruebas. |
