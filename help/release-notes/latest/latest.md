@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 7af082de034166e3a8a3971728d5743eaeec67ae
+source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 6%
 
 ---
@@ -43,7 +43,7 @@ Para satisfacer esta necesidad, Experience Platform proporciona entornos limitad
 
 | Función | Descripción |
 | ------- | ----------- |
-| (Beta) Múltiples entornos limitados de producción | Ahora puede crear y administrar varios entornos limitados de producción en su organización de IMS y dedicar entornos limitados de producción específicos a distintas líneas de negocios, marcas, proyectos o regiones. Para obtener más información, consulte los tutoriales sobre la creación de un entorno limitado de producción [en la interfaz de usuario](../../sandboxes/ui/user-guide.md) o [con la API](../../sandboxes/api/create-sandbox.md) para obtener más información. |
+| (Beta) Múltiples entornos limitados de producción | Ahora puede crear y administrar varios entornos limitados de producción en su organización de IMS y dedicar entornos limitados de producción específicos a distintas líneas de negocios, marcas, proyectos o regiones. Consulte los tutoriales sobre la creación de un entorno limitado de producción [en la interfaz de usuario](../../sandboxes/ui/user-guide.md) o [con la API](../../sandboxes/api/create-sandbox.md) para obtener más información. |
 
 Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../../sandboxes/home.md).
 
