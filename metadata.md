@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: Información general de plataforma
@@ -15,7 +15,7 @@ type: Documentación
 index: true
 role: Arquitecto, Desarrollador, Arquitecto de datos, Ingeniero de datos, Profesional de negocios, Administrador, Líder
 translation-type: tm+mt
-source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
+source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 74%
