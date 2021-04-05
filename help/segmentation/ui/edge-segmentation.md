@@ -3,15 +3,15 @@ keywords: Experience Platform;inicio;temas populares;segmentación perimetral;Se
 solution: Experience Platform
 title: Guía de la interfaz de usuario de segmentación de Edge
 topic: guía de la interfaz de usuario
-description: 'La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página. '
+description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
-
 
 # Guía de la interfaz de usuario de segmentación de Edge
 
@@ -25,8 +25,8 @@ Una consulta se puede evaluar con segmentación de Edge si cumple cualquiera de 
 | ---------- | ------- | ------- |
 | Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Consulta de frecuencia | Cualquier definición de segmento que haga referencia a un evento que se produzca un determinado número de veces. |  |
-| Consulta de frecuencia que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un evento que se produzca un determinado número de veces y que tenga uno o más atributos de perfil. |  |
+| Consulta de frecuencia | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces. |  |
+| Consulta de frecuencia que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un evento que se produzca al menos un determinado número de veces y que tenga uno o más atributos de perfil. |  |
 
 Si la consulta coincide con cualquiera de los tipos de consulta anteriores, puede activarla para la segmentación perimetral activando la opción **[!UICONTROL Evaluate as streaming segment on the edge]**.
 
