@@ -6,9 +6,9 @@ description: Instrucciones para conectarse a las ubicaciones de almacenamiento e
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ Para destinos [!DNL Azure Event Hubs], proporcione el nombre del flujo de datos 
 Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. Lea la sección [Activar segmentos](#activate-segments) para que el resto del flujo de trabajo exporte datos.
 
 ## Utilice macros para crear una carpeta en su ubicación de almacenamiento{#use-macros}
+
+>[!NOTE]
+>
+> La funcionalidad descrita en esta sección está disponible actualmente solo para destinos de [Amazon S3](./amazon-s3.md).
 
 Para crear una carpeta personalizada por archivo de segmento en su ubicación de almacenamiento, puede utilizar macros en el campo de entrada de ruta de carpeta. Inserte las macros al final del campo de entrada, como se muestra a continuación.
 
