@@ -1,16 +1,16 @@
 ---
 title: Variables de Adobe Analytics asignadas automáticamente en el SDK web de Adobe Experience Platform
-description: Aprenda qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
+description: Descubra qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Experience Platform
 seo-description: Descubra qué variables se asignan automáticamente en Adobe Analytics con el SDK web de Adobe Experience Platform
 keywords: adobe analytics;variables;analytics;asignación automática;asignación automática;
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
-
 
 # Variables asignadas automáticamente en [!DNL Analytics]
 
@@ -20,35 +20,35 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | Asignación de datos de contexto de AppMeasurement `c.a.appid`. |
 | `application.launches.value` | `c.a.launches` | Asignación de datos de contexto de AppMeasurement `c.a.launches`. |
-| `commerce.checkouts.id` | `events` | `scCheckout` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.checkouts.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_CHECKOUT, utilizando el delimitador `,`. |
-| `commerce.order.currencyCode` | `cc` | Asignación de CURRENCY, parámetro de consulta de AppMeasurement. |
-| `commerce.order.purchaseID` | `pi` | Asignación del parámetro de consulta de AppMeasurement PURCHASEID. |
-| `commerce.productListAdds.id` | `events` | `scAdd` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListAdds.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_AÑADA, utilizando el delimitador `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListOpens.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_OPEN, utilizando el delimitador `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListRemovals.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_SC_REMOVE, utilizando el delimitador `,`. |
-| `commerce.productListViews.id` | `events` | `scView` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productListViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_SC_, utilizando el delimitador `,`. |
-| `commerce.productViews.id` | `events` | `prodView` serialización de eventos. Si se excluye este campo (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
-| `commerce.productViews.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con la VISTA COMMERCE_PROD_, mediante el uso del delimitador `,`. |
-| `commerce.purchases.value` | `events` | Asignación del parámetro de consulta de AppMeasurement EVENTO_LISTA_FULL con conversion COMMERCE_PURCHASE, utilizando el delimitador `,`. |
-| `device.colorDepth` | `c` | Asignación del parámetro de consulta de AppMeasurement C_COLOR. |
-| `device.screenHeight` | `s` | Parámetro de consulta de AppMeasurement Asignación de resolución de pantalla. |
-| `device.screenWidth` | `s` | Parámetro de consulta de AppMeasurement Asignación de resolución de pantalla. |
-| `environment.browserDetails.acceptLanguage` | `Accept-Language` | Es una asignación de encabezado HTTP, HEADER_ACCEPT_LANGUAGE. |
-| `environment.browserDetails.cookiesEnabled` | `k` | Asignación COOKIES del parámetro de consulta de AppMeasurement con la conversión BOOLEAN_TO_YN. |
-| `environment.browserDetails.javaEnabled` | `v` | Asignación del parámetro de consulta de AppMeasurement JAVA_ENABLED con BOOLEAN_TO_YN de conversión. |
+| `commerce.checkouts.id` | `events` | `scCheckout` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.checkouts.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_CHECKOUT, utilizando el delimitador `,`. |
+| `commerce.order.currencyCode` | `cc` | Asignación de CURRENCY del parámetro de consulta AppMeasurement. |
+| `commerce.order.purchaseID` | `pi` | Asignación del parámetro de consulta AppMeasurement PURCHASEID . |
+| `commerce.productListAdds.id` | `events` | `scAdd` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.productListAdds.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_ADD, utilizando el delimitador `,`. |
+| `commerce.productListOpens.id` | `events` | `scOpen` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.productListOpens.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_OPEN, utilizando el delimitador `,`. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.productListRemovals.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_REMOVE, utilizando el delimitador `,`. |
+| `commerce.productListViews.id` | `events` | `scView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.productListViews.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_SC_VIEW, utilizando el delimitador `,`. |
+| `commerce.productViews.id` | `events` | `prodView` serialización de eventos. Si este campo se excluye (es decir, para eventos sin serializar), el sistema genera y asigna su propio valor de ID a la entidad. |
+| `commerce.productViews.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PROD_VIEW, utilizando el delimitador `,`. |
+| `commerce.purchases.value` | `events` | El parámetro de consulta AppMeasurement EVENT_LIST_FULL se asigna con la conversión COMMERCE_PURCHASE, utilizando el delimitador `,`. |
+| `device.colorDepth` | `c` | Asignación del parámetro de consulta AppMeasurement C_COLOR. |
+| `device.screenHeight` | `s` | Parámetro de consulta AppMeasurement Asignación de resolución de pantalla. |
+| `device.screenWidth` | `s` | Parámetro de consulta AppMeasurement Asignación de resolución de pantalla. |
+| `environment.browserDetails.acceptLanguage` | `Accept-Language` | Esto es una asignación de encabezados HTTP, HEADER_ACCEPT_LANGUAGE. |
+| `environment.browserDetails.cookiesEnabled` | `k` | Parámetro de consulta AppMeasurement COOKIES asignación con conversión BOOLEAN_TO_YN. |
+| `environment.browserDetails.javaEnabled` | `v` | El parámetro de consulta AppMeasurement JAVA_ENABLED se asigna con la conversión BOOLEAN_TO_YN. |
 | `environment.browserDetails.javaScriptVersion` | `j` | Asignación del parámetro de consulta AppMeasurement J_JSCRIPT. |
-| `environment.browserDetails.userAgent` | `User-Agent` | Es una asignación de encabezado HTTP, HEADER_USER_AGENT. |
-| `environment.browserDetails.viewportHeight` | `bh` | Asignación del parámetro de consulta de AppMeasurement para BROWSER_HEIGHT. |
-| `environment.browserDetails.viewportWidth` | `bw` | Asignación del parámetro de consulta de AppMeasurement para BROWSER_WIDTH. |
+| `environment.browserDetails.userAgent` | `User-Agent` | Se trata de una asignación de encabezados HTTP, HEADER_USER_AGENT. |
+| `environment.browserDetails.viewportHeight` | `bh` | Asignación del parámetro de consulta AppMeasurement para BROWSER_HEIGHT. |
+| `environment.browserDetails.viewportWidth` | `bw` | Asignación del parámetro de consulta AppMeasurement para BROWSER_WIDTH . |
 | `environment.connectionType` | `ct` | Asignación del parámetro de consulta AppMeasurement CT_CONNECT_TYPE. |
-| `environment.ipV4` | `X-Forwarded-For` | Es una asignación de encabezado HTTP, X-FORWARDED-FOR. |
-| `identityMap.ECID.[0].id` | `mid` | Asignación MID del parámetro de consulta de AppMeasurement. |
-| `marketing.trackingCode` | `v0` | Asignación de CAMPAÑA de parámetros de consulta de AppMeasurement. |
+| `environment.ipV4` | `X-Forwarded-For` | Esta es una asignación de encabezados HTTP, X-FORWARDED-FOR. |
+| `identityMap.ECID.[0].id` | `mid` | Asignación de MID del parámetro de consulta AppMeasurement. |
+| `marketing.trackingCode` | `v0` | Asignación del parámetro de consulta AppMeasurement en CAMPAIGN. |
 | `media.mediaTimed.completes.value` | `c.a.media.complete` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.dropBeforeStart.value` | `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.federated.value` | `c.a.media.federated` | Asignación de datos de contexto de AppMeasurement `c.a.media.federated`. |
@@ -66,8 +66,8 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number` | `c.a.media.season` | Asignación de datos de contexto de AppMeasurement `c.a.media.season`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Asignación de datos de contexto de AppMeasurement `a.media.name`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | Asignación de datos de contexto de AppMeasurement `c.a.media.show`. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto de AppMeasurement `c.a.media.type` con la conversión VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto de AppMeasurement `c.a.media.type` con conversión VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto `c.a.media.type` de AppMeasurement con conversión VEDIO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Asignación de datos de contexto `c.a.media.type` de AppMeasurement con conversión VIDEO_SHOW_TYPE. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Asignación de datos de contexto de AppMeasurement `c.a.media.length`. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | Asignación de datos de contexto de AppMeasurement `c.a.media.channel`. |
@@ -85,21 +85,23 @@ A continuación se muestra una lista de variables que Adobe Experience Platform 
 | `media.mediaTimed.thirdQuartiles.value` | `c.a.media.progress75` | Datos de contexto de AppMeasurement. |
 | `media.mediaTimed.timePlayed.value` | `c.a.media.timePlayed` | Asignación de datos de contexto de AppMeasurement `c.a.media.timePlayed`. |
 | `media.mediaTimed.totalTimePlayed.value` | `c.a.media.totalTimePlayed` | Asignación de datos de contexto de AppMeasurement `c.a.media.totalTimePlayed`. |
-| `placeContext.geo.latitude` | `lat` | Asignación LATITUDE del parámetro de consulta de AppMeasurement. |
+| `placeContext.geo.latitude` | `lat` | Parámetro de consulta AppMeasurement asignación LATITUDE. |
 | `placeContext.geo.longitude` | `lon` | Asignación del parámetro de consulta AppMeasurement en LONGITUDE. |
-| `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta de AppMeasurement. |
-| `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta de AppMeasurement. |
-| `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parámetro de consulta de AppMeasurement Productos Eventos de mercancías / Asignación de Evars. |
-| `productlistitems.[N].name` | `products` | Parámetro de consulta de AppMeasurement Asignación de nombres de productos. |
-| `productlistitems.[N].priceTotal` | `products` | Parámetro de consulta de AppMeasurement Asignación de precios de productos. |
-| `productlistitems.[N].quantity` | `products` | Parámetro de consulta de AppMeasurement Asignación de cantidad de productos. |
-| `web.webInteraction.URL` | `pev1` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR1. |
-| `web.webInteraction.name` | `pev2` | Asignación del parámetro de consulta de AppMeasurement PAGE_EVENTO_VAR2. |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` a  `pe=lnk_o`;  `web.webInteraction.type=download` a  `pe=lnk_d`;  `web.webInteraction.type=exit` to  `pe=lnk_e` |
-| `web.webPageDetails.URL` | `g` | Asignación del parámetro de consulta de AppMeasurement PAGE_URL. |
-| `web.webPageDetails.errorPage` | `pageType` | El parámetro de consulta de AppMeasurement PAGE_TYPE_FULL se asigna con la conversión ERROR_PAGE_TYPE. |
-| `web.webPageDetails.homePage` | `hp` | Parámetro de consulta de AppMeasurement Asignación HOMEPAGE con conversión BOOLEAN_TO_YN. |
-| `web.webPageDetails.name` | `gn` | Asignación del parámetro de consulta de AppMeasurement para PAGENAME. |
-| `web.webPageDetails.server` | `sv` | Asignación del parámetro de consulta de AppMeasurement USER_SERVER. |
-| `web.webPageDetails.siteSection` | `ch` | Asignación de CANALES de parámetros de consulta de AppMeasurement. |
-| `web.webReferrer.URL` | `r` | Asignación de REMITENTES DEL REENVÍO de parámetros de consulta de AppMeasurement. |
+| `placeContext.geo.postalCode` | `zip` | Asignación ZIP del parámetro de consulta AppMeasurement. |
+| `placeContext.geo.stateProvince` | `state` | Asignación STATE del parámetro de consulta AppMeasurement. |
+| `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parámetro de consulta AppMeasurement Evento de comercialización de productos / Asignación de Evars. |
+| `productlistitems.[N].name` | `products` | Parámetro de consulta AppMeasurement Asignación de nombres de productos. |
+| `productlistitems.[N].priceTotal` | `products` | Parámetro de consulta AppMeasurement Asignación de precios de productos. |
+| `productlistitems.[N].quantity` | `products` | Parámetro de consulta AppMeasurement Asignación de cantidad de productos. |
+| `web.webInteraction.URL` | `pev1` | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR1 . |
+| `web.webInteraction.name` | `pev2` | Asignación del parámetro de consulta AppMeasurement PAGE_EVENT_VAR2 . |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` a  `pe=lnk_o`;  `web.webInteraction.type=download` a  `pe=lnk_d`;  `web.webInteraction.type=exit` a  `pe=lnk_e` |
+| `web.webPageDetails.URL` | `g` | Parámetro de consulta AppMeasurement asignación PAGE_URL. |
+| `web.webPageDetails.errorPage` | `pageType` | Parámetro de consulta AppMeasurement PAGE_TYPE_FULL asignación con conversión ERROR_PAGE_TYPE. |
+| `web.webPageDetails.homePage` | `hp` | Asignación del parámetro de consulta AppMeasurement HOMEPAGE con la conversión BOOLEAN_TO_YN. |
+| `web.webPageDetails.name` | `gn` | Asignación del parámetro de consulta AppMeasurement PAGENAME. |
+| `web.webPageDetails.server` | `sv` | Asignación del parámetro de consulta AppMeasurement USER_SERVER . |
+| `web.webPageDetails.siteSection` | `ch` | Parámetro de consulta AppMeasurement Asignación de CANAL. |
+| `web.webReferrer.URL` | `r` | Asignación del parámetro de consulta AppMeasurement REFERRER. |
+
+{style=&quot;table-layout:auto&quot;}
