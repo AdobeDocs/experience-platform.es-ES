@@ -5,14 +5,14 @@ type: Tutorial
 seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2025'
 ht-degree: 0%
 
 ---
-
 
 # Activar perfiles y segmentos en un destino
 
@@ -240,13 +240,6 @@ En la página **[!UICONTROL Review]** puede ver un resumen de su selección. Sel
 Si no se ha detectado ninguna infracción de directiva, seleccione **[!UICONTROL Finish]** para confirmar la selección y empezar a enviar datos al destino.
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
-
-## Editar activación {#edit-activation}
-
-Siga los pasos a continuación para editar los flujos de activación existentes en Adobe Experience Platform:
-
-1. Seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda, haga clic en la pestaña **[!UICONTROL Browse]** y, a continuación, haga clic en el nombre de destino.
-2. Seleccione **[!UICONTROL Edit activation]** en el carril derecho para cambiar los segmentos que se enviarán al destino.
 
 ## Verifique que la activación del segmento se haya realizado correctamente {#verify-activation}
 
