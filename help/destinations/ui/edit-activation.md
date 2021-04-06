@@ -1,18 +1,18 @@
 ---
-keywords: editar activación; editar destino;
+keywords: Editar activación,Editar destino
 title: Editar flujos de activación
 type: Tutorial
 seo-title: Editar flujos de activación
 description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
 seo-description: Siga los pasos de este artículo para editar un flujo de activación existente en Adobe Experience Platform.
+exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
 
 ---
-
 
 # Editar flujos de activación {#edit-activation-flows}
 
