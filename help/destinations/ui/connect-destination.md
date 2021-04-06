@@ -1,26 +1,37 @@
 ---
-keywords: conectar destino;destino conectar;cómo conectar destino
-title: Conectar a un destino
+keywords: conectar destino;conexión de destino;cómo conectar destino
+title: Conectarse a un destino
 type: Tutorial
-description: Este tutorial lista los pasos para conectar un destino en Adobe Experience Platform
+description: Este tutorial enumera los pasos para conectar un destino en Adobe Experience Platform
+exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
-# Conectar a un destino
+# Conectarse a un destino
 
 Siga los pasos a continuación para conectarse a un destino en Adobe Experience Platform:
 
-1. Vaya a **[!UICONTROL Destinations]** desde la barra de navegación izquierda.
-2. En la ficha [[!UICONTROL Catálogo]](./destinations-workspace.md#catalog), seleccione el destino al que desea conectarse.
-3. Pulse **[!UICONTROL Conectar destino]** para inicio del asistente de conexión de destino.
-4. Para obtener instrucciones paso a paso sobre cómo conectarse a destinos específicos, consulte las páginas de destino. Consulte [destinos de almacenamiento en la nube](../catalog/cloud-storage/workflow.md), [destinos de mercadotecnia de correo electrónico](../catalog/email-marketing/overview.md) y [destinos de publicidad](../catalog/advertising/overview.md).
+1. Inicie sesión en la [IU del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda.
 
-Consulte a continuación para ver un vídeo de descripción general de cómo conectar un destino y activar segmentos en él.
+   ![Conectarse al destino](../assets/ui/connect-destinations/connect-destination.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)
+2. En la pestaña [[!UICONTROL Catalog]](./destinations-workspace.md#catalog), seleccione el destino al que desea conectarse.
+
+3. Seleccione **[!UICONTROL Configure]** para iniciar el asistente de conexión de destino.
+
+   ![Configurar destino](../assets/ui/connect-destinations/configure-destination.png)
+
+   >[!NOTE]
+   >
+   >Si existe una conexión con un destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
+
+4. Consulte [Descripción general del catálogo de destinos](../catalog/overview.md) para obtener instrucciones sobre cómo conectar con tipos de destinos específicos.
+
+5. Si lo desea, vea el siguiente vídeo para obtener información general sobre cómo conectar con un destino y activar segmentos para él.
+
+   >[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)
