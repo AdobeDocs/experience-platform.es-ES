@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Punto final de la API de Mixins
 description: El extremo /mixins de la API del Registro de Esquemas permite administrar mediante programación las mezclas XDM dentro de la aplicación de experiencia.
 topic: guía para desarrolladores
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 2%
 
 ---
-
 
 # Punto final de las mezclas
 
@@ -19,11 +19,11 @@ Las mezclas son componentes reutilizables que definen uno o más campos que repr
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Recuperar una lista de mezclas {#list}
 
-Puede listar todas las mezclas bajo el contenedor `global` o `tenant` realizando una solicitud GET a `/global/mixins` o `/tenant/mixins`, respectivamente.
+Puede listar todas las mezclas bajo el contenedor `global` o `tenant` haciendo una solicitud de GET a `/global/mixins` o `/tenant/mixins`, respectivamente.
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ La solicitud anterior utilizó el encabezado `application/vnd.adobe.xed-id+json`
 
 ## Buscar una mezcla {#lookup}
 
-Puede buscar una mezcla específica incluyendo el ID de la mezcla en la ruta de una solicitud GET.
+Puede buscar una mezcla específica incluyendo el ID de la mezcla en la ruta de una solicitud de GET.
 
 **Formato de API**
 
@@ -140,11 +140,11 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 
 | `Accept` header | Descripción |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+| `application/vnd.adobe.xed+json; version=1` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` y  `allOf` resuelto, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
 
 **Respuesta**
 
@@ -211,7 +211,7 @@ Una respuesta correcta devuelve los detalles de la mezcla. Los campos devueltos 
 
 ## Crear una mezcla {#create}
 
-Puede definir una mezcla personalizada bajo el contenedor `tenant` haciendo una solicitud POST.
+Puede definir una mezcla personalizada bajo el contenedor `tenant` haciendo una solicitud del POST.
 
 **Formato de API**
 
@@ -378,11 +378,11 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Al realizar una solicitud GET para [enumerar todas las mezclas](#list) en el contenedor de inquilinos, ahora se incluiría la mezcla Detalles de propiedad o puede [realizar una solicitud de búsqueda (GET)](#lookup) utilizando el URI `$id` codificado con la dirección URL para ver la nueva mezcla directamente.
+Al realizar una solicitud de GET para [enumerar todas las mezclas](#list) en el contenedor de inquilinos, ahora se incluiría la mezcla Detalles de propiedad o puede [realizar una solicitud de búsqueda (GET)](#lookup) utilizando el URI `$id` codificado con la dirección URL para ver la nueva mezcla directamente.
 
 ## Actualizar una mezcla {#put}
 
-Puede reemplazar una mezcla completa a través de una operación PUT, básicamente reescribiendo el recurso. Al actualizar una mezcla a través de una solicitud PUT, el cuerpo debe incluir todos los campos que serían necesarios cuando [cree una nueva mezcla](#create) en una solicitud POST.
+Puede reemplazar una mezcla completa a través de una operación de PUT, básicamente reescribiendo el recurso. Al actualizar una mezcla a través de una solicitud del PUT, el cuerpo debe incluir todos los campos necesarios cuando [se cree una nueva mezcla](#create) en una solicitud del POST.
 
 >[!NOTE]
 >
@@ -565,11 +565,11 @@ Una respuesta correcta devuelve los detalles de la mezcla actualizada.
 
 ## Actualizar una parte de una mezcla {#patch}
 
-Puede actualizar una parte de una mezcla utilizando una solicitud PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre JSON Patch, consulte la [guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Puede actualizar una parte de una mezcla utilizando una solicitud del PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre JSON Patch, consulte la [guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar una mezcla con una operación PUT](#put).
+>Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar una mezcla con una operación de PUT](#put).
 
 **Formato de API**
 
@@ -706,7 +706,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El `desc
 
 ## Eliminar una mezcla {#delete}
 
-Ocasionalmente puede ser necesario eliminar una mezcla del Registro de Esquema. Para ello, se realiza una solicitud de ELIMINACIÓN con el ID de mezcla que se proporciona en la ruta.
+Ocasionalmente puede ser necesario eliminar una mezcla del Registro de Esquema. Esto se hace realizando una solicitud de DELETE con el ID de mezcla que se proporciona en la ruta.
 
 **Formato de API**
 
