@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta de flujo;ingesta;registrar datos;datos de registro de flujo;
+keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;registrar datos;datos de registro de flujo;
 solution: Experience Platform
 title: Registrar datos mediante las API de ingesta de flujos
 topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
+exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 2%
 
 ---
 
-
 # Transmisión de datos de registro mediante las API de ingesta de transmisión
 
-Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API [!DNL Data Ingestion Service] de Adobe Experience Platform.
+Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API de Adobe Experience Platform [!DNL Data Ingestion Service].
 
 ## Primeros pasos
 
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "Dataset description",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -306,7 +306,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity": {
@@ -336,7 +336,7 @@ Si desea incluir un nombre de origen, el siguiente ejemplo muestra cómo lo incl
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -364,7 +364,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
-| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a Adobe a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
+| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
 | `receivedTimeMs` | Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
 | `synchronousValidation.status` | Dado que se ha agregado el parámetro de consulta `synchronousValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
 
@@ -392,7 +392,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Solicitud**
 
-Puede revisar los datos de registro ingestados anteriormente con la siguiente solicitud GET.
+Puede revisar los datos de registro ingestados anteriormente con la siguiente solicitud de GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -456,5 +456,3 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las entidades
 Al leer este documento, ahora puede comprender cómo introducir datos de registro en [!DNL Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con valores diferentes y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos introducidos a través de la interfaz de usuario [!DNL Platform]. Para obtener más información, consulte la guía [monitorización de la ingesta de datos](../quality/monitor-data-ingestion.md).
 
 Para obtener más información sobre la ingesta de transmisión en general, lea la [descripción general de la ingesta de transmisión](../streaming-ingestion/overview.md).
-
-
