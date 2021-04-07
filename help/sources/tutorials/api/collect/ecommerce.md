@@ -1,51 +1,51 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Recopilar datos de comercio electrónico;datos de comercio electrónico
 solution: Experience Platform
-title: Recopilación de datos de comercio electrónico mediante las API y los conectores de origen
-topic: overview
+title: Recopilación de datos de comercio electrónico mediante conectores de origen y API
+topic: sobre validación
 type: Tutorial
-description: En este tutorial se explican los pasos para recuperar datos de un sistema de comercio electrónico de terceros e incorporarlos a la plataforma mediante conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar datos de un sistema de comercio electrónico de terceros e introducirlos en Platform mediante conectores de origen y API.
+exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
 
-
 # Recopilación de datos de comercio electrónico mediante conectores de origen y API
 
-Este tutorial trata los pasos para recuperar datos de un sistema **[!UICONTROL eCommerce]** de terceros e ingerirlos en [!DNL Platform] a través de conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para recuperar datos de un sistema **[!UICONTROL eCommerce]** de terceros e introducirlos en [!DNL Platform] mediante conectores de origen y la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga acceso a un sistema **[!UICONTROL eCommerce]** a través de una conexión válida, como así también información sobre el archivo que desea incluir en [!DNL Platform] (incluyendo la ruta y estructura del archivo). Si no tiene esta información, consulte el tutorial sobre [exploración de un sistema de comercio electrónico mediante la API de servicio de flujo](../explore/ecommerce.md) antes de intentar este tutorial.
+Este tutorial requiere que tenga acceso a un sistema **[!UICONTROL eCommerce]** a través de una conexión válida, así como información sobre el archivo que desea introducir en [!DNL Platform] (incluida la ruta y estructura del archivo). Si no tiene esta información, consulte el tutorial sobre [exploración de un sistema de comercio electrónico con la API de servicio de flujo](../explore/ecommerce.md) antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):: El esquema estandarizado por el cual el Experience Platform organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de la composición](../../../../xdm/schema/composition.md) de esquemas: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [API](../../../../xdm/api/getting-started.md) del Registro de esquemas: Obtenga información sobre cómo realizar correctamente llamadas a la API del Registro de Esquema. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
-* [[!DNL Catalog Service]](../../../../catalog/home.md):: Catalog es el sistema de registro para la ubicación y linaje de datos dentro de  [!DNL Experience Platform].
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):: La API de inserción de lotes permite ingestar datos en  [!DNL Experience Platform] archivos por lotes.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md)::  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Aspectos básicos de la composición](../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [API](../../../../xdm/api/getting-started.md) del Registro de Esquemas: Obtenga información sobre cómo realizar llamadas correctamente a la API del Registro de esquemas. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo es el sistema de registro para la ubicación y linaje de datos dentro de  [!DNL Experience Platform].
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): La API de ingesta de lotes permite introducir datos en  [!DNL Experience Platform] como archivos por lotes.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema **[!UICONTROL eCommerce]** mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema **[!UICONTROL eCommerce]** mediante la API [!DNL Flow Service].
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -59,17 +59,17 @@ Puede crear una conexión de origen realizando una solicitud de POST a la API [!
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
-Utilice los siguientes valores de enumeración para los conectores basados en archivos:
+Utilice los siguientes valores de enumeración para conectores basados en archivos:
 
 | Formato de datos | Valor de enumeración |
 | ----------- | ---------- |
 | Delimitado | `delimited` |
 | JSON | `json` |
-| Parquet | `parquet` |
+| Parqué | `parquet` |
 
 Para todos los conectores basados en tablas, establezca el valor en `tabular`.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /sourceConnections
@@ -114,13 +114,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `baseConnectionId` | ID de conexión de su **[!UICONTROL origen de eCommerce]**. |
+| `baseConnectionId` | El ID de conexión de su origen **[!UICONTROL eCommerce]**. |
 | `params.path` | Ruta del archivo de origen. |
-| `connectionSpec.id` | ID de especificación de conexión de su origen **[!UICONTROL eCommerce]**. |
+| `connectionSpec.id` | El ID de especificación de conexión de su origen **[!UICONTROL eCommerce]**. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en pasos posteriores para crear una conexión de destinatario.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en pasos posteriores para crear una conexión de destino.
 
 ```json
 {
@@ -129,13 +129,13 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Crear un esquema XDM de destinatario {#target-schema}
+## Crear un esquema XDM de destino {#target-schema}
 
-Para que los datos de origen se utilicen en [!DNL Platform], se debe crear un esquema de destinatario para estructurar los datos de origen según sus necesidades. El esquema de destinatario se utiliza para crear un conjunto de datos [!DNL Platform] en el que se incluyen los datos de origen. Este esquema XDM de destinatario también extiende la clase XDM [!DNL Individual Profile].
+Para que los datos de origen se utilicen en [!DNL Platform], se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos [!DNL Platform] en el que se incluyen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
 
-Se puede crear un esquema XDM de destinatario realizando una solicitud de POST a la [API del Registro de Esquema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /tenant/schemas
@@ -143,7 +143,7 @@ POST /tenant/schemas
 
 **Solicitud**
 
-La siguiente solicitud de ejemplo crea un esquema XDM que extiende la clase XDM [!DNL Individual Profile].
+La siguiente solicitud de ejemplo crea un esquema XDM que amplía la clase XDM [!DNL Individual Profile].
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles del esquema recién creado, incluido su identificador único (`$id`). Este ID es necesario en pasos posteriores para crear un conjunto de datos, una asignación y un flujo de datos de destinatario.
+Una respuesta correcta devuelve detalles del esquema recién creado, incluido su identificador único (`$id`). Este ID es necesario en pasos posteriores para crear un conjunto de datos de destinatario, una asignación y un flujo de datos.
 
 ```json
 {
@@ -239,11 +239,11 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 }
 ```
 
-## Creación de un conjunto de datos de destinatario
+## Creación de un conjunto de datos de destino
 
-Se puede crear un conjunto de datos de destinatario realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destino dentro de la carga útil.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /dataSets
@@ -270,11 +270,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `schemaRef.id` | El `$id` del esquema XDM de destinatario. |
+| `schemaRef.id` | El `$id` del esquema XDM de destino. |
+| `schemaRef.contentType` | Versión del esquema. Este valor debe establecerse `application/vnd.adobe.xed-full-notext+json;version=1`, que devuelve la última versión secundaria del esquema. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API. Almacene el ID del conjunto de datos de destinatario como se requiere en pasos posteriores para crear una conexión de destinatario y un flujo de datos.
+Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de solo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas API. Almacene el ID del conjunto de datos de destino como es necesario en pasos posteriores para crear una conexión de destino y un flujo de datos.
 
 ```json
 [
@@ -282,13 +283,13 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 ]
 ```
 
-## Crear una conexión de destinatario {#target-connection}
+## Crear una conexión de destino {#target-connection}
 
-Una conexión de destinatario representa la conexión al destino en el que aterrizan los datos ingestados. Para crear una conexión de destinatario, debe proporcionar la ID de especificación de conexión fija asociada al Data Lake. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino en el que llegan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos un esquema de destinatario un conjunto de datos de destinatario y el ID de especificación de conexión con el lago de datos. Mediante la API [!DNL Flow Service], puede crear una conexión de destinatario especificando estos identificadores junto con el conjunto de datos que contendrá los datos de origen de entrada.
+Ahora tiene los identificadores únicos, un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión a un lago de datos. Con la API [!DNL Flow Service], puede crear una conexión de destino especificando estos identificadores junto con el conjunto de datos que contendrán los datos de origen entrantes.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /targetConnections
@@ -326,13 +327,14 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.schema.id` | El `$id` del esquema XDM de destinatario. |
-| `params.dataSetId` | ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.schema.id` | El `$id` del esquema XDM de destino. |
+| `data.schema.version` | Versión del esquema. Este valor debe establecerse `application/vnd.adobe.xed-full+json;version=1`, que devuelve la última versión secundaria del esquema. |
+| `params.dataSetId` | El ID del conjunto de datos de destino. |
+| `connectionSpec.id` | El ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único de la nueva conexión de destinatario (`id`). Este valor es necesario en un paso posterior para crear un flujo de datos.
+Una respuesta correcta devuelve el identificador único de la nueva conexión de destino (`id`). Este valor es necesario en un paso posterior para crear un flujo de datos.
 
 ```json
 {
@@ -343,9 +345,9 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 
 ## Crear una asignación {#mapping}
 
-Para que los datos de origen se puedan ingerir en un conjunto de datos de destinatario, primero deben asignarse al esquema de destinatario al que se adhiere el conjunto de datos de destinatario. Esto se logra realizando una solicitud de POST a la [API de servicio de conversión](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se consigue realizando una solicitud de POST a la [API del servicio de conversión](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /mappingSets
@@ -385,7 +387,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `xdmSchema` | El `$id` del esquema XDM de destinatario. |
+| `xdmSchema` | El `$id` del esquema XDM de destino. |
 
 **Respuesta**
 
@@ -404,9 +406,9 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Buscar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de las fuentes y llevarlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones de flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de una fuente **[!UICONTROL eCommerce]**.
+Un flujo de datos es responsable de recopilar datos de los orígenes y traerlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de un origen **[!UICONTROL eCommerce]**.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /flowSpecs?property=name=="CRMToAEP"
@@ -424,7 +426,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos responsable de traer datos de su origen a la plataforma. La respuesta incluye la especificación de flujo único `id` necesaria para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos responsable de traer los datos de su origen a Platform. La respuesta incluye la especificación de flujo único `id` necesaria para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -658,15 +660,15 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debe tener preparados los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source)
-* [ID de conexión de destinatario](#target)
+* [ID de conexión de Target](#target)
 * [ID de asignación](#mapping)
-* [Id. de especificación de flujo de datos](#specs)
+* [ID de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores anteriormente mencionados en la carga útil de la solicitud.
+Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores antes mencionados dentro de la carga útil de la solicitud.
 
-Para programar una ingestión, primero debe establecer el valor de tiempo de inicio en hora de generación en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day` o `week`. El valor de intervalo designa el período entre dos ingestas consecutivas y la creación de una ingestión única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en hora de inicio en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day` o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /flows
@@ -714,12 +716,12 @@ curl -X POST \
 | -------- | ----------- |
 | `flowSpec.id` | El [Id. de especificación de flujo](#specs) recuperado en el paso anterior. |
 | `sourceConnectionIds` | El [ID de conexión de origen](#source) recuperado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destinatario](#target-connection) recuperado en un paso anterior. |
-| `transformations.params.mappingId` | El [id. de asignación](#mapping) recuperado en un paso anterior. |
-| `transformations.params.mappingId` | El identificador de asignación asociado a su origen **[!UICONTROL eCommerce]**. |
-| `scheduleParams.startTime` | La hora de inicio del flujo de datos en la época de época. |
-| `scheduleParams.frequency` | El `frequency` en el cual el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere un intervalo cuando `frequency` se configura como `once` y debe ser bueno o igual a `15` para otros valores `frequency`. |
+| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El [ID de asignación](#mapping) recuperado en un paso anterior. |
+| `transformations.params.mappingId` | El ID de asignación asociado al origen **[!UICONTROL eCommerce]**. |
+| `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo de época. |
+| `scheduleParams.frequency` | El `frequency` en el que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | El intervalo designa el periodo entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un número entero distinto de cero. No se requiere un intervalo cuando `frequency` está establecido como `once` y debe ser bueno o igual que `15` para otros `frequency` valores. |
 
 **Respuesta**
 
@@ -732,13 +734,13 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 }
 ```
 
-## Monitorear el flujo de datos
+## Monitorizar el flujo de datos
 
-Una vez creado el flujo de datos, puede supervisar los datos que se están ingeriendo a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para obtener más información sobre cómo monitorear flujos de datos, consulte el tutorial sobre [monitoreo de flujos de datos en la API ](../monitor.md)
+Una vez creado el flujo de datos, puede supervisar los datos que se están incorporando a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para obtener más información sobre cómo monitorizar los flujos de datos, consulte el tutorial sobre [monitorización de flujos de datos en la API ](../monitor.md)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado un conector de origen para recopilar datos **[!UICONTROL eCommerce]** de forma programada. Los datos entrantes ahora se pueden utilizar en servicios de flujo descendente [!DNL Platform] como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha creado un conector de origen para recopilar datos **[!UICONTROL eCommerce]** de forma programada. Los datos entrantes ahora se pueden usar en servicios descendentes [!DNL Platform] como [!DNL Real-time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general sobre el Perfil del cliente en tiempo real](../../../../profile/home.md)
-* [Información general sobre el área de trabajo de ciencias de datos](../../../../data-science-workspace/home.md)
+* [Resumen del perfil del cliente en tiempo real](../../../../profile/home.md)
+* [Información general de Data Science Workspace](../../../../data-science-workspace/home.md)
