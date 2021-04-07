@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conjunto de datos;Conjunto de datos;crear un conjunto de datos;crear conjunto de datos;habilitar conjunto de datos
+keywords: Experience Platform;inicio;temas populares;conjunto de datos;conjunto de datos;crear un conjunto de datos;crear conjunto de datos;habilitar conjunto de datos
 solution: Experience Platform
-title: Creación de un conjunto de datos en la API
-topic: developer guide
+title: Crear un conjunto de datos en la API
+topic: guía para desarrolladores
 description: Este documento explica cómo crear un objeto de conjunto de datos en la API del servicio de catálogo.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '256'
 ht-degree: 1%
 
 ---
 
+# Crear un conjunto de datos en la API
 
-# Creación de un conjunto de datos en la API
-
-Para crear un conjunto de datos mediante la API [!DNL Catalog], debe conocer el valor `$id` del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos haciendo una solicitud de POST al extremo `/datasets` en la API [!DNL Catalog].
+Para crear un conjunto de datos con la API [!DNL Catalog] , debe conocer el valor `$id` del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud de POST al extremo `/datasets` en la API [!DNL Catalog].
 
 >[!NOTE]
 >
->Este documento solo cubre cómo crear un objeto de conjunto de datos en [!DNL Catalog]. Para ver los pasos completos sobre cómo crear, rellenar y monitorear un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
+>Este documento solo trata cómo crear un objeto de conjunto de datos en [!DNL Catalog]. Para ver los pasos completos sobre cómo crear, rellenar y monitorizar un conjunto de datos, consulte el siguiente [tutorial](../datasets/create.md).
 
-**Formato API**
+**Formato de API**
 
 ```HTTP
 POST /dataSets
@@ -29,7 +29,7 @@ POST /dataSets
 
 **Solicitud**
 
-La siguiente solicitud crea un conjunto de datos que hace referencia a un esquema definido previamente.
+La siguiente solicitud crea un conjunto de datos que hace referencia a un esquema definido anteriormente.
 
 ```SHELL
 curl -X POST \
@@ -57,14 +57,15 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre del conjunto de datos que se va a crear. |
 | `schemaRef.id` | El valor URI `$id` del esquema XDM en el que se basará el conjunto de datos. |
+| `schemaRef.contentType` | Indica el formato y la versión del esquema. Consulte la sección sobre [versión del esquema](../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información. |
 
 >[!NOTE]
 >
->Este ejemplo utiliza el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para su propiedad `containerFormat`. Encontrará un ejemplo que utiliza el formato de archivo JSON en la [guía para desarrolladores de ingestión por lotes](../../ingestion/batch-ingestion/api-overview.md).
+>Este ejemplo utiliza el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/) para su propiedad `containerFormat`. Puede encontrar un ejemplo que use el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md).
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respuesta que consta de una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de sólo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas de API.
+Una respuesta correcta devuelve el Estado HTTP 201 (Creado) y un objeto de respuesta que consta de una matriz que contiene el ID del conjunto de datos recién creado con el formato `"@/datasets/{DATASET_ID}"`. El ID del conjunto de datos es una cadena de solo lectura generada por el sistema que se utiliza para hacer referencia al conjunto de datos en las llamadas API.
 
 ```JSON
 [
