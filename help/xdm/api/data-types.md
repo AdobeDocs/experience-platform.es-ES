@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de tipo de datos;registro de esquema;tipo de datos;tipos de datos;crear
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de tipo de datos;registro de esquema;tipo de datos;tipo de datos;tipos de datos;crear
 solution: Experience Platform
 title: Punto final de la API de tipos de datos
 description: El extremo /datatypes de la API del Registro de esquemas le permite administrar mediante programación los tipos de datos XDM dentro de la aplicación de experiencia.
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
 
 ---
-
 
 # Punto de conexión de tipos de datos
 
@@ -18,11 +18,11 @@ Los tipos de datos se utilizan como campos de referencia en clases o mezclas de 
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Recuperar una lista de tipos de datos {#list}
 
-Puede enumerar todos los tipos de datos bajo el contenedor `global` o `tenant` realizando una solicitud GET a `/global/datatypes` o `/tenant/datatypes`, respectivamente.
+Puede enumerar todos los tipos de datos bajo el contenedor `global` o `tenant` realizando una solicitud de GET a `/global/datatypes` o `/tenant/datatypes`, respectivamente.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CONTAINER_ID}` | El contenedor desde el que desea recuperar los tipos de datos: `global` para los tipos de datos creados por Adobe o `tenant` para los tipos de datos propiedad de su organización. |
+| `{CONTAINER_ID}` | El contenedor desde el que desea recuperar los tipos de datos: `global` para tipos de datos creados por Adobe o `tenant` para tipos de datos propiedad de su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
 **Solicitud**
@@ -96,7 +96,7 @@ La solicitud anterior utilizaba el encabezado `application/vnd.adobe.xed-id+json
 
 ## Buscar un tipo de datos {#lookup}
 
-Puede buscar un tipo de datos específico incluyendo el ID del tipo de datos en la ruta de una solicitud GET.
+Puede buscar un tipo de datos específico incluyendo el ID del tipo de datos en la ruta de una solicitud de GET.
 
 **Formato de API**
 
@@ -106,7 +106,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{CONTAINER_ID}` | El contenedor que alberga el tipo de datos que desea recuperar: `global` para un tipo de datos creado por Adobe o `tenant` para un tipo de datos propiedad de su organización. |
+| `{CONTAINER_ID}` | El contenedor que alberga el tipo de datos que desea recuperar: `global` para un tipo de datos creado por el Adobe o `tenant` para un tipo de datos propiedad de su organización. |
 | `{DATA_TYPE_ID}` | El `meta:altId` o el `$id` con codificación de dirección URL del tipo de datos que desea buscar. |
 
 **Solicitud**
@@ -127,11 +127,11 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 
 | `Accept` header | Descripción |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, tiene títulos y descripciones. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+| `application/vnd.adobe.xed+json; version=1` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` y  `allOf` resuelto, tiene títulos y descripciones. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
 
 **Respuesta**
 
@@ -216,7 +216,7 @@ Una respuesta correcta devuelve los detalles del tipo de datos. Los campos devue
 
 ## Crear un tipo de datos {#create}
 
-Puede definir un tipo de datos personalizado en el contenedor `tenant` realizando una solicitud POST.
+Puede definir un tipo de datos personalizado en el contenedor `tenant` realizando una solicitud de POST.
 
 **Formato de API**
 
@@ -324,11 +324,11 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 }
 ```
 
-Al realizar una solicitud GET para [enumerar todos los tipos de datos](#list) en el contenedor de inquilinos, ahora se incluiría el tipo de datos Detalles de propiedad o puede [realizar una solicitud de búsqueda (GET)](#lookup) utilizando el URI `$id` codificado con la dirección URL para ver el nuevo tipo de datos directamente.
+Al realizar una solicitud de GET para [enumerar todos los tipos de datos](#list) en el contenedor de inquilinos, ahora se incluiría el tipo de datos Detalles de propiedad o puede [realizar una solicitud de búsqueda (GET)](#lookup) utilizando el URI `$id` codificado con la dirección URL para ver el nuevo tipo de datos directamente.
 
 ## Actualizar un tipo de datos {#put}
 
-Puede reemplazar un tipo de datos completo mediante una operación PUT, lo que básicamente es volver a escribir el recurso. Al actualizar un tipo de datos a través de una solicitud PUT, el cuerpo debe incluir todos los campos necesarios cuando [se crea un nuevo tipo de datos](#create) en una solicitud POST.
+Puede reemplazar un tipo de datos completo mediante una operación de PUT, lo que básicamente es volver a escribir el recurso. Al actualizar un tipo de datos mediante una solicitud de PUT, el cuerpo debe incluir todos los campos necesarios cuando [se crea un nuevo tipo de datos](#create) en una solicitud de POST.
 
 >[!NOTE]
 >
@@ -457,11 +457,11 @@ Una respuesta correcta devuelve los detalles del tipo de datos actualizado.
 
 ## Actualizar una parte de un tipo de datos {#patch}
 
-Puede actualizar una parte de un tipo de datos utilizando una solicitud PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre JSON Patch, consulte la [guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
+Puede actualizar una parte de un tipo de datos utilizando una solicitud de PATCH. El [!DNL Schema Registry] es compatible con todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre JSON Patch, consulte la [guía de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar un tipo de datos con una operación PUT](#put).
+>Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar un tipo de datos con una operación de PUT](#put).
 
 **Formato de API**
 
@@ -598,7 +598,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El `desc
 
 ## Eliminar un tipo de datos {#delete}
 
-Ocasionalmente puede ser necesario eliminar un tipo de datos del Registro de esquemas. Esto se realiza realizando una solicitud de eliminación con el ID de tipo de datos proporcionado en la ruta.
+Ocasionalmente puede ser necesario eliminar un tipo de datos del Registro de esquemas. Esto se realiza realizando una solicitud de DELETE con el ID de tipo de datos proporcionado en la ruta.
 
 **Formato de API**
 
@@ -625,4 +625,4 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Puede confirmar la eliminación intentando enviar una solicitud [lookup (GET)](#lookup) al tipo de datos. Deberá incluir un encabezado `Accept` en la solicitud, pero debe recibir un estado HTTP 404 (No encontrado) porque el tipo de datos se ha eliminado del Registro de esquemas.
+Puede confirmar la eliminación intentando enviar una solicitud de [búsqueda (GET)](#lookup) al tipo de datos. Deberá incluir un encabezado `Accept` en la solicitud, pero debe recibir un estado HTTP 404 (No encontrado) porque el tipo de datos se ha eliminado del Registro de esquemas.
