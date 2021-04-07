@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;datos de series temporales;datos de series temporales de flujo;
+keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;datos de series temporales;datos de series temporales de transmisión;
 solution: Experience Platform
 title: Transmisión de datos de series temporales mediante API de ingesta de transmisión
 topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
+exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 2%
 
 ---
 
-
 # Transmisión de datos de series temporales mediante API de ingesta de transmisión
 
-Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API [!DNL Data Ingestion Service] de Adobe Experience Platform.
+Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API de Adobe Experience Platform [!DNL Data Ingestion Service].
 
 ## Primeros pasos
 
@@ -112,7 +112,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del esquema reci
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.{SCHEMA_ID}",
     "meta:resourceType": "schemas",
-    "version": "{SCHEMA_VERSION}",
+    "version": "1",
     "type": "object",
     "title": "{SCHEMA_NAME}",
     "description": "{SCHEMA_DESCRIPTION}",
@@ -271,7 +271,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "{DATASET_DESCRIPTION}",
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
-        "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "fileDescription": {
         "persisted": true,
@@ -329,7 +329,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -338,7 +338,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity":{
@@ -391,7 +391,7 @@ Si desea incluir un nombre de origen, el siguiente ejemplo muestra cómo lo incl
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -419,13 +419,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
-| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a Adobe a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
+| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
 | `receivedTimeMs`: Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
 | `synchronousValidation.status` | Dado que se ha agregado el parámetro de consulta `synchronousValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
 
 ## Recuperar los datos de series temporales recién introducidos
 
-Para validar los registros introducidos anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede hacer utilizando una solicitud GET al extremo `/access/entities` y utilizando parámetros de consulta opcionales. Se pueden usar varios parámetros, separados por el símbolo &amp;.&quot;
+Para validar los registros introducidos anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede hacer mediante una solicitud de GET al extremo `/access/entities` y utilizando parámetros de consulta opcionales. Se pueden usar varios parámetros, separados por el símbolo &amp;.&quot;
 
 >[!NOTE]
 >
