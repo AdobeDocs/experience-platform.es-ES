@@ -3,14 +3,14 @@ title: Configuración del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo configurar el SDK web de Adobe Experience Platform.
 seo-description: Obtenga información sobre cómo configurar el SDK web de Experience Platform
 keywords: configurar;configuración;SDK;edge;Web SDK;configurar;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;configuración del sdk web;preoculhideStyle;opacidad;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled third;PartyCookiesEnabled;
+exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
 translation-type: tm+mt
-source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
+source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 10%
+source-wordcount: '803'
+ht-degree: 8%
 
 ---
-
 
 # Configuración del SDK web de Platform
 
@@ -18,7 +18,7 @@ La configuración del SDK se realiza con el comando `configure`.
 
 >[!IMPORTANT]
 >
->`configure` siempre debe  ** ser el primer comando llamado.
+>`configure` es  ** siempre el primer comando llamado .
 
 ```javascript
 alloy("configure", {
@@ -35,9 +35,11 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | ninguna |
+| Cadena | Sí | Ninguna |
 
-Su ID de configuración asignado, que vincula el SDK a las cuentas y la configuración adecuadas.  Al configurar varias instancias dentro de una sola página, debe configurar un `edgeConfigId` diferente para cada instancia.
+{style=&quot;table-layout:auto&quot;}
+
+Su ID de configuración asignado, que vincula el SDK a las cuentas y la configuración adecuadas. Al configurar varias instancias dentro de una sola página, debe configurar un `edgeConfigId` diferente para cada instancia.
 
 ### `context`
 
@@ -45,7 +47,9 @@ Su ID de configuración asignado, que vincula el SDK a las cuentas y la configur
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matriz de cadenas | No | `["web", "device", "environment", "placeContext"]` |
 
-Indica las categorías de contexto que se recopilarán automáticamente tal como se describe en [Información automática](../data-collection/automatic-information.md).  Si no se especifica esta configuración, todas las categorías se utilizan de forma predeterminada.
+{style=&quot;table-layout:auto&quot;}
+
+Indica las categorías de contexto que se recopilarán automáticamente tal como se describe en [Información automática](../data-collection/automatic-information.md). Si no se especifica esta configuración, todas las categorías se utilizan de forma predeterminada.
 
 ### `debugEnabled`
 
@@ -53,29 +57,32 @@ Indica las categorías de contexto que se recopilarán automáticamente tal como
 | -------- | ------------ | ----------------- |
 | Booleano | No | `false` |
 
-Indica si la depuración debe estar habilitada. Al establecer esta configuración en `true` se habilitarán las siguientes funciones:
+{style=&quot;table-layout:auto&quot;}
+
+Indica si la depuración está habilitada. Al establecer esta configuración en `true` se habilitarán las siguientes funciones:
 
 | **Función** | **Función** |
 | ---------------------- | ------------------ |
 | Validación sincrónica | Valida los datos que se recopilan con el esquema y devuelve un error en la respuesta con la siguiente etiqueta: `collect:error OR success` |
 | Registro de consola | Habilita la visualización de mensajes de depuración en la consola JavaScript del explorador |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### `edgeDomain` {#edge-domain}
 
-| **Tipo** | **Requerido** | **Valor predeterminado** |
-| -------- | ------------ | ------------------ |
-| Cadena | No | `beta.adobedc.net` |
-| Cadena | No | `omtrdc.net` |
+Rellene este campo con el dominio de origen. Para obtener más información, consulte la [documentación](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
-Dominio utilizado para interactuar con los servicios de Adobe. Solo se utiliza si tiene un dominio de origen (CNAME) que proxie solicitudes a la infraestructura perimetral de Adobe.
+El dominio es similar a `data.{customerdomain.com}` para un sitio web en www.{customerdomain.com}.
 
 ### `orgId`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | Sí | ninguna |
+| Cadena | Sí | Ninguna |
 
-Su ID de organización [!DNL Experience Cloud] asignado.  Al configurar varias instancias dentro de una página, debe configurar un `orgId` diferente para cada instancia.
+{style=&quot;table-layout:auto&quot;}
+
+Su ID de organización [!DNL Experience Cloud] asignado. Al configurar varias instancias dentro de una página, debe configurar un `orgId` diferente para cada instancia.
 
 ## Recopilación de datos
 
@@ -85,7 +92,9 @@ Su ID de organización [!DNL Experience Cloud] asignado.  Al configurar varias i
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Indica si los datos asociados con los clics en vínculos se deben recopilar automáticamente. Consulte [Seguimiento automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información.
+{style=&quot;table-layout:auto&quot;}
+
+Indica si los datos asociados con clics en vínculos se recopilan automáticamente. Consulte [Seguimiento automático de vínculos](../data-collection/track-links.md#automaticLinkTracking) para obtener más información.
 
 ### `onBeforeEventSend`
 
@@ -93,7 +102,9 @@ Indica si los datos asociados con los clics en vínculos se deben recopilar auto
 | -------- | ------------ | ----------------- |
 | Función | No | () => sin definir |
 
-Configúrelo para configurar una llamada de retorno que se llame para cada evento justo antes de enviarse.  Se envía un objeto con el campo `xdm` a la rellamada.  Modifique el objeto `xdm` para cambiar lo que se envía.  Dentro de la rellamada, el objeto `xdm` ya tendrá los datos pasados en el comando event y la información recopilada automáticamente. Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de eventos](tracking-events.md#modifying-events-globally).
+{style=&quot;table-layout:auto&quot;}
+
+Configure una llamada de retorno que se llame para cada evento justo antes de enviarla. Se envía un objeto con el campo `xdm` a la rellamada. Para cambiar lo que se envía, modifique el objeto `xdm`. Dentro de la rellamada, el objeto `xdm` ya tiene los datos pasados en el comando event y la información recopilada automáticamente. Para obtener más información sobre la temporización de esta llamada de retorno y un ejemplo, consulte [Modificación global de eventos](tracking-events.md#modifying-events-globally).
 
 ## Opciones de privacidad
 
@@ -103,10 +114,12 @@ Configúrelo para configurar una llamada de retorno que se llame para cada event
 | -------- | ------------ | ----------------- |
 | Objeto | No | `"in"` |
 
-Establece el consentimiento predeterminado del usuario. Se utiliza cuando no hay preferencias de consentimiento ya guardadas para el usuario. Los demás valores válidos son `"pending"` y `"out"`. Este valor predeterminado no se mantiene en el perfil del usuario. Solo se actualiza el perfil del usuario cuando se llama a setConsent .
-* `"in"`: Cuando se establece o no se proporciona ningún valor, el trabajo continúa sin las preferencias de consentimiento del usuario.
-* `"pending"`: Cuando esto está establecido, el trabajo se pondrá en cola hasta que el usuario proporcione las preferencias de consentimiento.
-* `"out"`: Cuando esto está establecido, el trabajo se descartará hasta que el usuario proporcione las preferencias de consentimiento.
+{style=&quot;table-layout:auto&quot;}
+
+Establece el consentimiento predeterminado del usuario. Utilice esta configuración cuando no haya preferencias de consentimiento guardadas para el usuario. Los demás valores válidos son `"pending"` y `"out"`. Este valor predeterminado no se mantiene en el perfil del usuario. El perfil del usuario solo se actualiza cuando se llama a `setConsent`.
+* `"in"`: Cuando se establece esta configuración o no se proporciona ningún valor, el trabajo continúa sin las preferencias de consentimiento del usuario.
+* `"pending"`: Cuando se establece esta configuración, el trabajo se pone en cola hasta que el usuario proporcione las preferencias de consentimiento.
+* `"out"`: Cuando se establece esta configuración, el trabajo se descarta hasta que el usuario proporcione las preferencias de consentimiento.
 Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se interrumpe en función de sus preferencias. Consulte [Consentimiento de soporte](../consent/supporting-consent.md) para obtener más información.
 
 ## Opciones de personalización
@@ -115,11 +128,13 @@ Una vez proporcionadas las preferencias del usuario, el trabajo continúa o se i
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Cadena | No | ninguna |
+| Cadena | No | Ninguna |
+
+{style=&quot;table-layout:auto&quot;}
 
 Se utiliza para crear una definición de estilo CSS que oculte áreas de contenido de su página web mientras se carga contenido personalizado desde el servidor. Si no se proporciona esta opción, el SDK no intenta ocultar ninguna área de contenido mientras se carga el contenido personalizado, lo que potencialmente resulta en un &quot;parpadeo&quot;.
 
-Por ejemplo, si tiene un elemento en la página web con un ID de `container` cuyo contenido predeterminado desea ocultar mientras se carga contenido personalizado desde el servidor, un ejemplo de estilo de preocultación sería el siguiente:
+Por ejemplo, si un elemento de la página web tiene un ID de `container`, cuyo contenido predeterminado desea ocultar mientras se carga contenido personalizado desde el servidor, utilice el siguiente estilo de preocultación:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -133,6 +148,8 @@ Por ejemplo, si tiene un elemento en la página web con un ID de `container` cuy
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
+{style=&quot;table-layout:auto&quot;}
+
 Habilita [!DNL Audience Manager] destinos de cookies, lo que permite configurar cookies en función de la calificación de segmentos.
 
 ### `urlDestinationsEnabled`
@@ -140,6 +157,8 @@ Habilita [!DNL Audience Manager] destinos de cookies, lo que permite configurar 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
+
+{style=&quot;table-layout:auto&quot;}
 
 Habilita [!DNL Audience Manager] destinos de URL, lo que permite activar direcciones URL en función de la calificación de segmentos.
 
@@ -149,14 +168,18 @@ Habilita [!DNL Audience Manager] destinos de URL, lo que permite activar direcci
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Booleano | No | true |
+| Booleano | No | `true` |
 
-Si es true, el SDK leerá y establecerá cookies AMCV antiguas. Esto ayuda con la transición al uso del SDK web de Adobe Experience Platform, mientras que algunas partes del sitio pueden seguir utilizando Visitor.js. Además, si la API de visitante está definida en la página, el SDK consultará la API de visitante para el ECID. Esto le permite etiquetar páginas con el SDK web de Adobe Experience Platform y seguir teniendo el mismo ECID.
+{style=&quot;table-layout:auto&quot;}
+
+Si es true, el SDK lee y establece cookies AMCV antiguas. Esta opción ayuda con la transición al uso del SDK web de Adobe Experience Platform, mientras que algunas partes del sitio pueden seguir utilizando Visitor.js. Si la API de visitante está definida en la página, el SDK consulta la API de visitante para el ECID. Esta opción le permite etiquetar páginas con el SDK web de Adobe Experience Platform y seguir teniendo el mismo ECID.
 
 ### `thirdPartyCookiesEnabled`
 
 | **Tipo** | **Requerido** | **Valor predeterminado** |
 | -------- | ------------ | ----------------- |
-| Booleano | No | true |
+| Booleano | No | `true` |
 
-Habilita la configuración de cookies de terceros de Adobe. El SDK puede mantener el ID de visitante en un contexto de terceros para permitir que se use el mismo ID de visitante en todos los sitios. Esto resulta útil si tiene varios sitios o si desea compartir datos con socios; sin embargo, a veces esto no es deseable por motivos de privacidad.
+{style=&quot;table-layout:auto&quot;}
+
+Habilita la configuración de cookies de terceros de Adobe. El SDK puede mantener el ID de visitante en un contexto de terceros para permitir que se use el mismo ID de visitante en todos los sitios. Utilice esta opción si tiene varios sitios o si desea compartir datos con socios; sin embargo, a veces esta opción no es deseada por motivos de privacidad.
