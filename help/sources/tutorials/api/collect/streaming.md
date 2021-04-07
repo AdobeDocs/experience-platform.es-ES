@@ -5,18 +5,18 @@ title: Recopilación de datos de flujo continuo mediante conectores de origen y 
 topic: sobre validación
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1325'
 ht-degree: 2%
 
 ---
 
-
 # Recopilación de datos de flujo continuo mediante conectores de origen y API
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial trata los pasos para recuperar datos de un conector de origen de flujo continuo y llevarlos a [!DNL Experience Platform] mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -31,7 +31,7 @@ Este tutorial requiere que tenga un ID de conexión válido para un conector de 
 
 Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
    - [Aspectos básicos de la composición](../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Guía](../../../../xdm/api/getting-started.md) para desarrolladores de Schema Registry: Incluye información importante que debe conocer para realizar correctamente llamadas a la API del Registro de esquemas. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados requeridos para realizar solicitudes (con especial atención al encabezado Accept y sus posibles valores).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo es el sistema de registro para la ubicación y linaje de datos dentro de  [!DNL Experience Platform].
@@ -62,7 +62,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión de origen {#source}
 
-Puede crear una conexión de origen realizando una solicitud POST a la API [!DNL Flow Service]. Una conexión de origen consiste en un ID de conexión, una ruta al archivo de datos de origen y un ID de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST a la API [!DNL Flow Service]. Una conexión de origen consiste en un ID de conexión, una ruta al archivo de datos de origen y un ID de especificación de conexión.
 
 Para crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
@@ -128,7 +128,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para que los datos de origen se utilicen en [!DNL Platform], se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos [!DNL Platform] en el que se incluyen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
 
-Se puede crear un esquema XDM de destino realizando una solicitud POST a la [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API del Registro de Esquemas](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **Formato de API**
 
@@ -236,7 +236,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Creación de un conjunto de datos de destino
 
-Se puede crear un conjunto de datos de destino realizando una solicitud POST a la [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destino dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destino dentro de la carga útil.
 
 **Formato de API**
 
@@ -257,7 +257,7 @@ curl -X POST \
     -d '{
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "fileDescription": {
             "format": "parquet"
@@ -277,6 +277,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `schemaRef.id` | El ID del esquema XDM de destino. |
+| `schemaRef.contentType` | Versión del esquema. Este valor debe establecerse `application/vnd.adobe.xed-full-notext+json;version=1`, que devuelve la última versión secundaria del esquema. |
 
 **Respuesta**
 
@@ -344,7 +345,7 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 
 ## Crear una asignación {#mapping}
 
-Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud POST al servicio de conversión con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST al servicio de conversión con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 
 **Formato de API**
 
@@ -404,7 +405,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Buscar especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de los orígenes y traerlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de un conector de flujo continuo.
+Un flujo de datos es responsable de recopilar datos de los orígenes y traerlos a [!DNL Platform]. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud de GET a la API [!DNL Flow Service]. Las especificaciones de flujo de datos son responsables de recopilar datos de un conector de flujo continuo.
 **Formato de API**
 
 ```http
@@ -502,7 +503,7 @@ El último paso para recopilar datos de flujo continuo es crear un flujo de dato
 - [ID de asignación](#mapping)
 - [ID de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
 
 **Formato de API**
 
