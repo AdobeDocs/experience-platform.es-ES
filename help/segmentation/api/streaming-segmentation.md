@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
 topic: guía para desarrolladores
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1377'
 ht-degree: 1%
 
 ---
-
 
 # Evaluar eventos en tiempo casi real con segmentación de flujo continuo
 
@@ -75,9 +75,11 @@ Para que un segmento se evalúe utilizando la segmentación de flujo continuo, l
 | ---------- | ------- |
 | Visita entrante | Cualquier definición de segmento que haga referencia a un solo evento entrante sin restricciones de tiempo. |
 | Visita entrante dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante. |
+| Visita entrante con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un solo evento entrante con un intervalo de tiempo. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Visita entrante que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a un solo evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. |
 | Visita entrante que hace referencia a un perfil dentro de un periodo de tiempo relativo | Cualquier definición de segmento que haga referencia a un solo evento entrante y a uno o más atributos de perfil. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. |
 | Varios eventos que hacen referencia a un perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. |
 
 Una definición de segmento **no** se habilitará para la segmentación de flujo continuo en los siguientes escenarios:
