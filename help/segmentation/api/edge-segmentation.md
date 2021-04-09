@@ -6,18 +6,18 @@ topic: guía para desarrolladores
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación perimetral con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 1%
+source-wordcount: '653'
+ht-degree: 3%
 
 ---
 
-# Segmentación de Edge
+# Segmentación de Edge (beta)
 
 >[!NOTE]
 >
->El siguiente documento indica cómo realizar la segmentación perimetral mediante la API. Para obtener información sobre cómo realizar la segmentación perimetral mediante la interfaz de usuario, lea la [guía de la interfaz de segmentación de Edge](../ui/edge-segmentation.md).
+>El siguiente documento indica cómo realizar la segmentación perimetral mediante la API. Para obtener información sobre cómo realizar la segmentación perimetral mediante la interfaz de usuario, lea la [guía de la interfaz de segmentación de Edge](../ui/edge-segmentation.md). Además, la segmentación de Edge se encuentra actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 
