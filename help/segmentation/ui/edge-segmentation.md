@@ -6,14 +6,18 @@ topic: guía de la interfaz de usuario
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 1%
+source-wordcount: '348'
+ht-degree: 4%
 
 ---
 
-# Guía de la interfaz de usuario de segmentación de Edge
+# Guía de la interfaz de usuario de segmentación de Edge (beta)
+
+>[!NOTE]
+>
+>La segmentación de Edge está actualmente en fase beta. La documentación y las funciones están sujetas a cambios.
 
 La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 
