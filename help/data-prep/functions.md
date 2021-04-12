@@ -6,7 +6,7 @@ topic: sobre validación
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
+source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
 workflow-type: tm+mt
 source-wordcount: '3793'
 ht-degree: 3%
@@ -42,7 +42,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatena las cadenas dadas. | <ul><li>CADENA: Las cadenas que se concatenarán.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;ahi&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explosión | Divide la cadena en función de un regex y devuelve una matriz de partes. Opcionalmente, puede incluir regex para dividir la cadena. De forma predeterminada, la división se resuelve en &quot;,&quot;. Los siguientes delimitadores **necesitan** que se escapen con `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` Si incluye varios caracteres como delimitador, el delimitador se tratará como un delimitador de varios caracteres. | <ul><li>CADENA: **Requerido** La cadena que debe dividirse.</li><li>REGEX: *Opcional* La expresión regular que puede utilizarse para dividir la cadena.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hola, ahí!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
 | instr | Devuelve la ubicación/índice de una subcadena. | <ul><li>ENTRADA: **Requerido** La cadena que se está buscando.</li><li>SUBCADENA: **Requerido** La subcadena que se está buscando dentro de la cadena.</li><li>START_POSITION: *Opcional* La ubicación de donde comenzar a buscar en la cadena.</li><li>OCURRENCIA: *Opcional* La enésima incidencia que se busca desde la posición de inicio. De forma predeterminada, se establece en 1. </li></ul> | instr(ENTRADA, SUBCADENA, START_POSITION, OCURRENCIA) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
@@ -67,7 +67,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 ### Funciones de expresión regular
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Extrae grupos de la cadena de entrada, según una expresión regular. | <ul><li>CADENA: **Requerido** La cadena de la que está extrayendo los grupos.</li><li>REGEX: **Requerido** La expresión regular con la que desea que coincida el grupo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Comprueba si la cadena coincide con la expresión regular introducida. | <ul><li>CADENA: **Requerido** La cadena que está comprobando coincide con la expresión regular.</li><li>REGEX: **Requerido** La expresión regular con la que se compara.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
@@ -80,7 +80,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Toma una entrada y produce un valor hash utilizando Secure Hash Algorithm 1 (SHA-1). | <ul><li>ENTRADA: **Requerido** El texto sin formato que se va a hash.</li><li>CONJUNTO DE CARÁCTER: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha1(ENTRADA, CHARSET) | sha1(&quot;mi texto&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Toma una entrada y produce un valor hash utilizando Secure Hash Algorithm 256 (SHA-256). | <ul><li>ENTRADA: **Requerido** El texto sin formato que se va a hash.</li><li>CONJUNTO DE CARÁCTER: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha256(ENTRADA, JUEGO) | sha256(&quot;mi texto&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | Toma una entrada y produce un valor hash utilizando Secure Hash Algorithm 512 (SHA-512). | <ul><li>ENTRADA: **Requerido** El texto sin formato que se va a hash.</li><li>CONJUNTO DE CARÁCTER: *Opcional* El nombre del conjunto de caracteres. Los valores posibles son UTF-8, UTF-16, ISO-8859-1 y US-ASCII.</li></ul> | sha512(ENTRADA, ENTRADA) | sha512(&quot;mi texto&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -96,7 +96,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Devuelve el protocolo de la dirección URL dada. Si la entrada no es válida, devuelve nulo. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el protocolo.</li></ul> | get_url_protocol &#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | Devuelve el host de la URL dada. Si la entrada no es válida, devuelve nulo. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el host.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Devuelve el puerto de la URL dada. Si la entrada no es válida, devuelve nulo. | <ul><li>URL: **Requerido** La dirección URL desde la que se debe extraer el puerto.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
@@ -112,7 +112,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla. Puede encontrar más información sobre la función `date` en la [guía de la función date](./dates.md).
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera la hora actual. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera la hora Unix actual. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Da formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonianDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -136,7 +136,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerido** El objeto del que está intentando encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Comprueba si un objeto está vacío o no. | <ul><li>ENTRADA: **Requerido** El objeto que está intentando comprobar está vacío.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crea una lista de objetos. | <ul><li>ENTRADA: **Requerido** Una agrupación de pares de claves y matrices.</li></ul> | array_to_object(INPUT) | need sample | need sample |
@@ -154,7 +154,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Devuelve el primer objeto no nulo de una matriz determinada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea encontrar el primer objeto no nulo.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;seconds&quot;) | &quot;first&quot; |
 | first | Recupera el primer elemento de la matriz dada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea encontrar el primer elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Recupera el último elemento de la matriz dada. | <ul><li>ENTRADA: **Requerido** La matriz de la que desea encontrar el último elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -171,7 +171,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Si se da una clave y una lista de pares de valor clave acoplados como una matriz, la función devuelve el valor si se encuentra una clave o devuelve un valor predeterminado si está presente en la matriz. | <ul><li>CLAVE: **Requerido** La clave a buscar coincidencias.</li><li>OPTIONS: **Requerido** Una matriz plana de pares clave/valor. Opcionalmente, se puede colocar un valor predeterminado al final.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si el stateCode dado es &quot;ca&quot;, &quot;California&quot;.<br>Si el stateCode dado es &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si stateCode no coincide con lo siguiente, &quot;N/D&quot;. |
 | iif | Evalúa una expresión booleana determinada y devuelve el valor especificado en función del resultado. | <ul><li>EXPRESIÓN: **Requerido** La expresión booleana que se está evaluando.</li><li>TRUE_VALUE: **Required** El valor que se devuelve si la expresión se evalúa como verdadera.</li><li>FALSE_VALUE: **Required** El valor que se devuelve si la expresión se evalúa como falsa.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -184,7 +184,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Devuelve el mínimo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Devuelve el máximo de los argumentos dados. Utiliza el orden natural. | <ul><li>OPTIONS: **Requerido** Uno o más objetos que se pueden comparar entre sí.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -197,7 +197,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | Convierte una cadena en BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 100000,34 |
 | to_decimal | Convierte una cadena en Double. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un valor Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
 | to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
@@ -212,7 +212,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialice el contenido JSON de la cadena dada. | <ul><li>CADENA: **Requerido** La cadena JSON que se va a deserializar.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Un objeto que representa el JSON. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -224,7 +224,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudo-aleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -236,7 +236,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 >Desplácese a la izquierda/derecha para ver todo el contenido de la tabla.
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrae el nombre del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extrae la versión principal del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS5 |
 | ua_os_version | Extrae la versión del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** La cadena del agente de usuario.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Versión/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
