@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Solución de problemas de fuentes
 topic: solución de problemas
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # Guía de solución de problemas de fuentes (Beta)
 
@@ -57,7 +57,7 @@ Los tipos de datos admitidos son números enteros, cadenas, booleanos, objetos d
 
 ### ¿Qué formatos de fecha y hora se admiten?
 
-Las fuentes admiten una amplia variedad de formatos de fecha y hora al introducir datos. Puede encontrar más información sobre los formatos de fecha y hora admitidos en la [guía de funciones de fecha de preparación de datos](../data-prep/dates.md).
+Las fuentes admiten una amplia variedad de formatos de fecha y hora al introducir datos. Puede encontrar más información sobre los formatos de fecha y hora admitidos en la sección de fechas de la [guía de administración del formato de datos](../data-prep/data-handling.md#dates) en la documentación de preparación de datos.
 
 ### ¿Cómo aplico formato a las matrices en archivos CSV, JSON y Parquet?
 
