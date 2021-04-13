@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Información general sobre la preparación de datos
 topic: sobre validación
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Para obtener más información sobre las diferentes funciones de asignación, le
 
 Un conjunto de asignaciones que transforman un esquema en otro se conocen colectivamente como conjunto de asignaciones. Se crea un conjunto de asignaciones único como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y monitoriza como parte de los flujos de datos.
 
+## Gestión del formato de datos
+
+La preparación de datos puede gestionar de forma sólida diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, lea la [información general sobre la administración del formato de datos](./data-handling.md).
+
 ## Pasos siguientes
 
-Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre las diferentes cadenas de fecha y hora, lea la [guía de cadenas de fecha](./dates.md). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
+Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo gestiona la preparación de datos los distintos tipos de datos, consulte la [guía de administración del formato de datos](./data-handling.md#dates). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
