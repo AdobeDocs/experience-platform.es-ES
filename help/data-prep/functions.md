@@ -6,9 +6,9 @@ topic: sobre validación
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 >[!NOTE]
 >
->Desplácese a la izquierda/derecha para ver todo el contenido de la tabla. Puede encontrar más información sobre la función `date` en la [guía de la función date](./dates.md).
+>Desplácese a la izquierda/derecha para ver todo el contenido de la tabla. Puede encontrar más información sobre la función `date` en la sección de fechas de la [guía de administración del formato de datos](./data-handling.md#dates).
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
