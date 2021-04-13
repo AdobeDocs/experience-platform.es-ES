@@ -5,10 +5,10 @@ user-guide-title: Guía de preparación de datos
 user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform.
 feature: Gestión de datos, ingesta de datos
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 42%
+source-wordcount: '43'
+ht-degree: 41%
 
 ---
 
@@ -22,5 +22,5 @@ ht-degree: 42%
    - [Primeros pasos](./api/getting-started.md)
    - [Funciones](./api/functions.md)
    - [Conjunto de asignaciones](./api/mapping-set.md)
-- [Objetos Datetime](dates.md)
+- [Gestión de formatos de datos](./data-handling.md)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
