@@ -1,0 +1,126 @@
+---
+keywords: Experience Platform;inicio;temas populares
+solution: Experience Platform
+title: Procesamiento de consentimiento en Adobe Experience Platform
+topic: introducción
+description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
+translation-type: tm+mt
+source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+workflow-type: tm+mt
+source-wordcount: '1448'
+ht-degree: 0%
+
+---
+
+
+# Procesamiento de consentimiento en Adobe Experience Platform
+
+Adobe Experience Platform le permite procesar los datos de consentimiento que ha recopilado de sus clientes e integrarlos en los perfiles de clientes almacenados. Los procesos descendentes pueden utilizar estos datos para determinar si la recopilación de datos se produce para un cliente específico o si sus perfiles se utilizan para fines específicos. Por ejemplo, los datos de consentimiento de un perfil en particular pueden determinar si se pueden incluir en un segmento de audiencia exportado o si pueden participar en canales de marketing específicos, como correo electrónico, mensajes de texto o notificaciones push.
+
+Este documento proporciona información general sobre cómo configurar las operaciones de datos de Platform para introducir datos de consentimiento del cliente generados por una plataforma de administración de consentimiento (CMP) e integrar esos datos en perfiles del cliente para casos de uso posteriores.
+
+>[!NOTE]
+>
+>Este documento se centra en el procesamiento de datos de consentimiento mediante el estándar de Adobe. Si está procesando datos de consentimiento de conformidad con el marco de transparencia y consentimiento IAB (TCF) 2.0, consulte la guía sobre la compatibilidad con [TCF 2.0 en la plataforma de datos del cliente en tiempo real](../iab/overview.md).
+
+## Requisitos previos
+
+Esta guía requiere una comprensión práctica de los distintos servicios de Experience Platform involucrados en el procesamiento de datos de consentimiento:
+
+* [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Servicio de identidad de Adobe Experience Platform](../../../../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
+* [Perfil](../../../../profile/home.md) del cliente en tiempo real: Utiliza  [!DNL Identity Service] capacidades para crear perfiles de cliente detallados a partir de sus conjuntos de datos en tiempo real. El perfil del cliente en tiempo real extrae datos del lago de datos y mantiene los perfiles del cliente en su propio almacén de datos independiente.
+* [SDK](../../../../edge/home.md) web de Adobe Experience Platform: Una biblioteca JavaScript del lado del cliente que le permite integrar varios servicios de Platform en su sitio web de cliente.
+   * [Comandos](../../../../edge/consent/supporting-consent.md) de consentimiento del SDK: Una descripción general del caso de uso de los comandos del SDK relacionados con el consentimiento que se muestran en esta guía.
+* [Servicio de segmentación de Adobe Experience Platform](../../../../segmentation/home.md): Permite dividir los datos del perfil del cliente en tiempo real en grupos de individuos que comparten características similares y que responderán de manera similar a las estrategias de marketing.
+
+## Resumen del flujo de procesamiento de consentimiento {#summary}
+
+A continuación se describe cómo se procesan los datos de consentimiento una vez configurado correctamente el sistema:
+
+1. Un cliente proporciona sus preferencias de consentimiento para la recopilación de datos mediante un cuadro de diálogo en el sitio web.
+1. En cada carga de página (o cuando su CMP detecta un cambio en las preferencias de consentimiento), un script personalizado del sitio asigna las preferencias actuales a un objeto XDM estándar. Este objeto se pasa entonces al comando Platform Web SDK `setConsent`.
+1. Cuando se llama a `setConsent`, el SDK web de Platform comprueba si los valores de consentimiento son diferentes de los recibidos por última vez. Si los valores son diferentes (o no hay ningún valor anterior), los datos estructurados de consentimiento/preferencia se envían a Adobe Experience Platform.
+1. Los datos de consentimiento/preferencia se incorporan en un conjunto de datos habilitado para [!DNL Profile] cuyo esquema contiene campos de consentimiento/preferencia.
+
+Además de los comandos del SDK activados por los enlaces de cambio de consentimiento de CMP, los datos de consentimiento también pueden fluir en el Experience Platform a través de cualquier dato XDM generado por el cliente que se cargue directamente en un conjunto de datos habilitado para [!DNL Profile].
+
+### Cumplimiento del consentimiento
+
+En la versión actual de compatibilidad con el procesamiento de consentimiento en Platform, solo el SDK web de Platform aplica automáticamente el permiso de recopilación de datos (`collect.val`). Aunque se pueden recopilar y mantener consentimientos y preferencias más granulares en los perfiles de cliente, estas señales adicionales deben aplicarse manualmente en sus propios procesos descendentes.
+
+>[!NOTE]
+>
+>Para obtener más información sobre la estructura de los campos de consentimiento XDM mencionados anteriormente, consulte la guía del tipo de datos [Consents &amp; Preferences](../../../../xdm/data-types/consents.md).
+
+Una vez configurado el sistema, el SDK web de la plataforma interpreta el valor del consentimiento de la recopilación de datos para el usuario actual a fin de determinar si los datos deben enviarse a la red perimetral de Adobe Experience Platform, dejarse caer del cliente o persistir hasta que el permiso de recopilación de datos se establezca en sí o no.
+
+## Determine cómo generar datos de consentimiento del cliente dentro de su CMP {#consent-data}
+
+Dado que cada sistema CMP es único, debe determinar la mejor manera de permitir que sus clientes den su consentimiento mientras interactúan con su servicio. Una forma común de conseguirlo es mediante un cuadro de diálogo de consentimiento de cookie, similar al siguiente ejemplo:
+
+![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
+
+Este cuadro de diálogo debe permitir al cliente activar o desactivar casos de uso de marketing y personalización específicos para sus datos. Estos consentimientos y preferencias deben ajustarse al modelo de datos que defina para el conjunto de datos habilitado para [!DNL Profile] en el siguiente paso.
+
+## Añadir campos de consentimiento estandarizado a un conjunto de datos [!DNL Profile] habilitado para {#dataset}
+
+Los datos de consentimiento del cliente deben enviarse a un conjunto de datos habilitado para [!DNL Profile] cuyo esquema contenga campos de consentimiento. Estos campos deben incluirse en el mismo esquema y conjunto de datos que utiliza para capturar información de atributos sobre clientes individuales.
+
+Consulte el tutorial sobre la [configuración de un conjunto de datos para capturar datos de consentimiento](./dataset.md) para ver los pasos detallados sobre cómo agregar estos campos obligatorios a un conjunto de datos [!DNL Profile] habilitado antes de continuar con esta guía.
+
+## Actualizar [!DNL Profile] políticas de combinación para incluir datos de consentimiento {#merge-policies}
+
+Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para procesar datos de consentimiento, debe asegurarse de que las políticas de combinación se hayan configurado para incluir siempre campos de consentimiento en cada perfil del cliente. Esto implica establecer la prioridad del conjunto de datos para que el conjunto de datos de consentimiento tenga prioridad sobre otros conjuntos de datos potencialmente conflictivos.
+
+>[!NOTE]
+>
+>Si no tiene conjuntos de datos en conflicto, debe establecer la prioridad de la marca de tiempo para la política de combinación. Esto ayuda a garantizar que el consentimiento más reciente especificado por un cliente sea la configuración de consentimiento que se utiliza.
+
+Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento requeridos que proporciona la mezcla Consentimientos y preferencias, como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
+
+## Incorporar datos de consentimiento a Platform
+
+Una vez que tenga sus conjuntos de datos y políticas de combinación para representar los campos de consentimiento requeridos en sus perfiles de cliente, el siguiente paso es introducir los datos de consentimiento en Platform.
+
+Principalmente, debe utilizar el SDK web de Adobe Experience Platform para enviar datos de consentimiento a Platform siempre que su CMP detecte eventos de cambio de consentimiento. Sin embargo, si ya tiene datos de consentimiento almacenados en otra parte, también puede optar por introducir los datos de consentimiento recopilados directamente asignándolos al esquema XDM de su conjunto de datos de consentimiento y enviándolos a Platform mediante la ingesta por lotes.
+
+En las subsecciones siguientes se proporcionan detalles sobre cada uno de estos métodos.
+
+### Integración del SDK web del Experience Platform para procesar los datos de consentimiento del cliente {#sdk}
+
+Una vez configurada la CMP para detectar eventos de cambio de consentimiento en su sitio web, puede integrar el SDK web del Experience Platform para recibir la configuración de consentimiento actualizada y enviarla a Platform siempre que se produzca un evento de cambio de consentimiento. Para obtener más información, consulte la guía sobre [configuración del SDK para procesar los datos de consentimiento del cliente](./sdk.md) .
+
+### Ingesta de datos de consentimiento compatibles con XDM directamente {#batch}
+
+Puede ingerir datos de consentimiento compatibles con XDM desde un archivo CSV mediante la ingesta por lotes. Esto puede resultar útil si tiene una acumulación de datos de consentimiento recopilados anteriormente que aún no se han integrado en sus perfiles de cliente.
+
+Siga el tutorial sobre [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para aprender a convertir los campos de datos a XDM e incorporarlos en Platform. Al seleccionar [!UICONTROL Destination] para la asignación, asegúrese de seleccionar la opción **[!UICONTROL Use existing dataset]** y elegir el conjunto de datos de consentimiento [!DNL Profile] habilitado que creó anteriormente.
+
+## Pruebe la implementación {#test-implementation}
+
+Después de haber introducido los datos de consentimiento del cliente en su conjunto de datos habilitado para [!DNL Profile] , puede comprobar los perfiles actualizados para ver si contienen atributos de consentimiento.
+
+>[!IMPORTANT]
+>
+>Para ver los atributos de un perfil existente en la interfaz de usuario, debe conocer al menos un valor de identidad (y su área de nombres correspondiente) asociado a ese perfil.
+>
+>Si no tiene acceso a esta información, puede optar por ingerir sus propios datos de consentimiento de prueba y asociarlos a un valor de identidad/área de nombres que conozca.
+
+Consulte la sección sobre [navegación por perfiles por identidad](../../../../profile/ui/user-guide.md#browse) en la guía de interfaz de usuario [!DNL Profile] para ver los pasos específicos sobre cómo buscar los detalles de un perfil.
+
+De forma predeterminada, los nuevos atributos de consentimiento no aparecen en el panel de un perfil. Por lo tanto, debe navegar a la pestaña **[!UICONTROL Attributes]** en la página de detalles de un perfil para confirmar que se han introducido según lo esperado. Consulte la guía del [panel de perfiles](../../../../profile/ui/profile-dashboard.md) para aprender a personalizar el tablero según sus necesidades.
+
+<!-- (To be included once CJM is GA)
+## Handling consent in Customer Journey Management
+
+If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
+
+Customer Journey Management can also send consent-change signals back to Platform. When a customer selects an "unsubscribe" link in an email message, the updated consent preference is sent to Platform and the appropriate profile attributes are updated accordingly.
+-->
+
+## Pasos siguientes
+
+Esta guía explica cómo configurar las operaciones de Platform para procesar los datos de consentimiento del cliente mediante el estándar de Adobe y hacer que esos atributos se representen en los perfiles del cliente. Ahora puede integrar las preferencias de consentimiento del cliente como factor determinante en la calificación de segmentos y otros casos de uso descendente.
+
+Para obtener más información sobre las funcionalidades relacionadas con la privacidad de Experience Platform, consulte la información general sobre [administración, privacidad y seguridad en Platform](../../overview.md).
