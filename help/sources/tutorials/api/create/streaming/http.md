@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de api;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta
+keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de api;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
 solution: Experience Platform
 title: Creación de una conexión de flujo continuo mediante la API
 topic: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -69,7 +70,7 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -132,7 +133,7 @@ POST /flowservice/connections
 
 **Solicitud**
 
-Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para crear una conexión de flujo continuo, el ID de proveedor y el ID de especificación de conexión deben proporcionarse como parte de la solicitud del POST. El ID del proveedor es `521eee4d-8cbe-4906-bb48-fb6bd4450033` y el ID de la especificación de conexión es `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
