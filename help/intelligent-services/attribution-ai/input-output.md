@@ -6,9 +6,9 @@ topic: Datos de entrada y salida para Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,16 @@ En el siguiente documento se describen las diferentes entradas y salidas utiliza
 
 ## [!DNL Attribution AI] datos de entrada
 
-[!DNL Attribution AI] utiliza  [!DNL Consumer Experience Event] datos para calcular puntuaciones algorítmicas. Para obtener más información sobre [!DNL Consumer Experience Event], consulte la [Preparación de datos para su uso en la documentación de Servicios inteligentes](../data-preparation.md).
+Attribution AI funciona analizando uno de los siguientes conjuntos de datos para calcular puntuaciones algorítmicas:
+
+- Conjunto de datos de Evento de experiencia del consumidor (CEE)
+- Conjuntos de datos de Adobe Analytics que utilizan el [Conector de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>El conector de origen de Adobe Analytics puede tardar hasta cuatro semanas en rellenar los datos. Si ha configurado recientemente un conector, debe comprobar que el conjunto de datos tiene la longitud mínima de datos necesaria para la Attribution AI. Revise la sección [datos históricos](#data-requirements) para verificar que tiene datos suficientes para calcular puntuaciones algorítmicas precisas.
+
+Para obtener más información sobre la configuración del esquema [!DNL Consumer Experience Event] (CEE), consulte la guía [Intelligent Services data preparation](../data-preparation.md) . Para obtener más información sobre la asignación de datos de Adobe Analytics, consulte la documentación [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) .
 
 No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obligatorias para la Attribution AI.
 
