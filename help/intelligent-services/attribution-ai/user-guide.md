@@ -1,85 +1,89 @@
 ---
 keywords: Experience Platform;guía del usuario;ai de atribución;temas populares;región
 solution: Experience Platform, Intelligent Services
-title: Guía de la IU de Attribution AI
-topic: User guide
+title: Guía de la interfaz de usuario de Attribution AI
+topic: 'Guía del usuario '
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1712'
 ht-degree: 1%
 
 ---
 
-
 # Guía de la interfaz de usuario de Attribution AI
 
-Attribution AI, como parte de Servicios Inteligentes, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
+Attribution AI, como parte de Servicios inteligentes es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
 
 Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 
 ## Crear una instancia
 
-En la interfaz de usuario [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Servicios]** y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, haga clic en **[!UICONTROL Abrir]**.
+En la interfaz de usuario de [!DNL Adobe Experience Platform], haga clic en **[!UICONTROL Services]** en el panel de navegación izquierdo. El explorador **[!UICONTROL Services]** aparece y muestra los servicios inteligentes de Adobe disponibles. En el contenedor para Attribution AI, haga clic en **[!UICONTROL Open]**.
 
 ![Acceso a la instancia](./images/user-guide/open_Attribution_ai.png)
 
-Aparece la página de servicio de Attribution AI. Esta página lista las instancias de servicio de Attribution AI y muestra información sobre ellas, incluido el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
+Aparecerá la página del servicio de Attribution AI. Esta página enumera las instancias de servicio de Attribution AI y muestra información sobre ellas, como el nombre de la instancia, los eventos de conversión, la frecuencia con la que se ejecuta la instancia y el estado de la última actualización.
 
-Puede encontrar la métrica **[!UICONTROL eventos de conversión totales puntuados]** en la parte inferior derecha del contenedor **[!UICONTROL Crear instancia]**. Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de simulación de pruebas y las instancias de servicio eliminadas.
+Puede encontrar la métrica **[!UICONTROL Total conversion events scored]** ubicada en el lado inferior derecho del contenedor **[!UICONTROL Create instance]** . Esta métrica rastrea el número total de eventos de conversión marcados por Attribution AI para el año natural actual, incluidos todos los entornos de espacio aislado y las instancias de servicio eliminadas.
 
 ![](./images/user-guide/total_conversions.png)
 
-Las instancias de servicio se pueden editar, clonar y eliminar mediante los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de las **[!UICONTROL instancias de servicio]** existentes. Los controles contienen la siguiente información:
+Las instancias de servicio se pueden editar, clonar y eliminar utilizando los controles del lado derecho de la interfaz de usuario. Para mostrar estos controles, seleccione una instancia de su **[!UICONTROL Service instances]** existente. Los controles contienen la siguiente información:
 
-- **[!UICONTROL Editar]**: Si selecciona  **** Editar, podrá modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
-- **[!UICONTROL Clonar]**: Al seleccionar  **** Clonecopia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar pequeñas modificaciones y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Eliminar]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
-- **[!UICONTROL Fuente]** de datos: Vínculo al conjunto de datos que utiliza esta instancia.
-- **[!UICONTROL Detalles]** de la última ejecución: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué falló la ejecución, como códigos de error.
+- **[!UICONTROL Edit]**: La selección de  **[!UICONTROL Edit]** permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción, el estado y la frecuencia de puntuación de la instancia.
+- **[!UICONTROL Clone]**: Al seleccionar  **[!UICONTROL Clone]** se copia la instancia de servicio seleccionada. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
+- **[!UICONTROL Delete]**: Puede eliminar una instancia de servicio, incluidas las ejecuciones históricas.
+- **[!UICONTROL Data source]**: Un vínculo al conjunto de datos que utiliza esta instancia.
+- **[!UICONTROL Last run details]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué la ejecución falló, como códigos de error.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Eventos]** de conversión: Información general rápida sobre los eventos de conversión configurados para esta instancia.
-- **[!UICONTROL Ventana]** de búsqueda: Período de tiempo definido que indica cuántos días antes de incluir los puntos de contacto del evento de conversión.
-- **[!UICONTROL Puntos de contacto]**: Una lista de todos los puntos de contacto definidos durante la creación de esta instancia.
+- **[!UICONTROL Conversion events]**: Información general rápida sobre los eventos de conversión configurados para esta instancia.
+- **[!UICONTROL Lookback window]**: El lapso de tiempo definido que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
+- **[!UICONTROL Touchpoints]**: Una lista de todos los puntos de contacto definidos al crear esta instancia.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Seleccione **[!UICONTROL Crear instancia]** para comenzar.
+Seleccione **[!UICONTROL Create instance]** para comenzar.
 
 ![Crear instancia](./images/user-guide/landing_page.png)
 
-A continuación, se abre la página de configuración para Attribution AI, donde puede proporcionar información básica y especificar un conjunto de datos para la instancia.
+A continuación, aparece la página de configuración para la Attribution AI, donde puede proporcionar información básica y especificar un conjunto de datos para la instancia.
 
 ![página de configuración](./images/user-guide/setup_attribution.png)
 
 ### Asigne un nombre a la instancia
 
-En **[!UICONTROL Información básica]**, proporcione un nombre y una descripción opcional para la instancia de servicio.
+En **[!UICONTROL Basic information]**, proporcione un nombre y una descripción opcional para su instancia de servicio.
 
-![asignación de nombres a una instancia](./images/user-guide/naming_instance.png)
+![asignación de nombres a instancias](./images/user-guide/naming_instance.png)
 
 ### Seleccionar un conjunto de datos
 
-Después de completar la información básica, haga clic en el menú desplegable etiquetado **Seleccionar conjunto de datos** para seleccionar el conjunto de datos. El conjunto de datos se utiliza para entrenar el modelo y puntuar los datos subsiguientes que produce. Al seleccionar un conjunto de datos en el selector desplegable, solo se muestran los que son compatibles con la Attribution AI y cumplen el esquema del modelo de datos de experiencia (XDM). Una vez elegido un conjunto de datos, haga clic en **Siguiente** en la esquina superior derecha para continuar con la página de definición de eventos.
+Después de completar la información básica, haga clic en el menú desplegable etiquetado **Seleccionar conjunto de datos** para seleccionar el conjunto de datos. El conjunto de datos se utiliza para entrenar el modelo y puntuar los datos posteriores que produce. Al seleccionar un conjunto de datos en el selector desplegable, solo se muestran los que son compatibles con la Attribution AI y se ajustan al esquema del Modelo de datos de experiencia (XDM). Una vez elegido un conjunto de datos, haga clic en **Siguiente** en la esquina superior derecha para continuar con la página definir eventos.
 
-![página de configuración](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Los conjuntos de datos de Adobe Analytics son compatibles mediante el conector de origen de Analytics.
+
+![página de configuración](./images/user-guide/dataset_selector.png)
 
 ## Definición de eventos
 
 Existen tres tipos diferentes de datos de entrada que se utilizan para definir eventos:
 
-- **Eventos de conversión: objetivos** comerciales que identifican el impacto de las actividades de mercadotecnia, como los pedidos de comercio electrónico, las compras en el almacén y las visitas al sitio web.
-- **Ventana retroactiva:** Proporciona un intervalo de tiempo que indica cuántos días antes de incluir los puntos de contacto del evento de conversión.
-- **Puntos de contacto:eventos de marketing a nivel de** destinatario, individual o de cookie utilizados para evaluar el impacto numérico o de ingresos de las conversiones.
+- **Eventos de conversión:** objetivos comerciales que identifican el impacto de las actividades de marketing, como pedidos de comercio electrónico, compras en el almacén y visitas a sitios web.
+- **Ventana retrospectiva:** Proporciona un lapso de tiempo que indica cuántos días antes de que se incluyan los puntos de contacto del evento de conversión.
+- **Touchpoints:** eventos de marketing a nivel de destinatario, individuo o cookie utilizados para evaluar el impacto numérico o basado en ingresos de las conversiones.
 
 ### Definir eventos de conversión {#define-conversion-events}
 
-Para definir un evento de conversión, debe asignar un nombre al evento y seleccionar el tipo de evento haciendo clic en el menú desplegable **Especifique el nombre del campo**.
+Para definir un evento de conversión, debe asignar un nombre al evento y seleccionar el tipo de evento haciendo clic en el menú desplegable **Introducir nombre de campo**.
 
-![menú desplegable Sí](./images/user-guide/conversion_event_2.png)
+![lista desplegable yes](./images/user-guide/conversion_event_2.png)
 
 Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha. La segunda lista desplegable se utiliza para proporcionar un contexto adicional al evento mediante el uso de operaciones. Para este evento de conversión, se utiliza la operación predeterminada *exists*.
 
@@ -87,33 +91,33 @@ Una vez seleccionado un evento, aparece un nuevo menú desplegable a la derecha.
 >
 >Se actualiza una cadena con el *nombre de conversión* al definir el evento.
 
-![sin menú desplegable](./images/user-guide/conversion_event_1.png)
+![sin lista desplegable](./images/user-guide/conversion_event_1.png)
 
-Los botones **[!UICONTROL Añadir evento]** y **[!UICONTROL Añadir grupo]** se utilizan para definir aún más la conversión. Según la conversión que esté definiendo, es posible que tenga que utilizar los botones **[!UICONTROL Añadir evento]** y **[!UICONTROL Añadir grupo]** para proporcionar contexto adicional.
+Los botones **[!UICONTROL Add event]** y **[!UICONTROL Add Group]** se utilizan para definir aún más la conversión. Según la conversión que defina, es posible que necesite utilizar los botones **[!UICONTROL Add event]** y **[!UICONTROL Add group]** para proporcionar un contexto más amplio.
 
 ![agregar evento](./images/user-guide/add_event.png)
 
-Al hacer clic en **[!UICONTROL Añadir evento]** se crean campos adicionales que se pueden rellenar utilizando el mismo método descrito anteriormente. Al hacerlo, se agrega una instrucción AND a la definición de cadena debajo del nombre de conversión. Haga clic en **x** para eliminar un evento que se haya agregado.
+Al hacer clic en **[!UICONTROL Add event]** se crean campos adicionales que se pueden rellenar utilizando el mismo método descrito anteriormente. Al hacerlo, se agrega una instrucción AND a la definición de cadena debajo del nombre de conversión. Haga clic en **x** para eliminar un evento que se haya agregado.
 
-![menú Agregar evento](./images/user-guide/add_event_result.png)
+![agregar menú de evento](./images/user-guide/add_event_result.png)
 
-Al hacer clic en **[!UICONTROL Añadir grupo]** se ofrece la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Al hacer clic en **And** se ofrece una opción para cambiar el parámetro para que contenga &quot;Or&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión exitosas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
+Al hacer clic en **[!UICONTROL Add Group]** se da la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Al hacer clic en **And** se proporciona una opción para cambiar el parámetro a contener &quot;O&quot;. &quot;O&quot; se utiliza para definir varias rutas de conversión correctas. &quot;And&quot; amplía la ruta de conversión para incluir condiciones adicionales.
 
-![usar y](./images/user-guide/and_or.png)
+![mediante y o](./images/user-guide/and_or.png)
 
-Si necesita más de una conversión, haga clic en **Añadir conversión** para crear una nueva tarjeta de conversión. Puede repetir el proceso anterior para definir varias conversiones.
+Si necesita más de una conversión, haga clic en **Agregar conversión** para crear una tarjeta de conversión nueva. Puede repetir el proceso anterior para definir varias conversiones.
 
 ![agregar conversión](./images/user-guide/add_conversion.png)
 
-### Definir ventana retroactiva {#lookback-window}
+### Definir ventana retrospectiva {#lookback-window}
 
-Una vez que haya terminado de definir la conversión, deberá confirmar la ventana retrospectiva. Con las teclas de flecha o haciendo clic en el valor predeterminado (56), especifique cuántos días antes del evento de conversión desea incluir puntos de contacto. Los puntos de contacto se definen en el paso siguiente.
+Cuando haya terminado de definir la conversión, debe confirmar la ventana retrospectiva. Con las teclas de flecha o haciendo clic en el valor predeterminado (56), especifique cuántos días antes del evento de conversión desea incluir los puntos de contacto. Los puntos de contacto se definen en el paso siguiente.
 
-![lookback](./images/user-guide/lookback_window.png)
+![retrospectiva](./images/user-guide/lookback_window.png)
 
 ### Definir puntos de contacto
 
-La definición de puntos de contacto sigue un flujo de trabajo similar al de [definición de conversiones](#define-conversion-events). Inicialmente debe asignar un nombre al punto de contacto y seleccionar un valor de punto de contacto en el menú desplegable *Especifique el nombre del campo*. Una vez seleccionada, la lista desplegable de operadores aparece con el valor predeterminado &quot;exists&quot;. Haga clic en el menú desplegable para mostrar una lista de operadores.
+La definición de puntos de contacto sigue un flujo de trabajo similar al de [definición de conversiones](#define-conversion-events). Inicialmente, debe asignar un nombre al punto de contacto y seleccionar un valor de punto de contacto en el menú desplegable *Especifique el nombre del campo*. Una vez seleccionado, aparece la lista desplegable de operadores con el valor predeterminado &quot;existe&quot;. Haga clic en la lista desplegable para mostrar una lista de operadores.
 
 ![operadores](./images/user-guide/operators.png)
 
@@ -121,53 +125,53 @@ Para este punto de contacto, seleccione **es igual a**.
 
 ![paso 1](./images/user-guide/touchpoint_step1.png)
 
-Una vez seleccionado un operador para un punto de contacto, *Especifique el valor del campo* estará disponible. Los valores desplegables para *Introducir valor de campo* se rellenan según el operador y el valor de punto de contacto que seleccionó anteriormente. Si un valor no se rellena en la lista desplegable, puede escribir ese valor manualmente. Haga clic en el menú desplegable y seleccione **HAGA CLIC**.
+Una vez seleccionado un operador para un punto de contacto, *Introducir valor de campo* está disponible. Los valores desplegables para *Introducir valor de campo* se rellenan en función del operador y el valor de punto de contacto seleccionados previamente. Si un valor no se rellena en la lista desplegable, puede escribirlo manualmente. Haga clic en el menú desplegable y seleccione **CLICK**.
 
 >[!NOTE]
 >
 >Los operadores &quot;existe&quot; y &quot;no existe&quot; no tienen valores de campo asociados a ellos.
 
-![menú desplegable de punto de contacto](./images/user-guide/touchpoint_dropdown.png)
+![lista desplegable de puntos de contacto](./images/user-guide/touchpoint_dropdown.png)
 
-Los botones *Añadir evento* y *Añadir grupo* se utilizan para definir el punto de contacto. Debido a la naturaleza compleja que rodea los puntos de contacto, no es raro tener varios eventos y grupos para un solo punto de contacto.
+Los botones *Add event* y *Add Group* se utilizan para definir aún más el punto de contacto. Debido a la naturaleza compleja que rodea los puntos de contacto, no es inusual tener múltiples eventos y grupos para un solo punto de contacto.
 
-Cuando se hace clic, **Añadir evento** permite agregar campos adicionales. Haga clic en **x** para eliminar un evento que se haya agregado.
+Cuando se hace clic, **Add event** permite agregar campos adicionales. Haga clic en **x** para eliminar un evento que se haya agregado.
 
 ![agregar evento](./images/user-guide/touchpoint_add_event.png)
 
-Al hacer clic en **Añadir grupo** puede crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Haga clic en **Y** para cambiar el parámetro, se utilizará el nuevo parámetro &quot;O&quot; para definir varias rutas correctas. Este punto de contacto en particular solo tiene una ruta exitosa, por lo tanto no se necesita &quot;O&quot;.
+Al hacer clic en **Agregar grupo** se proporciona la opción de crear campos adicionales separados del original. Con la adición de grupos, aparece un botón azul *And*. Haga clic en **And** para cambiar el parámetro, se utilizará el nuevo parámetro &quot;O&quot; para definir varias rutas correctas. Este punto de contacto en particular solo tiene una ruta correcta, por lo que no es necesario &quot;O&quot;.
 
-![descripción general de touchpoint](./images/user-guide/add_group_touchpoint.png)
+![información general de touchpoint](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->Utilice la cadena en *Touchpoint name* para obtener una visión general rápida de su touchpoint. Observe que la cadena coincide con el nombre del punto de contacto.
+>Utilice la cadena en *Touchpoint name* para obtener una descripción general rápida de su touchpoint. Observe que la cadena coincide con el nombre del punto de contacto.
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Puede agregar puntos de contacto adicionales haciendo clic en **Añadir punto de contacto** y repitiendo el proceso anterior.
+Para agregar puntos de contacto adicionales, haga clic en **Agregar punto de contacto** y repita el proceso anterior.
 
 ![añadir touchpoint](./images/user-guide/add_touchpoint.png)
 
 Una vez que haya terminado de definir todos los puntos de contacto necesarios, desplácese hacia arriba y haga clic en **Siguiente** en la esquina superior derecha para continuar con el paso final.
 
-![definición final](./images/user-guide/define_event_next.png)
+![define](./images/user-guide/define_event_next.png)
 
-## Configuración avanzada de puntuación y formación
+## Configuración avanzada de capacitación y puntuación
 
-La última página de Attribution AI es la página **[!UICONTROL Avanzado]** que se utiliza para configurar la capacitación y la puntuación.
+La última página de Attribution AI es la página **[!UICONTROL Advanced]** que se utiliza para configurar la formación y la puntuación.
 
-![nueva página avanzada](./images/user-guide/advanced_settings.png)
+![página nueva avanzada](./images/user-guide/advanced_settings.png)
 
-### Programar formación
+### Programar capacitación
 
-Con el *Programa*, puede seleccionar el día y la hora de la semana que desea que se realice la puntuación.
+Mediante el *Schedule*, puede seleccionar el día y la hora de la semana en que desea que se realice la puntuación.
 
-Haga clic en el menú desplegable en *Frecuencia de puntuación* para seleccionar entre la puntuación diaria, semanal y mensual. A continuación, seleccione los días de la semana en los que desea que tenga lugar la puntuación. Se pueden seleccionar varios días. Haga clic una segunda vez en un día para anular la selección.
+Haga clic en el menú desplegable en *Frecuencia de puntuación* para seleccionar entre la puntuación diaria, semanal y mensual. A continuación, seleccione los días de la semana en los que desea que se realice la puntuación. Se pueden seleccionar varios días. Haga clic en un día por segunda vez para anular la selección.
 
-![Programar formación](./images/user-guide/schedule_training.png)
+![Programar capacitación](./images/user-guide/schedule_training.png)
 
-Para cambiar la hora del día que desea que se produzca la puntuación, haga clic en el icono del reloj. En la nueva superposición que aparece, introduzca la hora del día en la que desea que se realice la puntuación. Haga clic fuera de la superposición para cerrarla.
+Para cambiar la hora del día que desea que se produzca la puntuación, haga clic en el icono de reloj. En la nueva superposición que aparece, introduzca la hora del día en la que desea que se realice la puntuación. Haga clic fuera de la superposición para cerrarla.
 
 >[!NOTE]
 >
@@ -177,15 +181,15 @@ Para cambiar la hora del día que desea que se produzca la puntuación, haga cli
 
 ### Columnas adicionales del conjunto de datos de puntuación (opcional)
 
-De forma predeterminada, se crea un conjunto de datos de puntuación para cada instancia de servicio en un esquema estándar. Puede elegir agregar columnas adicionales basadas en las configuraciones de Evento de conversión y punto de contacto al resultado del conjunto de datos de puntuación. Para inicio, seleccione las columnas de su conjunto de datos de entrada y, a continuación, puede arrastrarlas y soltarlas para cambiar el orden pulsando el botón izquierdo del ratón sobre el icono de hamburguesa.
+De forma predeterminada, se crea un conjunto de datos de puntuación para cada instancia de servicio en un esquema estándar. Puede elegir agregar columnas adicionales basadas en las configuraciones de Evento de conversión y Punto de contacto a la salida del conjunto de datos de puntuación. Para empezar, seleccione columnas de su conjunto de datos de entrada, puede arrastrarlas y soltarlas para cambiar el orden manteniendo presionado el botón izquierdo del ratón sobre el icono de hamburguesa.
 
 ![adición de columna de conjunto de datos de puntuación](./images/user-guide/Add-score-dataset.png)
 
-### Modelado basado en región (opcional) {#region-based-modeling-optional}
+### Modelado basado en regiones (opcional) {#region-based-modeling-optional}
 
-El comportamiento de los clientes puede variar significativamente según el país y la región geográfica. Para las empresas globales, el uso de modelos basados en países o regiones puede aumentar la precisión de la atribución. Cada región agregada crea un nuevo modelo con los datos de esa región.
+Los comportamientos de los clientes pueden variar de forma significativa según el país y la región geográfica. Para las empresas globales, el uso de modelos basados en países o regiones puede aumentar la precisión de atribución. Cada región agregada crea un nuevo modelo con los datos de esa región.
 
-Para definir una nueva región, haga clic en **[!UICONTROL Añadir región]** para realizar el inicio. En el contenedor que aparece, proporcione un nombre para la región. Sólo un valor (&quot;placeContext.geo.countryCode&quot;) se rellena desde la lista desplegable **[!UICONTROL Escribir nombre de campo]**. Seleccione este valor.
+Para definir una nueva región, comience haciendo clic en **[!UICONTROL Add region]**. En el contenedor que aparece, proporcione un nombre para la región. Solo se rellena un valor (&quot;placeContext.geo.countryCode&quot;) en la lista desplegable **[!UICONTROL Enter Field Name]**. Seleccione este valor.
 
 ![Seleccionar región en](./images/user-guide/select_region_att.png)
 
@@ -193,31 +197,31 @@ A continuación, seleccione un operador.
 
 ![operador de región](./images/user-guide/region_operators.png)
 
-Por último, escriba el código de país en la lista desplegable **[!UICONTROL Introducir valor de campo]**.
+Por último, escriba el código de país en la lista desplegable **[!UICONTROL Enter Field Value]**.
 
 >[!NOTE]
 >
 >Los códigos de país tienen dos caracteres. Puede encontrar una lista completa aquí [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
-![región](./images/user-guide/region-based.png)
+![region](./images/user-guide/region-based.png)
 
 ### Ventana de capacitación {#training-window}
 
-Para asegurarse de que obtiene el modelo más preciso posible, es importante capacitar a su modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se entrena con 2 trimestres (6 meses) de datos de eventos de conversión. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede elegir entrenar con uno o cuatro cuartos de datos (3 a 12 meses).
+Para garantizar que obtiene el modelo más preciso posible, es importante entrenar el modelo con datos históricos que representen su negocio. De forma predeterminada, el modelo se forma utilizando 2 trimestres (6 meses) de datos de eventos de conversión. Seleccione la lista desplegable para cambiar el valor predeterminado. Puede optar por entrenar con entre uno y cuatro trimestres de datos (de 3 a 12 meses).
 
 >[!NOTE]
 >
->Un período de formación más corto es más sensible a las tendencias recientes, mientras que un período de formación más largo crea un modelo más sólido y es menos sensible a las tendencias recientes.
+>Un período de formación más breve es más sensible a las tendencias recientes, mientras que un período de formación más largo crea un modelo más robusto y es menos sensible a las tendencias recientes.
 
 ![ventana de formación](./images/user-guide/training_window.png)
 
-Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finalizar]** en la esquina superior derecha. Deje que los datos se procesen algún tiempo. Una vez completada, aparece un cuadro de diálogo emergente que confirma que la configuración de la instancia ha finalizado. Haga clic en **[!UICONTROL Aceptar]** para que se le redirija a la página **[!UICONTROL Instancias de servicio]** donde podrá ver la instancia de servicio.
+Una vez seleccionada la ventana de formación, haga clic en **[!UICONTROL Finish]** en la esquina superior derecha. Espere un tiempo para que los datos se procesen. Una vez finalizada, aparece un cuadro de diálogo de apertura que confirma que la configuración de la instancia ha finalizado. Haga clic en **[!UICONTROL Ok]** para redirigirlo a la página **[!UICONTROL Service instances]** donde podrá ver la instancia de servicio.
 
 ![configuración completada](./images/user-guide/instance_setup_complete.png)
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado correctamente una instancia de servicio en Attribution AI. Una vez que la instancia haya terminado de anotar (permitir hasta 24 horas), estará listo para [descubrir perspectivas de Attribution AI](./discover-insights.md). Además, si desea descargar los resultados de puntuación, visite la documentación de [descargas de puntuaciones](./download-scores.md).
+Al seguir este tutorial, ha creado correctamente una instancia de servicio en Attribution AI. Una vez que la instancia haya terminado de puntuar (aproximadamente 24 horas), estará listo para [descubrir perspectivas de Attribution AI](./discover-insights.md). Además, si desea descargar los resultados de puntuación, visite la documentación de [descarga de puntuaciones](./download-scores.md).
 
 ## Recursos adicionales
 
