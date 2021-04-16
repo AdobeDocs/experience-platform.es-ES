@@ -5,14 +5,14 @@ title: Evaluar y acceder a resultados de segmentos
 topic: tutorial
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # Evaluar y acceder a resultados de segmentos
 
@@ -43,7 +43,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 >
 >Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
-Todas las solicitudes POST, PUT y PATCH requieren un encabezado adicional:
+Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 
 - Content-Type: application/json
 
@@ -65,19 +65,19 @@ A través de la evaluación programada, su organización de IMS puede crear una 
 
 ### Crear una programación
 
-Al realizar una solicitud POST al extremo `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
+Al realizar una solicitud de POST al extremo `/config/schedules` , puede crear una programación e incluir la hora específica en la que se debe activar la programación.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía del extremo de las programaciones](../api/schedules.md#create)
 
 ### Activación de una programación
 
-De forma predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` esté establecida en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establezca `state` en `active`) realizando una solicitud PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
+De forma predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` esté establecida en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establezca `state` en `active`) realizando una solicitud de PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía del extremo de las programaciones](../api/schedules.md#update-state)
 
 ### Actualizar la hora de programación
 
-La temporización de programación se puede actualizar realizando una solicitud PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
+La temporización de programación se puede actualizar realizando una solicitud del PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía del extremo de las programaciones](../api/schedules.md#update-schedule)
 
@@ -89,7 +89,7 @@ La evaluación a petición le permite crear un trabajo de segmento para generar 
 
 Un trabajo de segmento es un proceso asincrónico que crea un nuevo segmento de audiencia. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle cómo [!DNL Real-time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmento se completa correctamente, puede recopilar información variada sobre el segmento, como los errores que puedan haberse producido durante el procesamiento y el tamaño definitivo de la audiencia.
 
-Puede crear un nuevo trabajo de segmento realizando una solicitud POST al extremo `/segment/jobs` en la API [!DNL Real-time Customer Profile].
+Puede crear un nuevo trabajo de segmento realizando una solicitud de POST al extremo `/segment/jobs` en la API [!DNL Real-time Customer Profile].
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía de extremo de trabajos de segmento](../api/segment-jobs.md#create)
 
@@ -193,9 +193,7 @@ curl -X POST \
         "contentType": "application/vnd.adobe.xed+json;version=1"
     },
     "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     }
 }'
 ```
@@ -218,13 +216,13 @@ Una respuesta correcta devuelve una matriz que contiene el ID único de solo lec
 
 ### Generación de perfiles para miembros de audiencia {#generate-profiles}
 
-Una vez que tenga un conjunto de datos que persista en la unión, puede crear un trabajo de exportación para mantener a los miembros de audiencia en el conjunto de datos realizando una solicitud POST al extremo `/export/jobs` en la API [!DNL Real-time Customer Profile] y proporcionando el ID del conjunto de datos y la información del segmento para los segmentos que desea exportar.
+Una vez que tenga un conjunto de datos que mantenga la unión, puede crear un trabajo de exportación para mantener a los miembros de audiencia en el conjunto de datos realizando una solicitud de POST al extremo `/export/jobs` en la API [!DNL Real-time Customer Profile] y proporcionando el ID del conjunto de datos y la información del segmento para los segmentos que desea exportar.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía de extremo de trabajos de exportación](../api/export-jobs.md#create)
 
 ### Monitorización del progreso de exportación
 
-Como proceso de trabajo de exportación, puede monitorizar su estado realizando una solicitud GET al extremo `/export/jobs` e incluyendo el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el campo `status` devuelve el valor &quot;SUCCEEDED&quot;.
+Como proceso de trabajo de exportación, puede monitorizar su estado realizando una solicitud de GET al extremo `/export/jobs` e incluyendo el `id` del trabajo de exportación en la ruta. El trabajo de exportación se completa una vez que el campo `status` devuelve el valor &quot;SUCCEEDED&quot;.
 
 Puede encontrar información más detallada sobre el uso de este extremo en la [guía de extremo de trabajos de exportación](../api/export-jobs.md#get)
 
