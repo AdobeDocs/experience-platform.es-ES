@@ -1,22 +1,22 @@
 ---
-keywords: Facebook;facebook;red social;red social;autenticación de red social;autenticación de red social
-title: Crear un destino de red social
+keywords: Facebook;facebook;red social;red social;autenticación social;autenticación de red social
+title: Crear un destino social
 type: Tutorial
-description: Aprenda a conectarse a sus cuentas de publicidad de red social en Adobe Experience Platform.
+description: Aprenda a conectarse a sus cuentas de anuncios sociales en Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-# Crear un destino de red social {#social-network-destinations-workflow}
+# Crear un destino social {#social-network-destinations-workflow}
 
 ## Información general {#overview}
 
-Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de Adobe Experience Platform es el mismo para todos los destinos de redes sociales.
+Este tutorial utiliza [!DNL Facebook] como ejemplo, pero el flujo de trabajo de Adobe Experience Platform es el mismo para todos los destinos sociales.
 
 ## Configuración del destino social: tutorial de vídeo {#video}
 
@@ -26,9 +26,9 @@ El siguiente vídeo muestra cómo configurar un destino social y activar segment
 
 ## Seleccionar destino social {#select-destination}
 
-En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, desplácese hasta la categoría **[!UICONTROL Social]**. Seleccione su destino preferido de red social y, a continuación, seleccione **[!UICONTROL Configure]**.
+En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, desplácese hasta la categoría **[!UICONTROL Social]**. Seleccione su destino social preferido y, a continuación, seleccione **[!UICONTROL Configure]**.
 
-![Conectarse al destino de la red social](../../assets/catalog/social/workflow/catalog.png)
+![Conectarse a destino social](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, desplácese hasta l
 
 ## Paso de cuenta {#account}
 
-En el paso **Cuenta**, si anteriormente ha configurado una conexión con el destino de red social, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con el destino de la red social. Seleccione **[!UICONTROL Connect to destination]** y esto le llevará al destino de red social seleccionado para iniciar sesión y conectar Adobe Experience Cloud a su cuenta de publicidad de red social.
+En el paso **Cuenta**, si anteriormente ha configurado una conexión con su destino social, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino social. Seleccione **[!UICONTROL Connect to destination]** y esto le llevará al destino social seleccionado para iniciar sesión y conectar Adobe Experience Cloud a su cuenta de publicidad social.
 
 >[!NOTE]
 >
->Platform admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si se introducen credenciales incorrectas en el ID de cuenta de la red social. Esto garantiza que no complete el flujo de trabajo con credenciales incorrectas.
+>Platform admite la validación de credenciales en el proceso de autenticación y muestra un mensaje de error si se introducen credenciales incorrectas en el ID de cuenta social. Esto garantiza que no complete el flujo de trabajo con credenciales incorrectas.
 
-![Conectarse al destino de la red social: paso de autenticación](../../assets/catalog/social/workflow/pre-connect.png)
+![Conectar con destino social: paso de autenticación](../../assets/catalog/social/workflow/pre-connect.png)
 
 Una vez confirmadas las credenciales y que Adobe Experience Cloud esté conectado a la red social, puede seleccionar **[!UICONTROL Next]** para continuar con el paso **[!UICONTROL Authentication]**.
 
@@ -58,7 +58,7 @@ En el paso **[!UICONTROL Authentication]**, introduzca un [!UICONTROL Name] y un
 > * Para destinos [!DNL LinkedIn], **[!UICONTROL Account ID]** es su [!DNL LinkedIn Campaign Manager Account ID]. Puede encontrar este ID en [!DNL LinkedIn Campaign Manager].
 
 
-![Conectarse al destino de la red social: paso de autenticación](../../assets/catalog/social/workflow/authentication.png)
+![Conectar con destino social: paso de autenticación](../../assets/catalog/social/workflow/authentication.png)
 
 En este paso, también puede seleccionar cualquier **[!UICONTROL Marketing action]** que deba aplicarse a este destino. Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
