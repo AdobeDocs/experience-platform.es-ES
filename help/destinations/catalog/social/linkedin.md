@@ -4,9 +4,9 @@ title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 ## Conectarse al destino {#connect-destination}
 
-Para conectarse al destino [!DNL LinkedIn Matched Audiences], consulte [Flujo de trabajo de autenticación de destinos de red social](./workflow.md).
+Para conectarse al destino [!DNL LinkedIn Matched Audiences], consulte [Flujo de trabajo de autenticación de destinos sociales](./workflow.md).
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar segmentos.
 
