@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;consumo de datos;datos ingestados;flujo continuo;descripción general;ingesta de flujo;latencia;latencia de flujo continuo;
 solution: Experience Platform
 title: Información general sobre la ingesta de flujos
-topic: sobre validación
+topic: overview
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor a Experience Platform en tiempo real.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

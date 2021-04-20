@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;combinación;mezcla;mezclas;mezclas;tipo de datos;tipos de datos;tipo de datos;tipo de datos;diseño de esquema;tipo de datos;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;diseño de esquema;mapa;mapa;
 solution: Experience Platform
 title: Restricciones de tipo de campo XDM
-topic: sobre validación
+topic: overview
 description: Una referencia para restricciones de tipo de campo en Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 translation-type: tm+mt
 source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234

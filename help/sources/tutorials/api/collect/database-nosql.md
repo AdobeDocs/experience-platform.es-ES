@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;base de datos;base de datos de terceros
 solution: Experience Platform
 title: Recopilación de datos de una base de datos mediante conectores de origen y API
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una base de datos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683

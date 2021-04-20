@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Crear una conexión de origen PostgreSQL en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen PostgreSQL utilizando la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt

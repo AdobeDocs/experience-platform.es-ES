@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Aspectos básicos de las API de Experience Platform
-topic: introducción
+topic: getting started
 description: Este documento proporciona una breve descripción general de algunas de las tecnologías subyacentes y sintaxis relacionadas con las API de Experience Platform.
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

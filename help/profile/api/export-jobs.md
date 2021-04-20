@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Exportar extremo de API de trabajos
-topic: guía
+topic: guide
 type: Documentation
 description: El perfil del cliente en tiempo real le permite crear una sola vista de clientes individuales dentro de Adobe Experience Platform recopilando datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para su procesamiento posterior.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67

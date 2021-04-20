@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Campo de preferencia de marketing genérico con tipo de datos de suscripciones
-topic: sobre validación
+topic: overview
 description: Este documento proporciona información general sobre el campo de preferencia de marketing genérico con el tipo de datos XDM de suscripciones.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

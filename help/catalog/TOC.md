@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guía de catálogos y conjuntos de datos
 user-guide-description: Explore el linaje de datos, los metadatos, las descripciones de los archivos, los directorios y los conjuntos de datos dentro del lago de datos.
-feature: Gestión de datos
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

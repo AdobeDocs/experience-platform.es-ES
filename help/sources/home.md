@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;conectores de origen;conector de origen;orígenes;fuentes de datos;fuente de datos;conexión de origen de datos
 solution: Experience Platform
 title: Información general de los conectores de origen
-topic: sobre validación
+topic: overview
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
 translation-type: tm+mt
 source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070

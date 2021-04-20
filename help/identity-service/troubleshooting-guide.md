@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;área de nombres de identidad;área de nombres de identidad
 solution: Experience Platform
 title: Guía de solución de problemas del servicio de identidad
-topic: solución de problemas
+topic: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de ID de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

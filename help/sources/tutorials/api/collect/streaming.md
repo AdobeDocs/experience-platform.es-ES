@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube;datos de flujo continuo;flujo continuo
 solution: Experience Platform
 title: Recopilación de datos de flujo continuo mediante conectores de origen y API
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4

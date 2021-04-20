@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;MySQL;mysql
 solution: Experience Platform
 title: Crear una conexión de origen MySQL utilizando la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a MySQL mediante la API de servicio de flujo.
 translation-type: tm+mt

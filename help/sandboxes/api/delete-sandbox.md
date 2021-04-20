@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;eliminar entorno limitado
 solution: Experience Platform
 title: Eliminación de un Simulador para pruebas en la API
-topic: guía para desarrolladores
+topic: developer guide
 description: Puede eliminar un simulador para pruebas realizando una solicitud de DELETE que incluya el nombre del simulador para pruebas en la ruta de solicitud.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

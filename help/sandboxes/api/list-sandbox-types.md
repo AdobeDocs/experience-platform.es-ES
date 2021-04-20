@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;entornos limitados de lista
 solution: Experience Platform
 title: Lista de tipos de Simulador para pruebas admitidos en la API
-topic: guía para desarrolladores
+topic: developer guide
 description: Puede recuperar una lista de tipos de entornos limitados admitidos para su organización realizando una solicitud de GET al extremo /sandboxTypes .
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

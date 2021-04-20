@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;SFTP;sftp
 solution: Experience Platform
 title: Información general del conector de origen SFTP
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar un servidor SFTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3

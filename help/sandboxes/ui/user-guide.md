@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;guía del usuario del entorno limitado;guía del entorno limitado
 solution: Experience Platform
 title: Guía de la interfaz de usuario del Simulador para pruebas
-topic: Guía del usuario
+topic: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ayuda sobre Sandboxes en Adobe Experience Platform
 breadcrumb-title: Guía de Sandboxes
 user-guide-description: Dividir una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
-feature: Gestión de datos
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

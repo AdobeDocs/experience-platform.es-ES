@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;supervisar cuentas;supervis
 description: En este tutorial se proporcionan pasos para supervisar el flujo de datos mediante la vista de supervisión agregada y la supervisión cruzada de servicios.
 solution: Experience Platform
 title: Monitorear flujos de datos de fuentes en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356

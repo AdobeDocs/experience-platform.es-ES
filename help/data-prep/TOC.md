@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guía de preparación de datos
 user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform.
-feature: Gestión de datos, ingesta de datos
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

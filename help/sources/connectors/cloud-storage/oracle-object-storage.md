@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Almacenamiento de objetos Oracle;almacenamiento de objetos oracle
 solution: Experience Platform
 title: Introducción al conector de origen de Almacenamiento de objetos Oracle
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar el Almacenamiento de objetos Oracle a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9

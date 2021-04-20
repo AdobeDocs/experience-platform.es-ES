@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;actualizar flujos de datos;
 description: Este tutorial trata los pasos para actualizar una programación de flujo de datos, incluida la frecuencia de ingesta y la velocidad de intervalo, mediante el espacio de trabajo de fuentes.
 solution: Experience Platform
 title: Actualizar un flujo de datos de conexión de origen en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

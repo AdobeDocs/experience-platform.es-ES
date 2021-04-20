@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;shopify;Shopify;
 solution: Experience Platform
 title: Información general del conector de origen de Shopify
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar Shopify a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

@@ -2,7 +2,7 @@
 keywords: Experience Platform;introducción;ai del cliente;temas populares;entrada de ayuda del cliente;salida de ai del cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Entrada y salida en Customer AI
-topic: Primeros pasos
+topic: Getting started
 description: Obtenga más información sobre los eventos, entradas y salidas necesarios que utiliza Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt

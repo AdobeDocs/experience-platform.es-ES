@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;área de nombres;área de nombres;espacios de nombres;área de nombres;área de nombres de identidad;área de nombres de identidad;identidad;identidad;servicio de identidad
 solution: Experience Platform
 title: Información general sobre el área de nombres de identidad
-topic: sobre validación
+topic: overview
 description: 'Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico. '
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

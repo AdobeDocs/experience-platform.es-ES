@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Modelo de datos ERD de la industria de viajes y hospitalidad
-topic: sobre validación
+topic: overview
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector de viajes y hostelería, compatible con Experience Data Model (XDM) para su uso en Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

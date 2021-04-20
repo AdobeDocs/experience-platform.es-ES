@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;recopilación de datos;launch;sdk web
 solution: Experience Platform
 title: Información general sobre la recopilación de datos
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre las distintas tecnologías que intervienen en la recopilación de datos sobre las experiencias de los clientes en Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;buscar entorno limitado;buscar un simulador de pruebas
 solution: Experience Platform
 title: Buscar un Simulador para pruebas en la API
-topic: guía para desarrolladores
+topic: developer guide
 description: Puede buscar un entorno limitado individual realizando una solicitud de GET que incluya la propiedad name del entorno limitado en la ruta de solicitud.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

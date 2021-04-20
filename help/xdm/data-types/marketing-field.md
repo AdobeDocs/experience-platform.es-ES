@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Tipo de datos de campo de preferencia de marketing genérico
-topic: sobre validación
+topic: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM del campo de preferencias de marketing genéricas.
 translation-type: tm+mt
 source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228

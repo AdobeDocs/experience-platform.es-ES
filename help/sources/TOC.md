@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
-feature: Ingesta de datos, fuentes
+feature: Data Ingestion, Sources
 translation-type: tm+mt
 source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt

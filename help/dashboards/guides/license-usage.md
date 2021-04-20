@@ -2,8 +2,8 @@
 keywords: Experience Platform;interfaz de usuario;IU;personalización;panel de uso de licencias;panel;uso de licencias;derecho;consumo
 title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización.
-topic: guía
-type: Documentación
+topic: guide
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt

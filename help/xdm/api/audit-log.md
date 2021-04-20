@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de API de registro de auditoría
 description: El extremo /auditlog en la API del Registro de esquemas permite recuperar una lista cronológica de los cambios realizados en un recurso XDM existente.
-topic: guía para desarrolladores
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

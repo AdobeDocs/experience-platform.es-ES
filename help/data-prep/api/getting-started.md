@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;preparación de datos;api de preparación de datos;solución de problemas;API
 title: Introducción a la API de preparación de datos
-topic: guía
+topic: guide
 description: Conozca los conceptos clave y la funcionalidad básica que necesita conocer para utilizar los extremos de la API de preparación de datos para realizar operaciones CRUD básicas para usarlas con Mapper.
 translation-type: tm+mt
 source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded

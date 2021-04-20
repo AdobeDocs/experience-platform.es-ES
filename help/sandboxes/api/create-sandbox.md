@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Sandbox;Sandbox
 solution: Experience Platform
 title: Creación de un Simulador para pruebas en la API
-topic: guía para desarrolladores
+topic: developer guide
 description: Puede crear un nuevo simulador de pruebas realizando una solicitud de POST al extremo "/sandboxes".
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

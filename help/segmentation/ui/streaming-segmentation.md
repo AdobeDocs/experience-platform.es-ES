@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;segmentación de flujo continuo;Segmentación;Servicio de segmentación;servicio de segmentación;guía de interfaz de usuario;
 solution: Experience Platform
 title: Guía de la interfaz de usuario de segmentación por transmisión
-topic: guía de la interfaz de usuario
+topic: ui guide
 description: La segmentación por transmisión en Adobe Experience Platform le permite realizar segmentación en tiempo casi real, mientras se centra en la riqueza de los datos. Con la segmentación de flujo continuo, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que reduce la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la pertenencia a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt

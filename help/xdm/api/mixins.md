@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de la API de Mixins
 description: El extremo /mixins de la API del Registro de Esquemas permite administrar mediante programación las mezclas XDM dentro de la aplicación de experiencia.
-topic: guía para desarrolladores
+topic: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

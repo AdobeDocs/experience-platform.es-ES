@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Información general sobre administración, privacidad y seguridad
-topic: sobre validación
+topic: overview
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con sus prácticas comerciales, obligaciones legales y procesos de desarrollo.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;mysql;MySQL
 solution: Experience Platform
 title: Crear una conexión de origen MySQL en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen MySQL utilizando la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt

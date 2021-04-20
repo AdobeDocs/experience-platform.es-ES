@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;publicidad;adwords de google;publicidad
 solution: Experience Platform
 title: Recopilación de datos publicitarios mediante conectores de origen y API
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación publicitaria de terceros e ingerirlos en Platform mediante conectores de origen y la API de servicio de flujo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1

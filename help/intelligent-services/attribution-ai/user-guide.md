@@ -2,7 +2,7 @@
 keywords: Experience Platform;guía del usuario;ai de atribución;temas populares;región
 solution: Experience Platform, Intelligent Services
 title: Guía de la interfaz de usuario de Attribution AI
-topic: 'Guía del usuario '
+topic: User guide 
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de Servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt

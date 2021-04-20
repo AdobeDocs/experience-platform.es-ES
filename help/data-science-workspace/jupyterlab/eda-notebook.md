@@ -2,7 +2,7 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Área de trabajo de ciencias de datos;temas populares;analizar blocs de datos;eda;análisis de datos exploratoria;ciencia de datos
 solution: Experience Platform
 title: Equipo portátil de Análisis de datos exploratorios (EDA)
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Esta guía se centra en cómo utilizar el bloc de notas de análisis de datos exploratoria (EDA) para descubrir patrones en datos web, eventos acumulados con un objetivo de predicción, limpiar datos agregados y comprender la relación entre los predictores y un objetivo.
 translation-type: tm+mt

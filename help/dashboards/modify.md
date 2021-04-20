@@ -2,7 +2,7 @@
 keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;segmentos;destinos;uso de licencias
 title: Modificación de paneles de plataforma en la interfaz de usuario
 description: 'Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de Adobe Experience Platform de su organización en los paneles. '
-topic: guía
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

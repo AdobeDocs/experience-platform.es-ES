@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;FTP;ftp;
 solution: Experience Platform
 title: Información general del conector de origen FTP
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar un servidor FTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

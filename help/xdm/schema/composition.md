@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;esquema;esquema;enumeración;mezcla;mezclas;mezclas;tipo de datos;tipos de datos;tipos de datos;tipo de datos;identidad principal;identidad principal;perfil individual XDM;campos XDM;tipo de datos enum;evento de experiencia;evento de experiencia XDM;evento de experiencia XDM;evento de experiencia;evento de experiencias;evento de experiencias XDM;evento de experiencias XDM;clase;clases Clases;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
 solution: Experience Platform
 title: Aspectos básicos de la composición del esquema
-topic: sobre validación
+topic: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2

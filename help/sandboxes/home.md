@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Sandbox;Sandbox;pruebas;Pruebas
 solution: Experience Platform
 title: Información general de entornos limitados
-topic: sobre validación
+topic: overview
 description: Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

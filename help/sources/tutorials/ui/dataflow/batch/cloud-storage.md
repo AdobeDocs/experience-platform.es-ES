@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;flujo de datos;flujo de datos
 solution: Experience Platform
 title: Configurar un flujo de datos para un conector por lotes de almacenamiento en la nube en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e incorpora datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos con su cuenta de almacenamiento en la nube.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;almacenamiento en la nube;almacenamiento en la nube
 solution: Experience Platform
 title: Explorar un sistema de almacenamiento en voz alta mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
 translation-type: tm+mt
 source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8

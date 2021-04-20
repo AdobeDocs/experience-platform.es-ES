@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Creación de una conexión de origen PostgreSQL mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a PostgreSQL mediante la API de servicio de flujo.
 translation-type: tm+mt

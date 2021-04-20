@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de API de datos de muestra
 description: El extremo /sampledata de la API del Registro de esquemas permite generar datos de ejemplo asignados a la estructura de cualquier esquema XDM existente.
-topic: guía para desarrolladores
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

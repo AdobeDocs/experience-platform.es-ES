@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;exclusión;segmentación;servicio de segmentación;servicio de segmentación;exclusiones por honor;exclusiones;exclusión;exclusión;exclusiones;
 solution: Experience Platform
 title: Respeto de las solicitudes de exclusión en los segmentos
-topic: sobre validación
+topic: overview
 description: 'Adobe Experience Platform permite a sus clientes enviar solicitudes de exclusión relativas al uso y almacenamiento de sus datos dentro del perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de Privacidad del Consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién). '
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

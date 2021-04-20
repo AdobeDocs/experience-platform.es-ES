@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guía de Perfil del cliente en tiempo real
 user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
-feature: Perfiles
+feature: Profiles
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

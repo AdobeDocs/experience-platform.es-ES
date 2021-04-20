@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Analytics Data Connector;Analytics;Analytics
 solution: Experience Platform
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
-topic: sobre validación
+topic: overview
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

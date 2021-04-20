@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar cuentas
 solution: Experience Platform
 title: Actualización de cuentas mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Este tutorial trata los pasos para actualizar los detalles y las credenciales de una cuenta mediante la API de servicio de flujo.
 translation-type: tm+mt

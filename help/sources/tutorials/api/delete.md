@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;eliminar cuentas;eliminar;api
 solution: Experience Platform
 title: Eliminar una cuenta mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo eliminar una cuenta mediante la API de servicio de flujo.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Descripción general del conector de origen de Azure Data Lake Storage Gen2
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar Azure Data Lake Storage Gen2 a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;control de datos;etiqueta de uso de datos;servicio de políticas;guía del usuario de etiquetas de uso de datos
 solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la interfaz de usuario
-topic: etiquetas
+topic: labels
 description: Esta guía trata los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70

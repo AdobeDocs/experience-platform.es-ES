@@ -2,7 +2,7 @@
 keywords: perspectivas;ai de atribución;perspectivas de ai de atribución;servicio de consulta AAI;consultas de atribución;puntuaciones de atribución
 solution: Intelligent Services, Experience Platform
 title: Análisis de puntuaciones de atribución mediante el servicio de consulta
-topic: consultas de Attribution AI
+topic: Attribution AI queries
 description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
 translation-type: tm+mt
 source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9

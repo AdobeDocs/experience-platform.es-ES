@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Información general sobre los modelos de datos del sector
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 translation-type: tm+mt
 source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía de ui;mapper;asignación;campos de asignación;funciones de asignación
 solution: Experience Platform
 title: Funciones de asignación de preparación de datos
-topic: sobre validación
+topic: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt

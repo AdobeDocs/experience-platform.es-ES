@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta;guía para desarrolladores;guía de api;cargar;ingesta de parquet;ingesta de json;
 solution: Experience Platform
 title: Guía de API de ingesta de lotes
-topic: guía para desarrolladores
+topic: developer guide
 description: Este documento proporciona una descripción general completa del uso de las API de ingesta por lotes.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

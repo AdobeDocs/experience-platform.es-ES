@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación por secuencias;Segmentación por secuencias;Evaluación continua;
 solution: Experience Platform
 title: 'Evaluar eventos en tiempo casi real con segmentación por transmisión '
-topic: guía para desarrolladores
+topic: developer guide
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt

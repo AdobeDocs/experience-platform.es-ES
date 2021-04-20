@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;actualizar entorno limitado
 solution: Experience Platform
 title: Actualizar un Simulador para pruebas en la API
-topic: guía para desarrolladores
+topic: developer guide
 description: Puede actualizar uno o varios campos de un simulador de pruebas realizando una solicitud de PATCH que incluya el nombre del simulador de pruebas en la ruta de solicitud y la propiedad que se va a actualizar en la carga útil de la solicitud.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Crear una conexión de origen de almacenamiento de Google Cloud en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de almacenamiento de Google Cloud mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;shopify;Shopify
 solution: Experience Platform
 title: Crear una conexión de origen de Shopify en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen Shopify mediante la interfaz de usuario de Adobe Experience Platform.
 translation-type: tm+mt

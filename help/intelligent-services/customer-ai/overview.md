@@ -2,7 +2,7 @@
 keywords: Experience Platform;información general;ayuda al cliente;temas populares;información general sobre el cliente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 'Información general sobre Customer AI '
-topic: Información general sobre Customer AI
+topic: Customer AI Overview
 description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Clase de definición de segmento
-topic: sobre validación
+topic: overview
 description: Este documento proporciona información general sobre la clase de definición de segmentos en el Modelo de datos de experiencia (XDM).
 translation-type: tm+mt
 source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53

@@ -2,7 +2,7 @@
 keywords: Experience Platform;interfaz de usuario;IU;paneles;tablero;perfiles;segmentos;destinos;uso de licencias
 title: Uso de la biblioteca de utilidades para agregar y crear widgets de tablero
 description: 'Esta guía proporciona instrucciones paso a paso para agregar utilidades estándar y crear utilidades personalizadas para visualizar datos de tablero en Adobe Experience Platform. '
-topic: guía
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

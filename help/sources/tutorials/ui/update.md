@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;actualizar cuentas
 description: En algunas circunstancias, puede ser necesario actualizar los detalles de una cuenta de fuentes existente. El espacio de trabajo Orígenes permite agregar, editar y eliminar detalles de un lote o conexión de flujo continuo existente, como su nombre, descripción y credenciales.
 solution: Experience Platform
 title: Actualizar los detalles de la cuenta de conexión de origen en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb

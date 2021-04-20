@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Modelo de datos ERD del sector de las telecomunicaciones
-topic: sobre validación
+topic: overview
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector de las telecomunicaciones, compatible con el modelo de datos de experiencias (XDM) para su uso en Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;centro de eventos;centro de eventos de Azure;centro de eventos
 solution: Experience Platform
 title: Creación de una conexión de origen de los centros de eventos de Azure mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de centros de eventos de Azure mediante la API de servicio de flujo.
 translation-type: tm+mt

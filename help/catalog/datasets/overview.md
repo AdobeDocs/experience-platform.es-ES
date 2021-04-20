@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;ubicación de datos;ubicación de datos;administración de datos;administración de datos;idioma;linaje;tipo de datos;tipos de datos;tipos de datos;tipo de datos
 solution: Experience Platform
 title: Información general sobre conjuntos de datos
-topic: conjuntos de datos
+topic: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

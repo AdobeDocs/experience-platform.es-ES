@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;asignación de csv;asignación de archivo csv;asignación de archivo csv a xdm;asignación de csv a xdm;guía de ui;asignador;asignación;preparación de datos;preparación de datos;preparación de datos;
 solution: Experience Platform
 title: Información general sobre la preparación de datos
-topic: sobre validación
+topic: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt

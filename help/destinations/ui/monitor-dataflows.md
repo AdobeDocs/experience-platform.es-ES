@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;monitorizar cuentas;monitor
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 solution: Experience Platform
 title: Flujos de datos del monitor
-topic: sobre validación
+topic: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt

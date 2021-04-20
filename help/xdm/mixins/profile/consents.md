@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Mezcla de preferencias de privacidad/personalización/marketing (consentimientos)
-topic: sobre validación
+topic: overview
 description: Este documento proporciona una descripción general de la combinación de privacidad, personalización y preferencias de marketing (consentimientos).
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

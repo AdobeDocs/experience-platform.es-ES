@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar flujos de datos
 solution: Experience Platform
 title: Actualización de flujos de datos mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: En este tutorial se explican los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de servicio de flujo.
 translation-type: tm+mt

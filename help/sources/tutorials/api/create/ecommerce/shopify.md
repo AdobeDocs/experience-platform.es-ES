@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Shopify;shopify;comercio electrónico
 solution: Experience Platform
 title: Creación de una conexión de origen de conector Shopify mediante la API de servicio de flujo
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Shopify a Adobe Experience Platform mediante la API de servicio de flujo.
 translation-type: tm+mt

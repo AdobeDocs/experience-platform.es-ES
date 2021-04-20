@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;atributos del cliente
 solution: Experience Platform
 title: Creación de una conexión de origen de atributos del cliente en la interfaz de usuario
-topic: sobre validación
+topic: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen en la interfaz de usuario para recopilar datos de perfil de atributos del cliente en Adobe Experience Platform.
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Tipo de datos de campo de preferencia de personalización genérica
-topic: sobre validación
+topic: overview
 description: Este documento proporciona una descripción general del tipo de datos XDM del campo de preferencia de personalización genérica.
 translation-type: tm+mt
 source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;centros de eventos de Azure;centros de eventos de azure;centros de eventos;centros de eventos
 solution: Experience Platform
 title: Descripción general del conector de origen de los centros de eventos de Azure
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar los centros de eventos de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

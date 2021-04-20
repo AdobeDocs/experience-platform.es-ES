@@ -11,9 +11,9 @@ tutorials-title: Tutoriales
 tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.es-ES
 solution: Experience Platform
-type: Documentación
+type: Documentation
 index: true
-role: Arquitecto, Desarrollador, Arquitecto de datos, Ingeniero de datos, Profesional de negocios, Administrador, Líder
+role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
 translation-type: tm+mt
 source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt

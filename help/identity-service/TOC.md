@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Servicio de ID de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
-feature: Identidades
+feature: Identities
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

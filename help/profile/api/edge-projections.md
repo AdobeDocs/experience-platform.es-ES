@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Puntos finales de la API de proyección de Edge
-topic: guía
-type: Documentación
+topic: guide
+type: Documentation
 description: Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y personalizadas para sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

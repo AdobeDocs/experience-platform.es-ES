@@ -2,7 +2,7 @@
 keywords: Experience Platform;perspectivas;ai del cliente;temas populares;perspectivas de los clientes
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Descubra perspectivas con Customer AI
-topic: Descubrimiento de perspectivas
+topic: Discovering insights
 description: Este documento sirve como guía para interactuar con perspectivas de instancias de servicio en la interfaz de usuario de Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt

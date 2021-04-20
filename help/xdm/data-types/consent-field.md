@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Tipo de datos de campo de consentimiento genérico
-topic: sobre validación
+topic: overview
 description: Este documento proporciona una descripción general del tipo de datos XDM del campo de consentimiento genérico.
 translation-type: tm+mt
 source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58

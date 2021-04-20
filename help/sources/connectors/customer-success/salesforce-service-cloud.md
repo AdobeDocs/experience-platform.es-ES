@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;Salesforce Service Cloud;nube de servicio de salesforce
 solution: Experience Platform
 title: Información general sobre el conector de origen de nube de Salesforce Service
-topic: sobre validación
+topic: overview
 description: Obtenga información sobre cómo conectar Salesforce Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;consumo de datos;ubicación de datos;ubicación de datos;gestión de datos;gestión de datos;lineal;linaje;lote;lote;datos ingestados
 solution: Experience Platform
 title: Información general sobre la incorporación de datos
-topic: sobre validación
+topic: overview
 description: Este documento presenta las tres maneras principales en que se introducen los datos en Platform, con vínculos a su respectiva documentación general para obtener información más detallada.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

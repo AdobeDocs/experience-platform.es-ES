@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de la API de Unions
 description: El extremo /union de la API del Registro de esquemas permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
-topic: guía para desarrolladores
+topic: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
