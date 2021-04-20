@@ -2,14 +2,14 @@
 keywords: conexión linkedin;conexión linkedin;destinos linkedin;linkedin;
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] connection
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Active perfiles para sus campañas [!DNL LinkedIn] para segmentación, personalización y supresión de audiencias, en función de correos electrónicos con hash e ID móviles.
 
-![Destino de LinkedIn en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
+![Destino de linkedIn en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Casos de uso
 
@@ -40,7 +40,7 @@ Una empresa de software organiza una conferencia y quiere mantenerse en contacto
 
 **Exportación de segmentos** : está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en el  [!DNL LinkedIn Matched Audiences] destino.
 
-## Requisitos previos de cuenta de LinkedIn {#LinkedIn-account-prerequisites}
+## Requisitos previos de cuenta de linkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar el destino [!UICONTROL LinkedIn Matched Audience] , asegúrese de que su cuenta [!DNL LinkedIn Campaign Manager] tenga el nivel de permiso [!DNL Creative Manager] o superior.
 
@@ -81,6 +81,10 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 ## Conectarse al destino {#connect-destination}
 
 Para conectarse al destino [!DNL LinkedIn Matched Audiences], consulte [Flujo de trabajo de autenticación de destinos de red social](./workflow.md).
+
+El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar segmentos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Activar segmentos en [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
