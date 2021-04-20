@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Procesamiento de consentimiento en Adobe Experience Platform
 topic: introducción
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
-
 
 # Procesamiento de consentimiento en Adobe Experience Platform
 
@@ -83,13 +83,19 @@ Para obtener más información sobre cómo trabajar con políticas de combinaci�
 
 Una vez que tenga sus conjuntos de datos y políticas de combinación para representar los campos de consentimiento requeridos en sus perfiles de cliente, el siguiente paso es introducir los datos de consentimiento en Platform.
 
-Principalmente, debe utilizar el SDK web de Adobe Experience Platform para enviar datos de consentimiento a Platform siempre que su CMP detecte eventos de cambio de consentimiento. Sin embargo, si ya tiene datos de consentimiento almacenados en otra parte, también puede optar por introducir los datos de consentimiento recopilados directamente asignándolos al esquema XDM de su conjunto de datos de consentimiento y enviándolos a Platform mediante la ingesta por lotes.
+Principalmente, debe utilizar el SDK web de Adobe Experience Platform para enviar datos de consentimiento a Platform siempre que su CMP detecte eventos de cambio de consentimiento. Si recopila datos de consentimiento en una plataforma móvil, debe utilizar el SDK de Adobe Experience Platform Mobile. También puede optar por ingerir los datos de consentimiento recopilados directamente asignándolos al esquema XDM de su conjunto de datos de consentimiento y enviándolos a Platform mediante la ingesta por lotes.
 
 En las subsecciones siguientes se proporcionan detalles sobre cada uno de estos métodos.
 
-### Integración del SDK web del Experience Platform para procesar los datos de consentimiento del cliente {#sdk}
+### Configuración del SDK web del Experience Platform para procesar los datos de consentimiento {#web-sdk}
 
-Una vez configurada la CMP para detectar eventos de cambio de consentimiento en su sitio web, puede integrar el SDK web del Experience Platform para recibir la configuración de consentimiento actualizada y enviarla a Platform siempre que se produzca un evento de cambio de consentimiento. Para obtener más información, consulte la guía sobre [configuración del SDK para procesar los datos de consentimiento del cliente](./sdk.md) .
+Una vez que haya configurado su CMP para que detecte eventos de cambio de consentimiento en su sitio web, puede integrar el SDK web del Experience Platform para que reciba la configuración de consentimiento actualizada y la envíe a Platform en cada carga de página y cada vez que se produzcan eventos de cambio de consentimiento. Consulte la guía sobre [configuración del SDK web para procesar los datos de consentimiento del cliente](./sdk.md) para obtener más información.
+
+### Configuración del SDK de Experience Platform Mobile para procesar los datos de consentimiento {#mobile-sdk}
+
+Si las preferencias de consentimiento del cliente son necesarias en su aplicación móvil, puede integrar el SDK móvil de Experience Platform para recuperar y actualizar la configuración de consentimiento y enviarla a Platform siempre que se llame a la API de consentimiento.
+
+Consulte la documentación del SDK móvil para [configurar la extensión móvil de consentimiento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) y [mediante la API de consentimiento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Para obtener más información sobre cómo gestionar las preocupaciones de privacidad mediante el SDK de Mobile, consulte la sección [Privacidad y RGPD](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
 
 ### Ingesta de datos de consentimiento compatibles con XDM directamente {#batch}
 
