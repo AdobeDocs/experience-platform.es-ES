@@ -7,9 +7,9 @@ description: Active los datos que tiene en Adobe Experience Platform asignando s
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ En la página **[!UICONTROL Segment schedule]** puede establecer la fecha de ini
 >
 >Para destinos sociales, debe seleccionar el origen de la audiencia en este paso. Solo puede continuar con el paso siguiente después de seleccionar una de las opciones de la imagen siguiente.
 
-![Origen de audiencia de Facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origen de audiencia de facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,7 +264,7 @@ La presencia de estos archivos en su ubicación de almacenamiento es la confirma
 
 Compruebe su cuenta en el destino publicitario correspondiente al que está activando sus datos. Si la activación se ha realizado correctamente, las audiencias se rellenan en la plataforma de publicidad.
 
-## Destinos de redes sociales
+## Destinos sociales
 
 Para [!DNL Facebook], una activación correcta significa que se crearía una audiencia personalizada [!DNL Facebook] mediante programación en [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). La pertenencia a segmentos en la audiencia se agregaría y eliminaría ya que los usuarios están cualificados o no cumplen los requisitos para los segmentos activados.
 
