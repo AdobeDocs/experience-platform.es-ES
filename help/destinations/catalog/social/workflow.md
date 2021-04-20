@@ -5,7 +5,7 @@ type: Tutorial
 description: Aprenda a conectarse a sus cuentas de anuncios sociales en Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -64,8 +64,8 @@ En este paso, también puede seleccionar cualquier **[!UICONTROL Marketing actio
 
 Seleccione **[!UICONTROL Create Destination]** después de rellenar los campos anteriores.
 
-Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos en redes sociales](#activate-segments), para el resto del flujo de trabajo.
+Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. En cualquier caso, consulte la siguiente sección, [Activar segmentos en destinos sociales](#activate-segments), para el resto del flujo de trabajo.
 
-## Activar segmentos en redes sociales {#activate-segments}
+## Activar segmentos en destinos sociales {#activate-segments}
 
-Para obtener instrucciones sobre cómo activar segmentos en redes sociales, consulte [Activar datos en destinos](../../ui/activate-destinations.md).
+Para obtener instrucciones sobre cómo activar segmentos en destinos sociales, consulte [Activar datos en destinos](../../ui/activate-destinations.md).
