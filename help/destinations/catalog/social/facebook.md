@@ -1,15 +1,15 @@
 ---
-keywords: conexión de facebook;conexión de facebook;destinos de facebook;facebook;instagram;messenger;mensajero de facebook
-title: Conexión de Facebook
-description: Active perfiles para sus campañas de Facebook para segmentación, personalización y supresión de audiencias en función de correos electrónicos con hash.
+keywords: Conexión de facebook;conexión de facebook;destinos de facebook;facebook;instagram;mensajero;mensajería de facebook
+title: Conexión facebook
+description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] connection
 
@@ -19,13 +19,13 @@ Active perfiles para sus campañas [!DNL Facebook] para segmentación de audienc
 
 Puede usar este destino para la segmentación de audiencia en toda la familia [!DNL Facebook’s] de aplicaciones compatibles con [!DNL Custom Audiences], incluidas [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] y [!DNL Messenger]. La selección de la aplicación con la que quiere ejecutar la campaña se indica en el nivel de colocación de [!DNL Facebook Ads Manager].
 
-![Destino de Facebook en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destino de facebook en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
 Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Facebook], estos son dos casos de uso de muestra que los clientes de Adobe Experience Platform pueden resolver mediante esta función.
 
-### Caso de uso n.º 1
+### Caso de uso número 1
 
 Un comerciante en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El comerciante en línea puede ingerir direcciones de correo electrónico desde su propio CRM a Adobe Experience Platform, crear segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a la plataforma social [!DNL Facebook], lo que optimiza su gasto en publicidad.
 
@@ -59,7 +59,7 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 
 **Exportación de segmentos** : exporta todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de Facebook.
 
-## Requisitos previos de cuenta de Facebook {#facebook-account-prerequisites}
+## Requisitos previos de cuenta de facebook {#facebook-account-prerequisites}
 
 Antes de enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
@@ -113,11 +113,15 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 
 ## Uso de áreas de nombres personalizadas {#custom-namespaces}
 
-Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
+Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Facebook], asegúrese de sincronizar sus propios identificadores con [!DNL Facebook Pixel]. Consulte la [documentación oficial de Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
 
 ## Conectarse al destino {#connect-destination}
 
 Para conectarse al destino [!DNL Facebook], consulte [Flujo de trabajo de autenticación de destinos de red social](./workflow.md).
+
+El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar segmentos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Activar segmentos en [!DNL Facebook] {#activate-segments}
 
@@ -125,7 +129,7 @@ Para obtener instrucciones sobre cómo activar segmentos en [!DNL Facebook], con
 
 En el paso **[!UICONTROL Segment schedule]**, debe proporcionar el [!UICONTROL Origin of audience] al enviar segmentos a [!DNL Facebook Custom Audiences].
 
-![Origen de audiencia de Facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origen de audiencia de facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Datos exportados {#exported-data}
 
