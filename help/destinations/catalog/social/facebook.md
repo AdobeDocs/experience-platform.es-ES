@@ -4,9 +4,9 @@ title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Antes de utilizar el espacio de nombres `Extern_ID` para enviar datos a [!DNL Fa
 
 ## Conectarse al destino {#connect-destination}
 
-Para conectarse al destino [!DNL Facebook], consulte [Flujo de trabajo de autenticación de destinos de red social](./workflow.md).
+Para conectarse al destino [!DNL Facebook], consulte [Flujo de trabajo de autenticación de destinos sociales](./workflow.md).
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar segmentos.
 
