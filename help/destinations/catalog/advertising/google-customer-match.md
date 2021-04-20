@@ -2,14 +2,14 @@
 keywords: coincidencia de clientes de google;coincidencia de clientes de Google;coincidencia de clientes de Google
 title: Conexión de Google Customer Match
 description: Google Customer Match le permite utilizar sus datos en línea y sin conexión para llegar a sus clientes y volver a interactuar con ellos en todas las propiedades de Google que usted posee y gestiona, como Search, Shopping, Gmail y YouTube.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match] connection
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Google Customer Match], estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden resolver mediante esta función.
 
-### Caso de uso n.º 1
+### Caso de uso número 1
 
 Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y generar segmentos a partir de sus propios datos sin conexión. A continuación, pueden enviar estos segmentos a [!DNL Google Customer Match] para usarlos en [!DNL Search] y [!DNL Shopping], lo que optimiza su gasto en publicidad.
 
@@ -108,6 +108,12 @@ Antes de utilizar el espacio de nombres `User_ID` para enviar datos a Google, as
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## Configuración del destino: tutorial de vídeo {#video}
+
+El siguiente vídeo muestra los pasos para configurar un destino [!DNL Google Customer Match] y activar segmentos. Los pasos también se describen secuencialmente en las secciones siguientes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Conectarse al destino {#connect-destination}
 
