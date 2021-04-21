@@ -1,39 +1,39 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
-title: Cómo configurar un campo de atributo calculado
-topic: guide
+title: Configuración de un campo de atributo calculado
+topic-legacy: guide
 type: Documentation
-description: Los atributos calculados son funciones que se utilizan para acumulados datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con una mezcla para agregar el campo a un esquema existente o seleccionando un campo que ya haya definido en un esquema.
+description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando una mezcla para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
 translation-type: tm+mt
-source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
 
 
-# (Alfa) Configure un campo de atributo calculado en la interfaz de usuario
+# (Alpha) Configuración de un campo de atributo calculado en la interfaz de usuario
 
 >[!IMPORTANT]
 >
->La funcionalidad de atributo calculada está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad de atributo computado está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con una mezcla para agregar el campo a un esquema existente o seleccionando un campo que ya haya definido en un esquema.
+Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando una mezcla para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
 
 >[!NOTE]
 >
->No se pueden agregar atributos calculados a los campos dentro de mezclas definidas por Adobe. El campo debe estar dentro de la Área de nombres `tenant`, lo que significa que debe ser un campo que usted defina y agregue a un esquema.
+>Los atributos calculados no se pueden agregar a campos dentro de mezclas definidas por Adobe. El campo debe estar dentro del espacio de nombres `tenant` , lo que significa que debe ser un campo que defina y agregue a un esquema.
 
-Para definir correctamente un campo de atributo calculado, el esquema debe habilitarse para [!DNL Profile] y aparecer como parte del esquema de unión para la clase en la que se basa el esquema. Para obtener más información sobre esquemas y uniones habilitados para [!DNL Profile], consulte la sección de la [!DNL Schema Registry] guía para desarrolladores en [habilitación de un esquema para Perfil y visualización de esquemas de unión](../../xdm/api/getting-started.md). También se recomienda revisar la [sección sobre uniones](../../xdm/schema/composition.md) en la documentación básica de la composición de esquema.
+Para definir correctamente un campo de atributo calculado, el esquema debe estar habilitado para [!DNL Profile] y aparecer como parte del esquema de unión para la clase en la que se basa el esquema. Para obtener más información sobre los esquemas y uniones habilitados para [!DNL Profile], consulte la sección de la [!DNL Schema Registry] guía para desarrolladores en [habilitación de un esquema para Perfil y visualización de esquemas de unión](../../xdm/api/getting-started.md). También se recomienda revisar la sección [sobre las uniones](../../xdm/schema/composition.md) en la documentación básica de la composición del esquema.
 
-El flujo de trabajo de este tutorial utiliza un esquema habilitado para [!DNL Profile] y sigue los pasos para definir una nueva combinación que contenga el campo de atributo calculado y garantizar que sea la Área de nombres correcta. Si ya tiene un campo que se encuentra en la Área de nombres correcta dentro de un esquema habilitado para Perfil, puede continuar directamente con el paso para [crear un atributo calculado](#create-a-computed-attribute).
+El flujo de trabajo de este tutorial utiliza un esquema habilitado para [!DNL Profile] y sigue los pasos para definir una nueva mezcla que contenga el campo de atributo calculado y garantizar que sea el área de nombres correcta. Si ya tiene un campo en el área de nombres correcta dentro de un esquema habilitado para perfil, puede continuar directamente con el paso para [crear un atributo calculado](#create-a-computed-attribute).
 
-## Vista de un esquema
+## Ver un esquema
 
-Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, agregar una mezcla y definir un campo. Si prefiere utilizar la API [!DNL Schema Registry], consulte la [guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md) para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para su uso con [!DNL Real-time Customer Profile].
+Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, añadir una mezcla y definir un campo. Si prefiere utilizar la API [!DNL Schema Registry], consulte la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md) para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para usar con [!DNL Real-time Customer Profile].
 
-En la interfaz de usuario, haga clic en **[!UICONTROL Esquemas]** en el carril izquierdo y utilice la barra de búsqueda de la ficha **[!UICONTROL Examinar]** para encontrar rápidamente el esquema que desea actualizar.
+En la interfaz de usuario, haga clic en **[!UICONTROL Schemas]** en el carril izquierdo y utilice la barra de búsqueda de la pestaña **[!UICONTROL Browse]** para encontrar rápidamente el esquema que desea actualizar.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -43,46 +43,46 @@ Una vez que haya localizado el esquema, haga clic en su nombre para abrir el [!D
 
 ## Crear una mezcla
 
-Para crear una nueva mezcla, haga clic en **[!UICONTROL Añadir]** al lado de **[!UICONTROL Mezclas]** en la sección **[!UICONTROL Composición]** a la izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Añadir mezcla]** donde puede ver las mezclas existentes. Haga clic en el botón de radio para **[!UICONTROL Crear nueva mezcla]** para definir la nueva mezcla.
+Para crear una nueva mezcla, haga clic en **[!UICONTROL Add]** junto a **[!UICONTROL Mixins]** en la sección **[!UICONTROL Composition]** a la izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Add mixin]** donde puede ver las mezclas existentes. Haga clic en el botón de opción **[!UICONTROL Create new mixin]** para definir la nueva mezcla.
 
-Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Añadir mezcla]** cuando finalice.
+Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Add mixin]** cuando termine.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
-## Añadir un campo de atributo calculado en el esquema
+## Añadir un campo de atributo calculado al esquema
 
-La nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mezclas]&quot; en &quot;[!UICONTROL Composición]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones **[!UICONTROL Añadir campo]** en la sección **[!UICONTROL Estructura]** del editor.
+La nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mixins]&quot; de &quot;[!UICONTROL Composition]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones **[!UICONTROL Add field]** en la sección **[!UICONTROL Structure]** del editor.
 
-Seleccione **[!UICONTROL Añadir campo]** junto al nombre del esquema para agregar un campo de nivel superior, o puede seleccionar agregar el campo en cualquier lugar dentro del esquema que prefiera.
+Seleccione **[!UICONTROL Add field]** junto al nombre del esquema para añadir un campo de nivel superior o puede seleccionar añadir el campo en cualquier lugar dentro del esquema que prefiera.
 
-Después de hacer clic en **[!UICONTROL Añadir campo]**, se abre un nuevo objeto, denominado para su ID de inquilino, que muestra que el campo está en la Área de nombres correcta. Dentro de ese objeto, aparece un **[!UICONTROL nuevo campo]**. Esto sucede si el campo en el que se va a definir el atributo calculado.
+Después de hacer clic en **[!UICONTROL Add field]** se abre un nuevo objeto, denominado para su ID de inquilino, que muestra que el campo se encuentra en el área de nombres correcta. Dentro de ese objeto, aparece un **[!UICONTROL New field]**. Esto se hace si el campo donde se va a definir el atributo calculado.
 
 ![](../images/computed-attributes/New-field.png)
 
-## Configurar el campo
+## Configuración del campo
 
-Mediante la sección **[!UICONTROL Propiedades del campo]** a la derecha del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
+Mediante la sección **[!UICONTROL Field properties]** en el lado derecho del editor, proporcione la información necesaria para el nuevo campo, incluido su nombre, nombre para mostrar y tipo.
 
 >[!NOTE]
 >
 >El tipo del campo debe ser del mismo tipo que el valor del atributo calculado. Por ejemplo, si el valor del atributo calculado es una cadena, el campo que se está definiendo en el esquema debe ser una cadena.
 
-Cuando termine, haga clic en **[!UICONTROL Aplicar]** y el nombre del campo, así como su tipo, aparecerán en la sección **[!UICONTROL Estructura]** del editor.
+Cuando termine, haga clic en **[!UICONTROL Apply]** y el nombre del campo, así como su tipo, aparecerán en la sección **[!UICONTROL Structure]** del editor.
 
 ![](../images/computed-attributes/Apply.png)
 
 ## Habilitar esquema para [!DNL Profile]
 
-Antes de continuar, asegúrese de que el esquema se haya habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección **[!UICONTROL Estructura]** del editor para que aparezca la ficha **[!UICONTROL Propiedades del Esquema]**. Si el deslizador **[!UICONTROL Perfil]** es azul, el esquema se ha habilitado para [!DNL Profile].
+Antes de continuar, asegúrese de que el esquema se ha habilitado para [!DNL Profile]. Haga clic en el nombre del esquema en la sección **[!UICONTROL Structure]** del editor para que aparezca la pestaña **[!UICONTROL Schema Properties]**. Si el control deslizante **[!UICONTROL Profile]** está en azul, el esquema se ha habilitado para [!DNL Profile].
 
 >[!NOTE]
 >
->No se puede deshacer la activación de un esquema para [!DNL Profile], por lo que si hace clic en el control deslizante una vez que se ha habilitado, no tendrá que correr el riesgo de deshabilitarlo.
+>No se puede deshacer la activación de un esquema para [!DNL Profile], por lo que si hace clic en el control deslizante una vez activado, no tendrá que arriesgarse a desactivarlo.
 
 ![](../images/computed-attributes/Profile.png)
 
-Ahora puede hacer clic en **[!UICONTROL Guardar]** para guardar el esquema actualizado y continuar con el resto del tutorial usando la API.
+Ahora puede hacer clic en **[!UICONTROL Save]** para guardar el esquema actualizado y continuar con el resto del tutorial utilizando la API .
 
 ## Pasos siguientes
 
-Ahora que ha creado un campo en el que se almacenará el valor de atributo calculado, puede crear el atributo calculado mediante el extremo de API `/computedattributes`. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de la API de atributos calculados](ca-api.md).
+Ahora que ha creado un campo en el que se almacenará el valor de atributo calculado, puede crear el atributo calculado utilizando el extremo de API `/computedattributes`. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de la API de atributos calculados](ca-api.md).
