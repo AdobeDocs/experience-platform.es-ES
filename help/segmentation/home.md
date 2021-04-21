@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentos;segmento;segmento;segmentos;segmentos
 solution: Experience Platform
 title: Información general del servicio de segmentación
-topic: overview
+topic-legacy: overview
 description: Obtenga información sobre el servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
+exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 translation-type: tm+mt
-source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
-
 
 # Información general del [!DNL Segmentation Service]
 
