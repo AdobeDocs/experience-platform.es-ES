@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas programadas;consulta programada;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;consultas programadas;consulta programada;
 solution: Experience Platform
-title: Extremo de API de Consultas programadas
-topic: scheduled queries
-description: Las siguientes secciones recorren las distintas llamadas de API que puede realizar para consultas programadas con la API de servicio de Consulta.
+title: Punto final de API de consultas programadas
+topic-legacy: scheduled queries
+description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para consultas programadas con la API del servicio de consulta.
+exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
 
 ---
 
+# Punto final de consultas programadas
 
-# Extremo de consultas programadas
+## Ejemplo de llamadas a API
 
-## Ejemplos de llamadas a API
-
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de consultas programadas
 
-Puede recuperar una lista de todas las consultas programadas para su organización de IMS haciendo una solicitud de GET al extremo `/schedules`.
+Puede recuperar una lista de todas las consultas programadas para su organización IMS realizando una solicitud de GET al extremo `/schedules` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /schedules
@@ -32,22 +32,22 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Se agregaron parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;. A continuación se enumeran los parámetros disponibles. |
 
 **Parámetros de consulta**
 
-A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar consultas programadas. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las consultas programadas disponibles para su organización.
+A continuación se muestra una lista de parámetros de consulta disponibles para enumerar consultas programadas. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las consultas programadas disponibles para su organización.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por medio de la creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`) se ordenarán los elementos por orden descendente. |
+| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados creando en orden ascendente. Al agregar un `-` antes de crear (`orderby=-created`), los elementos se ordenarán de forma descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista que comienza en la tercera consulta de la lista. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `templateId` y `userId`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que) y `==` (igual a). Por ejemplo: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas programadas donde el ID de usuario sea el especificado. |
+| `start` | Desplaza la lista de respuestas utilizando la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `templateId` y `userId`. La lista de operadores admitidos es `>` (buena que), `<` (menor que) y `==` (igual a). Por ejemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas programadas donde el ID de usuario sea el especificado. |
 
 **Solicitud**
 
-La siguiente solicitud recupera la última consulta programada creada para su organización de IMS.
+La siguiente solicitud recupera la última consulta programada creada para su organización IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas programadas para la organización de IMS especificada. La siguiente respuesta devuelve la última consulta programada creada para su organización de IMS.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas programadas para la organización de IMS especificada. La siguiente respuesta devuelve la última consulta programada creada para su organización IMS.
 
 ```json
 {
@@ -125,9 +125,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pr
 
 ### Crear una nueva consulta programada
 
-Puede crear una nueva consulta programada realizando una solicitud de POST al extremo `/schedules`.
+Puede crear una nueva consulta programada realizando una solicitud de POST al extremo `/schedules` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /schedules
@@ -162,12 +162,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nombre de la base de datos para la que está creando una consulta programada. |
 | `query.sql` | La consulta SQL que desea crear. |
 | `query.name` | Nombre de la consulta programada. |
-| `schedule.schedule` | El cronograma de crones para la consulta. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;30 * * * *&quot; significa que la consulta se ejecutará cada hora con la marca de 30 minutos. |
-| `schedule.startDate` | La fecha de inicio de la consulta programada, escrita como una marca de hora UTC. |
+| `schedule.schedule` | La programación cron de la consulta. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;30 * * * *&quot; significa que la consulta se ejecutará cada hora con la marca de 30 minutos. |
+| `schedule.startDate` | La fecha de inicio de la consulta programada, escrita como una marca de tiempo UTC. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la consulta programada recién creada. Una vez que la consulta programada haya terminado de activarse, el `state` cambiará de `REGISTERING` a `ENABLED`.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta programada recién creada. Una vez que la consulta programada haya terminado de activarse, el `state` cambiará de `REGISTERING` a `ENABLED`.
 
 ```json
 {
@@ -220,13 +220,13 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede utilizar el valor `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
+>Puede utilizar el valor de `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
 
-### Solicitar detalles de una consulta programada específica
+### Detalles de solicitud de una consulta programada especificada
 
-Puede recuperar información para una consulta programada específica haciendo una solicitud de GET al extremo `/schedules` y proporcionando su ID en la ruta de la solicitud.
+Puede recuperar información para una consulta programada específica realizando una solicitud de GET al extremo `/schedules` y proporcionando su ID en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}
@@ -303,19 +303,19 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la consulta p
 
 >[!NOTE]
 >
->Puede utilizar el valor `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
+>Puede utilizar el valor de `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
 
-### Actualizar detalles de una consulta programada específica
+### Actualizar detalles de una consulta programada especificada
 
-Puede actualizar los detalles de una consulta programada especificada realizando una solicitud de PATCH al extremo `/schedules` y proporcionando su ID en la ruta de la solicitud.
+Puede actualizar los detalles de una consulta programada especificada realizando una solicitud de PATCH al extremo `/schedules` y proporcionando su ID en la ruta de solicitud.
 
-La solicitud de PATCH admite dos rutas diferentes: `/state` y `/schedule/schedule`.
+La solicitud del PATCH admite dos rutas diferentes: `/state` y `/schedule/schedule`.
 
-### Actualizar estado de consulta programado
+### Actualizar estado de consulta programada
 
-Puede utilizar `/state` para actualizar el estado de la consulta programada seleccionada: HABILITADA o DESHABILITADA. Para actualizar el estado, deberá establecer el valor como `enable` o `disable`.
+Puede utilizar `/state` para actualizar el estado de la consulta programada seleccionada - ENABLED o DESHABILITADA. Para actualizar el estado, deberá establecer el valor como `enable` o `disable`.
 
-**Formato API**
+**Formato de API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -328,7 +328,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-Esta solicitud de API utiliza la sintaxis de parche JSON para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de los principios fundamentales de API.
+Esta solicitud de API utiliza la sintaxis JSON Patch para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de fundamentos de API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -349,12 +349,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `path` | La ruta del valor que desea aplicar el parche. En este caso, como está actualizando el estado de la consulta programada, debe establecer el valor de `path` en `/state`. |
-| `value` | El valor actualizado de `/state`. Este valor se puede establecer como `enable` o `disable` para habilitar o deshabilitar la consulta programada. |
+| `path` | La ruta del valor que desea parche. En este caso, dado que está actualizando el estado de la consulta programada, debe establecer el valor de `path` en `/state`. |
+| `value` | El valor actualizado de `/state`. Este valor puede establecerse como `enable` o `disable` para habilitar o deshabilitar la consulta programada. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
@@ -363,11 +363,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 }
 ```
 
-### Actualizar programación de consultas programadas
+### Actualizar la programación de consultas programadas
 
 Puede utilizar `/schedule/schedule` para actualizar la programación cron de la consulta programada. Para obtener más información sobre las programaciones de cron, lea la documentación de [formato de expresión cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
-**Formato API**
+**Formato de API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -379,7 +379,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-Esta solicitud de API utiliza la sintaxis de parche JSON para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de los principios fundamentales de API.
+Esta solicitud de API utiliza la sintaxis JSON Patch para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de fundamentos de API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -400,12 +400,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `path` | La ruta del valor que desea aplicar el parche. En este caso, como está actualizando la programación de la consulta programada, debe establecer el valor de `path` en `/schedule/schedule`. |
-| `value` | El valor actualizado de `/schedule`. Este valor debe tener la forma de un cronograma de crones. Así, en este ejemplo, la consulta programada se ejecutará cada hora con la marca de 45 minutos. |
+| `path` | La ruta del valor que desea parche. En este caso, dado que está actualizando la programación de la consulta programada, debe establecer el valor de `path` en `/schedule/schedule`. |
+| `value` | El valor actualizado de `/schedule`. Este valor debe presentar la forma de una programación cron. Por lo tanto, en este ejemplo, la consulta programada se ejecutará cada hora con la marca de 45 minutos. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
@@ -416,13 +416,13 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Eliminar una consulta programada especificada
 
-Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo `/schedules` y proporcionando el ID de la consulta programada que desee eliminar en la ruta de la solicitud.
+Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo `/schedules` y proporcionando el ID de la consulta programada que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
 >La programación **debe** deshabilitarse antes de eliminarse.
 
-**Formato API**
+**Formato de API**
 
 ```http
 DELETE /schedules/{SCHEDULE_ID}
@@ -444,7 +444,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
