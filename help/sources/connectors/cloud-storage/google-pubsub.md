@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;Google PubSub;google pubsub
 solution: Experience Platform
 title: Información general sobre el conector PubSub Source de Google
-topic: overview
+topic-legacy: overview
 description: Obtenga información sobre cómo conectar Google PubSub a Adobe Experience Platform mediante API o la interfaz de usuario.
+exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
-
 
 # Conector (Beta) [!DNL Google PubSub]
 
@@ -23,9 +23,9 @@ Adobe Experience Platform proporciona conectividad nativa para proveedores de nu
 
 Las fuentes de almacenamiento en la nube pueden llevar sus datos a Platform sin necesidad de descargar, formatear o cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o delimitados. Cada paso del proceso se integra en el flujo de trabajo de fuentes. Platform le permite incorporar datos de [!DNL Azure Event Hubs] en tiempo real.
 
-## Lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [IP address allow list](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 ## Conectar [!DNL Google PubSub] a Platform
 
