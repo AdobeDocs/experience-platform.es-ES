@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;ssc;SSC;Salesforce Service Cloud;nube de servicio de salesforce
 solution: Experience Platform
 title: Creación de una conexión de origen de nube de servicio de Salesforce mediante la API de servicio de flujo
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Salesforce Service Cloud mediante la API de servicio de flujo.
+exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 2%
 
 ---
-
 
 # Crear una conexión de origen [!DNL Salesforce Service Cloud] mediante la API [!DNL Flow Service]
 
