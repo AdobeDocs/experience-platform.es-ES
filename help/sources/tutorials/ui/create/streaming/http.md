@@ -2,14 +2,14 @@
 keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de interfaz de usuario;tutorial;crear una conexión de flujo continuo;ingesta de flujo;ingesta;
 solution: Experience Platform
 title: Creación de una conexión de flujo continuo mediante la interfaz de usuario
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo con Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 translation-type: tm+mt
-source-git-commit: 3b71f1399a770e097cf75827e626d6d4e289ab77
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
