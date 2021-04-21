@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Google AdWords;Google adwords
+keywords: Experience Platform;inicio;temas populares;Google AdWords;adwords de google
 solution: Experience Platform
 title: Información general sobre el conector de origen de Google AdWords
-topic: overview
+topic-legacy: overview
 description: Obtenga información sobre cómo conectar Google AdWords a Adobe Experience Platform mediante API o la interfaz de usuario.
+exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Google AdWords] conector
+# [!DNL Google AdWords] connector
 
 >[!NOTE]
 >
->El conector [!DNL Google AdWords] está en versión beta. Consulte la [información general de las fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Google AdWords] está en versión beta. Consulte la [información general sobre fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Experience Platform] permite la ingesta de datos desde un sistema de publicidad de terceros. La compatibilidad con proveedores de publicidad incluye [!DNL Google AdWords].
+[!DNL Experience Platform] permite la ingesta de datos desde un sistema de publicidad de terceros. La compatibilidad con los proveedores de publicidad incluye [!DNL Google AdWords].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 ## Conectar [!DNL Google AdWords] a [!DNL Platform]
 
@@ -33,11 +33,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ### Uso de API
 
-- [Creación de una conexión de origen Google AdWords mediante la API de servicio de flujo](../../tutorials/api/create/advertising/ads.md)
-- [Explorar un sistema de publicidad mediante la API de servicio de flujo](../../tutorials/api/explore/advertising.md)
-- [Recopilación de datos de publicidad mediante la API de servicio de flujo](../../tutorials/api/collect/advertising.md)
+- [Creación de una conexión de origen de Google AdWords mediante la API de servicio de flujo](../../tutorials/api/create/advertising/ads.md)
+- [Explorar un sistema publicitario mediante la API de servicio de flujo](../../tutorials/api/explore/advertising.md)
+- [Recopilación de datos publicitarios mediante la API de servicio de flujo](../../tutorials/api/collect/advertising.md)
 
 ### Uso de la interfaz de usuario
 
-- [Creación de una conexión de origen de Google AdWords en la interfaz de usuario](../../tutorials/ui/create/advertising/ads.md)
-- [Configuración de un flujo de datos para una conexión de publicidad en la interfaz de usuario](../../tutorials/ui/dataflow/advertising.md)
+- [Crear una conexión de origen de Google AdWords en la interfaz de usuario](../../tutorials/ui/create/advertising/ads.md)
+- [Configurar un flujo de datos para una conexión publicitaria en la interfaz de usuario](../../tutorials/ui/dataflow/advertising.md)
