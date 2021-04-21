@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;inicio;temas populares;identidades de lista;clúster de lista
 solution: Experience Platform
-title: Lista de todas las identidades en un clúster
-topic: API guide
-description: Las identidades que están relacionadas en un gráfico de identidad, independientemente de la Área de nombres, se consideran parte del mismo "clúster" en ese gráfico de identidad. Las opciones siguientes proporcionan los medios para acceder a todos los miembros del clúster.
+title: Enumerar todas las identidades en un clúster
+topic-legacy: API guide
+description: Las identidades relacionadas en un gráfico de identidad, independientemente del área de nombres, se consideran parte del mismo "clúster" en ese gráfico de identidad. Las siguientes opciones proporcionan los medios para acceder a todos los miembros del clúster.
+exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 1%
 
 ---
 
+# Enumerar todas las identidades de un clúster
 
-# Lista de todas las identidades de un clúster
-
-Las identidades que están relacionadas en un gráfico de identidad, independientemente de la Área de nombres, se consideran parte del mismo &quot;clúster&quot; en ese gráfico de identidad. Las opciones siguientes proporcionan los medios para acceder a todos los miembros del clúster.
+Las identidades relacionadas en un gráfico de identidad, independientemente del área de nombres, se consideran parte del mismo &quot;clúster&quot; en ese gráfico de identidad. Las siguientes opciones proporcionan los medios para acceder a todos los miembros del clúster.
 
 ## Obtener identidades asociadas para una sola identidad
 
@@ -24,9 +24,9 @@ Recupere todos los miembros del clúster para una sola identidad.
 Puede utilizar el parámetro opcional `graph-type` para indicar el gráfico de identidad desde el que obtener el clúster. Las opciones son:
 
 - Ninguno: no realice ninguna vinculación de identidad.
-- Gráfico privado: realice una vinculación de identidad basada en el gráfico de identidad privado. Si no se proporciona `graph-type`, este es el valor predeterminado.
+- Gráfico privado : realice la vinculación de identidad en función de su gráfico de identidad privada. Si no se proporciona ningún `graph-type`, este es el valor predeterminado.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAMETERS}
@@ -34,7 +34,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Solicitud**
 
-Opción 1: Proporcione la identidad como Área de nombres (`nsId`, por ID) y valor de ID (`id`).
+Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -45,7 +45,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como Área de nombres (`ns`, por nombre) y valor de ID (`id`).
+Opción 2: Proporcione la identidad como área de nombres (`ns`, por su nombre) y valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -56,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata de [obtener el XID de una identidad](./list-native-id.md).
+Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata la [obtención del XID para una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -69,13 +69,13 @@ curl -X GET \
 
 ## Obtener identidades asociadas para varias identidades
 
-Utilice `POST` como equivalente por lotes del método `GET` descrito anteriormente para devolver las identidades en los clústeres de identidades múltiples.
+Utilice `POST` como un equivalente por lotes del método `GET` descrito anteriormente para devolver las identidades en los clústeres de varias identidades.
 
 >[!NOTE]
 >
 >La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
@@ -83,11 +83,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **Solicitud**
 
-La siguiente solicitud muestra el suministro de una lista de XID para los que se recuperan miembros del clúster.
+La siguiente solicitud demuestra el suministro de una lista de XID para los que recuperar miembros del clúster.
 
 **Solicitud Stub**
 
-El uso del encabezado `x-uis-cst-ctx: stub` devolverá una respuesta stubbed. Se trata de una solución temporal para facilitar el progreso inicial en el desarrollo de la integración, mientras se completan los servicios. Esto quedará obsoleto cuando ya no se necesite.
+El uso del encabezado `x-uis-cst-ctx: stub` devolverá una respuesta superpuesta. Se trata de una solución temporal para facilitar el progreso temprano en el desarrollo de la integración, mientras que los servicios se están completando. Esto quedará obsoleto cuando ya no se necesite.
 
 ```shell
 curl -X POST \
@@ -103,7 +103,7 @@ curl -X POST \
 }'
 ```
 
-**Llamar con XID**
+**Llamada mediante XID**
 
 ```shell
 curl -X POST \
@@ -119,7 +119,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**Llamar con UID**
+**Llamada mediante UID**
 
 ```shell
 curl -X POST \
@@ -243,4 +243,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Vaya al siguiente tutorial para [lista del historial de clúster de una identidad](./list-cluster-history.md)
+Continúe con el siguiente tutorial para [enumerar el historial de clúster de una identidad](./list-cluster-history.md)
