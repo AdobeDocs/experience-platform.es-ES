@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Azure Data Explorer;explorador de datos azure
+keywords: Experience Platform;inicio;temas populares;Data Explorer de Azure;explorador de datos azure
 solution: Experience Platform
-title: Descripción general del conector de origen del Explorador de datos de Azure
-topic: overview
-description: Obtenga información sobre cómo conectar Azure Data Explorer a Adobe Experience Platform mediante API o la interfaz de usuario.
+title: Descripción general del conector de origen de Data Explorer de Azure
+topic-legacy: overview
+description: Obtenga información sobre cómo conectar la Data Explorer de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
+exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
-
 
 # Conector (Beta) [!DNL Azure Data Explorer]
 
@@ -23,9 +23,9 @@ Adobe Experience Platform proporciona conectividad nativa para proveedores de ba
 
 Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoSQL. La compatibilidad con proveedores de bases de datos incluye [!DNL Azure Data Explorer].
 
-## Lista de permitidos de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [IP address allow list](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -35,11 +35,11 @@ La documentación siguiente proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante API
 
-- [Creación de una conexión de origen del Explorador de datos de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
+- [Creación de una conexión de origen de Data Explorer de Azure mediante la API de servicio de flujo](../../tutorials/api/create/databases/data-explorer.md)
 - [Explorar un sistema de base de datos mediante la API de servicio de flujo](../../tutorials/api/explore/database-nosql.md)
 - [Recopilación de datos de una base de datos mediante la API de servicio de flujo](../../tutorials/api/collect/database-nosql.md)
 
 ## Conectar [!DNL Azure Data Explorer] a [!DNL Platform] mediante la interfaz de usuario
 
-- [Crear una conexión de origen del Explorador de datos de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
+- [Crear una conexión de origen de Data Explorer de Azure en la interfaz de usuario](../../tutorials/ui/create/databases/data-explorer.md)
 - [Configuración de un flujo de datos para una conexión de base de datos en la interfaz de usuario](../../tutorials/ui/dataflow/databases.md)
