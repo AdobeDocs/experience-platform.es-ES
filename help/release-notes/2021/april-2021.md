@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 14%
+source-wordcount: '728'
+ht-degree: 12%
 
 ---
 
@@ -21,6 +21,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -61,6 +62,21 @@ Attribution AI se utiliza para atribuir créditos a puntos de contacto que lleva
 | Compatibilidad con datos de Adobe Analytics | Se ha actualizado la funcionalidad para que admita conjuntos de datos de Adobe Analytics mediante el conector de origen de Analytics sin necesidad de ETL para que los datos se ajusten al esquema de Evento de experiencia del consumidor (EEC). |
 
 Para obtener más información sobre conjuntos de datos compatibles, consulte la [[!DNL Intelligent Services] documentación de preparación de datos](../../intelligent-services/data-preparation.md).
+
+## Servicio de segmentación {#segmentation}
+
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permiten crear segmentos y generar audiencias a partir de sus datos [!DNL Real-time Customer Profile]. Estos segmentos están configurados y mantenidos de forma centralizada en [!DNL Platform], lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
+
+[!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Funciones adicionales de agregación | Se han añadido funciones de recuento en el Generador de segmentos. Las funciones de recuento permiten contabilizar el número de veces que se ha realizado el evento especificado. Puede encontrar más información sobre las funciones de recuento en la sección funciones de recuento de la [guía del Generador de segmentos](../../segmentation/ui/segment-builder.md#count-functions) |
+
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [información general de segmentación](../../segmentation/home.md).
+
 
 ## [!DNL Sources] {#sources}
 
