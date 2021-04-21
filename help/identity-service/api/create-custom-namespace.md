@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Área de nombres;Área de nombres;Áreas de nombres;Áreas de nombres;Área de nombres de identidad;Área de nombres de identidad;identidad;identidad;identidad
+keywords: Experience Platform;inicio;temas populares;área de nombres;área de nombres;áreas de nombres;área de nombres;área de nombres de identidad;área de nombres de identidad;identidad;identidad
 solution: Experience Platform
-title: Creación de una Área de nombres personalizada en la API de servicio de identidad
-topic: API guide
-description: Mediante la API de Área de nombres de identidad, puede crear una Área de nombres de identidad personalizada que solo estará disponible para su organización.
+title: Creación de un área de nombres personalizada en la API del servicio de identidad
+topic-legacy: API guide
+description: Con la API de área de nombres de identidad, puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
 
+# Creación de un área de nombres personalizada en la API del servicio de identidad
 
-# Creación de una Área de nombres personalizada en la API de servicio de identidad
+Con la API [!DNL Identity Namespace], puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
 
-Mediante la API [!DNL Identity Namespace], puede crear una Área de nombres de identidad personalizada que estará disponible solamente para su organización.
-
-Para obtener recomendaciones sobre la creación de Áreas de nombres personalizadas, consulte [la documentación de preguntas más frecuentes de Identity Service](../troubleshooting-guide.md).
+Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes del servicio de identidad](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->Las Áreas de nombres son un calificador para las identidades. Como tal, una vez creada una Área de nombres, no se puede eliminar.
+>Los espacios de nombres son un calificador para identidades. Como tal, una vez que se ha creado un área de nombres, no se puede eliminar.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /idnamespace/identities
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Vaya al siguiente tutorial para [lista del ID nativo de una identidad](./list-native-id.md)
+Continúe con el siguiente tutorial para [enumerar el ID nativo de una identidad](./list-native-id.md)
