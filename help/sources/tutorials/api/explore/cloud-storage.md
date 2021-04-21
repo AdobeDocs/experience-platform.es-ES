@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;almacenamiento en la nube;almacenamiento en la nube
 solution: Experience Platform
 title: Explorar un sistema de almacenamiento en voz alta mediante la API de servicio de flujo
-topic: overview
+topic-legacy: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar un sistema de almacenamiento en la nube de terceros.
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
-
 
 # Explorar un sistema de almacenamiento en la nube mediante la API [!DNL Flow Service]
 
