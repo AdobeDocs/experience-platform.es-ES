@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;ejecutar consultas programadas;ejecutar consulta programada;servicio de Consulta;consultas programadas;consulta programada;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;ejecutar consultas programadas;ejecutar consulta programada;servicio de consulta;consultas programadas;consulta programada;
 solution: Experience Platform
-title: La Consulta programada ejecuta el extremo de la API
-topic: runs for scheduled queries
-description: Las siguientes secciones recorren las distintas llamadas de API que puede realizar para ejecutar consultas programadas con la API de servicio de Consulta.
+title: La consulta programada ejecuta el extremo de la API
+topic-legacy: runs for scheduled queries
+description: Las secciones siguientes recorren las distintas llamadas de API que puede realizar para ejecutar consultas programadas con la API del servicio de consulta.
+exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 2%
 
 ---
 
+# El extremo de ejecución de la consulta programada
 
-# Extremo de ejecución de consulta programada
+## Ejemplo de llamadas a API
 
-## Ejemplos de llamadas a API
-
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de todas las ejecuciones para una consulta programada especificada
 
-Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Esto se realiza realizando una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs`, donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuyas ejecuciones desea recuperar.
+Puede recuperar una lista de todas las ejecuciones para una consulta programada específica, independientemente de si se están ejecutando o ya se han completado. Para ello, se realiza una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs` , donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuyas ejecuciones desea recuperar.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}/runs
@@ -33,22 +33,22 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea recuperar. |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Se agregaron parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;. A continuación se enumeran los parámetros disponibles. |
 
 **Parámetros de consulta**
 
-A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar las ejecuciones de una consulta programada específica. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros se recuperarán todas las ejecuciones disponibles para la consulta programada especificada.
+La siguiente es una lista de parámetros de consulta disponibles para enumerar ejecuciones para una consulta programada especificada. Todos estos parámetros son opcionales. Si se realiza una llamada a este extremo sin parámetros, se recuperarán todas las ejecuciones disponibles para la consulta programada especificada.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por medio de la creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`) se ordenarán los elementos por orden descendente. |
+| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados creando en orden ascendente. Al agregar un `-` antes de crear (`orderby=-created`), los elementos se ordenarán de forma descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista que comienza en la tercera consulta de la lista. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state` y `externalTrigger`. La lista de los operadores admitidos es `>` (buena que), `<` (menor que), `==` (igual a) y `!=` (no igual a). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones que se hayan creado, realizado correctamente y creado manualmente después del 20 de abril de 2019. |
+| `start` | Desplaza la lista de respuestas utilizando la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state` y `externalTrigger`. La lista de operadores admitidos es `>` (buena), `<` (menor que), `==` (igual a) y `!=` (no igual a). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones creadas manualmente después del 20 de abril de 2019. |
 
 **Solicitud**
 
-La siguiente solicitud recupera las cuatro últimas ejecuciones de la consulta programada especificada.
+La siguiente solicitud recupera las cuatro últimas ejecuciones para la consulta programada especificada.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -60,7 +60,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones para la consulta programada especificada como JSON. La siguiente respuesta devuelve las cuatro últimas ejecuciones de la consulta programada especificada.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones para la consulta programada especificada como JSON. La siguiente respuesta devuelve las cuatro últimas ejecuciones para la consulta programada especificada.
 
 ```json
 {
@@ -150,13 +150,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones 
 
 >[!NOTE]
 >
->Puede usar el valor de `_links.cancel` para [detener una ejecución para una consulta programada específica](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Puede utilizar el valor de `_links.cancel` a [detener una ejecución para una consulta programada específica](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Déclencheur inmediato de una ejecución para una consulta programada específica
 
-Puede realizar un déclencheur inmediato de una ejecución para una consulta programada especificada haciendo una solicitud de POST al extremo `/schedules/{SCHEDULE_ID}/runs`, donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuya ejecución desea déclencheur.
+Se puede almacenar en déclencheur inmediatamente una ejecución para una consulta programada especificada realizando una solicitud de POST al extremo `/schedules/{SCHEDULE_ID}/runs` , donde `{SCHEDULE_ID}` es el valor `id` de la consulta programada cuya ejecución desea almacenar en déclencheur.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /schedules/{SCHEDULE_ID}/runs
@@ -174,7 +174,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
@@ -185,9 +185,9 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente m
 
 ### Recuperar detalles de una ejecución para una consulta programada específica
 
-Puede recuperar detalles sobre una ejecución para una consulta programada específica haciendo una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de solicitud.
+Puede recuperar detalles sobre una ejecución para una consulta programada específica realizando una solicitud de GET al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando el ID de la consulta programada y la ejecución en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
@@ -195,7 +195,7 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar los detalles. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar detalles de. |
 | `{RUN_ID}` | El valor `id` de la ejecución que desea recuperar. |
 
 **Solicitud**
@@ -210,7 +210,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la ejecución especificada.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la ejecución especificada.
 
 ```json
 {
@@ -246,9 +246,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la ejecuc
 
 ### Detener inmediatamente una ejecución para una consulta programada específica
 
-Puede detener inmediatamente una ejecución para una consulta programada específica haciendo una solicitud de PATCH al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando tanto el ID de la consulta programada como la ejecución en la ruta de solicitud.
+Puede detener inmediatamente una ejecución para una consulta programada específica realizando una solicitud de PATCH al extremo `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` y proporcionando el ID de la consulta programada y la ejecución en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
@@ -256,12 +256,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar los detalles. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada cuya ejecución desea recuperar detalles de. |
 | `{RUN_ID}` | El valor `id` de la ejecución que desea recuperar. |
 
 **Solicitud**
 
-Esta solicitud de API utiliza la sintaxis de parche JSON para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de los principios fundamentales de API.
+Esta solicitud de API utiliza la sintaxis JSON Patch para su carga útil. Para obtener más información sobre cómo funciona JSON Patch, lea el documento de fundamentos de API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -276,7 +276,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
