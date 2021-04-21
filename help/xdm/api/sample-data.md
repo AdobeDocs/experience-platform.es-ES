@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;datos de ejemplo;datos de muestra;rpc
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;datos de ejemplo;datos de muestra;rpc;
 solution: Experience Platform
 title: Punto final de API de datos de muestra
 description: El extremo /sampledata de la API del Registro de esquemas permite generar datos de ejemplo asignados a la estructura de cualquier esquema XDM existente.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
 
-
 # Punto de conexión de datos de ejemplo
 
-Para poder introducir datos en Adobe Experience Platform, el formato y la estructura de los datos deben cumplir con un esquema existente del Modelo de datos de experiencia (XDM). Dependiendo de la complejidad del esquema para un conjunto de datos en particular, puede ser difícil determinar la forma exacta de los datos que el conjunto de datos espera al ingerirlos.
+Para poder introducir datos en Adobe Experience Platform, el formato y la estructura de los datos deben cumplir con un esquema del Modelo de datos de experiencia (XDM) existente. Dependiendo de la complejidad del esquema para un conjunto de datos en particular, puede ser difícil determinar la forma exacta de los datos que el conjunto de datos espera al ingerirlos.
 
 Con el extremo `/sampledata` en la API [!DNL Schema Registry], puede generar un objeto de ingesta de ejemplo para cualquier esquema creado anteriormente.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 El extremo de datos de ejemplo forma parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan `CONTAINER_ID`. En su lugar, deben utilizar el espacio de nombres `/rpc` , como se muestra en la llamada de API que aparece a continuación.
 
 ## Recuperar datos de ejemplo para un esquema
 
-Puede recuperar datos de ejemplo para cualquier esquema de la Biblioteca de esquemas especificando el ID del esquema en la ruta de una solicitud GET al extremo.
+Puede recuperar datos de ejemplo para cualquier esquema de la Biblioteca de esquemas especificando el ID del esquema en la ruta de una solicitud de GET al extremo.
 
 **Formato de API**
 
