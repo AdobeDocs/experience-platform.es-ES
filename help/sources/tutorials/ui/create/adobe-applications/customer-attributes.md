@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;atributos del cliente
 solution: Experience Platform
 title: Creación de una conexión de origen de atributos del cliente en la interfaz de usuario
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen en la interfaz de usuario para recopilar datos de perfil de atributos del cliente en Adobe Experience Platform.
+exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
 translation-type: tm+mt
-source-git-commit: 08a3026e969a8739a8b57226c35a6d1d3150006e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 6%
+source-wordcount: '397'
+ht-degree: 5%
 
 ---
-
 
 # Creación de una conexión de origen de Atributos del cliente en la interfaz de usuario
 
