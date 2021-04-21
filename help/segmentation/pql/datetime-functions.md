@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de fecha y hora;funciones de fecha y hora;datetime;datetime;date;time;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Idioma de consulta de perfil;funciones de fecha y hora;funciones de fecha y hora;fecha y hora;fecha y hora;hora;fecha y hora
 solution: Experience Platform
 title: Funciones de fecha y hora de PQL
-topic: developer guide
-description: Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro del lenguaje de Consulta de Perfil (PQL).
+topic-legacy: developer guide
+description: Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro del lenguaje de consulta de perfil (PQL).
+exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 3%
 
 ---
 
-
 # Funciones de fecha y hora
 
-Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro de [!DNL Profile Query Language] (PQL). Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
+Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro de [!DNL Profile Query Language] (PQL). Puede encontrar más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Mes actual
 
-La función `currentMonth` devuelve el mes actual como un entero.
+La función `currentMonth` devuelve el mes actual como un número entero.
 
 **Format**
 
@@ -37,7 +37,7 @@ person.birthMonth = currentMonth()
 
 ## Obtener mes
 
-La función `getMonth` devuelve el mes, como un entero, en función de una marca de tiempo determinada.
+La función `getMonth` devuelve el mes, como un número entero, en función de una marca de tiempo determinada.
 
 **Formato**
 
@@ -55,7 +55,7 @@ person.birthdate.getMonth() = 6
 
 ## Año actual
 
-La función `currentYear` devuelve el año actual como un entero.
+La función `currentYear` devuelve el año actual como un número entero.
 
 **Formato**
 
@@ -73,7 +73,7 @@ product.saleYear = currentYear()
 
 ## Obtener año
 
-La función `getYear` devuelve el año, como un entero, en función de una marca de tiempo determinada.
+La función `getYear` devuelve el año como un número entero, en función de una marca de tiempo determinada.
 
 **Formato**
 
@@ -91,7 +91,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Día actual del mes
 
-La función `currentDayOfMonth` devuelve el día actual del mes como un entero.
+La función `currentDayOfMonth` devuelve el día actual del mes como un número entero.
 
 **Formato**
 
@@ -101,7 +101,7 @@ currentDayOfMonth()
 
 **Ejemplo**
 
-La siguiente consulta PQL comprueba si el día de nacimiento de la persona coincide con el día del mes actual.
+La siguiente consulta PQL comprueba si el día de nacimiento de la persona coincide con el día actual del mes.
 
 ```sql
 person.birthDay = currentDayOfMonth()
@@ -109,7 +109,7 @@ person.birthDay = currentDayOfMonth()
 
 ## Obtener día del mes
 
-La función `getDayOfMonth` devuelve el día, como un entero, en función de una marca de tiempo determinada.
+La función `getDayOfMonth` devuelve el día, como un número entero, en función de una marca de tiempo determinada.
 
 **Formato**
 
@@ -125,7 +125,7 @@ La siguiente consulta PQL comprueba si el artículo se vendió en los primeros 1
 product.sale.getDayOfMonth() <= 15
 ```
 
-## Ocurre
+## Ocurrencias
 
 La función `occurs` compara la función de marca de tiempo dada con un período de tiempo fijo.
 
@@ -142,11 +142,11 @@ La función `occurs` se puede escribir con cualquiera de los siguientes formatos
 
 | Argumento | Descripción |
 | --------- | ----------- |
-| `{COMPARISON}` | Operador de comparación. Puede ser cualquiera de los siguientes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`, . Encontrará más información sobre las funciones de comparación en el documento [funciones de comparación](./comparison-functions.md). |
+| `{COMPARISON}` | Un operador de comparación. Puede ser cualquiera de los siguientes operadores: `>`, `>=`, `<`, `<=`, `=`, `!=`. Puede encontrar más información sobre las funciones de comparación en el [documento de funciones de comparación](./comparison-functions.md). |
 | `{INTEGER}` | Un entero no negativo. |
-| `{TIME_UNIT}` | Una unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
-| `{DIRECTION}` | Preposición que describe cuándo comparar la fecha. Puede ser cualquiera de las siguientes palabras: `before`, `after`, `from`. |
-| `{TIME}` | Puede ser un literal de marca de hora (`today`, `now`, `yesterday`, `tomorrow`), una unidad de tiempo relativa (una de `this`, `last` o `next` seguida de una unidad de tiempo) o un atributo de marca de hora. |
+| `{TIME_UNIT}` | Unidad de tiempo. Puede ser cualquiera de las siguientes palabras: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
+| `{DIRECTION}` | Una preposición que describe cuándo comparar la fecha. Puede ser cualquiera de las siguientes palabras: `before`, `after`, `from`. |
+| `{TIME}` | Puede ser un literal con marca de hora (`today`, `now`, `yesterday`, `tomorrow`), una unidad de tiempo relativa (una de `this`, `last` o `next` seguida de una unidad de tiempo) o un atributo con marca de hora. |
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ product.saleDate occurs = 3 hours before now
 
 ## Hoy
 
-`today` es una palabra reservada que representa la marca de hora del inicio del día de la ejecución de PQL.
+`today` es una palabra reservada que representa la marca de tiempo del inicio del día de la ejecución de PQL.
 
 **Ejemplo**
 
@@ -192,4 +192,4 @@ person.birthday occurs = 3 days before today
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de fecha y hora, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
+Ahora que ha aprendido sobre las funciones de fecha y hora, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de consulta de perfil](./overview.md).
