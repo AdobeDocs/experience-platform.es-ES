@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;hogar;temas populares;Fénix;fénix
+keywords: Experience Platform;inicio;temas populares;Phoenix;phoenix
 solution: Experience Platform
-title: Creación de una conexión de origen Phoenix mediante la API de servicio de flujo
-topic: overview
+title: Creación de una conexión de origen de Phoenix mediante la API de servicio de flujo
+topic-legacy: overview
 type: Tutorial
-description: Obtenga información sobre cómo conectar una base de datos Phoenix a Adobe Experience Platform mediante la API de servicio de flujo.
+description: Obtenga información sobre cómo conectar una base de datos de Phoenix a Adobe Experience Platform mediante la API de servicio de flujo.
+exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 1%
 
 ---
 
-
 # Crear una conexión de origen [!DNL Phoenix] mediante la API [!DNL Flow Service]
 
 >[!NOTE]
 >
->El conector [!DNL Phoenix] está en versión beta. Consulte la [información general de las fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Phoenix] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar una base de datos [!DNL Phoenix] a [!DNL Experience Platform].
 
 ## Primeros pasos
 
-Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
-* [Simuladores](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores para pruebas](../../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse con éxito a [!DNL Phoenix] mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Phoenix] mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
@@ -42,26 +42,26 @@ Para que [!DNL Flow Service] se conecte con [!DNL Phoenix], debe proporcionar va
 | `host` | La dirección IP o el nombre de host del servidor [!DNL Phoenix]. |
 | `username` | El nombre de usuario que utiliza para acceder al servidor [!DNL Phoenix]. |
 | `password` | La contraseña correspondiente al usuario. |
-| `port` | El puerto TCP que utiliza el servidor [!DNL Phoenix] para escuchar las conexiones de cliente. Si se conecta a [!DNL Azure] HDInsights, especifique el puerto como 443. |
-| `httpPath` | La dirección URL parcial correspondiente al servidor [!DNL Phoenix]. Especifique /hbasephoenix0 si utiliza el clúster [!DNL Azure] HDInsights. |
+| `port` | Puerto TCP que utiliza el servidor [!DNL Phoenix] para detectar conexiones de cliente. Si se conecta a [!DNL Azure] HDInsights, especifique el puerto como 443. |
+| `httpPath` | La URL parcial correspondiente al servidor [!DNL Phoenix]. Especifique /basephoenix0 si utiliza el clúster [!DNL Azure] HDInsights. |
 | `enableSsl` | Un valor booleano. Especifica si las conexiones al servidor se cifran mediante SSL. |
-| `connectionSpec.id` | Identificador único necesario para crear una conexión. El identificador de especificación de conexión para [!DNL Phoenix] es: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | Identificador único necesario para crear una conexión. El ID de especificación de conexión para [!DNL Phoenix] es: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
-Para obtener más información sobre cómo empezar, consulte [este documento Phoenix](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+Para obtener más información sobre cómo empezar, consulte [este documento de Phoenix](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -71,9 +71,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cuenta [!DNL Phoenix], ya que se puede utilizar para crear varios conectores de origen para traer datos diferentes.
+Una conexión especifica un origen y contiene sus credenciales para ese origen. Solo se requiere una conexión por cada cuenta [!DNL Phoenix], ya que se puede utilizar para crear varios conectores de origen para introducir datos diferentes.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /connections
@@ -81,7 +81,7 @@ POST /connections
 
 **Solicitud**
 
-Para crear una conexión [!DNL Phoenix], se debe proporcionar su ID de especificación de conexión única como parte de la solicitud del POST. El identificador de especificación de conexión para [!DNL Phoenix] es `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
+Para crear una conexión [!DNL Phoenix], su ID de especificación de conexión única debe proporcionarse como parte de la solicitud del POST. El ID de especificación de conexión para [!DNL Phoenix] es `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
 
 ```shell
 curl -X POST \
@@ -119,12 +119,12 @@ curl -X POST \
 | `auth.params.password` | La contraseña asociada a su conexión [!DNL Phoenix]. |
 | `auth.params.port` | El puerto TCP para la conexión [!DNL Phoenix]. |
 | `auth.params.httpPath` | Ruta http parcial para la conexión [!DNL Phoenix]. |
-| `auth.params.enableSsl` | El valor booleano que especifica si las conexiones al servidor se cifran mediante SSL. |
-| `connectionSpec.id` | El identificador de especificación de conexión [!DNL Phoenix]: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
+| `auth.params.enableSsl` | El valor booleano que especifica si las conexiones al servidor se cifran con SSL. |
+| `connectionSpec.id` | El ID de especificación de conexión [!DNL Phoenix]: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar los datos en el siguiente tutorial.
+Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar sus datos en el siguiente tutorial.
 
 ```json
 {
@@ -135,4 +135,4 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha creado una conexión [!DNL Phoenix] mediante la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial cuando aprenda a [explorar bases de datos mediante la API de servicio de flujo](../../explore/database-nosql.md).
+Siguiendo este tutorial, ha creado una conexión [!DNL Phoenix] utilizando la API [!DNL Flow Service] y ha obtenido el valor de ID único de la conexión. Puede utilizar este ID en el siguiente tutorial, mientras aprende a explorar las [bases de datos mediante la API de servicio de flujo](../../explore/database-nosql.md).
