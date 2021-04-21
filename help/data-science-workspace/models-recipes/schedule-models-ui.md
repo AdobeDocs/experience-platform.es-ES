@@ -2,17 +2,17 @@
 keywords: Experience Platform;programar un modelo;Data Science Workspace;temas populares;programar puntuación;programar formación
 solution: Experience Platform
 title: Programar un modelo en la interfaz de usuario de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace permite configurar ejecuciones de puntuación y formación programadas en un servicio de aprendizaje automático. La automatización del proceso de capacitación y puntuación puede ayudar a mantener y mejorar la eficacia de un Servicio a lo largo del tiempo, al mantenerse al día con los patrones dentro de sus datos.
+exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 translation-type: tm+mt
-source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
-
 
 # Programar un modelo en la interfaz de usuario de Data Science Workspace
 
