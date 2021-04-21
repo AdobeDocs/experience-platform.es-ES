@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
-title: Extremo de API de Entidades (Acceso a Perfil)
-topic: guide
+title: Punto final de API de entidades (acceso a perfil)
+topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform le permite acceder a los datos de Perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de Perfil.
+description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
 
 ---
 
+# Extremo de entidades (acceso de perfil)
 
-# Extremo de entidades (acceso a Perfil)
-
-Adobe Experience Platform le permite acceder a [!DNL Real-time Customer Profile] datos mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a perfiles mediante la [!DNL Platform] interfaz de usuario, consulte la [guía del usuario de Perfil](../ui/user-guide.md).
+Adobe Experience Platform le permite acceder a los datos [!DNL Real-time Customer Profile] mediante las API de RESTful o la interfaz de usuario. Esta guía describe cómo acceder a entidades, más comúnmente denominadas &quot;perfiles&quot;, mediante la API de . Para obtener más información sobre el acceso a perfiles mediante la interfaz de usuario [!DNL Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
 ## Primeros pasos
 
-El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de muestra en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas exitosas a cualquier API [!DNL Experience Platform].
+El extremo de API utilizado en esta guía forma parte de [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Antes de continuar, consulte la [guía de introducción](getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API [!DNL Experience Platform].
 
-## Acceso a datos de perfil por identidad
+## Acceso a los datos de perfil por identidad
 
-Puede acceder a una entidad [!DNL Profile] realizando una solicitud de GET al extremo `/access/entities` y proporcionando la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consiste en un valor de ID (`entityId`) y la Área de nombres de identidad (`entityIdNS`).
+Puede acceder a una entidad [!DNL Profile] realizando una solicitud de GET al extremo `/access/entities` y proporcionando la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consta de un valor de ID (`entityId`) y el área de nombres de identidad (`entityIdNS`).
 
-Los parámetros de consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección [Parámetros de consulta](#query-parameters) del apéndice se proporciona una lista completa de los parámetros válidos.
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &amp;. En la sección [query parameters](#query-parameters) del apéndice se proporciona una lista completa de parámetros válidos.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -117,13 +117,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->Si un gráfico relacionado vincula más de 50 identidades, este servicio devolverá el estado HTTP 422 y el mensaje &quot;Demasiadas identidades relacionadas&quot;. Si recibe este error, considere la posibilidad de agregar más parámetros de consulta para limitar la búsqueda.
+>Si un gráfico relacionado vincula más de 50 identidades, este servicio devolverá el estado HTTP 422 y el mensaje &quot;Demasiadas identidades relacionadas&quot;. Si recibe este error, considere la posibilidad de agregar más parámetros de consulta para restringir la búsqueda.
 
 ## Acceso a los datos de perfil por lista de identidades
 
-Puede acceder a varias entidades de perfil mediante sus identidades, realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades en la carga útil. Estas identidades consisten en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a varias entidades de perfil según sus identidades haciendo una solicitud de POST al extremo `/access/entities` y proporcionando las identidades en la carga útil. Estas identidades constan de un valor de ID (`entityId`) y un área de nombres de identidad (`entityIdNS`).
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /access/entities
@@ -182,19 +182,19 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `schema.name` | ***(Requerido)*** El nombre del esquema XDM al que pertenece la entidad. |
-| `fields` | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devolverán todos los campos. |
-| `identities` | ***(Requerido)*** Matriz que contiene una lista de identidades para las entidades a las que desea acceder. |
-| `identities.entityId` | ID de una entidad a la que desee acceder. |
-| `identities.entityIdNS.code` | Área de nombres de un identificador de entidad a la que desea acceder. |
-| `timeFilter.startTime` | Tiempo de inicio del filtro de intervalo de tiempo, incluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el comienzo del tiempo disponible. |
-| `timeFilter.endTime` | Filtro de intervalo de tiempo de finalización, excluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el final del tiempo disponible. |
-| `limit` | Número de registros que devolver. Solo se aplica al número de eventos de experiencia devueltos. Predeterminado: 1000. |
-| `orderby` | Orden de clasificación de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp`, siendo el valor predeterminado `+timestamp`. |
-| `withCA` | Indicador de característica para activar atributos calculados para la búsqueda. Predeterminado: false. |
+| `schema.name` | ***(Obligatorio)*** El nombre del esquema XDM al que pertenece la entidad. |
+| `fields` | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devuelven todos los campos. |
+| `identities` | ***(Obligatorio)*** Matriz que contiene una lista de identidades para las entidades a las que desea acceder. |
+| `identities.entityId` | El ID de una entidad a la que desea acceder. |
+| `identities.entityIdNS.code` | El espacio de nombres de un ID de entidad al que desea acceder. |
+| `timeFilter.startTime` | Hora de inicio del filtro de intervalo de tiempo, incluido. Debe tener una granularidad de milisegundos. El valor predeterminado, si no se especifica, es el comienzo del tiempo disponible. |
+| `timeFilter.endTime` | Filtro de intervalo de tiempo de finalización, excluido. Debe tener una granularidad de milisegundos. El valor predeterminado, si no se especifica, es el final del tiempo disponible. |
+| `limit` | Número de registros que se van a devolver. Solo se aplica al número de eventos de experiencia devueltos. Predeterminado: 1000. |
+| `orderby` | El orden de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
+| `withCA` | Indicador de características para activar atributos calculados para la búsqueda. Predeterminado: false. |
 
 ****
-RespuestaUna respuesta correcta devuelve los campos solicitados de las entidades especificadas en el cuerpo de la solicitud.
+RespuestaUna respuesta correcta devuelve los campos solicitados de entidades especificadas en el cuerpo de la solicitud.
 
 ```json
 {
@@ -333,13 +333,13 @@ RespuestaUna respuesta correcta devuelve los campos solicitados de las entidades
 }
 ```
 
-## Acceso a eventos de series temporales para un perfil por identidad
+## Acceso a eventos de series temporales de un perfil por identidad
 
-Puede acceder a los eventos de series temporales según la identidad de la entidad de perfil asociada realizando una solicitud de GET al extremo `/access/entities`. Esta identidad consiste en un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a los eventos de series temporales según la identidad de su entidad de perfil asociada realizando una solicitud de GET al extremo `/access/entities` . Esta identidad consta de un valor de ID (`entityId`) y un área de nombres de identidad (`entityIdNS`).
 
-Los parámetros de consulta proporcionados en la ruta de la solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección [Parámetros de consulta](#query-parameters) del apéndice se proporciona una lista completa de los parámetros válidos.
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &amp;. En la sección [query parameters](#query-parameters) del apéndice se proporciona una lista completa de parámetros válidos.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -347,7 +347,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud busca una entidad de perfil por ID y recupera los valores de las propiedades `endUserIDs`, `web` y `channel` para todos los eventos de serie temporal asociados con la entidad.
+La siguiente solicitud encuentra una entidad de perfil por ID y recupera los valores de las propiedades `endUserIDs`, `web` y `channel` para todos los eventos de series temporales asociados a la entidad.
 
 ```shell
 curl -X GET \
@@ -360,11 +360,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de la solicitud.
+Una respuesta correcta devuelve una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de solicitud.
 
 >[!NOTE]
 >
->La solicitud especificó un límite de uno (`limit=1`), por lo tanto el `count` en la respuesta siguiente es 1 y sólo se devuelve una entidad.
+>La solicitud especificó un límite de uno (`limit=1`), por lo que el `count` de la respuesta siguiente es 1 y solo se devuelve una entidad.
 
 ```json
 {
@@ -413,15 +413,15 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 }
 ```
 
-### Acceder a una página de resultados subsiguiente
+### Acceso a una página de resultados posterior
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al extremo `/access/entities`, pero asegúrese de reemplazar `/entities` por el valor del URI proporcionado.
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al extremo `/access/entities` , pero asegúrese de reemplazar `/entities` con el valor del URI proporcionado.
 
 >[!NOTE]
 >
->Asegúrese de no repetir accidentalmente `/entities/` en la ruta de solicitud. Sólo debería aparecer una vez como `/access/entities?start=...`
+>Asegúrese de no repetir accidentalmente `/entities/` en la ruta de solicitud. Solo debería aparecer una vez como `/access/entities?start=...`
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /access/{NEXT_URI}
@@ -429,7 +429,7 @@ GET /access/{NEXT_URI}
 
 | Parámetro | Descripción |
 |---|---|
-| `{NEXT_URI}` | El valor URI tomado de `_links.next.href`. |
+| `{NEXT_URI}` | El valor de URI tomado de `_links.next.href`. |
 
 **Solicitud**
 
@@ -497,9 +497,9 @@ Una respuesta correcta devuelve la siguiente página de resultados. Esta respues
 
 ## Acceso a eventos de series temporales para varios perfiles por identidades
 
-Puede acceder a eventos de series temporales desde varios perfiles asociados realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades de perfil en la carga útil. Cada una de estas identidades consta de un valor de ID (`entityId`) y una Área de nombres de identidad (`entityIdNS`).
+Puede acceder a los eventos de series temporales de varios perfiles asociados realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades de perfil en la carga útil. Cada una de estas identidades consta de un valor de ID (`entityId`) y un área de nombres de identidad (`entityIdNS`).
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /access/entities
@@ -549,19 +549,19 @@ curl -X POST \
 | Propiedad | Descripción |
 |---|---|
 | `schema.name` | **(OBLIGATORIO)** El esquema XDM de la entidad que se va a recuperar |
-| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent`, este valor debe especificar el esquema de la entidad de perfil a la que están relacionados los eventos de series temporales. |
-| `identities` | **(REQUERIDO)** Una lista de matriz de perfiles desde los que recuperar eventos de series temporales asociadas. Cada entrada de la matriz se establece de una de las dos maneras siguientes: 1) utilizando una identidad completa consistente en un valor de ID y una Área de nombres o 2) proporcionando un XID. |
-| `fields` | Aísla los datos devueltos a un conjunto especificado de campos. Utilícelo para filtrar qué campos de esquema se incluyen en los datos recuperados. Ejemplo: personalEmail,persona.nombre,persona.género |
-| `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica ninguno en la llamada de servicio, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, la opción predeterminada es no combinar perfiles ni establecer vínculos de identidad. |
-| `orderby` | Orden de clasificación de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp`, siendo el valor predeterminado `+timestamp`. |
-| `timeFilter.startTime` | Especifique el tiempo de inicio para filtrar objetos de serie temporal (en milisegundos). |
-| `timeFilter.endTime` | Especifique la hora de finalización para filtrar objetos de serie temporal (en milisegundos). |
+| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent`, este valor debe especificar el esquema de la entidad de perfil con la que están relacionados los eventos de series temporales. |
+| `identities` | **(OBLIGATORIO)** Una lista de matriz de perfiles desde los que recuperar los eventos de series temporales asociados. Cada entrada de la matriz se configura de una de las dos maneras siguientes: 1) usar una identidad completa que consista en un valor de ID y un área de nombres o 2) proporcionar un XID. |
+| `fields` | Aísla los datos devueltos a un conjunto específico de campos. Utilice esto para filtrar qué campos de esquema se incluyen en los datos recuperados. Ejemplo: personalEmail,person.name,person.gender |
+| `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica uno en la llamada de servicio, se utilizará el esquema predeterminado de la organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, el valor predeterminado es sin combinación de perfiles ni vinculación de identidad. |
+| `orderby` | El orden de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
+| `timeFilter.startTime` | Especifique la hora de inicio para filtrar objetos de series temporales (en milisegundos). |
+| `timeFilter.endTime` | Especifique la hora de finalización para filtrar objetos de series temporales (en milisegundos). |
 | `limit` | Valor numérico que especifica el número máximo de objetos que se van a devolver. Predeterminado: 1000 |
-| `withCA` | Indicador de característica para activar atributos calculados para la búsqueda. Predeterminado: false |
+| `withCA` | Indicador de características para activar atributos calculados para la búsqueda. Predeterminado: false |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista paginada de eventos de serie temporal asociados con los múltiples perfiles especificados en la solicitud.
+Una respuesta correcta devuelve una lista paginada de eventos de series temporales asociados con los múltiples perfiles especificados en la solicitud.
 
 ```json
 {
@@ -769,21 +769,21 @@ Una respuesta correcta devuelve una lista paginada de eventos de serie temporal 
 }`
 ```
 
-En esta respuesta de ejemplo, el primer perfil de la lista (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) proporciona un valor para `_links.next.payload`, lo que significa que existen páginas adicionales de resultados para este perfil. Consulte la siguiente sección sobre [acceso a resultados adicionales](#access-additional-results) para obtener más información sobre cómo acceder a esos resultados adicionales.
+En esta respuesta de ejemplo, el primer perfil enumerado (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) proporciona un valor para `_links.next.payload`, lo que significa que hay páginas de resultados adicionales para este perfil. Consulte la siguiente sección sobre [acceso a resultados adicionales](#access-additional-results) para obtener más información sobre cómo acceder a esos resultados adicionales.
 
-### Acceda a resultados adicionales {#access-additional-results}
+### Acceso a resultados adicionales {#access-additional-results}
 
-Al recuperar eventos de series temporales, es posible que se devuelvan muchos resultados, por lo que los resultados se paginan con frecuencia. Si hay páginas de resultados posteriores para un perfil en particular, el valor `_links.next.payload` de ese perfil contendrá un objeto de carga útil.
+Al recuperar eventos de series temporales, es posible que se devuelvan muchos resultados, por lo que los resultados se suelen paginar. Si hay páginas de resultados subsiguientes para un perfil en particular, el valor `_links.next.payload` de ese perfil contendrá un objeto de carga útil.
 
-Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud de POST adicional al extremo `access/entities` para recuperar la página siguiente de datos de serie temporal para ese perfil.
+Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud de POST adicional al extremo `access/entities` para recuperar la página siguiente de datos de series temporales para ese perfil.
 
 ## Acceso a eventos de series temporales en varias entidades de esquema
 
-Puede acceder a varias entidades conectadas mediante un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relación, lea la [!DNL Schema Registry] guía para desarrolladores de API [descriptores de la guía de extremo](../../xdm/api/descriptors.md).
+Puede acceder a varias entidades conectadas a través de un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relaciones, consulte la [!DNL Schema Registry] guía para desarrolladores de API [descriptors endpoint guide](../../xdm/api/descriptors.md).
 
-Puede incluir parámetros de consulta en la ruta de la solicitud para especificar a qué datos acceder. Puede incluir varios parámetros, separados por signos ampersands (&amp;). En la sección [Parámetros de consulta](#query-parameters) del apéndice se proporciona una lista completa de los parámetros válidos.
+Puede incluir parámetros de consulta en la ruta de solicitud para especificar a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &amp;. En la sección [query parameters](#query-parameters) del apéndice se proporciona una lista completa de parámetros válidos.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -791,7 +791,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud recupera una entidad que contiene un descriptor de relación previamente establecido para acceder a la información en diferentes esquemas.
+La siguiente solicitud recupera una entidad que contiene un descriptor de relación establecido anteriormente para acceder a la información en diferentes esquemas.
 
 ```shell
 curl -X GET \
@@ -804,7 +804,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista paginada de eventos de series temporales asociados a las múltiples entidades.
+Una respuesta correcta devuelve una lista paginada de eventos de series temporales asociados a las distintas entidades.
 
 ```json
 {
@@ -883,35 +883,35 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 }
 ```
 
-### Acceder a una página de resultados subsiguiente
+### Acceso a una página de resultados posterior
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados posteriores, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente haciendo solicitudes de GET adicionales al extremo `access/entities`.
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente realizando solicitudes de GET adicionales al extremo `access/entities` .
 
 ## Pasos siguientes
 
-Al seguir esta guía, ha accedido con éxito a [!DNL Real-time Customer Profile] campos de datos, perfiles y datos de series temporales. Para obtener más información sobre cómo acceder a otros recursos de datos almacenados en [!DNL Platform], consulte la [información general sobre el acceso a datos](../../data-access/home.md).
+Al seguir esta guía, ha accedido correctamente a [!DNL Real-time Customer Profile] campos de datos, perfiles y datos de series temporales. Para obtener información sobre cómo acceder a otros recursos de datos almacenados en [!DNL Platform], consulte [Data Access overview](../../data-access/home.md).
 
 ## Apéndice {#appendix}
 
-En la siguiente sección se proporciona información adicional sobre el acceso a [!DNL Profile] datos mediante la API.
+La siguiente sección proporciona información complementaria sobre el acceso a los datos [!DNL Profile] mediante la API.
 
 ### Parámetros de consulta {#query-parameters}
 
-Los siguientes parámetros se utilizan en la ruta de las solicitudes de GET al extremo `/access/entities`. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros requeridos están etiquetados, mientras que el resto son opcionales.
+Los siguientes parámetros se utilizan en la ruta para las solicitudes de GET al extremo `/access/entities` . Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros requeridos están etiquetados, mientras que el resto son opcionales.
 
 | Parámetro | Descripción | Ejemplo |
 |---|---|---|
 | `schema.name` | **(OBLIGATORIO)** El esquema XDM de la entidad que se va a recuperar | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | Si `schema.name` es &quot;_xdm.context.experience&quot;, este valor debe especificar el esquema de la entidad perfil a la que están relacionados los eventos de series temporales. | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **(REQUERIDO)** El ID de la entidad. Si el valor de este parámetro no es un XID, también se debe proporcionar un parámetro de Área de nombres de identidad (consulte `entityIdNS` más adelante). | `entityId=janedoe@example.com` |
-| `entityIdNS` | Si `entityId` no se proporciona como un XID, este campo debe especificar la Área de nombres de identidad. | `entityIdNE=email` |
-| `relatedEntityId` | Si `schema.name` es &quot;_xdm.context.experience&quot;, este valor debe especificar la Área de nombres de identidad de la entidad de perfil relacionada. Este valor sigue las mismas reglas que `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | Si `schema.name` es &quot;_xdm.context.experience&quot;, este valor debe especificar la Área de nombres de identidad de la entidad especificada en `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
-| `fields` | Filtros los datos devueltos en la respuesta. Utilice esto para especificar qué valores de campo de esquema incluir en los datos recuperados. Para varios campos, separe los valores por una coma sin espacios entre | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica ninguno en la llamada, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, la opción predeterminada es no combinar perfiles ni establecer vínculos de identidad. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | Orden de clasificación de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp`, siendo el valor predeterminado `+timestamp`. | `orderby=-timestamp` |
-| `startTime` | Especifique el tiempo de inicio para filtrar objetos de serie temporal (en milisegundos). | `startTime=1539838505` |
-| `endTime` | Especifique la hora de finalización para filtrar objetos de serie temporal (en milisegundos). | `endTime=1539838510` |
+| `relatedSchema.name` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el esquema de la entidad de perfil con la que están relacionados los eventos de series temporales. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(OBLIGATORIO)** El ID de la entidad. Si el valor de este parámetro no es un XID, también debe proporcionarse un parámetro de área de nombres de identidad (consulte `entityIdNS` más adelante). | `entityId=janedoe@example.com` |
+| `entityIdNS` | Si `entityId` no se proporciona como un XID, este campo debe especificar el área de nombres de identidad. | `entityIdNE=email` |
+| `relatedEntityId` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el área de nombres de identidad de la entidad de perfil relacionada. Este valor sigue las mismas reglas que `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el área de nombres de identidad para la entidad especificada en `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
+| `fields` | Filtra los datos devueltos en la respuesta. Utilice esto para especificar qué valores de campo de esquema incluir en los datos recuperados. Para varios campos, separe los valores por una coma sin espacios entre | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | Identifica la directiva de combinación por la que se rigen los datos devueltos. Si no se especifica uno en la llamada a , se utilizará el valor predeterminado de la organización para ese esquema. Si no se ha configurado ninguna directiva de combinación predeterminada, el valor predeterminado es sin combinación de perfiles ni vinculación de identidad. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | El orden de los eventos de experiencia recuperados por marca de tiempo, escrito como `(+/-)timestamp` con el valor predeterminado `+timestamp`. | `orderby=-timestamp` |
+| `startTime` | Especifique la hora de inicio para filtrar objetos de series temporales (en milisegundos). | `startTime=1539838505` |
+| `endTime` | Especifique la hora de finalización para filtrar objetos de series temporales (en milisegundos). | `endTime=1539838510` |
 | `limit` | Valor numérico que especifica el número máximo de objetos que se van a devolver. Predeterminado: 1000 | `limit=100` |
-| `property` | Filtros por el valor de propiedad. Admite los siguientes evaluadores: =, !=, &lt;, &lt;=, >, >=. Solo se puede usar con eventos de experiencia, con un máximo de tres propiedades admitidas. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
-| `withCA` | Indicador de característica para activar atributos calculados para la búsqueda. Predeterminado: false | `withCA=true` |
+| `property` | Filtra por el valor de la propiedad. Admite los siguientes evaluadores: =, !=, &lt;, &lt;=, >, >=. Solo se puede utilizar con eventos de experiencia, con un máximo de tres propiedades admitidas. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `withCA` | Indicador de características para activar atributos calculados para la búsqueda. Predeterminado: false | `withCA=true` |
