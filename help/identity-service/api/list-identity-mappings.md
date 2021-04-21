@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;inicio;temas populares;identidad;identidad
 solution: Experience Platform
-title: Asignaciones de identidad de lista
-topic: API guide
-description: Una asignación es una colección de todas las identidades de un clúster para una Área de nombres específica.
+title: Enumerar asignaciones de identidad
+topic-legacy: API guide
+description: Una asignación es una colección de todas las identidades de un clúster, para un espacio de nombres especificado.
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
 
 ---
 
+# Enumerar asignaciones de identidad
 
-# Asignaciones de identidad de lista
-
-Una asignación es una colección de todas las identidades de un clúster para una Área de nombres específica.
+Una asignación es una colección de todas las identidades de un clúster, para un espacio de nombres especificado.
 
 ## Obtener una asignación de identidad para una sola identidad
 
-Dada la identidad, recupere todas las identidades relacionadas de la misma Área de nombres que la representada por la identidad en la solicitud.
+Dada una identidad, recupere todas las identidades relacionadas del mismo espacio de nombres que el representado por la identidad en la solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
@@ -29,7 +29,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Solicitud**
 
-Opción 1: Proporcione la identidad como Área de nombres (`nsId`, por ID) y valor de ID (`id`).
+Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -40,7 +40,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como Área de nombres (`ns`, por nombre) y valor de ID (`id`).
+Opción 2: Proporcione la identidad como área de nombres (`ns`, por su nombre) y valor de ID (`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata de [obtener el XID de una identidad](./list-native-id.md).
+Opción 3: Proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata la [obtención del XID para una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,19 +64,19 @@ curl -X GET \
 
 ### Obtener asignaciones de identidad para varias identidades
 
-Utilice el método `POST` como equivalente por lotes del método `GET` descrito anteriormente para recuperar asignaciones para identidades múltiples.
+Utilice el método `POST` como equivalente por lotes del método `GET` descrito anteriormente para recuperar asignaciones para varias identidades.
 
 >[!NOTE]
 >
 >La solicitud no debe indicar más de un máximo de 1000 identidades. Las solicitudes que superen las 1000 identidades resultarán en un código de estado de 400.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**Cuerpo de solicitud**
+**Cuerpo de la solicitud**
 
 Opción 1: Proporcione una lista de XID para los que recuperar asignaciones.
 
@@ -87,7 +87,7 @@ Opción 1: Proporcione una lista de XID para los que recuperar asignaciones.
 }
 ```
 
-Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada uno asigna un nombre al valor de ID y a la Área de nombres por ID de Área de nombres. En este ejemplo se muestra el uso de este método mientras se sobrescribe el valor predeterminado `graph-type` de &quot;Private Graph&quot;.
+Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada una asigna un nombre al valor de ID y al área de nombres por ID de área de nombres. En este ejemplo se demuestra el uso de este método al sobrescribir el `graph-type` predeterminado de &quot;Gráfico privado&quot;.
 
 ```shell
 {
@@ -184,9 +184,9 @@ Si no se encontraron identidades relacionadas con la entrada proporcionada, se d
 }
 ```
 
-- `lastAssociationTime`:: Marca de hora en la que se asoció por última vez la identidad de entrada a esta identidad.
-- `regions`:: Proporciona el  `regionId` y  `lastAssociationTime` para dónde se vio la identidad.
+- `lastAssociationTime`: Marca de fecha y hora en la que la identidad de entrada se asoció por última vez a esta identidad.
+- `regions`: Proporciona el  `regionId` y  `lastAssociationTime` para dónde se vio la identidad.
 
 ## Pasos siguientes
 
-Vaya al siguiente tutorial a [Áreas de nombres disponibles de lista](./list-namespaces.md).
+Continúe con el siguiente tutorial para [list available namespaces](./list-namespaces.md).
