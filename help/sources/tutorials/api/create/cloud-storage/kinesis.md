@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Kinesis;kinesis;Amazon Kinesis;amazonía cinesis
+keywords: Experience Platform;inicio;temas populares;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Creación de una conexión de origen de Amazon Kinesis mediante la API de servicio de flujo
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Amazon Kinesis mediante la API de servicio de flujo.
+exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 translation-type: tm+mt
-source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---
-
 
 # Creación de una conexión de origen [!DNL Amazon Kinesis] mediante la API de servicio de flujo
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 >
 >El conector [!DNL Amazon Kineses] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
 Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para conectar [!DNL Experience Platform] a una cuenta [!DNL Amazon Kinesis].
 
@@ -108,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | El ID de clave de acceso para su cuenta [!DNL Kinesis]. |
 | `auth.params.secretKey` | La clave de acceso secreta para su cuenta [!DNL Kinesis]. |
-| `auth.params.region` | Región de la cuenta [!DNL Kinesis]. Para obtener más información sobre las regiones, consulte el documento [IP address allow list](../../../../ip-address-allow-list.md) |
+| `auth.params.region` | Región de la cuenta [!DNL Kinesis]. Para obtener más información sobre las regiones, consulte el documento sobre [lista de permitidos de direcciones IP](../../../../ip-address-allow-list.md) |
 | `connectionSpec.id` | El ID de especificación de conexión [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Respuesta**
