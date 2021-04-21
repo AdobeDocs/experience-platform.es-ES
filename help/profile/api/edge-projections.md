@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Puntos finales de la API de proyección de Edge
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y personalizadas para sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
+description: Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, haciendo que los datos adecuados estén disponibles y se actualicen continuamente a medida que se produzcan cambios. Esto se hace mediante el uso de bordes, un servidor ubicado geográficamente que almacena datos y lo hace fácilmente accesible para las aplicaciones.
+exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
 
-
 # Configuraciones de proyección de Edge y extremos de destinos
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como perímetros. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe, como Adobe Target y Adobe Campaign, utilizan perímetros para ofrecer experiencias de cliente personalizadas en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Esta guía proporciona instrucciones detalladas para utilizar la API [!DNL Real-time Customer Profile] para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
+Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Esta guía proporciona instrucciones detalladas para utilizar la API [!DNL Real-time Customer Profile] para trabajar con proyecciones avanzadas, incluidos destinos y configuraciones.
 
 ## Primeros pasos
 
@@ -31,7 +31,7 @@ Una proyección se puede dirigir a uno o varios bordes especificando las ubicaci
 
 ### Enumerar todos los destinos
 
-Puede enumerar los destinos Edge que ya se han creado para su organización realizando una solicitud GET al extremo `/config/destinations` .
+Puede enumerar los destinos Edge que ya se han creado para su organización realizando una solicitud de GET al extremo `/config/destinations` .
 
 **Formato de API**
 
@@ -105,14 +105,14 @@ La respuesta incluye una matriz `projectionDestinations` con los detalles de cad
 
 | Propiedad | Descripción |
 |---|---|
-| `_links.self.href` | En el nivel superior, coincide con la ruta utilizada para realizar la solicitud GET. Dentro de cada objeto de destino individual, esta ruta se puede utilizar en una solicitud GET para buscar directamente los detalles de un destino específico. |
+| `_links.self.href` | En el nivel superior, coincide con la ruta utilizada para realizar la solicitud de GET. Dentro de cada objeto de destino individual, esta ruta se puede utilizar en una solicitud de GET para buscar directamente los detalles de un destino específico. |
 | `id` | Dentro de cada objeto de destino, el `"id"` muestra el ID único de solo lectura generado por el sistema para el destino. Este ID se utiliza al hacer referencia a un destino específico y al crear configuraciones de proyección. |
 
 Para obtener más información sobre los atributos de un destino individual, consulte la sección sobre [creación de un destino](#create-a-destination) que se muestra a continuación.
 
 ### Crear un destino {#create-a-destination}
 
-Si el destino que necesita no existe, puede crear un nuevo destino de proyección realizando una solicitud POST al extremo `/config/destinations` .
+Si el destino que necesita no existe, puede crear un nuevo destino de proyección realizando una solicitud de POST al extremo `/config/destinations` .
 
 **Formato de API**
 
@@ -126,7 +126,7 @@ La siguiente solicitud crea un nuevo destino perimetral.
 
 >[!NOTE]
 >
->La solicitud POST para crear un destino requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del POST para crear un destino requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
 
 ```shell
 curl -X POST \
@@ -175,13 +175,13 @@ Una respuesta correcta devuelve los detalles del destino perimetral recién crea
 
 | Propiedad | Descripción |
 |---|---|
-| `self.href` | Esta ruta se utiliza para buscar (GET) el destino directamente y también se puede utilizar para actualizar (PUT) o eliminar (ELIMINAR) el destino. |
+| `self.href` | Esta ruta se utiliza para buscar (GET) el destino directamente y también se puede utilizar para actualizar (PUT) o eliminar (DELETE) el destino. |
 | `id` | ID único de solo lectura generado por el sistema para el destino. Este ID se utiliza para hacer referencia al destino directamente y al crear configuraciones de proyección. |
 | `version` | Este valor de solo lectura muestra la versión actual del destino. Cuando se actualiza un destino, el número de versión aumenta automáticamente. |
 
 ### Ver un destino
 
-Si conoce el ID exclusivo de un destino de proyección, puede realizar una solicitud de consulta para ver sus detalles. Esto se realiza realizando una solicitud GET al extremo `/config/destinations` e incluyendo el ID del destino en la ruta de solicitud.
+Si conoce el ID exclusivo de un destino de proyección, puede realizar una solicitud de consulta para ver sus detalles. Esto se realiza realizando una solicitud de GET al extremo `/config/destinations` e incluyendo el ID del destino en la ruta de solicitud.
 
 **Formato de API**
 
@@ -228,7 +228,7 @@ El objeto response muestra los detalles del destino de la proyección. El atribu
 
 ### Actualizar un destino
 
-Un destino existente se puede actualizar realizando una solicitud PUT al extremo `/config/destinations` e incluyendo el ID del destino a actualizar en la ruta de solicitud. Esta operación está reescribiendo el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
+Un destino existente se puede actualizar realizando una solicitud de PUT al extremo `/config/destinations` e incluyendo el ID del destino a actualizar en la ruta de solicitud. Esta operación está reescribiendo el destino, por lo que se deben proporcionar los mismos atributos en el cuerpo de la solicitud que se proporcionan al crear un nuevo destino.
 
 >[!CAUTION]
 >
@@ -250,7 +250,7 @@ La siguiente solicitud actualiza el destino existente para incluir una segunda u
 
 >[!IMPORTANT]
 >
->La solicitud PUT requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del PUT requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
 
 ```shell
 curl -X PUT \
@@ -298,7 +298,7 @@ La respuesta incluye los detalles actualizados para el destino, incluido su ID y
 
 ### Eliminar un destino
 
-Si su organización ya no requiere un destino de proyección, se puede eliminar realizando una solicitud DELETE al extremo `/config/destinations` e incluyendo el ID del destino que desea eliminar en la ruta de solicitud.
+Si su organización ya no requiere un destino de proyección, se puede eliminar realizando una solicitud de DELETE al extremo `/config/destinations` e incluyendo el ID del destino que desea eliminar en la ruta de solicitud.
 
 >[!CAUTION]
 >
@@ -336,7 +336,7 @@ Las configuraciones de proyección proporcionan información sobre qué datos de
 
 ### Enumerar todas las configuraciones de proyección
 
-Puede enumerar todas las configuraciones de proyección creadas para su organización realizando una solicitud GET al extremo `/config/projections` . También puede agregar parámetros opcionales a la ruta de solicitud para acceder a las configuraciones de proyección de un esquema en particular o buscar una proyección individual por su nombre.
+Puede enumerar todas las configuraciones de proyección creadas para su organización realizando una solicitud de GET al extremo `/config/projections` . También puede agregar parámetros opcionales a la ruta de solicitud para acceder a las configuraciones de proyección de un esquema en particular o buscar una proyección individual por su nombre.
 
 **Formato de API**
 
@@ -422,7 +422,7 @@ Una respuesta correcta devuelve una lista de configuraciones de proyección dent
 
 ### Crear una configuración de proyección
 
-Puede crear (POST) una nueva configuración de proyección que dictará qué campos XDM están disponibles en los bordes.
+Puede crear (POST) una nueva configuración de proyección que dicte qué campos XDM están disponibles en los bordes.
 
 **Formato de API**
 
@@ -438,7 +438,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->La solicitud POST para crear una configuración requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
+>La solicitud del POST para crear una configuración requiere un encabezado `Content-Type` específico, como se muestra a continuación. El uso de un encabezado `Content-Type` incorrecto genera un error de estado HTTP 415 (tipo de medio no compatible).
 
 ```shell
 curl -X POST \
