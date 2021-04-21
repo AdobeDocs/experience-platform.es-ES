@@ -1,50 +1,50 @@
 ---
-keywords: Experience Platform;inicio;temas populares;automatización de mercadotecnia
+keywords: Experience Platform;inicio;temas populares;automatización de marketing
 solution: Experience Platform
-title: Explorar un sistema de automatización de mercadotecnia con la API de servicio de flujo
-topic: overview
+title: Explorar un sistema de automatización de marketing mediante la API de servicio de flujo
+topic-legacy: overview
 description: Este tutorial utiliza la API de servicio de flujo para explorar los sistemas de automatización de marketing.
+exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 2%
 
 ---
 
+# Explorar un sistema de automatización de marketing mediante la API [!DNL Flow Service]
 
-# Explore un sistema de automatización de mercadotecnia mediante la API [!DNL Flow Service]
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
-
-Este tutorial utiliza la API [!DNL Flow Service] para explorar los sistemas de automatización de mercadotecnia.
+Este tutorial utiliza la API [!DNL Flow Service] para explorar los sistemas de automatización de marketing.
 
 ## Primeros pasos
 
-Esta guía requiere un conocimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
-* [Simuladores](../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores para pruebas](../../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de automatización de marketing mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a un sistema de automatización de marketing mediante la API [!DNL Flow Service].
 
 ### Recopilar las credenciales necesarias
 
-Este tutorial requiere que tenga una conexión válida con la aplicación de automatización de marketing de terceros desde la que desee ingestar datos. Una conexión válida implica el ID de especificación de conexión y el ID de conexión de la aplicación. Encontrará más información sobre la creación de una conexión de automatización de mercadotecnia y la recuperación de estos valores en el tutorial [conectar una fuente de automatización de mercadotecnia con Platform](../../api/create/marketing-automation/hubspot.md).
+Este tutorial requiere que tenga una conexión válida con la aplicación de automatización de marketing de terceros desde la que desea introducir datos. Una conexión válida implica el ID de especificación de conexión y el ID de conexión de la aplicación. Puede encontrar más información sobre la creación de una conexión de automatización de marketing y la recuperación de estos valores en el tutorial [conectar una fuente de automatización de marketing a Platform](../../api/create/marketing-automation/hubspot.md).
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -54,9 +54,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Explorar las tablas de datos
 
-Con la conexión base para el sistema de automatización de marketing, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o ingerir en [!DNL Platform].
+Con la conexión base para su sistema de automatización de marketing, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de la tabla que desea inspeccionar o introducir en [!DNL Platform].
 
-**Formato API**
+**Formato de API**
 
 ```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
@@ -64,7 +64,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de la conexión base para el sistema de automatización de marketing. |
+| `{BASE_CONNECTION_ID}` | El ID de la conexión base para su sistema de automatización de marketing. |
 
 **Solicitud**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta es una matriz de tablas desde a su sistema de automatización de marketing. Encuentre la tabla que desee incluir en [!DNL Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el próximo paso para inspeccionar su estructura.
+Una respuesta correcta es una matriz de tablas desde hasta su sistema de automatización de marketing. Busque la tabla que desea introducir en [!DNL Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el siguiente paso para inspeccionar su estructura.
 
 ```json
 [
@@ -116,9 +116,9 @@ Una respuesta correcta es una matriz de tablas desde a su sistema de automatizac
 
 ## Inspect de la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde el sistema de automatización de marketing, realice una solicitud de GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde el sistema de automatización de marketing, realice una solicitud de GET al especificar la ruta de una tabla como parámetro de consulta.
 
-**Formato API**
+**Formato de API**
 
 ```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
@@ -126,7 +126,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID de conexión para el sistema de automatización de marketing. |
+| `{BASE_CONNECTION_ID}` | El ID de conexión para su sistema de automatización de marketing. |
 | `{TABLE_PATH}` | Ruta de una tabla dentro del sistema de automatización de marketing. |
 
 **Solicitud**
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve la estructura de una tabla. Los detalles relativos a cada una de las columnas de la tabla se encuentran dentro de los elementos de la matriz `columns`.
+Una respuesta correcta devuelve la estructura de una tabla. Los detalles sobre cada una de las columnas de la tabla se encuentran dentro de los elementos de la matriz `columns`.
 
 ```json
 {
@@ -186,4 +186,4 @@ Una respuesta correcta devuelve la estructura de una tabla. Los detalles relativ
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha explorado su sistema de automatización de mercadotecnia, ha encontrado la ruta de la tabla que desea traer a [!DNL Platform] y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema de automatización de mercadotecnia y llevarlos a la plataforma](../collect/marketing-automation.md).
+Al seguir este tutorial, ha explorado su sistema de automatización de marketing, ha encontrado la ruta de la tabla a la que desea incluir [!DNL Platform] y ha obtenido información sobre su estructura. Puede utilizar esta información en el siguiente tutorial para [recopilar datos de su sistema de automatización de marketing e introducirlos en Platform](../collect/marketing-automation.md).
