@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;preparación de datos;api de preparación de datos;solución de problemas;API
 title: Información general sobre la API de preparación de datos
-topic: guide
+topic-legacy: guide
 description: La API de preparación de datos permite crear conjuntos y funciones de asignación mediante programación, lo que permite transformar los datos entre esquemas de origen y destino.
+exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
-
 
 # Guía de API del servicio de asignación
 
