@@ -2,14 +2,14 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión del Experience Platform para el 21 de abril de 2021.
 doc-type: release notes
-last-update: March 31, 2021
-author: ens70167
+last-update: April 21, 2021
+author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 12%
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -37,6 +38,14 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 | Compatibilidad con la transmisión por secuencias de ingesta | Ahora puede utilizar funciones de preparación de datos al crear una conexión de origen de flujo continuo. Para obtener más información, consulte el tutorial sobre la [creación de una conexión de origen de flujo en la interfaz de usuario](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar el poder de las experiencias digitales. Proporciona estructuras y definiciones comunes para que cualquier aplicación se comunique con los servicios de Adobe Experience Platform. Al cumplir con los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar a una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener perspectivas valiosas a partir de las acciones de los clientes, definir audiencias de clientes a través de segmentos y utilizar atributos de clientes con fines de personalización.
+
+| Función | Descripción |
+| --- | --- |
+| Recomendaciones de esquema por sector | Al seleccionar clases y mezclas en la interfaz de usuario del Editor de esquemas, puede utilizar un nuevo filtro para ver los componentes estándar recomendados según su sector específico. Consulte la documentación sobre [modelos de datos del sector](https://www.adobe.com/go/xdm-industry-erds-en) para obtener más información sobre cómo se relacionan estos componentes entre sí para diferentes casos de uso del sector. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
