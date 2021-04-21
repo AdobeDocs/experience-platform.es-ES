@@ -3,12 +3,12 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 solution: Experience Platform
 title: Punto final de API de clases
 description: El extremo /classes de la API del Registro de esquemas permite administrar mediante programación las clases XDM dentro de la aplicación de experiencia.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1495'
 ht-degree: 1%
 
 ---
