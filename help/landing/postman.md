@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía de la api;guía de la api de plataforma;introducción a la plataforma;guía para desarrolladores
+keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía de la api;guía de la api de platform;introducción a platform;guía para desarrolladores
 solution: Experience Platform
 title: Postman en Adobe Experience Platform
-topic: api guide
+topic-legacy: api guide
 description: Este documento contiene pasos que describen cómo configurar un entorno Postman, importar colecciones Postman y una lista de colecciones disponibles para cada servicio de Platform.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 translation-type: tm+mt
-source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
-
 
 # Postman en Adobe Experience Platform
 
@@ -25,7 +25,7 @@ La siguiente guía de vídeo describe la creación y configuración del entorno 
 
 ## Colecciones Postman {#collections}
 
-Puede encontrar una carpeta que contenga todas las colecciones Postman disponibles en , visitando el [Repositorio de GitHub de muestras de Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativamente, se puede encontrar un vínculo de recopilación de Postman en cada archivo de intercambio individual en la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
+Puede encontrar una carpeta que contenga todas las colecciones Postman disponibles en, visitando el [Experience Platform Postman muestra el repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternativamente, se puede encontrar un vínculo de recopilación de Postman en cada archivo de intercambio individual en la [documentación de referencia de la API](http://www.adobe.com/go/platform-api-reference-en) en el Adobe I/O.
 
 Para descargar una colección de Postman, seleccione **[!DNL Raw]** en la página de GitHub para cargar el archivo JSON sin procesar en una nueva pestaña. A continuación, haga clic con el botón derecho y seleccione **[!DNL Save as]** para guardar el archivo en un destino local de su elección.
 
@@ -53,9 +53,9 @@ Para obtener más información sobre la interfaz de usuario de Postman y sus fun
 
 >[!WARNING]
 >
->Como se indica en la colección Postman de generación de tokens de acceso de Adobe I/O, los métodos de generación indicados son adecuados para **usos que no sean de producción**. La firma local carga una biblioteca JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que Adobe posee y gestiona. Aunque Adobe no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
+>Como se indica en la colección Postman de generación de token de acceso a Adobe I/O, los métodos de generación indicados son adecuados para **usos que no sean de producción**. La firma local carga una biblioteca JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que es propiedad de y está gestionado por el Adobe. Aunque Adobe no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
 
-El siguiente vídeo utiliza la [colección de generación de tokens de acceso de Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que se puede descargar del repositorio público de GitHub.
+El siguiente vídeo utiliza la [colección de generación de tokens de acceso al Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) que se puede descargar del repositorio público de GitHub.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
