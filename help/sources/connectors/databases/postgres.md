@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;PostgreSQL;postgresql
 solution: Experience Platform
 title: Información general del conector de origen PostgreSQL
-topic: overview
+topic-legacy: overview
 description: Obtenga información sobre cómo conectar PostgreSQL a Adobe Experience Platform mediante API o la interfaz de usuario.
+exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL PostgreSQL] connector
 
