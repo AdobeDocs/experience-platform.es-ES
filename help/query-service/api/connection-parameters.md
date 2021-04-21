@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de API;parámetros de conexión;servicio de Consulta;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;guía de api;parámetros de conexión;servicio de consulta;
 solution: Experience Platform
-title: Extremo de API de parámetros de conexión
-topic: connection parameters
-description: Puede recuperar los parámetros de conexión para utilizar el servicio interactivo haciendo una solicitud de GET al extremo /connection_parameters.
+title: Punto final de API de parámetros de conexión
+topic-legacy: connection parameters
+description: Puede recuperar los parámetros de conexión para utilizar el servicio interactivo realizando una solicitud de GET al extremo /connection_parameters.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
-
 # Extremo de parámetros de conexión
 
-## Ejemplos de llamadas a API
+## Ejemplo de llamadas a API
 
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Solicitar parámetros de conexión
 
-Puede recuperar los parámetros de conexión realizando una solicitud de GET al extremo `/connection_parameters`. Para obtener más información acerca de los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación sobre [clientes del servicio de Consulta](../clients/overview.md).
+Puede recuperar los parámetros de conexión realizando una solicitud de GET al extremo `/connection_parameters` . Para obtener más información sobre los clientes que utilizan parámetros de conexión para conectarse mediante el servicio interactivo, lea la documentación sobre [Query Service clients](../clients/overview.md).
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /connection_parameters
