@@ -2,16 +2,16 @@
 keywords: Experience Platform;interfaz de usuario;IU;personalización;panel de uso de licencias;panel;uso de licencias;derecho;consumo
 title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 translation-type: tm+mt
-source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '632'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Panel de uso de licencias {#license-usage-dashboard}
 
@@ -33,23 +33,23 @@ El panel de uso de licencias muestra una instantánea de los datos de su organiz
 
 ## Exploración del panel de uso de licencias
 
-Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Licencia de uso]** en el carril izquierdo. Se abre con la pestaña **[!UICONTROL Overview]** que muestra el tablero.
+Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL License usage]** en el carril izquierdo. Se abre con la pestaña **[!UICONTROL Overview]** que muestra el tablero.
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Seleccionar un simulador de pruebas
 
-Para elegir un simulador para pruebas para ver en el tablero, seleccione [!UICONTROL Producción] o [!UICONTROL Desarrollo]. El simulador de pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador de pruebas.
+Para elegir un simulador para pruebas para verlo en el tablero, seleccione [!UICONTROL Production] o [!UICONTROL Development]. El simulador de pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador de pruebas.
 
 >[!NOTE]
 >
->Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
+>Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Production] o [!UICONTROL Development] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### Seleccionar un intervalo de fechas
 
-Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay tres opciones disponibles: [!UICONTROL Últimos 30 días], [!UICONTROL Últimos 90 días] y [!UICONTROL Últimos 12 meses]. Los últimos 30 días están seleccionados de forma predeterminada.
+Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay tres opciones disponibles: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] y [!UICONTROL Last 12 months]. Los últimos 30 días están seleccionados de forma predeterminada.
 
 ![](../images/license-usage/select-date-range.png)
 
@@ -65,10 +65,10 @@ Cada utilidad muestra gráficos de líneas en los que se comparan los números r
 
 Actualmente hay cuatro métricas disponibles en el panel de uso de licencias:
 
-* [!UICONTROL Audiencia a la que se puede dirigir]  (medida por el número de perfiles)
-* [!UICONTROL Promedio de riqueza del perfil]
-* [!UICONTROL Almacenamiento consumido total]
-* [!UICONTROL Datos analizados por proporción de segmentación]
+* [!UICONTROL Addressable Audience] (medido por el número de perfiles)
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Total consumed storage]
+* [!UICONTROL Data scanned per segmentation ratio]
 
 La definición de cada una de estas métricas varía según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación apropiada sobre la Descripción del producto:
 
