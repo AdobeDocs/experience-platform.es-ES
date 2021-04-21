@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;inicio;temas populares;políticas efectivas;API de control de acceso
+keywords: Experience Platform;inicio;temas populares;políticas efectivas;api de control de acceso
 solution: Experience Platform
-title: Extremo de la API de directivas efectivas
-topic: developer guide
-description: Control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funciones de la plataforma mediante Adobe Admin Console. Este documento sirve como guía para la vista de políticas eficaces mediante la API de control de acceso para Adobe Experience Platform.
+title: Punto final de API de directivas efectivas
+topic-legacy: developer guide
+description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para diversas funcionalidades de Platform mediante Adobe Admin Console. Este documento sirve como guía para ver políticas efectivas usando la API de control de acceso para Adobe Experience Platform.
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '317'
 ht-degree: 1%
 
 ---
 
+# Punto final de directivas efectivas
 
-# Extremo de directivas efectivo
+Para ver las directivas efectivas para el usuario actual, realice una solicitud de POST al extremo `/acl/effective-policies` en la API [!DNL Access Control]. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que aparece a continuación.
 
-Para vista de políticas efectivas para el usuario actual, realice una solicitud de POST al extremo `/acl/effective-policies` en la API [!DNL Access Control]. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en el ejemplo de llamada de API que se muestra a continuación.
-
-**Formato API**
+**Formato de API**
 
 ```http
 POST /acl/effective-policies
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **Solicitud**
 
-Las siguientes solicitudes recuperan información sobre el permiso &quot;[!UICONTROL Administrar conjuntos de datos]&quot; y el acceso al tipo de recurso &quot;[!UICONTROL esquemas]&quot; para el usuario actual.
+Las siguientes solicitudes recuperan información sobre el permiso &quot;[!UICONTROL Manage Datasets]&quot; y el acceso al tipo de recurso &quot;[!UICONTROL schemas]&quot; para el usuario actual.
 
 ```shell
 curl -X POST \
@@ -43,11 +43,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice sobre [permisos y tipos de recursos aceptados](#accepted-permissions-and-resource-types).
+>Para obtener una lista completa de los permisos y tipos de recursos que se pueden proporcionar en la matriz de carga útil, consulte la sección del apéndice sobre [permisos aceptados y tipos de recursos](#accepted-permissions-and-resource-types).
 
 **Respuesta**
 
-Una respuesta correcta devuelve información sobre los permisos y tipos de recursos proporcionados en la solicitud. La respuesta incluye los permisos activos que tiene el usuario actual para los tipos de recursos especificados en la solicitud. Si algún permiso incluido en la carga útil de la solicitud está activo para el usuario actual, la API devuelve el permiso con un riesgo (`*`) para indicar que el permiso está activo. Los permisos proporcionados en la solicitud que no estén activos para el usuario se omiten de la carga útil de respuesta.
+Una respuesta correcta devuelve información sobre los permisos y tipos de recursos proporcionados en la solicitud. La respuesta incluye los permisos activos que el usuario actual tiene para los tipos de recursos especificados en la solicitud. Si algún permiso incluido en la carga útil de la solicitud está activo para el usuario actual, la API devuelve el permiso con un riesgo (`*`) para indicar que el permiso está activo. Todos los permisos proporcionados en la solicitud que no estén activos para el usuario se omiten en la carga útil de respuesta.
 
 ```json
 {
@@ -66,15 +66,15 @@ Una respuesta correcta devuelve información sobre los permisos y tipos de recur
 
 ## Pasos siguientes
 
-Este documento explicaba cómo realizar llamadas a la API [!DNL Access Control] para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información sobre control de acceso para [!DNL Experience Platform], consulte la [información general del control de acceso](../home.md).
+Este documento abarcaba cómo realizar llamadas a la API [!DNL Access Control] para devolver información sobre permisos activos y políticas relacionadas para tipos de recursos. Para obtener más información acerca del control de acceso para [!DNL Experience Platform], consulte la [información general del control de acceso](../home.md).
 
 ## Apéndice
 
-Esta sección proporciona información adicional para utilizar la API [!DNL Access Control].
+Esta sección proporciona información complementaria para utilizar la API [!DNL Access Control].
 
-### Permisos y tipos de recursos aceptados
+### Permisos aceptados y tipos de recursos
 
-A continuación se muestra una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST al extremo `/acl/active-permissions`.
+La siguiente es una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST al extremo `/acl/active-permissions` .
 
 **Permisos**
 
