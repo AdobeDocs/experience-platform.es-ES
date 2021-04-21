@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;Perfil del cliente en tiempo real;Servicio de identidad;
 solution: Experience Platform
 title: Tutoriales del perfil del cliente en tiempo real
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este documento describe los pasos involucrados y proporciona vínculos a tutoriales para completar cada flujo de trabajo individual.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # Configurar [!DNL Real-time Customer Profile]
 
@@ -38,7 +38,7 @@ Para obtener más información y obtener los valores necesarios para realizar op
 
 ## Habilitar un esquema para el servicio [!DNL Profile] y [!DNL Identity]
 
-Antes de poder ingerir datos en Adobe Experience Platform y utilizarlos en la creación de [!DNL Real-time Customer Profiles], se debe crear un esquema para proporcionar la estructura de los datos que se incorporarán y ese esquema debe habilitarse para utilizarse en [!DNL Profile] y Adobe Experience Platform [!DNL Identity Service].
+Para poder ingerir datos en Adobe Experience Platform y utilizarlos en la creación de [!DNL Real-time Customer Profiles], se debe crear un esquema para proporcionar la estructura de los datos que se incorporarán y ese esquema debe estar habilitado para utilizarse en [!DNL Profile] y Adobe Experience Platform [!DNL Identity Service].
 
 **Esta guía le ayudará a:**
 - Examine los esquemas existentes.
@@ -75,7 +75,7 @@ Para trabajar con políticas de combinación en la interfaz de usuario [!DNL Pla
 
 ## Configurar proyecciones de borde
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe [!DNL Experience Platform] permite este acceso en tiempo real a los datos mediante lo que se conoce como perímetros. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde.
+Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. El Adobe [!DNL Experience Platform] permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde.
 
 **Esta guía le ayudará a:**
 - Enumerar, crear, ver, actualizar y eliminar un destino de proyección de borde.
@@ -86,7 +86,7 @@ Para obtener más información y empezar a trabajar con los bordes, consulte la 
 
 ## Personalice cómo se muestran los datos de perfil en la interfaz de usuario
 
-En la interfaz de usuario de Experience Platform, puede ver e interactuar con los datos del perfil del cliente en tiempo real en forma de perfiles de cliente. La información de perfil mostrada en la interfaz de usuario se ha combinado desde varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar en el nivel de organización para mostrar los atributos de perfil preferidos.
+En la interfaz de usuario del Experience Platform, puede ver e interactuar con los datos del Perfil del cliente en tiempo real en forma de perfiles del cliente. La información de perfil mostrada en la interfaz de usuario se ha combinado desde varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar en el nivel de organización para mostrar los atributos de perfil preferidos.
 
 **Esta guía le ayudará a:**
 - Reordenar, cambiar el tamaño, editar y eliminar tarjetas.
