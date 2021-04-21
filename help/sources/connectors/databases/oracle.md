@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Oracle;oracle
 solution: Experience Platform
-title: Información general de conector de oracle Source
-topic: overview
-description: Obtenga información sobre cómo conectar Oracle a Adobe Experience Platform mediante API o la interfaz de usuario.
+title: Información general sobre el conector de origen de oracle
+topic-legacy: overview
+description: Obtenga información sobre cómo conectar el Oracle a Adobe Experience Platform mediante API o la interfaz de usuario.
+exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-
 # Conector (Beta) [!DNL Oracle]
 
 >[!NOTE]
 >
->El conector [!DNL Oracle] está en versión beta. Consulte la [información general de las fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiquetas beta.
+>El conector [!DNL Oracle] está en versión beta. Consulte la [información general sobre fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede traer los datos de estos sistemas a [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 
-Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoData. La compatibilidad con proveedores de bases de datos incluye [!DNL Oracle].
+Se admiten diferentes tipos de bases de datos de terceros, incluidos los almacenes de datos relacionales, NoSQL o NoSQL. La compatibilidad con proveedores de bases de datos incluye [!DNL Oracle].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de su región a la lista de permitidos, puede que se produzcan errores o no se produzca un rendimiento al usar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 La documentación siguiente proporciona información sobre cómo conectar [!DNL Oracle] a [!DNL Platform] mediante API o la interfaz de usuario:
 
