@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;unificado;perfil;rtcp;gráficos XDM
 title: Información general del perfil del cliente en tiempo real
-topic: guide
+topic-legacy: guide
 description: El perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérica que combina datos de varios activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
 
-
 # Información general del [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-time Customer Profile], puede ver una vista holística de cada cliente al combinar datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-time Customer Profile] en [!DNL Experience Platform].
 
 ## [!DNL Profile] en Experience Platform
 
-La relación entre el perfil del cliente en tiempo real y otros servicios dentro de Experience Platform se resalta en el siguiente diagrama:
+La relación entre Perfil del cliente en tiempo real y otros servicios dentro de Experience Platform se resalta en el siguiente diagrama:
 
 ![](images/profile-overview/profile-in-platform.png)
 
@@ -28,7 +28,7 @@ La relación entre el perfil del cliente en tiempo real y otros servicios dentro
 
 ### Almacenamiento de datos de perfil
 
-Aunque [!DNL Real-time Customer Profile] procesa los datos ingestados y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar los datos relacionados mediante la asignación de identidad, mantiene sus propios datos en el almacén de datos [!DNL Profile]. El almacén [!DNL Profile] es independiente de los datos del catálogo en el lago de datos y de los datos [!DNL Identity Service] en el gráfico de identidad.
+Aunque [!DNL Real-time Customer Profile] procesa los datos ingestados y utiliza Adobe Experience Platform [!DNL Identity Service] para combinar los datos relacionados mediante la asignación de identidades, mantiene sus propios datos en el almacén de datos [!DNL Profile]. El almacén [!DNL Profile] es independiente de los datos del catálogo en el lago de datos y de los datos [!DNL Identity Service] en el gráfico de identidad.
 
 El Almacenamiento de perfiles utiliza una infraestructura de Microsoft Azure Cosmos DB y Platform Data Lake utiliza el almacenamiento de Microsoft Azure Data Lake.
 
@@ -42,7 +42,7 @@ Experience Platform proporciona una serie de protecciones que le ayudan a evitar
 >
 >La funcionalidad del panel está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-La interfaz de usuario de Experience Platform proporciona un tablero en el que puede ver información importante sobre los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder y trabajar con el tablero [!DNL Profile] en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el tablero, consulte la [Guía de la interfaz de usuario del tablero de perfil](ui/profile-dashboard.md).
+La interfaz de usuario del Experience Platform proporciona un tablero a través del cual puede ver información importante sobre los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder y trabajar con el tablero [!DNL Profile] en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el tablero, consulte la [Guía de la interfaz de usuario del tablero de perfil](ui/profile-dashboard.md).
 
 ### Fragmentos de perfil frente a perfiles combinados {#profile-fragments-vs-merged-profiles}
 
@@ -80,7 +80,7 @@ Para obtener más información sobre los esquemas de unión, incluido cómo acce
 >
 >La funcionalidad de atributo calculada está en alfa. La documentación y la funcionalidad están sujetas a cambios.
 
-Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con elementos como el valor de compra de por vida, el tiempo entre compras o el número de aperturas de aplicaciones, sin que sea necesario realizar cálculos complejos manualmente cada vez que se necesite la información. Para obtener más información sobre los atributos calculados, incluida la comprensión de la función que los atributos calculados juegan en Adobe Experience Platform, comience por leer la [información general de los atributos calculados](computed-attributes/overview.md).
+Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en toda la segmentación, activación y personalización. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con elementos como el valor de compra de por vida, el tiempo entre compras o el número de aperturas de aplicaciones, sin que sea necesario realizar cálculos complejos manualmente cada vez que se necesite la información. Para obtener más información sobre los atributos calculados, incluida la comprensión de la función que los atributos calculados juegan dentro de Adobe Experience Platform, comience por leer la [descripción general de los atributos calculados](computed-attributes/overview.md).
 
 ## Perfiles y segmentos
 
@@ -92,7 +92,7 @@ La entrada en tiempo real es posible a través de un proceso llamado ingesta de 
 
 ## Proyecciones perimetrales
 
-Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como perímetros. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe, como Adobe Target y Adobe Campaign, utilizan perímetros para ofrecer experiencias de cliente personalizadas en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Para obtener más información y empezar a trabajar con proyecciones mediante la API [!DNL Real-time Customer Profile], consulte la [guía de puntos finales de proyección de Edge](api/edge-projections.md).
+Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus clientes en varios canales en tiempo real, es necesario disponer fácilmente de los datos adecuados y actualizarlos continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante lo que se conoce como bordes. Un Edge es un servidor ubicado geográficamente que almacena datos y los hace fácilmente accesibles para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan perímetros para ofrecer experiencias personalizadas al cliente en tiempo real. Los datos se dirigen a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que se pondrá a disposición en el borde. Para obtener más información y empezar a trabajar con proyecciones mediante la API [!DNL Real-time Customer Profile], consulte la [guía de puntos finales de proyección de Edge](api/edge-projections.md).
 
 ## Ingesta de datos en [!DNL Profile]
 
@@ -100,7 +100,7 @@ Para ofrecer experiencias coordinadas, coherentes y personalizadas a sus cliente
 
 >[!NOTE]
 >
->Los datos recopilados a través de las soluciones de Adobe, incluidas [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], se transfieren a [!DNL Experience Platform] y se incorporan a [!DNL Profile].
+>Los datos recopilados mediante soluciones de Adobe, incluidas [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], se transfieren a [!DNL Experience Platform] y se incorporan a [!DNL Profile].
 
 ### Métricas de ingesta de perfiles
 
@@ -123,4 +123,4 @@ En cuanto al acceso a los datos, el control de datos desempeña un papel clave e
 
 ## Pasos siguientes y recursos adicionales
 
-Para obtener más información sobre cómo trabajar con datos de [!DNL Real-time Customer Profile] mediante la interfaz de usuario de Experience Platform o la API de perfil, comience por leer la [Guía del desarrollador de la ](ui/user-guide.md) o la [Guía del desarrollador de API](api/overview.md), respectivamente.
+Para obtener más información sobre cómo trabajar con datos [!DNL Real-time Customer Profile] mediante la interfaz de usuario del Experience Platform o la API de perfil, comience por leer la [Guía de la interfaz de usuario del perfil](ui/user-guide.md) o la [Guía para desarrolladores de API](api/overview.md), respectivamente.
