@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentos;segmentos;segmentos;varias entidades;segmentación multientidad;segmentos multientidad;
 solution: Experience Platform
 title: Información general sobre la segmentación de varias entidades
-topic: overview
+topic-legacy: overview
 description: La segmentación de varias entidades es la capacidad de ampliar los datos del perfil con datos adicionales basados en productos, tiendas u otras clases que no sean de perfil. Una vez conectados, los datos de clases adicionales estarán disponibles como si fueran nativos del esquema de perfil.
+exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
-
 
 # Resumen de segmentación de varias entidades
 
@@ -24,8 +24,8 @@ La segmentación de varias entidades requiere una comprensión práctica de los 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real, basado en datos agregados de varias fuentes.
    * [Protecciones](../profile/guardrails.md) de perfil: Prácticas recomendadas para crear modelos de datos compatibles con  [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permite generar segmentos a partir de  [!DNL Real-time Customer Profile] datos.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   * [Aspectos básicos de la composición](../xdm/schema/composition.md#union) del esquema: Conozca las prácticas recomendadas para componer esquemas que se van a utilizar en Experience Platform.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   * [Aspectos básicos de la composición](../xdm/schema/composition.md#union) del esquema: Conozca las prácticas recomendadas para componer esquemas para utilizarlos en Experience Platform.
 
 ## Casos de uso
 
