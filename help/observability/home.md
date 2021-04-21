@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;inicio;temas populares;intervalo de fechas
 solution: Experience Platform
-title: Información general de perspectivas de la capacidad de observación
-topic: overview
-description: Adobe Experience Platform Observability Insights es una API de RESTful que le permite exponer métricas clave en actividades de plataforma. Estas métricas proporcionan perspectivas sobre las estadísticas de uso de la Plataforma, las comprobaciones de estado de los servicios de la Plataforma, las tendencias históricas y los indicadores de rendimiento de diversas funcionalidades de la Plataforma.
+title: Información general sobre Observability Insights
+topic-legacy: overview
+description: Adobe Experience Platform Observability Insights es una API de RESTful que le permite exponer métricas clave en actividades de Platform. Estas métricas proporcionan información sobre las estadísticas de uso de Platform, las comprobaciones de estado de los servicios de Platform, las tendencias históricas y los indicadores de rendimiento de varias funcionalidades de Platform.
+exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%
 
 ---
 
-
 # Información general del [!DNL Observability Insights]
 
-Adobe Experience Platform [!DNL Observability Insights] le permite monitorear las actividades de la plataforma mediante el uso de métricas estadísticas y notificaciones de evento. Este documento ofrece una visión general de las diversas funciones que ofrece el servicio, junto con vínculos a documentación adicional para obtener más detalles.
+Adobe Experience Platform [!DNL Observability Insights] permite supervisar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos. En este documento se ofrece una descripción general de las diversas funciones que ofrece el servicio, así como enlaces a documentación adicional para obtener más detalles.
 
 ## [!DNL Observability Insights] API
 
-La API [!DNL Observability Insights] es una API de RESTful que le permite exponer las métricas de observabilidad clave en Adobe Experience Platform. Estas métricas proporcionan perspectivas sobre [!DNL Platform] estadísticas de uso, comprobaciones de estado de [!DNL Platform] servicios, tendencias históricas e indicadores de rendimiento para diversas funcionalidades [!DNL Platform].
+La API [!DNL Observability Insights] es una API de RESTful que le permite exponer métricas clave de observación en Adobe Experience Platform. Estas métricas proporcionan perspectivas sobre las estadísticas de uso [!DNL Platform], las comprobaciones de estado de los servicios [!DNL Platform], las tendencias históricas y los indicadores de rendimiento para varias funcionalidades [!DNL Platform].
 
 Para obtener más información sobre cómo trabajar con la API, consulte la [[!DNL Observability Insights] guía para desarrolladores de API](./api/overview.md).
 
-## Notificaciones de evento
+## Notificaciones de eventos
 
-[!DNL Observability Insights] le permite suscribirse a las notificaciones de evento relativas a actividades de Adobe Experience Platform. Al suscribirse a eventos, puede configurar sus propios protocolos de flujo descendente para cuándo se ha completado un trabajo, si se ha alcanzado un determinado hito en un flujo de trabajo o si se han producido errores durante el proceso.
+[!DNL Observability Insights] le permite suscribirse a notificaciones de eventos relacionadas con actividades de Adobe Experience Platform. Al suscribirse a eventos, puede configurar sus propios protocolos descendentes para cuando se haya completado un trabajo, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se han producido errores durante el proceso.
 
-Consulte la información general sobre [notificaciones de evento](./notifications/overview.md) para obtener más información.
+Consulte la descripción general de [notificaciones de eventos](./notifications/overview.md) para obtener más información.
 
 ## Pasos siguientes
 
-Este documento abarcaba las diversas capacidades de [!DNL Observability Insights]. Consulte la documentación relacionada a lo largo de esta descripción general para obtener más información sobre cada función.
+Este documento abarcaba las distintas capacidades de [!DNL Observability Insights]. Consulte la documentación vinculada a esta descripción general para obtener más información sobre cada función.
