@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;inicio;temas populares;lista de Área de nombres;Área de nombres de lista
+keywords: Experience Platform;inicio;temas populares;lista de área de nombres;área de nombres de la lista
 solution: Experience Platform
-title: Áreas de nombres de identidad disponibles de lista
-topic: API guide
-description: Lista de todas las Áreas de nombres disponibles.
+title: Enumerar espacios de nombres de identidad disponibles
+topic-legacy: API guide
+description: Enumere todos los espacios de nombres disponibles.
+exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 4%
+source-wordcount: '79'
+ht-degree: 5%
 
 ---
 
+# Enumerar áreas de nombres de identidad disponibles
 
-# Áreas de nombres de identidad disponibles de lista
-
-**Formato API**
+**Formato de API**
 
 ```http
 GET /idnamespace/identities
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa una Área de nombres disponible. Las Áreas de nombres con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; son Áreas de nombres estándar, mientras que aquellas con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; son Áreas de nombres que su organización ha creado.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa un espacio de nombres disponible. Los espacios de nombres con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; son espacios de nombres estándar, mientras que los que tienen un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; son espacios de nombres creados por su organización.
 
 >[!NOTE]
 >
@@ -80,4 +80,4 @@ La respuesta incluye una matriz de objetos, cada uno de los cuales representa un
 
 ## Pasos siguientes
 
-Vaya al siguiente tutorial para [crear una Área de nombres personalizada](./create-custom-namespace.md)
+Continúe con el siguiente tutorial para [crear un espacio de nombres personalizado](./create-custom-namespace.md)
