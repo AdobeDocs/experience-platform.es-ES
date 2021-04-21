@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;exclusión;segmentación;servicio de segmentación;servicio de segmentación;exclusiones por honor;exclusiones;exclusión;exclusión;exclusiones;
+keywords: Experience Platform;inicio;temas populares;exclusión;segmentación;servicio de segmentación;servicio de segmentación;exclusiones por honor;exclusión;exclusión;exclusión;exclusión;exclusión
 solution: Experience Platform
 title: Respeto de las solicitudes de exclusión en los segmentos
-topic: overview
-description: 'Adobe Experience Platform permite a sus clientes enviar solicitudes de exclusión relativas al uso y almacenamiento de sus datos dentro del perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de Privacidad del Consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién). '
+topic-legacy: overview
+description: Adobe Experience Platform permite a sus clientes enviar solicitudes de exclusión con respecto al uso y almacenamiento de sus datos dentro del perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de Privacidad del Consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # Respeto de las solicitudes de exclusión en los segmentos
 
@@ -112,15 +112,15 @@ Las secciones siguientes muestran cómo añadir los campos adecuados para los do
 
 ### Exclusión general
 
-[!DNL Segmentation] respeta automáticamente todos los perfiles que contienen el indicador &quot;[!UICONTROL Exclusión general]&quot;, lo que significa que esos perfiles no se incluirán en audiencias ni exportaciones de forma predeterminada. Sin embargo, se recomienda añadir los campos adecuados para garantizar que los perfiles no seleccionados no se incluyan en las audiencias y las actividades de marketing.
+[!DNL Segmentation] respeta automáticamente todos los perfiles que contienen el indicador &quot;[!UICONTROL General Opt-Out]&quot;, lo que significa que esos perfiles no se incluirán en audiencias ni exportaciones de forma predeterminada. Sin embargo, se recomienda añadir los campos adecuados para garantizar que los perfiles no seleccionados no se incluyan en las audiencias y las actividades de marketing.
 
-Esto se puede hacer mediante la interfaz de usuario añadiendo atributos de **[!UICONTROL Exclusión de la privacidad]**. En este caso, el segmento se configura para incluir solo aquellos que han elegido (lo que significa que no tienen un indicador de exclusión general en su perfil). Esto se hace declarando que el &quot;[!UICONTROL Tipo de exclusión]&quot; es igual a &quot;[!UICONTROL Exclusión general]&quot; y el &quot;[!UICONTROL Valor de exclusión]&quot; es igual a &quot;[!UICONTROL Inclusión]&quot;.
+Esto se puede hacer mediante la interfaz de usuario añadiendo atributos **[!UICONTROL Privacy Opt-Outs]**. En este caso, el segmento se configura para incluir solo aquellos que han elegido (lo que significa que no tienen un indicador de exclusión general en su perfil). Esto se hace declarando que &quot;[!UICONTROL Opt-Out Type]&quot; es igual a &quot;[!UICONTROL General Opt-Out]&quot; y que &quot;[!UICONTROL Opt-Out Value]&quot; es igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### Exclusión de ventas/uso compartido
 
-Si un usuario tiene un indicador de exclusión de venta/uso compartido establecido en su perfil, este perfil ya no debe utilizarse para ninguna creación de segmentos o actividad de marketing. Para garantizar que se cumple este indicador, el &quot;[!UICONTROL Tipo de exclusión]&quot; debe ser igual a &quot;[!UICONTROL Exclusión del uso compartido de ventas]&quot; y el &quot;[!UICONTROL Valor de exclusión]&quot; debe ser igual a &quot;[!UICONTROL Inclusión]&quot;.
+Si un usuario tiene un indicador de exclusión de venta/uso compartido establecido en su perfil, este perfil ya no debe utilizarse para ninguna creación de segmentos o actividad de marketing. Para garantizar que se cumpla este indicador, el &quot;[!UICONTROL Opt-Out Type]&quot; debe ser igual a &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; y el &quot;[!UICONTROL Opt-Out Value]&quot; debe ser igual a &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
