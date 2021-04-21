@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ayuda de paneles de Adobe Experience Platform
 breadcrumb-title: Guía de paneles
 user-guide-description: Visualice datos de Experience Platform en paneles personalizables.
-feature: Data Management
+feature: Gestión de datos
 translation-type: tm+mt
-source-git-commit: 4b087685f065d05894fb45c19fce453346448614
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 47%
