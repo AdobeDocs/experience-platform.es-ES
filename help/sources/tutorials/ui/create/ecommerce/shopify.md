@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;shopify;Shopify
 solution: Experience Platform
 title: Crear una conexión de origen de Shopify en la interfaz de usuario
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen Shopify mediante la interfaz de usuario de Adobe Experience Platform.
+exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 1%
 
 ---
-
 
 # Crear una conexión de origen [!DNL Shopify] en la interfaz de usuario
 
