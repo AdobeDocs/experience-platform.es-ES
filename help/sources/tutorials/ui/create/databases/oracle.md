@@ -7,18 +7,14 @@ type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de base de datos de Oracle mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen [!DNL Oracle DB] en la interfaz de usuario
-
->[!NOTE]
->
-> El conector [!DNL Oracle DB] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL Oracle DB] mediante la interfaz de usuario [!DNL Platform].
 
