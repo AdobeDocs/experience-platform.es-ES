@@ -7,18 +7,14 @@ type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Microsoft SQL Server mediante la API de servicio de flujo.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 1%
+source-wordcount: '591'
+ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL Microsoft] de SQL Server utilizando la API [!DNL Flow Service]
-
->[!NOTE]
->
->El conector [!DNL Microsoft] SQL Server está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 [!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
