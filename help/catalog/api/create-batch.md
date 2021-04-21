@@ -2,22 +2,22 @@
 keywords: Experience Platform;inicio;temas populares;crear lote;servicio de catálogo;api
 solution: Experience Platform
 title: Crear un lote en la API
-topic: developer guide
-description: Puede crear un lote realizando una solicitud de POST al extremo /lotes en la API del catálogo.
+topic-legacy: developer guide
+description: Puede crear un lote realizando una solicitud de POST al extremo /batches en la API del catálogo.
+exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 translation-type: tm+mt
-source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 3%
 
 ---
 
-
 # Crear un lote
 
-Para que un conjunto de datos ingeste datos, debe tener un lote asociado a él. Con el valor `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud de POST al extremo `/batches` en la API [!DNL Catalog].
+Para que un conjunto de datos pueda introducir datos, debe tener un lote asociado a él. Utilizando el valor `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud de POST al extremo `/batches` en la API [!DNL Catalog].
 
-**Formato API**
+**Formato de API**
 
 ```HTTP
 POST /batches
@@ -44,7 +44,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respuesta que contiene detalles del lote recién creado, incluida su `id`, una cadena de sólo lectura generada por el sistema.
+Una respuesta correcta devuelve el Estado HTTP 201 (Creado) y un objeto Response que contiene detalles del lote recién creado, incluida su `id`, una cadena generada por el sistema de solo lectura.
 
 ```JSON
 {
