@@ -1,64 +1,64 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingestión de datos;lote;lote;habilitar conjunto de datos;Introducción a la ingestión por lotes;información general;información general sobre la ingestión por lotes;
+keywords: Experience Platform;inicio;temas populares;ingesta de datos;lote;habilitar conjunto de datos;información general sobre ingesta por lotes;información general;información general sobre ingesta por lotes
 solution: Experience Platform
-title: Información general de ingestión de lotes
-topic: overview
-description: La API de inserción de datos de Adobe Experience Platform permite ingestar datos en la plataforma como archivos por lotes. Los datos que se están ingeriendo pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parquet) o datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
+title: Información general sobre la ingesta de lotes
+topic-legacy: overview
+description: La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
+# Información general sobre la ingesta por lotes
 
-# Introducción a la ingesta por lotes
+La API de ingesta de datos de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos introducidos pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
 
-La API de inserción de datos de Adobe Experience Platform permite ingestar datos en la plataforma como archivos por lotes. Los datos que se ingieren pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de parquet) o datos que se ajustan a un esquema conocido en el Registro [!DNL Experience Data Model] (XDM).
+La [referencia de la API de ingesta de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) proporciona información adicional sobre estas llamadas a la API.
 
-La [referencia de API de inserción de datos](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) proporciona información adicional sobre estas llamadas de API.
-
-El diagrama siguiente describe el proceso de ingestión por lotes:
+El diagrama siguiente describe el proceso de ingesta por lotes:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
 ## Uso de la API
 
-La API [!DNL Data Ingestion] le permite ingestar datos como lotes (una unidad de datos que consta de uno o más archivos que se van a ingerir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
+La API [!DNL Data Ingestion] permite introducir datos como lotes (una unidad de datos que consta de uno o más archivos que se van a introducir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
 
-1. Crear un nuevo lote.
-2. Cargue archivos en un conjunto de datos especificado que coincida con el esquema XDM de los datos.
-3. Señale el final del lote.
+1. Cree un nuevo lote.
+2. Cargue archivos a un conjunto de datos especificado que coincida con el esquema XDM de los datos.
+3. Indica el final del lote.
 
 
 ### [!DNL Data Ingestion] requisitos previos
 
 - Los datos que se van a cargar deben estar en los formatos Parquet o JSON.
 - Un conjunto de datos creado en [[!DNL Catalog services]](../../catalog/home.md).
-- El contenido del archivo Parquet debe coincidir con un subconjunto del esquema del conjunto de datos que se está cargando en.
-- Tenga su Token de acceso único después de la autenticación.
+- El contenido del archivo de parquet debe coincidir con un subconjunto del esquema del conjunto de datos que se está cargando en.
+- Tenga su token de acceso único después de la autenticación.
 
-### Prácticas recomendadas de ingestión por lotes
+### Prácticas recomendadas sobre la ingesta por lotes
 
-- El tamaño de lote recomendado está entre 256 MB y 100 GB.
+- El tamaño recomendado del lote está entre 256 MB y 100 GB.
 - Cada lote debe contener como máximo 1500 archivos.
 
-Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en partes más pequeñas. Las instrucciones para cargar un archivo grande se encuentran [aquí](#large-file-upload---create-file).
+Para cargar un archivo de más de 512 MB, el archivo deberá dividirse en trozos más pequeños. Las instrucciones para cargar un archivo grande se encuentran [aquí](#large-file-upload---create-file).
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -72,7 +72,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Crear un lote
 
-Antes de agregar datos a un conjunto de datos, debe vincularse a un lote, que luego se cargará en un conjunto de datos especificado.
+Para poder agregar datos a un conjunto de datos, estos deben vincularse a un lote que luego se cargará en un conjunto de datos especificado.
 
 ```http
 POST /batches
@@ -94,7 +94,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `datasetId` | ID del conjunto de datos en el que se cargarán los archivos. |
+| `datasetId` | El ID del conjunto de datos en el que se cargarán los archivos. |
 
 **Respuesta**
 
@@ -120,22 +120,22 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `id` | ID del lote que se acaba de crear (se utiliza en solicitudes posteriores). |
-| `relatedObjects.id` | ID del conjunto de datos en el que se cargarán los archivos. |
+| `id` | El ID del lote que se acaba de crear (se utiliza en solicitudes posteriores). |
+| `relatedObjects.id` | El ID del conjunto de datos en el que se cargarán los archivos. |
 
 ## Carga de archivos
 
-Después de crear correctamente un nuevo lote para la carga, los archivos se pueden cargar a un conjunto de datos específico.
+Después de crear correctamente un nuevo lote para su carga, los archivos se pueden cargar en un conjunto de datos específico.
 
-Puede cargar archivos con la API de carga de archivos pequeños. Sin embargo, si los archivos son demasiado grandes y se supera el límite de la puerta de enlace (como tiempos de espera extendidos, solicitudes de tamaño de cuerpo excedidos y otras restricciones), puede cambiar a la API de carga de archivos grandes. Esta API carga el archivo en fragmentos y vincula los datos mediante la llamada API Large File Upload Complete.
+Puede cargar archivos mediante la API de carga de archivos pequeños. Sin embargo, si los archivos son demasiado grandes y se supera el límite de la puerta de enlace (como los tiempos de espera extendidos, las solicitudes de tamaño de cuerpo excedidos y otras restricciones), puede cambiar a la API de carga de archivos grandes. Esta API carga el archivo en fragmentos y vincula los datos mediante la llamada API de finalización de carga de archivos grandes.
 
 >[!NOTE]
 >
->Los ejemplos siguientes utilizan el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/). Encontrará un ejemplo que utiliza el formato de archivo JSON en la [guía para desarrolladores de ingestión por lotes](./api-overview.md).
+>Los ejemplos siguientes utilizan el formato de archivo [Apache Parquet](https://parquet.apache.org/documentation/latest/). Puede encontrar un ejemplo que use el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](./api-overview.md).
 
-### Carga de archivos pequeña
+### Carga de archivo pequeño
 
-Una vez creado el lote, los datos se pueden cargar en un conjunto de datos preexistente.  El archivo que se está cargando debe coincidir con el esquema XDM al que hace referencia.
+Una vez creado un lote, los datos se pueden cargar en un conjunto de datos preexistente.  El archivo que se está cargando debe coincidir con su esquema XDM al que se hace referencia.
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -143,9 +143,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote. |
+| `{BATCH_ID}` | El ID del lote. |
 | `{DATASET_ID}` | ID del conjunto de datos para cargar archivos. |
-| `{FILE_NAME}` | Nombre del archivo tal como se verá en el conjunto de datos. |
+| `{FILE_NAME}` | El nombre del archivo tal como se verá en el conjunto de datos. |
 
 **Solicitud**
 
@@ -169,9 +169,9 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 #Status 200 OK, with empty response body
 ```
 
-### Carga de archivos grande: crear archivo
+### Carga de archivo grande: crear archivo
 
-Para cargar un archivo de gran tamaño, el archivo debe dividirse en fragmentos más pequeños y cargarse de uno en uno.
+Para cargar un archivo grande, el archivo debe dividirse en fragmentos más pequeños y cargarse de uno en uno.
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initialize
@@ -179,9 +179,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote. |
-| `{DATASET_ID}` | ID del conjunto de datos que ingesta los archivos. |
-| `{FILE_NAME}` | Nombre del archivo tal como se verá en el conjunto de datos. |
+| `{BATCH_ID}` | El ID del lote. |
+| `{DATASET_ID}` | ID del conjunto de datos que incorpora los archivos. |
+| `{FILE_NAME}` | El nombre del archivo tal como se verá en el conjunto de datos. |
 
 **Solicitud**
 
@@ -199,9 +199,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 #Status 201 CREATED, with empty response body
 ```
 
-### Carga de archivos grande: carga de partes subsiguientes
+### Carga de archivos grande: cargue las partes siguientes
 
-Una vez creado el archivo, todos los fragmentos posteriores se pueden cargar realizando solicitudes repetidas de PATCH, una para cada sección del archivo.
+Una vez creado el archivo, todos los fragmentos posteriores se pueden cargar realizando solicitudes de PATCH repetidas, una para cada sección del archivo.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -209,8 +209,8 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote. |
-| `{DATASET_ID}` | ID del conjunto de datos en el que se cargarán los archivos. |
+| `{BATCH_ID}` | El ID del lote. |
+| `{DATASET_ID}` | El ID del conjunto de datos en el que se cargarán los archivos. |
 | `{FILE_NAME}` | Nombre del archivo tal como se verá en el conjunto de datos. |
 
 **Solicitud**
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Finalización del lote de señales
 
-Una vez cargados todos los archivos en el lote, se puede indicar la finalización del lote. Al hacer esto, las entradas [!DNL Catalog] DataSetFile se crean para los archivos completados y se asocian con el lote generado anteriormente. El lote [!DNL Catalog] se marca como correcto, lo que déclencheur los flujos descendentes para ingestar los datos disponibles.
+Una vez cargados todos los archivos en el lote, se puede indicar que el lote ha finalizado. Al hacerlo, las entradas [!DNL Catalog] DataSetFile se crean para los archivos completados y se asocian al lote generado anteriormente. El lote [!DNL Catalog] se marca como correcto, lo que déclencheur los flujos descendentes para introducir los datos disponibles.
 
 **Solicitud**
 
@@ -248,7 +248,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote que se va a cargar en el conjunto de datos. |
+| `{BATCH_ID}` | El ID del lote que se cargará en el conjunto de datos. |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -264,11 +264,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 #Status 200 OK, with empty response
 ```
 
-## Comprobar estado de lote
+## Comprobar el estado del lote
 
-Mientras esperan a que los archivos se carguen en el lote, se puede comprobar el estado del lote para ver su progreso.
+Mientras esperan que los archivos se carguen en el lote, se puede comprobar el estado del lote para ver su progreso.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /batch/{BATCH_ID}
@@ -276,7 +276,7 @@ GET /batch/{BATCH_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID del lote que se está comprobando. |
+| `{BATCH_ID}` | El ID del lote que se está comprobando. |
 
 **Solicitud**
 
@@ -384,19 +384,19 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 El campo `"status"` es lo que muestra el estado actual del lote solicitado. Los lotes pueden tener uno de los siguientes estados:
 
-## Estado de ingestión de lotes
+## Estados de ingesta por lotes
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Abandonado | El lote no se completó en el intervalo de tiempo esperado. |
-| Anulado | Se ha llamado a una operación de anulación **explícitamente** (mediante la API de ingesta por lotes) para el lote especificado. Una vez que el lote está en estado &quot;Cargado&quot;, no se puede anular. |
-| Activo | El lote se ha promocionado correctamente y está disponible para el consumo de flujo descendente. Este estado se puede utilizar de forma intercambiable con &quot;Éxito&quot;. |
-| Eliminado | Se han eliminado completamente los datos del lote. |
-| Fallido | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no** aparecerán. Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
+| Abandonado | El lote no se ha completado en el intervalo de tiempo esperado. |
+| Anulado | Se ha llamado a una operación de anulación **explícitamente** (a través de la API de ingesta de lotes) para el lote especificado. Una vez que el lote está en estado &quot;Loaded&quot;, no se puede anular. |
+| Activo | El lote se ha promocionado correctamente y está disponible para el consumo descendente. Este estado se puede utilizar de forma intercambiable con &quot;Success&quot;. |
+| Eliminado | Los datos del lote se han eliminado por completo. |
+| Fallido | Estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido **no** aparecerán. Este estado se puede utilizar de forma intercambiable con &quot;Fallo&quot;. |
 | Inactivo | El lote se promocionó correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
-| Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
-| Cargando | Los datos de este lote se están cargando y el lote está **no** listo para promocionarse. |
-| Reintentar | Se están procesando los datos de este lote. Sin embargo, debido a un error de sistema o transitorio, el lote falló; como resultado, este lote se está reintentando. |
-| En etapas | Se ha completado la fase de ensayo del proceso de promoción de un lote y se ha ejecutado el trabajo de inserción. |
+| Cargado | Los datos del lote se completan y el lote está listo para su promoción. |
+| Carga | Los datos de este lote se están cargando y el lote está **no** listo para su promoción. |
+| Reintentando | Se están procesando los datos de este lote. Sin embargo, debido a un error del sistema o transitorio, el lote falló, por lo que se está reintentando este lote. |
+| Ensayo | La fase de ensayo del proceso de promoción de un lote se ha completado y el trabajo de ingesta se ha ejecutado. |
 | Ensayo | Se están procesando los datos del lote. |
-| Detenido | Se están procesando los datos del lote. Sin embargo, la promoción por lotes se ha estancado después de varios reintentos. |
+| Estancado | Se están procesando los datos del lote. Sin embargo, la promoción por lotes se ha estancado después de varios reintentos. |
