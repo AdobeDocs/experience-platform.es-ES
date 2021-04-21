@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;inicio;temas populares;perfil del producto
+keywords: Experience Platform;inicio;temas populares;perfil de producto
 solution: Experience Platform
-title: Crear un nuevo Perfil de producto en Adobe Admin Console
-topic: user guide
-description: Este documento cubre los pasos necesarios para crear un nuevo perfil de productos en Adobe Admin Console. Para crear un nuevo perfil en inicio, vaya a la ficha Perfiles del producto y haga clic en Nuevo Perfil.
+title: Crear un nuevo perfil de producto en Adobe Admin Console
+topic-legacy: user guide
+description: Este documento cubre los pasos necesarios para crear un nuevo perfil de producto en Adobe Admin Console. Para empezar a crear un nuevo perfil, vaya a la pestaña Perfiles de producto y haga clic en Nuevo perfil.
+exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 3%
 
 ---
 
-
 # Crear un nuevo perfil de producto en Adobe Admin Console
 
-Para crear un nuevo perfil en inicio, vaya a la ficha **[!UICONTROL Perfiles del producto]** y haga clic en **[!UICONTROL Nuevo Perfil]**.
+Para empezar a crear un nuevo perfil, vaya a la pestaña **[!UICONTROL Product Profiles]** y haga clic en **[!UICONTROL New Profile]**.
 
-![new-perfil-button](../images/new-profile-button.png)
+![new-profile-button](../images/new-profile-button.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Crear nuevo Perfil]**, que le solicita que introduzca un nombre de perfil y una descripción para el nuevo perfil. Si desea que el nombre para mostrar del perfil sea diferente, desmarque **[!UICONTROL Igual que el nombre del Perfil]** e introduzca el nombre para mostrar en el cuadro de texto que aparece. En **[!UICONTROL Notificaciones de usuario]**, puede alternar si se notificará por correo electrónico a los usuarios cuando se agreguen o eliminen del perfil.
+Aparece el cuadro de diálogo **[!UICONTROL Create New Profile]**, que le solicita que introduzca un nombre de perfil y una descripción para el nuevo perfil. Si desea que el nombre para mostrar del perfil sea diferente, desmarque **[!UICONTROL Same as Profile Name]** e introduzca el nombre para mostrar en el cuadro de texto que aparece. En **[!UICONTROL User Notifications]**, puede alternar si se notificará por correo electrónico a los usuarios cuando se agreguen o eliminen del perfil.
 
-Cuando termine, haga clic en **[!UICONTROL Siguiente]**.
+Cuando termine, haga clic en **[!UICONTROL Next]**.
 
-![new-perfil-details](../images/new-profile-details.png)
+![new-profile-details](../images/new-profile-details.png)
 
-La siguiente pantalla le solicita que elija qué [!DNL Platform] servicios incluir en el perfil. Haga clic en el botón de alternancia situado junto a un servicio para desactivarlo. Si un servicio está deshabilitado, todas las funciones asociadas con ese servicio no estarán disponibles para los usuarios asignados a este perfil de producto. Cuando termine, haga clic en **[!UICONTROL Listo]**.
+La siguiente pantalla le solicita que elija qué servicios [!DNL Platform] incluir en el perfil. Haga clic en el botón de alternancia situado junto a un servicio para desactivarlo. Si un servicio está deshabilitado, todas las funciones asociadas con ese servicio no estarán disponibles para los usuarios asignados a este perfil de producto. Cuando termine, haga clic en **[!UICONTROL Done]**.
 
-![new-perfil-services](../images/new-profile-services.png)
+![new-profile-services](../images/new-profile-services.png)
 
-El nuevo perfil de producto se crea correctamente y se le redirige a la [página de permisos de edición](#edit-permissions) del perfil. Consulte las secciones sobre [administración de permisos](#manage-permissions-for-a-product-profile) y [administración de usuarios](#manage-users-for-a-product-profile) para obtener más detalles sobre cómo administrar los perfiles de productos una vez creados.
+El nuevo perfil de producto se crea correctamente y se le redirige a la [página de permisos de edición](#edit-permissions) del perfil. Consulte las secciones sobre [administración de permisos](#manage-permissions-for-a-product-profile) y [administración de usuarios](#manage-users-for-a-product-profile) para obtener más información sobre cómo administrar los perfiles de producto una vez creados.
 
 ## Pasos siguientes
 
