@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Información general sobre los modelos de datos del sector
-topic: overview
+topic-legacy: overview
 description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
+exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
-
 
 # Resumen de los modelos de datos del sector
 
