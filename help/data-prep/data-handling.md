@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;asignación de csv;asignación de archivo csv;asignación de archivo csv a xdm;asignación de csv a xdm;guía de ui;asignador;asignación;preparación de datos;preparación de datos;preparación de datos;
 solution: Experience Platform
 title: Gestión de formatos de datos con la preparación de datos
-topic: overview
+topic-legacy: overview
 description: Este documento ofrece información general sobre cómo se gestionan los distintos tipos de datos en la preparación de datos.
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 translation-type: tm+mt
-source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 13%
 
 ---
-
 
 # Gestión de formatos de datos con la preparación de datos
 
