@@ -2,17 +2,17 @@
 keywords: Experience Platform;importar fórmula empaquetada;Data Science Workspace;temas populares;fórmulas;ui;crear motor
 solution: Experience Platform
 title: Importar una fórmula empaquetada en la interfaz de usuario de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial proporciona información sobre cómo configurar e importar una fórmula empaquetada mediante el ejemplo de ventas minoristas proporcionado. Al final de este tutorial, estará listo para crear, entrenar y evaluar un modelo en Adobe Experience Platform Data Science Workspace.
+exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
-
 
 # Importar una fórmula empaquetada en la interfaz de usuario de Data Science Workspace
 
