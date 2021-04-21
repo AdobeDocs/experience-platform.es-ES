@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;empaquetar archivos de origen;Área de trabajo de ciencia de datos;temas populares;Docker;imagen de docker
+keywords: Experience Platform;archivos de origen de paquetes;Data Science Workspace;temas populares;Docker;imagen de docker
 solution: Experience Platform
 title: Empaquetar archivos de origen en una fórmula
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de origen de muestra de ventas minoristas proporcionados en un archivo de archivo, que se puede utilizar para crear una fórmula en Adobe Experience Platform Data Science Workspace siguiendo el flujo de trabajo de importación de fórmulas en la interfaz de usuario o mediante la API.
+description: Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de origen de muestra de ventas minoristas proporcionados en un archivo, que se puede utilizar para crear una fórmula en Adobe Experience Platform Data Science Workspace siguiendo el flujo de trabajo de importación de fórmulas en la interfaz de usuario o utilizando la API.
+exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
+# Empaquete archivos de origen en una fórmula
 
-# Empaquetar archivos de origen en una fórmula
-
-Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de origen de muestra de ventas minoristas proporcionados en un archivo de almacenamiento, que se puede utilizar para crear una fórmula en Adobe Experience Platform [!DNL Data Science Workspace] siguiendo el flujo de trabajo de importación de fórmulas ya sea en la interfaz de usuario o mediante la API.
+Este tutorial proporciona instrucciones sobre cómo empaquetar los archivos de origen de muestra de ventas minoristas proporcionados en un archivo, que se puede utilizar para crear una fórmula en Adobe Experience Platform [!DNL Data Science Workspace] siguiendo el flujo de trabajo de importación de fórmulas, ya sea en la interfaz de usuario o utilizando la API.
 
 Conceptos para comprender:
 
-- **Fórmulas**: Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de inteligencia artificial o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarias para crear y ejecutar un modelo capacitado y, por lo tanto, ayuda a resolver problemas comerciales específicos.
+- **Fórmulas**: Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de inteligencia artificial o un conjunto de algoritmos, lógica de procesamiento y configuración necesarios para crear y ejecutar un modelo entrenado y, por lo tanto, ayuda a resolver problemas empresariales específicos.
 - **Archivos** de origen: Archivos individuales del proyecto que contienen la lógica de una fórmula.
 
 ## Requisitos previos
@@ -30,64 +30,64 @@ Conceptos para comprender:
 - [[!DNL Scala]](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
 - [[!DNL Maven]](https://maven.apache.org/install.html)
 
-## Creación de fórmulas
+## Creación de fórmula
 
-Inicios de creación de fórmulas con empaquetado de archivos de origen para crear un archivo de archivo. Los archivos de origen definen la lógica de aprendizaje automático y los algoritmos utilizados para resolver un problema específico y se escriben en [!DNL Python], R, PySpark o Scala. Los archivos de archivo creados toman la forma de una imagen de Docker. Una vez compilado, el archivo empaquetado se importa en [!DNL Data Science Workspace] para crear una fórmula [en la interfaz de usuario](./import-packaged-recipe-ui.md) o [mediante la API](./import-packaged-recipe-api.md).
+La creación de fórmulas comienza con el empaquetado de archivos de origen para crear un archivo. Los archivos de origen definen la lógica y los algoritmos de aprendizaje automático utilizados para resolver un problema específico que se encuentra en la mano y están escritos en [!DNL Python], R, PySpark o Scala. Los archivos archivados creados toman la forma de una imagen Docker. Una vez creado, el archivo empaquetado se importa en [!DNL Data Science Workspace] para crear una fórmula [en la interfaz de usuario](./import-packaged-recipe-ui.md) o [utilizando la API](./import-packaged-recipe-api.md).
 
-### Creación de modelos basados en acoplamiento {#docker-based-model-authoring}
+### Creación de modelos basados en Docker {#docker-based-model-authoring}
 
-Una imagen de Docker permite a un desarrollador empaquetar una aplicación con todas las partes que necesita, como bibliotecas y otras dependencias, y enviarla como un paquete.
+Una imagen Docker permite a un desarrollador empaquetar una aplicación con todas las partes que necesita, como bibliotecas y otras dependencias, y enviarla como un paquete.
 
-La imagen de Docker creada se inserta en el Registro de Contenedor de Azure mediante las credenciales proporcionadas durante el flujo de trabajo de creación de fórmulas.
+La imagen Docker creada se inserta en el Registro de contenedores de Azure utilizando las credenciales proporcionadas durante el flujo de trabajo de creación de la fórmula.
 
-Para obtener las credenciales del Registro de Contenedor de Azure, inicie sesión en [Adobe Experience Platform](https://platform.adobe.com). En la columna de navegación izquierda, navegue a **[!UICONTROL Flujos de trabajo]**. Seleccione **[!UICONTROL Importar fórmula]** seguida de seleccionar **[!UICONTROL Iniciar]**. Consulte la captura de pantalla siguiente para obtener referencia.
+Para obtener las credenciales del Registro de contenedores de Azure, inicie sesión en [Adobe Experience Platform](https://platform.adobe.com). En la columna de navegación izquierda, vaya a **[!UICONTROL Workflows]**. Seleccione **[!UICONTROL Import Recipe]** seguido de **[!UICONTROL Launch]**. Consulte la captura de pantalla siguiente para obtener referencia.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Se abre la página **[!UICONTROL Configurar]**. Proporcione un **[!UICONTROL Nombre de fórmula apropiado]**, por ejemplo, &quot;Fórmula de venta minorista&quot;, y opcionalmente proporcione una dirección URL de documentación o descripción. Una vez finalizado, haga clic en **[!UICONTROL Siguiente]**.
+Se abre la página **[!UICONTROL Configure]**. Proporcione un **[!UICONTROL Recipe Name]** apropiado, por ejemplo, &quot;Receta de ventas minoristas&quot;, y opcionalmente proporcione una descripción o una dirección URL de documentación. Una vez finalizado, haga clic en **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Seleccione el *Tiempo de ejecución* correspondiente y, a continuación, elija una **[!UICONTROL Clasificación]** para *Tipo*. Las credenciales del Registro de Contenedor de Azure se generan una vez finalizadas.
+Seleccione el *Runtime* correspondiente y, a continuación, elija **[!UICONTROL Classification]** para *Type*. Las credenciales del Registro de contenedores de Azure se generan una vez finalizadas.
 
 >[!NOTE]
 >
->** Typeis la clase de problema de aprendizaje automático para la que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la ejecución de la formación.
+>** Escriba la clase de problema de aprendizaje automático para la que está diseñada la fórmula y se utiliza después de la formación para ayudar a adaptar la evaluación de la ejecución de la formación.
 
 >[!TIP]
 >
 >- Para las fórmulas [!DNL Python] seleccione el tiempo de ejecución **[!UICONTROL Python]**.
 >- Para las fórmulas R, seleccione el tiempo de ejecución **[!UICONTROL R]**.
->- Para las fórmulas de PySpark, seleccione el tiempo de ejecución **[!UICONTROL PySpark]**. Se rellena automáticamente un tipo de artefacto.
->- Para las fórmulas de Scala, seleccione el tiempo de ejecución **[!UICONTROL Spark]**. Se rellena automáticamente un tipo de artefacto.
+>- Para las fórmulas de PySpark, seleccione el tiempo de ejecución **[!UICONTROL PySpark]**. Un tipo de artefacto se rellena automáticamente.
+>- Para las fórmulas de Scala, seleccione el tiempo de ejecución **[!UICONTROL Spark]**. Un tipo de artefacto se rellena automáticamente.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Tenga en cuenta los valores del host, el nombre de usuario y la contraseña del Docker. Se utilizan para generar e insertar la imagen [!DNL Docker] en los flujos de trabajo que se describen a continuación.
+Tenga en cuenta los valores del host Docker, el nombre de usuario y la contraseña. Se utilizan para crear y insertar la imagen [!DNL Docker] en los flujos de trabajo descritos a continuación.
 
 >[!NOTE]
 >
->La dirección URL de origen se proporciona después de completar los pasos que se describen a continuación. El archivo de configuración se explica en tutoriales posteriores que se encuentran en [pasos siguientes](#next-steps).
+>La dirección URL de origen se proporciona después de completar los pasos descritos a continuación. El archivo de configuración se explica en tutoriales posteriores que se encuentran en [pasos siguientes](#next-steps).
 
-### Empaquetar los archivos de origen
+### Empaquete los archivos de origen
 
-Inicio mediante la obtención del código base de muestra que se encuentra en el repositorio <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Referencia del área de trabajo de Experience Platform de Data Science</a>.
+Comience por obtener el código de base de ejemplo que se encuentra en el repositorio <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a>.
 
-- [Generar imagen de acoplamiento Python](#python-docker)
-- [Generar imagen de acoplamiento R](#r-docker)
-- [Generar imagen de acoplador de PySpark](#pyspark-docker)
+- [Generar imagen Python Docker](#python-docker)
+- [Generar imagen R Docker](#r-docker)
+- [Crear imagen de Docker de PySpark](#pyspark-docker)
 - [Generar imagen de acoplador Scala (Spark)](#scala-docker)
 
-### Generar [!DNL Python] imagen del acoplador {#python-docker}
+### Generar [!DNL Python] Imagen de Docker {#python-docker}
 
-Si no lo ha hecho, clona el repositorio [!DNL GitHub] en el sistema local con el siguiente comando:
+Si no lo ha hecho, clone el repositorio [!DNL GitHub] en el sistema local con el siguiente comando:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Vaya al directorio `experience-platform-dsw-reference/recipes/python/retail`. Aquí encontrará las secuencias de comandos `login.sh` y `build.sh` utilizadas para iniciar sesión en Docker y generar la imagen [!DNL Python Docker]. Si tiene [credenciales de Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
+Vaya al directorio `experience-platform-dsw-reference/recipes/python/retail`. Aquí, encontrará las secuencias de comandos `login.sh` y `build.sh` utilizadas para iniciar sesión en Docker y crear la imagen [!DNL Python Docker]. Si tiene sus [Credenciales del Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
 
 ```BASH
 # for logging in to Docker
@@ -97,9 +97,9 @@ Vaya al directorio `experience-platform-dsw-reference/recipes/python/retail`. Aq
 ./build.sh
 ```
 
-Tenga en cuenta que, al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
+Tenga en cuenta que al ejecutar el script de inicio de sesión, debe proporcionar el host Docker, el nombre de usuario y la contraseña. Al crear, es necesario proporcionar el host Docker y una etiqueta de versión para la compilación.
 
-Una vez que se haya completado la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen de Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
+Una vez finalizada la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
 
 ```BASH
 # URL format: 
@@ -110,13 +110,13 @@ Copie esta dirección URL y continúe con los [pasos siguientes](#next-steps).
 
 ### Generar imagen R [!DNL Docker] {#r-docker}
 
-Si no lo ha hecho, clona el repositorio [!DNL GitHub] en el sistema local con el siguiente comando:
+Si no lo ha hecho, clone el repositorio [!DNL GitHub] en el sistema local con el siguiente comando:
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Vaya al directorio `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` dentro del repositorio clonado. Aquí encontrará los archivos `login.sh` y `build.sh` que utilizará para iniciar sesión en Docker y crear la imagen del R Docker. Si tiene [credenciales de Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
+Vaya al directorio `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` dentro del repositorio clonado. Aquí, encontrará los archivos `login.sh` y `build.sh` que utilizará para iniciar sesión en Docker y para crear la imagen de R Docker. Si tiene sus [Credenciales del Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
 
 ```BASH
 # for logging in to Docker
@@ -126,9 +126,9 @@ Vaya al directorio `experience-platform-dsw-reference/recipes/R/Retail - Gradien
 ./build.sh
 ```
 
-Tenga en cuenta que, al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
+Tenga en cuenta que al ejecutar el script de inicio de sesión, debe proporcionar el host Docker, el nombre de usuario y la contraseña. Al crear, es necesario proporcionar el host Docker y una etiqueta de versión para la compilación.
 
-Una vez que se haya completado la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen de Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
+Una vez finalizada la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
 
 ```BASH
 # URL format: 
@@ -137,15 +137,15 @@ Una vez que se haya completado la secuencia de comandos de compilación, se le p
 
 Copie esta dirección URL y continúe con los [pasos siguientes](#next-steps).
 
-### Generar imagen de PySpark Docker {#pyspark-docker}
+### Generar imagen de Docker de PySpark {#pyspark-docker}
 
-Inicio clonando el repositorio [!DNL GitHub] en el sistema local con el siguiente comando:
+Comience clonando el repositorio [!DNL GitHub] en su sistema local con el siguiente comando:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Vaya al directorio `experience-platform-dsw-reference/recipes/pyspark/retail`. Las secuencias de comandos `login.sh` y `build.sh` se encuentran aquí y se utilizan para iniciar sesión en Docker y generar la imagen del Docker. Si tiene [credenciales de Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
+Vaya al directorio `experience-platform-dsw-reference/recipes/pyspark/retail`. Los scripts `login.sh` y `build.sh` se encuentran aquí y se utilizan para iniciar sesión en Docker y para crear la imagen Docker. Si tiene sus [Credenciales del Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en orden:
 
 ```BASH
 # for logging in to Docker
@@ -155,9 +155,9 @@ Vaya al directorio `experience-platform-dsw-reference/recipes/pyspark/retail`. L
 ./build.sh
 ```
 
-Tenga en cuenta que, al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
+Tenga en cuenta que al ejecutar el script de inicio de sesión, debe proporcionar el host Docker, el nombre de usuario y la contraseña. Al crear, es necesario proporcionar el host Docker y una etiqueta de versión para la compilación.
 
-Una vez que se haya completado la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen de Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
+Una vez finalizada la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
 
 ```BASH
 # URL format: 
@@ -166,15 +166,15 @@ Una vez que se haya completado la secuencia de comandos de compilación, se le p
 
 Copie esta dirección URL y continúe con los [pasos siguientes](#next-steps).
 
-### Generar imagen de acoplador de escala {#scala-docker}
+### Generar imagen de Scala Docker {#scala-docker}
 
-Inicio clonando el repositorio [!DNL GitHub] en el sistema local con el siguiente comando en terminal:
+Comience clonando el repositorio [!DNL GitHub] en su sistema local con el siguiente comando en terminal:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/scala` donde encontrará las secuencias de comandos `login.sh` y `build.sh`. Estas secuencias de comandos se utilizan para iniciar sesión en Docker y crear la imagen del Docker. Si tiene [credenciales de Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos para terminal en orden:
+A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/scala` donde puede encontrar los scripts `login.sh` y `build.sh`. Estas secuencias de comandos se utilizan para iniciar sesión en Docker y crear la imagen Docker. Si tiene sus [Credenciales del Docker](#docker-based-model-authoring) listas, introduzca los siguientes comandos en terminal en orden:
 
 ```BASH
 # for logging in to Docker
@@ -186,11 +186,11 @@ A continuación, vaya al directorio `experience-platform-dsw-reference/recipes/s
 
 >[!TIP]
 >
->Si recibe un error de permiso al intentar iniciar sesión en Docker mediante la secuencia de comandos `login.sh`, intente utilizar el comando `bash login.sh`.
+>Si está recibiendo un error de permiso al intentar iniciar sesión en Docker utilizando la secuencia de comandos `login.sh`, intente utilizar el comando `bash login.sh`.
 
-Al ejecutar la secuencia de comandos de inicio de sesión, debe proporcionar el host, el nombre de usuario y la contraseña del Docker. Al compilar, debe proporcionar el host de Docker y una etiqueta de versión para la compilación.
+Al ejecutar el script de inicio de sesión, debe proporcionar el host Docker, el nombre de usuario y la contraseña. Al crear, es necesario proporcionar el host Docker y una etiqueta de versión para la compilación.
 
-Una vez que se haya completado la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen de Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
+Una vez finalizada la secuencia de comandos de compilación, se le proporcionará una URL de archivo de origen Docker en la salida de la consola. Para este ejemplo específico, tendrá un aspecto similar al siguiente:
 
 ```BASH
 # URL format: 
@@ -201,7 +201,7 @@ Copie esta dirección URL y continúe con los [pasos siguientes](#next-steps).
 
 ## Pasos siguientes {#next-steps}
 
-Este tutorial pasó a empaquetar archivos de origen en una fórmula, el paso previo para importar una fórmula a [!DNL Data Science Workspace]. Ahora debe tener una imagen de Docker en el Registro de Contenedor de Azure junto con la URL de imagen correspondiente. Ya está listo para comenzar el tutorial sobre la importación de una fórmula empaquetada en [!DNL Data Science Workspace]. Seleccione uno de los vínculos de tutorial siguientes para comenzar:
+Este tutorial ha pasado el empaquetado de archivos de origen a una fórmula, el paso previo para importar una fórmula a [!DNL Data Science Workspace]. Ahora debe tener una imagen de Docker en el Registro de contenedores de Azure junto con la URL de la imagen correspondiente. Ya está listo para iniciar el tutorial sobre la importación de una fórmula empaquetada en [!DNL Data Science Workspace]. Seleccione uno de los vínculos del tutorial a continuación para empezar:
 
-- [Importación de una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md)
+- [Importar una fórmula empaquetada en la interfaz de usuario](./import-packaged-recipe-ui.md)
 - [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md)
