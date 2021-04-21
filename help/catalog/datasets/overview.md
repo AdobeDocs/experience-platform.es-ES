@@ -2,20 +2,20 @@
 keywords: Experience Platform;inicio;temas populares;ubicación de datos;ubicación de datos;administración de datos;administración de datos;idioma;linaje;tipo de datos;tipos de datos;tipos de datos;tipo de datos
 solution: Experience Platform
 title: Información general sobre conjuntos de datos
-topic: datasets
+topic-legacy: datasets
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
 
-
 # Información general sobre conjuntos de datos
 
-Todos los datos que se incorporan correctamente en Adobe Experience Platform se mantienen dentro de [!DNL Data Lake] como conjuntos de datos. Un conjunto de datos es una construcción de almacenamiento y administración para una recopilación de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los conjuntos de datos también contienen metadatos que describen varios aspectos de los datos que almacenan.
+Todos los datos que se introducen correctamente en Adobe Experience Platform se mantienen dentro de [!DNL Data Lake] como conjuntos de datos. Un conjunto de datos es una construcción de almacenamiento y administración para una recopilación de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los conjuntos de datos también contienen metadatos que describen varios aspectos de los datos que almacenan.
 
 Este documento proporciona información general de alto nivel sobre los conjuntos de datos en [!DNL Experience Platform].
 
@@ -57,7 +57,7 @@ Una vez que los conjuntos de datos se han utilizado para almacenar datos ingesta
 A continuación se muestra una lista de servicios descendentes que utilizan conjuntos de datos para diversas operaciones. Consulte la documentación de cada servicio para obtener más información.
 
 * [[!DNL Data Access API]](../../data-access/home.md): Permite acceder y descargar el contenido de los archivos almacenados en conjuntos de datos.
-* [Servicio de ID de Adobe Experience Platform](../../identity-service/home.md): Agrupa identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
+* [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): Agrupa identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Aprovecha  [!DNL Identity Service] para crear perfiles de cliente detallados a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos de  [!DNL Data Lake] y mantiene los perfiles de cliente en su propio almacén de datos independiente.
 * [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): Permite crear segmentos y generar audiencias a partir de los  [!DNL Real-time Customer Profile] datos. Estas audiencias se pueden exportar a sus propios conjuntos de datos dentro de [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utiliza aprendizaje automático e inteligencia artificial para descubrir perspectivas en conjuntos de datos grandes.
