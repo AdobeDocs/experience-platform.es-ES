@@ -1,53 +1,53 @@
 ---
 keywords: Experience Platform;introducción;ayuda al cliente;temas populares
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Introducción a la API del cliente
-topic: Getting started
-description: Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado.
+title: Introducción a Customer AI
+topic-legacy: Getting started
+description: Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto.
+exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
+# Introducción a Customer AI
 
-# Introducción a la API del cliente
+Las guías para Customer AI requieren comprender bien los distintos servicios de Platform implicados en el uso de Customer AI. Antes de comenzar, revise los siguientes documentos:
 
-Las guías para la API del cliente requieren una comprensión práctica de los distintos servicios de la plataforma implicados en el uso de la API del cliente. Antes de su inicio, consulte los siguientes documentos:
+- [Descripción general del sistema del Modelo de datos de experiencia (XDM)](../../xdm/home.md): XDM es el marco fundamental que permite  [!DNL Adobe Experience Cloud], con tecnología de Experience Platform, entregar el mensaje correcto a la persona adecuada, en el canal correcto, en el momento justo. La metodología en la que se basa el Experience Platform, el sistema XDM, operacionaliza los esquemas del Modelo de datos de experiencia para que los utilicen los servicios de plataforma.
+- [Aspectos básicos de la composición](../../xdm/schema/composition.md) del esquema: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en  [!DNL Adobe Experience Platform].
+- [Creación de esquemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
+- [Información general del perfil del cliente en tiempo real](../../rtcdp/overview.md): Integrada en  [!DNL Adobe Experience Platform], la plataforma de datos del cliente en tiempo real (CDP en tiempo real) ayuda a las empresas a reunir datos conocidos y desconocidos para activar perfiles del cliente con decisiones inteligentes a lo largo de todo el recorrido del cliente. CDP en tiempo real combina varias fuentes de datos empresariales para crear perfiles unificados en tiempo real que se pueden utilizar para proporcionar experiencias personalizadas de cliente individuales en todos los canales y dispositivos.
+- [Información general del servicio de segmentación](../../segmentation/home.md): La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Por ejemplo, en una campaña de correo electrónico llamada &quot;¿Olvidó comprar sus zapatillas?&quot;, puede que quiera una audiencia de todos los usuarios que buscaron zapatillas en los últimos 30 días, pero que no completaron una compra. Con distintos segmentos, puede centrarse en las distintas audiencias y ofrecer una experiencia de marketing más personalizada.
+- [Guía](../../segmentation/tutorials/create-a-segment.md) del usuario del Generador de segmentos: Platform le permite crear y acceder fácilmente a segmentos, así como utilizar diferentes componentes básicos para caracterizar aún más sus segmentos.
 
-- [Descripción general](../../xdm/home.md) del sistema del modelo de datos de experiencia (XDM): XDM es el marco fundamental que permite  [!DNL Adobe Experience Cloud], con la ayuda de un Experience Platform, entregar el mensaje correcto a la persona correcta, en el canal correcto, en el momento preciso. La metodología en la que se crea el Experience Platform, Sistema XDM, hace operativos los esquemas del modelo de datos de experiencia para que los utilicen los servicios de plataforma.
-- [Conceptos básicos de la composición](../../xdm/schema/composition.md) de esquemas: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se utilizarán en  [!DNL Adobe Experience Platform].
-- [Esquemas](../../xdm/tutorials/create-schema-ui.md) de creación: Este tutorial trata los pasos para crear un esquema con el Editor de Esquemas en Experience Platform.
-- [Información general](../../rtcdp/overview.md) sobre el Perfil del cliente en tiempo real: La plataforma de datos del cliente en tiempo real (CDP en tiempo real)  [!DNL Adobe Experience Platform]se basa en la integración de compañías que aúnan datos conocidos y desconocidos para activar perfiles del cliente con decisiones inteligentes en todo el recorrido del cliente. CDP en tiempo real combina múltiples fuentes de datos empresariales para crear perfiles unificados en tiempo real que se pueden utilizar para proporcionar experiencias personalizadas de uno a uno en todos los canales y dispositivos.
-- [Descripción general](../../segmentation/home.md) del servicio de segmentación: La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles de su almacén de perfiles para distinguir un grupo de personas comercializables de su base de clientes. Por ejemplo: en una campaña por correo electrónico llamada &quot;¿Olvidó comprar sus zapatillas?&quot;, puede que desee una audiencia de todos los usuarios que buscaron zapatos deportivos en los últimos 30 días, pero que no completaron una compra. Con diferentes segmentos, puede centrarse en sus distintas audiencias y ofrecer una experiencia de marketing más personalizada.
-- [Guía](../../segmentation/tutorials/create-a-segment.md) de usuario del Generador de segmentos: Platform le permite crear segmentos y acceder a ellos fácilmente, así como utilizar diferentes componentes básicos para seguir caracterizando los segmentos.
-
-## Descarga de puntuaciones de AI del cliente
+## Descarga de puntuaciones de Customer AI
 
 >[!NOTE]
 >
 >Si no necesita descargar puntuaciones sin procesar, puede omitir este paso y continuar con la [guía de configuración](./user-guide/configure.md).
 
-La descarga de puntuaciones de AI del cliente se realiza mediante una combinación de llamadas de API. Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+La descarga de puntuaciones de Customer AI se realiza mediante una combinación de llamadas de API. Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre los entornos limitados en la plataforma, consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
+>Para obtener más información sobre los entornos limitados en Platform, consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
 
 ## Pasos siguientes
 
-Una vez que haya completado los pasos descritos en el documento anterior, visite la [documentación de entrada y salida](./input-output.md). Este documento ofrece una breve descripción general de los tipos de datos que se utilizan y producen en la API del cliente.
+Una vez que haya completado los pasos descritos en el documento anterior, visite la documentación de [Entrada y salida](./input-output.md). Este documento ofrece una breve descripción general de los tipos de datos que se utilizan y producen en Customer AI.
