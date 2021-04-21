@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de Consulta de Perfil;funciones de mapa;mapa;
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Idioma de consulta de perfil;funciones de asignación;mapa;
 solution: Experience Platform
-title: Funciones de mapa PQL
-topic: developer guide
-description: El lenguaje de Consulta de perfil (PQL) oferta funciones para facilitar la interacción con los mapas.
+title: Funciones de mapa de PQL
+topic-legacy: developer guide
+description: El lenguaje de consulta de perfil (PQL) ofrece funciones para facilitar la interacción con los mapas.
+exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 5%
 
 ---
 
+# Asignar funciones
 
-# Funciones de mapa
-
-[!DNL Profile Query Language] (PQL) oferta funciones para facilitar la interacción con los mapas. Encontrará más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con los mapas. Puede encontrar más información sobre otras funciones de PQL en [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Obtenga
 
@@ -35,7 +35,7 @@ La siguiente consulta PQL obtiene el valor del mapa de identidad para la clave `
 identityMap.get("example@example.com")
 ```
 
-## Teclas
+## Claves
 
 La función `keys` se utiliza para recuperar todas las claves de un mapa determinado.
 
@@ -73,4 +73,4 @@ identityMap.values()
 
 ## Pasos siguientes
 
-Ahora que ha aprendido sobre las funciones de mapa, puede utilizarlas dentro de sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de Consulta de Perfil](./overview.md).
+Ahora que ha aprendido sobre las funciones de asignación, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones de PQL, lea la [información general del lenguaje de consulta de perfil](./overview.md).
