@@ -2,17 +2,17 @@
 keywords: Experience Platform;entrenar y evaluar;Data Science Workspace;temas populares;crear un modelo;crear una ejecución de formación
 solution: Experience Platform
 title: Capacitar y evaluar un modelo en la interfaz de usuario de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, el Modelo es entrenado y evaluado para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear varios modelos y adaptarlos a propósitos específicos con una sola fórmula.
+exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1083'
 ht-degree: 1%
 
 ---
-
 
 # Capacite y evalúe un modelo en la interfaz de usuario de Data Science Workspace
 
