@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de evento de experiencia;consulta de evento de experiencia;consulta de Evento de experiencias;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;consulta de eventos de experiencias;
 solution: Experience Platform
-title: Consultas de muestra para Eventos de experiencias
-topic: queries
+title: Consultas de ejemplo para eventos de experiencias
+topic-legacy: queries
 type: Tutorial
-description: El siguiente documento proporciona ejemplos de consultas que involucran a Eventos de experiencia en el servicio de Consulta de Adobe Experience Platform.
+description: El siguiente documento proporciona ejemplos de consultas que involucran eventos de experiencia en el servicio de consulta de Adobe Experience Platform.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
+# Consultas de ejemplo para [!DNL Experience Events]
 
-# Consultas de muestra para [!DNL Experience Events]
+Además de las consultas SQL estándar, Adobe Experience Platform [!DNL Query Service] admite la escritura de consultas mediante [!DNL Experience Events]. Los eventos de experiencia están representados por la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea inmutable y no agregada del sistema cuando un usuario interactúa con un sitio web o servicio y, por lo tanto, se puede utilizar para el análisis del dominio de tiempo.
 
-Además de las consultas SQL estándar, Adobe Experience Platform [!DNL Query Service] admite la escritura de consultas mediante [!DNL Experience Events]. Los Eventos de experiencia están representados por la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea inmutable y no agregada del sistema cuando un usuario interactúa con un sitio web o servicio y, por lo tanto, se puede utilizar para la análisis del dominio de tiempo.
-
-Encontrará más información sobre XDM y [!DNL Experience Events] en la [[!DNL XDM System] información general](../../xdm/home.md). Al combinar [!DNL Query Service] con [!DNL Experience Events], puede rastrear de manera efectiva las tendencias de comportamiento entre los usuarios. El siguiente documento proporciona ejemplos de consultas que involucran [!DNL Experience Events].
+Puede encontrar más información sobre XDM y [!DNL Experience Events] en [[!DNL XDM System] overview](../../xdm/home.md). Al combinar [!DNL Query Service] con [!DNL Experience Events], puede rastrear de forma eficaz las tendencias de comportamiento entre los usuarios. El siguiente documento proporciona ejemplos de consultas que involucran [!DNL Experience Events].
 
 ## Creación de un informe de tendencias de eventos por día en un intervalo de fechas específico
 
-En el ejemplo siguiente se crea un informe de tendencias de eventos en un intervalo de fechas especificado, agrupado por fecha. Específicamente, resume varios valores de análisis como A, B y C, y luego resume el número de veces que se han visualizado los parámetros.
+En el siguiente ejemplo se crea un informe de tendencias de eventos en un intervalo de fechas especificado, agrupado por fecha. En concreto, resume varios valores de análisis como A, B y C, y luego resume el número de veces que se ha visto el parámetro.
 
-La columna de marca de tiempo que se encuentra en [!DNL Experience Event] datasets está en UTC. El ejemplo siguiente utiliza la función `from_utc_timestamp()` para transformar la marca de tiempo de UTC a EDT. Luego utiliza la función `date_format()` para aislar la fecha del resto de la marca de tiempo.
+La columna de marca de tiempo que se encuentra en los conjuntos de datos [!DNL Experience Event] está en UTC. El siguiente ejemplo utiliza la función `from_utc_timestamp()` para transformar la marca de tiempo de UTC a EDT. A continuación, utiliza la función `date_format()` para aislar la fecha del resto de la marca de tiempo.
 
 ```sql
 SELECT 
@@ -84,7 +84,7 @@ ORDER BY Day ASC, pageViews DESC;
 
 ## Recuperación de una lista de visitantes organizada por número de vistas de página.
 
-El siguiente ejemplo crea un informe que lista los ID de los usuarios que han visto la mayoría de las páginas.
+En el siguiente ejemplo se crea un informe que enumera los ID de los usuarios que vieron la mayoría de las páginas.
 
 ```sql
 SELECT 
@@ -114,7 +114,7 @@ LIMIT 10;
 
 ## Reproducción de las sesiones de un visitante
 
-El siguiente ejemplo lista las últimas 100 páginas que ha visto un usuario especificado.
+En el siguiente ejemplo se enumeran las últimas 100 páginas que ha visto un usuario especificado.
 
 
 ```sql
@@ -160,7 +160,7 @@ LIMIT 100;
 
 ## Visualización de un informe resumido de un visitante
 
-El siguiente ejemplo muestra un informe acumulado de varios valores de análisis para un usuario especificado.
+El siguiente ejemplo muestra un informe agregado de varios valores de análisis para un usuario especificado.
 
 ```sql
 SELECT 
@@ -189,5 +189,4 @@ ORDER BY pageViews DESC;
 
 ## Pasos siguientes
 
-Para obtener más información sobre consultas de muestra que utilizan funciones definidas por Adobe (ADF), lea la guía Funciones definidas por Adobe. Para obtener instrucciones generales sobre la ejecución de consultas, lea la [guía sobre la ejecución de consultas en el servicio de Consulta](./writing-queries.md).
-
+Para obtener más información sobre consultas de ejemplo que utilizan funciones definidas por Adobe (ADF), lea la guía Funciones definidas por Adobe . Para obtener instrucciones generales sobre la ejecución de consultas, lea la [guía sobre la ejecución de consultas en Query Service](./writing-queries.md).
