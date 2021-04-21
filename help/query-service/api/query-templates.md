@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;plantillas de consulta;guía de API;plantillas;servicio de Consulta;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;plantillas de consulta;guía de api;plantillas;servicio de consulta;
 solution: Experience Platform
 title: Extremo de API de plantillas de consulta
-topic: query templates
-description: La siguiente documentación describe las distintas llamadas de API que puede realizar mediante plantillas de consulta para la API de servicio de Consulta.
+topic-legacy: query templates
+description: La siguiente documentación explica las distintas llamadas de API que puede realizar mediante plantillas de consulta para la API del servicio de consulta.
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 3%
 
 ---
 
-
 # Extremo de plantillas de consulta
 
-## Ejemplos de llamadas a API
+## Ejemplo de llamadas a API
 
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de muestra que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones explican las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperar una lista de plantillas de consulta
 
-Puede recuperar una lista de todas las plantillas de consulta para su organización de IMS haciendo una solicitud de GET al extremo `/query-templates`.
+Puede recuperar una lista de todas las plantillas de consulta para su organización IMS realizando una solicitud de GET al extremo `/query-templates` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /query-templates
@@ -32,22 +32,22 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Se agregaron parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por ampersands (`&`). Los parámetros disponibles se enumeran a continuación. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Se han agregado parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;`&`&quot;. A continuación se enumeran los parámetros disponibles. |
 
 **Parámetros de consulta**
 
-A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar las plantillas de consulta. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las plantillas de consulta disponibles para su organización.
+La siguiente es una lista de parámetros de consulta disponibles para listar plantillas de consulta. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las plantillas de consulta disponibles para su organización.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se ordenan los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por medio de la creación en orden ascendente. Al añadir un `-` antes de crear (`orderby=-created`) se ordenarán los elementos por orden descendente. |
+| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados creando en orden ascendente. Al agregar un `-` antes de crear (`orderby=-created`), los elementos se ordenarán de forma descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuesta mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista que comienza en la tercera consulta de la lista. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados en función de los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `name` y `userId`. El único operador admitido es `==` (igual a). Por ejemplo, `name==my_template` devolverá todas las plantillas de consulta con el nombre `my_template`. |
+| `start` | Desplaza la lista de respuestas utilizando la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `name` y `userId`. El único operador admitido es `==` (igual a). Por ejemplo, `name==my_template` devolverá todas las plantillas de consulta con el nombre `my_template`. |
 
 **Solicitud**
 
-La siguiente solicitud recupera la plantilla de consulta más reciente creada para su organización de IMS.
+La siguiente solicitud recupera la plantilla de consulta más reciente creada para su organización IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de consulta para la organización de IMS especificada. La siguiente respuesta devuelve la plantilla de consulta más reciente creada para su organización de IMS.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de consulta para la organización IMS especificada. La siguiente respuesta devuelve la última plantilla de consulta creada para su organización IMS.
 
 ```json
 {
@@ -112,9 +112,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 ### Creación de una plantilla de consulta
 
-Puede crear una plantilla de consulta haciendo una solicitud de POST al extremo `/query-templates`.
+Puede crear una plantilla de consulta realizando una solicitud de POST al extremo `/query-templates` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /query-templates
@@ -137,11 +137,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `sql` | La consulta SQL que desea crear. |
-| `name` | Nombre de la plantilla de consulta. |
+| `name` | El nombre de la plantilla de consulta. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con los detalles de la plantilla de consulta recién creada.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la plantilla de consulta recién creada.
 
 ```json
 {
@@ -175,9 +175,9 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con los detalles d
 
 ### Recuperar una plantilla de consulta especificada
 
-Puede recuperar una plantilla de consulta específica realizando una solicitud de GET al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
+Puede recuperar una plantilla de consulta específica realizando una solicitud de GET al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /query-templates/{TEMPLATE_ID}
@@ -199,7 +199,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la plantilla de consulta especificada.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla de consulta especificada.
 
 ```json
 {
@@ -233,9 +233,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la planti
 
 ### Actualizar una plantilla de consulta especificada
 
-Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
+Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 PUT /query-templates/{TEMPLATE_ID}
@@ -249,7 +249,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La solicitud de PUT requiere que se rellenen tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
+>La solicitud del PUT requiere que se rellenen tanto el campo sql como el campo name, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -270,7 +270,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con la información actualizada de la plantilla de consulta especificada.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con la información actualizada para la plantilla de consulta especificada.
 
 ```json
 {
@@ -303,11 +303,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con la informació
 >
 >Puede utilizar el valor de `_links.delete` para [eliminar la plantilla de consulta](#delete-a-specified-query-template).
 
-### Eliminar una plantilla de consulta específica
+### Eliminar una plantilla de consulta especificada
 
-Puede eliminar una plantilla de consulta específica haciendo una solicitud de DELETE a `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
+Puede eliminar una plantilla de consulta específica realizando una solicitud de DELETE a `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de la solicitud.
 
-**Formato API**
+**Formato de API**
 
 ```http
 DELETE /query-templates/{TEMPLATE_ID}
@@ -329,7 +329,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
 
 ```json
 {
