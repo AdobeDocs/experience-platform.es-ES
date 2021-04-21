@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;entornos limitados de lista
 solution: Experience Platform
 title: Listar entornos limitados en la API
-topic: developer guide
+topic-legacy: developer guide
 description: Para enumerar todos los entornos limitados pertenecientes a su organización de IMS (activa o de otro tipo), realice una solicitud de GET al extremo /sandboxes.
+exl-id: 5e7dc6e7-cb9c-41e0-a3ad-025b625f14ec
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
-
 
 # Lista de entornos limitados en la API
 
