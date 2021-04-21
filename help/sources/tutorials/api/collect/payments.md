@@ -2,15 +2,15 @@
 keywords: Experience Platform;inicio;temas populares;Recopilar datos de pago;datos de pago
 solution: Experience Platform
 title: Recopilación de datos de pago mediante conectores de origen y API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de pagos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 2%
+source-wordcount: '1598'
+ht-degree: 1%
 
 ---
 
