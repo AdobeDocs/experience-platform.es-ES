@@ -1,13 +1,12 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
-feature: Data Management
+feature: Gestión de datos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 34%
@@ -53,7 +52,7 @@ ht-degree: 34%
    * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}
       * [Información general](consent/iab-tcf/overview.md)
       * [Integración con Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-      * [Integración sin Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+      * [Integrar sin Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Extensión de SDK web para Adobe Experience Platform Launch {#extension}
    * [Extensión de SDK web](extension/web-sdk-extension.md)
    * [Tipos de acción](extension/action-types.md)
