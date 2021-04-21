@@ -1,45 +1,45 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consulta
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;consulta
 solution: Experience Platform
-title: Guía de API de servicio de consulta
-topic: query templates
-description: La API de servicio de Consulta permite a los desarrolladores realizar consultas de sus datos de Adobe Experience Platform mediante SQL estándar. Siga esta guía para aprender a realizar operaciones clave mediante la API.
+title: Guía de API del servicio de consulta
+topic-legacy: query templates
+description: La API del servicio de consulta permite a los desarrolladores consultar sus datos de Adobe Experience Platform mediante SQL estándar. Siga esta guía para aprender a realizar operaciones clave con la API.
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Query Service] Guía de API
 
-Esta guía para desarrolladores proporciona pasos para realizar diversas operaciones en la API de Adobe Experience Platform [!DNL Query Service].
+Esta guía para desarrolladores proporciona pasos para realizar varias operaciones en la API de Adobe Experience Platform [!DNL Query Service].
 
 ## Primeros pasos
 
-Esta guía requiere un conocimiento práctico de los diversos servicios de Adobe Experience Platform que se utilizan con [!DNL Query Service].
+Esta guía requiere comprender bien los distintos servicios de Adobe Experience Platform involucrados en el uso de [!DNL Query Service].
 
-- [[!DNL Query Service]](../home.md):: Proporciona la capacidad de consulta de conjuntos de datos y capturar las consultas resultantes como nuevos conjuntos de datos en  [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):: Marco normalizado por el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md)::  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+- [[!DNL Query Service]](../home.md): Proporciona la capacidad de consultar conjuntos de datos y capturar las consultas resultantes como nuevos conjuntos de datos en  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para utilizar con éxito [!DNL Query Service] mediante la API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para utilizar correctamente [!DNL Query Service] con la API.
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Esta guía proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en esta documentación para ver ejemplos de llamadas de API, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en esta documentación para ver ejemplos de llamadas a la API, consulte la sección sobre [cómo leer ejemplos de llamadas a la API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Experience Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Platform], como se muestra a continuación:
 
 - Autorización: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -47,9 +47,9 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 >
 >Para obtener más información sobre cómo trabajar con entornos limitados en [!DNL Experience Platform], consulte la [documentación general de entornos limitados](../../sandboxes/home.md).
 
-## Ejemplos de llamadas a API
+## Ejemplo de llamadas a API
 
-Ahora que comprende qué encabezados usar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Los siguientes documentos recorren las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada de ejemplo incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Los siguientes documentos recorren las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada de ejemplo incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 - [Consultas](queries.md)
 - [Parámetros de conexión](connection-parameters.md)
@@ -59,4 +59,4 @@ Ahora que comprende qué encabezados usar, está listo para empezar a realizar l
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a realizar llamadas mediante la API [!DNL Query Service], puede crear sus propias consultas no interactivas. Para obtener más información sobre cómo crear consultas, lea la [guía de referencia de SQL](../sql/overview.md).
+Ahora que ha aprendido a hacer llamadas utilizando la API [!DNL Query Service], puede crear sus propias consultas no interactivas. Para obtener más información sobre cómo crear consultas, lea la [Guía de referencia de SQL](../sql/overview.md).
