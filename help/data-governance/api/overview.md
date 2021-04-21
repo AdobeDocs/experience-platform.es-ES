@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Guía de API de servicio de directivas
-topic: developer guide
-description: La API de servicio de directivas permite a los desarrolladores administrar las etiquetas y políticas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave mediante la API.
+title: Guía de API del servicio de directivas
+topic-legacy: developer guide
+description: La API del servicio de directivas permite a los desarrolladores administrar las etiquetas y políticas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Policy Service] Guía de API
 
-Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en diversos niveles, incluso la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing.
 
-La API [!DNL Policy Service] proporciona varios extremos que le permiten administrar mediante programación las directivas y etiquetas de uso de datos, como así también evaluar las acciones de mercadotecnia en caso de infracciones de políticas. Estos extremos se describen a continuación. Visite las guías de punto final individuales para obtener más detalles y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados requeridos, leer llamadas de API de muestra y mucho más.
+La API [!DNL Policy Service] proporciona varios puntos finales que le permiten administrar mediante programación las etiquetas y políticas de uso de datos, así como evaluar las acciones de marketing en caso de infracciones de políticas. Estos extremos se describen a continuación. Visite las guías de puntos finales individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, leer llamadas de API de ejemplo y más.
 
-Para realizar la vista de todos los extremos y las operaciones de CRUD disponibles, visite el [[!DNL Policy Service] swagger de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Para ver todos los extremos disponibles y todas las operaciones de CRUD, visite el [[!DNL Policy Service] Intercambio de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
 ## Etiquetas
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. Las prácticas recomendadas alientan el etiquetado de datos tan pronto como se ingesta en [!DNL Experience Platform] o tan pronto como los datos estén disponibles para su uso en [!DNL Platform]. Puede crear, vista, editar y eliminar etiquetas mediante el extremo `/labels`. Para aprender a usar este extremo, visite la [guía de extremo de etiquetas](./labels.md).
+Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que elige administrar los datos. Las prácticas recomendadas recomiendan el etiquetado de datos tan pronto como se incorporan a [!DNL Experience Platform] o tan pronto como los datos estén disponibles para su uso en [!DNL Platform]. Puede crear, ver, editar y eliminar etiquetas utilizando el extremo `/labels` . Para aprender a utilizar este extremo, visite la [guía de extremo de etiquetas](./labels.md).
 
-## Acciones de mercadotecnia
+## Acciones de marketing
 
-Las acciones de mercadotecnia (también denominadas casos de uso de mercadotecnia), en el contexto del [!DNL Data Governance] marco de trabajo, son acciones que un [!DNL Experience Platform] consumidor de datos puede realizar, para las cuales su organización desea restringir el uso de datos. Para obtener información detallada sobre cómo trabajar con acciones de mercadotecnia, consulte la [guía del extremo de acciones de mercadotecnia](./marketing-actions.md).
+Las acciones de marketing (también denominadas casos de uso de marketing), en el contexto del marco [!DNL Data Governance], son acciones que puede realizar un [!DNL Experience Platform] consumidor de datos, para las que su organización desea restringir el uso de datos. Para obtener información detallada sobre cómo trabajar con acciones de marketing, consulte la [guía de extremo de acciones de marketing](./marketing-actions.md).
 
 ## Políticas
 
-Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de [!DNL Experience Platform]. Una directiva se define de la siguiente manera:
+Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe, realizar en datos dentro de [!DNL Experience Platform]. Una política se define de la siguiente manera:
 
-1. Una acción de mercadotecnia específica
-1. Las etiquetas de uso de datos con las que se restringe la acción
+1. Una acción de marketing específica
+1. Etiquetas de uso de datos con las que se restringe la acción
 
-Para obtener información sobre cómo administrar las políticas en la API, consulte la [guía de extremo de directivas](./policies.md)
+Para obtener información sobre cómo administrar directivas en la API, consulte la [guía de extremo de directivas](./policies.md)
 
 ## Evaluación
 
-Una vez que las etiquetas de uso de datos se han aplicado a [!DNL Platform] datasets y se han definido políticas de uso de datos para las acciones de mercadotecnia en relación con dichas etiquetas, las capacidades de administración de datos le permiten aplicar esas políticas y evitar operaciones de datos que constituyan violaciones de políticas.
+Una vez que las etiquetas de uso de datos se han aplicado a los conjuntos de datos [!DNL Platform] y se han definido políticas de uso de datos para acciones de marketing frente a esas etiquetas, las funcionalidades de control de datos permiten aplicar esas políticas y evitar operaciones de datos que constituyan infracciones de políticas.
 
-La API [!DNL Policy Service] proporciona extremos que le permiten probar acciones de mercadotecnia con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para verificar si se producen violaciones de políticas. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos. Consulte la [guía de extremos de evaluación](./evaluation.md) para obtener más información.
+La API [!DNL Policy Service] proporciona extremos que le permiten probar acciones de marketing con conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se produce alguna infracción de directiva. En función de la respuesta de API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente la política de uso de datos. Consulte la [guía de extremos de evaluación](./evaluation.md) para obtener más información.
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas mediante la API [!DNL Policy Service], lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos. Para trabajar con etiquetas y políticas mediante la [!DNL Experience Platform] interfaz de usuario, consulte la [guía del usuario de etiquetas](../labels/user-guide.md) y la [guía del usuario de directivas](../policies/user-guide.md), respectivamente.
+Para empezar a realizar llamadas con la API [!DNL Policy Service], lea la [guía de introducción](./getting-started.md) y, a continuación, seleccione una de las guías de punto final para aprender a utilizar puntos finales específicos. Para trabajar con etiquetas y políticas usando la interfaz de usuario [!DNL Experience Platform], consulte la [guía del usuario de etiquetas](../labels/user-guide.md) y la [guía del usuario de directivas](../policies/user-guide.md), respectivamente.
