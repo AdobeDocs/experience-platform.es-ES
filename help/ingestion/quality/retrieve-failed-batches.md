@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingesta por lotes;ingesta por lotes;lotes fallidos;obtener lotes fallidos;obtener lotes fallidos;Descargar lotes fallidos;descargar lotes fallidos;
+keywords: Experience Platform;inicio;temas populares;recuperar lotes fallidos;lotes fallidos;ingesta por lotes;ingesta por lotes;lotes fallidos;obtener lotes fallidos;obtener lotes fallidos;descargar lotes fallidos;descargar lotes fallidos;
 solution: Experience Platform
 title: Recuperación de lotes en los que se han producido errores al usar la API de acceso a datos
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar información sobre un lote con errores mediante las API de ingesta de datos.
+exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '653'
 ht-degree: 2%
 
 ---
-
 
 # Recuperación de lotes con errores mediante la API de acceso a datos
 
