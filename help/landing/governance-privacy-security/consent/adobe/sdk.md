@@ -1,15 +1,15 @@
 ---
 title: Procesamiento de datos de consentimiento del cliente mediante el SDK web de Adobe Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
+exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 translation-type: tm+mt
-source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
-
 
 # Integración del SDK web de Platform para procesar los datos de consentimiento del cliente mediante el estándar Adobe 2.0
 
