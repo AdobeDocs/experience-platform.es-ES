@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;jupyterlab
 solution: Experience Platform
 title: Información general sobre la interfaz de usuario de JupyterLab
-topic: Overview
+topic-legacy: Overview
 description: JupyterLab es una interfaz de usuario basada en web para Project Jupyter y está estrechamente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus características, así como instrucciones para realizar acciones comunes.
+exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1813'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL JupyterLab] Información general sobre la IU
 
@@ -72,7 +72,7 @@ En [Adobe Experience Platform](https://platform.adobe.com), seleccione **[!UICON
 
 La interfaz [!DNL JupyterLab] consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene pestañas de documentos y actividades.
 
-**Barra de menús**
+**Barra de menú**
 
 La barra de menús de la parte superior de la interfaz tiene menús de nivel superior que exponen las acciones disponibles en [!DNL JupyterLab] con sus métodos abreviados de teclado:
 
@@ -118,7 +118,7 @@ En [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior der
 
 ### Finalizar y reiniciar [!DNL JupyterLab]
 
-En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Apagar]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
+En [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Shut Down]** en la ventana emergente que aparece para finalizar la sesión. Las sesiones de bloc de notas finalizan automáticamente después de 12 horas sin actividad.
 
 Para reiniciar [!DNL JupyterLab], seleccione el **icono de reinicio** ![icono de reinicio](../images/jupyterlab/user-guide/restart_button.png) situado directamente a la izquierda del icono de energía y, a continuación, seleccione **[!UICONTROL Restart]** en la ventana emergente que aparece.
 
