@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;control de datos;api de etiquetas de uso de datos;api de servicio de políticas
 solution: Experience Platform
 title: 'Administrar etiquetas de uso de datos mediante API '
-topic: developer guide
+topic-legacy: developer guide
 description: La API del servicio de conjunto de datos le permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funcionalidades del catálogo de datos de Adobe Experience Platform, pero está separado de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 translation-type: tm+mt
-source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1145'
 ht-degree: 2%
 
 ---
