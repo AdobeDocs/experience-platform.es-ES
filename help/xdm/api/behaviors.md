@@ -1,42 +1,42 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de Esquemas;comportamiento;comportamiento;comportamientos;comportamientos;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquema;registro de esquemas;comportamiento;comportamiento;comportamientos;comportamientos;
 solution: Experience Platform
 title: Punto final de la API Behaviors
-description: El extremo /Behaviors de la API del Registro de Esquema permite recuperar todos los comportamientos disponibles en el contenedor global.
-topic: developer guide
+description: El extremo /comportamientos de la API del Registro de esquemas permite recuperar todos los comportamientos disponibles en el contenedor global.
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
 
+# Punto final de comportamiento
 
-# Extremo de comportamientos
+En Experience Data Model (XDM), los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Para casi todos los casos de uso en Platform, hay dos comportamientos disponibles:
 
-En el Modelo de datos de experiencia (XDM), los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que empleen esa clase. Para casi todos los casos de uso en la plataforma, hay dos comportamientos disponibles:
-
-* **[!UICONTROL Registro]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
-* **[!UICONTROL Serie]** temporal: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirecta.
+* **[!UICONTROL Record]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
+* **[!UICONTROL Time-series]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
 
 >[!NOTE]
 >
->Hay algunos casos de uso en Plataforma que requieren el uso de esquema que no emplea ninguno de los comportamientos anteriores. En estos casos, hay disponible un tercer comportamiento &quot;ad-hoc&quot;. Consulte el tutorial sobre [creación de un esquema ad-hoc](../tutorials/ad-hoc.md) para obtener más información.
+>Existen algunos casos de uso en Platform que requieren el uso de un esquema que no emplea ninguno de los comportamientos anteriores. Para estos casos, hay disponible un tercer comportamiento &quot;ad hoc&quot;. Consulte el tutorial sobre [creación de un esquema ad-hoc](../tutorials/ad-hoc.md) para obtener más información.
 >
 >Para obtener información más general sobre los comportamientos de los datos en cuanto a cómo afectan a la composición del esquema, consulte la guía sobre los [conceptos básicos de la composición del esquema](../schema/composition.md).
 
-El extremo `/behaviors` de la API [!DNL Schema Registry] le permite vista de los comportamientos disponibles en el contenedor `global`.
+El extremo `/behaviors` de la API [!DNL Schema Registry] le permite ver los comportamientos disponibles en el contenedor `global`.
 
 ## Primeros pasos
 
-El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de la API de muestra en este documento e información importante sobre los encabezados necesarios para realizar llamadas exitosas a cualquier API de Experience Platform.
+El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 ## Recuperar una lista de comportamientos {#list}
 
-Puede recuperar una lista de todos los comportamientos disponibles haciendo una solicitud de GET al extremo `/behaviors`.
+Puede recuperar una lista de todos los comportamientos disponibles realizando una solicitud de GET al extremo `/behaviors` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /global/behaviors
@@ -91,9 +91,9 @@ curl -X GET \
 
 ## Buscar un comportamiento {#lookup}
 
-Puede buscar un comportamiento específico proporcionando su ID en la ruta de una solicitud de GET al extremo `/behaviors`.
+Puede buscar un comportamiento específico proporcionando su ID en la ruta de una solicitud de GET al extremo `/behaviors` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /global/behaviors/{BEHAVIOR_ID}
@@ -101,11 +101,11 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{BEHAVIOR_ID}` | El `meta:altId` o `$id` con codificación URL del comportamiento que desea buscar. |
+| `{BEHAVIOR_ID}` | El `meta:altId` o el `$id` con codificación de URL del comportamiento que desea buscar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera los detalles del comportamiento del registro al proporcionar su `meta:altId` en la ruta de la solicitud.
+La siguiente solicitud recupera los detalles del comportamiento del registro al proporcionar su `meta:altId` en la ruta de solicitud.
 
 ```shell
 curl -X GET \
@@ -172,4 +172,4 @@ Una respuesta correcta devuelve los detalles del comportamiento, incluida su ver
 
 ## Pasos siguientes
 
-Esta guía abarcó el uso del extremo `/behaviors` en la API [!DNL Schema Registry]. Para obtener información sobre cómo asignar un comportamiento a una clase mediante la API, consulte la [guía de extremo de clases](./classes.md).
+Esta guía abarcó el uso del extremo `/behaviors` en la API [!DNL Schema Registry]. Para aprender a asignar un comportamiento a una clase mediante la API, consulte la [guía de extremo de clases](./classes.md).
