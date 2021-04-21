@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
-title: Cómo configurar un campo de atributo calculado
-topic: guide
+title: Configuración de un campo de atributo calculado
+topic-legacy: guide
 type: Documentation
-description: Los atributos calculados son funciones que se utilizan para acumulados datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con la API del Registro de Esquemas para definir un esquema y una combinación personalizada que contendrá el campo de atributo calculado.
+description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando la API del Registro de Esquemas para definir un esquema y una mezcla personalizada que alojará el campo de atributo calculado.
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 2a4fb8af8cd29254c499bfa6bfb8b316a4834526
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
 
-
-# (Alfa) Configure un campo de atributo calculado mediante la API del Registro de Esquemas
+# (Alpha) Configuración de un campo de atributo calculado mediante la API del Registro de esquemas
 
 >[!IMPORTANT]
 >
->La funcionalidad de atributo calculada está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad de atributo computado está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear con la API del Registro de Esquemas para definir un esquema y una combinación personalizada que contendrá el campo de atributo calculado. Se recomienda crear un esquema y una combinación de &quot;Atributos calculados&quot; independientes en los que su organización pueda agregar cualquier atributo para utilizarlo como atributos calculados. Esto permite a su organización separar de forma limpia el esquema de atributos computado de otros esquemas que se utilizan para la ingestión de datos.
+Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando la API del Registro de Esquemas para definir un esquema y una mezcla personalizada que alojará el campo de atributo calculado. Se recomienda crear un esquema de &quot;Atributos calculados&quot; independiente y una combinación en la que su organización pueda añadir atributos que se vayan a utilizar como atributos calculados. Esto permite que la organización separe limpiamente el esquema de atributos calculados de otros esquemas que se están utilizando para la ingesta de datos.
 
-El flujo de trabajo de este documento describe cómo utilizar la API del Registro de Esquema para crear un esquema de &quot;Atributo calculado&quot; habilitado para Perfiles que haga referencia a una combinación personalizada. Este documento contiene un código de muestra específico a los atributos calculados, pero consulte la [guía de API del Registro de Esquemas](../../xdm/api/overview.md) para obtener información detallada sobre la definición de mezclas y esquemas mediante la API.
+El flujo de trabajo de este documento describe cómo utilizar la API del Registro de esquemas para crear un esquema de &quot;Atributo calculado&quot; habilitado para el perfil que haga referencia a una mezcla personalizada. Este documento contiene código de muestra específico para los atributos calculados. Sin embargo, consulte la [guía de API del Registro de Esquemas](../../xdm/api/overview.md) para obtener información detallada sobre la definición de mezclas y esquemas mediante la API.
 
-## Crear una combinación de atributos calculados
+## Crear una mezcla de atributos calculados
 
-Para crear una mezcla con la API del Registro de Esquema, comience por realizar una solicitud de POST al extremo `/tenant/mixins` y proporcionar los detalles de la mezcla en el cuerpo de la solicitud. Para obtener más información sobre el trabajo con mezclas mediante la API del Registro de Esquemas, consulte la [guía de punto final de la API de mezclas](../../xdm/api/mixins.md).
+Para crear una mezcla utilizando la API del Registro del Esquema, comience por realizar una solicitud del POST al extremo `/tenant/mixins` y proporcionar los detalles de la mezcla en el cuerpo de la solicitud. Para obtener más información sobre cómo trabajar con mezclas utilizando la API del Registro de Esquemas, consulte la [guía de extremo de la API de mezclas](../../xdm/api/mixins.md).
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /tenant/mixins
@@ -80,12 +80,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 |---|---|
-| `title` | Nombre de la mezcla que está creando. |
+| `title` | El nombre de la mezcla que está creando. |
 | `meta:intendedToExtend` | Clase XDM con la que se puede utilizar la mezcla. |
 
 **Respuesta**
 
-Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles de la mezcla recién creada, incluidos los `$id`, `meta:altIt` y `version`. Estos valores son de sólo lectura y son asignados por el Registro de Esquemas.
+Una solicitud correcta devuelve el Estado de respuesta HTTP 201 (Creado) con un cuerpo de respuesta que contiene los detalles de la mezcla recién creada, incluidos `$id`, `meta:altIt` y `version`. Estos valores son de solo lectura y son asignados por el Registro de esquemas.
 
 ```json
 {
@@ -147,9 +147,9 @@ Una solicitud correcta devuelve el estado de respuesta HTTP 201 (Creado) con un 
 
 ## Actualizar mezcla con atributos calculados adicionales
 
-A medida que se necesitan atributos más calculados, puede actualizar la combinación de atributos calculados con atributos adicionales haciendo una solicitud de PUT al extremo `/tenant/mixins`. Esta solicitud requiere que incluya el ID exclusivo de la mezcla que ha creado en la ruta y todos los campos nuevos que desea agregar al cuerpo.
+A medida que se necesiten atributos más calculados, puede actualizar los atributos calculados mezclados con atributos adicionales realizando una solicitud de PUT al extremo `/tenant/mixins` . Esta solicitud requiere que incluya el ID exclusivo de la mezcla que ha creado en la ruta y todos los campos nuevos que desea añadir en el cuerpo.
 
-Para obtener más información acerca de la actualización de una mezcla con la API del Registro de Esquemas, consulte la [guía de punto final de la API de mezclas](../../xdm/api/mixins.md).
+Para obtener más información sobre la actualización de una mezcla mediante la API del Registro de Esquemas, consulte la [guía de extremo de la API de mezclas](../../xdm/api/mixins.md).
 
 **Formato de API**
 
@@ -163,7 +163,7 @@ Esta solicitud agrega nuevos campos relacionados con la información `purchaseSu
 
 >[!NOTE]
 >
->Al actualizar una mezcla a través de una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva mezcla en una solicitud de POST.
+>Al actualizar una mezcla a través de una solicitud del PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva mezcla en una solicitud del POST.
 
 ```shell
 curl -X PUT \
@@ -310,11 +310,11 @@ Una respuesta correcta devuelve los detalles de la mezcla actualizada.
 }
 ```
 
-## Creación de un esquema con Perfil habilitado
+## Crear un esquema habilitado para perfil
 
-Para crear un esquema con la API del Registro de Esquema, comience por realizar una solicitud de POST al extremo `/tenant/schemas` y proporcionar los detalles del esquema en el cuerpo de la solicitud. El esquema también debe habilitarse para [!DNL Profile] y aparecer como parte del esquema de unión para la clase esquema.
+Para crear un esquema con la API del Registro de esquemas, comience por realizar una solicitud de POST al extremo `/tenant/schemas` y proporcionar los detalles del esquema en el cuerpo de la solicitud. El esquema también debe estar habilitado para [!DNL Profile] y aparecer como parte del esquema de unión para la clase schema .
 
-Para obtener más información sobre los esquemas de unión y esquemas habilitados para [!DNL Profile], consulte la [[!DNL Schema Registry] guía de API](../../xdm/api/overview.md) y la [documentación básica de la composición de esquema](../../xdm/schema/composition.md).
+Para obtener más información sobre los esquemas y esquemas de unión [!DNL Profile] habilitados, consulte la [[!DNL Schema Registry] guía de API](../../xdm/api/overview.md) y la [documentación básica de la composición de esquema](../../xdm/schema/composition.md).
 
 **Formato de API**
 
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo esquema que hace referencia al `computedAttributesMixin` creado anteriormente en este documento (con su identificador único) y está habilitado para el esquema de unión de Perfil (con la matriz `meta:immutableTags`). Para obtener instrucciones detalladas sobre cómo crear un esquema mediante la API del Registro de Esquemas, consulte la [guía de extremo de la API de esquemas](../../xdm/api/schemas.md).
+La siguiente solicitud crea un nuevo esquema que hace referencia al `computedAttributesMixin` creado anteriormente en este documento (con su ID único) y está habilitado para el esquema de unión Perfil (con la matriz `meta:immutableTags`). Para obtener instrucciones detalladas sobre cómo crear un esquema con la API del Registro de esquemas, consulte la [guía de extremo de la API de esquemas](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -367,7 +367,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos los valores `$id`, `meta:altId` y `version`. Estos valores son de sólo lectura y son asignados por el Registro de Esquemas.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos `$id`, `meta:altId` y `version`. Estos valores son de solo lectura y son asignados por el Registro de esquemas.
 
 ```json
 {
@@ -435,4 +435,4 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 
 ## Pasos siguientes
 
-Ahora que ha creado un esquema y una mezcla en los que se almacenarán los atributos calculados, puede crear el atributo calculado mediante el extremo de API `/computedattributes`. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de la API de atributos calculados](ca-api.md).
+Ahora que ha creado un esquema y una mezcla en los que se almacenarán los atributos calculados, puede crear el atributo calculado utilizando el extremo de API `/computedattributes`. Para ver los pasos detallados para crear un atributo calculado en la API, siga los pasos que se proporcionan en la [guía de extremo de la API de atributos calculados](ca-api.md).
