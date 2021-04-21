@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;introducción;contenido ai;comercio ai;contenido y comercio ai;extracción de palabras clave;extracción de palabras clave
+keywords: Experience Platform;introducción;ai de contenido;ai de comercio;ai de contenido y comercio;extracción de palabras clave;extracción de palabras clave
 solution: Experience Platform, Intelligent Services
-title: Extracción de palabras clave en la Content and Commerce AI API
-topic: Developer guide
-description: El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
+title: Extracción de palabras clave en la API de AI de contenido y comercio
+topic-legacy: Developer guide
+description: El servicio de extracción de palabras clave, cuando se le da un documento de texto, extrae automáticamente palabras clave o jerarquías que describan mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de reconocimiento de entidades con nombre (NER) y de extracción de palabras clave sin supervisión.
+exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%
 
 ---
-
 
 # Extracción de palabras clave
 
@@ -19,29 +19,29 @@ ht-degree: 3%
 >
 >[!DNL Content and Commerce AI] está en versión beta. La documentación está sujeta a cambios.
 
-El servicio de extracción de palabras clave, cuando se le proporciona un documento de texto, extrae automáticamente palabras clave o frases clave que describan mejor el tema del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de extracción de palabras clave con nombre (NER) y sin supervisión.
+El servicio de extracción de palabras clave, cuando se le da un documento de texto, extrae automáticamente palabras clave o jerarquías que describan mejor el asunto del documento. Para extraer palabras clave, se utiliza una combinación de algoritmos de reconocimiento de entidades con nombre (NER) y de extracción de palabras clave sin supervisión.
 
 Las entidades con nombre reconocidas por [!DNL Content and Commerce AI] se enumeran en la siguiente tabla:
 
-| Nombre de entidad | Descripción |
+| Nombre de la entidad | Descripción |
 | --- | --- |
 | PERSONA | Personas, incluyendo ficción. |
 | NORP | Nacionalidades o grupos religiosos o políticos. |
 | GPE | Países, ciudades y estados. |
-| LOC | Lugares sin GPE, cordilleras, masas de agua. |
+| LOC | Lugares no GPE, cordilleras, masas de agua. |
 | FAC | Edificios, aeropuertos, autopistas, puentes, etc. |
-| ORG | Compañías, agencias, instituciones, etc. |
+| ORG | Empresas, agencias, instituciones, etc. |
 | PRODUCTO | Objetos, vehículos, alimentos, etc. (No servicios). |
-| EVENTO | Huracanes, batallas, guerras, eventos deportivos, etc. con nombre. |
+| EVENT | Nombrados huracanes, batallas, guerras, eventos deportivos, etc. |
 | WORK_OF_ART | Títulos de libros, canciones, etc. |
-| LEY | Los documentos designados se convierten en leyes. |
+| LEY | Documentos con nombre convertidos en leyes. |
 | IDIOMA | Cualquier idioma con nombre. |
 
 >[!NOTE]
 >
->Si planea procesar archivos PDF, vaya a las instrucciones de [extracción de palabra clave PDF](#pdf-extraction) dentro de este documento. Además, la compatibilidad con tipos de archivo adicionales como docx, ppt, amd xml se establece para su lanzamiento en una fecha posterior.
+>Si planea procesar archivos PDF, vaya a las instrucciones de [extracción de palabras clave PDF](#pdf-extraction) en este documento. Además, la compatibilidad con tipos de archivo adicionales como docx, ppt, amd xml se configuran para su lanzamiento en una fecha posterior.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /services/v1/predict
@@ -74,11 +74,11 @@ JSON simplificado del archivo de entrada:
 }
 ```
 
-Consulte la tabla debajo de la carga útil de ejemplo para obtener más información sobre los parámetros de entrada mostrados.
+Consulte la tabla siguiente a la carga útil de ejemplo para obtener más información sobre los parámetros de entrada que se muestran.
 
 >[!CAUTION]
 >
->`analyzer_id` determina qué  [!DNL Sensei Content Framework] se utiliza. Verifique que dispone del `analyzer_id` apropiado antes de realizar su solicitud. Para el servicio de extracción de palabras clave, la ID `analyzer_id` es:
+>`analyzer_id` determina qué  [!DNL Sensei Content Framework] se utiliza. Compruebe que dispone del `analyzer_id` adecuado antes de realizar su solicitud. Para el servicio de extracción de palabras clave, el ID `analyzer_id` es:
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -114,17 +114,17 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `analyzer_id` | El identificador de servicio [!DNL Sensei] en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de Content and Commerce AI para configurar un ID personalizado. | Sí |
-| `application-id` | ID de la aplicación creada. | Sí |
-| `data` | Matriz que contiene un objeto JSON con cada objeto de la matriz que representa un documento. Cualquier parámetro que se pase como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Cualquiera de las propiedades restantes que se describen a continuación en esta tabla se puede sobrescribir desde `data`. | Sí |
+| `analyzer_id` | El ID de servicio [!DNL Sensei] en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de AI de contenido y comercio para configurar un ID personalizado. | Sí |
+| `application-id` | El ID de la aplicación creada. | Sí |
+| `data` | Matriz que contiene un objeto JSON y cada objeto de la matriz representa un documento. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Las propiedades restantes que se describen a continuación en esta tabla se pueden sobrescribir desde `data`. | Sí |
 | `language` | Idioma del texto de entrada. El valor predeterminado es `en`. | No |
-| `content-type` | Se utiliza para indicar si la entrada es parte del cuerpo de la solicitud o una dirección URL firmada para un bucket S3. El valor predeterminado de esta propiedad es `inline`. | Sí |
-| `encoding` | Formato de codificación del texto de entrada. Puede ser `utf-8` o `utf-16`. El valor predeterminado de esta propiedad es `utf-8`. | No |
-| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Use el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
-| `top-N` | Número de resultados que se van a devolver (no puede ser un entero negativo). Use el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de los límites establecidos. El valor predeterminado de esta propiedad es `0`. | No |
-| `custom` | Parámetros personalizados que se van a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
-| `content-id` | ID única para el elemento de datos que se devuelve en la respuesta. Si no se pasa, se asigna un ID generado automáticamente. | No |
-| `content` | Contenido utilizado por el servicio de extracción de palabras clave. El contenido puede ser texto sin procesar (tipo de contenido &quot;en línea&quot;). <br> Si el contenido es un archivo en S3 (tipo de contenido &#39;s3-bucket&#39;), pase la dirección URL firmada. Cuando el contenido es parte de request-body, la lista de los elementos de datos debe tener un solo objeto. Si se pasa más de un objeto, solo se procesa el primer objeto. | Sí |
+| `content-type` | Se utiliza para indicar si la entrada forma parte del cuerpo de la solicitud o si es una url firmada para un compartimento S3. El valor predeterminado de esta propiedad es `inline`. | Sí |
+| `encoding` | El formato de codificación del texto de entrada. Puede ser `utf-8` o `utf-16`. El valor predeterminado de esta propiedad es `utf-8`. | No |
+| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
+| `top-N` | Número de resultados que se van a devolver (no puede ser un número entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de ambos conjuntos de límites. El valor predeterminado de esta propiedad es `0`. | No |
+| `custom` | Cualquier parámetro personalizado que se vaya a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
+| `content-id` | ID exclusivo del elemento de datos que se devuelve en la respuesta. Si no se pasa esto, se asigna un ID generado automáticamente. | No |
+| `content` | Contenido utilizado por el servicio de extracción de palabras clave. El contenido puede ser texto sin procesar (tipo de contenido &quot;en línea&quot;). <br> Si el contenido es un archivo en S3 (tipo de contenido s3-bucket), pase la dirección url firmada. Cuando el contenido forma parte del cuerpo de la solicitud, la lista de elementos de datos solo debe tener un objeto. Si se pasa más de un objeto, solo se procesa el primer objeto. | Sí |
 
 **Respuesta**
 
@@ -228,11 +228,11 @@ Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extra
 }
 ```
 
-## EXTRACCIÓN de palabra clave PDF {#pdf-extraction}
+## Extracción de palabras clave PDF {#pdf-extraction}
 
-El servicio de extracción de palabras clave admite archivos PDF; sin embargo, debe utilizar un nuevo AnalyzerID para archivos PDF y cambiar el tipo de documento a PDF. Consulte el ejemplo siguiente para obtener más información.
+El servicio de extracción de palabras clave admite archivos PDF; sin embargo, es necesario utilizar un nuevo AnalyzerID para archivos PDF y cambiar el tipo de documento a PDF. Consulte el ejemplo siguiente para obtener más información.
 
-**Formato API**
+**Formato de API**
 
 ```http
 POST /services/v1/predict
@@ -244,7 +244,7 @@ La siguiente solicitud extrae palabras clave de un documento PDF en función de 
 
 >[!CAUTION]
 >
->`analyzer_id` determina qué  [!DNL Sensei Content Framework] se utiliza. Verifique que dispone del `analyzer_id` apropiado antes de realizar su solicitud. Para la extracción de palabras clave PDF, el ID `analyzer_id` es:
+>`analyzer_id` determina qué  [!DNL Sensei Content Framework] se utiliza. Compruebe que dispone del `analyzer_id` adecuado antes de realizar su solicitud. Para la extracción de palabras clave de PDF, el ID `analyzer_id` es:
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -276,16 +276,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `analyzer_id` | El identificador de servicio [!DNL Sensei] en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de Content and Commerce AI para configurar un ID personalizado. | Sí |
-| `application-id` | ID de la aplicación creada. | Sí |
-| `data` | Matriz que contiene un objeto JSON con cada objeto de la matriz que representa un documento. Cualquier parámetro que se pase como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Cualquiera de las propiedades restantes que se describen a continuación en esta tabla se puede sobrescribir desde `data`. | Sí |
+| `analyzer_id` | El ID de servicio [!DNL Sensei] en el que se implementa su solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utiliza. Para obtener servicios personalizados, póngase en contacto con el equipo de AI de contenido y comercio para configurar un ID personalizado. | Sí |
+| `application-id` | El ID de la aplicación creada. | Sí |
+| `data` | Matriz que contiene un objeto JSON y cada objeto de la matriz representa un documento. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Las propiedades restantes que se describen a continuación en esta tabla se pueden sobrescribir desde `data`. | Sí |
 | `language` | Idioma de entrada. El valor predeterminado es `en` (inglés). | No |
-| `content-type` | Se utiliza para indicar el tipo de contenido de entrada. Debe establecerse en `file`. | Sí |
-| `encoding` | Formato de codificación de la entrada. Debe establecerse en `pdf`. Más tipos de codificación se configuran para que se admitan en una fecha posterior. | Sí |
-| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Use el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
-| `top-N` | Número de resultados que se van a devolver (no puede ser un entero negativo). Use el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de los límites establecidos. El valor predeterminado de esta propiedad es `0`. | No |
-| `custom` | Parámetros personalizados que se van a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
-| `content-id` | ID única para el elemento de datos que se devuelve en la respuesta. Si no se pasa, se asigna un ID generado automáticamente. | No |
+| `content-type` | Se utiliza para indicar el tipo de contenido de las entradas. Debe establecerse en `file`. | Sí |
+| `encoding` | El formato de codificación de la entrada. Debe establecerse en `pdf`. Más tipos de codificación se configuran para que se admitan en una fecha posterior. | Sí |
+| `threshold` | El umbral de puntuación (0 a 1) por encima del cual deben devolverse los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
+| `top-N` | Número de resultados que se van a devolver (no puede ser un número entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se utiliza junto con `threshold`, el número de resultados devueltos es el menor de ambos conjuntos de límites. El valor predeterminado de esta propiedad es `0`. | No |
+| `custom` | Cualquier parámetro personalizado que se vaya a pasar. Esta propiedad requiere un objeto JSON válido para funcionar. Consulte el [apéndice](#appendix) para obtener más información sobre los parámetros personalizados. | No |
+| `content-id` | ID exclusivo del elemento de datos que se devuelve en la respuesta. Si no se pasa esto, se asigna un ID generado automáticamente. | No |
 | `content` | Debe establecerse en `file`. | Sí |
 
 **Respuesta**
@@ -359,13 +359,13 @@ Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extra
 }
 ```
 
-Para obtener más información y ver un ejemplo sobre el uso de la extracción PDF con instrucciones sobre cómo configurar, implementar e integrar con el servicio de nube de AEM. Visite el [repositorio de github de trabajo de extracción PDF CCAI](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
+Para obtener más información y un ejemplo sobre el uso de la extracción de PDF que contenga instrucciones sobre cómo configurar, implementar e integrar con el servicio de nube de AEM. Visite el [repositorio github del trabajador de extracción de PDF CCAI](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Apéndice {#appendix}
 
-La siguiente tabla contiene los parámetros disponibles que se pueden utilizar desde `custom`.
+La siguiente tabla contiene los parámetros disponibles que pueden utilizarse desde `custom`.
 
 | Nombre | Descripción | Obligatorio |
 | --- | --- | --- |
-| `min-n` | El número mínimo de palabras requeridas en las palabras clave. | No |
-| `entity-types` | Tipos de entidades a devolver. Consulte la tabla de reconocimiento de entidad con nombre al principio de este documento. | No |
+| `min-n` | El número mínimo de palabras necesarias en las palabras clave. | No |
+| `entity-types` | Tipos de entidades a devolver. Consulte la tabla de reconocimiento de entidades con nombre al principio de este documento. | No |
