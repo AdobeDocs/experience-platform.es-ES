@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;relación;campo;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;relación;campo
 solution: Experience Platform
 title: Definir campos de relación en la interfaz de usuario
 description: Obtenga información sobre cómo definir un campo de relación en la interfaz de usuario del Experience Platform.
-topic: user guide
+topic-legacy: user guide
+exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Definir campos de relación en la interfaz de usuario
 
-# Definición de campos de relación en la interfaz de usuario
+En Experience Data Model (XDM), un [esquema de unión](../../schema/composition.md#union) es una vista unificada de todos los esquemas pertenecientes a la misma clase que también se han habilitado para [Perfil del cliente en tiempo real](../../../profile/home.md). Profile aprovecha el esquema de unión para construir una representación completa de un cliente a partir de datos de experiencia dispares.
 
-En el Modelo de datos de experiencia (XDM), un [esquema de unión](../../schema/composition.md#union) es una vista unificada de todos los esquemas pertenecientes a la misma clase que también se han habilitado para [Perfil del cliente en tiempo real](../../../profile/home.md). El Perfil aprovecha el esquema de unión para construir una representación completa de un cliente a partir de datos de experiencia dispares.
+En algunos casos, es posible que esté incorporando datos que no necesariamente formen parte de un perfil, pero que no estén relacionados con él. Un ejemplo de este tipo de datos sería un campo &quot;hotel favorito&quot; para un cliente. Dado que los atributos del hotel favorito de una persona no son atributos de la propia persona, un hotel se representa mejor mediante un esquema separado basado en una clase personalizada en lugar de [!DNL XDM Individual Profile].
 
-En algunos casos, puede estar ingiriendo datos que no necesariamente forman parte de un perfil, pero que, sin embargo, están relacionados con el perfil. Un ejemplo de este tipo de datos sería un campo de &quot;hotel favorito&quot; para un cliente. Dado que los atributos del hotel favorito de una persona no son atributos de la misma persona, un hotel se representa mejor con un esquema separado basado en una clase personalizada en lugar de [!DNL XDM Individual Profile].
+Dado que los esquemas de unión solo se basan en esquemas que comparten la misma clase, simplemente habilitar el esquema &quot;Hoteles&quot; para su uso en Perfil no incluirá su esquema de unión de campos para [!DNL XDM Individual Profile]. En su lugar, debe definir una relación entre &quot;Hoteles&quot; y otro esquema perteneciente a la unión. Esto implica definir un **campo de relación** en un esquema de origen que haga referencia a la identidad principal de un esquema de destino.
 
-Dado que los esquemas de unión se basan solamente en esquemas que comparten la misma clase, simplemente habilitar el esquema &quot;Hoteles&quot; para su uso en Perfil no incluirá su esquema de unión de campos para [!DNL XDM Individual Profile]. En su lugar, debe definir una relación entre &quot;Hoteles&quot; y otro esquema que pertenece a la unión. Esto implica definir un **campo de relación** en un esquema de origen que haga referencia a la identidad principal de un esquema de destino.
-
-Para ver los pasos detallados sobre la definición de una relación entre dos esquemas en la interfaz de usuario de Adobe Experience Platform, consulte el [tutorial de interfaz de usuario de relación](../../tutorials/relationship-ui.md).
+Para ver los pasos detallados sobre la definición de una relación entre dos esquemas en la interfaz de usuario de Adobe Experience Platform, consulte el [tutorial de la interfaz de usuario de relación](../../tutorials/relationship-ui.md).
