@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
+keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;organización de campañas;organización;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
 title: Descripción general de Adobe Experience Platform
-topic: getting started
-description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar considerablemente el diseño y el envío de experiencias enriquecidas y personalizadas.
+topic-legacy: getting started
+description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+exl-id: edcce353-338a-440e-99eb-a64e2abca579
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 8%
 
 ---
 
-
 # Información general de Adobe Experience Platform
 
 >[!NOTE]
 >
->La documentación de Adobe Experience Platform se ha trasladado recientemente. Tómese un momento para revisar la nueva navegación y actualizar los marcadores existentes.
+>La documentación de Adobe Experience Platform se ha movido recientemente. Tómese un momento para revisar la nueva navegación y actualizar cualquier marcador existente.
 
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. [!DNL Experience Platform] les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. [!DNL Experience Platform] les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 
-Basado en las API de RESTful, [!DNL Experience Platform] expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de las soluciones empresariales mediante herramientas conocidas. [!DNL Experience Platform] también ayuda a los asociados a crear e integrar sus propios productos y tecnologías según sea necesario. Este poder y flexibilidad hace que [!DNL Experience Platform] sea único en el mercado. Ofrece a los socios, clientes y una comunidad de desarrolladores una base sobre la cual construir innovaciones que impulsen el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, extraída de una vista de 360 grados del cliente y sus preferencias individuales.
+Basado en las API de RESTful, [!DNL Experience Platform] expone toda la funcionalidad del sistema a los desarrolladores, lo que permite la fácil integración de las soluciones empresariales mediante herramientas familiares. [!DNL Experience Platform] también apoya a los asociados para que creen e integren sus propios productos y tecnologías según sea necesario. Esta potencia y flexibilidad hacen que [!DNL Experience Platform] sea único en el mercado. Proporciona a los socios, clientes y una comunidad de desarrolladores una base sobre la que crear innovaciones que impulsan el negocio de la experiencia: superar las expectativas de los clientes al ofrecer una experiencia continuamente mejorada y totalmente personalizada, basada en una vista de 360 grados del cliente y sus preferencias individuales.
 
 ## [!DNL Experience Platform] documentación
 
-[!DNL Experience Platform] la documentación se proporciona en múltiples formatos para una variedad de funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, visite [Información general sobre la documentación de la plataforma](documentation/overview.md).
+[!DNL Experience Platform] la documentación se proporciona en varios formatos para diversas funciones y servicios. Para obtener más información sobre los tipos de documentación disponibles, visite [Información general de la documentación de Platform](documentation/overview.md).
 
-Para empezar a aprender más sobre un servicio [!DNL Platform] específico, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html) y seleccione la guía adecuada.
+Para empezar a obtener más información sobre un servicio [!DNL Platform] específico, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html) y seleccione la guía adecuada.
 
 ### Documentación para servicios de aplicaciones creada en [!DNL Experience Platform]
 
-Adobe ha creado varios servicios de aplicaciones sobre el Experience Platform. Puede encontrar documentación para estos servicios en sus propias guías, que se encuentran en el siguiente enlace:
+Adobe ha creado varios servicios de aplicación sobre el Experience Platform. Puede encontrar documentación para estos servicios en sus propias guías, vinculadas a continuación:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
@@ -40,23 +40,23 @@ Adobe ha creado varios servicios de aplicaciones sobre el Experience Platform. P
 
 ## [!DNL Experience Platform] tutoriales
 
-Puede comenzar con [!DNL Platform] de forma rápida y sencilla, siguiendo los tutoriales paso a paso que cubren todo, desde la preparación de los datos para la ingestión hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de [!DNL Experience Platform], de modo que para obtener los mejores resultados, mantenga la documentación disponible mientras completa los tutoriales.
+Puede comenzar con [!DNL Platform] de forma rápida y sencilla siguiendo los tutoriales paso a paso que abarcan todo, desde la preparación de los datos para su incorporación hasta algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de [!DNL Experience Platform], de modo que, para obtener mejores resultados, mantenga la documentación disponible mientras completa los tutoriales.
 
-Visite la página de aterrizaje [tutoriales del Experience Platform](https://www.adobe.com/go/platform-tutorials-home-en) para empezar.
+Visite la página de aterrizaje [tutoriales del Experience Platform](https://www.adobe.com/go/platform-tutorials-home-en) para comenzar.
 
-## Documentos y recursos de referencia
+## Documentos de referencia y recursos
 
-* [**Conceptos básicos de API**](api-fundamentals.md)\
-   Conozca los aspectos básicos del trabajo con las [!DNL Platform] API.
+* [**Aspectos básicos de la API**](api-fundamentals.md)\
+   Conozca los conceptos básicos para trabajar con las API [!DNL Platform].
 
-* [**DOCUMENTOS de referencia de API**](https://www.adobe.com/go/platform-api-reference-en)\
-   API de Discover [!DNL Experience Platform], incluidos encabezados, parámetros, solicitudes de muestra y respuestas.<br/>*Estos documentos están alojados en Adobe I/O.*
+* [**Documentos de referencia de API**](https://www.adobe.com/go/platform-api-reference-en)\
+   Descubra las API [!DNL Experience Platform] de Discover, que incluyen encabezados, parámetros, solicitudes de muestra y respuestas.<br/>*Estos documentos están alojados en Adobe I/O.*
 
 * [**Glosario**](glossary.md)\
    Revise la terminología de Adobe Experience Platform.
 
 * [**Notas de la versión**](https://www.adobe.com/go/platform-release-notes.en)\
-   Busque información sobre la versión más reciente [!DNL Experience Platform] y revise las versiones anteriores.
+   Busque información sobre la versión más reciente de [!DNL Experience Platform] y revise versiones anteriores.
 
 * [**Guía de resolución de problemas**](troubleshooting.md)\
    Encuentre soluciones a errores comunes y respuestas a preguntas frecuentes.
