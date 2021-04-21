@@ -2,14 +2,14 @@
 keywords: Experience Platform;inicio;temas populares;ingesta de transmisión;ingesta;registrar datos;datos de registro de flujo;
 solution: Experience Platform
 title: Registrar datos mediante las API de ingesta de flujos
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 2%
 
 ---
