@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;escribir consultas;escribir consulta;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;escritura de consultas;escritura de consultas;
 solution: Experience Platform
-title: Directrices generales para la ejecución de Consultas en el servicio de Consulta
-topic: queries
+title: Guía general para la ejecución de consultas en el servicio de consultas
+topic-legacy: queries
 type: Tutorial
-description: Este documento detalla detalles importantes que deben conocerse al escribir consultas en el servicio de Consulta de Adobe Experience Platform.
+description: Este documento detalla detalles importantes que deben conocerse al escribir consultas en el servicio de consulta de Adobe Experience Platform.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
 
 ---
 
-
-# Orientación general para la ejecución de consultas en [!DNL Query Service]
+# Directrices generales para la ejecución de consultas en [!DNL Query Service]
 
 Este documento detalla detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform [!DNL Query Service].
 
-Para obtener información detallada sobre la sintaxis SQL utilizada en [!DNL Query Service], lea la [documentación de sintaxis SQL](../sql/syntax.md).
+Para obtener información detallada sobre la sintaxis SQL utilizada en [!DNL Query Service], lea la [Documentación de sintaxis SQL](../sql/syntax.md).
 
-## Modelos de ejecución de consulta
+## Modelos de ejecución de consultas
 
-Adobe Experience Platform [!DNL Query Service] tiene dos modelos de ejecución de consultas: interactiva y no interactiva. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
+Adobe Experience Platform [!DNL Query Service] tiene dos modelos de ejecución de consultas: interactivo y no interactivo. La ejecución interactiva se utiliza para el desarrollo de consultas y la generación de informes en las herramientas de inteligencia empresarial, mientras que la no interactiva se utiliza para trabajos más grandes y consultas operativas como parte de un flujo de trabajo de procesamiento de datos.
 
 ### Ejecución de consultas interactivas
 
-Las consultas se pueden ejecutar de forma interactiva enviándolas a través de la [!DNL Query Service] interfaz de usuario o [a través de un cliente conectado](../clients/overview.md). Cuando se ejecuta [!DNL Query Service] a través de un cliente conectado, se ejecuta una sesión activa entre el cliente y [!DNL Query Service] hasta que la consulta enviada se devuelve o se agota el tiempo de espera.
+Las consultas se pueden ejecutar de forma interactiva enviándolas a través de la [!DNL Query Service] interfaz de usuario o [a través de un cliente conectado](../clients/overview.md). Al ejecutar [!DNL Query Service] a través de un cliente conectado, se ejecuta una sesión activa entre el cliente y [!DNL Query Service] hasta que se devuelve o se agota el tiempo de espera de la consulta enviada.
 
 La ejecución de consultas interactivas tiene las siguientes limitaciones:
 
@@ -34,21 +34,21 @@ La ejecución de consultas interactivas tiene las siguientes limitaciones:
 | --------- | ---------- |
 | Tiempo de espera de consulta | 10 minutos |
 | Máximo de filas devueltas | 50.000 |
-| Consultas simultáneas máximas | 5 |
+| Máximo de consultas simultáneas | 5 |
 
 >[!NOTE]
 >
->Para anular la limitación máxima de filas, incluya `LIMIT 0` en la consulta. El tiempo de espera de consulta de 10 minutos sigue siendo válido.
+>Para anular la limitación máxima de filas, incluya `LIMIT 0` en la consulta. Se sigue aplicando el tiempo de espera de consulta de 10 minutos.
 
 De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no** persisten. Para mantener los resultados como un conjunto de datos en [!DNL Experience Platform], la consulta debe utilizar la sintaxis `CREATE TABLE AS SELECT`.
 
 ### Ejecución de consultas no interactivas
 
-Las consultas enviadas a través de la API [!DNL Query Service] no se ejecutan de forma interactiva. La ejecución no interactiva significa que [!DNL Query Service] recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en [!DNL Experience Platform] para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
+Las consultas enviadas a través de la API [!DNL Query Service] se ejecutan de forma no interactiva. La ejecución no interactiva significa que [!DNL Query Service] recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en [!DNL Experience Platform] para recibir los resultados o en la inserción de nuevas filas en un conjunto de datos existente.
 
 ## Acceso a un campo específico dentro de un objeto
 
-Para acceder a un campo dentro de un objeto de la consulta, puede utilizar la notación de puntos (`.`) o la notación de corchetes (`[]`). La instrucción SQL siguiente utiliza notación de puntos para recorrer el objeto `endUserIds` hasta el objeto `mcid`.
+Para acceder a un campo dentro de un objeto de la consulta, puede utilizar la notación de puntos (`.`) o la notación de corchetes (`[]`). La siguiente instrucción SQL utiliza la notación de puntos para recorrer el objeto `endUserIds` hasta el objeto `mcid`.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -61,7 +61,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | El nombre de la tabla de análisis. |
 
-La instrucción SQL siguiente utiliza la notación de corchetes para recorrer el objeto `endUserIds` hasta el objeto `mcid`.
+La siguiente sentencia SQL utiliza la notación de corchetes para recorrer el objeto `endUserIds` hacia abajo hasta el objeto `mcid`.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -76,9 +76,9 @@ LIMIT 1
 
 >[!NOTE]
 >
->Dado que cada tipo de anotación devuelve los mismos resultados, el que elija utilizar estará a su preferencia.
+>Dado que cada tipo de anotación devuelve los mismos resultados, el que elija utilizar dependerá de sus preferencias.
 
-Las dos consultas de ejemplo anteriores devuelven un objeto acoplado en lugar de un solo valor:
+Las dos consultas de ejemplo anteriores devuelven un objeto acoplado, en lugar de un solo valor:
 
 ```console
               endUserIds._experience.mcid   
@@ -93,7 +93,7 @@ El objeto `endUserIds._experience.mcid` devuelto contiene los valores correspond
 - `namespace`
 - `primary`
 
-Cuando la columna solo se declara en el objeto, devuelve el objeto entero como una cadena. Para vista solo del ID, utilice:
+Cuando la columna solo se declara en el objeto, devuelve el objeto entero como una cadena. Para ver solo el ID, utilice:
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -111,11 +111,11 @@ LIMIT 1
 
 ## Comillas
 
-Las comillas simples, las comillas de doble y las comillas dobles tienen usos diferentes dentro de las consultas del servicio de Consulta.
+Las comillas simples, las comillas dobles y las comillas invertidas tienen usos diferentes dentro de las consultas del servicio de consulta.
 
-### Comillas únicas
+### Comillas simples
 
-La comilla simple (`'`) se utiliza para crear cadenas de texto. Por ejemplo, se puede utilizar en la sentencia `SELECT` para devolver un valor de texto estático en el resultado y en la cláusula `WHERE` para evaluar el contenido de una columna.
+La comilla simple (`'`) se utiliza para crear cadenas de texto. Por ejemplo, se puede utilizar en la instrucción `SELECT` para devolver un valor de texto estático en el resultado y en la cláusula `WHERE` para evaluar el contenido de una columna.
 
 La siguiente consulta declara un valor de texto estático (`'datasetA'`) para una columna:
 
@@ -139,11 +139,11 @@ WHERE web.webPageDetails.name = 'homepage'
 LIMIT 10
 ```
 
-### Comillas de doble
+### Comillas dobles
 
-La cita de doble (`"`) se utiliza para declarar un identificador con espacios.
+La comilla doble (`"`) se utiliza para declarar un identificador con espacios.
 
-La siguiente consulta utiliza comillas de doble para devolver valores de columnas especificadas cuando una columna contiene un espacio en su identificador:
+La siguiente consulta utiliza comillas dobles para devolver valores de columnas especificadas cuando una columna contiene un espacio en su identificador:
 
 ```sql
 SELECT
@@ -158,11 +158,11 @@ FROM
 
 >[!NOTE]
 >
->Las comillas de doble **no pueden** utilizarse con acceso al campo de notación de puntos.
+>Las comillas dobles **no pueden** utilizarse con acceso al campo de notación de puntos.
 
-### Comillas secundarias
+### comillas invertidas
 
-La comilla trasera `` ` `` se utiliza para omitir los nombres de columna reservados **solamente** al utilizar la sintaxis de notación de puntos. Por ejemplo, como `order` es una palabra reservada en SQL, debe utilizar comillas para acceder al campo `commerce.order`:
+La comilla trasera `` ` `` se utiliza para omitir los nombres de columna reservados **only** cuando se utiliza la sintaxis de notación de puntos. Por ejemplo, como `order` es una palabra reservada en SQL, debe utilizar comillas invertidas para acceder al campo `commerce.order`:
 
 ```sql
 SELECT 
@@ -171,7 +171,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-También se utilizan comillas dobles para acceder a un campo que inicio con un número. Por ejemplo, para acceder al campo `30_day_value`, debe utilizar la notación de comillas.
+Las comillas invertidas también se utilizan para acceder a un campo que comienza con un número. Por ejemplo, para acceder al campo `30_day_value`, debe utilizar la notación de comillas invertidas.
 
 ```SQL
 SELECT
@@ -180,7 +180,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-Las comillas tipográficas (**no**) son necesarias si utiliza la notación de corchetes.
+Las comillas de fondo **no** son necesarias si utiliza la notación de corchetes.
 
 ```sql
  SELECT
@@ -189,13 +189,13 @@ Las comillas tipográficas (**no**) son necesarias si utiliza la notación de co
  LIMIT 10
 ```
 
-## Visualización de información de tabla
+## Visualización de la información de la tabla
 
-Después de conectarse al servicio de Consulta, puede ver todas las tablas disponibles en Platform mediante los comandos `\d` o `SHOW TABLES`.
+Después de conectarse al servicio de consulta, puede ver todas las tablas disponibles en Platform mediante los comandos `\d` o `SHOW TABLES`.
 
 ### Vista de tabla estándar
 
-El comando `\d` muestra la vista PostgreSQL estándar para enumerar las tablas. A continuación se muestra un ejemplo de la salida de este comando:
+El comando `\d` muestra la vista PostgreSQL estándar para listar tablas. A continuación se puede ver un ejemplo de la salida de este comando:
 
 ```sql
              List of relations
@@ -206,9 +206,9 @@ El comando `\d` muestra la vista PostgreSQL estándar para enumerar las tablas. 
 (2 rows)
 ```
 
-### Vista de tabla detallada
+### Vista detallada de la tabla
 
-`SHOW TABLES` es un comando personalizado que proporciona información más detallada sobre las tablas. A continuación se muestra un ejemplo de la salida de este comando:
+`SHOW TABLES` es un comando personalizado que proporciona información más detallada sobre las tablas. A continuación se puede ver un ejemplo de la salida de este comando:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -218,9 +218,9 @@ El comando `\d` muestra la vista PostgreSQL estándar para enumerar las tablas. 
 (2 rows)
 ```
 
-### Información de esquema
+### Información del esquema
 
-Para obtener información más detallada sobre los esquemas de la tabla, puede utilizar el comando `\d {TABLE_NAME}`, donde `{TABLE_NAME}` es el nombre de la tabla cuya información de esquema desea vista.
+Para ver información más detallada sobre los esquemas dentro de la tabla, puede utilizar el comando `\d {TABLE_NAME}`, donde `{TABLE_NAME}` es el nombre de la tabla cuya información de esquema desea ver.
 
 El siguiente ejemplo muestra la información de esquema de la tabla `luma_midvalues`, que se vería mediante `\d luma_midvalues`:
 
@@ -245,9 +245,9 @@ El siguiente ejemplo muestra la información de esquema de la tabla `luma_midval
  search            | search                      |           |          | 
 ```
 
-Además, puede obtener más información sobre una columna concreta agregando el nombre de la columna al nombre de la tabla. Esto se escribiría con el formato `\d {TABLE_NAME}_{COLUMN}`.
+Además, puede obtener más información sobre una columna en particular anexando el nombre de la columna al nombre de la tabla. Esto se escribiría con el formato `\d {TABLE_NAME}_{COLUMN}`.
 
-El siguiente ejemplo muestra información adicional para la columna `web` y se invocaría mediante el siguiente comando: `\d luma_midvalues_web`:
+En el siguiente ejemplo se muestra información adicional para la columna `web` y se invoca mediante el siguiente comando: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -257,11 +257,11 @@ El siguiente ejemplo muestra información adicional para la columna `web` y se i
  webreferrer    | web_webreferrer                   |           |          | 
 ```
 
-## Incorporación de conjuntos de datos
+## Combinación de conjuntos de datos
 
 Puede unir varios conjuntos de datos para incluir datos de otros conjuntos de datos en la consulta.
 
-El siguiente ejemplo se uniría a los dos conjuntos de datos siguientes (`your_analytics_table` y `custom_operating_system_lookup`) y crea una sentencia `SELECT` para los 50 sistemas operativos principales por número de vistas de página.
+El siguiente ejemplo se uniría a los dos conjuntos de datos siguientes (`your_analytics_table` y `custom_operating_system_lookup`) y crea una instrucción `SELECT` para los 50 sistemas operativos principales por número de vistas de página.
 
 **Consulta**
 
@@ -301,10 +301,10 @@ LIMIT 50;
 
 ## Deduplicación
 
-El servicio de consulta admite la deduplicación de datos o la eliminación de filas de duplicados de los datos. Para obtener más información sobre la deduplicación, lea la [guía de deduplicación del servicio de Consulta](./deduplication.md).
+El servicio de consulta admite la deduplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de deduplicación del servicio de consulta](./deduplication.md).
 
 ## Pasos siguientes
 
-Al leer este documento, se le han presentado algunas consideraciones importantes al escribir consultas usando [!DNL Query Service]. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la [documentación de sintaxis SQL](../sql/syntax.md).
+Al leer este documento, se le han introducido algunas consideraciones importantes al escribir consultas con [!DNL Query Service]. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la [documentación de sintaxis SQL](../sql/syntax.md).
 
-Para obtener más ejemplos de consultas que se pueden utilizar dentro del servicio de Consulta, lea las guías sobre [consultas de muestra de Adobe Analytics](./adobe-analytics.md), [consultas de muestra de Adobe Target](./adobe-target.md) o [consultas de muestra de ExperienceEvent](./experience-event-queries.md).
+Para obtener más ejemplos de consultas que se pueden utilizar dentro del servicio de consulta, lea las guías sobre [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md) o [ExperienceEvent sample queries](./experience-event-queries.md).
