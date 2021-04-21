@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
+keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución de problemas;API
 title: Introducción a la API del perfil del cliente en tiempo real
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: La guía de introducción a la API de perfil describe los conceptos clave y la funcionalidad básica que debe conocer para utilizar los extremos de la API de perfil de cliente en tiempo real para realizar operaciones CRUD básicas con datos de perfil.
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
-
 
 # Introducción a la API [!DNL Real-time Customer Profile] {#getting-started}
 
 Mediante los extremos de la API del perfil del cliente en tiempo real, puede realizar operaciones CRUD básicas con los datos del perfil, como la configuración de atributos calculados, el acceso a entidades, la exportación de datos del perfil y la eliminación de conjuntos de datos o lotes innecesarios.
 
-El uso de la guía para desarrolladores requiere conocer los distintos servicios de Adobe Experience Platform que intervienen en el trabajo con datos [!DNL Profile]. Antes de comenzar a trabajar con la API [!DNL Real-time Customer Profile] , revise la documentación de los siguientes servicios:
+El uso de la guía para desarrolladores requiere comprender bien los distintos servicios de Adobe Experience Platform involucrados en el trabajo con datos [!DNL Profile]. Antes de comenzar a trabajar con la API [!DNL Real-time Customer Profile] , revise la documentación de los siguientes servicios:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Obtenga una mejor visión de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas.
@@ -45,7 +45,7 @@ Todos los recursos de [!DNL Experience Platform] están aislados en entornos lim
 
 Para obtener más información sobre los entornos limitados en [!DNL Platform], consulte la [documentación general del entorno limitado](../../sandboxes/home.md).
 
-Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como las llamadas POST, PUT y PATCH) deben incluir un encabezado `Content-Type`. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada .
+Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como llamadas de POST, PUT y PATCH) deben incluir un encabezado `Content-Type`. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada .
 
 ## Pasos siguientes
 
