@@ -2,20 +2,20 @@
 keywords: Experience Platform;inicio;temas populares;área de nombres de identidad;área de nombres de identidad
 solution: Experience Platform
 title: Guía de solución de problemas del servicio de identidad
-topic: troubleshooting
-description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de ID de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
+topic-legacy: troubleshooting
+description: Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
+exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
 
-
 # Guía de solución de problemas del servicio de identidad
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para errores comunes. Para obtener preguntas y solución de problemas con las API [!DNL Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para errores comunes. Para preguntas y solución de problemas con las API [!DNL Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
 
 Los datos que identifican a un único cliente a menudo se fragmentan en los distintos dispositivos y sistemas que utilizan para interactuar con su marca. [!DNL Identity Service] recopila estas identidades fragmentadas, lo que facilita una comprensión completa del comportamiento del cliente para que pueda ofrecer experiencias digitales impactantes en tiempo real. Para obtener más información, consulte la [descripción general del servicio de identidad](./home.md).
 
@@ -73,17 +73,17 @@ Los campos de identidad deben asociarse con un área de nombres de identidad exi
 
 Para obtener instrucciones paso a paso sobre la definición de un espacio de nombres al crear un descriptor de identidad mediante la API, consulte la sección [creación de un descriptor](../xdm/tutorials/create-schema-ui.md) en la guía para desarrolladores del Registro de esquemas. Para marcar un campo de esquema como identidad en la interfaz de usuario, siga los pasos del [tutorial del Editor de esquemas](../xdm/tutorials/create-schema-api.md).
 
-## ¿Cuáles son las áreas de nombres de identidad estándar proporcionadas por Experience Platform? {#standard-namespaces}
+## ¿Cuáles son las áreas de nombres de identidad estándar proporcionadas por el Experience Platform? {#standard-namespaces}
 
 Las áreas de nombres de identidad estándar son áreas de nombres disponibles para todas las organizaciones. Consulte [Identity namespaces overview](./namespaces.md) para obtener una lista completa de los espacios de nombres estándar disponibles.
 
 ## ¿Dónde puedo encontrar la lista de áreas de nombres de identidad disponibles para mi organización?
 
-Mediante la [API del servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puede enumerar todos los espacios de nombres de identidad disponibles para su organización realizando una solicitud GET al extremo `/idnamespace/identities` . Consulte la sección sobre [lista de áreas de nombres disponibles](./api/list-namespaces.md) en la descripción general de la API del servicio de identidad para obtener más información.
+Mediante la [API del servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puede enumerar todos los espacios de nombres de identidad disponibles para su organización realizando una solicitud de GET al extremo `/idnamespace/identities` . Consulte la sección sobre [lista de áreas de nombres disponibles](./api/list-namespaces.md) en la descripción general de la API del servicio de identidad para obtener más información.
 
 ## ¿Cómo creo un espacio de nombres personalizado para mi organización?
 
-Con la [API del servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puede crear un área de nombres de identidad personalizada para su organización realizando una solicitud POST al extremo `/idnamespace/identities` . Consulte la sección sobre [creación de un área de nombres personalizada](./api/create-custom-namespace.md) en la descripción general de la API del servicio de identidad para obtener más información.
+Con la [API del servicio de identidad](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puede crear un área de nombres de identidad personalizada para su organización realizando una solicitud de POST al extremo `/idnamespace/identities` . Consulte la sección sobre [creación de un área de nombres personalizada](./api/create-custom-namespace.md) en la descripción general de la API del servicio de identidad para obtener más información.
 
 ## ¿Qué son las identidades compuestas y los XID?
 
@@ -298,7 +298,7 @@ A continuación se muestra una lista de mensajes de error relacionados con [!DNL
 }
 ```
 
-[!DNL Identity Service] solo consume identidades para datos de registros o series temporales que se ajusten a las  [!DNL Profile] clases o  [!DNL ExperienceEvent] clases, respectivamente. Si se intenta introducir datos para [!DNL Identity Service] que no se adhiere a ninguna de las clases, se activará este error.
+[!DNL Identity Service] solo consume identidades para datos de registros o series temporales que se ajusten a las  [!DNL Profile] clases o  [!DNL ExperienceEvent] clases, respectivamente. Si se intenta introducir datos para [!DNL Identity Service] que no se adhiere a ninguna de las clases, se generará el déclencheur de este error.
 
 ### Hubo 0 identidades válidas en las primeras 100 filas del lote procesado
 
