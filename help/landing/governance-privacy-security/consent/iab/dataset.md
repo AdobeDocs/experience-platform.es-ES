@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;IAB;IAB 2.0;consentimiento;consentimiento
 solution: Experience Platform
 title: Crear conjuntos de datos para capturar datos de consentimiento TCF de IAB 2.0
-topic: privacy events
+topic-legacy: privacy events
 description: Este documento proporciona los pasos para configurar los dos conjuntos de datos necesarios para recopilar los datos de consentimiento TCF de IAB 2.0.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
-
 
 # Crear conjuntos de datos para capturar datos de consentimiento TCF de IAB 2.0
 
@@ -30,11 +30,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 * [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
    * [Aspectos básicos de la composición](../../../../xdm/schema/composition.md) del esquema: Obtenga información sobre los componentes básicos de los esquemas XDM.
-* [Servicio de ID de Adobe Experience Platform](../../../../identity-service/home.md): Permite unir las identidades de los clientes desde las distintas fuentes de datos entre dispositivos y sistemas.
+* [Servicio de identidad de Adobe Experience Platform](../../../../identity-service/home.md): Permite unir las identidades de los clientes desde las distintas fuentes de datos entre dispositivos y sistemas.
    * [Espacios de nombres](../../../../identity-service/namespaces.md) de identidad: Los datos de identidad del cliente deben proporcionarse en un área de nombres de identidad específica reconocida por el servicio de identidad.
 * [Perfil](../../../../profile/home.md) del cliente en tiempo real: Aprovecha  [!DNL Identity Service] para permitirle crear perfiles de cliente detallados a partir de sus conjuntos de datos en tiempo real. [!DNL Real-time Customer Profile] extrae datos del lago de datos y mantiene los perfiles de cliente en su propio almacén de datos independiente.
 
-## [!UICONTROL Detalles de privacidad ] Estructura mixta  {#structure}
+## [!UICONTROL Privacy Details] estructura de mezcla  {#structure}
 
 La mezcla [!UICONTROL Privacy Details] proporciona los campos de consentimiento del cliente necesarios para el soporte de TCF 2.0. Hay dos versiones de esta mezcla: una compatible con la clase [!DNL XDM Individual Profile] y la otra con la clase [!DNL XDM ExperienceEvent].
 
@@ -42,7 +42,7 @@ Las secciones siguientes explican la estructura de cada una de estas mezclas, in
 
 ### Mezcla de perfiles {#profile-mixin}
 
-Para esquemas basados en [!DNL XDM Individual Profile], la mezcla [!UICONTROL Privacy Details] proporciona un único campo de tipo mapa, `xdm:identityPrivacyInfo`, que asigna las identidades de los clientes a sus preferencias de consentimiento TCF. El siguiente JSON es un ejemplo del tipo de datos que `xdm:identityPrivacyInfo` espera al ingerirlos:
+En el caso de esquemas basados en [!DNL XDM Individual Profile], la mezcla [!UICONTROL Privacy Details] proporciona un único campo de tipo mapa, `xdm:identityPrivacyInfo`, que asigna las identidades de los clientes a sus preferencias de consentimiento TCF. El siguiente JSON es un ejemplo del tipo de datos que `xdm:identityPrivacyInfo` espera al ingerirlos:
 
 ```json
 {
@@ -65,7 +65,7 @@ Para esquemas basados en [!DNL XDM Individual Profile], la mezcla [!UICONTROL Pr
 }
 ```
 
-Como se muestra en el ejemplo, cada clave de nivel raíz de `xdm:identityPrivacyInfo` corresponde a un área de nombres de identidad reconocida por Identity Service. A su vez, cada propiedad de área de nombres debe tener al menos una subpropiedad cuya clave coincida con el valor de identidad correspondiente del cliente para ese área de nombres. En este ejemplo, el cliente se identifica con un valor de Experience Cloud ID (`ECID`) de `13782522493631189`.
+Como se muestra en el ejemplo, cada clave de nivel raíz de `xdm:identityPrivacyInfo` corresponde a un área de nombres de identidad reconocida por Identity Service. A su vez, cada propiedad de área de nombres debe tener al menos una subpropiedad cuya clave coincida con el valor de identidad correspondiente del cliente para ese área de nombres. En este ejemplo, el cliente se identifica con un valor de ID de Experience Cloud (`ECID`) de `13782522493631189`.
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ Ambas versiones de la mezcla [!UICONTROL Privacy Details] requieren al menos un 
 
 Para crear conjuntos de datos que capten datos de consentimiento, primero debe crear esquemas XDM en los que basar esos conjuntos de datos.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo [!UICONTROL Esquemas]. A partir de aquí, siga los pasos de las secciones siguientes para crear cada esquema necesario.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo [!UICONTROL Schemas]. A partir de aquí, siga los pasos de las secciones siguientes para crear cada esquema necesario.
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en e
 
 ### Crear un esquema de consentimiento basado en registros {#profile-schema}
 
-En el espacio de trabajo **[!UICONTROL Esquemas]**, seleccione **[!UICONTROL Crear esquema]** y, a continuación, elija **[!UICONTROL Perfil individual XDM]** en la lista desplegable.
+En el espacio de trabajo **[!UICONTROL Schemas]**, seleccione **[!UICONTROL Create schema]** y, a continuación, elija **[!UICONTROL XDM Individual Profile]** en la lista desplegable.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
@@ -130,7 +130,7 @@ Aparece el [!DNL Schema Editor], que muestra la estructura del esquema en el lie
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Add mixin]**. Desde aquí, seleccione **[!UICONTROL Detalles de privacidad]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, seleccione **[!UICONTROL Add mixin]**.
+Aparece el cuadro de diálogo **[!UICONTROL Add mixin]**. Desde aquí, seleccione **[!UICONTROL Privacy Details]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez seleccionada la mezcla, seleccione **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -140,14 +140,14 @@ El lienzo vuelve a aparecer y muestra que el campo `identityPrivacyInfo` se ha a
 
 A partir de aquí, repita los pasos anteriores para añadir las siguientes mezclas adicionales al esquema:
 
-* [!UICONTROL Mapa de identidades]
-* [!UICONTROL Región de captura de datos para el perfil]
-* [!UICONTROL Detalles demográficos]
-* [!UICONTROL Detalles de contacto personal]
+* [!UICONTROL IdentityMap]
+* [!UICONTROL Data capture region for Profile]
+* [!UICONTROL Demographic Details]
+* [!UICONTROL Personal Contact Details]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
 
-Si está editando un esquema existente que ya se ha habilitado para su uso en [!DNL Real-time Customer Profile], seleccione **[!UICONTROL Guardar]** para confirmar los cambios antes de pasar a la sección de [creación de un conjunto de datos basado en el esquema de consentimiento](#dataset). Si está creando un nuevo esquema, siga los pasos descritos en la subsección siguiente.
+Si está editando un esquema existente que ya se ha habilitado para su uso en [!DNL Real-time Customer Profile], seleccione **[!UICONTROL Save]** para confirmar los cambios antes de pasar a la sección de [creación de un conjunto de datos basado en el esquema de consentimiento](#dataset). Si está creando un nuevo esquema, siga los pasos descritos en la subsección siguiente.
 
 #### Habilitar el esquema para utilizarlo en [!DNL Real-time Customer Profile]
 
@@ -167,13 +167,13 @@ Aparece una ventana emergente que indica que falta una identidad principal. Sele
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/missing-primary-identity.png)
 
-Finalmente, seleccione **[!UICONTROL Guardar]** para confirmar los cambios.
+Finalmente, seleccione **[!UICONTROL Save]** para confirmar los cambios.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
 ### Crear un esquema de consentimiento basado en series temporales {#event-schema}
 
-En el espacio de trabajo **[!UICONTROL Esquemas]**, seleccione **[!UICONTROL Crear esquema]** y, a continuación, elija **[!UICONTROL XDM ExperienceEvent]** en la lista desplegable.
+En el espacio de trabajo **[!UICONTROL Schemas]**, seleccione **[!UICONTROL Create schema]** y, a continuación, elija **[!UICONTROL XDM ExperienceEvent]** en la lista desplegable.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
@@ -181,7 +181,7 @@ Aparece el [!DNL Schema Editor], que muestra la estructura del esquema en el lie
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Add mixin]**. Desde aquí, seleccione **[!UICONTROL Detalles de privacidad]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez que haya elegido una mezcla, seleccione **[!UICONTROL Añadir mezcla]**.
+Aparece el cuadro de diálogo **[!UICONTROL Add mixin]**. Desde aquí, seleccione **[!UICONTROL Privacy Details]** en la lista. Si lo desea, puede utilizar la barra de búsqueda para reducir los resultados y encontrar la mezcla más fácilmente. Una vez que haya elegido una mezcla, seleccione **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -191,10 +191,10 @@ El lienzo vuelve a aparecer y muestra que la matriz `consentStrings` se ha agreg
 
 A partir de aquí, repita los pasos anteriores para añadir las siguientes mezclas adicionales al esquema:
 
-* [!UICONTROL Mapa de identidades]
-* [!UICONTROL Detalles del entorno]
-* [!UICONTROL Detalles web]
-* [!UICONTROL Detalles de implementación]
+* [!UICONTROL IdentityMap]
+* [!UICONTROL Environment Details]
+* [!UICONTROL Web Details]
+* [!UICONTROL Implementation Details]
 
 Una vez añadidas las mezclas, termine seleccionando **[!UICONTROL Save]**.
 
@@ -208,21 +208,21 @@ Para empezar, seleccione **[!UICONTROL Datasets]** en el panel de navegación iz
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create.png)
 
-En la página siguiente, seleccione **[!UICONTROL Crear conjunto de datos desde esquema]**.
+En la página siguiente, seleccione **[!UICONTROL Create dataset from schema]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-Aparece el flujo de trabajo **[!UICONTROL Crear conjunto de datos a partir del esquema]**, empezando en el paso **[!UICONTROL Seleccionar esquema]**. En la lista proporcionada, busque uno de los esquemas de consentimiento que creó anteriormente. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y localizar el esquema con mayor facilidad. Seleccione el botón de opción situado junto al esquema deseado y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Aparece el flujo de trabajo **[!UICONTROL Create dataset from schema]**, comenzando en el paso **[!UICONTROL Select schema]**. En la lista proporcionada, busque uno de los esquemas de consentimiento que creó anteriormente. Opcionalmente, puede utilizar la barra de búsqueda para reducir los resultados y localizar el esquema con mayor facilidad. Seleccione el botón de opción situado junto al esquema deseado y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 
-Aparece el paso **[!UICONTROL Configurar conjunto de datos]**. Proporcione un nombre y una descripción únicos y fácilmente identificables para el conjunto de datos antes de seleccionar **[!UICONTROL Finish]**.
+Aparece el paso **[!UICONTROL Configure dataset]**. Proporcione un nombre y una descripción únicos y fácilmente identificables para el conjunto de datos antes de seleccionar **[!UICONTROL Finish]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
 Aparecerá la página de detalles del conjunto de datos recién creado. Si el conjunto de datos se basa en el esquema de series temporales, el proceso finaliza. Si el conjunto de datos se basa en el esquema de registro, el paso final del proceso es habilitar el conjunto de datos para su uso en [!DNL Real-time Customer Profile].
 
-En el carril derecho, seleccione el botón **[!UICONTROL Profile]** y, a continuación, seleccione **[!UICONTROL Enable]** en la ventana de confirmación para habilitar el esquema para [!DNL Profile].
+En el carril derecho, seleccione la opción **[!UICONTROL Profile]** y, a continuación, seleccione **[!UICONTROL Enable]** en la ventana emergente de confirmación para habilitar el esquema para [!DNL Profile].
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
