@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;SFTP;sftp
 solution: Experience Platform
 title: Crear una conexión de origen SFTP en la interfaz de usuario
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
+exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 1%
+source-wordcount: '676'
+ht-degree: 0%
 
 ---
-
 
 # Creación de una conexión de origen SFTP en la interfaz de usuario
 
