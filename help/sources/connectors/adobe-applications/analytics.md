@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;Analytics Data Connector;Analytics;Analytics
 solution: Experience Platform
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
-topic: overview
+topic-legacy: overview
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
+exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '503'
 ht-degree: 3%
 
 ---
-
 
 # Conector de Adobe Analytics para datos de grupos de informes
 
@@ -41,7 +41,7 @@ Para obtener más información sobre XDM, consulte la [información general del 
 
 Cuando se establece una conexión de origen para introducir datos [!DNL Analytics] en [!DNL Experience Platform] mediante la interfaz de usuario [!DNL Platform], los campos de datos se asignan automáticamente e incorporan a [!DNL Real-time Customer Profile] en cuestión de minutos. Para obtener instrucciones sobre la creación de una conexión de origen con [!DNL Analytics] mediante la interfaz de usuario [!DNL Platform], consulte el [Tutorial del conector de datos de Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Para obtener información detallada sobre la asignación de campos que se produce entre [!DNL Analytics] y [!DNL Experience Platform], visite la [guía de asignación de campos de Adobe Analytics](./mapping/analytics.md).
+Para obtener información detallada sobre la asignación de campos que se produce entre [!DNL Analytics] y [!DNL Experience Platform], visite la guía [Adobe Analytics field mapping](./mapping/analytics.md).
 
 ## ¿Cuál es la latencia esperada para los datos de Analytics en la plataforma?
 
