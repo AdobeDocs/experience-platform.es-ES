@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
+keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;organización de campañas;organización;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
-title: Compatibilidad con el explorador y el idioma para la interfaz de usuario del Experience Platform
-topic: getting started
-description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que impulsan la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+title: Compatibilidad con navegadores e idiomas para la IU del Experience Platform
+topic-legacy: getting started
+description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '246'
 ht-degree: 18%
 
 ---
 
+# Compatibilidad con navegadores e idiomas para la IU del Experience Platform
 
-# Compatibilidad con el explorador y el idioma de la interfaz de usuario del Experience Platform
-
-La interfaz de usuario (IU) de Adobe Experience Platform está diseñada para admitir varios exploradores e idiomas.
+La interfaz de usuario (IU) de Adobe Experience Platform está diseñada para admitir varios navegadores e idiomas.
 
 ## Compatibilidad con navegadores
 
-La interfaz de usuario de la plataforma está diseñada para funcionar de manera óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los navegadores.
+La interfaz de usuario de Platform está diseñada para funcionar de forma óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar ciertas funciones en versiones anteriores de los navegadores.
 
 | Sistema operativo | Navegadores admitidos |
 |---|---|
@@ -33,9 +33,9 @@ No se admiten los siguientes sistemas operativos y navegadores:
 * Internet Explorer 10
 * Opera
 
-## Compatibilidad con idiomas
+## Compatibilidad de idiomas
 
-La interfaz de usuario de la plataforma está disponible en los siguientes idiomas:
+La interfaz de usuario de Platform está disponible actualmente en los siguientes idiomas:
 
 * Inglés
 * Francés
@@ -49,9 +49,9 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 Para cambiar el idioma:
 
 1. Seleccione el idioma actual en el pie de página de la interfaz de usuario [!DNL Experience Platform].
-2. En la configuración del perfil, seleccione **[!UICONTROL Cambiar región]**.
-3. Seleccione su región.
+2. En la configuración de perfil, seleccione **[!UICONTROL Change Region]**.
+3. Seleccione la región.
 
 >[!NOTE]
 >
-> Al seleccionar una región también se establece el idioma del contenido en Adobe.com.
+> Al seleccionar una región, también se establece el idioma del contenido en Adobe.com.
