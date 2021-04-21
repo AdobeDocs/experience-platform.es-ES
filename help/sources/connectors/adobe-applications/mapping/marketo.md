@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;Marketo Engage;marketing para interactuar;Marketo;asignación
 solution: Experience Platform
 title: Asignación de campos para el origen del Marketo Engage
-topic: sobre validación
+topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
