@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Aspectos básicos de las API de Experience Platform
-topic: getting started
+title: Aspectos básicos de la API del Experience Platform
+topic-legacy: getting started
 description: Este documento proporciona una breve descripción general de algunas de las tecnologías subyacentes y sintaxis relacionadas con las API de Experience Platform.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
 
-
-# Aspectos básicos de las API de Experience Platform
+# Aspectos básicos de la API del Experience Platform
 
 Las API de Adobe Experience Platform emplean varias tecnologías subyacentes y sintaxis que son importantes de comprender para administrar de forma eficaz los recursos basados en JSON [!DNL Platform]. Este documento proporciona una breve descripción general de estas tecnologías, así como enlaces a documentación externa para obtener más información.
 
 ## Puntero JSON {#json-pointer}
 
-El puntero JSON es una sintaxis de cadena estandarizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos dentro de documentos JSON. Un puntero JSON es una cadena de tokens separados por caracteres `/`, que especifican claves de objeto o índices de matriz, y los tokens pueden ser una cadena o un número. Las cadenas de puntero JSON se utilizan en muchas operaciones PATCH para API [!DNL Platform], como se describe más adelante en este documento. Para obtener más información sobre el puntero JSON, consulte la [documentación general del puntero JSON](https://rapidjson.org/md_doc_pointer.html).
+El puntero JSON es una sintaxis de cadena estandarizada ([RFC 6901](https://tools.ietf.org/html/rfc6901)) para identificar valores específicos dentro de documentos JSON. Un puntero JSON es una cadena de tokens separados por caracteres `/`, que especifican claves de objeto o índices de matriz, y los tokens pueden ser una cadena o un número. Las cadenas de puntero JSON se utilizan en muchas operaciones de PATCH para API [!DNL Platform], tal como se describe más adelante en este documento. Para obtener más información sobre el puntero JSON, consulte la [documentación general del puntero JSON](https://rapidjson.org/md_doc_pointer.html).
 
 ### Ejemplo de objeto de esquema JSON
 
@@ -98,7 +98,7 @@ El siguiente JSON representa un esquema XDM simplificado cuyos campos pueden ser
 
 ## Parche JSON {#json-patch}
 
-Existen muchas operaciones PATCH para API [!DNL Platform] que aceptan objetos JSON Patch para sus cargas de solicitud. JSON Patch es un formato estandarizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para describir los cambios realizados en un documento JSON. Le permite definir actualizaciones parciales a JSON sin necesidad de enviar el documento completo en un cuerpo de solicitud.
+Existen muchas operaciones de PATCH para las API [!DNL Platform] que aceptan objetos JSON Patch para sus cargas de solicitud. JSON Patch es un formato estandarizado ([RFC 6902](https://tools.ietf.org/html/rfc6902)) para describir los cambios realizados en un documento JSON. Le permite definir actualizaciones parciales a JSON sin necesidad de enviar el documento completo en un cuerpo de solicitud.
 
 ### Ejemplo de objeto JSON Patch
 
@@ -109,7 +109,7 @@ Existen muchas operaciones PATCH para API [!DNL Platform] que aceptan objetos JS
 }
 ```
 
-* `op`: Tipo de operación de parche. Aunque JSON Patch admite varios tipos de operación diferentes, no todas las operaciones PATCH en las API [!DNL Platform] son compatibles con todos los tipos de operación. Los tipos de operación disponibles son:
+* `op`: Tipo de operación de parche. Aunque JSON Patch admite varios tipos de operación diferentes, no todas las operaciones de PATCH en las API [!DNL Platform] son compatibles con todos los tipos de operación. Los tipos de operación disponibles son:
    * `add`
    * `remove`
    * `replace`
