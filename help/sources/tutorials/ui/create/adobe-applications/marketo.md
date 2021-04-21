@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares;Conector de origen de Marketo;Conector de Marketo;Origen de Marketo;Marketo
 solution: Experience Platform
 title: Creación de un conector de origen de Marketo Engage en la interfaz de usuario
-topic: sobre validación
+topic-legacy: overview
 type: Tutorial
 description: Este tutorial proporciona pasos para crear un conector de origen de Marketo Engage en la interfaz de usuario para introducir datos B2B en Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
