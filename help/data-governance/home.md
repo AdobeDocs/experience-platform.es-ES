@@ -1,95 +1,95 @@
 ---
-keywords: Experience Platform;inicio;temas populares;DULE;programar
+keywords: Experience Platform;inicio;temas populares;DULE;programación
 solution: Experience Platform
 title: Información general sobre la administración de datos
-topic: overview
-description: La Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normativas, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluyendo catalogación, linaje de datos, etiquetado de uso de datos, políticas de uso de datos y control del uso de datos para acciones de mercadotecnia
+topic-legacy: overview
+description: La administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing
+exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 0%
 
 ---
 
-
 # Información general sobre la administración de datos
 
-Una de las capacidades principales de Adobe Experience Platform es reunir los datos de varios sistemas empresariales para permitir que los especialistas en mercadotecnia identifiquen, comprendan y capten mejor a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] sean compatibles con las políticas de uso de datos.
+Una de las funciones principales de Adobe Experience Platform es unir los datos de varios sistemas empresariales para permitir a los especialistas en marketing identificar, comprender y captar mejor a los clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por las regulaciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplan con las políticas de uso de datos.
 
-Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en diversos niveles, incluso la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de mercadotecnia.
+Adobe Experience Platform [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing.
 
 ## Funciones de administración de datos
 
-Como concepto, la gobernanza de los datos no es automática ni se da en un vacío. Lo que comenzó como un papel para un individuo, generalmente reconocido como administrador de datos, ha crecido considerablemente a medida que se ha expandido el ecosistema de gobernanza de datos. En la actualidad, la gestión de los datos requiere una gestión y supervisión continuas para tener éxito y depende de que los administradores de datos cuenten con herramientas con las que se puedan etiquetar correctamente los datos, se puedan crear políticas de uso y se pueda hacer cumplir el cumplimiento de dichas políticas.
+Como concepto, el control de datos no es automático ni se produce en un vacío. Lo que comenzó como un papel para un individuo, generalmente reconocido como gestor de datos, ha crecido considerablemente a medida que se ha ampliado el ecosistema de control de datos. En la actualidad, el control de los datos requiere una gestión y supervisión continuas para tener éxito y depende de que los administradores de datos dispongan de herramientas con las que se puedan etiquetar correctamente los datos, se puedan crear políticas de uso y se pueda hacer cumplir esas políticas.
 
-Si bien la gobernanza de los datos debe ser responsabilidad de cada individuo en la organización, aquí hay algunas de las funciones esenciales dentro del ciclo de gobernanza de los datos:
+Si bien la gestión de los datos debe ser responsabilidad de cada individuo en la organización, a continuación se presentan algunas de las funciones esenciales dentro del ciclo de gobernanza de los datos:
 
 ![Funciones de administración de datos](./images/overview/roles.png)
 
 ### Administrador de datos
 
-Los administradores de datos son el núcleo de la gobernanza de los datos. Esta función es responsable de interpretar regulaciones, restricciones contractuales y políticas, y de aplicarlas directamente a los datos. Informados por su comprensión de estas regulaciones, restricciones y políticas, el rol de un administrador de datos incluye:
+Los administradores de datos son el núcleo del control de datos. Esta función es responsable de interpretar regulaciones, restricciones contractuales y políticas, y aplicarlas directamente a los datos. Basándose en su comprensión de estas regulaciones, restricciones y políticas, el rol de un gestor de datos incluye:
 
 * Revisión de datos, conjuntos de datos y muestras de datos para aplicar y administrar el etiquetado de uso de metadatos.
-* Creación de directivas de datos y aplicación de dichas directivas a conjuntos de datos y campos.
-* Comunicación de directivas de datos a la organización.
+* Creación de políticas de datos y aplicación a conjuntos de datos y campos.
+* Comunicar las políticas de datos a la organización.
 
 ### Especialista en marketing
 
-Los especialistas en mercadotecnia son el punto final del gobierno de los datos. Solicitan datos de la infraestructura de gestión de datos creada por los encargados de la gestión de datos, científicos e ingenieros. Los especialistas en mercadotecnia incluyen una serie de especialidades diferentes en el marco de la mercadotecnia, entre las que se incluyen las siguientes:
+Los especialistas en marketing son el punto final del control de datos. Solicitan datos de la infraestructura de control de datos creada por administradores de datos, científicos e ingenieros. Los especialistas en marketing proponen una serie de especialidades diferentes en el marco del marketing, entre las que se incluyen las siguientes:
 
-* Los analistas de marketing solicitan datos para permitir comprender a los clientes, tanto como individuos como en grupos (también conocidos como segmentos).
-* Los especialistas en marketing y los diseñadores de experiencias utilizan los datos para diseñar nuevas experiencias de cliente.
+* Los analistas de marketing solicitan datos para comprender mejor a los clientes, tanto como individuos como en grupos (también conocidos como segmentos).
+* Los especialistas en marketing y los diseñadores de experiencias utilizan los datos para diseñar nuevas experiencias para los clientes.
 
 
-## [!DNL Data Governance] framework
+## [!DNL Data Governance] marco
 
 El marco [!DNL Data Governance] simplifica y optimiza el proceso de categorización de datos y creación de políticas de uso de datos. Una vez aplicadas las etiquetas de datos y establecidas las políticas de uso de datos, se pueden evaluar las acciones de marketing para garantizar el uso correcto de los datos.
 
-Existen tres elementos clave en el marco de trabajo [!DNL Data Governance]: Etiquetas, políticas y aplicación.
+Hay tres elementos clave en el marco [!DNL Data Governance]: Etiquetas, políticas y aplicación.
 
-1. **Etiquetas:** clasifique los datos que reflejen consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas de organización.
-1. **Políticas:** describa qué tipo o tipos de acciones de marketing se permiten o no en datos específicos.
-1. **Aplicación:** utiliza el marco de políticas para aconsejar y aplicar políticas en diferentes patrones de acceso a datos.
+1. **Etiquetas:** clasifique los datos que reflejen consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir las normativas y las políticas de organización.
+1. **Políticas:** describa qué tipo(s) de acciones de marketing se permiten o no se permite realizar en datos específicos.
+1. **Aplicación:** utiliza el marco de políticas para recomendar y aplicar políticas en diferentes patrones de acceso a datos.
 
 ## Etiquetas de uso de datos
 
-[!DNL Data Governance] permite a los administradores de datos aplicar etiquetas de uso en el nivel de campo y conjunto de datos para categorizar los datos según el tipo de directivas que se apliquen.
+[!DNL Data Governance] permite a los administradores de datos aplicar etiquetas de uso a nivel de conjunto de datos y campo para categorizar los datos según el tipo de políticas que se apliquen.
 
-El marco de trabajo [!DNL Data Governance] incluye etiquetas de uso de datos predefinidas que pueden utilizarse para categorizar los datos de tres maneras:
+El marco [!DNL Data Governance] incluye etiquetas de uso de datos predefinidas que se pueden usar para categorizar los datos de tres maneras:
 
 ![Categorías de etiquetas de uso de datos](./images/overview/label-categories.png)
 
-* **Etiquetas de datos del contrato &quot;C&quot;:** Etiquete y categorice los datos que tienen obligaciones contractuales o que están relacionados con políticas de control de datos del cliente.
-* **Etiquetas de datos &quot;I&quot; de identidad:** Etiquete y categorice los datos que pueden identificar o contactar a una persona específica.
-* **Etiquetas de datos &quot;S&quot; sensibles:** etiquete y categorice los datos relacionados con datos confidenciales, como datos geográficos.
+* **Etiquetas de datos &quot;C&quot; del contrato:** Etiquete y categorice los datos que tengan obligaciones contractuales o que estén relacionados con políticas de control de datos de clientes.
+* **Etiquetas de datos &quot;I&quot; de identidad:** etiquete y categorice los datos que puedan identificar a una persona específica o ponerse en contacto con ella.
+* **Etiquetas de datos &quot;S&quot; confidenciales:** etiquete y categorice datos relacionados con datos confidenciales, como datos geográficos.
 
 >[!NOTE]
 >
->Consulte la guía de [etiquetas de uso de datos admitidas](labels/reference.md) para obtener una lista completa de las etiquetas disponibles, así como definiciones para cada tipo de etiqueta.
+>Consulte la guía de [etiquetas de uso de datos compatibles](labels/reference.md) para obtener una lista completa de las etiquetas disponibles, así como las definiciones de cada tipo de etiqueta.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide gobernar los datos. La práctica recomendada alienta el etiquetado de datos tan pronto como se ingrese en [!DNL Experience Platform] o tan pronto como los datos estén disponibles en [!DNL Platform].
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que elige administrar los datos. La práctica recomendada recomienda etiquetar los datos tan pronto como se incorporan en [!DNL Experience Platform] o tan pronto como los datos están disponibles en [!DNL Platform].
 
-Consulte la información general sobre [etiquetas de uso de datos](./labels/overview.md) para obtener más información.
+Consulte la descripción general de [etiquetas de uso de datos](./labels/overview.md) para obtener más información.
 
-## Directivas de uso de datos
+## Políticas de uso de datos
 
-Para que las etiquetas de uso de datos admitan de manera efectiva el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de mercadotecnia que se le permite o se le restringe la realización de datos dentro de [!DNL Experience Platform].
+Para que las etiquetas de uso de datos admitan de forma eficaz el cumplimiento de los datos, se deben implementar políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite o se le restringe, realizar en datos dentro de [!DNL Experience Platform].
 
-Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que indica que los tipos específicos de datos, como Información de identificación personal (PII), no se pueden exportar y se ha aplicado una etiqueta &quot;I&quot; (Datos de identidad) al conjunto de datos, recibirá una respuesta del [!DNL Policy Service] que le informará de que se ha violado una política de uso de datos.
+Un ejemplo de una acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si hay una directiva que indica que no se pueden exportar tipos de datos específicos, como Información de identificación personal (PII), y se ha aplicado una etiqueta &quot;I&quot; (datos de identidad) al conjunto de datos, recibirá una respuesta del [!DNL Policy Service] que le indicará que se ha violado una política de uso de datos.
 
 Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear políticas mediante la API [!DNL Policy Service] o la interfaz de usuario [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >
->Todas las directivas de uso de datos (incluidas las directivas principales proporcionadas por Adobe) están deshabilitadas de forma predeterminada. Para que una política individual se considere para su aplicación, debe habilitarla manualmente.
+>De forma predeterminada, todas las políticas de uso de datos (incluidas las políticas principales proporcionadas por Adobe) están desactivadas. Para que una directiva individual se considere para su aplicación, debe habilitarla manualmente.
 
-Para obtener más información sobre las políticas de uso de datos y las acciones de mercadotecnia, consulte la [información general de las directivas](./policies/overview.md).
+Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [descripción general de las políticas](./policies/overview.md).
 
 ## Pasos siguientes
 
-Este documento proporcionó una introducción de alto nivel al [!DNL Data Governance] y al marco[!DNL Data Governance]. Ahora puede continuar con la [guía del usuario de etiquetas de uso de datos](labels/user-guide.md) y el inicio de agregar etiquetas de uso a los datos de experiencia.
+Este documento proporcionó una introducción de alto nivel a [!DNL Data Governance] y al marco[!DNL Data Governance]. Ahora puede continuar con la [guía del usuario de etiquetas de uso de datos](labels/user-guide.md) y empezar a agregar etiquetas de uso a los datos de experiencia.
 
 ## Apéndice
 
@@ -97,27 +97,27 @@ La siguiente sección proporciona información adicional sobre [!DNL Data Govern
 
 ### [!DNL Data Governance] terminología
 
-La siguiente tabla describe los términos clave relacionados con [!DNL Data Governance] y el marco[!DNL Data Governance].
+La siguiente tabla describe términos clave relacionados con [!DNL Data Governance] y el marco[!DNL Data Governance].
 
 | Término | Definición |
 |---|---|
-| **Etiquetas de contrato** | Las etiquetas &quot;C&quot; del contrato se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de administración de datos de su organización. |
+| **Etiquetas de contrato** | Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos que tienen obligaciones contractuales o que están relacionados con las políticas de control de datos de su organización. |
 | **Datos entre sitios** | Los datos entre sitios son la combinación de datos de varios sitios, incluida una combinación de datos en el sitio y datos fuera del sitio o una combinación de datos de varias fuentes fuera del sitio. |
-| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normativas y políticas institucionales en lo que respecta al uso de los datos. |
-| **Administrador de datos** | El administrador de datos es la persona responsable de la administración, supervisión y ejecución de los activos de datos de una organización. Un administrador de datos también garantiza que las políticas de control de datos se salvaguarden y mantienen para cumplir con las regulaciones y políticas de organización del gobierno. |
-| **Etiquetas de uso de datos** | Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las normativas y políticas corporativas. |
-| **Etiquetas de datos** | Las etiquetas se pueden agregar a un conjunto de datos. Todos los campos dentro de un conjunto de datos heredan las etiquetas del conjunto de datos. |
-| **Etiquetas de campo** | Las etiquetas de campo son etiquetas de control de datos que se heredan de un conjunto de datos o se aplican directamente a un campo.  Las etiquetas de control de datos aplicadas a un campo no se heredan hasta un conjunto de datos. |
-| **Geofence** | Una geofence es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software déclencheur una respuesta cuando un dispositivo móvil entra o sale de un área en particular. |
-| **Etiquetas de identidad** | Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar o comunicarse con una persona específica. |
-| **Targeting basado en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de los usuarios, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se ofrecen en función de esas inferencias. |
-| **Acción de mercadotecnia** | Una acción de mercadotecnia, en el contexto del marco de administración de datos, es una acción que realiza un [!DNL Experience Platform] consumidor de datos, para la cual es necesario verificar las violaciones de las políticas de uso de datos |
-| **Política** | En el marco de administración de datos, una política es una regla que describe qué tipo de acciones de mercadotecnia se permiten o no se permiten realizar en datos específicos. |
-| **Etiquetas sensibles** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
+| **Administración de datos** | La gobernanza de los datos abarca las estrategias y tecnologías utilizadas para garantizar que los datos se ajusten a las normas y políticas corporativas con respecto al uso de los datos. |
+| **Administrador de datos** | El gestor de datos es la persona responsable de la administración, supervisión y aplicación de los activos de datos de una organización. Un gestor de datos también garantiza que las políticas de control de datos se salvaguarden y se mantengan para cumplir con las regulaciones gubernamentales y las políticas de organización. |
+| **Etiquetas de uso de datos** | Las etiquetas de uso de datos proporcionan a los usuarios la capacidad de categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las regulaciones y políticas corporativas. |
+| **Etiquetas de conjuntos de datos** | Las etiquetas se pueden agregar a un conjunto de datos. Todos los campos dentro de un conjunto de datos heredan las etiquetas del conjunto de datos. |
+| **Etiquetas de campos** | Las etiquetas de campo son etiquetas de control de datos que se heredan de un conjunto de datos o se aplican directamente a un campo.  Las etiquetas de control de datos aplicadas a un campo no se heredan de un conjunto de datos. |
+| **Geofence** | Una geovalla es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software almacenar en déclencheur una respuesta cuando un dispositivo móvil entra o sale de un área en particular. |
+| **Etiquetas de identidad** | Las etiquetas &quot;I&quot; de identidad se utilizan para categorizar los datos que pueden identificar a una persona específica o ponerse en contacto con ella. |
+| **Segmentación basada en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes: los datos recopilados en el sitio se utilizan para hacer inferencias sobre el interés de los usuarios, se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) y se utilizan para seleccionar qué contenido o anuncios se sirven en función de esas inferencias. |
+| **Acción de marketing** | Una acción de marketing, en el contexto del marco de control de datos, es una acción que realiza un [!DNL Experience Platform] consumidor de datos, para la cual es necesario comprobar las infracciones de las políticas de uso de datos |
+| **Política** | En el marco de control de datos, una política es una regla que describe qué tipo de acciones de marketing se permiten o no en datos específicos. |
+| **Etiquetas confidenciales** | Las etiquetas &quot;S&quot; confidenciales se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 
 ## Recursos adicionales
 
-El siguiente vídeo está diseñado para admitir su comprensión del marco de trabajo [!DNL Data Governance].
+El siguiente vídeo está diseñado para admitir su comprensión del marco [!DNL Data Governance].
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
