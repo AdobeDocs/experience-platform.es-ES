@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Ingesta de datos, fuentes
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 13%
+source-wordcount: '610'
+ht-degree: 12%
 
 ---
 
@@ -79,6 +79,8 @@ ht-degree: 13%
       - [Conector PayPal](connectors/payments/paypal.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
+   - Transmisión {#streaming}
+      - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
    - Crear una conexión de origen {#create}
       - Publicidad {#advertising}
