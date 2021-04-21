@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform permite la ingesta de datos desde un sistema de automatizaci
 Experience Platform permite la ingesta de datos desde un sistema de pagos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
+
+### Transmisión
+
+El Experience Platform es compatible con la ingesta de datos de fuentes de flujo continuo. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocolos
 
