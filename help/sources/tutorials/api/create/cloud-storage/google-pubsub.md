@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;Google PubSub;google pubsub
 solution: Experience Platform
 title: Crear una conexión de Google PubSub Source mediante la API de servicio de flujo
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Google PubSub mediante la API de servicio de flujo.
+exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 translation-type: tm+mt
-source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 2%
+source-wordcount: '611'
+ht-degree: 1%
 
 ---
-
 
 # Crear una conexión de origen [!DNL Google PubSub] mediante la API del servicio de flujo
 
