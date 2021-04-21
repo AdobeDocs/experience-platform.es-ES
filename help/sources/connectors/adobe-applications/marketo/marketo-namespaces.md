@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;conector de origen de Marketo;áreas de nombres;esquemas
 solution: Experience Platform
 title: 'Espacios de nombres de Marketo '
-topic: sobre validación
+topic-legacy: overview
 description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen de Marketo Engage.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1176'
 ht-degree: 6%
 
 ---
