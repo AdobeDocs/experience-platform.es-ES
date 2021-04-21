@@ -2,13 +2,13 @@
 keywords: Experience Platform;inicio;temas populares;fuentes;ingesta;solución de problemas;fuentes;solución de problemas;fuentes preguntas frecuentes;faq;conectores de origen;conector de origen;preguntas frecuentes de conectores de origen;solución de problemas de conectores de origen;
 solution: Experience Platform
 title: Solución de problemas de fuentes
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre las fuentes en Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
