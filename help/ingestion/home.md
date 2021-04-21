@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;inicio;temas populares;consumo de datos;ubicación de datos;ubicación de datos;gestión de datos;gestión de datos;lineal;linaje;lote;lote;datos ingestados
+keywords: Experience Platform;inicio;temas populares;ingesta de datos;ubicación de datos;ubicación de datos;gestión de datos;gestión de datos;linaje;lote;lote;datos ingestados
 solution: Experience Platform
 title: Información general sobre la incorporación de datos
-topic: overview
+topic-legacy: overview
 description: Este documento presenta las tres maneras principales en que se introducen los datos en Platform, con vínculos a su respectiva documentación general para obtener información más detallada.
+exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 14%
 
 ---
 
-
 # Información general sobre la ingesta de datos
 
-Adobe Experience Platform reúne datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingesta de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales [!DNL Platform] ingesta datos de estas fuentes, así como el modo en que se mantienen esos datos dentro del lago de datos para su uso por los servicios descendentes [!DNL Platform].
+Adobe Experience Platform reúne datos de varias fuentes para ayudar a los especialistas en marketing a comprender mejor el comportamiento de sus clientes. La ingesta de datos de Adobe Experience Platform representa los múltiples métodos mediante los cuales [!DNL Platform] ingesta datos de estas fuentes, así como el modo en que se mantienen esos datos dentro del lago de datos para su uso por parte de los servicios [!DNL Platform] descendentes.
 
 Este documento presenta las tres maneras principales en que se introducen los datos en [!DNL Platform], con vínculos a su respectiva documentación general para obtener información más detallada.
 
