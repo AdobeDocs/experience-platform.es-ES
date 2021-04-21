@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
 source-wordcount: '1940'
 ht-degree: 0%
@@ -117,7 +117,7 @@ Ahora se agrega la agregación. Ahora puede seleccionar la función de agregaci�
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Contar funciones
+### Contar funciones {#count-functions}
 
 Las funciones de recuento del Generador de segmentos se utilizan para buscar eventos especificados y contar la cantidad de veces que se han completado. Las funciones de recuento compatibles con el Generador de segmentos son &quot;Al menos&quot;, &quot;Como máximo&quot;, &quot;Exactamente&quot;, &quot;Entre&quot; y &quot;Todo&quot;.
 
