@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;esquemas;
 solution: Experience Platform
 title: Punto final de API de Esquemas
-topic: schemas
+topic-legacy: schemas
 description: 'Puede utilizar el extremo `/schemas` en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlo con Mapper en Platform. '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
