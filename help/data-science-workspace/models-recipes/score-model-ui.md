@@ -2,17 +2,17 @@
 keywords: Experience Platform;puntuación de modelo;Data Science Workspace;temas populares;iu;ejecución de puntuación;resultados de puntuación
 solution: Experience Platform
 title: Puntuación de un modelo en la interfaz de usuario de Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'La puntuación en Adobe Experience Platform Data Science Workspace se puede lograr añadiendo datos de entrada a un modelo entrenado existente. Los resultados de puntuación se almacenan y pueden verse en un conjunto de datos de salida especificado como un nuevo lote. '
+description: La puntuación en Adobe Experience Platform Data Science Workspace se puede lograr añadiendo datos de entrada a un modelo entrenado existente. Los resultados de puntuación se almacenan y pueden verse en un conjunto de datos de salida especificado como un nuevo lote.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 1%
+source-wordcount: '619'
+ht-degree: 0%
 
 ---
-
 
 # Puntuación de un modelo en la interfaz de usuario de Data Science Workspace
 
