@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;SDK;SDK de acceso a datos;Área de trabajo de ciencias de datos;temas populares
+keywords: Experience Platform;guía para desarrolladores;SDK;SDK de acceso a datos;Data Science Workspace;temas populares
 solution: Experience Platform
-title: Creación de modelos con el SDK de la plataforma Adobe Experience Platform
-topic: SDK authoring
-description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python a la nueva plataforma Python platform_sdk en Python y R.
+title: Creación de modelos mediante el SDK de la plataforma Adobe Experience Platform
+topic-legacy: SDK authoring
+description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
-
 # Creación de modelos con el SDK [!DNL Platform] de Adobe Experience Platform
 
-Este tutorial le proporciona información sobre la conversión de `data_access_sdk_python` al nuevo Python `platform_sdk` en Python y R. Este tutorial proporciona información sobre las siguientes operaciones:
+Este tutorial le proporciona información sobre la conversión de `data_access_sdk_python` al nuevo Python `platform_sdk` tanto en Python como en R. Este tutorial proporciona información sobre las siguientes operaciones:
 
 - [Generar autenticación](#build-authentication)
 - [Lectura básica de los datos](#basic-reading-of-data)
@@ -27,13 +27,13 @@ La autenticación es necesaria para realizar llamadas a [!DNL Adobe Experience P
 
 ### Python
 
-Si utiliza el bloc de notas Jupyter, utilice el código siguiente para generar el `client_context`:
+Si está utilizando Jupyter Notebook, utilice el siguiente código para crear el `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no está utilizando Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente código de muestra:
+Si no utiliza Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente ejemplo de código:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -45,7 +45,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Si utiliza el bloc de notas Jupyter, utilice el código siguiente para generar el `client_context`:
+Si está utilizando Jupyter Notebook, utilice el siguiente código para crear el `client_context`:
 
 ```r
 library(reticulate)
@@ -56,7 +56,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no está utilizando Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente código de muestra:
+Si no utiliza Jupyter Notebook o necesita cambiar la organización de IMS, utilice el siguiente ejemplo de código:
 
 ```r
 library(reticulate)
@@ -72,7 +72,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 Con el nuevo SDK [!DNL Platform], el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
 
-Si el tiempo de lectura tarda demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
+Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
 
 - [Filtrado de datos por desplazamiento y límite](#filter-by-offset-and-limit)
 - [Filtrado de datos por fecha](#filter-by-date)
@@ -81,11 +81,11 @@ Si el tiempo de lectura tarda demasiado, puede intentar utilizar una de las sigu
 
 >[!NOTE]
 >
->La organización de IMS se establece dentro de `client_context`.
+>La organización IMS se configura dentro de `client_context`.
 
 ### Python
 
-Para leer datos en Python, utilice el código de muestra siguiente:
+Para leer datos en Python, utilice el siguiente ejemplo de código:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -96,7 +96,7 @@ df.head()
 
 ### R
 
-Para leer los datos en R, utilice el código de muestra siguiente:
+Para leer los datos en R, utilice el siguiente ejemplo de código:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -105,9 +105,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrar por desplazamiento y limitar {#filter-by-offset-and-limit}
+## Filtrar por desajuste y limitar {#filter-by-offset-and-limit}
 
-Dado que ya no se admite el filtrado por ID de lote, para definir el ámbito de la lectura de datos, debe utilizar `offset` y `limit`.
+Ya no se admite el filtrado por ID de lote, por lo que debe utilizar `offset` y `limit` para ampliar el ámbito de lectura de los datos.
 
 ### Python
 
@@ -125,7 +125,7 @@ df
 
 ## Filtrar por fecha {#filter-by-date}
 
-La granularidad del filtro de fechas ahora se define mediante la marca de tiempo, en lugar de establecerse por el día.
+La granularidad del filtrado de fechas ahora se define mediante la marca de tiempo, en lugar de configurarse por día.
 
 ### Python
 
@@ -161,7 +161,7 @@ El nuevo SDK [!DNL Platform] admite las siguientes operaciones:
 
 ## Filtrar por columnas seleccionadas {#filter-by-selected-columns}
 
-Para restringir aún más la lectura de datos, también puede filtrar por nombre de columna.
+Para restringir aún más la lectura de los datos, también puede filtrar por nombre de columna.
 
 ### Python
 
@@ -177,9 +177,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Obtener resultados ordenados {#get-sorted-results}
 
-Los resultados recibidos se pueden ordenar por columnas especificadas del conjunto de datos de destinatario y en su orden (asc/desc) respectivamente.
+Los resultados recibidos se pueden ordenar por columnas especificadas del conjunto de datos de destino y en su orden (asc/desc) respectivamente.
 
-En el siguiente ejemplo, dataframe se ordena primero por &quot;column-a&quot; en orden ascendente. Las filas que tienen los mismos valores para &quot;columna-a&quot; se ordenan por &quot;columna-b&quot; en orden descendente.
+En el siguiente ejemplo, dataframe se ordena primero por &quot;column-a&quot; en orden ascendente. Las filas que tienen los mismos valores para la &quot;columna-a&quot; se ordenan por &quot;columna-b&quot; en orden descendente.
 
 ### Python
 
@@ -197,7 +197,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->La organización de IMS se establece dentro de `client_context`.
+>La organización IMS se configura dentro de `client_context`.
 
 Para escribir datos en Python y R, utilice uno de los siguientes ejemplos:
 
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y luego se dividen en los datasets `train` y `val`. Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula mediante [!DNL JupyterLab] blocs de notas.
+Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y luego se dividen en los conjuntos de datos `train` y `val`. Para obtener más información sobre la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula utilizando [!DNL JupyterLab] blocs de notas.
