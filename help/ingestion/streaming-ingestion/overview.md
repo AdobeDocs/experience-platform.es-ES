@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;consumo de datos;datos ingestados;flujo continuo;descripción general;ingesta de flujo;latencia;latencia de flujo continuo;
+keywords: Experience Platform;inicio;temas populares;consumo de datos;datos ingestados;flujo continuo;descripción general;ingesta de transmisión;latencia;latencia de transmisión por secuencias;
 solution: Experience Platform
 title: Información general sobre la ingesta de flujos
-topic: overview
-description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor a Experience Platform en tiempo real.
+topic-legacy: overview
+description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos de cliente y del lado del servidor al Experience Platform en tiempo real.
+exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 3%
 
 ---
-
 
 # Información general sobre la ingesta de flujos
 
@@ -46,4 +46,4 @@ Para obtener más información sobre cómo habilitar un conjunto de datos para [
 
 ## Extensión de Adobe Experience Platform
 
-Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La extensión [!DNL Experience Platform] proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la documentación de [Experience Platform Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) para obtener más información.
+Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La extensión [!DNL Experience Platform] proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la documentación de [extensión del Experience Platform](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) para obtener más información.
