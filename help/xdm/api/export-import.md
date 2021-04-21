@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;exportación;importación;rpc
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;exportación;importación;rpc;
 solution: Experience Platform
 title: Exportación/importación de extremos de API
 description: Los extremos /export y /import de la API del Registro de esquemas permiten compartir recursos XDM entre organizaciones IMS y entornos limitados.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
-
 
 # Exportación/importación de extremos
 
@@ -19,13 +19,13 @@ Todos los recursos dentro de [!DNL Schema Library] están contenidos en un entor
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que son necesarios para realizar llamadas correctamente a cualquier API de Experience Platform.
+Los extremos utilizados en esta guía forman parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
 Los extremos de exportación e importación forman parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan `CONTAINER_ID`. En su lugar, deben utilizar el espacio de nombres `/rpc` , como se muestra en las llamadas de API que aparecen a continuación.
 
 ## Recuperar una carga útil de exportación para un recurso {#export}
 
-Para cualquier esquema, mezcla o tipo de datos existente en [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud GET al extremo `/export` , proporcionando el ID del recurso en la ruta de acceso.
+Para cualquier esquema, mezcla o tipo de datos existente en [!DNL Schema Library], puede generar una carga útil de exportación realizando una solicitud de GET al extremo `/export` , proporcionando el ID del recurso en la ruta de acceso.
 
 **Formato de API**
 
@@ -197,7 +197,7 @@ Tenga en cuenta que todas las instancias del ID de inquilino del recurso se sust
 
 ## Importar un recurso {#import}
 
-Una vez que haya [generado una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga en una solicitud POST al extremo `/import` para importar ese recurso en una organización IMS y un simulador de pruebas de destino.
+Una vez que [ha generado una carga útil de exportación](#export) para un recurso XDM, puede utilizar esa carga en una solicitud de POST al extremo `/import` para importar ese recurso en una organización y simulador de pruebas IMS de destino.
 
 **Formato de API**
 
