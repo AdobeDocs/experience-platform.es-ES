@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Guía de flujos de datos
 user-guide-description: Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform.
-feature: Data Management, Data Ingestion
+feature: Gestión de datos, ingesta de datos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 31%
