@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;ai de atribución;puntuaciones de acceso;temas populares;puntuaciones de descarga;puntuaciones de ai de atribución;exportar;Exportar
+keywords: Experience Platform;ai de atribución;acceder a puntuaciones;temas populares;descargar puntuaciones;atribución de puntuaciones de ai;exportar;Exportar
 solution: Experience Platform, Intelligent Services
 title: Descargar puntuaciones en Attribution AI
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: Este documento sirve como guía para descargar puntuaciones para Attribution AI.
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 2%
 
 ---
-
 
 # Descargar puntuaciones en Attribution AI
 
@@ -19,25 +19,25 @@ Este documento sirve como guía para descargar puntuaciones para Attribution AI.
 
 ## Primeros pasos
 
-Attribution AI le permite descargar puntuaciones en el formato de archivo Parquet. Este tutorial requiere que haya leído y terminado la sección de puntuaciones de Attribution AI de descarga en la guía [introducción](./getting-started.md).
+Attribution AI le permite descargar puntuaciones en el formato de archivo Parquet. Este tutorial requiere que haya leído y terminado la sección de descargas de puntuaciones de Attribution AI en la guía [introducción](./getting-started.md).
 
-Además, para acceder a las puntuaciones de Attribution AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite la [guía del usuario de Attribution AI](./user-guide.md). Si ha creado recientemente una instancia de servicio y aún está en formación y puntaje, espere 24 horas para que termine de ejecutarse.
+Además, para acceder a las puntuaciones de Attribution AI, debe tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite la [guía del usuario de Attribution AI](./user-guide.md). Si ha creado recientemente una instancia de servicio y sigue siendo de formación y puntuación, espere 24 horas para que termine de ejecutarse.
 
 ## Busque su ID de conjunto de datos {#dataset-id}
 
-En la instancia de servicio para obtener información sobre Attribution AI, haga clic en la lista desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Puntuaciones de acceso]**.
+En la instancia de servicio para obtener información sobre las Attribution AI, haga clic en el menú desplegable *Más acciones* en la navegación superior derecha y, a continuación, seleccione **[!UICONTROL Access scores]**.
 
 ![más acciones](./images/download-scores/more-actions.png)
 
-Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación de las puntuaciones de descarga y al ID del conjunto de datos de la instancia actual. Copie el ID del conjunto de datos en el portapapeles y continúe con el paso siguiente.
+Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación de descarga de puntuaciones y el ID del conjunto de datos para la instancia actual. Copie el ID del conjunto de datos en el portapapeles y continúe con el paso siguiente.
 
-![Id. de conjunto de datos](../customer-ai/images/download-scores/access-scores.png)
+![ID de conjunto de datos](../customer-ai/images/download-scores/access-scores.png)
 
 ## Recupere su ID de lote {#retrieve-your-batch-id}
 
-Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Se utilizan parámetros de consulta adicionales para esta llamada de API a fin de devolver el último lote exitoso en lugar de una lista de lotes que pertenecen a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta `limit` a la cantidad deseada que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, visite la guía sobre [filtrado de datos del catálogo mediante parámetros de consulta](../../catalog/api/filter-data.md).
+Con el ID del conjunto de datos del paso anterior, debe realizar una llamada a la API del catálogo para recuperar un ID de lote. Para esta llamada de API se utilizan parámetros de consulta adicionales para devolver el último lote correcto en lugar de una lista de lotes pertenecientes a su organización. Para devolver lotes adicionales, aumente el número del parámetro de consulta `limit` a la cantidad que desee que se devuelva. Para obtener más información sobre los tipos de parámetros de consulta disponibles, consulte la guía sobre el [filtrado de datos del catálogo utilizando parámetros de consulta](../../catalog/api/filter-data.md).
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
@@ -59,11 +59,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote. En este ejemplo, el valor Key del objeto devuelto es el ID de lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie el ID de lote para utilizarlo en la siguiente llamada de API.
+Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de lote. En este ejemplo, el valor de clave del objeto devuelto es el ID de lote `01E5QSWCAASFQ054FNBKYV6TIQ`. Copie su ID de lote para utilizarlo en la siguiente llamada de API.
 
 >[!NOTE]
 >
-> La siguiente respuesta ha tenido el objeto `tags` reformado para facilitar la lectura.
+> La siguiente respuesta ha tenido el objeto `tags` reforzado para facilitar la lectura.
 
 ```json
 {
@@ -116,7 +116,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto de ID de 
 
 Una vez que tenga su ID de lote, podrá realizar una nueva solicitud de GET a `/batches`. La solicitud devuelve un vínculo que se utiliza como la siguiente solicitud de API.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET batches/{BATCH_ID}/files
@@ -124,7 +124,7 @@ GET batches/{BATCH_ID}/files
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{BATCH_ID}` | El ID de lote que se recuperó en el paso anterior [recupere el ID de lote](#retrieve-your-batch-id). |
+| `{BATCH_ID}` | El ID de lote que se recuperó en el paso anterior [recupere su ID de lote](#retrieve-your-batch-id). |
 
 **Solicitud**
 
@@ -168,9 +168,9 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto `_links`.
 
 ## Recupere los archivos {#retrieving-your-files}
 
-Utilizando el valor `href` obtenido en el paso anterior como una llamada de API, realice una nueva solicitud de GET para recuperar el directorio de archivos.
+Utilizando el valor `href` que obtuvo en el paso anterior como una llamada de API, realice una nueva solicitud de GET para recuperar el directorio de archivos.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET files/{DATASETFILE_ID}
@@ -178,7 +178,7 @@ GET files/{DATASETFILE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el valor `href` del [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). También se puede acceder a ella en la matriz `data`, bajo el tipo de objeto `dataSetFileId`. |
+| `{DATASETFILE_ID}` | El ID dataSetFile se devuelve en el valor `href` del [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). También es accesible en la matriz `data` bajo el tipo de objeto `dataSetFileId`. |
 
 **Solicitud**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 **Respuesta**
 
-La respuesta contiene una matriz de datos que puede tener una sola entrada o una lista de archivos pertenecientes a ese directorio. El ejemplo siguiente contiene una lista de archivos y se ha resumido para facilitar la lectura. En este escenario, debe seguir la dirección URL de cada archivo para acceder al archivo.
+La respuesta contiene una matriz de datos que puede tener una sola entrada o una lista de archivos pertenecientes a ese directorio. El ejemplo siguiente contiene una lista de archivos y se ha condensado para facilitar la lectura. En esta situación, debe seguir la dirección URL de cada archivo para acceder al archivo.
 
 ```json
 {
@@ -216,10 +216,10 @@ La respuesta contiene una matriz de datos que puede tener una sola entrada o una
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `_links.self.href` | Dirección URL de solicitud de GET utilizada para descargar un archivo en el directorio. |
+| `_links.self.href` | La URL de solicitud de GET utilizada para descargar un archivo en su directorio. |
 
 
-Copie el valor `href` para cualquier objeto de archivo de la matriz `data` y, a continuación, continúe con el paso siguiente.
+Copie el valor `href` de cualquier objeto de archivo de la matriz `data` y, a continuación, continúe con el paso siguiente.
 
 ## Descargar los datos del archivo
 
@@ -227,9 +227,9 @@ Para descargar los datos del archivo, realice una solicitud de GET al valor `"hr
 
 >[!NOTE]
 >
->Si realiza esta solicitud directamente en la línea de comandos, es posible que se le pregunte si desea agregar un resultado después de los encabezados de la solicitud. El siguiente ejemplo de solicitud utiliza `--output {FILENAME.FILETYPE}`.
+>Si realiza esta solicitud directamente en la línea de comandos, es posible que se le pida que añada un resultado después de los encabezados de solicitud. El siguiente ejemplo de solicitud utiliza `--output {FILENAME.FILETYPE}`.
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET files/{DATASETFILE_ID}?path={FILE_NAME}
@@ -237,7 +237,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | El ID de dataSetFile se devuelve en el valor `href` de un [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). |
+| `{DATASETFILE_ID}` | El ID dataSetFile se devuelve en el valor `href` de un [paso anterior](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | Nombre del archivo. |
 
 **Solicitud**
@@ -253,29 +253,29 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->Antes de realizar la solicitud de GET, asegúrese de que se encuentra en el directorio o la carpeta en los que desea guardar el archivo.
+>Asegúrese de que está en el directorio o carpeta correcto en el que desea guardar el archivo antes de realizar la solicitud de GET.
 
 **Respuesta**
 
-La respuesta descarga el archivo solicitado en el directorio actual. En este ejemplo, el nombre de archivo es &quot;file.parquet&quot;.
+La respuesta descarga el archivo solicitado en en el directorio actual. En este ejemplo, el nombre de archivo es &quot;file.parquet&quot;.
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Las puntuaciones descargadas estarán en formato Parquet y necesitarán un [!DNL Spark] shell o un lector de parquet para vista de las puntuaciones. Para ver la puntuación sin procesar, puede utilizar [Herramientas de parquet de Apache](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Las herramientas de parquet pueden analizar los datos con [!DNL Spark].
+Las puntuaciones descargadas estarán en formato Parquet y necesitarán un [!DNL Spark]-shell o un lector de parquet para ver las puntuaciones. Para la visualización de puntuación sin procesar, puede utilizar [Apache Parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Las herramientas de parquet pueden analizar los datos con [!DNL Spark].
 
 ## Pasos siguientes
 
-Este documento describió los pasos necesarios para descargar puntuaciones de Attribution AI. Para obtener más información sobre los resultados, visite la documentación de [entradas y salidas de AI de asignación](./input-output.md).
+Este documento describía los pasos necesarios para descargar puntuaciones de Attribution AI. Para obtener más información sobre los resultados de puntuación, consulte la documentación [Attribution AI input and output](./input-output.md).
 
-## Acceso a las puntuaciones mediante Snowflake
+## Acceso a las puntuaciones mediante el Snowflake
 
 >[!IMPORTANT]
 >
->Póngase en contacto con attributionai-support@adobe.com para obtener más información sobre el acceso a las puntuaciones mediante Snowflake.
+>Póngase en contacto con attributionai-support@adobe.com para obtener más información sobre el acceso a puntuaciones con el Snowflake.
 
-Puede acceder a las puntuaciones de Attribution AI agregadas a través del Snowflake. Actualmente, debe enviar por correo electrónico la asistencia técnica de Adobe a attributionai-support@adobe.com para configurar y recibir las credenciales de Snowflake en su cuenta de lector.
+Puede acceder a las puntuaciones de Attribution AI agregadas a través del Snowflake . Actualmente, debe enviar por correo electrónico a la asistencia de Adobe a attributionai-support@adobe.com para configurar y recibir las credenciales de Snowflake en su cuenta de lector.
 
-Una vez que la asistencia de Adobe haya procesado su solicitud, se le proporcionará una dirección URL para la cuenta de lector al Snowflake y las credenciales correspondientes a continuación:
+Una vez que la asistencia de Adobe ha procesado su solicitud, se le proporcionará una URL para la cuenta de lector al Snowflake y las credenciales correspondientes a continuación:
 
 - URL del Snowflake
 - Nombre de usuario
@@ -283,26 +283,26 @@ Una vez que la asistencia de Adobe haya procesado su solicitud, se le proporcion
 
 >[!NOTE]
 >
->La cuenta de lector es para consultar los datos mediante clientes SQL, hojas de cálculo y soluciones BI que admiten el conector JDBC.
+>La cuenta de lector es para consultar los datos usando clientes sql, hojas de cálculo y soluciones de BI que admiten el conector JDBC.
 
-Una vez que tenga las credenciales y la dirección URL, puede realizar la consulta de las tablas de modelos, agregadas por fecha de punto de contacto o fecha de conversión.
+Una vez que tenga las credenciales y la dirección URL, puede consultar las tablas del modelo, agregadas por fecha del punto de contacto o fecha de conversión.
 
-### Búsqueda de su esquema en Snowflake
+### Búsqueda del esquema en el Snowflake
 
-Con las credenciales proporcionadas, inicie sesión en Snowflake. Haga clic en la ficha **Hojas de cálculo** en la navegación principal superior izquierda y, a continuación, navegue hasta el directorio de la base de datos en el panel izquierdo.
+Con las credenciales proporcionadas, inicie sesión en el Snowflake. Haga clic en la ficha **Hojas de cálculo** en la navegación principal superior izquierda y, a continuación, vaya al directorio de la base de datos en el panel izquierdo.
 
 ![Hojas de cálculo y navegación](./images/download-scores/edited_snowflake_1.png)
 
-A continuación, haga clic en **Seleccionar Esquema** en la esquina superior derecha de la pantalla. En la ventana emergente que aparece, confirme que tiene seleccionada la base de datos correcta. A continuación, haga clic en la lista desplegable *Esquema* y seleccione uno de los esquemas enumerados. Puede realizar la consulta directamente desde las tablas de puntuación que aparecen bajo el esquema seleccionado.
+A continuación, haga clic en **Seleccionar esquema** en la esquina superior derecha de la pantalla. En la ventana emergente que aparece, confirme que tiene seleccionada la base de datos correcta. A continuación, haga clic en la lista desplegable *Schema* y seleccione uno de los esquemas enumerados. Puede realizar consultas directamente desde las tablas de puntuación enumeradas en el esquema seleccionado.
 
 ![buscar un esquema](./images/download-scores/edited_snowflake_2.png)
 
 ## Conexión de PowerBI al Snowflake (opcional)
 
-Las credenciales de Snowflake se pueden utilizar para configurar una conexión entre las bases de datos de PowerBI Desktop y Snowflake.
+Las credenciales del Snowflake se pueden usar para configurar una conexión entre las bases de datos de PowerBI Desktop y Snowflake.
 
-Primero, en el cuadro *Servidor*, escriba la dirección URL del Snowflake. A continuación, en *Almacén*, escriba &quot;XSMALL&quot;. A continuación, escriba su nombre de usuario y contraseña.
+En primer lugar, en el cuadro *Servidor*, escriba la dirección URL del Snowflake. A continuación, en *Warehouse*, escriba &quot;XSMALL&quot;. A continuación, escriba su nombre de usuario y contraseña.
 
 ![ejemplo de POWERBI](./images/download-scores/powerbi-snowflake.png)
 
-Una vez establecida la conexión, seleccione la base de datos Snowflake y, a continuación, seleccione el esquema adecuado. Ahora puede cargar todas las tablas.
+Una vez establecida la conexión, seleccione la base de datos del Snowflake y, a continuación, seleccione el esquema adecuado. Ahora puede cargar todas las tablas.
