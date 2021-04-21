@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;inicio;temas populares;etl;ETL;transformaciones de ETL;transformaciones de ETL
+keywords: Experience Platform;inicio;temas populares;etl;ETL;transformaciones de etl;transformaciones de ETL
 solution: Experience Platform
 title: Transformaciones de ETL de muestra
-topic: overview
-description: En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación y carga (ETL).
+topic-legacy: overview
+description: En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación, carga (ETL).
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 2%
 
 ---
 
+# Transformaciones de ETL de muestra
 
-# Transformaciones ETL de muestra
+En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación, carga (ETL).
 
-En este artículo se muestran las siguientes transformaciones de ejemplo que puede encontrar un desarrollador de extracción, transformación y carga (ETL).
+## CSV plano a jerarquía
 
-## CSV plano para jerarquía
+### Archivos de muestra
 
-### Archivos de ejemplo
+Los archivos CSV y JSON de muestra están disponibles en el repositorio público de referencia ETL [!DNL GitHub] que mantiene el Adobe:
 
-Los archivos CSV y JSON de muestra están disponibles en la repo de referencia ETL pública [!DNL GitHub] mantenida por Adobe:
-
-- [CRM_perfiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_perfiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### CSV de ejemplo
 
@@ -46,20 +46,20 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 Los requisitos de asignación para los datos CRM se describen en la siguiente tabla e incluyen las siguientes transformaciones:
 - Columnas de identidad con propiedades `identityMap`
 - Fecha de nacimiento (DOB) al año y al mes
-- Cadenas a Dobles o integradores cortos.
+- Cadenas a dobles o a integradores cortos.
 
 | Columna CSV | Ruta XDM | Formato de datos |
 | ---------- | -------- | --------------- |
 | TÍTULO | person.name.courtesyTitle | Copiar como cadena |
 | F_NAME | person.name.firstName | Copiar como cadena |
 | L_NAME | person.name.lastName | Copiar como cadena |
-| SEXO | person.gender | Transformar el sexo como persona correspondiente.valor de enumeración de género |
-| DOB | people.bornDayAndMonth: &quot;MM-DD&quot;<br/>persona.bornDate: &quot;AAAA-MM-DD&quot;<br/>persona.bornYear: YYYY | Transforme el valor de bornDayAndMonth como cadena<br/>Transformar el valor de bornDate como cadena<br/>Transformar el valor de bornYear como int corto |
+| SEXO | person.gender | Transformar el género como valor de enumeración person.gender correspondiente |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: YYYY | Transforme birthDayAndMonth como cadena<br/>Transformar birthDate como cadena<br/>Transformar birthYear como short int |
 | CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, principal:false}] | Copiar como cadena a la matriz CRMID en identityMap y establecer Principal como falso |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copiar como cadena a la primera entrada en la matriz ECID en identityMap y establecer Principal como falso |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, principal:true}] | Copiar como cadena a la matriz LOYALTYID en identityMap y establecer Principal como verdadero |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, principal:false}] | Copiar como cadena en la segunda entrada de la matriz ECID en identityMap y establecer Principal en false |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie como cadena en la matriz CRMID en identityMap y establezca Primary como false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copie como cadena a la primera entrada en la matriz ECID en identityMap y establezca Primary como false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copie como cadena en la matriz LOYALTYID en identityMap y establezca Primary como true |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copie como cadena a la segunda entrada en la matriz ECID en identityMap y establezca Primary como false |
 | TELÉFONO | homePhone.number | Copiar como cadena |
 | CALLE | homeAddress.street1 | Copiar como cadena |
 | CIUDAD | homeAddress.city | Copiar como cadena |
@@ -174,11 +174,11 @@ El siguiente ejemplo muestra las dos primeras filas del CSV transformado en XDM,
 
 ## Esquema Dataframe a XDM
 
-La jerarquía de un dataframe (como un archivo de parquet) debe coincidir con la del esquema XDM en el que se está cargando.
+La jerarquía de un dataframe (como un archivo Parquet) debe coincidir con la del esquema XDM que se está cargando en.
 
 ### Ejemplo de dataframe
 
-La estructura del siguiente dataframe de ejemplo se ha asignado a un esquema que implementa la clase [!DNL XDM Individual Profile] y contiene los campos más comunes asociados con esquemas de ese tipo.
+La estructura del siguiente ejemplo dataframe se ha asignado a un esquema que implementa la clase [!DNL XDM Individual Profile] y contiene los campos más comunes asociados a esquemas de ese tipo.
 
 ```python
 [
@@ -253,7 +253,7 @@ La estructura del siguiente dataframe de ejemplo se ha asignado a un esquema que
 
 Al construir un dataframe para utilizarlo en Adobe Experience Platform, es importante asegurarse de que su estructura jerárquica coincide exactamente con la de un esquema XDM existente para que los campos se asignen correctamente.
 
-## Identidades al mapa de identidad
+## Identidades para el mapa de identidad
 
 ### Matriz de identidades
 
@@ -284,7 +284,7 @@ Al construir un dataframe para utilizarlo en Adobe Experience Platform, es impor
 
 Los requisitos de asignación para la matriz de identidades se describen en la siguiente tabla:
 
-| Campo de identidad | Campo IdentityMap | Tipo de datos |
+| Campo de identidad | Campo identityMap | Tipo de datos |
 | -------------- | ----------------- | --------- |
 | identidades[0].id | identityMap[Correo electrónico][{"id"}] | copiar como cadena |
 | identidades[1].id | identityMap[CRMID][{"id"}] | copiar como cadena |
@@ -292,7 +292,7 @@ Los requisitos de asignación para la matriz de identidades se describen en la s
 
 ### XDM de salida
 
-A continuación se muestra el conjunto de identidades transformadas en XDM:
+A continuación se muestra la matriz de identidades transformadas en XDM:
 
 ```JSON
 "identityMap": {
@@ -307,4 +307,3 @@ A continuación se muestra el conjunto de identidades transformadas en XDM:
       }]
    }
 ```
-
