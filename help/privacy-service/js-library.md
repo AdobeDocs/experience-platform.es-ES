@@ -2,57 +2,57 @@
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Información general de la biblioteca JavaScript de privacidad de Adobe
-topic: overview
-description: La biblioteca JavaScript de privacidad de Adobe le permite recuperar identidades de sujeto de datos para utilizarlas en Privacy Service.
+topic-legacy: overview
+description: La biblioteca JavaScript de privacidad de Adobe permite recuperar identidades de interesados para usarlas en Privacy Service.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 6%
 
 ---
 
+# Resumen de la biblioteca JavaScript de privacidad de Adobe
 
-# Información general sobre la biblioteca JavaScript de privacidad de Adobe
+Como encargado del tratamiento de datos, Adobe procesa los datos personales de acuerdo con los permisos e instrucciones de su empresa. Como responsable del tratamiento de datos, determinará qué datos personales Adobe trata y almacena en su nombre. Según la información que elija enviar a través de las soluciones de Adobe Experience Cloud, Adobe puede almacenar información privada aplicable a regulaciones de privacidad como [!DNL General Data Protection Regulation] (RGPD) y [!DNL California Consumer Privacy Act] (CCPA). Consulte el documento sobre [privacidad en Adobe Experience Cloud](https://www.adobe.com/es/privacy/marketing-cloud.html) para obtener más información sobre cómo las soluciones de Experience Cloud recopilan datos privados.
 
-Como procesador de datos, Adobe procesa los datos personales de acuerdo con las instrucciones y los permisos de su compañía. Como responsable del tratamiento de datos, determinará qué datos personales Adobe trata y almacena en su nombre. Según la información que elija enviar a través de las soluciones de Adobe Experience Cloud, Adobe puede almacenar información privada aplicable a las regulaciones de privacidad, como [!DNL General Data Protection Regulation] (GDPR) y [!DNL California Consumer Privacy Act] (CCPA). Consulte el documento sobre [privacidad en Adobe Experience Cloud](https://www.adobe.com/es/privacy/marketing-cloud.html) para obtener más información sobre cómo las soluciones de Experience Cloud recopilan datos privados.
-
-La **biblioteca JavaScript de privacidad de Adobe** permite a los controladores de datos automatizar la recuperación de todas las identidades de sujeto de datos generadas por las soluciones [!DNL Experience Cloud] para un dominio específico. Utilizando la API proporcionada por [Adobe Experience Platform Privacy Service](home.md), estas identidades se pueden utilizar para crear solicitudes de acceso y eliminar solicitudes de datos privados pertenecientes a esos sujetos de datos.
+La **Biblioteca JavaScript de privacidad de Adobe** permite a los controladores de datos automatizar la recuperación de todas las identidades de interesados generadas por las soluciones [!DNL Experience Cloud] para un dominio específico. Mediante la API proporcionada por [Adobe Experience Platform Privacy Service](home.md), estas identidades se pueden utilizar para crear solicitudes de acceso y eliminación de datos privados pertenecientes a esos interesados.
 
 >[!NOTE]
 >
->El [!DNL Privacy JS Library] generalmente sólo necesita instalarse en páginas relacionadas con la privacidad y no es necesario que se instale en todas las páginas de un sitio Web o dominio.
+>El [!DNL Privacy JS Library] generalmente solo necesita instalarse en páginas relacionadas con la privacidad y no es necesario que esté instalado en todas las páginas de un sitio web o dominio.
 
 ## Funciones
 
-El [!DNL Privacy JS Library] proporciona varias funciones para administrar identidades en [!DNL Privacy Service]. Estas funciones solo se pueden usar para administrar las identidades almacenadas en el navegador para un visitante específico. No se pueden utilizar para enviar información directamente a [!DNL Experience Cloud Central Service].
+El [!DNL Privacy JS Library] proporciona varias funciones para administrar identidades en [!DNL Privacy Service]. Estas funciones solo se pueden utilizar para administrar las identidades almacenadas en el explorador para un visitante específico. No se pueden utilizar para enviar información directamente a [!DNL Experience Cloud Central Service].
 
-La siguiente tabla describe las diferentes funciones proporcionadas por la biblioteca:
+La siguiente tabla describe las diferentes funciones que proporciona la biblioteca:
 
 | Función | Descripción |
 | --- | --- |
 | `retrieveIdentities` | Devuelve una matriz de identidades coincidentes (`validIds`) que se recuperaron de [!DNL Privacy Service], así como una matriz de identidades que no se encontraron (`failedIds`). |
-| `removeIdentities` | Quita cada identidad coincidente (válida) del explorador. Devuelve una matriz de identidades coincidentes (`validIds`), con cada identidad que contiene un booleano `isDeletedClientSide` que indica si este ID se ha eliminado. |
-| `retrieveThenRemoveIdentities` | Recupera una matriz de identidades coincidentes (`validIds`) y, a continuación, quita esas identidades del explorador. Aunque esta función es similar a `removeIdentities`, es mejor utilizarla cuando la solución de Adobe que está utilizando requiere una solicitud de acceso antes de poder eliminarla (por ejemplo, cuando se debe recuperar un identificador único antes de proporcionarlo en una solicitud de eliminación). |
+| `removeIdentities` | Quita cada identidad coincidente (válida) del explorador. Devuelve una matriz de identidades coincidentes (`validIds`), con cada identidad que contiene un booleano `isDeletedClientSide` que indica si se ha eliminado este ID. |
+| `retrieveThenRemoveIdentities` | Recupera una matriz de identidades coincidentes (`validIds`) y, a continuación, elimina esas identidades del explorador. Aunque esta función es similar a `removeIdentities`, es mejor utilizarla cuando la solución de Adobe que está utilizando requiere una solicitud de acceso antes de la eliminación (como cuando se debe recuperar un identificador único antes de proporcionarlo en una solicitud de eliminación). |
 
 >[!NOTE]
 >
->`removeIdentities` y  `retrieveThenRemoveIdentities` solo elimine identidades del explorador para soluciones de Adobe específicas que las admitan. Por ejemplo, Adobe Audience Manager no elimina los ID de demdex almacenados en cookies de terceros, mientras que Adobe Target elimina todas las cookies que almacenan sus ID.
+>`removeIdentities` y  `retrieveThenRemoveIdentities` solo elimine las identidades del explorador para soluciones de Adobe específicas que las admitan. Por ejemplo, Adobe Audience Manager no elimina los ID de demdex que están almacenados en cookies de terceros, mientras que Adobe Target elimina todas las cookies que almacenan sus ID.
 
-Dado que las tres funciones representan procesos asincrónicos, cualquier identidad recuperada debe gestionarse mediante rellamadas o promesas.
+Dado que las tres funciones representan procesos asíncronos, cualquier identidad recuperada debe gestionarse mediante llamadas de retorno o promesas.
 
 
 ## Instalación
 
-Para realizar inicios mediante el uso de [!DNL Privacy JS Library], debe instalarlo en el equipo mediante uno de los siguientes métodos:
+Para empezar a utilizar [!DNL Privacy JS Library], debe instalarlo en el equipo mediante uno de los métodos siguientes:
 
-* Para realizar la instalación con npm, ejecute el siguiente comando: `npm install @adobe/adobe-privacy`
-* Utilice la extensión de lanzamiento de Adobe con el nombre `AdobePrivacy`
+* Instale utilizando npm ejecutando el siguiente comando: `npm install @adobe/adobe-privacy`
+* Utilice la extensión de Launch de Adobe con el nombre `AdobePrivacy`
 * Descarga desde el [repositorio de GitHub Experience Cloud](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Cree una instancia de [!DNL Privacy JS Library]
 
-Todas las aplicaciones que utilicen el [!DNL Privacy JS Library] deben crear una instancia de un nuevo objeto `AdobePrivacy`, que debe configurarse en una solución de Adobe específica. Por ejemplo, una instancia de Adobe Analytics tendría un aspecto similar al siguiente:
+Todas las aplicaciones que utilizan [!DNL Privacy JS Library] deben crear una instancia de un nuevo objeto `AdobePrivacy`, que debe configurarse en una solución de Adobe específica. Por ejemplo, una instancia de Adobe Analytics tendría un aspecto similar al siguiente:
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -63,11 +63,11 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-Para obtener una lista completa de los parámetros admitidos para distintas soluciones de Adobe, consulte la sección del apéndice sobre los parámetros de configuración de la solución de Adobe [admitidos](#adobe-solution-configuration-parameters).
+Para obtener una lista completa de los parámetros admitidos para las distintas soluciones de Adobe, consulte la sección del apéndice sobre los parámetros de configuración [solución de Adobe](#adobe-solution-configuration-parameters) admitidos.
 
 ## Ejemplos de código
 
-Los siguientes ejemplos de código muestran cómo utilizar [!DNL Privacy JS Library] en varios escenarios comunes, siempre que no utilice [!DNL Launch] o DTM.
+Los siguientes ejemplos de código muestran cómo utilizar [!DNL Privacy JS Library] para varios escenarios comunes, siempre que no utilice [!DNL Launch] o DTM.
 
 ### Recuperar identidades
 
@@ -75,7 +75,7 @@ Este ejemplo muestra cómo recuperar una lista de identidades de [!DNL Experienc
 
 #### JavaScript
 
-El siguiente código define una función, `handleRetrievedIDs`, que se utilizará como llamada de retorno o promesa para manejar las identidades recuperadas por `retrieveIdentities`.
+El siguiente código define una función, `handleRetrievedIDs`, que se utilizará como llamada de retorno o promesa para gestionar las identidades recuperadas por `retrieveIdentities`.
 
 ```javascript
 function handleRetrievedIDs(ids) {
@@ -124,7 +124,7 @@ Este ejemplo muestra cómo eliminar una lista de identidades del explorador.
 
 #### JavaScript
 
-El siguiente código define una función, `handleRemovedIDs`, que se utilizará como llamada de retorno o promesa de administrar las identidades recuperadas por `removeIdentities` después de haber sido eliminadas del explorador.
+El siguiente código define una función, `handleRemovedIDs`, que se utilizará como llamada de retorno o promesa de gestionar las identidades recuperadas por `removeIdentities` después de que se hayan eliminado del explorador.
 
 ```javascript
 function handleRemovedIDs(ids) {
@@ -171,11 +171,11 @@ Si el código se ejecuta correctamente, `validIDs` se rellena con una lista de i
 
 ## Pasos siguientes
 
-Al leer este documento, se le han presentado las funcionalidades principales del [!DNL Privacy JS Library]. Después de utilizar la biblioteca para recuperar una lista de identidades, puede utilizarlas para crear acceso a datos y eliminar solicitudes a la API [!DNL Privacy Service]. Consulte la [guía para desarrolladores de Privacy Service](api/getting-started.md) para obtener más información.
+Al leer este documento, se le han introducido las funcionalidades principales de [!DNL Privacy JS Library]. Después de usar la biblioteca para recuperar una lista de identidades, puede utilizarlas para crear solicitudes de acceso a datos y eliminarlas en la API [!DNL Privacy Service]. Consulte la [guía para desarrolladores de Privacy Service](api/getting-started.md) para obtener más información.
 
 ## Apéndice
 
-Esta sección contiene información adicional para utilizar [!DNL Privacy JS Library].
+Esta sección contiene información complementaria para utilizar [!DNL Privacy JS Library].
 
 ### Parámetros de configuración de la solución Adobe
 
@@ -185,26 +185,26 @@ A continuación se muestra una lista de los parámetros de configuración acepta
 
 | Parámetro | Descripción |
 | --- | --- |
-| `cookieDomainPeriods` | Períodos numéricos en un dominio para el seguimiento de cookies (el valor predeterminado es 2). |
-| `dataCenter` | Centro de datos de recopilación de datos de Adobe. Esto solo debe incluirse si se especifica en la señalización web JavaScript. Los valores posibles son: <ul><li>&quot;d1&quot;: Centro de datos de San José.</li><li>&quot;d2&quot;: Centro de datos de Dallas.</li></ul> |
-| `reportSuite` | ID del grupo de informes tal como se especifica en la señalización web JavaScript (por ejemplo, &quot;s_code.js&quot; o &quot;dtm&quot;). |
-| `trackingServer` | Dominio de recopilación de datos (no SSL). Esto solo debe incluirse si se especifica en la señalización web JavaScript. |
-| `trackingServerSecure` | Dominio de recopilación de datos (SSL). Esto solo debe incluirse si se especifica en la señalización web JavaScript. |
-| `visitorNamespace` | Área de nombres utilizada para agrupar visitantes. Esto solo debe incluirse si se especifica en la señalización web JavaScript. |
+| `cookieDomainPeriods` | El número de puntos en un dominio para el seguimiento de cookies (el valor predeterminado es 2). |
+| `dataCenter` | Centro de datos de recopilación de datos de Adobe. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. Los valores posibles son: <ul><li>&quot;d1&quot;: Centro de datos de San José.</li><li>&quot;d2&quot;: Centro de datos de Dallas.</li></ul> |
+| `reportSuite` | ID del grupo de informes tal como se especifica en la señalización web de JavaScript (por ejemplo, &quot;s_code.js&quot; o &quot;dtm&quot;). |
+| `trackingServer` | Dominio de recopilación de datos (no SSL). Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
+| `trackingServerSecure` | Dominio de recopilación de datos (SSL). Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
+| `visitorNamespace` | Área de nombres utilizada para agrupar visitantes. Esto solo debe incluirse si se especifica en la señalización web de JavaScript. |
 
 **Adobe Target**
 
 | Parámetro | Descripción |
 | --- | --- |
-| `clientCode` | Código de cliente que identifica a un cliente en Adobe Target System. |
+| `clientCode` | Código de cliente que identifica a un cliente en el sistema Adobe Target. |
 
 **Adobe Audience Manager**
 
 | Parámetro | Descripción |
 | --- | --- |
-| `aamUUIDCookieName` | Nombre de la cookie de origen que contiene el ID de usuario único devuelto por Adobe Audience Manager. |
+| `aamUUIDCookieName` | Nombre de la cookie de origen que contiene el ID de usuario único devuelto desde Adobe Audience Manager. |
 
-**Servicio Adobe ID (ECID)**
+**Servicio de Adobe ID (ECID)**
 
 | Parámetro | Descripción |
 | --- | --- |
