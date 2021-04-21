@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;campos;esquemas;Esquemas;señalización;detalles de interacción;tipo de datos;tipo de datos;tipo de datos;
+keywords: Experience Platform;inicio;temas populares;esquema;esquema;XDM;campos;esquemas;esquemas;señalización;detalles de interacción;tipo de datos;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de señalización
-topic: overview
-description: Este documento proporciona información general sobre la clase de Perfil individual XDM.
+topic-legacy: overview
+description: Este documento proporciona información general sobre la clase XDM Individual Profile.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '245'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Beacon] tipo de datos
 
-# [!UICONTROL Tipo ] Beacondata
-
- Beaconis es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del alcance.
+[!UICONTROL Beacon] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica la información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del rango.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `beaconMajor` | Duplicada | Los valores principales identifican y distinguen un grupo y los valores enteros sin signo entre 1 y 65.535. |
+| `beaconMajor` | Duplicada | Los valores principales identifican y distinguen entre 1 y 65.535 valores enteros sin signo. |
 | `beaconMinor` | Duplicada | Los valores menores identifican y distinguen valores enteros individuales y sin signo entre 1 y 65.535. |
-| `proximity` | Cadena | Distancia estimada desde la señalización. Consulte el [apéndice](#proximity) para conocer los valores y las definiciones aceptados. |
-| `proximityUUID` | Cadena | Un UUID de proximidad (identificador único universal) es un tipo especial de identificador que se utiliza para distinguir las señalizaciones de la red de todas las demás señalizaciones de redes fuera de su control. El UUID de proximidad se configura en una señalización, que se transmitirá a dispositivos móviles en el rango para identificar las señalizaciones de una organización. |
+| `proximity` | Cadena | Distancia estimada de la señalización. Consulte el [apéndice](#proximity) para conocer los valores y definiciones aceptados. |
+| `proximityUUID` | Cadena | Un UUID de proximidad (Universally Unique Identifier) es un tipo especial de identificador utilizado para distinguir señalizaciones en la red de todas las demás señalizaciones en redes fuera de su control. El UUID de proximidad se configura en una señalización, que se transmitirá a dispositivos móviles en un rango para identificar las señalizaciones de una organización. |
 
-Para obtener más información sobre el tipo de datos, consulte el repositorio público XDM:
+Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Señalización].
+La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Beacon].
 
 ## Valores aceptados para proximidad {#proximity}
 
@@ -43,5 +43,5 @@ La siguiente tabla describe los valores aceptados para `proximity` y sus signifi
 | --- | --- |
 | `immediate` | En unos pocos centímetros. |
 | `near` | A menos de 10 metros. |
-| `far` | Bueno a menos de 10 metros. |
+| `far` | Buenos a menos de 10 metros. |
 | `unknown` | No se pudo determinar la distancia, probablemente debido a una señal débil. |
