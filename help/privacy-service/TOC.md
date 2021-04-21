@@ -1,31 +1,30 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ayuda de Adobe Experience Platform Privacy Service
 breadcrumb-title: Guía de Privacy Service
 user-guide-description: Administre las solicitudes de datos de los clientes para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
-feature: Privacy
+feature: Privacidad
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 42%
+ht-degree: 48%
 
 ---
 
 
-# Servicio de privacidad de Adobe Experience Platform {#privacy}
+# Adobe Experience Platform Privacy Service {#privacy}
 
-* [Información general de Privacy Service](home.md)
-* [Aplicaciones de Privacy Service y Experience Cloud](experience-cloud-apps.md)
+* [Información general del Privacy Service](home.md)
+* [aplicaciones de Privacy Service y Experience Cloud](experience-cloud-apps.md)
 * [Datos de identidad para solicitudes de privacidad](identity-data.md)
 * [Resumen de la biblioteca de Privacy JS](js-library.md)
-* API del servicio de privacidad {#api}
-   * [Primeros pasos](api/getting-started.md)
+* API del Privacy Service {#api}
+   * [Introducción](api/getting-started.md)
    * [Trabajos de privacidad](api/privacy-jobs.md)
    * [Consentimiento](api/consent.md)
    * [Apéndice](api/appendix.md)
-* Interfaz de usuario del Privacy Service {#ui}
+* IU de Privacy Service {#ui}
    * [Información general](ui/overview.md)
    * [Administrar trabajos de privacidad](ui/user-guide.md)
 * [Suscripción a Eventos de privacidad](privacy-events.md)
