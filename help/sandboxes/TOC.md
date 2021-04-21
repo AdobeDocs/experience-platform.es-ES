@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ayuda sobre Sandboxes en Adobe Experience Platform
 breadcrumb-title: Guía de Sandboxes
 user-guide-description: Dividir una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
-feature: Data Management
+feature: Gestión de datos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 31%
@@ -21,7 +20,7 @@ ht-degree: 31%
    * [Información general sobre la interfaz de usuario del Simulador para pruebas](ui/overview.md)
    * [Guía del usuario de Sandbox](ui/user-guide.md)
 * API de Sandbox {#api}
-   * [Primeros pasos](api/getting-started.md)
+   * [Introducción](api/getting-started.md)
    * [Tipos de entornos limitados admitidos en la lista](api/list-sandbox-types.md)
    * [Lista de todos los entornos limitados](api/list-all-sandboxes.md)
    * [Lista de entornos limitados activos para el usuario actual](api/list-active-sandboxes.md)
