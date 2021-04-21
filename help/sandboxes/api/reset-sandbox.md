@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;restablecer entorno limitado
 solution: Experience Platform
 title: Restablecer un Simulador para pruebas en la API
-topic: developer guide
+topic-legacy: developer guide
 description: Los entornos limitados de desarrollo tienen una función de "restablecimiento de fábrica" que elimina todos los recursos no predeterminados de un entorno limitado. Puede restablecer un simulador para pruebas realizando una solicitud de PUT que incluya el nombre del simulador para pruebas en la ruta de solicitud.
+exl-id: 3a82735d-a043-4fe4-9042-1eb373748d35
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
-
 
 # Restablecer un simulador para pruebas en la API
 
