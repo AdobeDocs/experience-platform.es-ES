@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Autenticar;acceso
 solution: Experience Platform
-title: Autenticar y acceder a las API de Experience Platform
-topic: tutorial
+title: API de Experience Platform de autenticación y acceso
+topic-legacy: tutorial
 type: Tutorial
-description: 'Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform. '
+description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '896'
 ht-degree: 4%
 
 ---
-
 
 # Autenticar y acceder a las API [!DNL Experience Platform]
 
@@ -31,21 +31,21 @@ Para realizar correctamente llamadas a las API [!DNL Experience Platform] , nece
 
 * Una organización de IMS con acceso a Adobe Experience Platform
 * Una cuenta de Adobe ID registrada
-* Un administrador de Admin Console para agregarlo como **desarrollador** y **usuario** para un producto.
+* Un administrador Admin Console para agregarlo como **desarrollador** y **usuario** para un producto.
 
-En las siguientes secciones se explican los pasos para crear un Adobe ID y convertirse en desarrollador y usuario de una organización.
+En las secciones siguientes se describen los pasos para crear un Adobe ID y convertirse en desarrollador y usuario de una organización.
 
-### Creación de un Adobe ID
+### Crear una Adobe ID
 
-Si no dispone de un Adobe ID, puede crearlo siguiendo estos pasos:
+Si no tiene un Adobe ID, puede crearlo siguiendo estos pasos:
 
 1. Vaya a [Adobe Developer Console](https://console.adobe.io)
-2. Seleccione **[!UICONTROL crear una nueva cuenta]**
+2. Seleccione **[!UICONTROL create a new account]**
 3. Completar el proceso de registro
 
 ## Conviértase en desarrollador y usuario de [!DNL Experience Platform] para una organización
 
-Antes de crear integraciones en Adobe I/O, la cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Encontrará información detallada sobre las cuentas de desarrollador en Admin Console en el [documento de asistencia](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) para administrar desarrolladores.
+Antes de crear integraciones en Adobe I/O, la cuenta debe tener permisos de desarrollador para un producto en una organización de IMS. Puede encontrar información detallada sobre las cuentas de desarrollador en el Admin Console en el [documento de soporte](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) para administrar desarrolladores.
 
 **Obtener acceso de desarrollador**
 
@@ -73,7 +73,7 @@ Al igual que el proceso para añadir un desarrollador, el administrador debe asi
 
 >[!NOTE]
 >
->Si está siguiendo este documento desde la [Guía para desarrolladores de Privacy Service](../privacy-service/api/getting-started.md), ahora puede regresar a esa guía para generar las credenciales de acceso exclusivas de [!DNL Privacy Service].
+>Si está siguiendo este documento desde la [guía para desarrolladores de Privacy Service](../privacy-service/api/getting-started.md), ahora puede regresar a esa guía para generar las credenciales de acceso exclusivas de [!DNL Privacy Service].
 
 Con Adobe Developer Console, debe generar las tres credenciales de acceso siguientes:
 
@@ -89,11 +89,11 @@ Los pasos se detallan a continuación.
 
 Vaya a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre la [creación de un proyecto vacío](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) en la documentación de Adobe Developer Console.
 
-Una vez creado un nuevo proyecto, seleccione **[!UICONTROL Agregar API]** en la pantalla **Información general del proyecto**.
+Una vez creado un nuevo proyecto, seleccione **[!UICONTROL Add API]** en la pantalla **Información general del proyecto**.
 
 ![](images/api-authentication/add-api-button.png)
 
-Aparece la pantalla **Add an API**. Seleccione el icono del producto para Adobe Experience Platform y, a continuación, elija **[!UICONTROL API de Experience Platform]** antes de seleccionar **[!UICONTROL Siguiente]**.
+Aparece la pantalla **Add an API**. Seleccione el icono del producto para Adobe Experience Platform y, a continuación, elija **[!UICONTROL Experience Platform API]** antes de seleccionar **[!UICONTROL Next]**.
 
 ![](images/api-authentication/add-platform-api.png)
 
