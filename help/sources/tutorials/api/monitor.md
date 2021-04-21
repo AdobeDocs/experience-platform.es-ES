@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform;inicio;temas populares;controlar flujos de datos;API de servicio de flujo;Servicio de flujo
+keywords: Experience Platform;inicio;temas populares;monitorizar flujos de datos;api de servicio de flujo;servicio de flujo
 solution: Experience Platform
-title: Monitoreo de flujos de datos mediante la API de servicio de flujo
-topic: overview
+title: Monitorización de flujos de datos mediante la API de servicio de flujo
+topic-legacy: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para supervisar los datos de ejecución del flujo para comprobar si están completos, los errores y las métricas que utilizan la API de servicio de flujo.
+description: Este tutorial trata los pasos para monitorizar los datos de ejecución del flujo para obtener información completa, errores y métricas mediante la API del servicio de flujo.
+exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 1%
 
 ---
 
+# Monitorización de flujos de datos mediante la API de servicio de flujo
 
-# Monitorear flujos de datos mediante la API de servicio de flujo
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamientos basados en la nube, bases de datos y muchas otras.
+[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diferentes fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes admitidas.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de diversas fuentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde la que se pueden conectar todas las fuentes admitidas.
-
-En este tutorial se explican los pasos para monitorear los datos de ejecución del flujo para conocer la integridad, los errores y las métricas que utilizan la [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para monitorizar los datos de ejecución del flujo para la integridad, los errores y las métricas que utilizan [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga el valor de ID de un flujo de datos válido. Si no tiene un ID de flujo de datos válido, seleccione el conector que desee en la [información general de fuentes](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
+Este tutorial requiere que tenga el valor de ID de un flujo de datos válido. Si no tiene un ID de flujo de datos válido, seleccione el conector que desee en la [información general de las fuentes](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md):  [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
-* [Simuladores](../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores para pruebas](../../../sandboxes/home.md):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para poder monitorear correctamente las ejecuciones de flujo mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para supervisar correctamente las ejecuciones de flujo mediante la API [!DNL Flow Service].
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener más información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas [!DNL Experience Platform] API, como se muestra a continuación:
+Para realizar llamadas a las API [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del entorno limitado en el que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,11 +53,11 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * `Content-Type: application/json`
 
-## Monitoreo de las ejecuciones de flujo
+## Monitorización de las ejecuciones de flujo
 
 Una vez que haya realizado un flujo de datos, realice una solicitud de GET a la API [!DNL Flow Service].
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /runs?property=flowId=={FLOW_ID}
@@ -65,7 +65,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FLOW_ID}` | El valor único `id` del flujo de datos que desea monitorear. |
+| `{FLOW_ID}` | El valor único `id` para el flujo de datos que desea monitorizar. |
 
 **Solicitud**
 
@@ -82,7 +82,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida información sobre la fecha de creación, las conexiones de origen y destinatario, así como el identificador único de la ejecución del flujo (`id`).
+Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida información sobre la fecha de creación, las conexiones de origen y destino, así como el identificador único de la ejecución del flujo (`id`).
 
 ```json
 {
@@ -246,15 +246,15 @@ Una respuesta correcta devuelve detalles sobre la ejecución del flujo, incluida
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `items` | Contiene una única carga útil de metadatos asociada con la ejecución de flujo específica. |
-| `metrics` | Define las características de los datos en la ejecución de flujo. |
+| `items` | Contiene una única carga útil de metadatos asociados a su ejecución de flujo específica. |
+| `metrics` | Define características de los datos en la ejecución de flujo. |
 | `activities` | Define cómo se transforman los datos. |
-| `durationSummary` | Define el inicio y la hora de finalización de la ejecución del flujo. |
+| `durationSummary` | Define la hora de inicio y finalización de la ejecución del flujo. |
 | `sizeSummary` | Define el volumen de los datos en bytes. |
 | `recordSummary` | Define el recuento de registros de los datos. |
-| `fileSummary` | Define el recuento de archivos de los datos. |
+| `fileSummary` | Define el número de archivos de los datos. |
 | `statusSummary` | Define si la ejecución del flujo es un éxito o un error. |
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha recuperado métricas e información de error en el flujo de datos mediante la API [!DNL Flow Service]. Ahora puede seguir monitoreando el flujo de datos, según el programa de ingestión, para rastrear su estado y las tasas de ingestión. Para obtener información sobre cómo realizar las mismas tareas mediante la interfaz de usuario, consulte el tutorial sobre [supervisión de flujos de datos mediante la interfaz de usuario](../ui/monitor.md)
+Al seguir este tutorial, ha recuperado métricas e información de error en el flujo de datos mediante la API [!DNL Flow Service]. Ahora puede seguir monitorizando el flujo de datos, según la programación de ingesta, para rastrear su estado y las tasas de ingesta. Para obtener información sobre cómo realizar las mismas tareas utilizando la interfaz de usuario, consulte el tutorial sobre [monitorización de flujos de datos mediante la interfaz de usuario](../ui/monitor.md)
