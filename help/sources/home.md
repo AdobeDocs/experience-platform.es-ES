@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permite la ingesta de datos de fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,7 @@ Experience Platform permite la ingesta de datos desde una base de datos de terce
 - [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connector](connectors/databases/mysql.md)
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
