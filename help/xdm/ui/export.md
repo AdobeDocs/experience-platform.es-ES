@@ -1,45 +1,45 @@
 ---
 solution: Experience Platform
-title: Exportación de Esquemas XDM en la interfaz de usuario
-description: Obtenga información sobre cómo exportar un esquema existente a un entorno limitado diferente o a una organización de IMS en la interfaz de usuario de Adobe Experience Platform.
-topic: user guide
+title: Exportar esquemas XDM en la interfaz de usuario
+description: Obtenga información sobre cómo exportar un esquema existente a un simulador para pruebas o una organización IMS diferente en la interfaz de usuario de Adobe Experience Platform.
+topic-legacy: user guide
 type: Tutorial
+exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
+# Exportar esquemas XDM en la interfaz de usuario
 
-# Exportación de esquemas XDM en la interfaz de usuario
+Todos los recursos de la biblioteca de esquemas están contenidos en un simulador de pruebas específico de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS.
 
-Todos los recursos de la biblioteca de Esquemas están contenidos en un entorno limitado específico de una organización de IMS. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones IMS.
-
-Para satisfacer esta necesidad, el espacio de trabajo [!UICONTROL Esquemas] de la interfaz de usuario de Adobe Experience Platform le permite generar una carga útil de exportación para cualquier esquema de la biblioteca de Esquemas. Esta carga útil se puede utilizar en una llamada a la API del Registro de Esquema para importar el esquema (y todos los recursos dependientes) en un entorno limitado de destinatario y en una organización de IMS.
+Para satisfacer esta necesidad, el espacio de trabajo [!UICONTROL Schemas] en la interfaz de usuario de Adobe Experience Platform le permite generar una carga útil de exportación para cualquier esquema dentro de la biblioteca de esquemas. Esta carga útil se puede utilizar en una llamada a la API del Registro de esquemas para importar el esquema (y todos los recursos dependientes) en un entorno limitado de destino y en una organización de IMS.
 
 >[!NOTE]
 >
->También puede utilizar la API del Registro de Esquema para exportar otros recursos además de esquemas, como clases, mezclas y tipos de datos. Consulte la guía de los [extremos de exportación e importación](../api/export-import.md) para obtener más información.
+>También puede utilizar la API del Registro de esquemas para exportar otros recursos además de esquemas, como clases, mezclas y tipos de datos. Consulte la guía de [export/import endpoints](../api/export-import.md) para obtener más información.
 
 ## Requisitos previos
 
-Aunque la interfaz de usuario de la plataforma le permite exportar recursos XDM, debe utilizar la API del Registro de Esquema para importar esos recursos en otros entornos limitados u organizaciones IMS para completar el flujo de trabajo. Consulte la guía [Introducción a la API del Registro de Esquema](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación requeridos antes de seguir esta guía.
+Aunque la interfaz de usuario de Platform le permite exportar recursos XDM, debe utilizar la API del Registro de esquemas para importar esos recursos en otros entornos limitados u organizaciones IMS para completar el flujo de trabajo. Consulte la guía [Introducción a la API del Registro de esquemas](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación necesarios antes de seguir esta guía.
 
 ## Generar una carga útil de exportación
 
-En la interfaz de usuario de la plataforma, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Dentro del espacio de trabajo [!UICONTROL Esquemas], localice el esquema que desea exportar y ábralo en [!DNL Schema Editor].
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo. Dentro del espacio de trabajo [!UICONTROL Schemas], busque el esquema que desea exportar y ábralo en [!DNL Schema Editor].
 
 >[!TIP]
 >
->Consulte la guía sobre [exploración de recursos XDM](./explore.md) para obtener detalles sobre cómo encontrar el recurso XDM que está buscando.
+>Consulte la guía sobre [exploración de recursos XDM](./explore.md) para obtener más información sobre cómo encontrar el recurso XDM que está buscando.
 
-Una vez abierto el esquema, seleccione el icono **[!UICONTROL Copiar JSON]** (![Copiar icono](../images/ui/export/icon.png)) en la parte superior derecha del lienzo.
+Una vez que haya abierto el esquema, seleccione el icono **[!UICONTROL Copy JSON]** (![Copiar icono](../images/ui/export/icon.png)) en la parte superior derecha del lienzo.
 
 ![](../images/ui/export/copy-json.png)
 
-Esto copia una carga útil JSON en el portapapeles, generada en función de la estructura de esquema. Para el esquema &quot;[!DNL Loyalty Members]&quot; mostrado arriba, se genera el siguiente JSON:
+Esto copia una carga útil JSON en el portapapeles, generada según la estructura del esquema. Para el esquema &quot;[!DNL Loyalty Members]&quot; mostrado arriba, se genera el siguiente JSON:
 
 ```json
 [
@@ -203,14 +203,14 @@ Esto copia una carga útil JSON en el portapapeles, generada en función de la e
 ]
 ```
 
-La carga útil adopta la forma de una matriz, y cada elemento de la matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen la mezcla personalizada &quot;[!DNL Loyalty details]&quot; y el esquema &quot;[!DNL Loyalty Members]&quot;. Los recursos básicos empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todos los entornos limitados y en todas las organizaciones de IMS.
+La carga útil adopta la forma de una matriz, y cada elemento de matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen la mezcla personalizada &quot;[!DNL Loyalty details]&quot; y el esquema &quot;[!DNL Loyalty Members]&quot;. Los recursos principales empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todos los entornos limitados y en las organizaciones de IMS.
 
-Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se reemplazarán automáticamente con el valor de ID de inquilino correspondiente, según el lugar donde se importe el esquema en el paso siguiente.
+Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se sustituirán automáticamente por el valor de ID de inquilino correspondiente, según el lugar de importación del esquema en el paso siguiente.
 
-## Importar el recurso mediante la API
+## Importación del recurso mediante la API
 
-Una vez copiado el JSON de exportación para el esquema, puede utilizarlo como carga útil para una solicitud de POST al extremo `/import` de la API del Registro de Esquema. Consulte la sección sobre [importación de un recurso XDM en la API](../api/export-import.md#import) para obtener más información sobre cómo configurar la llamada para enviar el esquema a la organización y el entorno limitado de IMS que desee.
+Una vez copiado el JSON de exportación para el esquema, puede utilizarlo como carga útil para una solicitud de POST al extremo `/import` en la API del Registro de esquemas. Consulte la sección sobre [importación de un recurso XDM en la API](../api/export-import.md#import) para obtener más información sobre cómo configurar la llamada para enviar el esquema a la organización y el entorno limitado de IMS deseados.
 
 ## Pasos siguientes
 
-Siguiendo esta guía, se ha exportado correctamente un esquema XDM a una organización IMS o un simulador de pruebas diferentes. Para obtener más información sobre las funciones de la interfaz de usuario [!UICONTROL Esquemas], consulte la [[!UICONTROL información general de la interfaz de usuario de ] Esquemas](./overview.md).
+Al seguir esta guía, ha exportado correctamente un esquema XDM a una organización o simulador de pruebas IMS diferente. Para obtener más información sobre las capacidades de la [!UICONTROL Schemas] interfaz de usuario, consulte la [[!UICONTROL Schemas] información general de la interfaz de usuario](./overview.md).
