@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Platform mediante la ingestión por lotes o de flujo continuo.
-feature: Data Ingestion
+feature: Ingesta de datos
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 26%
@@ -14,7 +13,7 @@ ht-degree: 26%
 ---
 
 
-# Incorporación de datos de Adobe Experience Platform {#ingestion}
+# Ingesta de datos de Adobe Experience Platform {#ingestion}
 
 - [Información general sobre la ingesta de datos](home.md)
 - Ingesta de la transmisión {#streaming}
