@@ -2,23 +2,23 @@
 keywords: Experience Platform;vista previa de datos de esquema;Data Science Workspace;temas populares
 solution: Experience Platform
 title: Vista previa del esquema de ventas minoristas y el conjunto de datos
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: El siguiente documento describe la vista previa de esquemas y conjuntos de datos en Adobe Experience Platform.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 translation-type: tm+mt
-source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 1%
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
-
 
 # Vista previa del esquema de ventas minoristas y el conjunto de datos
 
 Una vez completada correctamente la secuencia de comandos de arranque desde el tutorial [retail sales schema and dataset](./create-retails-sales-dataset.md). Los esquemas de salida y los conjuntos de datos se pueden ver en [!DNL Experience Platform]. Para ver los esquemas y conjuntos de datos, siga los pasos a continuación:
 
-Seleccione la pestaña **[!UICONTROL schemas]** ubicada en la navegación izquierda y busque el esquema de entrada creado por el script de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` desde el paso anterior. Para ver los detalles del esquema y su composición, haga clic en él.
+Seleccione la pestaña **[!UICONTROL Schemas]** ubicada en la navegación izquierda y busque el esquema de entrada creado por el script de arranque. El nombre del esquema corresponderá a lo que se definió en `config.yaml` desde el paso anterior. Para ver los detalles del esquema y su composición, haga clic en él.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
@@ -26,7 +26,7 @@ Seleccione la pestaña **[!UICONTROL Datasets]** ubicada en la navegación izqui
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Seleccione **[!UICONTROL Vista previa del conjunto de datos]** situado en la parte superior derecha para obtener una vista previa de un subconjunto del conjunto de datos.
+Seleccione **[!UICONTROL Preview Dataset]** , en la parte superior derecha, para obtener una vista previa de un subconjunto del conjunto de datos.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
