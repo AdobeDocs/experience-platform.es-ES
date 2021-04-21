@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;monitorización;monitorización;flujos de datos;monitorización de la ingesta;consumo de datos;ingesta de datos;ver registros;ver lotes;
+keywords: Experience Platform;inicio;temas populares;monitorización;monitorización;flujos de datos;monitorizar consumo;consumo de datos;ingesta de datos;ver registros;ver lotes;
 solution: Experience Platform
 title: Supervisión de la ingesta de datos
-topic: overview
+topic-legacy: overview
 description: En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
+exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # Monitorización de la ingesta de datos
 
@@ -21,7 +21,7 @@ En esta guía del usuario se proporcionan pasos sobre cómo monitorizar los dato
 
 ## Monitorización de la transmisión de datos de extremo a extremo
 
-En la [interfaz de usuario de Experience Platform](https://platform.adobe.com), haga clic en **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda y, a continuación, haga clic en **[!UICONTROL Transmisión de extremo a extremo]**.
+En la [IU del Experience Platform](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoring]** en el menú de navegación de la izquierda y, a continuación, haga clic en **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
@@ -61,7 +61,7 @@ Además, los registros fallidos proporcionan detalles sobre los errores que se p
 
 ## Monitorización de la ingesta de datos de extremo a extremo por lotes
 
-En [[!DNL Experience Platform UI]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitorización]** en el menú de navegación de la izquierda.
+En [[!DNL Experience Platform UI]](https://platform.adobe.com), haga clic en **[!UICONTROL Monitoring]** en el menú de navegación de la izquierda.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
