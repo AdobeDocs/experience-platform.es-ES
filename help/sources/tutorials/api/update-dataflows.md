@@ -1,47 +1,47 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar flujos de datos
 solution: Experience Platform
-title: Actualización de flujos de datos mediante la API de servicio de flujo
-topic: overview
+title: Actualización de flujos de datos mediante la API del servicio de flujo
+topic-legacy: overview
 type: Tutorial
-description: En este tutorial se explican los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de servicio de flujo.
+description: Este tutorial trata los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de servicio de flujo.
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 1%
 
 ---
 
+# Actualización de flujos de datos mediante la API del servicio de flujo
 
-# Actualización de flujos de datos mediante la API de servicio de flujo
-
-Este tutorial trata los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación mediante la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Este tutorial trata los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación con la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Primeros pasos
 
-Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que desee en la [información general de fuentes](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
+Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el conector que elija en la [sources overview](../../home.md) y siga los pasos descritos antes de intentar este tutorial.
 
-Este tutorial también requiere que tenga conocimientos prácticos sobre los siguientes componentes de Adobe Experience Platform:
+Este tutorial también requiere que tenga una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos desde diversas fuentes, al tiempo que le permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de plataforma.
-* [Simuladores](../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Plataforma en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Simuladores para pruebas](../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
-Las siguientes secciones proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante la API [!DNL Flow Service].
 
-### Leer llamadas de API de muestra
+### Leer llamadas de API de ejemplo
 
-Este tutorial proporciona ejemplos de llamadas a API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados requeridos y cargas de solicitud con el formato adecuado. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas de acceso, encabezados necesarios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
 ### Recopilar valores para encabezados necesarios
 
-Para realizar llamadas a las API de plataforma, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). La finalización del tutorial de autenticación proporciona los valores para cada uno de los encabezados necesarios en todas las llamadas de API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de plataforma requieren un encabezado que especifique el nombre del simulador para pruebas en el que tendrá lugar la operación:
+Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en entornos limitados virtuales específicos. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre del simulador para pruebas en el que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -51,9 +51,9 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Buscar detalles de flujo de datos
 
-El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos con el ID de flujo. Puede realizar una vista de los detalles actuales de un flujo de datos existente mediante una solicitud de GET al extremo `/flows`.
+El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos mediante su ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al extremo `/flows` .
 
-**Formato API**
+**Formato de API**
 
 ```http
 GET /flows/{FLOW_ID}
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles actuales del flujo de datos, incluyendo su versión, programación e identificador único (`id`).
+Una respuesta correcta devuelve los detalles actuales del flujo de datos, incluida su versión, programación e identificador único (`id`).
 
 ```json
 {
@@ -192,13 +192,13 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, incluy
 
 ## Actualizar flujo de datos
 
-Para actualizar la programación, el nombre y la descripción de ejecución del flujo de datos, realice una solicitud de PATCH a la API [!DNL Flow Service] mientras proporciona el ID de flujo, la versión y la nueva programación que desee utilizar.
+Para actualizar la programación, el nombre y la descripción de ejecución del flujo de datos, realice una solicitud de PATCH a la API [!DNL Flow Service] mientras proporciona su ID de flujo, su versión y la nueva programación que desea utilizar.
 
 >[!IMPORTANT]
 >
->Se requiere el encabezado `If-Match` al realizar una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
+>El encabezado `If-Match` es necesario cuando se realiza una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
 
-**Formato API**
+**Formato de API**
 
 ```http
 PATCH /flows/{FLOW_ID}
@@ -206,7 +206,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el programa de ejecución de flujo, así como el nombre y la descripción del flujo de datos.
+La siguiente solicitud actualiza la programación de la ejecución del flujo, así como el nombre y la descripción del flujo de datos.
 
 ```shell
 curl -X PATCH \
@@ -243,7 +243,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de flujo y una etiqueta actualizada. Puede comprobar la actualización haciendo una solicitud de GET a la API [!DNL Flow Service], mientras proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], mientras proporciona su ID de flujo.
 
 ```json
 {
@@ -254,4 +254,4 @@ Una respuesta correcta devuelve el ID de flujo y una etiqueta actualizada. Puede
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, ha actualizado la programación de ejecución, el nombre y la descripción del flujo de datos mediante la API [!DNL Flow Service]. Para obtener más información sobre el uso de los conectores de origen, consulte la [información general de las fuentes](../../home.md).
+Al seguir este tutorial, ha actualizado la programación de ejecución, el nombre y la descripción del flujo de datos mediante la API [!DNL Flow Service]. Para obtener más información sobre el uso de conectores de origen, consulte la [información general de las fuentes](../../home.md).
