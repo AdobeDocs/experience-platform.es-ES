@@ -2,16 +2,16 @@
 keywords: Experience Platform;guía para desarrolladores;Data Science Workspace;temas populares;aprendizaje automático en tiempo real;
 solution: Experience Platform
 title: Información general sobre aprendizaje automático en tiempo real
-topic: Overview
+topic-legacy: Overview
 description: El aprendizaje automático en tiempo real puede mejorar considerablemente la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias al uso de inferencias en tiempo real y aprendizaje continuo en Experience Edge.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
-
 
 # Descripción general del aprendizaje automático en tiempo real (Alpha)
 
@@ -45,7 +45,7 @@ Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o
 
 ### Implementación
 
-Implemente su modelo en [!DNL Experience Edge] para crear un servicio de aprendizaje automático en tiempo real en la [!UICONTROL Galería de servicios] mediante el extremo de la API de predicción.
+Implemente el modelo en [!DNL Experience Edge] para crear un servicio de aprendizaje automático en tiempo real en [!UICONTROL Service Gallery] mediante el extremo de la API de predicción.
 
 ### Inferencia
 
@@ -81,4 +81,3 @@ El aprendizaje automático en tiempo real está actualmente en alfa. La funciona
 ## Pasos siguientes
 
 Puede empezar por seguir la guía [introducción](./getting-started.md). Esta guía lo acompaña durante la configuración de todos los requisitos previos necesarios para crear un modelo de aprendizaje automático en tiempo real.
-
