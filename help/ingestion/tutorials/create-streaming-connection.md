@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conexión de transmisión;crear conexión de transmisión;guía de API;tutorial;crear una conexión de transmisión;transmisión de flujo continuo;ingestión;
+keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de api;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
 solution: Experience Platform
-title: Creación de una conexión de flujo mediante la API
-topic: tutorial
+title: Creación de una conexión de flujo continuo mediante la API
+topic-legacy: tutorial
 type: Tutorial
-description: Este tutorial le ayudará a empezar a utilizar las API de inserción de flujo continuo, que forman parte de las API de servicio de inserción de datos de Adobe Experience Platform.
+description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
+exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
+# Creación de una conexión de flujo continuo mediante la API
 
-# Creación de una conexión de flujo mediante la API
-
-Se requiere el registro de la conexión de flujo para poder inicio de datos de flujo continuo a Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de datos de flujo.
+Se requiere el registro de la conexión de flujo continuo para iniciar la transmisión de datos a Adobe Experience Platform. Al registrar una conexión de flujo continuo, debe proporcionar algunos detalles clave, como la fuente de los datos de flujo continuo.
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una dirección URL única que puede utilizarse para transmitir datos a Platform.
 
-Para aprender a crear una conexión de flujo autenticada, lea la [guía de API de origen de API HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Para aprender a crear una conexión de flujo continuo autenticada, lea la [Guía de API de origen de API HTTP](../../sources/tutorials/api/create/streaming/http.md).
