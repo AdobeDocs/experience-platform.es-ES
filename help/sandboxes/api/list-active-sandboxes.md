@@ -2,16 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;listar entornos limitados activos;listar entornos limitados
 solution: Experience Platform
 title: Lista de entornos limitados activos para el usuario actual en la API
-topic: developer guide
+topic-legacy: developer guide
 description: Puede enumerar los entornos limitados activos para el usuario actual realizando una solicitud de GET al extremo raíz.
+exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
-
 
 # Lista de entornos limitados activos para el usuario actual en la API
 
