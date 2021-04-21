@@ -1,15 +1,15 @@
 ---
-keywords: publicidad; la oficina de comercio;
+keywords: publicidad; la oficina de comercio; oficina de publicidad
 title: La conexión con el mostrador de comercio
-description: 'Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización. '
+description: Trade Desk es una plataforma de autoservicio para que los compradores de publicidad ejecuten campañas digitales de redireccionamiento y segmentación de audiencia en distintas fuentes de inventario de dispositivos móviles, vídeo y visualización.
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '595'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL The Trade Desk] connection
 
