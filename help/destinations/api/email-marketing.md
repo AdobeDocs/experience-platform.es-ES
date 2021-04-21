@@ -3,16 +3,16 @@ keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo
 description: Este documento cubre la creación de destinos de marketing por correo electrónico mediante la API de Adobe Experience Platform
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
-
 
 # Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo
 
@@ -73,7 +73,7 @@ Puede encontrar la documentación de referencia adjunta para todas las llamadas 
 
 ![Pasos de destino paso 1](../assets/api/email-marketing/step1.png)
 
-Como primer paso, debe decidir a qué destino de marketing por correo electrónico desea activar los datos. Para empezar, realice una llamada para solicitar una lista de destinos disponibles a los que puede conectarse y activar segmentos. Realice la siguiente solicitud GET al extremo `connectionSpecs` para devolver una lista de destinos disponibles:
+Como primer paso, debe decidir a qué destino de marketing por correo electrónico desea activar los datos. Para empezar, realice una llamada para solicitar una lista de destinos disponibles a los que puede conectarse y activar segmentos. Realice la siguiente solicitud de GET al extremo `connectionSpecs` para devolver una lista de destinos disponibles:
 
 **Formato de API**
 
@@ -462,9 +462,9 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Con los ID obtenidos en los pasos anteriores, ahora puede crear un flujo de datos entre los datos [!DNL Experience Platform] y el destino en el que desea activar los datos. Considere este paso como la construcción de la canalización, a través de la cual fluirán los datos más adelante, entre [!DNL Experience Platform] y el destino deseado.
 
-Para crear un flujo de datos, realice una solicitud POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
+Para crear un flujo de datos, realice una solicitud de POST, como se muestra a continuación, mientras proporciona los valores mencionados a continuación dentro de la carga útil.
 
-Realice la siguiente solicitud POST para crear un flujo de datos.
+Realice la siguiente solicitud de POST para crear un flujo de datos.
 
 **Formato de API**
 
@@ -512,8 +512,8 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilice el flujo para el destino de marketing por correo electrónico al que desee conectarse. Para obtener la especificación de flujo, realice una operación GET en el extremo `flowspecs` . Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de marketing de correo electrónico al que desea conectarse. Por ejemplo, para Adobe Campaign, busque `upsToCampaign` y copie el parámetro `id` .
-* `{SOURCE_CONNECTION_ID}`: Utilice el ID de conexión de origen que obtuvo en el paso  [Conectar con Experience Platform](#connect-to-your-experience-platform-data).
+* `{FLOW_SPEC_ID}`: Utilice el flujo para el destino de marketing por correo electrónico al que desee conectarse. Para obtener la especificación de flujo, realice una operación de GET en el extremo `flowspecs` . Consulte la documentación de Swagger aquí: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. En la respuesta, busque `upsTo` y copie el ID correspondiente del destino de marketing de correo electrónico al que desea conectarse. Por ejemplo, para Adobe Campaign, busque `upsToCampaign` y copie el parámetro `id`.
+* `{SOURCE_CONNECTION_ID}`: Utilice el ID de conexión de origen que obtuvo en el paso  [Conectar con su Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Utilice el ID de conexión de destino que obtuvo en el paso  [Conectar con destino](#connect-to-email-marketing-destination) de marketing por correo electrónico.
 
 **Respuesta**
@@ -534,7 +534,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado y
 
 Después de crear todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de marketing por correo electrónico. En este paso, se selecciona qué segmentos y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
 
-Para activar segmentos en su nuevo destino, debe realizar una operación JSON PATCH, similar al ejemplo siguiente. Puede activar varios segmentos y atributos de perfil en una llamada. Para obtener más información sobre JSON PATCH, consulte la [especificación RFC](https://tools.ietf.org/html/rfc6902).
+Para activar segmentos en el nuevo destino, debe realizar una operación de PATCH JSON similar al ejemplo siguiente. Puede activar varios segmentos y atributos de perfil en una llamada. Para obtener más información sobre el PATCH JSON, consulte la [especificación RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato de API**
 
@@ -593,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilice el flujo de datos obtenido en el paso anterior.
 * `{ETAG}`: Utilice la etiqueta que obtuvo en el paso anterior.
-* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL API del servicio de segmentación]** en el menú de navegación de la izquierda y busque la operación `GET /segment/definitions` en **[!UICONTROL Definiciones de segmentos]**.
+* `{SEGMENT_ID}`: Proporcione el ID de segmento que desea exportar a este destino. Para recuperar los ID de segmento de los segmentos que desea activar, vaya a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleccione **[!UICONTROL Segmentation Service API]** en el menú de navegación de la izquierda y busque la operación `GET /segment/definitions` en **[!UICONTROL Segment Definitions]**.
 * `{PROFILE_ATTRIBUTE}`: Por ejemplo, `"person.lastName"`
 
 **Respuesta**
@@ -606,7 +606,7 @@ Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para va
 
 Como último paso del tutorial, debe validar que los segmentos y los atributos de perfil se hayan asignado correctamente al flujo de datos.
 
-Para validar esto, realice la siguiente solicitud GET:
+Para validar esto, realice la siguiente solicitud de GET:
 
 **Formato de API**
 
