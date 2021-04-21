@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;servicio de consultas
 solution: Experience Platform
 title: Servicio de consultas en el bloc de notas de Jupyter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform le permite utilizar el lenguaje de consulta estructurado (SQL) en Data Science Workspace mediante la integración del servicio de consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de ejemplo para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Servicio de consultas en el bloc de notas de Jupyter
 
@@ -42,9 +42,9 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
    >[!NOTE]
    >
-   >Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL Archivo]** y seleccione **[!UICONTROL Nuevo Iniciador]**.
+   >Si no aparece automáticamente una nueva ficha Iniciador, abra una nueva ficha Iniciador haciendo clic en **[!UICONTROL File]** y seleccione **[!UICONTROL New Launcher]**.
 
-2. En la ficha Iniciador, haga clic en el icono **[!UICONTROL Vacío]** de un entorno de Python 3 para abrir un bloc de notas vacío.
+2. En la ficha Iniciador , haga clic en el icono **[!UICONTROL Blank]** de un entorno de Python 3 para abrir un bloc de notas vacío.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -56,7 +56,7 @@ Antes de iniciar este tutorial, debe tener los siguientes requisitos previos:
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Busque un conjunto de datos [!DNL Adobe Analytics] para explorar y haga clic con el botón derecho en el listado, haga clic en **[!UICONTROL Query Data in Notebook]** para generar consultas SQL en el bloc de notas vacío.
+4. Busque un conjunto de datos [!DNL Adobe Analytics] para explorar y haga clic con el botón derecho en la lista, haga clic en **[!UICONTROL Query Data in Notebook]** para generar consultas SQL en el bloc de notas vacío.
 
 5. Haga clic en la primera celda generada que contenga la función `qs_connect()` y ejecútela haciendo clic en el botón de reproducción. Esta función crea una conexión entre la instancia del bloc de notas y [!DNL Query Service].
 
