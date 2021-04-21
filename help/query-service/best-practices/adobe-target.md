@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de Consulta;consultas de muestra;consulta de muestra;destinatario de adobe;
+keywords: Experience Platform;inicio;temas populares;servicio de consulta;servicio de consulta;consultas de ejemplo;consulta de ejemplo;adobe target;
 solution: Experience Platform
-title: Consultas de muestra para datos de Adobe Target
-topic: queries
-description: Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren en Experience Platform como conjuntos de datos para usted. Este documento contiene consultas de muestra para usar el servicio de Consulta con sus conjuntos de datos de Adobe Target.
+title: Consultas de ejemplo para datos de Adobe Target
+topic-legacy: queries
+description: Los datos de Adobe Target se transforman en un esquema XDM de Evento de experiencia y se incorporan en Experience Platform como conjuntos de datos para usted. Este documento contiene consultas de ejemplo para usar el servicio de consulta con sus conjuntos de datos de Adobe Target.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
 
 ---
 
+# Consultas de ejemplo para datos de Adobe Target
 
-# Consultas de muestra para datos de Adobe Target
+Los datos de Adobe Target se transforman en un esquema XDM de Evento de experiencia y se incorporan en Adobe Experience Platform como conjuntos de datos para usted. Existen muchos casos de uso para el servicio de consulta de Adobe Experience Platform con estos datos, y las siguientes consultas de ejemplo deberían funcionar con sus conjuntos de datos de Adobe Target.
 
-Los datos de Adobe Target se transforman en esquema XDM de Experience Evento y se ingieren en Adobe Experience Platform como conjuntos de datos para usted. Existen muchos casos de uso para el servicio de Consulta de Adobe Experience Platform con estos datos, y las siguientes consultas de muestra deberían funcionar con sus conjuntos de datos de Adobe Target.
+En Experience Platform, el nombre del conjunto de datos creado automáticamente es &quot;Adobe Target Experience Events&quot;. Al utilizar este conjunto de datos con consultas, debe utilizar el nombre `adobe_target_experience_events`.
 
-En Experience Platform, el nombre del conjunto de datos creado automáticamente es &quot;Eventos de experiencias de Adobe Target&quot;. Al utilizar este conjunto de datos con consultas, debe utilizar el nombre `adobe_target_experience_events`.
+## Asignación parcial de campos XDM de alto nivel
 
-## Asignación parcial de campo XDM de alto nivel
-
-La siguiente lista muestra los campos de Destinatario que se asignan a los campos XDM correspondientes.
+La siguiente lista muestra los campos de Target que se asignan a los campos XDM correspondientes.
 
 >[!NOTE]
 >
@@ -30,18 +30,18 @@ La siguiente lista muestra los campos de Destinatario que se asignan a los campo
 - mboxName: `_experience.target.mboxname`
 - ID de actividad: `_experience.target.activities.activityID`
 - ID de la experiencia: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
-- ID del segmento: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
-- Ámbito de evento: `_experience.target.activities[].activityEvents[].eventScope`
+- ID de segmento: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
+- Alcance del evento: `_experience.target.activities[].activityEvents[].eventScope`
    - Este campo rastrea nuevos visitantes y visitas.
-- ID del paso: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
+- ID de paso: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
    - Este campo es un ID de paso personalizado para Adobe Campaign.
 - Precio total: `commerce.order.priceTotal`
 
-## Consultas de muestra
+## Consultas de ejemplo
 
-Las siguientes consultas muestran ejemplos de consultas de uso común con Adobe Target.
+Las siguientes consultas muestran ejemplos de consultas comúnmente utilizadas con Adobe Target.
 
-En los siguientes ejemplos, deberá editar SQL para completar los parámetros esperados para sus consultas en función del conjunto de datos, las variables o el intervalo de tiempo que desee evaluar. Proporcione parámetros donde vea `{ }` en SQL.
+En los ejemplos siguientes, deberá editar el SQL para rellenar los parámetros esperados para sus consultas en función del conjunto de datos, las variables o el intervalo de tiempo que desee evaluar. Proporcione parámetros donde vea `{ }` en SQL.
 
 ### Recuentos de actividad por hora para un día determinado
 
@@ -64,7 +64,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-### Detalles por hora de una actividad específica de un día determinado
+### Detalles por hora para una actividad específica de un día determinado
 
 ```sql
 SELECT
@@ -112,7 +112,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### Devolver una lista de ámbitos de Evento (visitante, visita, impresión) por instancias por ID de Actividad para un día determinado
+### Devolver una lista de ámbitos de eventos (visitante, visita, impresión) por instancias por ID de actividad para un día determinado
 
 ```sql
 SELECT
@@ -142,7 +142,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-### Recuento de devoluciones de visitantes, visitas e impresiones por actividad para un día determinado
+### Recuento de visitantes, visitas e impresiones por actividad durante un día determinado
 
 ```sql
 SELECT
@@ -166,7 +166,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-### Visitantes de retorno, visitas, impresiones para ID de experiencia, ID de segmento y EventScope para un día determinado
+### Visitantes de retorno, visitas, impresiones para el ID de experiencia, ID de segmento y EventScope de un día determinado
 
 ```sql
 SELECT
