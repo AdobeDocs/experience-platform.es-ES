@@ -2,17 +2,17 @@
 keywords: Experience Platform;inicio;temas populares;Shopify;shopify;comercio electrónico
 solution: Experience Platform
 title: Creación de una conexión de origen de conector Shopify mediante la API de servicio de flujo
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo conectar Shopify a Adobe Experience Platform mediante la API de servicio de flujo.
+exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
-
 
 # Crear una conexión de origen [!DNL Shopify] mediante la API [!DNL Flow Service]
 
