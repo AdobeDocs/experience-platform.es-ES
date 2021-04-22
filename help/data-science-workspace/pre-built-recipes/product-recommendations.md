@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La fórmula de Product Recommendations le permite ofrecer recomendaciones de productos personalizadas que se adaptan a las necesidades y los intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle información sobre qué productos puede interesarle.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) person
 ### Esquema de datos de entrada
 
 | Nombre del campo | Tipo |
---- | ---
+| --- | --- |
 | itemId | Cadena |
 | interactionType | Cadena |
 | timestamp | Cadena |
@@ -48,7 +48,7 @@ Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) person
 ### Esquema de datos de salida
 
 | Nombre del campo | Tipo |
---- | ---
+| --- | --- |
 | recommendations | Cadena |
 | userId | Número entero |
 
