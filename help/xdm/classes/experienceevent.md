@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionado
 | `eventMergeId` | El ID del lote ingestado que provocó que se creara el registro. El sistema rellena automáticamente este campo tras la ingesta de datos. |
 | `eventType` | Cadena que indica el tipo de evento principal del registro. Los valores aceptados y sus definiciones se proporcionan en la sección [apéndice](#eventType). |
 | `identityMap` | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los  [conceptos básicos de la ](../schema/composition.md#identityMap) composición de esquemas para obtener más información sobre su caso de uso. |
-| `timestamp` | Hora a la que se produjo el evento o la observación, con el formato [RFC 3339 (Sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | Marca de fecha y hora ISO 8601 del momento en que se produjo el evento, con el formato [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Esta marca de tiempo  **** solo puede representar la observación del propio evento y debe ocurrir en el pasado. Si los casos de uso de segmentación requieren el uso de marcas de tiempo que puedan producirse en el futuro (como una fecha de salida), estos valores deben restringirse en cualquier otra parte del esquema de eventos de experiencia. |
 
 ## Mezclas compatibles {#mixins}
 
