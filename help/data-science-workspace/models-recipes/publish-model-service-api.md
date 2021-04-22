@@ -7,7 +7,7 @@ type: Tutorial
 description: Este tutorial trata el proceso de publicación de un modelo como servicio mediante la API de aprendizaje automático de Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 La siguiente tabla describe algunos términos comunes utilizados en este tutorial:
 
 | Término | Definición |
---- | ---
+| --- | --- |
 | **Instancia de aprendizaje automático (instancia ML)** | Instancia de un motor [!DNL Sensei] para un inquilino en particular, que contiene datos, parámetros y código [!DNL Sensei] específicos. |
 | **Experimento** | Una entidad paraguas para la celebración de ejecuciones de experimentos de formación, la puntuación de ejecuciones de experimentos, o ambas. |
 | **Experimento programado** | Término que describe la automatización de las ejecuciones de experimentos de capacitación o puntuación, regido por una programación definida por el usuario. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | Propiedad | Descripción |
---- | ---
+| --- | --- |
 | `mlInstanceId` | La identificación existente de la instancia ML, la ejecución del experimento de formación utilizada para crear el servicio ML debe corresponder a esta instancia ML concreta. |
 | `trainingExperimentId` | Identificación del experimento correspondiente a la identificación de la instancia ML. |
 | `trainingExperimentRunId` | Una ejecución de experimento de formación específica que se utilizará para publicar el servicio ML. |
