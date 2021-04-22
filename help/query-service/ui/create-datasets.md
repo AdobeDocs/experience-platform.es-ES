@@ -7,10 +7,10 @@ type: Tutorial
 description: El servicio de consulta de Adobe Experience Platform permite crear conjuntos de datos desde la interfaz de usuario. Una vez creado un conjunto de datos, se puede acceder a él como a cualquier otro conjunto de datos en el lago de datos y se puede utilizar para una variedad de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +23,9 @@ El verdadero poder de [!DNL Query Service] se revela cuando las consultas se uti
 1. Escriba la consulta utilizando un cliente conectado y valide el resultado.
 2. Inicie sesión en la interfaz de usuario de [!DNL Platform] y vaya a Consultas.
 3. Busque la consulta en la lista y pase el ratón por encima de la fila .
-4. Haga clic en **[!UICONTROL Create Dataset]**. ![Imagen](../images/ui/output-dataset.png)
+4. Seleccione **[!UICONTROL Create Dataset]**. ![Imagen](../images/ui/create-datasets/output-dataset.png)
 5. Introduzca un nombre de conjunto de datos, precedido de su ID LDAP (no tiene que ser único ni seguro para SQL; el sistema genera un &quot;nombre de tabla&quot; basado en el nombre dado aquí).
-6. Introduzca una descripción del conjunto de datos y haga clic en **[!UICONTROL Run Query]**.![Imagen](../images/ui/run-query.png)
+6. Introduzca una descripción del conjunto de datos y seleccione **[!UICONTROL Run Query]**.![Imagen](../images/ui/create-datasets/run-query.png)
 7. Observe la consulta completada y, a continuación, vaya a la página de lista de conjuntos de datos para ver el conjunto de datos que acaba de crear.
 
 Después de crear un conjunto de datos, se puede acceder a él como a cualquier otro conjunto de datos en [!DNL Data Lake] y se puede utilizar para una variedad de casos de uso.
