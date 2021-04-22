@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial le muestra cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1235'
 ht-degree: 1%
 
 ---
@@ -41,16 +41,14 @@ Vamos a consumir las API para crear un Experimento para formación. Para este tu
 
 >[!NOTE]
 >
->Los términos &quot;Motor&quot;, &quot;MLInposition&quot;, &quot;MLService&quot;, &quot;Experimento&quot; y &quot;Modelo&quot; se denominan en la IU como términos diferentes. Si proviene de la interfaz de usuario de , la siguiente tabla asignará las diferencias.
-> 
-> | Término de interfaz de usuario | Término de API |
-> --- | ---
-> | Fórmula | Motor |
-> | Modelo | Instancia MLI |
-> | Ejecuciones de formación | Experimento |
-> | Service | MLService |
+>Los términos &quot;Motor&quot;, &quot;MLInposition&quot;, &quot;MLService&quot;, &quot;Experimento&quot; y &quot;Modelo&quot; se denominan en la IU como términos diferentes. Si proviene de la interfaz de usuario, la siguiente tabla asigna las diferencias.
 
-
+| Término de interfaz de usuario | Término de API |
+| --- | --- |
+| Fórmula | Motor |
+| Modelo | Instancia MLI |
+| Ejecuciones de formación | Experimento |
+| Service | MLService |
 
 ### Crear una instancia MLI
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 >En `{JSON_PAYLOAD}`, definimos los parámetros utilizados para la capacitación y la puntuación en la matriz `tasks`. El `{ENGINE_ID}` es el ID del motor que desea utilizar y el campo `tag` es un parámetro opcional utilizado para identificar la instancia.
 
-La respuesta contendrá el `{INSTANCE_ID}` que representa la instancia MLI creada. Se pueden crear varias instancias MLI de modelo con diferentes configuraciones.
+La respuesta contiene el `{INSTANCE_ID}` que representa la instancia MLI que se crea. Se pueden crear varias instancias MLI de modelo con diferentes configuraciones.
 
 **Respuesta**
 
