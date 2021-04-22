@@ -7,9 +7,9 @@ type: Tutorial
 description: En Adobe Experience Platform Data Science Workspace, se crea un modelo de aprendizaje automático mediante la incorporación de una fórmula existente que es adecuada para la intención del modelo. A continuación, el Modelo es entrenado y evaluado para optimizar su eficacia y eficiencia operativa mediante el ajuste de sus hiperparámetros asociados. Las fórmulas son reutilizables, lo que significa que se pueden crear varios modelos y adaptarlos a propósitos específicos con una sola fórmula.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -110,10 +110,10 @@ Este tutorial lo acompañó en la creación, formación y evaluación de un mode
 Los hiperparámetros determinan el comportamiento de formación del modelo, la modificación de los hiperparámetros afectará la precisión y precisión del modelo:
 
 | Hiperparámetro | Descripción | Intervalo recomendado |
---- | --- | ---
-| learning_rate | La tasa de aprendizaje reduce la contribución de cada árbol mediante learning_rate. Hay un equilibrio entre learning_rate y n_estimators. | 0,1 | [2 - 10] / número de estimadores |
-| n_estimators | Número de etapas de ampliación que se van a realizar. El aumento de degradado es bastante robusto para sobreajustar, por lo que un gran número suele dar como resultado un mejor rendimiento. | 100 | 100 - 1000 |
-| max_depth | Profundidad máxima de los estimadores de regresión individuales. La profundidad máxima limita el número de nodos en el árbol. Ajuste este parámetro para obtener el mejor rendimiento; el mejor valor depende de la interacción de las variables de entrada. | 3 | 4 - 10 |
+| --- | --- | --- |
+| learning_rate | La tasa de aprendizaje reduce la contribución de cada árbol mediante learning_rate. Hay un equilibrio entre learning_rate y n_estimators. | 0,1 |
+| n_estimators | Número de etapas de ampliación que se van a realizar. El aumento de degradado es bastante robusto para sobreajustar, por lo que un gran número suele dar como resultado un mejor rendimiento. | 100 |
+| max_depth | Profundidad máxima de los estimadores de regresión individuales. La profundidad máxima limita el número de nodos en el árbol. Ajuste este parámetro para obtener el mejor rendimiento; el mejor valor depende de la interacción de las variables de entrada. | 3 |
 
 Los parámetros adicionales determinan las propiedades técnicas del modelo:
 
