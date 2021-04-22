@@ -6,9 +6,9 @@ topic-legacy: datasets
 description: Aprenda a realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,22 +32,22 @@ Esta guía del usuario requiere conocer los siguientes componentes de Adobe Expe
 
 En la interfaz de usuario [!DNL Experience Platform], haga clic en **[!UICONTROL Datasets]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Datasets]**. El tablero enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
 
-![](../images/datasets/user-guide/browse_datasets.png)
+![](../images/datasets/user-guide/browse-datasets.png)
 
 Haga clic en el nombre de un conjunto de datos para acceder a su pantalla **[!UICONTROL Dataset activity]** y ver los detalles del conjunto de datos seleccionado. La pestaña actividad incluye un gráfico que visualiza la tasa de consumo de los mensajes, así como una lista de lotes correctos y fallidos.
 
-![](../images/datasets/user-guide/dataset_activity_1.png)
-![](../images/datasets/user-guide/dataset_activity_2.png)
+![](../images/datasets/user-guide/dataset-activity-1.png)
+![](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Vista previa de un conjunto de datos
 
-En la pantalla **[!UICONTROL Dataset activity]**, haga clic en **[!UICONTROL Preview dataset]** cerca de la esquina superior derecha de la pantalla para obtener una vista previa de hasta 100 filas de datos. Si el conjunto de datos está vacío, el vínculo de vista previa se desactiva y en su lugar indica que la vista previa no está disponible.
+En la pantalla **[!UICONTROL Dataset activity]**, haga clic en **[!UICONTROL Preview dataset]** cerca de la esquina superior derecha de la pantalla para obtener una vista previa de hasta 100 filas de datos. Si el conjunto de datos está vacío, el vínculo de vista previa se desactivará y en su lugar indicará que la vista previa no está disponible.
 
-![](../images/datasets/user-guide/click_to_preview.png)
+![](../images/datasets/user-guide/click-to-preview.png)
 
 En la ventana de vista previa, la vista jerárquica del esquema para el conjunto de datos se muestra a la derecha.
 
-![](../images/datasets/user-guide/preview_dataset.png)
+![](../images/datasets/user-guide/preview-dataset.png)
 
 Para métodos más sólidos para acceder a sus datos, [!DNL Experience Platform] proporciona servicios descendentes como [!DNL Query Service] y [!DNL JupyterLab] para explorar y analizar los datos. Consulte los siguientes documentos para obtener más información:
 
@@ -58,7 +58,7 @@ Para métodos más sólidos para acceder a sus datos, [!DNL Experience Platform]
 
 Para crear un nuevo conjunto de datos, comience haciendo clic en **[!UICONTROL Create dataset]** en el panel **[!UICONTROL Datasets]** .
 
-![](../images/datasets/user-guide/click_to_create.png)
+![](../images/datasets/user-guide/click-to-create.png)
 
 En la siguiente pantalla, se le presentan las dos opciones siguientes para crear un nuevo conjunto de datos:
 
@@ -69,25 +69,25 @@ En la siguiente pantalla, se le presentan las dos opciones siguientes para crear
 
 En la pantalla **[!UICONTROL Create dataset]** , haga clic en **[!UICONTROL Create dataset from schema]** para crear un nuevo conjunto de datos vacío.
 
-![](../images/datasets/user-guide/create_dataset_schema.png)
+![](../images/datasets/user-guide/create-dataset-schema.png)
 
 Aparece el paso **[!UICONTROL Select schema]**. Examine la lista de esquemas y seleccione el esquema al que se adherirá el conjunto de datos antes de hacer clic en **[!UICONTROL Next]**.
 
-![](../images/datasets/user-guide/select_schema.png)
+![](../images/datasets/user-guide/select-schema.png)
 
 Aparece el paso **[!UICONTROL Configure dataset]**. Proporcione un nombre al conjunto de datos y una descripción opcional y, a continuación, haga clic en **[!UICONTROL Finish]** para crear el conjunto de datos.
 
-![](../images/datasets/user-guide/configure_dataset_schema.png)
+![](../images/datasets/user-guide/configure-dataset-schema.png)
 
 ### Crear un conjunto de datos con un archivo CSV {#csv}
 
 Cuando se crea un conjunto de datos con un archivo CSV, se crea un esquema ad hoc para proporcionar al conjunto de datos una estructura que coincida con el archivo CSV proporcionado. En la pantalla **[!UICONTROL Create dataset]**, haga clic en el cuadro que dice **[!UICONTROL Create dataset from CSV file]**.
 
-![](../images/datasets/user-guide/create_dataset_csv.png)
+![](../images/datasets/user-guide/create-dataset-csv.png)
 
 Aparece el paso **[!UICONTROL Configure]**. Proporcione un nombre y una descripción opcionales al conjunto de datos y haga clic en **[!UICONTROL Next]**.
 
-![](../images/datasets/user-guide/configure_dataset_csv.png)
+![](../images/datasets/user-guide/configure-dataset-csv.png)
 
 Aparece el paso **[!UICONTROL Add data]**. Cargue el archivo CSV arrastrándolo y soltándolo en el centro de la pantalla o haga clic en **[!UICONTROL Browse]** para explorar el directorio de archivos. El archivo puede tener un tamaño de hasta diez gigabytes. Una vez cargado el archivo CSV, haga clic en **[!UICONTROL Save]** para crear el conjunto de datos.
 
@@ -95,7 +95,7 @@ Aparece el paso **[!UICONTROL Add data]**. Cargue el archivo CSV arrastrándolo 
 >
 >Los nombres de columna de CSV deben comenzar con caracteres alfanuméricos y solo pueden contener letras, números y guiones bajos.
 
-![](../images/datasets/user-guide/add_csv_data.png)
+![](../images/datasets/user-guide/add-csv-data.png)
 
 ## Habilitar un conjunto de datos para Perfil del cliente en tiempo real {#enable-profile}
 
@@ -112,7 +112,7 @@ Para habilitar un conjunto de datos para Perfil, acceda a su pantalla **[!UICONT
 >
 >Si un conjunto de datos ya contiene datos y luego se habilita para [!DNL Profile], [!DNL Profile] no consume automáticamente los datos existentes. Una vez habilitado un conjunto de datos para [!DNL Profile], se recomienda volver a introducir los datos existentes para que contribuyan a los perfiles del cliente.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+![](../images/datasets/user-guide/enable-dataset-profiles.png)
 
 ## Administrar y hacer cumplir la administración de datos en un conjunto de datos
 
@@ -126,11 +126,11 @@ Puede eliminar un conjunto de datos accediendo primero a su pantalla **[!UICONTR
 >
 >Los conjuntos de datos creados y utilizados por aplicaciones y servicios de Adobe (como Adobe Analytics, Adobe Audience Manager o [!DNL Offer Decisioning]) no se pueden eliminar.
 
-![](../images/datasets/user-guide/delete_dataset.png)
+![](../images/datasets/user-guide/delete-dataset.png)
 
 Aparece un cuadro de confirmación. Haga clic en **[!UICONTROL Delete]** para confirmar la eliminación del conjunto de datos.
 
-![](../images/datasets/user-guide/confirm_delete.png)
+![](../images/datasets/user-guide/confirm-delete.png)
 
 ## Eliminar un conjunto de datos habilitado para perfil
 
@@ -140,17 +140,17 @@ Puede eliminar un conjunto de datos solo del almacén [!DNL Profile] (dejando lo
 
 ## Monitorización de la ingesta de datos
 
-En la interfaz de usuario de [!DNL Experience Platform], haga clic en **[!UICONTROL Monitoring]** en el panel de navegación izquierdo. El tablero **[!UICONTROL Monitoring]** permite ver los estados de los datos entrantes desde la ingesta por lotes o de flujo continuo. Para ver los estados de los lotes individuales, haga clic en **[!UICONTROL Batch end-to-end]** o **[!UICONTROL Streaming end-to-end]**. En los tableros se enumeran todas las ejecuciones de ingesta por lotes o de flujo continuo, incluidas las que se han realizado correctamente, que han fallado o siguen en curso. Cada lista proporciona detalles del lote, incluido el ID del lote, el nombre del conjunto de datos de destino y el número de registros introducidos. Si el conjunto de datos de destino está habilitado para [!DNL Profile], también se muestra el número de registros de identidad y perfil ingestados.
+En la interfaz de usuario de [!DNL Experience Platform], haga clic en **[!UICONTROL Monitoring]** en el panel de navegación izquierdo. El tablero **[!UICONTROL Monitoring]** permite ver los estados de los datos entrantes desde la ingesta por lotes o de flujo continuo. Para ver los estados de los lotes individuales, haga clic en **[!UICONTROL Batch end-to-end]** o **[!UICONTROL Streaming end-to-end]**. Los tableros enumeran todas las ejecuciones de ingesta por lotes o de flujo continuo, incluidas las que se hayan realizado correctamente, que hayan fallado o que estén aún en curso. Cada lista proporciona detalles del lote, incluido el ID del lote, el nombre del conjunto de datos de destino y el número de registros introducidos. Si el conjunto de datos de destino está habilitado para [!DNL Profile], también se muestra el número de registros de identidad y perfil ingestados.
 
-![](../images/datasets/user-guide/batch_listing.png)
+![](../images/datasets/user-guide/batch-listing.png)
 
 Puede hacer clic en un **[!UICONTROL Batch ID]** individual para acceder al tablero **[!UICONTROL Batch overview]** y ver los detalles del lote, incluidos los registros de errores en caso de que el lote no se ingrese.
 
-![](../images/datasets/user-guide/batch_overview.png)
+![](../images/datasets/user-guide/batch-overview.png)
 
 Si desea eliminar el lote, puede hacerlo haciendo clic en **[!UICONTROL Delete batch]** que se encuentra cerca de la parte superior derecha del panel. Al hacerlo, también se eliminarán sus registros del conjunto de datos al que se incorporó originalmente el lote.
 
-![](../images/datasets/user-guide/delete_batch.png)
+![](../images/datasets/user-guide/delete-batch.png)
 
 ## Pasos siguientes
 
