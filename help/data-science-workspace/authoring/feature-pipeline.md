@@ -6,7 +6,7 @@ type: Tutorial
 description: Adobe Experience Platform le permite crear y crear canalizaciones de funciones personalizadas para realizar ingeniería de funciones a escala a través del tiempo de ejecución de Sensei Machine Learning Framework. En este documento se describen las distintas clases que se encuentran en una canalización de funciones y se proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante el SDK de creación de modelos en PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -163,7 +163,6 @@ class MyDataLoader(DataLoader):
 DatasetTransformer proporciona la lógica para transformar un DataFrame de entrada y devuelve un nuevo DataFrame derivado. Esta clase puede implementarse para trabajar de forma cooperativa con FeaturePipelineFactory, trabajar como el único componente de ingeniería de características o puede elegir no implementar esta clase.
 
 El siguiente ejemplo amplía la clase DatasetTransformer :
-
 
 **Ejemplo de PySpark**
 
