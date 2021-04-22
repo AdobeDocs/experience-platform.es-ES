@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Este documento contiene información adicional para trabajar con la API de Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 5%
 
 ---
 
@@ -25,15 +25,17 @@ La siguiente tabla describe varios tipos de identidad predefinidos utilizados co
 
 | Tipo de identidad | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| Correo electrónico | Correo electrónico | 6 |
-| Phone | Teléfono | 7 |
-| Adobe Advertising Cloud ID | Adcloud | 411 |
-| UUID de Adobe Audience Manager | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] ID para anunciantes | IDFA | 20915 |
-| [!DNL Google] ID de anuncio | GAID | 20914 |
-| [!DNL Windows] AID | WAID | 8 |
+| Correo electrónico | `Email` | `6` |
+| Phone | `Phone` | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| UUID de Adobe Audience Manager | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] ID para anunciantes | `IDFA` | `20915` |
+| [!DNL Google] ID de anuncio | `GAID` | `20914` |
+| [!DNL Windows] AID | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ Al especificar un valor `namespace` en la API [!DNL Privacy Service], se debe in
 
 | Cualificador | Definición |
 | --------- | ---------- |
-| standard | Una de las áreas de nombres estándar definidas globalmente, no está vinculada a un conjunto de datos de organización individual (por ejemplo, correo electrónico, número de teléfono, etc.). Se proporciona el ID de área de nombres. |
-| custom | Un espacio de nombres único creado en el contexto de una organización, no compartido entre [!DNL Experience Cloud]. El valor representa el nombre descriptivo (campo &quot;nombre&quot;) que se va a buscar. Se proporciona el ID de área de nombres. |
-| integrationCode | Código de integración : similar a &quot;personalizado&quot;, pero definido específicamente como el código de integración de una fuente de datos que se va a buscar. Se proporciona el ID de área de nombres. |
-| namespaceId | Indica que el valor es el ID real del área de nombres que se creó o asignó a través del servicio de área de nombres. |
-| no registrado | Cadena de forma libre que no está definida en el servicio de área de nombres y se toma &quot;tal cual&quot;. Cualquier aplicación que gestione este tipo de áreas de nombres comprueba su existencia y gestiona, si corresponde, el contexto de la empresa y el conjunto de datos. No se proporciona ningún ID de área de nombres. |
-| analytics | Un área de nombres personalizada que se asigna internamente en [!DNL Analytics], no en el servicio de área de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
-| Target | Un espacio de nombres personalizado comprendido internamente por [!DNL Target], no en el servicio de espacio de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
+| `standard` | Una de las áreas de nombres estándar definidas globalmente, no está vinculada a un conjunto de datos de organización individual (por ejemplo, correo electrónico, número de teléfono, etc.). Se proporciona el ID de área de nombres. |
+| `custom` | Un espacio de nombres único creado en el contexto de una organización, no compartido entre [!DNL Experience Cloud]. El valor representa el nombre descriptivo (campo &quot;nombre&quot;) que se va a buscar. Se proporciona el ID de área de nombres. |
+| `integrationCode` | Código de integración : similar a &quot;personalizado&quot;, pero definido específicamente como el código de integración de una fuente de datos que se va a buscar. Se proporciona el ID de área de nombres. |
+| `namespaceId` | Indica que el valor es el ID real del área de nombres que se creó o asignó a través del servicio de área de nombres. |
+| `unregistered` | Cadena de forma libre que no está definida en el servicio de área de nombres y se toma &quot;tal cual&quot;. Cualquier aplicación que gestione este tipo de áreas de nombres comprueba su existencia y gestiona, si corresponde, el contexto de la empresa y el conjunto de datos. No se proporciona ningún ID de área de nombres. |
+| `analytics` | Un área de nombres personalizada que se asigna internamente en [!DNL Analytics], no en el servicio de área de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
+| `target` | Un espacio de nombres personalizado comprendido internamente por [!DNL Target], no en el servicio de espacio de nombres. Esto se transfiere directamente según lo especificado por la solicitud original, sin un ID de área de nombres |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Valores de producto aceptados
 
@@ -70,3 +74,5 @@ La siguiente tabla describe los valores aceptados para especificar un producto d
 | Adobe Target | `Target` |
 | Servicio de registro de cliente | `CRS` |
 | Perfil del cliente en tiempo real | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
