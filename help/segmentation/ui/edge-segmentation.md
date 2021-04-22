@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en el perímetro, habilitando los casos de uso de personalización de la misma página y de la siguiente página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Los siguientes tipos de consulta son **no** compatibles actualmente con la segme
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
 | Ventana de tiempo relativo | Si una consulta hace referencia a un período de tiempo, no se puede evaluar mediante la segmentación perimetral. |
-| Negación | Si una consulta contiene una negación, no se puede evaluar mediante la segmentación de Edge. |
+| Negación | Si una consulta contiene una negación o un evento `not`, no se puede evaluar mediante la segmentación perimetral. |
 | Varios eventos | Si una consulta contiene más de un evento, no se puede evaluar mediante la segmentación perimetral. |
 
 ## Pasos siguientes
