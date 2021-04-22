@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La fórmula Venta minorista permite predecir la previsión de ventas de todas las tiendas que se hayan creado durante un período determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre la demanda y las políticas de precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Este tutorial explicará la creación de la fórmula de ventas minoristas en un 
 Esta fórmula utiliza [XDM schemas](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
---- | ---
+| --- | --- |
 | date | Cadena |
 | almacenar | Número entero |
 | storeType | Cadena |
