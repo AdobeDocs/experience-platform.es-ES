@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1362'
 ht-degree: 1%
 
 ---
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | El tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 | `{PAGE}` | La página de datos que se va a mostrar, utilizando una numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | Número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devuelve un error de código 400. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: Todos los datos a los que hace referencia la recopilación determinada de ID de usuario se vuelven anónimos. Si se omite `analyticsDeleteMethod`, este es el comportamiento predeterminado.</li><li>`purge`: Todos los datos se eliminan por completo.</li></ul> |
 | `regulation` **(Requerido)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`gdpr` (Unión Europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasil)</li><li>`nzpa_nzl` (Nueva Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Respuesta**
 
 Una respuesta correcta devuelve los detalles de los trabajos recién creados.
@@ -210,6 +214,8 @@ Una respuesta correcta devuelve los detalles de los trabajos recién creados.
 | --- | --- |
 | `jobId` | Un ID único y de solo lectura generado por el sistema para un trabajo. Este valor se utiliza en el siguiente paso de la búsqueda de un trabajo específico. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar con el siguiente paso de [comprobación del estado del trabajo](#check-status).
 
 ## Comprobar el estado de un trabajo {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{JOB_ID}` | El ID del trabajo que desea buscar. Este ID se devuelve en `jobId` en respuestas de API correctas para [crear un trabajo](#create-job) y [enumerar todos los trabajos](#list). |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -326,6 +334,8 @@ Una respuesta correcta devuelve los detalles del trabajo especificado.
 | `productStatusResponse.results` | Para ciertos estados, algunos productos pueden devolver un objeto `results` que proporciona información adicional que no está cubierta por `responseMsgDetail`. |
 | `downloadURL` | Si el estado del trabajo es `complete`, este atributo proporciona una URL para descargar los resultados del trabajo como archivo ZIP. Este archivo está disponible para su descarga durante 60 días después de que finalice el trabajo. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Categorías de estado del trabajo {#status-categories}
 
 La siguiente tabla enumera las diferentes categorías posibles de estado del trabajo y su significado correspondiente:
@@ -336,6 +346,8 @@ La siguiente tabla enumera las diferentes categorías posibles de estado del tra
 | `processing` | Las aplicaciones han reconocido el trabajo y se están procesando actualmente. |
 | `submitted` | El trabajo se envía a cada solicitud aplicable. |
 | `error` | Error en el procesamiento del trabajo: se puede obtener información más específica recuperando los detalles del trabajo individual. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
