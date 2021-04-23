@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Obtenga información sobre cómo conectar Amazon Kinesis a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 translation-type: tm+mt
-source-git-commit: d6f1521470b8dc630060584189690545c724de6b
+source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,68 @@ Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL 
 ## LISTA DE PERMITIDOS de direcciones IP
 
 Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no agrega las direcciones IP específicas de su región a su lista de permitidos, puede que se produzcan errores o que no se produzca un rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+
+## Requisitos previos
+
+La siguiente sección proporciona más información sobre la configuración previa necesaria para poder crear una conexión de origen [!DNL Kinesis].
+
+### Configuración de la directiva de acceso
+
+Un flujo [!DNL Kinesis] requiere los siguientes permisos para crear una conexión de origen:
+
+- `GetShardIterator`
+- `GetRecords`
+- `DescribeStream`
+- `ListStreams`
+
+Estos permisos se organizan a través de la consola [!DNL Kinesis] y Platform los comprueba una vez que introduce las credenciales y selecciona el flujo de datos.
+
+El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para crear una conexión de origen [!DNL Kinesis].
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:GetShardIterator",
+                "kinesis:GetRecords",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `kinesis:GetShardIterator` | Acción necesaria para recorrer los registros. |
+| `kinesis:GetRecords` | Acción necesaria para obtener registros de un desplazamiento o ID compartido específico. |
+| `kinesis:DescribeStream` | Acción que devuelve información sobre el flujo, incluido el mapa compartido, que es necesario para generar un ID compartido. |
+| `kinesis:ListStreams` | Acción necesaria para enumerar los flujos disponibles que puede seleccionar en la interfaz de usuario. |
+
+Para obtener más información sobre el control del acceso para [!DNL Kinesis] flujos de datos, consulte el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+
+### Configurar el tipo de iterador
+
+[!DNL Kinesis] admite los siguientes tipos de iteradores para permitirle especificar el orden en que se leen los datos:
+
+| Tipo de iterador | Descripción |
+| ------------- | ----------- |
+| `AT_SEQUENCE_NUMBER` | Los datos se leen empezando por una posición identificada por un número de secuencia específico. |
+| `AFTER_SEQUENCE_NUMBER` | Los datos se leen comenzando después de la posición identificada con un número de secuencia específico. |
+| `AT_TIMESTAMP` | Los datos se leen a partir de una posición identificada por una marca de tiempo específica. |
+| `TRIM_HORIZON` | Los datos se leen a partir del registro de datos más antiguo. |
+| `LATEST` | Los datos se leen a partir del registro de datos más reciente. |
+
+Actualmente, una fuente de interfaz de usuario [!DNL Kinesis] solo admite `TRIM_HORIZON`, mientras que la API admite `TRIM_HORIZON` y `LATEST` como modos de obtener datos. El valor predeterminado del iterador que utiliza Platform para el origen [!DNL Kinesis] es `TRIM_HORIZON`.
+
+Para obtener más información sobre los tipos de iterador, consulte el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
 ## Conectar [!DNL Amazon Kinesis] a [!DNL Platform]
 
