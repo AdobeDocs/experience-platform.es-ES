@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ También es importante conocer dos términos clave que se utilizan en este docum
 
 ## Información general
 
-En la [[!DNL Experience Platform] UI](http://platform.adobe.com/), seleccione **[!UICONTROL Segments]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con segmentos.
+En la [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleccione **[!UICONTROL Segments]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con segmentos.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Seleccione la pestaña **[!UICONTROL Browse]** para ver una lista de todas las d
 
 Esta vista muestra información sobre la definición del segmento, incluido el desglose, la pérdida, el recuento de perfiles, el método de evaluación, la fecha de creación y la fecha de la última modificación.
 
-El desglose muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Entered], [!UICONTROL Realized] y [!UICONTROL Exiting].
+El desglose muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Realized], [!UICONTROL Existing] y [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Introducido | Un nuevo perfil dentro del segmento. |
-| Realizado | Un perfil existente que se ha mantenido dentro del segmento. |
+| Realizado | Un nuevo perfil dentro del segmento. |
+| Existente | Un perfil existente que se ha mantenido dentro del segmento. |
 | Saliendo | Un perfil existente que abandona el segmento. |
 
 La pérdida representa el porcentaje de perfiles que cambian dentro de una definición de segmento en comparación con la última vez que se ejecutó el trabajo del segmento, mientras que el recuento de perfiles representa el número total de perfiles que califican para el segmento.
