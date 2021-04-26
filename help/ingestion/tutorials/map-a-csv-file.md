@@ -7,7 +7,7 @@ type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -85,7 +85,7 @@ Aparece la ventana emergente **[!UICONTROL Map source to target field]**. Desde 
 
 Si desea eliminar una de las asignaciones, pase el ratón sobre esa asignación y, a continuación, seleccione el icono menos.
 
-### Añadir campo calculado
+### Agregar campo calculado {#add-calculated-field}
 
 Los campos calculados permiten que se creen valores en función de los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
 
