@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) [!DNL Marketo Engage] asignaciones de campos
 
@@ -158,6 +158,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Identidad principal |
-| `marketingListID` | `staticListID` | Relación |
+| `staticListMemberID` | `marketingListMemberID` | Identidad principal |
+| `staticListID` | `marketingListID` | Relación |
 | `personID` | `personID` | Relación |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Solo se recomienda si utiliza la integración de Salesforce. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Solo se recomienda si utiliza la integración de Salesforce. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Como solución alternativa, puede actualizar el campo de vinculación de ID de `
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Identidad secundaria |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Como solución alternativa, puede actualizar el campo de vinculación de ID de `
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse mediante la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obtener más información.
 
 ## Pasos siguientes
 
