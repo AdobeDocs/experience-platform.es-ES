@@ -8,9 +8,9 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1768'
 ht-degree: 4%
 
 ---
@@ -179,6 +179,16 @@ Este mensaje de error se muestra cuando el usuario o la integración de Adobe I/
 
 Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH tiene un encabezado `Content-Type` no válido o que falta. Asegúrese de que el encabezado esté incluido en la solicitud y de que su valor sea `application/json`.
 
+### Falta la región del usuario
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Este mensaje de error se muestra cuando su cuenta (representada por las credenciales de autenticación proporcionadas) no está asociada con un perfil de producto para Experience Platform. Siga los pasos de [generación de credenciales de acceso](./api-authentication.md#authentication-for-each-session) en el tutorial de autenticación de la API de plataforma para agregar Platform a su cuenta y actualizar sus credenciales de autenticación en consecuencia.
 
 ## Directorio de solución de problemas del servicio {#service-troubleshooting-directory}
 
