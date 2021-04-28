@@ -2,14 +2,14 @@
 keywords: correo electrónico;correo electrónico;destinos de correo electrónico;eloqua de oracle;oracle
 title: Conexión oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de marketing que ofrece Oracle y que tiene como objetivo ayudar a los especialistas en marketing B2B y a las organizaciones a administrar las campañas de marketing y la generación de posibles clientes de ventas.
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Oracle Eloqua] connection
 
@@ -20,6 +20,12 @@ Para enviar datos de segmentos a [!DNL Oracle Eloqua], primero debe [conectar el
 ## Tipo de exportación {#export-type}
 
 **Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en la pantalla de selección de atributos del flujo de trabajo de activación de  [destino](../../ui/activate-destinations.md#select-attributes).
+
+## LISTA DE PERMITIDOS de dirección IP {#allow-list}
+
+Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda que agregue ciertos rangos de IP a la lista de permitidos.
+
+Consulte la [lista de permitidos de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar IP de Adobe a su lista de permitidos.
 
 ## Conectarse al destino {#connect-destination}
 
