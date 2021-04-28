@@ -5,9 +5,9 @@ type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura los datos de Experience Platform a su servidor SFTP, Amazon S3 o al almacenamiento del blob de Azure.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura los datos del Experience Platform a su [servidor SFTP](./sftp.md), [Amazon S3](./amazon-s3.md) o almacenamiento [Azure Blob](./azure-blob.md).
+Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos del Experience Platform a su [servidor SFTP](./sftp.md).
 
 Puede definir los controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
