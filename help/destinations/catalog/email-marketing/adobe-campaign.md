@@ -2,14 +2,14 @@
 keywords: correo electrónico;correo electrónico;destinos de correo electrónico;adobe campaign;campaña
 title: Conexión Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y entregar campañas en todos sus canales en línea y sin conexión.
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
-
 
 # Conexión Adobe Campaign
 
@@ -23,6 +23,12 @@ Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el desti
 
 **Basado en perfiles** : exporta todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono y apellidos), tal como se elige en el  **[!UICONTROL Select attributes]** paso del flujo de trabajo de activación del  [destino](../../ui/activate-destinations.md#select-attributes).
 
+## LISTA DE PERMITIDOS de dirección IP {#allow-list}
+
+Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda que agregue ciertos rangos de IP a la lista de permitidos.
+
+Consulte la [lista de permitidos de direcciones IP para destinos de almacenamiento en la nube](../cloud-storage/ip-address-allow-list.md) si necesita agregar IP de Adobe a su lista de permitidos.
+
 ## Conectar destino {#connect-destination}
 
 En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione Adobe Campaign y, a continuación, seleccione **[!UICONTROL Configure]**.
@@ -31,7 +37,7 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione Adob
 >
 >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre [!UICONTROL Activate] y [!UICONTROL Configure], consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-![Conectarse a Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
+![Conexión a Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 En el paso **[!UICONTROL Account]** del flujo de trabajo de destino de Connect, seleccione **[!UICONTROL Connection type]** para la ubicación de almacenamiento. Para Adobe Campaign, puede seleccionar entre **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]** y **[!UICONTROL Azure Blob]**. El método preferido para enviar datos a Adobe Campaign es a través de [!DNL Amazon S3] o [!DNL Azure Blob]. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
