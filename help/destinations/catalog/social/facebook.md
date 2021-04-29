@@ -4,9 +4,9 @@ title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ Una aerolínea tiene diferentes niveles de clientes (bronce, plata y oro) y dese
 Para dirigirlos a través de los medios sociales, pueden incorporar los datos de clientes de su CRM a Adobe Experience Platform, utilizando las direcciones de correo electrónico como identificadores.
 
 A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de cliente, para crear nuevos segmentos de audiencia a los que pueden dirigirse mediante el destino [!DNL Facebook] .
-
-## Administración de datos para destinos [!DNL Facebook] {#data-governance}
-
->[!IMPORTANT]
->
->Los datos enviados a [!DNL Facebook] no pueden incluir identidades vinculadas. Usted es el responsable de cumplir esta obligación y puede hacerlo asegurándose de que los segmentos seleccionados para la activación no utilicen una opción de vinculación en su política de combinación. Obtenga más información sobre [políticas de combinación](/help/profile/ui/merge-policies.md).
 
 ## Identidades admitidas {#supported-identities}
 
