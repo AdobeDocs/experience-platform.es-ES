@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 10%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 10%
    * Destinos de almacenamiento en la nube {#cloud-storage}
       * [Resumen de destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
       * [Crear un destino de almacenamiento en la nube](./catalog/cloud-storage/workflow.md)
-      * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(Beta) Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexión de Azure Blob](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Conexión de los centros de eventos de Azure](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 10%
       * [Crear un destino social](./catalog/social/workflow.md)
       * [Extensión de Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Conexión facebook](./catalog/social/facebook.md)
-      * [Conexión de audiencias coincidentes de Linkedin](./catalog/social/linkedin.md)
+      * [Conexión de Audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
    * Destinos de Survey {#survey}
       * [Información general sobre los destinos de encuesta](./catalog/survey/overview.md)
       * [Destino de la extensión forestal](./catalog/survey/foresee.md)
