@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 ## Personas {#persons}
 
-En el tablero [!DNL Profiles] de la interfaz de usuario de Platform, si el valor de la vinculación de ID en la política de combinación que utilizó para examinar está establecido en `None`, la ventana identidades vinculadas solo mostrará el atributo de identidad principal.
-
-Como solución alternativa, puede actualizar el campo de vinculación de ID de `None` a `Private graph` para ver todas las identidades vinculadas a [!DNL Profile]. Como alternativa, puede crear una nueva política de combinación o usar una política de combinación diferente que contenga un valor de vinculación de ID establecido en `Private graph`. Si decide crear una nueva directiva de combinación o usar una directiva de combinación diferente, debe asegurarse de que la directiva contenga el mismo tipo de esquema que se usa para el conjunto de asignaciones [!DNL Marketo] Personas. Para obtener más información, consulte la [guía de interfaz de usuario de políticas de combinación](../../../../profile/ui/merge-policies.md).
-
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identidad primaria |
@@ -313,7 +309,7 @@ Como solución alternativa, puede actualizar el campo de vinculación de ID de `
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse mediante la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obtener más información.
 
