@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 }
 ```
 
-
 ## Crear un esquema XDM de destino {#target-schema}
 
 Para que los datos de origen se utilicen en [!DNL Platform], se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos [!DNL Platform] en el que se incluyen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `schemaRef.id` | El ID del esquema XDM de destino. |
-| `schemaRef.contentType` | Versión del esquema. Este valor debe establecerse `application/vnd.adobe.xed-full-notext+json;version=1`, que devuelve la última versión secundaria del esquema. |
+| `name` | Nombre del conjunto de datos que se va a crear. |
+| `schemaRef.id` | El URI `$id` del esquema XDM en el que se basará el conjunto de datos. |
+| `schemaRef.contentType` | Versión del esquema. Este valor debe establecerse en `application/vnd.adobe.xed-full-notext+json;version=1`, que devuelve la última versión secundaria del esquema. Consulte la sección sobre [versión del esquema](../../../../xdm/api/getting-started.md#versioning) en la guía de la API XDM para obtener más información. |
 
 **Respuesta**
 
