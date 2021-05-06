@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -290,9 +290,16 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 ]
 ```
 
+
+## Creación de una conexión de flujo continuo
+
+Después de crear el esquema y el conjunto de datos, debe crear una conexión de flujo continuo para introducir los datos.
+
+Para obtener más información sobre la creación de una conexión de flujo continuo, lea el [tutorial de creación de una conexión de flujo continuo](./create-streaming-connection.md).
+
 ## Ingesta de datos de series temporales en la conexión de flujo continuo
 
-Con el conjunto de datos y la conexión de flujo continuo en su lugar, puede ingerir registros JSON con formato XDM para introducir datos de series temporales en [!DNL Platform].
+Con el conjunto de datos, la conexión de flujo continuo y el flujo de datos creado, puede ingerir registros JSON con formato XDM para introducir datos de series temporales en [!DNL Platform].
 
 **Formato de API**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
+| `{CONNECTION_ID}` | El `inletId` de la conexión de flujo continuo creada anteriormente. |
 | `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
 | `receivedTimeMs`: Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
 | `synchronousValidation.status` | Dado que se ha agregado el parámetro de consulta `synchronousValidation=true`, este valor aparecerá. Si la validación se ha realizado correctamente, el estado será `pass`. |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
