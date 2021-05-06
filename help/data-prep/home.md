@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento presenta la preparación de datos dentro de Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Para obtener más información sobre las diferentes funciones de asignación, le
 ## Conjunto de asignaciones
 
 Un conjunto de asignaciones que transforman un esquema en otro se conocen colectivamente como conjunto de asignaciones. Se crea un conjunto de asignaciones único como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y monitoriza como parte de los flujos de datos.
+
+Para obtener más información sobre los conjuntos de asignaciones, incluido cómo utilizar los campos dentro de un conjunto de asignaciones, lea la [guía del conjunto de asignaciones](./mapping-set.md). Para aprender a crear un conjunto de asignaciones y utilizar otras llamadas de API relacionadas con conjuntos de asignaciones, lea la sección del conjunto de asignaciones en la [guía para desarrolladores](./api/mapping-set.md).
 
 ## Gestión del formato de datos
 
