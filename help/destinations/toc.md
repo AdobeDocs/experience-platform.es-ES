@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 10%
       * [Información general sobre la extensión de Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre los destinos de participación del dispositivo móvil](./catalog/mobile-engagement/overview.md)
-      * [Conexión de atributos de aeronave](./catalog/mobile-engagement/airship-attributes.md)
-      * [Conexión de etiquetas de la aeronave](./catalog/mobile-engagement/airship-tags.md)
-      * [Conexión con el Brazo](./catalog/mobile-engagement/braze.md)
+      * [(Beta) Conexión de Atributos de Aeronaves](./catalog/mobile-engagement/airship-attributes.md)
+      * [(Beta) Conexión de las etiquetas de los buques aéreos](./catalog/mobile-engagement/airship-tags.md)
+      * [(Beta) Conexión en formato Braze](./catalog/mobile-engagement/braze.md)
    * Destinos personalizados {#personalization}
       * [Información general sobre los destinos de personalización](./catalog/personalization/overview.md)
       * [Extensión de Adobe Target](./catalog/personalization/adobe-target.md)
