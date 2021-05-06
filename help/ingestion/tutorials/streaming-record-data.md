@@ -7,12 +7,13 @@ type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
+
 
 # Transmisión de datos de registro mediante las API de ingesta de transmisión
 
@@ -23,10 +24,8 @@ Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisió
 Este tutorial requiere conocimientos prácticos de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia.
+   - [Guía](../../xdm/api/getting-started.md) para desarrolladores de Schema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la  [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a lo largo de este tutorial, así como saber cómo crear esquemas, que se utilizan para crear un conjunto de datos para la ingesta.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado y de cliente en tiempo real basado en datos agregados de varias fuentes.
-- [Guía](../../xdm/api/getting-started.md) para desarrolladores de Schema Registry: Una guía completa que cubre cada uno de los extremos disponibles de la  [!DNL Schema Registry] API y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a lo largo de este tutorial, así como saber cómo crear esquemas, que se utilizan para crear un conjunto de datos para la ingesta.
-
-Además, este tutorial requiere que ya haya creado una conexión de flujo continuo. Para obtener más información sobre la creación de una conexión de flujo continuo, lea el [tutorial de creación de una conexión de flujo continuo](./create-streaming-connection.md).
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de ingesta de transmisión.
 
@@ -264,6 +263,12 @@ Una respuesta correcta devuelve el estado HTTP 201 y una matriz que contiene el 
 ]
 ```
 
+## Creación de una conexión de flujo continuo
+
+Después de crear el esquema y el conjunto de datos, puede crear una conexión de flujo continuo
+
+Para obtener más información sobre la creación de una conexión de flujo continuo, lea el [tutorial de creación de una conexión de flujo continuo](./create-streaming-connection.md).
+
 ## Ingesta de datos de registro en la conexión de flujo continuo {#ingest-data}
 
 Con el conjunto de datos y la conexión de flujo continuo en su lugar, puede ingerir registros JSON con formato XDM para introducir datos de registro en [!DNL Platform].
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo creada anteriormente. |
+| `{CONNECTION_ID}` | El valor `inletId` de la conexión de flujo continuo creada anteriormente. |
 | `synchronousValidation` | Un parámetro de consulta opcional diseñado para fines de desarrollo. Si se establece en `true`, se puede utilizar para comentarios inmediatos a fin de determinar si la solicitud se ha enviado correctamente. De forma predeterminada, este valor se establece en `false`. |
 
 **Solicitud**
