@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del explorador .
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '259'
 ht-degree: 6%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 6%
 | `viewportHeight` | Número entero | Tamaño vertical en píxeles de la ventana en la que se mostró el evento. Para un evento de vista web, esta es la altura de la ventanilla del explorador. |
 | `viewportWidth` | Número entero | El tamaño horizontal en píxeles de la ventana en la que se mostró el evento. Para un evento de vista web, esta es la anchura de la ventanilla del explorador. |
 
-Para obtener más información sobre la mezcla, consulte el repositorio XDM público:
+Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)
