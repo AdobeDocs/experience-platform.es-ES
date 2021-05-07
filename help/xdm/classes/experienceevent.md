@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
@@ -31,16 +31,16 @@ La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionado
 | `identityMap` | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los  [conceptos básicos de la ](../schema/composition.md#identityMap) composición de esquemas para obtener más información sobre su caso de uso. |
 | `timestamp` | Marca de fecha y hora ISO 8601 del momento en que se produjo el evento, con el formato [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Esta marca de tiempo  **** solo puede representar la observación del propio evento y debe ocurrir en el pasado. Si los casos de uso de segmentación requieren el uso de marcas de tiempo que puedan producirse en el futuro (como una fecha de salida), estos valores deben restringirse en cualquier otra parte del esquema de eventos de experiencia. |
 
-## Mezclas compatibles {#mixins}
+## Grupos de campos de esquema compatibles {#field-groups}
 
 >[!NOTE]
 >
->Los nombres de varias mezclas han cambiado. Consulte el documento sobre [mezcin name updates](../mixins/name-updates.md) para obtener más información.
+>Los nombres de varios grupos de campos han cambiado. Para obtener más información, consulte el documento [field group name updates](../field-groups/name-updates.md) .
 
-El Adobe proporciona varias mezclas estándar para su uso con la clase [!DNL XDM ExperienceEvent]. A continuación se presenta una lista de algunas mezclas que se utilizan habitualmente para la clase:
+Adobe proporciona varios grupos de campos estándar para su uso con la clase [!DNL XDM ExperienceEvent]. A continuación se muestra una lista de algunos grupos de campos utilizados con frecuencia para la clase :
 
-* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
 
 ## Apéndice
 
