@@ -6,9 +6,9 @@ description: Este documento proporciona información complementaria relacionada 
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Puede filtrar los resultados utilizando el parámetro `property` , que se utiliz
 
 >[!TIP]
 >
->Puede utilizar el parámetro `property` para filtrar las mezclas por su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` devuelve solo las mezclas compatibles con la clase [!DNL XDM Individual Profile].
+>Puede utilizar el parámetro `property` para filtrar grupos de campos de esquema por su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` solo devuelve grupos de campos compatibles con la clase [!DNL XDM Individual Profile].
 
 ## Modo de compatibilidad
 
