@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2879'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ A medida que los registros de perfil se incorporan al Experience Platform, se ob
 
 En ocasiones puede haber casos de uso en los que sea necesario proporcionar una marca de tiempo personalizada y en los que la política de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema. Algunos ejemplos de esto son rellenar los datos o garantizar el orden correcto de los eventos si los registros se introducen de forma desordenada.
 
-Para utilizar una marca de tiempo personalizada, se debe agregar **[!UICONTROL External Source System Audit Details Mixin]** al esquema de perfil. Una vez añadida, la marca de tiempo personalizada se puede rellenar con el campo `lastUpdatedDate` . Cuando se ingesta un registro con el campo `lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros entre conjuntos de datos. Si `lastUpdatedDate` no está presente o no se rellena, Platform seguirá usando la marca de tiempo del sistema.
+Para utilizar una marca de tiempo personalizada, el grupo de campos de esquema **[!UICONTROL External Source System Audit Details]** debe agregarse al esquema de perfil. Una vez añadida, la marca de tiempo personalizada se puede rellenar con el campo `lastUpdatedDate` . Cuando se ingesta un registro con el campo `lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros entre conjuntos de datos. Si `lastUpdatedDate` no está presente o no se rellena, Platform seguirá usando la marca de tiempo del sistema.
 
 >[!NOTE]
 >
 >Debe asegurarse de que la marca de tiempo `lastUpdatedDate` se rellene al ingerir una actualización en el mismo registro.
 
-La siguiente captura de pantalla muestra los campos en [!UICONTROL External Source System Audit Details Mixin]. Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la interfaz de usuario de Platform, incluido cómo añadir mezclas a esquemas, visite el [tutorial para crear un esquema con la IU](../../xdm/tutorials/create-schema-ui.md).
+La siguiente captura de pantalla muestra los campos del grupo de campos [!UICONTROL External Source System Audit Details]. Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la interfaz de usuario de Platform, incluido cómo añadir grupos de campos a esquemas, visite el [tutorial para crear un esquema con la IU](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Para trabajar con marcas de hora personalizadas mediante la API, consulte la sección [guía de extremo de directivas de combinación sobre el uso de marcas de hora personalizadas](../api/merge-policies.md#custom-timestamps).
 
