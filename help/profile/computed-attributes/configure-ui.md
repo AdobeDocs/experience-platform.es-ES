@@ -3,11 +3,11 @@ keywords: Experience Platform;perfil;perfil del cliente en tiempo real;solución
 title: Configuración de un campo de atributo calculado
 topic-legacy: guide
 type: Documentation
-description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando una mezcla para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
+description: Los atributos calculados son funciones que se utilizan para acumular datos de nivel de evento en atributos de nivel de perfil. Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando un grupo de campos de esquema para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
@@ -19,19 +19,19 @@ ht-degree: 1%
 >
 >La funcionalidad de atributo computado está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando una mezcla para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
+Para configurar un atributo calculado, primero debe identificar el campo que contendrá el valor de atributo calculado. Este campo se puede crear utilizando un grupo de campos de esquema para añadir el campo a un esquema existente o seleccionando un campo que ya haya definido dentro de un esquema.
 
 >[!NOTE]
 >
->Los atributos calculados no se pueden agregar a campos dentro de mezclas definidas por Adobe. El campo debe estar dentro del espacio de nombres `tenant` , lo que significa que debe ser un campo que defina y agregue a un esquema.
+>Los atributos calculados no se pueden agregar a campos dentro de grupos de campos definidos por el Adobe. El campo debe estar dentro del espacio de nombres `tenant` , lo que significa que debe ser un campo que defina y agregue a un esquema.
 
 Para definir correctamente un campo de atributo calculado, el esquema debe estar habilitado para [!DNL Profile] y aparecer como parte del esquema de unión para la clase en la que se basa el esquema. Para obtener más información sobre los esquemas y uniones habilitados para [!DNL Profile], consulte la sección de la [!DNL Schema Registry] guía para desarrolladores en [habilitación de un esquema para Perfil y visualización de esquemas de unión](../../xdm/api/getting-started.md). También se recomienda revisar la sección [sobre las uniones](../../xdm/schema/composition.md) en la documentación básica de la composición del esquema.
 
-El flujo de trabajo de este tutorial utiliza un esquema habilitado para [!DNL Profile] y sigue los pasos para definir una nueva mezcla que contenga el campo de atributo calculado y garantizar que sea el área de nombres correcta. Si ya tiene un campo en el área de nombres correcta dentro de un esquema habilitado para perfil, puede continuar directamente con el paso para [crear un atributo calculado](#create-a-computed-attribute).
+El flujo de trabajo de este tutorial utiliza un esquema habilitado para [!DNL Profile] y sigue los pasos para definir un nuevo grupo de campos que contenga el campo de atributo calculado y garantizar que sea el área de nombres correcta. Si ya tiene un campo en el área de nombres correcta dentro de un esquema habilitado para perfil, puede continuar directamente con el paso para [crear un atributo calculado](#create-a-computed-attribute).
 
 ## Ver un esquema
 
-Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, añadir una mezcla y definir un campo. Si prefiere utilizar la API [!DNL Schema Registry], consulte la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md) para ver los pasos sobre cómo crear una mezcla, agregar una mezcla a un esquema y habilitar un esquema para usar con [!DNL Real-time Customer Profile].
+Los pasos siguientes utilizan la interfaz de usuario de Adobe Experience Platform para localizar un esquema, agregar un grupo de campos y definir un campo. Si prefiere utilizar la API [!DNL Schema Registry], consulte la [Guía para desarrolladores del Registro de Esquemas](../../xdm/api/getting-started.md) para ver los pasos sobre cómo crear un grupo de campos, agregar un grupo de campos a un esquema y habilitar un esquema para utilizarlo con [!DNL Real-time Customer Profile].
 
 En la interfaz de usuario, haga clic en **[!UICONTROL Schemas]** en el carril izquierdo y utilice la barra de búsqueda de la pestaña **[!UICONTROL Browse]** para encontrar rápidamente el esquema que desea actualizar.
 
@@ -41,17 +41,17 @@ Una vez que haya localizado el esquema, haga clic en su nombre para abrir el [!D
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-## Crear una mezcla
+## Creación de un grupo de campos
 
-Para crear una nueva mezcla, haga clic en **[!UICONTROL Add]** junto a **[!UICONTROL Mixins]** en la sección **[!UICONTROL Composition]** a la izquierda del editor. Esto abre el cuadro de diálogo **[!UICONTROL Add mixin]** donde puede ver las mezclas existentes. Haga clic en el botón de opción **[!UICONTROL Create new mixin]** para definir la nueva mezcla.
+Para crear un nuevo grupo de campos, haga clic en **[!UICONTROL Add]** junto a **[!UICONTROL Field groups]** en la sección **[!UICONTROL Composition]** a la izquierda del editor. Se abre el cuadro de diálogo **[!UICONTROL Add field group]**, donde puede ver los grupos de campos existentes. Haga clic en el botón de opción de **[!UICONTROL Create new field group]** para definir el nuevo grupo de campos.
 
-Asigne un nombre y una descripción a la mezcla y haga clic en **[!UICONTROL Add mixin]** cuando termine.
+Asigne un nombre y una descripción al grupo de campos y haga clic en **[!UICONTROL Add field group]** cuando termine.
 
-![](../images/computed-attributes/Add-mixin.png)
+![](../images/computed-attributes/Add-field-group.png)
 
 ## Añadir un campo de atributo calculado al esquema
 
-La nueva mezcla debe aparecer ahora en la sección &quot;[!UICONTROL Mixins]&quot; de &quot;[!UICONTROL Composition]&quot;. Haga clic en el nombre de la mezcla y aparecerán varios botones **[!UICONTROL Add field]** en la sección **[!UICONTROL Structure]** del editor.
+El nuevo grupo de campos debería aparecer en la sección &quot;[!UICONTROL Field groups]&quot; de &quot;[!UICONTROL Composition]&quot;. Haga clic en el nombre del grupo de campos y aparecerán varios botones **[!UICONTROL Add field]** en la sección **[!UICONTROL Structure]** del editor.
 
 Seleccione **[!UICONTROL Add field]** junto al nombre del esquema para añadir un campo de nivel superior o puede seleccionar añadir el campo en cualquier lugar dentro del esquema que prefiera.
 
