@@ -6,14 +6,21 @@ description: El extremo /mixins de la API del Registro de Esquemas permite admin
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
 
-# Punto final de las mezclas
+
+# Punto final de Mixins (obsoleto)
+
+>[!IMPORTANT]
+>
+>Se ha cambiado el nombre de las mezclas a grupos de campos de esquema y, por lo tanto, el extremo `/mixins` se ha desaprobado en favor del extremo `/fieldgroups` .
+>
+>Aunque `/mixins` se seguirá manteniendo como punto final heredado, se recomienda utilizar `/fieldgroups` para nuevas implementaciones de la API del Registro de esquemas en las aplicaciones de experiencia. Consulte la [guía de extremo de grupos de campos](./field-groups.md) para obtener más información.
 
 Las mezclas son componentes reutilizables que definen uno o más campos que representan un concepto en particular, como una persona individual, una dirección de correo o un entorno de navegador web. Las mezclas están pensadas para incluirse como parte de un esquema que implemente una clase compatible, según el comportamiento de los datos que representan (registro o serie temporal). El extremo `/mixins` de la API [!DNL Schema Registry] le permite administrar de forma programada las mezclas dentro de la aplicación de experiencia.
 
@@ -154,7 +161,7 @@ Una respuesta correcta devuelve los detalles de la mezcla. Los campos devueltos 
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Una respuesta correcta devuelve los detalles de la mezcla actualizada.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El `desc
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
