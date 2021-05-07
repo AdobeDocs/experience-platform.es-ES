@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre el campo de preferencia de marketing genérico con el tipo de datos XDM de suscripciones.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de su organización utilizando la [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mezcla](../mixins/profile/consents.md) como punto de referencia.
+>Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de la organización mediante el grupo de campos [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) como línea de base.
 >
 >Si no necesita un `subscriptions` mapa para un campo de preferencias de marketing determinado, puede usar el [tipo de datos básico del campo de marketing](./marketing-field.md) en su lugar.
 
