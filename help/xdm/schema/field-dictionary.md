@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: El modelo de datos de experiencia (XDM) define un conjunto de campos estándar que se pueden utilizar al componer esquemas de Adobe Experience Platform. El uso de estos campos da como resultado un comportamiento coherente en todos los servicios de Platform, ya que todos los servicios que consumen XDM comprenderán explícitamente las definiciones específicas proporcionadas por estos campos.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Consulte los [conceptos básicos de la composición del esquema](composition.md) para obtener más información sobre los componentes básicos de los esquemas, incluidos los principios y las prácticas recomendadas para definir esquemas para [!DNL Experience Platform].
 
-La siguiente tabla incluye el nombre del campo (no todos los campos XDM tienen espacio de nombres mediante &quot;xdm&quot;) junto con su título y descripción, tipo y formato donde sea necesario, así como su tipo XDM correspondiente y los recursos (mezclas, tipos de datos y esquemas) en los que se puede encontrar el campo.
+La siguiente tabla incluye el nombre del campo (no todos los campos XDM tienen espacio de nombres mediante &quot;xdm&quot;) junto con su título y descripción, tipo y formato donde sea necesario, así como su tipo XDM correspondiente y los recursos (esquemas, grupos de campos de esquema y tipos de datos) en los que se puede encontrar el campo.
 
 Puede utilizar la funcionalidad de búsqueda de [!DNL Schema Editor] para ver los detalles de estos recursos, como se muestra en el tutorial [Editor de esquemas](../tutorials/create-schema-ui.md#browse).
 
@@ -402,7 +402,7 @@ Puede utilizar la funcionalidad de búsqueda de [!DNL Schema Editor] para ver lo
 | xdm:cuarentena | Cuarentena | Dirección trasladada a cuarentena. La cuarentena se establece en `true` cuando el mensaje no se pudo enviar de una manera que indica que no se podrán enviar mensajes futuros a esta dirección. | Booleano |  | Booleano | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/mutationevent |
 | xdm:quicktimeVersion | Versión de Quicktime | La versión de Apple Quicktime admitida durante la observación. | string |  | string | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/experience/campaign/profile-snapshot, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, `, |
 | xdm:rating | Clasificación | Puntuación calculada o clasificación por estrellas para esta organización. `1` indica la clasificación máxima posible,  `0` la clasificación mínima posible. | entero |  | entero | https://ns.adobe.com/xdm/common/organization |
-| xdm:reason | Razón | La razón por la que el mensaje se pudo entregar o no. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/experience/campaign/mutationevent, https://ns.adobe.com/xdm/context/profile-subscriptions |
+| xdm:reason | Motivo | La razón por la que el mensaje se pudo entregar o no. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/experience/campaign/mutationevent, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:reasonMessage | Mensaje de motivo | Motivo del error en la entrega del mensaje. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:receivedTimestamp | Marca de tiempo recibida | Hora a la que un servidor recibió esta interacción. | string | date-time | date-time | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
 | xdm:region | Región | Región, condado o distrito de la dirección. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/experienceevent-profile-personal-details, https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details, https://ns.adobe.com/experience/campaign/profile-snapshot, https://ns.adobe.com/xdm/context/profile-directmarketing, https://ns.adobe.com/xdm/context/profile-personal-details, https://ns.adobe.com/xdm/context/profile-work-details |
