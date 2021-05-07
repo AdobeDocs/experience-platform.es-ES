@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de Detalles del punto de interés.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '189'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `poiID` | Cadena | Identificador único del punto de interés. |
 | `type` | Cadena | Tipo general del punto de interés utilizando un esquema de escritura seleccionado por el administrador de las definiciones de punto de interés. |
 
-Para obtener más información sobre la mezcla, consulte el repositorio XDM público:
+Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
