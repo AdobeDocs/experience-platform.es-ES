@@ -6,9 +6,9 @@ description: Obtenga información sobre los conceptos básicos de cómo crear y 
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Esta guía proporciona información general sobre cómo crear, editar y administ
 
 >[!IMPORTANT]
 >
->Los esquemas XDM son extremadamente personalizables y, por lo tanto, los pasos involucrados en la creación de un esquema pueden variar según el tipo de datos que desee capturar. Como resultado, este documento solo cubre las interacciones básicas que puede realizar con los esquemas en la interfaz de usuario y excluye los pasos relacionados como la personalización de clases, mezclas, tipos de datos y campos.
+>Los esquemas XDM son extremadamente personalizables y, por lo tanto, los pasos involucrados en la creación de un esquema pueden variar según el tipo de datos que desee capturar. Como resultado, este documento solo cubre las interacciones básicas que puede realizar con los esquemas en la interfaz de usuario y excluye los pasos relacionados como la personalización de clases, grupos de campos de esquema, tipos de datos y campos.
 >
 >Para obtener un recorrido completo por el proceso de creación del esquema, siga el tutorial de creación de esquema [schema](../../tutorials/create-schema-ui.md) para crear un esquema de ejemplo completo y familiarizarse con las muchas funciones de [!DNL Schema Editor].
 
@@ -37,7 +37,7 @@ Una vez seleccionada una clase, aparece [!DNL Schema Editor] y la estructura bas
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-Ahora puede empezar a crear la estructura del esquema [añadiendo mezclas](#add-mixins).
+Ahora puede empezar a crear la estructura del esquema [añadiendo grupos de campos de esquema](#add-field-groups).
 
 ## Editar un esquema existente {#edit}
 
@@ -53,23 +53,23 @@ Para editar un esquema existente, seleccione la pestaña **[!UICONTROL Browse]**
 >
 >Puede utilizar las capacidades de búsqueda y filtrado del espacio de trabajo para ayudar a encontrar el esquema más fácil. Consulte la guía sobre [exploración de recursos XDM](../explore.md) para obtener más información.
 
-Una vez seleccionado un esquema, el [!DNL Schema Editor] aparece con la estructura del esquema mostrada en el lienzo. Ahora puede [añadir mezclas](#add-mixins) al esquema, [editar nombres de visualización de campos](#display-names) o [editar mezclas personalizadas existentes](./mixins.md#edit) si el esquema emplea alguna.
+Una vez seleccionado un esquema, el [!DNL Schema Editor] aparece con la estructura del esquema mostrada en el lienzo. Ahora puede [agregar grupos de campos](#add-field-groups) al esquema, [editar nombres para mostrar de campos](#display-names) o [editar grupos de campos personalizados existentes](./field-groups.md#edit) si el esquema emplea alguno.
 
-## Añadir mezclas a un esquema {#add-mixins}
+## Agregar grupos de campos a un esquema {#add-field-groups}
 
 >[!NOTE]
 >
->En esta sección se explica cómo añadir mezclas existentes a un esquema. Si desea crear una nueva mezcla personalizada, consulte la guía sobre [creación y edición de mezclas](./mixins.md#create) en su lugar.
+>Esta sección explica cómo agregar grupos de campos existentes a un esquema. Si desea crear un nuevo grupo de campos personalizados, consulte la guía sobre [creación y edición de grupos de campos](./field-groups.md#create) en su lugar.
 
-Una vez que haya abierto un esquema dentro de [!DNL Schema Editor], puede añadir campos al esquema mediante el uso de mezclas. Para comenzar, seleccione **[!UICONTROL Add]** junto a **[!UICONTROL Mixins]** en el carril izquierdo.
+Una vez que haya abierto un esquema dentro de [!DNL Schema Editor], puede añadir campos al esquema mediante el uso de grupos de campos. Para comenzar, seleccione **[!UICONTROL Add]** junto a **[!UICONTROL Field groups]** en el carril izquierdo.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-Aparece un cuadro de diálogo que muestra una lista de mezclas que puede seleccionar para el esquema. Dado que las mezclas sólo son compatibles con una clase, sólo se enumerarán las mezclas asociadas con la clase seleccionada del esquema. De forma predeterminada, las mezclas enumeradas se ordenan según su popularidad de uso dentro de su organización.
+Aparece un cuadro de diálogo que muestra una lista de los grupos de campos que puede seleccionar para el esquema. Dado que los grupos de campos solo son compatibles con una clase, solo se enumerarán los grupos de campos asociados con la clase seleccionada del esquema. De forma predeterminada, los grupos de campos enumerados se ordenan según su popularidad de uso dentro de su organización.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Si conoce la actividad general o el área de negocio de los campos de mezcla que desea agregar, seleccione una o más de las categorías verticales del sector en el carril izquierdo para filtrar la lista mostrada de mezclas.
+Si conoce la actividad general o el área comercial de los campos que desea agregar, seleccione una o varias categorías verticales del sector en el carril izquierdo para filtrar la lista mostrada de grupos de campos.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ Si conoce la actividad general o el área de negocio de los campos de mezcla que
 >
 >Para obtener más información sobre las prácticas recomendadas para el modelado de datos específico del sector en XDM, consulte la documentación sobre [modelos de datos del sector](../../schema/industries/overview.md).
 
-También puede utilizar la barra de búsqueda para localizar la mezcla deseada. Las mezclas cuyo nombre coincida con la consulta aparecen en la parte superior de la lista. En **[!UICONTROL Standard Fields]**, se muestran las mezclas que contienen campos que describen atributos de datos deseados.
+También puede utilizar la barra de búsqueda para localizar el grupo de campos deseado. Los grupos de campos cuyo nombre coincida con la consulta aparecen en la parte superior de la lista. En **[!UICONTROL Standard Fields]**, se muestran los grupos de campos que contienen campos que describen atributos de datos deseados.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-Seleccione la casilla de verificación situada junto al nombre de la mezcla que desea añadir al esquema. Puede seleccionar varias mezclas de la lista, y cada una de ellas aparecerá en el carril derecho.
+Active la casilla situada junto al nombre del grupo de campos que desea agregar al esquema. Puede seleccionar varios grupos de campos en la lista, y cada grupo de campos seleccionado aparecerá en el carril derecho.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Para cualquier mezcla enumerada, puede mantener el puntero o centrarse en el icono de información (![](../../images/ui/resources/schemas/info-icon.png)) para ver una breve descripción del tipo de datos que captura la mezcla. También puede seleccionar el icono de vista previa (![](../../images/ui/resources/schemas/preview-icon.png)) para ver la estructura de los campos que proporciona la mezcla antes de decidir agregarla al esquema.
+>Para cualquier grupo de campos de la lista, puede mantener el ratón o centrarse en el icono de información (![](../../images/ui/resources/schemas/info-icon.png)) para ver una breve descripción del tipo de datos que captura el grupo de campos. También puede seleccionar el icono de vista previa (![](../../images/ui/resources/schemas/preview-icon.png)) para ver la estructura de los campos que proporciona el grupo de campos antes de decidir agregarla al esquema.
 
-Una vez seleccionadas las mezclas, seleccione **[!UICONTROL Add mixin]** para agregarlas al esquema.
+Una vez que haya elegido los grupos de campos, seleccione **[!UICONTROL Add field groups]** para agregarlos al esquema.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-El [!DNL Schema Editor] vuelve a aparecer con los campos proporcionados por la mezcla representados en el lienzo.
+El [!DNL Schema Editor] vuelve a aparecer con los campos proporcionados por el grupo de campos representados en el lienzo.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Habilitar un esquema para el perfil de cliente en tiempo real {#profile}
 
@@ -127,11 +127,11 @@ El esquema ahora está habilitado para utilizarse en el perfil del cliente en ti
 
 ## Editar nombres para mostrar para campos de esquema {#display-names}
 
-Una vez que haya asignado una clase y agregado mezclas a un esquema, puede editar los nombres para mostrar de cualquiera de los campos del esquema, independientemente de si esos campos han sido proporcionados por recursos XDM estándar o personalizados.
+Una vez que haya asignado una clase y agregado grupos de campos a un esquema, puede editar los nombres para mostrar de cualquiera de los campos del esquema, independientemente de si esos campos han sido proporcionados por recursos XDM estándar o personalizados.
 
 >[!NOTE]
 >
->Tenga en cuenta que los nombres para mostrar de los campos que pertenecen a clases o mezclas estándar solo se pueden editar en el contexto de un esquema específico. En otras palabras, cambiar el nombre para mostrar de un campo estándar en un esquema no afecta a otros esquemas que emplean la misma clase o mezcla asociada.
+>Tenga en cuenta que los nombres para mostrar de los campos que pertenecen a clases estándar o grupos de campos solo se pueden editar en el contexto de un esquema específico. En otras palabras, cambiar el nombre para mostrar de un campo estándar en un esquema no afecta a otros esquemas que emplean la misma clase o grupo de campos asociado.
 
 Para editar el nombre para mostrar de un campo de esquema, seleccione el campo en el lienzo. En el carril derecho, proporcione el nuevo nombre en **[!UICONTROL Display name]**.
 
@@ -147,7 +147,7 @@ Puede cambiar la clase de un esquema en cualquier momento durante el proceso de 
 
 >[!WARNING]
 >
->La reasignación de la clase para un esquema debe realizarse con extrema precaución. Las mezclas solo son compatibles con ciertas clases y, por lo tanto, cambiar la clase restablecerá el lienzo y los campos que haya agregado.
+>La reasignación de la clase para un esquema debe realizarse con extrema precaución. Los grupos de campos solo son compatibles con ciertas clases y, por lo tanto, al cambiar la clase se restablecerá el lienzo y los campos que haya agregado.
 
 Para reasignar una clase, seleccione **[!UICONTROL Assign]** en el lado izquierdo del lienzo.
 
@@ -167,7 +167,7 @@ Después de confirmar el cambio de clase, el lienzo se restablecerá y se perder
 
 ## Pasos siguientes
 
-Este documento abarcaba los aspectos básicos de la creación y edición de esquemas en la interfaz de usuario de Platform. Se recomienda encarecidamente revisar el [tutorial de creación de esquemas](../../tutorials/create-schema-ui.md) para obtener un flujo de trabajo completo para crear un esquema completo en la interfaz de usuario, incluida la creación de mezclas personalizadas y tipos de datos para casos de uso únicos.
+Este documento abarcaba los aspectos básicos de la creación y edición de esquemas en la interfaz de usuario de Platform. Se recomienda encarecidamente revisar el [tutorial de creación de esquemas](../../tutorials/create-schema-ui.md) para obtener un flujo de trabajo completo para crear un esquema completo en la interfaz de usuario, incluida la creación de grupos de campos personalizados y tipos de datos para casos de uso únicos.
 
 Para obtener más información sobre las capacidades del espacio de trabajo [!UICONTROL Schemas], consulte la [[!UICONTROL Schemas] descripción general del espacio de trabajo](../overview.md).
 
