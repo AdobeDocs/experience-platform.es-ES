@@ -7,16 +7,16 @@ type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario del Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 # Crear y editar tipos de datos mediante la interfaz de usuario
 
-En el Modelo de datos de experiencia (XDM), los tipos de datos se utilizan como campos de referencia en clases o mezclas del mismo modo que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a las mezclas en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque pueden incluirse en cualquier lugar de la estructura del esquema, mientras que las mezclas sólo pueden agregarse en el nivel raíz.
+En el Modelo de datos de experiencia (XDM), los tipos de datos se utilizan como campos de referencia en clases o grupos de campos de esquema del mismo modo que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden agregar en el nivel raíz.
 
 Adobe Experience Platform proporciona muchos tipos de datos estándar que se pueden usar para cubrir una amplia variedad de casos de uso comunes de administración de experiencias. Sin embargo, también puede definir sus propios tipos de datos personalizados para satisfacer sus necesidades comerciales únicas.
 
@@ -85,21 +85,21 @@ Esto demuestra la flexibilidad de los tipos de datos en la descripción de los d
 
 Una vez que haya terminado de agregar campos al tipo de datos, seleccione **[!UICONTROL Save]** para guardar los cambios y agregar el tipo de datos al [!DNL Schema Library].
 
-## Añadir el tipo de datos a una clase o mezcla
+## Añadir el tipo de datos a una clase o grupo de campos
 
-Una vez creado un tipo de datos, puede empezar a utilizarlo en sus esquemas. Dado que los esquemas XDM están compuestos por una clase y cero o más mezclas, los campos proporcionados por un tipo de datos no se pueden agregar directamente a un esquema. En su lugar, deben incluirse en una clase o mezcla.
+Una vez creado un tipo de datos, puede empezar a utilizarlo en sus esquemas. Dado que los esquemas XDM están compuestos por una clase y cero o más grupos de campos, los campos proporcionados por un tipo de datos no se pueden agregar directamente a un esquema. En su lugar, deben incluirse en una clase o un grupo de campos.
 
-Comience por seguir los pasos relacionados con la [adición de un campo a una clase](./classes.md#add-fields) o [adición de un campo a una mezcla](./mixins.md#add-fields). Cuando elija **[!UICONTROL Type]** para el nuevo campo, seleccione el nombre del tipo de datos en el menú desplegable.
+Comience por seguir los pasos relacionados con [la adición de un campo a una clase](./classes.md#add-fields) o [la adición de un campo a un grupo de campos](./field-groups.md#add-fields). Cuando elija **[!UICONTROL Type]** para el nuevo campo, seleccione el nombre del tipo de datos en el menú desplegable.
 
 ## Conversión de un objeto de varios campos en un tipo de datos {#convert}
 
-Cuando se crea un campo de tipo de objeto con varios subcampos en el [!DNL Schema Editor], se puede convertir ese campo en un tipo de datos para poder utilizar la misma estructura de campo en una clase o mezcla diferente.
+Cuando se crea un campo de tipo de objeto con varios subcampos en el [!DNL Schema Editor], se puede convertir ese campo en un tipo de datos para poder utilizar la misma estructura de campo en una clase o grupo de campos diferente.
 
 Para convertir un campo de tipo objeto en un tipo de datos, seleccione el campo en el lienzo. Antes de convertir el campo, asegúrese de que **[!UICONTROL Display name]** sea descriptivo de los datos que contendrá el objeto, ya que este será el nombre del tipo de datos. Cuando esté listo para convertir el campo , seleccione **[!UICONTROL Convert to new data type]** en el carril derecho.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Object]&quot; al nuevo tipo de datos. Los subcampos también tienen iconos de bloqueo pequeños junto a ellos, lo que indica que ya no son campos individuales sino parte de un tipo de datos de varios campos. Esta estructura ahora se puede reutilizar en otras clases y mezclas seleccionando este tipo de datos en la lista desplegable **[!UICONTROL Type]** al definir un nuevo campo.
+El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Object]&quot; al nuevo tipo de datos. Los subcampos también tienen iconos de bloqueo pequeños junto a ellos, lo que indica que ya no son campos individuales sino parte de un tipo de datos de varios campos. Esta estructura ahora se puede reutilizar en otras clases y grupos de campos seleccionando este tipo de datos en la lista desplegable **[!UICONTROL Type]** al definir un nuevo campo.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
