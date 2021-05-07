@@ -7,7 +7,7 @@ type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una base de datos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
 workflow-type: tm+mt
 source-wordcount: '1649'
 ht-degree: 2%
@@ -332,7 +332,7 @@ curl -X POST \
         "params": {
             "dataSetId": "6019e0e7c5dcf718db5ebc71"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
