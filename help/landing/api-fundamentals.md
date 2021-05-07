@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Este documento proporciona una breve descripción general de algunas de las tecnologías subyacentes y sintaxis relacionadas con las API de Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ El puntero JSON es una sintaxis de cadena estandarizada ([RFC 6901](https://tool
 
 ### Ejemplo de objeto de esquema JSON
 
-El siguiente JSON representa un esquema XDM simplificado cuyos campos pueden ser referenciados usando cadenas de puntero JSON. Tenga en cuenta que todos los campos que se han agregado utilizando mezclas personalizadas (como `loyaltyLevel`) tienen un espacio de nombres dentro de un objeto `_{TENANT_ID}`, mientras que los campos que se han agregado utilizando mezclas principales (como `fullName`) no lo son.
+El siguiente JSON representa un esquema XDM simplificado cuyos campos pueden ser referenciados usando cadenas de puntero JSON. Tenga en cuenta que todos los campos que se han agregado utilizando grupos de campos de esquema personalizados (como `loyaltyLevel`) tienen un espacio de nombres dentro de un objeto `_{TENANT_ID}`, mientras que los campos que se han agregado utilizando grupos de campos principales (como `fullName`) no lo tienen.
 
 ```json
 {
@@ -87,8 +87,8 @@ El siguiente JSON representa un esquema XDM simplificado cuyos campos pueden ser
 | Puntero JSON | Resuelve como |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Devuelve una referencia al campo `fullName`, proporcionado por una mezcla de núcleo). |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Devuelve una referencia al campo `loyaltyLevel`, proporcionado por una mezcla personalizada). |
+| `"/properties/person/properties/name/properties/fullName"` | (Devuelve una referencia al campo `fullName`, proporcionado por un grupo de campos principales). |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Devuelve una referencia al campo `loyaltyLevel`, proporcionado por un grupo de campos personalizado). |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
