@@ -4,14 +4,14 @@ description: Notas de la versión del Experience Platform para el 24 de febrero 
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
+exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 translation-type: tm+mt
-source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1138'
 ht-degree: 7%
 
 ---
-
 
 # Notas de la versión de Adobe Experience Platform
 
@@ -49,7 +49,7 @@ Data Science Workspace utiliza el aprendizaje automático y la inteligencia arti
 
 | Función | Descripción |
 | --- | --- |
-| Portátil JupyterLab EDA | El bloc de notas Python de análisis de datos exploratorios (EDA) ya está disponible en Jupyterlab. Este bloc de notas está diseñado para ayudarle a descubrir patrones en los datos, comprobar la solidez de los datos y resumir los datos relevantes para modelos predictivos. Consulte el tutorial sobre [exploración de datos basados en web para modelos predictivos](../../data-science-workspace/jupyterlab/eda-notebook.md) para obtener más información. |
+| Portátil JupyterLab EDA | El bloc de notas Python de análisis de datos exploratorios (EDA) ya está disponible en Jupyterlab. Este bloc de notas está diseñado para ayudarle a descubrir patrones en los datos, comprobar la solidez de los datos y resumir los datos relevantes para los modelos predictivos. Consulte el tutorial sobre [exploración de datos basados en web para modelos predictivos](../../data-science-workspace/jupyterlab/eda-notebook.md) para obtener más información. |
 
 Para obtener información más general sobre Data Science Workspace, consulte [Información general sobre Data Science Workspace](../../data-science-workspace/home.md).
 
@@ -89,7 +89,7 @@ XDM es una especificación públicamente documentada diseñada para mejorar el p
 
 | Función | Descripción |
 | --- | --- |
-| Interfaz de usuario de búsqueda actualizada | Las funciones de búsqueda mejoradas ahora están disponibles en la pestaña [!UICONTROL Browse] del espacio de trabajo [!UICONTROL Schemas] y en el cuadro de diálogo de selección de mezclas en [!DNL Schema Editor].<br><br>Al buscar un término anteriormente, los resultados solo incluirían recursos XDM cuyo nombre coincida con la consulta de búsqueda. Ahora, además de los recursos cuyo nombre coincide con la consulta, también se incluyen los recursos que contienen atributos individuales que coinciden con el término. Esto le permite buscar recursos XDM en función de los atributos que contienen en lugar de por el nombre del recurso.<br><br>Consulte los documentos sobre la  [exploración de los ](../../xdm/ui/explore.md) recursos XDM y la  [administración de ](../../xdm/ui/resources/schemas.md) esquemas en la interfaz de usuario para obtener más información. |
+| Interfaz de usuario de búsqueda actualizada | Las funciones de búsqueda mejoradas ahora están disponibles en la pestaña [!UICONTROL Browse] del espacio de trabajo [!UICONTROL Schemas] y en el cuadro de diálogo de selección del grupo de campos de esquema en [!DNL Schema Editor].<br><br>Al buscar un término anteriormente, los resultados solo incluirían recursos XDM cuyo nombre coincida con la consulta de búsqueda. Ahora, además de los recursos cuyo nombre coincide con la consulta, también se incluyen los recursos que contienen atributos individuales que coinciden con el término. Esto le permite buscar recursos XDM en función de los atributos que contienen en lugar de por el nombre del recurso.<br><br>Consulte los documentos sobre la  [exploración de los ](../../xdm/ui/explore.md) recursos XDM y la  [administración de ](../../xdm/ui/resources/schemas.md) esquemas en la interfaz de usuario para obtener más información. |
 
 Para obtener información más general sobre XDM, consulte [Información general del sistema XDM](../../xdm/home.md).
 
