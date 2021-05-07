@@ -6,9 +6,9 @@ description: Obtenga información sobre cómo crear y editar clases en la interf
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Aparece el [!DNL Schema Editor], que muestra un nuevo esquema en el lienzo basad
 
 >[!IMPORTANT]
 >
->Al crear un esquema que implemente una clase definida por su organización, recuerde que las mezclas están disponibles para su uso únicamente con clases compatibles. Como la clase que ha definido es nueva, no hay mezclas compatibles enumeradas en el cuadro de diálogo **[!UICONTROL Add mixin]**. En su lugar, necesitará [crear nuevas mezclas](./mixins.md#create) para usarlas con esa clase. La próxima vez que componga un esquema que implemente la nueva clase, las mezclas que haya definido se enumerarán y estarán disponibles para su uso.
+>Al crear un esquema que implemente una clase definida por su organización, recuerde que los grupos de campos de esquema solo están disponibles para su uso con clases compatibles. Como la clase que ha definido es nueva, no hay grupos de campos compatibles enumerados en el cuadro de diálogo **[!UICONTROL Add field group]**. En su lugar, deberá [crear nuevos grupos de campos](./field-groups.md#create) para usarlos con esa clase. La próxima vez que componga un esquema que implemente la nueva clase, los grupos de campos que haya definido se enumerarán y estarán disponibles para su uso.
 
 Ahora puede empezar a [añadir campos a la clase](#add-fields), que compartirán todos los esquemas que empleen la clase.
 
@@ -77,7 +77,7 @@ Una vez que tenga un esquema que emplee una clase personalizada abierta en [!UIC
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que cualquier campo que agregue a una clase se utilizará en todos los esquemas que empleen esa clase. Por lo tanto, debe tener en cuenta qué campos serán útiles en todos los casos de uso del esquema. Si está pensando en añadir un campo que solo pueda verse utilizado en algunos esquemas de esta clase, puede que desee considerar la posibilidad de añadirlo a esos esquemas [creando una mezcla](./mixins.md#create) en su lugar.
+>Tenga en cuenta que cualquier campo que agregue a una clase se utilizará en todos los esquemas que empleen esa clase. Por lo tanto, debe tener en cuenta qué campos serán útiles en todos los casos de uso del esquema. Si está pensando en añadir un campo que solo pueda verse utilizado en algunos esquemas de esta clase, puede que desee considerar la posibilidad de añadirlo a esos esquemas [creando un grupo de campos](./field-groups.md#create) en su lugar.
 
 Aparece un **[!UICONTROL New field]** en el lienzo y el carril derecho se actualiza para mostrar los controles que configuran las propiedades del campo. Consulte la guía de [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver los pasos específicos sobre cómo configurar y añadir el campo a la clase.
 
