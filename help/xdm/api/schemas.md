@@ -6,16 +6,16 @@ description: El extremo /schemas de la API del Registro de esquemas le permite a
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1431'
 ht-degree: 2%
 
 ---
 
 # Punto final de esquemas
 
-Un esquema se puede considerar como el modelo para los datos que desea introducir en Adobe Experience Platform. Cada esquema está compuesto por una clase y cero o más mezclas. El extremo `/schemas` de la API [!DNL Schema Registry] le permite administrar esquemas mediante programación dentro de la aplicación de experiencia.
+Un esquema se puede considerar como el modelo para los datos que desea introducir en Adobe Experience Platform. Cada esquema está compuesto por una clase y cero o más grupos de campos de esquema. El extremo `/schemas` de la API [!DNL Schema Registry] le permite administrar esquemas mediante programación dentro de la aplicación de experiencia.
 
 ## Primeros pasos
 
@@ -154,7 +154,7 @@ Una respuesta correcta devuelve los detalles del esquema. Los campos devueltos d
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ Una respuesta correcta devuelve los detalles del esquema. Los campos devueltos d
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ El proceso de composición del esquema comienza asignando una clase. La clase de
 
 >[!NOTE]
 >
->La llamada de ejemplo siguiente es solo un ejemplo básico de cómo crear un esquema en la API, con los requisitos de composición mínimos de una clase y sin mezclas. Para ver los pasos completos sobre cómo crear un esquema en la API, incluido cómo asignar campos mediante mezclas y tipos de datos, consulte el [tutorial de creación de esquemas](../tutorials/create-schema-api.md).
+>La llamada de ejemplo siguiente es solo un ejemplo de línea de base de cómo crear un esquema en la API, con los requisitos de composición mínimos de una clase y sin grupos de campos. Para ver los pasos completos sobre cómo crear un esquema en la API, incluido cómo asignar campos mediante grupos de campos y tipos de datos, consulte el [tutorial de creación de esquemas](../tutorials/create-schema-api.md).
 
 **Formato de API**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `allOf` | Matriz de objetos, con cada objeto haciendo referencia a una clase o mezcla en cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa el `$id` de la clase o mezcla que implementará el nuevo esquema. Debe proporcionarse una clase, con cero o más mezclas adicionales. En el ejemplo anterior, el objeto único de la matriz `allOf` es la clase del esquema. |
+| `allOf` | Matriz de objetos, con cada objeto haciendo referencia a una clase o grupo de campos cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa el `$id` de la clase o grupo de campos que implementará el nuevo esquema. Se debe proporcionar una clase, con cero o más grupos de campos adicionales. En el ejemplo anterior, el objeto único de la matriz `allOf` es la clase del esquema. |
 
 **Respuesta**
 
@@ -268,7 +268,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil qu
 
 Al realizar una solicitud de GET a [list all schemas](#list) en el contenedor de inquilinos, ahora se incluiría el nuevo esquema. Puede realizar una solicitud de [búsqueda (GET)](#lookup) utilizando el URI `$id` con codificación URL para ver el nuevo esquema directamente.
 
-Para agregar campos adicionales a un esquema, puede realizar una operación [PATCH](#patch) para agregar mezclas a las matrices `allOf` y `meta:extends` del esquema.
+Para agregar campos adicionales a un esquema, puede realizar una operación [PATCH](#patch) para agregar grupos de campos a las matrices `allOf` y `meta:extends` del esquema.
 
 ## Actualizar un esquema {#put}
 
@@ -357,7 +357,7 @@ Puede actualizar una parte de un esquema mediante una solicitud de PATCH. El [!D
 >
 >Si desea reemplazar un recurso completo con valores nuevos en lugar de actualizar campos individuales, consulte la sección sobre [reemplazar un esquema con una operación de PUT](#put).
 
-Una de las operaciones de PATCH más comunes implica añadir mezclas previamente definidas a un esquema, como se muestra en el ejemplo siguiente.
+Una de las operaciones de PATCH más comunes implica agregar grupos de campos definidos anteriormente a un esquema, como se muestra en el ejemplo siguiente.
 
 **Formato de API**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente agrega una nueva mezcla a un esquema añadiendo el valor `$id` de la mezcla a las matrices `meta:extends` y `allOf`.
+La solicitud de ejemplo siguiente agrega un nuevo grupo de campos a un esquema añadiendo el valor `$id` de ese grupo de campos a las matrices `meta:extends` y `allOf`.
 
 El cuerpo de la solicitud adopta la forma de una matriz, y cada objeto de la lista representa un cambio específico en un campo individual. Cada objeto incluye la operación que se va a realizar (`op`), en qué campo se debe realizar la operación (`path`) y qué información se debe incluir en esa operación (`value`).
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Respuesta**
 
-La respuesta muestra que ambas operaciones se realizaron correctamente. La mezcla `$id` se ha añadido a la matriz `meta:extends` y ahora aparece una referencia (`$ref`) a la mezcla `$id` en la matriz `allOf`.
+La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo de campos `$id` se ha agregado a la matriz `meta:extends` y ahora aparece una referencia (`$ref`) al grupo de campos `$id` en la matriz `allOf`.
 
 ```JSON
 {
@@ -413,7 +413,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. La mezcl
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. La mezcl
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, mostrando 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, mostrando 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
