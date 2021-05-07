@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -752,19 +752,19 @@ A medida que los registros se incorporan en el Experience Platform, se obtiene u
 
 Ocasionalmente puede haber casos de uso, como rellenar datos o garantizar el orden correcto de los eventos si los registros se introducen de forma desordenada, en los que es necesario proporcionar una marca de tiempo personalizada y hacer que la directiva de combinación respete la marca de tiempo personalizada en lugar de la marca de tiempo del sistema.
 
-Para utilizar una marca de tiempo personalizada, se debe agregar [[!DNL External Source System Audit Details Mixin]](#mixin-details) al esquema de perfil. Una vez añadida, la marca de tiempo personalizada se puede rellenar con el campo `xdm:lastUpdatedDate` . Cuando se ingesta un registro con el campo `xdm:lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si `xdm:lastUpdatedDate` no está presente o no se rellena, Platform seguirá usando la marca de tiempo del sistema.
+Para utilizar una marca de tiempo personalizada, el [[!DNL External Source System Audit Details] grupo de campos de esquema](#field-group-details) debe agregarse al esquema de perfil. Una vez añadida, la marca de tiempo personalizada se puede rellenar con el campo `xdm:lastUpdatedDate` . Cuando se ingesta un registro con el campo `xdm:lastUpdatedDate` rellenado, el Experience Platform utilizará ese campo para combinar registros o fragmentos de perfil dentro y entre conjuntos de datos. Si `xdm:lastUpdatedDate` no está presente o no se rellena, Platform seguirá usando la marca de tiempo del sistema.
 
 >[!NOTE]
 >
 >Debe asegurarse de que la marca de tiempo `xdm:lastUpdatedDate` se rellene al enviar un PATCH en el mismo registro.
 
-Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de esquemas, incluido cómo añadir mezclas a esquemas, visite el [tutorial para crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
+Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de esquemas, incluido cómo añadir grupos de campos a esquemas, visite el [tutorial para crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
 
 Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección [Uso de marcas de hora personalizadas](../ui/merge-policies.md#custom-timestamps) en la [guía del usuario de políticas de combinación](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] detalles  {#mixin-details}
+#### [!DNL External Source System Audit Details] detalles del grupo de campos  {#field-group-details}
 
-El siguiente ejemplo muestra campos rellenados correctamente en el [!DNL External Source System Audit Details Mixin]. La mezcla completa JSON también se puede ver en el repositorio [public Experience Data Model (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) de GitHub.
+El siguiente ejemplo muestra campos rellenados correctamente en el grupo de campos [!DNL External Source System Audit Details]. El grupo de campos completo JSON también se puede ver en el repositorio [del Modelo de datos de experiencia pública (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) de GitHub.
 
 ```json
 {
