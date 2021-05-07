@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '921'
 ht-degree: 1%
 
 ---
@@ -54,23 +54,23 @@ El esquema de destino &quot;[!DNL Hotels]&quot; se basa en una clase &quot;[!DNL
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Crear una mezcla de relación
+## Crear un grupo de campos de esquema de relación
 
 >[!NOTE]
 >
 >Este paso solo es necesario si el esquema de origen no tiene un campo dedicado de tipo cadena que se vaya a utilizar como referencia al esquema de destino. Si este campo ya está definido en el esquema de origen, vaya al siguiente paso de [definición de un campo de relación](#relationship-field).
 
-Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado para utilizarlo como referencia del esquema de destino. Puede añadir este campo al esquema de origen creando una nueva mezcla.
+Para definir una relación entre dos esquemas, el esquema de origen debe tener un campo dedicado para utilizarlo como referencia del esquema de destino. Puede añadir este campo al esquema de origen creando un nuevo grupo de campos de esquema.
 
-Comience por seleccionar **[!UICONTROL Add]** en la sección **[!UICONTROL Mixins]**.
+Comience por seleccionar **[!UICONTROL Add]** en la sección **[!UICONTROL Field groups]**.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-Aparece el cuadro de diálogo [!UICONTROL Add Mixin]. Desde aquí, seleccione **[!UICONTROL Create new mixin]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para la nueva mezcla. Seleccione **[!UICONTROL Add mixin]** cuando haya terminado.
+Aparece el cuadro de diálogo [!UICONTROL Add field group]. Desde aquí, seleccione **[!UICONTROL Create new field group]**. En los campos de texto que aparecen, introduzca un nombre para mostrar y una descripción para el nuevo grupo de campos. Seleccione **[!UICONTROL Add field groups]** cuando haya terminado.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-El lienzo vuelve a aparecer con &quot;[!DNL Favorite Hotel]&quot; en la sección **[!UICONTROL Mixins]**. Seleccione el nombre de la mezcla y, a continuación, seleccione **[!UICONTROL Add field]** junto al campo de nivel raíz `Loyalty Members`.
+El lienzo vuelve a aparecer con &quot;[!DNL Favorite Hotel]&quot; en la sección **[!UICONTROL Field groups]**. Seleccione el nombre del grupo de campos y, a continuación, seleccione **[!UICONTROL Add field]** junto al campo de nivel raíz `Loyalty Members`.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
