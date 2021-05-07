@@ -2,14 +2,14 @@
 title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 3%
+source-wordcount: '659'
+ht-degree: 4%
 
 ---
-
 
 # Uso de Adobe Target con el SDK web de Platform
 
@@ -19,7 +19,7 @@ Las siguientes funciones se han probado y actualmente son compatibles con Target
 
 * Pruebas A/B
 * Creación de informes de conversión e impresión de A4T
-* Personalización automatizada
+* Automated Personalization
 * Segmentación de experiencias
 * Pruebas multivariable
 * Creación de informes de conversión e impresión de objetivos nativos
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## Audiencias en XDM
 
-Al definir Audiencias para las actividades de Target que se entregan mediante el SDK web de Adobe Experience Platform, [XDM](https://docs.adobe.com/content/help/es-ES/experience-platform/xdm/home.html) debe definirse y utilizarse. Después de definir esquemas XDM, clases y mezclas, puede crear una regla de audiencia de Target definida por los datos XDM para la segmentación. En Target, los datos XDM se muestran en el Generador de audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
+Al definir Audiencias para las actividades de Target que se entregan mediante el SDK web de Adobe Experience Platform, [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es) debe definirse y utilizarse. Después de definir esquemas XDM, clases y grupos de campos de esquema, puede crear una regla de audiencia de Target definida por los datos XDM para la segmentación. En Target, los datos XDM se muestran en el Generador de audiencias como un parámetro personalizado. El XDM se serializa mediante notación de puntos (por ejemplo, `web.webPageDetails.name`).
 
 Si tiene actividades de Target con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, no se entregan correctamente mediante el SDK. En lugar de usar parámetros personalizados o el perfil de usuario, debe utilizar XDM en su lugar. Sin embargo, hay campos de objetivo de audiencia integrados compatibles con el SDK web de Adobe Experience Platform que no requieren XDM. Estos campos están disponibles en la interfaz de usuario de Target y no requieren XDM:
 
