@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7131'
+source-wordcount: '7147'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 1%
 
 **Campo**: Un campo es el elemento de nivel más bajo de un conjunto de datos, tal como se define en el esquema XDM del conjunto de datos. Cada campo tiene un nombre para hacer referencia y un tipo para indicar el tipo de datos que contiene. Los tipos de campo pueden incluir (entre otros) números enteros, números, cadenas, booleanos y objetos.
 
+**Grupo** de campos: Consulte &quot;Grupo de campos de esquema&quot;.
+
 **Etiquetas** de campo: Las etiquetas de campo son etiquetas de control de datos que se heredan de un conjunto de datos o se aplican directamente a un campo.
 
 **Nombre** del campo: Se utiliza un nombre de campo para hacer referencia al valor de un campo en las consultas y los servicios descendentes.
@@ -323,7 +325,7 @@ ht-degree: 1%
 
 **Política** de combinación: Las políticas de combinación son reglas que el Experience Platform utiliza para determinar cómo se combinarán los fragmentos de datos de clientes de varias fuentes para crear un perfil individual. Cuando se produce un conflicto de datos, la política de combinación determina qué datos deben priorizarse para su inclusión en el perfil.
 
-**Mezclina**: En Experience Data Model (XDM), una combinación permite a los usuarios ampliar los campos reutilizables para definir uno o más atributos que se pretenden incluir en un esquema.
+**Mezclina**: Consulte &quot;Grupo de campos de esquema&quot;.
 
 **Módulo**: En  [!DNL Platform Launch], un módulo es un fragmento de JavaScript ejecutable proporcionado por una extensión, que realiza acciones en un entorno de cliente sin necesidad de crear una regla.
 
@@ -437,7 +439,9 @@ ht-degree: 1%
 
 **Puntuación**: La puntuación es el proceso de generación de perspectivas a partir de datos mediante un modelo entrenado.
 
-**Esquema**: Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. Un esquema consta de una clase y mezclas opcionales y se utiliza para crear conjuntos de datos y conjuntos de datos. Un esquema puede incluir atributos de comportamiento, marcas de tiempo, identidades, definiciones de atributos, relaciones, etc.
+**Esquema**: Un esquema es un conjunto de reglas que representan y validan la estructura y el formato de los datos. Un esquema consta de una clase y un grupo de campos opcionales y se utiliza para crear conjuntos de datos y conjuntos de datos. Un esquema puede incluir atributos de comportamiento, marcas de tiempo, identidades, definiciones de atributos, relaciones, etc.
+
+**Grupo** de campos de esquema: En Experience Data Model (XDM), un grupo de campos de esquema permite a los usuarios ampliar los campos reutilizables para definir uno o más atributos que se pretenden incluir en un esquema.
 
 **Biblioteca** de esquemas: La biblioteca de esquemas contiene recursos XDM estándar del sector disponibles por Adobe, así como recursos personalizados definidos por su organización.
 
