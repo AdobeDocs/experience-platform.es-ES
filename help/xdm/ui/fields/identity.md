@@ -6,9 +6,9 @@ description: Obtenga información sobre cómo definir un campo de identidad en l
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Cuando termine, seleccione **[!UICONTROL Apply]** para aplicar el cambio al esqu
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-El lienzo se actualiza para reflejar los cambios, con el campo seleccionado obteniendo un símbolo de huella (![](../../images/ui/fields/special/identity-symbol.png)) para designarlo como identidad. En el carril izquierdo, el campo de identidad se muestra ahora bajo el nombre de la clase o mezcla que proporciona el campo al esquema.
+El lienzo se actualiza para reflejar los cambios, con el campo seleccionado obteniendo un símbolo de huella (![](../../images/ui/fields/special/identity-symbol.png)) para designarlo como identidad. En el carril izquierdo, el campo de identidad se muestra ahora bajo el nombre del grupo de campos de clase o esquema que proporciona el campo al esquema.
 
 Dado que todos los campos de identidad son obligatorios de forma predeterminada, el campo aparece ahora bajo **[!UICONTROL Required fields]** en el carril izquierdo. Si el campo de identidad está anidado dentro de la estructura del esquema, todos los campos principales también se enumerarán como necesarios.
 
