@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre la clase de definición de segmentos en el Modelo de datos de experiencia (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Esta clase solo debe utilizarse para capturar información sobre las definiciones de segmentos en sí. Para capturar la información de pertenencia a segmentos dentro de los datos de perfil, debe utilizar la [mezcla de Detalles de pertenencia a segmentos](../mixins/profile/segmentation.md) en su esquema [!UICONTROL XDM Individual Profile].
+>Esta clase solo debe utilizarse para capturar información sobre las definiciones de segmentos en sí. Para capturar la información de pertenencia a segmentos dentro de los datos de perfil, debe utilizar el grupo de campos [Detalles de pertenencia a segmentos](../field-groups/profile/segmentation.md) en el esquema [!UICONTROL XDM Individual Profile].
 
 ![](../images/classes/segment-definition.png)
 
