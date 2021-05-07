@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Obtenga información sobre los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ A fin de ayudar a orientar su estrategia de modelado de datos en función de su 
 Para leer los ERD a los que se hace referencia en esta guía, debe tener una comprensión práctica de cómo los componentes XDM interactúan con los esquemas de formularios y cómo funcionan los esquemas XDM en el Experience Platform en su conjunto. Asegúrese de haber leído la siguiente documentación general antes de continuar:
 
 * [Información general](../../home.md) del sistema XDM: Descubra cómo funciona XDM en el ecosistema de la plataforma.
-* [Aspectos básicos de la composición](../../schema/composition.md) del esquema: Descubra cómo los componentes XDM (como mezclas, clases y tipos de datos) contribuyen a la estructura de un esquema, así como la función de los campos de identidad.
+* [Aspectos básicos de la composición](../../schema/composition.md) del esquema: Descubra cómo los componentes XDM (como grupos de campos de esquema, clases y tipos de datos) contribuyen a la estructura de un esquema, así como a la función de los campos de identidad.
 
 También se recomienda revisar la [guía de prácticas recomendadas de modelado de datos](../../schema/best-practices.md) para obtener directrices generales sobre cómo asignar los datos a XDM.
 
@@ -37,7 +37,7 @@ También se recomienda revisar la [guía de prácticas recomendadas de modelado 
 
 Los modelos verticales del sector representados por los ERD que figuran a continuación se crean intencionadamente de manera desnormalizada y teniendo en cuenta cómo se almacenan los datos en la Plataforma.
 
-Para un ERD determinado, cada entidad mostrada en se basa en una clase XDM subyacente. Para una entidad determinada, cada fila marcada con **bold** representa una mezcla o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita. Los campos más importantes de una entidad determinada se resaltan en rojo.
+Para un ERD determinado, cada entidad mostrada en se basa en una clase XDM subyacente. Para una entidad determinada, cada fila marcada en **bold** representa un grupo de campos o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita. Los campos más importantes de una entidad determinada se resaltan en rojo.
 
 >[!NOTE]
 >
