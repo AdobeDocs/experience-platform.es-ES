@@ -6,9 +6,9 @@ description: Este documento proporciona respuestas a las preguntas más frecuent
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ A continuación se ofrece una lista de respuestas a las preguntas más frecuente
 
 ### ¿Cómo se agregan campos a un esquema?
 
-Puede añadir campos a un esquema utilizando una mezcla. Cada mezcla es compatible con una o más clases, permitiendo que la mezcla se utilice en cualquier esquema que implemente una de esas clases compatibles. Aunque Adobe Experience Platform proporciona varias mezclas del sector con sus propios campos predefinidos, puede añadir sus propios campos a un esquema creando nuevas mezclas con la API o la interfaz de usuario.
+Puede añadir campos a un esquema utilizando un grupo de campos de esquema. Cada grupo de campos es compatible con una o más clases, lo que permite utilizar el grupo de campos en cualquier esquema que implemente una de esas clases compatibles. Aunque Adobe Experience Platform proporciona varios grupos de campos del sector con sus propios campos predefinidos, puede añadir sus propios campos a un esquema creando nuevos grupos de campos mediante la API o la interfaz de usuario.
 
-Para obtener más información sobre la creación de nuevas mezclas en la API [!DNL Schema Registry], consulte la [guía de punto final de la mezcla](api/mixins.md#create). Si utiliza la interfaz de usuario de , consulte el tutorial [Editor de esquemas](./tutorials/create-schema-ui.md).
+Para obtener más información sobre la creación de nuevos grupos de campos en la API [!DNL Schema Registry], consulte la [guía de extremo del grupo de campos](api/field-groups.md#create). Si utiliza la interfaz de usuario de , consulte el tutorial [Editor de esquemas](./tutorials/create-schema-ui.md).
 
-### ¿Cuáles son los mejores usos para las mezclas frente a los tipos de datos?
+### ¿Cuáles son los mejores usos para los grupos de campos frente a los tipos de datos?
 
-[](./schema/composition.md#mixin) Las mezclas son componentes que definen uno o varios campos de un esquema. Las mezclas refuerzan la forma en que sus campos aparecen en la jerarquía del esquema y, por lo tanto, muestran la misma estructura en cada esquema en el que están incluidos. Las mezclas solo son compatibles con clases específicas, tal como se identifica mediante su atributo `meta:intendedToExtend`.
+[Los ](./schema/composition.md#field-group) grupos de campos son componentes que definen uno o más campos de un esquema. Los grupos de campos refuerzan la forma en que sus campos aparecen en la jerarquía del esquema y, por lo tanto, muestran la misma estructura en cada esquema en el que están incluidos. Los grupos de campos solo son compatibles con clases específicas, tal como se identifican con su atributo `meta:intendedToExtend`.
 
-[Los ](./schema/composition.md#data-type) tipos de datos también pueden proporcionar uno o más campos para un esquema. Sin embargo, a diferencia de las mezclas, los tipos de datos no se limitan a una clase determinada. Esto hace que los tipos de datos sean una opción más flexible para describir estructuras de datos comunes que se pueden reutilizar en varios esquemas con clases potencialmente diferentes.
+[Los ](./schema/composition.md#data-type) tipos de datos también pueden proporcionar uno o más campos para un esquema. Sin embargo, a diferencia de los grupos de campos, los tipos de datos no están restringidos a una clase en particular. Esto hace que los tipos de datos sean una opción más flexible para describir estructuras de datos comunes que se pueden reutilizar en varios esquemas con clases potencialmente diferentes.
 
 ### ¿Cuál es el ID exclusivo de un esquema?
 
-Todos los [!DNL Schema Registry] recursos (esquemas, mezclas, tipos de datos, clases) tienen un URI que actúa como ID único con fines de referencia y búsqueda. Al ver un esquema en la API, se puede encontrar en los atributos `$id` y `meta:altId` de nivel superior.
+Todos los [!DNL Schema Registry] recursos (esquemas, grupos de campos, tipos de datos, clases) tienen un URI que actúa como ID único con fines de referencia y búsqueda. Al ver un esquema en la API, se puede encontrar en los atributos `$id` y `meta:altId` de nivel superior.
 
 Para obtener más información, consulte la sección [resource identification](api/getting-started.md#resource-identification) en la guía para desarrolladores de API [!DNL Schema Registry].
 
@@ -135,7 +135,7 @@ Para obtener más información sobre la construcción de rutas de búsqueda en l
 }
 ```
 
-Este mensaje de error se muestra cuando intenta crear un recurso con un título que otro recurso ya está utilizando. Los títulos deben ser únicos en todos los tipos de recursos. Por ejemplo, si intenta crear una mezcla con un título que ya esté siendo utilizado por un esquema, recibirá este error.
+Este mensaje de error se muestra cuando intenta crear un recurso con un título que otro recurso ya está utilizando. Los títulos deben ser únicos en todos los tipos de recursos. Por ejemplo, si intenta crear un grupo de campos con un título que ya esté utilizando un esquema, recibirá este error.
 
 ### Los campos personalizados deben utilizar un campo de nivel superior
 
@@ -149,7 +149,7 @@ Este mensaje de error se muestra cuando intenta crear un recurso con un título 
 }
 ```
 
-Este mensaje de error se muestra cuando intenta crear una nueva mezcla con campos con espacios de nombres incorrectos. Las mezclas definidas por su organización IMS deben establecer el espacio de nombres de sus campos con un `TENANT_ID` para evitar conflictos con otros recursos del sector y del proveedor. Puede encontrar ejemplos detallados de estructuras de datos adecuadas para las mezclas en la [guía del extremo de las mezclas](./api/mixins.md#create).
+Este mensaje de error se muestra cuando intenta crear un nuevo grupo de campos con campos con espacio de nombres incorrecto. Los grupos de campos definidos por la organización IMS deben establecer el espacio de nombres de sus campos con un `TENANT_ID` para evitar conflictos con otros recursos del sector y del proveedor. Puede encontrar ejemplos detallados de estructuras de datos adecuadas para grupos de campos en la [guía de extremo de grupos de campos](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errors
