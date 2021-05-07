@@ -1,26 +1,26 @@
 ---
-title: Integración de la compatibilidad con IAB TCF 2.0 mediante Platform Launch y la extensión del SDK web de la plataforma
+title: Integración de la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de la plataforma
 description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con Adobe Experience Platform Launch y la extensión web SDK de Adobe Experience Platform.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
+# Integración de la compatibilidad con IAB TCF 2.0 mediante Platform launch y la extensión del SDK web de la plataforma
 
-# Integración de la compatibilidad con IAB TCF 2.0 mediante Platform Launch y la extensión web SDK de Platform
-
-El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento de la agencia de publicidad interactiva, versión 2.0 (IAB TCF 2.0). Esta guía le muestra cómo configurar una propiedad de Adobe Experience Platform Launch para enviar información de consentimiento TCF de IAB a Adobe mediante la extensión web SDK de Adobe Experience Platform para Experience Platform Launch.
+El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento de la agencia de publicidad interactiva, versión 2.0 (IAB TCF 2.0). Esta guía le muestra cómo configurar una propiedad de Adobe Experience Platform Launch para enviar información de consentimiento TCF de IAB 2.0 a Adobe mediante la extensión web SDK de Adobe Experience Platform para Experience Platform Launch.
 
 Si no desea utilizar Experience Platform Launch, consulte la guía sobre el [uso de IAB TCF 2.0 sin Experience Platform Launch](./without-launch.md).
 
 ## Primeros pasos
 
-Para utilizar IAB TCF 2.0 con Experience Platform Launch y la extensión web SDK de Platform, debe tener disponible un esquema XDM y un conjunto de datos.
+Para utilizar IAB TCF 2.0 con Experience Platform Launch y la extensión del SDK web de plataforma, debe tener disponible un esquema XDM y un conjunto de datos.
 
-Además, esta guía requiere que conozca bien el SDK web de Adobe Experience Platform. Para obtener una actualización rápida, consulte la [información general del SDK web de Adobe Experience Platform](../../home.md) y la documentación de las [preguntas más frecuentes](../../web-sdk-faq.md).
+Además, esta guía requiere que conozca bien el SDK web de Adobe Experience Platform. Para obtener una actualización rápida, lea la [información general del SDK web de Adobe Experience Platform](../../home.md) y la documentación de las [preguntas más frecuentes](../../web-sdk-faq.md).
 
 ## Configuración del consentimiento predeterminado
 
@@ -58,7 +58,7 @@ Este código personalizado hace dos cosas:
 
 * Establece dos elementos de datos, uno con la cadena de consentimiento y otro con el indicador `gdprApplies`. Esto resulta útil posteriormente al rellenar la acción &quot;Establecer consentimiento&quot;.
 
-* Activa la regla cuando han cambiado las preferencias de consentimiento. La acción &quot;Definir consentimiento&quot; debe utilizarse siempre que se hayan cambiado las preferencias de consentimiento. Añada una acción &quot;Set Consent&quot; en la extensión y rellene el formulario de la siguiente manera:
+* Déclencheur la regla cuando han cambiado las preferencias de consentimiento. La acción &quot;Definir consentimiento&quot; debe utilizarse siempre que se hayan cambiado las preferencias de consentimiento. Añada una acción &quot;Set Consent&quot; en la extensión y rellene el formulario de la siguiente manera:
 
 * Estándar: &quot;TCF de IAB&quot;
 * Versión: &quot;2.0&quot;
@@ -73,13 +73,13 @@ Este código personalizado hace dos cosas:
 
 ## Creación de un elemento de datos XDM para eventos de experiencias
 
-La cadena de consentimiento debe incluirse en el evento de experiencia XDM. Para ello, utilice el elemento de datos Objeto XDM . Comience creando un nuevo elemento de datos de objeto XDM o, alternativamente, utilice uno que ya haya creado para enviar eventos. Si ha añadido la combinación de privacidad de eventos de experiencia al esquema, debe tener una clave `consentStrings` en el objeto XDM.
+La cadena de consentimiento debe incluirse en el evento de experiencia XDM. Para ello, utilice el elemento de datos Objeto XDM . Comience creando un nuevo elemento de datos de objeto XDM o, alternativamente, utilice uno que ya haya creado para enviar eventos. Si ha añadido el grupo de campos del esquema de privacidad de eventos de experiencia al esquema, debe tener una clave `consentStrings` en el objeto XDM.
 
-1. Seleccione **[!UICONTROL permissionStrings]**.
+1. Seleccione **[!UICONTROL consentStrings]**.
 
-1. Elija **[!UICONTROL Proporcionar elementos individuales]** y seleccione **[!UICONTROL Agregar elemento]**.
+1. Elija **[!UICONTROL Provide individual items]** y seleccione **[!UICONTROL Add Item]**.
 
-1. Expanda el encabezado **[!UICONTROL permissionString]** y expanda el primer elemento y, a continuación, rellene los valores siguientes:
+1. Expanda el encabezado **[!UICONTROL consentString]**, expanda el primer elemento y, a continuación, rellene los valores siguientes:
 
 * `consentStandard`: TCF de IAB
 * `consentStandardVersion`: 2,0
@@ -114,7 +114,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Este código es idéntico al código personalizado anterior, excepto que se gestionan los eventos `useractioncomplete` y `tcloaded` . El [código personalizado anterior](#consent-code-1) solo se activa cuando el cliente elige sus preferencias por primera vez. Este código también se activa cuando el cliente ya ha elegido sus preferencias. Por ejemplo, en la segunda carga de página.
+Este código es idéntico al código personalizado anterior, excepto que se gestionan los eventos `useractioncomplete` y `tcloaded` . El [código personalizado anterior](#consent-code-1) solo déclencheur cuando el cliente elige sus preferencias por primera vez. Este código también déclencheur cuando el cliente ya ha elegido sus preferencias. Por ejemplo, en la segunda carga de página.
 
 Añada una acción &quot;Enviar evento&quot; desde la extensión web SDK de Platform. Dentro del campo XDM , elija el elemento de datos XDM que creó en la sección anterior.
 
