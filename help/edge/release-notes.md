@@ -4,9 +4,9 @@ description: Últimas notas de la versión del SDK web de Adobe Experience Platf
 keywords: SDK web de Adobe Experience Platform;SDK web de plataforma;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * El SDK ahora puede [instalarse como un paquete npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
 * Se agregó compatibilidad con una opción `out` al [configurar el consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos los eventos hasta que se recibe el consentimiento (la opción `pending` existente coloca en cola los eventos y los envía una vez que se recibe el consentimiento).
 * Ahora se puede utilizar la [devolución de llamada onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) para evitar que se envíe un evento.
-* Ahora utiliza una mezcla XDM en lugar de `meta.personalization` al enviar eventos sobre el contenido personalizado que se está procesando o haciendo clic en él.
+* Ahora utiliza un grupo de campos de esquema XDM en lugar de `meta.personalization` al enviar eventos sobre el contenido personalizado que se está procesando o haciendo clic en él.
 * El comando [getIdentity](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) ahora devuelve el ID de región perimetral junto con la identidad.
 * Las advertencias y los errores recibidos del servidor se han mejorado y se gestionan de forma más adecuada.
 * Se agregó compatibilidad con el estándar [Consent 2.0 del Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
