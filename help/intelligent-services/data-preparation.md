@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: Para que los servicios inteligentes puedan descubrir perspectivas a partir de los datos de eventos de marketing, los datos deben enriquecirse semánticamente y mantenerse en una estructura estándar. Los servicios inteligentes utilizan esquemas del Modelo de datos de experiencia (XDM) para conseguirlo.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Si los datos se almacenan fuera de [!DNL Experience Platform], siga los pasos a 
 
 Customer AI y Attribution AI admiten datos de Adobe Analytics de forma nativa. Para utilizar datos de Adobe Analytics, siga los pasos descritos en la documentación para configurar un [Conector de origen de Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
-Una vez que el conector de origen transmite los datos al Experience Platform, puede seleccionar Adobe Analytics como fuente de datos seguida de un conjunto de datos durante la configuración de la instancia. Todos los campos y mezclas de esquema requeridos se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
+Una vez que el conector de origen transmite los datos al Experience Platform, puede seleccionar Adobe Analytics como fuente de datos seguida de un conjunto de datos durante la configuración de la instancia. Todos los grupos de campos de esquema necesarios y los campos individuales se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Una vez que el conector de origen transmite los datos al Experience Platform, pu
 
 Customer AI admite datos de Adobe Audience Manager de forma nativa. Para utilizar datos de Audience Manager, siga los pasos descritos en la documentación para configurar un [conector de origen de Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
-Una vez que el conector de origen transmite los datos al Experience Platform, puede seleccionar Adobe Audience Manager como fuente de datos seguida de un conjunto de datos durante la configuración de Customer AI. Todos los campos y mezclas de esquema requeridos se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
+Una vez que el conector de origen transmite los datos al Experience Platform, puede seleccionar Adobe Audience Manager como fuente de datos seguida de un conjunto de datos durante la configuración de Customer AI. Todos los grupos de campos de esquema y los campos individuales se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ El esquema CEE, como todos los esquemas XDM ExperienceEvent, captura el estado d
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Al igual que todos los esquemas XDM, la mezcla CEE es extensible. En otras palabras, se pueden agregar campos adicionales a la mezcla de CEE y se pueden incluir variaciones diferentes en varios esquemas si es necesario.
+Al igual que todos los esquemas XDM, el grupo de campos de esquema CEE es extensible. En otras palabras, se pueden agregar campos adicionales al grupo de campos CEE y se pueden incluir variaciones diferentes en varios esquemas si es necesario.
 
-Puede encontrar un ejemplo completo de la mezcla en el [repositorio XDM público](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Además, puede ver y copiar el siguiente [archivo JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para ver un ejemplo de cómo se pueden estructurar los datos para que cumplan con el esquema CEE. Consulte estos dos ejemplos cuando conozca los campos clave descritos en la sección siguiente para determinar cómo puede asignar sus propios datos al esquema.
+Puede encontrar un ejemplo completo del grupo de campos en el [repositorio XDM público](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Además, puede ver y copiar el siguiente [archivo JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para ver un ejemplo de cómo se pueden estructurar los datos para que cumplan con el esquema CEE. Consulte estos dos ejemplos cuando conozca los campos clave descritos en la sección siguiente para determinar cómo puede asignar sus propios datos al esquema.
 
 ## Campos clave
 
-Existen varios campos clave dentro de la mezcla CEE que deben utilizarse para que [!DNL Intelligent Services] genere perspectivas útiles. En esta sección se describe el caso de uso y los datos esperados para estos campos, y se proporcionan vínculos a documentación de referencia para ver más ejemplos.
+Existen varios campos clave dentro del grupo de campos CEE que deben utilizarse para que [!DNL Intelligent Services] genere perspectivas útiles. En esta sección se describe el caso de uso y los datos esperados para estos campos, y se proporcionan vínculos a documentación de referencia para ver más ejemplos.
 
 ### Campos obligatorios
 
@@ -297,16 +297,16 @@ En esta sección se describe el flujo de trabajo para la asignación e ingesta d
 
 #### Creación de un esquema y conjunto de datos de CEE
 
-Cuando esté listo para empezar a preparar los datos para su ingesta, el primer paso es crear un nuevo esquema XDM que emplee la mezcla CEE. Los siguientes tutoriales explican el proceso de creación de un nuevo esquema en la interfaz de usuario o la API:
+Cuando esté listo para empezar a preparar los datos para la ingesta, el primer paso es crear un nuevo esquema XDM que emplee el grupo de campos CEE. Los siguientes tutoriales explican el proceso de creación de un nuevo esquema en la interfaz de usuario o la API:
 
 * [Creación de un esquema en la interfaz de usuario](../xdm/tutorials/create-schema-ui.md)
 * [Creación de un esquema en la API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->Los tutoriales anteriores siguen un flujo de trabajo genérico para crear un esquema. Al elegir una clase para el esquema, debe utilizar la clase **XDM ExperienceEvent**. Una vez seleccionada esta clase, puede añadir la mezcla CEE al esquema.
+>Los tutoriales anteriores siguen un flujo de trabajo genérico para crear un esquema. Al elegir una clase para el esquema, debe utilizar la clase **XDM ExperienceEvent**. Una vez seleccionada esta clase, puede añadir el grupo de campos CEE al esquema.
 
-Después de agregar la mezcla CEE al esquema, puede agregar otras mezclas según sea necesario para campos adicionales dentro de los datos.
+Después de agregar el grupo de campos CEE al esquema, puede agregar otros grupos de campos según sea necesario para campos adicionales dentro de los datos.
 
 Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos basado en ese esquema. Los siguientes tutoriales explican el proceso de creación de un nuevo conjunto de datos en la interfaz de usuario o la API:
 
