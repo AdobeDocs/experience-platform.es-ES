@@ -6,9 +6,9 @@ description: Este documento proporciona una introducción a los conceptos princi
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ Una respuesta correcta devuelve información sobre el uso del [!DNL Schema Regis
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Una respuesta correcta devuelve información sobre el uso del [!DNL Schema Regis
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ Las llamadas a la API [!DNL Schema Registry] requieren el uso de `CONTAINER_ID`.
 
 ### Contenedor global
 
-El contenedor `global` contiene todo el Adobe estándar y el socio [!DNL Experience Platform] proporciona clases, mezclas, tipos de datos y esquemas. Solo puede realizar solicitudes de lista y búsqueda (GET) contra el contenedor `global` .
+El contenedor `global` contiene todos los Adobes estándar y el socio [!DNL Experience Platform] proporciona clases, grupos de campos de esquema, tipos de datos y esquemas. Solo puede realizar solicitudes de lista y búsqueda (GET) contra el contenedor `global` .
 
 Un ejemplo de una llamada que utiliza el contenedor `global` tendría el siguiente aspecto:
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Contenedor del inquilino
 
-No debe confundirse con su `TENANT_ID` único, el contenedor `tenant` contiene todas las clases, mezclas, tipos de datos, esquemas y descriptores definidos por una organización de IMS. Estas son únicas para cada organización, lo que significa que otras organizaciones IMS no las pueden ver ni administrar. Puede realizar todas las operaciones de CRUD (GET, POST, PUT, PATCH, DELETE) con los recursos que cree en el contenedor `tenant`.
+No se debe confundir con su `TENANT_ID` único, el contenedor `tenant` contiene todas las clases, grupos de campos, tipos de datos, esquemas y descriptores definidos por una organización de IMS. Estas son únicas para cada organización, lo que significa que otras organizaciones IMS no las pueden ver ni administrar. Puede realizar todas las operaciones de CRUD (GET, POST, PUT, PATCH, DELETE) con los recursos que cree en el contenedor `tenant`.
 
 Un ejemplo de una llamada que utiliza el contenedor `tenant` tendría el siguiente aspecto:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Cuando se crea una clase, mezcla, esquema o tipo de datos en el contenedor `tenant`, se guarda en el [!DNL Schema Registry] y se asigna un URI `$id` que incluye su `TENANT_ID`. Este `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de valores `$id`.
+Cuando se crea una clase, un grupo de campos, un esquema o un tipo de datos en el contenedor `tenant`, se guarda en el [!DNL Schema Registry] y se asigna un URI `$id` que incluye su `TENANT_ID`. Este `$id` se utiliza en toda la API para hacer referencia a recursos específicos. En la siguiente sección se proporcionan ejemplos de valores `$id`.
 
 ## Identificación de recursos {#resource-identification}
 
