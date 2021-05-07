@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para
 >
 >Si no tiene conjuntos de datos en conflicto, debe establecer la prioridad de la marca de tiempo para la política de combinación. Esto ayuda a garantizar que el consentimiento más reciente especificado por un cliente sea la configuración de consentimiento que se utiliza.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento requeridos que proporciona la mezcla Consentimientos y preferencias, como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
+Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento necesarios proporcionados por el grupo de campos de esquema Consentimientos y preferencias , tal como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
 
 ## Incorporar datos de consentimiento a Platform
 
