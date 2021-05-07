@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1354'
 ht-degree: 1%
 
 ---
@@ -111,35 +111,35 @@ Registre los valores `$id` de los dos esquemas que desea definir una relación e
 
 ## Definición de un campo de referencia para el esquema de origen
 
-Dentro de [!DNL Schema Registry], los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia del campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, es posible que tenga que crear una mezcla con el nuevo campo y añadirlo al esquema. Este nuevo campo debe tener un valor `type` de &quot;[!DNL string]&quot;.
+Dentro de [!DNL Schema Registry], los descriptores de relaciones funcionan de manera similar a las claves externas en las tablas de bases de datos relacionales: un campo del esquema de origen actúa como referencia del campo de identidad principal de un esquema de destino. Si el esquema de origen no tiene un campo para este fin, es posible que tenga que crear un grupo de campos de esquema con el nuevo campo y añadirlo al esquema. Este nuevo campo debe tener un valor `type` de &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >A diferencia del esquema de destino, el esquema de origen no puede utilizar su identidad principal como campo de referencia.
 
-En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un campo `hotelId` que sirve como identidad principal del esquema y, por lo tanto, también actúa como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo dedicado que pueda utilizarse como referencia y debe recibir una nueva mezcla que añada un nuevo campo al esquema: `favoriteHotel`.
+En este tutorial, el esquema de destino &quot;[!DNL Hotels]&quot; contiene un campo `hotelId` que sirve como identidad principal del esquema y, por lo tanto, también actúa como campo de referencia. Sin embargo, el esquema de origen &quot;[!DNL Loyalty Members]&quot; no tiene un campo específico para utilizarlo como referencia y debe recibir un nuevo grupo de campos que agregue un nuevo campo al esquema: `favoriteHotel`.
 
 >[!NOTE]
 >
 >Si el esquema de origen ya tiene un campo dedicado que planea utilizar como campo de referencia, puede avanzar al paso [crear un descriptor de referencia](#reference-identity).
 
-### Crear una nueva mezcla
+### Crear un nuevo grupo de campos
 
-Para añadir un nuevo campo a un esquema, primero debe definirse en una mezcla. Puede crear una nueva mezcla haciendo una solicitud de POST al extremo `/tenant/mixins` .
+Para añadir un nuevo campo a un esquema, primero debe definirse en un grupo de campos. Puede crear un nuevo grupo de campos realizando una solicitud de POST al extremo `/tenant/fieldgroups` .
 
 **Formato de API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva mezcla que añade un campo `favoriteHotel` bajo el espacio de nombres `_{TENANT_ID}` de cualquier esquema al que se añada.
+La siguiente solicitud crea un nuevo grupo de campos que agrega un campo `favoriteHotel` bajo el espacio de nombres `_{TENANT_ID}` de cualquier esquema al que se agregue.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la mezcla recién creada.
+Una respuesta correcta devuelve los detalles del grupo de campos recién creado.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ Una respuesta correcta devuelve los detalles de la mezcla recién creada.
 
 | Propiedad | Descripción |
 | --- | --- |
-| `$id` | El sistema de sólo lectura generó un identificador único de la nueva mezcla. Toma la forma de URI. |
+| `$id` | El sistema generó un identificador único de solo lectura del nuevo grupo de campos. Toma la forma de URI. |
 
-Registre el URI `$id` de la mezcla, que se utilizará en el siguiente paso de añadir la mezcla al esquema de origen.
+Registre el URI `$id` del grupo de campos, que se utilizará en el siguiente paso de añadir el grupo de campos al esquema de origen.
 
-### Añadir la mezcla al esquema de origen
+### Añadir el grupo de campos al esquema de origen
 
-Una vez creada una mezcla, puede agregarla al esquema de origen realizando una solicitud de PATCH al extremo `/tenant/schemas/{SCHEMA_ID}` .
+Una vez creado un grupo de campos, puede agregarlo al esquema de origen realizando una solicitud de PATCH al extremo `/tenant/schemas/{SCHEMA_ID}` .
 
 **Formato de API**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Solicitud**
 
-La siguiente solicitud añade la mezcla &quot;[!DNL Favorite Hotel]&quot; al esquema &quot;[!DNL Loyalty Members]&quot;.
+La siguiente solicitud agrega el grupo de campos &quot;[!DNL Favorite Hotel]&quot; al esquema &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | Propiedad | Descripción |
 | --- | --- |
 | `op` | La operación de PATCH que se va a realizar. Esta solicitud utiliza la operación `add`. |
-| `path` | La ruta al campo de esquema donde se agregará el nuevo recurso. Al añadir mezclas a los esquemas, el valor debe ser &quot;/allOf/-&quot;. |
-| `value.$ref` | El `$id` de la mezcla que debe añadirse. |
+| `path` | La ruta al campo de esquema donde se agregará el nuevo recurso. Al agregar grupos de campos a esquemas, el valor debe ser &quot;/allOf/-&quot;. |
+| `value.$ref` | El `$id` del grupo de campos que se va a añadir. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora incluye el valor `$ref` de la mezcla añadida en su matriz `allOf`.
+Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora incluye el valor `$ref` del grupo de campos agregado en su matriz `allOf`.
 
 ```json
 {
@@ -300,13 +300,13 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ Una respuesta correcta devuelve los detalles del esquema actualizado, que ahora 
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
