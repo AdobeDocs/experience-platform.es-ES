@@ -7,9 +7,9 @@ type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Si prefiere componer un esquema utilizando la API [!DNL Schema Registry] en su l
 Este tutorial requiere una comprensión práctica de los distintos aspectos de Adobe Experience Platform implicados en la creación de esquemas. Antes de comenzar este tutorial, consulte la documentación de los siguientes conceptos:
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): El marco estandarizado mediante el cual se  [!DNL Platform] organizan los datos de experiencia del cliente.
-   * [Aspectos básicos de la composición](../schema/composition.md) del esquema: Información general sobre esquemas XDM y sus componentes básicos, incluidas clases, mezclas, tipos de datos y campos.
+   * [Aspectos básicos de la composición](../schema/composition.md) del esquema: Una descripción general de los esquemas XDM y sus componentes básicos, incluidas las clases, los grupos de campos de esquema, los tipos de datos y los campos individuales.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
 ## Abra el espacio de trabajo [!UICONTROL Schemas] {#browse}
@@ -48,9 +48,9 @@ Para los fines de este tutorial, seleccione **[!UICONTROL XDM Individual Profile
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Dado que elige una clase XDM estándar en la que basar el esquema, aparece el cuadro de diálogo **[!UICONTROL Add mixin]**, que le permite empezar a añadir campos inmediatamente al esquema. Por ahora, seleccione **[!UICONTROL Cancel]** para salir del cuadro de diálogo.
+Dado que elige una clase XDM estándar en la que basar el esquema, aparece el cuadro de diálogo **[!UICONTROL Add field group]**, que le permite empezar a añadir campos inmediatamente al esquema. Por ahora, seleccione **[!UICONTROL Cancel]** para salir del cuadro de diálogo.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 Aparece el [!DNL Schema Editor]. Este es el lienzo sobre el que compondrá el esquema. Se crea automáticamente un esquema sin título en la sección **[!UICONTROL Structure]** del lienzo al llegar al editor, junto con los campos estándar incluidos en todos los esquemas basados en esa clase. La clase asignada para el esquema también se enumera en **[!UICONTROL Class]** en la sección **[!UICONTROL Composition]**.
 
@@ -58,7 +58,7 @@ Aparece el [!DNL Schema Editor]. Este es el lienzo sobre el que compondrá el es
 
 >[!NOTE]
 >
->Puede [cambiar la clase de un esquema](#change-class) en cualquier momento durante el proceso de composición inicial antes de guardar el esquema, pero esto debe hacerse con mucha precaución. Las mezclas solo son compatibles con ciertas clases y, por lo tanto, cambiar la clase restablecerá el lienzo y los campos que haya agregado.
+>Puede [cambiar la clase de un esquema](#change-class) en cualquier momento durante el proceso de composición inicial antes de guardar el esquema, pero esto debe hacerse con mucha precaución. Los grupos de campos solo son compatibles con ciertas clases y, por lo tanto, al cambiar la clase se restablecerá el lienzo y los campos que haya agregado.
 
 Utilice los campos del lado derecho del editor para proporcionar un nombre para mostrar y una descripción opcional para el esquema. Una vez introducido un nombre, el lienzo se actualiza para reflejar el nuevo nombre del esquema.
 
@@ -72,35 +72,35 @@ Hay que tener en cuenta varias consideraciones importantes a la hora de decidir 
 
 Este tutorial compone un esquema para introducir datos relacionados con los miembros de un programa de fidelidad y, por lo tanto, el esquema se denomina &quot;Miembros de fidelidad&quot;.
 
-## Añadir una mezcla {#mixin}
+## Agregar un grupo de campos {#field-group}
 
-Ahora puede empezar a añadir campos al esquema añadiendo mezclas. Una mezcla es un grupo de uno o más campos que a menudo se utilizan juntos para describir un concepto en particular. Este tutorial utiliza mezclas para describir los miembros del programa de fidelidad y capturar información clave como nombre, cumpleaños, número de teléfono, dirección, etc.
+Ahora puede empezar a añadir campos al esquema añadiendo grupos de campos. Un grupo de campos es un grupo de uno o más campos que a menudo se utilizan juntos para describir un concepto en particular. Este tutorial utiliza grupos de campos para describir los miembros del programa de fidelidad y capturar información clave como nombre, cumpleaños, número de teléfono, dirección, etc.
 
-Para añadir una mezcla, seleccione **[!UICONTROL Add]** en la subsección **[!UICONTROL Mixins]**.
+Para agregar un grupo de campos, seleccione **[!UICONTROL Add]** en la subsección **[!UICONTROL Field groups]**.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-Aparece un nuevo cuadro de diálogo, que muestra una lista de las mezclas disponibles. Cada mezcla está destinada únicamente a utilizarse con una clase específica, por lo que el cuadro de diálogo sólo contiene mezclas compatibles con la clase seleccionada (en este caso, la clase [!DNL XDM Individual Profile]). Si está utilizando una clase XDM estándar, la lista de mezclas se ordenará de forma inteligente en función de la popularidad de uso.
+Aparece un nuevo cuadro de diálogo que muestra una lista de los grupos de campos disponibles. Cada grupo de campos solo está diseñado para utilizarse con una clase específica, por lo que el cuadro de diálogo solo enumera los grupos de campos compatibles con la clase seleccionada (en este caso, la clase [!DNL XDM Individual Profile] ). Si utiliza una clase XDM estándar, la lista de grupos de campos se ordenará de forma inteligente según la popularidad de uso.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-La selección de una mezcla de la lista hace que aparezca en el carril derecho. Si lo desea, puede seleccionar varias mezclas, agregándolas a la lista en el carril derecho antes de confirmarlas. Además, aparece un icono en el lado derecho de la mezcla seleccionada actualmente, que permite previsualizar la estructura de los campos que proporciona.
+Si se selecciona un grupo de campos de la lista, este aparecerá en el carril derecho. Si lo desea, puede seleccionar varios grupos de campos, agregándolos a la lista en el carril derecho antes de confirmarlos. Además, aparece un icono en el lado derecho del grupo de campos seleccionado que permite obtener una vista previa de la estructura de los campos que proporciona.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Al previsualizar una mezcla, se proporciona una descripción detallada del esquema de la mezcla en el carril derecho. También puede navegar por los campos de la mezcla en el lienzo proporcionado. A medida que selecciona diferentes campos, el carril derecho se actualiza para mostrar detalles sobre el campo en cuestión. Seleccione **[!UICONTROL Back]** cuando haya terminado de obtener una vista previa para volver al cuadro de diálogo de selección de la mezcla.
+Al obtener una vista previa de un grupo de campos, se proporciona una descripción detallada del esquema del grupo de campos en el carril derecho. También puede navegar por los campos del grupo de campos en el lienzo proporcionado. A medida que selecciona diferentes campos, el carril derecho se actualiza para mostrar detalles sobre el campo en cuestión. Seleccione **[!UICONTROL Back]** cuando haya terminado de obtener una vista previa para volver al cuadro de diálogo de selección del grupo de campos.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-Para este tutorial, seleccione la mezcla **[!UICONTROL Demographic Details]** y, a continuación, seleccione **[!UICONTROL Add mixin]**.
+Para este tutorial, seleccione el grupo de campos **[!UICONTROL Demographic Details]** y, a continuación, seleccione **[!UICONTROL Add field group]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Mixins]** ahora enumera &quot;[!UICONTROL Demographic Details]&quot; y la sección **[!UICONTROL Structure]** incluye los campos contribuidos por la mezcla. Puede seleccionar el nombre de la mezcla en la sección **[!UICONTROL Mixins]** para resaltar los campos específicos que proporciona dentro del lienzo.
+El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Field groups]** ahora enumera &quot;[!UICONTROL Demographic Details]&quot; y la sección **[!UICONTROL Structure]** incluye los campos contribuidos por el grupo de campos. Puede seleccionar el nombre del grupo de campos en la sección **[!UICONTROL Field groups]** para resaltar los campos específicos que proporciona dentro del lienzo.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Esta mezcla contribuye a varios campos bajo el nombre de nivel superior `person` con el tipo de datos &quot;[!UICONTROL Person]&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
+Este grupo de campos contribuye con varios campos bajo el nombre de nivel superior `person` con el tipo de datos &quot;[!UICONTROL Person]&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Observe que el campo `name` tiene un tipo de datos de &quot;[!UICONTROL Person n
 
 Seleccione los diferentes campos dentro del lienzo para mostrar los campos adicionales que contribuyen a la estructura del esquema.
 
-## Añadir otra mezcla {#mixin-2}
+## Agregar otro grupo de campos {#field-group-2}
 
-Ahora puede repetir los mismos pasos para agregar otra mezcla. Cuando vea el cuadro de diálogo **[!UICONTROL Add mixin]** esta vez, observe que la mezcla &quot;[!UICONTROL Demographic Details]&quot; se ha atenuado y que la casilla de verificación situada junto a ella no se puede seleccionar. Esto evita que se dupliquen accidentalmente las mezclas que ya se han incluido en el esquema actual.
+Ahora puede repetir los mismos pasos para agregar otro grupo de campos. Cuando vea el cuadro de diálogo **[!UICONTROL Add field group]** esta vez, observe que el grupo de campos &quot;[!UICONTROL Demographic Details]&quot; se ha atenuado y que la casilla de verificación situada junto a él no se puede seleccionar. Esto evita que se dupliquen accidentalmente los grupos de campos que ya se han incluido en el esquema actual.
 
-Para este tutorial, seleccione la mezcla &quot;[!DNL Personal Contact Details]&quot; en el cuadro de diálogo y, a continuación, seleccione **[!UICONTROL Add mixin]** para agregarla al esquema.
+Para este tutorial, seleccione el grupo de campos &quot;[!DNL Personal Contact Details]&quot; en el cuadro de diálogo y, a continuación, seleccione **[!UICONTROL Add field group]** para agregarlo al esquema.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Una vez añadido, el lienzo vuelve a aparecer. &quot;[!UICONTROL Personal Contact Details]&quot; ahora aparece en **[!UICONTROL Mixins]** en la sección **[!UICONTROL Composition]** y se han agregado campos para la dirección de inicio, el teléfono móvil y mucho más en **[!UICONTROL Structure]**.
+Una vez añadido, el lienzo vuelve a aparecer. &quot;[!UICONTROL Personal Contact Details]&quot; ahora aparece en **[!UICONTROL Field groups]** en la sección **[!UICONTROL Composition]** y se han agregado campos para la dirección de inicio, el teléfono móvil y mucho más en **[!UICONTROL Structure]**.
 
 Al igual que el campo `name` , los campos que acaba de añadir representan conceptos de varios campos. Por ejemplo, `homeAddress` tiene un tipo de datos de &quot;[!UICONTROL Postal address]&quot; y `mobilePhone` tiene un tipo de datos de &quot;[!UICONTROL Phone number]&quot;. Puede seleccionar cada uno de estos campos para expandirlos y ver los campos adicionales incluidos en el tipo de datos.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Defina una mezcla personalizada {#define-mixin}
+## Definir un grupo de campos personalizado {#define-field-group}
 
 El esquema &quot;[!UICONTROL Loyalty Members]&quot; está diseñado para capturar datos relacionados con los miembros de un programa de fidelidad, por lo que necesitará algunos campos específicos relacionados con la fidelidad.
 
-Hay una mezcla estándar [!UICONTROL Loyalty Details] que puede agregar al esquema para capturar campos comunes relacionados con un programa de fidelidad. Aunque se le recomienda encarecidamente que utilice mezclas estándar para representar los conceptos capturados por sus esquemas, es posible que la estructura de la mezcla de fidelidad estándar no pueda capturar todos los datos relevantes para su programa de fidelidad en particular. En este escenario, puede elegir definir una nueva mezcla personalizada para capturar estos campos en su lugar.
+Hay un grupo de campos estándar [!UICONTROL Loyalty Details] que puede agregar al esquema para capturar campos comunes relacionados con un programa de fidelidad. Aunque se le recomienda encarecidamente que utilice grupos de campos estándar para representar los conceptos capturados por los esquemas, es posible que la estructura del grupo de campos de lealtad estándar no pueda capturar todos los datos relevantes para su programa de fidelidad en particular. En esta situación, puede definir un nuevo grupo de campos personalizados para capturar estos campos.
 
-Vuelva a abrir el cuadro de diálogo **[!UICONTROL Add Mixin]**, pero esta vez seleccione **[!UICONTROL Create New Mixin]** cerca de la parte superior. A continuación, se le pedirá que proporcione un nombre para mostrar y una descripción para su mezcla.
+Vuelva a abrir el cuadro de diálogo **[!UICONTROL Add Field group]**, pero esta vez seleccione **[!UICONTROL Create New Field group]** cerca de la parte superior. A continuación, se le pedirá que proporcione un nombre para mostrar y una descripción para su grupo de campos.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-Como con los nombres de clase, el nombre de la mezcla debe ser corto y simple, describiendo lo que la mezcla contribuirá al esquema. Estas también son únicas, por lo que no podrá reutilizar el nombre y, por lo tanto, debe asegurarse de que sea lo suficientemente específico.
+Al igual que con los nombres de clase, el nombre del grupo de campos debe ser corto y sencillo, describiendo lo que el grupo de campos contribuirá al esquema. Estas también son únicas, por lo que no podrá reutilizar el nombre y, por lo tanto, debe asegurarse de que sea lo suficientemente específico.
 
-Para este tutorial, asigne un nombre a la nueva mezcla &quot;Detalles de lealtad&quot;.
+Para este tutorial, asigne al nuevo grupo de campos el nombre &quot;Detalles de lealtad&quot;.
 
-Seleccione **[!UICONTROL Add mixin]** para volver a [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; debería aparecer en **[!UICONTROL Mixins]** en el lado izquierdo del lienzo, pero todavía no hay campos asociados a él y, por lo tanto, no aparecen campos nuevos en **[!UICONTROL Structure]**.
+Seleccione **[!UICONTROL Add field group]** para volver a [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; debería aparecer en **[!UICONTROL Field groups]** en el lado izquierdo del lienzo, pero todavía no hay campos asociados a él y, por lo tanto, no aparecen campos nuevos en **[!UICONTROL Structure]**.
 
-## Añadir campos a la mezcla {#mixin-fields}
+## Agregar campos al grupo de campos {#field-group-fields}
 
-Ahora que ha creado la mezcla &quot;Detalles de Lealtad&quot;, es hora de definir los campos que la mezcla contribuirá al esquema.
+Ahora que ha creado el grupo de campos &quot;Detalles de lealtad&quot;, ha llegado el momento de definir los campos que el grupo de campos contribuirá al esquema.
 
-Para empezar, seleccione el nombre de la mezcla en la sección **[!UICONTROL Mixins]**. Una vez que haga esto, las propiedades de la mezcla aparecen en el lado derecho del editor y aparece un icono **plus (+)** junto al nombre del esquema en **[!UICONTROL Structure]**.
+Para empezar, seleccione el nombre del grupo de campos en la sección **[!UICONTROL Field groups]**. Una vez hecho esto, las propiedades del grupo de campos aparecen en el lado derecho del editor y aparece un icono **plus (+)** junto al nombre del esquema en **[!UICONTROL Structure]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 Seleccione el icono **plus (+)** situado junto a &quot;[!DNL Loyalty Members]&quot; para crear un nuevo nodo en la estructura. Este nodo (denominado `_tenantId` en este ejemplo) representa el ID de inquilino de la organización IMS, precedido por un guion bajo. La presencia del ID de inquilino indica que los campos que está agregando están contenidos en el espacio de nombres de su organización.
 
-En otras palabras, los campos que agregue son únicos para su organización y se guardarán en [!DNL Schema Registry] en un área específica accesible solo para su organización. Los campos que defina siempre deben agregarse al espacio de nombres del inquilino para evitar conflictos con nombres de otras clases estándar, mezclas, tipos de datos y campos.
+En otras palabras, los campos que agregue son únicos para su organización y se guardarán en [!DNL Schema Registry] en un área específica accesible solo para su organización. Los campos que defina siempre deben agregarse al espacio de nombres del inquilino para evitar conflictos con nombres de otras clases estándar, grupos de campos, tipos de datos y campos.
 
-Dentro de ese nodo con espacio de nombres se encuentra &quot;[!UICONTROL New Field]&quot;. Este es el comienzo de la mezcla &quot;[!UICONTROL Loyalty Details]&quot;.
+Dentro de ese nodo con espacio de nombres se encuentra &quot;[!UICONTROL New Field]&quot;. Este es el principio del grupo de campos &quot;[!UICONTROL Loyalty Details]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Hay diferentes opciones de restricción disponibles en función del tipo de dato
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Añadir más campos a la mezcla {#mixin-fields-2}
+## Agregar más campos al grupo de campos {#field-group-fields-2}
 
 Ahora que ha agregado el campo `loyaltyId`, puede agregar campos adicionales para capturar información relacionada con la lealtad, como:
 
@@ -192,7 +192,7 @@ Cuando se complete, el objeto Lealtad contendrá campos para ID de fidelidad, pu
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Añadir un campo de enumeración a la mezcla {#enum}
+## Agregar un campo de enumeración al grupo de campos {#enum}
 
 Al definir campos en [!DNL Schema Editor], hay algunas opciones adicionales que puede aplicar a tipos de campo básicos para proporcionar más restricciones en los datos que el campo puede contener. Los casos de uso de estas restricciones se explican en la siguiente tabla:
 
@@ -226,7 +226,7 @@ Cuando haya completado todas las propiedades del campo, seleccione **[!UICONTROL
 
 El objeto `loyalty` ahora contiene varios campos específicos de lealtad y representa una estructura de datos común que podría resultar útil en otros esquemas. El [!DNL Schema Editor] permite aplicar fácilmente objetos de varios campos reutilizables convirtiendo la estructura de esos objetos en tipos de datos.
 
-Los tipos de datos permiten el uso coherente de estructuras de varios campos y proporcionan más flexibilidad que una mezcla, ya que se pueden utilizar en cualquier lugar dentro de un esquema. Esto se hace estableciendo el valor **[!UICONTROL Type]** del campo en el valor de cualquier tipo de datos definido en [!DNL Schema Registry].
+Los tipos de datos permiten el uso coherente de estructuras de varios campos y proporcionan más flexibilidad que un grupo de campos, ya que se pueden utilizar en cualquier lugar dentro de un esquema. Esto se hace estableciendo el valor **[!UICONTROL Type]** del campo en el valor de cualquier tipo de datos definido en [!DNL Schema Registry].
 
 Para convertir el objeto `loyalty` en un tipo de datos, seleccione el campo `loyalty` en **[!UICONTROL Structure]** y, a continuación, seleccione **[!UICONTROL Convert to new data type]** en el lado derecho del editor, en **[!UICONTROL Field properties]**. Aparece una ventana emergente verde que confirma que el objeto se ha convertido correctamente.
 
@@ -244,17 +244,17 @@ En un esquema futuro, ahora se podría asignar un campo como tipo &quot;[!DNL Lo
 
 ## Buscar y filtrar campos de esquema
 
-El esquema ahora contiene varias mezclas además de los campos proporcionados por su clase base. Al trabajar con esquemas más grandes, puede seleccionar las casillas de verificación situadas junto a los nombres de las mezclas en el carril izquierdo para filtrar los campos mostrados únicamente a los proporcionados por las mezclas que le interesen.
+El esquema ahora contiene varios grupos de campos además de los campos proporcionados por su clase base. Al trabajar con esquemas más grandes, puede seleccionar las casillas de verificación situadas junto a los nombres de los grupos de campos en el carril izquierdo para filtrar los campos mostrados únicamente a los proporcionados por los grupos de campos que le interesen.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-Si está buscando un campo específico en el esquema, también puede utilizar la barra de búsqueda para filtrar los campos mostrados por nombre, independientemente de la mezcla en la que se proporcionan.
+Si está buscando un campo específico en el esquema, también puede utilizar la barra de búsqueda para filtrar los campos mostrados por nombre, independientemente del grupo de campos en el que se proporcionen.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->La función de búsqueda tiene en cuenta los filtros de mezcla seleccionados al mostrar los campos coincidentes. Si una consulta de búsqueda no muestra los resultados esperados, es posible que tenga que verificar que no está filtrando ninguna mezcla relevante.
+>La función de búsqueda tiene en cuenta los filtros de grupo de campos seleccionados al mostrar los campos coincidentes. Si una consulta de búsqueda no muestra los resultados esperados, es posible que tenga que verificar que no está filtrando ningún grupo de campos relevante.
 
 ## Establecer un campo de esquema como campo de identidad {#identity-field}
 
@@ -334,7 +334,7 @@ El siguiente vídeo muestra cómo crear un esquema simple en la interfaz de usua
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-El siguiente vídeo pretende reforzar su comprensión del trabajo con mezclas y clases.
+El siguiente vídeo pretende reforzar su comprensión del trabajo con grupos de campo y clases.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Puede cambiar la clase de un esquema en cualquier momento durante el proceso de 
 
 >[!WARNING]
 >
->La reasignación de la clase para un esquema debe realizarse con extrema precaución. Las mezclas solo son compatibles con ciertas clases y, por lo tanto, cambiar la clase restablecerá el lienzo y los campos que haya agregado.
+>La reasignación de la clase para un esquema debe realizarse con extrema precaución. Los grupos de campos solo son compatibles con ciertas clases y, por lo tanto, al cambiar la clase se restablecerá el lienzo y los campos que haya agregado.
 
 Para aprender a cambiar la clase de un esquema, consulte la guía sobre [administración de esquemas en la interfaz de usuario](../ui/resources/schemas.md).
