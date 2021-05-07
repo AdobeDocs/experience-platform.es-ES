@@ -6,16 +6,16 @@ description: El extremo /classes de la API del Registro de esquemas permite admi
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
 
 # Extremo de clases
 
-Todos los esquemas del Modelo de datos de experiencia (XDM) deben basarse en una clase. Una clase determina la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase, así como las mezclas que pueden utilizarse en esos esquemas. Además, la clase de un esquema determina los aspectos de comportamiento de los datos que contendrá un esquema, de los cuales hay dos tipos:
+Todos los esquemas del Modelo de datos de experiencia (XDM) deben basarse en una clase. Una clase determina la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase, así como los grupos de campos de esquema que pueden utilizarse en esos esquemas. Además, la clase de un esquema determina los aspectos de comportamiento de los datos que contendrá un esquema, de los cuales hay dos tipos:
 
 * **[!UICONTROL Record]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
 * **[!UICONTROL Time-series]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
@@ -246,7 +246,7 @@ Puede definir una clase personalizada bajo el contenedor `tenant` realizando una
 
 >[!IMPORTANT]
 >
->Al componer un esquema basado en una clase personalizada que usted defina, no podrá utilizar mezclas estándar. Cada mezcla define las clases con las que son compatibles en su atributo `meta:intendedToExtend`. Una vez que empiece a definir mezclas compatibles con su nueva clase (utilizando el `$id` de su nueva clase en el campo `meta:intendedToExtend` de la mezcla), podrá reutilizar esas mezclas cada vez que defina un esquema que implemente la clase que haya definido. Consulte las secciones sobre [creación de mezclas](./mixins.md#create) y [creación de esquemas](./schemas.md#create) en sus respectivas guías de punto final para obtener más información.
+>Al componer un esquema basado en una clase personalizada que defina, no podrá utilizar grupos de campos estándar. Cada grupo de campos define las clases con las que son compatibles en su atributo `meta:intendedToExtend`. Una vez que empiece a definir grupos de campos compatibles con la nueva clase (utilizando el `$id` de la nueva clase en el campo `meta:intendedToExtend` del grupo de campos), podrá reutilizar esos grupos de campos cada vez que defina un esquema que implemente la clase que haya definido. Consulte las secciones sobre [creación de grupos de campos](./field-groups.md#create) y [creación de esquemas](./schemas.md#create) en sus respectivas guías de punto final para obtener más información.
 >
 >Si planea utilizar esquemas basados en clases personalizadas en el perfil del cliente en tiempo real, también es importante tener en cuenta que los esquemas de unión solo se construyen en función de esquemas que comparten la misma clase. Si desea incluir un esquema de clase personalizada en la unión para otra clase como [!UICONTROL XDM Individual Profile] o [!UICONTROL XDM ExperienceEvent], debe establecer una relación con otro esquema que emplee esa clase. Consulte el tutorial sobre el [establecimiento de una relación entre dos esquemas en la API](../tutorials/relationship-api.md) para obtener más información.
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 La solicitud para crear (POST) una clase debe incluir un atributo `allOf` que contenga `$ref` en uno de los dos valores: `https://ns.adobe.com/xdm/data/record` o `https://ns.adobe.com/xdm/data/time-series`. Estos valores representan el comportamiento en el que se basa la clase (registro o serie temporal, respectivamente). Para obtener más información sobre las diferencias entre los datos de registros y los datos de series temporales, consulte la sección sobre tipos de comportamiento dentro de los [conceptos básicos de la composición de esquemas](../schema/composition.md).
 
-Cuando define una clase, también puede incluir mezclas o campos personalizados dentro de la definición de la clase. Esto haría que las mezclas y campos añadidos se incluyeran en todos los esquemas que implementan la clase. En el siguiente ejemplo de solicitud se define una clase denominada &quot;Propiedad&quot;, que captura información sobre las distintas propiedades que posee y gestiona una empresa. Incluye un campo `propertyId` que se debe incluir cada vez que se utiliza la clase.
+Al definir una clase, también puede incluir grupos de campos o campos personalizados en la definición de la clase. Esto haría que los grupos de campos y campos añadidos se incluyeran en todos los esquemas que implementan la clase. En el siguiente ejemplo de solicitud se define una clase denominada &quot;Propiedad&quot;, que captura información sobre las distintas propiedades que posee y gestiona una empresa. Incluye un campo `propertyId` que se debe incluir cada vez que se utiliza la clase.
 
 ```SHELL
 curl -X POST \
