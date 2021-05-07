@@ -6,9 +6,9 @@ description: La API del Registro de esquemas permite a los desarrolladores admin
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [re
 
 ## Esquemas
 
-Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más mezclas. Puede crear, ver, editar y eliminar esquemas con el extremo `/schemas` . Para aprender a utilizar este punto final, consulte la [guía de extremo de esquemas](./schemas.md).
+Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas con el extremo `/schemas` . Para aprender a utilizar este punto final, consulte la [guía de extremo de esquemas](./schemas.md).
 
-Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de esquemas, incluida la creación y adición de mezclas y tipos de datos, consulte el [tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
+Para obtener una guía paso a paso sobre cómo crear un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte el [tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
 
 ## Comportamientos
 
@@ -39,15 +39,15 @@ Los comportamientos definen la naturaleza de los datos que describe un esquema. 
 
 ## Clases
 
-Una clase define la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase y determina qué mezclas son aptas para su uso en esos esquemas. Cada clase debe estar asociada a un comportamiento existente. Consulte la [guía de extremo de clases](./classes.md) para obtener más información sobre cómo trabajar con clases en la API.
+Una clase define la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase y determina qué grupos de campos son aptos para su uso en esos esquemas. Cada clase debe estar asociada a un comportamiento existente. Consulte la [guía de extremo de clases](./classes.md) para obtener más información sobre cómo trabajar con clases en la API.
 
-## Mezclas
+## Grupos de campo
 
-Las mezclas son componentes reutilizables que definen uno o más campos que representan un concepto en particular, como una persona individual, una dirección de correo o un entorno de navegador web. Las mezclas están pensadas para incluirse como parte de un esquema que implemente una clase compatible, según el comportamiento de los datos que representan (registro o serie temporal). Consulte la [guía del extremo de las mezclas](./mixins.md) para aprender a trabajar con las mezclas en la API.
+Los grupos de campos son componentes reutilizables que definen uno o más campos que representan un concepto en particular, como una persona individual, una dirección de correo o un entorno de explorador web. Los grupos de campos están pensados para incluirse como parte de un esquema que implemente una clase compatible, según el comportamiento de los datos que representan (registro o serie temporal). Consulte la [guía de extremo de grupos de campos](./field-groups.md) para aprender a trabajar con grupos de campos en la API.
 
 ## Tipos de datos
 
-Los tipos de datos se utilizan como campos de referencia en clases o mezclas de la misma manera que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a las mezclas en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque pueden incluirse en cualquier lugar de la estructura del esquema, mientras que las mezclas sólo pueden agregarse en el nivel raíz. Consulte la [guía de extremo de tipos de datos](./data-types.md) para obtener más información sobre cómo trabajar con tipos de datos en la API.
+Los tipos de datos se utilizan como campos de tipo de referencia en clases o grupos de campos de la misma manera que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden agregar en el nivel raíz. Consulte la [guía de extremo de tipos de datos](./data-types.md) para obtener más información sobre cómo trabajar con tipos de datos en la API.
 
 ## Descriptores
 
@@ -61,7 +61,7 @@ Para obtener información sobre cómo ver uniones en la API del Registro de esqu
 
 ## Exportar/Importar
 
-La API del Registro de esquemas permite transferir y compartir recursos XDM entre entornos limitados y organizaciones de IMS. Para cualquier esquema, combinación o tipo de datos, puede generar una carga útil de exportación que contenga la estructura del recurso y cualquier recurso dependiente. Esta carga útil se puede utilizar para importar el recurso en un entorno limitado de destino y en una organización de IMS.
+La API del Registro de esquemas permite transferir y compartir recursos XDM entre entornos limitados y organizaciones de IMS. Para cualquier esquema, grupo de campos o tipo de datos, puede generar una carga útil de exportación que contenga la estructura del recurso y cualquier recurso dependiente. Esta carga útil se puede utilizar para importar el recurso en un entorno limitado de destino y en una organización de IMS.
 
 Consulte la [guía de puntos finales de exportación/importación](./export-import.md) para obtener más información sobre cómo utilizar estos puntos finales.
 
@@ -73,7 +73,7 @@ Consulte la [guía de extremo de datos de ejemplo](./sample-data.md) para obtene
 
 ## Registro de auditoría
 
-El Registro de esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, mezcla, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso en particular proporcionando su `$id` o `meta:altId` en la ruta de una solicitud de GET a este extremo.
+El Registro de esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, grupo de campos, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso en particular proporcionando su `$id` o `meta:altId` en la ruta de una solicitud de GET a este extremo.
 
 Consulte la [guía de extremo del registro de auditoría](./audit-log.md) para obtener más información sobre el uso de este extremo.
 
