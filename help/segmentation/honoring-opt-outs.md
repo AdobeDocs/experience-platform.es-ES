@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform permite a sus clientes enviar solicitudes de exclusión con respecto al uso y almacenamiento de sus datos dentro del perfil del cliente en tiempo real]. Estas solicitudes de exclusión forman parte de la Ley de Privacidad del Consumidor de California (CCPA), que otorga a los residentes de California el derecho de acceder y eliminar sus datos personales y de saber si sus datos personales se venden o revelan (y a quién).
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,33 @@ El cumplimiento de las solicitudes de exclusión requiere comprender los distint
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Ayuda a las organizaciones a automatizar el cumplimiento de las normas de privacidad de datos que implican datos de clientes dentro de  [!DNL Platform].
 
-## Mezclas de exclusión
+## Grupos de campos de esquema de exclusión
 
-Para cumplir las solicitudes de exclusión de CCPA, uno de los esquemas que forma parte del esquema de unión debe contener los campos de exclusión necesarios [!DNL Experience Data Model] (XDM). Hay dos mezclas que se pueden utilizar para agregar campos de exclusión a un esquema; cada una de ellas se explica con más detalle en las secciones siguientes:
+Para cumplir las solicitudes de exclusión de CCPA, uno de los esquemas que forma parte del esquema de unión debe contener los campos de exclusión necesarios [!DNL Experience Data Model] (XDM). Hay dos grupos de campos de esquema que se pueden utilizar para agregar campos de exclusión a un esquema. Cada uno de ellos se explica con más detalle en las secciones siguientes:
 
 - [Privacidad](#profile-privacy) del perfil: Se utiliza para capturar distintos tipos de exclusión (general o venta/uso compartido).
 - [Detalles](#profile-preferences-details) de preferencias de perfil: Se utiliza para capturar solicitudes de exclusión para canales XDM específicos.
 
-Para obtener instrucciones paso a paso sobre cómo añadir una mezcla a un esquema, consulte la sección &quot;Añadir una mezcla&quot; en la siguiente documentación de XDM:
+Para obtener instrucciones paso a paso sobre cómo añadir un grupo de campos a un esquema, consulte la sección &quot;Añadir un grupo de campos&quot; en la siguiente documentación de XDM:
 - [Tutorial de la API del Registro de esquemas](../xdm/api/getting-started.md).: Creación de un esquema mediante la API del Registro de esquemas.
 - [Tutorial del Editor de esquemas](../xdm/tutorials/create-schema-ui.md): Creación de un esquema mediante la interfaz de usuario de Platform.
 
-A continuación, se muestra un ejemplo de imagen que muestra las mezclas de exclusión agregadas a un esquema en la interfaz de usuario:
+A continuación, se muestra un ejemplo de imagen que muestra los grupos de campos de exclusión agregados a un esquema en la interfaz de usuario:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-La estructura de cada mezcla, así como una descripción de los campos que contribuyen al esquema, se describen con más detalle en las siguientes secciones.
+La estructura de cada grupo de campos, así como una descripción de los campos que contribuyen al esquema, se describen con más detalle en las siguientes secciones.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-La mezcla [!DNL Profile Privacy] le permite capturar dos tipos de solicitudes de exclusión de CCPA de los clientes:
+El grupo de campos [!DNL Profile Privacy] permite capturar dos tipos de solicitudes de exclusión de CCPA de los clientes:
 
 1. Exclusión general
 2. Exclusión de ventas/uso compartido
 
 ![](images/opt-outs/profile-privacy.png)
 
-La mezcla [!DNL Profile Privacy] contiene los siguientes campos:
+El grupo de campos [!DNL Profile Privacy] contiene los siguientes campos:
 
 - Exclusiones en la privacidad (`privacyOptOuts`): Matriz que contiene una lista de objetos de exclusión.
 - Tipo de exclusión (`optOutType`): Tipo de exclusión. Este campo es una enumeración con dos valores posibles:
@@ -67,15 +67,15 @@ La mezcla [!DNL Profile Privacy] contiene los siguientes campos:
    - Inclusión (`in`): El cliente ha elegido la opción de inclusión.
 - Marca de tiempo de exclusión (`timestamp`): Marca de tiempo de la señal de exclusión recibida.
 
-Para ver la estructura completa de la mezcla [!DNL Profile Privacy], consulte el [repositorio público GitHub XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) o previsualice la mezcla utilizando la interfaz de usuario de Platform.
+Para ver la estructura completa del grupo de campos [!DNL Profile Privacy], consulte el [repositorio público GitHub XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) o previsualice el grupo de campos mediante la interfaz de usuario de Platform.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-La mezcla [!DNL Profile Preferences Details] proporciona varios campos que representan preferencias para perfiles de cliente (como formato de correo electrónico, idioma preferido y zona horaria). Uno de los campos incluidos en esta mezcla, OptInOut (`optInOut`), permite establecer valores de exclusión para canales individuales.
+El grupo de campos [!DNL Profile Preferences Details] proporciona varios campos que representan preferencias para perfiles de clientes (como formato de correo electrónico, idioma preferido y zona horaria). Uno de los campos incluidos en este grupo de campos, OptInOut (`optInOut`), permite establecer valores de exclusión para canales individuales.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-La mezcla [!DNL Profile Preferences Details] contiene los siguientes campos relacionados con las exclusiones:
+El grupo de campos [!DNL Profile Preferences Details] contiene los siguientes campos relacionados con las exclusiones:
 
 - OptInOut (`optInOut`): Objeto donde cada clave representa un URI válido y conocido para un canal de comunicación y el estado activo de la exclusión para cada canal. Cada canal puede tener uno de los cuatro valores posibles:
    - No proporcionado (`not_provided`): No se ha proporcionado una solicitud de exclusión para este canal.
@@ -100,7 +100,7 @@ El ejemplo JSON siguiente destaca cómo el objeto OptInOut puede capturar varias
 }
 ```
 
-Para ver la estructura completa de la mezcla de detalles de preferencias de perfil, visite el [repositorio público GitHub XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) o previsualice la mezcla utilizando la interfaz de usuario [!DNL Platform].
+Para ver la estructura completa del grupo de campos Detalles de preferencias de perfil , visite el [repositorio GitHub público XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) o previsualice el grupo de campos utilizando la interfaz de usuario [!DNL Platform] .
 
 ## Gestión de las exclusiones en la segmentación
 
