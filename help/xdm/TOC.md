@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
-user-guide-description: Utilice clases y mezclas del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
+user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Esquemas
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 21%
+source-wordcount: '291'
+ht-degree: 17%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
    * Modelos de datos del sector {#industries}
-      * [Información general](./schema/industries/overview.md)
+      * Información general de [](./schema/industries/overview.md)
       * [Modelo de datos comerciales ERD](./schema/industries/retail.md)
       * [Modelo de datos de servicios financieros ERD](./schema/industries/financial.md)
       * [Modelo de datos sobre viajes y hospitalidad ERD](./schema/industries/travel-hospitality.md)
@@ -30,18 +30,18 @@ ht-degree: 21%
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Definición del segmento](./classes/segment-definition.md)
-* Mezclas {#mixins}
-   * Mezclas de perfiles {#profile}
-      * [Mapa de identidades](./mixins/profile/identitymap.md)
-      * [Detalles demográficos](./mixins/profile/person-details.md)
-      * [Detalles de contacto personal](./mixins/profile/personal-details.md)
-      * [Privacidad/Personalización/Preferencias de marketing (consentimientos)](./mixins/profile/consents.md)
-      * [Detalles de pertenencia a segmentos](./mixins/profile/segmentation.md)
-      * [Detalles de contacto de trabajo](./mixins/profile/work-details.md)
-   * Mezclas de eventos {#event}
-      * [Detalles del ID de usuario final](./mixins/event/enduserids.md)
-      * [Detalles del entorno](./mixins/event/environment-details.md)
-   * [Mezclar actualizaciones de nombres](./mixins/name-updates.md)
+* Grupos de campos de esquema {#field-groups}
+   * Grupos de campos de perfil {#profile}
+      * [Mapa de identidades](./field-groups/profile/identitymap.md)
+      * [Detalles demográficos](./field-groups/profile/demographic-details.md)
+      * [Detalles de contacto personal](./field-groups/profile/personal-contact-details.md)
+      * [Detalles de pertenencia a segmentos](./field-groups/profile/segmentation.md)
+      * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
+      * [Privacidad/Personalización/Preferencias de marketing (consentimientos)](./field-groups/profile/consents.md)
+   * Grupos de campos de eventos {#event}
+      * [Detalles del ID de usuario final](./field-groups/event/enduserids.md)
+      * [Detalles del entorno](./field-groups/event/environment-details.md)
+   * [Actualizaciones del nombre del grupo de campos](./field-groups/name-updates.md)
 * Tipos de datos {#data-types}
    * [de asistencia al cliente](./data-types/application.md)
    * [Señalización](./data-types/beacon.md)
@@ -76,15 +76,15 @@ ht-degree: 21%
    * [Interacción web](./data-types/web-interactions.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] IU {#ui}
-   * [Información general](./ui/overview.md)
-   * [Explorar recursos XDM](./ui/explore.md)
+   * Información general de [](./ui/overview.md)
+   * [Exploración de recursos XDM](./ui/explore.md)
    * Crear y editar recursos {#resources}
       * [Esquemas](./ui/resources/schemas.md)
       * [Clases](./ui/resources/classes.md)
-      * [Mezclas](./ui/resources/mixins.md)
+      * [Grupos de campo](./ui/resources/field-groups.md)
       * [Tipos de datos](./ui/resources/data-types.md)
    * Definir campos {#fields}
-      * [Información general](./ui/fields/overview.md)
+      * Información general de [](./ui/fields/overview.md)
       * [Campos requeridos](./ui/fields/required.md)
       * [Campos de objeto](./ui/fields/object.md)
       * [Campos de matriz](./ui/fields/array.md)
@@ -99,7 +99,7 @@ ht-degree: 21%
    * [Esquemas](api/schemas.md)
    * [Comportamientos](api/behaviors.md)
    * [Clases](api/classes.md)
-   * [Mezclas](api/mixins.md)
+   * [Grupos de campos de esquema](api/field-groups.md)
    * [Tipos de datos](api/data-types.md)
    * [Descriptores](api/descriptors.md)
    * [Uniones](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 21%
    * [Datos de muestra](api/sample-data.md)
    * [Registro de auditoría](api/audit-log.md)
    * [Esquemas específicos](api/ad-hoc.md)
+   * [Mezclas (obsoletas)](api/mixins.md)
    * [Apéndice](api/appendix.md)
 * Tutoriales {#tutorials}
    * [Creación de un esquema (IU)](tutorials/create-schema-ui.md)
