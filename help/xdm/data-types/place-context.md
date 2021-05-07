@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de contexto de ubicación.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 | `localTime` | DateTime | Marca de tiempo en formato [RFC 3339](https://tools.ietf.org/html/rfc3339), que indica la hora local que se utiliza con un desplazamiento de zona horaria declarado. El patrón de formato es `yyyy-MM-dd'T'HH:mm:ssXXX` (por ejemplo, `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Número entero | El desplazamiento de zona horaria local actual en minutos desde UTC para el valor `localTime`. Esto debería incluir el desplazamiento actual del horario de verano, si corresponde. |
 
-Para obtener más información sobre la mezcla, consulte el repositorio XDM público:
+Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
