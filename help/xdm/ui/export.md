@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Para satisfacer esta necesidad, el espacio de trabajo [!UICONTROL Schemas] en la
 
 >[!NOTE]
 >
->También puede utilizar la API del Registro de esquemas para exportar otros recursos además de esquemas, como clases, mezclas y tipos de datos. Consulte la guía de [export/import endpoints](../api/export-import.md) para obtener más información.
+>También puede utilizar la API del Registro de esquemas para exportar otros recursos además de esquemas, como clases, grupos de campos de esquema y tipos de datos. Consulte la guía de [export/import endpoints](../api/export-import.md) para obtener más información.
 
 ## Requisitos previos
 
@@ -44,9 +44,9 @@ Esto copia una carga útil JSON en el portapapeles, generada según la estructur
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ Esto copia una carga útil JSON en el portapapeles, generada según la estructur
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ Esto copia una carga útil JSON en el portapapeles, generada según la estructur
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ Esto copia una carga útil JSON en el portapapeles, generada según la estructur
 ]
 ```
 
-La carga útil adopta la forma de una matriz, y cada elemento de matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen la mezcla personalizada &quot;[!DNL Loyalty details]&quot; y el esquema &quot;[!DNL Loyalty Members]&quot;. Los recursos principales empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todos los entornos limitados y en las organizaciones de IMS.
+La carga útil adopta la forma de una matriz, y cada elemento de matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen el grupo de campos personalizados &quot;[!DNL Loyalty details]&quot; y el esquema &quot;[!DNL Loyalty Members]&quot;. Los recursos principales empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todos los entornos limitados y en las organizaciones de IMS.
 
 Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se sustituirán automáticamente por el valor de ID de inquilino correspondiente, según el lugar de importación del esquema en el paso siguiente.
 
