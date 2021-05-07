@@ -2,14 +2,14 @@
 keywords: etiquetas de aerolíneas;destino de aerolíneas
 title: Conexión de etiquetas de la aeronave
 description: Transfiera sin problemas los datos de audiencia de Adobe a la nave aérea como etiquetas de audiencia para segmentar dentro de la nave aérea.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1123'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Conexión [!DNL Airship Tags] {#airship-tags-destination}
 
@@ -43,7 +43,7 @@ Antes de poder enviar los segmentos de Adobe Experience Platform a [!DNL Airship
 
 ## Grupos de etiquetas
 
-El concepto de segmentos en Adobe Experience Platform es similar a [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Envío aéreo, con ligeras diferencias en la implementación. Esta integración asigna el estado de la pertenencia de un usuario [en un segmento de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) a la presencia o no presencia de una etiqueta [!DNL Airship]. Por ejemplo, en un segmento de Platform en el que `xdm:status` cambia a `realized`, la etiqueta se agrega al canal [!DNL Airship] o al usuario asignado a este perfil. Si el `xdm:status` cambia a `exited`, la etiqueta se elimina.
+El concepto de segmentos en Adobe Experience Platform es similar a [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Envío aéreo, con ligeras diferencias en la implementación. Esta integración asigna el estado de la pertenencia de un usuario [en un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de una etiqueta [!DNL Airship]. Por ejemplo, en un segmento de Platform en el que `xdm:status` cambia a `realized`, la etiqueta se agrega al canal [!DNL Airship] o al usuario asignado a este perfil. Si el `xdm:status` cambia a `exited`, la etiqueta se elimina.
 
 Para habilitar esta integración, cree un *grupo de etiquetas* en [!DNL Airship] con el nombre `adobe-segments`.
 
@@ -157,4 +157,3 @@ Si no se ha detectado ninguna infracción de directiva, seleccione **[!UICONTROL
 ## Administración y uso de datos {#data-usage-governance}
 
 Todos los destinos [!DNL Adobe Experience Platform] cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte [Información general sobre el control de datos](../../../data-governance/home.md).
-
