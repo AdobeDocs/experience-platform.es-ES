@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Aprenda a configurar sus operaciones de datos y esquemas para transmitir las opciones de consentimiento del cliente al activar segmentos en destinos en Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2466'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Los datos de consentimiento del cliente deben enviarse a conjuntos de datos cuyo
 
 Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para recopilar datos de consentimiento, debe asegurarse de que las políticas de combinación se hayan configurado para incluir siempre campos de consentimiento TCF en sus perfiles de cliente. Esto implica establecer la prioridad del conjunto de datos para que el conjunto de datos de consentimiento tenga prioridad sobre otros conjuntos de datos potencialmente conflictivos.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyan todos los atributos de consentimiento requeridos que proporciona la [XDM privacy mixin](./dataset.md#privacy-mixin), tal como se describe en la guía sobre la preparación del conjunto de datos.
+Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyen todos los atributos de consentimiento requeridos proporcionados por el grupo de campos [XDM privacy schema](./dataset.md#privacy-field-group), tal como se describe en la guía sobre la preparación del conjunto de datos.
 
 ## Integración del SDK web del Experience Platform para recopilar datos de consentimiento del cliente {#sdk}
 
@@ -196,7 +196,7 @@ También puede recopilar datos de consentimiento TCF 2.0 en cada evento activado
 
 >[!NOTE]
 >
->Para utilizar este método, debe haber agregado el [!DNL Experience Event Privacy mixin] al esquema [!DNL Profile] habilitado para [!DNL XDM ExperienceEvent]. Consulte la sección sobre la [actualización del esquema ExperienceEvent](./dataset.md#event-schema) en la guía de preparación del conjunto de datos para ver los pasos para configurarlo.
+>Para utilizar este método, debe haber agregado el grupo de campos Privacidad del evento de experiencia al esquema [!DNL Profile] habilitado [!DNL XDM ExperienceEvent]. Consulte la sección sobre la [actualización del esquema ExperienceEvent](./dataset.md#event-schema) en la guía de preparación del conjunto de datos para ver los pasos para configurarlo.
 
 El comando `sendEvent` debe utilizarse como una rellamada en los detectores de eventos adecuados del sitio web. El comando espera dos argumentos: (1) una cadena que indica el tipo de comando (en este caso, `sendEvent`) y (2) una carga que contiene un objeto `xdm` que proporciona los campos de consentimiento requeridos como JSON:
 
