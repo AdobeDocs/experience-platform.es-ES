@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;esquema;enumeración;mezcla;mezclas;mezclas;tipo de datos;tipos de datos;tipos de datos;tipo de datos;identidad principal;identidad principal;perfil individual XDM;campos XDM;tipo de datos enum;evento de experiencia;evento de experiencia XDM;evento de experiencia XDM;evento de experiencia;evento de experiencias;evento de experiencias XDM;evento de experiencias XDM;clase;clases Clases;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
+keywords: Experience Platform;inicio;temas populares;esquema;esquema;enumeración;mezcla;grupo de campos;grupos de campos;mezclas;tipo de datos;tipos de datos;tipos de datos;tipo de datos;identidad principal;perfil individual XDM;campos XDM;tipo de datos enum;evento de experiencia;evento de experiencia XDM;evento de experiencia XDM;evento de experiencias;evento de experiencias XDM;evento de experiencias XDM;clase;clases Clases;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;mapa de identidad;mapa de identidad;mapa de identidad;diseño de esquema;mapa;mapa;esquema de unión;unión
 solution: Experience Platform
 title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3497'
 ht-degree: 0%
 
 ---
@@ -123,49 +123,49 @@ Para poder introducir datos en [!DNL Experience Platform], primero debe crearse 
 
 Los esquemas se componen con la siguiente fórmula:
 
-**Clase + Mixin&amp;ast; = Esquema XDM**
+**Clase + Grupo de campos de esquema&amp;ast; = Esquema XDM**
 
-&amp;ast;A schema está compuesto por una clase y cero o más mezclas. Esto significa que puede componer un esquema de conjunto de datos sin usar mezclas en absoluto.
+&amp;ast;A schema está compuesto por una clase y cero o más grupos de campos de esquema. Esto significa que puede componer un esquema de conjunto de datos sin usar grupos de campos en absoluto.
 
 ### Clase {#class}
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además de esto, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían para incluir y proporcionar una forma de combinar varios conjuntos de datos compatibles.
 
-La clase de un esquema determina qué mezclas pueden utilizarse en ese esquema. Esto se analiza con más detalle en la [siguiente sección](#mixin).
+La clase de un esquema determina qué grupos de campos pueden utilizarse en ese esquema. Esto se analiza con más detalle en la [siguiente sección](#field-group).
 
 Adobe proporciona varias clases XDM estándar (&quot;core&quot;). Se requieren dos de estas clases, [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent], para casi todos los procesos de Platform descendentes. Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización. Las clases personalizadas las define una organización cuando no hay clases principales definidas por el Adobe disponibles para describir un caso de uso único.
 
-La siguiente captura de pantalla muestra cómo se representan las clases en la interfaz de usuario de Platform. Dado que el esquema de ejemplo mostrado no contiene ninguna mezcla, la clase del esquema ([!UICONTROL XDM Individual Profile]) proporciona todos los campos mostrados.
+La siguiente captura de pantalla muestra cómo se representan las clases en la interfaz de usuario de Platform. Dado que el esquema de ejemplo mostrado no contiene ningún grupo de campos, la clase del esquema ([!UICONTROL XDM Individual Profile]) proporciona todos los campos mostrados.
 
 ![](../images/schema-composition/class.png)
 
 Para obtener la lista más actualizada de las clases XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
-### Mixin {#mixin}
+### Grupo de campos {#field-group}
 
-Una mezcla es un componente reutilizable que define uno o más campos que implementan ciertas funciones, como detalles personales, preferencias de hotel o dirección. Las mezclas están pensadas para incluirse como parte de un esquema que implemente una clase compatible.
+Un grupo de campos es un componente reutilizable que define uno o más campos que implementan ciertas funciones, como detalles personales, preferencias de hotel o dirección. Los grupos de campos están pensados para incluirse como parte de un esquema que implemente una clase compatible.
 
-Las mezclas definen con qué clases son compatibles en función del comportamiento de los datos que representan (registro o serie temporal). Esto significa que no todas las mezclas están disponibles para su uso con todas las clases.
+Los grupos de campos definen con qué clases son compatibles en función del comportamiento de los datos que representan (registro o serie temporal). Esto significa que no todos los grupos de campos están disponibles para su uso con todas las clases.
 
-[!DNL Experience Platform] incluye muchas mezclas de Adobe estándar, al tiempo que permite a los proveedores definir mezclas para sus usuarios, y a los usuarios individuales definir mezclas para sus propios conceptos específicos.
+[!DNL Experience Platform] incluye muchos grupos de campos de Adobe estándar, al mismo tiempo que permite a los proveedores definir grupos de campos para los usuarios, y a los usuarios individuales definir grupos de campos para sus propios conceptos específicos.
 
-Por ejemplo, para capturar detalles como &quot;[!UICONTROL First Name]&quot; y &quot;[!UICONTROL Home Address]&quot; para su esquema &quot;[!UICONTROL Loyalty Members]&quot;, podría usar mezclas estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Loyalty Program Level]&quot;) no suelen tener una mezcla predefinida. En este caso, debe definir su propia mezcla para capturar esta información.
+Por ejemplo, para capturar detalles como &quot;[!UICONTROL First Name]&quot; y &quot;[!UICONTROL Home Address]&quot; para el esquema &quot;[!UICONTROL Loyalty Members]&quot;, podría utilizar grupos de campos estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Loyalty Program Level]&quot;) no suelen tener un grupo de campos predefinido. En este caso, debe definir su propio grupo de campos para capturar esta información.
 
-Recuerde que los esquemas están compuestos de &quot;cero o más&quot; mezclas, lo que significa que puede componer un esquema válido sin usar ninguna mezcla.
+Recuerde que los esquemas están compuestos de &quot;cero o más&quot; grupos de campos, por lo que esto significa que puede componer un esquema válido sin utilizar ningún grupo de campos.
 
-La siguiente captura de pantalla muestra cómo se representan las mezclas en la interfaz de usuario de Platform. En este ejemplo se agrega una sola mezcla ([!UICONTROL Demographic Details]) a un esquema, que proporciona una agrupación de campos a la estructura del esquema.
+La siguiente captura de pantalla muestra cómo se representan los grupos de campos en la interfaz de usuario de Platform. En este ejemplo se agrega un solo grupo de campos ([!UICONTROL Demographic Details]) a un esquema, que proporciona una agrupación de campos a la estructura del esquema.
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
-Para obtener la lista más actualizada de mezclas XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
+Para obtener la lista más actualizada de los grupos de campos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/mixins). También puede consultar la guía sobre [exploración de los componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
 ### Tipo de datos {#data-type}
 
-Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que una mezcla, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que una mezcla, ya que un tipo de datos se puede incluir en cualquier parte de un esquema al agregarlo como el &quot;tipo de datos&quot; de un campo.
+Los tipos de datos se utilizan como tipos de campos de referencia en clases o esquemas del mismo modo que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos. Al igual que un grupo de campos, un tipo de datos permite el uso coherente de una estructura de varios campos, pero tiene más flexibilidad que un grupo de campos, ya que un tipo de datos se puede incluir en cualquier parte de un esquema al agregarlo como el &quot;tipo de datos&quot; de un campo.
 
 [!DNL Experience Platform] proporciona varios tipos de datos comunes como parte de  [!DNL Schema Registry] para admitir el uso de patrones estándar para describir estructuras de datos comunes. Esto se explica con más detalle en los tutoriales de [!DNL Schema Registry], donde se aclarará a medida que avance por los pasos para definir los tipos de datos.
 
-La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por la mezcla [!UICONTROL Demographic Details] utiliza el tipo de datos &quot;[!UICONTROL Person name]&quot;, como se indica con el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
+La siguiente captura de pantalla muestra cómo se representan los tipos de datos en la interfaz de usuario de Platform. Uno de los campos proporcionados por el grupo de campos [!UICONTROL Demographic Details] utiliza el tipo de datos &quot;[!UICONTROL Person name]&quot;, como se indica con el texto que sigue al carácter de barra vertical (`|`) junto al nombre del campo. Este tipo de datos concreto proporciona varios subcampos relacionados con el nombre de una persona individual, una construcción que puede reutilizarse para otros campos en los que es necesario capturar el nombre de una persona.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -220,13 +220,13 @@ Consulte el [diccionario de campos XDM](field-dictionary.md) para obtener una li
 
 ## Ejemplo de composición
 
-Los esquemas representan el formato y la estructura de los datos que se incorporarán en [!DNL Platform] y se crean mediante un modelo de composición. Como se ha mencionado anteriormente, estos esquemas están compuestos por una clase y cero o más mezclas compatibles con esa clase.
+Los esquemas representan el formato y la estructura de los datos que se incorporarán en [!DNL Platform] y se crean mediante un modelo de composición. Como se ha mencionado anteriormente, estos esquemas están compuestos por una clase y cero o más grupos de campos compatibles con esa clase.
 
-Por ejemplo, un esquema que describa las compras realizadas en una tienda minorista podría llamarse &quot;[!UICONTROL Store Transactions]&quot;. El esquema implementa la clase [!DNL XDM ExperienceEvent] combinada con la mezcla estándar [!UICONTROL Commerce] y una mezcla [!UICONTROL Product Info] definida por el usuario.
+Por ejemplo, un esquema que describa las compras realizadas en una tienda minorista podría llamarse &quot;[!UICONTROL Store Transactions]&quot;. El esquema implementa la clase [!DNL XDM ExperienceEvent] combinada con el grupo de campos estándar [!UICONTROL Commerce] y un grupo de campos definido por el usuario [!UICONTROL Product Info].
 
-Otro esquema que rastrea el tráfico del sitio web puede llamarse &quot;[!UICONTROL Web Visits]&quot;. También implementa la clase [!DNL XDM ExperienceEvent], pero esta vez combina la mezcla estándar [!UICONTROL Web].
+Otro esquema que rastrea el tráfico del sitio web puede llamarse &quot;[!UICONTROL Web Visits]&quot;. También implementa la clase [!DNL XDM ExperienceEvent], pero esta vez combina el grupo de campos estándar [!UICONTROL Web].
 
-El diagrama siguiente muestra estos esquemas y los campos contribuidos por cada mezcla. También contiene dos esquemas basados en la clase [!DNL XDM Individual Profile], incluido el esquema &quot;[!UICONTROL Loyalty Members]&quot; mencionado anteriormente en esta guía.
+El diagrama siguiente muestra estos esquemas y los campos contribuidos por cada grupo de campos. También contiene dos esquemas basados en la clase [!DNL XDM Individual Profile], incluido el esquema &quot;[!UICONTROL Loyalty Members]&quot; mencionado anteriormente en esta guía.
 
 ![](../images/schema-composition/composition.png)
 
@@ -249,18 +249,18 @@ Todos los archivos de datos que se incorporan en [!DNL Experience Platform] debe
 Si va a introducir segmentos de sistemas externos en Platform, debe utilizar los siguientes componentes para capturarlos en los esquemas:
 
 * [[!UICONTROL Segment definition] Clase](../classes/segment-definition.md): Utilice esta clase estándar para capturar los atributos clave de una definición de segmento externa.
-* [[!UICONTROL Segment Membership Details] mezcla](../mixins/profile/segmentation.md): Añada esta mezcla al  [!UICONTROL XDM Individual Profile] esquema para asociar perfiles de cliente con segmentos específicos.
+* [[!UICONTROL Segment Membership Details] grupo de campos](../field-groups/profile/segmentation.md): Añada este grupo de campos al  [!UICONTROL XDM Individual Profile] esquema para asociar perfiles de clientes con segmentos específicos.
 
 ## Pasos siguientes
 
 Ahora que comprende los conceptos básicos de la composición del esquema, está listo para empezar a explorar y crear esquemas con [!DNL Schema Registry].
 
-Para revisar la estructura de las dos clases XDM principales y sus mezclas compatibles de uso común, consulte la siguiente documentación de referencia:
+Para revisar la estructura de las dos clases XDM principales y sus grupos de campos compatibles de uso común, consulte la siguiente documentación de referencia:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro de Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la cual se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobes, recursos del proveedor definidos por socios [!DNL Experience Platform] y clases, mezclas, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
+El [!DNL Schema Registry] se utiliza para acceder al [!DNL Schema Library] dentro de Adobe Experience Platform y proporciona una interfaz de usuario y una API RESTful desde la cual se puede acceder a todos los recursos de biblioteca disponibles. El [!DNL Schema Library] contiene recursos del sector definidos por Adobes, recursos del proveedor definidos por socios [!DNL Experience Platform] y clases, grupos de campos, tipos de datos y esquemas que han sido compuestos por miembros de su organización.
 
 Para empezar a componer el esquema mediante la interfaz de usuario, siga el tutorial [Editor de esquemas](../tutorials/create-schema-ui.md) para crear el esquema &quot;Miembros de lealtad&quot; mencionado en este documento.
 
