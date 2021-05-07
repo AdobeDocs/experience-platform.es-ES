@@ -5,16 +5,16 @@ title: Punto final de la API de tipos de datos
 description: El extremo /datatypes de la API del Registro de esquemas le permite administrar mediante programación los tipos de datos XDM dentro de la aplicación de experiencia.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
 
 # Punto de conexión de tipos de datos
 
-Los tipos de datos se utilizan como campos de referencia en clases o mezclas de la misma manera que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a las mezclas en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque pueden incluirse en cualquier lugar de la estructura del esquema, mientras que las mezclas sólo pueden agregarse en el nivel raíz. El extremo `/datatypes` de la API [!DNL Schema Registry] le permite administrar mediante programación los tipos de datos dentro de la aplicación de experiencia.
+Los tipos de datos se utilizan como campos de referencia en clases o grupos de campos de esquema del mismo modo que los campos literales básicos; la diferencia clave es que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden agregar en el nivel raíz. El extremo `/datatypes` de la API [!DNL Schema Registry] le permite administrar mediante programación los tipos de datos dentro de la aplicación de experiencia.
 
 ## Primeros pasos
 
