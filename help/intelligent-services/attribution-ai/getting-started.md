@@ -6,7 +6,7 @@ topic-legacy: Getting started
 description: Las siguientes guías requieren comprender los distintos servicios de Adobe Experience Platform implicados en el uso de Attribution AI. Antes de comenzar los tutoriales, revise los siguientes documentos.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Las siguientes guías requieren comprender los distintos servicios [!DNL Adobe E
 - [Aspectos básicos de la composición](../../xdm/schema/composition.md) del esquema: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en  [!DNL Adobe Experience Platform].
 - [Creación de esquemas](../../xdm/tutorials/create-schema-ui.md): Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 
-Attribution AI requiere que los conjuntos de datos se ajusten al esquema de Eventos de experiencias del consumidor (EEC), que es una mezcla en el [Modelo de datos de experiencia](../../xdm/home.md) (XDM). Póngase en contacto con el servicio de asistencia al Adobe en attributionai-support@adobe.com para implementar o realizar cambios en estos datos. Si los datos de gasto de medios están presentes, puede realizar más análisis, como ingresos incrementales y ROI. Si los datos de perfil del cliente están disponibles, puede atribuir créditos al nivel de perfil del cliente.
+Attribution AI requiere que los conjuntos de datos se ajusten al esquema de Eventos de experiencias del consumidor (EEC), que es un grupo de campos de esquema [Modelo de datos de experiencia (XDM)](../../xdm/home.md) . Póngase en contacto con el servicio de asistencia al Adobe en attributionai-support@adobe.com para implementar o realizar cambios en estos datos. Si los datos de gasto de medios están presentes, puede realizar más análisis, como ingresos incrementales y ROI. Si los datos de perfil del cliente están disponibles, puede atribuir créditos al nivel de perfil del cliente.
 
 ## Terminología
 
