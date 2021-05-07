@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;esquema;combinación;mezcla;mezclas;mezclas;tipo de datos;tipos de datos;tipo de datos;tipo de datos;diseño de esquema;tipo de datos;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;diseño de esquema;mapa;mapa;
+keywords: Experience Platform;inicio;temas populares;esquema;esquema;grupo de campos;grupo de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;tipo de datos;diseño de esquema;tipo de datos;tipo de datos;tipo de datos;esquemas;esquemas;diseño de esquema;mapa;mapa;
 solution: Experience Platform
 title: Restricciones de tipo de campo XDM
 topic-legacy: overview
 description: Una referencia para restricciones de tipo de campo en Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ En los esquemas del Modelo de datos de experiencia (XDM), el tipo de campo limit
 
 ## Primeros pasos
 
-Antes de utilizar esta guía, revise los [conceptos básicos de la composición del esquema](./composition.md) para obtener una introducción a los esquemas, clases y mezclas XDM.
+Antes de utilizar esta guía, revise los [conceptos básicos de la composición del esquema](./composition.md) para obtener una introducción a los esquemas XDM, las clases y los grupos de campos de esquema.
 
-Si planea definir sus propios tipos de campo en la API, se recomienda encarecidamente que comience con la [Guía para desarrolladores del Registro de Esquemas](../api/getting-started.md) para aprender a crear mezclas y tipos de datos en los que incluir sus campos personalizados. Si utiliza la IU de Experience Platform para crear sus esquemas, consulte la guía sobre la [definición de campos en la IU](../ui/fields/overview.md) para aprender a implementar restricciones en campos que define dentro de mezclas personalizadas y tipos de datos.
+Si planea definir sus propios tipos de campo en la API, se recomienda encarecidamente que comience con la [guía para desarrolladores del Registro de esquemas](../api/getting-started.md) para aprender a crear grupos de campos y tipos de datos para incluir los campos personalizados en. Si utiliza la IU de Experience Platform para crear sus esquemas, consulte la guía sobre la [definición de campos en la IU](../ui/fields/overview.md) para aprender a implementar restricciones en campos que defina dentro de grupos de campos personalizados y tipos de datos.
 
 ## Estructura base y ejemplos
 
@@ -214,7 +214,7 @@ Todos los campos XDM se definen utilizando las restricciones estándar [JSON Sch
 
 En la tabla siguiente se describe el formato adecuado para definir distintos tipos de campos, incluidos los que tienen propiedades opcionales. Encontrará más información sobre propiedades opcionales y palabras clave específicas del tipo en la [documentación del esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Para empezar, busque el tipo de campo deseado y utilice el código de muestra proporcionado para crear su solicitud de API para [crear una mezcla](../api/mixins.md#create) o [crear un tipo de datos](../api/data-types.md#create).
+Para empezar, busque el tipo de campo deseado y utilice el código de ejemplo proporcionado para crear la solicitud de API para [crear un grupo de campos](../api/field-groups.md#create) o [crear un tipo de datos](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
