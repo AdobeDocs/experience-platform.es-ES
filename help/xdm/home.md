@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. Experience Data Model (XDM), impulsado por el Adobe, es un esfuerzo por estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->El término &quot;mixin&quot; se ha actualizado a &quot;grupo de campos de esquema&quot; para promover la comprensión. Los grupos de campos son un conjunto de campos reutilizables para admitir casos de uso empresarial. Este cambio ahora se refleja en la API del Registro de esquemas, la interfaz de usuario de Adobe Experience Platform y en toda la documentación de Platform.
+>El término &quot;mixin&quot; se ha actualizado al esquema &quot;grupo de campos&quot; para promover la comprensión. Los grupos de campos son un conjunto de campos reutilizables para admitir casos de uso empresarial. Este cambio ahora se refleja en la API del Registro de esquemas, la interfaz de usuario de Adobe Experience Platform y en toda la documentación de Platform.
 
 La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
