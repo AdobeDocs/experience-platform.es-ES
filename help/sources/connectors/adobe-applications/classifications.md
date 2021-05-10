@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Conector de datos de clasificaciones de Adobe Analytics
+keywords: Experience Platform;inicio;temas populares;Conector de origen de clasificaciones de Adobe Analytics
 solution: Experience Platform
 title: Conector de origen de Adobe Analytics para datos de clasificaciones
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar clasificaciones de Analytics a la plataforma mediante la interfaz de usuario
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
