@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes o estructuras y etiquete y mejore los datos ingestados.
 feature: Ingesta de datos, fuentes
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 12%
+source-wordcount: '612'
+ht-degree: 13%
 
 ---
 
@@ -18,10 +18,10 @@ ht-degree: 12%
 - [Información general sobre conectores de origen](home.md)
 - Conectores de origen disponibles {#connectors}
    - Aplicaciones de Adobe {#adobe-applications}
-      - [Conector de datos de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
-      - [Conector de datos de Analytics](connectors/adobe-applications/analytics.md)
-      - [Conector del Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Conector de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Conector de origen de las clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
+      - [Conector de origen de Analytics](connectors/adobe-applications/analytics.md)
+      - [Conector de origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Conector de origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - Asignaciones de campos de aplicación de Adobe {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
