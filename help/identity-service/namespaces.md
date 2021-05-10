@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 3%
+source-wordcount: '1526'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes,
 
 ### Tipos de identidad
 
-Los datos se pueden identificar mediante varios tipos de identidad diferentes. El tipo de identidad se especifica en el momento en que se crea el área de nombres de identidad y controla si los datos se mantienen en el gráfico de identidad y cualquier instrucción especial para cómo se deben administrar esos datos.
+Los datos se pueden identificar mediante varios tipos de identidad diferentes. El tipo de identidad se especifica en el momento en que se crea el área de nombres de identidad y controla si los datos se mantienen en el gráfico de identidad y cualquier instrucción especial para cómo se deben administrar esos datos. Todos los tipos de identidad excepto **Non-people identifier** siguen el mismo comportamiento de vinculación de un área de nombres y su valor de ID correspondiente a un clúster de gráficos de identidad. Los datos no se vinculan entre sí al utilizar **Non-people identifier**.
 
 Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 
@@ -92,7 +92,9 @@ Para crear un área de nombres personalizada mediante la interfaz de usuario, va
 
 ![](./images/create.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Create identity namespace]**. Proporcione un **[!UICONTROL Display name]** y **[!UICONTROL Identity symbol]** únicos y luego seleccione el tipo de identidad que desee crear. También puede agregar una descripción opcional para obtener más información sobre el área de nombres. Cuando termine, seleccione **[!UICONTROL Create]**.
+Aparece el cuadro de diálogo **[!UICONTROL Create identity namespace]**. Proporcione un **[!UICONTROL Display name]** y **[!UICONTROL Identity symbol]** únicos y luego seleccione el tipo de identidad que desee crear. También puede agregar una descripción opcional para obtener más información sobre el área de nombres. Todos los tipos de identidad excepto **Non-people identifier** siguen el mismo comportamiento de vinculación. Si selecciona **Non-people identifier** como tipo de identidad al crear un área de nombres, la vinculación no se produce. Para obtener información específica sobre cada tipo de identidad, consulte la tabla de [tipos de identidad](#identity-types).
+
+Cuando termine, seleccione **[!UICONTROL Create]**.
 
 >[!IMPORTANT]
 >
