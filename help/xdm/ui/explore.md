@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ La opción **[!UICONTROL Included in Profile]** le permite filtrar los resultado
 También puede utilizar la barra de búsqueda para reducir aún más los resultados. Al buscar un término, los elementos principales representan recursos cuyos nombres coinciden con la consulta de búsqueda. Debajo de estos elementos, en **[!UICONTROL Standard Fields]**, se enumerarán todos los recursos que contengan campos que coincidan con la consulta. Esto le permite buscar recursos XDM en función del tipo de datos que contienen, sin tener que saber previamente el nombre del recurso.
 
 ![](../images/ui/explore/search.png)
+
+Los recursos mostrados en los resultados de búsqueda se ordenan primero por coincidencias de título y, a continuación, por coincidencias de descripción. A su vez, cuantas más coincidencias de palabras haya en cualquiera de estas categorías, más alto aparecerá el recurso en la lista.
+
+>[!NOTE]
+>
+>Para los recursos XDM estándar, la función de búsqueda solo devuelve campos individuales que contienen un espacio de nombres `xdm`. Los campos que se encuentran en un área de nombres diferente (como su ID de inquilino) solo se devuelven si están contenidos en un recurso personalizado.
 
 Cuando encuentre el recurso que desea explorar, seleccione su nombre en la lista para ver su estructura en el lienzo.
 
@@ -100,7 +106,7 @@ Los campos de relación también se resaltan de forma única en el lienzo, mostr
 
 >[!NOTE]
 >
->Consulte el tutorial sobre la [creación de una relación en la interfaz de usuario](../tutorials/create-schema-ui.md) para obtener más información sobre el uso de relaciones en esquemas XDM.
+>Consulte el tutorial sobre la [creación de una relación en la interfaz de usuario](../tutorials/relationship-ui.md) para obtener más información sobre el uso de relaciones en esquemas XDM.
 
 ## Pasos siguientes
 
