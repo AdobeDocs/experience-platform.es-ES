@@ -1,39 +1,39 @@
 ---
-title: Uso de Offer decisioning con el SDK web de plataforma
+title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
-keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;enviar ofertas;envío de oferta;personalización de oferta;
+keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;entrega de ofertas;entrega de ofertas;personalización de ofertas;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 9%
 
 ---
 
-
-# Uso de Offer decisioning con el SDK web de plataforma
+# Uso del Offer decisioning con el SDK web de Platform
 
 >[!NOTE]
 >
->El uso de Offer decisioning en Adobe Experience Platform Web SDK está actualmente disponible en el acceso anticipado a determinados usuarios. Esta funcionalidad no está disponible para todas las organizaciones de IMS.
+>El uso de Offer decisioning en el SDK web de Adobe Experience Platform está disponible actualmente en acceso anticipado para determinados usuarios. Esta funcionalidad no está disponible para todas las organizaciones de IMS.
 
 Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas personalizadas que se administran en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer decisioning.
 
 ## Requisitos previos
 
-* La organización de IMS está habilitada para la toma de decisiones de Edge
-* Ofertas, Actividades creadas
+* La organización IMS está habilitada para la toma de decisiones de Edge
+* Ofertas, actividades creadas
 * La configuración de Edge está publicada
 
 ## Terminología
 
-Es importante comprender la siguiente terminología al trabajar con Offer decisioning. Para obtener más información y vista de términos adicionales, visite el [glosario de Offers decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Es importante comprender la siguiente terminología al trabajar con Offer decisioning. Para obtener más información y ver términos adicionales, visite el [glosario del Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Contenedor:** Un contenedor es un mecanismo de aislamiento para mantener diferentes preocupaciones. El ID de contenedor es el primer elemento de ruta para todas las API de repositorio. Todos los objetos de decisión residen en un contenedor.
+* **Contenedor:** un contenedor es un mecanismo de aislamiento para mantener separadas diferentes preocupaciones. El ID de contenedor es el primer elemento de ruta para todas las API de repositorio. Todos los objetos de decisión residen dentro de un contenedor.
 
-* **Ámbitos de decisión:** para Offer decisioning, son las cadenas codificadas Base64 de JSON que contienen los ID de actividad y colocación que desea que utilice el servicio de offer decisioning para proponer ofertas.
+* **Ámbitos de decisión:** Para Offer decisioning, estas son las cadenas codificadas Base64 de JSON que contienen los ID de actividad y ubicación que desea que utilice el servicio de offer decisioning para proponer ofertas.
 
-   *Ámbito de decisión JSON:*
+   *Ámbito de la decisión JSON:*
 
    ```json
    {
@@ -42,7 +42,7 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
    }
    ```
 
-   *Cadena con codificación Base64 del ámbito de decisión:*
+   *Alcance de la decisión Cadena codificada Base64:*
 
    ```json
    "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
@@ -50,22 +50,22 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
    >[!TIP]
    >
-   >Puede copiar el valor del ámbito de decisión de la página **Información general de Actividad** en la interfaz de usuario.
+   >Puede copiar el valor del ámbito de decisión de la página **Información general de actividad** en la interfaz de usuario.
 
    ![](assets/decision-scope-copy.png)
 
-* **Configuración de Edge:** para obtener más información, lea la documentación de  [Edge ](../../fundamentals/edge-configuration.md) Configuration.
+* **Configuración de Edge:** para obtener más información, consulte la documentación de  [configuración ](../../fundamentals/edge-configuration.md) de Edge.
 
-* **Identidad**: Para obtener más información, lea esta documentación en la que se describe cómo  [Platform Web SDK aprovecha Identity Service](../../identity/overview.md).
+* **Identidad**: Para obtener más información, consulte esta documentación que describe cómo el SDK web de  [Platform aprovecha el servicio](../../identity/overview.md) de identidad.
 
-## Habilitar Offer decisioning
+## Activación del Offer decisioning
 
-Para habilitar Offer decisioning, debe realizar los siguientes pasos:
+Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
 
-1. Se habilitó Adobe Experience Platform en la [configuración de Edge](../../fundamentals/edge-configuration.md) y se marcó la casilla &quot;Offer decisioning&quot;
-   ![oferta-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (el SDK se puede instalar de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/intro/get-started/quick-start.html)).
-3. [Configure el ](../../fundamentals/configuring-the-sdk.md) SDK para Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
+1. Se ha habilitado Adobe Experience Platform en la [configuración de Edge](../../fundamentals/edge-configuration.md) y marque la casilla &quot;Offer decisioning&quot;
+   ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
+2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK puede instalarse de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/intro/get-started/quick-start.html)).
+3. [Configure el ](../../fundamentals/configuring-the-sdk.md) SDK para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
    * SDK instalado de forma independiente
       1. Configure la acción &quot;sendEvent&quot; con su `decisionScopes`
 
@@ -78,24 +78,26 @@ Para habilitar Offer decisioning, debe realizar los siguientes pasos:
           ]
       })
       ```
+
    * SDK instalado de platform launch
-      1. [Creación de una propiedad de Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/companies-and-properties.html)
+      1. [Crear una propiedad de Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/companies-and-properties.html)
       2. [Añadir el código incrustado de Platform launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Instale y configure la extensión del SDK web de plataforma con la configuración de Edge que acaba de crear seleccionando la configuración en la lista desplegable &quot;Configuración de Edge&quot;. Documentación útil sobre [extensiones](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Instale y configure la extensión del SDK web de Platform con la configuración de Edge que acaba de crear seleccionando la configuración en la lista desplegable &quot;Configuración de Edge&quot;. Documentación útil sobre [extensiones](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Cree los [elementos de datos](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html) necesarios. Como mínimo, deberá crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma.
+      4. Cree los [Elementos de datos](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html) necesarios. Como mínimo, deberá crear un mapa de identidad del SDK web de plataforma y un elemento de datos del objeto XDM del SDK web de plataforma .
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
-      5. Cree sus [reglas](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
-         * Añadir una acción de Evento de envío de SDK web de plataforma y agregar el `decisionScopes` relevante a la configuración de esa acción
-            ![send-evento-action-decisionsScopes](./assets/send-event-action-decisionScopes.png)
+      5. Cree sus [Reglas](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
+         * Añada una acción de Platform Web SDK Send Event y añada el `decisionScopes` correspondiente a la configuración de esa acción
+            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [Cree y publique una ](https://docs.adobe.com/content/help/es-ES/launch/using/reference/publish/libraries.html) biblioteca que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
 
 
-## Solicitudes y respuestas de muestra
+
+## Solicitudes y respuestas de ejemplo
 
 ### Un valor `decisionScopes`
 
@@ -129,7 +131,7 @@ Para habilitar Offer decisioning, debe realizar los siguientes pasos:
 | Propiedad | Requerido | Descripción | Límites | Ejemplo |
 |---|---|---|---|---|
 | `identityMap` | Sí | Consulte esta [documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Sí | Matriz de cadenas codificadas Base64 de JSON que contiene los ID de actividad y colocación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `decisionScopes` | Sí | Matriz de cadenas codificadas Base64 de JSON que contienen los ID de actividad y ubicación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Respuesta**
 
@@ -180,14 +182,14 @@ Para habilitar Offer decisioning, debe realizar los siguientes pasos:
 
 | Propiedad | Descripción | Ejemplo |
 |---|---|---|
-| `scope` | El alcance de la decisión que dio lugar a las ofertas propuestas. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `scope` | El ámbito de decisión que dio lugar a las ofertas propuestas. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
 | `activity.id` | ID exclusivo de la actividad de oferta. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | ID única de la ubicación de la oferta. | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id` | ID de la oferta propuesta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `schema` | Esquema del contenido asociado a la oferta propuesta. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | ID de la oferta propuesta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `format` | Formato del contenido asociado con la oferta propuesta. | `"format": "text/html"` |
-| `language` | Una matriz de idiomas asociados con el contenido de la oferta propuesta. | `"language": [ "en-US" ]` |
+| `placement.id` | ID exclusivo de la ubicación de la oferta. | `"id": "xcore:offer-placement:1175009612b0100c"` |
+| `items.id` | El ID de la oferta propuesta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `schema` | Esquema del contenido asociado con la oferta propuesta. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
+| `data.id` | El ID de la oferta propuesta. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `format` | El formato del contenido asociado con la oferta propuesta. | `"format": "text/html"` |
+| `language` | Matriz de idiomas asociados al contenido de la oferta propuesta. | `"language": [ "en-US" ]` |
 | `content` | Contenido asociado con la oferta propuesta en formato de cadena. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenido de imagen asociado con la oferta propuesta en formato de URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Características asociadas con la oferta propuesta en el formato de un objeto JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
@@ -226,7 +228,7 @@ Para habilitar Offer decisioning, debe realizar los siguientes pasos:
 | Propiedad | Requerido | Descripción | Límites | Ejemplo |
 |---|---|---|---|---|
 | `identityMap` | Sí | Consulte esta [documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Sí | Matriz de cadenas codificadas Base64 de JSON que contiene los ID de actividad y colocación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `decisionScopes` | Sí | Matriz de cadenas codificadas Base64 de JSON que contienen los ID de actividad y ubicación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **Respuesta**
 
@@ -307,14 +309,14 @@ Para habilitar Offer decisioning, debe realizar los siguientes pasos:
 
 | Propiedad | Descripción | Ejemplo |
 |---|---|---|
-| `scope` | El alcance de la decisión que dio lugar a las ofertas propuestas. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `scope` | El ámbito de decisión que dio lugar a las ofertas propuestas. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
 | `activity.id` | ID exclusivo de la actividad de oferta. | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
-| `placement.id` | ID única de la ubicación de la oferta. | `"xcore:offer-placement:1175009612b01123"` |
-| `items.id` | ID de la oferta propuesta. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
-| `schema` | Esquema del contenido asociado a la oferta propuesta. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"` |
-| `data.id` | ID de la oferta propuesta. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
-| `format` | Formato del contenido asociado con la oferta propuesta. | `"format": "text/text"` |
-| `language` | Una matriz de idiomas asociados con el contenido de la oferta propuesta. | `"language": [ "en-US" ]` |
+| `placement.id` | ID exclusivo de la ubicación de la oferta. | `"xcore:offer-placement:1175009612b01123"` |
+| `items.id` | El ID de la oferta propuesta. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `schema` | Esquema del contenido asociado con la oferta propuesta. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"` |
+| `data.id` | El ID de la oferta propuesta. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `format` | El formato del contenido asociado con la oferta propuesta. | `"format": "text/text"` |
+| `language` | Matriz de idiomas asociados al contenido de la oferta propuesta. | `"language": [ "en-US" ]` |
 | `content` | Contenido asociado con la oferta propuesta en formato de cadena. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenido de imagen asociado con la oferta propuesta en formato de URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Características asociadas con la oferta propuesta en el formato de un objeto JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
