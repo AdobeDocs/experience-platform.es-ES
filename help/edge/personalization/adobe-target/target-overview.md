@@ -3,10 +3,9 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 4%
 
 ---
@@ -29,7 +28,7 @@ Las siguientes funciones se han probado y actualmente son compatibles con Target
 
 Para habilitar [!DNL Target], haga lo siguiente:
 
-1. Habilite target en su [configuración de edge](../../fundamentals/edge-configuration.md) con el código de cliente apropiado.
+1. Habilite Target en su [almacén de datos](../../fundamentals/datastreams.md) con el código de cliente apropiado.
 1. Agregue la opción `renderDecisions` a los eventos.
 
 A continuación, opcionalmente, también puede añadir las siguientes opciones:
