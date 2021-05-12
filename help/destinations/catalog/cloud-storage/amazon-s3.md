@@ -3,10 +3,9 @@ keywords: Amazon S3;destino S3;s3;amazon s3
 title: Conexión Amazon S3
 description: Cree una conexión saliente en directo al almacenamiento de Amazon Web Services (AWS) S3 para exportar periódicamente archivos de datos CSV o delimitados por tabuladores de Adobe Experience Platform a sus propios bloques S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -31,9 +30,13 @@ Para destinos [!DNL Amazon S3] , introduzca la siguiente información en el fluj
 
 * **[!DNL Amazon S3]clave de acceso y clave  [!DNL Amazon S3] secreta**: En  [!DNL Amazon S3], genere un  `access key - secret access key` par para conceder a Platform acceso a su  [!DNL Amazon S3] cuenta. Obtenga más información en la [documentación de los servicios web de Amazon](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+>[!TIP]
+>
+>En el flujo de trabajo de conexión de destino, puede crear una carpeta personalizada en el almacenamiento de Amazon S3 por archivo de segmento exportado. Lea [Use macros para crear una carpeta en su ubicación de almacenamiento](./workflow.md#use-macros) para obtener instrucciones.
+
 ## Permisos [!DNL Amazon S3] requeridos {#required-s3-permission}
 
-Para conectar y exportar datos correctamente a su ubicación de almacenamiento [!DNL Amazon S3], cree un usuario de IAM para [!DNL Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
+Para conectar y exportar datos correctamente a su ubicación de almacenamiento [!DNL Amazon S3], cree un usuario de Administración de identidad y acceso (IAM) para [!DNL Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
