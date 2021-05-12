@@ -5,10 +5,9 @@ type: Tutorial
 description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 seo-description: Instrucciones para conectarse a las ubicaciones de almacenamiento en la nube
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione su d
 >
 >Si ya existe una conexión con este destino, puede ver un botón **[!UICONTROL Activate]** en la tarjeta de destino. Para obtener más información sobre la diferencia entre **[!UICONTROL Activate]** y **[!UICONTROL Configure]**, consulte la sección [Catalog](../../ui/destinations-workspace.md#catalog) de la documentación del espacio de trabajo de destino.
 
-## Paso de cuenta {#account}
+## Paso de la cuenta {#account}
 
 En el paso **[!UICONTROL Account]**, si ha configurado anteriormente una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino de almacenamiento en la nube. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
 
@@ -63,7 +62,7 @@ Para destinos [!DNL Azure Event Hubs], proporcione el nombre del flujo de datos 
 
 Se ha creado el destino. Puede seleccionar **[!UICONTROL Save & Exit]** si desea activar segmentos más adelante o puede seleccionar **[!UICONTROL Next]** para continuar con el flujo de trabajo y seleccionar segmentos para activarlos. Lea la sección [Activar segmentos](#activate-segments) para que el resto del flujo de trabajo exporte datos.
 
-## Utilice macros para crear una carpeta en su ubicación de almacenamiento{#use-macros}
+## Utilice macros para crear una carpeta en su ubicación de almacenamiento {#use-macros}
 
 >[!NOTE]
 >
