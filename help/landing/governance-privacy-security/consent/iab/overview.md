@@ -5,8 +5,7 @@ title: Compatibilidad con IAB TCF 2.0 en Experience Platform
 topic-legacy: privacy events
 description: Aprenda a configurar sus operaciones de datos y esquemas para transmitir las opciones de consentimiento del cliente al activar segmentos en destinos en Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -120,7 +119,7 @@ Una vez configurado el CMP para generar cadenas de consentimiento, debe integrar
 
 ### Crear una nueva configuración de Edge
 
-Para que el SDK envíe datos al Experience Platform, primero debe crear una nueva configuración Edge para Platform en [!DNL Adobe Experience Platform Launch]. Se proporcionan pasos específicos para crear una nueva configuración en la [documentación del SDK](../../../../edge/fundamentals/edge-configuration.md).
+Para que el SDK envíe datos al Experience Platform, primero debe crear una nueva configuración Edge para Platform en [!DNL Adobe Experience Platform Launch]. Se proporcionan pasos específicos para crear una nueva configuración en la [documentación del SDK](../../../../edge/fundamentals/datastreams.md).
 
 Después de proporcionar un nombre único para la configuración, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
 
