@@ -5,8 +5,7 @@ title: Configuración de un conjunto de datos para capturar datos de consentimie
 topic-legacy: getting started
 description: Obtenga información sobre cómo configurar un esquema y conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencias en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 0%
@@ -121,7 +120,7 @@ Si el esquema que editó lo utiliza la [!UICONTROL Profile Dataset] especificada
 
 Si no ha creado un conjunto de datos para este esquema, siga los pasos de la siguiente sección.
 
-## Cree un conjunto de datos basado en su esquema de consentimiento {#dataset}
+## Crear un conjunto de datos basado en el esquema de consentimiento {#dataset}
 
 Una vez que haya creado un esquema con campos de consentimiento, debe crear un conjunto de datos que, en última instancia, incorpore los datos de consentimiento de los clientes. Este conjunto de datos debe estar habilitado para [!DNL Real-time Customer Profile].
 
@@ -151,7 +150,7 @@ Finalmente, seleccione **[!UICONTROL Enable]** en la ventana emergente de confir
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-El conjunto de datos ahora se guarda y se habilita para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Profile Dataset] al configurar la [configuración perimetral](../../../../edge/fundamentals/edge-configuration.md).
+El conjunto de datos ahora se guarda y se habilita para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Profile Dataset] al configurar la [configuración perimetral](../../../../edge/fundamentals/datastreams.md).
 
 ## Pasos siguientes
 
