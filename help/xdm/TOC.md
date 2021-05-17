@@ -4,11 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases del Modelo de datos de experiencia (XDM) y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Esquemas
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 17%
+source-wordcount: '295'
+ht-degree: 18%
 
 ---
 
@@ -20,9 +19,10 @@ ht-degree: 17%
    * [Aspectos básicos de la composición del esquema](schema/composition.md)
    * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
+   * [Espaciado de nombres en XDM](./schema/namespaces.md)
    * [Diccionario de campo XDM](schema/field-dictionary.md)
    * Modelos de datos del sector {#industries}
-      * Información general de [](./schema/industries/overview.md)
+      * [Información general](./schema/industries/overview.md)
       * [Modelo de datos comerciales ERD](./schema/industries/retail.md)
       * [Modelo de datos de servicios financieros ERD](./schema/industries/financial.md)
       * [Modelo de datos sobre viajes y hospitalidad ERD](./schema/industries/travel-hospitality.md)
@@ -48,14 +48,14 @@ ht-degree: 17%
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Comercio](./data-types/commerce.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
-   * [Dispositivo](./data-types/device.md)
-   * [Dirección de correo electrónico](./data-types/email-address.md)
+   * [Device](./data-types/device.md)
+   * [Correo electrónico Dirección](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
    * [Campo de consentimiento genérico](./data-types/consent-field.md)
    * [Campo de preferencia de marketing genérico](./data-types/marketing-field.md)
    * [Campo de preferencia de marketing genérico con suscripciones](./data-types/marketing-field-subscriptions.md)
    * [Campo de preferencia de personalización genérica](./data-types/personalization-field.md)
-   * [Ubicación geográfica](./data-types/geo.md)
+   * [Geografía ](./data-types/geo.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Detalles de interacción geográfica](./data-types/geo-interaction-details.md)
@@ -75,8 +75,8 @@ ht-degree: 17%
    * [Suscripción](./data-types/subscription.md)
    * [Interacción web](./data-types/web-interactions.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] IU {#ui}
-   * Información general de [](./ui/overview.md)
+*  EsquemasIU  {#ui}
+   * [Información general](./ui/overview.md)
    * [Exploración de recursos XDM](./ui/explore.md)
    * Crear y editar recursos {#resources}
       * [Esquemas](./ui/resources/schemas.md)
@@ -84,7 +84,7 @@ ht-degree: 17%
       * [Grupos de campo](./ui/resources/field-groups.md)
       * [Tipos de datos](./ui/resources/data-types.md)
    * Definir campos {#fields}
-      * Información general de [](./ui/fields/overview.md)
+      * [Información general](./ui/fields/overview.md)
       * [Campos requeridos](./ui/fields/required.md)
       * [Campos de objeto](./ui/fields/object.md)
       * [Campos de matriz](./ui/fields/array.md)
