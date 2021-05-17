@@ -5,10 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3621'
 ht-degree: 0%
 
 ---
@@ -50,19 +49,23 @@ Todos los esquemas XDM describen datos que pueden clasificarse como registros o 
 
 Los esquemas de registros y series temporales contienen un mapa de identidades (`xdm:identityMap`). Este campo contiene la representación de identidad de un asunto, extraída de campos marcados como &quot;Identidad&quot; como se describe en la siguiente sección.
 
-### [!UICONTROL Identity] {#identity}
+### [!UICONTROL Identidad] {#identity}
 
 Los esquemas se utilizan para ingerir datos en [!DNL Experience Platform]. Estos datos se pueden utilizar en varios servicios para crear una única vista unificada de una entidad individual. Por lo tanto, es importante, al pensar en esquemas, pensar en las identidades de los clientes y en qué campos se pueden utilizar para identificar un sujeto independientemente de su origen.
 
-Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden marcar como identidades. Al ingerir los datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Identity Graph]&quot; de ese individuo. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros servicios [!DNL Experience Platform] para proporcionar una vista integrada de cada cliente individual.
+Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden marcar como identidades. Tras la ingesta de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico de identidad]&quot; de ese individuo. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros servicios [!DNL Experience Platform] para proporcionar una vista integrada de cada cliente individual.
 
-Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe considerar cualquier identificador único específico de su organización, ya que también pueden ser buenos campos &quot;[!UICONTROL Identity]&quot;.
+Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
 
 Es importante tener en cuenta las identidades de los clientes durante la fase de planificación del esquema para garantizar que los datos se recopilen y creen el perfil más sólido posible. Consulte la descripción general de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
+`identityMap` es un campo de tipo map que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Este campo se puede utilizar para proporcionar información de identidad para los esquemas, en lugar de definir valores de identidad dentro de la estructura del propio esquema.
+
+El principal inconveniente del uso de `identityMap` es que las identidades se incrustan en los datos y, como resultado, se vuelven menos visibles. Si va a introducir datos sin procesar, debe definir campos de identidad individuales dentro de la estructura de esquema real.
+
+Sin embargo, los mapas de identidad pueden resultar especialmente útiles si está recopilando datos de fuentes que almacenan identidades como [!DNL Airship] o Adobe Audience Manager. Además, se requieren mapas de identidad si utiliza el [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 Un ejemplo de mapa de identidad simple sería el siguiente:
 
@@ -135,7 +138,7 @@ La clase de un esquema determina qué grupos de campos pueden utilizarse en ese 
 
 Adobe proporciona varias clases XDM estándar (&quot;core&quot;). Se requieren dos de estas clases, [!DNL XDM Individual Profile] y [!DNL XDM ExperienceEvent], para casi todos los procesos de Platform descendentes. Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización. Las clases personalizadas las define una organización cuando no hay clases principales definidas por el Adobe disponibles para describir un caso de uso único.
 
-La siguiente captura de pantalla muestra cómo se representan las clases en la interfaz de usuario de Platform. Dado que el esquema de ejemplo mostrado no contiene ningún grupo de campos, la clase del esquema ([!UICONTROL XDM Individual Profile]) proporciona todos los campos mostrados.
+La siguiente captura de pantalla muestra cómo se representan las clases en la interfaz de usuario de Platform. Dado que el esquema de ejemplo mostrado no contiene ningún grupo de campos, la clase del esquema proporciona todos los campos mostrados ([!UICONTROL XDM Individual Profile]).
 
 ![](../images/schema-composition/class.png)
 
@@ -149,11 +152,11 @@ Los grupos de campos definen con qué clases son compatibles en función del com
 
 [!DNL Experience Platform] incluye muchos grupos de campos de Adobe estándar, al mismo tiempo que permite a los proveedores definir grupos de campos para los usuarios, y a los usuarios individuales definir grupos de campos para sus propios conceptos específicos.
 
-Por ejemplo, para capturar detalles como &quot;[!UICONTROL First Name]&quot; y &quot;[!UICONTROL Home Address]&quot; para el esquema &quot;[!UICONTROL Loyalty Members]&quot;, podría utilizar grupos de campos estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Loyalty Program Level]&quot;) no suelen tener un grupo de campos predefinido. En este caso, debe definir su propio grupo de campos para capturar esta información.
+Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot;[!UICONTROL Dirección principal]&quot; para su esquema &quot;[!UICONTROL Miembros de lealtad]&quot;, podría utilizar grupos de campos estándar que definan esos conceptos comunes. Sin embargo, los conceptos específicos de casos de uso menos comunes (como &quot;[!UICONTROL Nivel de programa de lealtad]&quot;) no suelen tener un grupo de campos predefinido. En este caso, debe definir su propio grupo de campos para capturar esta información.
 
 Recuerde que los esquemas están compuestos de &quot;cero o más&quot; grupos de campos, por lo que esto significa que puede componer un esquema válido sin utilizar ningún grupo de campos.
 
-La siguiente captura de pantalla muestra cómo se representan los grupos de campos en la interfaz de usuario de Platform. En este ejemplo se agrega un solo grupo de campos ([!UICONTROL Demographic Details]) a un esquema, que proporciona una agrupación de campos a la estructura del esquema.
+La siguiente captura de pantalla muestra cómo se representan los grupos de campos en la interfaz de usuario de Platform. En este ejemplo, se agrega un solo grupo de campos ([!UICONTROL Demographic Details]) a un esquema que proporciona una agrupación de campos a la estructura del esquema.
 
 ![](../images/schema-composition/field-group.png)
 
@@ -222,9 +225,9 @@ Consulte el [diccionario de campos XDM](field-dictionary.md) para obtener una li
 
 Los esquemas representan el formato y la estructura de los datos que se incorporarán en [!DNL Platform] y se crean mediante un modelo de composición. Como se ha mencionado anteriormente, estos esquemas están compuestos por una clase y cero o más grupos de campos compatibles con esa clase.
 
-Por ejemplo, un esquema que describa las compras realizadas en una tienda minorista podría llamarse &quot;[!UICONTROL Store Transactions]&quot;. El esquema implementa la clase [!DNL XDM ExperienceEvent] combinada con el grupo de campos estándar [!UICONTROL Commerce] y un grupo de campos definido por el usuario [!UICONTROL Product Info].
+Por ejemplo, un esquema que describa las compras realizadas en una tienda minorista puede llamarse &quot;[!UICONTROL Transacciones de almacenamiento]&quot;. El esquema implementa la clase [!DNL XDM ExperienceEvent] combinada con el grupo de campos estándar [!UICONTROL Commerce] y un grupo de campos definido por el usuario [!UICONTROL Product Info].
 
-Otro esquema que rastrea el tráfico del sitio web puede llamarse &quot;[!UICONTROL Web Visits]&quot;. También implementa la clase [!DNL XDM ExperienceEvent], pero esta vez combina el grupo de campos estándar [!UICONTROL Web].
+Otro esquema que rastrea el tráfico del sitio web puede llamarse &quot;[!UICONTROL Visitas web]&quot;. También implementa la clase [!DNL XDM ExperienceEvent], pero esta vez combina el grupo de campos estándar [!UICONTROL Web].
 
 El diagrama siguiente muestra estos esquemas y los campos contribuidos por cada grupo de campos. También contiene dos esquemas basados en la clase [!DNL XDM Individual Profile], incluido el esquema &quot;[!UICONTROL Loyalty Members]&quot; mencionado anteriormente en esta guía.
 
@@ -248,8 +251,8 @@ Todos los archivos de datos que se incorporan en [!DNL Experience Platform] debe
 
 Si va a introducir segmentos de sistemas externos en Platform, debe utilizar los siguientes componentes para capturarlos en los esquemas:
 
-* [[!UICONTROL Segment definition] Clase](../classes/segment-definition.md): Utilice esta clase estándar para capturar los atributos clave de una definición de segmento externa.
-* [[!UICONTROL Segment Membership Details] grupo de campos](../field-groups/profile/segmentation.md): Añada este grupo de campos al  [!UICONTROL XDM Individual Profile] esquema para asociar perfiles de clientes con segmentos específicos.
+* [[!UICONTROL Clase de ] definición de segmentos](../classes/segment-definition.md): Utilice esta clase estándar para capturar los atributos clave de una definición de segmento externa.
+* [[!UICONTROL Grupo ] de campos Detalles de pertenencia a segmentos](../field-groups/profile/segmentation.md): Agregue este grupo de campos al esquema de perfiles individuales  [!UICONTROL XDM ] para asociar perfiles de clientes con segmentos específicos.
 
 ## Pasos siguientes
 
@@ -270,7 +273,7 @@ Para empezar a utilizar la API [!DNL Schema Registry], lea la [guía para desarr
 
 Las secciones siguientes contienen información adicional sobre los principios de la composición del esquema.
 
-### Tablas relacionales frente a objetos {#embedded} incrustados
+### Tablas relacionales frente a objetos incrustados {#embedded}
 
 Cuando se trabaja con bases de datos relacionales, las prácticas recomendadas implican normalizar datos o tomar una entidad y dividirla en partes discretas que luego se muestran en varias tablas. Para leer los datos en su conjunto o actualizar la entidad, las operaciones de lectura y escritura deben realizarse en muchas tablas individuales utilizando JOIN.
 
@@ -278,7 +281,7 @@ Mediante el uso de objetos incrustados, los esquemas XDM pueden representar dire
 
 ### Esquemas y big data {#big-data}
 
-Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que puedan procesarse de manera consistente y eficiente.
+Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que se puedan procesar de manera consistente y eficiente.
 
 Los esquemas solucionan este problema al permitir que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
 
