@@ -5,8 +5,7 @@ title: Apéndice de la API del Registro de Esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -54,7 +53,7 @@ Puede filtrar los resultados utilizando el parámetro `property` , que se utiliz
 >
 >Puede utilizar el parámetro `property` para filtrar grupos de campos de esquema por su clase compatible. Por ejemplo, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` solo devuelve grupos de campos compatibles con la clase [!DNL XDM Individual Profile].
 
-## Modo de compatibilidad
+## Modo de compatibilidad {#compatibility}
 
 [!DNL Experience Data Model] (XDM) es una especificación públicamente documentada, impulsada por el Adobe para mejorar la interoperabilidad, la expresividad y el poder de las experiencias digitales. Adobe mantiene el código fuente y las definiciones XDM formales en un [proyecto de código abierto en GitHub](https://github.com/adobe/xdm/). Estas definiciones se escriben en la Notación estándar XDM, utilizando JSON-LD (Notación de objetos JavaScript para datos vinculados) y Esquema JSON como gramática para definir esquemas XDM.
 
