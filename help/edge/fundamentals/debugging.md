@@ -1,27 +1,26 @@
 ---
 title: Depuración en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo alternar las funciones de depuración en el SDK web de Experience Platform.
-keywords: depurar sdk web;depurar;configurar;configurar comando;depurar comando;edgeConfigId;setDebug;debugEnabled;debug;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+keywords: depurar sdk web;depuración;configurar;configurar comando;depurar comando;edgeConfigId;setDebug;debugEnabled;depurar;
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
-
 # Depuración
 
-Cuando la depuración está habilitada, el SDK envía mensajes a la consola del navegador que pueden resultar útiles para depurar la implementación y para comprender el comportamiento del SDK. La depuración también resulta en una validación sincrónica del lado del servidor de los datos que se recopilan con el esquema que ha configurado.
+Cuando la depuración está habilitada, el SDK envía mensajes a la consola del explorador que pueden resultar útiles para depurar la implementación y comprender cómo se comporta el SDK. La depuración también resulta en una validación sincrónica del lado del servidor de los datos que se recopilan con el esquema configurado.
 
 La depuración está deshabilitada de forma predeterminada, pero se puede activar de tres formas diferentes:
 
 * `configure` command
 * `setDebug` command
-* Parámetro de cadena de consulta
+* parámetro de cadena de consulta
 
-## Alternar la depuración con el comando Configurar
+## Alternar depuración con el comando Configurar
 
 Al configurar el SDK mediante el comando `configure`, habilite la depuración estableciendo la opción `debugEnabled` en `true`.
 
@@ -35,11 +34,11 @@ alloy("configure", {
 
 >[!TIP]
 >
->Esto habilita la depuración para todos los usuarios de la página web en lugar de solo para su explorador personal.
+>Esto permite la depuración para todos los usuarios de la página web en lugar de solo para su navegador personal.
 
-## Alternar la depuración con el comando Depurar
+## Alternar depuración con el comando Depuración
 
-Alternar la depuración con un comando `debug` independiente de la siguiente manera:
+Alterne la depuración con un comando `debug` independiente de la siguiente manera:
 
 ```javascript
 alloy("setDebug", {
@@ -47,27 +46,27 @@ alloy("setDebug", {
 });
 ```
 
-Si prefiere no cambiar el código de la página web o no desea que se produzcan mensajes de registro para todos los usuarios del sitio web, esto es particularmente útil porque puede ejecutar el comando `debug` en la consola JavaScript del explorador en cualquier momento.
+Si prefiere no cambiar el código de la página web o no desea que los mensajes de registro se produzcan para todos los usuarios del sitio web, esto es especialmente útil porque puede ejecutar el comando `debug` en la consola JavaScript del explorador en cualquier momento.
 
-## Alternar la depuración con un parámetro de cadena de consulta
+## Alternar depuración con un parámetro de cadena de consulta
 
-Alternar la depuración estableciendo un parámetro de cadena de consulta `alloy_debug` en `true` o `false` de la siguiente manera:
+Alterne la depuración estableciendo un parámetro de cadena de consulta `alloy_debug` en `true` o `false` como se indica a continuación:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-Al igual que el comando `debug`, si prefiere no cambiar el código de la página web o no desea que se produzcan mensajes de registro para todos los usuarios del sitio web, esto es especialmente útil porque puede establecer el parámetro de cadena de consulta al cargar la página web en el explorador.
+De forma similar al comando `debug` , si prefiere no cambiar el código de la página web o no desea que se produzcan mensajes de registro para todos los usuarios del sitio web, esto es especialmente útil porque puede configurar el parámetro de cadena de consulta al cargar la página web dentro del explorador.
 
 ## Prioridad y duración
 
-Cuando la depuración se establece mediante el comando `debug` o el parámetro de cadena de consulta, anula cualquier opción `debug` establecida en el comando `configure`. En estos dos casos, la depuración también permanece activada durante toda la sesión. En otras palabras, si se habilita la depuración mediante el comando debug o el parámetro de cadena de consulta, permanece habilitado hasta que se cumpla una de las siguientes condiciones:
+Cuando la depuración se configura mediante el comando `debug` o el parámetro de cadena de consulta, anula cualquier opción `debug` establecida en el comando `configure`. En estos dos casos, la depuración también permanece activada durante la sesión. En otras palabras, si habilita la depuración utilizando el comando debug o el parámetro de cadena de consulta, permanece habilitado hasta que se realice una de las siguientes acciones:
 
 * El final de la sesión
 * Ejecute el comando `debug`
-* El parámetro de cadena de consulta se establece de nuevo
+* Vuelva a establecer el parámetro de cadena de consulta
 
-## Recuperando información de biblioteca
+## Recuperación de la información de la biblioteca
 
 A menudo resulta útil acceder a algunos de los detalles de la biblioteca que ha cargado en su sitio web. Para ello, ejecute el comando `getLibraryInfo` de la siguiente manera:
 
@@ -79,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Actualmente, el objeto `libraryInfo` proporcionado contiene las siguientes propiedades:
 
-* `version` Esta es la versión de la biblioteca cargada. Por ejemplo, si la versión de la biblioteca que se carga fuera 1.0.0, el valor sería `1.0.0`.
+* `version` Esta es la versión de la biblioteca cargada. Por ejemplo, si la versión de la biblioteca que se está cargando es 1.0.0, el valor sería `1.0.0`. Cuando la biblioteca se ejecuta dentro de la extensión de Adobe Experience Platform Launch (denominada &quot;AEP Web SDK&quot;), la versión de la biblioteca y la versión de la extensión de Platform launch se unen con un signo &quot;+&quot;. Por ejemplo, si la versión de la biblioteca fuera 1.0.0 y la versión de la extensión de Platform launch fuera 1.2.0, el valor sería `1.0.0+1.2.0`.
