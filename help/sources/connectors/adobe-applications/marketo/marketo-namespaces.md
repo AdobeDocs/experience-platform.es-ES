@@ -5,10 +5,9 @@ title: Espacios de nombres de Marketo
 topic-legacy: overview
 description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen de Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 5%
 
 ---
@@ -56,6 +55,20 @@ La siguiente tabla contiene valores de ejemplo, así como información adicional
 | `has_msi` | Un valor booleano que indica si está suscrito a [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### Ejecución de las secuencias de comandos
+
+Con la colección [!DNL Postman] y el entorno configurados, ahora puede ejecutar el script a través de la interfaz [!DNL Postman].
+
+En la interfaz [!DNL Postman], seleccione la carpeta raíz de la utilidad del generador automático y, a continuación, seleccione **[!DNL Run]** en el encabezado superior.
+
+![carpeta raíz](../images/marketo/root-folder.png)
+
+Aparece la interfaz [!DNL Runner]. Desde aquí, asegúrese de que todas las casillas de verificación estén seleccionadas y, a continuación, seleccione **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![run-generator](../images/marketo/run-generator.png)
+
+Una solicitud correcta crea los espacios de nombres B2B y esquemas según las especificaciones beta.
 
 ## [!DNL Marketo] áreas de nombres
 
