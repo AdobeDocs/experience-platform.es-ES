@@ -2,14 +2,13 @@
 keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente en directo al servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
-
 
 # Conexión SFTP
 
@@ -39,7 +38,7 @@ Para los destinos SFTP, introduzca la siguiente información en el flujo de trab
 
 ## Datos exportados {#exported-data}
 
-Para los destinos SFTP, Platform crea un archivo `.txt` o `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
+Para destinos [!DNL SFTP], Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
