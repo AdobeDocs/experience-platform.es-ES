@@ -5,10 +5,9 @@ title: Entrada y salida en Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: En el siguiente documento se describen las diferentes entradas y productos utilizados en la Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2230'
 ht-degree: 3%
 
 ---
@@ -48,7 +47,11 @@ No todas las columnas del esquema [!DNL Consumer Experience Event] (CEE) son obl
 | Marketing.campaigngroup | Touchpoint |
 | Comercio | Conversión |
 
-Normalmente, la atribución se ejecuta en columnas de conversión como pedidos, compras y cierres de compra en &quot;comercio&quot;. Las columnas &quot;canal&quot; y &quot;marketing&quot; son muy recomendables para definir puntos de contacto para obtener buenas perspectivas. Sin embargo, puede incluir cualquier otra columna adicional junto con las columnas anteriores para configurarla como una definición de conversión o punto de contacto.
+Normalmente, la atribución se ejecuta en columnas de conversión como pedidos, compras y cierres de compra en &quot;comercio&quot;. Las columnas para &quot;canal&quot; y &quot;marketing&quot; se utilizan para definir puntos de contacto para la Attribution AI (por ejemplo, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Para obtener resultados y perspectivas óptimos, se recomienda incluir tantas columnas de conversión y punto de contacto como sea posible. Además, no se limita solo a las columnas anteriores. Puede incluir cualquier otra columna recomendada o personalizada como conversión o definición de punto de contacto.
+
+>[!TIP]
+>
+>Si utiliza datos de Adobe Analytics en el esquema de CEE, la información de los puntos de contacto de Analytics se almacena generalmente en `channel.typeAtSource` (por ejemplo, `channel.typeAtSource = 'email'`).
 
 Las columnas siguientes no son obligatorias, pero se recomienda incluirlas en el esquema CEE si tiene la información disponible.
 
@@ -58,7 +61,7 @@ Las columnas siguientes no son obligatorias, pero se recomienda incluirlas en el
 - web.webPageDetails
 - xdm:productListItems
 
-### Datos históricos {#data-requirements}
+## Datos históricos {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -145,11 +148,11 @@ La siguiente tabla describe los campos de esquema de la salida de ejemplo de las
 
 ### Visualización de rutas de puntuación sin procesar (IU) {#raw-score-path}
 
-Puede ver la ruta a sus puntuaciones sin procesar en la interfaz de usuario de . Para empezar, seleccione **[!UICONTROL Schemas]** en la interfaz de usuario de Platform y, a continuación, busque y seleccione el esquema de puntuaciones de AI de atribución en la pestaña **[!UICONTROL Browse]** .
+Puede ver la ruta a sus puntuaciones sin procesar en la interfaz de usuario de . Para empezar, seleccione **[!UICONTROL Esquemas]** en la interfaz de usuario de Platform, busque y seleccione el esquema de puntuaciones de AI de atribución en la pestaña **[!UICONTROL Browse]**.
 
 ![Elija el esquema](./images/input-output/schemas_browse.png)
 
-A continuación, seleccione un campo en la ventana **[!UICONTROL Structure]** de la interfaz de usuario y se abrirá la pestaña **[!UICONTROL Field properties]**. En **[!UICONTROL Field properties]** es el campo de ruta que se asigna a sus puntuaciones sin procesar.
+A continuación, seleccione un campo en la ventana **[!UICONTROL Structure]** de la interfaz de usuario y se abrirá la pestaña **[!UICONTROL Field properties]**. En **[!UICONTROL Field properties]** es el campo de ruta que se asigna a las puntuaciones sin procesar.
 
 ![Elegir un esquema](./images/input-output/field_properties.png)
 
