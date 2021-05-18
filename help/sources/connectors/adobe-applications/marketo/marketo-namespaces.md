@@ -5,9 +5,9 @@ title: Espacios de nombres de Marketo
 topic-legacy: overview
 description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen de Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ Este documento proporciona información sobre la configuración subyacente para 
 
 El primer paso para utilizar el espacio de nombres [!DNL Marketo] y la utilidad de generación automática de esquemas es configurar la consola del desarrollador de Platform y el entorno [!DNL Postman].
 
-- Puede descargar el entorno y la colección de utilidades de generación automática de esquemas y espacios de nombres desde este [repositorio de GitHub](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility).
+- Puede descargar el entorno y la colección de utilidades de generación automática de esquemas y espacios de nombres desde este [repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Para obtener información sobre el uso de las API de plataforma, incluidos detalles sobre cómo recopilar valores para los encabezados necesarios y leer llamadas de API de ejemplo, consulte la guía de [introducción a las API de plataforma](../../../../landing/api-guide.md).
 - Para obtener información sobre cómo generar las credenciales para las API de plataforma, consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../../landing/api-authentication.md).
 - Para obtener información sobre cómo configurar [!DNL Postman] para las API de plataforma, consulte el tutorial sobre la [configuración de la consola del desarrollador y [!DNL Postman]](../../../../landing/postman.md).
