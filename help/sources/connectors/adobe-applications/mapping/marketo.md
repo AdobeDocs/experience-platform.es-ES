@@ -5,10 +5,9 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -261,9 +260,6 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identidad primaria |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -310,7 +306,7 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 >[!NOTE]
 >
->El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse mediante la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obtener más información.
+>El campo de origen `to_object('ECID',arrays_to_objects('id',explode(ecids)))` es un campo calculado que debe añadirse utilizando la opción [!UICONTROL Add calculated field] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../ingestion/tutorials/map-a-csv-file.md) para obtener más información.
 
 ## Pasos siguientes
 
