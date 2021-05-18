@@ -3,10 +3,9 @@ keywords: Destino del centro de eventos de Azure;centro de eventos de azure;azur
 title: Conexión (Beta) !DNL Azure Event Hubs]
 description: Cree una conexión saliente en tiempo real a su almacenamiento de !DNL Azure Event Hubs] para transmitir datos desde el Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -45,21 +44,21 @@ Consulte [Flujo de trabajo de destinos de almacenamiento en la nube ](./workflow
 
 Para destinos [!DNL Azure Event Hubs] , introduzca la siguiente información en el flujo de trabajo de creación de destino:
 
+## Paso de cuenta {#account-step}
+
+* **[!UICONTROL Nombre de clave]** SAS y clave  **[!UICONTROL SAS]**: Rellene el nombre y la clave de la clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Área de nombres]**: Rellene el  [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre los espacios de nombres [!DNL Azure Event Hubs] en la [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+![Entrada requerida en el paso de cuenta](../../assets/catalog/cloud-storage/event-hubs/account.png)
+
 ## Paso de autenticación {#authentication-step}
 
-* **[!UICONTROL SAS Key Name]** y  **[!UICONTROL SAS Key]**: Rellene el nombre y la clave de la clave SAS. Obtenga información sobre cómo autenticarse en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Namespace]**: Rellene el  [!DNL Azure Event Hubs] espacio de nombres. Obtenga información sobre los espacios de nombres [!DNL Azure Event Hubs] en la [Documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-
-![Entrada necesaria en el paso de autenticación](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
-
-## Paso de configuración {#setup-step}
-
-* **[!UICONTROL Name]**: Rellene un nombre para la conexión a  [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]**: Proporcione una descripción de la conexión.  Ejemplos: &quot;Clientes de nivel Premium&quot;, &quot;Hombres interesados en el kitesurf&quot;.
+* **[!UICONTROL Nombre]**: Rellene un nombre para la conexión a  [!DNL Azure Event Hubs].
+* **[!UICONTROL Descripción]**: Proporcione una descripción de la conexión.  Ejemplos: &quot;Clientes de nivel Premium&quot;, &quot;Hombres interesados en el kitesurf&quot;.
 * **[!UICONTROL eventHubName]**: Proporcione un nombre para la emisión a su  [!DNL Azure Event Hubs] destino.
-* **[!UICONTROL Marketing actions]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte la página [Control de datos en Adobe Experience Platform](../../../data-governance/policies/overview.md). Para obtener información sobre las acciones de marketing definidas por el Adobe, consulte la [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
-![Datos necesarios en el paso de configuración](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![Datos necesarios en el paso de autenticación](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## Activar segmentos {#activate-segments}
 
@@ -111,6 +110,6 @@ Los datos [!DNL Experience Platform] exportados llegan a [!DNL Azure Event Hubs]
 >[!MORELIKETHIS]
 >
 >* [Conéctese a los centros de eventos de Azure y active los datos mediante la API de servicio de flujo](../../api/streaming-destinations.md)
->* [Destino de AWS Kinesis](./amazon-kinesis.md)
->* [Tipos y categorías de destino](../../destination-types.md)
+* [Destino de AWS Kinesis](./amazon-kinesis.md)
+* [Tipos y categorías de destino](../../destination-types.md)
 
