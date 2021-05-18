@@ -3,14 +3,13 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Información general sobre los destinos de marketing por correo electrónico
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como por ejemplo el envío de campañas de correo electrónico promocionales.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
-
 
 # Información general sobre destinos de marketing por correo electrónico {#email-marketing-destinations}
 
@@ -20,7 +19,7 @@ Para enviar segmentos a destinos de marketing por correo electrónico para sus c
 
 La conexión a destinos de marketing por correo electrónico es un proceso de tres pasos ([configurar destino](#connect-destination), [activar segmentos](#select-segments), [importar datos desde la ubicación de almacenamiento al destino](#import-data-into-destination)). Cada uno de los pasos se describe más abajo en esta página.
 
-En el flujo de destino de conexión, descrito en la sección siguiente, conéctese a Amazon S3 o SFTP. Platform exporta los segmentos como archivos `.csv` o `.txt` y los envía a la ubicación que prefiera. Programe la importación de datos en su plataforma de marketing por correo electrónico desde la ubicación de almacenamiento habilitada en Platform. El proceso de importación de datos varía según el socio. Lea los artículos de destinos individuales para obtener más información.
+En el flujo de destino de conexión, descrito en la sección siguiente, conéctese a [!DNL Amazon S3] o [!DNL SFTP]. Platform exporta los segmentos como archivos `.csv` y los envía a la ubicación que prefiera. Programe la importación de datos en su plataforma de marketing por correo electrónico desde la ubicación de almacenamiento habilitada en [!DNL Platform]. El proceso de importación de datos varía según el socio. Lea los artículos de destinos individuales para obtener más información.
 
 ## Configurar destino {#connect-destination}
 
@@ -28,7 +27,7 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione el d
 
 ![Conectarse al destino](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-En el paso **[!UICONTROL Account]**, si ha configurado anteriormente una conexión con su destino de marketing por correo electrónico, seleccione **[!UICONTROL Existing Account]** y la conexión existente. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector **[!UICONTROL Connection type]**, puede seleccionar entre [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP with Password] o [!UICONTROL SFTP with SSH Key]. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
+En el paso **[!UICONTROL Cuenta]**, si anteriormente ha configurado una conexión con su destino de marketing por correo electrónico, seleccione **[!UICONTROL Cuenta existente]** y seleccione la conexión existente. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión con su destino de marketing por correo electrónico. En el selector **[!UICONTROL Connection type]**, puede seleccionar entre [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP con contraseña] o [!UICONTROL SFTP con clave SSH]. Rellene la información siguiente, según el tipo de conexión y, a continuación, seleccione **[!UICONTROL Connect]**.
 
 - Para las conexiones **S3**, debe proporcionar el ID de clave de acceso de Amazon y la clave de acceso secreta.
 - Para conexiones **SFTP con contraseña**, debe proporcionar dominio, puerto, nombre de usuario y contraseña para el servidor SFTP.
@@ -36,7 +35,7 @@ En el paso **[!UICONTROL Account]**, si ha configurado anteriormente una conexi�
 
 Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado a los archivos exportados en la sección **[!UICONTROL Key]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
 
-En el paso **[!UICONTROL Authentication]**, introduzca un nombre y una descripción para el nuevo destino y el formato de archivo para los archivos exportados.
+En el paso **[!UICONTROL Authentication]**, introduzca un nombre y una descripción para el nuevo destino, así como el formato de archivo para los archivos exportados.
 
 Si seleccionó Amazon S3 como opción de almacenamiento en el paso anterior, inserte el nombre del bloque y la ruta de carpeta en el destino de almacenamiento en la nube donde se entregarán los archivos. Para la opción de almacenamiento SFTP, inserte la ruta de carpeta donde se entregarán los archivos.
 
@@ -46,7 +45,7 @@ En este paso, también puede seleccionar cualquier acción de marketing que deba
 
 ## Seleccione qué miembros de segmento incluir en las exportaciones de destino {#select-segments}
 
-En la página **[!UICONTROL Select Segments]** , seleccione qué segmentos desea enviar al destino. Encontrará más información sobre los campos en las secciones siguientes.
+En la página **[!UICONTROL Seleccionar segmentos]**, seleccione qué segmentos desea enviar al destino. Encontrará más información sobre los campos en las secciones siguientes.
 
 ![Seleccionar segmentos](../../assets/common/email-select-segments.png)
 
