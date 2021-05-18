@@ -3,10 +3,9 @@ keywords: correo electrónico;correo electrónico;destinos de correo electrónic
 title: Conexión de Marketing Cloud de Salesforce
 seo-description: Salesforce Marketing Cloud es un grupo de marketing digital conocido anteriormente como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
@@ -35,25 +34,25 @@ En **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleccione [!DN
 
 ![Conectarse a Salesforce](../../assets/catalog/email-marketing/salesforce/catalog.png)
 
-En el paso **[!UICONTROL Account]**, si ha configurado anteriormente una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Existing Account]** y elija una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL New Account]** para configurar una nueva conexión. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Para [!DNL Salesforce Marketing Cloud], puede seleccionar entre **[!UICONTROL SFTP with Password]** y **[!UICONTROL SFTP with SSH Key]**.
+En el paso **[!UICONTROL Cuenta]**, si anteriormente ha configurado una conexión con su destino de almacenamiento en la nube, seleccione **[!UICONTROL Cuenta existente]** y elija una de las conexiones existentes. O bien, puede seleccionar **[!UICONTROL Nueva cuenta]** para configurar una nueva conexión. Complete las credenciales de autenticación de la cuenta y seleccione **[!UICONTROL Connect to destination]**. Para [!DNL Salesforce Marketing Cloud], puede seleccionar entre **[!UICONTROL SFTP con contraseña]** y **[!UICONTROL SFTP con clave SSH]**.
 
 ![Conectar la cuenta de Marketing Cloud de Salesforce](../../assets/catalog/email-marketing/salesforce/connection-type.png)
 
-Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Configure]**.
+Rellene la información siguiente, según el tipo de conexión y seleccione **[!UICONTROL Configurar]**.
 
-- Para las conexiones **[!UICONTROL SFTP with Password]**, debe proporcionar [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] y [!UICONTROL Password].
-- Para las conexiones **[!UICONTROL SFTP with SSH Key]**, debe proporcionar [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] y [!UICONTROL SSH Key].
+- Para conexiones **[!UICONTROL SFTP con contraseña]**, debe proporcionar [!UICONTROL Dominio], [!UICONTROL Puerto], [!UICONTROL Nombre de usuario] y [!UICONTROL Contraseña].
+- Para conexiones **[!UICONTROL SFTP con clave SSH]**, debe proporcionar [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL User name] y [!UICONTROL SSH Key].
 
-Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Key]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
+Opcionalmente, puede adjuntar su clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Clave]**. La clave pública debe escribirse como una cadena codificada [!DNL Base64].
 
 ![Rellene la información de Salesforce](../../assets/catalog/email-marketing/salesforce/account-info.png)
 
-En el paso **[!UICONTROL Authentication]**, rellene la información relevante para su destino como se muestra a continuación:
-- **[!UICONTROL Name]**: Elija un nombre relevante para el destino.
-- **[!UICONTROL Description]**: Escriba una descripción para el destino.
-- **[!UICONTROL Folder Path]**: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
-- **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
-- **[!UICONTROL Marketing actions]**: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
+En el paso **[!UICONTROL Authentication]** , rellene la información relevante para su destino como se muestra a continuación:
+- **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.
+- **[!UICONTROL Descripción]**: Escriba una descripción para el destino.
+- **[!UICONTROL Ruta]** de carpeta: Proporcione la ruta en su ubicación de almacenamiento donde Platform depositará sus datos de exportación como archivos CSV o delimitados por tabuladores.
+- **[!UICONTROL Formato]** de archivo:  **** CSVo  **TAB_DELIMITED**. Seleccione el formato de archivo que desea exportar a su ubicación de almacenamiento.
+- **[!UICONTROL Acciones]** de marketing: Las acciones de marketing indican la intención para la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información sobre las acciones de marketing, consulte [Información general sobre las políticas de uso de datos](../../../data-governance/policies/overview.md).
 
 <!--
 
@@ -65,7 +64,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ![Información básica de Salesforce](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
-Haga clic en **[!UICONTROL Create destination]** después de rellenar los campos anteriores. El destino ahora está conectado y puede [activar segmentos](../../ui/activate-destinations.md) en el destino.
+Haga clic en **[!UICONTROL Crear destino]** después de rellenar los campos anteriores. El destino ahora está conectado y puede [activar segmentos](../../ui/activate-destinations.md) en el destino.
 
 ## Activar segmentos {#activate-segments}
 
@@ -77,8 +76,8 @@ Al [activar segmentos](../../ui/activate-destinations.md) en el destino [!DNL Sa
 
 ## Datos exportados {#exported-data}
 
-Para destinos [!DNL Salesforce Marketing Cloud], Platform crea un archivo `.txt` o `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
+Para destinos [!DNL Salesforce Marketing Cloud], Platform crea un archivo `.csv` delimitado por tabuladores en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Destinos de marketing por correo electrónico y destinos de almacenamiento en la nube](../../ui/activate-destinations.md#esp-and-cloud-storage) en el tutorial de activación de segmentos.
 
 ## Configurar la importación de datos en [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Después de conectar [!DNL Platform] al almacenamiento SFTP, debe configurar la importación de datos desde la ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud]. Para obtener información sobre cómo lograr esto, consulte [Importación de suscriptores a Marketing Cloud desde un archivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) en [!DNL Salesforce Help Center].
+Después de conectar [!DNL Platform] al almacenamiento [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud]. Para obtener información sobre cómo lograr esto, consulte [Importación de suscriptores a Marketing Cloud desde un archivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) en [!DNL Salesforce Help Center].
