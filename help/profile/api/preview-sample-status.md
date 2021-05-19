@@ -1,27 +1,20 @@
 ---
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;vista previa;ejemplo
 title: Vista previa del punto final de la API de estado de muestra (vista previa del perfil)
-description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil del cliente en tiempo real, puede obtener una vista previa de la muestra de éxito más reciente de los datos de perfil, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad dentro de Adobe Experience Platform.
-topic-legacy: guide
+description: Mediante el extremo de estado de muestra de vista previa, que forma parte de la API de perfil de cliente en tiempo real, puede obtener una vista previa de la muestra de éxito más reciente de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar un informe de superposición de conjuntos de datos.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
 
 # Vista previa del punto final del estado de muestra (vista previa del perfil)
 
-Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear perfiles unificados sólidos para clientes individuales. Como los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacenan en el almacén de datos del perfil.
+Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear un perfil unificado y robusto para cada uno de sus clientes. A medida que los datos se incorporan en Platform, se ejecuta un trabajo de ejemplo para actualizar el recuento de perfiles y otras métricas relacionadas con perfiles.
 
-Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
-
-* Para **flujos de trabajo de datos de flujo continuo**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si lo ha hecho, se activa automáticamente un trabajo de muestra para actualizar el recuento.
-* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se cumple el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del trabajo de muestra más reciente que se ha realizado correctamente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
-
-Estas métricas también están disponibles en la sección [!UICONTROL Profiles] de la interfaz de usuario del Experience Platform. Para obtener información sobre cómo acceder a los datos de perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía del usuario](../ui/user-guide.md).
+Los resultados de este trabajo de muestra se pueden ver mediante el extremo `/previewsamplestatus` de la API de perfil del cliente en tiempo real. Este extremo también se puede usar para enumerar distribuciones de perfiles por conjunto de datos y área de nombres de identidad, así como para generar un informe de superposición de conjuntos de datos para ganar visibilidad en la composición del almacén de perfiles de su organización. Esta guía explica los pasos necesarios para ver estas métricas usando el extremo `/previewsamplestatus` de la API.
 
 >[!NOTE]
 >
@@ -35,11 +28,26 @@ El extremo de API utilizado en esta guía forma parte de la [[!DNL Real-time Cus
 
 Esta guía hace referencia tanto a &quot;fragmentos de perfil&quot; como a &quot;perfiles combinados&quot;. Es importante comprender la diferencia entre estos términos antes de continuar.
 
-Cada perfil de cliente individual está compuesto por varios fragmentos de perfil que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan (según la política de combinación) para crear un único perfil para ese cliente. Por lo tanto, es probable que el número total de fragmentos de perfil sea siempre mayor que el número total de perfiles combinados, ya que cada perfil está compuesto por varios fragmentos.
+Cada perfil de cliente individual está compuesto por varios fragmentos de perfil que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con la marca a través de varios canales, es probable que su organización tenga varios fragmentos de perfil relacionados con ese único cliente que aparecen en varios conjuntos de datos.
+
+Cuando los fragmentos de perfil se incorporan en Platform, se combinan (según una política de combinación) para crear un único perfil para ese cliente. Por lo tanto, es probable que el número total de fragmentos de perfil sea siempre mayor que el número total de perfiles combinados, ya que cada perfil está compuesto por varios fragmentos.
+
+Para obtener más información sobre los perfiles y su función en el Experience Platform, comience por leer la [Descripción general del perfil del cliente en tiempo real](../home.md).
+
+## Activación del trabajo de muestra
+
+Como los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacenan en el almacén de datos del perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+
+* Para **flujos de trabajo de datos de flujo continuo**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si lo ha hecho, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se cumple el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del trabajo de muestra más reciente que se ha realizado correctamente, así como la distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
+
+El recuento de perfiles y los perfiles por métricas de espacio de nombres también están disponibles en la sección [!UICONTROL Perfiles] de la interfaz de usuario del Experience Platform. Para obtener información sobre cómo acceder a los datos de perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía de la interfaz de usuario](../ui/user-guide.md).
 
 ## Ver el último estado de muestra {#view-last-sample-status}
 
-Puede realizar una solicitud de GET al extremo `/previewsamplestatus` para ver los detalles del último trabajo de muestra exitoso que se ejecutó para su organización IMS. Esto incluye el número total de perfiles de la muestra, así como la métrica de recuento de perfiles o el número total de perfiles que su organización tiene en Experience Platform. El recuento de perfiles se genera después de combinar los fragmentos de perfil para formar un solo perfil para cada cliente individual. En otras palabras, su organización puede tener varios fragmentos de perfil relacionados con un único cliente que interactúa con su marca a través de diferentes canales, pero estos fragmentos se fusionarían juntos (según la política de combinación predeterminada) y devolverían un recuento de &quot;1&quot; perfil porque todos están relacionados con la misma persona.
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus` para ver los detalles del último trabajo de muestra exitoso que se ejecutó para su organización IMS. Esto incluye el número total de perfiles de la muestra, así como la métrica de recuento de perfiles o el número total de perfiles que su organización tiene en Experience Platform.
+
+El recuento de perfiles se genera después de combinar los fragmentos de perfil para formar un solo perfil para cada cliente individual. En otras palabras, cuando los fragmentos de perfil se combinan, devuelven un recuento de &quot;1&quot; perfil porque todos están relacionados con el mismo individuo.
 
 El recuento de perfiles también incluye perfiles con atributos (datos de registro) y perfiles que solo contienen datos de series temporales (eventos), como perfiles de Adobe Analytics. El trabajo de ejemplo se actualiza regularmente a medida que se incorporan los datos de perfil para proporcionar un número total actualizado de perfiles dentro de Platform.
 
@@ -62,7 +70,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye los detalles del último trabajo de muestra exitoso que se ejecutó para la organización IMS.
+La respuesta incluye los detalles del último trabajo de muestra exitoso que se ejecutó para la organización.
 
 >[!NOTE]
 >
@@ -137,7 +145,7 @@ La respuesta incluye una matriz `data`, que contiene una lista de objetos de con
 
 >[!NOTE]
 >
->Si existieran varios informes para la fecha, solo se devolvería el más reciente. Si no existiera un informe de conjunto de datos para la fecha proporcionada, se devolvería el estado HTTP 404 (no encontrado).
+>Si existen varios informes para la fecha, solo se devuelve el informe más reciente. Si no existe un informe de conjunto de datos para la fecha proporcionada, se devuelve el estado HTTP 404 (no encontrado).
 
 ```json
 {
@@ -198,7 +206,9 @@ La respuesta incluye una matriz `data`, que contiene una lista de objetos de con
 
 ## Enumerar la distribución de perfiles por espacio de nombres
 
-Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Las áreas de nombres de identidad son un componente importante del servicio de identidad de Adobe Experience Platform que sirve como indicadores del contexto con el que se relacionan los datos del cliente. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md).
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles.
+
+Las áreas de nombres de identidad son un componente importante del servicio de identidad de Adobe Experience Platform que sirve como indicadores del contexto con el que se relacionan los datos del cliente. Para obtener más información, comience por leer la [descripción general del área de nombres de identidad](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -288,9 +298,75 @@ La respuesta incluye una matriz `data`, con objetos individuales que contienen l
 | `fullIDsFragmentCount` | El número total de fragmentos de perfil en el espacio de nombres. |
 | `fullIDsCount` | Número total de perfiles combinados en el espacio de nombres. |
 | `fullIDsPercentage` | El `fullIDsCount` como porcentaje del total de perfiles combinados (el valor `totalRows` tal como se devuelve en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
-| `code` | El `code` del espacio de nombres. Esto se puede encontrar al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina [!UICONTROL Identity symbol] en la interfaz de usuario del Experience Platform. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md). |
+| `code` | El `code` del espacio de nombres. Esto se puede encontrar al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina [!UICONTROL Símbolo de identidad] en la interfaz de usuario del Experience Platform. Para obtener más información, visite [identity namespace overview](../../identity-service/namespaces.md). |
 | `value` | El valor `id` del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres mediante la [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
+
+## Generar informe de superposición de conjuntos de datos
+
+El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que contribuyen más a la audiencia a la que se puede dirigir (perfiles). Además de proporcionar perspectivas sobre los datos, este informe puede ayudarle a realizar acciones para optimizar el uso de licencias, como configurar un TTL para determinados conjuntos de datos.
+
+Puede generar el informe de superposición de conjuntos de datos realizando una solicitud de GET al extremo `/previewsamplestatus/report/dataset/overlap` .
+
+Para obtener instrucciones paso a paso que describen cómo generar el informe de superposición de conjuntos de datos mediante la línea de comandos o la interfaz de usuario de Postman, consulte el tutorial [Generación del informe de superposición de conjuntos de datos](../tutorials/dataset-overlap-report.md).
+
+**Formato de API**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `date` | Especifique la fecha del informe a devolver. Si se ejecutaron varios informes en la misma fecha, se devuelve el informe más reciente de esa fecha. Si no existe un informe para la fecha especificada, se devuelve un error 404 (No encontrado). Si no se especifica ninguna fecha, se devuelve el informe más reciente. Formato: AAAA-MM-DD. Ejemplo: `date=2024-12-31` |
+
+**Solicitud**
+
+La siguiente solicitud utiliza el parámetro `date` para devolver el informe más reciente de la fecha especificada.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Respuesta**
+
+Una solicitud correcta devuelve Estado HTTP 200 (OK) y el informe de superposición de conjuntos de datos.
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-12-29T19:55:31.147"
+}
+```
+
+| Propiedad | Descripción |
+|---|---|
+| `data` | El objeto `data` contiene listas de conjuntos de datos separados por coma y sus respectivos recuentos de perfiles. |
+| `reportTimestamp` | Marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto corresponde a la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
+
+Los resultados del informe se pueden interpretar desde los conjuntos de datos y recuentos de perfiles de la respuesta. Consideremos el siguiente objeto de informe de ejemplo `data`:
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+Este informe proporciona la siguiente información:
+* Hay 123 perfiles compuestos de datos procedentes de los siguientes conjuntos de datos: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* Hay 454.412 perfiles compuestos de datos procedentes de estos dos conjuntos de datos: `5d92921872831c163452edc8` y `5eb2cdc6fa3f9a18a7592a98`.
+* Hay 107 perfiles que están compuestos solamente de datos del conjunto de datos `5eeda0032af7bb19162172a7`.
+* Hay un total de 454.642 perfiles en la organización.
 
 ## Pasos siguientes
 
-Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el Almacenamiento de perfiles y ejecutar el informe de superposición de conjuntos de datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre las definiciones de segmentos. Esta información ayuda a garantizar que está aislando la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+
