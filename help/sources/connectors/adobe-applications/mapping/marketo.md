@@ -5,7 +5,7 @@ title: Asignación de campos para el origen del Marketo Engage
 topic-legacy: overview
 description: Las tablas siguientes contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
+source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 4%
@@ -129,6 +129,10 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
+| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `sfdc.lastStatus` | `lastStatus` |
+| `sfdc.hasResponded` | `hasResponded` |
+| `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
