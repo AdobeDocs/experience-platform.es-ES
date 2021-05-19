@@ -5,10 +5,9 @@ title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -19,11 +18,25 @@ Adobe Experience Platform admite la posibilidad de importar audiencias externas,
 
 ## Primeros pasos
 
+Este tutorial requiere una comprensión práctica de los distintos servicios [!DNL Adobe Experience Platform] implicados en la creación de segmentos de audiencia. Antes de comenzar este tutorial, consulte la documentación de los siguientes servicios:
+
 - [Servicio](../home.md) de segmentación: Permite generar segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
 - [Perfil](../../profile/home.md) del cliente en tiempo real: Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
 - [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en el Experience Platform.
 - [ingesta](../../ingestion/streaming-ingestion/overview.md) de transmisión: El modo en que el Experience Platform ingesta y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
+
+### Datos de segmentos frente a metadatos de segmentos
+
+Antes de comenzar a importar y usar audiencias externas, es importante comprender la diferencia entre los datos de segmentos y los metadatos de segmentos.
+
+Los datos de segmentos hacen referencia a perfiles que cumplen los criterios de calificación de segmentos y, por lo tanto, forman parte de la audiencia.
+
+Los metadatos del segmento son información sobre el propio segmento, que incluye el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con perfiles individuales que cumplen la calificación del segmento y forman parte de la audiencia resultante.
+
+| Datos de segmentos | Metadatos del segmento |
+| ------------ | ---------------- |
+| Perfiles que cumplen la calificación de segmentos | Información sobre el propio segmento |
 
 ## Creación de un área de nombres de identidad para la audiencia externa
 
@@ -37,11 +50,11 @@ Para crear un área de nombres de identidad, siga las instrucciones de la [guía
 
 Después de crear un área de nombres de identidad, debe crear un nuevo esquema para el segmento que va a crear.
 
-Para empezar a componer un esquema, seleccione primero **[!UICONTROL Schemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Create schema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Browse]** para ver una selección completa de los tipos de esquema disponibles.
+Para empezar a componer un esquema, seleccione primero **[!UICONTROL Esquemas]** en la barra de navegación izquierda, seguido de **[!UICONTROL Crear esquema]** en la esquina superior derecha del espacio de trabajo Esquemas. Desde aquí, seleccione **[!UICONTROL Browse]** para ver una selección completa de los tipos de esquema disponibles.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Dado que está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Use existing class]**. Ahora, seleccione la clase **[!UICONTROL Segment definition]**, seguida de **[!UICONTROL Assign class]**.
+Dado que está creando una definición de segmento, que es una clase predefinida, seleccione **[!UICONTROL Usar clase existente]**. Ahora, seleccione la clase **[!UICONTROL Segment definition]** seguida de **[!UICONTROL Assign class]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -49,7 +62,7 @@ Ahora que se ha creado el esquema, debe especificar qué campo contendrá el ID 
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Después de marcar el campo `_id` como identidad principal, seleccione el título del esquema, seguido del botón denominado **[!UICONTROL Profile]**. Seleccione **[!UICONTROL Enable]** para habilitar el esquema para [!DNL Real-time Customer Profile].
+Después de marcar el campo `_id` como identidad principal, seleccione el título del esquema, seguido del botón denominado **[!UICONTROL Perfil]**. Seleccione **[!UICONTROL Enable]** para habilitar el esquema para [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -59,7 +72,7 @@ Ahora, este esquema está habilitado para Perfil, con la identificación princip
 
 Después de configurar el esquema, deberá crear un conjunto de datos para los metadatos del segmento.
 
-Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir la opción **[!UICONTROL Create dataset from schema]** , utilizando el esquema creado anteriormente.
+Para crear un conjunto de datos, siga las instrucciones de la [guía del usuario del conjunto de datos](../../catalog/datasets/user-guide.md#create). Debe seguir la opción **[!UICONTROL Create dataset from schema]** utilizando el esquema que ha creado anteriormente.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -79,7 +92,7 @@ Una vez que haya creado la conexión de flujo continuo, tendrá acceso a su punt
 
 ## Generación de segmentos con audiencias importadas
 
-Una vez configuradas las audiencias importadas, se pueden utilizar como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione la pestaña **[!UICONTROL Audiences]** en la sección **[!UICONTROL Fields]**.
+Una vez configuradas las audiencias importadas, se pueden utilizar como parte del proceso de segmentación. Para buscar audiencias externas, vaya al Generador de segmentos y seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Campos]**.
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
