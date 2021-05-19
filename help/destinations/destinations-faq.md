@@ -4,9 +4,9 @@ title: Preguntas frecuentes sobre destinos
 seo-title: Preguntas frecuentes sobre destinos
 description: Respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform
 seo-description: Respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Preguntas frecuentes sobre destinos {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **¿Qué debo hacer antes de poder activar audiencias en  [!DNL Facebook Custom Audiences]?**
 
