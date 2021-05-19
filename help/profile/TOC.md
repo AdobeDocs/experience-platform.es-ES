@@ -3,18 +3,17 @@ audience: user
 user-guide-title: Guía de Perfil del cliente en tiempo real
 user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
 feature: Perfiles
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 20%
+source-wordcount: '128'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* Información general del [[!DNL Profile] ](home.md)
+* [Información general del [!DNL Profile]](home.md)
 * [Información general del perfil (vídeo)](video/profile-overview.md)
 * [[!DNL Profile] guardrails](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -41,7 +40,8 @@ ht-degree: 20%
    * [Expresiones de ejemplo](computed-attributes/expressions.md)
 * Tutoriales {#tutorials}
    * [Añadir datos a [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configurar un conjunto de datos  [!DNL Profile] & [!DNL Identity] para servicio](tutorials/dataset-configuration.md)
+   * [Configurar un conjunto de datos para el servicio [!DNL Profile] & [!DNL Identity] ](tutorials/dataset-configuration.md)
+   * [Generar el informe de superposición de conjuntos de datos](tutorials/dataset-overlap-report.md)
    * [Más tutoriales](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Procesamiento de solicitudes de privacidad](privacy.md)
 * [[!DNL Profile] guía de solución de problemas](troubleshooting.md)
