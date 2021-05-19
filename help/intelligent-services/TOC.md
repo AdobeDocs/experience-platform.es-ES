@@ -5,10 +5,9 @@ user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 25%
 
 ---
@@ -44,4 +43,5 @@ ht-degree: 25%
       - [Perspectivas de Discover](customer-ai/user-guide/discover-insights.md)
       - [Crear segmentos con puntuaciones de Customer AI](customer-ai/user-guide/create-segment.md)
       - [Descargar puntuaciones](customer-ai/user-guide/download-scores.md)
+   - [Solución de problemas de error](customer-ai/troubleshooting.md)
 - [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
