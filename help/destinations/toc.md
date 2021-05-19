@@ -4,10 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 10%
 
 ---
@@ -17,6 +16,7 @@ ht-degree: 10%
 
 * [Información general sobre los destinos](./home.md)
 * [Tipos y categorías de destino](./destination-types.md)
+* [Preguntas frecuentes sobre destinos](./destinations-faq.md)
 * Tutoriales de API {#api}
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo](./api/email-marketing.md)
