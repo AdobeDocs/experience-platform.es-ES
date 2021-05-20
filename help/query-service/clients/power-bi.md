@@ -5,11 +5,10 @@ title: Conectar Power BI al servicio de consulta
 topic-legacy: connect
 description: Este documento recorre los pasos para conectar la Power BI con el servicio de consulta de Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 0%
+source-wordcount: '468'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +18,7 @@ Este documento cubre los pasos para conectar el Power BI con el servicio de cons
 
 >[!NOTE]
 >
-> Esta guía asume que ya tiene acceso a [!DNL Power BI] y está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Power BI] en la [oficial [!DNL Power BI] documentación](https://docs.looker.com/).
+> Esta guía asume que ya tiene acceso a [!DNL Power BI] y está familiarizado con cómo navegar por su interfaz. Puede encontrar más información sobre [!DNL Power BI] en la [oficial [!DNL Power BI] documentación](https://docs.microsoft.com/es-ES/power-bi/).
 >
 > Además, la Power BI **solo** está disponible en dispositivos Windows.
 
@@ -43,7 +42,7 @@ Seleccione **[!DNL PostgreSQL database]**, seguido de **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-Ahora puede introducir valores para el servidor y la base de datos. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página [credenciales de Platform](https://platform.adobe.com/query/configuration). Para encontrar sus credenciales, inicie sesión en [!DNL Platform] y luego seleccione **[!UICONTROL Queries]**, seguido de **[!UICONTROL Credentials]**.
+Ahora puede introducir valores para el servidor y la base de datos. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, visite la página [credenciales de Platform](https://platform.adobe.com/query/configuration). Para encontrar sus credenciales, inicie sesión en [!DNL Platform], luego seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
 
 **[!DNL Server]** es el host que se encuentra en los detalles de conexión. Para la producción, agregue el puerto `:80` al final de la cadena de host. **[!DNL Database]** puede ser &quot;todo&quot; o un nombre de tabla de conjunto de datos.
 
