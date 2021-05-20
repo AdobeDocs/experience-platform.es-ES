@@ -6,9 +6,9 @@ seo-title: Activar perfiles y segmentos en un destino
 description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 seo-description: Active los datos que tiene en Adobe Experience Platform asignando segmentos a destinos. Para lograrlo, siga los pasos a continuación.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
 workflow-type: tm+mt
-source-wordcount: '2566'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ En el flujo de trabajo **[!UICONTROL Activate destination]** , en la página **[
 
 ![segmentos a destino](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Paso de ] asignación de identidades  {#identity-mapping}
+##  Paso de asignación {#mapping}
 
 Se aplica a: destinos sociales y destino publicitario de Google Customer Match
 
