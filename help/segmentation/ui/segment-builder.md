@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario del Generador de segmentos
 topic-legacy: ui guide
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos del perfil. El espacio de trabajo proporciona controles intuitivos para la creación y edición de reglas, como los mosaicos de arrastrar y soltar utilizados para representar propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-translation-type: tm+mt
-source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1996'
 ht-degree: 0%
 
 ---
@@ -23,7 +22,7 @@ ht-degree: 0%
 
 Los componentes básicos de las definiciones de segmentos son atributos y eventos. Además, los atributos y eventos contenidos en audiencias existentes también pueden utilizarse como componentes para nuevas definiciones.
 
-Puede ver estos componentes básicos en la sección **[!UICONTROL Fields]** del lado izquierdo del espacio de trabajo [!DNL Segment Builder]. **[!UICONTROL Fields]** contiene una pestaña para cada uno de los componentes principales: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; y &quot;[!UICONTROL Audiences]&quot;.
+Puede ver estos componentes básicos en la sección **[!UICONTROL Fields]** de la izquierda del espacio de trabajo [!DNL Segment Builder]. **** Los campos contienen una pestaña para cada uno de los componentes principales: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot; y &quot;[!UICONTROL Audiencias]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -35,9 +34,9 @@ La pestaña **[!UICONTROL Attributes]** permite examinar los atributos [!DNL Pro
 
 ### Eventos
 
-La pestaña **[!UICONTROL Events]** le permite crear una audiencia en función de eventos o acciones que se hayan producido utilizando elementos de datos [!DNL XDM ExperienceEvent]. También puede encontrar Tipos de eventos en la pestaña **[!UICONTROL Events]**, que son una colección de eventos usados comúnmente para permitirle crear sus segmentos más rápidamente.
+La pestaña **[!UICONTROL Events]** le permite crear una audiencia en función de los eventos o acciones que se hayan realizado utilizando [!DNL XDM ExperienceEvent] elementos de datos. También puede encontrar Tipos de eventos en la pestaña **[!UICONTROL Eventos]**, que son una colección de eventos usados comúnmente para permitirle crear sus segmentos más rápidamente.
 
-Además de poder buscar elementos [!DNL ExperienceEvent] , también puede buscar tipos de eventos. Los tipos de eventos utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin que sea necesario buscar en la clase [!DNL XDM ExperienceEvent] buscando el evento correcto. Por ejemplo, el uso de la barra de búsqueda para buscar &quot;carro&quot; devuelve los Tipos de eventos &quot;[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones del carro de compras que se usan con mucha frecuencia al crear definiciones de segmentos.
+Además de poder buscar elementos [!DNL ExperienceEvent] , también puede buscar tipos de eventos. Los tipos de eventos utilizan la misma lógica de codificación que [!DNL ExperienceEvents], sin que sea necesario buscar en la clase [!DNL XDM ExperienceEvent] buscando el evento correcto. Por ejemplo, si se utiliza la barra de búsqueda para buscar &quot;carro&quot;, se devuelven los tipos de evento &quot;[!UICONTROL AddCart]&quot; y &quot;[!UICONTROL RemoveCart]&quot;, que son dos acciones del carro de compras que se usan con mucha frecuencia al crear definiciones de segmentos.
 
 Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra de búsqueda, que utiliza la sintaxis de búsqueda [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Los resultados de la búsqueda comienzan a rellenarse a medida que se introducen palabras completas. Por ejemplo, para generar una regla basada en el campo XDM `ExperienceEvent.commerce.productViews`, empiece a escribir &quot;vistas del producto&quot; en el campo de búsqueda. Una vez que se ha escrito la palabra &quot;producto&quot;, empiezan a aparecer los resultados de la búsqueda. Cada resultado incluye la jerarquía de objetos a la que pertenece.
 
@@ -45,11 +44,11 @@ Se puede buscar cualquier tipo de componente escribiendo su nombre en la barra d
 >
 >Los campos de esquema personalizados definidos por su organización pueden tardar hasta 24 horas en aparecer y estar disponibles para su uso en la creación de reglas.
 
-A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y &quot;[!UICONTROL Event Types]&quot; en la definición del segmento.
+A continuación, puede arrastrar y soltar fácilmente [!DNL ExperienceEvents] y &quot;[!UICONTROL Tipos de eventos]&quot; en la definición del segmento.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye &quot;[!UICONTROL Event Types]&quot;. Si la lista &quot;[!UICONTROL Event Types]&quot; no está visible o solo puede seleccionar &quot;[!UICONTROL Any]&quot; como &quot;[!UICONTROL Event Type]&quot;, seleccione el **icono del engranaje** situado junto a **[!UICONTROL Fields]** y, a continuación, seleccione **[!UICONTROL Show full XDM schema]** en **[!UICONTROL Available Fields]**. Seleccione de nuevo el **icono de engranaje** para volver a la pestaña **[!UICONTROL Fields]** y ahora debería poder ver varios campos &quot;[!UICONTROL Event Types]&quot; y de esquema, independientemente de si contienen datos o no.
+De forma predeterminada, solo se muestran los campos de esquema rellenados del almacén de datos. Esto incluye &quot;[!UICONTROL Tipos de eventos]&quot;. Si la lista &quot;[!UICONTROL Tipos de eventos]&quot; no está visible o solo puede seleccionar &quot;[!UICONTROL Cualquiera]&quot; como &quot;[!UICONTROL Tipo de evento]&quot;, seleccione el **icono de engranaje** situado junto a **[!UICONTROL Campos]** y, a continuación, seleccione **[!UICONTROL Mostrar XDM completo schema]** en **[!UICONTROL Available Fields]**. Seleccione de nuevo el **icono de engranaje** para volver a la pestaña **[!UICONTROL Fields]** y ahora debería poder ver varios campos de esquema y de tipos de eventos], independientemente de si contienen datos o no.[!UICONTROL 
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -57,7 +56,7 @@ De forma predeterminada, solo se muestran los campos de esquema rellenados del a
 
 La pestaña **[!UICONTROL Audiences]** enumera todas las audiencias importadas desde fuentes externas, como Adobe Audience Manager, así como las audiencias creadas dentro de [!DNL Experience Platform].
 
-En la pestaña **[!UICONTROL Audiences]**, puede ver todos los orígenes disponibles como un grupo de carpetas. Al seleccionar las carpetas, se pueden ver las subcarpetas y audiencias disponibles. Además, puede seleccionar el icono de la carpeta (como se muestra en la imagen de la derecha) para ver la estructura de la carpeta (una marca de verificación indica la carpeta en la que se encuentra) y desplazarse fácilmente por las carpetas seleccionando el nombre de una carpeta en el árbol.
+En la pestaña **[!UICONTROL Audiencias]**, puede ver todos los orígenes disponibles como un grupo de carpetas. Al seleccionar las carpetas, se pueden ver las subcarpetas y audiencias disponibles. Además, puede seleccionar el icono de la carpeta (como se muestra en la imagen de la derecha) para ver la estructura de la carpeta (una marca de verificación indica la carpeta en la que se encuentra) y desplazarse fácilmente por las carpetas seleccionando el nombre de una carpeta en el árbol.
 
 Puede pasar el ratón sobre la ⓘ junto a una audiencia para ver información sobre la audiencia, como su ID, descripción y la jerarquía de carpetas, para localizar la audiencia.
 
@@ -69,7 +68,7 @@ También puede buscar audiencias usando la barra de búsqueda, que utiliza la si
 
 Una definición de segmento es un conjunto de reglas que se utilizan para describir características clave o el comportamiento de una audiencia de destino. Estas reglas se crean utilizando el lienzo del generador de reglas, ubicado en el centro de [!DNL Segment Builder].
 
-Para agregar una regla nueva a la definición del segmento, arrastre un mosaico desde la pestaña **[!UICONTROL Fields]** y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agreguen. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot; y audiencias.
+Para agregar una regla nueva a la definición del segmento, arrastre un mosaico desde la ficha **[!UICONTROL Campos]** y suéltelo en el lienzo del generador de reglas. A continuación, se le presentarán opciones específicas del contexto según el tipo de datos que se agreguen. Los tipos de datos disponibles incluyen: cadenas, fechas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de eventos]&quot; y audiencias.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -93,7 +92,7 @@ Si surgen conflictos al convertir audiencias en reglas, [!DNL Segment Builder] i
 
 ### Vista de código
 
-También puede ver una versión basada en código de una regla creada en [!DNL Segment Builder]. Una vez creada la regla dentro del lienzo del generador de reglas, puede seleccionar **[!UICONTROL Code view]** para ver el segmento como PQL.
+También puede ver una versión basada en código de una regla creada en [!DNL Segment Builder]. Una vez creada la regla dentro del lienzo del generador de reglas, puede seleccionar **[!UICONTROL Vista de código]** para ver el segmento como PQL.
 
 ![](../images/ui/segment-builder/code-view.png)
 
@@ -109,7 +108,7 @@ Para crear una función de agregación, seleccione un evento del carril izquierd
 
 ![](../images/ui/segment-builder/select-event.png)
 
-Después de colocar el evento dentro del contenedor de eventos, seleccione el icono de puntos suspensivos (...) seguido de **[!UICONTROL Aggregate]**.
+Después de colocar el evento dentro del contenedor de eventos, seleccione el icono de elipses (...), seguido de **[!UICONTROL Aggregate]**.
 
 ![](../images/ui/segment-builder/add-aggregation.png)
 
@@ -121,11 +120,11 @@ Ahora se agrega la agregación. Ahora puede seleccionar la función de agregaci�
 
 Las funciones de recuento del Generador de segmentos se utilizan para buscar eventos especificados y contar la cantidad de veces que se han completado. Las funciones de recuento compatibles con el Generador de segmentos son &quot;Al menos&quot;, &quot;Como máximo&quot;, &quot;Exactamente&quot;, &quot;Entre&quot; y &quot;Todo&quot;.
 
-Para crear una función de recuento, seleccione un evento en el carril izquierdo e insértelo en el contenedor [!UICONTROL Events] .
+Para crear una función de recuento, seleccione un evento en el carril izquierdo e insértelo en el contenedor [!UICONTROL Events].
 
 ![](../images/ui/segment-builder/add-event.png)
 
-Después de colocar el evento dentro del contenedor de eventos, seleccione el botón [!UICONTROL At least 1] .
+Después de colocar el evento dentro del contenedor de eventos, seleccione el botón [!UICONTROL Al menos 1].
 
 ![](../images/ui/segment-builder/add-count.png)
 
@@ -137,17 +136,17 @@ Ahora se agrega la función de recuento. Ahora puede seleccionar la función de 
 
 Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los contenedores permiten controlar el orden de ejecución mediante el uso de consultas anidadas.
 
-Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un contenedor nuevo, seleccione los puntos suspensivos (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Add container]**.
+Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un contenedor nuevo, seleccione los puntos suspensivos (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Agregar contenedor]**.
 
 ![](../images/ui/segment-builder/add-container.png)
 
-Un nuevo contenedor aparece como secundario del primer contenedor, pero puede ajustar la jerarquía arrastrando y moviendo los contenedores. El comportamiento predeterminado de un contenedor es &quot;[!UICONTROL Include]&quot; el atributo, evento o audiencia proporcionados. Puede establecer la regla en perfiles &quot;[!UICONTROL Exclude]&quot; que coincidan con los criterios del contenedor seleccionando **[!UICONTROL Include]** en la esquina superior izquierda del mosaico y seleccionando &quot;[!UICONTROL Exclude]&quot;.
+Un nuevo contenedor aparece como secundario del primer contenedor, pero puede ajustar la jerarquía arrastrando y moviendo los contenedores. El comportamiento predeterminado de un contenedor es &quot;[!UICONTROL Include]&quot; el atributo, evento o audiencia proporcionados. Puede establecer la regla en perfiles &quot;Exclude[!UICONTROL Exclude]&quot; que coincidan con los criterios del contenedor seleccionando **[!UICONTROL Include]** en la esquina superior izquierda del mosaico y seleccionando &quot;[!UICONTROL Exclude]&quot;.
 
 Un contenedor secundario también se puede extraer y agregar en línea al contenedor principal seleccionando &quot;desajustar contenedor&quot; en el contenedor secundario. Seleccione los puntos suspensivos (...) en la esquina superior derecha del contenedor secundario para acceder a esta opción.
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
-Una vez seleccionado **[!UICONTROL Unwrap container]**, el contenedor secundario se elimina y los criterios aparecen en línea.
+Una vez que seleccione **[!UICONTROL Desenvolver contenedor]**, el contenedor secundario se eliminará y los criterios aparecerán en línea.
 
 >[!NOTE]
 >
@@ -159,19 +158,19 @@ Una vez seleccionado **[!UICONTROL Unwrap container]**, el contenedor secundario
 
 [!DNL Experience Platform] permite reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
 
-Puede seleccionar una directiva de combinación que coincida con su propósito de marketing para esta audiencia o utilizar la directiva de combinación predeterminada proporcionada por [!DNL Platform]. Puede crear varias directivas de combinación exclusivas de su organización, incluida la creación de su propia directiva de combinación predeterminada. Para obtener instrucciones paso a paso sobre la creación de directivas de combinación para su organización, consulte el tutorial sobre [cómo trabajar con directivas de combinación mediante la IU](../../profile/ui/merge-policies.md).
+Puede seleccionar una directiva de combinación que coincida con su propósito de marketing para esta audiencia o utilizar la directiva de combinación predeterminada proporcionada por [!DNL Platform]. Puede crear varias directivas de combinación exclusivas de su organización, incluida la creación de su propia directiva de combinación predeterminada. Para obtener instrucciones paso a paso sobre la creación de directivas de combinación para su organización, comience leyendo la [información general de directivas de combinación](../../profile/merge-policies/overview.md).
 
-Para seleccionar una política de combinación para su definición de segmento, seleccione el icono de engranaje en la ficha **[!UICONTROL Fields]** y, a continuación, utilice el menú desplegable **[!UICONTROL Merge Policy]** para seleccionar la política de combinación que desea utilizar.
+Para seleccionar una política de combinación para su definición de segmento, seleccione el icono de engranaje en la pestaña **[!UICONTROL Fields]** y, a continuación, utilice el menú desplegable **[!UICONTROL Merge Policy]** para seleccionar la política de combinación que desea utilizar.
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Propiedades del segmento
 
-Al crear una definición de segmento, la sección **[!UICONTROL Segment Properties]** del lado derecho del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
+Al crear una definición de segmento, la sección **[!UICONTROL Propiedades del segmento]** del lado derecho del espacio de trabajo muestra una estimación del tamaño del segmento resultante, lo que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
-En la sección **[!UICONTROL Segment Properties]** también puede especificar información importante sobre la definición del segmento, incluido su nombre y descripción. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
+En la sección **[!UICONTROL Propiedades del segmento]** también puede especificar información importante sobre la definición del segmento, como su nombre y descripción. Los nombres de definiciones de segmentos se utilizan para identificar el segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
-A medida que siga creando su definición de segmento, puede ver una vista previa paginada de la audiencia seleccionando **[!UICONTROL View Profiles]**.
+A medida que siga creando su definición de segmento, puede ver una vista previa paginada de la audiencia seleccionando **[!UICONTROL Ver perfiles]**.
 
 ![](../images/ui/segment-builder/segment-properties.png)
 
