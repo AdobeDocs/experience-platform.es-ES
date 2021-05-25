@@ -3,10 +3,9 @@ keywords: Conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión facebook
 description: Active perfiles para sus campañas de Facebook para segmentación de audiencia, personalización y supresión en función de correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-translation-type: tm+mt
-source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
+source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1160'
 ht-degree: 2%
 
 ---
@@ -45,8 +44,8 @@ A continuación, pueden utilizar sus datos sin conexión, incluidos los ID de pe
 |---|---|---|
 | GAID | Google Advertising ID | Seleccione la identidad objetivo GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono sin formato y con hash, respectivamente. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos. |
-| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para las direcciones de correo electrónico con texto sin formato y con hash, respectivamente. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Adobe Experience Platform admite los números de teléfono con texto sin formato y con hash SHA256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono sin formato y con hash, respectivamente. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Adobe Experience Platform admite las direcciones de correo electrónico con texto sin formato y con hash SHA 256. Siga las instrucciones de la sección [ID match requirements](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para las direcciones de correo electrónico con texto sin formato y con hash, respectivamente. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 ## Tipo de exportación {#export-type}
@@ -100,8 +99,8 @@ Si selecciona hash para las direcciones de correo electrónico usted mismo, aseg
 >[!NOTE]
 >
 >Los datos de espacios de nombres sin hash se colocan automáticamente en hash mediante [!DNL Platform] al activarlos.
-> Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos al activarlos.
-> La opción **[!UICONTROL Apply transformation]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
+> Los datos de origen de atributos no se colocan automáticamente en hash. Cuando el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Platform] hash automáticamente los datos en la activación.
+> La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir espacios de nombres.
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -132,3 +131,15 @@ Para [!DNL Facebook], una activación correcta significa que se crearía una aud
 >[!TIP]
 >
 >La integración entre Adobe Experience Platform y [!DNL Facebook] admite los rellenos históricos de audiencias. Todas las cualificaciones históricas de segmentos se envían a [!DNL Facebook] al activar los segmentos en el destino.
+
+## Resolución de problemas {#troubleshooting}
+
+### 400 Mensaje de error de solicitud incorrecta {#bad-request}
+
+Al activar segmentos en [!DNL Facebook], puede recibir el siguiente error:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
+
+Este error se produce cuando los clientes utilizan cuentas recién creadas y los permisos [!DNL Facebook] aún no están activos.
+
+Si recibe el mensaje de error `400 Bad Request` después de seguir los pasos en [Requisitos previos de cuenta de Facebook](#facebook-account-prerequisites), permita que entren en vigor unos días para que los permisos de [!DNL Facebook] entren en vigor.
