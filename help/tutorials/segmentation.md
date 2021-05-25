@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permite crear segmentos y generar audiencias a partir de los datos del perfil del cliente en tiempo real. Estos segmentos están configurados y mantenidos de forma centralizada en Platform y son fácilmente accesibles para cualquier solución de Adobe.
 exl-id: e45de6b5-ff71-4908-ad79-898084763704
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ La exportación de segmentos que contienen [!DNL Profile] datos requiere primero
 
 ## Configuración de directivas de combinación
 
-Adobe Experience Platform le permite agrupar los datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Con las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para trabajar con políticas de combinación en la interfaz de usuario [!DNL Platform], visite la [guía del usuario de directivas de combinación](../profile/ui/merge-policies.md). Para trabajar con políticas de combinación usando la API [!DNL Real-time Customer Profile], consulte la [guía para desarrolladores de políticas de combinación](../profile/api/merge-policies.md).
+Adobe Experience Platform le permite agrupar los datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Con las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para obtener más información sobre las políticas de combinación y la función que desempeñan en el Experience Platform, lea en primer lugar la [información general sobre las políticas de combinación](../profile/merge-policies/overview.md).
 
 ## Aplicar el cumplimiento de uso de datos para los segmentos
 
