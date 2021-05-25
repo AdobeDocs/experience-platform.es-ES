@@ -5,9 +5,9 @@ title: Compatibilidad con IAB TCF 2.0 en Experience Platform
 topic-legacy: privacy events
 description: Aprenda a configurar sus operaciones de datos y esquemas para transmitir las opciones de consentimiento del cliente al activar segmentos en destinos en Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Los datos de consentimiento del cliente deben enviarse a conjuntos de datos cuyo
 
 Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para recopilar datos de consentimiento, debe asegurarse de que las políticas de combinación se hayan configurado para incluir siempre campos de consentimiento TCF en sus perfiles de cliente. Esto implica establecer la prioridad del conjunto de datos para que el conjunto de datos de consentimiento tenga prioridad sobre otros conjuntos de datos potencialmente conflictivos.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyen todos los atributos de consentimiento requeridos proporcionados por el grupo de campos [XDM privacy schema](./dataset.md#privacy-field-group), tal como se describe en la guía sobre la preparación del conjunto de datos.
+Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [información general de directivas de combinación](../../../../profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyen todos los atributos de consentimiento requeridos proporcionados por el grupo de campos [XDM privacy schema](./dataset.md#privacy-field-group), tal como se describe en la guía sobre la preparación del conjunto de datos.
 
 ## Integración del SDK web del Experience Platform para recopilar datos de consentimiento del cliente {#sdk}
 
@@ -126,9 +126,9 @@ Después de proporcionar un nombre único para la configuración, seleccione el 
 | Campo de configuración de Edge | Valor |
 | --- | --- |
 | [!UICONTROL Sandbox] | El nombre de la plataforma [sandbox](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo necesaria y los conjuntos de datos para configurar la configuración perimetral. |
-| [!UICONTROL Streaming Inlet] | Conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre la [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
-| [!UICONTROL Event Dataset] | Seleccione el conjunto de datos [!DNL XDM ExperienceEvent] creado en el [paso anterior](#datasets). |
-| [!UICONTROL Profile Dataset] | Seleccione el conjunto de datos [!DNL XDM Individual Profile] creado en el [paso anterior](#datasets). |
+| [!UICONTROL Entrada de flujo continuo] | Conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre la [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
+| [!UICONTROL Conjunto de datos del evento] | Seleccione el conjunto de datos [!DNL XDM ExperienceEvent] creado en el [paso anterior](#datasets). |
+| [!UICONTROL Conjunto de datos de perfil] | Seleccione el conjunto de datos [!DNL XDM Individual Profile] creado en el [paso anterior](#datasets). |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
