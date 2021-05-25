@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform le permite unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2590'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ Por ejemplo, si un cliente interactúa con la marca a través de varios canales,
 
 Con las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Esta guía proporciona los pasos para trabajar con políticas de combinación mediante la API.
 
-Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de la interfaz de usuario de directivas de combinación](../ui/merge-policies.md).
+Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de la interfaz de usuario de directivas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función dentro del Experience Platform, lea en primer lugar la [información general de las políticas de combinación](../merge-policies/overview.md).
 
 ## Primeros pasos
 
@@ -760,7 +759,7 @@ Para utilizar una marca de tiempo personalizada, el [[!DNL External Source Syste
 
 Para obtener instrucciones paso a paso sobre cómo trabajar con esquemas mediante la API del Registro de esquemas, incluido cómo añadir grupos de campos a esquemas, visite el [tutorial para crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
 
-Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección [Uso de marcas de hora personalizadas](../ui/merge-policies.md#custom-timestamps) en la [guía del usuario de políticas de combinación](../ui/merge-policies.md).
+Para trabajar con marcas de hora personalizadas mediante la interfaz de usuario, consulte la sección [Uso de marcas de hora personalizadas](../merge-policies/overview.md#custom-timestamps) en la [información general sobre políticas de combinación](../merge-policies/overview.md).
 
 #### [!DNL External Source System Audit Details] detalles del grupo de campos  {#field-group-details}
 
