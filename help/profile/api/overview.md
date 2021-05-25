@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de API del perfil del cliente en tiempo real
 description: La API de perfil de cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos la visualización de perfiles, la creación y actualización de políticas de combinación, la exportación o la muestra de datos de perfil y la eliminación de datos de perfil que ya no son necesarios o que se añadieron por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ A través de Adobe Experience Platform puede acceder a los datos [!DNL Real-time
 
 ## Combinar directivas {#merge-policies}
 
-Al unir datos de varias fuentes en [!DNL Experience Platform], las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear perfiles de clientes individuales. Con la API [!DNL Real-time Customer Profile], puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para obtener más información sobre cómo trabajar con políticas de combinación usando la API, visite la [guía de extremo de directivas de combinación](merge-policies.md).
+Al unir datos de varias fuentes en [!DNL Experience Platform], las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear perfiles de clientes individuales. Con la API [!DNL Real-time Customer Profile], puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización. Para trabajar con políticas de combinación usando la API, visite la [guía de extremo de directivas de combinación](merge-policies.md).
 
-Para obtener una guía sobre cómo trabajar con políticas de combinación utilizando la interfaz de usuario [!DNL Platform], consulte la [guía del usuario de directivas de combinación](../ui/merge-policies.md).
+Para obtener más información sobre las políticas de combinación y su función dentro de Platform, comience leyendo la [información general de las políticas de combinación](../merge-policies/overview.md).
 
 ## Vista previa del estado de muestra ([!DNL Profile] vista previa) {#profile-preview}
 
