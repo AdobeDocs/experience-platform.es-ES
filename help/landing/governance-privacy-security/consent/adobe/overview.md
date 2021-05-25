@@ -5,10 +5,9 @@ title: Procesamiento de consentimiento en Adobe Experience Platform
 topic-legacy: getting started
 description: Aprenda a procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Dado que cada sistema CMP es único, debe determinar la mejor manera de permitir
 
 Este cuadro de diálogo debe permitir al cliente activar o desactivar casos de uso de marketing y personalización específicos para sus datos. Estos consentimientos y preferencias deben ajustarse al modelo de datos que defina para el conjunto de datos habilitado para [!DNL Profile] en el siguiente paso.
 
-## Añadir campos de consentimiento estandarizado a un conjunto de datos [!DNL Profile] habilitado para {#dataset}
+## Añadir campos de consentimiento estandarizado a un conjunto de datos habilitado para [!DNL Profile] {#dataset}
 
 Los datos de consentimiento del cliente deben enviarse a un conjunto de datos habilitado para [!DNL Profile] cuyo esquema contenga campos de consentimiento. Estos campos deben incluirse en el mismo esquema y conjunto de datos que utiliza para capturar información de atributos sobre clientes individuales.
 
@@ -77,7 +76,7 @@ Una vez que haya creado un conjunto de datos habilitado para [!DNL Profile] para
 >
 >Si no tiene conjuntos de datos en conflicto, debe establecer la prioridad de la marca de tiempo para la política de combinación. Esto ayuda a garantizar que el consentimiento más reciente especificado por un cliente sea la configuración de consentimiento que se utiliza.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [guía del usuario de directivas de combinación](../../../../profile/ui/merge-policies.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento necesarios proporcionados por el grupo de campos de esquema Consentimientos y preferencias , tal como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
+Para obtener más información sobre cómo trabajar con políticas de combinación, comience por leer la [información general de directivas de combinación](../../../../profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los perfiles incluyan todos los atributos de consentimiento necesarios proporcionados por el grupo de campos de esquema Consentimientos y preferencias , tal como se describe en la guía de [preparación del conjunto de datos](./dataset.md).
 
 ## Incorporar datos de consentimiento a Platform
 
@@ -97,11 +96,11 @@ Si las preferencias de consentimiento del cliente son necesarias en su aplicaci�
 
 Consulte la documentación del SDK móvil para [configurar la extensión móvil de consentimiento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) y [mediante la API de consentimiento](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Para obtener más información sobre cómo gestionar las preocupaciones de privacidad mediante el SDK de Mobile, consulte la sección [Privacidad y RGPD](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
 
-### Ingesta de datos de consentimiento compatibles con XDM directamente {#batch}
+### Ingesta directa de datos de consentimiento compatibles con XDM {#batch}
 
 Puede ingerir datos de consentimiento compatibles con XDM desde un archivo CSV mediante la ingesta por lotes. Esto puede resultar útil si tiene una acumulación de datos de consentimiento recopilados anteriormente que aún no se han integrado en sus perfiles de cliente.
 
-Siga el tutorial sobre [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para aprender a convertir los campos de datos a XDM e incorporarlos en Platform. Al seleccionar [!UICONTROL Destination] para la asignación, asegúrese de seleccionar la opción **[!UICONTROL Use existing dataset]** y elegir el conjunto de datos de consentimiento [!DNL Profile] habilitado que creó anteriormente.
+Siga el tutorial sobre [asignación de un archivo CSV a XDM](../../../../ingestion/tutorials/map-a-csv-file.md) para aprender a convertir los campos de datos a XDM e incorporarlos en Platform. Al seleccionar [!UICONTROL Destination] para la asignación, asegúrese de seleccionar la opción **[!UICONTROL Use existing dataset]** y elija el conjunto de datos de consentimiento [!DNL Profile] habilitado que creó anteriormente.
 
 ## Pruebe la implementación {#test-implementation}
 
@@ -115,7 +114,7 @@ Después de haber introducido los datos de consentimiento del cliente en su conj
 
 Consulte la sección sobre [navegación por perfiles por identidad](../../../../profile/ui/user-guide.md#browse) en la guía de interfaz de usuario [!DNL Profile] para ver los pasos específicos sobre cómo buscar los detalles de un perfil.
 
-De forma predeterminada, los nuevos atributos de consentimiento no aparecen en el panel de un perfil. Por lo tanto, debe navegar a la pestaña **[!UICONTROL Attributes]** en la página de detalles de un perfil para confirmar que se han introducido según lo esperado. Consulte la guía del [panel de perfiles](../../../../profile/ui/profile-dashboard.md) para aprender a personalizar el tablero según sus necesidades.
+De forma predeterminada, los nuevos atributos de consentimiento no aparecen en el panel de un perfil. Por lo tanto, debe navegar a la pestaña **[!UICONTROL Attributes]** en la página de detalles de un perfil para confirmar que se han introducido tal como se esperaba. Consulte la guía del [panel de perfiles](../../../../profile/ui/profile-dashboard.md) para aprender a personalizar el tablero según sus necesidades.
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
