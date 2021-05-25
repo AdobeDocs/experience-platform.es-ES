@@ -5,10 +5,9 @@ title: Aplicación automática de directivas
 topic-legacy: guide
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Cada etapa del cronograma anterior representa una entidad que puede contribuir a
 | Etapa del linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
 | Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen los casos de uso para los que se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directiva si se utiliza un conjunto de datos o campo que contenga determinadas etiquetas con un fin restringido por una directiva. |
-| Combinar directiva | Las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las políticas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Para obtener más información, consulte la guía de [políticas de combinación](../../profile/ui/merge-policies.md) . |
+| Combinar directiva | Las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directiva si las políticas de combinación están configuradas de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Para obtener más información, consulte [merge policy overview](../../profile/merge-policies/overview.md) . |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse en los perfiles de cliente. Dependiendo de los campos que incluya una definición de segmento, el segmento heredará cualquier etiqueta de uso aplicada para esos campos. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas heredadas están restringidas por las políticas aplicables del destino de destino según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una política de uso de datos. En otras palabras, el caso de uso de marketing que defina para un destino determina qué políticas de uso de datos son aplicables a ese destino. Se producirán infracciones de directiva si activa un segmento cuyas etiquetas de uso están restringidas por las políticas aplicables del destino de destino. |
 
@@ -71,7 +70,7 @@ Cuando se producen infracciones de directiva, los mensajes resultantes que apare
 
 ## Mensajes de infracción de directiva {#enforcement}
 
-Si se produce una infracción de directiva al intentar activar un segmento (o [realizar ediciones en un segmento ya activado](#policy-enforcement-for-activated-segments)), se evita la acción y aparece una ventana emergente que indica que se han violado una o más directivas. Una vez que se ha activado una infracción, el botón **[!UICONTROL Save]** se desactiva para la entidad que esté modificando hasta que se actualicen los componentes adecuados para cumplir con las políticas de uso de datos.
+Si se produce una infracción de directiva al intentar activar un segmento (o [realizar ediciones en un segmento ya activado](#policy-enforcement-for-activated-segments)), se evita la acción y aparece una ventana emergente que indica que se han violado una o más directivas. Una vez que se ha activado una infracción, el botón **[!UICONTROL Save]** está desactivado para la entidad que está modificando hasta que se actualicen los componentes adecuados para cumplir con las políticas de uso de datos.
 
 Seleccione una infracción de directiva en la columna izquierda de la ventana emergente para mostrar los detalles de dicha infracción.
 
