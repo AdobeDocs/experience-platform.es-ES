@@ -4,19 +4,18 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinos
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '477'
+ht-degree: 11%
 
 ---
 
 
 # Destinos {#destinations}
 
-* [Información general sobre los destinos](./home.md)
+* [Destinos sobre validación](./home.md)
 * [Tipos y categorías de destino](./destination-types.md)
-* [Preguntas frecuentes sobre destinos](./destinations-faq.md)
 * Tutoriales de API {#api}
    * [Conectarse a destinos de flujo continuo y activar datos mediante la API de servicio de flujo](./api/streaming-destinations.md)
    * [Conectarse a destinos de marketing por correo electrónico y activar datos mediante la API de servicio de flujo](./api/email-marketing.md)
@@ -135,4 +134,5 @@ ht-degree: 10%
       * [Extensión de etiquetas de Invoca](./catalog/voice/invoca.md)
       * [Extensión de Medallia](./catalog/voice/medallia.md)
       * [Extensión de la bandeja de entrada de URL de Talk](./catalog/voice/talkurl.md)
+* [Preguntas frecuentes](./destinations-faq.md)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
