@@ -4,10 +4,9 @@ title: Información general del perfil del cliente en tiempo real
 topic-legacy: guide
 description: El perfil del cliente en tiempo real es un almacén de entidades de búsqueda genérica que combina datos de varios activos de datos empresariales y, a continuación, proporciona acceso a esos datos en forma de perfiles de cliente individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -64,9 +63,11 @@ Cada empresa quiere comunicarse con sus clientes de una manera que se sienta per
 
 ### Combinar directivas
 
-Al unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se utilizarán para crear el perfil del cliente. Cuando hay datos conflictivos de varios conjuntos de datos, la política de combinación determinará cómo se deben tratar esos datos y qué valor se debe utilizar. Con las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización.
+Al unir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se utilizarán para crear el perfil del cliente.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación utilizando la API [!DNL Real-time Customer Profile], consulte la [guía de extremo de directivas de combinación](api/merge-policies.md). Para trabajar con políticas de combinación utilizando la interfaz de usuario [!DNL Experience Platform], consulte la [guía de la interfaz de usuario de directivas de combinación](ui/merge-policies.md).
+Cuando hay datos conflictivos de varios conjuntos de datos, la política de combinación determina cómo se deben tratar esos datos y qué valor se debe utilizar. A través de las API de RESTful o la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una directiva de combinación predeterminada para su organización.
+
+Para obtener más información sobre las políticas de combinación y su función en el Experience Platform, lea en primer lugar la [información general de las políticas de combinación](merge-policies/overview.md).
 
 ### Esquemas de unión {#profile-fragments-and-union-schemas}
 
