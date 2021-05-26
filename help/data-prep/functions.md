@@ -5,11 +5,10 @@ title: Funciones de asignación de preparación de datos
 topic-legacy: overview
 description: Este documento introduce las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 3%
+source-wordcount: '3934'
+ht-degree: 4%
 
 ---
 
@@ -144,6 +143,8 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | str_to_object | Crea un objeto a partir de la cadena de entrada. | <ul><li>CADENA: **Requerido** La cadena que se está analizando para crear un objeto.</li><li>VALUE_DELIMITER: *Opcional* El delimitador que separa un campo del valor. El delimitador predeterminado es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de valor de campo. El delimitador predeterminado es `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | teléfono - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | Comprueba si el objeto existe dentro de los datos de origen. | <ul><li>ENTRADA: **Requerido** La ruta que se debe comprobar si existe dentro de los datos de origen.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | true |
 | anulación | Establece el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. |  | nullify() | nullify() | `null` |
+| get_keys | Analiza los pares clave/valor y devuelve todas las claves. | <ul><li>OBJETO: **Requerido** El objeto del que se extraerán las claves.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Orgullo y prejuicio&quot;, &quot;libro2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
+| get_values | Analiza los pares clave/valor y devuelve el valor de la cadena, según la clave dada. | <ul><li>CADENA: **Requerido** La cadena que desea analizar.</li><li>CLAVE: **Requerido** La clave para la que se debe extraer el valor.</li><li>VALUE_DELIMITER: **Requerido** El delimitador que separa el campo y el valor. Si se proporciona un `null` o una cadena vacía, este valor es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de campo y valor. Si se proporciona un `null` o una cadena vacía, este valor es `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
 {style=&quot;table-layout:auto&quot;}
 
