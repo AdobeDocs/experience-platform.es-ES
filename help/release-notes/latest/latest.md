@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '978'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Perfil del cliente en tiempo real](#profile)
+- [Fuentes](#sources)
 
 ## Tableros {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | Informe de superposición de conjunto de datos | El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles al exponer los conjuntos de datos que contribuyen en mayor medida a la audiencia a la que se puede dirigir. Además de proporcionar perspectivas sobre los datos de perfil, este informe ayuda a los usuarios a realizar acciones para optimizar el uso de licencias, como establecer un límite para la vida útil de ciertos datos. Para obtener más información, siga el tutorial sobre [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md). |
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+
+Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
+
+| Función | Descripción |
+| ------- | ----------- |
+| Compatibilidad con la interfaz de usuario para la ingesta de archivos comprimidos | Ahora puede obtener una vista previa e introducir archivos JSON comprimidos o delimitados mediante fuentes de almacenamiento en la nube en la interfaz de usuario. Para obtener más información, consulte el tutorial sobre la [configuración de un flujo de datos para una conexión de origen de almacenamiento en la nube en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+
+Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
