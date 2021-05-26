@@ -1,43 +1,68 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión del Experience Platform para el 21 de abril de 2021.
+description: Notas de la versión del Experience Platform para el 26 de mayo de 2021.
 doc-type: release notes
-last-update: April 21, 2021
+last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 10%
+source-wordcount: '831'
+ht-degree: 4%
 
 ---
 
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: 21 de abril de 2021**
+**Fecha de versión: 26 de mayo de 2021**
+
+Nuevas funciones de Adobe Experience Platform:
+
+- [Tableros](#dashboards)
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+- [Perfil del cliente en tiempo real](#profile)
+
+## Tableros {#dashboards}
+
+Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver perspectivas importantes sobre los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+| Función | Descripción |
+| --- | --- |
+| Perspectivas del perfil | El panel de perfiles proporciona una descripción general diaria de las métricas del Perfil del cliente en tiempo real para cada política de combinación organizativa en Experience Platform. Estas perspectivas de perfil están disponibles para todos los usuarios con la capacidad de acceder y ver los datos de perfil dentro de Platform. |
+| Perspectivas de audiencia | El tablero de segmentos proporciona perspectivas relacionadas con la audiencia a todos los usuarios con acceso para ver segmentos dentro de Platform. El tablero proporciona una descripción general diaria de las métricas de audiencia para las audiencias creadas con la interfaz de usuario del Generador de segmentos o importadas desde Adobe Audience Manager. |
+| Perspectivas de activación | El panel de destinos está disponible para todos los usuarios con la capacidad de acceder y ver destinos. El tablero proporciona información general diaria sobre las métricas de activación para las activaciones en todos los destinos. |
+| Perspectivas específicas del usuario | Cada usuario puede personalizar el aspecto de los tableros, incluida la capacidad de modificar el diseño del tablero añadiendo, eliminando, cambiando el tamaño y reorganizando las utilidades. |
+| Creación y administración de utilidades | Los especialistas en marketing pueden acceder a todos los widgets estándar y personalizados en un repositorio centralizado para democratizar la creación y el uso compartido de perspectivas:<br/><ul><li>La pestaña estándar contiene utilidades proporcionadas por Adobe a las que se puede acceder desde el contexto del panel. </li><li>La pestaña personalizada contiene widgets personalizados creados por la organización, incluida una opción para ocultar las utilidades de la vista.</li><li>El flujo de trabajo de creación de utilidades en Profiles and Audience Inghts permite editar, seleccionar, previsualizar y publicar utilidades personalizadas.</li></ul> |
+| Perspectivas personalizadas | Los permisos de acceso permiten a los ingenieros de datos y a los especialistas en marketing personalizar los atributos de perfil que están disponibles para la creación de utilidades. |
+
+Para obtener más información sobre los tableros, incluido cómo conceder permisos de acceso y crear utilidades personalizadas, comience leyendo la [información general de los tableros](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de Experience (XDM).
 
-**Nuevas funciones**
+| Función | Descripción |
+| ------- | ----------- |
+| Advertencias de error leves | Los mensajes de error del Data Prep Mapper serán ahora más indulgentes, ya que proporcionarán advertencias en lugar de errores junto con filas parcialmente transformadas. |
+| Nuevas funciones | Funciones agregadas para obtener claves, anexar elementos a una matriz existente, anexar elementos de varias matrices a una matriz existente, usar objetos para crear matrices y usar el nombre del objeto JSON como un literal de cadena. |
+
+Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos en campañas de marketing en canales múltiples, campañas de correo electrónico, publicidad de destino y muchos otros casos de uso.
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la edición de asignación para flujos de datos existentes | Ahora puede actualizar los conjuntos de asignación de un flujo de datos existente. No se pueden actualizar conjuntos de asignaciones para flujos de datos programados para una ingesta única. Esta función no es compatible con la API HTTP, Adobe Analytics, Adobe Audience Manager y [!DNL Marketo Engage]. Para obtener más información, consulte el tutorial sobre la [actualización de flujos de datos de fuentes en la interfaz de usuario](../../sources/tutorials/ui/update-dataflows.md). |
-| Compatibilidad con la transmisión por secuencias de ingesta | Ahora puede utilizar funciones de preparación de datos al crear una conexión de origen de flujo continuo. Para obtener más información, consulte el tutorial sobre la [creación de una conexión de origen de flujo en la interfaz de usuario](../../sources/tutorials/ui/create/streaming/http.md). |
+| Supervisión mejorada (beta) | Se han aumentado las capacidades de supervisión de los destinos, incluida la información para los destinos de lote y de flujo continuo |
 
-Para obtener más información, consulte [[!DNL Data Prep] overview](../../data-prep/home.md).
+Para obtener información más general sobre los destinos, consulte [información general sobre destinos](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -45,57 +70,15 @@ Experience Data Model (XDM) es una especificación de código abierto diseñada 
 
 | Función | Descripción |
 | --- | --- |
-| Recomendaciones de esquema por sector | Al seleccionar clases y grupos de campos de esquema en la interfaz de usuario del Editor de esquemas, puede utilizar un nuevo filtro para ver los componentes estándar recomendados según su sector específico. Consulte la documentación sobre [modelos de datos del sector](https://www.adobe.com/go/xdm-industry-erds-en) para obtener más información sobre cómo se relacionan estos componentes entre sí para diferentes casos de uso del sector. |
+| Grupos de campos de esquema | El término &quot;mezcla&quot; se ha actualizado a &quot;grupo de campos&quot;. Este cambio se refleja en la interfaz de usuario de Adobe Experience Platform. Además, la API del Registro de esquemas tiene un nuevo extremo [de grupos de campos](../../xdm/api/field-groups.md), mientras que el extremo de mezclas ha quedado obsoleto como punto final heredado. Consulte la [documentación de XDM](../../xdm/home.md) para obtener más información. |
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## Perfil del cliente en tiempo real {#profile}
 
-Los servicios inteligentes potencian a los analistas de marketing y a los profesionales para que aprovechen el poder de la inteligencia artificial y el aprendizaje automático en los casos de uso de experiencias del cliente. Esto permite que los analistas de marketing configuren predicciones específicas de las necesidades de una empresa mediante configuraciones de nivel empresarial sin necesidad de experiencia en ciencia de datos.
-
-### Customer AI
-
-Customer AI disponible en la plataforma de datos del cliente en tiempo real, se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherentes y relevantes a sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con Perfil del cliente en tiempo real, puede ver una vista holística de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con datos de Adobe Analytics | Se ha actualizado la funcionalidad para que admita conjuntos de datos de Adobe Analytics mediante el conector de origen de Analytics sin necesidad de ETL para que los datos se ajusten al esquema de Evento de experiencia del consumidor (EEC). |
-| Compatibilidad con datos de Adobe Audience Manager | Se ha actualizado la funcionalidad para admitir conjuntos de datos de Adobe Audience Manager a través del conector de origen del Audience Manager sin necesidad de ETL para los datos de modo que se ajusten al esquema de Evento de experiencia del consumidor (CEE). |
-| Resumen de rendimiento del modelo | La AI del cliente ahora tiene una [pestaña de resumen del rendimiento del modelo](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) dentro de la página de perspectivas de instancias de servicio. La pestaña de rendimiento del modelo muestra todas las tasas de conversión y pérdida reales. Esto le permite descifrar y comprender lo que está sucediendo en cada uno de sus bloques de propensión. |
+| Combinar actualizaciones del flujo de trabajo de directivas | Al crear y actualizar políticas de combinación en la interfaz de usuario, los usuarios ahora pueden obtener una vista previa de 20 perfiles de muestra basados en el esquema de unión. Esto permite a los usuarios obtener una vista previa del aspecto que tendrán los perfiles de cliente antes de guardar las configuraciones de directivas de combinación. Para obtener más información, consulte la [guía de interfaz de usuario de políticas de combinación](../../profile/merge-policies/ui-guide.md). |
+| Informe de superposición de conjunto de datos | El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles al exponer los conjuntos de datos que contribuyen en mayor medida a la audiencia a la que se puede dirigir. Además de proporcionar perspectivas sobre los datos de perfil, este informe ayuda a los usuarios a realizar acciones para optimizar el uso de licencias, como establecer un límite para la vida útil de ciertos datos. Para obtener más información, siga el tutorial sobre [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md). |
 
-Para obtener más información sobre conjuntos de datos compatibles, consulte la [[!DNL Intelligent Services] documentación de preparación de datos](../../intelligent-services/data-preparation.md).
-
-### Attribution AI
-
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
-
-| Función | Descripción |
-| ------- | ----------- |
-| Compatibilidad con datos de Adobe Analytics | Se ha actualizado la funcionalidad para que admita conjuntos de datos de Adobe Analytics mediante el conector de origen de Analytics sin necesidad de ETL para que los datos se ajusten al esquema de Evento de experiencia del consumidor (EEC). |
-
-Para obtener más información sobre conjuntos de datos compatibles, consulte la [[!DNL Intelligent Services] documentación de preparación de datos](../../intelligent-services/data-preparation.md).
-
-## Servicio de segmentación {#segmentation}
-
-El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API de RESTful que le permiten crear segmentos y generar audiencias a partir de sus datos [!DNL Real-time Customer Profile]. Estos segmentos están configurados y mantenidos de forma centralizada en Platform, lo que los hace fácilmente accesibles para cualquier aplicación de Adobe.
-
-[!DNL Segmentation Service] define un subconjunto de perfiles determinado describiendo los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registros (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Funciones adicionales de agregación | Se han añadido funciones de recuento en el Generador de segmentos. Las funciones de recuento permiten contabilizar el número de veces que se ha realizado el evento especificado. Puede encontrar más información sobre las funciones de recuento en la sección funciones de recuento de la [guía del Generador de segmentos](../../segmentation/ui/segment-builder.md#count-functions) |
-
-Para obtener más información sobre [!DNL Segmentation Service], consulte la [información general de segmentación](../../segmentation/home.md).
-
-## [!DNL Sources] {#sources}
-
-Adobe Experience Platform puede ingerir datos de fuentes externas, al mismo tiempo que le permite estructurarlos, etiquetarlos y mejorarlos mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
-
-Experience Platform proporciona una API de RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecutar la ingesta y administrar el rendimiento de ingesta de datos.
-
-| Función | Descripción |
-| ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Ahora puede crear una [!DNL Marketo Engage] conexión de origen utilizando la interfaz de usuario para llevar datos B2B a Platform y mantener estos datos actualizados mediante aplicaciones conectadas a la plataforma. Para obtener más información, consulte la [[!DNL Marketo Engage] documentación del conector de origen](../../sources/connectors/adobe-applications/marketo/marketo.md). |
-| Fuentes beta que se trasladan a GA | Se han promocionado las siguientes fuentes de beta a GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
-
-Para obtener más información sobre las fuentes, consulte [sources overview](../../sources/home.md).
+Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
