@@ -2,22 +2,16 @@
 keywords: Experience Platform;interfaz de usuario;IU;personalización;panel de uso de licencias;panel;uso de licencias;derecho;consumo
 title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización.
-topic-legacy: guide
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 2%
+source-wordcount: '926'
+ht-degree: 0%
 
 ---
 
-# (Beta) Panel de uso de licencias {#license-usage-dashboard}
-
->[!IMPORTANT]
->
->La funcionalidad de tablero descrita en este documento está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+# Panel de uso de licencias {#license-usage-dashboard}
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre el uso de licencias de su organización, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
 
@@ -33,25 +27,40 @@ El panel de uso de licencias muestra una instantánea de los datos de su organiz
 
 ## Exploración del panel de uso de licencias
 
-Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL License usage]** en el carril izquierdo. Se abre con la pestaña **[!UICONTROL Overview]** que muestra el tablero.
+Para ir al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Licencia de uso]** en el carril izquierdo. Se abre la pestaña **[!UICONTROL Overview]** que muestra el tablero.
+
+>[!NOTE]
+>
+>El panel de uso de licencias no está habilitado de forma predeterminada. A los usuarios se les debe conceder permiso &quot;Ver panel de uso de licencias&quot; para poder ver el tablero. Para ver los pasos sobre la concesión de permisos de acceso para ver el panel de uso de licencias, consulte la [guía de permisos de tablero](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Seleccionar un simulador de pruebas
 
-Para elegir un simulador para pruebas para verlo en el tablero, seleccione [!UICONTROL Production] o [!UICONTROL Development]. El simulador de pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador de pruebas.
+Para elegir un simulador para pruebas para ver en el tablero, seleccione [!UICONTROL Producción] o [!UICONTROL Desarrollo]. El simulador de pruebas seleccionado se indica mediante el botón de opción situado junto al nombre del simulador de pruebas.
 
->[!NOTE]
->
->Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Production] o [!UICONTROL Development] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
+Los informes de consumo para entornos limitados son acumulativos para todos los entornos limitados del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todos los entornos limitados de producción o desarrollo, respectivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
+>[!WARNING]
+>
+>El permiso para ver el panel de uso de la licencia debe especificarse en el simulador de pruebas. Esto significa que se debe añadir permiso para ver el panel a cada simulador de pruebas individual. Esta limitación se solucionará en una versión futura. Mientras tanto, está disponible la siguiente solución:
+>
+>1. Cree un perfil de producto en Adobe Admin Console.
+>2. En Permiso en la categoría Simulador para pruebas , agregue todos los entornos limitados que desee ver en el panel de uso de licencias.
+>3. En la categoría Permiso del tablero de usuarios , agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
+
+
 ### Seleccionar un intervalo de fechas
 
-Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay tres opciones disponibles: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] y [!UICONTROL Last 12 months]. Los últimos 30 días están seleccionados de forma predeterminada.
+Después de seleccionar un simulador para pruebas, puede utilizar la lista desplegable de intervalos de fechas para seleccionar el período de tiempo que se mostrará en el tablero. Hay varias opciones disponibles, incluido el valor predeterminado de los últimos 30 días.
 
 ![](../images/license-usage/select-date-range.png)
+
+También puede seleccionar **[!UICONTROL Custom date]** para elegir el período de tiempo que se muestra.
+
+![](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -63,14 +72,22 @@ Cada utilidad muestra gráficos de líneas en los que se comparan los números r
 
 ## Métricas disponibles
 
-Actualmente hay cuatro métricas disponibles en el panel de uso de licencias:
+El tablero de uso de licencias informa sobre cuatro métricas clave, con más métricas que agregar en versiones posteriores. A continuación se enumeran las métricas disponibles.
 
-* [!UICONTROL Addressable Audience] (medido por el número de perfiles)
-* [!UICONTROL Average profile richness]
-* [!UICONTROL Total consumed storage]
-* [!UICONTROL Data scanned per segmentation ratio]
+>[!NOTE]
+>
+>Tres de las métricas disponibles están actualmente en versión beta.
 
-La definición de cada una de estas métricas varía según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación apropiada sobre la Descripción del producto:
+* [!UICONTROL Audiencia a la que se puede dirigir]
+* [!UICONTROL Promedio de riqueza de perfiles]  (Beta)
+* [!UICONTROL Datos analizados por proporción de segmentación]  (Beta)
+* [!UICONTROL Almacenamiento consumido total]  (Beta)
+
+>[!WARNING]
+>
+>Limitación conocida de la métrica [!UICONTROL Almacenamiento consumido total]: Al eliminar datos de lote, ese lote se coloca en un estado de eliminación suave durante un período de 7 días para admitir casos de uso de recuperación de datos. Después de 7 días, el lote se mueve a un estado de eliminación grave. Los informes sobre el almacenamiento consumido total no reflejarán ningún cambio en el gráfico de tendencias hasta que el lote esté en estado de eliminación grave. Este problema se resolverá en una versión futura.
+
+La disponibilidad de estas métricas y la definición específica de cada una de ellas varían en función de las licencias que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación apropiada sobre la Descripción del producto:
 
 | Licencia | Descripción del producto |
 |---|---|
@@ -79,6 +96,10 @@ La definición de cada una de estas métricas varía según la licencia que haya
 | <ul><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 50M</li></ul> | [Plataforma de datos de clientes en tiempo real](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL A 10M</li><li>AEP:OD ACTIVATION PRFL HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Inteligencia de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+
+>[!WARNING]
+>
+>El panel de uso de licencias solo informa sobre la licencia más reciente aprovisionada para su organización. Si la licencia más reciente aprovisionada para su organización no aparece en la tabla anterior, es posible que el panel de uso de licencias no se muestre correctamente. Está previsto que se admitan licencias adicionales y varias licencias en una sola organización para una versión futura.
 
 ## Pasos siguientes
 
