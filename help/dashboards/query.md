@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Explorar y procesar conjuntos de datos sin procesar que alimentan los tableros del Experience Platform
 type: Documentation
 description: Aprenda a utilizar el servicio de consulta para explorar y procesar conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destino en Experience Platform.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Puede utilizar el servicio de consulta para consultar conjuntos de datos sin pro
 
 Por cada política de combinación activa en el Perfil del cliente en tiempo real, hay un conjunto de datos de atributos de perfil disponible en el lago de datos.
 
-La convención de nomenclatura de este conjunto de datos es **Atributo de perfil** seguida de un valor numérico alfa. Por ejemplo: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+La convención de nomenclatura de estos conjuntos de datos es **Atributo de perfil** seguida de un valor numérico alfa. Por ejemplo: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Para comprender el esquema completo del conjunto de datos, puede obtener una vista previa del esquema y explorarlo con el visor de conjuntos de datos en la interfaz de usuario del Experience Platform.
+Para comprender el esquema completo de cada conjunto de datos, puede obtener una vista previa y explorar los conjuntos de datos mediante el visor de conjuntos de datos en la interfaz de usuario del Experience Platform.
 
 ### Conjunto de datos de metadatos de segmentos
 
-Hay un conjunto de datos de metadatos de segmento disponible en el lago de datos para cada segmento de su organización.
+Hay un conjunto de datos de metadatos de segmento disponible en el lago de datos que contiene metadatos para cada uno de los segmentos de su organización.
 
 La convención de nomenclatura de este conjunto de datos es **Definición de segmento de perfil** seguida de un valor numérico alfa. Por ejemplo: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-La siguiente imagen muestra el esquema del conjunto de datos de metadatos del segmento.
+Para comprender el esquema completo del conjunto de datos, puede obtener una vista previa del esquema y explorarlo con el visor de conjuntos de datos en la interfaz de usuario del Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
 ### Conjunto de datos de metadatos de destino
 
-Los metadatos de los destinos activados están disponibles como un conjunto de datos sin procesar en el lago de datos.
+Los metadatos de todos los destinos activados de su organización están disponibles como un conjunto de datos sin procesar en el lago de datos.
 
 La convención de nomenclatura de este conjunto de datos es **DIM_Destination**.
 
-La siguiente imagen muestra el esquema del conjunto de datos de metadatos de destino.
+Para comprender el esquema completo del conjunto de datos, puede obtener una vista previa del esquema y explorarlo con el visor de conjuntos de datos en la interfaz de usuario del Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Recuento de segmentos activados por destino para todos los destinos
 
 ## Pasos siguientes
 
