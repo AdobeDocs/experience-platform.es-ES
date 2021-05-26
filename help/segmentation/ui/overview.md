@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario del servicio de segmentación
 topic-legacy: ui guide
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-translation-type: tm+mt
-source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -32,9 +31,15 @@ También es importante conocer dos términos clave que se utilizan en este docum
 
 ## Información general
 
-En la [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleccione **[!UICONTROL Segments]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con segmentos.
+En la [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]**. Esta ficha contiene vínculos a documentación y vídeos para ayudarle a comprender y comenzar a trabajar con segmentos.
 
 ![](../images/ui/overview/segment-overview.png)
+
+### Panel de segmentos
+
+Para algunos usuarios, al seleccionar **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y abrir la pestaña **[!UICONTROL Información general]** , aparece un tablero que describe las métricas clave relacionadas con los datos del segmento.
+
+Para obtener más información, consulte la [guía del tablero de segmentos](segment-dashboard.md).
 
 ## Examinar
 
@@ -44,7 +49,7 @@ Seleccione la pestaña **[!UICONTROL Browse]** para ver una lista de todas las d
 
 Esta vista muestra información sobre la definición del segmento, incluido el desglose, la pérdida, el recuento de perfiles, el método de evaluación, la fecha de creación y la fecha de la última modificación.
 
-El desglose muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Realized], [!UICONTROL Existing] y [!UICONTROL Exiting].
+El desglose muestra un gráfico de barras que resume el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados: [!UICONTROL Realizado], [!UICONTROL Existente] y [!UICONTROL Saliente].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +67,9 @@ El método de evaluación puede ser flujo continuo o por lotes. Los segmentos de
 
 En la parte superior de la página hay opciones para agregar todos los segmentos a una programación y para crear un nuevo segmento.
 
-Alternar **[!UICONTROL Add all segments to schedule]** habilitará la segmentación programada. Puede encontrar más información sobre la segmentación programada en la sección [segmentación programada de esta guía del usuario](#scheduled-segmentation).
+Si se cambia **[!UICONTROL Add all segments to schedule]** se habilitará la segmentación programada. Puede encontrar más información sobre la segmentación programada en la sección [segmentación programada de esta guía del usuario](#scheduled-segmentation).
 
-Si selecciona **[!UICONTROL Create segment]**, se le dirigirá al Generador de segmentos. Para obtener más información sobre la creación de segmentos, lea la sección sobre la [creación de segmentos en la guía del usuario](#create-segment).
+Si selecciona **[!UICONTROL Crear segmento]**, se le dirigirá al Generador de segmentos. Para obtener más información sobre la creación de segmentos, lea la sección sobre la [creación de segmentos en la guía del usuario](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +83,7 @@ Al seleccionar la fila de la definición del segmento, se proporciona un resumen
 
 ## Detalles de la definición del segmento {#segment-details}
 
-Para ver más detalles sobre una definición de segmento específica, seleccione el nombre de un segmento en la pestaña **[!UICONTROL Browse]**.
+Para ver más detalles sobre una definición de segmento específica, seleccione el nombre de un segmento en la pestaña **[!UICONTROL Examinar]**.
 
 Aparecerá la página de detalles del segmento. En la parte superior, hay un resumen de la definición del segmento, información sobre el tamaño de audiencia cualificado, así como los destinos para los que se activa el segmento.
 
@@ -86,19 +91,19 @@ Aparecerá la página de detalles del segmento. En la parte superior, hay un res
 
 ### Resumen de segmentos
 
-La sección **[!UICONTROL Segment summary]** proporciona información como el ID, el nombre, la descripción y los detalles de los atributos.
+La sección **[!UICONTROL Resumen de segmentos]** proporciona información como el ID, el nombre, la descripción y los detalles de los atributos.
 
-Además, se le da la opción de editar el segmento. Si selecciona **[!UICONTROL Edit segment]**, pasará al [!DNL Segment Builder]. Para obtener información más detallada sobre el uso del espacio de trabajo [!DNL Segment Builder], lea la [[!DNL Segment Builder] guía del usuario](./segment-builder.md).
+Además, se le da la opción de editar el segmento. Si selecciona **[!UICONTROL Editar segmento]**, pasará al [!DNL Segment Builder]. Para obtener información más detallada sobre el uso del espacio de trabajo [!DNL Segment Builder], lea la [[!DNL Segment Builder] guía del usuario](./segment-builder.md).
 
 ### Audiencia total en el segmento
 
-La sección **[!UICONTROL Total audience in segment]** muestra el número total de perfiles que cumplen los requisitos para el segmento.
+La sección **[!UICONTROL Audiencia total en el segmento]** muestra el número total de perfiles que califican para el segmento.
 
 Las estimaciones se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en el almacén de perfiles, se utiliza el conjunto completo de datos; para entre 1 y 20 millones de entidades, se utilizan 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Puede encontrar más información sobre la generación de estimaciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de segmentos.
 
 ### Destinos activados
 
-La sección **[!UICONTROL Activated destinations]** muestra los destinos para los que se activa este segmento.
+La sección **[!UICONTROL Destinos activados]** muestra los destinos para los que se activa este segmento.
 
 >[!NOTE]
 >
@@ -128,7 +133,7 @@ Para obtener información más detallada sobre cada [!DNL Profile], seleccione e
 
 ## Creación de un segmento {#create-segment}
 
-Al seleccionar **[!UICONTROL Create segment]** en la esquina superior derecha, se abre el espacio de trabajo [!DNL Segment Builder], donde puede empezar a crear una definición de segmento.
+Al seleccionar **[!UICONTROL Crear segmento]** en la esquina superior derecha, se abre el espacio de trabajo [!DNL Segment Builder], donde puede empezar a crear una definición de segmento.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -148,7 +153,7 @@ La evaluación bajo demanda implica el uso de la API para realizar evaluaciones 
 
 ### Habilitar la segmentación programada {#enable-scheduled-segmentation}
 
-La activación de las definiciones de segmentos para la evaluación programada se puede realizar mediante la interfaz de usuario o la API. En la interfaz de usuario, vuelva a la pestaña **[!UICONTROL Browse]** dentro de **[!UICONTROL Segments]** y active **[!UICONTROL Add all segments to schedule]**. Esto hará que todos los segmentos se evalúen según la programación establecida por su organización.
+La activación de las definiciones de segmentos para la evaluación programada se puede realizar mediante la interfaz de usuario o la API. En la interfaz de usuario, vuelva a la pestaña **[!UICONTROL Examinar]** dentro de **[!UICONTROL Segmentos]** y active **[!UICONTROL Agregar todos los segmentos para programar]**. Esto hará que todos los segmentos se evalúen según la programación establecida por su organización.
 
 >[!NOTE]
 >
