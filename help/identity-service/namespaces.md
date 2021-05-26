@@ -5,10 +5,9 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-translation-type: tm+mt
-source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
+source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -74,15 +73,21 @@ Las siguientes áreas de nombres estándar se proporcionan para su uso por todas
 | TNTID | Área de nombres que representa Adobe Target. Consulte el siguiente documento en [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) para obtener más información. |
 | AID de Windows | Área de nombres que representa un ID de publicidad de Windows. Consulte el siguiente documento en [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
 
-Para ver las áreas de nombres estándar en la interfaz de usuario, seleccione **[!UICONTROL Identities]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]** para mostrar una lista de áreas de nombres de identidad estándar accesibles para la organización. Puede ordenar los espacios de nombres alfabéticamente por sus **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]** o **[!UICONTROL Owner]**. Alternativamente, puede ordenar los espacios de nombres cronológicamente según la fecha de actualización más reciente.
+Para ver los espacios de nombres de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identities]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Browse]**.
 
-Seleccione un espacio de nombres para ver información más específica en el carril derecho.
+![navegar](./images/browse.png)
 
->[!NOTE]
->
->Platform también proporciona áreas de nombres para fines de integración. Estas áreas de nombres están ocultas de forma predeterminada, ya que se utilizan para conectarse con otros sistemas y no para unir identidades. Para ver los espacios de nombres de integración, seleccione **[!UICONTROL View integration identities]**.
+En la interfaz principal de la página aparece una lista de áreas de nombres de identidad que muestra información sobre sus nombres, símbolos de identidad, fecha de la última actualización y si son un espacio de nombres estándar o personalizado. El carril derecho contiene información sobre [!UICONTROL Identidades únicas] y [!UICONTROL Intensidad del gráfico de identidad]. [!UICONTROL Las ] identidades únicas hacen referencia al número de identidades que existen en el entorno limitado en particular que está utilizando, mientras que la  [!UICONTROL fortaleza del gráfico de ] identidad muestra información sobre el número de ID de cookies y no de cookies dentro del entorno limitado.
 
-![](./images/browse-namespaces.png)
+![identidades](./images/identities.png)
+
+Platform también proporciona áreas de nombres para fines de integración. Estas áreas de nombres están ocultas de forma predeterminada, ya que se utilizan para conectarse con otros sistemas y no para unir identidades. Para ver los espacios de nombres de integración, seleccione **[!UICONTROL View integration identities]**.
+
+![view-integration-identities](./images/view-integration-identities.png)
+
+Seleccione un área de nombres de identidad de la lista para ver información sobre un área de nombres específica. Al seleccionar un área de nombres de identidad, se actualiza la visualización en el carril derecho para mostrar metadatos relativos al área de nombres de identidad que ha seleccionado, incluido el número de identidades ingeridas y el número de registros fallidos y omitidos.
+
+![select-namespace](./images/select-namespace.png)
 
 ## Administración de áreas de nombres personalizadas {#manage-namespaces}
 
@@ -90,17 +95,17 @@ Según los datos organizativos y los casos de uso, es posible que necesite espac
 
 Para crear un área de nombres personalizada mediante la interfaz de usuario, vaya al espacio de trabajo **[!UICONTROL Identities]**, seleccione **[!UICONTROL Browse]** y, a continuación, seleccione **[!UICONTROL Create identity namespace]**.
 
-![](./images/create.png)
+![select-create](./images/select-create.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Create identity namespace]**. Proporcione un **[!UICONTROL Display name]** y **[!UICONTROL Identity symbol]** únicos y luego seleccione el tipo de identidad que desee crear. También puede agregar una descripción opcional para obtener más información sobre el área de nombres. Todos los tipos de identidad excepto **Non-people identifier** siguen el mismo comportamiento de vinculación. Si selecciona **Non-people identifier** como tipo de identidad al crear un área de nombres, la vinculación no se produce. Para obtener información específica sobre cada tipo de identidad, consulte la tabla de [tipos de identidad](#identity-types).
+Aparece el cuadro de diálogo **[!UICONTROL Crear área de nombres de identidad]**. Proporcione un **[!UICONTROL Display name]** y un **[!UICONTROL Identity *]** únicos y, a continuación, seleccione el tipo de identidad que desea crear. También puede agregar una descripción opcional para agregar más información sobre el área de nombres. Todos los tipos de identidad excepto **Non-people identifier** siguen el mismo comportamiento de vinculación. Si selecciona **Non-people identifier** como tipo de identidad al crear un área de nombres, la vinculación no se produce. Para obtener información específica sobre cada tipo de identidad, consulte la tabla de [tipos de identidad](#identity-types).
 
-Cuando termine, seleccione **[!UICONTROL Create]**.
+Cuando termine, seleccione **[!UICONTROL Crear]**.
 
 >[!IMPORTANT]
 >
 >Los espacios de nombres que defina son privados para su organización y requieren un símbolo de identidad único para poder crearlos correctamente.
 
-![](./images/create-namespace.png)
+![create-identity-namespace](./images/create-identity-namespace.png)
 
 Al igual que las áreas de nombres estándar, puede seleccionar un área de nombres personalizada en la pestaña **[!UICONTROL Browse]** para ver sus detalles. Sin embargo, con un espacio de nombres personalizado también puede editar su nombre para mostrar y su descripción desde el área de detalles.
 
