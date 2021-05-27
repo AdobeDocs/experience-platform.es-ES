@@ -5,11 +5,10 @@ title: Punto final de API de clases
 description: El extremo /classes de la API del Registro de esquemas permite administrar mediante programación las clases XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 1%
+source-wordcount: '1536'
+ht-degree: 3%
 
 ---
 
@@ -17,8 +16,8 @@ ht-degree: 1%
 
 Todos los esquemas del Modelo de datos de experiencia (XDM) deben basarse en una clase. Una clase determina la estructura base de las propiedades comunes que deben contener todos los esquemas basados en esa clase, así como los grupos de campos de esquema que pueden utilizarse en esos esquemas. Además, la clase de un esquema determina los aspectos de comportamiento de los datos que contendrá un esquema, de los cuales hay dos tipos:
 
-* **[!UICONTROL Record]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
-* **[!UICONTROL Time-series]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
+* **[!UICONTROL Registro]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
+* **[!UICONTROL Serie temporal]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
 
 >[!NOTE]
 >
@@ -49,6 +48,8 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | El contenedor desde el que desea recuperar las clases: `global` para clases creadas por Adobe o `tenant` para clases que pertenecen a su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de clases del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar las clases por su atributo `title`.
@@ -69,6 +70,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve la clase JSON completa para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -125,6 +128,8 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | El contenedor que alberga la clase que desea recuperar: `global` para una clase creada por Adobe o `tenant` para una clase propiedad de su organización. |
 | `{CLASS_ID}` | El `meta:altId` o el `$id` con codificación de URL de la clase que desea buscar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una clase por su valor `meta:altId` proporcionado en la ruta.
@@ -148,6 +153,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -314,6 +321,8 @@ curl -X POST \
 | `_{TENANT_ID}` | El espacio de nombres `TENANT_ID` de su organización. Todos los recursos creados por su organización deben incluir esta propiedad para evitar conflictos con otros recursos en [!DNL Schema Registry]. |
 | `allOf` | Una lista de recursos cuyas propiedades va a heredar la nueva clase. Uno de los objetos `$ref` dentro de la matriz define el comportamiento de la clase. En este ejemplo, la clase hereda el comportamiento &quot;record&quot;. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles de la clase recién creada, incluidos `$id`, `meta:altId` y `version`. Estos tres valores son de solo lectura y los asigna el [!DNL Schema Registry].
@@ -399,6 +408,8 @@ PUT /tenant/classes/{CLASS_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{CLASS_ID}` | El `meta:altId` o el `$id` con codificación de URL de la clase que desea reescribir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -535,6 +546,8 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | El URI `$id` con codificación URL o `meta:altId` de la clase que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La solicitud de ejemplo siguiente actualiza el `description` de una clase existente y el `title` de uno de sus campos.
@@ -634,6 +647,8 @@ DELETE /tenant/classes/{CLASS_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{CLASS_ID}` | El URI `$id` con codificación URL o `meta:altId` de la clase que desea eliminar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
