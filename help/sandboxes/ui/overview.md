@@ -5,8 +5,7 @@ title: Información general sobre la interfaz de usuario del Simulador para prue
 topic-legacy: user guide
 description: Adobe Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes y aislados. La interfaz de usuario de Sandbox se encuentra en la interfaz de usuario del Experience Platform.
 exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a3e12d304318b314060f3be339c63abb78c7733d
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -14,7 +13,6 @@ ht-degree: 0%
 ---
 
 # Información general sobre la interfaz de usuario del Simulador para pruebas
-
 
 Adobe Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes y aislados. La interfaz de usuario del Simulador para pruebas se encuentra dentro de la [IU del Experience Platform](https://platform.adobe.com).
 
