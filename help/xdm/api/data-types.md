@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Punto final de la API de tipos de datos
 description: El extremo /datatypes de la API del Registro de esquemas le permite administrar mediante programación los tipos de datos XDM dentro de la aplicación de experiencia.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 2%
+source-wordcount: '1172'
+ht-degree: 4%
 
 ---
 
@@ -39,6 +38,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | El contenedor desde el que desea recuperar los tipos de datos: `global` para tipos de datos creados por Adobe o `tenant` para tipos de datos propiedad de su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de tipos de datos del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar los tipos de datos por su atributo `title`.
@@ -59,6 +60,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el tipo de datos JSON completo para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -109,6 +112,8 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | El contenedor que alberga el tipo de datos que desea recuperar: `global` para un tipo de datos creado por el Adobe o `tenant` para un tipo de datos propiedad de su organización. |
 | `{DATA_TYPE_ID}` | El `meta:altId` o el `$id` con codificación de dirección URL del tipo de datos que desea buscar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera un tipo de datos por su valor `meta:altId` proporcionado en la ruta.
@@ -132,6 +137,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -344,6 +351,8 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | El `meta:altId` o el `$id` con codificación de URL del tipo de datos que desea reescribir. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud vuelve a escribir un tipo de datos existente y agrega un nuevo campo `floorSize`.
@@ -473,6 +482,8 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | El URI `$id` con codificación URL o `meta:altId` del tipo de datos que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La solicitud de ejemplo siguiente actualiza el `description` de un tipo de datos existente y agrega un nuevo campo `floorSize`.
@@ -596,7 +607,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El `desc
 }
 ```
 
-## Eliminar un tipo de datos {#delete}
+## Eliminación de un tipo de datos {#delete}
 
 Ocasionalmente puede ser necesario eliminar un tipo de datos del Registro de esquemas. Esto se realiza realizando una solicitud de DELETE con el ID de tipo de datos proporcionado en la ruta.
 
@@ -609,6 +620,8 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{DATA_TYPE_ID}` | El URI `$id` con codificación URL o `meta:altId` del tipo de datos que desea eliminar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
