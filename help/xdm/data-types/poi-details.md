@@ -5,30 +5,31 @@ title: Tipo de datos de detalles del punto de interés
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de Detalles del punto de interés.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 4%
+source-wordcount: '204'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Point of interest details] tipo de datos
+# [!UICONTROL Tipo de datos de ] detalles de punto de interés
 
-[!UICONTROL Point of interest details] es un tipo de datos XDM estándar que describe los datos geográficos donde se observó un evento.
+[!UICONTROL Los ] detalles del punto de interés son un tipo de datos XDM estándar que describe los datos geográficos donde se observó un evento.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Describe los detalles de señalización activos para la interacción de puntos de interés. |
-| `geoInteractionDetails` | [[!UICONTROL Geo interaction details]](./geo-interaction-details.md) | Describe los detalles geográficos activos para la interacción de puntos de interés. |
+| `beaconInteractionDetails` | [[!UICONTROL Señalización]](./beacon.md) | Describe los detalles de señalización activos para la interacción de puntos de interés. |
+| `geoInteractionDetails` | [[!UICONTROL Detalles de interacción geográfica]](./geo-interaction-details.md) | Describe los detalles geográficos activos para la interacción de puntos de interés. |
 | `category` | Cadena | Una categoría general asignada para organizar los puntos de interés por el administrador de definiciones de puntos de interés. |
 | `distanceToPOICenter` | Duplicada | La distancia estimada del centro de puntos de interés en metros. |
 | `locatingType` | Cadena | Mecanismo utilizado para determinar la ubicación. Los valores aceptados incluyen: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
 | `name` | Cadena | Nombre dado al punto de interés. |
 | `poiID` | Cadena | Identificador único del punto de interés. |
 | `type` | Cadena | Tipo general del punto de interés utilizando un esquema de escritura seleccionado por el administrador de las definiciones de punto de interés. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
