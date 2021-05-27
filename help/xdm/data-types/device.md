@@ -5,17 +5,16 @@ title: Tipo de datos del dispositivo
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos Device XDM .
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 4%
+source-wordcount: '329'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Device] tipo de datos
+#  Tipo de datos de dispositivo
 
-[!UICONTROL Device] es un tipo de datos XDM estándar que describe un dispositivo identificado. Un dispositivo es una aplicación o instancia de explorador que se puede rastrear entre sesiones, normalmente mediante cookies.
+ El dispositivo es un tipo de datos XDM estándar que describe un dispositivo identificado. Un dispositivo es una aplicación o instancia de explorador que se puede rastrear entre sesiones, normalmente mediante cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -32,6 +31,8 @@ ht-degree: 4%
 | `typeID` | Cadena | Identificador del dispositivo. Puede ser un identificador de DeviceAtlas u otro servicio que identifique el hardware que se está utilizando. |
 | `typeIDService` | Cadena | El espacio de nombres del servicio que se utiliza para identificar el tipo de dispositivo. Consulte el [apéndice](#typeIDService) para obtener más información sobre los valores aceptados. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obtener más información sobre el grupo de campos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
@@ -39,7 +40,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Device].
+La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Device] .
 
 ## Valores aceptados para typeIDService {#typeIDService}
 
