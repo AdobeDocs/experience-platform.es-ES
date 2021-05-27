@@ -4,11 +4,10 @@ user-guide-title: Ayuda sobre Sandboxes en Adobe Experience Platform
 breadcrumb-title: Guía de Sandboxes
 user-guide-description: Dividir una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
 feature: Gestión de datos
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 31%
+source-wordcount: '66'
+ht-degree: 45%
 
 ---
 
@@ -20,15 +19,12 @@ ht-degree: 31%
    * [Información general sobre la interfaz de usuario del Simulador para pruebas](ui/overview.md)
    * [Guía del usuario de Sandbox](ui/user-guide.md)
 * API de Sandbox {#api}
-   * [Introducción](api/getting-started.md)
-   * [Tipos de entornos limitados admitidos en la lista](api/list-sandbox-types.md)
-   * [Lista de todos los entornos limitados](api/list-all-sandboxes.md)
-   * [Lista de entornos limitados activos para el usuario actual](api/list-active-sandboxes.md)
-   * [Buscar un simulador para pruebas](api/look-up-sandbox.md)
-   * [Creación de un simulador de pruebas](api/create-sandbox.md)
-   * [Actualizar un simulador para pruebas](api/update-sandbox.md)
-   * [Restablecer un simulador para pruebas](api/reset-sandbox.md)
-   * [Eliminación de un simulador para pruebas](api/delete-sandbox.md)
+   * [Información general](api/overview.md)
+   * [Primeros pasos](api/getting-started.md)
+   * [Entornos aislados disponibles](api/available.md)
+   * [Administración de Simuladores para pruebas](api/sandboxes.md)
+   * [Tipos de Simulador para pruebas](api/types.md)
+   * [Apéndice](api/appendix.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
 * [Notas de la versión de Platform](https://www.adobe.com/go/platform-release-notes-en)
