@@ -5,11 +5,10 @@ title: Prácticas Recomendadas Para El Modelado De Datos
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2511'
-ht-degree: 1%
+source-wordcount: '2524'
+ht-degree: 2%
 
 ---
 
@@ -55,6 +54,8 @@ Una vez que haya creado un ERD para identificar las entidades esenciales que des
 | Entidades de búsqueda | Las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero que no se pueden utilizar directamente para identificar a dicha persona. Las entidades incluidas en esta categoría deben representarse mediante esquemas basados en **clases personalizadas**. |
 | Entidades de eventos | Las entidades de eventos representan conceptos relacionados con acciones que un cliente puede realizar, eventos del sistema o cualquier otro concepto en el que desee rastrear cambios a lo largo del tiempo. Las entidades incluidas en esta categoría deben representarse mediante esquemas basados en la clase **[!DNL XDM ExperienceEvent]**. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Consideraciones para la ordenación de entidades
 
 Las secciones a continuación proporcionan una guía adicional sobre cómo clasificar las entidades en las categorías anteriores.
@@ -77,6 +78,8 @@ Si desea analizar cómo cambian con el tiempo ciertos atributos dentro de una en
 | 1234567 | Eliminar | 275098 | 1 | 1 de octubre, 10:33 AM |
 | 1234567 | Agregar | 486502 | 1 | 1 de octubre, 10:41 AM |
 | 1234567 | Agregar | 910482 | 5 | 3 de octubre, 2:15 PM |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Casos de uso de segmentación
 
@@ -118,6 +121,8 @@ La siguiente tabla describe algunas relaciones de entidad comunes y las categor�
 | Clientes y cierres de compra | Uno a muchos | Un único cliente puede tener muchas cierres de compra, que son eventos que se pueden rastrear con el tiempo. Por lo tanto, los clientes serían una entidad de perfil, mientras que las cierres de compra del carro serían una entidad de evento. |
 | Clientes y cuentas de fidelidad | Uno a uno | Un único cliente solo puede tener una cuenta de fidelidad y viceversa. Dado que la relación es uno a uno, tanto los clientes como las cuentas de fidelidad representan entidades de perfil. |
 | Clientes y suscripciones | Uno a muchos | Un solo cliente puede tener muchas suscripciones. Dado que la empresa solo está preocupada por las suscripciones actuales de un cliente, Customers es una entidad de perfil, mientras que Subscriptions es una entidad de búsqueda. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Ventajas y desventajas de diferentes clases de entidad {#pros-and-cons}
 
@@ -202,7 +207,7 @@ El Experience Platform proporciona varios grupos de campos de esquema XDM listos
 * Adobe Campaign
 * Adobe Target
 
-Por ejemplo, el [[!UICONTROL Adobe Analytics ExperienceEvent Template] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) le permite asignar campos específicos de [!DNL Analytics] a sus esquemas XDM. Según las aplicaciones de Adobe con las que esté trabajando, debe utilizar estos grupos de campos proporcionados por Adobe en los esquemas.
+Por ejemplo, el grupo de campos [[!UICONTROL Adobe Analytics ExperienceEvent Template]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) le permite asignar campos específicos de [!DNL Analytics] a sus esquemas XDM. Según las aplicaciones de Adobe con las que esté trabajando, debe utilizar estos grupos de campos proporcionados por Adobe en los esquemas.
 
 <img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
