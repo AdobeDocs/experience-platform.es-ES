@@ -5,11 +5,10 @@ title: Acceso a datos en equipos portátiles de Jupyterlab
 topic-legacy: Developer Guide
 description: Esta guía se centra en cómo utilizar los equipos portátiles Jupyter, creados dentro de Data Science Workspace para acceder a sus datos.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 9%
+source-wordcount: '3290'
+ht-degree: 8%
 
 ---
 
@@ -150,13 +149,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Escribir en un conjunto de datos en Python {#write-python}
 
-Para escribir en un conjunto de datos en su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Para escribir en un conjunto de datos en su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Utilice **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
-- Utilice **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
-- Utilice **[!UICONTROL Query Data in Notebook]** para generar una celda de consulta básica con el conjunto de datos seleccionado.
+- Utilice **[!UICONTROL Escribir datos en el bloc de notas]** para generar una celda de escritura con el conjunto de datos seleccionado.
+- Utilice **[!UICONTROL Explorar datos en el bloc de notas]** para generar una celda de lectura con el conjunto de datos seleccionado.
+- Utilice **[!UICONTROL Datos de consulta en el bloc de notas]** para generar una celda de consulta básica con el conjunto de datos seleccionado.
 
 Como alternativa, puede copiar y pegar la siguiente celda de código. Reemplace `{DATASET_ID}` y `{PANDA_DATAFRAME}`.
 
@@ -175,7 +174,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Antes de utilizar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de tener una comprensión práctica de la sintaxis [[!DNL Query Service] SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Para realizar consultas de datos mediante [!DNL Query Service] es necesario proporcionar el nombre del conjunto de datos de destino. Puede generar las celdas de código necesarias encontrando el conjunto de datos deseado utilizando el **[!UICONTROL Data explorer]**. Haga clic con el botón derecho en la lista de conjuntos de datos y haga clic en **[!UICONTROL Query Data in Notebook]** para generar dos celdas de código en el bloc de notas. Estas dos celdas se describen con más detalle a continuación.
+Para realizar consultas de datos mediante [!DNL Query Service] es necesario proporcionar el nombre del conjunto de datos de destino. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante el **[!UICONTROL Explorador de datos]**. Haga clic con el botón derecho en la lista de conjuntos de datos y haga clic en **[!UICONTROL Query Data in Notebook]** para generar dos celdas de código en el bloc de notas. Estas dos celdas se describen con más detalle a continuación.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -286,12 +285,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Escribir en un conjunto de datos en R {#write-r}
 
-Para escribir en un conjunto de datos en su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Para escribir en un conjunto de datos en su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Utilice **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
-- Utilice **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
+- Utilice **[!UICONTROL Escribir datos en el bloc de notas]** para generar una celda de escritura con el conjunto de datos seleccionado.
+- Utilice **[!UICONTROL Explorar datos en el bloc de notas]** para generar una celda de lectura con el conjunto de datos seleccionado.
 
 Como alternativa, puede copiar y pegar la siguiente celda de código:
 
@@ -355,7 +354,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### Usar %dataset para leer y escribir con un bloc de notas PySpark 3 {#magic}
+### Uso de %dataset para leer y escribir con un bloc de notas PySpark 3 {#magic}
 
 Con la introducción de [!DNL Spark] 2.4, `%dataset` la magia personalizada se suministra para su uso en portátiles PySpark 3 ([!DNL Spark] 2.4). Para obtener más información sobre los comandos mágicos disponibles en el núcleo IPython, visite la [documentación mágica de IPython](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
@@ -386,12 +385,24 @@ Un comando mágico personalizado [!DNL Data Science Workspace] para leer o escri
 - **Ejemplo** de lectura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Ejemplo** de escritura:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
+>[!IMPORTANT]
+>
+> El almacenamiento en caché de datos mediante `df.cache()` antes de escribir datos puede mejorar considerablemente el rendimiento del bloc de notas. Esto puede ayudarle si está recibiendo cualquiera de los siguientes errores:
+> 
+> - Trabajo anulado debido a un error en la etapa ... Solo puede comprimir RDD con el mismo número de elementos en cada partición.
+> - Cliente RPC remoto desasociado y otros errores de memoria.
+> - Rendimiento deficiente al leer y escribir conjuntos de datos.
+
+> 
+> 
+Consulte la [guía de solución de problemas](../troubleshooting-guide.md) para obtener más información.
+
 Puede generar automáticamente los ejemplos anteriores en JupyterLab buy utilizando el siguiente método:
 
-Seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
-- Utilice **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura.
-- Utilice **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura.
+- Utilice **[!UICONTROL Explorar datos en el bloc de notas]** para generar una celda de lectura.
+- Utilice **[!UICONTROL Escribir datos en el bloc de notas]** para generar una celda de escritura.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -476,6 +487,18 @@ val spark = SparkSession
 
 En Scala, puede importar `clientContext` para obtener y devolver valores de Platform, lo que elimina la necesidad de definir variables como `var userToken`. En el ejemplo de Scala que se muestra a continuación, `clientContext` se utiliza para obtener y devolver todos los valores necesarios para leer un conjunto de datos.
 
+>[!IMPORTANT]
+>
+> El almacenamiento en caché de datos mediante `df.cache()` antes de escribir datos puede mejorar considerablemente el rendimiento del bloc de notas. Esto puede ayudarle si está recibiendo cualquiera de los siguientes errores:
+> 
+> - Trabajo anulado debido a un error en la etapa ... Solo puede comprimir RDD con el mismo número de elementos en cada partición.
+> - Cliente RPC remoto desasociado y otros errores de memoria.
+> - Rendimiento deficiente al leer y escribir conjuntos de datos.
+
+> 
+> 
+Consulte la [guía de solución de problemas](../troubleshooting-guide.md) para obtener más información.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -510,16 +533,28 @@ df1.show(10)
 
 Puede generar automáticamente el ejemplo anterior en JupyterLab buy utilizando el siguiente método:
 
-Seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explore Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Seleccione la pestaña Icono de datos (resaltado abajo) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL schemas]**. Seleccione **[!UICONTROL Datasets]** y haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 Y
-- Utilice **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura.
-- Utilice **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura.
+- Utilice **[!UICONTROL Explorar datos en el bloc de notas]** para generar una celda de lectura.
+- Utilice **[!UICONTROL Escribir datos en el bloc de notas]** para generar una celda de escritura.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
 ### Escribir en un conjunto de datos {#scala-write-dataset}
 
 En Scala, puede importar `clientContext` para obtener y devolver valores de Platform, lo que elimina la necesidad de definir variables como `var userToken`. En el ejemplo Scala que se muestra a continuación, `clientContext` se utiliza para definir y devolver todos los valores necesarios para escribir en un conjunto de datos.
+
+>[!IMPORTANT]
+>
+> El almacenamiento en caché de datos mediante `df.cache()` antes de escribir datos puede mejorar considerablemente el rendimiento del bloc de notas. Esto puede ayudarle si está recibiendo cualquiera de los siguientes errores:
+> 
+> - Trabajo anulado debido a un error en la etapa ... Solo puede comprimir RDD con el mismo número de elementos en cada partición.
+> - Cliente RPC remoto desasociado y otros errores de memoria.
+> - Rendimiento deficiente al leer y escribir conjuntos de datos.
+
+> 
+> 
+Consulte la [guía de solución de problemas](../troubleshooting-guide.md) para obtener más información.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
