@@ -5,23 +5,22 @@ title: Tipo de datos geográficos
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 4%
+source-wordcount: '200'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Geo] tipo de datos
+#  Tipo de datos geográficos
 
-[!UICONTROL Geo] es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
+ Geografía es un tipo de datos XDM estándar que describe el área geográfica donde se observó un evento.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Describe las coordenadas geográficas de un lugar. |
+| `_schema` | [[!UICONTROL Coordenadas geográficas]](./geo-coordinates.md) | Describe las coordenadas geográficas de un lugar. |
 | `_id` | Cadena | ID único generado por el sistema para las coordenadas. |
 | `city` | Cadena | El nombre de la ciudad. |
 | `countryCode` | Cadena | Código <a href="https://datahub.io/core/country-list">ISO 3166-1 alfa-2</a> de dos caracteres para el país. |
@@ -29,6 +28,8 @@ ht-degree: 4%
 | `msaID` | Número entero | El área estadística metropolitana en los Estados Unidos donde se produjo la observación. |
 | `postalCode` | Cadena | El código postal de la ubicación. Los códigos postales no están disponibles para todos los países. En algunos países, esto solo contiene parte del código postal. |
 | `stateProvince` | Cadena | Estado o provincia de la observación. El formato sigue el estándar [ISO 3166-2 (país y subdivisión)](http://www.unece.org/cefact/locode/subdivisions.html). |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
