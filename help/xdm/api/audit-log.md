@@ -5,11 +5,10 @@ title: Punto final de API de registro de auditoría
 description: El extremo /auditlog en la API del Registro de esquemas permite recuperar una lista cronológica de los cambios realizados en un recurso XDM existente.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 2%
+source-wordcount: '406'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{RESOURCE_ID}` | El `meta:altId` o la `$id` con codificación de URL del recurso cuyo registro de auditoría desea recuperar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -96,3 +97,5 @@ Una respuesta correcta devuelve una lista cronológica de los cambios realizados
 | `action` | Tipo de cambio que se ha realizado. |
 | `path` | Una cadena [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) que indica la ruta al campo específico que se cambió o agregó. |
 | `value` | El valor que se asignó al campo nuevo o actualizado. |
+
+{style=&quot;table-layout:auto&quot;}
