@@ -5,11 +5,10 @@ title: Punto final de API de descriptores
 description: El extremo /descriptors de la API del Registro de esquemas permite administrar mediante programación los descriptores XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 1%
+source-wordcount: '1634'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +26,7 @@ El extremo `/descriptors` de la API [!DNL Schema Registry] le permite administra
 
 El punto final utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para ver los vínculos a la documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios que se necesitan para realizar llamadas correctamente a cualquier API de Experience Platform.
 
-## Recupere una lista de descriptores {#list}
+## Recuperar una lista de descriptores {#list}
 
 Puede enumerar todos los descriptores definidos por su organización realizando una solicitud de GET a `/tenant/descriptors`.
 
@@ -61,6 +60,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xdm-link+json` | Devuelve una matriz de rutas de API de descriptor |
 | `application/vnd.adobe.xdm+json` | Devuelve una matriz de objetos descriptor expandidos |
 | `application/vnd.adobe.xdm-v2+json` | Este encabezado `Accept` debe usarse para utilizar las capacidades de paginación. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -97,6 +98,8 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | El `@id` del descriptor que desea buscar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -205,6 +208,8 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | El `@id` del descriptor que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 Esta solicitud básicamente reescribe el descriptor, por lo que el cuerpo de la solicitud debe incluir todos los campos necesarios para definir un descriptor de ese tipo. En otras palabras, la carga útil de la solicitud para actualizar (PUT) un descriptor es la misma que la carga útil para [crear (POST) un descriptor](#create) del mismo tipo.
@@ -260,6 +265,8 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | El `@id` del descriptor que desea eliminar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 ```SHELL
@@ -287,7 +294,7 @@ Las siguientes secciones proporcionan información general sobre los tipos de de
 
 #### Descriptor de identidad
 
-Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; es un campo [!DNL Identity] tal como se describe en [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
+Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; es un campo [!DNL Identity] como se describe en [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
 ```json
 {
@@ -311,6 +318,8 @@ Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de
 | `xdm:namespace` | El valor `id` o `code` del área de nombres de identidad. Se puede encontrar una lista de áreas de nombres usando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | `xdm:id` o `xdm:code`, según el `xdm:namespace` utilizado. |
 | `xdm:isPrimary` | Un valor booleano opcional. Si es true, indica el campo como identidad principal. Los esquemas solo pueden contener una identidad principal. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Descriptor de nombres descriptivos
 
@@ -346,6 +355,8 @@ Los descriptores de nombres descriptivos permiten al usuario modificar los valor
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
 | `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` determina la lista de valores sugeridos para el campo en la interfaz de usuario [!DNL Experience Platform]. Es importante tener en cuenta que `meta:enum` no declara una enumeración ni proporciona ninguna validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para campos XDM principales definidos por el Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, en su lugar debe editar la propiedad `meta:enum` del campo directamente a través de una solicitud de PATCH al recurso principal del campo. |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### Descriptor de relaciones
 
 Los descriptores de relación describen una relación entre dos esquemas diferentes, basados en las propiedades descritas en `sourceProperty` y `destinationProperty`. Consulte el tutorial sobre la [definición de una relación entre dos esquemas](../tutorials/relationship-api.md) para obtener más información.
@@ -373,6 +384,8 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 | `xdm:destinationSchema` | El URI `$id` del esquema de destino con el que este descriptor define una relación. |
 | `xdm:destinationVersion` | La versión principal del esquema de destino. |
 | `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de destino. Si se omite esta propiedad, el campo de destino se deduce por cualquier campo que contenga un descriptor de identidad de referencia coincidente (consulte a continuación). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 #### Descriptor de identidad de referencia
