@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, que forman parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -416,3 +415,59 @@ Si el encabezado `Authorization` no está presente o se envía un token de acces
     }
 }
 ```
+
+### Publicar datos sin procesar para ingerirlos en Platform {#ingest-data}
+
+Ahora que ha creado su flujo, puede enviar su mensaje JSON al extremo de flujo que creó anteriormente.
+
+**Formato de API**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | El valor `id` de la conexión de flujo continuo recién creada. |
+
+**Solicitud**
+
+La solicitud de ejemplo ingesta datos sin procesar en el extremo de flujo que se creó anteriormente.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la información recién ingerida.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | El ID de la conexión de flujo continuo creada anteriormente. |
+| `xactionId` | Identificador único generado en el servidor para el registro que acaba de enviar. Este ID ayuda a los Adobes a rastrear el ciclo vital de este registro a través de varios sistemas y con depuración. |
+| `receivedTimeMs` | Marca de tiempo (época en milisegundos) que muestra la hora a la que se recibió la solicitud. |
