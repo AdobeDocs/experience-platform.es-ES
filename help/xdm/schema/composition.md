@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Los intervalos válidos de estos tipos escalares pueden restringirse aún más a
 * Largo
 * Corto
 * Byte
-* Fecha
+* Fecha 
 * Fecha y hora
 * Mapa
 
@@ -281,7 +281,7 @@ Mediante el uso de objetos incrustados, los esquemas XDM pueden representar dire
 
 ### Esquemas y big data {#big-data}
 
-Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que se puedan procesar de manera consistente y eficiente.
+Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que puedan procesarse de manera consistente y eficiente.
 
 Los esquemas solucionan este problema al permitir que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
 
@@ -293,6 +293,8 @@ A la hora de diseñar los esquemas, deben tenerse en cuenta algunos factores cla
 | --- | --- |
 | Aumenta la anidación | Menos o no anidar |
 | Crea agrupaciones de campos lógicos | Los campos se colocan en ubicaciones específicas |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Objetos
 
