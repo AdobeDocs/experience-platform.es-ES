@@ -5,17 +5,16 @@ title: Tipo de datos de dirección de correo electrónico
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de la dirección de correo electrónico.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 1%
+source-wordcount: '190'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Email address] tipo de datos
+# [!UICONTROL Tipo de datos de ] direcciones de correo electrónico
 
-[!UICONTROL Email address] es un tipo de datos XDM estándar que describe los detalles de una dirección de correo electrónico.
+[!UICONTROL La ] dirección de correo electrónico es un tipo de datos XDM estándar que describe los detalles de una dirección de correo electrónico.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
@@ -27,6 +26,8 @@ ht-degree: 1%
 | `status` | Indica si la dirección de correo electrónico se puede utilizar actualmente |
 | `statusReason` | Una descripción del `status` actual. |
 | `type` | La forma en que la cuenta se relaciona con la persona (como `work` o `personal`). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Para obtener más información sobre el tipo de datos de dirección de correo electrónico, consulte el repositorio XDM público:
