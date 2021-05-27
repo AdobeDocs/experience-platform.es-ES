@@ -5,25 +5,26 @@ title: Tipo de datos de detalles de interacción geográfica
 topic-legacy: overview
 description: Este documento proporciona una descripción general del tipo de datos XDM Detalles de interacción geográfica .
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 2%
+source-wordcount: '159'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Geo interaction details] tipo de datos
+# [!UICONTROL Tipo de datos de ] detalles de interacción geográfica
 
-[!UICONTROL Geo interaction details] es un tipo de datos XDM estándar que describe el estado actual de inclusión en un área definida geográficamente.
+[!UICONTROL Los ] detalles de interacción geográfica son un tipo de datos XDM estándar que describe el estado actual de inclusión en un área definida geográficamente.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `geoShape` | [[!UICONTROL Geo Shape]](./geo-shape.md) | Describe la forma geográfica del área con la que se interactúa. Este campo puede describir un cuadro, un círculo o un polígono. |
+| `geoShape` | [[!UICONTROL Forma geográfica]](./geo-shape.md) | Describe la forma geográfica del área con la que se interactúa. Este campo puede describir un cuadro, un círculo o un polígono. |
 | `deviceGeoAccuracy` | Duplicada | Precisión del dispositivo o mecanismo de medición geográfica, medida en metros. |
 | `distanceToCenter` | Duplicada | Distancia al centro de la geografía en el caso de un círculo geográfico, medida en metros. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
