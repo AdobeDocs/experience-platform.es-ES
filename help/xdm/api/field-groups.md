@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Extremo de API de grupos de campos
 description: El extremo /fieldgroups de la API del Registro de esquemas permite administrar mediante programación los grupos de campos de esquema XDM dentro de la aplicación de experiencia.
 topic: guía para desarrolladores
-translation-type: tm+mt
-source-git-commit: b25c545e86c8ffd6b5832893152aef597feaf71f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 2%
+source-wordcount: '1217'
+ht-degree: 3%
 
 ---
 
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | El contenedor desde el que desea recuperar los grupos de campos: `global` para grupos de campos creados por Adobe o `tenant` para grupos de campos propiedad de su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de grupos de campos del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar los grupos de campos por su atributo `title`.
@@ -60,6 +61,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el grupo de campos JSON completo para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -122,6 +125,8 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | El contenedor que aloja el grupo de campos que desea recuperar: `global` para un grupo de campos creado por el Adobe o `tenant` para un grupo de campos propiedad de su organización. |
 | `{FIELD_GROUP_ID}` | El `meta:altId` o el `$id` con codificación de URL del grupo de campos que desea buscar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera un grupo de campos según el valor `meta:altId` proporcionado en la ruta.
@@ -145,6 +150,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -209,7 +216,7 @@ Una respuesta correcta devuelve los detalles del grupo de campos. Los campos dev
 }
 ```
 
-## Crear un grupo de campos {#create}
+## Creación de un grupo de campos {#create}
 
 Puede definir un grupo de campos personalizado bajo el contenedor `tenant` realizando una solicitud de POST.
 
@@ -398,6 +405,8 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | El `meta:altId` o el `$id` con codificación de URL del grupo de campos que desea reescribir. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud vuelve a escribir un grupo de campos existente y agrega un nuevo campo `propertyCountry`.
@@ -581,6 +590,8 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | El URI `$id` con codificación URL o `meta:altId` del grupo de campos que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La solicitud de ejemplo siguiente actualiza el `description` de un grupo de campos existente y añade un nuevo campo `propertyCity`.
@@ -704,7 +715,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El `desc
 }
 ```
 
-## Eliminar un grupo de campos {#delete}
+## Eliminación de un grupo de campos {#delete}
 
 Ocasionalmente puede ser necesario quitar un grupo de campos del Registro de esquemas. Esto se hace realizando una solicitud de DELETE con el ID del grupo de campos proporcionado en la ruta.
 
@@ -717,6 +728,8 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | El URI `$id` con codificación URL o `meta:altId` del grupo de campos que desea eliminar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
