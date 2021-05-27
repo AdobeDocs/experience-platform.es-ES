@@ -4,21 +4,20 @@ title: Campo de preferencia de marketing genérico con tipo de datos de suscripc
 topic-legacy: overview
 description: Este documento proporciona información general sobre el campo de preferencia de marketing genérico con el tipo de datos XDM de suscripciones.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 2%
+source-wordcount: '738'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Generic Marketing Preference Field with Subscriptions] tipo de datos
+# [!UICONTROL Campo de preferencia de marketing genérico con tipo de datos ] Suscripciones
 
-[!UICONTROL Generic Marketing Preference Field with Subscriptions] es un tipo de datos XDM estándar que describe la selección de un cliente para una preferencia de marketing determinada.
+[!UICONTROL El campo de preferencia de marketing genérico con ] suscripción es un tipo de datos XDM estándar que describe la selección de un cliente para una preferencia de marketing determinada.
 
 >[!NOTE]
 >
->Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de la organización mediante el grupo de campos [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) como línea de base.
+>Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de la organización con el grupo de campos [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) como línea de base.
 >
 >Si no necesita un `subscriptions` mapa para un campo de preferencias de marketing determinado, puede usar el [tipo de datos básico del campo de marketing](./marketing-field.md) en su lugar.
 
@@ -30,6 +29,8 @@ ht-degree: 2%
 | `subscriptions` | Mapa | Mapa de las preferencias de marketing de los clientes para suscripciones específicas. Consulte la sección sobre [suscripciones](#subscriptions) para obtener más información. |
 | `time` | DateTime | Marca de fecha y hora ISO 8601 del momento en que se cambió la preferencia de marketing, si corresponde. |
 | `val` | Cadena | La opción de preferencia proporcionada por el cliente para este caso de uso de marketing. Consulte la [siguiente sección](#val) para conocer los valores y definiciones aceptados. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `val` {#val}
 
@@ -46,6 +47,8 @@ La siguiente tabla describe los valores aceptados para `val`:
 | `CP` | Cumplimiento de una obligación legal | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones jurídicas de la empresa. |
 | `VI` | Interés vital del individuo | La recopilación de datos con el fin especificado es necesaria para proteger los intereses vitales de la persona. |
 | `PI` | Interés público | La recopilación de datos con el fin especificado es necesaria para llevar a cabo una tarea de interés público o en el ejercicio de la autoridad oficial. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `subscriptions` {#subscriptions}
 
@@ -90,6 +93,8 @@ El siguiente JSON representa un campo de marketing de ejemplo para un canal de m
 | --- | --- |
 | `type` | El tipo de suscripción. Puede ser cualquier cadena descriptiva, siempre que tenga 15 caracteres o menos. |
 | `subscribers` | Campo opcional de tipo asignación que representa un conjunto de identificadores (como direcciones de correo electrónico o números de teléfono) que se han suscrito a una suscripción determinada. Cada clave de este objeto representa el identificador en cuestión y contiene dos subpropiedades: <ul><li>`time`: Marca de tiempo ISO 8601 del momento de la suscripción de la identidad, si procede.</li><li>`source`: Origen del suscriptor. Puede ser cualquier cadena descriptiva, siempre que tenga 15 caracteres o menos.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Recursos adicionales
 
