@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3754'
 ht-degree: 0%
 
 ---
@@ -32,27 +31,27 @@ Este tutorial requiere una comprensión práctica de los distintos aspectos de A
    * [Aspectos básicos de la composición](../schema/composition.md) del esquema: Una descripción general de los esquemas XDM y sus componentes básicos, incluidas las clases, los grupos de campos de esquema, los tipos de datos y los campos individuales.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
 
-## Abra el espacio de trabajo [!UICONTROL Schemas] {#browse}
+## Abra el espacio de trabajo [!UICONTROL Esquemas] {#browse}
 
-El espacio de trabajo [!UICONTROL Schemas] en la interfaz de usuario [!DNL Platform] proporciona una visualización del [!DNL Schema Library], lo que le permite ver y administrar los esquemas disponibles para su organización. El espacio de trabajo también incluye el [!DNL Schema Editor], el lienzo en el que puede componer un esquema a lo largo de este tutorial.
+El espacio de trabajo [!UICONTROL Esquemas] en la interfaz de usuario [!DNL Platform] proporciona una visualización del [!DNL Schema Library], lo que le permite ver y administrar los esquemas disponibles para su organización. El espacio de trabajo también incluye el [!DNL Schema Editor], el lienzo en el que puede componer un esquema a lo largo de este tutorial.
 
-Después de iniciar sesión en [!DNL Experience Platform], seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo **[!UICONTROL Schemas]**. La pestaña **[!UICONTROL Browse]** muestra una lista de esquemas (una representación del [!DNL Schema Library]) que puede ver y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
+Después de iniciar sesión en [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el espacio de trabajo **[!UICONTROL Esquemas]**. La pestaña **[!UICONTROL Browse]** muestra una lista de esquemas (una representación del [!DNL Schema Library]) que puede ver y personalizar. La lista incluye el nombre, el tipo, la clase y el comportamiento (registro o serie temporal) en los que se basa el esquema, así como la fecha y la hora de la última modificación del esquema.
 
 Consulte la guía [Exploración de los recursos XDM existentes en la interfaz de usuario](../ui/explore.md) para obtener más información.
 
 ## Crear y asignar un nombre a un esquema {#create}
 
-Para empezar a componer un esquema, seleccione **[!UICONTROL Create schema]** en la esquina superior derecha del espacio de trabajo **[!UICONTROL Schemas]**. Aparece un menú desplegable que le ofrece la opción de elegir entre las clases principales [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent]. Si estas clases no se adaptan a sus necesidades, también puede seleccionar **[!UICONTROL Browse]** para elegir entre otras clases disponibles o [crear una nueva clase](#create-new-class).
+Para empezar a componer un esquema, seleccione **[!UICONTROL Create schema]** en la esquina superior derecha del espacio de trabajo **[!UICONTROL schemas]**. Aparece un menú desplegable que le ofrece la opción de elegir entre las clases principales [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent]. Si estas clases no se adaptan a sus necesidades, también puede seleccionar **[!UICONTROL Browse]** para elegir entre otras clases disponibles o [crear una nueva clase](#create-new-class).
 
 Para los fines de este tutorial, seleccione **[!UICONTROL XDM Individual Profile]**.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Dado que elige una clase XDM estándar en la que basar el esquema, aparece el cuadro de diálogo **[!UICONTROL Add field group]**, que le permite empezar a añadir campos inmediatamente al esquema. Por ahora, seleccione **[!UICONTROL Cancel]** para salir del cuadro de diálogo.
+Dado que elige una clase XDM estándar en la que se basa el esquema, aparece el cuadro de diálogo **[!UICONTROL Add field group]**, que le permite empezar a añadir campos inmediatamente al esquema. Por ahora, seleccione **[!UICONTROL Cancelar]** para salir del cuadro de diálogo.
 
 ![](../images/tutorials/create-schema/cancel-field-group.png)
 
-Aparece el [!DNL Schema Editor]. Este es el lienzo sobre el que compondrá el esquema. Se crea automáticamente un esquema sin título en la sección **[!UICONTROL Structure]** del lienzo al llegar al editor, junto con los campos estándar incluidos en todos los esquemas basados en esa clase. La clase asignada para el esquema también se enumera en **[!UICONTROL Class]** en la sección **[!UICONTROL Composition]**.
+Aparece el [!DNL Schema Editor]. Este es el lienzo sobre el que compondrá el esquema. Se crea automáticamente un esquema sin título en la sección **[!UICONTROL Structure]** del lienzo al llegar al editor, junto con los campos estándar incluidos en todos los esquemas basados en esa clase. La clase asignada para el esquema también se enumera en **[!UICONTROL Clase]** en la sección **[!UICONTROL Composición]**.
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -96,41 +95,41 @@ Para este tutorial, seleccione el grupo de campos **[!UICONTROL Demographic Deta
 
 ![](../images/tutorials/create-schema/demographic-details.png)
 
-El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Field groups]** ahora enumera &quot;[!UICONTROL Demographic Details]&quot; y la sección **[!UICONTROL Structure]** incluye los campos contribuidos por el grupo de campos. Puede seleccionar el nombre del grupo de campos en la sección **[!UICONTROL Field groups]** para resaltar los campos específicos que proporciona dentro del lienzo.
+El lienzo del esquema vuelve a aparecer. La sección **[!UICONTROL Field groups]** ahora enumera &quot;[!UICONTROL Demographic Details]&quot; y la sección **[!UICONTROL Structure]** incluye los campos aportados por el grupo de campos. Puede seleccionar el nombre del grupo de campos en la sección **[!UICONTROL Field groups]** para resaltar los campos específicos que proporciona dentro del lienzo.
 
 ![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Este grupo de campos contribuye con varios campos bajo el nombre de nivel superior `person` con el tipo de datos &quot;[!UICONTROL Person]&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
+Este grupo de campos contribuye con varios campos bajo el nombre de nivel superior `person` con el tipo de datos &quot;[!UICONTROL Persona]&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
 
 >[!NOTE]
 >
 >Recuerde que los campos pueden utilizar tipos escalares (como cadena, entero, matriz o fecha), así como cualquier tipo de datos (un grupo de campos que representa un concepto común) definido dentro de [!DNL Schema Registry].
 
-Observe que el campo `name` tiene un tipo de datos de &quot;[!UICONTROL Person name]&quot;, lo que significa que también describe un concepto común y contiene subcampos relacionados con nombres como nombre, apellido, título de cortesía y sufijo.
+Observe que el campo `name` tiene un tipo de datos de &quot;[!UICONTROL Person name]&quot;, lo que significa que también describe un concepto común y contiene subcampos relacionados con los nombres, como nombre, apellidos, título de cortesía y sufijo.
 
 Seleccione los diferentes campos dentro del lienzo para mostrar los campos adicionales que contribuyen a la estructura del esquema.
 
 ## Agregar otro grupo de campos {#field-group-2}
 
-Ahora puede repetir los mismos pasos para agregar otro grupo de campos. Cuando vea el cuadro de diálogo **[!UICONTROL Add field group]** esta vez, observe que el grupo de campos &quot;[!UICONTROL Demographic Details]&quot; se ha atenuado y que la casilla de verificación situada junto a él no se puede seleccionar. Esto evita que se dupliquen accidentalmente los grupos de campos que ya se han incluido en el esquema actual.
+Ahora puede repetir los mismos pasos para agregar otro grupo de campos. Cuando vea el cuadro de diálogo **[!UICONTROL Agregar grupo de campos]** esta vez, observe que el grupo de campos &quot;[!UICONTROL Detalles demográficos]&quot; se ha atenuado y la casilla de verificación situada junto a él no se puede seleccionar. Esto evita que se dupliquen accidentalmente los grupos de campos que ya se han incluido en el esquema actual.
 
 Para este tutorial, seleccione el grupo de campos &quot;[!DNL Personal Contact Details]&quot; en el cuadro de diálogo y, a continuación, seleccione **[!UICONTROL Add field group]** para agregarlo al esquema.
 
 ![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Una vez añadido, el lienzo vuelve a aparecer. &quot;[!UICONTROL Personal Contact Details]&quot; ahora aparece en **[!UICONTROL Field groups]** en la sección **[!UICONTROL Composition]** y se han agregado campos para la dirección de inicio, el teléfono móvil y mucho más en **[!UICONTROL Structure]**.
+Una vez añadido, el lienzo vuelve a aparecer. &quot;[!UICONTROL Detalles de contacto personal]&quot; ahora aparece en **[!UICONTROL Grupos de campo]** en la sección **[!UICONTROL Composición]**, y se han agregado campos para dirección de inicio, teléfono móvil y más en **[!UICONTROL Estructura]**.
 
-Al igual que el campo `name` , los campos que acaba de añadir representan conceptos de varios campos. Por ejemplo, `homeAddress` tiene un tipo de datos de &quot;[!UICONTROL Postal address]&quot; y `mobilePhone` tiene un tipo de datos de &quot;[!UICONTROL Phone number]&quot;. Puede seleccionar cada uno de estos campos para expandirlos y ver los campos adicionales incluidos en el tipo de datos.
+Al igual que el campo `name` , los campos que acaba de añadir representan conceptos de varios campos. Por ejemplo, `homeAddress` tiene un tipo de datos de &quot;[!UICONTROL Dirección postal]&quot; y `mobilePhone` tiene un tipo de datos de &quot;[!UICONTROL Número de teléfono]&quot;. Puede seleccionar cada uno de estos campos para expandirlos y ver los campos adicionales incluidos en el tipo de datos.
 
 ![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
 ## Definir un grupo de campos personalizado {#define-field-group}
 
-El esquema &quot;[!UICONTROL Loyalty Members]&quot; está diseñado para capturar datos relacionados con los miembros de un programa de fidelidad, por lo que necesitará algunos campos específicos relacionados con la fidelidad.
+El esquema &quot;[!UICONTROL Loyalty Members]&quot; está diseñado para capturar datos relacionados con los miembros de un programa de fidelidad, por lo que se necesitarán algunos campos específicos relacionados con la fidelidad.
 
-Hay un grupo de campos estándar [!UICONTROL Loyalty Details] que puede agregar al esquema para capturar campos comunes relacionados con un programa de fidelidad. Aunque se le recomienda encarecidamente que utilice grupos de campos estándar para representar los conceptos capturados por los esquemas, es posible que la estructura del grupo de campos de lealtad estándar no pueda capturar todos los datos relevantes para su programa de fidelidad en particular. En esta situación, puede definir un nuevo grupo de campos personalizados para capturar estos campos.
+Hay un grupo de campos [!UICONTROL Detalles de lealtad] estándar que puede agregar al esquema para capturar campos comunes relacionados con un programa de fidelidad. Aunque se le recomienda encarecidamente que utilice grupos de campos estándar para representar los conceptos capturados por los esquemas, es posible que la estructura del grupo de campos de lealtad estándar no pueda capturar todos los datos relevantes para su programa de fidelidad en particular. En esta situación, puede definir un nuevo grupo de campos personalizados para capturar estos campos.
 
-Vuelva a abrir el cuadro de diálogo **[!UICONTROL Add Field group]**, pero esta vez seleccione **[!UICONTROL Create New Field group]** cerca de la parte superior. A continuación, se le pedirá que proporcione un nombre para mostrar y una descripción para su grupo de campos.
+Vuelva a abrir el cuadro de diálogo **[!UICONTROL Agregar grupo de campos]**, pero esta vez seleccione **[!UICONTROL Crear nuevo grupo de campos]** cerca de la parte superior. A continuación, se le pedirá que proporcione un nombre para mostrar y una descripción para su grupo de campos.
 
 ![](../images/tutorials/create-schema/create-new-field-group.png)
 
@@ -138,7 +137,7 @@ Al igual que con los nombres de clase, el nombre del grupo de campos debe ser co
 
 Para este tutorial, asigne al nuevo grupo de campos el nombre &quot;Detalles de lealtad&quot;.
 
-Seleccione **[!UICONTROL Add field group]** para volver a [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; debería aparecer en **[!UICONTROL Field groups]** en el lado izquierdo del lienzo, pero todavía no hay campos asociados a él y, por lo tanto, no aparecen campos nuevos en **[!UICONTROL Structure]**.
+Seleccione **[!UICONTROL Add field group]** para volver al [!DNL Schema Editor]. &quot;[!UICONTROL Detalles de lealtad]&quot; debería aparecer ahora en **[!UICONTROL Grupos de campos]** en el lado izquierdo del lienzo, pero aún no hay campos asociados a él y, por lo tanto, no aparecen campos nuevos en **[!UICONTROL Estructura]**.
 
 ## Agregar campos al grupo de campos {#field-group-fields}
 
@@ -152,30 +151,30 @@ Seleccione el icono **plus (+)** situado junto a &quot;[!DNL Loyalty Members]&qu
 
 En otras palabras, los campos que agregue son únicos para su organización y se guardarán en [!DNL Schema Registry] en un área específica accesible solo para su organización. Los campos que defina siempre deben agregarse al espacio de nombres del inquilino para evitar conflictos con nombres de otras clases estándar, grupos de campos, tipos de datos y campos.
 
-Dentro de ese nodo con espacio de nombres se encuentra &quot;[!UICONTROL New Field]&quot;. Este es el principio del grupo de campos &quot;[!UICONTROL Loyalty Details]&quot;.
+Dentro de ese nodo con espacio de nombres hay un &quot;[!UICONTROL Nuevo campo]&quot;. Este es el principio del grupo de campos &quot;[!UICONTROL Detalles de lealtad]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Con los controles del lado derecho del editor, comience creando un campo `loyalty` con el tipo &quot;[!UICONTROL Object]&quot; que se utilizará para incluir los campos relacionados con la lealtad. Cuando termine, seleccione **[!UICONTROL Apply]**.
+Con los controles del lado derecho del editor, comience creando un campo `loyalty` con el tipo &quot;[!UICONTROL Object]&quot; que se utilizará para incluir los campos relacionados con la lealtad. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-Los cambios se aplican y aparece el objeto `loyalty` recién creado. Seleccione el icono **plus (+)** situado junto al objeto para añadir campos adicionales relacionados con la lealtad. Aparece un &quot;[!UICONTROL New Field]&quot; y la sección **[!UICONTROL Field properties]** está visible en el lado derecho del lienzo.
+Los cambios se aplican y aparece el objeto `loyalty` recién creado. Seleccione el icono **plus (+)** situado junto al objeto para añadir campos adicionales relacionados con la lealtad. Aparece un &quot;[!UICONTROL Nuevo campo]&quot; y la sección **[!UICONTROL Propiedades del campo]** está visible en el lado derecho del lienzo.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
 Cada campo requiere la siguiente información:
 
-* **[!UICONTROL Field Name]:** El nombre del campo, escrito en caso de camello. Ejemplo: loyaltyLevel
-* **[!UICONTROL Display Name]:** El nombre del campo, escrito en el caso del título. Ejemplo: Nivel de fidelidad
-* **[!UICONTROL Type]:** El tipo de datos del campo. Esto incluye tipos escalares básicos y cualquier tipo de datos definido en el [!DNL Schema Registry]. Ejemplos: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
-* **[!UICONTROL Description]:** Se debe incluir una descripción opcional del campo, escrita en caso de sentencia, con un máximo de 200 caracteres.
+* **[!UICONTROL Nombre] del campo:** el nombre del campo, escrito en el caso del camello. Ejemplo: loyaltyLevel
+* **[!UICONTROL Nombre para mostrar]:** el nombre del campo, escrito en el caso del título. Ejemplo: Nivel de fidelidad
+* **[!UICONTROL Tipo]:** el tipo de datos del campo. Esto incluye tipos escalares básicos y cualquier tipo de datos definido en el [!DNL Schema Registry]. Ejemplos: [!UICONTROL Cadena], [!UICONTROL Entero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Dirección], [!UICONTROL Número de teléfono], etc.
+* **[!UICONTROL Descripción]:** Se debe incluir una descripción opcional del campo, escrita en caso de sentencia, con un máximo de 200 caracteres.
 
 El primer campo del objeto `Loyalty` será una cadena denominada `loyaltyId`. Al establecer el tipo del nuevo campo en &quot;[!UICONTROL String]&quot;, la sección **[!UICONTROL Field properties]** se rellena con varias opciones para aplicar restricciones, incluidos el valor predeterminado, el formato y la longitud máxima.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-Hay diferentes opciones de restricción disponibles en función del tipo de datos seleccionado. Dado que `loyaltyId` será una dirección de correo electrónico, seleccione &quot;[!UICONTROL email]&quot; en el menú desplegable **[!UICONTROL Format]**. Seleccione **[!UICONTROL Apply]** para aplicar los cambios.
+Hay diferentes opciones de restricción disponibles en función del tipo de datos seleccionado. Dado que `loyaltyId` será una dirección de correo electrónico, seleccione &quot;[!UICONTROL email]&quot; en el menú desplegable **[!UICONTROL Formato]**. Seleccione **[!UICONTROL Aplicar]** para aplicar los cambios.
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
@@ -192,17 +191,19 @@ Cuando se complete, el objeto Lealtad contendrá campos para ID de fidelidad, pu
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Agregar un campo de enumeración al grupo de campos {#enum}
+## Añadir un campo de enumeración al grupo de campos {#enum}
 
 Al definir campos en [!DNL Schema Editor], hay algunas opciones adicionales que puede aplicar a tipos de campo básicos para proporcionar más restricciones en los datos que el campo puede contener. Los casos de uso de estas restricciones se explican en la siguiente tabla:
 
 | Restricción | Descripción |
 | --- | --- |
-| [!UICONTROL Required] | Indica que el campo es necesario para la ingesta de datos. Cualquier dato cargado en un conjunto de datos basado en este esquema que no contenga este campo fallará tras la ingesta. |
-| [!UICONTROL Array] | Indica que el campo contiene una matriz de valores, cada uno con el tipo de datos especificado. Por ejemplo, el uso de esta restricción en un campo con un tipo de datos de &quot;[!UICONTROL String]&quot; especifica que el campo contendrá una matriz de cadenas. |
+| [!UICONTROL Requerido] | Indica que el campo es necesario para la ingesta de datos. Cualquier dato cargado en un conjunto de datos basado en este esquema que no contenga este campo fallará tras la ingesta. |
+| [!UICONTROL Matriz] | Indica que el campo contiene una matriz de valores, cada uno con el tipo de datos especificado. Por ejemplo, el uso de esta restricción en un campo con un tipo de datos de &quot;[!UICONTROL String]&quot; especifica que el campo contendrá una matriz de cadenas. |
 | [!UICONTROL Enum] | Indica que este campo debe contener uno de los valores de una lista enumerada de valores posibles. |
-| [!UICONTROL Identity] | Indica que este campo es de identidad. Más información sobre los campos de identidad se proporciona [más adelante en este tutorial](#identity-field). |
-| [!UICONTROL Relationship] | Aunque las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. La restricción [!UICONTROL Relationship] indica que este campo hace referencia a la identidad principal de un esquema basado en una clase diferente, lo que implica una relación entre los dos esquemas. Consulte el tutorial sobre [definición de una relación](./relationship-ui.md) para obtener más información. |
+| [!UICONTROL Identidad] | Indica que este campo es de identidad. Más información sobre los campos de identidad se proporciona [más adelante en este tutorial](#identity-field). |
+| [!UICONTROL Relación] | Aunque las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-time Customer Profile], esto solo se aplica a esquemas que comparten la misma clase. La restricción [!UICONTROL Relationship] indica que este campo hace referencia a la identidad principal de un esquema basado en una clase diferente, lo que implica una relación entre los dos esquemas. Consulte el tutorial sobre [definición de una relación](./relationship-ui.md) para obtener más información. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -214,9 +215,9 @@ Para este tutorial, el objeto [!DNL "loyalty"] del esquema requiere un nuevo cam
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
-Aparecen casillas de verificación adicionales para el campo después de que se haya seleccionado su tipo, incluidas las casillas de verificación **[!UICONTROL Array]**, **[!UICONTROL Enum]** y **[!UICONTROL Identity]**.
+Después de seleccionar su tipo, aparecen casillas de verificación adicionales para el campo, incluidas las casillas de verificación **[!UICONTROL Array]**, **[!UICONTROL Enum]** e **[!UICONTROL Identity]**.
 
-Active la casilla **[!UICONTROL Enum]** para abrir la sección **[!UICONTROL Enum values]** que aparece a continuación. Aquí puede introducir **[!UICONTROL Value]** (en camelCase) y **[!UICONTROL Label]** (un nombre opcional y fácil de leer en el caso del título) para cada nivel de lealtad aceptable.
+Active la casilla **[!UICONTROL Enum]** para abrir la sección **[!UICONTROL Enum values]** que aparece a continuación. Aquí puede introducir el **[!UICONTROL Value]** (en camelCase) y la **[!UICONTROL Label]** (un nombre opcional y fácil de leer en el caso del título) para cada nivel de lealtad aceptable.
 
 Cuando haya completado todas las propiedades del campo, seleccione **[!UICONTROL Apply]** para agregar el campo &quot;[!DNL loyaltyLevel]&quot; al objeto `loyalty`.
 
@@ -228,7 +229,7 @@ El objeto `loyalty` ahora contiene varios campos específicos de lealtad y repre
 
 Los tipos de datos permiten el uso coherente de estructuras de varios campos y proporcionan más flexibilidad que un grupo de campos, ya que se pueden utilizar en cualquier lugar dentro de un esquema. Esto se hace estableciendo el valor **[!UICONTROL Type]** del campo en el valor de cualquier tipo de datos definido en [!DNL Schema Registry].
 
-Para convertir el objeto `loyalty` en un tipo de datos, seleccione el campo `loyalty` en **[!UICONTROL Structure]** y, a continuación, seleccione **[!UICONTROL Convert to new data type]** en el lado derecho del editor, en **[!UICONTROL Field properties]**. Aparece una ventana emergente verde que confirma que el objeto se ha convertido correctamente.
+Para convertir el objeto `loyalty` en un tipo de datos, seleccione el campo `loyalty` en **[!UICONTROL Estructura]** y, a continuación, seleccione **[!UICONTROL Convertir en nuevo tipo de datos]** en el lado derecho del editor, en **[!UICONTROL Propiedades del campo]**. Aparece una ventana emergente verde que confirma que el objeto se ha convertido correctamente.
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
@@ -260,7 +261,7 @@ Si está buscando un campo específico en el esquema, también puede utilizar la
 
 La estructura de datos estándar que proporcionan los esquemas se puede aprovechar para identificar los datos que pertenecen al mismo individuo en múltiples fuentes, lo que permite varios casos de uso descendente como segmentación, informes, análisis de ciencia de datos, etc. Para unir datos en función de identidades individuales, los campos clave deben marcarse como campos [!UICONTROL Identity] dentro de los esquemas aplicables.
 
-[!DNL Experience Platform] facilita la identificación de un campo de identidad mediante el uso de una  **[!UICONTROL Identity]** casilla de verificación en  [!DNL Schema Editor]. Sin embargo, debe determinar qué campo es el mejor candidato para utilizarlo como identidad, en función de la naturaleza de los datos.
+[!DNL Experience Platform] facilita la identificación de un campo de identidad mediante el uso de una casilla de verificación  **** Identityen  [!DNL Schema Editor]. Sin embargo, debe determinar qué campo es el mejor candidato para utilizarlo como identidad, en función de la naturaleza de los datos.
 
 Por ejemplo, puede haber miles de miembros del programa de fidelidad que pertenezcan al mismo &quot;nivel de fidelidad&quot;, pero cada miembro del programa de fidelidad tiene un `loyaltyId` único (que en este caso es la dirección de correo electrónico del miembro individual). El hecho de que `loyaltyId` sea un identificador único para cada miembro lo convierte en un buen candidato para un campo de identidad, mientras que `loyaltyLevel` no lo es.
 
@@ -270,13 +271,13 @@ Por ejemplo, puede haber miles de miembros del programa de fidelidad que pertene
 >
 >Si planea utilizar `identityMap`, tenga en cuenta que anulará cualquier identidad principal que agregue al esquema directamente. Consulte la sección sobre `identityMap` en la [Guía básica de composición de esquema](../schema/composition.md#identityMap) para obtener más información.
 
-En la sección **[!UICONTROL Structure]** del editor, seleccione el campo `loyaltyId` y la casilla **[!UICONTROL Identity]** aparece en **[!UICONTROL Field properties]**. Marque la casilla y la opción para establecerla como aparece el **[!UICONTROL Primary identity]**. Seleccione también este cuadro.
+En la sección **[!UICONTROL Structure]** del editor, seleccione el campo `loyaltyId` y la casilla **[!UICONTROL Identity]** aparece en **[!UICONTROL Field properties]**. Marque la casilla y la opción para establecerla como aparece la **[!UICONTROL Primary identity]**. Seleccione también este cuadro.
 
 >[!NOTE]
 >
 >Cada esquema puede contener solo un campo de identidad principal. Una vez que se ha establecido un campo de esquema como identidad principal, recibirá un mensaje de error si más tarde intenta establecer otro campo de identidad en el esquema como principal.
 
-A continuación, debe proporcionar un **[!UICONTROL Identity namespace]** de la lista de áreas de nombres predefinidas en la lista desplegable. Dado que `loyaltyId` es la dirección de correo electrónico del cliente, seleccione &quot;[!UICONTROL Email]&quot; en la lista desplegable. Seleccione **[!UICONTROL Apply]** para confirmar las actualizaciones del campo `loyaltyId`.
+A continuación, debe proporcionar un **[!UICONTROL espacio de nombres de identidad]** de la lista de espacios de nombres predefinidos de la lista desplegable. Dado que `loyaltyId` es la dirección de correo electrónico del cliente, seleccione &quot;[!UICONTROL Correo electrónico]&quot; en la lista desplegable. Seleccione **[!UICONTROL Apply]** para confirmar las actualizaciones del campo `loyaltyId`.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
@@ -290,7 +291,7 @@ Después de aplicar el cambio, el icono de `loyaltyId` muestra un símbolo de hu
 
 Ahora todos los datos incorporados en el campo `loyaltyId` se utilizan para ayudar a identificar a ese individuo y unir una sola vista de ese cliente. Para obtener más información sobre cómo trabajar con identidades en [!DNL Experience Platform], consulte la documentación de [[!DNL Identity Service]](../../identity-service/home.md).
 
-## Habilite el esquema para utilizarlo en [!DNL Real-time Customer Profile] {#profile}
+## Habilitar el esquema para utilizarlo en [!DNL Real-time Customer Profile] {#profile}
 
 [[!DNL Real-time Customer Profile]](../../profile/home.md) aprovecha los datos de identidad en  [!DNL Experience Platform] para proporcionar una vista holística de cada cliente individual. El servicio crea perfiles sólidos de 360° de atributos del cliente, así como cuentas con marca de tiempo de cada interacción que los clientes han tenido en cualquier sistema integrado con [!DNL Experience Platform].
 
@@ -298,13 +299,13 @@ Para que un esquema esté habilitado para utilizarse con [!DNL Real-time Custome
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
-Para habilitar el esquema &quot;Miembros de lealtad&quot; para su uso en [!DNL Profile], comience por seleccionar &quot;[!DNL Loyalty Members]&quot; en la sección **[!UICONTROL Structure]** del editor.
+Para habilitar el esquema &quot;Miembros de lealtad&quot; para su uso en [!DNL Profile], comience por seleccionar &quot;[!DNL Loyalty Members]&quot; en la sección **[!UICONTROL Estructura]** del editor.
 
 A la derecha del editor, se muestra información sobre el esquema, incluido su nombre para mostrar, descripción y tipo. Además de esta información, hay un botón de alternancia **[!UICONTROL Profile]**.
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Seleccione **[!UICONTROL Profile]** y aparecerá una ventana emergente que le pedirá que confirme que desea habilitar el esquema para [!DNL Profile].
+Seleccione **[!UICONTROL Perfil]** y aparecerá una ventana emergente para pedirle que confirme que desea habilitar el esquema para [!DNL Profile].
 
 <img src="../images/tutorials/create-schema/enable-profile.png" width="700" /><br>
 
@@ -312,11 +313,11 @@ Seleccione **[!UICONTROL Profile]** y aparecerá una ventana emergente que le pe
 >
 >Una vez que un esquema se ha habilitado para [!DNL Real-time Customer Profile] y se ha guardado, no se puede desactivar.
 
-Seleccione **[!UICONTROL Enable]** para confirmar su elección. Puede volver a seleccionar la opción **[!UICONTROL Profile]** para deshabilitar el esquema si lo desea, pero una vez que el esquema se haya guardado mientras [!DNL Profile] está habilitado, ya no se puede deshabilitar.
+Seleccione **[!UICONTROL Enable]** para confirmar su elección. Puede seleccionar de nuevo la opción **[!UICONTROL Profile]** para deshabilitar el esquema si lo desea, pero una vez que el esquema se ha guardado mientras [!DNL Profile] está habilitado, ya no se puede deshabilitar.
 
 ## Pasos siguientes y recursos adicionales
 
-Ahora que ha terminado de componer el esquema, puede ver el esquema completo en el lienzo. Seleccione **[!UICONTROL Save]** y el esquema se guardará en [!DNL Schema Library], lo que lo hace accesible desde [!DNL Schema Registry].
+Ahora que ha terminado de componer el esquema, puede ver el esquema completo en el lienzo. Seleccione **[!UICONTROL Save]** y el esquema se guardará en [!DNL Schema Library], de modo que el [!DNL Schema Registry] pueda acceder a él.
 
 El nuevo esquema ahora se puede usar para introducir datos en [!DNL Platform]. Recuerde que una vez que el esquema se ha utilizado para introducir datos, solo se pueden realizar cambios aditivos. Consulte los [conceptos básicos de la composición de esquema](../schema/composition.md) para obtener más información sobre el control de versiones de esquemas.
 
