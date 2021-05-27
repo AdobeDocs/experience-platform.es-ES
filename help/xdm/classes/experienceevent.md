@@ -5,9 +5,9 @@ title: Clase XDM ExperienceEvent
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de eventos.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1482'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,8 @@ La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionado
 | `producedBy` | Un valor de cadena que describe el productor o el origen del evento. Este campo se puede utilizar para filtrar ciertos productores de eventos si es necesario para fines de segmentación.<br><br>Algunos valores sugeridos para esta propiedad se proporcionan en la  [sección](#producedBy) del apéndice. Este campo es una enumeración extensible, lo que significa que también puede utilizar sus propias cadenas para representar a diferentes productores de eventos. |
 | `identityMap` | Campo de mapa que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los  [conceptos básicos de la ](../schema/composition.md#identityMap) composición de esquemas para obtener más información sobre su caso de uso. |
 | `timestamp` | Marca de fecha y hora ISO 8601 del momento en que se produjo el evento, con el formato [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Esta marca de tiempo debe suceder en el pasado. Consulte la sección siguiente en [timestamps](#timestamps) para conocer las prácticas recomendadas sobre el uso de este campo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Prácticas recomendadas para el modelado de eventos
 
@@ -76,7 +78,7 @@ La siguiente tabla describe los valores aceptados para `eventType`, junto con su
 
 | Valor | Definición |
 | --- | --- |
-| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido el vídeo. |
+| `advertising.completes` | Se ha visto hasta el final un recurso de medios temporizados. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que el usuario podría haber omitido. |
 | `advertising.timePlayed` | Describe la cantidad de tiempo que un usuario emplea en un recurso de medios temporizados específico. |
 | `advertising.federated` | Indica si un evento de experiencia se creó mediante una federación de datos (uso compartido de datos entre clientes). |
 | `advertising.clicks` | Haga clic en las acciones de un anuncio. |
@@ -100,6 +102,8 @@ La siguiente tabla describe los valores aceptados para `eventType`, junto con su
 | `delivery.feedback` | Eventos de comentarios de un envío, como un envío de correo electrónico. |
 | `message.feedback` | Eventos de comentarios como enviados/rechazados/errores para mensajes enviados a un cliente. |
 | `message.tracking` | Eventos de seguimiento como acciones de apertura/clic/personalizadas en mensajes enviados a un cliente. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Valores sugeridos para `producedBy` {#producedBy}
 
