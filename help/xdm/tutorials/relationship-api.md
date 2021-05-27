@@ -6,11 +6,10 @@ description: Este documento proporciona un tutorial para definir una relación "
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 1%
+source-wordcount: '1369'
+ht-degree: 2%
 
 ---
 
@@ -231,6 +230,8 @@ Una respuesta correcta devuelve los detalles del grupo de campos recién creado.
 | --- | --- |
 | `$id` | El sistema generó un identificador único de solo lectura del nuevo grupo de campos. Toma la forma de URI. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Registre el URI `$id` del grupo de campos, que se utilizará en el siguiente paso de añadir el grupo de campos al esquema de origen.
 
 ### Añadir el grupo de campos al esquema de origen
@@ -246,6 +247,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SCHEMA_ID}` | El URI `$id` con codificación URL o `meta:altId` del esquema de origen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -275,6 +278,8 @@ curl -X PATCH \
 | `op` | La operación de PATCH que se va a realizar. Esta solicitud utiliza la operación `add`. |
 | `path` | La ruta al campo de esquema donde se agregará el nuevo recurso. Al agregar grupos de campos a esquemas, el valor debe ser &quot;/allOf/-&quot;. |
 | `value.$ref` | El `$id` del grupo de campos que se va a añadir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -378,6 +383,8 @@ curl -X POST \
 | `sourceProperty` | Ruta al campo de identidad principal del esquema de destino. |
 | `xdm:identityNamespace` | El área de nombres de identidad del campo de referencia. Debe ser el mismo espacio de nombres que se utiliza al definir el campo que la identidad principal del esquema. Consulte la [descripción general del área de nombres de identidad](../../identity-service/home.md) para obtener más información. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Respuesta**
 
 Una respuesta correcta devuelve los detalles del descriptor de referencia recién creado para el esquema de destino.
@@ -436,6 +443,8 @@ curl -X POST \
 | `xdm:destinationSchema` | La dirección URL `$id` del esquema de destino. |
 | `xdm:destinationVersion` | Número de versión del esquema de destino. |
 | `xdm:destinationProperty` | Ruta al campo de referencia en el esquema de destino. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Respuesta
 
