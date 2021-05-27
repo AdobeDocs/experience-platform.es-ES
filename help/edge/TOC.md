@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Gestión de datos
-source-git-commit: 4ed738b2b71332db1602d5571797ed61214afc2d
+source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 34%
+source-wordcount: '152'
+ht-degree: 33%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 34%
    * [Combinar datos de evento](fundamentals/merging-event-data.md)
    * [Configuración de un CSP](fundamentals/configuring-a-csp.md)
    * [Interaccione con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
+   * [Casos de uso admitidos](fundamentals/supported-use-cases.md)
 * Identidad {#identity}
    * [Información general](identity/overview.md)
 * Recopilación de datos {#data-collection}
