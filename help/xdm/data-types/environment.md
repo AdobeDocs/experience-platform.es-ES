@@ -5,17 +5,16 @@ title: Tipo de datos de entorno
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de entorno.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 4%
+source-wordcount: '468'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Environment] tipo de datos
+#  Tipo de datos de entorno
 
-[!UICONTROL Environment] es un tipo de datos XDM estándar que describe el entorno de un evento observado, detallando específicamente información transitoria como versiones de red y software.
+ Entornos es un tipo de datos XDM estándar que describe el entorno de un evento observado, detallando específicamente información transitoria como versiones de red y software.
 
 >[!IMPORTANT]
 >
@@ -41,6 +40,8 @@ ht-degree: 4%
 | `viewportHeight` | Número entero | Tamaño vertical en píxeles de la ventana en la que se mostraba la experiencia. Para un evento de vista web, esta es la altura de la ventanilla del explorador. |
 | `viewPortWidth` | Número entero | El tamaño horizontal en píxeles de la ventana en la que se mostraba la experiencia. Para un evento de vista web, esta es la anchura de la ventanilla del explorador. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
 * [Ejemplo rellenado](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
@@ -48,7 +49,7 @@ Para obtener más información sobre el tipo de datos, consulte el repositorio X
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Device].
+La siguiente sección contiene información adicional sobre el tipo de datos [!UICONTROL Device] .
 
 ## Valores aceptados para el tipo {#type}
 
