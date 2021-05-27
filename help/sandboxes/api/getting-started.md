@@ -5,10 +5,9 @@ title: Guía de la API de Sandbox
 topic-legacy: developer guide
 description: La API de espacio aislado permite a los desarrolladores administrar mediante programación entornos limitados en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la AP
 
 ## Introducción a la API de Sandbox
 
-Para administrar entornos limitados para su organización de IMS, debe tener permisos de administración de entornos limitados. Los usuarios sin permisos de acceso solo pueden usar el punto final para [listar entornos limitados activos para el usuario actual](./list-active-sandboxes.md). Consulte la [información general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar permisos de simulación de pruebas para el Experience Platform.
+Para administrar entornos limitados para su organización de IMS, debe tener permisos de administración de entornos limitados. Los usuarios sin permisos de acceso solo pueden utilizar el [extremo de entornos limitados disponibles](./available.md) para enumerar los entornos limitados activos para el usuario actual. Consulte la [información general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar permisos de simulación de pruebas para el Experience Platform.
 
 ### Leer llamadas de API de ejemplo
 
