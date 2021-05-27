@@ -5,10 +5,9 @@ title: Guía de solución de problemas de Data Science Workspace
 topic-legacy: Troubleshooting
 description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -116,6 +115,28 @@ Para obtener más información sobre la configuración de [!DNL Spark] recursos 
 ## ¿Por qué recibo un error al intentar ejecutar ciertas tareas para conjuntos de datos más grandes?
 
 Si está recibiendo un error por un motivo como `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.`, esto generalmente significa que el controlador o un ejecutor se está quedando sin memoria. Consulte la documentación de JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) para obtener más información sobre los límites de datos y cómo ejecutar tareas en conjuntos de datos grandes. Normalmente, este error se puede resolver cambiando el `mode` de `interactive` a `batch`.
+
+Además, mientras se escriben grandes conjuntos de datos de Spark/PySpark, el almacenamiento en caché de los datos (`df.cache()`) antes de ejecutar el código de escritura puede mejorar en gran medida el rendimiento.
+
+<!-- remove this paragraph at a later date once the sdk is updated -->
+
+Si tiene problemas al leer datos y aplica transformaciones a los datos, intente almacenar los datos en caché antes de las transformaciones. El almacenamiento en caché de los datos evita que se lean varias veces en la red. Comience por leer los datos. A continuación, almacene en caché (`df.cache()`) los datos. Finalmente, realice las transformaciones.
+
+## ¿Por qué mis portátiles Spark/PySpark tardan tanto en leer y escribir datos?
+
+Si realiza transformaciones en los datos, como el uso de `fit()`, es posible que las transformaciones se estén ejecutando varias veces. Para aumentar el rendimiento, almacene en caché los datos mediante `df.cache()` antes de realizar el `fit()`. Esto garantiza que las transformaciones solo se ejecuten una sola vez y evita que se lean varias veces en la red.
+
+**Orden recomendado:** comience leyendo los datos. A continuación, realice transformaciones seguidas de almacenar en caché (`df.cache()`) los datos. Finalmente, realice un `fit()`.
+
+## ¿Por qué mis portátiles Spark/PySpark no funcionan?
+
+Si está recibiendo cualquiera de los siguientes errores:
+
+- Trabajo anulado debido a un error en la etapa ... Solo puede comprimir RDD con el mismo número de elementos en cada partición.
+- Cliente RPC remoto desasociado y otros errores de memoria.
+- Rendimiento deficiente al leer y escribir conjuntos de datos.
+
+Compruebe que está almacenando en caché los datos (`df.cache()`) antes de escribir los datos. Al ejecutar código en portátiles, el uso de `df.cache()` antes de una acción como `fit()` puede mejorar en gran medida el rendimiento del bloc de notas. El uso de `df.cache()` antes de escribir un conjunto de datos garantiza que las transformaciones solo se ejecuten una sola vez en lugar de varias.
 
 ## [!DNL Docker Hub] restricciones de límite en Data Science Workspace
 
