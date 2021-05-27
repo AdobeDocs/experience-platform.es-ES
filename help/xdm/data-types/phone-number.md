@@ -5,17 +5,16 @@ title: Tipo de datos de número telefónico
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de Número de teléfono.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 0%
+source-wordcount: '211'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Phone number] tipo de datos
+# [!UICONTROL Tipo de datos de ] número de teléfono
 
-[!UICONTROL Phone number] es un tipo de datos XDM estándar que describe los detalles de un número de teléfono.
+[!UICONTROL El ] número de teléfono es un tipo de datos XDM estándar que describe los detalles de un número de teléfono.
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
@@ -27,6 +26,8 @@ ht-degree: 0%
 | `status` | Indica si el número de teléfono se puede usar actualmente. |
 | `statusReason` | Descripción del estado actual. |
 | `validity` | Un nivel de corrección técnica del número de teléfono. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos de número de teléfono, consulte el repositorio XDM público:
 
