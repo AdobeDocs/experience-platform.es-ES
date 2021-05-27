@@ -5,17 +5,16 @@ title: Tipo de datos de detalles del explorador
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del explorador .
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 6%
+source-wordcount: '266'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Browser details] tipo de datos
+# [!UICONTROL Tipo de datos de ] detalles del explorador
 
-[!UICONTROL Browser details] es un tipo de datos XDM estándar que describe detalles relacionados con un explorador o aplicación.
+[!UICONTROL Los ] detalles del explorador son un tipo de datos XDM estándar que describe detalles relacionados con un explorador o aplicación.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -35,6 +34,8 @@ ht-degree: 6%
 | `version` | Cadena | La aplicación o la versión del explorador. |
 | `viewportHeight` | Número entero | Tamaño vertical en píxeles de la ventana en la que se mostró el evento. Para un evento de vista web, esta es la altura de la ventanilla del explorador. |
 | `viewportWidth` | Número entero | El tamaño horizontal en píxeles de la ventana en la que se mostró el evento. Para un evento de vista web, esta es la anchura de la ventanilla del explorador. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
