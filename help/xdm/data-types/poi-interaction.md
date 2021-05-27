@@ -5,25 +5,26 @@ title: Tipo de datos de interacción del punto de interés
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de interacción de puntos de interés.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 1%
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Point of interest interaction] tipo de datos
+# [!UICONTROL Tipo de datos de ] interacción de puntos de interés
 
-[!UICONTROL Point of interest interaction] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica la información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del rango.
+[!UICONTROL La ] interacción del punto de interés es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica la información de identidad a las aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del intervalo.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Point of interest details]](./poi-details.md) | Describe los detalles del punto de interés que provocó el evento. |
+| `poiDetail` | [[!UICONTROL Detalles del punto de interés]](./poi-details.md) | Describe los detalles del punto de interés que provocó el evento. |
 | `poiEntries` | Objeto | Describe el número de veces que una persona ha ingresado al punto de interés. Contiene dos propiedades: <ul><li>`id`: Identificador único de la medida.</li><li>`value`: El valor cuantificable de la medida.</li></ul> |
 | `poiExits` | Objeto | Describe el número de veces que una persona ha salido del punto de interés. Contiene dos propiedades: <ul><li>`id`: Identificador único de la medida.</li><li>`value`: El valor cuantificable de la medida.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
