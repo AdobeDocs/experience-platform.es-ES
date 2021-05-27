@@ -5,11 +5,10 @@ title: Exportación/importación de extremos de API
 description: Los extremos /export y /import de la API del Registro de esquemas permiten compartir recursos XDM entre organizaciones IMS y entornos limitados.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 1%
+source-wordcount: '510'
+ht-degree: 2%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/export/{RESOURCE_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{RESOURCE_ID}` | El `meta:altId` o el `$id` con codificación de URL del recurso XDM que desea exportar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
