@@ -5,10 +5,9 @@ title: Introducción a la API del Registro de esquemas
 description: Este documento proporciona una introducción a los conceptos principales que debe conocer antes de intentar realizar llamadas a la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -213,11 +212,13 @@ En la tabla siguiente se enumeran los valores de encabezado `Accept` compatibles
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto. Sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resuelto. Se incluyen los descriptores. |
 
+{style=&quot;table-layout:auto&quot;}
+
 >[!NOTE]
 >
 >Actualmente, Platform solo admite una versión principal para cada esquema (`1`). Por lo tanto, el valor de `version` siempre debe ser `1` al realizar solicitudes de búsqueda para devolver la última versión secundaria del esquema. Consulte la subsección siguiente para obtener más información sobre el control de versiones de esquemas.
 
-### Versiones del esquema {#versioning}
+### Versiones de esquemas {#versioning}
 
 Los encabezados `Accept` hacen referencia a las versiones de esquema en la API del Registro de esquemas y en las `schemaRef.contentType` propiedades en las cargas útiles de API del servicio de Platform descendente.
 
