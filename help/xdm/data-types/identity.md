@@ -5,17 +5,16 @@ title: Tipo de datos de identidad
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de identidad.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 2%
+source-wordcount: '287'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Identity] tipo de datos
+#  Tipo de datos de identidad
 
-[!UICONTROL Identity] es un tipo de datos XDM estándar que se utiliza para distinguir claramente a las personas que interactúan con experiencias digitales. La identidad la establece un proveedor de identidad, al que se hace referencia en un atributo `namespace`. Dentro de cada `namespace`, la identidad es única.
+ La identidad es un tipo de datos XDM estándar que se utiliza para distinguir claramente a las personas que interactúan con experiencias digitales. La identidad la establece un proveedor de identidad, al que se hace referencia en un atributo `namespace`. Dentro de cada `namespace`, la identidad es única.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
@@ -26,6 +25,8 @@ ht-degree: 2%
 | `id` | Cadena | La identidad del consumidor en el área de nombres relacionada. |
 | `primary` | Booleano | Indica si esta es la identidad principal del individuo. Cada individuo solo puede tener una identidad principal. |
 | `xid` | Cadena | Cuando está presente, este valor representa un identificador de área de nombres cruzada que es único en todos los identificadores de ámbito de área de nombres en todos los espacios de nombres. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
