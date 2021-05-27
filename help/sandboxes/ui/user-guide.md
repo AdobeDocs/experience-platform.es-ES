@@ -5,10 +5,9 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ Este documento proporciona pasos sobre cómo realizar varias operaciones relacio
 
 ## Ver entornos limitados
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Sandboxes]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Sandboxes]**. El tablero enumera todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creador, eliminado o fallido).
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sandboxes]** en el panel de navegación izquierdo para abrir el tablero [!UICONTROL Sandboxes]. El tablero enumera todos los entornos limitados disponibles para su organización, incluido el tipo de entorno limitado (producción o desarrollo) y el estado (activo, creador, eliminado o fallido).
 
 ![](../images/ui/view-sandboxes.png)
 
@@ -37,7 +36,7 @@ Una vez seleccionado un simulador de pruebas, la pantalla se actualiza con el si
 
 ![](../images/ui/switched.png)
 
-## Sesiones para un simulador de pruebas
+## Buscar un simulador de pruebas
 
 Puede navegar por la lista de entornos limitados disponibles mediante la función de búsqueda del menú del conmutador de entornos limitados. Escriba el nombre del simulador de pruebas al que desea acceder para filtrar por todos los entornos limitados disponibles para su organización.
 
@@ -49,61 +48,61 @@ Utilice el siguiente vídeo para obtener información general rápida sobre cóm
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Para crear un nuevo simulador de pruebas en la interfaz de usuario, seleccione el botón **[!UICONTROL Create Sandbox]** en la parte superior derecha de la pantalla.
+Para crear un nuevo entorno limitado, seleccione **[!UICONTROL Crear entorno limitado]** en la esquina superior derecha de la pantalla.
 
-![](../images/ui/create-sandbox.png)
+![crear](../images/ui/create.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Create Sandbox]**, que le solicita que proporcione un título y un nombre para mostrar para el simulador de pruebas. El **título de visualización** está diseñado para ser legible por el usuario y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El simulador de pruebas **[!UICONTROL Name]** es un identificador en minúsculas que se utiliza en las llamadas a la API y, por lo tanto, debe ser único y conciso. El simulador de pruebas **[!UICONTROL Name]** solo debe contener caracteres alfanuméricos y guiones **(-)**, debe comenzar con una letra y tener un máximo de 256 caracteres.
+Aparece el cuadro de diálogo **[!UICONTROL Crear entorno limitado]**. Si está creando un entorno limitado de desarrollo, seleccione **[!UICONTROL Desarrollo]** en el panel desplegable. Para crear un nuevo entorno limitado de producción, seleccione **[!UICONTROL Producción]**.
 
-Cuando termine, seleccione **[!UICONTROL Create]**.
+![type](../images/ui/type.png)
 
-![](../images/ui/create-dialog.png)
+Después de seleccionar el tipo, proporcione un nombre y un título al simulador de pruebas. El título debe ser legible por el ser humano y debe ser lo suficientemente descriptivo como para ser fácilmente identificable. El nombre del simulador para pruebas es un identificador en minúsculas que se utiliza en las llamadas a la API y, por lo tanto, debe ser único y conciso. El nombre del simulador para pruebas debe comenzar con una letra, tener un máximo de 256 caracteres y constar únicamente de caracteres alfanuméricos y guiones (-).
 
->[!NOTE]
->
->Como está restringido a la creación de tipos de entornos limitados que no sean de producción solamente, la opción **[!UICONTROL type]** está bloqueada en &quot;No de producción&quot; y no se puede manipular.
+Cuando termine, seleccione **[!UICONTROL Crear]**.
 
-Una vez que haya terminado de crear el entorno limitado, actualice la página y aparecerá el nuevo entorno limitado en el panel **[!UICONTROL Sandboxes]** con el estado &quot;[!UICONTROL Creating]&quot;. El sistema tarda aproximadamente 15 minutos en aprovisionar nuevos entornos limitados, tras lo cual su estado cambia a &quot;[!UICONTROL Active]&quot;.
+![información](../images/ui/info.png)
 
-![](../images/ui/creating.png)
+Una vez que haya terminado de crear el simulador para pruebas, actualice la página y aparecerá el nuevo simulador para pruebas en el tablero **[!UICONTROL Sandboxes]** con el estado &quot;[!UICONTROL Creating]&quot;. El sistema tarda aproximadamente 30 segundos en aprovisionar nuevos entornos limitados, tras lo cual su estado cambia a &quot;[!UICONTROL Activo]&quot;.
 
 ## Restablecer un simulador para pruebas
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. No se pueden restablecer los entornos limitados de producción.
+>No se puede restablecer el entorno limitado de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para la función [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) . Tampoco se pueden restablecer los entornos limitados de producción que se utilizan para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia.
 
-Al restablecer un simulador para pruebas que no sean de producción, se eliminan todos los recursos asociados a ese simulador para pruebas (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del simulador para pruebas y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
+Al restablecer un entorno limitado de producción o desarrollo, se eliminan todos los recursos asociados a dicho entorno limitado (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre del entorno limitado y los permisos asociados. Este simulador de pruebas &quot;limpio&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a él.
 
-Para restablecer un simulador para pruebas en la interfaz de usuario, seleccione **[!UICONTROL Sandboxes]** en la barra de navegación izquierda y, a continuación, seleccione el simulador para pruebas que desea restablecer. En el cuadro de diálogo que aparece en el lado derecho de la pantalla, seleccione **[!UICONTROL Reset Sandbox]**.
+Seleccione el simulador de pruebas que desea restablecer de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Sandbox reset]**.
 
-![](../images/ui/reset-sandbox.png)
+![reset](../images/ui/reset.png)
 
-Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Reset]** para continuar.
+Aparece un cuadro de diálogo que le solicita que confirme su elección. Seleccione **[!UICONTROL Continue]** para continuar.
 
-![](../images/ui/reset-confirm.png)
+![reset-warning](../images/ui/reset-warning.png)
 
-Aparece un mensaje de confirmación y el estado del entorno limitado cambia a &quot;**[!UICONTROL Resetting]&quot;**. Una vez que el sistema lo haya aprovisionado, su estado se actualizará a **&quot;[!UICONTROL Active]&quot;** o **&quot;[!UICONTROL Failed]&quot;**.
+En la ventana de confirmación final, introduzca el nombre del simulador de pruebas en el cuadro de diálogo y seleccione **[!UICONTROL Reset]**
 
-![](../images/ui/resetting.png)
+![reset-confirm](../images/ui/reset-confirm.png)
 
 ## Eliminación de un simulador para pruebas
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Esta funcionalidad solo está disponible para entornos limitados que no sean de producción. Los entornos limitados de producción no se pueden eliminar.
+>El entorno limitado de producción predeterminado no se puede eliminar y los entornos limitados de producción que se utilizan para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia tampoco se pueden eliminar.
 
-Al eliminar permanentemente un simulador para pruebas que no sean de producción, se eliminan todos los recursos asociados con ese simulador para pruebas, incluidos los permisos.
+Al eliminar un entorno limitado de producción o desarrollo, se eliminan permanentemente todos los recursos asociados a dicho entorno limitado, incluidos los permisos.
 
-Para eliminar un simulador para pruebas en la interfaz de usuario, seleccione **[!UICONTROL Sandboxes]** en la barra de navegación izquierda y, a continuación, seleccione el simulador para pruebas que desea eliminar. En el cuadro de diálogo que aparece en el lado derecho de la pantalla, seleccione **[!UICONTROL Delete Sandbox]**.
+Seleccione el simulador de pruebas que desee eliminar de la lista de entornos limitados. En el panel de navegación derecho que aparece, seleccione **[!UICONTROL Eliminar]**.
 
-![](../images/ui/delete-sandbox.png)
+![delete](../images/ui/delete.png)
 
-Aparecerá un cuadro de diálogo que le pedirá que confirme su elección. Seleccione **[!UICONTROL Delete]** para continuar.
+Aparece un cuadro de diálogo que le solicita que confirme su elección. Seleccione **[!UICONTROL Continue]** para continuar.
 
-![](../images/ui/delete-confirm.png)
+![delete-warning](../images/ui/delete-warning.png)
 
-Aparece un mensaje de confirmación y el simulador de pruebas se elimina del espacio de trabajo **[!UICONTROL Sandboxes]**.
+En la ventana de confirmación final, introduzca el nombre del simulador de pruebas en el cuadro de diálogo y seleccione **[!UICONTROL Continue]**
+
+![delete-confirm](../images/ui/delete-confirm.png)
 
 ## Pasos siguientes
 
