@@ -5,10 +5,10 @@ title: Apéndice de la API del Registro de Esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API del Registro de esquemas.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 0%
+source-wordcount: '781'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,8 @@ Los parámetros de consulta más comunes para la paginación incluyen:
 | `limit` | Limite el número de recursos devueltos. Ejemplo: `limit=5` devolverá una lista de cinco recursos. |
 | `orderby` | Ordene los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Si se añade un `-` antes del valor del parámetro (`orderby=-title`), los elementos se ordenarán por título en orden descendente (Z-A). |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Filtro {#filtering}
 
 Puede filtrar los resultados utilizando el parámetro `property` , que se utiliza para aplicar un operador específico a una propiedad JSON determinada dentro de los recursos recuperados. Los operadores admitidos son:
@@ -48,6 +50,8 @@ Puede filtrar los resultados utilizando el parámetro `property` , que se utiliz
 | `>=` | Filtra por si la propiedad es buena o igual al valor proporcionado. | `property=version>=5` |
 | `~` | Filtra si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
 | (Ninguna) | Al indicar solo el nombre de propiedad, solo se devuelven las entradas en las que existe la propiedad. | `property=title` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!TIP]
 >
@@ -67,7 +71,7 @@ La principal diferencia que notará entre el XDM estándar y el Modo de compatib
 
 A continuación se muestra una comparación en paralelo que muestra los campos relacionados con el cumpleaños (con los atributos de &quot;descripción&quot; eliminados) tanto en el XDM estándar como en el modo de compatibilidad. Observe que los campos Modo de compatibilidad incluyen una referencia al campo XDM y su tipo de datos en los atributos &quot;meta:xdmField&quot; y &quot;meta:xdmType&quot;.
 
-<table>
+<table style="table-layout:auto">
   <th>XDM estándar</th>
   <th>Modo de compatibilidad</th>
   <tr>
