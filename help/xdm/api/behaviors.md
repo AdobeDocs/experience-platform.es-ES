@@ -5,11 +5,10 @@ title: Punto final de la API Behaviors
 description: El extremo /comportamientos de la API del Registro de esquemas permite recuperar todos los comportamientos disponibles en el contenedor global.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 2%
+source-wordcount: '428'
+ht-degree: 3%
 
 ---
 
@@ -17,8 +16,8 @@ ht-degree: 2%
 
 En Experience Data Model (XDM), los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Para casi todos los casos de uso en Platform, hay dos comportamientos disponibles:
 
-* **[!UICONTROL Record]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
-* **[!UICONTROL Time-series]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
+* **[!UICONTROL Registro]**: Proporciona información sobre los atributos de un asunto. Un tema podría ser una organización o un individuo.
+* **[!UICONTROL Serie temporal]**: Proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirectamente.
 
 >[!NOTE]
 >
@@ -102,6 +101,8 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{BEHAVIOR_ID}` | El `meta:altId` o el `$id` con codificación de URL del comportamiento que desea buscar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
