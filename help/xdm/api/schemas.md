@@ -5,11 +5,10 @@ title: Punto final de API de Esquemas
 description: El extremo /schemas de la API del Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 2%
+source-wordcount: '1458'
+ht-degree: 4%
 
 ---
 
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | El contenedor que alberga los esquemas que desea recuperar: `global` para esquemas creados por Adobe o `tenant` para esquemas propiedad de su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de esquemas del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar los resultados por su atributo `title`.
@@ -60,6 +61,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -110,6 +113,8 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | El contenedor que alberga el esquema que desea recuperar: `global` para un esquema creado por el Adobe o `tenant` para un esquema propiedad de su organización. |
 | `{SCHEMA_ID}` | El `meta:altId` o el `$id` con codificación de URL del esquema que desea buscar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera un esquema especificado por su valor `meta:altId` en la ruta.
@@ -133,6 +138,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -229,6 +236,8 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Matriz de objetos, con cada objeto haciendo referencia a una clase o grupo de campos cuyos campos implementa el esquema. Cada objeto contiene una sola propiedad (`$ref`) cuyo valor representa el `$id` de la clase o grupo de campos que implementará el nuevo esquema. Se debe proporcionar una clase, con cero o más grupos de campos adicionales. En el ejemplo anterior, el objeto único de la matriz `allOf` es la clase del esquema. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 201 (Creado) y una carga útil que contiene los detalles del esquema recién creado, incluidos `$id`, `meta:altId` y `version`. Estos valores son de solo lectura y los asigna el [!DNL Schema Registry].
@@ -287,6 +296,8 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SCHEMA_ID}` | El `meta:altId` o el `$id` con codificación de URL del esquema que desea reescribir. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -369,6 +380,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | El URI `$id` con codificación URL o `meta:altId` del esquema que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La solicitud de ejemplo siguiente agrega un nuevo grupo de campos a un esquema añadiendo el valor `$id` de ese grupo de campos a las matrices `meta:extends` y `allOf`.
@@ -440,7 +453,7 @@ La respuesta muestra que ambas operaciones se realizaron correctamente. El grupo
 }
 ```
 
-## Habilitar un esquema para utilizarlo en el perfil de cliente en tiempo real {#union}
+## Activación de un esquema para su uso en Perfil del cliente en tiempo real {#union}
 
 Para que un esquema participe en [Perfil del cliente en tiempo real](../../profile/home.md), debe agregar una etiqueta `union` a la matriz `meta:immutableTags` del esquema. Puede hacerlo realizando una solicitud de PATCH para el esquema en cuestión.
 
@@ -457,6 +470,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SCHEMA_ID}` | El URI `$id` con codificación URL o `meta:altId` del esquema que desea habilitar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -538,6 +553,8 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{SCHEMA_ID}` | El URI `$id` con codificación URL o `meta:altId` del esquema que desea eliminar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
