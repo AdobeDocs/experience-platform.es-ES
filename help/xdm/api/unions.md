@@ -5,11 +5,10 @@ title: Punto final de la API de Unions
 description: El extremo /union de la API del Registro de esquemas permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 1%
+source-wordcount: '915'
+ht-degree: 3%
 
 ---
 
@@ -66,6 +65,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve la clase JSON completa para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz `results` en el cuerpo de respuesta. Si se han definido uniones, los detalles de cada unión se proporcionan como objetos dentro de la matriz. Si no se han definido uniones, el estado HTTP 200 (OK) sigue devolviendo, pero la matriz `results` estará vacía.
@@ -89,7 +90,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz `results` e
 }
 ```
 
-## Buscar una unión {#lookup}
+## Buscar un sindicato {#lookup}
 
 Puede ver una unión específica realizando una solicitud de GET que incluya el `$id` y, según el encabezado Aceptar, algunos o todos los detalles de la unión.
 
@@ -107,6 +108,8 @@ GET /tenant/schemas/{UNION_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{UNION_ID}` | El URI `$id` con codificación URL de la unión que desea buscar. Los URI de los esquemas de unión se añaden a &quot;__union&quot;. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
@@ -128,6 +131,8 @@ Los siguientes encabezados Accept están disponibles para las búsquedas de esqu
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Sin procesar con `$ref` y `allOf`. Incluye títulos y descripciones. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` y  `allOf` resuelto. Incluye títulos y descripciones. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -192,6 +197,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | El `$id` de la clase cuyos esquemas habilitados para la unión desea enumerar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de todos los esquemas que forman parte de la unión para la clase [!DNL XDM Individual Profile].
@@ -212,6 +219,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con los valores originales `$ref` y `allOf` incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
