@@ -5,10 +5,9 @@ title: Información general de entornos limitados
 topic-legacy: overview
 description: Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -23,9 +22,19 @@ Este documento proporciona información general de alto nivel sobre los entornos
 
 ## Aspectos básicos de los entornos limitados
 
-Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital. Una instancia de Experience Platform admite un simulador para pruebas de producción y varios entornos limitados que no sean de producción. Cada simulador para pruebas mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.).  Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas.
+Los entornos limitados son particiones virtuales dentro de una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de las aplicaciones de experiencia digital. Todo el contenido y las acciones realizadas dentro de un simulador de pruebas solo se limitan a ese simulador de pruebas y no afectan a ningún otro simulador de pruebas. El Experience Platform admite dos tipos de entornos limitados:
 
-Los entornos limitados que no son de producción le permiten probar características, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a su entorno limitado de producción. Además, los entornos limitados que no son de producción tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados que no sean de producción no se pueden convertir en entornos limitados de producción. Una licencia de Experience Platform predeterminada le otorga cinco entornos limitados (una producción y cuatro no producción). Puede agregar paquetes de diez entornos limitados que no sean de producción hasta un máximo de 75 entornos limitados en total. Póngase en contacto con su administrador de organización de IMS o con su representante de ventas de Adobe para obtener más información.
+* **Espacio aislado** de producción: Un simulador para pruebas de producción está diseñado para utilizarse con perfiles en el entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada a los datos sin dejar de mantener el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Los entornos limitados de producción admiten un volumen de perfiles de producción hasta su [!DNL Profile] compromiso con licencia (medido acumulativamente en todos los entornos limitados de producción autorizados). Tiene derecho a usar un perfil promedio con licencia por [!DNL Profile] autorizado (medido acumulativamente en todos los entornos limitados de producción autorizados).
+* **Entorno limitado de desarrollo**: Un entorno limitado de desarrollo es un entorno limitado que se puede utilizar exclusivamente para desarrollo y pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10% de su [!DNL Profile] compromiso con licencia (medido acumulativamente en todos los entornos limitados de desarrollo autorizados). Tiene derecho a:
+   * Una riqueza media de perfil no productiva de 75 kilobytes por perfil no de producción autorizado (medida acumulativamente en todos los entornos limitados de desarrollo autorizados);
+   * Un trabajo de segmentación por lotes al día, por simulador de pruebas de desarrollo;
+   * Un promedio de 120 [!DNL Profile] llamadas de API por [!DNL Profile] año (se miden acumulativamente en todos los entornos limitados de desarrollo autorizados.
+
+Una instancia de Experience Platform admite varios entornos limitados de producción y desarrollo, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Además, tanto los entornos limitados de producción como los de desarrollo tienen una función de restablecimiento que elimina todos los recursos creados por el cliente del entorno limitado. Los entornos limitados de desarrollo no se pueden convertir en entornos limitados de producción.
+
+Una licencia de Experience Platform predeterminada le otorga un total de cinco entornos limitados, que puede clasificar como de producción o desarrollo. Puede obtener una licencia de paquetes adicionales de 10 entornos limitados hasta un máximo de 75 entornos limitados en total. Estos entornos limitados adicionales se pueden usar para crear entornos limitados de producción y desarrollo. Póngase en contacto con su administrador de organización de IMS o con su representante de ventas de Adobe para obtener más información.
+
+Por último, el entorno limitado de producción predeterminado es el primer entorno limitado de producción que se crea al crear una organización de IMS por primera vez. El entorno limitado de producción predeterminado le permite ingerir o consumir datos de Platform, así como aceptar solicitudes que no incluyan valores para un nombre de entorno limitado o un ID de simulador de pruebas.
 
 >[!NOTE]
 >
@@ -47,7 +56,7 @@ Para obtener más información sobre la administración de funciones y permisos 
 
 ## Sandboxes en la interfaz de usuario del Experience Platform
 
-En la [interfaz de usuario del Experience Platform](https://platform.adobe.com), los usuarios pueden cambiar entre los entornos limitados a los que tienen acceso mediante el control **sandbox switch** en la parte superior izquierda de la pantalla.  Los usuarios con privilegios de administración de espacio aislado también tienen acceso a la pestaña **[!UICONTROL Sandboxes]** en la navegación izquierda, donde pueden ver y administrar entornos limitados para su organización. Para obtener más información sobre cómo trabajar con entornos limitados en la interfaz de usuario, consulte la [guía del usuario del entorno limitado](ui/overview.md).
+En la [interfaz de usuario del Experience Platform](https://platform.adobe.com), los usuarios pueden cambiar entre los entornos limitados a los que tienen acceso mediante el control **sandbox switch** en la parte superior izquierda de la pantalla.  Los usuarios con privilegios de administración de espacio aislado también tienen acceso a la pestaña **[!UICONTROL Entornos aislados]** en la navegación de la izquierda, donde pueden ver y administrar entornos limitados para su organización. Para obtener más información sobre cómo trabajar con entornos limitados en la interfaz de usuario, consulte la [guía del usuario del entorno limitado](ui/overview.md).
 
 ## Sandboxes en las API de Experience Platform
 
@@ -66,7 +75,7 @@ Si `x-sandbox-name` no está incluido en una llamada de API, el sistema usará u
 
 ### API de Sandbox
 
-La API de espacio aislado permite administrar entornos limitados mediante operaciones de API RESTful. Consulte la [guía para desarrolladores de entornos limitados](api/getting-started.md) para obtener información detallada sobre cómo utilizar la API, incluidas las solicitudes con formato correcto y las respuestas de ejemplo.
+La API de espacio aislado permite administrar entornos limitados mediante operaciones de API RESTful. Consulte la [guía para desarrolladores de entornos limitados](api/overview.md) para obtener información detallada sobre cómo utilizar la API, incluidas las solicitudes con formato correcto y las respuestas de ejemplo.
 
 ## Pasos siguientes
 
