@@ -5,10 +5,10 @@ title: Clase de perfil individual XDM
 topic-legacy: overview
 description: Este documento proporciona información general sobre la clase XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 0%
+source-wordcount: '455'
+ht-degree: 1%
 
 ---
 
@@ -31,6 +31,8 @@ La propia clase [!DNL XDM Individual Profile] proporciona varios valores generad
 | `personID` | Un identificador único para la persona a la que se relaciona este registro. Este campo no representa necesariamente una identidad relacionada con la persona a menos que también esté designado como [campo de identidad](../schema/composition.md#identity). |
 | `repositoryCreatedBy` | ID del usuario que creó el registro. |
 | `repositoryLastModifiedBy` | El ID del usuario que modificó el registro por última vez. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Grupos de campos compatibles {#field-groups}
 
