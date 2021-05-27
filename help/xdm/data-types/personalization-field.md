@@ -4,27 +4,28 @@ title: Tipo de datos de campo de preferencia de personalización genérica
 topic-legacy: overview
 description: Este documento proporciona una descripción general del tipo de datos XDM del campo de preferencia de personalización genérica.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 1%
+source-wordcount: '485'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Generic Personalization Preference Field] tipo de datos
+# [!UICONTROL Tipo de ] datos de campo de preferencia de personalización genérica
 
-[!UICONTROL Generic Personalization Preference Field] es un tipo de datos XDM estándar que describe la selección de un cliente para una preferencia de personalización determinada.
+[!UICONTROL Los ] campos de preferencia de personalización genérica son un tipo de datos XDM estándar que describe la selección de un cliente para una preferencia de personalización determinada.
 
 >[!NOTE]
 >
->Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de la organización mediante el grupo de campos [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) como línea de base.
+>Este tipo de datos está diseñado para utilizarse para personalizar la estructura de los esquemas de consentimiento de la organización con el grupo de campos [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) como línea de base.
 
 ![](../images/data-types/personalization-field.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `val` | Cadena | La opción de preferencia proporcionada por el cliente para este caso de uso de personalización. Consulte la siguiente tabla para ver los valores y definiciones aceptados. |
+
+{style=&quot;table-layout:auto&quot;}
 
 La siguiente tabla describe los valores aceptados para `val`:
 
@@ -39,6 +40,8 @@ La siguiente tabla describe los valores aceptados para `val`:
 | `CP` | Cumplimiento de una obligación legal | La recopilación de datos con el fin especificado es necesaria para cumplir las obligaciones jurídicas de la empresa. |
 | `VI` | Interés vital del individuo | La recopilación de datos con el fin especificado es necesaria para proteger los intereses vitales de la persona. |
 | `PI` | Interés público | La recopilación de datos con el fin especificado es necesaria para llevar a cabo una tarea de interés público o en el ejercicio de la autoridad oficial. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos, consulte el repositorio XDM público:
 
