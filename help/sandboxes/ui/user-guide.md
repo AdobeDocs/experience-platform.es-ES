@@ -5,9 +5,9 @@ title: Guía de la interfaz de usuario del Simulador para pruebas
 topic-legacy: user guide
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con entornos limitados en la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ En la ventana de confirmación final, introduzca el nombre del simulador de prue
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+Después de unos momentos, aparece un cuadro de confirmación en la parte inferior de la pantalla para confirmar que el restablecimiento se ha realizado correctamente.
+
+![success](../images/ui/success.png)
+
+### Mensajes de error
+
+No se puede restablecer un entorno limitado de producción predeterminado que contenga datos CDA y devuelve el siguiente error.
+
+![cda](../images/ui/cda.png)
+
+Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos PBD y devuelve el siguiente error.
+
+![pbd](../images/ui/pbd.png)
+
+Tampoco se puede restablecer un entorno limitado de producción predeterminado que contenga datos tanto para CDA como para PBD, y devuelve el siguiente error.
+
+![both](../images/ui/both.png)
+
+Tampoco se puede restablecer un simulador para pruebas de producción que se utilice para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia y devuelve el siguiente error.
+
+![seg](../images/ui/seg.png)
+
 ## Eliminación de un simulador para pruebas
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Aparece un cuadro de diálogo que le solicita que confirme su elección. Selecci
 En la ventana de confirmación final, introduzca el nombre del simulador de pruebas en el cuadro de diálogo y seleccione **[!UICONTROL Continue]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Un simulador para pruebas de producción que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia no se puede eliminar y devuelve el siguiente error.
+
+![seg](../images/ui/seg.png)
 
 ## Pasos siguientes
 
