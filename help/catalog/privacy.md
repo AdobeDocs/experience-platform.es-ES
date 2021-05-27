@@ -5,10 +5,9 @@ title: Procesamiento de solicitudes de privacidad en el lago de datos
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluir la venta o eliminar sus datos personales según lo establecido en las normas legales y de privacidad de la organización. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -19,6 +18,12 @@ Adobe Experience Platform [!DNL Privacy Service] procesa las solicitudes de los 
 
 Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para datos de clientes almacenados en [!DNL Data Lake].
 
+>[!NOTE]
+>
+>Esta guía solo explica cómo realizar solicitudes de privacidad para el lago de datos en Experience Platform. Si también planea realizar solicitudes de privacidad para el almacén de datos del perfil del cliente en tiempo real, consulte la guía sobre el [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md) además de este tutorial.
+>
+>Para ver los pasos sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+
 ## Primeros pasos
 
 Se recomienda que conozca bien los siguientes [!DNL Experience Platform] servicios antes de leer esta guía:
@@ -28,7 +33,7 @@ Se recomienda que conozca bien los siguientes [!DNL Experience Platform] servici
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): El marco estandarizado mediante el cual se  [!DNL Experience Platform] organizan los datos de experiencia del cliente.
 * [[!DNL Identity Service]](../identity-service/home.md): Resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 
-## Explicación de los espacios de nombres de identidad {#namespaces}
+## Explicación de las áreas de nombres de identidad {#namespaces}
 
 Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza áreas de nombres de identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
@@ -57,7 +62,7 @@ Existen dos métodos para añadir un descriptor de identidad a un esquema de con
 
 ### Uso de la IU {#identity-ui}
 
-En la interfaz de usuario [!DNL Experience Platform ], el espacio de trabajo **[!UICONTROL Schemas]** le permite editar los esquemas XDM existentes. Para añadir un descriptor de identidad a un esquema, seleccione el esquema en la lista y siga los pasos para [establecer un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el tutorial [!DNL Schema Editor].
+En la interfaz de usuario [!DNL Experience Platform ], el espacio de trabajo **[!UICONTROL Esquemas]** le permite editar los esquemas XDM existentes. Para añadir un descriptor de identidad a un esquema, seleccione el esquema en la lista y siga los pasos para [establecer un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el tutorial [!DNL Schema Editor].
 
 Una vez configurados los campos adecuados dentro del esquema como campos de identidad, puede continuar con la siguiente sección sobre el [envío de solicitudes de privacidad](#submit).
 
@@ -143,7 +148,7 @@ En la siguiente sección se describe cómo realizar solicitudes de privacidad pa
 
 ### Uso de la interfaz de usuario
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** y/o **[!UICONTROL Profile]** en **[!UICONTROL Products]** para procesar los trabajos de los datos almacenados en [!DNL Data Lake] o [!DNL Real-time Customer Profile], respectivamente.
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** o **[!UICONTROL Profile]** en **[!UICONTROL Products]** para procesar los trabajos de los datos almacenados en [!DNL Data Lake] o [!DNL Real-time Customer Profile], respectivamente.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
