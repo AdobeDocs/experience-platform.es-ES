@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1340'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Perfil del cliente en tiempo real](#profile)
+- [Entornos aislados](#sandboxes)
 - [Fuentes](#sources)
 
 ## Tableros {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform le permite ofrecer experiencias coordinadas, coherente
 | Informe de superposición de conjunto de datos | El informe de superposición de conjuntos de datos proporciona visibilidad sobre la composición del almacén de perfiles al exponer los conjuntos de datos que contribuyen en mayor medida a la audiencia a la que se puede dirigir. Además de proporcionar perspectivas sobre los datos de perfil, este informe ayuda a los usuarios a realizar acciones para optimizar el uso de licencias, como establecer un límite para la vida útil de ciertos datos. Para obtener más información, siga el tutorial sobre [generación del informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md). |
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos [!DNL Profile], lea en primer lugar la [información general del Perfil del cliente en tiempo real](../../profile/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. A menudo, las empresas ejecutan varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, asegurando al mismo tiempo el cumplimiento de las normas operacionales. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+
+| Función | Descripción |
+| ------- | ----------- |
+| Varios entornos limitados de producción | Ahora puede crear y administrar varios entornos limitados de producción en su organización de IMS y dedicar entornos limitados de producción específicos a distintas líneas de negocios, marcas, proyectos o regiones. Consulte los tutoriales sobre la creación de un entorno limitado de producción [en la interfaz de usuario](../../sandboxes/ui/user-guide.md) o [con la API](../../sandboxes/api/overview.md) para obtener más información. |
+
+### Limitaciones conocidas
+
+- Cada organización de Experience Cloud viene con un simulador para pruebas de producción predeterminado creado previamente. Este simulador para pruebas actúa como destino predeterminado para cada solicitud enviada a Platform desde otra aplicación de Adobe o aplicación que no es de Adobe y que (aún) no es compatible con Sandbox. No se puede restablecer el entorno limitado de producción predeterminado si Adobe Analytics también está utilizando el gráfico de identidad alojado en él para la función [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o si Adobe Audience Manager también está utilizando el gráfico de identidad alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
+- Los entornos limitados de producción que se utilizan para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de audiencia no se pueden restablecer ni eliminar.
+- Se pueden eliminar todos los entornos limitados de producción y desarrollo creados por el usuario, excepto el entorno limitado de producción predeterminado.
+
+Para obtener más información sobre los entornos limitados, consulte la [información general de los entornos limitados](../../sandboxes/home.md).
 
 ## [!DNL Sources] {#sources}
 
