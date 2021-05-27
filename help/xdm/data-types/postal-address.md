@@ -5,17 +5,16 @@ title: Tipo de datos de dirección postal
 topic-legacy: overview
 description: Este documento proporciona información general sobre el tipo de datos XDM de la dirección postal.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 0%
+source-wordcount: '339'
+ht-degree: 1%
 
 ---
 
-# [!UICONTROL Postal address] tipo de datos
+# [!UICONTROL Tipo de ] datos de dirección postal
 
-[!UICONTROL Postal address] es un tipo de datos XDM estándar que describe los detalles de una dirección de correo.
+[!UICONTROL La ] dirección postal es un tipo de datos XDM estándar que describe los detalles de una dirección de correo.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
@@ -40,6 +39,8 @@ ht-degree: 0%
 | `status` | Indica si la dirección se puede utilizar actualmente. |
 | `statusReason` | Una descripción del `status` actual. |
 | `street1` - `street4` | Estos cuatro campos están pensados para contener información de nivel de calle principal, número de apartamento, número de calle y nombre de calle. `street2` a  `street4` son opcionales. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Para obtener más información sobre el tipo de datos de dirección postal, consulte el repositorio XDM público:
 
