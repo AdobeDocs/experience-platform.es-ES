@@ -5,11 +5,10 @@ title: Punto final de la API de Mixins
 description: El extremo /mixins de la API del Registro de Esquemas permite administrar mediante programación las mezclas XDM dentro de la aplicación de experiencia.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 2%
+source-wordcount: '1214'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +46,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | El contenedor del que desea recuperar las mezclas: `global` para mezclas creadas por Adobe o `tenant` para mezclas de su organización. |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales para filtrar los resultados por. Consulte el [apéndice document](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una lista de mezclas del contenedor `tenant`, utilizando un parámetro de consulta `orderby` para ordenar las mezclas por su atributo `title`.
@@ -67,6 +68,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para listar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve la mezcla JSON completa para cada recurso, con `$ref` y `allOf` originales incluidos. (Límite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -129,6 +132,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | El contenedor que alberga la mezcla que desea recuperar: `global` para una mezcla creada por Adobe o `tenant` para una mezcla propiedad de su organización. |
 | `{MIXIN_ID}` | El `meta:altId` o la `$id` con codificación URL de la mezcla que desea buscar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud recupera una mezcla por su valor `meta:altId` proporcionado en la ruta.
@@ -152,6 +157,8 @@ El formato de respuesta depende del encabezado `Accept` enviado en la solicitud.
 | `application/vnd.adobe.xed-notext+json; version=1` | Sin procesar con `$ref` y `allOf`, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` y  `allOf` resuelto, sin títulos ni descripciones. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` y  `allOf` resueltos, incluidos los descriptores. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Respuesta**
 
@@ -405,6 +412,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | El `meta:altId` o la `$id` con codificación URL de la mezcla que desea reescribir. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud reescribe una mezcla existente, agregando un nuevo campo `propertyCountry`.
@@ -588,6 +597,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | El URI `$id` con codificación URL o `meta:altId` de la mezcla que desea actualizar. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Solicitud**
 
 La siguiente solicitud de ejemplo actualiza el `description` de una mezcla existente y añade un nuevo campo `propertyCity`.
@@ -724,6 +735,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parámetro | Descripción |
 | --- | --- |
 | `{MIXIN_ID}` | El URI `$id` con codificación URL o `meta:altId` de la mezcla que desea eliminar. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Solicitud**
 
