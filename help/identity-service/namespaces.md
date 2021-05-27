@@ -5,9 +5,9 @@ title: Información general sobre el área de nombres de identidad
 topic-legacy: overview
 description: Las áreas de nombres de identidad son un componente de Identity Service de   que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID de CRM numérico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 2%
 
 ---
@@ -73,6 +73,8 @@ Las siguientes áreas de nombres estándar se proporcionan para su uso por todas
 | TNTID | Área de nombres que representa Adobe Target. Consulte el siguiente documento en [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) para obtener más información. |
 | AID de Windows | Área de nombres que representa un ID de publicidad de Windows. Consulte el siguiente documento en [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
 
+### Ver áreas de nombres de identidad
+
 Para ver los espacios de nombres de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identities]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Browse]**.
 
 ![navegar](./images/browse.png)
@@ -89,7 +91,7 @@ Seleccione un área de nombres de identidad de la lista para ver información so
 
 ![select-namespace](./images/select-namespace.png)
 
-## Administración de áreas de nombres personalizadas {#manage-namespaces}
+## Administrar áreas de nombres personalizadas {#manage-namespaces}
 
 Según los datos organizativos y los casos de uso, es posible que necesite espacios de nombres personalizados. Las áreas de nombres personalizadas se pueden crear utilizando la API [[!DNL Identity Service]](./api/create-custom-namespace.md) o a través de la interfaz de usuario.
 
