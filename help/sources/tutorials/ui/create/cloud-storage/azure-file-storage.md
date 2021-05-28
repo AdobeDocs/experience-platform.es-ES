@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de almacenamiento de archivos de Azure mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '470'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen [!DNL Azure File Storage] en la interfaz de usuario
-
->[!NOTE]
->
->El conector [!DNL Azure File Storage] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona pasos para autenticar un conector de origen [!DNL Azure File Storage] mediante la interfaz de usuario [!DNL Platform].
 
@@ -49,11 +44,11 @@ Para obtener más información sobre cómo empezar, consulte [este [!DNL Azure F
 
 Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL Azure File Storage] a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Orígenes]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Databases]**, seleccione **[!UICONTROL Azure File Storage]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL Azure File Storage].
+En la categoría **[!UICONTROL Bases de datos]**, seleccione **[!UICONTROL Almacenamiento de archivos de Azure]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL Azure File Storage].
 
 ![catálogo](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
@@ -67,7 +62,7 @@ Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL Azure File Storage] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta [!DNL Azure File Storage] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/azure-file-storage/existing.png)
 
