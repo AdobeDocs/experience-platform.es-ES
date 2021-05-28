@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de HubSpot mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 1%
@@ -15,10 +14,6 @@ ht-degree: 1%
 ---
 
 # Crear una conexión de origen [!DNL HubSpot] en la interfaz de usuario
-
->[!NOTE]
->
-> El conector [!DNL HubSpot] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL HubSpot] mediante la interfaz de usuario [!DNL Platform].
 
@@ -50,11 +45,11 @@ Para obtener más información sobre cómo empezar, consulte este [[!DNL HubSpot
 
 Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL HubSpot] a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Orígenes]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Marketing automation]**, seleccione **[!UICONTROL HubSpot]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL HubSpot].
+En la categoría **[!UICONTROL Marketing Automation]**, seleccione **[!UICONTROL HubSpot]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL HubSpot].
 
 ![catálogo](../../../../images/tutorials/create/hubspot/catalog.png)
 
@@ -68,7 +63,7 @@ Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL HubSpot] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta [!DNL HubSpot] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/hubspot/existing.png)
 
