@@ -5,19 +5,14 @@ title: Información general del conector de origen ServiceNow
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar ServiceNow a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL ServiceNow]
-
->[!NOTE]
->
->El conector [!DNL ServiceNow] está en versión beta. Consulte [sources overview](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# [!DNL ServiceNow] connector
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
