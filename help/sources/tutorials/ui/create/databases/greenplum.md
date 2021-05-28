@@ -6,19 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a crear una conexión de origen de GreenPlum mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '465'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen [!DNL GreenPlum] en la interfaz de usuario
-
->[!NOTE]
->
-> El conector [!DNL GreenPlum] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL GreenPlum] mediante la interfaz de usuario [!DNL Platform].
 
@@ -47,11 +42,11 @@ Para obtener más información sobre cómo empezar, consulte [este documento de 
 
 Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL GreenPlum] a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Orígenes]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Databases]**, seleccione **[!UICONTROL GreenPlum]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL GreenPlum].
+En la categoría **[!UICONTROL Bases de datos]**, seleccione **[!UICONTROL GreenPlum]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Add data]** para crear un nuevo conector [!DNL GreenPlum].
 
 ![catálogo](../../../../images/tutorials/create/greenplum/catalog.png)
 
@@ -65,7 +60,7 @@ Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL GreenPlum] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** en la esquina superior derecha para continuar.
+Para conectar una cuenta existente, seleccione la cuenta [!DNL GreenPlum] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
 
 ![existente](../../../../images/tutorials/create/greenplum/existing.png)
 
