@@ -5,15 +5,14 @@ title: Información general sobre el conector de origen de Azure synapse Analyti
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar Azure synapse Analytics a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-# Conector (Beta) [!DNL Azure Synapse Analytics]
+# [!DNL Azure Synapse Analytics] connector
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante los servicios [!DNL Platform]. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
