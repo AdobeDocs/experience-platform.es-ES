@@ -5,19 +5,14 @@ title: Descripción general del conector de origen de almacenamiento de archivos
 topic-legacy: overview
 description: Obtenga información sobre cómo conectar el almacenamiento de archivos de Azure a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# (Beta) Conector de almacenamiento de archivos de Azure
-
->[!NOTE]
->
->El conector de almacenamiento de archivos de Azure está en versión beta. Consulte la [información general sobre fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+# Conector de almacenamiento de archivos de Azure
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure], lo que le permite obtener sus datos de estos sistemas.
 
