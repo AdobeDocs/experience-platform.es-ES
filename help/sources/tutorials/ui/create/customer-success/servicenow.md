@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de ServiceNow mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -15,10 +14,6 @@ ht-degree: 1%
 ---
 
 # Crear una conexión de origen [!DNL ServiceNow] en la interfaz de usuario
-
->[!NOTE]
->
->El conector [!DNL ServiceNow] está en versión beta. Consulte la [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen de Adobe Experience Platform permiten la ingesta de datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL ServiceNow] mediante la interfaz de usuario [!DNL Platform].
 
@@ -49,11 +44,11 @@ Para obtener más información sobre cómo empezar, consulte [este [!DNL Service
 
 Una vez que haya reunido las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta [!DNL ServiceNow] a [!DNL Platform].
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Sources]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes para las que puede crear una cuenta.
+Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Orígenes]** en la barra de navegación izquierda para acceder al espacio de trabajo **[!UICONTROL Orígenes]**. La pantalla **[!UICONTROL Catalog]** muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. Alternativamente, puede encontrar la fuente específica con la que desea trabajar usando la opción de búsqueda.
 
-En la categoría **[!UICONTROL Customer Success]**, seleccione **[!UICONTROL ServiceNow]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configure]**. De lo contrario, seleccione **[!UICONTROL Connect source]** para crear un nuevo conector [!DNL ServiceNow].
+En la categoría **[!UICONTROL Customer Success]**, seleccione **[!UICONTROL ServiceNow]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Connect source]** para crear un nuevo conector [!DNL ServiceNow].
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
@@ -67,7 +62,7 @@ Si está utilizando credenciales nuevas, seleccione **[!UICONTROL New account]**
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la cuenta [!DNL ServiceNow] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
+Para conectar una cuenta existente, seleccione la cuenta [!DNL ServiceNow] con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
