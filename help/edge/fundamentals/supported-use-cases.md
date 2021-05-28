@@ -2,7 +2,7 @@
 title: Casos de uso compatibles con el SDK web de Adobe Experience Platform
 description: Descubra qué casos de uso son compatibles con el SDK web de Adobe Experience Platform.
 keywords: sdk web;casos de uso
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 16%
