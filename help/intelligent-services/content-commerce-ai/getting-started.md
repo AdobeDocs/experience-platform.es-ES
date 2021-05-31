@@ -5,10 +5,9 @@ title: Introducción a Content and Commerce AI
 topic-legacy: Getting started
 description: La API de contenido y comercio utiliza API de Adobe I/O. Para realizar llamadas a las API de Adobe I/O y a la integración de la consola de E/S, primero debe completar el tutorial de autenticación.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -33,7 +32,7 @@ Al completar el tutorial de autenticación, se proporcionan los valores para cad
 
 ## Creación de un entorno Postman (opcional)
 
-Una vez configurado el proyecto y la API en Adobe Developer Console, tiene la opción de descargar un archivo de entorno para Postman. En **[!UICONTROL APIs]** el carril izquierdo del proyecto, seleccione **[!UICONTROL Content and Commerce AI]**. Se abre una nueva pestaña que contiene una tarjeta etiquetada como &quot;[!DNL Try it out]&quot;. Seleccione **Descargar para Postman** para descargar un archivo JSON utilizado para configurar el entorno de postman.
+Una vez configurado el proyecto y la API en Adobe Developer Console, tiene la opción de descargar un archivo de entorno para Postman. En **[!UICONTROL APIs]** , en el carril izquierdo del proyecto, seleccione **[!UICONTROL Content and Commerce AI]**. Se abre una nueva pestaña que contiene una tarjeta etiquetada como &quot;[!DNL Try it out]&quot;. Seleccione **Descargar para Postman** para descargar un archivo JSON utilizado para configurar el entorno de postman.
 
 ![descargar para postman](./images/add-to-postman.png)
 
@@ -73,6 +72,6 @@ Esta guía proporciona ejemplos de llamadas a la API para demostrar cómo dar fo
 
 Una vez que tenga todas sus credenciales, estará listo para configurar un trabajador personalizado para [!DNL Content and Commerce AI]. Los siguientes documentos ayudan a comprender el marco de extensibilidad y la configuración del entorno.
 
-Para obtener más información sobre el marco de extensibilidad, comience leyendo el documento [introducción a la extensibilidad](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html). Este documento describe los requisitos previos y los requisitos de aprovisionamiento.
+Para obtener más información sobre el marco de extensibilidad, comience leyendo el documento [introducción a la extensibilidad](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). Este documento describe los requisitos previos y los requisitos de aprovisionamiento.
 
-Para obtener más información sobre la configuración de un entorno para [!DNL Content and Commerce AI], comience leyendo la guía para [configurar un entorno de desarrollador](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Este documento proporciona instrucciones de configuración que le permiten desarrollar para el servicio de Asset compute.
+Para obtener más información sobre la configuración de un entorno para [!DNL Content and Commerce AI], comience leyendo la guía para [configurar un entorno de desarrollador](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Este documento proporciona instrucciones de configuración que le permiten desarrollar para el servicio de Asset compute.
