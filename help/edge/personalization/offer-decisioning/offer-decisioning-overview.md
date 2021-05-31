@@ -3,10 +3,10 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de plataforma;ofertas personalizadas;entrega de ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 9%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -63,7 +63,7 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
 
 1. Adobe Experience Platform habilitado en su [almacén de datos](../../fundamentals/datastreams.md) y marque la casilla &quot;Offer decisioning&quot;
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK puede instalarse de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/intro/get-started/quick-start.html)).
+2. Siga las instrucciones para [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK puede instalarse de forma independiente o a través de [Adobe Experience Platform Launch](http://launch.adobe.com/es). Esta es una [guía de inicio rápido para Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
 3. [Configure el ](../../fundamentals/configuring-the-sdk.md) SDK para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
    * SDK instalado de forma independiente
       1. Configure la acción &quot;sendEvent&quot; con su `decisionScopes`
@@ -79,20 +79,20 @@ Para habilitar el Offer decisioning, debe realizar los siguientes pasos:
       ```
 
    * SDK instalado de platform launch
-      1. [Crear una propiedad de Platform launch](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/companies-and-properties.html)
-      2. [Añadir el código incrustado de Platform launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Instale y configure la extensión del SDK web de Platform con el Datastream que acaba de crear seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      1. [Crear una propiedad de Platform launch](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      2. [Añadir el código incrustado de Platform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Instale y configure la extensión del SDK web de Platform con el Datastream que acaba de crear seleccionando la configuración en la lista desplegable &quot;Datastream&quot;. Consulte la documentación sobre [extensiones](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Cree los [Elementos de datos](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html) necesarios. Como mínimo, debe crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma .
+      4. Cree los [Elementos de datos](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html) necesarios. Como mínimo, debe crear un mapa de identidad del SDK web de plataforma y un elemento de datos de objeto XDM del SDK web de plataforma .
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
-      5. Cree sus [Reglas](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
+      5. Cree sus [Reglas](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
          * Añada una acción de Platform Web SDK Send Event y añada el `decisionScopes` correspondiente a la configuración de esa acción
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      6. [Cree y publique una ](https://docs.adobe.com/content/help/es-ES/launch/using/reference/publish/libraries.html) biblioteca que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
+      6. [Cree y publique una ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) biblioteca que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
 
 
 
