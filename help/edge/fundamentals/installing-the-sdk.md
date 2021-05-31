@@ -3,10 +3,10 @@ title: Instalación del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform.
 keywords: instalación de sdk web;instalar sdk web;explorador de Internet;promesa;paquete npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 3%
+source-wordcount: '937'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Existen tres formas compatibles de utilizar el SDK web de Adobe Experience Platf
 
 ## Opción 1: Instalación de la extensión de Adobe Experience Platform Launch
 
-Para obtener documentación sobre la extensión de Adobe Experience Platform Launch, consulte la [documentación de launch](https://docs.adobe.com/content/help/es-ES/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+Para obtener documentación sobre la extensión de Adobe Experience Platform Launch, consulte la [documentación de launch](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
 
 ## Opción 2: Instalación de la versión independiente precompilada
 
