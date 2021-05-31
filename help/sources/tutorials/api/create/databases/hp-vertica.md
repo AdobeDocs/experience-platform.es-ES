@@ -6,11 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Aprenda a conectar HP Vertica a Adobe Experience Platform mediante la API de servicio de flujo.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 3%
+source-wordcount: '593'
+ht-degree: 2%
 
 ---
 
@@ -28,8 +27,8 @@ Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para
 
 Esta guía requiere conocer los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, asignar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
-* [Simuladores para pruebas](https://docs.adobe.com/content/help/es-ES/experience-platform/sandbox/home.html):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html):  [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, asignar y mejorar los datos entrantes mediante  [!DNL Platform] servicios.
+* [Simuladores para pruebas](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html):  [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen una sola  [!DNL Platform] instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a HP [!DNL Vertica] mediante la API [!DNL Flow Service].
 
