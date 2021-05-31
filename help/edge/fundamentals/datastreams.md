@@ -3,10 +3,10 @@ title: Configurar el almacén de datos para el SDK web del Experience Platform
 description: 'Aprenda a configurar los flujos de datos. '
 keywords: configuración;datastreams;datastreamId;edge;id de configuración perimetral;Configuración de entorno;edgeConfigId;id;sincronización de id habilitada;ID de contenedor de sincronización de ID;Sandbox;entrada de flujo;conjunto de datos de evento;target;código de cliente;token de propiedad;ID de entorno de Target;destinos de cookies;destinos de url;id de grupo de informes de bloqueo de configuración de Analytics;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5642fa155d487982f01d25fa765bb36ad5c3bb21
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 2%
+source-wordcount: '904'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Los Datastreams se pueden crear en el Adobe [!DNL Experience Platform Launch] me
 
 >[!NOTE]
 >
->La herramienta de configuración de conjuntos de datos está disponible para los clientes de la lista de permitidos independientemente de si utilizan [!DNL Experience Platform Launch] como administrador de etiquetas. Además, los usuarios requieren permisos de desarrollo en [!DNL Experience Platform Launch]. Consulte el artículo [Permisos de usuario](https://docs.adobe.com/content/help/es-ES/launch/using/reference/admin/user-permissions.html) en la documentación de [!DNL Experience Platform Launch] para obtener más información.
+>La herramienta de configuración de conjuntos de datos está disponible para los clientes de la lista de permitidos independientemente de si utilizan [!DNL Experience Platform Launch] como administrador de etiquetas. Además, los usuarios requieren permisos de desarrollo en [!DNL Experience Platform Launch]. Consulte el artículo [Permisos de usuario](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) en la documentación de [!DNL Experience Platform Launch] para obtener más información.
 
-Cree un conjunto de datos haciendo clic en **[!UICONTROL New Datastream]** en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno. A continuación se detalla la configuración disponible.
+Cree un conjunto de datos haciendo clic en **[!UICONTROL Nuevo conjunto de datos]** en el área superior derecha de la pantalla. Después de proporcionar un nombre y una descripción, se le pedirá la configuración predeterminada para cada entorno. A continuación se detalla la configuración disponible.
 
 Al crear un conjunto de datos, se crean automáticamente tres entornos con una configuración idéntica. Estos tres entornos son *dev*, *stage* y *prod*. Coinciden con los tres entornos predeterminados en [!DNL Experience Platform Launch]. Cuando crea una biblioteca [!DNL Experience Platform Launch] en un entorno de desarrollo, la biblioteca utiliza automáticamente el entorno de desarrollo a partir de la configuración. Puede editar la configuración en entornos individuales tanto como desee.
 
@@ -35,17 +35,17 @@ El ID utilizado en el SDK como `edgeConfigId` es un ID compuesto que especifica 
 
 A continuación se muestran los ajustes disponibles para cada entorno de configuración. La mayoría de las secciones pueden habilitarse o deshabilitarse. Cuando está desactivado, la configuración se guarda, pero no está activa.
 
-## [!UICONTROL Third Party ID] Configuración
+## [!UICONTROL Configuración de ] ID de terceros
 
-La sección ID de terceros es la única sección que siempre está activada. Tiene dos configuraciones disponibles: &quot;[!UICONTROL Third Party ID Sync Enabled]&quot; y &quot;[!UICONTROL Third Party ID Sync Container ID]&quot;.
+La sección ID de terceros es la única sección que siempre está activada. Tiene dos configuraciones disponibles: &quot;[!UICONTROL Sincronización de ID de terceros habilitada]&quot; y &quot;[!UICONTROL ID de contenedor de sincronización de ID de terceros]&quot;.
 
 ![Sección Identidad de la interfaz de usuario de configuración](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL Third Party ID Sync Enabled]
+### [!UICONTROL Sincronización de ID de terceros habilitada]
 
 Controla si el SDK realiza o no sincronizaciones de identidad con socios de terceros.
 
-### [!UICONTROL Third Party ID Sync Container ID]
+### [!UICONTROL ID de contenedor de sincronización de ID de terceros]
 
 Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Esto controla qué contenedor de sincronizaciones de ID se ejecuta para un ID de configuración determinado.
 
@@ -59,11 +59,11 @@ La configuración que se muestra aquí le permite enviar datos a Adobe Experienc
 
 Los entornos limitados son ubicaciones en Adobe Experience Platform que permiten a los clientes aislar entre sí sus datos e implementaciones. Para obtener más información sobre cómo funcionan, consulte la [Documentación de entornos limitados](../../sandboxes/home.md).
 
-### [!UICONTROL Streaming Inlet]
+### [!UICONTROL Entrada de flujo continuo]
 
 Una entrada de flujo continuo es una fuente HTTP en Adobe Experience Platform. Se crean en la pestaña &quot;[!UICONTROL Sources]&quot; de Adobe Experience Platform as a HTTP API.
 
-### [!UICONTROL Event Dataset]
+### [!UICONTROL Conjunto de datos del evento]
 
 Los conjuntos de datos admiten el envío de datos a conjuntos de datos que tienen un esquema de clase [!UICONTROL Experience Event].
 
@@ -77,19 +77,19 @@ Para configurar Adobe Target, debe proporcionar un código de cliente. Los demá
 >
 >La organización asociada con el código de cliente debe coincidir con la organización en la que se creó el ID de configuración.
 
-### [!UICONTROL Client Code]
+### [!UICONTROL Código de cliente]
 
-ID exclusivo de una cuenta de destino. Para encontrar esto, puede navegar a [!UICONTROL Adobe Target] > [!UICONTROL Setup] [!UICONTROL Implementation] > [!UICONTROL edit settings] junto al botón [!UICONTROL download] para [!UICONTROL at.js] o [!UICONTROL mbox.js]
+ID exclusivo de una cuenta de destino. Para encontrar esto, puede navegar a [!UICONTROL Adobe Target] > [!UICONTROL Configuración] [!UICONTROL Implementación] > [!UICONTROL editar configuración] junto al botón [!UICONTROL descargar] para [!UICONTROL at.js] o [!UICONTROL mbox.js]
 
-### [!UICONTROL Property Token]
+### [!UICONTROL Token de propiedad]
 
-[!DNL Target] permite a los clientes controlar los permisos mediante el uso de propiedades. Puede encontrar más información en la sección [Permisos de Enterprise](https://docs.adobe.com/content/help/es-ES/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentación de [!DNL Target].
+[!DNL Target] permite a los clientes controlar los permisos mediante el uso de propiedades. Puede encontrar más información en la sección [Permisos de Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentación de [!DNL Target].
 
 El token de propiedad se puede encontrar en [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
-### [!UICONTROL Target Environment ID]
+### [!UICONTROL ID de entorno de Target]
 
-[](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) Los entornos de Adobe Target le ayudan a administrar su implementación en todas las etapas de desarrollo. Esta configuración especifica qué entorno se va a utilizar con cada entorno.
+[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Los entornos de Adobe Target le ayudan a administrar su implementación en todas las etapas de desarrollo. Esta configuración especifica qué entorno se va a utilizar con cada entorno.
 
 Adobe recomienda configurarlo de forma diferente para cada uno de los entornos del conjunto de datos `dev`, `stage` y `prod` para mantener las cosas simples. Sin embargo, si ya tiene definidos entornos de Adobe Target, puede utilizarlos.
 
@@ -99,13 +99,13 @@ Todo lo que se necesita para enviar datos a Adobe Audience Manager es habilitar 
 
 ![Bloque de configuración de Audience Manager de Adobe](../../assets/edge_configuration_aam.png)
 
-### [!UICONTROL Cookie Destinations Enabled]
+### [!UICONTROL Destinos de cookies habilitados]
 
-Permite al SDK compartir información de segmentos a través de [Cookie Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) desde [!DNL Audience Manager].
+Permite al SDK compartir información de segmentos a través de [Cookie Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) desde [!DNL Audience Manager].
 
-### [!UICONTROL URL Destinations Enabled]
+### [!UICONTROL Destinos de URL habilitados]
 
-Permite que el SDK comparta información de segmentos a través de [Destinos de URL](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Estos se configuran en [!DNL Audience Manager].
+Permite que el SDK comparta información de segmentos a través de [Destinos de URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Estos se configuran en [!DNL Audience Manager].
 
 ## Configuración de Adobe Analytics
 
@@ -113,6 +113,6 @@ Controla si los datos se envían a Adobe Analytics. Encontrará más informació
 
 ![Bloque de configuración de Adobe Analytics](../../assets/edge_configuration_aa.png)
 
-### [!UICONTROL Report Suite ID]
+### [!UICONTROL ID del grupo de informes]
 
-El grupo de informes se encuentra en la sección Administración de Adobe Analytics, en [!UICONTROL Admin > ReportSuites]. Si se especifican varios grupos de informes, los datos se copian en cada grupo de informes.
+El grupo de informes se encuentra en la sección Administración de Adobe Analytics en [!UICONTROL Administración > Grupos de informes]. Si se especifican varios grupos de informes, los datos se copian en cada grupo de informes.
