@@ -1,20 +1,19 @@
 ---
-title: Recuperación de Experience Cloud ID mediante el SDK web de Adobe Experience Platform
+title: Recuperación de ID de Experience Cloud mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo recuperar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
 seo-description: Obtenga información sobre cómo obtener el Adobe Experience Cloud Id.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de visitante;identidad de terceros;Cookies de tercerosEnabled;idMigrationEnabled;getIdentity;Sincronización de identidades;syncIdentity;sendEvent;identityMap;principal;ecid;espacio de nombres;id de área de nombres;authenticationState;hashEnabled;
-translation-type: tm+mt
-source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 3%
 
 ---
 
+# Recuperar Adobe Experience Cloud ID
 
-# Recuperación de Adobe Experience Cloud ID
-
-El SDK web de Adobe Experience Platform aprovecha [Adobe Identity Service](../../identity-service/ecid.md). Esto garantiza que cada dispositivo tenga un identificador único que se mantenga en el dispositivo, de modo que la actividad entre páginas se pueda vincular.
+El SDK web de Adobe Experience Platform aprovecha el [servicio de identidad de Adobe](../../identity-service/ecid.md). Esto garantiza que cada dispositivo tenga un identificador único que se mantenga en el dispositivo, de modo que la actividad entre páginas se pueda vincular.
 
 ## Identidad de origen
 
@@ -30,15 +29,15 @@ Al migrar desde la API de visitante, también puede migrar las cookies AMCV exis
 
 * Cuando algunas páginas de un dominio utilizan la API de visitante y otras páginas utilizan este SDK. Para admitir este caso, el SDK lee las cookies AMCV existentes y escribe una nueva cookie con el ECID existente. Además, el SDK escribe cookies AMCV de modo que si el ECID se obtiene primero en una página instrumentada con el SDK, las páginas posteriores instrumentadas con la API de visitante tendrán el mismo ECID.
 * Cuando el SDK web de Adobe Experience Platform se configura en una página que también tiene la API de visitante. Para admitir este caso, si no se establece la cookie AMCV, el SDK busca la API de visitante en la página y la llama para obtener el ECID.
-* Cuando todo el sitio utiliza el SDK web de Adobe Experience Platform y no tiene la API de visitante, resulta útil migrar los ECID para conservar la información de visitante devuelta. Después de que el SDK se implemente con `idMigrationEnabled` durante un periodo de tiempo para que se migren la mayoría de las cookies del visitante, la configuración se puede desactivar.
+* Cuando todo el sitio utiliza el SDK web de Adobe Experience Platform y no tiene la API de visitante, resulta útil migrar los ECID para conservar la información de visitante de retorno. Después de que el SDK se implemente con `idMigrationEnabled` durante un periodo de tiempo para que se migren la mayoría de las cookies del visitante, la configuración se puede desactivar.
 
 ## Actualización de características para la migración
 
-Cuando se envían datos con formato XDM a Audience Manager, estos datos deben convertirse en señales al migrar. Los rasgos deberán actualizarse para reflejar las nuevas claves que proporciona XDM. Este proceso se facilita mediante el uso de la [herramienta BAAAM](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que Audience Manager ha creado.
+Cuando se envían datos con formato XDM al Audience Manager, estos datos deben convertirse en señales al migrar. Los rasgos deberán actualizarse para reflejar las nuevas claves que proporciona XDM. Este proceso se facilita mediante el uso de la [herramienta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que el Audience Manager ha creado.
 
 ## Reenvío del lado del servidor
 
-Si actualmente tiene habilitado el reenvío del lado del servidor y está utilizando `appmeasurement.js`. y `visitor.js` puede mantener habilitada la función de reenvío del lado del servidor, lo que no provocará ningún problema. En el servidor, Adobe recupera cualquier segmento de AAM y lo añade a la llamada a Analytics. Si la llamada a Analytics contiene estos segmentos, Analytics no llamará a Audience Manager para reenviar datos, por lo que no hay ninguna recopilación de datos doble. Tampoco hay necesidad de indicio de ubicación al utilizar el SDK web, ya que se llaman los mismos puntos finales de segmentación en el servidor.
+Si actualmente tiene habilitado el reenvío del lado del servidor y está utilizando `appmeasurement.js`. y `visitor.js` puede mantener habilitada la función de reenvío del lado del servidor, lo que no provocará ningún problema. En el servidor, Adobe busca cualquier segmento de AAM y lo agrega a la llamada de Analytics. Si la llamada a Analytics contiene estos segmentos, Analytics no llamará al Audience Manager para reenviar datos, por lo que no hay ninguna recopilación de datos doble. Tampoco hay necesidad de indicio de ubicación al utilizar el SDK web, ya que se llaman los mismos puntos finales de segmentación en el servidor.
 
 ## Recuperación del ID de visitante y el ID de región
 
@@ -46,7 +45,7 @@ Si desea utilizar el ID de visitante único, utilice el comando `getIdentity`. `
 
 >[!NOTE]
 >
->Este método se utiliza generalmente con soluciones personalizadas que requieren leer el [!DNL Experience Cloud] ID o necesitan la sugerencia de ubicación de Adobe Audience Manager. No se utiliza en una implementación estándar.
+>Este método se utiliza generalmente con soluciones personalizadas que requieren leer el ID [!DNL Experience Cloud] o necesitan la sugerencia de ubicación de Adobe Audience Manager. No se utiliza en una implementación estándar.
 
 ```javascript
 alloy("getIdentity")
