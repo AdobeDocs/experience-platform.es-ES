@@ -2,18 +2,17 @@
 title: Notas de la versión de la extensión del SDK web de Adobe Experience Platform
 description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
 seo-description: Extensión de SDK web de Adobe Experience Platform en Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 78%
 
 ---
 
+# Notas de la versión de Adobe Experience Platform Web SDK
 
-# Notas de la versión de la extensión web SDK de Adobe Experience Platform
-
-Este documento cubre las notas de la versión de la extensión web SDK de Adobe Experience Platform para Adobe Experience Platform Launch. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/release-notes.html).
+Este documento cubre las notas de la versión de la extensión web SDK de Adobe Experience Platform para Adobe Experience Platform Launch. Para ver las notas de la última versión del SDK, consulte las [Notas de la versión del SDK web de Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## 9 de marzo de 2020
 
@@ -24,7 +23,7 @@ Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Plat
 * Se ha añadido la casilla de verificación [&quot;descarga de documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) a la interfaz de usuario de acción Enviar evento .
 * Se agregó compatibilidad con una opción `out` al [configurar el consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), que descarta todos los eventos hasta que se recibe el consentimiento (la opción `pending` existente coloca en cola los eventos y los envía una vez que se recibe el consentimiento).
 * Se ha añadido una información sobre herramientas al campo de consentimiento predeterminado.
-* Se ha agregado compatibilidad con [Adobe Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Se agregó compatibilidad con el estándar [Consent 2.0 del Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Ahora aparece un mejor error en la interfaz de usuario del elemento de datos Objeto XDM si el token de acceso del usuario no es válido o está aprovisionado incorrectamente.
 * Se ha corregido un error de origen cruzado (que no afecta al funcionamiento de la extensión) que se mostraba en la consola del desarrollador del explorador al ver un elemento de datos de objeto XDM.
 
@@ -70,7 +69,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 #### Funcionalidades
 
 * Cambio radical: Elimine la acción `syncIdentity` y permita que se pasen esos ID en la acción `sendEvent`. Desactive cualquier regla existente que utilice esta acción antes de actualizar la extensión.
-* Actualización a Alloy 2.1.0 ([Notas de la versión](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html))
+* Actualización a Alloy 2.1.0 ([Notas de la versión](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
 * Compatibilidad con el estándar de consentimiento IAB 2.0 en la acción `setConsent`.
 * Compatibilidad con la anulación del ID del conjunto de datos en la acción `sendEvent`.
 * Añada un nuevo elemento de datos del tipo `IdentityMap` que se pueda utilizar para rellenar la entrada de `identityMap` en el elemento de datos de objeto XDM que ahora está activado y en la acción `setConsent`.
