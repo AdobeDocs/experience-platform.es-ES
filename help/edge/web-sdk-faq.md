@@ -2,10 +2,10 @@
 title: Preguntas frecuentes sobre el SDK web de Adobe Experience Platform
 description: Obtenga respuestas a las preguntas más frecuentes sobre el SDK web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5ead9dc72b8b9fe89e0a1bc8365ceff8affd3c85
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 2%
+source-wordcount: '1843'
+ht-degree: 1%
 
 ---
 
@@ -149,7 +149,7 @@ A finales de 2020, el Experience Platform Launch lanzará funciones de reenvío 
 
 ## ¿Qué es un CNAME o un dominio de origen y por qué importa?
 
-Encontrará más información sobre un CNAME en la [documentación del Adobe](https://docs.adobe.com/content/help/es-ES/id-service/using/reference/analytics-reference/cname.html)
+Encontrará más información sobre un CNAME en la [documentación del Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## ¿El SDK web de Adobe Experience Platform utiliza cookies? En caso afirmativo, ¿qué cookies utiliza?
 
@@ -169,5 +169,5 @@ El SDK web de Adobe Experience Platform está diseñado para funcionar de forma 
 
 ## ¿Dónde puedo obtener más información sobre el SDK web de Adobe Experience Platform?
 
-* [Documentación](https://docs.adobe.com/content/help/es-ES/experience-platform/edge/home.html)
+* [Documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [Código fuente](https://github.com/adobe/alloy)
