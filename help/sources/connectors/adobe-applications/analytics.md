@@ -5,11 +5,10 @@ title: Conector de origen de Adobe Analytics para datos de grupos de informes
 topic-legacy: overview
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-translation-type: tm+mt
-source-git-commit: af5ad975bbfd6a67fe66c90e33da1365d49c8899
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 3%
+source-wordcount: '511'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +26,7 @@ Este documento proporciona información general sobre [!DNL Analytics] y describ
 
 En un nivel superior, [!DNL Analytics] recopila datos de varios canales digitales y múltiples centros de datos en todo el mundo. Una vez recopilados los datos, las reglas de Arquitectura de transformación, segmentación e identificación del visitante (VISTA) y las reglas de procesamiento se aplican para dar forma a los datos entrantes. Una vez que los datos sin procesar han pasado por este procesamiento ligero, se consideran listos para el consumo antes de [!DNL Real-time Customer Profile]. En un proceso paralelo al anteriormente mencionado, los mismos datos procesados se incluyen en lotes e incorporados en conjuntos de datos de Platform para su consumo por [!DNL Data Science Workspace], [!DNL Query Service] y otras aplicaciones de descubrimiento de datos.
 
-Consulte la [información general sobre las reglas de procesamiento](https://docs.adobe.com/content/help/es-ES/analytics/admin/admin-tools/processing-rules/processing-rules.html) para obtener más información sobre las reglas de procesamiento.
+Consulte la [información general sobre las reglas de procesamiento](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) para obtener más información sobre las reglas de procesamiento.
 
 ## Modelo de datos de experiencia (XDM)
 
