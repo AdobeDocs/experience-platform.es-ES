@@ -3,16 +3,16 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 4%
+source-wordcount: '652'
+ht-degree: 3%
 
 ---
 
 # Uso de Adobe Target con el SDK web de Platform
 
-Adobe Experience Platform [!DNL Web SDK] puede entregar y renderizar experiencias personalizadas administradas en Adobe Target al canal web. Puede utilizar un editor WYSIWYG, denominado [Compositor de experiencias visuales](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, el [Compositor de experiencias basadas en formularios](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), para crear, activar y ofrecer sus actividades y experiencias de personalización.
+Adobe Experience Platform [!DNL Web SDK] puede entregar y renderizar experiencias personalizadas administradas en Adobe Target al canal web. Puede utilizar un editor WYSIWYG, denominado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para crear, activar y ofrecer sus actividades y experiencias de personalización.
 
 Las siguientes funciones se han probado y actualmente son compatibles con Target:
 
@@ -88,7 +88,7 @@ alloy
 
 ## Ámbitos de decisión
 
-`decisionScopes` define secciones, ubicaciones o partes de las páginas en las que desea procesar una experiencia personalizada. Estos `decisionScopes` son personalizables y están definidos por el usuario. Para los clientes actuales de [!DNL Target] , `decisionScopes` también se conocen como &quot;mboxes&quot;. En la interfaz de usuario de [!DNL Target], `decisionScopes` aparece como &quot;ubicaciones&quot;.
+`decisionScopes` define secciones, ubicaciones o partes de las páginas en las que desea mostrar una experiencia personalizada. Estos `decisionScopes` son personalizables y están definidos por el usuario. Para los clientes actuales de [!DNL Target] , `decisionScopes` también se conocen como &quot;mboxes&quot;. En la interfaz de usuario de [!DNL Target], `decisionScopes` aparece como &quot;ubicaciones&quot;.
 
 ## El ámbito `__view__`
 
