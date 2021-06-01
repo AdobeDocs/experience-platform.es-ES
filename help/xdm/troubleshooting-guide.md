@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;XDM;sistema XDM;perfil individual XDM;ExperienceEvent XDM;Evento de experiencia XDM;experienceEvent;evento de experiencias;evento de experiencias XDM;ExperienceEvent XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;esquema;solución de problemas;preguntas frecuentes;faq;esquema de unión;UNION PROFILE;perfil de unión
+keywords: Experience Platform;inicio;temas populares;XDM;sistema XDM;perfil individual XDM;ExperienceEvent XDM;Evento de experiencia XDM;experienceEvent;evento de experiencias;evento de experiencias XDM;ExperienceEvent XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;esquema;solución de problemas;preguntas frecuentes;faq;esquema de unión;UNION PROFILE;perfil de unión;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;
 solution: Experience Platform
 title: Guía de solución de problemas del sistema XDM
-description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Experience Data Model (XDM) y el sistema XDM en Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
+description: Encuentre respuestas a las preguntas más frecuentes sobre Experience Data Model (XDM), incluidos pasos para resolver errores comunes de API.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 415938f6f3aeec342774b73d1ae5f2dc0e27349c
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
 
 # Guía de solución de problemas del sistema XDM
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, así como una guía de solución de problemas para errores comunes. Para preguntas y solución de problemas relacionados con otros servicios de Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, incluida una guía de solución de problemas para errores comunes. Para preguntas y solución de problemas relacionados con otros servicios de Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
 
 **[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se crea [!DNL Experience Platform], **XDM System**, operacionaliza los [!DNL Experience Data Model] esquemas para su uso por los servicios [!DNL Platform]. El **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder al **[!DNL Schema Library]** dentro de [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
 
@@ -25,9 +24,9 @@ A continuación se ofrece una lista de respuestas a las preguntas más frecuente
 
 ### ¿Cómo se agregan campos a un esquema?
 
-Puede añadir campos a un esquema utilizando un grupo de campos de esquema. Cada grupo de campos es compatible con una o más clases, lo que permite utilizar el grupo de campos en cualquier esquema que implemente una de esas clases compatibles. Aunque Adobe Experience Platform proporciona varios grupos de campos del sector con sus propios campos predefinidos, puede añadir sus propios campos a un esquema creando nuevos grupos de campos mediante la API o la interfaz de usuario.
+Puede añadir campos a un esquema utilizando un grupo de campos de esquema. Cada grupo de campos es compatible con una o más clases, lo que permite utilizar el grupo de campos en cualquier esquema que implemente una de esas clases compatibles. Aunque Adobe Experience Platform proporciona varios grupos de campos del sector con sus propios campos predefinidos, puede añadir sus propios campos a un esquema creando grupos de campos personalizados mediante la API o la interfaz de usuario.
 
-Para obtener más información sobre la creación de nuevos grupos de campos en la API [!DNL Schema Registry], consulte la [guía de extremo del grupo de campos](api/field-groups.md#create). Si utiliza la interfaz de usuario de , consulte el tutorial [Editor de esquemas](./tutorials/create-schema-ui.md).
+Para obtener más información sobre la creación de grupos de campos en la API [!DNL Schema Registry], consulte la [guía de extremo de grupo de campos](api/field-groups.md#create). Si utiliza la interfaz de usuario de , consulte el tutorial [Editor de esquemas](./tutorials/create-schema-ui.md).
 
 ### ¿Cuáles son los mejores usos para los grupos de campos frente a los tipos de datos?
 
@@ -39,7 +38,7 @@ Para obtener más información sobre la creación de nuevos grupos de campos en 
 
 Todos los [!DNL Schema Registry] recursos (esquemas, grupos de campos, tipos de datos, clases) tienen un URI que actúa como ID único con fines de referencia y búsqueda. Al ver un esquema en la API, se puede encontrar en los atributos `$id` y `meta:altId` de nivel superior.
 
-Para obtener más información, consulte la sección [resource identification](api/getting-started.md#resource-identification) en la guía para desarrolladores de API [!DNL Schema Registry].
+Para obtener más información, consulte la sección [identificación de recursos](api/getting-started.md#resource-identification) en la guía de API [!DNL Schema Registry].
 
 ### ¿Cuándo comienza un esquema a impedir que se rompan los cambios?
 
@@ -67,17 +66,17 @@ Para obtener más información sobre la creación de descriptores de identidad e
 
 #### Definición de identidades en la interfaz de usuario
 
-Con el esquema abierto en el Editor de esquemas, seleccione el campo en la sección **[!UICONTROL Structure]** del editor que desea marcar como identidad. En **[!UICONTROL Field Properties]** en el lado derecho, seleccione la casilla **[!UICONTROL Identity]** .
+Con el esquema abierto en el Editor de esquemas, seleccione el campo en la sección **[!UICONTROL Structure]** del editor que desea marcar como identidad. En **[!UICONTROL Propiedades del campo]** en el lado derecho, seleccione la casilla **[!UICONTROL Identidad]**.
 
 Para obtener más información sobre la administración de identidades en la interfaz de usuario, consulte la sección [definición de campos de identidad](./tutorials/create-schema-ui.md#identity-field) en el tutorial Editor de esquemas.
 
 ### ¿Mi esquema necesita una identidad principal?
 
-Las identidades principales son opcionales, ya que los esquemas pueden tener 0 o 1 de ellas. Sin embargo, un esquema debe tener una identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-time Customer Profile]. Consulte la sección [identity](./tutorials/create-schema-ui.md#identity-field) del tutorial Editor de esquemas para obtener más información.
+Las identidades principales son opcionales, ya que los esquemas pueden tener cero o uno de ellos. Sin embargo, un esquema debe tener una identidad principal para que el esquema esté habilitado para utilizarse en [!DNL Real-time Customer Profile]. Consulte la sección [identity](./tutorials/create-schema-ui.md#identity-field) del tutorial Editor de esquemas para obtener más información.
 
 ### ¿Cómo se habilita un esquema para su uso en [!DNL Real-time Customer Profile]?
 
-Los esquemas se habilitan para su uso en [[!DNL Real-time Customer Profile]](../profile/home.md) mediante la adición de una etiqueta &quot;union&quot;, ubicada en el atributo `meta:immutableTags` del esquema. La activación de un esquema para su uso con [!DNL Profile] se puede realizar mediante la API o la interfaz de usuario.
+Los esquemas se habilitan para su uso en [[!DNL Real-time Customer Profile]](../profile/home.md) mediante la adición de una etiqueta &quot;union&quot; dentro del atributo `meta:immutableTags` del esquema. La activación de un esquema para su uso con [!DNL Profile] se puede realizar mediante la API o la interfaz de usuario.
 
 #### Activación de un esquema existente para [!DNL Profile] mediante la API
 
@@ -87,16 +86,16 @@ Para obtener más información sobre el uso de la API para habilitar un esquema 
 
 #### Activación de un esquema existente para [!DNL Profile] mediante la interfaz de usuario
 
-En [!DNL Experience Platform], seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo y seleccione el nombre del esquema que desea habilitar en la lista de esquemas. A continuación, en el lado derecho del editor, en **[!UICONTROL Schema Properties]**, seleccione **[!UICONTROL Profile]** para activarlo.
+En [!DNL Experience Platform], seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y seleccione el nombre del esquema que desea habilitar en la lista de esquemas. A continuación, en el lado derecho del editor, en **[!UICONTROL Propiedades del esquema]**, seleccione **[!UICONTROL Perfil]** para activarlo.
 
 
-Para obtener más información, consulte la sección [use in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) en el tutorial [!UICONTROL Schema Editor].
+Para obtener más información, consulte la sección [use in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) en el tutorial [!UICONTROL Editor de esquemas].
 
 ### ¿Puedo editar un esquema de unión directamente?
 
 Los esquemas de unión son de solo lectura y el sistema los genera automáticamente. No se pueden editar directamente. Los esquemas de unión se crean para una clase específica cuando se agrega una etiqueta &quot;unión&quot; al esquema que implementa esa clase.
 
-Para obtener más información sobre las uniones en XDM, consulte la sección [union](./api/unions.md) en la guía para desarrolladores de API [!DNL Schema Registry].
+Para obtener más información sobre las uniones en XDM, consulte la sección [union](./api/unions.md) en la guía de API [!DNL Schema Registry].
 
 ### ¿Cómo debo formatear mi archivo de datos para introducir datos en mi esquema?
 
@@ -106,79 +105,149 @@ Para obtener más información sobre las uniones en XDM, consulte la sección [u
 
 A continuación se muestra una lista de mensajes de error que puede encontrar al trabajar con la API [!DNL Schema Registry].
 
-### Objeto no encontrado
+### Recurso no encontrado
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1010-404",
+    "title": "Resource not found",
     "status": 404,
-    "title": "NotFoundError",
-    "detail": "Object https://ns.adobe.com/incorrectTenantId/schemas/ee067e31b08514d21e2b82577813409d 
-      with version 1 not found"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "The requested class resource https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 with version 1 is not found.",
+        "sub-errors": []
+    },
+    "detail": "The requested class resource https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 with version 1 is not found."
 }
 ```
 
 Este error se muestra cuando el sistema no pudo encontrar un recurso en particular. Es posible que el recurso se haya eliminado o que la ruta de acceso de la llamada de API no sea válida. Asegúrese de haber introducido una ruta válida para la llamada de API antes de intentarlo de nuevo. Es posible que desee comprobar que ha introducido el ID correcto para el recurso y que la ruta tiene un espacio de nombres adecuado con el contenedor apropiado (global o inquilino).
 
+>[!NOTE]
+>
+>Según el tipo de recurso que se recupere, este error puede utilizar cualquiera de los siguientes URI `type`:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+
+
 Para obtener más información sobre la construcción de rutas de búsqueda en la API, consulte las secciones [container](./api/getting-started.md#container) e [resource identification](api/getting-started.md#resource-identification) en la guía para desarrolladores de [!DNL Schema Registry].
 
-### El título debe ser único
+### Título no único
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1521-400",
+    "title": "Title not unique",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "Title must be unique. An object 
-      https://ns.adobe.com/{TENANT_ID}/schemas/26f6833e55db1dd8308aa07a64f2042d 
-      already exists with the same title."
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "Object titles must be unique. An object https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 already exists with the same title",
+        "sub-errors": []
+    },
+    "detail": "Object titles must be unique. An object https://ns.adobe.com/{TENANT_ID}/classes/11447bb484d4599d2cd9b0aseefff78b463cbbde1527f498 already exists with the same title"
 }
 ```
 
 Este mensaje de error se muestra cuando intenta crear un recurso con un título que otro recurso ya está utilizando. Los títulos deben ser únicos en todos los tipos de recursos. Por ejemplo, si intenta crear un grupo de campos con un título que ya esté utilizando un esquema, recibirá este error.
 
-### Los campos personalizados deben utilizar un campo de nivel superior
+### Error de validación de área de nombres
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1021-400",
+    "title": "Namespace validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "For custom fields, you must use a top level field named _{TENANT_ID}
-       and all the other fields must be defined under it"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "A custom field is defined under an invalid namespace. All custom fields must be defined under a top-level field named {TENANT_ID}.",
+        "sub-errors": []
+    },
+    "detail": "A custom field is defined under an invalid namespace. All custom fields must be defined under a top-level field named {TENANT_ID}."
 }
 ```
 
-Este mensaje de error se muestra cuando intenta crear un nuevo grupo de campos con campos con espacio de nombres incorrecto. Los grupos de campos definidos por la organización IMS deben establecer el espacio de nombres de sus campos con un `TENANT_ID` para evitar conflictos con otros recursos del sector y del proveedor. Puede encontrar ejemplos detallados de estructuras de datos adecuadas para grupos de campos en la [guía de extremo de grupos de campos](./api/field-groups.md#create).
+Este mensaje de error se muestra cuando intenta crear un recurso con campos con espacio de nombres incorrecto o agregar campos con espacio de nombres incorrecto a un recurso existente.
 
+Los recursos definidos por su organización de IMS deben establecer el espacio de nombres de sus campos en el ID de inquilino para evitar conflictos con otros recursos del sector y del proveedor. Al crear un esquema utilizando grupos de campos estándar, los campos personalizados que agregue dentro de la estructura de esos grupos de campos también deben tener espacio de nombres en el ID de inquilino.
+
+>[!NOTE]
+>
+>Según la naturaleza específica del error de área de nombres, este error puede utilizar cualquiera de los siguientes URI `type` junto con diferentes detalles del mensaje:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+
+
+Puede encontrar ejemplos detallados de estructuras de datos adecuadas para los recursos XDM en la guía de API del Registro de esquemas:
+
+* [Crear una clase personalizada](./api/classes.md#create)
+* [Crear un grupo de campos personalizado](./api/field-groups.md#create)
+* [Crear un tipo de datos personalizado](./api/data-types.md#create)
+
+### Aceptar encabezado no válido
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/XDM-1006-400",
+    "title": "Accept header invalid",
+    "status": 400,
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "The supplied Accept header is not valid: application/vnd.adobe.xed+json;version=1 - A valid Accept value should look like application/vnd.adobe.{xed|xdm}+json",
+        "sub-errors": []
+    },
+    "detail": "The supplied Accept header is not valid: application/vnd.adobe.xed+json;version=1 - A valid Accept value should look like application/vnd.adobe.{xed|xdm}+json"
+}
+```
+
+Las solicitudes de GET de la API [!DNL Schema Registry] requieren un encabezado `Accept` para que el sistema determine cómo dar formato a la respuesta. Este error se produce cuando falta un encabezado `Accept` requerido o no es válido.
+
+Dependiendo del punto final que utilice, la propiedad `detailed-message` indica el aspecto que debe tener un encabezado `Accept` válido para obtener una respuesta correcta. Asegúrese de haber introducido correctamente un encabezado `Accept` compatible con la solicitud de API que intenta realizar antes de intentarlo de nuevo.
+
+>[!NOTE]
+>
+>En función del punto final que se utilice, este error puede utilizar cualquiera de los siguientes URI `type`:
+>
+>* `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+
+
+Para obtener listas de encabezados Accept compatibles para diferentes solicitudes de API, consulte las secciones correspondientes en la [Guía para desarrolladores del Registro de Esquemas](./api/overview.md).
 
 ### [!DNL Real-time Customer Profile] errors
 
-Los siguientes mensajes de error están asociados a operaciones involucradas en la activación de esquemas para [!DNL Real-time Customer Profile]. Consulte la sección [union](./api/unions.md) en la guía para desarrolladores de API [!DNL Schema Registry] para obtener más información.
-
-#### Para habilitar conjuntos de datos de perfil, el esquema debe ser válido
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 400,
-    "title": "BadRequestError",
-    "detail": "To enable profile datasets the schema should be valid"
-}
-```
-
-Este mensaje de error se muestra cuando intenta habilitar un conjunto de datos de perfil para un esquema que no se ha habilitado para [!DNL Real-time Customer Profile]. Asegúrese de que el esquema contiene una etiqueta de unión antes de habilitar el conjunto de datos.
+Los siguientes mensajes de error están asociados a operaciones involucradas en la activación de esquemas para [!DNL Real-time Customer Profile]. Consulte la sección [union](./api/unions.md) en la guía de API [!DNL Schema Registry] para obtener más información.
 
 #### Debe haber un descriptor de identidad de referencia
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1526-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "For a schema to be able to participate in union, if any of its 
-      property is associated with a xdm:descriptorOneToOne descriptor, there must 
-      be a xdm:descriptorReferenceIdentity descriptor for that property"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "If a schema contains properties that are associated with an xdm:descriptorOneToOne descriptor, those properties must also have a xdm:descriptorReferenceIdentity descriptor for that schema to participate in a union.",
+        "sub-errors": []
+    },
+    "detail": "If a schema contains properties that are associated with an xdm:descriptorOneToOne descriptor, those properties must also have a xdm:descriptorReferenceIdentity descriptor for that schema to participate in a union."
 }
 ```
 
@@ -188,95 +257,38 @@ Este mensaje de error se muestra cuando intenta habilitar un esquema para [!DNL 
 
 ```json
 {
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1527-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "If both schemas from an already defined xdm:descriptorOneToOne 
-      descriptor are promoted to union, and if there is a primary identity on one of 
-      the schemas from the xdm:descriptorOneToOne descriptor, the 
-      xdm:identityNamespace of the sourceSchema's descriptorReferenceIdentity and the 
-      xdm:namespace field of the xdm:descriptorIdentity for the destinationSchema must 
-      match"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "If both schemas from an existing xdm:descriptorOneToOne descriptor are promoted to union, and one of those schemas contains a primary identity, the xdm:identityNamespace of the source schema's descriptorReferenceIdentity field must match the xdm:namespace field of destination schema's xdm:descriptorIdentity field.",
+        "sub-errors": []
+    },
+    "detail": "If both schemas from an existing xdm:descriptorOneToOne descriptor are promoted to union, and one of those schemas contains a primary identity, the xdm:identityNamespace of the source schema's descriptorReferenceIdentity field must match the xdm:namespace field of destination schema's xdm:descriptorIdentity field."
 }
 ```
 
 Para habilitar esquemas que contengan descriptores de relación para usarlos en [!DNL Profile], el área de nombres del campo de origen y el área de nombres principal del campo de destino deben ser el mismo. Este mensaje de error se muestra cuando intenta habilitar un esquema que contiene un área de nombres no coincidente para su descriptor de identidad de referencia. Asegúrese de que el valor `xdm:namespace` del campo de identidad del esquema de destino coincide con el de la propiedad `xdm:identityNamespace` en el descriptor de identidad de referencia del campo de origen para resolver este problema.
 
-Para obtener una lista de códigos de área de nombres de identidad admitidos, consulte la sección sobre [áreas de nombres estándar](../identity-service/namespaces.md) en la descripción general del área de nombres de identidad.
+Para obtener una lista de códigos de área de nombres de identidad estándar, consulte la sección sobre [áreas de nombres estándar](../identity-service/namespaces.md) en la descripción general del área de nombres de identidad.
 
-### Aceptar errores de encabezado
-
-La mayoría de las solicitudes de GET de la API [!DNL Schema Registry] requieren un encabezado Accept para que el sistema determine cómo dar formato a la respuesta. La siguiente es una lista de errores comunes asociados con el encabezado Accept . Para obtener listas de encabezados Accept compatibles para diferentes solicitudes de API, consulte las secciones correspondientes en la [Guía para desarrolladores del Registro de Esquemas](api/getting-started.md).
-
-#### Se requiere el parámetro Accept header
+#### El esquema debe incluir un identityMap o una identidad principal
 
 ```json
 {
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Accept header parameter is required"
-}
-```
-
-Este mensaje de error se muestra cuando falta un encabezado Accept de una solicitud de API. Asegúrese de incluir un encabezado Accept antes de volver a intentarlo.
-
-#### Se ha proporcionado un soporte de aceptar desconocido
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Unknown Accept media supplied: xed+json"
-}
-```
-
-Este mensaje de error se muestra cuando un encabezado Accept no es válido. Asegúrese de haber introducido correctamente un encabezado Accept compatible con la solicitud de API que intenta realizar antes de volver a intentarlo.
-
-#### Formato aceptar desconocido disponible
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 406,
-    "title": "NotAcceptableError",
-    "detail": "Unknown Accept format available "
-}
-```
-
-Este mensaje de error se muestra cuando el encabezado Accept se ha proporcionado incorrectamente al buscar un descriptor. Asegúrese de haber introducido correctamente uno de los [encabezados de aceptar admitidos para los descriptores](./api/descriptors.md) antes de volver a intentarlo.
-
-#### La versión debe suministrarse en el encabezado Accept
-
-```json
-{
-    "type": "/placeholder/type/uri",
+    "type": "http://ns.adobe.com/aep/errors/XDM-1528-400",
+    "title": "Union descriptor validation error",
     "status": 400,
-    "title": "BadRequestError",
-    "detail": "version must be supplied in the accept header. Example: 
-      application/vnd.adobe.xed-full-notext+json; version=1"
+    "report": {
+        "registryRequestId": "a15996b5-5133-4cec-9bf7-7d1207904ae3",
+        "timestamp": "06-01-2021 04:11:06",
+        "detailed-message": "To participate in a union, a schema must include an identityMap fieldgroup or a primary identity descriptor.",
+        "sub-errors": []
+    },
+    "detail": "To participate in a union, a schema must include an identityMap fieldgroup or a primary identity descriptor."
 }
 ```
 
-Este mensaje de error se muestra cuando no se ha incluido un número de versión en el encabezado Accept . Algunos elementos, como los esquemas, requieren que se especifique una versión al buscar instancias individuales. Un encabezado Accept que contenga un número de versión tendrá un aspecto similar al siguiente:
-
-```plaintext
-application/vnd.adobe.xed+json; version=1
-```
-
-Para obtener una lista de los encabezados Accept admitidos, consulte la sección [Accept header](api/getting-started.md#accept) en la guía para desarrolladores de [!DNL Schema Registry].
-
-#### La versión no debe suministrarse en el encabezado Accept
-
-```json
-{
-    "type": "/placeholder/type/uri",
-    "status": 400,
-    "title": "BadRequestError",
-    "detail": "version must not be supplied in the accept header. Example: 
-      application/vnd.adobe.xed-full+json"
-}
-```
-
-Si intenta incluir una versión en el encabezado Accept al enumerar recursos (GET), recibirá este error. Las versiones solo son necesarias cuando se intenta realizar una solicitud de consulta en un solo recurso. Elimine la versión del encabezado Accept para resolver el error.
+Antes de habilitar un esquema para Perfil, primero debe [crear un descriptor de identidad principal](./api/descriptors.md#create) para el esquema o incluir un campo de mapa de identidad para actuar en la identidad principal.
