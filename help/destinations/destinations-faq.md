@@ -4,10 +4,10 @@ title: Preguntas frecuentes
 seo-title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform
 seo-description: Respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 6%
+source-wordcount: '733'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,18 @@ ht-degree: 6%
 ## Información general {#overview}
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre los destinos de Adobe Experience Platform. Para preguntas y solución de problemas relacionados con otros [!DNL Platform] servicios, incluidos los que se encuentran en todas las API [!DNL Platform], consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+
+## Preguntas generales sobre destinos {#general}
+
+**¿Por qué veo diferentes recuentos de perfiles en la interfaz de usuario del Experience Platform y en los archivos CSV exportados?**
+
+Se trata de un comportamiento normal debido a la forma en que el Experience Platform realiza la segmentación.
+
+La segmentación por transmisión actualiza el recuento de perfiles de los segmentos de flujo continuo a lo largo del día, mientras que la segmentación por lotes actualiza el recuento de perfiles de los segmentos por lotes una vez cada 24 horas.
+
+Cuando la programación de exportación de segmentos difiere de la programación de segmentación, los recuentos de perfil entre la interfaz de usuario y el archivo [!DNL CSV] exportado serán diferentes, especialmente cuando se trata de segmentos de flujo continuo.
+
+Consulte la [Documentación del servicio de segmentación](../segmentation/home.md) para obtener más información.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
