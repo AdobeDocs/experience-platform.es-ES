@@ -3,7 +3,7 @@ title: Uso de Adobe Target con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;fragmento de ocultamiento previo;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 835fbee335c1b125f22a33f1806680514dfd9a6f
+source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 3%
@@ -140,7 +140,7 @@ El [!DNL Platform Web SDK] permite actualizar el perfil al perfil [!DNL Target] 
 Para actualizar un perfil [!DNL Target], asegúrese de que los datos de perfil se pasan con lo siguiente:
 
 * En `“data {“`
-* En `“__adobe”`
+* En `“__adobe.target”`
 * Prefijo `“profile.”`, por ejemplo, como se muestra a continuación
 
 | Clave | Tipo | Descripción |
