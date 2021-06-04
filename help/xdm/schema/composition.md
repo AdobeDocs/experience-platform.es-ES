@@ -5,9 +5,9 @@ title: Aspectos básicos de la composición del esquema
 topic-legacy: overview
 description: Este documento proporciona una introducción a los esquemas del Modelo de datos de experiencia (XDM) y a los componentes, principios y prácticas recomendadas para la composición de esquemas que se van a utilizar en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Los esquemas se utilizan para ingerir datos en [!DNL Experience Platform]. Estos
 
 Para ayudar con este proceso, los campos clave dentro de los esquemas se pueden marcar como identidades. Tras la ingesta de datos, los datos de esos campos se insertan en el &quot;[!UICONTROL Gráfico de identidad]&quot; de ese individuo. A continuación, se puede acceder a los datos del gráfico mediante [[!DNL Real-time Customer Profile]](../../profile/home.md) y otros servicios [!DNL Experience Platform] para proporcionar una vista integrada de cada cliente individual.
 
-Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
+Los campos que suelen marcarse como &quot;[!UICONTROL Identity]&quot; incluyen: dirección de correo electrónico, número de teléfono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es), ID de CRM u otros campos de ID únicos. También debe tener en cuenta cualquier identificador único específico de su organización, ya que también pueden ser buenos campos de &quot;[!UICONTROL identidad]&quot;.
 
 Es importante tener en cuenta las identidades de los clientes durante la fase de planificación del esquema para garantizar que los datos se recopilen y creen el perfil más sólido posible. Consulte la descripción general de [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) para obtener más información sobre cómo la información de identidad puede ayudarle a ofrecer experiencias digitales a sus clientes.
 
@@ -108,13 +108,15 @@ A medida que la naturaleza de las experiencias digitales sigue evolucionando, ta
 
 Dado que el mantenimiento de la compatibilidad con versiones anteriores es crucial para la evolución del esquema, [!DNL Experience Platform] aplica un principio de versiones puramente aditivo para garantizar que cualquier revisión del esquema solo genere actualizaciones y cambios no destructivos. En otras palabras, no se admiten los **cambios de interrupción.**
 
-| Cambios admitidos | Cambios que se rompen (no compatible) |
-|------------------------------------|---------------------------------|
-| <ul><li>Adición de nuevos campos a un esquema existente</li><li>Hacer opcional un campo obligatorio</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Introducción de nuevos campos obligatorios</li><li>Cambio del nombre o redefinición de campos existentes</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente</li><li>Mover atributos a una ubicación diferente en el árbol</li></ul> |
-
 >[!NOTE]
 >
->Si aún no se ha utilizado un esquema para introducir datos en [!DNL Experience Platform], puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en [!DNL Platform], debe adherirse a la directiva de versiones aditiva.
+>Si todavía no se ha utilizado un esquema para introducir datos en [!DNL Experience Platform] y no se ha habilitado para utilizarlo en el perfil del cliente en tiempo real, puede introducir un cambio de ruptura en ese esquema. Sin embargo, una vez que el esquema se ha utilizado en [!DNL Platform], debe adherirse a la directiva de versiones aditiva.
+
+En la tabla siguiente se desglosan los cambios compatibles al editar esquemas, grupos de campos y tipos de datos:
+
+| Cambios admitidos | Cambios que se rompen (no compatible) |
+| --- | --- |
+| <ul><li>Adición de nuevos campos al recurso</li><li>Hacer opcional un campo obligatorio</li><li>Cambio del nombre para mostrar y la descripción del recurso</li></ul> | <ul><li>Eliminación de campos definidos previamente</li><li>Introducción de nuevos campos obligatorios</li><li>Cambio del nombre o redefinición de campos existentes</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente</li><li>Mover atributos a una ubicación diferente en el árbol</li></ul> |
 
 ### Esquemas e ingesta de datos
 
@@ -281,7 +283,7 @@ Mediante el uso de objetos incrustados, los esquemas XDM pueden representar dire
 
 ### Esquemas y big data {#big-data}
 
-Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que puedan procesarse de manera consistente y eficiente.
+Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacciones, registros web, Internet de cosas, visualización, etc.). Estos grandes datos ofrecen oportunidades extraordinarias para optimizar experiencias, pero es un desafío usar debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estar estandarizados para que se puedan procesar de manera consistente y eficiente.
 
 Los esquemas solucionan este problema al permitir que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se formule sobre los datos, alejándose del enfoque tradicional de la modelización de datos, en el que todas las preguntas que se formularán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
 
